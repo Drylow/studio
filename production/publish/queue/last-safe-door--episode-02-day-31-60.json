@@ -1,0 +1,15 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 31 to Day 60",
+  "description_file": "chaines/last-safe-door/episode-02-day-31-60/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/yJZzMGwA",
+    "file": "final.mp4",
+    "sha256": "b3d3e8d3677a5a62badcdbe42fed97df1b6dbd579823deaf595ba51094737407"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-02-day-31-60/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-02-day-31-60/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-02-day-31-60/tags.txt",
+  "visibility": "public",
+  "tubeforge_video_id": "zombie-bunker-survival-day-31-to-day-60-be3e00"
+}
