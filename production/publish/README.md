@@ -28,7 +28,11 @@ Le PC refuse une fiche dans ces cas :
 - `sha256` absent ;
 - miniature absente ;
 - `channel` qui n'est pas exactement un des 6 noms ;
-- `publish_at` déjà passé.
+
+Si `publish_at` est déjà passé (PC éteint à l'heure prévue), le PC ne refuse pas : il publie la vidéo
+**en public tout de suite**, sauf si un épisode précédent de la même chaîne attend encore dans la file
+(alors il le publie d'abord). Ordre : toujours l'épisode le plus ancien d'abord, une vidéo par chaîne
+et par passage quand une date est dépassée.
 
 Il passe à 8 h, 11 h, 14 h, 17 h, 20 h et 23 h (heure de Belgique). Une vidéo programmée doit
 donc être poussée sur `main` au moins un passage avant son heure. Pour 10 h, il faut la pousser

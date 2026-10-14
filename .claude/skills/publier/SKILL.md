@@ -83,6 +83,9 @@ publie pas et note pourquoi.
    - tags du fichier `tags_file` s'il est dans la fiche (« Afficher plus » → Tags, séparés par des virgules) ;
    - sous-titres SRT s'il y en a ;
    - visibilité ou date de programmation de la fiche (heure de Bruxelles).
+   - si `publish_at` est déjà passé (le PC était éteint), ne refuse pas la fiche : publie en public
+     tout de suite. Une chaîne qui a deux fiches en retard : seulement la plus ancienne (l'épisode le plus
+     petit) à ce passage, la suivante garde sa date si elle est encore à venir.
 5. Attends la fin de l'envoi. Relève le lien de la vidéo et l'état des droits d'auteur (vérification
    YouTube). Ferme le profil.
 6. Ajoute une ligne au journal : chaîne, titre, SHA-256, `video_id`, visibilité, date, état des
