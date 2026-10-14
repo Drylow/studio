@@ -1014,14 +1014,14 @@
       delete body.style_id;
       body.template_style_id = values.get('template_style_id') || null;
       body.preset = {prompt:values.get('preset_prompt'), background_direction:values.get('preset_background_direction'),
-        background_mode:values.get('background_mode'), thumbnail_prompt:values.get('preset_thumbnail_prompt')};
+        background_mode:values.get('background_mode'), camera_policy:values.get('camera_policy'), thumbnail_prompt:values.get('preset_thumbnail_prompt')};
       const result = await api('/api/workspace/management/presets', {method:'POST', body});
       return '#/channels/' + encode(result.channel.id) + '/settings';
     });
     $('[name="template_style_id"]', $('#management-form')).onchange = event => {
       const selected = data.styles.find(style => style.id === event.target.value);
       for (const [field, value] of Object.entries({preset_prompt:selected?.prompt || '',
-        preset_background_direction:selected?.background_direction || '', background_mode:selected?.background_mode || 'free',
+        preset_background_direction:selected?.background_direction || '', background_mode:selected?.background_mode || 'free', camera_policy:selected?.camera_policy || 'varied',
         preset_thumbnail_prompt:selected?.thumbnail_prompt || ''})) $('[name="' + field + '"]', $('#management-form')).value = value;
     };
   }
@@ -1082,8 +1082,8 @@
     };
     $('#archive-channel').onclick = () => archiveManaged('channels', profile, !profile.archived);
   }
-  function backgroundModeField(mode = 'free') {
-    return `<label class="full">Background mode<select name="background_mode"><option value="free"${mode !== 'consistent' ? ' selected' : ''}>Free backgrounds — each image can use a different setting</option><option value="consistent"${mode === 'consistent' ? ' selected' : ''}>Consistent locations — same place, varied camera views</option></select><span class="small muted">Character references stay consistent in both modes. This choice applies to new videos; existing videos keep their settings.</span></label>`;
+  function backgroundModeField(mode = 'free', camera = 'varied') {
+    return `<label class="full">Background mode<select name="background_mode"><option value="free"${mode !== 'consistent' ? ' selected' : ''}>Free backgrounds — each image can use a different setting</option><option value="consistent"${mode === 'consistent' ? ' selected' : ''}>Consistent locations — preserve the same physical place</option></select></label><label class="full">Camera continuity<select name="camera_policy"><option value="stable"${camera === 'stable' ? ' selected' : ''}>Stable axis — keep the established side during a scene</option><option value="varied"${camera !== 'stable' ? ' selected' : ''}>Varied views — use multiple inspected angles</option></select><span class="small muted">With consistent locations, every selected view needs an inspected reference. Character references stay consistent in both background modes. Preset changes apply to new videos.</span></label>`;
   }
   function newStyle() {
     const fields = "<div class=\"form-grid\"><label class=\"full\">Style name<input name=\"name\" maxlength=\"200\" required></label><label class=\"full\">Video prompt<textarea name=\"prompt\" rows=\"6\" required></textarea></label><label class=\"full\">Background direction<textarea name=\"background_direction\" rows=\"3\"></textarea></label><label class=\"full\">Thumbnail prompt<textarea name=\"thumbnail_prompt\" rows=\"3\"></textarea></label></div>";
@@ -1116,7 +1116,7 @@
     const used = management.channels.filter((c) => !c.archived && c.style_id === style.id);
     const refs = style.references.map((r) => ({...r}));
     root.innerHTML = '<div class="breadcrumbs"><a href="#/styles">Visual styles</a><span>/</span>' + esc(style.name) + '</div>' + header(style.name, countLabel(used.length, "channel") + ' · ' + countLabel(refs.length, "reference"), !style.archived ? "<button id=\"duplicate-style\">Duplicate style</button>" : "<button id=\"restore-style\">Restore style</button>") + "<div class=\"management-editor\"><form id=\"visual-style-form\"><h2>Style settings</h2><div class=\"form-grid\"><label class=\"full\">Style name<input name=\"name\" value=\"" + esc(style.name) + "\" maxlength=\"200\" required></label><label class=\"full\">Video prompt<textarea name=\"prompt\" rows=\"10\" required>" + esc(style.prompt) + "</textarea></label><label class=\"full\">Background direction<textarea name=\"background_direction\" rows=\"4\">" + esc(style.background_direction) + '</textarea></label><label class="full">Thumbnail prompt<textarea name="thumbnail_prompt" rows="5">' + esc(style.thumbnail_prompt) + "</textarea></label></div><div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save style</button></div></form><aside><h2>Style previews</h2><figure>" + preview(style.video_preview_url, "Video style") + "<figcaption>Video</figcaption></figure><figure>" + preview(style.thumbnail_preview_url, "Thumbnail style") + "<figcaption>Thumbnail</figcaption></figure><h3>Linked channels</h3><ul class=\"linked-channels\">" + (used.map((c) => '<li><a href="#/channels/' + encode(c.id) + '/settings">' + esc(c.name) + '</a></li>').join('') || "<li>No linked channels</li>") + "</ul></aside></div><section class=\"section\"><div class=\"page-head\"><h2>Visual references</h2><button id=\"save-style-refs\">Save references</button></div><ol class=\"reference-list\" id=\"style-references\"></ol><form id=\"style-upload\"><label>Add images<input name=\"files\" type=\"file\" accept=\"image/png,image/jpeg,image/webp\" multiple required" + (style.archived ? ' disabled' : '') + '></label><div class="form-actions"><button type="submit"' + (style.archived ? ' disabled' : '') + '>' + icon('plus') + "Add references</button></div><p id=\"upload-progress\" class=\"small muted\" role=\"status\"></p></form></section><section class=\"section\"><h2>Style status</h2><div class=\"inline\">" + badge(style.archived ? 'unreviewed' : 'verified', style.archived ? "Archived" : "Active") + (!style.is_default ? '<button id="archive-style">' + (style.archived ? "Restore" : "Archive style") + '</button>' : '') + '</div></section>';
-    $('#visual-style-form .form-grid').insertAdjacentHTML('beforeend', backgroundModeField(style.background_mode));
+    $('#visual-style-form .form-grid').insertAdjacentHTML('beforeend', backgroundModeField(style.background_mode, style.camera_policy));
     if (!style.archived) $('#duplicate-style').onclick = () => duplicateStyle(style);
     else $('#restore-style').onclick = () => archiveManaged('styles', style, false);
     if ($('#archive-style')) $('#archive-style').onclick = () => archiveManaged('styles', style, !style.archived);
@@ -1150,7 +1150,7 @@
     };
     renderRefs();
     renderStyleCharacters(style, root);
-    $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="background_mode"]').value !== (style.background_mode || "free") || $('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify("Save the style settings before references.", true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, "References saved."); };
+    $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="camera_policy"]').value !== (style.camera_policy || "varied") || $('#visual-style-form [name="background_mode"]').value !== (style.background_mode || "free") || $('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify("Save the style settings before references.", true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, "References saved."); };
     $('#style-upload').onsubmit = (event) => {
       event.preventDefault();
       if (dirty) { notify("Save your changes before adding images.", true); return; }

@@ -1,0 +1,2024 @@
+{
+  "camera_policy": "stable",
+  "background_mode": "consistent",
+  "locations": {
+    "courier_cockpit": {
+      "description": "Lysa courier ship cockpit",
+      "layout": "Small angular grey cockpit with exactly ONE seated pilot position on EAST/right physical side and one standing passenger space WEST/left. ONE wide forward windscreen on NORTH wall, low continuous grey control console with small amber squares, plain grey pilot chair. Cockpit doorway to cargo cabin centered SOUTH behind camera. No second pilot console, circle windows or steering wheel.",
+      "angle": "Camera just aft/south-west of pilot facing north-east, pilot chair image right and standing passenger position left. Dry tan valley outside drawn windscreen on narrated flights, no ocean.",
+      "source_shot": 95,
+      "anchors": [
+        "Small angular grey cockpit with exactly ONE seated pilot position on EAST/right physical side and one standing passenger space WEST/left.",
+        "ONE wide forward windscreen on NORTH wall, low continuous grey control console with small amber squares, plain grey pilot chair.",
+        "Cockpit doorway to cargo cabin centered SOUTH behind camera.",
+        "No second pilot console, circle windows or steering wheel.."
+      ],
+      "file": "locations/courier_cockpit.png",
+      "sha256": "587ba7a82057f344e519f4b041dc0d06dc9c8d98bdd3f301dda22e2f8cef4149",
+      "inspection": "Single grey pilot chair/control bank right, standing space left, wide forward angular window/dry valley. No extra seat/cockpit duplication."
+    },
+    "ruins_int": {
+      "description": "Ruined archive corridor",
+      "layout": "Narrow rectangular grey stone corridor extends north/back to ONE dark exit. One broken low metal archive shelf leans from EAST/right wall, its near corner resting on square rubble support. ONE sealed small memory-core case below that leaning shelf. Cracked plain ceiling beam above, low rubble along left wall. No cathedral pillars or windows.",
+      "angle": "Camera at south doorway looking north along corridor; leaning shelf and case image right, accessible path image left. Preserve support and ceiling until explicitly narrated collapse.",
+      "source_shot": 84,
+      "anchors": [
+        "Narrow rectangular grey stone corridor extends north/back to ONE dark exit.",
+        "One broken low metal archive shelf leans from EAST/right wall, its near corner resting on square rubble support.",
+        "ONE sealed small memory-core case below that leaning shelf.",
+        "Cracked plain ceiling beam above, low rubble along left wall.",
+        "No cathedral pillars or windows.."
+      ],
+      "file": "locations/ruins_int.png",
+      "sha256": "daf04267c8791e710b357521836ed22d9ff3f698f43c9871cbcc4d66600b4677",
+      "inspection": "Cracked flat corridor ceiling, right leaning shelf with supported memory case, rubble left and straight rear exit. No actor, same shelf side."
+    },
+    "port": {
+      "description": "Transfer port courier berth",
+      "layout": "Low practical grey transfer port on flat ground. Courier berth at EAST/right edge with one short yellow-lined landing rectangle. Plain cargo containers west/left, low flat roof service shelter on north/back edge. ONE waist-height plain metal payment counter under that shelter. Flat clear walking path in centre; no huge city towers or castle. A fixed red/grey ordinary freighter is docked in far right berth, its open cargo ramp remains on right; this is NOT the separate smaller grey Lysa courier.",
+      "angle": "Camera south-west looking north-east across clear centre to counter at back left and courier berth right. Ground-level stable view.",
+      "source_shot": 51,
+      "anchors": [
+        "Low practical grey transfer port on flat ground.",
+        "Courier berth at EAST/right edge with one short yellow-lined landing rectangle.",
+        "Plain cargo containers west/left, low flat roof service shelter on north/back edge.",
+        "ONE waist-height plain metal payment counter under that shelter.",
+        "Flat clear walking path in centre; no huge city towers or castle.."
+      ],
+      "file": "locations/port.png",
+      "sha256": "1a21cc754216caddd3f5fb2ea2a0060a8c1c8781a2089c16ac2dc8bba0de39d1",
+      "inspection": "Low service canopy/counter back left, fixed red freight vessel docked right with its ramp, plain cargo stacks and rails. Actual docked red freighter is permanent port context, NOT Lysa courier."
+    },
+    "hold": {
+      "description": "Freighter empty cargo hold",
+      "layout": "Rectangular dark-grey cargo hold with closed bevelled rectangular hatch centered on north/back wall. Low loading platform one shallow step high along east/right edge, yellow-black line on platform edge. ONE green-grey waist-height rectangular crate in room centre. Simple floor tie-down rings, no shelves of cargo, windows or cockpit.",
+      "angle": "Camera south-west inside hold looking north-east; central crate, closed back hatch, loading platform right. Same crate/clip experiment axis.",
+      "source_shot": 18,
+      "anchors": [
+        "Rectangular dark-grey cargo hold with closed bevelled rectangular hatch centered on north/back wall.",
+        "Low loading platform one shallow step high along east/right edge, yellow-black line on platform edge.",
+        "ONE green-grey waist-height rectangular crate in room centre.",
+        "Simple floor tie-down rings, no shelves of cargo, windows or cockpit.."
+      ],
+      "file": "locations/hold.png",
+      "sha256": "6734a6e3fa357b139f37dfb4e250f7f4a02188250230f81296679f3e06330567",
+      "inspection": "One green centre crate before same north angular closed hatch; right raised platform edge, floor rings and fixed west net. Empty actors."
+    },
+    "hatch": {
+      "description": "Transfer vessel loading hatch approach",
+      "layout": "ONE rectangular grey cargo loading hatch in north/back wall of transfer vessel. Double sliding steel panels with narrow centre join, thick square frame, ONE small rectangular mechanism cover on EAST/right jamb. A green-grey archive crate sits immediately behind hatch. Near-side straight metal access corridor extends south toward camera, yellow edge lines, plain rail left, solid grey wall right. No ramp rotating between sides.",
+      "angle": "Camera outside hatch on south end corridor looking straight north; hatch centre, mechanism housing right, left rail. Preserve this axis for demand, shot, jam, repair and retrieval.",
+      "source_shot": 60,
+      "anchors": [
+        "ONE rectangular grey cargo loading hatch in north/back wall of transfer vessel.",
+        "Double sliding steel panels with narrow centre join, thick square frame, ONE small rectangular mechanism cover on EAST/right jamb.",
+        "A green-grey archive crate sits immediately behind hatch.",
+        "Near-side straight metal access corridor extends south toward camera, yellow edge lines, plain rail left, solid grey wall right.",
+        "No ramp rotating between sides.."
+      ],
+      "file": "locations/hatch.png",
+      "sha256": "1ba7b0f414cc0d877e849c62698a41535fecf7ea86134c5ad8d95c30cf4ab01b",
+      "inspection": "Straight approach from bottom to one centred thick square steel hatch, left handrail, right mechanism jamb, fixed grey archive crate just inside. Doors may slide without replacing frame."
+    },
+    "courier_cabin": {
+      "description": "Lysa courier ship cargo cabin",
+      "layout": "Small squat grey angular courier ship interior. ONE broad aft ramp opening centered on SOUTH wall; ramp to outside. Fixed green-grey cargo crate stack against EAST/right wall; ONE small fixed wood-grey worktable against WEST/left wall. ONE physical rectangular dark monitor above that table for remote calls. Ceiling amber strip lights, plain grey floor with yellow edge lines. North end leads to cockpit through small rectangular opening. No extra rooms or duplicate ramps.",
+      "angle": "Camera inside north/cockpit end looking south to aft ramp: worktable/monitor on image right because west wall is right from this axis, cargo crate image left. One exact orientation for work, calls and boarding/payment.",
+      "source_shot": 67,
+      "anchors": [
+        "Small squat grey angular courier ship interior.",
+        "ONE broad aft ramp opening centered on SOUTH wall; ramp to outside.",
+        "ONE green-grey low cargo crate against EAST/right wall; ONE small fixed wood-grey worktable against WEST/left wall.",
+        "ONE physical rectangular dark monitor above that table for remote calls.",
+        "Ceiling amber strip lights, plain grey floor with yellow edge lines.",
+        "North end leads to cockpit through small rectangular opening.",
+        "No extra rooms or duplicate ramps.."
+      ],
+      "file": "locations/courier_cabin.png",
+      "sha256": "d7f2cb2b97b9530fd3114c3167bc07786c00deab81f85d1a42c1c8293770b48a",
+      "inspection": "Aft ramp centred, crate stack left, worktable/physical monitor right, rectangular low ceiling lights. Actual outside port/night retained only for port episode; closed-ramp flight view to be made."
+    },
+    "private": {
+      "description": "Residence private archive chamber",
+      "layout": "Small low square grey stone archive room, not throne hall. ONE plain tall dark rectangular locked cabinet along north/back wall, TWO small shelves of anonymous grey record boxes to its left. ONE small plain wood desk with single drawer in centre-left foreground. ONE rectangular stone entrance on east/right wall with its original dark metal latch. One warm thin wall lamp, square grey floor slabs. Plain dark door on right has the small angular brass-line decoration of the inspected master; retain it consistently, no throne, windows or grand hall.",
+      "angle": "Camera at south-west corner looking north-east; desk foreground left, record cabinet back centre, doorway image right. Same room for archive access, secrecy and last three shots.",
+      "source_shot": 142,
+      "anchors": [
+        "Small low square grey stone archive room, not throne hall.",
+        "ONE plain tall dark rectangular locked cabinet along north/back wall, TWO small shelves of anonymous grey record boxes to its left.",
+        "ONE small plain wood desk with single drawer in centre-left foreground.",
+        "ONE rectangular stone entrance on east/right wall with its original dark metal latch.",
+        "One warm thin wall lamp, square grey floor slabs.",
+        "No banners, throne, windows, holograms or ornate gold furniture.."
+      ],
+      "file": "locations/private.png",
+      "sha256": "d48c908ec145491619bb5659ef5e249ce9741fb7d86abe334aa06eb6617c5338",
+      "inspection": "Centre dark cabinet, two left record shelves, single drawer wood desk foreground left, one right doorway. Minor original angular brass border retained as FIXED door detail, no large gold hall/throne. All actors removed."
+    },
+    "bunk": {
+      "description": "Varek ship bunk cabin",
+      "layout": "Narrow plain grey metal cabin with ONE short grey bunk fixed to east/right wall, under-bunk storage recess empty for the old tool case. ONE closed angular hatch on north/back wall. Small flat wood-grey shelf along west/left wall, soft pale ceiling strip. No weapon rack, cargo ramp or windows.",
+      "angle": "Camera at south-west doorway looking north-east, bunk right, back hatch centred, small shelf left.",
+      "source_shot": 28,
+      "anchors": [
+        "Narrow plain grey metal cabin with ONE short grey bunk fixed to east/right wall, under-bunk storage recess empty for the old tool case.",
+        "ONE closed angular hatch on north/back wall.",
+        "Small flat wood-grey shelf along west/left wall, soft pale ceiling strip.",
+        "No weapon rack, cargo ramp or windows.."
+      ],
+      "file": "locations/bunk.png",
+      "sha256": "6e825922beb65f654110a585adaa11da71e142a14e57443d2c841176de2c4d27",
+      "inspection": "Grey bunk on right, north hatch centred, cabinet/shelf left, no actor/weapon. Same under-bunk recess preserved."
+    },
+    "ruins_ext": {
+      "description": "Ruined archive landing pad",
+      "layout": "Flat dusty tan landing clearing beside a modest LOW ruined grey stone archive. Broken single-storey facade on north/back edge, one fallen lintel and ONE dark rectangular entry opening. No gothic cathedral, towers or giant staircase. Thin scrub, pale dry hills. Courier ship enters only when narration calls it.",
+      "angle": "Camera south-west looking north-east, ruined low facade back left, flat landing space foreground right.",
+      "source_shot": 85,
+      "anchors": [
+        "Flat dusty tan landing clearing beside a modest LOW ruined grey stone archive.",
+        "Broken single-storey facade on north/back edge, one fallen lintel and ONE dark rectangular entry opening.",
+        "No gothic cathedral, towers or giant staircase.",
+        "Thin scrub, pale dry hills.",
+        "Courier ship enters only when narration calls it.."
+      ],
+      "file": "locations/ruins_ext.png",
+      "sha256": "c28fbebcddb9e9ef83f8eb8259f8decae1dfa86aafa70848db3fbd5cebf5b0b9",
+      "inspection": "Single low broken stone facade left, one entry, flat dirt landing space right and dry hills. No cathedral/castle towers."
+    },
+    "chamber": {
+      "description": "Stone Sith training chamber",
+      "layout": "ONE rectangular low-ceiling grey stone room, plain square grey flagstone floor with old scuff marks, NO circles, targets or round platform. North/back wall has exactly ONE heavy rectangular stone SLIDING door at east/right end; slab slides horizontally towards EAST/image right into wall pocket. Small dark metal latch housing is fixed to image-left door jamb at hand height. A plain dark-grey chair stands one pace LEFT of doorway. West/left wall holds ONE simple waist-high dark wood rack with two plain wooden training rods. Short plain wooden repair workbench and one low shelf stand against north wall LEFT of chair. ONE thin warm wall lamp above bench; ONE above door. No banners, windows, throne or extra exits.",
+      "angle": "Camera near south-west corner looking north-east; rack image left, bench back left, chair back centre-right, sliding door back right. Keep this same axis for training, repair, duel, escape and final lessons; close-ups crop this view.",
+      "source_shot": 30,
+      "anchors": [
+        "ONE rectangular low-ceiling grey stone room, plain square grey flagstone floor with old scuff marks, NO circles, targets or round platform.",
+        "North/back wall has exactly ONE heavy rectangular stone SLIDING door at east/right end; slab slides horizontally towards EAST/image right into wall pocket.",
+        "Small dark metal latch housing is fixed to image-left door jamb at hand height.",
+        "A plain dark-grey chair stands one pace LEFT of doorway.",
+        "West/left wall holds ONE simple waist-high dark wood rack with two plain wooden training rods.",
+        "Short plain wooden repair workbench and one low shelf stand against north wall LEFT of chair.",
+        "ONE thin warm wall lamp above bench; ONE above door.",
+        "No banners, windows, throne or extra exits.."
+      ],
+      "file": "locations/chamber.png",
+      "sha256": "d982c573275451fae96027dd01406f8058c5fad8b4a56438dd1ddbb6f86c0f3d",
+      "inspection": "Rack left, bench/shelf back left, chair beside SINGLE right sliding door and left-jamb housing. Square slab floor, no circles/targets/throne/banners. Two lamps. Door slab pocket opens right. Empty chamber."
+    },
+    "dock": {
+      "description": "Repair dock freighter berth",
+      "layout": "ONE open grey concrete repair berth. A squat grey cargo freighter sits on legs on east/image-right side; rear loading ramp slopes DOWN toward west/image left beside maintenance area. Exposed hinge housing and loose black cable on near ramp side. ONE low dark workbench in south foreground holds disconnected brake assembly. A grey crate stack west/left, low utilitarian sheds beyond. No city towers.",
+      "angle": "Camera at south-west service corner looking north-east: freighter/ramp right, tool bench foreground left, dock clear path to left background. Stable orientation for mechanic rescue and Varek arrival.",
+      "source_shot": 6,
+      "anchors": [
+        "ONE open grey concrete repair berth.",
+        "A squat grey cargo freighter sits on legs on east/image-right side; rear loading ramp slopes DOWN toward west/image left beside maintenance area.",
+        "Exposed hinge housing and loose black cable on near ramp side.",
+        "ONE low dark workbench in south foreground holds disconnected brake assembly.",
+        "A grey crate stack west/left, low utilitarian sheds beyond.",
+        "No city towers.."
+      ],
+      "file": "locations/dock.png",
+      "sha256": "ec0a61a360b90e77fb08d62a7a5bab4dd0d7655c1c46944fb2c7773df36c2fe6",
+      "inspection": "Same grey freighter ramp slopes down from upper right toward left maintenance bench, hanging black cable near right hinge, low sheds, crate stack left. All people removed."
+    },
+    "landing": {
+      "description": "Residence upper landing platform",
+      "layout": "Modest LOW rectangular grey stone residence on dry tan plateau above a dry scrub valley. ONE plain rectangular front entrance at north/back wall leads to the training chamber, entrance right half of facade. NO castle towers, crenellations, giant stairway, sea or trees. Flat grey stone upper landing platform south of residence, narrow walking path between platform and entrance. A SMALL lower dirt landing pad visible downhill east/image right, no second building. Courier or Varek ship only when scene explicitly calls it.",
+      "angle": "Camera south-west of upper platform looking north-east, modest residence back left-centre, upper landing area foreground right, dry valley and small lower pad far right. Keep this axis for arrivals, departure and decision to stay.",
+      "source_shot": 29,
+      "anchors": [
+        "Modest LOW rectangular grey stone residence on dry tan plateau above a dry scrub valley.",
+        "ONE plain rectangular front entrance at north/back wall leads to the training chamber, entrance right half of facade.",
+        "NO castle towers, crenellations, giant stairway, sea or trees.",
+        "Flat grey stone upper landing platform south of residence, narrow walking path between platform and entrance.",
+        "A SMALL lower dirt landing pad visible downhill east/image right, no second building.",
+        "Courier or Varek ship only when scene explicitly calls it.."
+      ],
+      "file": "locations/landing.png",
+      "sha256": "7ea47066a9a00679e5ab21ef0c27382d6aa16dd79aa95ef9fc757701aa28af59",
+      "inspection": "Low single rectangular residence left, one doorway and path to upper foreground platform, dry valley/lower pad right. No castle towers, no sea."
+    },
+    "courier_closed": {
+      "description": "courier closed-ramp cabin",
+      "layout": "Small squat grey angular courier ship interior. ONE broad aft ramp opening centered on SOUTH wall; ramp to outside. Fixed green-grey cargo crate stack against EAST/right wall; ONE small fixed wood-grey worktable against WEST/left wall. ONE physical rectangular dark monitor above that table for remote calls. Ceiling amber strip lights, plain grey floor with yellow edge lines. North end leads to cockpit through small rectangular opening. No extra rooms or duplicate ramps. IN-FLIGHT STATE: same single aft hatch CLOSED, no outside port visible.",
+      "angle": "Camera inside north/cockpit end looking south to aft ramp: worktable/monitor on image right because west wall is right from this axis, cargo crate image left. One exact orientation for work, calls and boarding/payment.",
+      "source_shot": 67,
+      "anchors": [
+        "Same cabin axis: left crate stack, right table/physical monitor, centre aft hatch now CLOSED; no outside port in flight. Fixed walls/floor lights maintained."
+      ],
+      "source_parent": "courier_cabin",
+      "file": "locations/courier_closed.png",
+      "sha256": "84449e63281e8ced433860925681ffb2b634ebb07b440c30f5b0ae61fe5bfe02",
+      "inspection": "Same cabin axis: left crate stack, right table/physical monitor, centre aft hatch now CLOSED; no outside port in flight. Fixed walls/floor lights maintained."
+    }
+  },
+  "shots": {
+    "1": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek hands ONE straight silver spare lightsaber hilt, blade OFF, to Neris by fixed bench; Soren watches from near floor. Neris belt EMPTY, Soren own silver hilt OFF on maroon sash, Varek curved dark hilt OFF at grey sash.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "Your master puts a lightsaber into a stranger's hands and tells her to take your place.",
+      "start": 0.0,
+      "end": 4.836
+    },
+    "2": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Neris examines the single received silver hilt in BOTH white mitten hands, blade OFF; Soren watches at side, Varek by same fixed chair. No second Neris belt hilt.",
+      "characters": [
+        "Soren",
+        "Neris",
+        "Varek"
+      ],
+      "narration": "Neris stands across the stone chamber, turning the hilt over in her hand. You recognise the weapon.",
+      "start": 4.836,
+      "end": 11.43
+    },
+    "3": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Varek settles into fixed chair LEFT of sole sliding door as its motor starts; Soren stands by bench with tool case, Neris holds silver spare blade OFF. Same rack/bench/door geometry.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "You repaired its switch for Lord Varek, who is now sitting beside the only door.",
+      "start": 11.43,
+      "end": 16.321
+    },
+    "4": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris takes one cautious combat stance facing Soren, holding ONE straight silver spare lightsaber with red blade active; Varek watches from fixed chair. Soren own weapon held, no duplicate on belt.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "You thought learning his secrets would make you harder to replace. But he has brought someone here to see whether you deserve to keep them.",
+      "start": 16.321,
+      "end": 24.014
+    },
+    "5": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren glances toward the FIXED dark latch housing on LEFT jamb of the only RIGHT sliding door while holding his single red blade low; Neris in front, Varek seated. No doorway reversal.",
+      "characters": [
+        "Soren",
+        "Neris",
+        "Varek"
+      ],
+      "narration": "Before she ignites the blade, you notice the repair you left beneath its grip.",
+      "start": 24.014,
+      "end": 28.872
+    },
+    "6": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Early mechanic Soren crouches beside SAME right freighter ramp hinge, plain charcoal work tunic, NO hood/robe/maroon sash/weapon; one white hand on loose black connector.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The switch is the same sort you once had to fix with a loading ramp hanging above you.",
+      "start": 28.872,
+      "end": 33.709
+    },
+    "7": {
+      "location": "dock",
+      "shot_type": "close_up",
+      "visual_beat": "Mechanic Soren examines frayed connector under SAME ramp hinge; disconnected brake assembly lies on fixed foreground-left bench. Grey freighter at right, no changed ship side.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "Back then, your name is Soren, and you work in a repair dock where nobody waits for a mechanic to finish eating.",
+      "start": 33.709,
+      "end": 40.46
+    },
+    "8": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Mechanic Soren removes ONE loose connector under raised right ramp while anonymous white-round-headed pilot leans from upper opening toward controls. No added main cast.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "A freighter needs its ramp before the next berth opens. You are underneath it, holding a loose connector while the pilot shouts from the cockpit.",
+      "start": 40.46,
+      "end": 48.516
+    },
+    "9": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Pilot reaches control at SAME upper right ramp doorway; ramp begins lowering toward mechanic Soren's shoulder. Retain hinge, cable and fore-left workbench.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You ask her to keep the controls still. She reaches for them anyway, and the ramp begins coming down.",
+      "start": 48.516,
+      "end": 54.705
+    },
+    "10": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Soren raises ONE empty white palm just under SAME lowering ramp, a clear air gap between hand and metal; other hand holds removed connector. Ramp suspended by invisible Force, no physical prop.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "Your hand goes up before you can move. The ramp stops with its weight hanging above your shoulder.",
+      "start": 54.705,
+      "end": 60.337
+    },
+    "11": {
+      "location": "dock",
+      "shot_type": "close_up",
+      "visual_beat": "Crop to the clear gap between Soren's raised pure-white mitten palm and SAME ramp underside, connector in other hand. No realistic human fingers or touching metal.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You stare at the gap between your palm and the metal. Nothing is touching.",
+      "start": 60.337,
+      "end": 64.789
+    },
+    "12": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Soren scrambles left toward intact dock floor carrying connector while pilot cuts ramp power; SAME freighter/ramp stops. Mechanics clothes remain plain charcoal/black.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The pilot cuts the power, and you scramble out with the connector still in your other hand.",
+      "start": 64.789,
+      "end": 70.398
+    },
+    "13": {
+      "location": "dock",
+      "shot_type": "close_up",
+      "visual_beat": "Soren looks down at ONE disconnected brake assembly on fixed left bench, connector held beside it; no active weapon or robe.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You tell yourself the emergency brake must have caught. Then you notice the brake assembly sitting on your bench.",
+      "start": 70.398,
+      "end": 76.72
+    },
+    "14": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Lysa in olive jacket/tan trousers stands beside workbench questioning Soren about the held ramp; SAME grey freighter right, no new repair bay.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Lysa, the courier waiting for that freighter, has seen everything. She asks how you held it.",
+      "start": 76.72,
+      "end": 83.515
+    },
+    "15": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Soren points at disconnected brake controls on fixed left bench while Lysa questions him; two compact white-round-headed adults once each.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You point at the disconnected controls. She looks at them, then asks again.",
+      "start": 83.515,
+      "end": 88.634
+    },
+    "16": {
+      "location": "dock",
+      "shot_type": "wide",
+      "visual_beat": "Varek in charcoal robes/grey mantle walks from clear dock path toward Soren and Lysa beside SAME right freighter ramp. No extra Varek in ship window.",
+      "characters": [
+        "Soren",
+        "Lysa",
+        "Varek"
+      ],
+      "narration": "Before you answer, a passenger in black robes walks down the dock.",
+      "start": 88.634,
+      "end": 93.18
+    },
+    "17": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Varek indicates the connector in Soren's white mitten hand near SAME bench/ramp; Soren looks up, Lysa only. Varek's weapon remains OFF.",
+      "characters": [
+        "Soren",
+        "Lysa",
+        "Varek"
+      ],
+      "narration": "He was close enough to see your raised hand. His name is Varek, and he asks you to bring the connector with you.",
+      "start": 93.18,
+      "end": 100.042
+    },
+    "18": {
+      "location": "hold",
+      "shot_type": "wide",
+      "visual_beat": "Varek closes SAME north cargo hatch behind himself while Soren stands by ONE green central crate; ONE small U-shaped grey clip rests on crate. No active lightsaber.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He takes you into an empty cargo hold and closes the hatch. A loose metal clip rests on a crate between you.",
+      "start": 100.042,
+      "end": 106.541
+    },
+    "19": {
+      "location": "hold",
+      "shot_type": "medium",
+      "visual_beat": "Varek points to the small U-shaped clip on central crate and Soren raises a cautious empty palm towards it; same right raised loading platform, north hatch CLOSED.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He asks you to lift it without touching it. You spend several uncomfortable minutes staring at a piece of scrap.",
+      "start": 106.541,
+      "end": 114.065
+    },
+    "20": {
+      "location": "hold",
+      "shot_type": "medium",
+      "visual_beat": "Varek slides SAME green crate a little toward the fixed RIGHT loading-platform edge; Soren reaches toward the small clip. Not a cliff or open floor hole.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "When he slides the crate toward the edge of a loading platform, you reach for the clip.",
+      "start": 114.065,
+      "end": 119.045
+    },
+    "21": {
+      "location": "hold",
+      "shot_type": "close_up",
+      "visual_beat": "ONE tiny U-shaped metal clip jumps a short distance from same green crate toward Soren's open white mitten palm; Varek watches. No cylinder/hilt substitution.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "It jumps against your palm before your fingers close.\n\nVarek asks what you felt beneath the ramp.",
+      "start": 119.045,
+      "end": 125.427
+    },
+    "22": {
+      "location": "hold",
+      "shot_type": "medium",
+      "visual_beat": "Varek puts SAME small U-shaped clip back on central green crate while Soren steadies his raised hand; closed north hatch and right platform unchanged.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You tell him you thought it was going to crush you. He places the clip on the crate again. This time, you know something is possible.",
+      "start": 125.427,
+      "end": 132.866
+    },
+    "23": {
+      "location": "hold",
+      "shot_type": "close_up",
+      "visual_beat": "Soren lifts the same tiny U-shaped clip a few centimetres above central crate; Varek's hand stays away. One clip, no glow orb or giant tool.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You can move it a short distance when you remember the ramp falling. When your attention slips, the clip drops.",
+      "start": 132.866,
+      "end": 139.115
+    },
+    "24": {
+      "location": "hold",
+      "shot_type": "medium",
+      "visual_beat": "Varek picks up same dropped tiny clip from crate and holds it between white mittens while Soren listens; no new bench or door.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek picks it up and tells you he can teach you to do more.\n\nYou ask what the teaching costs.",
+      "start": 139.115,
+      "end": 143.997
+    },
+    "25": {
+      "location": "hold",
+      "shot_type": "medium",
+      "visual_beat": "Varek explains his offer with one open empty hand while Soren stands beside green crate considering it; keep bare cargo hold and closed north hatch.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He wants an apprentice who will travel with him, follow instructions and keep what he learns to himself.",
+      "start": 143.997,
+      "end": 150.376
+    },
+    "26": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Soren packs ONE small old dark rectangular tool case on fixed left bench; Lysa beside him questions his departure. Same mechanic work tunic and freighter ramp right.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You have no place on his ship unless you take the offer. Lysa catches you putting your tools into a small case.",
+      "start": 150.376,
+      "end": 156.813
+    },
+    "27": {
+      "location": "dock",
+      "shot_type": "medium",
+      "visual_beat": "Soren carries closed old tool case toward the same freighter ramp while Lysa pauses beside bench.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "She asks whether you even know where you're going. You tell her that you will finally be able to choose something beyond the next broken ramp.",
+      "start": 156.813,
+      "end": 164.708
+    },
+    "28": {
+      "location": "bunk",
+      "shot_type": "medium",
+      "visual_beat": "Varek settles the new MAROON sash on Soren's charcoal apprentice robe beside fixed RIGHT bunk. Old tool case sits in under-bunk recess. Soren no personal weapon yet.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek gives you a charcoal tunic and a maroon sash. Your tools stay in their case beneath the bunk.",
+      "start": 164.708,
+      "end": 171.319
+    },
+    "29": {
+      "location": "landing",
+      "shot_type": "wide",
+      "visual_beat": "ONE squat grey Varek ship stands landed on SAME upper stone pad; Soren and Varek beside lowered ramp look at low rectangular residence and dry valley RIGHT. No descending ship with same actors on ground twice.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "His ship carries you to a remote stone residence above a dry valley.",
+      "start": 171.319,
+      "end": 175.563
+    },
+    "30": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Soren enters the ONE fixed plain training chamber and observes left rod rack, back bench, chair and single right sliding door. No weapon yet, square floor, no banners/targets.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The training room is almost empty: a rack, a floor marked by old impacts and a heavy door that closes slowly enough to make you watch it.",
+      "start": 175.563,
+      "end": 184.046
+    },
+    "31": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren raises a questioning hand to Varek beside same fixed bench; sole door remains RIGHT and chair next to it. Two actors only, no imaginary additional students.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You ask whether other students are coming. Varek says that he already has an apprentice.",
+      "start": 184.046,
+      "end": 189.375
+    },
+    "32": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek points from himself to Soren, explaining one master/one apprentice; both in same open floor before fixed bench. No inserted ancient Sith actor.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He follows the Sith tradition of one master and one apprentice.",
+      "start": 189.375,
+      "end": 193.531
+    },
+    "33": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek sets TWO plain wooden training rods apart on fixed bench while explaining the rule's origin; Soren watches. No new historic hall, hologram or Bane portrait.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Darth Bane established that rule to end the fighting that had weakened the Sith.",
+      "start": 193.531,
+      "end": 198.404
+    },
+    "34": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek walks a single step on far side of Soren across same square-slab floor, speaking; show one instant, no multiple Varek silhouettes.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek describes the apprentice's purpose while he walks around you.",
+      "start": 198.404,
+      "end": 202.634
+    },
+    "35": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren looks from Varek's grey mantle toward the two plain rods on fixed bench; master explains future challenge. No own silver hilt yet.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You will learn what he knows, become strong enough to challenge him and eventually take his place.",
+      "start": 202.634,
+      "end": 208.034
+    },
+    "36": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren holds trembling white mitten hands above ONE tiny grey U-shaped practice clip on same back bench; Varek observes at chair side.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He says this without looking worried. You are still trying to lift a clip.\n\nThe first lessons leave your hands shaking.",
+      "start": 208.034,
+      "end": 215.83
+    },
+    "37": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren levitates ONE small grey stone practice block above square floor beside fixed bench, hands raised; Varek speaks from a few paces away. No temple platform.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You raise objects, hold them steady and lose them whenever Varek interrupts you.",
+      "start": 215.83,
+      "end": 220.986
+    },
+    "38": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek asks Soren a question while SAME small stone block hovers above fixed central floor; Soren hesitates with hands lifted, single block.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He asks questions while a stone block is suspended above the floor. If you answer too quickly, the block drops.",
+      "start": 220.986,
+      "end": 227.469
+    },
+    "39": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek sweeps Soren's near boot with one foot; Soren leans off balance while SAME practice block stays above floor. ONE body/pose each, two arms only.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "If you keep staring at it, he knocks your feet out from beneath you. You have to recover your balance while keeping the thing in the air.",
+      "start": 227.469,
+      "end": 235.234
+    },
+    "40": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren regains his grounded stance and keeps SAME stone practice block floating while looking toward Varek's moving boot. Square floor and door axis fixed.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You improve when you stop waiting for each interruption. You begin listening to his movement as well as watching the stone.",
+      "start": 235.234,
+      "end": 242.436
+    },
+    "41": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren turns his WHITE round head toward Varek's foot before it reaches him; SAME stone block remains suspended. No extra limbs or copied pose.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "On one attempt, you turn before his foot reaches you. The block remains suspended.",
+      "start": 242.436,
+      "end": 248.196
+    },
+    "42": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Varek opens SAME RIGHT sliding stone door toward its RIGHT pocket while Soren continues holding block above floor. Left rack/bench/chair remain fixed.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek leaves it there while he opens the door. You cannot follow until he lets you put it down.",
+      "start": 248.196,
+      "end": 255.129
+    },
+    "43": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek hands Soren ONE plain brown wooden training rod at fixed bench, practice block now FULLY on floor. No red blade or finished lightsaber.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Even a successful lesson ends when he decides it does.\n\nHe teaches you to fight with a training weapon before giving you a real blade.",
+      "start": 255.129,
+      "end": 263.273
+    },
+    "44": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek catches Soren's white wrist as ONE brown practice rod drops near same left rack; one instantaneous movement, no sword glow.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "The first time you rush him, he catches your wrist and sends the weapon across the room. You fetch it.",
+      "start": 263.273,
+      "end": 268.948
+    },
+    "45": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren attacks with ONE plain brown training rod while Varek guards with a second brown rod; SAME open central floor, no active lightsabers at this stage.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He tells you to use the frustration you are already feeling. On the next exchange, you push harder.",
+      "start": 268.948,
+      "end": 275.4
+    },
+    "46": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek steps beside Soren's brown practice rod strike, drawing him past fixed bench; Soren still grips ONE wooden rod, no empty-handed punch or red weapon.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He steps aside and makes you chase him into the same mistake.\n\nEventually you make him change position.",
+      "start": 275.4,
+      "end": 281.21
+    },
+    "47": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "ONE square loose floor slab shifts a little under Varek's boot while he blocks Soren's brown wooden rod; both rods are WOOD, no red blades.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "A loose floor plate shifts beneath his boot when you reach through the Force. He stops your next strike, but you have made him move.",
+      "start": 281.21,
+      "end": 288.477
+    },
+    "48": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek points toward SAME right door's left-jamb mechanism while Soren lowers wooden practice rod; displaced floor plate remains beside his boot.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You expect him to mention the plate. Instead, he asks you to repair the door mechanism after training.",
+      "start": 288.477,
+      "end": 294.817
+    },
+    "49": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren crouches repairing SAME left-jamb dark latch housing on RIGHT sliding door with old tool case open below; rod returned to fixed left rack, no own saber yet.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "It has been catching at the end of its travel. You spend the evening with the housing open, learning how much stone the motor is supposed to move.",
+      "start": 294.817,
+      "end": 302.518
+    },
+    "50": {
+      "location": "port",
+      "shot_type": "wide",
+      "visual_beat": "Soren with closed old tool case walks among plain cargo stacks at same low transfer-port courier berth; small grey courier craft not the fixed red freighter.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "Your first mission takes you back among cargo ships. Varek wants a sealed navigation archive delivered to him.",
+      "start": 302.518,
+      "end": 309.214
+    },
+    "51": {
+      "location": "port",
+      "shot_type": "wide",
+      "visual_beat": "Soren watches anonymous adult cargo workers move ONE green-grey archive crate up fixed RED ordinary freighter ramp on RIGHT; courier berth/counter separate.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "Its current holder is preparing to leave through a busy transfer port.",
+      "start": 309.214,
+      "end": 313.226
+    },
+    "52": {
+      "location": "port",
+      "shot_type": "medium",
+      "visual_beat": "Varek gives Soren ONE small dark physical transmitter beside fixed back-left counter, not a floating hologram; Soren looks toward port berth, no own saber yet.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He sends you to arrange transport before the shipment moves. You expect him to come with you.",
+      "start": 313.226,
+      "end": 319.186
+    },
+    "53": {
+      "location": "port",
+      "shot_type": "medium",
+      "visual_beat": "Soren holds the transmitter while Lysa in olive jacket/tan pants works behind same plain back-left payment counter; no new office scene.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "He gives you a transmitter and tells you to report when you have the archive.\n\nLysa is working at the port.",
+      "start": 319.186,
+      "end": 324.808
+    },
+    "54": {
+      "location": "port",
+      "shot_type": "medium",
+      "visual_beat": "Lysa points at Soren's SAME old dark tool case resting beside counter, a wry tiny line-mouth reaction. Soren apprentice robe/maroon sash, no weapon.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "She recognises the tool case you still carry and asks whether your new employer has broken something already.",
+      "start": 324.808,
+      "end": 331.571
+    },
+    "55": {
+      "location": "port",
+      "shot_type": "medium",
+      "visual_beat": "Soren shows ONE simple unlabelled destination sketch and two small plain payment tokens on SAME counter; Lysa checks them before agreeing.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You tell her that you need a pilot who can make a difficult collection. She asks for the destination and payment before agreeing.",
+      "start": 331.571,
+      "end": 339.241
+    },
+    "56": {
+      "location": "port",
+      "shot_type": "medium",
+      "visual_beat": "Soren passes ONE payment token to Lysa beside counter, she gestures toward his apprentice robe; same fixed red freighter stays context, no ship duplicates.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You give her both. She points at your robes and asks whether the passenger will be as quiet as the cargo.",
+      "start": 339.241,
+      "end": 345.478
+    },
+    "57": {
+      "location": "courier_closed",
+      "shot_type": "medium",
+      "visual_beat": "Soren places his old tool case beside same fixed LEFT cabin crate stack and looks at transmitter. Single centre aft hatch CLOSED during flight, monitor/table RIGHT. Lysa checks a navigation token at fixed right worktable, not in a second cabin.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You board her small courier ship with the instructions Varek supplied.",
+      "start": 345.478,
+      "end": 349.296
+    },
+    "58": {
+      "location": "hatch",
+      "shot_type": "medium",
+      "visual_beat": "Soren stands at fixed centred transfer-vessel hatch with transmitter, Lysa waiting near LEFT corridor rail. One anonymous adult guard visible inside refuses access.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Lysa can get you near the transfer vessel, but its crew refuses to hand over the archive. You send Varek a message.",
+      "start": 349.296,
+      "end": 356.035
+    },
+    "59": {
+      "location": "courier_closed",
+      "shot_type": "medium",
+      "visual_beat": "Soren listens to Varek ONCE ONLY on fixed RIGHT physical cabin monitor, transmitter in hand; no physical full-body Varek or hologram. Centre aft hatch closed.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He tells you that an apprentice should not need his master to settle a disagreement with a cargo crew.",
+      "start": 356.035,
+      "end": 361.933
+    },
+    "60": {
+      "location": "hatch",
+      "shot_type": "medium",
+      "visual_beat": "Soren raises an empty demanding palm toward ONE guard inside SAME centred hatch; Lysa at left rail, Soren has NO personal saber yet.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You return to the loading hatch and demand that they open it.\n\nA guard raises his weapon from inside.",
+      "start": 361.933,
+      "end": 368.193
+    },
+    "61": {
+      "location": "hatch",
+      "shot_type": "medium",
+      "visual_beat": "Soren pushes guard backward with one empty palm; one stray bolt chips SAME RIGHT hatch mechanism/frame, sliding panels jam partly open. No gore or duplicate guard.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You push him back through the Force. His shot strikes the hatch frame as he falls, and the locking mechanism jams.",
+      "start": 368.193,
+      "end": 375.49
+    },
+    "62": {
+      "location": "hatch",
+      "shot_type": "medium",
+      "visual_beat": "Lysa pulls Soren LEFT away from SAME partly jammed hatch opening as a second anonymous white-round-headed guard approaches inside. Archive crate stays just behind hatch.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "The archive is still behind the door. Lysa pulls you away from the opening before a second guard reaches it.",
+      "start": 375.49,
+      "end": 382.514
+    },
+    "63": {
+      "location": "hatch",
+      "shot_type": "medium",
+      "visual_beat": "Lysa questions Soren on SAME near corridor LEFT of jammed hatch, hand on rail; no newly invented corridor or hatch on opposite side.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "She asks whether that made the collection easier.",
+      "start": 382.514,
+      "end": 385.654
+    },
+    "64": {
+      "location": "hatch",
+      "shot_type": "close_up",
+      "visual_beat": "Soren kneels opening SAME damaged RIGHT-jamb mechanism cover with a tool from old case; Lysa guards approach from LEFT corridor rail. No personal lightsaber used.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You have to cut the damaged housing open with a tool you brought from the dock.\n\nWhile you work, she keeps the corridor clear.",
+      "start": 385.654,
+      "end": 391.963
+    },
+    "65": {
+      "location": "hatch",
+      "shot_type": "medium",
+      "visual_beat": "Soren keeps both white hands in SAME open right mechanism housing while Lysa blocks an approaching guard with a warning hand at left rail. One instant and exact cast.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You can move a person across a room, but you still need somebody beside you while your hands are inside a broken machine.",
+      "start": 391.963,
+      "end": 398.785
+    },
+    "66": {
+      "location": "hatch",
+      "shot_type": "wide",
+      "visual_beat": "Panels of SAME centred hatch now open enough for Soren to carry ONE green-grey archive crate out along corridor; Lysa watches guards, damage retained right jamb.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "The hatch opens far enough to recover the crate. You leave with it while Lysa watches the guards.",
+      "start": 398.785,
+      "end": 404.638
+    },
+    "67": {
+      "location": "courier_cabin",
+      "shot_type": "medium",
+      "visual_beat": "Soren places ONE green-grey archive crate on cabin floor by LEFT fixed cargo stack beside same open aft ramp; Lysa points at one short scrape from dragging it, right table/monitor fixed.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "On her ship, she makes you pay for the damage to the ramp where you dragged the load aboard.",
+      "start": 404.638,
+      "end": 409.881
+    },
+    "68": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren delivers ONE green-grey archive crate to Varek beside SAME fixed back bench. Tool case beside Soren, no master throne room invented.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek is pleased that the archive reached him. He barely asks about the crew.",
+      "start": 409.881,
+      "end": 414.681
+    },
+    "69": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren gestures at the crate's damaged corner while Varek dismisses it beside fixed bench; no corridor, alternate table or own saber.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You tell him that the hatch jammed. He says you should have forced it sooner.",
+      "start": 414.681,
+      "end": 419.901
+    },
+    "70": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren tries ONE small lock on SAME green-grey archive crate sitting on fixed BACK bench; case remains shut, old tool case beside it.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "Later, when you try opening the archive yourself, its locks refuse your access.",
+      "start": 419.901,
+      "end": 424.937
+    },
+    "71": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek takes closed archive crate and walks through SAME RIGHT sliding door; Soren stays by back bench. No private archive interior revealed yet.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek takes it from you and carries it into a private chamber.",
+      "start": 424.937,
+      "end": 428.726
+    },
+    "72": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren opens old tool case at SAME back workbench beside ONE small set of silver lightsaber parts supplied by Varek. No complete weapon on belt yet.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You have delivered a secret that you are still forbidden to read.\n\nHe gives you the parts for a lightsaber after that mission.",
+      "start": 428.726,
+      "end": 435.887
+    },
+    "73": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren holds ONE fully assembled CLOSED straight silver hilt, one red blade first ignited diagonally above bench; unused parts remain on bench. EMPTY maroon belt.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You assemble the hilt at your old tool case, testing each connection until the blade ignites red above the bench.",
+      "start": 435.887,
+      "end": 443.046
+    },
+    "74": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren switches ONE newly built silver hilt OFF beside same low-ceiling bench, Varek watches from RIGHT doorway. No second belt weapon, no blade touching ceiling.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You shut it off immediately because the ceiling is closer than you expected. Varek watches from the doorway.",
+      "start": 443.046,
+      "end": 449.97
+    },
+    "75": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek gestures from SAME right doorway toward floor as Soren grips his ONE unlit new silver hilt near back bench; belt empty while held.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He asks whether you plan to keep staring at it or learn to use it.\n\nThe new blade changes your training.",
+      "start": 449.97,
+      "end": 456.812
+    },
+    "76": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren controls ONE active red blade swung away from fixed left rod rack; Varek watches. No cut rack yet unless clearly shown in narration, no duplicated belt hilt.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "A mistake can cut through the rack instead of merely knocking it over. You have to control where you strike.",
+      "start": 456.812,
+      "end": 463.889
+    },
+    "77": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek presses Soren toward plain wall LEFT of the sole right doorway, holding ONE curved dark hilt whose red blade stops in AIR by Soren's SHOULDER, never on face. Soren holds his own straight silver weapon, both belts EMPTY.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek drives you toward a wall, then stops with his weapon near your shoulder.",
+      "start": 463.889,
+      "end": 468.57
+    },
+    "78": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren extends one empty palm to push Varek, whose boots remain grounded on same square slabs; each holds own SINGLE red blade with other hand, no belt duplicates.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He asks what you will do when an opponent is stronger. You try to push him away. His boots barely move.",
+      "start": 468.57,
+      "end": 475.548
+    },
+    "79": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Soren looks from fixed bench/left rod rack to same right door mechanism, considering the room; ONE own hilt switched OFF.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "He tells you to find an answer before the next lesson.\n\nYou begin looking at the room differently.",
+      "start": 475.548,
+      "end": 481.203
+    },
+    "80": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren's empty white mitten hand traces the same LEFT-jamb catch housing, square loose floor plate below, bench to left. ONE personal hilt OFF on sash if visible.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The door, the floor plates and the shelves are things you understand.",
+      "start": 481.203,
+      "end": 485.767
+    },
+    "81": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren repairs ONE exposed catch hinge at SAME left jamb of RIGHT sliding door; his own straight silver hilt OFF at sash, Varek not secretly duplicated.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek knows exactly how you swing your blade. He pays less attention when you are repairing a hinge.",
+      "start": 485.767,
+      "end": 491.668
+    },
+    "82": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren crouches by SAME back bench moving ONE tiny U-shaped grey clip beneath it with an empty hand; case open above, own hilt OFF at belt. No doorway relocation.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You keep practising after he leaves, using small movements rather than trying to lift the heaviest object.",
+      "start": 491.668,
+      "end": 498.168
+    },
+    "83": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "ONE tiny U-shaped clip slides beneath SAME back bench beyond view from right doorway; Soren watches beside table edge. No circular floor or second bench.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The tool clip travels beneath the bench where he cannot see it from the entrance.\n\nVarek notices your progress on a later mission.",
+      "start": 498.168,
+      "end": 505.829
+    },
+    "84": {
+      "location": "ruins_int",
+      "shot_type": "medium",
+      "visual_beat": "Soren steadies SAME leaning right archive shelf just above its square rubble support while Lysa reaches for small sealed memory-core case underneath. Ceiling stays in place.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You recover a memory core from a ruined archive without bringing the ceiling down around it.",
+      "start": 505.829,
+      "end": 510.875
+    },
+    "85": {
+      "location": "ruins_ext",
+      "shot_type": "wide",
+      "visual_beat": "ONE small squat grey Lysa courier craft rests on flat landing ground RIGHT of SAME low broken archive facade; Lysa at controls or ramp, Soren nearby, no cathedral.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Lysa flies you there because she trusts your payment more than his promises.",
+      "start": 510.875,
+      "end": 515.559
+    },
+    "86": {
+      "location": "ruins_int",
+      "shot_type": "medium",
+      "visual_beat": "Lysa withdraws ONE small memory case from beneath SAME right shelf while Soren lowers shelf gently onto existing rubble support. Clear corridor LEFT maintained.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You move the fallen shelf just enough for her to reach the case. When she gets back, you lower it onto its supports.",
+      "start": 515.559,
+      "end": 522.528
+    },
+    "87": {
+      "location": "ruins_int",
+      "shot_type": "wide",
+      "visual_beat": "Soren and Lysa move down intact LEFT corridor toward near exit with sealed memory case; one loose ceiling fragment falls BEHIND them. Same shelf remains right, no teleport to another ruin.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You both leave before the damaged corridor gives way.\n\nThe core contains a record Varek expected to keep private.",
+      "start": 522.528,
+      "end": 529.349
+    },
+    "88": {
+      "location": "courier_closed",
+      "shot_type": "close_up",
+      "visual_beat": "Soren examines ONE simple route trace on memory case reader at fixed RIGHT cabin worktable, then starts closing it. No giant hologram, Lysa's port not visible through CLOSED aft hatch.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You see his ship's route before you seal it inside the case. There is another landing site in the valley below his residence.",
+      "start": 529.349,
+      "end": 536.673
+    },
+    "89": {
+      "location": "courier_closed",
+      "shot_type": "medium",
+      "visual_beat": "Soren copies a few unlabelled route marks from reader onto his ONE dark transmitter on same RIGHT table. same left crate stack.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "Someone has been arriving while you are away. You copy the arrival times onto your own transmitter.",
+      "start": 536.673,
+      "end": 543.852
+    },
+    "90": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren hands sealed memory-core case to Varek at SAME back bench, explaining its intact condition; square slabs and sole right door fixed.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "When Varek asks whether you examined the core, you say you checked that it was intact.",
+      "start": 543.852,
+      "end": 548.889
+    },
+    "91": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Night: Soren waits beside same RIGHT sliding door, now CLOSED/locked, watching its small left-jamb latch after Varek has left. No exterior castle or new hallway.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He studies you for longer than usual. That night, the private chamber is locked even after he leaves it.",
+      "start": 548.889,
+      "end": 556.139
+    },
+    "92": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "ONE tiny U-shaped grey practice clip lies on square floor just inside SAME right doorway; Soren notices from fixed bench side. Not a large cylindrical weight.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You return to the training room and find your practice clip on the floor by the entrance.",
+      "start": 556.139,
+      "end": 560.774
+    },
+    "93": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren looks from the tiny U-shaped clip by SAME right threshold back toward its original place UNDER back bench. One clip only, no memory-panel collage.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You had left it beneath the bench. Varek has moved it where you will notice.",
+      "start": 560.774,
+      "end": 565.208
+    },
+    "94": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren checks arranged tools/retaining clips in old open case on SAME back bench; stone practice block rests fully on floor, personal silver hilt OFF at belt.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You cannot tell how much else he has found, so you begin checking your tool case before every lesson.",
+      "start": 565.208,
+      "end": 571.225
+    },
+    "95": {
+      "location": "courier_cockpit",
+      "shot_type": "medium",
+      "visual_beat": "Lysa sits in SAME RIGHT pilot chair pointing through front windscreen toward dry lower valley pad; Soren stands LEFT listening. One console and one chair.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Lysa hears you ask about the lower landing site during your next flight. She knows the route.",
+      "start": 571.225,
+      "end": 576.506
+    },
+    "96": {
+      "location": "courier_cockpit",
+      "shot_type": "medium",
+      "visual_beat": "Soren questions Lysa from SAME left standing space; she points at low valley route through unchanged windscreen. No actual Neris inserted as floating memory face.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "A young woman named Neris has been using it. You ask whether Neris travels with a weapon.",
+      "start": 576.506,
+      "end": 582.297
+    },
+    "97": {
+      "location": "courier_cockpit",
+      "shot_type": "medium",
+      "visual_beat": "Lysa holds ONE pilot control while answering Soren, who pauses at left cockpit side. Fixed right chair, angular window, dry valley, no sea/castle.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Lysa tells you that she travels with an instructor's invitation. You stop asking questions for a while.",
+      "start": 582.297,
+      "end": 588.048
+    },
+    "98": {
+      "location": "courier_closed",
+      "shot_type": "medium",
+      "visual_beat": "Soren gives Lysa instructions beside RIGHT worktable while centre aft ramp stays CLOSED during flight. No new middle cabin or extra cockpit seats.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Then you ask Lysa to keep her ship ready near the residence when you return.\n\nShe asks whether you intend to leave.",
+      "start": 588.048,
+      "end": 594.13
+    },
+    "99": {
+      "location": "courier_closed",
+      "shot_type": "medium",
+      "visual_beat": "Lysa gestures between ONE route transmitter and two payment tokens on SAME right worktable; Soren listens, same left fixed crate stack and shut hatch.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You tell her that you need to know what Varek is doing. She says those are different journeys and she charges for either.",
+      "start": 594.13,
+      "end": 600.397
+    },
+    "100": {
+      "location": "courier_closed",
+      "shot_type": "medium",
+      "visual_beat": "Soren hands Lysa ONE remaining payment token, she points toward same centred CLOSED aft hatch to discuss his eventual exit. Ship still in descent, ramp not open yet.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You give her the remaining payment from your last mission. Before landing, she makes you look at the exit ramp.",
+      "start": 600.397,
+      "end": 606.841
+    },
+    "101": {
+      "location": "courier_cabin",
+      "shot_type": "wide",
+      "visual_beat": "Lysa opens SAME centred aft ramp to dry residence upper platform just outside, Soren waiting inside with tool case. Fixed LEFT crates and RIGHT table/monitor unchanged; no port scenery.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "If she opens it for you, she expects you to come aboard instead of starting another fight in front of it.",
+      "start": 606.841,
+      "end": 612.801
+    },
+    "102": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek places ONE straight SILVER spare hilt on SAME back bench before Soren; Soren own silver hilt OFF at maroon sash, spare still OFF. Neris is absent.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Inside, Varek tells you that a visitor will join the next lesson. He asks you to repair the switch on a spare lightsaber.",
+      "start": 612.801,
+      "end": 620.234
+    },
+    "103": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren examines ONE worn connector inside opened SILVER spare hilt on fixed back bench; his own OFF hilt stays separate at sash. No curved dark spare.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The hilt has a worn connector beneath its grip, much like the one from your old cargo ramp.",
+      "start": 620.234,
+      "end": 625.158
+    },
+    "104": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren replaces ONE connector in SAME silver spare and leaves a small U-shaped retaining clip exposed below casing; tool case open beside it, no red blade during open wiring.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You replace the faulty part and test it. Then you leave a small retaining clip exposed beneath the casing.",
+      "start": 625.158,
+      "end": 632.013
+    },
+    "105": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren holds now CLOSED silver spare hilt, ONE red blade ignites away from wall/face; his own separate silver hilt OFF on belt. One assembled spare, no floating connector.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The blade works, but the connector can move if that clip is pulled.",
+      "start": 632.013,
+      "end": 636.054
+    },
+    "106": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren places the SAME repaired SILVER spare hilt OFF on fixed back bench by tool case; his own weapon remains OFF on maroon sash. No unrelated weapon rack. Varek waits at SAME fixed chair beside right door.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You place the weapon where Varek asked. He does not inspect the repair.",
+      "start": 636.054,
+      "end": 640.762
+    },
+    "107": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren hands Varek ONE repaired straight SILVER spare, blade OFF, beside fixed bench. Varek own dark curved hilt stays OFF on grey sash, no duplicate silver spare.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "He has watched you keep his doors and weapons working for so long that he accepts the hilt when you hand it over.",
+      "start": 640.762,
+      "end": 648.009
+    },
+    "108": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Morning: Neris enters SAME RIGHT sliding door in NAVY/VIOLET with completely EMPTY belt/hands; Soren closes old tool case at fixed back bench. Varek waits at chair.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "You return your tools to their case. The following morning, Neris walks into the stone chamber wearing a navy tunic and a violet sash.",
+      "start": 648.009,
+      "end": 656.006
+    },
+    "109": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek hands the ONE repaired straight SILVER spare hilt OFF to Neris, who glances toward Soren. Soren own silver hilt OFF at maroon sash; Neris belt EMPTY.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "Varek gives her the repaired weapon.\n\nNow you hear him tell her to take your place. She looks at you before she ignites the blade.",
+      "start": 656.006,
+      "end": 664.176
+    },
+    "110": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek explains from beside fixed chair; Neris holds ONE straight silver spare with one red blade now active pointed away from faces, Soren listens with own weapon OFF at sash.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "Varek explains that you have begun hiding your progress, and an apprentice who hides things has already started challenging his master.",
+      "start": 664.176,
+      "end": 672.042
+    },
+    "111": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris asks Varek a question, holding one silver spare red blade safely upright; Varek gestures toward Soren. Same chair, doorway and bench, no hilt at Neris belt.",
+      "characters": [
+        "Varek",
+        "Neris",
+        "Soren"
+      ],
+      "narration": "Neris asks what happens if she loses. He tells her that she should concentrate on winning.",
+      "start": 672.042,
+      "end": 677.453
+    },
+    "112": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Neris attacks Soren across SAME open square-slab floor as ONLY right sliding door closes to right pocket behind Varek's fixed chair; each combatant holds ONE red blade, belts empty.",
+      "characters": [
+        "Soren",
+        "Neris",
+        "Varek"
+      ],
+      "narration": "You can hear the door motor starting behind his chair.\n\nShe attacks while the door is closing.",
+      "start": 677.453,
+      "end": 682.825
+    },
+    "113": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren blocks Neris's first red-blade strike away from his WHITE face; one straight silver hilt held per combatant, no belt duplicates. Varek watches in SAME fixed chair.",
+      "characters": [
+        "Soren",
+        "Neris",
+        "Varek"
+      ],
+      "narration": "You meet the first strike and turn her blade away from your face.",
+      "start": 682.825,
+      "end": 686.848
+    },
+    "114": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris recovers stance beside original left rack while Soren guards on near floor; Varek seated LEFT of RIGHT sliding door, not on a new centre throne.",
+      "characters": [
+        "Soren",
+        "Neris",
+        "Varek"
+      ],
+      "narration": "She has been trained well enough to recover before you can push her back. Varek watches you trade blows across the chamber.",
+      "start": 686.848,
+      "end": 694.192
+    },
+    "115": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren grips his ONE silver saber with ONE hand, his OTHER empty hand draws ONE tiny U-shaped retaining clip from Neris's ONE silver hilt. Exactly TWO arms each; Neris blade just active before failure, both belts empty. Varek watches from SAME fixed chair behind, ONE dark hilt OFF at sash.",
+      "characters": [
+        "Soren",
+        "Neris",
+        "Varek"
+      ],
+      "narration": "You keep your weapon between you and Neris while the small clip beneath her hilt starts sliding from its housing.",
+      "start": 694.192,
+      "end": 701.238
+    },
+    "116": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris stares at ONE now-UNLIT silver spare in her hands after clip removal, belt EMPTY; Soren holds own ONE active blade safely away. Fixed chair/door behind.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "When you pull it free through the Force, her blade shuts off. She stares at the empty hilt.",
+      "start": 701.238,
+      "end": 706.774
+    },
+    "117": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren turns from Neris toward Varek rising from SAME fixed chair, master now holding ONE dark CURVED hilt with active red blade, belt EMPTY. Neris spare OFF in hand.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "You could strike before she moves, but you turn toward Varek. He rises from his chair with his own weapon already active.",
+      "start": 706.774,
+      "end": 714.437
+    },
+    "118": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek flicks ONE tiny loose U-shaped clip toward the plain wall left of doorway while holding his own active curved weapon with other hand; Soren retreats, Neris unlit spare in hand.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "Neris has made you cross the room and show him your first trick. He sends the fallen clip against the wall as you reach for it again.",
+      "start": 714.437,
+      "end": 721.782
+    },
+    "119": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren retreats to LEFT jamb of SAME right sliding door, Varek follows and crosses ONE red blade against Soren's ONE guard. Both belts empty, Neris back by chair.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "You retreat toward the heavy door. Varek follows, cutting across your guard until your shoulder hits the stone frame.",
+      "start": 721.782,
+      "end": 729.0
+    },
+    "120": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek's ONE free hand reaches toward Soren's throat without touching or wounds; other hand holds curved saber. Soren guards low with ONE own blade, shoulder at same left doorframe.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You cannot hold him back for long. His next strike knocks your blade low, and he reaches toward your throat.",
+      "start": 729.0,
+      "end": 735.415
+    },
+    "121": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren pulls ONE exposed catch in SAME LEFT jamb housing beside RIGHT sliding door through Force with ONE empty hand; his other hand holds own silver blade. No extra arm, no relocated latch. Varek stays at SAME right threshold following Soren, holding own ONE curved dark red weapon.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You pull the door's exposed catch rather than trying to move his whole body.",
+      "start": 735.415,
+      "end": 739.854
+    },
+    "122": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Same stone slab slides LEFT from right pocket against Varek's weapon forearm by threshold; Soren steps to original bench side. ONE curved dark hilt partly trapped, no blood.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "The slab drives into his weapon arm before he can turn it aside.\n\nThe motor strains against him.",
+      "start": 739.854,
+      "end": 745.612
+    },
+    "123": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Soren draws SAME left-jamb housing latch fully DOWN with one empty white palm extended, while holding own weapon in other hand. Motor strains, single right doorway fixed. Varek remains trapped at SAME right doorframe, ONE curved dark hilt and exactly two arms.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You know where its housing opens because you spent an evening repairing it. You force the latch fully down.",
+      "start": 745.612,
+      "end": 751.531
+    },
+    "124": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek uses ONE free hand to push SAME stone slab RIGHT back into wall pocket; his OTHER arm holds the freed curved dark saber. Soren steps clear, no third arm or second door.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "Varek has to release his grip on you to push the door away, and you step clear while his attention is on the stone.",
+      "start": 751.531,
+      "end": 758.479
+    },
+    "125": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris stands behind SAME chair LEFT of doorway and places ONE unlit damaged SILVER spare hilt fully on floor by chair leg. Her hands and belt EMPTY afterward.",
+      "characters": [
+        "Neris"
+      ],
+      "narration": "Neris is behind his chair, watching. She leaves her broken weapon on the floor.",
+      "start": 758.479,
+      "end": 764.21
+    },
+    "126": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Varek steps away from sole right door into clear square-slab floor with own curved red blade; Soren meets him with own straight silver red blade. Neris empty-belt by chair, spare on floor.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "Varek gets the door moving again and comes toward you. This time, you have space to meet him.",
+      "start": 764.21,
+      "end": 769.903
+    },
+    "127": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "At SAME right threshold, Soren turns Varek's one blade aside with his own ONE silver blade and steps past guard; no impalement/gore, both belts empty.",
+      "characters": [
+        "Soren",
+        "Varek"
+      ],
+      "narration": "You catch his blade near the frame, turn with it and strike before he can restore his stance.",
+      "start": 769.903,
+      "end": 775.643
+    },
+    "128": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Varek's ONE dark curved hilt lies unlit on SAME right threshold; he falls to knees or crouches stopped, no drawn wound. Soren switches own held silver blade OFF. Neris's separate silver spare stays by chair.",
+      "characters": [
+        "Soren",
+        "Varek",
+        "Neris"
+      ],
+      "narration": "His weapon falls against the threshold. When he stops reaching for it, you shut yours off.",
+      "start": 775.643,
+      "end": 781.277
+    },
+    "129": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Neris waits on same far floor beside fixed chair, her hands/belt EMPTY, silver spare still on floor; Soren turns toward ONLY right door as courier landing heard. No extra doorway or new ship inside room.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "Neris keeps watching from the other side of the room. You can hear a ship landing outside.",
+      "start": 781.277,
+      "end": 786.7
+    },
+    "130": {
+      "location": "landing",
+      "shot_type": "medium",
+      "visual_beat": "ONE small grey Lysa courier has landed on SAME upper stone platform, its single aft ramp opens. Soren approaches from modest residence entrance with old tool case; no other ship.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "Lysa opens the ramp as promised. You walk toward it with your tool case.",
+      "start": 786.7,
+      "end": 791.479
+    },
+    "131": {
+      "location": "landing",
+      "shot_type": "medium",
+      "visual_beat": "Lysa at same courier ramp asks Soren if he leaves; Neris stands at fixed residence doorway asking a question, hands/belt EMPTY. Same dry valley RIGHT, no castle/sea.",
+      "characters": [
+        "Soren",
+        "Lysa",
+        "Neris"
+      ],
+      "narration": "She asks whether you are leaving. Behind you, Neris asks what she should do now.",
+      "start": 791.479,
+      "end": 797.132
+    },
+    "132": {
+      "location": "landing",
+      "shot_type": "medium",
+      "visual_beat": "Soren stops beside SAME open courier ramp and turns his white round head toward low residence entrance, old case at side; Lysa waits, Neris remains doorway.",
+      "characters": [
+        "Soren",
+        "Lysa",
+        "Neris"
+      ],
+      "narration": "You stop beside the ramp and look back at the residence. Varek's archive is still inside.",
+      "start": 797.132,
+      "end": 802.969
+    },
+    "133": {
+      "location": "landing",
+      "shot_type": "close_up",
+      "visual_beat": "Soren places ONE old dark tool case down on SAME upper grey platform beside courier ramp, looking back at modest residence. No duplicate case or new coast.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "His ship, his lessons and the records he kept from you are all here. You put the tool case down on the ground.",
+      "start": 802.969,
+      "end": 809.664
+    },
+    "134": {
+      "location": "landing",
+      "shot_type": "medium",
+      "visual_beat": "Lysa returns ONE plain payment token to Soren at SAME courier ramp before closing it; Neris at doorway, empty belt. Same lower pad far right.",
+      "characters": [
+        "Soren",
+        "Lysa",
+        "Neris"
+      ],
+      "narration": "Lysa waits until you tell her you are staying. She returns the unused part of your payment and closes the ramp.",
+      "start": 809.664,
+      "end": 816.148
+    },
+    "135": {
+      "location": "landing",
+      "shot_type": "wide",
+      "visual_beat": "Lysa points DOWN towards small lower dirt landing pad far RIGHT of SAME upper platform while Soren listens beside tool case. Stay here; no travel to a new shore or sea.",
+      "characters": [
+        "Soren",
+        "Lysa"
+      ],
+      "narration": "You ask whether she will still take work from you. She says she will collect ordinary cargo from the lower landing site.",
+      "start": 816.148,
+      "end": 823.553
+    },
+    "136": {
+      "location": "landing",
+      "shot_type": "medium",
+      "visual_beat": "Lysa raises a firm open white hand toward Soren from SAME courier ramp, indicating her condition; Neris watches at residence doorway. No return to chamber interior during this line.",
+      "characters": [
+        "Soren",
+        "Lysa",
+        "Neris"
+      ],
+      "narration": "She will not return to this chamber to collect another person you have decided to test.",
+      "start": 823.553,
+      "end": 828.623
+    },
+    "137": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren comes back through SAME right chamber doorway; Neris by fixed chair picks up her ONE damaged silver spare from floor, belt EMPTY. Varek's dark hilt remains separate at threshold, no duplicate spare.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "You watch her ship lift from the valley before going back inside.\n\nNeris has picked up the damaged hilt.",
+      "start": 828.623,
+      "end": 835.548
+    },
+    "138": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris explains why she set weapon down, holding ONE damaged straight silver spare at fixed back bench; Soren listens, her belt EMPTY and his own weapon OFF at sash.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "You ask why she left it on the floor during the fight. She tells you that Varek would have killed either of you if it suited him.",
+      "start": 835.548,
+      "end": 842.442
+    },
+    "139": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Neris has put the small retaining clip back and holds ONE fully CLOSED repaired SILVER hilt, one red blade ignited into free air; Soren points from one pace away. Her belt EMPTY, no live open wiring.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "You show her the loose connector and let her put the clip back. The weapon ignites.",
+      "start": 842.442,
+      "end": 847.43
+    },
+    "140": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Soren takes ONE backward step beside fixed bench while Neris switches SAME repaired silver weapon OFF; keep EMPTY Neris belt and pure-white face/hands.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "You take a step away before telling her to switch it off. She has noticed that step.",
+      "start": 847.43,
+      "end": 853.054
+    },
+    "141": {
+      "location": "chamber",
+      "shot_type": "wide",
+      "visual_beat": "Soren stands beside SAME fixed plain chair now as master; Neris faces him across unchanged chamber floor, repaired silver weapon OFF on bench or in one hand. No invented throne or grand audience hall.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "You become the Sith Lord who keeps the residence and takes Neris as an apprentice.",
+      "start": 853.054,
+      "end": 857.859
+    },
+    "142": {
+      "location": "private",
+      "shot_type": "medium",
+      "visual_beat": "Soren unlocks SAME dark back-wall archive cabinet with ONE small access device; centre-left desk and right sole entrance unchanged. No full second room or gilded throne.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "The locked archive opens to the access device you recovered from Varek.",
+      "start": 857.859,
+      "end": 862.216
+    },
+    "143": {
+      "location": "private",
+      "shot_type": "medium",
+      "visual_beat": "Soren reads ONE plain grey record at SAME foreground-left wood desk; cabinet behind opened, two back-left record shelves fixed. No floating galaxy or hologram.",
+      "characters": [
+        "Soren"
+      ],
+      "narration": "You read the records you once carried here without permission to touch them. Some concern the places where you worked.",
+      "start": 862.216,
+      "end": 868.6
+    },
+    "144": {
+      "location": "private",
+      "shot_type": "medium",
+      "visual_beat": "Soren slides ONE record list into SAME desk drawer before Neris enters through fixed RIGHT doorway; her hands/belt EMPTY, weapon being kept separate on original bench outside frame.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "Others list candidates he visited while you were training. You move that list into a drawer before Neris enters.",
+      "start": 868.6,
+      "end": 874.591
+    },
+    "145": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris raises SAME small grey stone practice block above original square floor while Soren walks on far side; same left rack/back bench/chair/right doorway. No weapon in her hands/belt.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "Her lessons begin in the room you know. You let her lift the stone block while you walk behind it.",
+      "start": 874.591,
+      "end": 880.56
+    },
+    "146": {
+      "location": "chamber",
+      "shot_type": "medium",
+      "visual_beat": "Neris turns before Soren's boot reaches her while block remains suspended; SAME right door catches partly closed at its old left-jamb housing, no new door/motor.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "She turns before your foot reaches her, and you recognise the movement. Later, the door catches at the end of its travel.",
+      "start": 880.56,
+      "end": 887.793
+    },
+    "147": {
+      "location": "chamber",
+      "shot_type": "close_up",
+      "visual_beat": "Neris extends ONE empty white hand toward SAME left-jamb door housing, Soren raises a stop palm; tools on original back bench, no weapon duplicates.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "Neris offers to repair the housing. You tell her to leave it until you have checked it yourself.",
+      "start": 887.793,
+      "end": 893.859
+    },
+    "148": {
+      "location": "private",
+      "shot_type": "medium",
+      "visual_beat": "Neris places ONE small U-shaped retaining clip on SAME foreground-left wood desk before Soren. Her ONE opened silver hilt sits OFF on desk as maintenance prop, BOTH hands and belt EMPTY after placing clip.",
+      "characters": [
+        "Neris",
+        "Soren"
+      ],
+      "narration": "She looks at the worn latch, then puts her tools away.\n\nThat evening, she leaves the small retaining clip on your desk.",
+      "start": 893.859,
+      "end": 901.161
+    },
+    "149": {
+      "location": "private",
+      "shot_type": "medium",
+      "visual_beat": "Soren looks from tiny U-shaped clip on SAME desk to Neris waiting at fixed RIGHT doorway. Neris hands/belt EMPTY, her single opened OFF silver hilt remains on desk, no red blade.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "It came loose while she was checking her lightsaber. You look from the piece of metal to the apprentice waiting by the door.",
+      "start": 901.161,
+      "end": 908.836
+    },
+    "150": {
+      "location": "private",
+      "shot_type": "close_up",
+      "visual_beat": "Soren rests ONE white mitten hand on his own ONE unlit silver belt hilt, then looks toward Neris's EMPTY hands by SAME right doorway. Her only opened hilt stays desk, no duplicate belt weapon.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "Your hand settles over your own hilt before you notice that hers are empty.",
+      "start": 908.836,
+      "end": 912.729
+    },
+    "151": {
+      "location": "private",
+      "shot_type": "medium",
+      "visual_beat": "Neris waits with BOTH white hands and belt EMPTY by SAME right doorway, Soren beside left desk deciding whether she may finish repair; small clip and ONE opened OFF silver spare stay desk. Same low private room ending.",
+      "characters": [
+        "Soren",
+        "Neris"
+      ],
+      "narration": "Neris is still waiting for you to tell her whether she should finish the repair.",
+      "start": 912.729,
+      "end": 917.36
+    }
+  },
+  "state": "Fixed masters inspected; complete new scene images still pending. Original voice timings preserved."
+}

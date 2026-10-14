@@ -11,12 +11,18 @@ SHOT_TYPES = {'wide', 'medium', 'close_up', 'insert', 'over_shoulder', 'pov', 't
 SCENE_KEYS = ('location_view', 'shot_type', 'visual_beat', 'location_contract')
 ROLES = {'location-master', 'location-view'}
 MODES = {'free', 'consistent'}
+CAMERA_POLICIES = {'stable', 'varied'}
 
 
 def mode(p):
     """The project freezes its style choice. Older projects keep free scenery."""
     return (p.get('settings', {}).get('visuals', {}).get('background_mode')
             or p.get('style_snapshot', {}).get('background_mode') or 'free')
+
+
+def camera_policy(p):
+    return (p.get('settings', {}).get('visuals', {}).get('camera_policy')
+            or p.get('style_snapshot', {}).get('camera_policy') or 'varied')
 
 
 RULES = (
@@ -26,11 +32,8 @@ RULES = (
     'Describe permanent geometry using world-space anchors (bow/stern, north/south walls), '
     'NOT screen-left/screen-right, which change with camera position. Doors, windows, furnishings '
     'and colours stay fixed. Moving props, damage, weather and time follow the narrative. '
-    'Give each recurring space explicit named camera views with genuinely different camera positions '
-    '(entrance facing inward, opposite wall facing entrance, side wall, overhead, character POV). '
+    'A different physical camera position needs an explicitly named, inspected image view. '
     'A crop, zoom, day/night change or shot-size change is NOT a new viewpoint. '
-    'For a space used in at least six shots, use at least three distinct viewpoints. '
-    'Never use one viewpoint more than twice consecutively in the same space. '
     'Keep backgrounds shallow and simple; camera variety must not add decorative architecture. '
     'Every shot shows a new narrated action, detail, reaction or consequence; camera rotation alone '
     'does not count as new story information. Return exact requested shot IDs in order. '
@@ -41,6 +44,18 @@ RULES = (
     'shot_type is wide|medium|close_up|insert|over_shoulder|pov|top_down|low_angle. '
     'angle states the physical camera position and viewing direction, not lens size.'
 )
+
+
+def rules(p):
+    if camera_policy(p) == 'stable':
+        return RULES + (' CAMERA POLICY: STABLE. Keep one established camera axis during a continuous '
+            'scene. Use framing, foreground action and inserts for variety. No minimum viewpoints '
+            'and no forced rotation after repeated shots. Change axis only for an authored transition '
+            'or a different established space; never mirror the room.')
+    return RULES + (' CAMERA POLICY: VARIED. For a space used in at least six shots, use at least '
+        'three distinct physical viewpoints. Never use one viewpoint more than twice consecutively '
+        'in the same space. Every view preserves the same world-space geometry and needs an '
+        'inspected image before generation; a reverse angle is not a different room.')
 
 
 def registry(p):
@@ -81,8 +96,9 @@ def check_registry(p):
     for name, entry in registry(p).items():
         _ref(p, entry['master'], name)
         for key, view in entry['views'].items():
-            if view.get('reference'):
-                _ref(p, view['reference'], name, key)
+            if not view.get('reference'):
+                raise HTTPException(422, 'Each camera view needs its own inspected image binding; the master view may bind the master file')
+            _ref(p, view['reference'], name, key)
 
 
 def summary(p):
@@ -90,7 +106,7 @@ def summary(p):
             for name, e in registry(p).items()}
 
 
-def audit(shots):
+def audit(shots, policy='varied'):
     views, types = defaultdict(set), defaultdict(set)
     counts = Counter()
     warnings, run, previous = [], 0, None
@@ -103,19 +119,20 @@ def audit(shots):
             types[name].add(s['shot_type'])
         pair = (name, view)
         run = run + 1 if pair == previous else 1
-        if view and run == 3:
+        if policy == 'varied' and view and run == 3:
             warnings.append(f'Shot {s["id"]}: the same location view appears three times in a row')
         previous = pair
-    for name, count in counts.items():
-        if count >= 6 and len(views[name]) < 3:
-            warnings.append(f'{name}: {count} shots use fewer than three named viewpoints')
-        if count >= 6 and len(types[name]) < 2:
-            warnings.append(f'{name}: use different shot sizes as well as viewpoints')
+    if policy == 'varied':
+        for name, count in counts.items():
+            if count >= 6 and len(views[name]) < 3:
+                warnings.append(f'{name}: {count} shots use fewer than three named viewpoints')
+            if count >= 6 and len(types[name]) < 2:
+                warnings.append(f'{name}: use different shot sizes as well as viewpoints')
     return {'locations': {name: {'shots': count, 'views': sorted(views[name]),
             'shot_types': sorted(types[name])} for name, count in counts.items()}, 'warnings': warnings}
 
 
-def validate_plan(data, shots, approved=None):
+def validate_plan(data, shots, approved=None, policy='varied'):
     places, rows = data.get('locations'), data.get('shots')
     if (not isinstance(places, dict) or not places or not isinstance(rows, list)
             or [r.get('id') for r in rows if isinstance(r, dict)] != [s['id'] for s in shots]):
@@ -147,18 +164,22 @@ def validate_plan(data, shots, approved=None):
     for row in normalized:
         angle = places[row['location_id']]['views'][row['location_view']]['angle']
         row['location_view'] = ' '.join(angle.casefold().split())
-    if audit(normalized)['warnings']:
-        raise ValueError('Camera plan repeats viewpoints; no partial plan is published')
+    for name, entry in places.items():
+        angles = [' '.join(v['angle'].casefold().split()) for v in entry['views'].values()]
+        if len(angles) != len(set(angles)):
+            raise ValueError('Different view names cannot disguise the same camera position')
+    if audit(normalized, policy)['warnings']:
+        raise ValueError('Camera plan violates this preset\'s varied-view policy')
     return {'locations': places, 'shots': copy.deepcopy(rows)}
 
 
 async def plan(p, shots, model):
     approved = summary(p)
-    raw = await llm.chat([{'role': 'system', 'content': RULES}, {'role': 'user', 'content':
+    raw = await llm.chat([{'role': 'system', 'content': rules(p)}, {'role': 'user', 'content':
         __import__('json').dumps({'story': p['script'], 'location_registry': approved,
             'shots': [{'id': s['id'], 'narration': s['text']} for s in shots]}, ensure_ascii=False)}],
         model=model, effort='low', attempts=1, hedge=False, label='Locations and camera plan')
-    return validate_plan(parse_json(raw), shots, approved)
+    return validate_plan(parse_json(raw), shots, approved, camera_policy(p))
 
 
 def contract(plan, scene):
@@ -168,9 +189,9 @@ def contract(plan, scene):
             + entry['layout'] + '\nPermanent world-space anchors: ' + '; '.join(entry['anchors'])
             + '\nCamera position and direction: ' + view['angle'] + '\nVisible view: ' + view['description']
             + '\nFraming: ' + scene['shot_type'] + '\nNew narrated information: ' + scene['visual_beat']
-            + '\nPreserve this place\'s topology, object colours and permanent landmarks. Screen positions '
-              'change naturally with the camera. Recreate the requested view rather than copy a reference '
-              'composition. Keep the same architecture; do not invent windows, doors or furniture. '
+            + '\nPreserve this place\'s topology, object colours and permanent landmarks. Match the '
+              'approved view\'s camera axis and left/right orientation; framing may crop or widen '
+              'without rotating or mirroring the room. Do not invent windows, doors or furniture. '
               'Moving objects, damage and light change only when this scene explicitly calls for it.')
 
 
@@ -185,10 +206,11 @@ def selected(p, scene):
     if not entry or not view:
         raise HTTPException(422, 'Choose an explicit registered location and view')
     refs = [_ref(p, entry['master'], scene['location_id'])]
-    if view.get('reference'):
-        ref = _ref(p, view['reference'], scene['location_id'], scene['location_view'])
-        if (ref['owner'], ref['path']) != (refs[0]['owner'], refs[0]['path']):
-            refs.append(ref)
+    if not view.get('reference'):
+        raise HTTPException(422, 'The selected camera view has no inspected image; generate and review it before shots')
+    ref = _ref(p, view['reference'], scene['location_id'], scene['location_view'])
+    if (ref['owner'], ref['path']) != (refs[0]['owner'], refs[0]['path']):
+        refs.append(ref)
     return refs
 
 
@@ -201,7 +223,8 @@ def binding(p, scene):
             purpose = 'permanent geometry master' if ref['role'] == 'location-master' else 'approved requested camera view'
             lines.append(f'Image {index}: {scene["location_id"]}; {purpose}.')
     return ('LOCATION IMAGE BINDINGS (exact attachment order):\n' + '\n'.join(lines)
-            + '\nThese images fix the same physical space, not the actor pose or screen composition. '
+            + '\nThese images fix the same physical space AND the approved camera orientation, '
+              'not the actor pose. Crop or widen on this axis; never mirror or invent the reverse side. '
               'Use the saved camera contract. Never import people from a location image.')
 
 
@@ -215,8 +238,10 @@ def author(p, scene, base_refs):
 
 
 def validate(p, scene):
-    if mode(p) != 'consistent' or not registry(p):
+    if mode(p) != 'consistent':
         return
+    if not registry(p):
+        raise HTTPException(422, 'Consistent backgrounds require inspected location masters before image generation')
     if scene.get('shot_type') not in SHOT_TYPES or not isinstance(scene.get('visual_beat'), str):
         raise HTTPException(422, 'Save the shot framing and its new narrated action')
     required = selected(p, scene)

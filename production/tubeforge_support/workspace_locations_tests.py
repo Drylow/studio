@@ -39,6 +39,8 @@ def project_with_location(workspace):
     entry = camera_plan()['locations']['cabin']
     entry['master'] = {'owner':'project','path':'refs/cabin.png','role':'location-master',
         'location_id':'cabin','review_state':'verified','sha256':hashlib.sha256(master.read_bytes()).hexdigest()}
+    for key, view in entry['views'].items():
+        view['reference'] = dict(entry['master'], role='location-view', location_view=key)
     p['workspace_location_registry'] = {'cabin':entry}
     return p
 
@@ -59,10 +61,11 @@ def test_global_plan_counts_positions_not_crop_names():
     with pytest.raises(ValueError): locations.validate_plan(data,data['shots'])
 
 
-def test_repeated_same_angle_and_unknown_views_are_rejected():
+def test_stable_axis_is_allowed_and_unknown_views_are_rejected():
     data = camera_plan()
     for row in data['shots']: row['location_view']='door'
-    with pytest.raises(ValueError): locations.validate_plan(data,data['shots'])
+    assert len(locations.validate_plan(data,data['shots'],policy='stable')['shots']) == 9
+    with pytest.raises(ValueError): locations.validate_plan(data,data['shots'],policy='varied')
     data=camera_plan();data['shots'][0]['location_view']='invented-room'
     with pytest.raises(ValueError): locations.validate_plan(data,data['shots'])
 
@@ -135,8 +138,7 @@ def test_real_prepass_uses_configured_proxy_once_and_never_generates_images(work
 
 
 def test_prepare_connects_global_views_to_exact_prompts_and_saved_receipts(workspace,monkeypatch):
-    p=store.get_project(create(workspace[0],custom_script='You repair the motor.')['id'])
-    p['settings']['visuals']['background_mode']='consistent'
+    p=project_with_location(workspace)
     data=camera_plan();shots=[dict(row,text=p['script'],start=i*6,end=(i+1)*6)
                                for i,row in enumerate(data['shots'])]
     style=store.get_style(p['style_id']);refs=[]
@@ -157,6 +159,33 @@ def test_prepare_connects_global_views_to_exact_prompts_and_saved_receipts(works
     assert all(s['location_contract'] in s['prompt'] for s in p['scenes'])
     p['scenes'][0]['location_view']='side-wall'
     assert not planning.authored(p,p['scenes'][0])
+
+
+def test_consistent_mode_without_masters_cannot_silently_generate_free_scenery(workspace):
+    p=project_with_location(workspace);p['workspace_location_registry']={}
+    with pytest.raises(HTTPException) as error:
+        locations.validate(p, {'id':1})
+    assert error.value.status_code == 422
+
+
+def test_unillustrated_reverse_angle_blocks_before_paid_generation(workspace):
+    p=project_with_location(workspace)
+    p['workspace_location_registry']['cabin']['views']['side-wall'].pop('reference')
+    with pytest.raises(HTTPException): locations.check_registry(p)
+    with pytest.raises(HTTPException):
+        locations.selected(p, dict(location_id='cabin', location_view='side-wall'))
+
+
+def test_camera_policy_is_frozen_per_project_and_legacy_variety_is_preserved(workspace):
+    p=project_with_location(workspace)
+    assert locations.camera_policy(p)=='varied'
+    assert 'at least three distinct' in locations.rules(p)
+    p['settings']['visuals'].pop('camera_policy', None)
+    p['style_snapshot']['camera_policy']='stable'
+    assert locations.camera_policy(p)=='stable'
+    assert 'No minimum viewpoints' in locations.rules(p)
+    p['settings']['visuals']['camera_policy']='varied'
+    assert locations.camera_policy(p)=='varied'
 
 
 def test_free_mode_ignores_location_registry_but_keeps_identity_references(workspace):

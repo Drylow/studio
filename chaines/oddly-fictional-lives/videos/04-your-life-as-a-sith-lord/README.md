@@ -11,3 +11,6 @@ Studio: https://tools.kanye.studio/2d#/video/your-life-as-a-sith-lord-998563/tex
 Canon anchors: https://www.starwars.com/databank/darth-bane establishes the Rule of Two; https://www.starwars.com/databank/emperor-palpatine-darth-sidious supports the master/apprentice rivalry tradition. This is an original story in the Banite tradition, not a universal academy/rank progression or a Palpatine biography. Neris is a prospective replacement until Soren takes the master's place.
 
 Script and editorial review are saved here. Private production receipts, image requests, inspection notes and API state: `work/oddly-fictional-wave-2026-10-14/`. No final-video claim until actual media review.
+
+
+Background rebuild: the original full visual version was rejected for changing location geometry. `visual-plan.json` contains primary-authored shot actions, exact original voice timings and the inspected empty locations in `locations/`. Keep an established axis during continuous action; explicit derived views/damage states remain bound to their original space. Image generation and render remain on the hosted studio. Characters and voices are retained; new scene frames must be inspected before rendering.

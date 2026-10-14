@@ -40,6 +40,10 @@ def _save_channel(c):
 
 
 def _update_style(s, body):
+    if 'camera_policy' in body:
+        if body['camera_policy'] not in ('stable', 'varied'):
+            raise HTTPException(422, 'Choose a stable camera axis or varied camera views')
+        s['visuals']['camera_policy'] = body['camera_policy']
     if 'background_mode' in body:
         if body['background_mode'] not in ('free', 'consistent'):
             raise HTTPException(422, 'Choose free backgrounds or consistent locations')

@@ -1,0 +1,2146 @@
+{
+  "camera_policy": "stable",
+  "background_mode": "consistent",
+  "locations": {
+    "workshop": {
+      "description": "Harbour workshop interior",
+      "layout": "ONE rectangular low corrugated-metal service room. North/back wall: long wood workbench with pegboard of spanners above, two olive lockers at its RIGHT end; a small dark rectangular physical communication monitor mounted over lockers, fixed to wall. West/left wall: wide roll-up entry to freight yard, with thin grey steel jamb. East/right wall: ONE small rectangular window, visible above tool cabinet. Plain concrete floor, single pale overhead hanging lamp. A separate small rectangular wood worktable in middle foreground, two stools. No extra doors, desks, skylights or ocean-facing giant openings.",
+      "angle": "Camera at south-west corner facing north-east. Yard entrance at image left edge, north workbench behind centre, two lockers/monitor back right, middle worktable foreground. Preserve this axis for report, sleep, repair and disclosure.",
+      "source_shot": 81,
+      "anchors": [
+        "ONE rectangular low corrugated-metal service room.",
+        "North/back wall: long wood workbench with pegboard of spanners above, two olive lockers at its RIGHT end; a small dark rectangular physical communication monitor mounted over lockers, fixed to wall.",
+        "West/left wall: wide roll-up entry to freight yard, with thin grey steel jamb.",
+        "East/right wall: ONE small rectangular window, visible above tool cabinet.",
+        "Plain concrete floor, single pale overhead hanging lamp.",
+        "A separate small rectangular wood worktable in middle foreground, two stools.",
+        "No extra doors, desks, skylights or ocean-facing giant openings.."
+      ],
+      "file": "locations/workshop.png",
+      "sha256": "5f75d4e12a6afa5c2bc3827483586939a841a5fce59dfc61193926aef1b9cee6",
+      "inspection": "Entry left, wood/pegboard back bench, paired olive lockers/physical monitor back right, right window, centre table and two stools; nighttime light. Actual smooth geometry same for all future uses."
+    },
+    "hangar": {
+      "description": "Imperial transport departure bay",
+      "layout": "Grey enclosed rectangular metal hangar with ONE broad rectangular aft ramp opening at north wall, ramp descends away from camera. Two fixed stacks of dark-grey equipment crates along west/left wall; clear centre aisle. Plain ceiling strip lights and yellow edge lines. No curved cockpit or briefing table.",
+      "angle": "Camera inside south end looking north to open ramp, west crate stacks at image left. Daylight sky visible through opening only.",
+      "source_shot": 29,
+      "anchors": [
+        "Grey enclosed rectangular metal hangar with ONE broad rectangular aft ramp opening at north wall, ramp descends away from camera.",
+        "Two fixed stacks of dark-grey equipment crates along west/left wall; clear centre aisle.",
+        "Plain ceiling strip lights and yellow edge lines.",
+        "No curved cockpit or briefing table.."
+      ],
+      "file": "locations/hangar.png",
+      "sha256": "bbaba709d56c019289efbdbf7b55b840ab0c1f088d41afb3965688d479614cbf",
+      "inspection": "Left fixed grey cargo stack, central ramp to sky, rectangular opening and yellow floor-edge lines; actual control lights fixed."
+    },
+    "court": {
+      "description": "Imperial training court",
+      "layout": "Rectangular pale-grey stone courtyard, high plain north wall with THREE evenly spaced black-and-gold narrow banners. Shallow THREE-step platform centered on north wall. ONE rectangular grey storage door at west end of north wall, on image left. No other doors or windows. Movable low dark square landing platform with thin yellow border placed in courtyard centre. A single open skeletal grey transport frame lies near east wall, no assembled spaceship. Plain square paving slabs, no helipad H.",
+      "angle": "Camera at south-west court corner facing north-east, wide level three-quarter establishing view. North wall behind, storage door on left, steps in middle, east frame on right.",
+      "source_shot": 7,
+      "anchors": [
+        "Rectangular pale-grey stone courtyard, high plain north wall with THREE evenly spaced black-and-gold narrow banners.",
+        "Shallow THREE-step platform centered on north wall.",
+        "ONE rectangular grey storage door at west end of north wall, on image left.",
+        "No other doors or windows.",
+        "Movable low dark square landing platform with thin yellow border placed in courtyard centre.",
+        "A single open skeletal grey transport frame lies near east wall, no assembled spaceship.",
+        "Plain square paving slabs, no helipad H.."
+      ],
+      "file": "locations/court.png",
+      "sha256": "62bdf4acaaf3d47d036503416dcf70ee2b5824c1d0eee6c638cb0acb666fbd95",
+      "inspection": "Three gold/black banners, left storage door, central three steps, square movable yellow-bordered landing deck and open skeletal frame right. No rotating helipad."
+    },
+    "storm_road": {
+      "description": "Hillside storm rescue road",
+      "layout": "ONE narrow paved road climbing from lower-left foreground to upper-right background on wooded slope. Uphill NORTH bank on image left has low rock face and roots; downhill SOUTH verge on image right is broken above scrub drop. ONE grey van stopped diagonally against broken right verge, nose uphill; fallen plain brown tree trunk crosses its roof from uphill bank. A low grey guardrail follows downhill edge, broken beside van. Two orange-white barriers on intact road behind van, no urban structures. Match the exact drawn road bend/van position: van tilted at right verge, never mirrored to opposite bank.",
+      "angle": "Camera on safe downhill road approach looking uphill north-east; uphill bank left, van and broken verge right. Stable axis through rescue and bag recovery. Overcast drawn rain, no photorealism.",
+      "source_shot": 74,
+      "anchors": [
+        "ONE narrow paved road climbing from lower-left foreground to upper-right background on wooded slope.",
+        "Uphill NORTH bank on image left has low rock face and roots; downhill SOUTH verge on image right is broken above scrub drop.",
+        "ONE grey van stopped diagonally against broken right verge, nose uphill; fallen plain brown tree trunk crosses its roof from uphill bank.",
+        "A low grey guardrail follows downhill edge, broken beside van.",
+        "Two orange-white barriers on intact road behind van, no urban structures.."
+      ],
+      "file": "locations/storm_road.png",
+      "sha256": "63e2254aa162ec0f3f5b6b81c58d3f34f98617c390d2496cce85598a19efa5bb",
+      "inspection": "Same grey van under fallen brown trunk at right broken verge, uphill rocky woodland bank left, two barriers and road bend. No people/photo background. Actual van lies tilted outside verge, freeze this consistent state."
+    },
+    "shelter_path": {
+      "description": "Hidden supply shelter path",
+      "layout": "Narrow tan dirt footpath in low green woodland, runs from near/south foreground to a small timber-and-muted-olive-tarp shelter tucked beneath ONE broad grey boulder at north/back. One simple timber entrance at image right, low wood supply table beside entrance, blue water cans on shelf. No bridge, harbour, castle or city.",
+      "angle": "Camera south-west of footpath facing north-east towards boulder shelter; path image left to centre, timber entrance and supply table image right.",
+      "source_shot": 148,
+      "anchors": [
+        "Narrow tan dirt footpath in low green woodland, runs from near/south foreground to a small timber-and-muted-olive-tarp shelter tucked beneath ONE broad grey boulder at north/back.",
+        "One simple timber entrance at image right, low wood supply table beside entrance, blue water cans on shelf.",
+        "No bridge, harbour, castle or city.."
+      ],
+      "file": "locations/shelter_path.png",
+      "sha256": "5ddcc337c493f282498117a831674997d48c940714a61313e0d761ee753942d0",
+      "inspection": "Wood/tarp refuge right below broad boulder, supply table right, blue cans and low path left through green woodland. No city imported."
+    },
+    "pump": {
+      "description": "Shelter utility pump room",
+      "layout": "Small low grey stone-and-timber utility room in wooded refuge. ONE compact green water pump on north/back wall with visible plain grey pipe running horizontally right then down. One small closed wood doorway at west/left edge. Bare tan floor, single plain wall lamp, no tables, industrial crane or city.",
+      "angle": "Camera from south-west inside room facing north-east; pump at back centre, pipe at image right, doorway at left edge.",
+      "source_shot": 151,
+      "anchors": [
+        "Small low grey stone-and-timber utility room in wooded refuge.",
+        "ONE compact green water pump on north/back wall with visible plain grey pipe running horizontally right then down.",
+        "One small closed wood doorway at west/left edge.",
+        "Bare tan floor, single plain wall lamp, no tables, industrial crane or city.."
+      ],
+      "file": "locations/pump.png",
+      "sha256": "dcf671fb33e1e973ecf03bb739dc00c9117d35fbdb26da03961b26abdc325595",
+      "inspection": "Left wood door/lamp, green pump against stone back wall, pipe loop right and wood beams. Empty room and supported fixed equipment."
+    },
+    "yard": {
+      "description": "Lethra freight yard",
+      "layout": "Open square pale concrete freight yard on east harbour bank. ONE mustard-yellow gantry crane at west/left edge with dark grey control cabinet at its near leg; red corrugated container and navy stacks beside it. ONE low grey corrugated service WORKSHOP on north/back edge with wide central dark open roll-up entrance and small blue-grey personnel door to its right. Yard gate in EAST/right fence. Near/south edge overlooks water and the same low concrete bridge in distant left background, NO cables or towers. Clear centre landing zone; no random extra sheds.",
+      "angle": "Camera at south-east corner looking north-west across clear yard: yellow crane image left, grey workshop back centre, right fence/gate image right. Same orientation for loading, arrival, confrontation and aftermath.",
+      "source_shot": 37,
+      "anchors": [
+        "Open square pale concrete freight yard on east harbour bank.",
+        "ONE mustard-yellow gantry crane at west/left edge with dark grey control cabinet at its near leg; red corrugated container and navy stacks beside it.",
+        "ONE low grey corrugated service WORKSHOP on north/back edge with wide central dark open roll-up entrance and small blue-grey personnel door to its right.",
+        "Yard gate in EAST/right fence.",
+        "Near/south edge overlooks water and the same low concrete bridge in distant left background, NO cables or towers.",
+        "Clear centre landing zone; no random extra sheds.."
+      ],
+      "file": "locations/yard.png",
+      "sha256": "91a9bd4572665605489ae0b57387c86c8f067e31cd0e46575613f5c34096254a",
+      "inspection": "Yellow crane/control cab left, open grey shed centred with small blue door right, gate far right, low concrete bridge in left distance; no suspension towers."
+    },
+    "headland": {
+      "description": "Rocky harbour headland",
+      "layout": "Low broad tan-grey rocky headland, flat uneven stone shelf beside steep south drop to blue sea. A short blunt north ridge connects inland to woodland. No towers, castles or temples. Distant east harbour includes only low concrete TWO-pier bridge, yellow crane and squat grey workshop; distant low hills west.",
+      "angle": "Camera on inland north-west side looking south-east across flat shelf; sea and small harbour far at image right. Same coast direction as inspected drawing.",
+      "source_shot": 136,
+      "anchors": [
+        "Low broad tan-grey rocky headland, flat uneven stone shelf beside steep south drop to blue sea.",
+        "A short blunt north ridge connects inland to woodland.",
+        "No towers, castles or temples.",
+        "Distant east harbour includes only low concrete TWO-pier bridge, yellow crane and squat grey workshop; distant low hills west.."
+      ],
+      "file": "locations/headland.png",
+      "sha256": "9688a980cd085332c60fb02d7570b1a69a9f754a1a86e6bfe21b085ccad71d6a",
+      "inspection": "Flat bare stone shelf, low north inland ridge, sea to east-right; modest port distant right. Actual distant shore houses tiny, no large landmark."
+    },
+    "depot_ext": {
+      "description": "Inland freight depot exterior",
+      "layout": "Squat rectangular grey corrugated repair shed inland surrounded by packed brown dirt. ONE broad roll-up front opening with yellow-edged frame in north/back facade. Small plain blue personnel door to right of opening. Stack of three wooden shipping boxes LEFT of opening, two folded blue tarps. Open empty loading yard foreground, ONE plain grey transport allowed only when narration arrives it. Low grassy hills, no sea or bridge. Actual inspected shallow PITCHED roof and fixed grey cargo truck to left of entrance are retained. This truck is NOT the imperial transport.",
+      "angle": "Camera in south yard looking north at front entrance, crate stack at left, small door at right. View remains on entrance and stable threshold.",
+      "source_shot": 140,
+      "anchors": [
+        "Squat rectangular grey corrugated repair shed inland surrounded by packed brown dirt.",
+        "ONE broad roll-up front opening with yellow-edged frame in north/back facade.",
+        "Small plain blue personnel door to right of opening.",
+        "Stack of three wooden shipping boxes LEFT of opening, two folded blue tarps.",
+        "Open empty loading yard foreground, ONE plain grey transport allowed only when narration arrives it.",
+        "Low grassy hills, no sea or bridge.."
+      ],
+      "file": "locations/depot_ext.png",
+      "sha256": "02f2f29bd1cacfcbc769d02bf77577a2784711c3a1296d333a20b1d99d619f35",
+      "inspection": "Yellow-edged roll-up opening, blue right door, left crates/tarp/truck retained; no harbour. Actual pitched corrugated roof frozen."
+    },
+    "support": {
+      "description": "Shelter support repair area",
+      "layout": "Small timber-roof shelter interior, roof sagging slightly above ONE horizontal brown beam running west-left to east-right. THREE wooden uprights hold beam, central support bolted to square grey base plate on tan floor. Open south/front edge toward low woodland only, solid muted olive tarp back/north wall. Two plain supply crates along right wall. No ruined city, bridge or extra metal posts.",
+      "angle": "Camera south-west facing north-east, horizontal beam across top, three wood posts fixed, central base plate foreground centre-right; refuge woodland only at left open edge.",
+      "source_shot": 152,
+      "anchors": [
+        "Small timber-roof shelter interior, roof sagging slightly above ONE horizontal brown beam running west-left to east-right.",
+        "THREE wooden uprights hold beam, central support bolted to square grey base plate on tan floor.",
+        "Open south/front edge toward low woodland only, solid muted olive tarp back/north wall.",
+        "Two plain supply crates along right wall.",
+        "No ruined city, bridge or extra metal posts.."
+      ],
+      "file": "locations/support.png",
+      "sha256": "dfeb0d5f5ee40fccb2714184cdd6f0ee9a899cd5118e7d1351ece534fc740edc",
+      "inspection": "Three wood uprights beneath one sagging beam, central bolted base plate, olive tarp back/right and low woodland through left opening. No ruined city."
+    },
+    "bridge": {
+      "description": "Low concrete harbour bridge",
+      "layout": "A narrow two-lane concrete girder bridge running west-to-east between two low shore abutments. Exactly TWO square concrete water piers support three spans. Straight grey deck, black waist-height vertical-bar guardrails, three slim plain road lamps. No towers, arches, suspension cables or extra bridges. A repair expansion joint is over the east pier. A narrow concrete maintenance ledge and steel handrail run along the near south side below the deck. Open blue harbour water underneath; yellow freight crane and low grey workshop beyond the EAST shore; low hillside houses on WEST shore.",
+      "angle": "Camera on south harbour bank, eye-level oblique side view looking north-east; west shore at image left and east freight yard at image right. All bridge structural elements visible, simple flat drawing.",
+      "source_shot": 1,
+      "anchors": [
+        "A narrow two-lane concrete girder bridge running west-to-east between two low shore abutments.",
+        "Exactly TWO square concrete water piers support three spans.",
+        "Straight grey deck, black waist-height vertical-bar guardrails, three slim plain road lamps.",
+        "No towers, arches, suspension cables or extra bridges.",
+        "A repair expansion joint is over the east pier.",
+        "A narrow concrete maintenance ledge and steel handrail run along the near south side below the deck.",
+        "Open blue harbour water underneath; yellow freight crane and low grey workshop beyond the EAST shore; low hillside houses on WEST shore.."
+      ],
+      "file": "locations/bridge.png",
+      "sha256": "0616475d1cf22a08a2a3070a8c81ea94d3d307ccfdfc19551e6ac1e0e75067f1",
+      "inspection": "Two square water piers, low concrete girders, vertical black railing and three lamps; west houses left/east yellow crane and shed right; no suspension towers. Near-side narrow maintenance walkway retained."
+    },
+    "harbour": {
+      "description": "Lethra harbour geography",
+      "layout": "A small practical coastal freight port. Near/east shore has one yellow gantry crane, red/blue container stacks and ONE low grey corrugated workshop. The same low grey concrete girder bridge with TWO square piers crosses the narrow channel to west residential hillside. NO suspension towers or cables. Modest low white/tan hillside houses, no castles, giant towers or skyscrapers. Harbour opens to sea south, rocky headland south-west.",
+      "angle": "High establishing camera on south-east side looking north-west; freight yard lower right, channel centre, bridge centre left, modest residential hillside above left. Fully illustrated shallow map-like panorama, no labels.",
+      "source_shot": 33,
+      "anchors": [
+        "A small practical coastal freight port.",
+        "Near/east shore has one yellow gantry crane, red/blue container stacks and ONE low grey corrugated workshop.",
+        "The same low grey concrete girder bridge with TWO square piers crosses the narrow channel to west residential hillside.",
+        "NO suspension towers or cables.",
+        "Modest low white/tan hillside houses, no castles, giant towers or skyscrapers.",
+        "Harbour opens to sea south, rocky headland south-west.."
+      ],
+      "file": "locations/harbour.png",
+      "sha256": "f604c8054d041498dfe807d1a00d939cdca6f0803f55d3e4e9a4261fd0a65b54",
+      "inspection": "Low TWO-pier girder bridge links left modest hillside to right yellow crane/grey shed/container yard; no castle or suspension bridge. Drawing style and geography inspected."
+    },
+    "depot_int": {
+      "description": "Inland freight depot interior",
+      "layout": "Low rectangular corrugated repair shed, broad doorway on SOUTH/front wall opening to dirt yard. One wood worktable in room centre; north/back wall pegboard and grey tool cabinet. West/left wall stack of three wood boxes and one spare tyre. East/right wall plain steel shelf. Roof thin metal beams, plain tan concrete floor. No windows or harbour scenery.",
+      "angle": "Camera at south doorway looking north into room; centre table frontal, crates left, shelf right. Outside glimpses only through foreground doorway edge, no camera reversal.",
+      "source_shot": 146,
+      "anchors": [
+        "Low rectangular corrugated repair shed, broad doorway on SOUTH/front wall opening to dirt yard.",
+        "One wood worktable in room centre; north/back wall pegboard and grey tool cabinet.",
+        "West/left wall stack of three wood boxes and one spare tyre.",
+        "East/right wall plain steel shelf.",
+        "Roof thin metal beams, plain tan concrete floor.",
+        "No windows or harbour scenery.."
+      ],
+      "file": "locations/depot_int.png",
+      "sha256": "56e1ef1552d6a939ef37688aa78ff13c08faa1b5c178f3d2347a1046a0a946aa",
+      "inspection": "Frontal doorway framing, centre wood table, left crates/tyre, back pegboard and right shelves. No actors or scenery reversal."
+    },
+    "briefing": {
+      "description": "Imperial transport briefing room",
+      "layout": "Low angular grey enclosed room. ONE wide rectangular physical planet-display mounted centered on north wall, ONE low rectangular grey briefing table fixed directly below it. ONE closed bevelled doorway on east/right wall. Thin white ceiling strip lights, no circular table, hologram or windows.",
+      "angle": "Camera at south-west corner facing north-east; table central, flat display behind, doorway at image right.",
+      "source_shot": 25,
+      "anchors": [
+        "Low angular grey enclosed room.",
+        "ONE wide rectangular physical planet-display mounted centered on north wall, ONE low rectangular grey briefing table fixed directly below it.",
+        "ONE closed bevelled doorway on east/right wall.",
+        "Thin white ceiling strip lights, no circular table, hologram or windows.."
+      ],
+      "file": "locations/briefing.png",
+      "sha256": "5bba66050affe9999054874143a74f6a895881e845abd6c87d1aaffada4587ac",
+      "inspection": "Flat physical blue planet display, low console table and single right bevelled door; all actors removed."
+    },
+    "storage_v2": {
+      "description": "storage shed with side exit",
+      "layout": "Small grey shallow-pitched secondary storage shed; ONE grey front door and ONE grey left SIDE door directly below high side window. Same left crates/containers/truck, right fence, blue barrel beside side door. NOT the wide roll-up workshop. Back inside wall has one simple low rack and three plain wood boxes. Two exit positions fixed.",
+      "angle": "Camera south-west looking north-east at front and visible west/left side; front door image right, SIDE exit under high window image left. Same inspected three-quarter exterior axis.",
+      "source_shot": 140,
+      "anchors": [
+        "Corrected storage master has existing front door PLUS required side exit below visible left high window. Same shallow roof, low shed, yard/containers and camera. No character, one permanent building."
+      ],
+      "source_parent": "storage",
+      "file": "locations/storage_v2.png",
+      "sha256": "967338225359c6aeae7dd085593d8717e2c38919decb6a630ec23b550dfa956c",
+      "inspection": "Corrected storage master has existing front door PLUS required side exit below visible left high window. Same shallow roof, low shed, yard/containers and camera. No character, one permanent building."
+    },
+    "workshop_day": {
+      "description": "daylight workshop",
+      "layout": "ONE rectangular low corrugated-metal service room. North/back wall: long wood workbench with pegboard of spanners above, two olive lockers at its RIGHT end; a small dark rectangular physical communication monitor mounted over lockers, fixed to wall. West/left wall: wide roll-up entry to freight yard, with thin grey steel jamb. East/right wall: ONE small rectangular window, visible above tool cabinet. Plain concrete floor, single pale overhead hanging lamp. A separate small rectangular wood worktable in middle foreground, two stools. No extra doors, desks, skylights or ocean-facing giant openings. EXACT DAYLIGHT variant: lamp off, floor dry, same fixed furniture and openings.",
+      "angle": "Camera at south-west corner facing north-east. Yard entrance at image left edge, north workbench behind centre, two lockers/monitor back right, middle worktable foreground. Preserve this axis for report, sleep, repair and disclosure.",
+      "source_shot": 81,
+      "anchors": [
+        "Same LEFT yard opening, RIGHT window, paired lockers/monitor back right, centre table/two stools and back pegboard/bench. Daylight state inspected, minor small-tool/lamp detail variation accepted, fixed room topology held."
+      ],
+      "source_parent": "workshop",
+      "file": "locations/workshop_day.png",
+      "sha256": "a1fc91501d56d84d57f89c989ad9cea16bf22ca592b3969472d291a0bccc433a",
+      "inspection": "Same LEFT yard opening, RIGHT window, paired lockers/monitor back right, centre table/two stools and back pegboard/bench. Daylight state inspected, minor small-tool/lamp detail variation accepted, fixed room topology held."
+    },
+    "bridge_road": {
+      "description": "bridge roadway",
+      "layout": "A narrow two-lane concrete girder bridge running west-to-east between two low shore abutments. Exactly TWO square concrete water piers support three spans. Straight grey deck, black waist-height vertical-bar guardrails, three slim plain road lamps. No towers, arches, suspension cables or extra bridges. A repair expansion joint is over the east pier. A narrow concrete maintenance ledge and steel handrail run along the near south side below the deck. Open blue harbour water underneath; yellow freight crane and low grey workshop beyond the EAST shore; low hillside houses on WEST shore. Roadway remains passable, near east expansion seam repaired temporarily; no damage until explicit act.",
+      "angle": "EAST approach looking WEST along straight road, south harbour LEFT, west houses ahead. Three existing lamps and black rails, near joint foreground; crop same axis only.",
+      "source_shot": 1,
+      "anchors": [
+        "Exact straight same girder-road view, three slim lamps, vertical black rails and west hillside ahead; left blue water and near expansion seam. No cables/towers. Same stable east-to-west axis."
+      ],
+      "source_parent": "bridge",
+      "file": "locations/bridge_road.png",
+      "sha256": "9124890d5ceaaf195cd8e78d978a784191debdc59a5581f5eacc891d8abb3e07",
+      "inspection": "Exact straight same girder-road view, three slim lamps, vertical black rails and west hillside ahead; left blue water and near expansion seam. No cables/towers. Same stable east-to-west axis."
+    },
+    "bridge_under": {
+      "description": "bridge maintenance ledge",
+      "layout": "A narrow two-lane concrete girder bridge running west-to-east between two low shore abutments. Exactly TWO square concrete water piers support three spans. Straight grey deck, black waist-height vertical-bar guardrails, three slim plain road lamps. No towers, arches, suspension cables or extra bridges. A repair expansion joint is over the east pier. A narrow concrete maintenance ledge and steel handrail run along the near south side below the deck. Open blue harbour water underneath; yellow freight crane and low grey workshop beyond the EAST shore; low hillside houses on WEST shore. Maintenance view starts beside WEST SHORE ABUTMENT, TWO water piers recede to right; temporary EAST support plate/brace still attached.",
+      "angle": "Camera on south maintenance ledge beside WEST SHORE ABUTMENT looking east-north-east along underside; near abutment left edge, two water piers recede right, same low deck overhead. Crop towards east mounting joint, never reverse.",
+      "source_shot": 1,
+      "anchors": [
+        "Same bridge underside/near maintenance ledge. Near LEFT foreground is WEST shore abutment; two water piers recede to RIGHT. Black road railing/lamps overhead, hillside left, yellow yard crane right. Same beam/pier geometry; crop below east joint."
+      ],
+      "source_parent": "bridge",
+      "file": "locations/bridge_under.png",
+      "sha256": "c0f8aecef8f270740995ab4ce928358dbc75d6dc6da1a26eb6171e7f23ddd51d",
+      "inspection": "Same bridge underside/near maintenance ledge. Near LEFT foreground is WEST shore abutment; two water piers recede to RIGHT. Black road railing/lamps overhead, hillside left, yellow yard crane right. Same beam/pier geometry; crop below east joint."
+    },
+    "bridge_road_broken": {
+      "description": "Same bridge road after brace torn out",
+      "layout": "Create the explicit FAILED-JOINT roadway state of SAME Image1. Retain camera EAST looking WEST, black rails, three lamps, west hillside ahead and south water LEFT. ONLY damage: near expansion-joint at bottom foreground now has a cracked edge and a small sag/gap, STILL passable by a grey freight truck when supported from below. Main road is continuous to intact far shore, no giant rubble canyon, vanished opposite approach or new side bridge. No truck/people in this empty anchor. Same deck width and road yellow centre line. Temporary underside brace removed, not visible here.",
+      "angle": "EAST approach looking WEST along straight road, south harbour LEFT, west houses ahead. Three existing lamps and black rails, near joint foreground; crop same axis only.",
+      "anchors": [
+        "Create the explicit FAILED-JOINT roadway state of SAME Image1. Retain camera EAST looking WEST, black rails, three lamps, west hillside ahead and south water LEFT. ONLY damage: near expansion-joint at bottom foreground now has a cracked edge and a small sag/gap, STILL passable by a grey freight truck when supported from below. Main road is continuous to intact far shore, no giant rubble canyon, vanished opposite approach or new side bridge. No truck/people in this empty anchor. Same deck width and road yellow centre line. Temporary underside brace removed, not visible here."
+      ],
+      "source_parent": "bridge_road",
+      "file": "locations/bridge_road_broken.png",
+      "sha256": "00d2c9039ab0b20a871a00ccbc7c1a94e79566ca8846949d26706381cc47f1ae",
+      "inspection": "Viewed actual near expansion joint with local cracked/sagged edge and small missing chunk; same road, yellow centre, black rails, three lamps, far hill and axis. Still passable supported, not a new crossing."
+    },
+    "storage_damaged": {
+      "description": "Secondary storage shed damaged roof",
+      "layout": "Create damaged roof state of SAME storage shed Image1: one person-sized jagged HOLE in CENTRE corrugated roof, a few grey fallen roof pieces inside. Front door remains image RIGHT and required SIDE escape door below high window image LEFT; leave both doors closed in empty baseline. Same external shed, containers, blue barrel, truck, fence and camera; no entire building collapse. A single low back-wall shelf and three small wood boxes visible only through roof hole, no people.",
+      "angle": "Camera south-west looking north-east at front and visible west/left side; front door image right, SIDE exit under high window image left. Same inspected three-quarter exterior axis.",
+      "anchors": [
+        "Create damaged roof state of SAME storage shed Image1: one person-sized jagged HOLE in CENTRE corrugated roof, a few grey fallen roof pieces inside. Front door remains image RIGHT and required SIDE escape door below high window image LEFT; leave both doors closed in empty baseline. Same external shed, containers, blue barrel, truck, fence and camera; no entire building collapse. A single low back-wall shelf and three small wood boxes visible only through roof hole, no people."
+      ],
+      "source_parent": "storage_v2",
+      "file": "locations/storage_damaged.png",
+      "sha256": "88fa3f0164824638eb3e0972c0a871ac3a3176be197a9e1a778964f75fa286a1",
+      "inspection": "Same low shed/front door/right, side exit below left high window and yard. Single central roof hole with back shelf visible; walls remain intact and exits fixed."
+    },
+    "bridge_under_broken": {
+      "description": "Same bridge underside after brace torn out",
+      "layout": "Create the explicit FAILED-JOINT state of SAME underside view Image1. Preserve both water piers, west foreground abutment, near maintenance ledge, far yellow crane and all geometry. ONLY narrated damage: the MAIN grey girder at EAST/far-right mounting joint has sagged a little after its short temporary brace was torn out; a crack around that plate, a small loose chunk. Main road span remains connected, NOT a collapsed bridge or a gap to nowhere. Keep the continuous near handrail intact here; individual railing damage comes later. East-support beam must be accessible to ONE flying hero beneath it, but NO people in this reference. No new bridge towers, cable, extra pier, tilt of entire bridge or replacement camera.",
+      "angle": "Camera on south maintenance ledge beside WEST SHORE ABUTMENT looking east-north-east along underside; near abutment left edge, two water piers recede right, same low deck overhead. Crop towards east mounting joint, never reverse.",
+      "anchors": [
+        "Create the explicit FAILED-JOINT state of SAME underside view Image1. Preserve both water piers, west foreground abutment, near maintenance ledge, far yellow crane and all geometry. ONLY narrated damage: the MAIN grey girder at EAST/far-right mounting joint has sagged a little after its short temporary brace was torn out; a crack around that plate, a small loose chunk. Main road span remains connected, NOT a collapsed bridge or a gap to nowhere. Keep the continuous near handrail intact here; individual railing damage comes later. East-support beam must be accessible to ONE flying hero beneath it, but NO people in this reference. No new bridge towers, cable, extra pier, tilt of entire bridge or replacement camera."
+      ],
+      "source_parent": "bridge_under",
+      "file": "locations/bridge_under_broken.png",
+      "sha256": "773466178c0e62b99588adf5be80b22f5fd7330f4b9d7d211a4e0eb01edc2d85",
+      "inspection": "Viewed actual derived failed east-support plate state: same overhead girder, near abutment, two water piers, maintenance rail, west houses/yard landmarks. Only small cracked mounting plate; no new bridge design."
+    },
+    "storage_inside": {
+      "description": "Inside secondary storage shed after roof impact",
+      "layout": "Create the explicit INSIDE view of this SAME small storage shed Image1, camera just outside FRONT door looking north into the small room. Front doorway frames near image edges; the SIDE door under high west/LEFT window is visible on LEFT wall INSIDE. One low dark-grey shelf fixed to BACK wall with three small plain wood boxes; blue barrel stays OUTSIDE not inside. Plain grey floor, modest grey metal wall seams. ONE person-sized jagged hole in CENTRE roof from the narrated impact, a grey roof panel lies on floor centre, no total collapse. Keep exact exterior size/roof/window/exit topology, no workshop workbench, locker or machine shop. No occupants.",
+      "angle": "Camera just outside SOUTH/front doorway looking NORTH into storage: back rack behind, SIDE escape door and high window on LEFT wall, roof hole centre overhead. Stable fight axis; no reversal.",
+      "anchors": [
+        "Create the explicit INSIDE view of this SAME small storage shed Image1, camera just outside FRONT door looking north into the small room. Front doorway frames near image edges; the SIDE door under high west/LEFT window is visible on LEFT wall INSIDE. One low dark-grey shelf fixed to BACK wall with three small plain wood boxes; blue barrel stays OUTSIDE not inside. Plain grey floor, modest grey metal wall seams. ONE person-sized jagged hole in CENTRE roof from the narrated impact, a grey roof panel lies on floor centre, no total collapse. Keep exact exterior size/roof/window/exit topology, no workshop workbench, locker or machine shop. No occupants."
+      ],
+      "source_parent": "storage_v2",
+      "file": "locations/storage_inside.png",
+      "sha256": "4437c98b4541945e451dd90480d1280a7c86da4db83168d8e8c6c010dcc098aa",
+      "inspection": "Explicit inspected interior from original front door: LEFT side exit below high window, BACK shelf with three boxes, centre roof hole/fallen panel. Correct topology and stable axis, no workshop furnishings."
+    }
+  },
+  "shots": {
+    "1": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Varen hovers beneath the failing EAST support beam, BOTH white mitten hands braced overhead, holding the single sagging concrete span above blue water; no commander inserted as a ghost.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Your commander orders you to let go of the bridge while people are still crossing it.\n\nYou're holding the broken span above the water.",
+      "start": 0.0,
+      "end": 7.089
+    },
+    "2": {
+      "location": "bridge_road_broken",
+      "shot_type": "medium",
+      "visual_beat": "Mira stands beside the same cracked near expansion joint, waving ONE plain grey freight vehicle west toward the intact approach; traffic behind her waits.",
+      "characters": [
+        "Mira"
+      ],
+      "narration": "On the road above you, Mira is waving the last vehicle forward.",
+      "start": 7.089,
+      "end": 11.12
+    },
+    "3": {
+      "location": "bridge_road_broken",
+      "shot_type": "medium",
+      "visual_beat": "Rusk stands on the east road approach beside the same failed joint, one commanding hand extended toward the span, road and guardrail in their established positions.",
+      "characters": [
+        "Rusk"
+      ],
+      "narration": "Commander Rusk is waiting for you to obey. You came to this planet to bring it into the Viltrum Empire.",
+      "start": 11.12,
+      "end": 18.065
+    },
+    "4": {
+      "location": "bridge_road_broken",
+      "shot_type": "wide",
+      "visual_beat": "Two anonymous adult white-round-headed residents in plain work coats walk west behind the same grey freight vehicle over the supported span. No copies of Varen.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "But the people crossing the road you're holding have spent months calling you their protector.",
+      "start": 18.065,
+      "end": 23.316
+    },
+    "5": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Rusk hovers threateningly on the free side of Varen, who keeps BOTH hands under the SAME east-support beam; show one instant of the refusal, no fighting double poses.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Getting them across will mean fighting the man who sent you here.",
+      "start": 23.316,
+      "end": 27.927
+    },
+    "6": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Varen has just landed badly against the LEFT storage door; its lower panel is dented and one hinge displaced. Rusk approaches across the fixed square paving.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Your first landing during training ends with you crashing through a storage door.\n\nYour name is Varen.",
+      "start": 27.927,
+      "end": 33.579
+    },
+    "7": {
+      "location": "court",
+      "shot_type": "wide",
+      "visual_beat": "Rusk pushes the movable yellow-bordered LOW landing platform a short distance across the court. Varen watches; the three banners, central steps and left damaged door stay fixed.",
+      "characters": [
+        "Rusk",
+        "Varen"
+      ],
+      "narration": "The training court has a high stone wall, a landing square, and an instructor who moves the square whenever you start getting comfortable.",
+      "start": 33.579,
+      "end": 42.265
+    },
+    "8": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Varen flies too low past the near edge of the yellow-bordered landing platform, hands spread for balance; he overshoots on the same court axis.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You can already lift things that would crush an ordinary person. Staying in the air is harder. Your approach carries you straight past the landing square.",
+      "start": 42.265,
+      "end": 50.911
+    },
+    "9": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Varen gets up beside the dented LEFT storage door as Rusk approaches from the central steps. Same damaged door, no new wall opening.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You get up from the broken doorway before Rusk reaches you, hoping the dent looks smaller from where he stands.",
+      "start": 50.911,
+      "end": 56.738
+    },
+    "10": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Varen lands with boots scraping across the yellow-bordered platform, leaving two short dark skid marks. Rusk observes from the fixed step side.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "He asks you to land again. The second time, you arrive low and fast. Your boots tear across the square.",
+      "start": 56.738,
+      "end": 64.131
+    },
+    "11": {
+      "location": "court",
+      "shot_type": "close_up",
+      "visual_beat": "Rusk points down at the TWO fresh boot-skid marks at Varen's red boots on the same low platform; crop on original axis, retain platform border.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Rusk makes you look at the mark they leave. A strong body is useful to the Empire.",
+      "start": 64.131,
+      "end": 69.662
+    },
+    "12": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Varen bends toward the scraped platform while Talen waits beside it in grey with blue sash, indicating the damaged equipment rather than laughing at a new empty floor.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "An uncontrolled one can destroy the equipment it was supposed to capture.\n\nTalen trains beside you.",
+      "start": 69.662,
+      "end": 76.279
+    },
+    "13": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Talen in BLUE sash laughs softly and gestures at Varen's skid marks; Varen rubs the back of his pure-white round head. Same platform and three-banner wall behind.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "He wears a blue sash and laughs whenever you try to pretend a bad landing was intentional.",
+      "start": 76.279,
+      "end": 82.698
+    },
+    "14": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Talen has bumped his shoulder against the plain NORTH wall beside the central steps; Varen reaches to help. No fresh doorway or shifted banners.",
+      "characters": [
+        "Talen",
+        "Varen"
+      ],
+      "narration": "His own turn ends with him catching the wall with his shoulder.",
+      "start": 82.698,
+      "end": 86.576
+    },
+    "15": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Varen steadies Talen down from the wall. Talen points at the already dented LEFT storage door. One body per actor, both on the same court floor.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "You help him down, and he tells you that your storage door now looks quite reasonable.",
+      "start": 86.576,
+      "end": 91.758
+    },
+    "16": {
+      "location": "court",
+      "shot_type": "wide",
+      "visual_beat": "Rusk stands on the existing THREE central steps with one hand directing the two trainees back toward the landing platform. Varen and Talen both obey from near landing platform.",
+      "characters": [
+        "Varen",
+        "Talen",
+        "Rusk"
+      ],
+      "narration": "Rusk watches both of you from the steps. He gives you another drill before either of you can finish laughing.",
+      "start": 91.758,
+      "end": 98.262
+    },
+    "17": {
+      "location": "court",
+      "shot_type": "wide",
+      "visual_beat": "Varen lifts one OPEN skeletal rectangular grey transport FRAME from its fixed east-side storage position, not a completed spaceship; Talen supports the opposite end.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "The drills get heavier. You carry a damaged transport frame across the court without crushing its mounting points.",
+      "start": 98.262,
+      "end": 104.227
+    },
+    "18": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Talen flies just beside the open frame and points to its slipping rear corner; Varen holds the near corner while hovering over the same court paving.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "Talen flies beside you and calls out which corner is slipping. You try correcting everything at once.",
+      "start": 104.227,
+      "end": 110.534
+    },
+    "19": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "One thin grey support folds under Varen's too-tight grip on the OPEN frame; Talen steadies the opposite end, Rusk raises a stop hand.",
+      "characters": [
+        "Varen",
+        "Talen",
+        "Rusk"
+      ],
+      "narration": "The frame tilts, and a support folds under your grip. Rusk stops the drill.",
+      "start": 110.534,
+      "end": 115.333
+    },
+    "20": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Rusk points at the bent support while Varen lowers the single OPEN frame toward court floor. No closed spaceship or duplicate cargo.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "He wants that frame useful when you put it down.\n\nYou begin slowing your hands before the rest of your body.",
+      "start": 115.333,
+      "end": 121.678
+    },
+    "21": {
+      "location": "court",
+      "shot_type": "wide",
+      "visual_beat": "Varen and Talen hold opposite ends of the SAME now straightened open grey frame and settle it gently on the yellow-bordered landing platform.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "On the next attempt, you let Talen settle his side before lifting yours. The frame reaches the square intact.",
+      "start": 121.678,
+      "end": 128.668
+    },
+    "22": {
+      "location": "court",
+      "shot_type": "medium",
+      "visual_beat": "Rusk checks one mounting joint on the SAME open frame resting fully on the platform; Varen and Talen stand clear.",
+      "characters": [
+        "Varen",
+        "Talen",
+        "Rusk"
+      ],
+      "narration": "Rusk checks the joints and moves on without praising either of you.",
+      "start": 128.668,
+      "end": 133.312
+    },
+    "23": {
+      "location": "court",
+      "shot_type": "close_up",
+      "visual_beat": "Talen taps the straight grey frame support with one white mitten knuckle, Varen beside him; platform yellow edge stays underneath. Not an assembled ship.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "Talen waits until he's gone, then taps the straight support with his knuckle.",
+      "start": 133.312,
+      "end": 138.307
+    },
+    "24": {
+      "location": "hangar",
+      "shot_type": "wide",
+      "visual_beat": "Varen walks down the clear central aisle of the grey imperial transport departure bay toward the single open ramp, mission equipment in the left stacks.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You both know what changed.\n\nLater, you're sent out with an imperial transport.",
+      "start": 138.307,
+      "end": 143.582
+    },
+    "25": {
+      "location": "briefing",
+      "shot_type": "medium",
+      "visual_beat": "Rusk briefs Varen beside the fixed rectangular table and physical BLUE planet display on back wall. No floating hologram or round table.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Rusk briefs you while a planet turns on the display behind his shoulder.",
+      "start": 143.582,
+      "end": 148.591
+    },
+    "26": {
+      "location": "briefing",
+      "shot_type": "close_up",
+      "visual_beat": "Varen studies one small mission recorder on the SAME fixed table, while Rusk points at a simple coast shape on the physical wall display.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Your assignment is a coastal region on Lethra, a world with working ports and cities the Empire wants usable.",
+      "start": 148.591,
+      "end": 155.231
+    },
+    "27": {
+      "location": "briefing",
+      "shot_type": "medium",
+      "visual_beat": "Rusk points at three unlabelled route lines on the flat physical display; Varen listens from the table's near side. Same sole right door.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You're to learn its defences and prepare it for imperial control.",
+      "start": 155.231,
+      "end": 159.279
+    },
+    "28": {
+      "location": "briefing",
+      "shot_type": "medium",
+      "visual_beat": "Rusk places ONE small dark rectangular mission recorder into Varen's white mitten hand across the near edge of the fixed briefing table.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Rusk puts the mission record into your hand before asking whether you understand.",
+      "start": 159.279,
+      "end": 164.071
+    },
+    "29": {
+      "location": "hangar",
+      "shot_type": "medium",
+      "visual_beat": "Varen stands near the SAME central open ramp holding the small mission recorder, looking toward the blue sky beyond; left grey crate stack remains.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You understand the parts about flying down, surviving, and sending reports. You have practised those.",
+      "start": 164.071,
+      "end": 171.089
+    },
+    "30": {
+      "location": "hangar",
+      "shot_type": "medium",
+      "visual_beat": "Varen pauses at the central ramp opening, recorder held low, looking outward; the quiet grey bay and its fixed cargo suggest his unfamiliar assignment.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You haven't practised living among the people whose factories and roads you are listing as assets.",
+      "start": 171.089,
+      "end": 176.674
+    },
+    "31": {
+      "location": "hangar",
+      "shot_type": "medium",
+      "visual_beat": "Talen presses his BLUE sash beneath his grey harness and speaks to Varen beside the left crate stack; each white-round-headed actor once.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "Talen is assigned elsewhere. He presses his blue sash flat beneath his harness and tells you to keep your reports clear.",
+      "start": 176.674,
+      "end": 183.839
+    },
+    "32": {
+      "location": "harbour",
+      "shot_type": "wide",
+      "visual_beat": "Varen flies into the top foreground above the establishing harbour geography: TWO-pier low bridge, yellow crane/right workshop, modest hillside houses left.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "He expects you to meet again when the region is ready.\n\nThe city below your landing site is built around a harbour.",
+      "start": 183.839,
+      "end": 190.061
+    },
+    "33": {
+      "location": "harbour",
+      "shot_type": "wide",
+      "visual_beat": "Varen hovers at frame edge looking toward the same working harbour geography; emphasize yellow crane, low houses and low concrete bridge, no suspension cables.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Cranes move cargo beyond a narrow bridge. Low houses climb the hill behind them.",
+      "start": 190.061,
+      "end": 195.425
+    },
+    "34": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen lands beside the existing RIGHT yard gate, making one shallow crack beneath his red boots. One anonymous white-round-headed worker in olive work clothes turns.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You touch down outside the freight yard and leave a shallow crack in the concrete. A worker notices the crack before he notices you.",
+      "start": 195.425,
+      "end": 202.916
+    },
+    "35": {
+      "location": "yard",
+      "shot_type": "close_up",
+      "visual_beat": "The anonymous worker points at the shallow fresh crack by Varen's red boots, then glances upward; crop at the SAME right gate, not a different yard.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "He looks at your boots, then at the space above the gate where you appeared.\n\nYou ask where the regional offices are.",
+      "start": 202.916,
+      "end": 209.251
+    },
+    "36": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "The worker points toward the shore route as ONE cable snaps beside the SAME yellow crane at image left. Varen turns toward that falling load.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "He points across the water. Before you reach them, a cable snaps above the yard.",
+      "start": 209.251,
+      "end": 214.262
+    },
+    "37": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Varen hovers below ONE falling closed RED corrugated container with a dark open support frame, BOTH hands under its two near corners. Workers move clear of the yellow crane.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "A suspended load tips toward the workers below. You catch it because it is falling into your path.",
+      "start": 214.262,
+      "end": 219.921
+    },
+    "38": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen adjusts his BOTH grips under the SAME RED closed container/dark support frame, its loose right corner tilting. Anonymous adult workers flee away from underneath.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Your hands close around the frame, and people scatter beneath you while its loose corner swings against the crane.",
+      "start": 219.921,
+      "end": 225.963
+    },
+    "39": {
+      "location": "yard",
+      "shot_type": "close_up",
+      "visual_beat": "Varen's white mitten hands grip the dark container frame; one thin support bends beneath the RED corrugated box. Same yellow crane at left behind, no alternate cargo.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "The load is heavier than the training frame, but its supports are softer. You feel one begin to buckle.",
+      "start": 225.963,
+      "end": 231.86
+    },
+    "40": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Varen places the SAME red closed container/dark support frame fully on the EMPTY clear centre concrete; all workers stand outside its footprint.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You shift your grip and set the whole thing down on the clear part of the yard. Nobody is under it when it lands.",
+      "start": 231.86,
+      "end": 238.663
+    },
+    "41": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira in YELLOW jacket runs to the fixed dark control cabinet at the near LEFT yellow crane leg; container is already grounded centrally.",
+      "characters": [
+        "Mira"
+      ],
+      "narration": "A woman in a yellow work jacket runs toward the crane controls instead of toward you.",
+      "start": 238.663,
+      "end": 243.764
+    },
+    "42": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira cuts the damaged hanging crane line at the left control station, loose cable falling; SAME red closed container remains grounded, never hovering again.",
+      "characters": [
+        "Mira"
+      ],
+      "narration": "She cuts the damaged line before it can pull another piece loose.\n\nThat is how you meet Mira.",
+      "start": 243.764,
+      "end": 249.279
+    },
+    "43": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira checks a bent dark support on the grounded RED container and asks Varen about his wrists; both stand beside, no open empty replacement frame.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "She checks the frame you put down and asks whether your wrists hurt. You tell her they don't.",
+      "start": 249.279,
+      "end": 255.175
+    },
+    "44": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen raises one empty pure-white mitten hand while Mira examines the same grounded red container support; crane remains left, workshop behind.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "She asks whether you can lift that much every time. You say you can lift more.",
+      "start": 255.175,
+      "end": 260.272
+    },
+    "45": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Mira points from the grounded cargo toward the fixed grey WORKSHOP at back centre; Varen follows her indication. Same crane/gate geography.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "She considers the damaged crane, then points toward a service shed. Her crew could use someone who doesn't need the lifting equipment they've just lost.",
+      "start": 260.272,
+      "end": 268.52
+    },
+    "46": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Mira hands Varen two plain job sheets over the centre wood table inside the fixed workshop. Pegboard bench behind, lockers/monitor right, entry left.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "You take the offer because it gives you access to the yard. Mira gives you a pair of jobs she expects to take all afternoon.",
+      "start": 268.52,
+      "end": 275.536
+    },
+    "47": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Varen sets ONE stack of grey metal assemblies beside the WORKSHOP entrance; Mira arrives with a small bolt box. Do not move the workshop or yellow crane.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "You finish moving the first stack before she has found the replacement bolts. She changes the second job.",
+      "start": 275.536,
+      "end": 281.464
+    },
+    "48": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen holds a compact grey machine assembly motionless above the centre table while two anonymous adult mechanics work safely at its underside. Mira supervises beside it.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "Instead of carrying the entire assembly, you hold it steady while her crew repairs its underside.",
+      "start": 281.464,
+      "end": 287.368
+    },
+    "49": {
+      "location": "workshop_day",
+      "shot_type": "close_up",
+      "visual_beat": "Varen waits with hands still supporting the same grey assembly as a mechanic aligns a bolt; crop the original table axis, not a new work bay. Mira supervises behind the same table.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You have to wait while other people work.\n\nWaiting turns out to be part of most days here.",
+      "start": 287.368,
+      "end": 293.144
+    },
+    "50": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen holds the yellow crane's detached short arm steady at the near left crane leg while an anonymous mechanic aligns one round bearing.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "A mechanic has to line up a bearing before you lower a crane arm.",
+      "start": 293.144,
+      "end": 297.376
+    },
+    "51": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen steadies a plain grey work-vehicle cab door at the yard right gate; one anonymous driver steps fully clear. Mira watches the safe clearance.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "A driver has to clear his cab before you straighten the bent door. Mira checks the ground before asking you to lift a container.",
+      "start": 297.376,
+      "end": 304.825
+    },
+    "52": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira raises a pause hand before Varen lifts the grounded RED container; one anonymous worker leaves its footprint. No airborne load yet, fixed crane behind left.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "If you ignore those pauses, somebody can be hurt by the piece you are trying to move.",
+      "start": 304.825,
+      "end": 310.332
+    },
+    "53": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen stands at the paired olive lockers/physical wall monitor, speaking into his ONE dark mission recorder; no physical Rusk or harbour cutaway inserted.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Your first report lists a working harbour, a narrow bridge and limited defences against an attacker who can fly.",
+      "start": 310.332,
+      "end": 316.476
+    },
+    "54": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen points toward a route sketch on the centre table while Rusk appears ONCE ONLY on the existing physical monitor above right lockers. No hologram or physical second Rusk.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Rusk asks you to inspect the road into the hill district. You tell him you have already walked it. He asks why you were walking.",
+      "start": 316.476,
+      "end": 323.88
+    },
+    "55": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen gestures with his recorder near the right lockers while explaining the worker questions; the existing monitor stays dark or shows only the cast explicitly listed, no ghost memory people.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You describe the people who followed you after the crane rescue. They had expected you to stay long enough to answer their questions.",
+      "start": 323.88,
+      "end": 330.944
+    },
+    "56": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Rusk on the existing physical rectangular right-wall monitor raises a commanding hand; Varen listens inside the SAME workshop. No full physical commander in room.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Rusk tells you to remember your assignment. He wants measurements and access routes.",
+      "start": 330.944,
+      "end": 336.949
+    },
+    "57": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Mira hands Varen a repair list at the centre table in DAYLIGHT. All workshop furnishings and doorway positions match the inspected daylight master.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "The next morning, Mira hands you a list of broken equipment. The bridge is on it.",
+      "start": 336.949,
+      "end": 342.177
+    },
+    "58": {
+      "location": "bridge_road",
+      "shot_type": "medium",
+      "visual_beat": "ONE plain grey freight truck rolls WEST across the damaged near expansion-joint seam. No named protagonists inserted; original straight railing/lamp/road axis retained.",
+      "characters": [],
+      "narration": "Freight vehicles keep crossing a damaged expansion joint, and her crew cannot replace its support while traffic shakes the deck above them.",
+      "start": 342.177,
+      "end": 350.332
+    },
+    "59": {
+      "location": "bridge_under",
+      "shot_type": "medium",
+      "visual_beat": "Mira leads Varen along the SAME south maintenance ledge beneath the east-support girder; she points overhead to its mounting beam, both hands empty.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You say you can hold the span still.\n\nMira takes you under the bridge before agreeing.",
+      "start": 350.332,
+      "end": 355.834
+    },
+    "60": {
+      "location": "bridge_under",
+      "shot_type": "close_up",
+      "visual_beat": "Mira points at the SAME main grey underside beam and temporary mounting plate above the ledge; Varen follows her hand. Retain girder/pier position, crop only.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "She shows you which beam carries the road and which pieces only keep the railings upright.",
+      "start": 355.834,
+      "end": 361.28
+    },
+    "61": {
+      "location": "bridge_under",
+      "shot_type": "medium",
+      "visual_beat": "Varen braces BOTH white hands under that main beam while a single grey freight truck passes on road above; Mira stands clear on the maintenance ledge.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You put your hands where she directs. Above, a lorry passes over the joint. You feel its weight move through the beam.",
+      "start": 361.28,
+      "end": 369.256
+    },
+    "62": {
+      "location": "bridge_under",
+      "shot_type": "close_up",
+      "visual_beat": "Mira tightens one replacement bolt at the mounting plate while Varen's two hands keep the SAME beam level; no floating beam or unrelated mechanism.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira watches the gap beneath its mounting plate and asks you to keep that pressure steady while she bolts the replacement into place.",
+      "start": 369.256,
+      "end": 376.626
+    },
+    "63": {
+      "location": "bridge_under",
+      "shot_type": "wide",
+      "visual_beat": "Varen still holds the same underside beam while Mira and two anonymous adult crew rest on the same maintenance ledge. Replacement plate remains bolted.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "By the time the work is finished, your arms ache. Mira's crew has been taking breaks around you.",
+      "start": 376.626,
+      "end": 382.005
+    },
+    "64": {
+      "location": "bridge_under",
+      "shot_type": "medium",
+      "visual_beat": "Varen strains with BOTH hands keeping the now-repaired beam immobile; one anonymous worker moves fully out from beneath the plate before he releases. Mira waits safely on the maintenance ledge.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You couldn't let the beam move while someone was beneath it, so you stayed.",
+      "start": 382.005,
+      "end": 385.913
+    },
+    "65": {
+      "location": "bridge_road",
+      "shot_type": "medium",
+      "visual_beat": "On the SAME east roadway approach, one anonymous driver offers Varen a simple blue water bottle. Mira inspects the replaced expansion joint nearby.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "When you finally stand on the road again, a driver gets out and offers you a drink. You take it while Mira checks the joint from above.",
+      "start": 385.913,
+      "end": 393.41
+    },
+    "66": {
+      "location": "bridge_road",
+      "shot_type": "wide",
+      "visual_beat": "The SAME grey freight vehicle crosses WEST over the repaired seam; Mira checks traffic and Varen stands near the railing. No fresh new bridge design.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "The bridge still needs work, but vehicles can cross without hammering the old support.",
+      "start": 393.41,
+      "end": 398.666
+    },
+    "67": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Night report: Varen uses his recorder at the right lockers; Rusk appears ONLY on the existing physical monitor. Same furniture, lamp on, no projected commander.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You mention the repair in your next report. Rusk asks whether the bridge can carry imperial equipment. You say it can.",
+      "start": 398.666,
+      "end": 405.717
+    },
+    "68": {
+      "location": "workshop",
+      "shot_type": "close_up",
+      "visual_beat": "Varen sets the received BLUE water bottle beside his dark mission recorder on the centre table; focus these physical objects, no flashback collage or bridge inside room.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "He marks it as an access point. You remember the driver handing you a drink beside that same joint.",
+      "start": 405.717,
+      "end": 411.901
+    },
+    "69": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Rusk's white round face on the physical right-wall monitor speaks to Varen, who has the recorder lowered. Same single monitor and paired lockers.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Before the transmission ends, Rusk tells you that an inspection team will arrive when the harbour facilities are ready.",
+      "start": 411.901,
+      "end": 418.487
+    },
+    "70": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Mira opens the nearer olive locker for Varen beside the SAME back-right paired lockers. Loose tools gathered into the actual centre table tray.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You keep returning to the workshop. Mira gives you a locker and asks you to stop leaving loose tools near the landing area.",
+      "start": 418.487,
+      "end": 425.552
+    },
+    "71": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen lands gently beside the WORKSHOP front, leaving clear space in front of its fixed entrance. Small loose tools on ground stay still; Mira observes.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Your arrivals can send them rolling across the floor. You learn to come down beside the shed rather than in front of its door.",
+      "start": 425.552,
+      "end": 432.837
+    },
+    "72": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "One anonymous adult mechanic reaches from the centre table while Varen passes a plain wrench. Mira continues working at the back bench, no new room.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "The crew stops looking up whenever you enter. Someone eventually asks you to pass a wrench without adding anything about your strength.",
+      "start": 432.837,
+      "end": 440.312
+    },
+    "73": {
+      "location": "storm_road",
+      "shot_type": "wide",
+      "visual_beat": "Storm establishing shot: Mira's crew carries the two orange-white barriers along the SAME broken-verge road towards the trapped grey van; retain tilted van/trunk and uphill bank.",
+      "characters": [
+        "Mira"
+      ],
+      "narration": "During a storm, the hillside road slips.",
+      "start": 440.312,
+      "end": 443.602
+    },
+    "74": {
+      "location": "storm_road",
+      "shot_type": "medium",
+      "visual_beat": "Varen lifts the ONE brown fallen trunk off the grey van with both hands while Mira moves the existing barrier clear. Same van location/downhill right verge.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira's crew heads out with temporary barriers while you lift a fallen tree from a van. The driver is trapped by a bent panel.",
+      "start": 443.602,
+      "end": 451.953
+    },
+    "75": {
+      "location": "storm_road",
+      "shot_type": "medium",
+      "visual_beat": "With trunk now laid fully on the uphill LEFT bank, Varen holds the SAME tilted van chassis against the intact road, preventing it sliding downhill right. One driver inside.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Pulling it straight would move the whole van toward the broken verge. You hold the chassis against the road instead.",
+      "start": 451.953,
+      "end": 458.362
+    },
+    "76": {
+      "location": "storm_road",
+      "shot_type": "medium",
+      "visual_beat": "Mira opens the SAME van's road-facing left cab door as Varen braces its chassis; the anonymous adult driver crawls onto intact road LEFT of van.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira frees the door from the other side, and the driver crawls onto the part of the road that still supports him.",
+      "start": 458.362,
+      "end": 464.679
+    },
+    "77": {
+      "location": "storm_road",
+      "shot_type": "medium",
+      "visual_beat": "The safely cleared driver points through the open van door toward a small plain dark bag; Varen checks the broken right verge before moving, Mira waits.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "He wants you to fetch his bag. You check the verge before moving the van again. Rusk would call the delay unnecessary.",
+      "start": 464.679,
+      "end": 471.341
+    },
+    "78": {
+      "location": "storm_road",
+      "shot_type": "medium",
+      "visual_beat": "Varen reaches through the SAME open road-facing van door to retrieve ONE dark bag, other hand bracing chassis; driver remains entirely on intact road.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "The driver is already clear, and a damaged vehicle has little value. You retrieve the bag anyway.",
+      "start": 471.341,
+      "end": 477.41
+    },
+    "79": {
+      "location": "storm_road",
+      "shot_type": "medium",
+      "visual_beat": "The driver hugs his retrieved dark bag while Mira guides him downhill toward the same two barriers and waiting crew. Varen stands clear of van.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "The man holds it against his chest while Mira leads him toward the waiting crew.",
+      "start": 477.41,
+      "end": 482.164
+    },
+    "80": {
+      "location": "storm_road",
+      "shot_type": "wide",
+      "visual_beat": "Varen carries one plain supply box UP the intact left lane towards the low hillside houses beyond the SAME road bend; driver safe beside Mira.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "He thanks you before asking whether anyone has reached the houses farther up the hill.\n\nYou spend the night carrying supplies past the broken road.",
+      "start": 482.164,
+      "end": 490.395
+    },
+    "81": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Night: Mira sleeps at the centre table, pure-white head on her ONE folded yellow jacket; she wears NAVY long-sleeve undershirt. Varen sets supplies beside LEFT entry.",
+      "characters": [
+        "Mira",
+        "Varen"
+      ],
+      "narration": "On your last return, Mira is asleep beside the workshop table with a wet jacket folded beneath her head.",
+      "start": 490.395,
+      "end": 496.91
+    },
+    "82": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Varen sits on the near stool beside the SAME centre table, looking toward his mission recorder inside the open back-right locker; sleeping Mira remains exactly once.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You put the remaining supplies beside the door and sit down. Your mission record is waiting in the locker.",
+      "start": 496.91,
+      "end": 503.946
+    },
+    "83": {
+      "location": "workshop",
+      "shot_type": "close_up",
+      "visual_beat": "Varen pauses at the open back-right locker with recorder in hand, glancing towards folded jacket on SAME table; tired hesitation, no imaginary commander.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You haven't told Rusk how much time the storm cost you.",
+      "start": 503.946,
+      "end": 507.787
+    },
+    "84": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Varen reports into his recorder near the SAME paired lockers/monitor; a simple route sketch on centre table has one blocked hillside line. Commander only on monitor. Rusk is shown ONLY on the fixed right physical monitor, never physically in room.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "When you do report, you describe the hillside as temporarily inaccessible. You leave out the people moving supplies.",
+      "start": 507.787,
+      "end": 515.174
+    },
+    "85": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Rusk on the existing physical monitor asks Varen about the bridge; Varen looks from screen to simple route sketch. No miniature bridge teleported into workshop.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "Rusk asks whether the population depends on the harbour bridge. You tell him it does.",
+      "start": 515.174,
+      "end": 520.644
+    },
+    "86": {
+      "location": "workshop",
+      "shot_type": "medium",
+      "visual_beat": "Varen's white mitten hand hovers over the mission recorder while Rusk on fixed monitor gestures at the inspection routes; lockers and bench never switch sides.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "His next questions concern the workshop, the emergency stores and the route out of the city.",
+      "start": 520.644,
+      "end": 526.328
+    },
+    "87": {
+      "location": "workshop",
+      "shot_type": "close_up",
+      "visual_beat": "Varen looks down at the same physical route sketch and supply box at centre table, understanding their meaning. No memory montage, invented street or inset characters.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "You know why those details matter to him. You have helped the residents use every one of them.",
+      "start": 526.328,
+      "end": 531.859
+    },
+    "88": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Mira notices Varen paused at a grey repair assembly on the centre table and asks him a question; he looks from right window toward her. Same room axis.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira notices you watching the harbour instead of the repair in front of you. She asks whether someone is coming.",
+      "start": 531.859,
+      "end": 538.196
+    },
+    "89": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen speaks cautiously to Mira across the same centre table, mission recorder placed between them. Mira's yellow jacket back ON after the storm.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You tell her there will be an inspection. She asks what they will inspect.",
+      "start": 538.196,
+      "end": 543.177
+    },
+    "90": {
+      "location": "workshop_day",
+      "shot_type": "close_up",
+      "visual_beat": "Mira reaches one white mitten hand toward ONE mission recorder on centre table before Varen can explain. No duplicate recorder, no relocated desk.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You look at the mission record on the table. She reaches for it before you can decide how to explain.",
+      "start": 543.177,
+      "end": 549.126
+    },
+    "91": {
+      "location": "workshop_day",
+      "shot_type": "close_up",
+      "visual_beat": "Mira holds the dark mission recorder with a simple unlabelled access-route map on its small physical screen; Varen beside table, no giant hologram.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Its map shows the city divided into useful facilities and routes to secure.",
+      "start": 549.126,
+      "end": 554.029
+    },
+    "92": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Mira studies the recorder and points toward Varen, her other hand holding it; the SAME wood table and back pegboard remain behind.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "She reads the marked bridge, then the freight yard. She asks whether that was what you were doing when you caught the crane load.",
+      "start": 554.029,
+      "end": 561.228
+    },
+    "93": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen explains with one open white palm while Mira keeps reading the ONE recorder; strained conversation, each actor once.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You tell her why you landed here. She keeps reading until she reaches the regional surrender order.",
+      "start": 561.228,
+      "end": 567.091
+    },
+    "94": {
+      "location": "workshop_day",
+      "shot_type": "wide",
+      "visual_beat": "Mira places the recorder on centre table and calls the anonymous crew toward the LEFT workshop entrance; Varen extends an empty hand asking her to wait.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Then she puts the record down and calls her crew away from the workshop entrance. You ask her to wait.",
+      "start": 567.091,
+      "end": 572.834
+    },
+    "95": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira stands just outside the fixed workshop entrance holding the same recorder, challenging Varen who remains near threshold; unchanged crane left/gate right.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "She asks what part of the record you expect her to wait for.\n\nYou let her leave with it.",
+      "start": 572.834,
+      "end": 578.39
+    },
+    "96": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen keeps his hands lowered while Mira walks from workshop across the SAME centre yard with recorder; he lets her leave rather than grabbing it.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "That is the first thing you do after she learns the truth. You could have taken it from her hand.",
+      "start": 578.39,
+      "end": 584.797
+    },
+    "97": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Varen stays beside WORKSHOP front while Mira crosses centre yard toward RIGHT gate, her yellow jacket distinct; no swap of gates, containers or doorway.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You watch her cross the yard with the information Rusk wanted you to collect.",
+      "start": 584.797,
+      "end": 589.14
+    },
+    "98": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira and two anonymous crew load ONE plain grey work vehicle near RIGHT gate; Varen stands several paces away with empty hands.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "The crew members beside her keep their distance from you. Later, she returns for the tools her team needs.",
+      "start": 589.14,
+      "end": 596.06
+    },
+    "99": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Mira points Varen clear of the crew's tool-loading route while ONE imperial transport settles on centre open landing zone; keep WORKSHOP back centre and crane left.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "She asks you to stand clear while they load them.\n\nThe inspection transport arrives before the workshop is empty.",
+      "start": 596.06,
+      "end": 602.873
+    },
+    "100": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Rusk descends the ONE imperial transport rear ramp in centre yard; Talen with BLUE sash follows, Varen waits near fixed workshop. No extra ship.",
+      "characters": [
+        "Rusk",
+        "Talen",
+        "Varen"
+      ],
+      "narration": "Rusk steps out with Talen behind him. Your old training partner still wears the blue sash.",
+      "start": 602.873,
+      "end": 609.154
+    },
+    "101": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Talen looks at the crew leaving through RIGHT gate and turns to Varen; Rusk speaks from transport ramp. Same landed ship position.",
+      "characters": [
+        "Rusk",
+        "Talen",
+        "Varen"
+      ],
+      "narration": "He looks around the yard, notices the workers leaving and asks what happened. Rusk answers before you do.",
+      "start": 609.154,
+      "end": 616.424
+    },
+    "102": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Rusk points accusingly at Varen beside centre transport ramp while Talen stands back with BLUE sash, workshop still in back centre.",
+      "characters": [
+        "Rusk",
+        "Varen",
+        "Talen"
+      ],
+      "narration": "The local population has become restless, and your reports have stopped matching your behaviour.",
+      "start": 616.424,
+      "end": 621.87
+    },
+    "103": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Rusk points toward the SAME low concrete bridge at far LEFT background; Varen looks toward that shore route. No suspension towers or shifted port.",
+      "characters": [
+        "Rusk",
+        "Varen"
+      ],
+      "narration": "Rusk wants the regional officials brought to the harbour. He intends to use the bridge crossing to separate them from the residential district.",
+      "start": 621.87,
+      "end": 630.076
+    },
+    "104": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen raises one cautious open hand to Rusk near centre landed transport, indicating vehicles passing along the LEFT bridge route.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You tell him the road is carrying people displaced by the storm.",
+      "start": 630.076,
+      "end": 633.838
+    },
+    "105": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira waves ONE grey work vehicle along the RIGHT gate route away from centre inspection transport; Varen watches Rusk. Crew backs away safely.",
+      "characters": [
+        "Rusk",
+        "Mira",
+        "Varen"
+      ],
+      "narration": "He says that makes them easier to gather. Mira is already guiding vehicles away from the inspection area.",
+      "start": 633.838,
+      "end": 639.891
+    },
+    "106": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Mira moves between two stationary plain grey vehicles at RIGHT gate and points toward the same low bridge route on LEFT; no other main actor duplicated.",
+      "characters": [
+        "Mira"
+      ],
+      "narration": "You see her yellow jacket moving between them while Rusk describes the order he expects you to enforce.",
+      "start": 639.891,
+      "end": 645.957
+    },
+    "107": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Rusk lifts into air from centre yard and flies LEFT toward the existing bridge; Talen stays beside Varen near landed transport. One continuous location, no cutaway inset.",
+      "characters": [
+        "Varen",
+        "Rusk",
+        "Talen"
+      ],
+      "narration": "You tell him the bridge isn't fully repaired. He calls it an excuse and flies toward the road. Talen stays beside you.",
+      "start": 645.957,
+      "end": 653.724
+    },
+    "108": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Talen questions Varen beside landed transport while Varen gestures toward workshop and low bridge on left; both share same grey suits with distinct RED/BLUE details.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "He asks whether your report was false. You tell him the facilities are real and the people depend on them.",
+      "start": 653.724,
+      "end": 659.843
+    },
+    "109": {
+      "location": "bridge_road",
+      "shot_type": "medium",
+      "visual_beat": "Rusk lands at SAME repaired near expansion joint, ONE grey truck braking in front of him, anonymous drivers stepping from queued cabs behind.",
+      "characters": [
+        "Rusk"
+      ],
+      "narration": "Rusk lands near the damaged joint before you finish. A vehicle brakes beside him. Drivers behind it begin getting out.",
+      "start": 659.843,
+      "end": 667.174
+    },
+    "110": {
+      "location": "bridge_road",
+      "shot_type": "medium",
+      "visual_beat": "Rusk tears ONE temporary steel brace from beneath the near expansion joint; Mira waves first truck WEST. Main concrete girder/pier topology stays fixed.",
+      "characters": [
+        "Mira",
+        "Rusk"
+      ],
+      "narration": "Mira tries to move the first vehicle past him. Rusk reaches beneath the damaged joint and tears out its temporary brace.",
+      "start": 667.174,
+      "end": 673.955
+    },
+    "111": {
+      "location": "bridge_under_broken",
+      "shot_type": "wide",
+      "visual_beat": "The SAME EAST support span drops at damaged joint; Varen flies beneath its grey main girder before it separates. Sag only at this one joint, not a new bridge.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "The deck drops where the brace was holding it. You get beneath the span before it tears away.",
+      "start": 673.955,
+      "end": 679.611
+    },
+    "112": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Varen catches the SAME main underside beam across his shoulders, BOTH hands overhead, keeping broken EAST span above water. Same as opening hook.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Your hands find the beam Mira showed you, and its weight settles across your shoulders.",
+      "start": 679.611,
+      "end": 684.438
+    },
+    "113": {
+      "location": "bridge_road_broken",
+      "shot_type": "medium",
+      "visual_beat": "One anonymous adult freight driver climbs backward into his open grey truck cab at same sagged near joint, one foot on cab step. No named hero imported.",
+      "characters": [],
+      "narration": "Above, a driver stumbles back into his cab.",
+      "start": 684.438,
+      "end": 688.175
+    },
+    "114": {
+      "location": "bridge_road_broken",
+      "shot_type": "medium",
+      "visual_beat": "Mira waves the SAME grey truck WEST toward intact far approach; Rusk watches near failed joint. Same roadway as opening shot2.",
+      "characters": [
+        "Mira",
+        "Rusk"
+      ],
+      "narration": "Mira waves him toward the intact approach.\n\nNow Rusk gives the order from your first moment on this bridge.",
+      "start": 688.175,
+      "end": 694.773
+    },
+    "115": {
+      "location": "bridge_road_broken",
+      "shot_type": "medium",
+      "visual_beat": "Rusk commands with one empty hand extended down toward failed east span; Mira keeps directing WEST traffic. No physical hero duplicated atop his own held beam.",
+      "characters": [
+        "Rusk",
+        "Mira"
+      ],
+      "narration": "Let it fall. He wants the vehicles stopped and the people waiting where he can control them.",
+      "start": 694.773,
+      "end": 699.858
+    },
+    "116": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Varen holds BOTH hands under failing main girder and speaks firmly to Rusk hovering beside the near ledge; one commander only, no ghost.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You tell him to move away from the road. He asks whether you understand what you have just said to your commander.",
+      "start": 699.858,
+      "end": 706.215
+    },
+    "117": {
+      "location": "bridge_road_broken",
+      "shot_type": "wide",
+      "visual_beat": "The SAME grey truck reaches the intact WEST approach past the failed near joint while Mira waves the next driver forward; fixed railing/lamp axis.",
+      "characters": [
+        "Mira"
+      ],
+      "narration": "You watch the next vehicle reach the safe end. Mira is still directing traffic.",
+      "start": 706.215,
+      "end": 711.519
+    },
+    "118": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Rusk strikes Varen's shoulder with one compact gloved fist while Varen braces both hands under the SAME girder; one impact instant, no second Varen pose.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You keep holding the beam.\n\nRusk hits you before the road is clear. Your grip slips, and the deck tilts.",
+      "start": 711.519,
+      "end": 718.281
+    },
+    "119": {
+      "location": "bridge_under_broken",
+      "shot_type": "wide",
+      "visual_beat": "Varen catches the SAME girder against his forearm as ONE broken near railing section drops into water; Talen catches opposite end. No intact railing reappears later.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "You catch the beam against your forearm while the broken railing slides into the water. Talen catches the opposite support.",
+      "start": 718.281,
+      "end": 725.754
+    },
+    "120": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Talen plants BOTH white hands beneath the opposite edge of SAME grey girder; Varen directs him while Rusk hovers clear. Distinct blue vs red outfits.",
+      "characters": [
+        "Varen",
+        "Talen",
+        "Rusk"
+      ],
+      "narration": "You shout for him to hold his side still. He looks from Rusk to the vehicles, then plants his hands beneath the steel.",
+      "start": 725.754,
+      "end": 733.027
+    },
+    "121": {
+      "location": "bridge_under_broken",
+      "shot_type": "medium",
+      "visual_beat": "Talen holds the SAME girder alone with BOTH hands while Varen releases and moves toward Rusk; traffic still supported, no extra hero.",
+      "characters": [
+        "Varen",
+        "Rusk",
+        "Talen"
+      ],
+      "narration": "You both know this part from the training court.\n\nWith Talen supporting the span, you can let go long enough to meet Rusk.",
+      "start": 733.027,
+      "end": 740.223
+    },
+    "122": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen has just hit the existing RIGHT concrete wall beside yard gate, a local impact crack/debris behind boots; Rusk lands approaching him. Do not destroy workshop.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "His first blow sends you into the freight-yard wall. You get up with pieces of masonry falling around your boots.",
+      "start": 740.223,
+      "end": 747.262
+    },
+    "123": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen rises from the SAME right wall impact and guards against Rusk approaching across empty centre yard; same local damage persists.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "He has fought longer than you, and moving straight toward him gives him the contact he wants.",
+      "start": 747.262,
+      "end": 752.78
+    },
+    "124": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Varen pivots and pulls Rusk upward over empty centre yard, ONE actor each; workshop/crane/gate remain in their fixed orientation.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "When he comes again, you turn aside and pull him above the empty part of the yard.",
+      "start": 752.78,
+      "end": 757.646
+    },
+    "125": {
+      "location": "storage_damaged",
+      "shot_type": "wide",
+      "visual_beat": "Varen lands amid plain crates inside ONE newly broken central roof opening in the secondary STORAGE shed; Rusk at roof edge, NOT the workshop. Same added side exit.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "He breaks your grip and drives you down through a storage roof. You land among spilled crates.",
+      "start": 757.646,
+      "end": 763.587
+    },
+    "126": {
+      "location": "storage_inside",
+      "shot_type": "medium",
+      "visual_beat": "Varen lifts ONE fallen corrugated roof panel away from an anonymous adult worker crouched behind fixed back-wall rack; square roof hole above, front/side exits fixed. Rusk appears only at overhead roof opening, following Varen; worker remains safely below rack.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "A worker is behind the shelving at the far wall. You push the fallen roof panel away from him before Rusk reaches the opening.",
+      "start": 763.587,
+      "end": 771.602
+    },
+    "127": {
+      "location": "storage_inside",
+      "shot_type": "wide",
+      "visual_beat": "Mira opens the SAME LEFT SIDE escape door below high window, helping worker out; Varen shields worker from Rusk entering roof opening. Both exits remain fixed.",
+      "characters": [
+        "Varen",
+        "Rusk",
+        "Mira"
+      ],
+      "narration": "The pause costs you another hit. Mira opens the side door from outside, and the worker gets out while you keep Rusk facing you.",
+      "start": 771.602,
+      "end": 779.065
+    },
+    "128": {
+      "location": "storage_damaged",
+      "shot_type": "wide",
+      "visual_beat": "Varen flies out through the SAME storage roof hole toward headland; Rusk follows above roof, the left side door remains open after worker exit.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You climb out through the damaged roof and draw Rusk toward the rocky headland.",
+      "start": 779.065,
+      "end": 783.895
+    },
+    "129": {
+      "location": "headland",
+      "shot_type": "wide",
+      "visual_beat": "Varen and Rusk fly low above BLUE water approaching SAME bare headland shelf, coastline orientation fixed; no harbour buildings beneath their feet.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "He follows because he expects you to run. You keep him above the water until the harbour is behind both of you.",
+      "start": 783.895,
+      "end": 790.998
+    },
+    "130": {
+      "location": "headland",
+      "shot_type": "medium",
+      "visual_beat": "Varen intercepts Rusk at the near rock face beside broad shelf; one impact dislodges only small stone chips, no blood or demolished mountain.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "There, you stop turning away from his attacks. The next collision tears rock from the cliff.",
+      "start": 790.998,
+      "end": 797.229
+    },
+    "131": {
+      "location": "headland",
+      "shot_type": "medium",
+      "visual_beat": "Varen pins Rusk against SAME low rock face while distant single imperial transport lifts from tiny east harbour; no giant castle or extra ship.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You hold him against the stone long enough to see the inspection transport lifting from the yard.",
+      "start": 797.229,
+      "end": 802.125
+    },
+    "132": {
+      "location": "yard",
+      "shot_type": "wide",
+      "visual_beat": "Talen at controls in ONE transport cockpit/ramp window lifts the landed imperial transport from SAME centre yard; Mira's grey work vehicles take LEFT bridge route.",
+      "characters": [
+        "Talen",
+        "Mira"
+      ],
+      "narration": "Talen is at its controls. Mira's vehicles are already moving across the road he held in place.",
+      "start": 802.125,
+      "end": 808.193
+    },
+    "133": {
+      "location": "harbour",
+      "shot_type": "wide",
+      "visual_beat": "ONE imperial transport rises just beside the SAME now-broken two-pier concrete bridge and turns INLAND, not over modest town. Rusk/Varen remain tiny at same headland.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "The transport rises beside the broken bridge instead of over the town. Rusk sees it and pulls free.",
+      "start": 808.193,
+      "end": 814.882
+    },
+    "134": {
+      "location": "headland",
+      "shot_type": "medium",
+      "visual_beat": "Varen grabs Rusk's black boot before he clears the ridge; both fall onto SAME lower stone shelf, one instant and one body each.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "He turns toward Talen. You catch his boot before he clears the headland, and both of you fall against the lower shelf.",
+      "start": 814.882,
+      "end": 822.291
+    },
+    "135": {
+      "location": "headland",
+      "shot_type": "wide",
+      "visual_beat": "Varen blocks Rusk BELOW the same low ridge while ONE grey transport continues inland in far background. No relocation to seaside castle.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "The transport continues inland while you keep him below the ridge.",
+      "start": 822.291,
+      "end": 826.191
+    },
+    "136": {
+      "location": "headland",
+      "shot_type": "medium",
+      "visual_beat": "Rusk tries to rise at SAME cliff edge; Varen braces to meet him. Local rock chips from earlier impact remain, no blood or dead-body implication.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "You stay until you can no longer see the transport. Rusk tries to rise again, and you meet him at the cliff edge.",
+      "start": 826.191,
+      "end": 833.323
+    },
+    "137": {
+      "location": "headland",
+      "shot_type": "wide",
+      "visual_beat": "Varen flies alone from SAME broad shelf toward harbour; Rusk stays seated on stone behind him, alive but stopped. No beige exposed skin under torn grey suit.",
+      "characters": [
+        "Varen",
+        "Rusk"
+      ],
+      "narration": "When he finally stops moving toward the city, you leave him on the broad stone shelf and fly back alone.",
+      "start": 833.323,
+      "end": 839.714
+    },
+    "138": {
+      "location": "yard",
+      "shot_type": "medium",
+      "visual_beat": "Varen lands unsteadily beside SAME centre yard, one white hand touching concrete. Torn shoulder shows WHITE skin only; fixed workshop entrance empty, gate-wall crack retained.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "Your suit is torn at the shoulder. You land badly in the yard and cannot make your hands stop shaking.",
+      "start": 839.714,
+      "end": 846.19
+    },
+    "139": {
+      "location": "workshop_day",
+      "shot_type": "medium",
+      "visual_beat": "Varen opens the nearer right olive locker and removes ONE folded note from under its latch. Workshop empty except him, same furnishings, no missing door.",
+      "characters": [
+        "Varen"
+      ],
+      "narration": "The workshop door is open, but nobody is inside.\n\nMira has left a note beneath the locker latch.",
+      "start": 846.19,
+      "end": 852.549
+    },
+    "140": {
+      "location": "depot_ext",
+      "shot_type": "wide",
+      "visual_beat": "Varen approaches yellow-edged open entrance of SAME inland repair shed. Mira's crew and residents visible inside, no harbour or bridge behind.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "It names the inland freight depot where her crew took the stranded residents. You find them in the repair shed behind it.",
+      "start": 852.549,
+      "end": 859.543
+    },
+    "141": {
+      "location": "depot_int",
+      "shot_type": "medium",
+      "visual_beat": "Talen sits against SAME left crate stack holding ONE arm close to body, blue sash intact. Varen kneels beside him, torn shoulder skin stays WHITE.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "Talen is sitting against a crate with one arm held close to his body. He tells you the transport will have to stay here.",
+      "start": 859.543,
+      "end": 866.452
+    },
+    "142": {
+      "location": "depot_int",
+      "shot_type": "medium",
+      "visual_beat": "Talen gestures toward one mission recorder/navigation record on centre table while Varen listens; no second ship suddenly inside cramped shed.",
+      "characters": [
+        "Talen",
+        "Varen"
+      ],
+      "narration": "Taking it back means explaining why he was flying civilians away from Rusk's inspection.",
+      "start": 866.452,
+      "end": 871.182
+    },
+    "143": {
+      "location": "depot_ext",
+      "shot_type": "medium",
+      "visual_beat": "Varen sits beside existing yellow-edged roll-up doorway while Mira checks the dirt-road approach with crew. Blue side door stays RIGHT.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira lets you sit beside the entrance while her crew checks the road.",
+      "start": 871.182,
+      "end": 875.119
+    },
+    "144": {
+      "location": "depot_ext",
+      "shot_type": "medium",
+      "visual_beat": "Mira hands seated Varen ONE dry cloth to cover torn shoulder at same yellow doorway; white skin only/no gore; her yellow jacket and his red suit details fixed.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "She gives you a dry cloth for the cut beneath your sleeve. You tell her Rusk survived.",
+      "start": 875.119,
+      "end": 880.323
+    },
+    "145": {
+      "location": "depot_ext",
+      "shot_type": "medium",
+      "visual_beat": "Mira indicates inland dirt route away from shed while Varen holds the cloth over white shoulder; anonymous residents gather plain supply bundles by left crate stack. Talen stays seated with hurt arm beside the same doorway; skin pure WHITE.",
+      "characters": [
+        "Varen",
+        "Mira",
+        "Talen"
+      ],
+      "narration": "She says that means they need to keep moving. Nobody treats the fight as a victory large enough to solve the invasion.",
+      "start": 880.323,
+      "end": 887.178
+    },
+    "146": {
+      "location": "depot_int",
+      "shot_type": "medium",
+      "visual_beat": "Mira, Varen and Talen examine ONE simple paper route map on SAME centre worktable; Varen points at an access line. Back pegboard/left crates/right shelves unchanged.",
+      "characters": [
+        "Varen",
+        "Mira",
+        "Talen"
+      ],
+      "narration": "They ask which routes the Empire knows, and you answer from the map you helped make.",
+      "start": 887.178,
+      "end": 892.666
+    },
+    "147": {
+      "location": "depot_ext",
+      "shot_type": "wide",
+      "visual_beat": "Varen and Talen guide ONE grey imperial transport away from dirt depot loading yard before dawn, beyond SAME open front. No duplicate transports or boats.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "You and Talen move the transport beyond the depot before the next morning.",
+      "start": 892.666,
+      "end": 897.142
+    },
+    "148": {
+      "location": "shelter_path",
+      "shot_type": "medium",
+      "visual_beat": "Varen carries ONE stacked plain supply bundle along left dirt path toward right boulder refuge; Mira checks a navigation record at fixed supply table.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira takes its navigation record and keeps the vehicle routes separate from it. You carry supplies to a shelter Rusk never saw.",
+      "start": 897.142,
+      "end": 905.039
+    },
+    "149": {
+      "location": "shelter_path",
+      "shot_type": "medium",
+      "visual_beat": "Mira raises a wait hand at SAME timber entrance while Varen pauses outside on dirt path; anonymous adult residents inside in plain clothes all WHITE skin.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "When you return, she asks you to wait outside while the residents decide whether they want you nearby.",
+      "start": 905.039,
+      "end": 911.291
+    },
+    "150": {
+      "location": "shelter_path",
+      "shot_type": "medium",
+      "visual_beat": "Mira opens SAME refuge timber entrance and waves waiting Varen along the left path toward it. No replacement home or shifted boulder.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "You stay by the path until she opens the door.\n\nThe days after that are ordinary in ways you never trained for.",
+      "start": 911.291,
+      "end": 917.853
+    },
+    "151": {
+      "location": "pump",
+      "shot_type": "medium",
+      "visual_beat": "Varen gently tightens ONE connection on same green pump; pipes remain attached to back/right wall. Talen watches fixed left doorway, BLUE sash unchanged.",
+      "characters": [
+        "Varen",
+        "Talen"
+      ],
+      "narration": "You help repair a pump without pulling its pipes from the wall. Talen watches the approach while you work.",
+      "start": 917.853,
+      "end": 923.783
+    },
+    "152": {
+      "location": "support",
+      "shot_type": "medium",
+      "visual_beat": "Mira measures SAME central wood upright/base plate while Varen waits with hands lowered and anonymous crew move fully clear; three wood posts and olive tarp fixed.",
+      "characters": [
+        "Varen",
+        "Mira"
+      ],
+      "narration": "Mira measures a support before asking you to lift it, and you wait for her crew to move clear.",
+      "start": 923.783,
+      "end": 929.674
+    },
+    "153": {
+      "location": "support",
+      "shot_type": "medium",
+      "visual_beat": "Varen holds the SAME sagging beam motionless with BOTH hands while Mira tightens its central support bolt. Same three wooden uprights and white skin; quiet useful ending. Talen watches approach at existing open side, BLUE sash unchanged.",
+      "characters": [
+        "Varen",
+        "Mira",
+        "Talen"
+      ],
+      "narration": "You still know how to seize the place. For now, you stand where she points and hold the beam until the bolts are tight.",
+      "start": 929.674,
+      "end": 936.91
+    }
+  },
+  "state": "Fixed masters inspected; complete new scene images still pending. Original voice timings preserved."
+}

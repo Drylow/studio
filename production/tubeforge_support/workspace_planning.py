@@ -28,6 +28,7 @@ def signature(p):
     style = store.get_style(p.get("style_id")) or {}
     style = copy.deepcopy(style)
     style.get('visuals', {}).pop('background_mode', None)
+    style.get('visuals', {}).pop('camera_policy', None)
     evidence = {"script": p.get("script"), "voice": p.get("voiceover"),
                 "style": style, "models": p.get("model_snapshot"), "settings": p.get("settings")}
     entries = cast.registry(p)
@@ -247,7 +248,7 @@ async def prepare(p):
                 "shots": {str(s["id"]): api._hash(_shot_evidence(s)) for s in result}}
             p.update(scenes=result, scenes_script_hash=timing.script_hash(p["script"]), render=None)
             if coherent:
-                p.update(workspace_location_plan=camera_plan, workspace_camera_audit=locations.audit(result))
+                p.update(workspace_location_plan=camera_plan, workspace_camera_audit=locations.audit(result, locations.camera_policy(p)))
             progress(len(result), len(result), "Shots ready: test the first three images")
             store.save_project(p)
         except BaseException as error:

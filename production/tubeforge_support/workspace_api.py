@@ -182,6 +182,7 @@ def _styles(include_archived=False):
                         "prompt": visuals.get("art_style", ""),
                         "background_direction": visuals.get("background_direction", ""),
                         "background_mode": visuals.get('background_mode', 'free'),
+                        "camera_policy": visuals.get('camera_policy', 'varied'),
                         "thumbnail_prompt": style.get("thumbnail", {}).get("style", ""),
                         "video_preview_url": f"/style-media/{sid}/{visuals['preview']}" if visuals.get("preview") else None,
                         "thumbnail_preview_url": f"/style-media/{sid}/{style['thumbnail']['preview']}" if style.get("thumbnail", {}).get("preview") else None,
@@ -354,6 +355,7 @@ def _create(prepared, catalog):
                                  "thumbnail.model": models["image"], "thumbnail.count": 0,
                                  "visuals.auto_characters": False, "visuals.continuity": "off",
                                  "visuals.background_mode": selected_style.get('visuals', {}).get('background_mode', 'free'),
+                                 "visuals.camera_policy": selected_style.get('visuals', {}).get('camera_policy', 'varied'),
                              })
     # A visual preset must not replace the channel's configured voice provider.
     p["settings"]["voice"] = copy.deepcopy(channel_style["voice"])
@@ -380,6 +382,7 @@ def _create(prepared, catalog):
                              "prompt": selected_style["visuals"].get("art_style", ""),
                              "background_direction": selected_style["visuals"].get("background_direction", "")})
     p['style_snapshot']['background_mode'] = p['settings']['visuals']['background_mode']
+    p['style_snapshot']['camera_policy'] = p['settings']['visuals']['camera_policy']
     if p.get("script_history"):
         p["script_history"][-1]["text"] = prepared["script"]
     if selected_style.get("workspace_cast_registry"):
@@ -582,7 +585,7 @@ def _full(p):
     from . import workspace_locations
     out = copy.deepcopy(p)
     if any(s.get('location_view') for s in p.get('scenes') or []):
-        out['workspace_camera_audit'] = workspace_locations.audit(p['scenes'])
+        out['workspace_camera_audit'] = workspace_locations.audit(p['scenes'], workspace_locations.camera_policy(p))
     out['location_registry_hash'] = _hash(p.get('workspace_location_registry') or {})
     out['owner_id'] = owner_of(p)
     out.pop("script_history", None)
