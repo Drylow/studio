@@ -1,0 +1,16 @@
+{
+  "channel": "Pirate Pages",
+  "title": "Why Being a Pirate Captain Was Worse Than You Think",
+  "description_file": "chaines/pirate-pages/episode-02/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/lfHuhGKH",
+    "file": "final.mp4",
+    "sha256": "2f7fc31910426080fdacebc83e30c067f32c3e5a27533e5910b6b7164a282ec0"
+  },
+  "thumbnail": "chaines/pirate-pages/episode-02/thumbnail.jpg",
+  "captions": "chaines/pirate-pages/episode-02/English-Captions.srt",
+  "tags_file": "chaines/pirate-pages/episode-02/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
+  "tubeforge_video_id": "why-being-a-pirate-captain-was-worse-tha-21aeea"
+}
