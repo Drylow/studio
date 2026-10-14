@@ -90,7 +90,8 @@ def main():
         raise SystemExit("décodage en erreur : " + check.stderr[:300])
     after = loudness(final)
     digest = sha256(final)
-    link = gofile_upload(str(final), str(work / "gofile_link.txt"), lambda *m: print(*m))
+    # Un lien par empreinte : un nouveau montage est toujours renvoyé, jamais remplacé par l'ancien lien.
+    link = gofile_upload(str(final), str(work / f"gofile_link-{digest[:16]}.txt"), lambda *m: print(*m))
     (episode / "English-Captions.srt").write_bytes(srt.read_bytes())
     slug = re.sub(r"[^a-z0-9]+", "-", a.channel.lower()).strip("-") + "--" + episode.name
     fiche = {
