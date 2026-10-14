@@ -1,0 +1,11 @@
+{
+  "_note": "Chaînes YouTube de l'utilisateur publiées depuis son PC (choix du 14 oct. 2026). Le nom du profil = le nom de la chaîne. Les identifiants internes des profils restent dans work/publish/profiles.json (ignoré par git).",
+  "channels": [
+    {"name": "Last Safe Door", "app": "fury", "profile": "Last Safe Door"},
+    {"name": "One Stick Left", "app": "fury", "profile": "One Stick Left"},
+    {"name": "Scene Analysis Guy", "app": "fury", "profile": "Scene Analysis Guy"},
+    {"name": "Samurai Chapters", "app": "fury", "profile": "Samurai Chapters"},
+    {"name": "Viking Chapters", "app": "adspower", "profile": "Viking Chapters"},
+    {"name": "Pirate Pages", "app": "adspower", "profile": "Pirate Pages"}
+  ]
+}

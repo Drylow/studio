@@ -62,6 +62,12 @@ variables disponibles. Les secrets d'une session Codex ne sont pas transférés 
   depuis le 7 oct. (application en *Testing*, son Gmail en utilisateur de test) : Cage et Pitch
   sont connectées et une vraie publication est validée. L'écran Firefox privé du VPS ne sert
   pas à publier (aucun envoi par navigateur, contraire aux conditions YouTube).
+- **14 octobre : ses 6 chaînes à lui** (Last Safe Door, One Stick Left, Scene Analysis Guy, Samurai
+  Chapters dans **Fury** ; Viking Chapters, Pirate Pages dans **AdsPower**) se publient depuis ces
+  profils, sur son PC, par un Claude lancé dans son dossier du studio : compétence `/publier`
+  ([.claude/skills/publier/SKILL.md](.claude/skills/publier/SKILL.md)), fiches dans
+  `production/publish/`. Pas de Zernio pour elles (son choix). Les autres chaînes TubeForge
+  (Patch Survives, Alien Aftermath, Deep Sea Survival, Oddly Fictional Lives) sont à son collègue.
 
 ## 2. Règles absolues
 
