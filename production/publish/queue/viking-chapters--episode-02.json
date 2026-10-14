@@ -10,6 +10,7 @@
   "thumbnail": "chaines/viking-chapters/episode-02/thumbnail.jpg",
   "captions": "chaines/viking-chapters/episode-02/English-Captions.srt",
   "tags_file": "chaines/viking-chapters/episode-02/tags.txt",
-  "visibility": "public",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
   "tubeforge_video_id": "why-being-a-viking-raider-was-worse-than-81bb93"
 }

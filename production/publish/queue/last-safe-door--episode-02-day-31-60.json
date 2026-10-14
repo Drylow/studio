@@ -10,6 +10,7 @@
   "thumbnail": "chaines/last-safe-door/episode-02-day-31-60/thumbnail.jpg",
   "captions": "chaines/last-safe-door/episode-02-day-31-60/English-Captions.srt",
   "tags_file": "chaines/last-safe-door/episode-02-day-31-60/tags.txt",
-  "visibility": "public",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
   "tubeforge_video_id": "zombie-bunker-survival-day-31-to-day-60-be3e00"
 }

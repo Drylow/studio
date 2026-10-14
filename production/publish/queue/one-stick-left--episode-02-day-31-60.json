@@ -10,6 +10,7 @@
   "thumbnail": "chaines/alien-outbreak-survival/episode-02-day-31-60/thumbnail.jpg",
   "captions": "chaines/alien-outbreak-survival/episode-02-day-31-60/English-Captions.srt",
   "tags_file": "chaines/alien-outbreak-survival/episode-02-day-31-60/tags.txt",
-  "visibility": "public",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
   "tubeforge_video_id": "alien-outbreak-survival-day-31-to-day-60-8a66e4"
 }
