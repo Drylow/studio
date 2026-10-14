@@ -83,6 +83,14 @@ def deploy(root, seed=True):
                  '        if not hedge:\n            return await once_bounded()\n'
                  '        first = asyncio.create_task(once_bounded())\n'
                  '        done, _ = await asyncio.wait({first}, timeout=hedge_after)\n')
+    # A directed one-attempt image must use one provider call and one queue slot.
+    # The legacy latency hedge otherwise doubles paid work behind that slot.
+    replace_once(root, 'app/llm.py',
+                 '        first = asyncio.create_task(once_bounded())\n'
+                 '        done, _ = await asyncio.wait({first}, timeout=150)\n',
+                 '        if attempts == 1:\n            return await once_bounded()\n'
+                 '        first = asyncio.create_task(once_bounded())\n'
+                 '        done, _ = await asyncio.wait({first}, timeout=150)\n')
     replace_once(root, 'app/steps/visuals.py', '                                    label=f"Fiche {c[\'name\']}")',
                  '                                    label=f"Fiche {c[\'name\']}", provider=v.get("image_provider", "cli_proxy"))')
     replace_once(root, 'app/steps/visuals.py', '                                                label=f"Image #{s[\'id\']}")',
