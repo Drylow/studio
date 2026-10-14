@@ -25,7 +25,9 @@
       "app": "fury",
       "profile": "Samurai Chapters",
       "youtube_channel_id": "UCfGYsP9_Ci2E3eHBFw6RUPw",
-      "published_thumbnail": "production/publish/published-thumbnails/samurai.jpg"
+      "published_thumbnail": "production/publish/published-thumbnails/samurai.jpg",
+      "active": false,
+      "note": "Compte Google mort (l'utilisateur, 14 oct. 2026) : ne plus produire ni publier."
     },
     {
       "name": "Viking Chapters",
