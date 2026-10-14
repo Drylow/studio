@@ -5,6 +5,7 @@
     python production/daily/forge_flow.py status <video_id>
     python production/daily/forge_flow.py shots <video_id> <dossier> [--ids 1,2,3]   # images + planches à regarder
     python production/daily/forge_flow.py review <video_id> <scene_id|all> "<constat réel>"
+    python production/daily/forge_flow.py regen <video_id> 12,40,77                 # refait ces images
     python production/daily/forge_flow.py thumbs <video_id> [--count 4] [--instruction "..."]
     python production/daily/forge_flow.py download <video_id> <fichier.mp4>
 
@@ -148,6 +149,28 @@ def review(video_id, scene, notes):
     print(f"{len(ids)} revues enregistrées")
 
 
+def regen(video_id, ids):
+    """Refait les images ratées, une par une, avec leur prompt exact et le modèle figé du projet."""
+    from concurrent.futures import ThreadPoolExecutor
+    p = api("GET", vid(video_id))
+    snap = p.get("model_snapshot") or {}
+    scenes = {s["id"]: s for s in p.get("scenes") or []}
+    url = NATIVE + f"/api/workspace/projects/{urllib.parse.quote(video_id, safe='')}/scenes/%d/generate"
+
+    def one(i):
+        body = {"confirm_prompt": scenes[i]["prompt"], "image_model": snap.get("image_model"),
+                "image_provider": snap.get("image_provider", "cli_proxy")}
+        try:
+            api("POST", url % i, body)
+            return i, "ok"
+        except SystemExit as e:
+            return i, str(e)[:120]
+
+    with ThreadPoolExecutor(6) as pool:
+        for i, r in pool.map(one, ids):
+            print(f"#{i} {r}", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd")
@@ -176,6 +199,8 @@ def main():
         shots(a.args[0], a.args[1], [int(x) for x in a.ids.split(",")] if a.ids else None)
     elif a.cmd == "review":
         review(*a.args)
+    elif a.cmd == "regen":
+        regen(a.args[0], [int(x) for x in a.args[1].split(",")])
     elif a.cmd == "thumbs":
         api("POST", NATIVE + f"/api/projects/{urllib.parse.quote(a.args[0], safe='')}/thumbnails",
             {"count": a.count, "instruction": a.instruction})
