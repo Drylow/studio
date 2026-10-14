@@ -1,0 +1,16 @@
+{
+  "channel": "One Stick Left",
+  "title": "Alien Outbreak Survival: Day 61 to Day 90",
+  "description_file": "chaines/alien-outbreak-survival/episode-03-day-61-90/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/2Acn5q4g",
+    "file": "final.mp4",
+    "sha256": "256548ace29fb169dba738ed327a09859103c03f1ff15bb865f4b1839e579333"
+  },
+  "thumbnail": "chaines/alien-outbreak-survival/episode-03-day-61-90/thumbnail.jpg",
+  "captions": "chaines/alien-outbreak-survival/episode-03-day-61-90/English-Captions.srt",
+  "tags_file": "chaines/alien-outbreak-survival/episode-03-day-61-90/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
+  "tubeforge_video_id": "alien-outbreak-survival-day-61-to-day-90-eede27"
+}
