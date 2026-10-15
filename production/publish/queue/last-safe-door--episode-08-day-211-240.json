@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 211 to Day 240",
+  "description_file": "chaines/last-safe-door/episode-08-day-211-240/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/iC94juDI",
+    "file": "final.mp4",
+    "sha256": "63fc46f750a60fa5555d799be38dbb3c9bb1c1acf65d84a6366a59a829fce7fc",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-08-day-211-240-89b6174a9326efda.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-08-day-211-240/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-08-day-211-240/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-08-day-211-240/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-21T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-211-to-day-24-c04d6c"
+}
