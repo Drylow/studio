@@ -1,0 +1,17 @@
+{
+  "channel": "Pirate Pages",
+  "title": "Why Being a Pirate Captive Was Worse Than You Think",
+  "description_file": "chaines/pirate-pages/episode-08/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/KeAzh51p",
+    "file": "final.mp4",
+    "sha256": "5e0e49b01258e2aaccfc173eff99b1237ad9fca8558f76690f2f37888296a21e",
+    "url": "http://media.edgerunners.fr/pirate-pages--episode-08-e6e7e769764cf730.mp4"
+  },
+  "thumbnail": "chaines/pirate-pages/episode-08/thumbnail.jpg",
+  "captions": "chaines/pirate-pages/episode-08/English-Captions.srt",
+  "tags_file": "chaines/pirate-pages/episode-08/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-21T10:00",
+  "tubeforge_video_id": "why-being-a-pirate-captive-was-worse-tha-3f2d42"
+}
