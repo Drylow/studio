@@ -1,13 +1,13 @@
 ---
 name: publier
-description: Sur le PC de l'utilisateur (Windows), publie les vidéos de ses 6 chaînes YouTube (Last Safe Door, One Stick Left, Scene Analysis Guy, Samurai Chapters, Viking Chapters, Pirate Pages) depuis leurs profils Fury ou AdsPower. À lancer quand l'utilisateur tape /publier ou demande de publier, programmer ou automatiser ces chaînes.
+description: Sur le PC de l'utilisateur (Windows), publie les vidéos de ses 5 chaînes YouTube (Last Safe Door, One Stick Left, Scene Analysis Guy, Viking Chapters, Pirate Pages) depuis leurs profils Fury ou AdsPower. À lancer quand l'utilisateur tape /publier ou demande de publier, programmer ou automatiser ces chaînes.
 ---
 
 # Publier sur les chaînes de l'utilisateur depuis Fury et AdsPower
 
 Décision de l'utilisateur du 14 octobre 2026 : ses chaînes se publient depuis les profils de
 navigateur où sont ses comptes, **Fury** et **AdsPower**, sur ce PC. Pas de Zernio ni d'API YouTube
-pour ces 6 chaînes. Cage Dispatch, Pitch Dispatch (serveur) et Octave Histoire (Zernio) ne changent pas.
+pour ces 5 chaînes. Samurai Chapters est retirée (compte Google mort, 15 oct.) : ne rien publier dessus. Cage Dispatch, Pitch Dispatch (serveur) et Octave Histoire (Zernio) ne changent pas.
 
 Parle-lui en français simple et court (CLAUDE.md §1). Il ne veut rien faire à la main : installe toi-même
 ce qui manque, il clique seulement « Autoriser ». Les chaînes du collègue (Patch Survives, Alien Aftermath,
@@ -17,7 +17,7 @@ Deep Sea Survival, Oddly Fictional Lives…) ne te concernent pas.
 
 `production/publish/channels.json` : le **nom du profil = le nom de la chaîne**.
 - AdsPower : **Viking Chapters**, **Pirate Pages**.
-- Fury : **Last Safe Door**, **One Stick Left**, **Scene Analysis Guy**, **Samurai Chapters**.
+- Fury : **Last Safe Door**, **One Stick Left**, **Scene Analysis Guy**.
 
 ## Étape 1 : le PC et ses outils (en place depuis le 14 oct.)
 
@@ -31,7 +31,7 @@ Notice locale du PC : `work/publish/LISEZMOI-PC.md` (pas dans git). L'essentiel 
   `connect_over_cdp`. Correspondance chaîne → profil dans `work/publish/profiles.json` (local).
 - **Fury 0.2.23** : `%LOCALAPPDATA%\Fury\fury-agent.exe mcp`, un serveur MCP stdio qui pilote
   seulement les profils locaux.
-  - Les 4 chaînes Fury utilisent les copies locales « <Chaîne> - local import », chacune avec son
+  - Les chaînes Fury utilisent les copies locales « <Chaîne> - local import », chacune avec son
     proxy. Ne plus utiliser les copies d'équipe.
   - `fury_start_profile` ne donne pas l'adresse CDP : le navigateur part avec
     `--remote-debugging-port=0`. Le vrai port est celui qu'écoute, sur 127.0.0.1, le processus
@@ -41,7 +41,7 @@ Notice locale du PC : `work/publish/LISEZMOI-PC.md` (pas dans git). L'essentiel 
   - Port variable, retrouvé automatiquement.
   - En-tête `Authorization: Bearer <clé du .env>`, environ 1 requête par seconde au maximum.
   - Routes : `/api/v1/browser/start|stop?user_id=…`, puis `data.ws.puppeteer`.
-- **YouTube Studio** (interface en anglais sur les 6 chaînes) :
+- **YouTube Studio** (interface en anglais sur les chaînes) :
   - nom de la chaîne : `#entity-name` après la redirection vers `/channel/UC…` ;
   - langue : `document.documentElement.lang` ;
   - proxys parfois lents : `wait_until="commit"`.

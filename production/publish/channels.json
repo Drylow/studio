@@ -1,5 +1,5 @@
 {
-  "_note": "Chaînes YouTube de l'utilisateur publiées depuis son PC (choix du 14 oct. 2026). Le nom du profil = le nom de la chaîne. Les identifiants internes des profils restent dans work/publish/profiles.json (ignoré par git).",
+  "_note": "Chaînes YouTube de l'utilisateur publiées depuis son PC (choix du 14 oct. 2026). Le nom du profil = le nom de la chaîne. Les identifiants internes des profils restent dans work/publish/profiles.json (ignoré par git). Samurai Chapters retirée le 15 oct. 2026 (compte Google mort, demande de l'utilisateur).",
   "channels": [
     {
       "name": "Last Safe Door",
@@ -21,15 +21,6 @@
       "name": "Scene Analysis Guy",
       "app": "fury",
       "profile": "Scene Analysis Guy"
-    },
-    {
-      "name": "Samurai Chapters",
-      "app": "fury",
-      "profile": "Samurai Chapters",
-      "youtube_channel_id": "UCfGYsP9_Ci2E3eHBFw6RUPw",
-      "published_thumbnail": "production/publish/published-thumbnails/samurai.jpg",
-      "active": false,
-      "note": "Compte Google mort (l'utilisateur, 14 oct. 2026) : ne plus produire ni publier."
     },
     {
       "name": "Viking Chapters",

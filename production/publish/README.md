@@ -3,7 +3,7 @@
 Le Claude du PC publie avec la compétence `/publier` (`.claude/skills/publier/SKILL.md`).
 Le Claude du cloud prépare les vidéos et dépose une fiche par vidéo dans `queue/`.
 
-- `channels.json` : les 6 chaînes, leur application (Fury ou AdsPower) et leur profil.
+- `channels.json` : les 5 chaînes (Samurai Chapters retirée le 15 oct.), leur application (Fury ou AdsPower) et leur profil.
 - `queue/<chaîne>--<vidéo>.json` : une vidéo prête à publier.
 - `log.jsonl` : une ligne par vidéo réellement envoyée. Elle contient : chaîne, titre, SHA-256,
   `video_id`, visibilité, date et état des droits.
