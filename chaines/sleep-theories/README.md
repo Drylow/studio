@@ -9,6 +9,13 @@ sont finalisés, relus et prêts pour la narration. Deep Void : Force, Guilde, P
 Silo, Victor/FROM, Eagan/Severance. Le troisième sujet Revan est abandonné en faveur
 de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets Ultravid.
 
+## Miniatures du nouveau lot
+
+Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient cinq nouvelles
+propositions exportées : Guilde, Paul, Silo, FROM, Severance. La Force reste bloquée
+par deux refus du générateur intégré ; confirmation de la voie API demandée.
+Les images sont des propositions, sans choix utilisateur ni publication.
+
 ## Lire dans cet ordre
 
 1. Ce README et [l'état des vidéos](etat-videos.json).

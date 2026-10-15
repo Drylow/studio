@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-15",
+  "mode": "built-in tool",
+  "records": [
+    {
+      "id": "01-deep-force",
+      "title": "The Biggest Mysteries of the Force Explained to Fall Asleep To | Star Wars Theories",
+      "status": "generation_blocked",
+      "source_path": null,
+      "reference_files": [
+        "deep-sith.jpg"
+      ]
+    },
+    {
+      "id": "02-deep-guilde",
+      "title": "The Secrets of Dune's Spacing Guild Explained to Fall Asleep To | Dune Lore",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "source_path": "C:\\Users\\ytbyt\\.codex\\generated_images\\01a125db-c77f-7233-8a28-50334b97d3d1\\exec-6b50aa38-2778-45e7-9ba6-8986442d86cc.png",
+      "reference_files": [
+        "deep-dune.jpg"
+      ],
+      "original": "originaux/02-deep-guilde.png",
+      "export": "exports/02-deep-guilde-1280x720.jpg",
+      "bytes": 418698
+    },
+    {
+      "id": "03-deep-paul",
+      "title": "The Entire Story of Paul Atreides Explained to Fall Asleep To | Dune Lore",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "source_path": "C:\\Users\\ytbyt\\.codex\\generated_images\\01a125db-c77f-7233-8a28-50334b97d3d1\\exec-0259135b-c895-429b-a7f9-53afd9bb3e01.png",
+      "reference_files": [
+        "deep-dune.jpg"
+      ],
+      "original": "originaux/03-deep-paul.png",
+      "export": "exports/03-deep-paul-1280x720.jpg",
+      "bytes": 374548
+    },
+    {
+      "id": "04-quiet-silo",
+      "title": "2 Hours of Silo's Hidden Clues & Secrets to Fall Asleep To",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "source_path": "C:\\Users\\ytbyt\\.codex\\generated_images\\01a125db-c77f-7233-8a28-50334b97d3d1\\exec-a7299ed5-06f2-4013-8bd5-4091e65707a1.png",
+      "reference_files": [
+        "quiet-silo.jpg",
+        "lukas.jpg"
+      ],
+      "original": "originaux/04-quiet-silo.png",
+      "export": "exports/04-quiet-silo-1280x720.jpg",
+      "bytes": 388469
+    },
+    {
+      "id": "05-quiet-from",
+      "title": "Victor's Memories Explained — FROM Theories to Fall Asleep To",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "source_path": "C:\\Users\\ytbyt\\.codex\\generated_images\\01a125db-c77f-7233-8a28-50334b97d3d1\\exec-c6004c52-95c0-488e-bfe2-eccbd5409524.png",
+      "reference_files": [
+        "quiet-from.jpg",
+        "henry.jpg"
+      ],
+      "original": "originaux/05-quiet-from.png",
+      "export": "exports/05-quiet-from-1280x720.jpg",
+      "bytes": 375376
+    },
+    {
+      "id": "06-quiet-severance",
+      "title": "The Secrets of the Eagan Family — Severance Theories to Fall Asleep To",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "source_path": "C:\\Users\\ytbyt\\.codex\\generated_images\\01a125db-c77f-7233-8a28-50334b97d3d1\\exec-a221e66d-3567-4ad8-a70d-d2212a3c26b9.png",
+      "reference_files": [
+        "quiet-severance.jpg",
+        "jame.jpg"
+      ],
+      "original": "originaux/06-quiet-severance.png",
+      "export": "exports/06-quiet-severance-1280x720.jpg",
+      "bytes": 327843
+    }
+  ],
+  "failed_attempts": [
+    {
+      "id": "01-deep-force",
+      "attempt": 1,
+      "composition": "Yoda and young Luke",
+      "error": "Output moderation blocked, category other; no further explanation returned."
+    },
+    {
+      "id": "01-deep-force",
+      "attempt": 2,
+      "composition": "Yoda and elderly Luke",
+      "prompt": "Create a finished wide 16:9 YouTube thumbnail for a calm discussion of the Force in Star Wars. The supplied image is a reference for the channel's midnight-blue photographic portrait layout and serif text; create a new scene with different characters.\n\nTwo large fictional portraits frame the image: wise elderly Yoda at left, green skin, expressive deep-set eyes, long ears and modest weathered Jedi robe; elderly Luke Skywalker at right, gray beard, long gray-brown hair and a dark travel cloak, thoughtful and peaceful. Their heads face slightly inward while their eyes look toward the viewer. Keep the whole eyes, noses and mouths readable and don't obscure them with text. They are quietly present, without combat.\n\nBackground: a recognizable X-wing in a misty Dagobah swamp in the upper central gap, still dark water and ancient roots under blue night light. Cinematic photoreal illustration, natural skin texture, detailed cloth, restrained cool edge light, deep black/navy shadows, clear facial shapes and strong readability on a phone. Match the reference's portrait scale and blue/white lettering family.\n\nExact central three-line typography: \"LORE\" in electric royal blue, \"FOR\" in white, \"SLEEP\" in white and largest, an elegant bold classical Roman serif. No additional wording. All text fully inside the image and between faces. No watermark, decorative labels, weapons, arrows or clocks.",
+      "error": "Output moderation blocked, category other; no further explanation returned."
+    }
+  ]
+}

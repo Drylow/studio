@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-15",
+  "method": "Viewed every generated full-resolution result, compared against actual channel references; exported and checked 1280x720 JPG <2MB; small-sheet readability review. No image declared user-approved.",
+  "assets": [
+    {
+      "id": "01-deep-force",
+      "status": "generation_blocked",
+      "text": "LORE / FOR / SLEEP",
+      "observations": "Two integrated-generation output moderation refusals; alternate route pending authorization."
+    },
+    {
+      "id": "02-deep-guilde",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "text": "LORE / FOR / SLEEP",
+      "observations": "Correct channel palette, two distinct recognizable portraits, readable centered serif and no visible watermark."
+    },
+    {
+      "id": "03-deep-paul",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "text": "LORE / FOR / SLEEP",
+      "observations": "Correct channel palette, two distinct recognizable portraits, readable centered serif and no visible watermark."
+    },
+    {
+      "id": "04-quiet-silo",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "text": "series / THEORIES / FOR / SLEEP",
+      "observations": "Correct channel palette, two distinct recognizable portraits, readable centered serif and no visible watermark."
+    },
+    {
+      "id": "05-quiet-from",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "text": "series / THEORIES / FOR / SLEEP",
+      "observations": "Correct channel palette, two distinct recognizable portraits, readable centered serif and no visible watermark."
+    },
+    {
+      "id": "06-quiet-severance",
+      "status": "proposal_visually_reviewed_not_user_approved",
+      "text": "series / THEORIES / FOR / SLEEP",
+      "observations": "Correct channel palette, two distinct recognizable portraits, readable centered serif and no visible watermark."
+    }
+  ]
+}
