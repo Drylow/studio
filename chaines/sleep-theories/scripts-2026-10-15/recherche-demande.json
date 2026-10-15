@@ -1,0 +1,779 @@
+{
+  "accessed": "2026-10-15",
+  "method": "Public Algrow channel/video/search snapshots. Views are instantaneous. Search results are topic-demand examples, not demonstrated channel-normalized outliers. Duration filter returned some short videos; actual durations retained. No private retention, CTR or revenue metrics accessed.",
+  "deep_void": [
+    {
+      "id": "f0GUjJ7jzJY",
+      "title": "The Entire 15,000-Year Dune Timeline Explained to Fall Asleep To | Sci-Fi Lore",
+      "views": 8392,
+      "date": "2026-09-06T00:09:46Z",
+      "duration_seconds": 7872
+    },
+    {
+      "id": "x4VvjFTRbg4",
+      "title": "The Entire Star Wars Timeline Explained to Fall Asleep To | Sci-Fi Lore",
+      "views": 2315,
+      "date": "2026-10-07T04:00:03Z",
+      "duration_seconds": 10738
+    },
+    {
+      "id": "2vpIxgq78fs",
+      "title": "The Entire History of the Bene Gesserit Explained to Fall Asleep To | Sci-Fi Lore",
+      "views": 1281,
+      "date": "2026-10-03T22:18:59Z",
+      "duration_seconds": 10738
+    },
+    {
+      "id": "h39dowvOsV4",
+      "title": "The Entire Matrix Timeline Explained to Fall Asleep To | Sci-Fi Lore",
+      "views": 903,
+      "date": "2026-10-05T04:00:36Z",
+      "duration_seconds": 10738
+    },
+    {
+      "id": "msNBf_Hxk9w",
+      "title": "The Lore of Dune's Sandworms Is Monstrous | Sci-Fi Lore to Fall Asleep To",
+      "views": 822,
+      "date": "2026-09-09T18:15:48Z",
+      "duration_seconds": 7997
+    },
+    {
+      "id": "sWcuUeQlZ5E",
+      "title": "The Entire Terminator Timeline Explained to Fall Asleep To | Sci-Fi Lore",
+      "views": 425,
+      "date": "2026-09-07T14:26:09Z",
+      "duration_seconds": 7727
+    },
+    {
+      "id": "t6QlCNuj9SE",
+      "title": "The Entire Story of Leto II, God Emperor of Dune Explained to Fall Asleep To | Dune Lore",
+      "views": 318,
+      "date": "2026-10-10T22:54:05Z",
+      "duration_seconds": 9189
+    },
+    {
+      "id": "9w8e0_jvmw0",
+      "title": "The War Against the Thinking Machines Explained to Fall Asleep To | Dune Lore",
+      "views": 215,
+      "date": "2026-10-14T04:00:01Z",
+      "duration_seconds": 9181
+    },
+    {
+      "id": "h88otEFlt_Y",
+      "title": "The Entire History of the Sith Explained to Fall Asleep To | Star Wars Lore",
+      "views": 124,
+      "date": "2026-10-12T09:48:04Z",
+      "duration_seconds": 7646
+    }
+  ],
+  "hushed_reference": [
+    {
+      "id": "AjibRjwB0sI",
+      "title": "Stranger Things 5 Theories To Fall Asleep To",
+      "views": 183261,
+      "date": "2025-10-31T03:39:45Z",
+      "duration_seconds": 4992
+    },
+    {
+      "id": "EQ4SHeWZJ_w",
+      "title": "Stranger Things The First Shadow - Entire Play Breakdown For Sleep",
+      "views": 148802,
+      "date": "2025-12-08T22:19:24Z",
+      "duration_seconds": 5325
+    },
+    {
+      "id": "bVaFyms_P80",
+      "title": "Why Stranger Things 5 Was A Total Disaster (For Sleep)",
+      "views": 136900,
+      "date": "2026-01-13T22:02:56Z",
+      "duration_seconds": 5719
+    },
+    {
+      "id": "EdEtw35QxjA",
+      "title": "Stranger Things 5 Finale Episode 9 Explained & Conformity Gate Explained To Fall Asleep To",
+      "views": 85362,
+      "date": "2026-01-06T22:00:24Z",
+      "duration_seconds": 5086
+    },
+    {
+      "id": "SiHXE9WvdfE",
+      "title": "Stranger Things 5 Vol 2 Theories To Fall Asleep To",
+      "views": 74134,
+      "date": "2025-11-28T22:00:27Z",
+      "duration_seconds": 5167
+    },
+    {
+      "id": "S00qGLoYc_E",
+      "title": "3 Hours Of Stranger Things Lore To Fall Asleep To",
+      "views": 66618,
+      "date": "2025-10-29T23:27:58Z",
+      "duration_seconds": 11352
+    },
+    {
+      "id": "FrfGz5B6QzM",
+      "title": "The ENTIRE Stranger Things Timeline To Fall Asleep To",
+      "views": 62002,
+      "date": "2025-11-01T02:45:36Z",
+      "duration_seconds": 10385
+    },
+    {
+      "id": "Lh80r1sbwQ0",
+      "title": "Stranger Things Finale Theories & Ending Predictions (For Sleep)",
+      "views": 57211,
+      "date": "2025-12-28T22:00:28Z",
+      "duration_seconds": 4901
+    },
+    {
+      "id": "Y3swVvO7H1U",
+      "title": "Every Conformity Gate Theory Explained (For Sleep)",
+      "views": 51499,
+      "date": "2026-01-07T22:30:19Z",
+      "duration_seconds": 5514
+    },
+    {
+      "id": "Z3iA9n9XuJg",
+      "title": "Who Dies in the Stranger Things Finale? | Predictions For Sleep",
+      "views": 50578,
+      "date": "2025-12-29T22:00:41Z",
+      "duration_seconds": 5423
+    },
+    {
+      "id": "ab6Me_tlfVs",
+      "title": "Breaking Down the Stranger Things 5 Finale - Soft Spoken",
+      "views": 43474,
+      "date": "2026-01-01T22:00:01Z",
+      "duration_seconds": 5082
+    },
+    {
+      "id": "KUFHTN8ZISU",
+      "title": "3+ Hours Of Stranger Things Theories To Fall Asleep To",
+      "views": 41068,
+      "date": "2025-12-10T22:00:48Z",
+      "duration_seconds": 11629
+    },
+    {
+      "id": "Y6Doq8B-UrU",
+      "title": "My Stranger Things 5 Finale Theories To Sleep To (Soft Spoken)",
+      "views": 39324,
+      "date": "2025-12-26T22:00:39Z",
+      "duration_seconds": 6599
+    },
+    {
+      "id": "eTAVfKaJs3Y",
+      "title": "How Will Stranger Things 5 End? | Predictions For Sleep",
+      "views": 34983,
+      "date": "2025-12-03T22:19:00Z",
+      "duration_seconds": 4852
+    },
+    {
+      "id": "u6bhquC3BPk",
+      "title": "My Stranger Things 5 Finale Predictions | To Fall Asleep To",
+      "views": 32570,
+      "date": "2025-12-27T22:00:58Z",
+      "duration_seconds": 5316
+    },
+    {
+      "id": "3kKBr2ey0AM",
+      "title": "Every Monster in Stranger Things Explained To Fall Asleep To",
+      "views": 30810,
+      "date": "2025-11-22T23:45:00Z",
+      "duration_seconds": 4680
+    },
+    {
+      "id": "1nY7s_uVBk4",
+      "title": "Biggest Stranger Things 5 Plot Holes",
+      "views": 27263,
+      "date": "2026-01-12T23:24:05Z",
+      "duration_seconds": 3934
+    },
+    {
+      "id": "FhVNkJwyEnE",
+      "title": "Stranger Things Season 5 Ending Predictions To Fall Asleep To",
+      "views": 23713,
+      "date": "2025-11-08T23:45:01Z",
+      "duration_seconds": 4849
+    },
+    {
+      "id": "Afl2D08kkS0",
+      "title": "Stranger Things Vol 2 Breakdown & Ending Explained For Sleep",
+      "views": 19161,
+      "date": "2025-12-30T22:00:11Z",
+      "duration_seconds": 5770
+    },
+    {
+      "id": "gErQOIk0DXo",
+      "title": "The ENTIRE Stranger Things Timeline Explained - 3hr Sleepy Ramble",
+      "views": 17656,
+      "date": "2026-01-05T22:00:47Z",
+      "duration_seconds": 11803
+    },
+    {
+      "id": "zHIK3YBE0mY",
+      "title": "Star Wars Lore, But It's Disturbing",
+      "views": 12722,
+      "date": "2026-09-24T00:00:37Z",
+      "duration_seconds": 6127
+    },
+    {
+      "id": "FvYXGHCkF5I",
+      "title": "Fall Asleep To The Star Wars Iceberg",
+      "views": 12276,
+      "date": "2026-09-19T00:00:13Z",
+      "duration_seconds": 6460
+    },
+    {
+      "id": "wOmbjmHjGOU",
+      "title": "The Lore of Star Wars is DEVASTATING",
+      "views": 10658,
+      "date": "2026-09-21T00:00:04Z",
+      "duration_seconds": 7319
+    },
+    {
+      "id": "_1FqfHV3URA",
+      "title": "Fall Asleep To Every Star Wars Paradox (Pt.2)",
+      "views": 9542,
+      "date": "2026-09-16T00:00:34Z",
+      "duration_seconds": 6189
+    },
+    {
+      "id": "GBey9fTMC30",
+      "title": "Stranger Things Season 5 Finale ENDING Episode 9 - All the PROOF that it's NOT Over! (For Sleep)",
+      "views": 9497,
+      "date": "2026-01-15T23:00:31Z",
+      "duration_seconds": 5427
+    }
+  ],
+  "topic_searches": [
+    {
+      "count": 8,
+      "estimated_results": 315,
+      "has_more": true,
+      "limit": 8,
+      "query": "Dune Spacing Guild explained sleep",
+      "results": [
+        {
+          "channel_id": "UCisWUR5UCMcxz_4zT6mI3kA",
+          "channel_name": "FilmComicsExplained",
+          "description_snippet": null,
+          "duration_seconds": 1628,
+          "published_text": "3 years ago",
+          "title": "THE SPACING GUILD (Masters of Interstellar Travel in DUNE) EXPLAINED",
+          "type": "video",
+          "video_id": "0_F4dlghilQ",
+          "view_count": 2544916,
+          "channel_handle": "@filmcomicsexplained"
+        },
+        {
+          "channel_id": "UCfG8kzSS-tzCuuZamlFx_Pg",
+          "channel_name": "Cryo Bay Logs",
+          "description_snippet": null,
+          "duration_seconds": 9743,
+          "published_text": "9 months ago",
+          "title": "The Spacing Guild | Dune Lore To Sleep To",
+          "type": "video",
+          "video_id": "ZroIAcdn_hQ",
+          "view_count": 427,
+          "channel_handle": "@CryoBayLogs"
+        },
+        {
+          "channel_id": "N/A",
+          "channel_name": "Legends of Arrakis and 2 more",
+          "description_snippet": null,
+          "duration_seconds": 11898,
+          "published_text": "3 months ago",
+          "title": "The Spacing Guild Explained (Dune Stories For Sleep)",
+          "type": "video",
+          "video_id": "dTMqhvtIB7E",
+          "view_count": 5363
+        },
+        {
+          "channel_id": "UCQoVMGQ6Z1y1KjNBpfyUTyA",
+          "channel_name": "MARS",
+          "description_snippet": null,
+          "duration_seconds": 3009,
+          "published_text": "6 months ago",
+          "title": "Dune's Heighliners and Guild Navigators Explained | Dune Sleep Story",
+          "type": "video",
+          "video_id": "odN7UwDw4o8",
+          "view_count": 24246,
+          "channel_handle": "@marsmarsm"
+        },
+        {
+          "channel_id": "UCNZMOOmPJStgwhiJ3x-MZ_A",
+          "channel_name": "Marvelous Videos",
+          "description_snippet": null,
+          "duration_seconds": 4010,
+          "published_text": "1 year ago",
+          "title": "Entire Life of Spacing Guild from Dune – Mutant Humans Who Monopolized Space Travel for 15,000 Years",
+          "type": "video",
+          "video_id": "LLPEax_2HFY",
+          "view_count": 1156367,
+          "channel_handle": "@MarvelousVideos"
+        },
+        {
+          "channel_id": "UCisWUR5UCMcxz_4zT6mI3kA",
+          "channel_name": "FilmComicsExplained",
+          "description_snippet": null,
+          "duration_seconds": 23799,
+          "published_text": "2 years ago",
+          "title": "DUNE: Entire 15,000 Year Timeline Lore & History Explained",
+          "type": "video",
+          "video_id": "1OfWhc2aFWw",
+          "view_count": 849429,
+          "channel_handle": "@filmcomicsexplained"
+        },
+        {
+          "channel_id": "UCQoVMGQ6Z1y1KjNBpfyUTyA",
+          "channel_name": "MARS",
+          "description_snippet": null,
+          "duration_seconds": 6872,
+          "published_text": "4 months ago",
+          "title": "The Complete History of Ix: Dune's Hidden Machine Empire Explained | Sleep Story",
+          "type": "video",
+          "video_id": "ySu0e2Rc9vQ",
+          "view_count": 43272,
+          "channel_handle": "@marsmarsm"
+        },
+        {
+          "channel_id": "UCQoVMGQ6Z1y1KjNBpfyUTyA",
+          "channel_name": "MARS",
+          "description_snippet": null,
+          "duration_seconds": 1891,
+          "published_text": "5 months ago",
+          "title": "Why Dune's Guild Navigators Are Sci-Fi's Most Horrifying Secret | Sleep Story",
+          "type": "video",
+          "video_id": "I3tI0Akqbwc",
+          "view_count": 53248,
+          "channel_handle": "@marsmarsm"
+        }
+      ]
+    },
+    {
+      "count": 8,
+      "estimated_results": 1363,
+      "has_more": true,
+      "limit": 8,
+      "query": "Paul Atreides entire story sleep",
+      "results": [
+        {
+          "channel_id": "UCH-4iTiuMdcY0GHSPColKcg",
+          "channel_name": "Archivum",
+          "description_snippet": null,
+          "duration_seconds": 4928,
+          "published_text": "11 months ago",
+          "title": "Dune | Lore To Sleep To | Paul Atreides: Mu'ad Dib to God-Emperor",
+          "type": "video",
+          "video_id": "aDq7JFHU1IA",
+          "view_count": 44696,
+          "channel_handle": "@theArchivum"
+        },
+        {
+          "channel_id": "UCFYB4pdBUyPH6MjH0AnGoIA",
+          "channel_name": "Good Knights Sleep",
+          "description_snippet": null,
+          "duration_seconds": 28834,
+          "published_text": "2 years ago",
+          "title": "Dune: The Secrets of Arrakis | ASMR Bedtime Story | Cozy Sci-Fi Lore & Relaxing Sleep Ambience",
+          "type": "video",
+          "video_id": "FSaYNqrCs_E",
+          "view_count": 179288,
+          "channel_handle": "@GoodKnightSleep"
+        },
+        {
+          "channel_id": "UClPWl_DMv58DpHy-JkxaHQQ",
+          "channel_name": "EPOCH",
+          "description_snippet": null,
+          "duration_seconds": 20648,
+          "published_text": "10 days ago",
+          "title": "Dune | Paul Atreides | Fall Asleep To The Entire Story",
+          "type": "video",
+          "video_id": "peD3C9gFa4c",
+          "view_count": 2966,
+          "channel_handle": "@EpochSleep"
+        },
+        {
+          "channel_id": "UCisWUR5UCMcxz_4zT6mI3kA",
+          "channel_name": "FilmComicsExplained",
+          "description_snippet": null,
+          "duration_seconds": 23799,
+          "published_text": "2 years ago",
+          "title": "DUNE: Entire 15,000 Year Timeline Lore & History Explained",
+          "type": "video",
+          "video_id": "1OfWhc2aFWw",
+          "view_count": 849429,
+          "channel_handle": "@filmcomicsexplained"
+        },
+        {
+          "channel_id": "UCBr2YE6HNacmaHDanZf7MKQ",
+          "channel_name": "Above the REM",
+          "description_snippet": null,
+          "duration_seconds": 23522,
+          "published_text": "Streamed 1 month ago",
+          "title": "Fall Asleep to the Complete Story of Paul Atreides | Soft Dune Bedtime Lore",
+          "type": "video",
+          "video_id": "XNGZeqyGlOY",
+          "view_count": 1131,
+          "channel_handle": "@Abovetherem"
+        },
+        {
+          "channel_id": "UClysgISO14gw9PyHBMV_t1A",
+          "channel_name": "The Lorebrarians",
+          "description_snippet": null,
+          "duration_seconds": 2909,
+          "published_text": "2 years ago",
+          "title": "Dune - The Complete Timeline Explained | Dune Lore",
+          "type": "video",
+          "video_id": "dxk2_I5z4uw",
+          "view_count": 1599083,
+          "channel_handle": "@TheLorebrarians"
+        },
+        {
+          "channel_id": "UCfFHYEu6bnK1ieacDjIU29w",
+          "channel_name": "Roy All Lore",
+          "description_snippet": null,
+          "duration_seconds": 2403,
+          "published_text": "2 years ago",
+          "title": "What Paul Atreides Actually Become In Dune Messiah - Dune Timeline Explained",
+          "type": "video",
+          "video_id": "FYcZfCp7DWI",
+          "view_count": 468224,
+          "channel_handle": "@RoyAllLore"
+        },
+        {
+          "channel_id": "UCMfiVDFUICkP9tPtJ07jvRw",
+          "channel_name": "Financial Relic",
+          "description_snippet": null,
+          "duration_seconds": 28815,
+          "published_text": "1 year ago",
+          "title": "The Desert Messiah: Paul Atreides Stories | Dune Bedtime Stories | Dune ASMR for Sleep",
+          "type": "video",
+          "video_id": "D7UoAdpgAWI",
+          "view_count": 3600,
+          "channel_handle": "@FinancialRelic"
+        }
+      ]
+    },
+    {
+      "count": 8,
+      "estimated_results": 469669,
+      "has_more": true,
+      "limit": 8,
+      "query": "Victor memories FROM theories",
+      "results": [
+        {
+          "channel_id": "UCcPKzHgFuJ7-qN7aMIrF1zQ",
+          "channel_name": "Scene by Scene",
+          "description_snippet": null,
+          "duration_seconds": 589,
+          "published_text": "6 months ago",
+          "title": "I Spent 1000 Hours Analyzing Victor’s Drawings… Here’s What I Found (FROM Theory)",
+          "type": "video",
+          "video_id": "E4iqUxVtRh8",
+          "view_count": 124915,
+          "channel_handle": "@scenebscene"
+        },
+        {
+          "channel_id": "UCpsJu06sja57CaalewMBI3Q",
+          "channel_name": "Ashes & Oaths ",
+          "description_snippet": null,
+          "duration_seconds": 801,
+          "published_text": "5 months ago",
+          "title": "Victor And The Man In Yellow Do The Same Thing… And Nobody Noticed",
+          "type": "video",
+          "video_id": "_bDiJO3CbSU",
+          "view_count": 613,
+          "channel_handle": "@Ashes-Oaths"
+        },
+        {
+          "channel_id": "UCpsJu06sja57CaalewMBI3Q",
+          "channel_name": "Ashes & Oaths ",
+          "description_snippet": null,
+          "duration_seconds": 748,
+          "published_text": "4 months ago",
+          "title": "What If Victor Is FROMville’s Living Memory  The Darkest FROM Theory Yet",
+          "type": "video",
+          "video_id": "rsBWQTCCSEM",
+          "view_count": 244,
+          "channel_handle": "@Ashes-Oaths"
+        },
+        {
+          "channel_id": "UCaIrW9egZzOmePtcElNOPmQ",
+          "channel_name": "Frame Theory",
+          "description_snippet": null,
+          "duration_seconds": 850,
+          "published_text": "3 months ago",
+          "title": "Why The Monsters Never Touch Victor | The Theory FROM Doesn't Want You To Figure Out",
+          "type": "video",
+          "video_id": "SFKJaTJfY90",
+          "view_count": 30,
+          "channel_handle": "@FrameTheoryGuy"
+        },
+        {
+          "channel_id": "UC8RH0nc05Ok_byVa1CPjLJg",
+          "channel_name": "Parklin Media",
+          "description_snippet": null,
+          "duration_seconds": 2260,
+          "published_text": "11 months ago",
+          "title": "Victor Was NOT Alone After the Town Massacre Theory | FROM",
+          "type": "video",
+          "video_id": "w2uMqmpEfqA",
+          "view_count": 14267,
+          "channel_handle": "@ParklinMedia"
+        },
+        {
+          "channel_id": "UCxR3K9bnobg3nOHUt6I2U6A",
+          "channel_name": "SCENE FEED",
+          "description_snippet": null,
+          "duration_seconds": 703,
+          "published_text": "7 months ago",
+          "title": "The Victor Kavanaugh Mystery: 40 Years in Fromville | Theory & Deep Dive",
+          "type": "video",
+          "video_id": "X4sJpw9YpHU",
+          "view_count": 39143,
+          "channel_handle": "@SCENE_FEED"
+        },
+        {
+          "channel_id": "UCUgujXt5Dmt93tMrHbLdB6Q",
+          "channel_name": "Aetherscene",
+          "description_snippet": null,
+          "duration_seconds": 877,
+          "published_text": "4 months ago",
+          "title": "FROM Never Explained How Victor Survived Alone — And The Answer Is Terrifying",
+          "type": "video",
+          "video_id": "ODZKnth3wME",
+          "view_count": 73625,
+          "channel_handle": "@Aetherscene"
+        },
+        {
+          "channel_id": "UCz7FuRHvd0CpH8vwKqU9Ruw",
+          "channel_name": "Teflon Tv",
+          "description_snippet": null,
+          "duration_seconds": 898,
+          "published_text": "4 months ago",
+          "title": "FROM Season 4 Theory: Victor Finally Reveals The Truth About The Town",
+          "type": "video",
+          "video_id": "7som8CPRYnM",
+          "view_count": 65535,
+          "channel_handle": "@TeflonTv"
+        }
+      ]
+    },
+    {
+      "count": 8,
+      "estimated_results": 120,
+      "has_more": true,
+      "limit": 8,
+      "query": "Severance Eagan family theories",
+      "results": [
+        {
+          "channel_id": "UCDwUrrDN9ZBwLkhXGc1DJAQ",
+          "channel_name": "Nautilus Files",
+          "description_snippet": null,
+          "duration_seconds": 721,
+          "published_text": "4 years ago",
+          "title": "Severance Theories #4 - Kier & The Eagan CEOs",
+          "type": "video",
+          "video_id": "-1SmKcLyB5g",
+          "view_count": 226084,
+          "channel_handle": "@nautilusfiles"
+        },
+        {
+          "channel_id": "UCicir67b52kDQb4Z5iRZGbg",
+          "channel_name": "Trendy Reviews",
+          "description_snippet": null,
+          "duration_seconds": 280,
+          "published_text": "1 year ago",
+          "title": "Severance Season 2 Confirms A Wild Secret About The Eagan Family",
+          "type": "video",
+          "video_id": "2inS1IQXZfw",
+          "view_count": 2387,
+          "channel_handle": "@TrendyyReviews"
+        },
+        {
+          "channel_id": "UCcrNraG2D_q2HzOen9zvpvw",
+          "channel_name": "Helly Refined",
+          "description_snippet": null,
+          "duration_seconds": 3023,
+          "published_text": "1 year ago",
+          "title": "SEVERANCE Season 2 Episode 9 Analysis: DEEP DIVE THEORY ICEBERG! (Hidden Details You Missed)",
+          "type": "video",
+          "video_id": "H-zSUOJlhUo",
+          "view_count": 34861,
+          "channel_handle": "@HellyRefined"
+        },
+        {
+          "channel_id": "UCbo1bRyTgpx3TmSofy1nF_Q",
+          "channel_name": "The Mash-up",
+          "description_snippet": null,
+          "duration_seconds": 447,
+          "published_text": "1 year ago",
+          "title": "Severance: How Lumon Is Going To Resurrect The Eagan Family Line (Theory)",
+          "type": "video",
+          "video_id": "iu-B4TK_VWk",
+          "view_count": 2325,
+          "channel_handle": "@TheMash-upChannel"
+        },
+        {
+          "channel_id": "UCdfTfwjBvG7sfo917emZpww",
+          "channel_name": "Down The Rabbit Hole",
+          "description_snippet": null,
+          "duration_seconds": 162,
+          "published_text": "4 years ago",
+          "title": "Severance Season One Conspiracy Theory",
+          "type": "video",
+          "video_id": "8p0ApNqf23o",
+          "view_count": 440,
+          "channel_handle": "@downtherabbithole5531"
+        },
+        {
+          "channel_id": "UCNZMOOmPJStgwhiJ3x-MZ_A",
+          "channel_name": "Marvelous Videos",
+          "description_snippet": null,
+          "duration_seconds": 651,
+          "published_text": "1 year ago",
+          "title": "Kier Eagan Origins – The Evil Founder of Severance & His Philosophies Explained",
+          "type": "video",
+          "video_id": "WegYZxx_k4Q",
+          "view_count": 14715,
+          "channel_handle": "@MarvelousVideos"
+        },
+        {
+          "channel_id": "UCBZjbPbv-vyFsgpEKqSa2dw",
+          "channel_name": "What If - Audio Channel",
+          "description_snippet": null,
+          "duration_seconds": 134,
+          "published_text": "1 year ago",
+          "title": "Severance Season 2: The Eagan Family’s Sinister Legacy | Theory",
+          "type": "video",
+          "video_id": "_CDoYOep4Fk",
+          "view_count": 297,
+          "channel_handle": "@WhatIf-audio"
+        },
+        {
+          "channel_id": "UC1GLf0PZ0I2Qwrg2YxM56SQ",
+          "channel_name": "Juan Ronco",
+          "description_snippet": null,
+          "duration_seconds": 218,
+          "published_text": "1 year ago",
+          "title": "Irv exposes Helly as an Eagan | Severance | S02E04 Ending Scene",
+          "type": "video",
+          "video_id": "0TzIgScn9Z8",
+          "view_count": 56081,
+          "channel_handle": "@JuanRonco"
+        }
+      ]
+    },
+    {
+      "count": 8,
+      "estimated_results": 133171,
+      "has_more": true,
+      "limit": 8,
+      "query": "Silo season 3 hidden clues",
+      "results": [
+        {
+          "channel_id": "UCUuZ3DWV5eBioDqarmOh9BQ",
+          "channel_name": "What yOu Missed?",
+          "description_snippet": null,
+          "duration_seconds": 801,
+          "published_text": "1 month ago",
+          "title": "SILO Season 3 Episode 9: 68 Hidden Clues You MISSED",
+          "type": "video",
+          "video_id": "HWwtNjJUzdc",
+          "view_count": 13693,
+          "channel_handle": "@WhatyOuMissed-b2n"
+        },
+        {
+          "channel_id": "UC34Qdd5Z5KN30A8aJ2eIMPA",
+          "channel_name": "Think Story",
+          "description_snippet": null,
+          "duration_seconds": 1261,
+          "published_text": "1 month ago",
+          "title": "SILO Season 3 Ending Explained!",
+          "type": "video",
+          "video_id": "VwfhFoxn_RU",
+          "view_count": 884109,
+          "channel_handle": "@ThinkStory"
+        },
+        {
+          "channel_id": "UC0PVv080osyIzFk9HeuSZvg",
+          "channel_name": "Brandi’s Reel Reviews",
+          "description_snippet": null,
+          "duration_seconds": 1130,
+          "published_text": "1 month ago",
+          "title": "SILO Season 3 E10 Finale: The Biggest Clues Reveal What’s Really Happening",
+          "type": "video",
+          "video_id": "kD3VGW5oKfc",
+          "view_count": 121713,
+          "channel_handle": "@BrandiReviewChannel"
+        },
+        {
+          "channel_id": "UChSLKQT-HCN_1FyqCCCgbYg",
+          "channel_name": "Plot Detective",
+          "description_snippet": null,
+          "duration_seconds": 1035,
+          "published_text": "1 month ago",
+          "title": "Silo Season 3 Finale: Every Detail You Missed",
+          "type": "video",
+          "video_id": "tBnb14li5UM",
+          "view_count": 77298,
+          "channel_handle": "@MrPlotDetective"
+        },
+        {
+          "channel_id": "UC8zAiZUuUXe-touFVopBbZw",
+          "channel_name": "Pete Peppers",
+          "description_snippet": null,
+          "duration_seconds": 1469,
+          "published_text": "1 month ago",
+          "title": "SILO Season 3 Ending Explained | Season 3 Finale Breakdown",
+          "type": "video",
+          "video_id": "40bf7uPYwss",
+          "view_count": 1122454,
+          "channel_handle": "@PetePeppers1"
+        },
+        {
+          "channel_id": "UCUuZ3DWV5eBioDqarmOh9BQ",
+          "channel_name": "What yOu Missed?",
+          "description_snippet": null,
+          "duration_seconds": 1073,
+          "published_text": "1 month ago",
+          "title": "SILO Season 3: The 300-Year Timeline Was Never Real",
+          "type": "video",
+          "video_id": "DpLmWLdyyg0",
+          "view_count": 225660,
+          "channel_handle": "@WhatyOuMissed-b2n"
+        },
+        {
+          "channel_id": "UCvWmKya6NdbtgVQm4uc-wTA",
+          "channel_name": "Rawteur",
+          "description_snippet": null,
+          "duration_seconds": 5018,
+          "published_text": "1 month ago",
+          "title": "50 Hidden Details and Clues in Silo Season 3 You Missed",
+          "type": "video",
+          "video_id": "fsMyTAAn5Fo",
+          "view_count": 17549,
+          "channel_handle": "@Rawteur"
+        },
+        {
+          "channel_id": "UCGaE6BmH_h2eOo12binZ2Tg",
+          "channel_name": "BrainPilot",
+          "description_snippet": null,
+          "duration_seconds": 616,
+          "published_text": "1 month ago",
+          "title": "SILO Season 3 Episode 10 Theories Explained",
+          "type": "video",
+          "video_id": "8rdGOw2Pgh0",
+          "view_count": 197579,
+          "channel_handle": "@BrainPilot"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Dune remains the strongest observed all-time public view count on Deep Void; upload ages differ, so no growth-rate causal claim.",
+    "Replace Revan with Paul Atreides; two Dune topics, one Star Wars topic.",
+    "Guild and Paul have existing sleep-format examples; no view prediction.",
+    "Quiet rotation remains Silo, FROM, Severance; topical episodes update all three scripts.",
+    "Hushed used for spoken register and modular listening, not content, personal biography or copied hooks. Stranger Things remains excluded from our output."
+  ]
+}
