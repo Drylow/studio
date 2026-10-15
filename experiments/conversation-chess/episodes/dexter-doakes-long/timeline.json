@@ -51,7 +51,7 @@
   "annotations": [
     {
       "id": "m01",
-      "source_at": 11.1,
+      "source_at": 11.233333333333333,
       "speaker": "black",
       "rating": "book",
       "comment": "Doakes opens with credit, not hostility. Praising the hunch keeps the conversation friendly while he studies how Dexter takes it.",
@@ -64,7 +64,7 @@
     },
     {
       "id": "m02",
-      "source_at": 31.4,
+      "source_at": 31.066666666666666,
       "speaker": "black",
       "rating": "brilliant",
       "comment": "Why is that? The compliment flips into a question about Dexter himself. Doakes turns forensic praise into a quiet accusation.",
@@ -77,7 +77,7 @@
     },
     {
       "id": "m03",
-      "source_at": 37.3,
+      "source_at": 36.96666666666667,
       "speaker": "black",
       "rating": "best",
       "comment": "I'm watching you. No more subtext: Doakes states the threat plainly, and Dexter has no reply that would not sound defensive.",
@@ -90,10 +90,10 @@
     },
     {
       "id": "m04",
-      "source_at": 46.766666666666666,
+      "source_at": 49.4,
       "speaker": "white",
       "rating": "book",
-      "comment": "Doakes sets the rules immediately: Dexter is the one who must explain why he is here. The burden of proof lands on the wrong man.",
+      "comment": "Doakes sets the rules at once: Dexter must explain why he is here, and 'In a cargo box?' shows no vague answer will pass. The burden of proof lands on the wrong man.",
       "hold_seconds": 8,
       "replay_seconds": 3,
       "reviewed": true,
@@ -142,7 +142,7 @@
     },
     {
       "id": "m08",
-      "source_at": 127.2,
+      "source_at": 127.26666666666667,
       "speaker": "white",
       "rating": "excellent",
       "comment": "Dexter recasts the surveillance as harassment. It does not answer the question, but it reminds Doakes he is on thin ice too.",
@@ -155,7 +155,7 @@
     },
     {
       "id": "m09",
-      "source_at": 145.4,
+      "source_at": 145.53333333333333,
       "speaker": "white",
       "rating": "best",
       "comment": "Could you be more vague? Dexter forces Doakes to show his evidence before conceding anything at all.",
@@ -168,7 +168,7 @@
     },
     {
       "id": "m10",
-      "source_at": 162.1,
+      "source_at": 162.23333333333332,
       "speaker": "black",
       "rating": "brilliant",
       "comment": "Cash only, no groups, medical school abandoned, advanced jujitsu. Doakes answers with a file, and every item is precise.",
@@ -181,7 +181,7 @@
     },
     {
       "id": "m11",
-      "source_at": 180.1,
+      "source_at": 180.2,
       "speaker": "white",
       "rating": "book",
       "comment": "Dexter assumes he is being recorded and refuses to comment. The caution is sensible, and it frames Doakes as the schemer.",
@@ -194,7 +194,7 @@
     },
     {
       "id": "m12",
-      "source_at": 193.0,
+      "source_at": 193.1,
       "speaker": "black",
       "rating": "great",
       "comment": "No paper trail in the early years of Dexter Morgan. Doakes cannot prove anything, but he names the gap that matters.",
@@ -207,7 +207,7 @@
     },
     {
       "id": "m13",
-      "source_at": 203.3,
+      "source_at": 203.4,
       "speaker": "black",
       "rating": "excellent",
       "comment": "Unlike you, I do everything out in the open. A strong line, but it tells Dexter exactly how Doakes intends to play.",
@@ -220,7 +220,7 @@
     },
     {
       "id": "m14",
-      "source_at": 224.9,
+      "source_at": 225.33333333333334,
       "speaker": "white",
       "rating": "brilliant",
       "comment": "I own you. Dexter drops the mask for a moment and claims total control. It is chilling, and it changes the tone of their war.",
@@ -246,7 +246,7 @@
     },
     {
       "id": "m16",
-      "source_at": 237.5,
+      "source_at": 237.4,
       "speaker": "black",
       "rating": "best",
       "comment": "Just following your lead. Dexter turns the order back on Doakes, calm and harmless in tone, while still advancing.",
@@ -259,7 +259,7 @@
     },
     {
       "id": "m17",
-      "source_at": 258.1,
+      "source_at": 257.73333333333335,
       "speaker": "white",
       "rating": "book",
       "comment": "Caged, Doakes still dares Dexter to face him. The provocation is the only weapon he has left, so he uses it.",
@@ -272,7 +272,7 @@
     },
     {
       "id": "m18",
-      "source_at": 262.5,
+      "source_at": 262.43333333333334,
       "speaker": "black",
       "rating": "best",
       "comment": "I already did. You just didn't know it. Dexter reveals the trap was set long before the cage, and the bravado falls flat.",
@@ -285,7 +285,7 @@
     },
     {
       "id": "m19",
-      "source_at": 279.0,
+      "source_at": 278.93333333333334,
       "speaker": "white",
       "rating": "great",
       "comment": "Who's lying now? Dexter claims to have no feelings, and Doakes catches the contradiction in his face. The captive scores.",
@@ -298,7 +298,7 @@
     },
     {
       "id": "m20",
-      "source_at": 288.9,
+      "source_at": 289.26666666666665,
       "speaker": "white",
       "rating": "book",
       "comment": "Your old man would be proud. Doakes aims at Harry, the one person Dexter still protects, to see whether it hurts.",
@@ -311,7 +311,7 @@
     },
     {
       "id": "m21",
-      "source_at": 292.9,
+      "source_at": 293.2,
       "speaker": "black",
       "rating": "mistake",
       "comment": "My old man was proud. Dexter defends Harry and gives away that his father knew. Doakes did not even have to ask.",
@@ -324,7 +324,7 @@
     },
     {
       "id": "m22",
-      "source_at": 316.2,
+      "source_at": 316.8,
       "speaker": "white",
       "rating": "brilliant",
       "comment": "They never told you. Doakes realises he holds a secret about Harry that Dexter lacks, and the captive suddenly has leverage.",
@@ -337,7 +337,7 @@
     },
     {
       "id": "m23",
-      "source_at": 351.6,
+      "source_at": 352.2,
       "speaker": "white",
       "rating": "best",
       "comment": "You didn't because you can't. Doakes refuses to treat the threat as real. He reads Dexter's code better than Dexter expected.",
@@ -350,7 +350,7 @@
     },
     {
       "id": "m24",
-      "source_at": 424.5,
+      "source_at": 424.8666666666667,
       "speaker": "white",
       "rating": "great",
       "comment": "Someone up high didn't want it solved. Doakes ends on a mystery, giving Dexter a reason to keep him talking.",
@@ -363,7 +363,7 @@
     },
     {
       "id": "m25",
-      "source_at": 436.0,
+      "source_at": 436.4,
       "speaker": "black",
       "rating": "brilliant",
       "comment": "A known murderer, and your final victim. Dexter announces the frame-up out loud. Every option now points back at Doakes.",
@@ -376,7 +376,7 @@
     },
     {
       "id": "m26",
-      "source_at": 447.8,
+      "source_at": 448.1666666666667,
       "speaker": "black",
       "rating": "best",
       "comment": "The justice system you put all your faith in. Dexter turns Doakes' own principles into the bars of his cage.",
@@ -389,7 +389,7 @@
     },
     {
       "id": "m27",
-      "source_at": 457.6,
+      "source_at": 457.8333333333333,
       "speaker": "white",
       "rating": "inaccuracy",
       "comment": "We'll find a way. After hours of threats, Doakes switches to bargaining. It sounds sincere, but it shows he is out of moves.",
@@ -402,7 +402,7 @@
     },
     {
       "id": "m28",
-      "source_at": 482.5,
+      "source_at": 483.0,
       "speaker": "white",
       "rating": "brilliant",
       "comment": "Your sister, your girlfriend, those kids. Doakes stops arguing about Dexter and makes it about the people he would hurt.",
@@ -415,7 +415,7 @@
     },
     {
       "id": "m29",
-      "source_at": 513.4,
+      "source_at": 513.9,
       "speaker": "black",
       "rating": "good",
       "comment": "Dexter half-agrees that capture will come someday. A rare concession, and Doakes immediately tries to turn it into a plan.",
@@ -428,7 +428,7 @@
     },
     {
       "id": "m30",
-      "source_at": 541.0,
+      "source_at": 541.6,
       "speaker": "black",
       "rating": "great",
       "comment": "I think we've seen the worst of that. Dexter calmly closes the door on Doakes' offer and walks away from the cage again.",
@@ -441,7 +441,7 @@
     },
     {
       "id": "m31",
-      "source_at": 562.1,
+      "source_at": 562.7333333333333,
       "speaker": "white",
       "rating": "great",
       "comment": "I lie to everyone I know, except my victims. Dexter's warmest words to Doakes are a confession and a farewell.",
@@ -454,7 +454,7 @@
     },
     {
       "id": "m32",
-      "source_at": 564.8,
+      "source_at": 565.4333333333333,
       "speaker": "white",
       "rating": "best",
       "comment": "Sorry about the cage. A polite apology with no intention of changing anything. Dexter leaves, and Doakes can only shout.",

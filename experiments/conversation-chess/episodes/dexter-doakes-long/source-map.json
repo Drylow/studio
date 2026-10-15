@@ -1,0 +1,498 @@
+{
+ "schema": "conversation-chess-actual-three-episode-edl-v1",
+ "status": "Dexter-Doakes public Clip.cafe clips; reviewed cuts.",
+ "master_fps": 30,
+ "master_duration_frames": 17199,
+ "source_map": [
+  {
+   "kind": "chapter_card",
+   "title": "I'M WATCHING YOU",
+   "chapter": "c01",
+   "duration_frames": 90,
+   "master_in_frames": 0,
+   "master_out_frames": 90,
+   "master_in": 0.0,
+   "master_out": 3.0
+  },
+  {
+   "kind": "source",
+   "id": "excuse-me-s1199",
+   "chapter_title": "I'M WATCHING YOU",
+   "episode": "S01E07",
+   "file": "excuse-me-s1199.mp4",
+   "source_in": 0.9,
+   "source_out": 35.4,
+   "duration_frames": 1035,
+   "master_in_frames": 90,
+   "master_out_frames": 1125,
+   "master_in": 3.0,
+   "master_out": 37.5,
+   "source_sha256": "2c6199b2f2d5ffb094c107bef2f09c5b16baa24e796dc00e9ceb215cec7370e6",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/excuse-me-s1199/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "SURPRISE, MORGAN",
+   "chapter": "c02",
+   "duration_frames": 90,
+   "master_in_frames": 1125,
+   "master_out_frames": 1215,
+   "master_in": 37.5,
+   "master_out": 40.5
+  },
+  {
+   "kind": "source",
+   "id": "shit-surprise-motherfucker-are-you-follo",
+   "chapter_title": "SURPRISE, MORGAN",
+   "episode": "S01E12",
+   "file": "shit-surprise-motherfucker-are-you-following-me-now-you-better-have-a-reason-for-being-here.mp4",
+   "source_in": 4.4,
+   "source_out": 32.4,
+   "duration_frames": 840,
+   "master_in_frames": 1215,
+   "master_out_frames": 2055,
+   "master_in": 40.5,
+   "master_out": 68.5,
+   "source_sha256": "84e6e5ea2d78e12b5ec2a5d9992c9ec39ac0a991c57aafbe93a32f130ec89d16",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/shit-surprise-motherfucker-are-you-following-me-now-you-better-have-a-reason-for-being-here/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "lab-geek-ass",
+   "chapter_title": "SURPRISE, MORGAN",
+   "episode": "S01E12",
+   "file": "lab-geek-ass.mp4",
+   "source_in": 0.6,
+   "source_out": 19.4,
+   "duration_frames": 564,
+   "master_in_frames": 2055,
+   "master_out_frames": 2619,
+   "master_in": 68.5,
+   "master_out": 87.3,
+   "source_sha256": "d40346fa9c22fdea4d40dbe3d249c96ce48758a7f8bc1ae81988602ff69b2cf1",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/lab-geek-ass/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "CAUGHT IN THE LAB",
+   "chapter": "c03",
+   "duration_frames": 90,
+   "master_in_frames": 2619,
+   "master_out_frames": 2709,
+   "master_in": 87.3,
+   "master_out": 90.3
+  },
+  {
+   "kind": "source",
+   "id": "hey-sergeant-s4",
+   "chapter_title": "CAUGHT IN THE LAB",
+   "episode": "S02E01",
+   "file": "hey-sergeant-s4.mp4",
+   "source_in": 0.4,
+   "source_out": 8.4,
+   "duration_frames": 240,
+   "master_in_frames": 2709,
+   "master_out_frames": 2949,
+   "master_in": 90.3,
+   "master_out": 98.3,
+   "source_sha256": "efc6f700cf227c5e8fc4770af5823e3aab15e86655d79c291418584f97c35a7f",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/hey-sergeant-s4/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "so-whats-that-a-titty-site",
+   "chapter_title": "CAUGHT IN THE LAB",
+   "episode": "S02E01",
+   "file": "so-whats-that-a-titty-site.mp4",
+   "source_in": 0.5,
+   "source_out": 37.8,
+   "duration_frames": 1119,
+   "master_in_frames": 2949,
+   "master_out_frames": 4068,
+   "master_in": 98.3,
+   "master_out": 135.6,
+   "source_sha256": "a6d05235b8e09dd6e5ce48bd72c780766ca52e9000c4d8bc7cd1180aea701ee6",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/so-whats-that-a-titty-site/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "THE FILE",
+   "chapter": "c04",
+   "duration_frames": 90,
+   "master_in_frames": 4068,
+   "master_out_frames": 4158,
+   "master_in": 135.6,
+   "master_out": 138.6
+  },
+  {
+   "kind": "source",
+   "id": "what-exactly-is-it-you-think-lve-done",
+   "chapter_title": "THE FILE",
+   "episode": "S02E03",
+   "file": "what-exactly-is-it-you-think-lve-done.mp4",
+   "source_in": 0.3,
+   "source_out": 24.4,
+   "duration_frames": 723,
+   "master_in_frames": 4158,
+   "master_out_frames": 4881,
+   "master_in": 138.6,
+   "master_out": 162.7,
+   "source_sha256": "4d5079df76f7e124cd05d09ad95bcbd5df590252b8bd89ea1340cd5bf8f118cc",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/what-exactly-is-it-you-think-lve-done/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "I OWN YOU",
+   "chapter": "c05",
+   "duration_frames": 90,
+   "master_in_frames": 4881,
+   "master_out_frames": 4971,
+   "master_in": 162.7,
+   "master_out": 165.7
+  },
+  {
+   "kind": "source",
+   "id": "you-finally-decided-to-fight-back",
+   "chapter_title": "I OWN YOU",
+   "episode": "S02E07",
+   "file": "you-finally-decided-to-fight-back.mp4",
+   "source_in": 0.5,
+   "source_out": 60.6,
+   "duration_frames": 1803,
+   "master_in_frames": 4971,
+   "master_out_frames": 6774,
+   "master_in": 165.7,
+   "master_out": 225.8,
+   "source_sha256": "3e8f84b62a999effd89e397d6288db63d3662361dfa132324bc5acfa896cb216",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/you-finally-decided-to-fight-back/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "THE EVERGLADES",
+   "chapter": "c06",
+   "duration_frames": 90,
+   "master_in_frames": 6774,
+   "master_out_frames": 6864,
+   "master_in": 225.8,
+   "master_out": 228.8
+  },
+  {
+   "kind": "source",
+   "id": "all-right-s2709",
+   "chapter_title": "THE EVERGLADES",
+   "episode": "S02E09",
+   "file": "all-right-s2709.mp4",
+   "source_in": 1.4,
+   "source_out": 10.6,
+   "duration_frames": 276,
+   "master_in_frames": 6864,
+   "master_out_frames": 7140,
+   "master_in": 228.8,
+   "master_out": 238.0,
+   "source_sha256": "df3b60a7ea6a4e7da65978e95fbd9db58e0cd1d8b450da1cfcc0601fb2fca4a9",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/all-right-s2709/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "youre-gonna-have-to-kill-me-morgan",
+   "chapter_title": "THE EVERGLADES",
+   "episode": "S02E09",
+   "file": "youre-gonna-have-to-kill-me-morgan.mp4",
+   "source_in": 0.5,
+   "source_out": 9.0,
+   "duration_frames": 255,
+   "master_in_frames": 7140,
+   "master_out_frames": 7395,
+   "master_in": 238.0,
+   "master_out": 246.5,
+   "source_sha256": "9d2209ef9e2549daf6525861482274b71f7c4079d18bf72a29034d7feee6520f",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/youre-gonna-have-to-kill-me-morgan/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "THE CAGE",
+   "chapter": "c07",
+   "duration_frames": 90,
+   "master_in_frames": 7395,
+   "master_out_frames": 7485,
+   "master_in": 246.5,
+   "master_out": 249.5
+  },
+  {
+   "kind": "source",
+   "id": "lf-you-want-to-bring-me-down-morgan-your",
+   "chapter_title": "THE CAGE",
+   "episode": "S02E10",
+   "file": "lf-you-want-to-bring-me-down-morgan-youre-gonna-have-to-open-this-goddamn-cage-first.mp4",
+   "source_in": 0.2,
+   "source_out": 13.6,
+   "duration_frames": 402,
+   "master_in_frames": 7485,
+   "master_out_frames": 7887,
+   "master_in": 249.5,
+   "master_out": 262.9,
+   "source_sha256": "94bbf65f7c25b37d3c0d0e09ab42fb8f2aef8f439a301a956a41b6d52fc8bbdb",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/lf-you-want-to-bring-me-down-morgan-youre-gonna-have-to-open-this-goddamn-cage-first/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "lm-sure-special-ops-taught-you-to-rattle",
+   "chapter_title": "THE CAGE",
+   "episode": "S02E10",
+   "file": "lm-sure-special-ops-taught-you-to-rattle-your-captor.mp4",
+   "source_in": 0.6,
+   "source_out": 17.2,
+   "duration_frames": 498,
+   "master_in_frames": 7887,
+   "master_out_frames": 8385,
+   "master_in": 262.9,
+   "master_out": 279.5,
+   "source_sha256": "89bf3f95d4a66fe120ddce444e257d3e0c8873c66a9bb4fa2c5131b216d141a9",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/lm-sure-special-ops-taught-you-to-rattle-your-captor/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "HARRY'S SECRET",
+   "chapter": "c08",
+   "duration_frames": 90,
+   "master_in_frames": 8385,
+   "master_out_frames": 8475,
+   "master_in": 279.5,
+   "master_out": 282.5
+  },
+  {
+   "kind": "source",
+   "id": "you-think-youre-a-fucking-hero-dont-you",
+   "chapter_title": "HARRY'S SECRET",
+   "episode": "S02E10",
+   "file": "you-think-youre-a-fucking-hero-dont-you.mp4",
+   "source_in": 0.3,
+   "source_out": 45.8,
+   "duration_frames": 1365,
+   "master_in_frames": 8475,
+   "master_out_frames": 9840,
+   "master_in": 282.5,
+   "master_out": 328.0,
+   "source_sha256": "3ffa84b512a94de174a4f7d8a29c814a305d9a58c2e7384ecf9db9653274cc8e",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/you-think-youre-a-fucking-hero-dont-you/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "what-was-that-shit-last-night",
+   "chapter_title": "HARRY'S SECRET",
+   "episode": "S02E10",
+   "file": "what-was-that-shit-last-night.mp4",
+   "source_in": 0.3,
+   "source_out": 47.4,
+   "duration_frames": 1413,
+   "master_in_frames": 9840,
+   "master_out_frames": 11253,
+   "master_in": 328.0,
+   "master_out": 375.1,
+   "source_sha256": "8bf2e0f43835e284160f153cd2085a604136febd0208589e107fb286f186bc3e",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/what-was-that-shit-last-night/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "lts-a-small-conscience",
+   "chapter_title": "HARRY'S SECRET",
+   "episode": "S02E10",
+   "file": "lts-a-small-conscience.mp4",
+   "source_in": 1.0,
+   "source_out": 51.4,
+   "duration_frames": 1512,
+   "master_in_frames": 11253,
+   "master_out_frames": 12765,
+   "master_in": 375.1,
+   "master_out": 425.5,
+   "source_sha256": "a03bfc649f66a4cfde78895a7d7037db3ced773063eab54b568189a886820aa5",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/lts-a-small-conscience/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "THE FINAL VICTIM",
+   "chapter": "c09",
+   "duration_frames": 90,
+   "master_in_frames": 12765,
+   "master_out_frames": 12855,
+   "master_in": 425.5,
+   "master_out": 428.5
+  },
+  {
+   "kind": "source",
+   "id": "who-the-fuck-is-that-s3",
+   "chapter_title": "THE FINAL VICTIM",
+   "episode": "S02E10",
+   "file": "who-the-fuck-is-that-s3.mp4",
+   "source_in": 0.5,
+   "source_out": 40.8,
+   "duration_frames": 1209,
+   "master_in_frames": 12855,
+   "master_out_frames": 14064,
+   "master_in": 428.5,
+   "master_out": 468.8,
+   "source_sha256": "ce77e85eee67403b216c2acf6c8e3679e401bfb8c4070bc6bc0a1c197de65bb7",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/who-the-fuck-is-that-s3/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "TURN YOURSELF IN",
+   "chapter": "c10",
+   "duration_frames": 90,
+   "master_in_frames": 14064,
+   "master_out_frames": 14154,
+   "master_in": 468.8,
+   "master_out": 471.8
+  },
+  {
+   "kind": "source",
+   "id": "lts-the-only-way-l-know-how-to-live",
+   "chapter_title": "TURN YOURSELF IN",
+   "episode": "S02E11",
+   "file": "lts-the-only-way-l-know-how-to-live.mp4",
+   "source_in": 15.3,
+   "source_out": 48.6,
+   "duration_frames": 999,
+   "master_in_frames": 14154,
+   "master_out_frames": 15153,
+   "master_in": 471.8,
+   "master_out": 505.1,
+   "source_sha256": "78469bf6f268b1c5280d97e765cc09c5f8ed00e29e02df900478e4ed8d75202d",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/lts-the-only-way-l-know-how-to-live/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "better-than-watching-me-dragged-in-like-",
+   "chapter_title": "TURN YOURSELF IN",
+   "episode": "S02E11",
+   "file": "better-than-watching-me-dragged-in-like-an-animal.mp4",
+   "source_in": 0.7,
+   "source_out": 41.4,
+   "duration_frames": 1221,
+   "master_in_frames": 15153,
+   "master_out_frames": 16374,
+   "master_in": 505.1,
+   "master_out": 545.8,
+   "source_sha256": "3ae63407ad14c16f7af53217cb65b9147458eff3ac8c01fcb18061d6c9d89525",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/better-than-watching-me-dragged-in-like-an-animal/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "LAST WORDS",
+   "chapter": "c11",
+   "duration_frames": 90,
+   "master_in_frames": 16374,
+   "master_out_frames": 16464,
+   "master_in": 545.8,
+   "master_out": 548.8
+  },
+  {
+   "kind": "source",
+   "id": "ive-really-enjoyed-our-conversations-jam",
+   "chapter_title": "LAST WORDS",
+   "episode": "S02E11",
+   "file": "ive-really-enjoyed-our-conversations-james.mp4",
+   "source_in": 3.0,
+   "source_out": 17.6,
+   "duration_frames": 438,
+   "master_in_frames": 16464,
+   "master_out_frames": 16902,
+   "master_in": 548.8,
+   "master_out": 563.4,
+   "source_sha256": "cb8bb61a3627483b84dbc3c660bf05cbb60fd8bc02954f1eca2ca31c0f79790b",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/ive-really-enjoyed-our-conversations-james/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "sorry-about-the-cage",
+   "chapter_title": "LAST WORDS",
+   "episode": "S02E11",
+   "file": "sorry-about-the-cage.mp4",
+   "source_in": 0.5,
+   "source_out": 10.4,
+   "duration_frames": 297,
+   "master_in_frames": 16902,
+   "master_out_frames": 17199,
+   "master_in": 563.4,
+   "master_out": 573.3,
+   "source_sha256": "769d80129811f655cb919ea710bab52cf213542cd22326a42f8ee68da9bf38b6",
+   "clip_cafe_page": "https://clip.cafe/dexter-2006/sorry-about-the-cage/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  }
+ ]
+}
