@@ -8,6 +8,7 @@ Les autres plans sont renvoyés tels quels (image et revue conservées). Les pla
 par l'étape « images » (parallèle) ; `--one-by-one` les refait un par un.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -16,6 +17,25 @@ import forge_flow as ff  # noqa: E402
 
 KEEP = ("id", "text", "prompt", "location_id", "characters", "character_variants", "references", "start", "end",
         "image", "motion", "location_view", "shot_type", "visual_beat", "location_contract")
+
+
+def drop_from_prompt(prompt, name):
+    """Retire les lignes « Image N: <nom>; … » du personnage et renumérote les suivantes : le serveur refuse un prompt
+    dont les numéros d'images ne correspondent plus aux références du plan. Retire aussi le nom de « Allowed cast »."""
+    out, removed = [], 0
+    for line in prompt.splitlines():
+        m = re.match(r"(\s*)Image (\d+): (.*)$", line)
+        if m and m.group(3).startswith(name + ";"):
+            removed += 1
+            continue
+        if m and removed:
+            line = f"{m.group(1)}Image {int(m.group(2)) - removed}: {m.group(3)}"
+        m2 = re.match(r"(\s*Allowed cast:)([^.]*)\.(.*)$", line)
+        if m2:
+            names = [n.strip() for n in m2.group(2).split(";") if n.strip() and n.strip() != name]
+            line = f"{m2.group(1)} {'; '.join(names) or 'none'}.{m2.group(3)}"
+        out.append(line)
+    return "\n".join(out)
 
 
 def main():
@@ -39,6 +59,7 @@ def main():
                 row["characters"] = [c for c in row.get("characters") or [] if c != name]
                 row.get("character_variants", {}).pop(name, None)
                 row["references"] = [r for r in row["references"] if r.get("character") != name]
+                row["prompt"] = drop_from_prompt(row["prompt"], name)
             row.pop("image", None)
         rows.append(row)
     ff.api("PUT", ff.NATIVE + f"/api/workspace/projects/{video_id}/scenes", {"scenes": rows})
