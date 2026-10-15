@@ -10,8 +10,14 @@ réclamée ou bloquée après Sopranos et Peaky Blinders.
 
 **Règle de l'utilisateur (15 oct.) : que ça n'arrive plus.** Un long fait
 surtout d'extraits d'une série commerciale n'est plus produit pour la chaîne,
-quelle que soit la série (The Mentalist compris : Warner Bros). Le format doit
-passer sans image ni son du titulaire, ou avec une source sous licence réelle.
+quelle que soit la série. Le format doit passer sans image ni son du titulaire,
+ou avec une source sous licence réelle.
+
+**Exception choisie par l'utilisateur le même jour : un essai The Mentalist en
+extraits très courts** (environ 1 min 30 à 2 min de scène jouée, modèle Death Note
+V3), envoyé d'abord en privé (`private_first`) et programmé seulement si les
+Checks YouTube sont propres. Risque de blocage accepté par l'utilisateur. Si cet
+essai est réclamé ou bloqué, passer au format sans extraits.
 
 ## Incident Peaky signalé le 11 octobre 2026
 
