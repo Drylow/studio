@@ -9,12 +9,20 @@ sont finalisés, relus et prêts pour la narration. Deep Void : Force, Guilde, P
 Silo, Victor/FROM, Eagan/Severance. Le troisième sujet Revan est abandonné en faveur
 de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets Ultravid.
 
+## Narrations du nouveau lot
+
+Les six voix Algrow sont terminées, téléchargées et contrôlées, voix Mellow Matt
+`IsEXLHzSvLH9UMB6SLHj`. Toutes dépassent deux heures. Lire [le relevé des voix](narrations-2026-10-15/README.md).
+Copie sur le Bureau : **Voix sleep - 15 octobre 2026**. Ne pas régénérer les jobs terminés.
+
 ## Miniatures du nouveau lot
 
-Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient cinq nouvelles
-propositions exportées : Guilde, Paul, Silo, FROM, Severance. La Force reste bloquée
-par deux refus du générateur intégré ; confirmation de la voie API demandée.
-Les images sont des propositions, sans choix utilisateur ni publication.
+Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient les six nouvelles
+propositions exportées : Force, Guilde, Paul, Silo, FROM, Severance. Force a été créée
+via le proxy API autorisé, avec deux Jedi humains originaux et des vaisseaux Star Wars.
+Les cinq autres viennent du générateur intégré. Les images sont revues visuellement,
+sans choix utilisateur ni publication. Copie simple : Miniatures sleep - 15 octobre 2026
+sur le Bureau.
 
 ## Lire dans cet ordre
 

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "measured_audio": false,
+  "measured_audio": true,
   "episodes": [
     {
       "id": "DV-01-force",
@@ -17,7 +17,9 @@
       "review_coverage": 17,
       "review_findings": 0,
       "final_text_editorially_validated": true,
-      "sha256": "59408ed0a6bce3d35d1faca8f24458d56414b3edb7cccebda646c04b4d280352"
+      "sha256": "59408ed0a6bce3d35d1faca8f24458d56414b3edb7cccebda646c04b4d280352",
+      "audio_duration_seconds": 10768.399,
+      "audio_file": "01-DV-01-force.mp3"
     },
     {
       "id": "DV-02-guilde",
@@ -34,7 +36,9 @@
       "review_coverage": 19,
       "review_findings": 0,
       "final_text_editorially_validated": true,
-      "sha256": "4c793266fa6804108661d8ba39fa232cb884aeaf6a66cf83c38cd956acc0aa16"
+      "sha256": "4c793266fa6804108661d8ba39fa232cb884aeaf6a66cf83c38cd956acc0aa16",
+      "audio_duration_seconds": 11203.683,
+      "audio_file": "02-DV-02-guilde.mp3"
     },
     {
       "id": "DV-03-paul",
@@ -51,7 +55,9 @@
       "review_coverage": 20,
       "review_findings": 0,
       "final_text_editorially_validated": true,
-      "sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b"
+      "sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b",
+      "audio_duration_seconds": 10760.176,
+      "audio_file": "03-DV-03-paul.mp3"
     },
     {
       "id": "QP-04-silo-indices",
@@ -68,7 +74,9 @@
       "review_coverage": 17,
       "review_findings": 0,
       "final_text_editorially_validated": true,
-      "sha256": "989c1d08ba1e601ca54e632f53ea654b2bd84fc7c2c075221634b2a81b117689"
+      "sha256": "989c1d08ba1e601ca54e632f53ea654b2bd84fc7c2c075221634b2a81b117689",
+      "audio_duration_seconds": 10588.709,
+      "audio_file": "04-QP-04-silo-indices.mp3"
     },
     {
       "id": "QP-05-from-victor",
@@ -85,7 +93,9 @@
       "review_coverage": 14,
       "review_findings": 0,
       "final_text_editorially_validated": true,
-      "sha256": "b044e15e851e38e807cb2324b2a7192c81b1c84b0d08ff99c0b6d994a9cead12"
+      "sha256": "b044e15e851e38e807cb2324b2a7192c81b1c84b0d08ff99c0b6d994a9cead12",
+      "audio_duration_seconds": 10218.58,
+      "audio_file": "05-QP-05-from-victor.mp3"
     },
     {
       "id": "QP-06-severance-eagan",
@@ -102,7 +112,9 @@
       "review_coverage": 19,
       "review_findings": 0,
       "final_text_editorially_validated": true,
-      "sha256": "33620c8c582abce8b2d2639e94fd80be84f28d7e6e1adb9b56ecee06af16d813"
+      "sha256": "33620c8c582abce8b2d2639e94fd80be84f28d7e6e1adb9b56ecee06af16d813",
+      "audio_duration_seconds": 10746.907,
+      "audio_file": "06-QP-06-severance-eagan.mp3"
     }
   ]
 }

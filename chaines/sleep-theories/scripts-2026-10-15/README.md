@@ -19,6 +19,6 @@ Trois passages de relecture ont été menés : deux par groupes de chapitres pui
 
 Un seul appel facultatif à l'abonnement et au commentaire de lieu/moment d'écoute est présent au début de chaque script. Pas de CTA final. Narration calme, théorie distinguée de l'événement, sans annonce de scène ou instruction de montage.
 
-Les durées sont des **estimations**, avec plus de deux heures même au repère de 170 mots/minute. La voix finale doit être générée puis chronométrée dans Ultravid. Aucun audio ou upload n'a été réalisé pour ce lot. Les repères de chapitres ne sont pas encore des timestamps de publication.
+Les durées sont des **estimations**, avec plus de deux heures même au repère de 170 mots/minute. Les six voix ont ensuite été générées dans Algrow avec Mellow Matt et mesurées : toutes dépassent deux heures. Voir `../narrations-2026-10-15/README.md`. Aucun montage ou upload lancé. Les repères de chapitres ne sont pas encore des timestamps de publication.
 
 Silo : télévision jusqu'à S3E10, sans spoilers des romans. FROM : jusqu'à S4E10. Severance : jusqu'à S2E10. Dune : continuité des romans originaux, spoilers annoncés. Voir [la méthode et ses limites](METHODE-ET-LIMITES.md) et les fichiers de sources.

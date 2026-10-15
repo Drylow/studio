@@ -127,7 +127,7 @@
   ],
   "next_script_batch": {
     "date": "2026-10-15",
-    "state": "six_final_texts_delivered_audio_pending",
+    "state": "six_final_scripts_and_voiceovers_verified",
     "user_authorized": true,
     "deep_void_balance": {
       "Dune": 2,
@@ -139,7 +139,7 @@
     },
     "folder": "scripts-2026-10-15",
     "publication_authorized": false,
-    "audio_generated": false,
+    "audio_generated": true,
     "scripts": [
       {
         "id": "DV-01-force",
@@ -249,10 +249,60 @@
     "thumbnail_batch": {
       "date": "2026-10-15",
       "folder": "miniatures-2026-10-15",
-      "generated": 5,
-      "star_wars": "integrated_generation_blocked_twice_api_authorization_requested",
+      "generated": 6,
+      "star_wars": "complete_original_human_jedi_composition_via_authorized_api",
       "user_approved": false,
-      "published": false
+      "published": false,
+      "api_authorized": true,
+      "preview": "miniatures-2026-10-15/apercu-six-miniatures.jpg",
+      "proposals": [
+        {
+          "id": "01-deep-force",
+          "export": "miniatures-2026-10-15/exports/01-deep-force-1280x720.jpg",
+          "status": "proposal_visually_reviewed_not_user_approved"
+        },
+        {
+          "id": "02-deep-guilde",
+          "export": "miniatures-2026-10-15/exports/02-deep-guilde-1280x720.jpg",
+          "status": "proposal_visually_reviewed_not_user_approved"
+        },
+        {
+          "id": "03-deep-paul",
+          "export": "miniatures-2026-10-15/exports/03-deep-paul-1280x720.jpg",
+          "status": "proposal_visually_reviewed_not_user_approved"
+        },
+        {
+          "id": "04-quiet-silo",
+          "export": "miniatures-2026-10-15/exports/04-quiet-silo-1280x720.jpg",
+          "status": "proposal_visually_reviewed_not_user_approved"
+        },
+        {
+          "id": "05-quiet-from",
+          "export": "miniatures-2026-10-15/exports/05-quiet-from-1280x720.jpg",
+          "status": "proposal_visually_reviewed_not_user_approved"
+        },
+        {
+          "id": "06-quiet-severance",
+          "export": "miniatures-2026-10-15/exports/06-quiet-severance-1280x720.jpg",
+          "status": "proposal_visually_reviewed_not_user_approved"
+        }
+      ]
+    },
+    "narration_batch": {
+      "folder": "narrations-2026-10-15",
+      "authorized": true,
+      "provider": "Algrow",
+      "voice_id": "IsEXLHzSvLH9UMB6SLHj",
+      "voice_name": "Mellow Matt",
+      "parts_accepted": 16,
+      "completed_audio_verified": 6,
+      "successful_parts": 15,
+      "recovery_parts_submitted": 4,
+      "failed_unbilled_jobs": 1,
+      "all_over_two_hours": true,
+      "state": "six_audios_downloaded_verified",
+      "report": "narrations-2026-10-15/suivi.json",
+      "recovery_state": "completed"
     }
   }
 }

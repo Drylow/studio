@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-15",
+  "records": [
+    {
+      "id": "01-deep-force",
+      "file": "exports/01-deep-force-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 399018,
+      "sha256": "f9ec65e8009e5a05696fa37b3ddda5372405f9f8753e6139ddc07ef354a4ca90",
+      "original": "originaux/01-deep-force-api-v2.png",
+      "user_approved": false
+    },
+    {
+      "id": "02-deep-guilde",
+      "file": "exports/02-deep-guilde-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 418698,
+      "sha256": "0992b068837517461c578a4905db2764cf51dc4ebce5dd20552d70c92ac00058",
+      "original": "originaux/02-deep-guilde.png",
+      "user_approved": false
+    },
+    {
+      "id": "03-deep-paul",
+      "file": "exports/03-deep-paul-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 374548,
+      "sha256": "c3a4bb88689a6b87c7a3a1955b6e7c20d5aed2279d620e10bc793771ec8b9c17",
+      "original": "originaux/03-deep-paul.png",
+      "user_approved": false
+    },
+    {
+      "id": "04-quiet-silo",
+      "file": "exports/04-quiet-silo-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 388469,
+      "sha256": "13a1ca0f51da036d7ae69f87853d7e8b9aaf38637ea62d6fc6bf204a2b92738d",
+      "original": "originaux/04-quiet-silo.png",
+      "user_approved": false
+    },
+    {
+      "id": "05-quiet-from",
+      "file": "exports/05-quiet-from-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 375376,
+      "sha256": "de07ada210cff5330e735679c2d96a9af99c49e0518a79dcb8544772c49d7a92",
+      "original": "originaux/05-quiet-from.png",
+      "user_approved": false
+    },
+    {
+      "id": "06-quiet-severance",
+      "file": "exports/06-quiet-severance-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 327843,
+      "sha256": "5527f8f76153741674262ae112e14a37f47ae3257138c0166ff0303fbb72da53",
+      "original": "originaux/06-quiet-severance.png",
+      "user_approved": false
+    }
+  ],
+  "generated": 6,
+  "upload_performed": false
+}

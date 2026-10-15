@@ -6,11 +6,12 @@
 2. Utiliser les `script-voix.txt` finaux ou les six textes simples du dossier
    Bureau **6 scripts sleep - 15 octobre 2026**. Sources et contrôles sont dans
    le dossier canonique et la sauvegarde autonome de reprise.
-3. Dans Ultravid, générer la narration puis vérifier au moins deux heures de
-   voix réelle. Les durées calculées sur les mots restent des estimations.
-   Ne pas ajouter de silence ou de boucle.
-4. Préparer les miniatures et descriptions de ce nouveau lot quand demandé.
-   Les directions visuelles précédentes restent les références.
+3. Les six voix Algrow Mellow Matt sont récupérées et contrôlées, toutes au-delà
+   de deux heures. Voir `narrations-2026-10-15/README.md` et le dossier Bureau
+   **Voix sleep - 15 octobre 2026**. Ne pas les régénérer. Le montage reste à faire.
+4. Six propositions de miniatures sont prêtes dans `miniatures-2026-10-15/`,
+   avec copie simple sur le Bureau. Attendre le choix utilisateur avant de les
+   déclarer approuvées. Les descriptions du nouveau lot restent à préparer.
 5. Premier lot Quiet : Silo publié, upload de Severance signalé, FROM prévu après.
    Vérifier ces états avant de créer un projet en double. Leurs kits existent
    déjà dans les dossiers `chaines/quiet-paradox/02-from` et `03-severance`.
@@ -19,5 +20,5 @@
 7. Relever les liens Ultravid et durées mesurées quand disponibles, puis mettre
    à jour `etat-videos.json` sur preuve ou confirmation.
 
-Le logo Quiet reste en pause. La commande de rédaction des six scripts ne lance
-aucun nouvel audio, montage ou upload.
+Le logo Quiet reste en pause. La commande du 15 octobre autorise les six narrations
+Algrow. Aucun nouveau montage ou upload ne découle de cette autorisation.

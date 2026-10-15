@@ -4,7 +4,7 @@ Title: What Happened When a Medieval Woman Reported Rape?
 
 ## Description
 
-What happened after a medieval woman made a complaint? We follow the documents through three separate examples: England in1287, France in1386 and Dijon in1472, asking what the surviving records reveal and whose words they leave out.
+What happened after a medieval woman made a complaint? We follow the documents through three separate examples: England in 1287, France in 1386 and Dijon in 1472, asking what the surviving records reveal and whose words they leave out.
 
 A non-graphic historical explanation based on published scholarship. The illustrated guides are fictional adults. The video does not depict an assault or claim to recreate the people in these cases. Procedures and outcomes differed across places and periods.
 
@@ -31,3 +31,11 @@ English. Ryan Kurk - Pleasant and Smooth. Duration: 14:30. 1920×1080, 24 fps. S
 All 108 source images personally inspected by Codex; actual final scene captures plus opening/end inspected. Full-file video/audio decode, timing and transferred file SHA/size verified. These are delegated AI checks; no human listening claim.
 
 Final MP4 and thumbnail are in this folder. Export removed from VPS after verified transfer, following the requested retention policy. Source images, voice and canonical references remain available for edits.
+
+## YouTube schedule
+
+Uploaded to **The Grumpy Peasant** and scheduled for **18 October 2026, 18:00 Europe/Paris** (16:00 UTC).
+
+Video: https://youtu.be/bLhF1h4kkR8
+
+Custom thumbnail, description with sources and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.
