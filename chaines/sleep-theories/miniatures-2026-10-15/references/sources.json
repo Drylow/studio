@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-15",
+  "local_style_references": [
+    [
+      "deep-sith.jpg",
+      "chaines/sleep-theories/deep-void/miniatures/sith-acceptee.jpg"
+    ],
+    [
+      "deep-dune.jpg",
+      "chaines/sleep-theories/deep-void/miniatures/leto-ii-utilisee.jpg"
+    ],
+    [
+      "quiet-silo.jpg",
+      "chaines/sleep-theories/quiet-paradox/miniatures/silo-reference.jpg"
+    ],
+    [
+      "quiet-from.jpg",
+      "chaines/quiet-paradox/02-from/miniature-from-1280x720.jpg"
+    ],
+    [
+      "quiet-severance.jpg",
+      "chaines/quiet-paradox/03-severance/miniature-severance-1280x720.jpg"
+    ],
+    [
+      "victor.jpg",
+      "chaines/quiet-paradox/02-from/miniatures-2026-10-13/references/victor.jpg"
+    ],
+    [
+      "helly.jpg",
+      "chaines/quiet-paradox/03-severance/miniatures-2026-10-13/references/helly.jpg"
+    ]
+  ],
+  "new_character_references": [
+    [
+      "lukas.jpg",
+      "https://static.wikia.nocookie.net/silo/images/a/ae/Lukas_Kyle.jpg/revision/latest?cb=20241206190308"
+    ],
+    [
+      "jame.jpg",
+      "https://www.slashfilm.com/img/gallery/severance-season-2-episode-9-puts-two-surprising-characters-on-parallel-paths/jame-eagans-involvement-might-have-even-darker-implications-for-lumons-women-1741881084.jpg"
+    ]
+  ],
+  "role": "Style and fictional character appearance references for original thumbnail compositions; no claim of an actual episode screenshot.",
+  "additional_character_references": [
+    [
+      "lukas.jpg",
+      "https://images.thedirect.com/media/photos/10avi.png"
+    ],
+    [
+      "henry.jpg",
+      "https://images.thedirect.com/media/photos/15henry.png"
+    ]
+  ],
+  "failed_download": "Initial Lukas wiki image blocked; The Direct image used instead."
+}

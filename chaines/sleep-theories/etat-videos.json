@@ -245,6 +245,14 @@
       }
     ],
     "desktop_folder": "6 scripts sleep - 15 octobre 2026",
-    "review_passes": 3
+    "review_passes": 3,
+    "thumbnail_batch": {
+      "date": "2026-10-15",
+      "folder": "miniatures-2026-10-15",
+      "generated": 5,
+      "star_wars": "integrated_generation_blocked_twice_api_authorization_requested",
+      "user_approved": false,
+      "published": false
+    }
   }
 }

@@ -97,6 +97,8 @@ publie pas et note pourquoi.
        vidéo pour tromper la détection ;
      - Checks pas finis en 30 min → laisse en privé, note « checks_pending », reprends au passage suivant
        (la vidéo existe déjà : ne la renvoie pas).
+     - fiche avec un champ `copyright_rule` : il prime sur les deux premières règles (ex. claim simple
+       refusé : laisse en privé et note « claimed »).
 5. Attends la fin de l'envoi. Relève le lien de la vidéo et l'état des droits d'auteur (vérification
    YouTube). Ferme le profil.
 6. Ajoute une ligne au journal : chaîne, titre, SHA-256, `video_id`, visibilité, date, état des
