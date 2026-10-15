@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 181 to Day 210",
+  "description_file": "chaines/last-safe-door/episode-07-day-181-210/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/cX2EJjWF",
+    "file": "final.mp4",
+    "sha256": "a0821f73793b164d05f109ed575526b1986977ae023600cd787a6ce55e0aba52",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-07-day-181-210-ba1b972467e6845a.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-07-day-181-210/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-07-day-181-210/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-07-day-181-210/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-20T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-181-to-day-21-81e21c"
+}
