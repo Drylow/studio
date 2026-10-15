@@ -86,6 +86,17 @@ publie pas et note pourquoi.
    - si `publish_at` est déjà passé (le PC était éteint), ne refuse pas la fiche : publie en public
      tout de suite. Une chaîne qui a deux fiches en retard : seulement la plus ancienne (l'épisode le plus
      petit) à ce passage, la suivante garde sa date si elle est encore à venir.
+   - **fiche avec `"copyright_check": "private_first"`** (Scene Analysis Guy : extraits de films et
+     séries) : à l'envoi, mets la visibilité **Privée**, pas la date. Attends la fin de
+     « Checks / Vérifications » (onglet Contenu, colonne Restrictions, ou étape Checks de l'envoi), puis :
+     - « No issues found » ou **claim simple** (Content ID, revenus au titulaire ou suivi, **sans blocage
+       ni avertissement**) → programme à la date de la fiche (en public tout de suite si elle est passée) ;
+       note le ou les claims (titulaire, passages) dans le journal ;
+     - **blocage** (monde entier ou quelques pays), retrait, avertissement / strike → **ne publie pas**,
+       laisse la vidéo en privé, note « blocked » avec les détails. Ne conteste rien, ne retouche pas la
+       vidéo pour tromper la détection ;
+     - Checks pas finis en 30 min → laisse en privé, note « checks_pending », reprends au passage suivant
+       (la vidéo existe déjà : ne la renvoie pas).
 5. Attends la fin de l'envoi. Relève le lien de la vidéo et l'état des droits d'auteur (vérification
    YouTube). Ferme le profil.
 6. Ajoute une ligne au journal : chaîne, titre, SHA-256, `video_id`, visibilité, date, état des

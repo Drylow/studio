@@ -20,14 +20,19 @@ Le Claude du cloud prépare les vidéos et dépose une fiche par vidéo dans `qu
   "captions": "chaines/viking-chapters/episode-01/delivery/English-Captions.srt",
   "tags_file": "chaines/viking-chapters/episode-02/tags.txt (facultatif)",
   "visibility": "unlisted | private | public | scheduled",
-  "publish_at": "2026-10-16T18:00 (heure de Bruxelles, seulement si scheduled)"
+  "publish_at": "2026-10-16T18:00 (heure de Bruxelles, seulement si scheduled)",
+  "copyright_check": "private_first (facultatif ; obligatoire pour Scene Analysis Guy)"
 }
 ```
+
+`copyright_check: private_first` : le PC envoie d'abord en privé, attend les Checks de YouTube Studio,
+puis programme seulement s'il n'y a ni blocage (même partiel) ni avertissement ; un claim simple sans
+blocage est accepté et noté. Détail dans la compétence `/publier`, étape 3.
 
 Le PC refuse une fiche dans ces cas :
 - `sha256` absent ;
 - miniature absente ;
-- `channel` qui n'est pas exactement un des 6 noms ;
+- `channel` qui n'est pas exactement un des noms de `channels.json` ;
 
 Si `publish_at` est déjà passé (PC éteint à l'heure prévue), le PC ne refuse pas : il publie la vidéo
 **en public tout de suite**, sauf si un épisode précédent de la même chaîne attend encore dans la file
