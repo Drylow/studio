@@ -156,3 +156,30 @@ The house rendering and costumes remain fixed; acting is not an identity lock.
 The three-image preview is being regenerated under this contract. Generated
 images still require actual inspection; this authoring record is not a claim
 that every output has passed review or that the film has been delivered.
+
+## Completed image inspection
+
+All145 actual story images were personally viewed by the primary author against
+their authored scene roles.42 continuity/composition corrections were specified
+manually, using explicitly selected inspected state images plus the location and
+identity masters. All42 results were viewed again. Three further fixes addressed
+the sole vehicle console, metal cargo identity and visible food on the final
+meal trays; those three actual outputs were separately inspected at full size.
+Their file fingerprints, review records and ordered inputs are retained privately.
+
+The neutral cast and shot acting produce visibly different reactions: smiling
+first payment and shared food, confident bounty hunter, anger at the false debt,
+danger during the retrieval, exposed clerk's fear and relaxed final paid meal.
+Illustrative simplifications remain; no claim of pixel-identical sets, perfect
+canon likeness, measured retention improvement or human audience review is made.
+
+The completed narration was fully decoded without errors or clipped samples,
+with no detected silence over two seconds. All2898 native word spans match the
+exact supplied script, are monotonic and fall within the measured16:25 audio.
+This is technical audio/clock validation, not independent speech recognition
+or a claim of a full human listening session. The chosen voice identity and
+normal speed match the user's standing instruction.
+
+The145 individually reviewed static scenes passed the hosted project's image,
+reference, voice and complete-timeline gates before the VPS slideshow render.
+Final encoded-video inspection and verified transfer are separate checks.

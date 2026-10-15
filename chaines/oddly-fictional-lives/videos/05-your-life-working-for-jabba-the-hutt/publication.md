@@ -4,7 +4,8 @@ Channel: Oddly Fictional Lives. Original fan-fiction episode set in Star Wars.
 Production: hosted Studio/VPS only. Narration: Ryan Kurk, normal speed.
 Measured narration:16:25.05.145 individually authored, voice-aligned shots.
 Static illustrations with hard cuts, no animated zoom or pan,16:9 output.
-Status: acting-aware image preview and visual inspection in progress; not delivered.
+Status: all145 images inspected, including45 explicit corrected outputs;
+static slideshow rendering on the VPS. Encoded-video QA and transfer pending.
 
 ## Description
 
