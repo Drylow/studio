@@ -1,0 +1,17 @@
+{
+  "channel": "One Stick Left",
+  "title": "Alien Outbreak Survival: Day 211 to Day 240",
+  "description_file": "chaines/alien-outbreak-survival/episode-08-day-211-240/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/yCMhDEIb",
+    "file": "final.mp4",
+    "sha256": "71f505ab7b7c5fb969986a7794591bcc49a4383650678aca8cbbab236030a01d",
+    "url": "http://media.edgerunners.fr/one-stick-left--episode-08-day-211-240-5b7608992b39572c.mp4"
+  },
+  "thumbnail": "chaines/alien-outbreak-survival/episode-08-day-211-240/thumbnail.jpg",
+  "captions": "chaines/alien-outbreak-survival/episode-08-day-211-240/English-Captions.srt",
+  "tags_file": "chaines/alien-outbreak-survival/episode-08-day-211-240/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-21T10:00",
+  "tubeforge_video_id": "alien-outbreak-survival-day-211-to-day-2-55ffe7"
+}
