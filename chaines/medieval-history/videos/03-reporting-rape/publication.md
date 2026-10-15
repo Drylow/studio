@@ -18,11 +18,6 @@ medieval women, medieval law, medieval justice, women in history, Middle Ages, m
 
 PROVE IT.
 
-## Sources
-
-- [Gwen Seabourne, Rape and Law in Medieval Western Europe](https://www.cambridge.org/core/books/abs/companion-to-crime-and-deviance-in-the-middle-ages/rape-and-law-in-medieval-western-europe/456E800DCA0EE9F051BDA59F6A828CF5)
-- [Sara McDougall and David Perry, Fact and Fiction in The Last Duel](https://www.historynewsnetwork.org/article/fact-and-fiction-in-the-last-duel)
-- [Justice for Jehanne, interview introduction](https://www.historicallythinking.org/p/justice-for-jehanne)
 
 ## Production
 
@@ -38,4 +33,4 @@ Uploaded to **The Grumpy Peasant** and scheduled for **18 October 2026, 18:00 Eu
 
 Video: https://youtu.be/bLhF1h4kkR8
 
-Custom thumbnail, description with sources and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.
+Custom thumbnail, description without external links or source lists, and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.

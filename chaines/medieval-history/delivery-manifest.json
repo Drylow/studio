@@ -36,7 +36,9 @@
         "language": "en-US",
         "category": "Education",
         "ai_use_disclosed": true,
-        "not_made_for_kids": true
+        "not_made_for_kids": true,
+        "external_links_in_description": false,
+        "source_list_in_description": false
       }
     },
     {
@@ -72,7 +74,9 @@
         "language": "en-US",
         "category": "Education",
         "ai_use_disclosed": true,
-        "not_made_for_kids": true
+        "not_made_for_kids": true,
+        "external_links_in_description": false,
+        "source_list_in_description": false
       }
     },
     {
@@ -108,7 +112,9 @@
         "language": "en-US",
         "category": "Education",
         "ai_use_disclosed": true,
-        "not_made_for_kids": true
+        "not_made_for_kids": true,
+        "external_links_in_description": false,
+        "source_list_in_description": false
       }
     }
   ],

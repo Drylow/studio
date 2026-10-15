@@ -125,4 +125,7 @@ Nom valide : **The Grumpy Peasant**. [Kit complet](channel-kit/CHANNEL_KIT.md) :
 
 ## Calendrier YouTube confirme
 
-Chaine **The Grumpy Peasant**, `UC9LIZCuGOuZ7XU-rR9-bywQ`. Choix utilisateur : une video par jour, a **18 h Europe/Paris**, les **16, 17 et 18 octobre 2026**, dans l'ordre noble, bouffon, justice. Les trois programmations sont confirmees par YouTube Studio ; les miniatures personnalisees, titres, descriptions, sources et tags sont enregistres. Les controles YouTube n'ont signale aucun probleme au moment de l'envoi. Les videos restent privees avant leur date de sortie. Les IDs et horaires figurent dans `delivery-manifest.json`. Ne pas reuploader ces films.
+Chaine **The Grumpy Peasant**, `UC9LIZCuGOuZ7XU-rR9-bywQ`. Choix utilisateur : une video par jour, a **18 h Europe/Paris**, les **16, 17 et 18 octobre 2026**, dans l'ordre noble, bouffon, justice. Les trois programmations sont confirmees par YouTube Studio ; les miniatures personnalisees, titres, descriptions sans liens ni liste de sources, et tags sont enregistres. Les controles YouTube n'ont signale aucun probleme au moment de l'envoi. Les videos restent privees avant leur date de sortie. Les IDs et horaires figurent dans `delivery-manifest.json`. Ne pas reuploader ces films.
+
+
+**Descriptions YouTube — correction utilisateur :** aucun lien externe ni section Sources dans les descriptions. Les trois descriptions programmees ont ete corrigees et leur enregistrement verifie apres rechargement. Appliquer cette regle aux prochains uploads de cette chaine.
