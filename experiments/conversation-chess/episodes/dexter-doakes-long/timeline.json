@@ -1,0 +1,626 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Dexter Morgan vs James Doakes Analyzed Like Chess | Dexter",
+  "demo": false,
+  "source_reviewed": true,
+  "source_in": 0,
+  "source_out": 573.3,
+  "intro_seconds": 16,
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "source_not_upscaled": true,
+    "source_metadata_note": "Nineteen ordinary public Clip.cafe clips measured native 1920x1080 (23.976 fps), conformed without resize to 30fps. Eleven selected Dexter-Doakes conversations from Seasons 1-2, authentic cast, no burned captions, broadcaster logo or third-party watermark seen in reviewed frames. Original public clips are compressed (about 0.25-1.1 Mb/s video); facial detail is softer than a disc master. Accepted for a private YouTube-check candidate, not claimed maximum-source quality."
+  },
+  "white_label": "Dexter",
+  "black_label": "Doakes",
+  "opening": {
+    "speaker": "white",
+    "label": "Dexter",
+    "reviewed": true,
+    "source_at": 0.0,
+    "evidence": "Chapter card 'I'M WATCHING YOU' then first complete retained line: Excuse me? (S01E07). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 2c6199b2f2d5ffb094c107bef2f09c5b16baa24e796dc00e9ceb215cec7370e6. Sampled review; no continuous human listening claimed."
+  },
+  "initial_score_text": "0.0",
+  "initial_control": 0.5,
+  "analysis_background": "replay",
+  "analysis_pawn_by_speaker": false,
+  "show_source_quality_label": false,
+  "mascot": {
+    "file": "assets/dexter/dexter-pawn-2026-10-15.png",
+    "overlay_file": "assets/dexter/dexter-pawn-2026-10-15.png",
+    "badges": true,
+    "status": "New Dexter pawn built like the approved Hannibal pawn (real series frame head on the same black pawn body). Companion Chess.com SVG badges are added by the renderer."
+  },
+  "dialogue_gain": 1,
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  },
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "ending_fade_seconds": 0.5,
+  "outro_summary": "Doakes is the only colleague who never buys the smile, and Dexter spends two seasons managing a man who is right about him. The lab jokes become a dossier, the dossier becomes a cage, and the cage becomes the most honest room either of them has ever sat in. Eleven exchanges, thirty-two decisions, and one detective who was never wrong.",
+  "annotations": [
+    {
+      "id": "m01",
+      "source_at": 11.1,
+      "speaker": "black",
+      "rating": "book",
+      "comment": "Doakes opens with credit, not hostility. Praising the hunch keeps the conversation friendly while he studies how Dexter takes it.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.2",
+      "control_after": 0.517992
+    },
+    {
+      "id": "m02",
+      "source_at": 31.4,
+      "speaker": "black",
+      "rating": "brilliant",
+      "comment": "Why is that? The compliment flips into a question about Dexter himself. Doakes turns forensic praise into a quiet accusation.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.2",
+      "control_after": 0.606351
+    },
+    {
+      "id": "m03",
+      "source_at": 37.3,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "I'm watching you. No more subtext: Doakes states the threat plainly, and Dexter has no reply that would not sound defensive.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.2",
+      "control_after": 0.606351
+    },
+    {
+      "id": "m04",
+      "source_at": 46.766666666666666,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Doakes sets the rules immediately: Dexter is the one who must explain why he is here. The burden of proof lands on the wrong man.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m05",
+      "source_at": 68.4,
+      "speaker": "black",
+      "rating": "inaccuracy",
+      "comment": "Furniture from Thailand is a story built to end the questions, but it is too neat. Doakes now has a lie to remember.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.6",
+      "control_after": 0.446209
+    },
+    {
+      "id": "m06",
+      "source_at": 94.9,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Dexter answers suspicion with a cheerful jab about the bowling team. Small talk is his armour, and he puts it on first.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m07",
+      "source_at": 113.1,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Ten years without a single porn rental. Doakes reveals how deep he has dug, and the fake alibi on the screen collapses instantly.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m08",
+      "source_at": 127.2,
+      "speaker": "white",
+      "rating": "excellent",
+      "comment": "Dexter recasts the surveillance as harassment. It does not answer the question, but it reminds Doakes he is on thin ice too.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.1",
+      "control_after": 0.491001
+    },
+    {
+      "id": "m09",
+      "source_at": 145.4,
+      "speaker": "white",
+      "rating": "best",
+      "comment": "Could you be more vague? Dexter forces Doakes to show his evidence before conceding anything at all.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "m10",
+      "source_at": 162.1,
+      "speaker": "black",
+      "rating": "brilliant",
+      "comment": "Cash only, no groups, medical school abandoned, advanced jujitsu. Doakes answers with a file, and every item is precise.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.1",
+      "control_after": 0.597726
+    },
+    {
+      "id": "m11",
+      "source_at": 180.1,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Dexter assumes he is being recorded and refuses to comment. The caution is sensible, and it frames Doakes as the schemer.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m12",
+      "source_at": 193.0,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "No paper trail in the early years of Dexter Morgan. Doakes cannot prove anything, but he names the gap that matters.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m13",
+      "source_at": 203.3,
+      "speaker": "black",
+      "rating": "excellent",
+      "comment": "Unlike you, I do everything out in the open. A strong line, but it tells Dexter exactly how Doakes intends to play.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.4",
+      "control_after": 0.464062
+    },
+    {
+      "id": "m14",
+      "source_at": 224.9,
+      "speaker": "white",
+      "rating": "brilliant",
+      "comment": "I own you. Dexter drops the mask for a moment and claims total control. It is chilling, and it changes the tone of their war.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.8",
+      "control_after": 0.34344
+    },
+    {
+      "id": "m15",
+      "source_at": 235.5,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "With the gun in hand, Doakes keeps distance between them. He knows exactly what Dexter is capable of in close range.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m16",
+      "source_at": 237.5,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "Just following your lead. Dexter turns the order back on Doakes, calm and harmless in tone, while still advancing.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m17",
+      "source_at": 258.1,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Caged, Doakes still dares Dexter to face him. The provocation is the only weapon he has left, so he uses it.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m18",
+      "source_at": 262.5,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "I already did. You just didn't know it. Dexter reveals the trap was set long before the cage, and the bravado falls flat.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m19",
+      "source_at": 279.0,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "Who's lying now? Dexter claims to have no feelings, and Doakes catches the contradiction in his face. The captive scores.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m20",
+      "source_at": 288.9,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Your old man would be proud. Doakes aims at Harry, the one person Dexter still protects, to see whether it hurts.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m21",
+      "source_at": 292.9,
+      "speaker": "black",
+      "rating": "mistake",
+      "comment": "My old man was proud. Dexter defends Harry and gives away that his father knew. Doakes did not even have to ask.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.2",
+      "control_after": 0.393649
+    },
+    {
+      "id": "m22",
+      "source_at": 316.2,
+      "speaker": "white",
+      "rating": "brilliant",
+      "comment": "They never told you. Doakes realises he holds a secret about Harry that Dexter lacks, and the captive suddenly has leverage.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "2.2",
+      "control_after": 0.311739
+    },
+    {
+      "id": "m23",
+      "source_at": 351.6,
+      "speaker": "white",
+      "rating": "best",
+      "comment": "You didn't because you can't. Doakes refuses to treat the threat as real. He reads Dexter's code better than Dexter expected.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "2.2",
+      "control_after": 0.311739
+    },
+    {
+      "id": "m24",
+      "source_at": 424.5,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "Someone up high didn't want it solved. Doakes ends on a mystery, giving Dexter a reason to keep him talking.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "2.2",
+      "control_after": 0.311739
+    },
+    {
+      "id": "m25",
+      "source_at": 436.0,
+      "speaker": "black",
+      "rating": "brilliant",
+      "comment": "A known murderer, and your final victim. Dexter announces the frame-up out loud. Every option now points back at Doakes.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.0",
+      "control_after": 0.58904
+    },
+    {
+      "id": "m26",
+      "source_at": 447.8,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "The justice system you put all your faith in. Dexter turns Doakes' own principles into the bars of his cage.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.0",
+      "control_after": 0.58904
+    },
+    {
+      "id": "m27",
+      "source_at": 457.6,
+      "speaker": "white",
+      "rating": "inaccuracy",
+      "comment": "We'll find a way. After hours of threats, Doakes switches to bargaining. It sounds sincere, but it shows he is out of moves.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.5",
+      "control_after": 0.631812
+    },
+    {
+      "id": "m28",
+      "source_at": 482.5,
+      "speaker": "white",
+      "rating": "brilliant",
+      "comment": "Your sister, your girlfriend, those kids. Doakes stops arguing about Dexter and makes it about the people he would hurt.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.0",
+      "control_after": 0.41096
+    },
+    {
+      "id": "m29",
+      "source_at": 513.4,
+      "speaker": "black",
+      "rating": "good",
+      "comment": "Dexter half-agrees that capture will come someday. A rare concession, and Doakes immediately tries to turn it into a plan.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.4",
+      "control_after": 0.376601
+    },
+    {
+      "id": "m30",
+      "source_at": 541.0,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "I think we've seen the worst of that. Dexter calmly closes the door on Doakes' offer and walks away from the cage again.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.4",
+      "control_after": 0.376601
+    },
+    {
+      "id": "m31",
+      "source_at": 562.1,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "I lie to everyone I know, except my victims. Dexter's warmest words to Doakes are a confession and a farewell.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "m32",
+      "source_at": 564.8,
+      "speaker": "white",
+      "rating": "best",
+      "comment": "Sorry about the cage. A polite apology with no intention of changing anything. Dexter leaves, and Doakes can only shout.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints (two speech-recognition passes), Clip.cafe captions cross-checked and authentic source frames sampled for the speaker. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    }
+  ],
+  "source_sha256": "db25ed2eb1beaf7a8323045b47d3f67c114b858de28297f59bdac0be765f9cf4",
+  "conversations": [
+    {
+      "source_at": 0.0,
+      "white_label": "Dexter",
+      "black_label": "Doakes",
+      "opening": {
+        "speaker": "white",
+        "label": "Dexter",
+        "reviewed": true,
+        "source_at": 0.0,
+        "evidence": "Chapter card 'I'M WATCHING YOU' then first complete retained line: Excuse me? (S01E07). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 2c6199b2f2d5ffb094c107bef2f09c5b16baa24e796dc00e9ceb215cec7370e6. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 37.5,
+      "white_label": "Doakes",
+      "black_label": "Dexter",
+      "opening": {
+        "speaker": "white",
+        "label": "Doakes",
+        "reviewed": true,
+        "source_at": 37.5,
+        "evidence": "Chapter card 'SURPRISE, MORGAN' then first complete retained line: Surprise, motherfucker! (S01E12). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 84e6e5ea2d78e12b5ec2a5d9992c9ec39ac0a991c57aafbe93a32f130ec89d16. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 87.3,
+      "white_label": "Dexter",
+      "black_label": "Doakes",
+      "opening": {
+        "speaker": "white",
+        "label": "Dexter",
+        "reviewed": true,
+        "source_at": 87.3,
+        "evidence": "Chapter card 'CAUGHT IN THE LAB' then first complete retained line: Hey, Sergeant. (S02E01). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA efc6f700cf227c5e8fc4770af5823e3aab15e86655d79c291418584f97c35a7f. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 135.6,
+      "white_label": "Dexter",
+      "black_label": "Doakes",
+      "opening": {
+        "speaker": "white",
+        "label": "Dexter",
+        "reviewed": true,
+        "source_at": 135.6,
+        "evidence": "Chapter card 'THE FILE' then first complete retained line: What exactly is it you think I've done? (S02E03). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 4d5079df76f7e124cd05d09ad95bcbd5df590252b8bd89ea1340cd5bf8f118cc. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 162.7,
+      "white_label": "Dexter",
+      "black_label": "Doakes",
+      "opening": {
+        "speaker": "white",
+        "label": "Dexter",
+        "reviewed": true,
+        "source_at": 162.7,
+        "evidence": "Chapter card 'I OWN YOU' then first complete retained line: You finally decided to fight back. (S02E07). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 3e8f84b62a999effd89e397d6288db63d3662361dfa132324bc5acfa896cb216. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 225.8,
+      "white_label": "Doakes",
+      "black_label": "Dexter",
+      "opening": {
+        "speaker": "white",
+        "label": "Doakes",
+        "reviewed": true,
+        "source_at": 225.8,
+        "evidence": "Chapter card 'THE EVERGLADES' then first complete retained line: All right, nice and slow. (S02E09). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA df3b60a7ea6a4e7da65978e95fbd9db58e0cd1d8b450da1cfcc0601fb2fca4a9. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 246.5,
+      "white_label": "Doakes",
+      "black_label": "Dexter",
+      "opening": {
+        "speaker": "white",
+        "label": "Doakes",
+        "reviewed": true,
+        "source_at": 246.5,
+        "evidence": "Chapter card 'THE CAGE' then first complete retained line: If you want to bring me down, Morgan, you're going to have to open this goddamn cage first. (S02E10). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 94bbf65f7c25b37d3c0d0e09ab42fb8f2aef8f439a301a956a41b6d52fc8bbdb. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 279.5,
+      "white_label": "Doakes",
+      "black_label": "Dexter",
+      "opening": {
+        "speaker": "white",
+        "label": "Doakes",
+        "reviewed": true,
+        "source_at": 279.5,
+        "evidence": "Chapter card 'HARRY'S SECRET' then first complete retained line: You think you're a fucking hero, don't you? (S02E10). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 3ffa84b512a94de174a4f7d8a29c814a305d9a58c2e7384ecf9db9653274cc8e. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 425.5,
+      "white_label": "Doakes",
+      "black_label": "Dexter",
+      "opening": {
+        "speaker": "white",
+        "label": "Doakes",
+        "reviewed": true,
+        "source_at": 425.5,
+        "evidence": "Chapter card 'THE FINAL VICTIM' then first complete retained line: Who the fuck is that? (S02E10). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA ce77e85eee67403b216c2acf6c8e3679e401bfb8c4070bc6bc0a1c197de65bb7. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 468.8,
+      "white_label": "Doakes",
+      "black_label": "Dexter",
+      "opening": {
+        "speaker": "white",
+        "label": "Doakes",
+        "reviewed": true,
+        "source_at": 468.8,
+        "evidence": "Chapter card 'TURN YOURSELF IN' then first complete retained line: No, no, Morgan, you're spinning. Let me help you. (S02E11). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA 78469bf6f268b1c5280d97e765cc09c5f8ed00e29e02df900478e4ed8d75202d. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 545.8,
+      "white_label": "Dexter",
+      "black_label": "Doakes",
+      "opening": {
+        "speaker": "white",
+        "label": "Dexter",
+        "reviewed": true,
+        "source_at": 545.8,
+        "evidence": "Chapter card 'LAST WORDS' then first complete retained line: I've really enjoyed our conversations, James. (S02E11). Speaker checked on sampled native frames (mouth movement and shot) and two independent English speech recognitions; source clip SHA cb8bb61a3627483b84dbc3c660bf05cbb60fd8bc02954f1eca2ca31c0f79790b. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    }
+  ]
+}
