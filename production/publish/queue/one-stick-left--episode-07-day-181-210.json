@@ -1,0 +1,17 @@
+{
+  "channel": "One Stick Left",
+  "title": "Alien Outbreak Survival: Day 181 to Day 210",
+  "description_file": "chaines/alien-outbreak-survival/episode-07-day-181-210/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/EYlackgQ",
+    "file": "final.mp4",
+    "sha256": "127b8e7fa33cecf104834e00be5a4be2a5f69afbfbac8fc6cb9917a2088012ab",
+    "url": "http://media.edgerunners.fr/one-stick-left--episode-07-day-181-210-efbbcfe01fcd0dac.mp4"
+  },
+  "thumbnail": "chaines/alien-outbreak-survival/episode-07-day-181-210/thumbnail.jpg",
+  "captions": "chaines/alien-outbreak-survival/episode-07-day-181-210/English-Captions.srt",
+  "tags_file": "chaines/alien-outbreak-survival/episode-07-day-181-210/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-20T10:00",
+  "tubeforge_video_id": "alien-outbreak-survival-day-181-to-day-2-a56d4b"
+}
