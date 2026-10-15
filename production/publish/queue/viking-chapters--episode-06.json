@@ -1,0 +1,17 @@
+{
+  "channel": "Viking Chapters",
+  "title": "Why Being a Viking Settler Was Worse Than You Think",
+  "description_file": "chaines/viking-chapters/episode-06/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/IMD1PbLu",
+    "file": "final.mp4",
+    "sha256": "40f773359d99fe368d5cba7567fecf11ccac8fe03c05a063851ca995d9e0a0c9",
+    "url": "http://media.edgerunners.fr/viking-chapters--episode-06-dfdbc065c72706b0.mp4"
+  },
+  "thumbnail": "chaines/viking-chapters/episode-06/thumbnail.jpg",
+  "captions": "chaines/viking-chapters/episode-06/English-Captions.srt",
+  "tags_file": "chaines/viking-chapters/episode-06/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-19T10:00",
+  "tubeforge_video_id": "why-being-a-viking-settler-was-worse-tha-105c45"
+}
