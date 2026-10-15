@@ -115,9 +115,14 @@ Les trois films sont termines et livres dans le dossier local `01 - Videos/Medie
 
 Voix **Ryan Kurk - Pleasant and Smooth**, toujours la meme. Rendus exclusivement sur le VPS, en 1920×1080 a 24 images/s : diaporama fixe et fondus de 0,25 seconde, sans zoom ni panoramique anime. Les gros plans dessines utiles restent conserves. Toutes les images sources puis les captures de chaque plan du montage final ont ete personnellement regardees par Codex. Decodage integral, durees et empreintes des transferts verifies. Ces controles sont des inspections IA explicites, pas une ecoute humaine ou un clic humain inventes.
 
-Les exports MP4 du VPS ont ete supprimes seulement APRES verification de leurs copies locales. Les voix, images, scripts, references canoniques et recus techniques restent conserves pour les reprises. Le lien de telechargement de l'ancien export sur le site n'est donc plus actif ; ne pas relancer de generation payante pour cela. Voir [le manifest de livraison](delivery-manifest.json) pour les empreintes finales. Aucune mise en ligne YouTube ni aucun envoi Discord n'a ete effectue.
+Les exports MP4 du VPS ont ete supprimes seulement APRES verification de leurs copies locales. Les voix, images, scripts, references canoniques et recus techniques restent conserves pour les reprises. Le lien de telechargement de l'ancien export sur le site n'est donc plus actif ; ne pas relancer de generation payante pour cela. Voir [le manifest de livraison](delivery-manifest.json) pour les empreintes finales. La livraison initiale ne comprenait pas de mise en ligne. Les trois films ont ensuite ete envoyes sur YouTube et programmes sur autorisation utilisateur ; voir le calendrier confirme ci-dessous. Aucun envoi Discord.
 
 
 ## Kit de chaine
 
-Nom valide : **The Grumpy Peasant**. [Kit complet](channel-kit/CHANNEL_KIT.md) : avatar, variante, banniere, handle suggere et description anglaise. L'utilisateur configure lui-meme sa chaine YouTube ; attendre son message explicite indiquant qu'elle est prete avant les uploads. Ne pas modifier ses reglages de chaine a sa place.
+Nom valide : **The Grumpy Peasant**. [Kit complet](channel-kit/CHANNEL_KIT.md) : avatar, variante, banniere, handle suggere et description anglaise. L'utilisateur a configure lui-meme sa chaine YouTube puis autorise les uploads. Les trois films sont maintenant programmes aux dates confirmees ci-dessous. Ne pas refaire les uploads ni changer les reglages de chaine a sa place.
+
+
+## Calendrier YouTube confirme
+
+Chaine **The Grumpy Peasant**, `UC9LIZCuGOuZ7XU-rR9-bywQ`. Choix utilisateur : une video par jour, a **18 h Europe/Paris**, les **16, 17 et 18 octobre 2026**, dans l'ordre noble, bouffon, justice. Les trois programmations sont confirmees par YouTube Studio ; les miniatures personnalisees, titres, descriptions, sources et tags sont enregistres. Les controles YouTube n'ont signale aucun probleme au moment de l'envoi. Les videos restent privees avant leur date de sortie. Les IDs et horaires figurent dans `delivery-manifest.json`. Ne pas reuploader ces films.

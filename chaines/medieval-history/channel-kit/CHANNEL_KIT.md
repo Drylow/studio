@@ -1,6 +1,6 @@
 # The Grumpy Peasant — channel kit
 
-The channel name was confirmed by the owner on 15 October 2026. The handle remains a suggestion until saved on YouTube. The owner is configuring the channel personally; video uploads must wait for their explicit ready message.
+The channel name was confirmed by the owner on 15 October 2026. The handle remains a suggestion until saved on YouTube. The owner configured the channel and then explicitly authorized uploading and scheduling all three films. They confirmed daily releases on 16, 17 and 18 October 2026 at 18:00 Europe/Paris.
 
 ## Copy into YouTube
 
@@ -49,3 +49,12 @@ Each video's title, description, tags and sources are already combined in its ow
 ## Asset provenance
 
 Original branding images generated through the existing configured channel image transport. Manually authored prompts are saved together in `prompts.json`; private access details and generation receipts are excluded. The avatar uses an approved video still only as a drawing-style reference. The banner uses the generated burgundy avatar as its identity reference. No competitor logo is reused.
+
+
+## Confirmed upload schedule
+
+All times are Europe/Paris. YouTube Studio confirmations and the refreshed scheduled-video list were checked.
+
+- 16 October 2026, 18:00 — [Why It Sucked to Be a Medieval Noblewoman](https://youtu.be/8nO_wsWEPRI)
+- 17 October 2026, 18:00 — [Why It Sucked to Be the King's Jester](https://youtu.be/2RJwOZ1d-54)
+- 18 October 2026, 18:00 — [What Happened When a Medieval Woman Reported Rape?](https://youtu.be/bLhF1h4kkR8)

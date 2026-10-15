@@ -24,7 +24,20 @@
         "transfer_sha_and_size": true,
         "decoded_static_hold_and_dissolve_samples": true
       },
-      "inspection_source": "delegated_ai_inspection"
+      "inspection_source": "delegated_ai_inspection",
+      "youtube": {
+        "state": "scheduled",
+        "video_id": "8nO_wsWEPRI",
+        "url": "https://youtu.be/8nO_wsWEPRI",
+        "scheduled_at": "2026-10-16T18:00:00+02:00",
+        "timezone": "Europe/Paris",
+        "checks": "No issues found at upload",
+        "custom_thumbnail": true,
+        "language": "en-US",
+        "category": "Education",
+        "ai_use_disclosed": true,
+        "not_made_for_kids": true
+      }
     },
     {
       "episode": "02-jester",
@@ -47,7 +60,20 @@
         "transfer_sha_and_size": true,
         "decoded_static_hold_and_dissolve_samples": true
       },
-      "inspection_source": "delegated_ai_inspection"
+      "inspection_source": "delegated_ai_inspection",
+      "youtube": {
+        "state": "scheduled",
+        "video_id": "2RJwOZ1d-54",
+        "url": "https://youtu.be/2RJwOZ1d-54",
+        "scheduled_at": "2026-10-17T18:00:00+02:00",
+        "timezone": "Europe/Paris",
+        "checks": "No issues found at upload",
+        "custom_thumbnail": true,
+        "language": "en-US",
+        "category": "Education",
+        "ai_use_disclosed": true,
+        "not_made_for_kids": true
+      }
     },
     {
       "episode": "03-reporting-rape",
@@ -70,7 +96,25 @@
         "transfer_sha_and_size": true,
         "decoded_static_hold_and_dissolve_samples": true
       },
-      "inspection_source": "delegated_ai_inspection"
+      "inspection_source": "delegated_ai_inspection",
+      "youtube": {
+        "state": "scheduled",
+        "video_id": "bLhF1h4kkR8",
+        "url": "https://youtu.be/bLhF1h4kkR8",
+        "scheduled_at": "2026-10-18T18:00:00+02:00",
+        "timezone": "Europe/Paris",
+        "checks": "No issues found at upload",
+        "custom_thumbnail": true,
+        "language": "en-US",
+        "category": "Education",
+        "ai_use_disclosed": true,
+        "not_made_for_kids": true
+      }
     }
-  ]
+  ],
+  "youtube_channel": {
+    "name": "The Grumpy Peasant",
+    "id": "UC9LIZCuGOuZ7XU-rR9-bywQ",
+    "schedule_timezone": "Europe/Paris"
+  }
 }
