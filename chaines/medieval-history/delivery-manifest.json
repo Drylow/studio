@@ -8,8 +8,12 @@
       "duration": "15:58",
       "scenes": 116,
       "output": "1920x1080,24fps",
-      "final_sha256": "1b0e6ba7dba15748fbba805238d99b9d8e0acc00e0a22c757ea4b2b6d025c6dc",
-      "bytes": 241919336,
+      "camera": "static",
+      "transition": "crossfade",
+      "transition_seconds": 0.25,
+      "previous_edit_sha256": "1b0e6ba7dba15748fbba805238d99b9d8e0acc00e0a22c757ea4b2b6d025c6dc",
+      "final_sha256": "0f2ac3bee8825f12552d29e368d1a55ef5eb9a2ddbd883ac9c155a25530bb141",
+      "bytes": 112644462,
       "state": "delivered",
       "vps_final_removed": true,
       "checks": {
@@ -17,7 +21,8 @@
         "actual_render_scene_frames_personally_inspected": true,
         "full_decode": true,
         "timing": true,
-        "transfer_sha_and_size": true
+        "transfer_sha_and_size": true,
+        "decoded_static_hold_and_dissolve_samples": true
       },
       "inspection_source": "delegated_ai_inspection"
     },
@@ -26,8 +31,12 @@
       "duration": "13:48",
       "scenes": 112,
       "output": "1920x1080,24fps",
-      "final_sha256": "cc704823a9f108c2267c968ce62d14b9c3ab6e3e3adf96058d804786776a2c08",
-      "bytes": 177901971,
+      "camera": "static",
+      "transition": "crossfade",
+      "transition_seconds": 0.25,
+      "previous_edit_sha256": "cc704823a9f108c2267c968ce62d14b9c3ab6e3e3adf96058d804786776a2c08",
+      "final_sha256": "69a3b5141945c0947a5027ce05d9cb7cfb8a79f80dbcde4315a4d4332501c234",
+      "bytes": 91047929,
       "state": "delivered",
       "vps_final_removed": true,
       "checks": {
@@ -35,7 +44,8 @@
         "actual_render_scene_frames_personally_inspected": true,
         "full_decode": true,
         "timing": true,
-        "transfer_sha_and_size": true
+        "transfer_sha_and_size": true,
+        "decoded_static_hold_and_dissolve_samples": true
       },
       "inspection_source": "delegated_ai_inspection"
     },
@@ -44,8 +54,12 @@
       "duration": "14:30",
       "scenes": 108,
       "output": "1920x1080,24fps",
-      "final_sha256": "341dca6b3e7bee76031a8d174c1ce8c3419b3d38abd91868ce569a29682d2526",
-      "bytes": 192933302,
+      "camera": "static",
+      "transition": "crossfade",
+      "transition_seconds": 0.25,
+      "previous_edit_sha256": "341dca6b3e7bee76031a8d174c1ce8c3419b3d38abd91868ce569a29682d2526",
+      "final_sha256": "3486f118241486df77b2edc9d62b3336dd9bcdc78728ada59252e082b4aa7f9e",
+      "bytes": 95012515,
       "state": "delivered",
       "vps_final_removed": true,
       "checks": {
@@ -53,7 +67,8 @@
         "actual_render_scene_frames_personally_inspected": true,
         "full_decode": true,
         "timing": true,
-        "transfer_sha_and_size": true
+        "transfer_sha_and_size": true,
+        "decoded_static_hold_and_dissolve_samples": true
       },
       "inspection_source": "delegated_ai_inspection"
     }

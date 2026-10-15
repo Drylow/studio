@@ -81,7 +81,7 @@ Le scan mecanique des trois versions relues donne zero terme interdit ou marque 
 
 Les images de plans viennent APRES les voix et l'alignement. Les references de personnages et de lieux peuvent etre preparees avant, car ce ne sont pas des plans cales au transcript. Les references canoniques doivent etre personnellement regardees avant import. Une description de lieu seule ne suffit pas.
 
-Montage : coupes franches, mouvement discret, 16:9, sortie 1080p ; aucun lot de clips separes ni ZIP a produire par defaut. Telechargement verifie par taille et SHA avant nettoyage des exports du VPS, suivant la politique deja convenue.
+Montage actuel de cette chaine : diaporama fixe, fondus de 0,25 seconde, aucun zoom ni panoramique anime, gros plans dessines utiles conserves, 16:9, sortie 1080p ; aucun lot de clips separes ni ZIP a produire par defaut. Telechargement verifie par taille et SHA avant nettoyage des exports du VPS, suivant la politique deja convenue.
 
 
 ## Reprise de production — voix et decoupage
@@ -98,10 +98,23 @@ La voix Noblewoman complete a recu une tres legere acceleration de 0,77 pour cen
 
 Les 22 references canoniques (12 adultes et 10 decors vides) sont conservees dans assets/canonical avec manifest canonical-references.json. Chacune a ete regardee par l'agent visuel et le Codex principal. Les fichiers scenes.json lient les actions manuelles aux extraits exacts du transcript et aux horloges reelles, avec references ordonnees, lieux, tenues et contrats de camera. Le code ne redacte aucun prompt par modele.
 
-Etat final du 15 octobre : trois films rendus, verifies et telecharges. Les 336 images sources ont toutes ete personnellement regardees par Codex ; les erreurs de proportions, inserts trop larges, accessoires, documents et ouvertures de decor ont ete corrigees explicitement, puis regardees a nouveau. Les 58 planches extraites des MP4 finaux couvrent chaque plan ainsi que le debut et la fin ; aucun rendu n'a ete valide par la seule presence de references.
+Etat final du 15 octobre : trois films rendus, verifies et telecharges. Les 336 images sources ont toutes ete personnellement regardees par Codex ; les erreurs de proportions, inserts trop larges, accessoires, documents et ouvertures de decor ont ete corrigees explicitement, puis regardees a nouveau. Les 30 planches extraites des trois MP4 revises couvrent chaque plan ainsi que le debut et la fin ; aucun rendu n'a ete valide par la seule presence de references.
 
 Les trois MP4 ont passe un decodage video/audio integral, la verification1920×1080/24images/s et la comparaison de duree a la voix. Les fichiers de voix utilises ont exactement les empreintes des voix Ryan Kurk deja controlees. Taille et SHA du transfert final correspondent au VPS. Il s'agit de controles IA documentes ; aucune ecoute humaine n'est revendiquee.
 
 Livraison locale : `01 - Videos/Medieval History - 2026-10-15/`. Chaque episode a son MP4, sa miniature et un unique fichier publication.md. Les exports finaux et leurs copies temporaires de transfert sur le VPS ont ete supprimes APRES transfert verifie, selon la politique utilisateur. Les sources de production restent conservees ; ne pas interpreter l'absence volontaire du MP4 sur le site comme un echec de generation. Les trois entrees de queue sont terminees et ne doivent pas etre relancees.
 
 Les illustrations conservent de petites variations de dessin ; notamment certains inserts alimentaires de la noble sont plus textures. La relecture ne revendique ni une identite pixel par pixel, ni une performance d'audience garantie. Aucune publication ou notification externe n'a ete faite. Les acces et recus de production restent dans le travail prive ignore ; [delivery-manifest.json](delivery-manifest.json) conserve les preuves publiques utiles.
+
+
+## Revision du montage — diaporama fixe
+
+Decision utilisateur du 15 octobre : retirer les zooms animes, conserver les gros plans utiles deja dessines. Les trois films ont ete rendus a nouveau exclusivement sur le VPS, avec images fixes et fondus de 0,25 seconde centres sur les anciennes frontieres. La duree totale et les timings de narration sont conserves ; aucun changement de voix.
+
+Le plan 21 de la noble, auparavant une chambre vide sans raison narrative suffisante, a ete remplace : Alix examine un parchemin scelle au bureau de gauche, dans le meme decor canonique. La nouvelle image puis sa capture dans le MP4 ont ete personnellement regardees. Les plans de documents, d'objets, d'etablissement ou de fermeture de scene restent autorises s'ils apportent une information de narration ; ne pas forcer un personnage dans chaque insert.
+
+Les 30 nouvelles planches finales ont ete personnellement regardees par Codex. Le decodage integral des trois MP4, les bornes audio/video et les empreintes du transfert ont passe les controles. Des echantillons effectivement decodes a cinq endroits par film confirment les images fixes ; les images intermediaires de la premiere transition confirment le fondu progressif. Ce controle par echantillons ne pretend pas etre une observation humaine de chaque image video.
+
+Les anciens montages locaux restent recuperables dans `90 - Archives/Medieval History - hard cuts - 2026-10-15/`. Les nouveaux `final.mp4` sont dans les dossiers de livraison habituels. Chaque dossier contient seulement le film, la miniature et `publication.md`. Les nouveaux exports MP4 du VPS sont retires apres transfert verifie ; les sources restent conservees.
+
+Execution technique : `production/tubeforge_support/slideshow_render.py` accepte un JSON de chemins images deja verifies, de bornes de plans et de voix. Il ne redige pas les prompts et ne choisit aucune reference. Ce module est copie par le deployeur et execute explicitement pour ces films ; il ne constitue pas encore un bouton ou un routage automatique de l'API publique. Ne pas annoncer cette integration comme une fonction d'interface. Les plans natifs de ces trois projets portent aussi `motion: static`, afin d'eviter les mouvements automatiques lors d'une reprise. Les regles des autres chaines ne changent pas.

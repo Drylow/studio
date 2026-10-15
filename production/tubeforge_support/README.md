@@ -19,6 +19,7 @@ Pour un nouveau PC ou le collegue qui produit des aliens, commencer par [README_
 | `workspace_visuals.py`, `workspace_composition.py` | Contrats visuels, composition, proportions et protection contre doublons |
 | `google_flow.py` | Transport Google Flow/useapi et comptes, distinct du chemin CLI Proxy |
 | `studio_bridge.py` | Pont avec les services du depot |
+| `slideshow_render.py` | Rendu technique d'images fixes inspectees, fondus centres sur les coupes et horloge voix conservee ; accepte un job JSON explicite, sans generation ni redaction |
 | `workspace_seed.py` | Initialisation/migration des donnees ; ne pas reseeder un workspace existant pour une reprise |
 | `main.py`, `__init__.py`, `import_review.py`, `benchmark.py` | Outils additionnels et point d'entree, egalement conserves dans la base distribuable |
 | `*_tests.py`, `workspace_ui_tests.cjs`, `requirements.lock` | Verification ciblee et dependances de l'installation |

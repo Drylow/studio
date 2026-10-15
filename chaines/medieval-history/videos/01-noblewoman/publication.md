@@ -26,7 +26,7 @@ HIM? REALLY?
 
 ## Production
 
-English. Ryan Kurk - Pleasant and Smooth. Duration: 15:58. 1920×1080, 24 fps, hard cuts. Suggested upload order: 1/3.
+English. Ryan Kurk - Pleasant and Smooth. Duration: 15:58. 1920×1080, 24 fps. Static slideshow, 0.25-second cross-dissolves, no animated zooms or pans. Useful authored close-ups retained. Suggested upload order: 1/3.
 
 All 116 source images personally inspected by Codex; actual final scene captures plus opening/end inspected. Full-file video/audio decode, timing and transferred file SHA/size verified. These are delegated AI checks; no human listening claim.
 
