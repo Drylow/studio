@@ -44,7 +44,7 @@ Videos keep the approved simple round-headed adults. Thumbnails retain the separ
 2. **Why It Sucked to Be the King's Jester** — 13:48. Thumbnail: LAUGH. PLEASE.
 3. **What Happened When a Medieval Woman Reported Rape?** — 14:30. Thumbnail: PROVE IT.
 
-Each video's title, description, tags and sources are already combined in its own `publication.md` in the finished-videos folder.
+Each video's title, description and tags are already combined in its own `publication.md` in the finished-videos folder.
 
 ## Asset provenance
 
@@ -58,3 +58,8 @@ All times are Europe/Paris. YouTube Studio confirmations and the refreshed sched
 - 16 October 2026, 18:00 — [Why It Sucked to Be a Medieval Noblewoman](https://youtu.be/8nO_wsWEPRI)
 - 17 October 2026, 18:00 — [Why It Sucked to Be the King's Jester](https://youtu.be/2RJwOZ1d-54)
 - 18 October 2026, 18:00 — [What Happened When a Medieval Woman Reported Rape?](https://youtu.be/bLhF1h4kkR8)
+
+
+## YouTube description rule
+
+Owner instruction: no external links and no Sources section in YouTube descriptions. The three scheduled descriptions have been cleaned, saved and verified after reloading Studio. Apply this rule to future uploads on this channel. Keep the descriptive copy and hashtags.

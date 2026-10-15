@@ -18,10 +18,6 @@ medieval jester, court jester, medieval fool, medieval court, medieval France, M
 
 LAUGH. PLEASE.
 
-## Sources
-
-- [Louvre, Figures du fou](https://www.louvre.fr/expositions-et-evenements/expositions/figures-du-fou)
-- [The jester's attributes](https://virtuelles-fastnachtsmuseum.de/themenbereiche/the-jesters-attributes-1/?lang=en)
 
 ## Production
 
@@ -37,4 +33,4 @@ Uploaded to **The Grumpy Peasant** and scheduled for **17 October 2026, 18:00 Eu
 
 Video: https://youtu.be/2RJwOZ1d-54
 
-Custom thumbnail, description with sources and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.
+Custom thumbnail, description without external links or source lists, and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.

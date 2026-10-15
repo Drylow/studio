@@ -18,11 +18,6 @@ medieval noblewoman, medieval women, medieval marriage, medieval France, Middle 
 
 HIM? REALLY?
 
-## Sources
-
-- [Genevieve Ribordy, research abstract on noble marriage](https://journals.sagepub.com/doi/abs/10.1177/036319900102600301)
-- [Met, Spectrum of Desire](https://www.metmuseum.org/fr/exhibitions/spectrum-of-desire-love-sex-and-gender-in-the-middle-ages/inside-the-galleries)
-- [Historical scholarship and research limits](https://github.com/Drylow/studio/blob/codex/medieval-channel-validation/chaines/medieval-history/PRODUCTION.md)
 
 ## Production
 
@@ -38,4 +33,4 @@ Uploaded to **The Grumpy Peasant** and scheduled for **16 October 2026, 18:00 Eu
 
 Video: https://youtu.be/8nO_wsWEPRI
 
-Custom thumbnail, description with sources and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.
+Custom thumbnail, description without external links or source lists, and tags saved. English (United States), Education, not made for kids. AI use disclosed. YouTube checks showed no issues at upload. The video remains private until its scheduled release.
