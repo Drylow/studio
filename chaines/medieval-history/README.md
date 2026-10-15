@@ -1,10 +1,10 @@
 # Projet medieval — trois episodes et essais de style
 
-15 octobre 2026. **Propositions a valider, production des films non commencee.**
+15 octobre 2026. **Direction visuelle validee par l'utilisateur ; sujets encore a confirmer. Production des films non commencee.**
 
 ![Planche des trois scenes et trois miniatures proposees](assets/00-review-board.jpg)
 
-Ce projet est une nouvelle chaine anglophone, independante des cinq anciennes chaines historiques archivees. Le nom de chaine reste a choisir. La demande actuelle porte sur trois sujets et la recreation du langage visuel d'Ottoman Days. L'utilisateur veut confirmer les idees ET les essais visuels avant tout script complet, voix ou film.
+Ce projet est une nouvelle chaine anglophone, independante des cinq anciennes chaines historiques archivees. Le nom de chaine reste a choisir. La demande actuelle porte sur trois sujets et la recreation du langage visuel d'Ottoman Days. L'utilisateur veut confirmer les idees ET les essais visuels avant tout script complet, voix ou film. Son dernier retour approuve les images (« c'est propre, donc c'est parfait »), mais reserve explicitement sa confirmation sur les idees. Ne pas traiter l'approbation visuelle comme une autorisation de production.
 
 ## Ce que montre la reference
 
@@ -98,7 +98,7 @@ Les trois images constituent des tests de direction, soumis a validation. La sec
 
 ## Reprise apres la reponse utilisateur
 
-**Attendre la confirmation des sujets et des visuels.** Pas de voix, script complet ou production automatique avant cette confirmation demandee explicitement par l'utilisateur.
+**Attendre la confirmation des sujets. La direction visuelle est approuvee.** Pas de voix, script complet ou production automatique avant cette confirmation demandee explicitement par l'utilisateur.
 
 Ensuite : recherche complementaire par episode → script original et controle des faits → voix → transcription et timings → decoupage avec narration, lieu et personnages nommes → references personnages et lieux approuvees → images controlees → montage et rendu sur VPS. Aucun rendu video sur le PC. Conserver les references effectivement envoyees, pas seulement leur intention dans un prompt.
 
