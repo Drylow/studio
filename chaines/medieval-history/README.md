@@ -1,10 +1,10 @@
 # Projet medieval — trois episodes et essais de style
 
-15 octobre 2026. **Direction visuelle validee par l'utilisateur ; sujets encore a confirmer. Production des films non commencee.**
+15 octobre 2026. **Les trois sujets et la direction visuelle sont valides. Production autorisee et en cours.**
 
 ![Planche des trois scenes et trois miniatures proposees](assets/00-review-board.jpg)
 
-Ce projet est une nouvelle chaine anglophone, independante des cinq anciennes chaines historiques archivees. Le nom de chaine reste a choisir. La demande actuelle porte sur trois sujets et la recreation du langage visuel d'Ottoman Days. L'utilisateur veut confirmer les idees ET les essais visuels avant tout script complet, voix ou film. Son dernier retour approuve les images (« c'est propre, donc c'est parfait »), mais reserve explicitement sa confirmation sur les idees. Ne pas traiter l'approbation visuelle comme une autorisation de production.
+Ce projet est une nouvelle chaine anglophone, independante des cinq anciennes chaines historiques archivees. Le nom de chaine reste a choisir. Apres avoir valide les images, l'utilisateur confirme explicitement les trois sujets (« les trois go »). Il demande de conserver la voix Ryan Kurk. L'autorisation couvre maintenant les scripts, voix, images, montage et livraison. Voir [la fiche de production](PRODUCTION.md) pour les sources, les briefs et les identifiants TubeForge ; [audits des scripts](script-audits.json). Aucune publication YouTube n'est demandee.
 
 ## Ce que montre la reference
 
@@ -98,7 +98,7 @@ Les trois images constituent des tests de direction, soumis a validation. La sec
 
 ## Reprise apres la reponse utilisateur
 
-**Attendre la confirmation des sujets. La direction visuelle est approuvee.** Pas de voix, script complet ou production automatique avant cette confirmation demandee explicitement par l'utilisateur.
+**Confirmation acquise : les trois sujets et le style sont approuves.** Continuer leur production sans redemander la meme autorisation. Narration Ryan Kurk uniquement. Garder les inspections deleguees a Codex explicites et ne pas les presenter comme des clics humains.
 
 Ensuite : recherche complementaire par episode → script original et controle des faits → voix → transcription et timings → decoupage avec narration, lieu et personnages nommes → references personnages et lieux approuvees → images controlees → montage et rendu sur VPS. Aucun rendu video sur le PC. Conserver les references effectivement envoyees, pas seulement leur intention dans un prompt.
 

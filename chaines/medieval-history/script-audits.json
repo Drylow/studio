@@ -1,0 +1,254 @@
+{
+  "noble": {
+    "folder": "01-noblewoman",
+    "hook_words": 82,
+    "turn": "But there is a complication",
+    "promise": "How recognized consent could coexist with family pressure and what the arrangement required after marriage.",
+    "payoff_map": {
+      "consent": "paragraphs 9-12",
+      "household duties and privileges": "paragraphs 15-20",
+      "future property/agency": "paragraphs 25-29"
+    },
+    "loops": [
+      {
+        "opens": 1,
+        "closes": 10,
+        "topic": "consent and family agreement"
+      },
+      {
+        "opens": 5,
+        "closes": 26,
+        "topic": "why the parchment matters"
+      },
+      {
+        "opens": 15,
+        "closes": 18,
+        "topic": "learning the new household"
+      },
+      {
+        "opens": 23,
+        "closes": 24,
+        "topic": "how to ask original family for practical support"
+      }
+    ],
+    "number_sources": [
+      "fourteenth century: bounded illustrative northern-French setting, Ribordy late-medieval research; no numerical legal rate or mortality statistic."
+    ],
+    "changes": [
+      "Removed repeated methodological disclaimers from the suitor, grain-sack, family-letter and pregnancy passages; kept one explicit composite framing.",
+      "Replaced balanced freedom/consequence aphorism with a practical question about where to go.",
+      "Kept regional and chronological distinctions for widowhood and later Christine comparison."
+    ],
+    "antithesis_ledger": [
+      {
+        "paragraph": 3,
+        "quote": "judging a person while the adults around you are judging a relationship",
+        "reason": "Concrete difference in what parties evaluate; kept one sharp contrast."
+      }
+    ],
+    "aphoristic_closers": [],
+    "state": "reviewed_for_production",
+    "reviewer": "Codex primary, delegated AI editorial inspection",
+    "script_sha256": "80f3069857ece91fdafdf3d1daeb4fff335c96a9e19aaf6d183c2a895b184edb",
+    "words": 2483,
+    "paragraphs": 29,
+    "sentence_one": "Your family has found you a husband, and everyone seems pleased except the person who has to marry him.",
+    "machine_flags": 0,
+    "mechanical_antithesis_floor": 0,
+    "anchor": "Actual Ottoman Days opening transcripts; shared short quotations and URLs in PRODUCTION.md. Sentence forms checked: direct you/action opening, But turn, concrete explanation and question. No narrative sentence copied.",
+    "group_A": "Hook/title/body promise checked against exact script; hook under100words and curiosity question present.",
+    "group_B": "Loop ledger checked after edits; paragraphs roughly70-100words, short cause/reaction units and changes of scene/subject. Timing is editorial estimate until voice.",
+    "group_C": "One spine, explicit illustrative framing, source and jurisdiction limits retained; clean TTS text without instruction headers.",
+    "group_D": "Fresh full reread after edits; zero hard bans or mechanical flags. Antithesis/closer examples listed rather than treating zero scanner flags as proof.",
+    "group_E": {
+      "independent_script": true,
+      "no_verbatim_copy": true,
+      "specific_sourcing": true,
+      "editorial_comments": true,
+      "original_illustrative_sequences": true,
+      "metadata_search_comparison": "Five result cards per topic inspected; this is metadata comparison, not a claim of watching every competitor film.",
+      "reference_voice_human_or_ai": "Unknown; do not claim verification. User explicitly requests established synthetic Ryan Kurk voice, retained.",
+      "human_buyer_script_review": false,
+      "limits": "Internal craft inspection, not a prediction or certification of YouTube monetization. No score invented for unseen competitor content."
+    },
+    "skills_used": [
+      "faceless-scripts-os-master.md",
+      "research-and-ideation-skill.md",
+      "script-structures-skill.md",
+      "voice-anchoring-skill.md",
+      "retention-mechanics-skill.md",
+      "humanizer-skill.md",
+      "greenlight-audit-skill.md",
+      "trailer-voice-scan.py"
+    ]
+  },
+  "jester": {
+    "folder": "02-jester",
+    "hook_words": 73,
+    "turn": "But the king did ask you to entertain him",
+    "promise": "How much permission a professional fool had, and how the opening failed performance could be recovered.",
+    "payoff_map": {
+      "permission versus patronage": "paragraphs 5,12-15,22-23",
+      "recovery of opening performance": "paragraphs 24-26"
+    },
+    "loops": [
+      {
+        "opens": 1,
+        "closes": 25,
+        "topic": "failed joke and recovery"
+      },
+      {
+        "opens": 4,
+        "closes": 16,
+        "topic": "why access to patron is attractive and dependent"
+      },
+      {
+        "opens": 9,
+        "closes": 12,
+        "topic": "steward asks for safe entertainment"
+      },
+      {
+        "opens": 13,
+        "closes": 14,
+        "topic": "limits without universal execution trope"
+      }
+    ],
+    "number_sources": [
+      "beginning of fifteenth century: illustrative French setting, Louvre late-medieval scope.",
+      "fourteenth century: Louvre Figures du fou institutionalization statement.",
+      "nineteenth century: French Ministry of Culture artwork notice identifying Victor Hugo inspiration."
+    ],
+    "changes": [
+      "Kept all performed jokes explicitly original illustrative scenes.",
+      "No universal immunity, automatic death penalty or conflation of all court fools with professional performers.",
+      "Later objects are used to explain limits of visual evidence, not dated silently to 1400."
+    ],
+    "antithesis_ledger": [],
+    "aphoristic_closers": [
+      {
+        "paragraph": 26,
+        "quote": "the audience matters before the punch line does",
+        "reason": "One earned practical conclusion after actual recovery scene."
+      }
+    ],
+    "state": "reviewed_for_production",
+    "reviewer": "Codex primary, delegated AI editorial inspection",
+    "script_sha256": "4666ed4b4111c11acbfc42bbbf4246d273ba8a7900b7457510b712ad6036bd3d",
+    "words": 2358,
+    "paragraphs": 28,
+    "sentence_one": "You have just made a joke about the king, and the king has stopped smiling.",
+    "machine_flags": 0,
+    "mechanical_antithesis_floor": 0,
+    "anchor": "Actual Ottoman Days opening transcripts; shared short quotations and URLs in PRODUCTION.md. Sentence forms checked: direct you/action opening, But turn, concrete explanation and question. No narrative sentence copied.",
+    "group_A": "Hook/title/body promise checked against exact script; hook under100words and curiosity question present.",
+    "group_B": "Loop ledger checked after edits; paragraphs roughly70-100words, short cause/reaction units and changes of scene/subject. Timing is editorial estimate until voice.",
+    "group_C": "One spine, explicit illustrative framing, source and jurisdiction limits retained; clean TTS text without instruction headers.",
+    "group_D": "Fresh full reread after edits; zero hard bans or mechanical flags. Antithesis/closer examples listed rather than treating zero scanner flags as proof.",
+    "group_E": {
+      "independent_script": true,
+      "no_verbatim_copy": true,
+      "specific_sourcing": true,
+      "editorial_comments": true,
+      "original_illustrative_sequences": true,
+      "metadata_search_comparison": "Five result cards per topic inspected; this is metadata comparison, not a claim of watching every competitor film.",
+      "reference_voice_human_or_ai": "Unknown; do not claim verification. User explicitly requests established synthetic Ryan Kurk voice, retained.",
+      "human_buyer_script_review": false,
+      "limits": "Internal craft inspection, not a prediction or certification of YouTube monetization. No score invented for unseen competitor content."
+    },
+    "skills_used": [
+      "faceless-scripts-os-master.md",
+      "research-and-ideation-skill.md",
+      "script-structures-skill.md",
+      "voice-anchoring-skill.md",
+      "retention-mechanics-skill.md",
+      "humanizer-skill.md",
+      "greenlight-audit-skill.md",
+      "trailer-voice-scan.py"
+    ]
+  },
+  "court": {
+    "folder": "03-reporting-rape",
+    "hook_words": 76,
+    "turn": "But surviving court records do not always preserve the voice",
+    "promise": "How reporting could proceed and what a surviving record lets us recover of a woman's account.",
+    "payoff_map": {
+      "procedure and outcome vary": "paragraphs 5-9,17-22,26",
+      "whose voice survives": "paragraphs 3-4,10-11,18-20,27"
+    },
+    "loops": [
+      {
+        "opens": 1,
+        "closes": 27,
+        "topic": "what the pen preserves and omits"
+      },
+      {
+        "opens": 5,
+        "closes": 6,
+        "topic": "could legal institutions act"
+      },
+      {
+        "opens": 9,
+        "closes": 10,
+        "topic": "what the famous French case lets us hear"
+      },
+      {
+        "opens": 18,
+        "closes": 20,
+        "topic": "Dijon testimony compared with missing 1386 testimony"
+      },
+      {
+        "opens": 21,
+        "closes": 22,
+        "topic": "legal outcome versus recovered life"
+      }
+    ],
+    "number_sources": [
+      "1287, England: Gwen Seabourne chapter summary, failed initial appeal followed by royal inquiry and conviction.",
+      "1386, French dispute: McDougall/Perry HNN article; no speech by historical survivor invented.",
+      "1472, Dijon: introduction of McDougall interview/book discussion; no final verdict fabricated from inaccessible book."
+    ],
+    "changes": [
+      "Replaced in-the-final-scene phrasing and duplicated filming-method disclaimer with practical return visit and questions about enforcement.",
+      "Avoided an automatic punishment for a complainant after a lost combat.",
+      "Kept English and French institutions separated; no false universal property-crime rule.",
+      "No assault descriptions, diagnosis of a survivor, reenactment, child sexual context or graphic injury."
+    ],
+    "antithesis_ledger": [],
+    "aphoristic_closers": [],
+    "state": "reviewed_for_production",
+    "reviewer": "Codex primary, delegated AI editorial inspection",
+    "script_sha256": "f67922fb5880fa704c5c46b868916e157d250ee468abe712f9f03392dfc9cf2e",
+    "words": 2342,
+    "paragraphs": 27,
+    "sentence_one": "You have told someone that you were raped.",
+    "machine_flags": 0,
+    "mechanical_antithesis_floor": 0,
+    "anchor": "Actual Ottoman Days opening transcripts; shared short quotations and URLs in PRODUCTION.md. Sentence forms checked: direct you/action opening, But turn, concrete explanation and question. No narrative sentence copied.",
+    "group_A": "Hook/title/body promise checked against exact script; hook under100words and curiosity question present.",
+    "group_B": "Loop ledger checked after edits; paragraphs roughly70-100words, short cause/reaction units and changes of scene/subject. Timing is editorial estimate until voice.",
+    "group_C": "One spine, explicit illustrative framing, source and jurisdiction limits retained; clean TTS text without instruction headers.",
+    "group_D": "Fresh full reread after edits; zero hard bans or mechanical flags. Antithesis/closer examples listed rather than treating zero scanner flags as proof.",
+    "group_E": {
+      "independent_script": true,
+      "no_verbatim_copy": true,
+      "specific_sourcing": true,
+      "editorial_comments": true,
+      "original_illustrative_sequences": true,
+      "metadata_search_comparison": "Five result cards per topic inspected; this is metadata comparison, not a claim of watching every competitor film.",
+      "reference_voice_human_or_ai": "Unknown; do not claim verification. User explicitly requests established synthetic Ryan Kurk voice, retained.",
+      "human_buyer_script_review": false,
+      "limits": "Internal craft inspection, not a prediction or certification of YouTube monetization. No score invented for unseen competitor content."
+    },
+    "skills_used": [
+      "faceless-scripts-os-master.md",
+      "research-and-ideation-skill.md",
+      "script-structures-skill.md",
+      "voice-anchoring-skill.md",
+      "retention-mechanics-skill.md",
+      "humanizer-skill.md",
+      "greenlight-audit-skill.md",
+      "trailer-voice-scan.py",
+      "true-crime-skill.md"
+    ]
+  }
+}
