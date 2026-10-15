@@ -105,6 +105,9 @@ def main():
     if len(ledger["episodes"]) != 6 or not all(e["state"] == "verified" for e in ledger["episodes"]):
         raise RuntimeError("All six assembled audios must be verified before delivery")
     episodes = []
+    successful_parts = sum(len(e["parts"]) for e in ledger["episodes"])
+    failed_attempts = [{"episode": e["id"], "job_id": p["job_id"], "failure": p.get("failure")}
+                       for e in ledger["episodes"] for p in e.get("failed_attempts", [])]
     for e in ledger["episodes"]:
         source = (BASE / "scripts-2026-10-15" / e["script"]).read_text(encoding="utf-8")
         assert hashlib.sha256(source.encode()).hexdigest() == e["sha256"]
@@ -126,6 +129,10 @@ def main():
               "user_authorized": True, "voice_id": ledger["voice_id"], "voice_name": ledger["voice_name"],
               "speed": ledger["speed"], "source_characters": sum(e["source_characters"] for e in episodes),
               "audio_measured": True, "all_over_two_hours": True,
+              "successful_source_parts": successful_parts, "failed_attempts": failed_attempts,
+              "accepted_jobs_including_failed": successful_parts + len(failed_attempts),
+              "recovery_audit": json.loads((STATE / "recovery-audit.json").read_text(encoding="utf-8")),
+              "recovery_note": "One definitive unbilled failure replaced by four shorter contiguous slices; source unchanged",
               "balance_before": before, "balance_after": after, "observed_character_debit": before-after,
               "debit_note": "Observed account balance change, including requested captions; other account activity may affect it",
               "desktop_folder": OUT.name, "episodes": episodes,
@@ -143,7 +150,7 @@ Les six MP3 complets sont récupérés et contrôlés, voix **Mellow Matt**, ID 
 |---|---:|
 {table}
 
-Fichiers sur le Bureau : **{OUT.name}**. Les douze parties sources sont conservées dans `work/sleep-voiceovers-2026-10-15/parts`. Deux parties contiguës par script respectent la limite de 100 000 caractères du compte. L'assemblage conserve les paquets MP3, sans réencodage, silence ou répétition ajoutés.
+Fichiers sur le Bureau : **{OUT.name}**. Les {successful_parts} parties sources terminées sont conservées dans `work/sleep-voiceovers-2026-10-15/parts`. Les scripts sont découpés en parties contiguës sous la limite de 100 000 caractères du compte. L'assemblage conserve les paquets MP3, sans réencodage, silence ou répétition ajoutés.
 
 Contrôles : empreinte du texte, source complète, décodage intégral sans erreur, durée réelle et comparaison des sous-titres au texte. Détails dans `suivi.json`. Les SRT automatiques sont fournis pour chaque MP3 ; leurs noms propres et autres erreurs de transcription restent à corriger avant publication. Ces vérifications ne constituent pas une écoute humaine intégrale.
 
@@ -151,7 +158,7 @@ Solde observé : **{before:,} → {after:,} caractères**, soit **{before-after:
 
 Reprise : `production/sleep_voiceovers.py monitor` relit les jobs existants sans soumettre de génération. `production/sleep_voiceover_delivery.py` reconstruit le relevé et la sauvegarde sans appel payant. Le registre privé `work/sleep-voiceovers-2026-10-15/ledger.json` contient les réponses et URL des médias ; ne pas le publier. La clé valide reste exclusivement dans le `.env` privé. Une ancienne variable Windows est refusée, sans avoir été modifiée.
 
-Le premier essai intégral a été refusé pour taille, sans job ni débit ; les douze parties acceptées sont terminées. Aucun nouveau montage ou upload n'est lancé. Préserver les originaux et ne pas repayer ces voix.
+Le premier essai intégral a été refusé pour taille, sans job ni débit. La seconde moitié de Severance a ensuite échoué définitivement sans être facturée : le solde correspondait exactement aux onze jobs réussis. Son texte a été réparti en quatre blocs plus courts, sans réécriture, avec la même voix. Les {successful_parts} parties réussies sont terminées. Aucun nouveau montage ou upload n'est lancé. Préserver les originaux et ne pas repayer ces voix.
 """
     write(REPORT / "README.md", readme)
     write(OUT / "LIRE-MOI.txt", readme)
@@ -161,7 +168,9 @@ Le premier essai intégral a été refusé pour taille, sans job ni débit ; les
     batch = status["next_script_batch"]
     batch.update(state="six_final_scripts_and_voiceovers_verified", audio_generated=True)
     batch["narration_batch"].update(completed_audio_verified=6, all_over_two_hours=True,
-        state="six_audios_downloaded_verified", report="narrations-2026-10-15/suivi.json")
+        state="six_audios_downloaded_verified", report="narrations-2026-10-15/suivi.json",
+        successful_parts=successful_parts, parts_accepted=successful_parts + len(failed_attempts),
+        recovery_state="completed", failed_unbilled_jobs=len(failed_attempts))
     dump(status_path, status)
     p = BASE / "PROCHAINES-ACTIONS.md"
     text = p.read_text(encoding="utf-8")
@@ -171,7 +180,7 @@ Le premier essai intégral a été refusé pour taille, sans job ni débit ; les
     tools_path = BASE / "OUTILS-ET-REPRISE.md"
     tools_text = tools_path.read_text(encoding="utf-8")
     if "## Voix Algrow du 15 octobre" not in tools_text:
-        tools_text += "\n## Voix Algrow du 15 octobre\n\nLes six narrations ont été produites avec l'API Algrow, voix Mellow Matt\n`IsEXLHzSvLH9UMB6SLHj`, vitesse 0,90. Les douze parties sources sont terminées ;\nne pas les relancer. Voir `narrations-2026-10-15/README.md` et le registre privé\n`work/sleep-voiceovers-2026-10-15/ledger.json`. MP3 complets sur le Bureau dans\n**Voix sleep - 15 octobre 2026**, et dans **VOIX-FINALES** de la sauvegarde.\n\nCet accès API utilise `ALGROW_API_KEY` dans le `.env` privé du dépôt ; il peut\nfonctionner après un changement de compte ChatGPT sur le même PC. La connexion\nMCP de recherche reste propre au compte de l'application. Une ancienne variable\nWindows du même nom est refusée : l'exécuteur choisit la clé du `.env` uniquement\npour son processus. Ne pas modifier Windows ni afficher la clé.\n\nCompte professionnel : 100 000 caractères maximum par génération, et sous-titres\navec supplément. Les fichiers sont découpés sans réécriture puis réunis en MP3\nsans silence ou répétition ajoutés. Les SRT sont automatiques, noms à relire.\nL'exécuteur de reprise ne soumet pas de nouveau job en mode `monitor`.\n"
+        tools_text += "\n## Voix Algrow du 15 octobre\n\nLes six narrations ont été produites avec l'API Algrow, voix Mellow Matt\n`IsEXLHzSvLH9UMB6SLHj`, vitesse 0,90. Les parties sources sont terminées ;\nne pas les relancer. Voir `narrations-2026-10-15/README.md` et le registre privé\n`work/sleep-voiceovers-2026-10-15/ledger.json`. MP3 complets sur le Bureau dans\n**Voix sleep - 15 octobre 2026**, et dans **VOIX-FINALES** de la sauvegarde.\n\nCet accès API utilise `ALGROW_API_KEY` dans le `.env` privé du dépôt ; il peut\nfonctionner après un changement de compte ChatGPT sur le même PC. La connexion\nMCP de recherche reste propre au compte de l'application. Une ancienne variable\nWindows du même nom est refusée : l'exécuteur choisit la clé du `.env` uniquement\npour son processus. Ne pas modifier Windows ni afficher la clé.\n\nCompte professionnel : 100 000 caractères maximum par génération, et sous-titres\navec supplément. Les fichiers sont découpés sans réécriture puis réunis en MP3\nsans silence ou répétition ajoutés. Les SRT sont automatiques, noms à relire.\nL'exécuteur de reprise ne soumet pas de nouveau job en mode `monitor`.\n"
         write(tools_path, tools_text)
     p = BASE / "README.md"
     text = p.read_text(encoding="utf-8")
@@ -215,7 +224,7 @@ Le premier essai intégral a été refusé pour taille, sans job ni débit ; les
          "note": "No keys or browser sessions. Private narration media URLs in work ledger: do not publish."})
     check_path = BACKUP / "VERIFICATIONS.json"
     checks = json.loads(check_path.read_text(encoding="utf-8"))
-    checks["narrations_2026_10_15"] = {"parts_complete": 12, "final_audios_verified": 6,
+    checks["narrations_2026_10_15"] = {"parts_complete": successful_parts, "failed_attempts": len(failed_attempts), "final_audios_verified": 6,
         "all_over_two_hours": True, "source_and_backup_audio_hashes_match": True,
         "manifest_files": len(entries), "no_credentials_copied": True}
     dump(check_path, checks)

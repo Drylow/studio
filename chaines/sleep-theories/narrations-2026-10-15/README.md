@@ -1,17 +1,13 @@
-# Six narrations — 15 octobre 2026
+# Six narrations — suivi du 15 octobre 2026
 
-Commande utilisateur : générer les six scripts finaux dans Algrow Voiceover avec la voix **Mellow Matt**, ID `IsEXLHzSvLH9UMB6SLHj`.
+Cinq MP3 complets récupérés et vérifiés : Force, Guilde, Paul, Silo, FROM. Tous dépassent deux heures. Voix Mellow Matt, ID `IsEXLHzSvLH9UMB6SLHj`, vitesse 0,90.
 
-Douze parties acceptées, deux par épisode, en cours côté service. 1 MP3 complet vérifié et 5/12 parties récupérées au dernier relevé. Voir `suivi.json` pour les identifiants acceptés ; ne pas les soumettre de nouveau.
+La première moitié de Severance est réussie. La seconde demande a échoué définitivement chez Algrow, sans facturation : débit observé de 855 224 caractères, exactement celui des onze parties réussies. Le même texte restant a été réparti en quatre blocs plus courts, voix et réglages identiques, actuellement acceptés et en traitement. Voir les identifiants et l'audit dans `suivi.json`.
 
-Le compte professionnel limite chaque demande à 100 000 caractères : les scripts sont coupés à une séparation de paragraphes proche du milieu, sans réécriture. Leur concaténation textuelle reproduit exactement chaque source finale contrôlée. Vitesse 0,90, réglages standards existants, sous-titres demandés. Les crédits de sous-titrage peuvent s'ajouter à ceux du texte ; le débit sera relevé à la fin.
+Reprendre avec `python production/sleep_voiceovers.py monitor`, depuis la racine du dépôt. Cette commande lit les jobs existants, télécharge les résultats et assemble les MP3 ; elle ne soumet aucune génération. Ne pas repayer les demandes acceptées.
 
-Exécuteur : `production/sleep_voiceovers.py`. Depuis la racine du dépôt : `python production/sleep_voiceovers.py monitor`. Cette commande lit uniquement les jobs acceptés, télécharge les parties terminées, vérifie leur décodage complet, assemble les MP3 sans réencodage puis mesure la durée finale. Elle ne lance aucune génération payante.
+Registre privé : `work/sleep-voiceovers-2026-10-15/ledger.json`. Preuve de reprise : `recovery-audit.json` dans le même dossier. URL des médias privées, pas de Git public. Clé valide uniquement dans le `.env` local ; une ancienne variable Windows est refusée. Ne pas afficher la clé.
 
-Le registre privé `work/sleep-voiceovers-2026-10-15/ledger.json` conserve les réponses du service et les URL de téléchargement. Les médias sont dans son sous-dossier `parts`, puis les six fichiers finaux sur le Bureau dans **Voix sleep - 15 octobre 2026**. Les URL et MP3 ne vont pas dans Git. Préserver le registre en cas de changement de compte.
+MP3 complets sur le Bureau dans **Voix sleep - 15 octobre 2026**. Sauvegarde autonome dans **REPRISE - Deep Void et Quiet Paradox**. Les parties contiguës conservent exactement les scripts finaux, sans réécriture. Assemblage MP3 sans silence ou répétition ajoutés, puis décodage intégral et durée réelle. Les SRT sont automatiques et leurs noms propres restent à relire.
 
-La clé valide est celle du `.env` du dépôt. Une ancienne variable Windows du même nom est refusée ; l'exécuteur choisit explicitement le `.env` pour ce processus, sans modifier Windows. Ne jamais afficher ni copier sa valeur dans la passation.
-
-Le premier envoi du script Force intégral a reçu un refus HTTP 400 pour dépassement de taille : aucun job accepté et aucun crédit consommé. Il a été remplacé par deux demandes sous la limite.
-
-Les deux heures minimum seront validées sur les audios réels. Pas de silence, boucle ou répétition ajoutés. Aucun montage ou upload autorisé par cette demande.
+Après les six MP3 vérifiés, `python production/sleep_voiceover_delivery.py` finalise le relevé et la sauvegarde, sans appel payant. Aucun montage ou upload lancé.

@@ -295,7 +295,10 @@
       "voice_id": "IsEXLHzSvLH9UMB6SLHj",
       "voice_name": "Mellow Matt",
       "parts_accepted": 12,
-      "completed_audio_verified": 1
+      "completed_audio_verified": 5,
+      "successful_parts": 11,
+      "recovery_parts_submitted": 4,
+      "failed_unbilled_jobs": 1
     }
   }
 }
