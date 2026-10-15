@@ -1,0 +1,17 @@
+{
+  "channel": "One Stick Left",
+  "title": "Alien Outbreak Survival: Day 91 to Day 120",
+  "description_file": "chaines/alien-outbreak-survival/episode-04-day-91-120/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/YqSFHmAs",
+    "file": "final.mp4",
+    "sha256": "99a3c4abc19160957ccb5c37f678dd84c4d95479b1da9b837dd3a8a800992957",
+    "url": "http://media.edgerunners.fr/one-stick-left--episode-04-day-91-120-a5c790d3928a0bf6.mp4"
+  },
+  "thumbnail": "chaines/alien-outbreak-survival/episode-04-day-91-120/thumbnail.jpg",
+  "captions": "chaines/alien-outbreak-survival/episode-04-day-91-120/English-Captions.srt",
+  "tags_file": "chaines/alien-outbreak-survival/episode-04-day-91-120/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-17T10:00",
+  "tubeforge_video_id": "alien-outbreak-survival-day-91-to-day-12-89c903"
+}
