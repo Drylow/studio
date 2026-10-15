@@ -76,6 +76,12 @@ The working trials under `visual-tests/` are kept separate from the approved
 palace reference. An isolated neutral worker sheet is a candidate translation
 of the approved style, not automatic approval of a new mascot or all costumes.
 
+The corrected, actually inspected [neutral identity sheet](visual-tests/white-head-neutral-2026-10-16.jpg)
+replaces the earlier worried worker sheet as the resting-face guide. It preserves
+the approved drawing and compact proportions. Its rust outfit belongs to this
+episode only; new universes still get appropriate wardrobe. Neither a neutral
+sheet nor the palace reference freezes the actor's expression in story images.
+
 ## Reusable prompt block
 
 ```text
