@@ -922,3 +922,7 @@ Timeline, reçus et reprise : `experiments/conversation-chess/ATTACK_ON_TITAN.md
 `episodes/eren-vs-reiner*`, `thumbnails/eren-reiner/` dans ce même outil.
 Sources et contrôles détaillés privés dans `work/`. Aucun upload ou contrôle
 Content ID effectué pour cet épisode ; la validation porte sur le fichier local.
+
+### Oddly Fictional Lives — episode05 delivered
+
+Your Life Working for Jabba the Hutt:145 inspected static shots, Ryan Kurk narration,16:25,1080p/24fps, hard cuts. Situation-specific acting replaces inherited worried faces. Rendered on VPS CPU; encoded-video QA and independent local SHA/size transfer passed. Delivery: `01 - Videos/Oddly Fictional Lives/05 - Your Life Working for Jabba the Hutt/`. Final VPS MP4 and obsolete frames removed after transfer; required voice/reference/authoring assets preserved. See `chaines/oddly-fictional-lives/videos/05-your-life-working-for-jabba-the-hutt/publication.md`. No YouTube upload performed.

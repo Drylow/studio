@@ -183,3 +183,18 @@ normal speed match the user's standing instruction.
 The145 individually reviewed static scenes passed the hosted project's image,
 reference, voice and complete-timeline gates before the VPS slideshow render.
 Final encoded-video inspection and verified transfer are separate checks.
+
+## Final export and transfer
+
+Both checks are now complete. The encoded1080p/24fps video has23641 frames and
+lasts985.041667 seconds.435 decoded samples cover all145 shots, matching their
+chosen source illustrations; the within-shot comparisons confirm static framing.
+Actual rendered moments at opening, shared food, cargo handling, danger, relief
+and ending were viewed. Full audio decoding passed with no clipped samples.
+The export rendered on the VPS CPU in194.43 seconds; no rendering ran on the PC.
+
+The owner folder's95,295,392-byte MP4 matched the independently computed server
+hash and size. Final server export and obsolete replaced frames were then removed
+under the owner's standing retention instruction. The hosted project retains
+delivery/cleanup receipts, voice, timing, authoring and required reference assets.
+See `publication.md` for the tidy delivery folder and public description.
