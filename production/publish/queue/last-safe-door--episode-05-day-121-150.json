@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 121 to Day 150",
+  "description_file": "chaines/last-safe-door/episode-05-day-121-150/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/yHS1DVLF",
+    "file": "final.mp4",
+    "sha256": "34e58c5ad5fbe1315ada0db52821e9724debd0869b0bc408e887ee244deedba3",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-05-day-121-150-43fd68e7981e7ad0.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-05-day-121-150/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-05-day-121-150/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-05-day-121-150/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-18T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-121-to-day-15-7c9120"
+}

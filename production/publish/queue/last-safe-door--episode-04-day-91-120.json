@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 91 to Day 120",
+  "description_file": "chaines/last-safe-door/episode-04-day-91-120/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/bblvPf9M",
+    "file": "final.mp4",
+    "sha256": "f9230b52d9d3cf9967a04463ecb4e6f7ccde2ba7f049d807cfd172fdb616e709",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-04-day-91-120-a7c01dc0129ed818.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-04-day-91-120/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-04-day-91-120/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-04-day-91-120/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-17T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-91-to-day-120-b6a4ee"
+}
