@@ -1,0 +1,85 @@
+{
+  "accessed": "2026-10-15",
+  "scope": "Television only through S3E10 Troy, released 4 September 2026. No novel events, future season-four explanations, ancestry claims or unreleased lore. This is a sequel to the channel's first broad Silo episode, not the same overview with shuffled paragraphs.",
+  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "sources": [
+    {
+      "id": "S1",
+      "fact": "The third season ran July 3 to September 4, 2026 and follows Juliette's memory loss alongside Helen and Daniel in the Before Times.",
+      "work": "Official scope and S3E1",
+      "url": "https://www.apple.com/tv-pr/news/2026/04/apples-globally-acclaimed-drama-silo-starring-and-executive-produced-by-rebecca-ferguson-returns-for-season-three-on-july-3-2026/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "S2",
+      "fact": "The finale of season one connects better tape, Supply and repeating visor birds with Juliette's survival and recognition of a display.",
+      "work": "S1E10",
+      "url": "https://www.tvline.com/recaps/silo-recap-season-1-finale-episode-10-juliette-outside-wasteland-rebecca-ferguson-1235007079/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "S3",
+      "fact": "Hanna's magnifying device, the Flamekeepers, reproductive suppression and mirror cameras show several distinct ways of limiting inquiry.",
+      "work": "S1E7",
+      "url": "https://readysteadycut.com/2023/06/09/silo-season-1-episode-7-recap/",
+      "opened": "2026-10-15",
+      "note": "Refreshed with original episode-source file; keep testimony attributed."
+    },
+    {
+      "id": "S4",
+      "fact": "The Pez toy in the earlier investigation is linked to Daniel's gift to Helen by the season-two final Before Times scene.",
+      "work": "S2E10",
+      "url": "https://time.com/7206478/silo-season-2-finale-explained/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "S5",
+      "fact": "Camille uses false footage and suppressants while Juliette has memory loss; restored public hero imagery is managed.",
+      "work": "S3E1",
+      "url": "https://readysteadycut.com/2026/07/03/silo-season-3-episode-1-recap/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "S6",
+      "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers.",
+      "work": "S3E8",
+      "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "S7",
+      "fact": "Pregnant Helen and Daniel are separated into S18 and S1, with an explosion at the unveiling in the Before Times story.",
+      "work": "S3E9",
+      "url": "https://tvobsessive.com/2026/08/28/silo-s3e9-recap-farewell-cruel-world-im-off-to-join-the-circus/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "S8",
+      "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist.",
+      "work": "S3E10",
+      "url": "https://www.thewrap.com/creative-content/tv-shows/silo-season-3-ending-explained-season-4/",
+      "opened": "2026-10-15",
+      "corroboration": "https://tvobsessive.com/2026/09/04/silo-s3e10-recap-troy-who-are-we-freed-from-the-past/"
+    },
+    {
+      "id": "S9",
+      "fact": "The drive George and Allison investigate carries the identifier eighteen; Bernard searches for it in S1E9. Its full origin is not thereby solved.",
+      "work": "S1E1 and S1E9",
+      "url": "https://cartermatt.com/598431/silo-season-1-episode-9-what-is-hard-drive-18/",
+      "opened": "2026-10-15"
+    }
+  ],
+  "forbidden": [
+    "Importing Donald's novel biography or the novels' full extinction mechanism",
+    "The Algorithm is a confirmed autonomous artificial intelligence",
+    "Daniel/Troy is a robot or literal killing machine",
+    "Helen is confirmed to be Juliette's ancestor",
+    "The Pez dispenser alone proves a complete chain of ownership",
+    "Outside is globally safe because a screen is false",
+    "Every magnifying device or all science is banned",
+    "Illuminated map markers prove exactly seven surviving silos",
+    "Fifty versus fifty-one is silently resolved without accounting for context",
+    "Every memory loss has one medically identical mechanism",
+    "A found relic demonstrates the founders' stated history is true"
+  ]
+}

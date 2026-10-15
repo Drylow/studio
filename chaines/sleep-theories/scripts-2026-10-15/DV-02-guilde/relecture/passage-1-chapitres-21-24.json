@@ -1,0 +1,220 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Under Leto II, the Guild's continuing need for melange subjects its transport operations to his control of stored spice and its distribution.",
+      "new_information": [
+        "Arrakis's ecological transformation has removed the former harvesting economy as a practical alternative to allocated reserves.",
+        "Leto's extraordinary lifespan makes control of spice distribution a durable institutional condition rather than a temporary supply dispute.",
+        "The Guild and Bene Gesserit have different uses for melange but face the same distributor's leverage.",
+        "Restrictions on movement under Leto's Peace further constrain the environment in which the Guild operates."
+      ],
+      "local_answer": "The chapter answers its assignment: Leto can subordinate the Guild by controlling its essential supply without personally administering its voyages.",
+      "open_issues": [
+        "Several paragraphs repeat the conclusion that ships, expertise and institutional importance cannot substitute for spice.",
+        "The concluding paragraph restates the stockpile mechanism after it has already been explained repeatedly."
+      ],
+      "evidence_notes": "G7 supports Leto's distribution leverage and the Guild's subordinate position. The ecological and institutional details go beyond that short proof-bank entry, although no contradiction with the supplied constraints is identified. The chapter does not invent ration volumes, prices or meetings."
+    },
+    {
+      "number": 22,
+      "summary": "Ixian navigation machinery supplies an alternative to spice-dependent Navigators, while no-ship concealment addresses a separate problem.",
+      "new_information": [
+        "Navigation machinery challenges the Guild's specialized service rather than merely adding another transport vessel.",
+        "Concealment from prescience and finding a safe interstellar course are different capabilities that can coexist aboard one ship.",
+        "The later no-ships on Gammu and Chapterhouse give those combined capabilities practical uses.",
+        "An alternative navigational method can weaken the Guild's bargaining position without eliminating its existing people or transport capacity."
+      ],
+      "local_answer": "The chapter clearly explains the competitive challenge and correctly keeps navigation machinery distinct from prescient concealment.",
+      "open_issues": [
+        "The Atreides comparison repeats the opening explanation without adding a new causal step.",
+        "The Hwi Noree paragraph spends more time on adjacent political and biographical material than the assigned technological distinction requires."
+      ],
+      "evidence_notes": "G7 supports the later Ixian challenge, and the assignment expressly requires distinguishing navigation machines from no-ships. The specific Hwi, Gammu and Chapterhouse examples are not documented individually in the supplied proof bank; they should not be described as independently verified by this review. No expanded-universe origin story or instant disappearance of all Navigators is asserted."
+    },
+    {
+      "number": 23,
+      "summary": "The Scattering and alternative navigation disperse humanity's transport capacity, reducing the reach of the old spice-and-carrier bottleneck without eliminating conflict or other needs for melange.",
+      "new_information": [
+        "Returning populations demonstrate that human communities have developed beyond the old imperial center.",
+        "Independent transport benefits hostile powers as well as communities seeking security.",
+        "Rakis's destruction does not end all interstellar movement.",
+        "The transfer of a sandworm to Chapterhouse illustrates the continuing importance of spice beyond navigation.",
+        "Dispersal makes control of one carrier or spice stockpile less capable of enforcing universal obedience."
+      ],
+      "local_answer": "The chapter answers the resilience question through concrete changes in transport and settlement, but its middle section drifts toward a broader account of the Bene Gesserit's later conflicts.",
+      "open_issues": [
+        "The Gammu and Murbella material extends the political recap beyond what is needed to explain diversified movement.",
+        "One paragraph announces how cautiously the analysis should be framed instead of directly delivering the analysis."
+      ],
+      "evidence_notes": "G7 supports the technological weakening of Navigator dependence. The Scattering, Rakis and Chapterhouse developments are within the assigned later-book discussion, but the proof bank does not separately document each scene-level detail. The chapter appropriately treats resilience as a political inference, not a quantified canonical result."
+    },
+    {
+      "number": 24,
+      "summary": "The ending contrasts the Atreides household's use of Guild transport with Edric's visibly spice-dependent existence inside his tank.",
+      "new_information": [
+        "The chapter juxtaposes the customer's temporary use of transport with the Navigator's continuing bodily requirements.",
+        "Edric's appearance at a political meeting makes an otherwise hidden component of Guild service visible.",
+        "A Navigator's specialized role is distinguished from the work of the Guild's other employees."
+      ],
+      "local_answer": "The intended answer is present: the Guild's secrets are practical dependencies concealed behind routine service, and the final image is appropriately grounded in Edric's tank and orange spice gas.",
+      "open_issues": [
+        "The ending revisits the conspiracy's protection and coordination problems instead of staying with the assigned passenger-and-Navigator contrast.",
+        "Several paragraphs repeat that institutional power and bodily dependence coexist.",
+        "The claim that the novel never gives Edric ordinary freedom exceeds what his depicted tank environment establishes."
+      ],
+      "evidence_notes": "G1 and G5 support the transport dependency and Edric's conspiracy role. The tank and spice environment are expressly authorized by the outline. The passage does not import film-specific physiology, but its broader claim about Edric's freedom should be narrowed to what the scene actually depicts."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The change on Arrakis is especially important because it prevents the Guild from treating this as a dispute with a difficult supplier whose competitors might welcome its business. In the original imperial order, rival Houses could compete for the privilege of administering the same planet. Their competition never created another Arrakis. Under Leto, even that succession of managers has given way to his personal rule. Melange remains bound to the history and ecology of one world, while the usable reserves sit within an order he has spent millennia shaping.",
+      "reason": "H18 identifies repetition where a script 'keeps re-stating it with nothing new attached.' The opening two paragraphs already establish the vanished harvesting alternative and Leto's stockpile control. The comparison with rival managers does not materially develop that mechanism here.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This doesn't mean every Guild journey requires a fresh personal instruction from Leto. The political implication is that the Guild has to plan its continuing operations around access he can restrict. A ship already available for service doesn't become a replacement source of spice. Neither does a long record of successful voyages. The organization's achievements remain useful, but they can't refill its reserves. Leto can leave its specialized work in its own hands and still establish the material conditions under which that work continues.",
+      "reason": "H18 requires cutting a 're-mention that adds nothing.' The earlier paragraph beginning 'For a Navigator' already explains that ships and accumulated experience cannot replace spice and that Leto need not direct individual journeys. This is the least useful full repetition of that explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild survives this long subordination. Its ships, Navigators and institutional knowledge remain part of human life under Leto, even as its bargaining position has narrowed. That survival matters: he has kept a useful carrier in operation while making its continued functioning dependent on his allocations. Across the transformed Arrakis, there are no harvesting crews bringing in a fresh desert crop to relieve that dependence. The spice reaching the Guild comes from reserves, and Leto decides what leaves them.",
+      "reason": "H18's document-scale echo applies to this final return to reserves, vanished harvesting and constrained bargaining. Retain the useful closing point that subordination does not mean abolition, without explaining the entire mechanism again.",
+      "replacement": "The Guild survives under Leto, still carrying people between worlds, but its control of transport doesn't let it set the terms of his spice allocations.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "Ix already has an unusual place in God Emperor of Dune. Its people produce sophisticated devices within a civilization still shaped by the prohibition against thinking machines. Leto deals with them despite the unease that their work provokes. Hwi Noree arrives as the Ixian ambassador, and the circumstances of her creation involve another Ixian achievement: a place hidden from prescient observation. Around her, technical invention and political maneuvering are closely connected. Ix can make things that interfere with advantages Leto possesses, although those inventions don't give the Ixians command of everything he does.",
+      "reason": "The release scope permits later novels for Leto's leverage and the Ixian challenge, not an adjacent account of Hwi's political role. Her concealed origin is useful to the next paragraph's distinction, but the surrounding generalizations and diplomacy are unnecessary.",
+      "replacement": "In God Emperor of Dune, the Ixians conceal the creation of Hwi Noree from Leto's prescient observation. That hidden place provides an example of concealment, which is a different capability from navigating a ship.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For comparison, the Atreides move to Arrakis takes place within an arrangement where House possessions and forces depend on the Guild's interstellar service. The family can prepare for departure and command the people being moved, but that doesn't give it a substitute for Guild passage. The later availability of navigation machinery changes that practical relationship. An operator with a suitable vessel and the necessary system can dispense with the Navigator's service. This is the point at which a customer can begin to have an alternative, rather than merely another reason to negotiate with the same carrier.",
+      "reason": "H18 says a second mention must add 'a consequence, a comparison, the next number.' Although framed as a comparison, this paragraph repeats the opening's existing comparison between House vessels, Guild dependence and the new navigational alternative. The following paragraph supplies the actual new bargaining consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "The returns also expose how little the old worlds know about the places beyond them. In Chapterhouse: Dune, Murbella gives the Bene Gesserit access to Honored Matre experience through a person they can question, train and eventually incorporate into their leadership. She carries knowledge acquired in a society the Sisterhood didn't direct. Her presence matters because having ships capable of reaching somewhere doesn't supply an understanding of its inhabitants. Odrade's problem includes learning what the newcomers fear and how they behave, while those newcomers are already acting against her.",
+      "reason": "The assignment asks for brief setting changes followed by analysis of transport resilience. This paragraph shifts into Murbella's incorporation and Odrade's intelligence problem, while the preceding opening paragraphs have already established unfamiliar returning societies. Removing it keeps the later-book material tied to the authorized transport question.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "When we call this later arrangement more resilient, the claim needs to stay with those particulars. The original Guild monopoly concentrated ordinary interstellar passage in one institution whose Navigators shared a physiological requirement. Later vessels can navigate without that personnel, while human settlements extend beyond the old imperial structure. It follows that a ruler who captures a spice stockpile or intimidates one carrier has fewer grounds for expecting universal obedience. People elsewhere may still possess the means to leave, return or continue supplying their own communities.",
+      "reason": "The first sentence gives the listener a methodological instruction rather than lore. The sleep adaptation asks for thoughtful interpretation without repeated lessons about evidentiary framing. The concrete causal explanation can stand directly.",
+      "replacement": "The original monopoly concentrated interstellar passage in an institution whose Navigators all needed spice. Later navigation machinery and settlements beyond the old imperial structure reduce the reach of that bottleneck. Control of one carrier or stockpile no longer gives a ruler the same hold over communities that can move and supply themselves independently.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The tank also changes the usual picture of a powerful Guild official. Edric belongs to an organization that carries the great powers of the Imperium, yet he conducts this meeting inside a specialized enclosure. Mohiam can bring Bene Gesserit knowledge to the discussion, and Irulan brings her position within Paul's household. Edric brings prescience along with the environmental needs of his altered body. His usefulness to the conspiracy and his dependence exist together in the room. Neither makes the other disappear.",
+      "reason": "H18 flags an observation repeatedly given new wording without development. Edric's visible dependence and political participation have already been established in the third and fourth paragraphs. The final paired verdict also repeats the contrast rather than giving the closing chapter a new concrete detail.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "His prescience gives the gathering a particular advantage. Edric's involvement conceals the conspirators from Paul's prescient sight, allowing people threatened by Paul to plan under that protection. The ability associated with finding a safe course through space therefore matters even when Edric isn't navigating a ship. He can affect what another prescient person perceives. That helps explain why these participants want him present, rather than dealing only with an ordinary Guild intermediary who could carry messages or negotiate on the organization's behalf.",
+      "reason": "The final chapter is assigned a specific passenger-and-body contrast and expressly should not become an all-chapter summary. Explaining prescient concealment again reopens the subjects assigned to chapters 17 and 18 rather than resolving this ending. Its removal leaves the tank scene intelligible.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Still, Edric has to participate in a conversation. Mohiam, Irulan and Scytale bring different interests and abilities, and they must arrange actions involving people outside the meeting. His presence doesn't settle those practical difficulties for them. The tank contains a conspirator who needs other conspirators, as well as a Navigator whose abilities they need. Seeing him among these particular people keeps him from becoming an abstract explanation for Guild success. He has a place in an unstable arrangement, with Paul as their shared opponent.",
+      "reason": "This continues the detour into the conspiracy's operational limits, a subject assigned to chapters 18 and 20. It adds neither a new bodily detail nor a new aspect of the customer's experience. Deleting it also prevents the preceding deletion from leaving an unsupported 'Still' transition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The secret beneath reliable passage is therefore quite practical. The Atreides can prepare to leave Caladan because the Guild supplies something their own forces can't replace. Edric shows what that supply asks of a person inside the organization. Ships and their passengers remain necessary parts of the journey, alongside the Navigator's limited foresight and his dependence on melange. To the departing household, those requirements can stay out of sight. They experience transport as the means of reaching the place where their own difficulties will begin.",
+      "reason": "H18's echo rule applies: this repeats the opening's Atreides comparison, the fifth paragraph's continuing bodily requirement and the immediately preceding paragraph's visible spice connection. The title's answer remains clear without another full synthesis immediately before the final tank image.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Dune Messiah gives Edric time away from that unseen position, although it never gives him the ordinary freedom of the people meeting around him.",
+      "reason": "Edric's depicted enclosure supports a contrast in bodily circumstances, not the broader categorical claim that the novel never gives him ordinary freedom. 'Freedom' can also imply political or personal restrictions not established by the supplied evidence.",
+      "replacement": "Edric's political role doesn't remove the needs of his altered body.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        22,
+        23
+      ],
+      "detail": "The spice bottleneck appropriately links these chapters, but its function should advance each time: allocation leverage in 21, a technological alternative in 22, and dispersed resilience in 23. Repeated explanations that ships alone cannot replace a Navigator's spice requirement should be concentrated in 21 and the opening transition of 22."
+    },
+    {
+      "chapters": [
+        22,
+        23,
+        24
+      ],
+      "detail": "Each returns to the Atreides relocation as an example of dependence on Guild passage. Chapter 22's later full comparison is dispensable; chapter 23 uses the military comparison to discuss a changed political structure, while chapter 24 needs the household departure for its assigned closing contrast."
+    },
+    {
+      "chapters": [
+        22,
+        24
+      ],
+      "detail": "Both explain that Edric's existing bodily dependence is not undone by changes in institutional circumstances. Chapter 22 needs only the distinction between replacing a service and transforming its practitioners; chapter 24 is the proper home for sustained attention to the tank and spice environment."
+    },
+    {
+      "chapters": [
+        22,
+        23
+      ],
+      "detail": "Gammu and the Chapterhouse no-ship recur as examples of concealment, escape and protection. Keep chapter 22 focused on the distinct technological capabilities and chapter 23 on the political consequences of independent movement rather than repeating the same refuge-and-pursuit explanation."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within Frank Herbert's original-six-book continuity and contain no identified expanded-universe origin story, film-specific Navigator design, fabricated tariff, quantified failure rate or conflation of navigation machinery with no-ship concealment. Chapters 22 and 23 include removable later-book political tangents, and chapter 24 partially recaps subjects assigned to earlier chapters instead of remaining tightly focused on its closing contrast.",
+  "limitations": "All four supplied chapter texts were read in full. Chapters 1-20 were provided only as outline assignments, so repetition involving their actual narration cannot be established. The proof bank was treated as authoritative, but its short entries do not independently document every descriptive detail in these chapters. No websites were opened, external citations verified, narration audio measured or human read-aloud performed.",
+  "input_hashes": {
+    "21": "3db51cf65762b018688787acc71b82ae08414b5a7c5c53acbd9b4042eef53eba",
+    "22": "d9da9fa70dbb29a041cdffb1b5ba82bb4d05208019273489298f6225d1e4b352",
+    "23": "c934aaeb6921878247a6273ee3ab0b05d6719b0806645b7885657aa0c700fe03",
+    "24": "fb369624e5783a54be8dab6281475acc6f74578bbdf08945987e397ceac54be9"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

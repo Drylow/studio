@@ -1,0 +1,171 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Victor's memories of Christopher's change, Miranda's warning and Christopher's surviving journal give Jade reasons for caution, while the released previous-lives revelation supplies context Victor could not have understood as a child.",
+      "new_information": [
+        "Victor identifies Christopher in the photograph and remembers him changing from someone who made people laugh into someone he feared.",
+        "Christopher's journal provides a surviving record of his attention to the symbol.",
+        "Miranda instructed Victor to hide somewhere Christopher did not know about, but that instruction does not establish Christopher as the sole perpetrator of the massacre.",
+        "Jade's encounter with the children and the root-shaped symbol connects the investigation to something beyond Christopher's behavior.",
+        "The season-three revelation connects Jade and Tabitha with Christopher and Miranda, allowing Christopher's fixation to be interpreted in the context of previous lives."
+      ],
+      "local_answer": "The chapter answers its assignment: Victor can describe Christopher's observed change and explain his own fear without proving that the symbol controlled Christopher or that Christopher caused every death.",
+      "open_issues": [
+        "The concluding paragraph repeats the chapter's established division between Jade's investigation and Victor's childhood experience without adding a further development."
+      ],
+      "evidence_notes": "The treatment of Victor's partial testimony and the previous-lives revelation is consistent with V1 and V4. The photograph, journal, hiding instruction and root imagery are more scene-specific than the abbreviated proof entries; their exact presentation has not been independently verified here. The proposed explanation of Christopher's fixation is appropriately marked as a possibility."
+    },
+    {
+      "number": 10,
+      "summary": "Victor and Henry retrieve Jasper from the tunnels, but possessing the dummy does not recover the conversation Victor has mistakenly associated with its voice.",
+      "new_information": [
+        "Victor pursues Jasper as a concrete way to recover an incomplete childhood memory.",
+        "Henry accompanies Victor into territory where Victor has greater practical experience.",
+        "Henry can witness the retrieval without corroborating the childhood conversation.",
+        "The retrieval exposes both men to danger, including a creature acknowledging Victor's visits.",
+        "Jasper remains silent, and Sara's subsequent assistance redirects the investigation toward Victor's recollection rather than the object."
+      ],
+      "local_answer": "The chapter clearly distinguishes recovering an associated object from recovering a reliable account of what happened around it.",
+      "open_issues": [
+        "After Jasper's silence establishes the central mismatch, another full paragraph restates the completed retrieval and failed recollection."
+      ],
+      "evidence_notes": "V2 supports the mistaken attribution to Jasper and the later correction with Sara's help. The retrieval logistics, Henry's participation and the creature encounter are not described in detail in the abbreviated V2 entry, so this review does not claim independent verification of those particulars. Jasper is never left as the confirmed speaker."
+    },
+    {
+      "number": 11,
+      "summary": "Sara helps Victor identify the Boy in White as Christopher's interlocutor and recover an account in which information about saving the children passes through Victor to Miranda.",
+      "new_information": [
+        "The corrected speaker in S3E8 is the Boy in White, not Jasper.",
+        "The remembered message concerns the children's suffering, their hope and its connection with the roots and symbol.",
+        "Victor recalls a proposed rescue and Christopher's refusal to undertake it.",
+        "Victor remembers carrying the information to Miranda.",
+        "Sara facilitates the recollection but cannot independently corroborate the childhood event.",
+        "Sara's own history with dangerous instructions supplies a relevant contrast to her more limited task here."
+      ],
+      "local_answer": "The chapter explains both the correction and its causal importance: identifying the speaker makes the transmission of information to Miranda intelligible without making Sara an independent witness or the promise a verified escape procedure.",
+      "open_issues": [
+        "The dangerous retrieval and Victor's investment in Jasper receive another explanatory paragraph after chapter 10 has already developed them.",
+        "Christopher's progression from entertaining people to frightening Victor is recapped again despite chapter 9 having established it.",
+        "A later paragraph re-explains the speaker correction after its consequences have already been shown."
+      ],
+      "evidence_notes": "V2 directly supports the corrected speaker, episode and Sara's assistance. The detailed content of the remembered message and its transmission to Miranda goes beyond the abbreviated proof entry, although it fits the supplied assignment's focus on explaining the corrected conversation. The narration appropriately attributes the promise to Victor's recollection rather than certifying it as supernatural fact."
+    },
+    {
+      "number": 12,
+      "summary": "The Boy in White's practical assistance, unexplained lighthouse intervention and bottle-tree warning give Victor reasons to listen without establishing the figure's complete knowledge or moral purpose.",
+      "new_information": [
+        "Victor's relationship with the Boy in White extends back to the aftermath of his childhood losses.",
+        "Victor associates his assistance to Tabitha in the tunnels with the boy's guidance.",
+        "Tabitha's lighthouse passage produces an apparent benefit through an intervention she did not agree to beforehand.",
+        "The season-four bottle-tree warning requires Victor to persuade others rather than carry out an instruction himself.",
+        "Boyd restrains Victor while the plan proceeds.",
+        "Both wholly benevolent and proven-villain interpretations require evidence beyond the interventions described."
+      ],
+      "local_answer": "The chapter answers its assigned comparison: limited guidance can have practical value while leaving intention, knowledge and the costs imposed on the messenger unresolved.",
+      "open_issues": [
+        "The third paragraph repeats the preceding explanation that Victor's childhood history gives later appearances weight.",
+        "The penultimate paragraph repeats the narrower-trust argument already developed through the tunnel comparison, tree objection and competing interpretations."
+      ],
+      "evidence_notes": "The remembered conversation is supported by V2, and the season-four warning, restraint and ensuing danger are supported by V7. The tunnel and lighthouse examples are additional scene-level material not detailed in those abbreviated entries. The chapter does not treat the Boy in White as omniscient, wholly good or a confirmed villain, and it does not claim that the warning establishes the complete mechanism of the finale's crisis."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Christopher remains difficult to approach because these parts of his story arrive through different people. Jade has the symbol, the journal and his developing recognition. Victor has the man who once made people laugh, the change he noticed and Miranda's instruction to hide. Those accounts can be held together without asking Victor to explain Christopher's entire life. When he warns Jade, he's speaking from a childhood that ended in loss. Jade's discoveries give him reasons to keep looking, while Victor gives him a reason to take care with what he finds.",
+      "reason": "H18 identifies a script that \"keeps re-stating it with nothing new attached.\" This closing paragraph inventories evidence already explained and repeats the caution-versus-investigation contrast from the fourth paragraph. The preceding paragraph already closes on the useful distinction between later knowledge and Victor's reasonable childhood fear.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That's a painful mismatch because Victor has completed the part he knew how to do. He remembered something concrete, took Henry underground and brought Jasper back. It's understandable that he'd expect this to bring the rest within reach. A familiar face can make an old occasion easier to picture. Here, the face is still available, along with Victor's association between Jasper and Christopher. Yet recognizing it doesn't restore the sequence of events around it. Victor can be sure he's found the dummy while still being mistaken about the part it played.",
+      "reason": "H18's \"a re-mention that adds nothing gets cut\" applies here. The preceding paragraph has already shown that Victor completes the retrieval but receives no answer, and the final paragraph states the distinction between recovering Jasper and recovering the event. This intervening explanation adds no separate development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a particular difficulty in changing this answer after bringing Jasper back. Victor has taken a dangerous journey because he thought the dummy could restore something he needed. Admitting that someone else spoke means accepting that he'd misunderstood the purpose of the search. Sara doesn't require him to defend the expedition before they can proceed. With her help, he can keep the part he remembers about Christopher while revising the part about who stood opposite him. The work he's done doesn't have to be discarded along with his mistake.",
+      "reason": "H18 warns against \"keeps re-stating it with nothing new attached.\" Chapter 10 has already developed the retrieval's cost and the mismatch between finding Jasper and recovering the exchange. This paragraph returns to that explanation instead of advancing chapter 11's distinct account of Sara's questioning and the message's transmission.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Victor, that would have been an extraordinary conversation to overhear as a child. Christopher had once made people laugh with Jasper. Later, his fixation on the symbol made him frightening to Victor. Now the remembered exchange places that same adult in front of the Boy in White, receiving an explanation tied to the symbol. Victor had seen Christopher change without having an adult's understanding of what he was going through. Remembering the conversation supplies some context for that change, although Christopher's own experience still isn't available through Victor.",
+      "reason": "H18 requires repetition to add \"a consequence, a comparison, the next number.\" Christopher's laughter, fixation, frightening change and Victor's limited childhood understanding have already received sustained treatment in chapter 9 and a shorter return in chapter 10. The surrounding paragraphs here already establish the newly recovered message, so this recap can be removed without losing the causal sequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That part of the recollection also explains why the speaker matters so much. If Jasper remains the source, Victor's story directs attention toward the dummy and whatever might make it speak. Once the Boy in White is identified, Christopher's refusal and Victor's decision to tell Miranda become easier to follow. The correction changes where the information came from and how it traveled through the family. It gives the search a sequence of people hearing something and responding, rather than leaving everyone waiting for Jasper to repeat a performance.",
+      "reason": "H18's \"a re-mention that adds nothing gets cut\" applies. The opening identifies the corrected speaker, the second paragraph explains the changed subject of the investigation, and the two immediately preceding paragraphs show Christopher refusing and Victor telling Miranda. This paragraph explains that same sequence again rather than letting the concrete developments carry the interpretation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's also something difficult about the boy's appearance. Victor grows older, while the figure he recognizes remains connected to his childhood. Seeing him again brings an earlier part of Victor's life into the present town. Other residents might encounter a strange child and have to begin with that single meeting. Victor already has a history with him. His response contains those earlier encounters, including occasions when the boy seemed to know where danger lay or where someone needed to go.",
+      "reason": "H18 describes repeating \"one fact, one phrase, or one framing.\" The preceding paragraph already explains why a later appearance carries weight because of Victor's childhood association. This paragraph restates that framing without supplying a distinct encounter; the following tunnel example provides the concrete development the chapter needs.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Victor doesn't have those answers when he objects at the bottle tree. What he has is a recognizable messenger, an instruction concerning a particular object and earlier experiences that make the instruction worth taking seriously. His uncertainty about the boy's wider purpose doesn't make the warning meaningless. It means Victor is asking the others to consider something narrower than complete faith in this figure. They can hear a warning about the tree without agreeing that its source knows everything about the town.",
+      "reason": "H18 identifies repeated framing that \"keeps re-stating it with nothing new attached.\" The eighth and ninth paragraphs already explain why Victor credits the warning and why others must decide whether to stop; the tenth establishes the limits of broader moral conclusions. This paragraph restates those distinctions as another evidence lesson. Deleting it lets the chapter move directly to the concrete cost Victor bears.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10,
+        11
+      ],
+      "detail": "Christopher's movement from making people laugh to frightening Victor recurs across all three chapters. Chapter 9 is its proper explanatory home; chapter 10 needs a brief account of his association with Jasper, but chapter 11's full recap is unnecessary."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "The dangerous retrieval, Victor's investment in Jasper and the distinction between possessing the object and recovering the conversation are repeatedly explained. Chapter 10 should retain the investigative detour; chapter 11 should move quickly into Sara's assistance, the corrected message and Victor telling Miranda."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "The Boy in White's message appropriately returns for comparison with later interventions. The substantive comparison earns its place, but repeated reminders that useful guidance does not verify everything contribute to an overly methodological rhythm. The proposed chapter-12 deletion reduces that repetition without removing the qualification."
+    }
+  ],
+  "scope_status": "The four supplied chapters respect the through-S4E10 release scope. They explicitly recognize the released previous-lives revelation and season-four bottle-tree warning, correct Jasper's speaking role, avoid assigning Christopher sole responsibility for the massacre and preserve uncertainty about the Boy in White. No prohibited season-five assertion, clinical diagnosis or graphic description was identified. Chapters 1-8 and 13-24 were supplied only as outline entries and were not reviewed as narration.",
+  "limitations": "This is a textual and supplied-evidence review of chapters 9-12, not independent episode or website verification. The proof bank is authoritative but abbreviated, so several scene-level particulars cannot be fully checked against its wording alone. No episode viewing, external-source opening, audio measurement, human read-aloud or executable scanner run is claimed. The supplied chapter-one spoiler notice and optional early audience request cannot be audited because chapter one's narration was not provided.",
+  "input_hashes": {
+    "9": "a13aef5538c4d20a962c6baaccae618e1bde838e38866131830ea070ea87d432",
+    "10": "26e8c1cf82b116c3569343ee27fa21da65ab2e1de87167d90afe287dc14029d0",
+    "11": "bc7400e2d851a3ca52af15e7970f7246fe83fdf22c80175aa50d38b72fe4be95",
+    "12": "430ff3881df8ab6d9f5b5c670548687fd5c4a3c4527b231969e1fcea504e475a"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

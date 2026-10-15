@@ -1,0 +1,145 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Yoda's recovery of Luke's X-wing challenges Luke's assumptions about size and demonstrates a trained ability without establishing unlimited Force power.",
+      "new_information": [
+        "Luke already moves stones before attempting the fighter, so his difficulty concerns the perceived limits of an existing ability.",
+        "The fighter begins to rise during Luke's attempt, showing partial success before he gives up.",
+        "Yoda identifies Luke's disbelief as an obstacle and demonstrates the task himself.",
+        "Luke's earlier training with the remote provides another example of learning not to rely exclusively on ordinary sensory expectations."
+      ],
+      "local_answer": "The scene shows that Luke has underestimated what he can learn, while Yoda's success supplies neither a universal power ceiling nor proof that belief alone replaces training.",
+      "open_issues": [
+        "The film does not separately measure the contributions of confidence, concentration, and technical command.",
+        "The paragraph generalizing about Yoda's expertise prolongs the methodological framing after the practical explanation is complete."
+      ],
+      "evidence_notes": "The central explanation is consistent with F1 and the assigned Empire scene. The optional subscribe and listening-location/day-or-night request appears once, early in this chapter, and is not repeated in the supplied chapters."
+    },
+    {
+      "number": 2,
+      "summary": "Qui-Gon's investigation identifies Anakin's exceptional biological potential, but decisions about his education also involve his circumstances, attachments, and the adults interpreting the result.",
+      "new_information": [
+        "Obi-Wan reports a midi-chlorian count exceeding Yoda's, without the narration introducing an unnecessary numerical count.",
+        "Qui-Gon describes midi-chlorians as symbiotic organisms involved in communication with the Force, rather than as the Force itself.",
+        "The blood test supplements Qui-Gon's observations of Anakin's abilities and his interpretation of Shmi's account.",
+        "Anakin's freedom comes with separation from Shmi, making the training decision consequential beyond biological aptitude.",
+        "The Council considers age and emotional circumstances rather than treating the reading as automatic admission.",
+        "Qui-Gon's death changes who will undertake Anakin's education."
+      ],
+      "local_answer": "A high count gives a teacher evidence of unusual potential, not a prediction of wisdom, emotional readiness, or the outcome of training.",
+      "open_issues": [
+        "The distinction between detecting potential and deciding how to educate a child is restated more often than its development requires."
+      ],
+      "evidence_notes": "The biology/Force distinction follows F1 and F2. The chapter attributes the prophecy interpretation to Qui-Gon and does not claim that the test establishes Anakin's origin or that a Sith created him."
+    },
+    {
+      "number": 3,
+      "summary": "Sabine's unsuccessful early exercises and later successful use of the Force show meaningful development without establishing identical potential or a universal breakthrough mechanism.",
+      "new_information": [
+        "Sabine's existing combat and technical abilities do not immediately enable her to move the cup.",
+        "Training with covered vision challenges her reliance on familiar combat responses.",
+        "Huyang's unfavorable assessment and Ahsoka's willingness to teach her represent different judgments about her prospects.",
+        "In the season-one finale, Sabine retrieves her lightsaber through the Force and helps Ezra reach the departing ship.",
+        "The successful actions establish changed ability, but the series does not isolate danger as the cause of the breakthrough."
+      ],
+      "local_answer": "Early failure was not a permanent verdict on Sabine's capacity to learn; her later achievements establish progress, not an equal ceiling for every living being.",
+      "open_issues": [
+        "One pronoun incorrectly assigns Ahsoka's instruction to Huyang.",
+        "The second paragraph revisiting Yoda's X-wing demonstration repeats material already explained in chapter one without a sufficiently distinct development."
+      ],
+      "evidence_notes": "The chapter respects F2 and the expressly authorized Ahsoka season-one developments. It does not invent subsequent training, dismiss Huyang's assessment, or claim that Sabine proves universal equality of potential."
+    },
+    {
+      "number": 4,
+      "summary": "Chirrut's successful crossing on Scarif expresses practiced ability and devotion, while his death and the other mission losses rule out treating that success as guaranteed invulnerability.",
+      "new_information": [
+        "Activating the master switch enables Bodhi's attempt to contact the Rebel fleet.",
+        "Chirrut's earlier combat and recognition of Jyn's kyber crystal provide context for his unusual awareness.",
+        "His devotion is situated within the Guardians' losses on occupied Jedha.",
+        "Baze's armed protection complements Chirrut's skills rather than disappearing from the explanation of their survival.",
+        "Chirrut is mortally wounded after completing his task, and Baze subsequently repeats his expression of faith without being shown to acquire new powers.",
+        "The other Scarif deaths place Chirrut's completed task within a mission whose success does not ensure individual survival."
+      ],
+      "local_answer": "The film leaves the exact contribution of the Force to Chirrut's crossing unresolved, but clearly does not present his faith as a guarantee of survival.",
+      "open_issues": [
+        "The concluding paragraph repeats the established answer and several concrete details after the deaths and mission comparison have already supplied a sufficient ending."
+      ],
+      "evidence_notes": "The account stays within Rogue One, which is included by the canon-film scope and specifically assigned in the outline. It does not assert an invisible shield, quantify Chirrut's sensitivity, or use the Guardians' name to introduce forbidden Whills cosmology."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Yoda's knowledge also has a particular shape. He can guide Luke through exercises, recognize a mistaken assumption, and demonstrate an ability Luke can't yet manage. Those are substantial reasons for Luke to listen. They don't require Yoda to know everything the Force might do. A teacher can understand the next step clearly while the larger subject remains unfinished. Here, Yoda knows enough to bring the ship out of the swamp and to see that Luke has given up too soon. The lesson reaches Luke through that practical difference.",
+      "reason": "H18 identifies an echo as repeatedly restating a framing with nothing new attached. This paragraph inventories instruction, demonstration, and Luke's premature surrender after those developments have already been explained. Its useful contribution is the limited claim about Yoda's expertise; that can remain without another extended methodological summary.",
+      "replacement": "Yoda's success gives Luke a concrete reason to trust his instruction, without establishing that Yoda understands everything the Force might do.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a useful distinction here between detecting unusual potential and knowing what to do with the child who has it. Anakin hasn't grown up in the Jedi Temple. He lives with his mother under slavery, works for Watto, and has practical skills the visiting Jedi needs. His life already includes obligations and attachments that a laboratory result can't describe. When Qui-Gon begins thinking about Jedi training, he's making a decision about a person with an existing home and an uncertain future beyond it.",
+      "reason": "H18 warns against repeatedly returning to the same observation rather than moving on. The limits of the test are already established in the second through fourth paragraphs, and the next paragraph supplies the stronger concrete development: freedom coupled with separation from Shmi. Retain the necessary personal circumstances and let that next paragraph carry the interpretation.",
+      "replacement": "Anakin hasn't grown up in the Jedi Temple. He lives with his mother under slavery, works for Watto, and has practical skills the visiting Jedi needs.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Sabine still needs to learn actual skills, but her progress doesn't have to look like the childhood training Huyang remembers for his instruction to be useful.",
+      "reason": "The preceding sentences discuss Ahsoka's purpose in teaching Sabine, but 'his instruction' switches the instructor to Huyang. This confuses the comparison between Huyang's institutional assessment and Ahsoka's individual teaching approach.",
+      "replacement": "Sabine still needs to learn actual skills, but Ahsoka's teaching can help her without reproducing the childhood training Huyang remembers.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Yoda's response gives Luke a demonstration Sabine doesn't get from her cup. He raises the fighter and brings it onto solid ground. Luke can see that the task he dismissed was possible. Sabine already knows Ahsoka has abilities she lacks, so another demonstration wouldn't settle her immediate problem. She needs to discover how to act on that connection herself. Watching a teacher succeed can correct a mistaken assumption, as it does for Luke, while leaving the student with considerable practice still ahead.",
+      "reason": "H18 states that a second mention must add a consequence, comparison, or other development. The preceding paragraph already supplies the useful comparison between Luke's partial ability and Sabine's earlier starting point. This additional paragraph repeats chapter one's demonstration and practice conclusion, while the claim about what another demonstration would settle for Sabine is speculative and unnecessary.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "So there's a useful answer here even without deciding how every shot missed. Chirrut's practiced skills are real, his devotion is explicit, and his awareness sometimes exceeds what his blindness would ordinarily allow. How those qualities combine on the beach stays open. What doesn't stay open is whether his prayer guarantees survival. The film follows him beyond the successful crossing and shows the cost. The switch is activated, Bodhi can reach the fleet, and Baze is there when Chirrut can go no farther.",
+      "reason": "H18 describes the document-scale echo as returning to the same fact or framing without new information. This paragraph repeats the awareness discussion, the uncertainty about protection, the rejection of guaranteed survival, and the switch/Bodhi/Baze sequence. The preceding paragraph already closes the chapter through the concrete comparison with the other completed Scarif tasks.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        3
+      ],
+      "detail": "Chapter three appropriately compares Sabine's starting point with Luke's partial success, as assigned. Its following paragraph unnecessarily retells Yoda's recovery of the fighter and repeats chapter one's explanation that demonstration does not replace the student's practice; the deletion finding preserves the useful comparison."
+    },
+    {
+      "chapters": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "detail": "All four chapters repeatedly distinguish observable results from what cannot be measured or universally inferred. That framework belongs to the episode's angle, and each chapter answers a distinct question, but the repeated explanatory summaries sometimes make the narration sound like evidence-review guidance. The proposed cuts retain the specific limits while giving more space to the actual scenes."
+    }
+  ],
+  "scope_status": "The four supplied chapters stay within their assigned canon-film and released-series scope. No Legends answer, future-season claim, forbidden universal rule, invented dialogue, repeated CTA, or power ranking was identified. The main issues are local repetition and one confused pronoun, not a major factual or structural failure.",
+  "limitations": "Reviewed all four supplied chapter texts against their assignments, the supplied proof bank, and the supplied voice and Humanizer rules. Chapters 5-24 were outlined but not supplied as narration and were not reviewed as completed chapters. No websites were opened, episodes watched, audio measured, or independent verification of every fictional detail performed.",
+  "input_hashes": {
+    "1": "c43eae696025a01851f139e8c6a90090210c98c5d28de190ab82d6e1321735a0",
+    "2": "fa9cd7107fa785c5491efd92f4ff9037b09a1ada7b691aa5e88a1ff7696b82ad",
+    "3": "c4d3d7ceb91b1fbe65e9c720d35dab470d80d2b5f08ad424c70c00214289077a",
+    "4": "fa59be21c1ec99cfeb8be30b540f7f742e0dd930315dc1f0a51046efeff988bb"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

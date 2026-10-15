@@ -1,0 +1,86 @@
+{
+  "accessed": "2026-10-15",
+  "scope": "FROM television through S4E10 If a Tree Falls in the Forest..., aired 28 June 2026. Spoilers for seasons one through four. No leaks, season-five predictions presented as fact, clinical diagnoses or extended graphic descriptions. Important late updates are explicit; do not write as if only season three has aired.",
+  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "sources": [
+    {
+      "id": "V1",
+      "fact": "Victor's childhood survival, drawings, cached possessions and his relationship with Ethan form a persistent record, but the series shows gaps and corrections.",
+      "work": "FROM S1-S3",
+      "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V2",
+      "fact": "Victor initially attributes Christopher's conversation to Jasper; S3E8 corrects this to the Boy in White. Sara helps him recall it.",
+      "work": "S3E8 Thresholds",
+      "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V3",
+      "fact": "Victor remembers Eloise and Miranda; the reunion with Henry introduces an independent person from his former home, without resolving every missing-family question.",
+      "work": "S2E8-10; S3 father-son reunion",
+      "url": "https://freshpairofiis.com/2024/10/21/interview-from-scott-mccord-victor-meeting-his-dad/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V4",
+      "fact": "The S3 finale reveals Tabitha and Jade's relation to Miranda and Christopher and the earlier attempts to save the children; Victor's personal history intersects that longer pattern.",
+      "work": "S3E10; S4E7",
+      "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V5",
+      "fact": "S4 Victor recalls the Man in Yellow as a former apparent resident and the later treatment of Miranda's body; at the car he fears Ethan may repeat his childhood isolation.",
+      "work": "S4E4 and S4E7",
+      "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V6",
+      "fact": "Henry's visions offer a life with another Victor and demand he remove the real Victor. The actors discuss the manipulation and strain; these visions are not verified escape instructions.",
+      "work": "S4E6-9",
+      "url": "https://www.tvinsider.com/1270854/from-scott-mccord-robert-joy-season-4-episode-9-recap-victor-henry-interview/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V7",
+      "fact": "The Boy in White warns against uprooting the bottle tree; Boyd restrains Victor, the plan goes ahead, and the finale's protections fail amid a new crisis.",
+      "work": "S4E9-10",
+      "url": "https://readysteadycut.com/2026/06/28/from-season-4-sophia-boy-in-white/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "V8",
+      "fact": "Henry attempts to shoot Victor; Ethan interrupts and Victor disarms his father. Both survive this scene. The actors describe a reversal toward Victor caring for Henry.",
+      "work": "S4E10",
+      "url": "https://www.tvinsider.com/1271846/",
+      "opened": "2026-10-15",
+      "corroboration": "https://tvbrittanyf.com/2026/07/07/from-season-4-scott-mccord-robert-joy-interview/"
+    },
+    {
+      "id": "V9",
+      "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct.",
+      "work": "S4E7 Best Laid Plans, supported by cast interview and episode recap",
+      "url": "https://www.horrorgeeklife.com/2026/06/08/from-season-4-scott-mccord-robert-joy-interview/",
+      "opened": "2026-10-15",
+      "corroboration": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/"
+    }
+  ],
+  "forbidden": [
+    "Jasper is still the confirmed speaker in Christopher's crucial conversation",
+    "Eloise is confirmed alive, dead, a named adult character or outside the town",
+    "Victor has lived entirely alone for every intervening decade",
+    "Victor deliberately created the town or is its confirmed immortal controller",
+    "Every drawing is an exact photograph or prediction",
+    "The Boy in White is confirmed wholly good, omniscient or the creator",
+    "Henry's hospital visions prove an actual alternate universe or that the show is a dream",
+    "Miranda's killing and the later treatment of her body are necessarily the same event",
+    "The characters' reincarnation revelation is just an unmentioned pre-season-three theory",
+    "Victor or Henry dies in the season-four finale",
+    "Trauma scientifically guarantees false memory",
+    "Graphic gore or invented dialogue"
+  ]
+}

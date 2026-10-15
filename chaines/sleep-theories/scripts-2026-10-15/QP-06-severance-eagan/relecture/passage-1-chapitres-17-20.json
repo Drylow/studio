@@ -1,0 +1,215 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Jame's preference for the spirit he says he recognizes in Helly does not amount to recognition of her right to direct her own life.",
+      "new_information": [
+        "Jame distinguishes his disappointment in Helena from his interest in Helly.",
+        "His earlier gala conversation addressed Helly under the mistaken assumption that she was Helena.",
+        "His association of Helly with Kier is his interpretation, not evidence of possession or surviving consciousness.",
+        "His admiration sits uneasily beside Lumon's suppression of the resistance that may interest him.",
+        "Helly cannot draw on Helena's remembered relationship with Jame when assessing his remarks."
+      ],
+      "local_answer": "The chapter answers its assignment: Jame can value an innie's perceived resemblance to the founder while continuing to subordinate that innie's wishes. It appropriately leaves his complete motives unresolved.",
+      "open_issues": [
+        "Several later paragraphs revisit Jame's preference and its failure to grant Helly autonomy without sufficiently developing the point.",
+        "One sentence mistakenly calls Jame an 'account' of the two women rather than a source or interpreter."
+      ],
+      "evidence_notes": "The central account follows E5. The gala context follows E2, and the distinction between Jame's expressed belief and literal possession is maintained. Longing and attraction to resistance are presented as interpretations rather than established motives."
+    },
+    {
+      "number": 18,
+      "summary": "Helly and Helena share a body and family position but act from different accessible experiences, relationships, and commitments.",
+      "new_information": [
+        "The gala photographs allow Helena's promotion to present Helly's working experience as a personal endorsement.",
+        "Learning the Eagan name gives Helly consequential information without restoring Helena's childhood memories or family attachments.",
+        "Helly uses the access supplied by Helena's status to oppose the promotion.",
+        "Helena's impersonation creates relationship consequences that Helly cannot remember producing.",
+        "Severance preserves language, practical understanding, and feelings while separating autobiographical access."
+      ],
+      "local_answer": "The chapter establishes through the gala speech and Woe's Hollow that a shared surname and body do not make the two identities' commitments interchangeable.",
+      "open_issues": [
+        "The gala's promotional use of the shared body receives several overlapping explanations before the chapter reaches Woe's Hollow.",
+        "A late paragraph repeats the account of Helly's attachments already established in this chapter and the preceding chapter."
+      ],
+      "evidence_notes": "The gala, impersonation, restoration of Helly, and Jame's differing responses are consistent with E2, E3, and E5. The chapter does not imply that Helena remains in control after Milchick restores Helly. Its claims about identity are analysis of particular choices, not claims about inherited values."
+    },
+    {
+      "number": 19,
+      "summary": "Gemma's testing-floor experiences show severance being used to partition an existing person's life, while Cobel links Mark's refinement work to the creation of those separate experiences.",
+      "new_information": [
+        "Gemma's corridor awareness and testing-room identities have different access to her captivity and marriage.",
+        "The dental, simulated-flight, and thank-you-note situations demonstrate different uses of the room partitions.",
+        "Mauer controls information about the outside while participating in Gemma's confinement.",
+        "Ms. Casey's wellness sessions brought Mark and Gemma together without their ordinary access to their marriage.",
+        "Cobel identifies Mark's files as work producing separate consciousnesses within Gemma.",
+        "Mark's attempt to escape grief through severed employment is connected to labor performed on the wife he believes he has lost."
+      ],
+      "local_answer": "The chapter explains the room partitions and attributes the account of refinement's function to Cobel, keeping the emphasis on Gemma's pre-existing life rather than an invented technical mechanism.",
+      "open_issues": [
+        "The opening two paragraphs explain substantially the same doorway-and-partition arrangement.",
+        "The final paragraph repeats the opening account of Gemma's wish to leave and the rooms' interruption of that wish.",
+        "The closing sentence of the Eagan-credit paragraph compresses its point into a polished pronouncement rather than concrete spoken analysis."
+      ],
+      "evidence_notes": "The chapter follows the assigned S2E7/S2E10 frame and attributes the explanation of Mark's work to Cobel. It supplies no exact room count, complete kidnapping history, or real-neuroscience explanation. E6 and E7 are broader than several of the individual scene details recounted here; those details have not been independently verified in this review."
+    },
+    {
+      "number": 20,
+      "summary": "Cold Harbor tests whether pain associated with Gemma's outside life reaches the identity dismantling the crib, without revealing the complete corporate purpose.",
+      "new_information": [
+        "The crib connects the assigned task to Gemma and Mark's history of trying to have a child.",
+        "Erickson's explanation identifies the direction of the test as outside pain crossing into a severed experience.",
+        "The procedure distinguishes explicit autobiographical recall from an emotional response to a reminder.",
+        "Dismantling the crib supplies observable conduct over the course of a task rather than only a verbal answer.",
+        "The same separation also affects whether Gemma recognizes Mark's arrival through their shared history.",
+        "The narrow test result does not establish a business plan, resurrection mechanism, or permanent erasure."
+      ],
+      "local_answer": "The chapter gives the supported narrow answer clearly, especially in the paragraph attributing the explanation to Dan Erickson, but repeats that answer too often afterward.",
+      "open_issues": [
+        "The crib's connection to inaccessible marital pain is explained repeatedly after it is already clear.",
+        "The audience-versus-Gemma paragraph restates the informational division without a distinct development.",
+        "The final paragraph repeats both the test result and the cost argument, then ends with an awkward statement that she continues the task after the crib comes apart."
+      ],
+      "evidence_notes": "The narrow test interpretation and withheld ultimate purpose follow E6. The draft appropriately names Erickson when using his explanation and does not present speculation about commercial uses or resurrection as established fact. Some claims about what the observers can assess are analysis of the procedure, not separately supplied creator statements."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a useful comparison with Helena's recorded response to Helly's request to leave. Helena asserted that her own wishes would determine whether their body continued coming to work. She refused to grant Helly equal standing in that decision. Jame's later language gives Helly an unusual place in his private estimation, but it doesn't undo Helena's refusal. A father can praise what he sees in an innie without accepting that the innie should be allowed to leave. Helly still has to live with the practical consequences of that distinction.",
+      "reason": "The recorded refusal is useful concrete evidence, but the paragraph spends six sentences returning to the distinction already established in the gala-injury paragraph and repeated in the ending. H18 identifies a script that 'keeps re-stating it with nothing new attached.' Retain the comparison and compress its consequence.",
+      "replacement": "Helena's recorded refusal to let Helly leave gives this admiration a practical limit. Jame's praise doesn't change the arrangement in which Helena decides whether Helly must keep coming to work.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Still, longing doesn't make him a dependable account of either woman.",
+      "reason": "A person can give an account or be a source, but cannot be 'a dependable account.' The awkward predicate obscures an otherwise reasonable caution about Jame's interpretation.",
+      "replacement": "That possible longing doesn't mean he understands either woman on her own terms.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It's worth pausing over how much of Helena's promotion depends on an assumption the guests would ordinarily have no reason to question. A woman who appears in workplace photographs later attends a gala about that workplace. Usually, she could explain what happened between those moments. Here, Helena can present Helly's working life without having lived it as Helly. The photographs join the two women together for an audience, while severance keeps their experiences apart. The exhibit looks personal because the body in the pictures belongs to the woman attending the event.",
+      "reason": "The opening paragraph has already explained how photographs of Helly's experience become Helena's public endorsement, and the preceding paragraph has already explained the gala's promotional purpose. This is the least necessary full restatement before another paragraph returns to the same arrangement. H18 calls for cutting 'a re-mention that adds nothing.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helly has concrete reasons to resist the role prepared for her. Mark helps her navigate a workplace she wants to leave. Irving and Dylan join the effort to bring their lives to outside attention. When she speaks at the gala, these are people she knows, with troubles she understands through time spent beside them. Helena's connection to Lumon comes with a different history and opportunities. Their opposing actions become understandable through those particular circumstances, without treating either woman as the automatic result of a surname.",
+      "reason": "The gala-speech paragraph already grounds Helly's action in her colleagues' suffering, and the shared-background paragraph already explains how her attachments develop. The immediately preceding chapter also gives these relationships a full paragraph. H18's document-scale warning applies: 'the third identical mention is the tell.' Deletion preserves the specific choices and the chapter's grounded closing.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "In Chikhai Bardo, that arrangement gives Gemma a life divided more finely than the familiar journey down the severed elevator. Mark S. goes to work and loses access to his life outside. Gemma encounters further divisions within the building itself. A doorway can separate the woman asking after her husband from another version of her who has a particular task or ordeal in front of her. The testing floor has corridors, staff, and rooms arranged around those changes. Someone else decides which experience she'll enter.",
+      "reason": "The opening already describes the doorway switch, corridor identity, interrupted memory, and Lumon's control. The comparison with Mark is the distinct development worth retaining. H18 advises that a second mention must add 'a consequence, a comparison, the next number'; compress this paragraph around its actual comparison.",
+      "replacement": "In Chikhai Bardo, Gemma's life is divided more finely than Mark's familiar journey down the severed elevator. His working identity loses access to life outside; she encounters further separations as she's sent into rooms within the building.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "A name attached to an invention tells Gemma nothing useful about how to get back to her husband.",
+      "reason": "The sentence closes concrete discussion with an abstract, polished verdict. It belongs to the H17 'Wise Narrator' pattern of 'a sentence that pronounces a general truth,' rather than the explanatory speech of the supplied anchors. The credit-versus-control point can remain attached to the people in the scene.",
+      "replacement": "Gemma still has to ask Lumon's staff about Mark, and the family's claim to the technology gives her no say in whether she can leave.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Even before Mark reaches the testing floor, Gemma has given a clear account of what she wants through her repeated efforts to get home. Her separate room experiences don't cancel that wish. They make it harder for her to carry it with her wherever Lumon sends her. The woman in the corridor remembers enough to seek Mark, while the identities inside the rooms must face the situations prepared for them. Lumon can keep those experiences apart. Gemma still returns to the corridor with a life outside the building that she wants to resume.",
+      "reason": "This ending repeats the opening paragraph's corridor identity, desire to get home, room separation, and return without adding a consequence. Mauer's information control and the marriage paragraph have also developed the same wish. H18 identifies repeated framing 'with nothing new attached.' The preceding paragraph already supplies a usable local close connecting family credit to Gemma's lack of control.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Gemma and Mark, having a child belonged to their life together. Their difficulties conceiving and their fertility treatment are part of the marriage shown in the second season. A crib carries associations within that history that wouldn't belong to someone encountering it as an unfamiliar piece of furniture. Lumon puts Gemma's body in front of that object while separating the working consciousness from the marriage around it. Her hands can take it apart even though the person directing those hands doesn't have the same reasons to hesitate.",
+      "reason": "The first two paragraphs already establish the crib's association with attempts to have a child and the identity's lack of access to that personal history. Chapter 19 has also supplied the fertility context. This paragraph delays the genuinely new creator explanation immediately following it. H18 directs that a repeated observation should have 'one home paragraph.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That leaves a harsh difference between Gemma's experience and our understanding of it. For the identity inside Cold Harbor, the assignment doesn't arrive with scenes of Mark or fertility treatment attached. Those connections belong to the wider account of Gemma's life. We bring them to the task as we watch. Her lack of distress therefore doesn't make the moment emotionally empty. It gives us a view of how much personal meaning Lumon has managed to keep out of her reach while she handles something that would otherwise carry it.",
+      "reason": "The preceding paragraph already contrasts what the audience knows about Gemma's life with what the room identity can access. Earlier paragraphs repeatedly establish the missing personal associations. Under H18, this is another 're-mention that adds nothing,' rather than a separate development about the test.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Gemma's composure gives Lumon the response it was seeking in the room. It doesn't settle what the procedure has cost her, because the Cold Harbor identity can't consult the life against which that cost would have to be measured. The marriage, the treatment and the hope attached to having a child remain part of Gemma's history. Lumon has arranged an assignment in which she can handle the crib without those experiences interrupting her. The crib comes apart, and she continues with the task.",
+      "reason": "The preceding paragraph already closes on the narrow result, the unconfirmed larger purpose, and the difference between those receiving credit and the person supplying the test material. This final paragraph explains the test again. H18 warns against repeatedly returning to the same framing. Its last sentence also awkwardly describes continued dismantling after stating that the crib has come apart; deleting the redundant paragraph avoids implying an additional action.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Both chapters explain Jame's preference for Helly and her lack of access to Helena's history with him. This is a legitimate handoff from paternal interpretation to lived identity, but chapter 18 should keep Jame as a brief application rather than another extended explanation."
+    },
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Helly's attachments to Mark, Irving, and Dylan are explained in chapter 17's attachments paragraph, chapter 18's gala-speech paragraph, chapter 18's shared-background paragraph, and chapter 18's late 'concrete reasons' paragraph. The last of these is the least useful repetition and is marked for deletion."
+    },
+    {
+      "chapters": [
+        18,
+        19,
+        20
+      ],
+      "detail": "The distinction between retained practical abilities and inaccessible autobiographical experience recurs appropriately, but each chapter should spend it differently: social recognition in chapter 18, room partitions in chapter 19, and emotional spillover in chapter 20. Re-explaining the general distinction at length reduces those useful differences."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Chapter 19 establishes Gemma and Mark's marriage and difficulties having a child. Chapter 20 needs a brief reminder to explain the crib, not several renewed accounts of the same marital associations. Its opening is sufficient before the creator explanation."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Both closing sections connect the Eagan name and invention credit to Gemma's lack of control. These applications are relevant to the episode angle, but repeated abstract credit-versus-cost conclusions risk anticipating chapter 24's assigned synthesis. The concrete differences between room control and the Cold Harbor result should remain primary here."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10. They do not introduce season-three events, a solved revolving, confirmed resurrection, cloning, unsupported genealogy, exact room counts, or a complete Cold Harbor business plan. Jame's spiritual language, Cobel's explanation of refinement, and Erickson's explanation of the test are attributed. No machine-tier banned phrase or non-ASCII narration artifact was identified. The principal release concern is cumulative repetition, not a demonstrated major factual or spoiler violation.",
+  "limitations": "Only chapters 17-20 were supplied as narration and reviewed in full. The remaining outline was used to assess assigned purpose and likely structural overlap, not treated as completed prose. The supplied proof bank and assignments were authoritative; linked pages and episodes were not independently opened or watched. Several detailed scene descriptions extend beyond the proof bank's concise summaries, so this review does not claim independent verification of every fictional detail. The requested early chapter-one subscription/location invitation and the final chapter's ending cannot be assessed from this excerpt. No narration audio was measured and no human read-aloud was performed.",
+  "input_hashes": {
+    "17": "0cc5b65a6a72cd0a102236281e8fa5fea4e3646099e53019a280e8288a7cea6d",
+    "18": "6a36da9242cd3b36efecefa2c45f398acf43a3972502c11da27162528ae47d07",
+    "19": "490f4fb9653fdc5d21cfd90a8baea7f3ed3521edb00d6bf64690e0f5d1f4c1ee",
+    "20": "16549fcbaae401fc1a23acc153a5ff7a1c2a2cbef4a61c58e5030b11195d17a8"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

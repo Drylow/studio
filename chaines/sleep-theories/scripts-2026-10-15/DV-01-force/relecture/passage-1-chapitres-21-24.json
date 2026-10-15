@@ -1,0 +1,152 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Ezra's encounter with the purrgil reveals their dependence on Clouzon-36, their natural hyperspace travel, and a relationship that later helps remove Thrawn's immediate threat to Lothal.",
+      "new_information": [
+        "Hera initially regards purrgil as navigation hazards, while Ezra senses living creatures whose behavior he can begin to understand.",
+        "The crew and the purrgil need the same resource at the Mining Guild facility.",
+        "A purrgil rescues Ezra, and the creatures subsequently demonstrate natural hyperspace travel.",
+        "Ezra later incorporates their arrival into a coordinated plan against Thrawn.",
+        "The connection illustrates Force-mediated contact with an ecology that exists independently of Jedi institutions."
+      ],
+      "local_answer": "The chapter answers its assignment: Ezra succeeds by understanding and engaging with living creatures, not by discovering an animal ability available to every Jedi on demand.",
+      "open_issues": [
+        "The explanation of the purrgil's feeding needs repeats immediately after those needs have already been established.",
+        "One transition describes the significance of the discovery abstractly instead of simply delivering the discovery."
+      ],
+      "evidence_notes": "The central claims align with F8 and the assigned Rebels scenes. The narration does not turn the old hyperspace stories into a confirmed account of hyperdrive invention, and it explicitly avoids universal command over purrgil."
+    },
+    {
+      "number": 22,
+      "summary": "Ezra rescues Ahsoka through the World Between Worlds but accepts that removing Kanan from his final act would also remove the protection that saved Kanan's companions.",
+      "new_information": [
+        "The Lothal temple entrance connects visually with the Mortis figures.",
+        "Ahsoka's rescue supplies an explanation for survival already depicted after Malachor.",
+        "A connected-history interpretation fits the shown sequence without establishing unlimited historical revision.",
+        "Kanan's continued presence is causally necessary to the rescue Ezra wants to interrupt.",
+        "The Emperor's attempted intrusion makes remaining within the pathways dangerous."
+      ],
+      "local_answer": "The chapter explains why access to another moment does not make intervention harmless: Ezra must consider the rescue already occurring within that moment.",
+      "open_issues": [
+        "Three adjacent stages of the explanation revisit the same consequence of removing Kanan; the middle restatement can be deleted."
+      ],
+      "evidence_notes": "The chapter follows F6 and the assigned causal limit. It labels connected history as a reading, does not claim a tested universal time-travel mechanism, and distinguishes Ahsoka's demonstrated rescue from hypothetical resurrections."
+    },
+    {
+      "number": 23,
+      "summary": "Luke projects his appearance onto Crait to occupy Kylo while the Resistance finds an escape route, then dies after the effort on Ahch-To.",
+      "new_information": [
+        "Kylo's response to Luke stops the immediate advance and draws him into a personal confrontation.",
+        "Luke remains physically on Ahch-To, explaining why the barrage cannot strike his body.",
+        "The altered appearance, intact blue lightsaber, and undisturbed salt retrospectively identify the deception.",
+        "Poe's recognition of the delay and Rey's removal of the rocks are necessary parts of the rescue.",
+        "Luke's death follows the projection's exertion, without a quantified account of its cost."
+      ],
+      "local_answer": "The chapter answers how Luke's intervention works in this scene: his projection exploits Kylo's expectations and buys time for other people to complete the escape.",
+      "open_issues": [
+        "One sentence asserts an unestablished limit on Luke's awareness of events inside the base.",
+        "The final paragraph repeats the farewell and escape explanation after both have already been completed."
+      ],
+      "evidence_notes": "The account stays within the assigned film scene and uses its visual clues locally rather than inventing universal projection rules. F1 provides only broad Force context; the detailed account is assessed against the named scene, not treated as independently documented by that proof entry."
+    },
+    {
+      "number": 24,
+      "summary": "Luke's refusal to kill Vader and Rey's healing of the serpent show that Force-enabled awareness and ability still leave characters responsible for choosing how to respond.",
+      "new_information": [
+        "Luke recognizes the resemblance between his artificial hand and Vader's severed mechanical hand before refusing to continue the duel.",
+        "Discarding his weapon leaves Luke vulnerable without guaranteeing Anakin's intervention.",
+        "Rey's healing transfers life energy without killing her, and the serpent's departure reveals an exit.",
+        "The comparison distinguishes an accountable human opponent from an injured animal rather than treating their moral situations as identical.",
+        "Luke can remain with the dying Anakin even though he cannot prevent his death."
+      ],
+      "local_answer": "The ending resolves the episode through two concrete decisions: understanding every possibility is unnecessary for recognizing an immediate opportunity for restraint or care.",
+      "open_issues": [
+        "The paragraph explaining that abilities do not determine choices repeats the preceding comparison and the earlier account of Sidious's intentions."
+      ],
+      "evidence_notes": "The comparison is consistent with F1, F7, and the assigned film scenes. It does not make healing universally fatal, promise redemption, recap the preceding chapters, predict future releases, or add a closing CTA. The final image of the cleared passage meets the requested quiet ending."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives the episode a physical basis for Ezra's growing connection. The purrgil feed on the gas. Their journey brings them into conflict with an industrial facility exploiting the same resource. Ezra isn't receiving a detached lesson about respecting life while standing somewhere safe. He's trying to survive an armed encounter, and understanding the animals changes what he can do. Their needs become part of his understanding of the place, alongside the fuel supply and the Mining Guild's weapons.",
+      "reason": "H18 identifies a script that \"keeps re-stating it with nothing new attached.\" The preceding paragraph already establishes the shared resource and industrial conflict, while the following paragraph supplies the concrete survival consequence. This intervening explanation is the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Then the animals make the discovery larger than the immediate rescue.",
+      "reason": "H17's Reading-Not-Speaking test targets \"written syntax no mouth produces live.\" Making a discovery \"larger\" is an abstract significance transition here; the next sentence already states the actual discovery.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives his decision a practical shape. He has to consider where the fire would go if Kanan disappeared. The doorway offers a view of the whole situation, including the people behind Kanan who still need his protection. Ezra's desire to bring him back is immediate, but Ahsoka helps him follow the consequences beyond that first movement of his hand. He understands that pulling Kanan free would undo the rescue Kanan is carrying out. He leaves his teacher in place, despite having a route toward him.",
+      "reason": "H18 warns against a framing that \"keeps re-stating it with nothing new attached.\" The previous paragraph already explains the causal dependency sentence by sentence, and the ending returns to Ezra's acceptance with a concrete image. Keep the decision here, but remove the second explanation of the same mechanism.",
+      "replacement": "Ezra leaves Kanan in place, accepting that his teacher must finish the rescue.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Their escape involves several people doing different things in different places, with Luke unable to see or direct every movement inside the base.",
+      "reason": "The scene establishes distributed action, but not this precise limit on Luke's perception. The assignment specifically cautions against deriving unsupported rules from the projection.",
+      "replacement": "Their escape involves several people doing different things in different places.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Their last meeting has given her a farewell, and his time outside the entrance has given the others a route off the planet.",
+      "reason": "H18 describes repeated statements with \"nothing new attached.\" Leia's farewell has already been explained in the fourth paragraph, and the escape enabled by Luke's delay has occupied several subsequent paragraphs. This sentence repeats both immediately before the stronger physical closing image.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Their abilities give them different ways to respond. Luke's skill with a lightsaber has put Vader on the ground, but he has to decide whether to strike again. Rey can close the serpent's wound, but first she has to approach and use that ability for its benefit. Neither action follows automatically from having access to the Force. Sidious is present in Luke's scene as a particularly clear reminder of that. He recognizes Luke's strength and wants the young man to use it to kill.",
+      "reason": "H18's theme-level warning applies when sections keep \"looping back to the same observation.\" The preceding paragraph already compares the two choices, the opening establishes Sidious's desired use of Luke's anger, and the final paragraph supplies the concluding distinction between awareness and action. This is the least useful additional statement of that thesis.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        24
+      ],
+      "detail": "Both chapters explain that nonhuman life participates in the Force independently of Jedi institutions. The recurrence is justified: chapter 21 develops an ecology and relationship, while chapter 24 applies that understanding to a specific act of care. Avoid expanding the concluding ecological explanation further."
+    },
+    {
+      "chapters": [
+        22,
+        23,
+        24
+      ],
+      "detail": "All three distinguish extraordinary ability from control over other people's actions or outcomes. Each supplies a different causal development: Kanan's indispensable protection, the Resistance's coordinated escape, and Anakin's voluntary intervention. This is thematic continuity rather than interchangeable explanation."
+    }
+  ],
+  "scope_status": "The supplied chapters 21-24 remain within their assigned released scenes and avoid the listed forbidden conclusions. Their local questions are answered, and chapter 24 provides a focused resolution without a recap or CTA. Local repetition cuts and one unsupported perception claim should be addressed; no chapter requires a structural rewrite.",
+  "limitations": "Only chapters 21-24 were supplied and reviewed in full. Earlier chapters, including the requested early subscribe and listening-location invitation, cannot be assessed. Review uses the supplied proof bank, outline, and named scene constraints; no websites were opened, episode footage watched, audio measured, or independent verification of every fictional detail performed.",
+  "input_hashes": {
+    "21": "3e41494805233c944113b432f054e34dd631f9e07322a53ba092b2ae2f6f4cef",
+    "22": "2e15a710616ad36c5d18b83f4a59c618f7d402a3bc641b1c4bb3e63854442f93",
+    "23": "0617e4b9b2b52ae11cb42f53165c416f923266452fc6a9d6da5d54bb8842ce9a",
+    "24": "256f2ad573c28c87b1b04f1daa8aa89ad7d567ca4a05a3f0e19e1f02edc53c2e"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

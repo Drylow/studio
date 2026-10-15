@@ -1,0 +1,75 @@
+{
+  "accessed": "2026-10-15",
+  "scope": "Canon films and the named released Clone Wars, Rebels and Ahsoka scenes. No Legends lore or unreleased answers. Mysteries means explained evidence and remaining interpretive questions, not claimed secret revelations.",
+  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "sources": [
+    {
+      "id": "F1",
+      "fact": "The Force is created by living things; the films show perception, influence and agency without giving an exhaustive scientific account.",
+      "work": "A New Hope; The Empire Strikes Back; The Phantom Menace",
+      "url": "https://www.starwars.com/databank/the-force",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F2",
+      "fact": "Midichlorians are the symbiotic means of communication with the Force in Qui-Gon's explanation; potential and training remain different questions.",
+      "work": "The Phantom Menace; Ahsoka Part Three",
+      "url": "https://www.starwars.com/news/so-what-the-heck-are-midi-chlorians",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F3",
+      "fact": "Mortis presents Father, Son and Daughter; the Son shows Anakin his future and the Father removes that memory.",
+      "work": "The Clone Wars S3E15-17",
+      "url": "https://www.starwars.com/series/clone-wars/ghosts-of-mortis-episode-guide",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F4",
+      "fact": "The Dagobah cave presents Yoda and Luke with visions; Luke sees his face under Vader's mask.",
+      "work": "The Empire Strikes Back; The Clone Wars Voices",
+      "url": "https://www.starwars.com/databank/cave-of-evil",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F5",
+      "fact": "Yoda follows Qui-Gon's voice and undergoes trials; persistence after death is a learned practice rather than simple physical survival.",
+      "work": "The Clone Wars S6E11-13",
+      "url": "https://www.starwars.com/series/clone-wars/voices-episode-guide",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F6",
+      "fact": "The World Between Worlds has pathways between time and space; Ezra saves Ahsoka and does not save Kanan.",
+      "work": "Rebels A World Between Worlds",
+      "url": "https://www.starwars.com/databank/world-between-worlds",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F7",
+      "fact": "Rey and Ben share a dyad; healing, object transfer and Ben's final sacrifice are shown, without a universal rulebook.",
+      "work": "The Rise of Skywalker",
+      "url": "https://www.starwars.com/databank/rey",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "F8",
+      "fact": "Purrgil travel through hyperspace naturally; Ezra's relationship with living creatures matters to the liberation of Lothal.",
+      "work": "Rebels The Call and Family Reunion and Farewell",
+      "url": "https://www.starwars.com/databank/purrgil",
+      "opened": "2026-10-15"
+    }
+  ],
+  "forbidden": [
+    "Equal numbers of Jedi and Sith as the definition of balance",
+    "Palpatine or Plagueis confirmed to have created Anakin",
+    "Abeloth, the Ones' origin, the Whills or Grey Jedi doctrine treated as canon answers",
+    "World Between Worlds as a proven unlimited time-rewrite machine",
+    "Force ghosts as a common automatic outcome for all dead Jedi",
+    "Midichlorians are the Force itself",
+    "Healing always costs a life",
+    "Sabine proves everyone has identical potential",
+    "Future Ahsoka seasons or game-only scenes",
+    "Invented dialogue and power rankings"
+  ]
+}

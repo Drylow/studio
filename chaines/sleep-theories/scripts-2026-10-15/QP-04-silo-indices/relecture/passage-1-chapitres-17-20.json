@@ -1,0 +1,166 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Camille supplies false footage while Juliette's memory is impaired and uses suppressants, making the apparent record of Juliette's past difficult for her to check independently.",
+      "new_information": [
+        "Camille's season-three manipulation combines false footage with suppressants during Juliette's memory loss.",
+        "The person supplying Juliette's biographical account also supplies its apparent visual corroboration.",
+        "A witness would provide an independent check only if their knowledge did not also originate with Camille's material."
+      ],
+      "local_answer": "The chapter answers its assignment: footage can appear to corroborate a biography without providing an independent basis for believing it, especially when Juliette cannot compare it with her own recollection.",
+      "open_issues": [
+        "Several later paragraphs repeat the initial account-versus-corroboration distinction without developing the scene further.",
+        "The comparisons with the mirror camera, Allison's implant, and Mechanical accumulate into an extended lesson about verification rather than remaining focused on Camille's particular manipulation."
+      ],
+      "evidence_notes": "The central released events agree with supplied proof S5. The witness discussion is conditional interpretation, not an additional released scene. The chapter appropriately avoids assigning one medical mechanism to every memory gap or treating the entire television narrative as hallucination."
+    },
+    {
+      "number": 18,
+      "summary": "Managed hero and mayoral imagery gives Juliette a public role while her impaired memory limits her ability to understand and endorse that role.",
+      "new_information": [
+        "Season three presents Juliette's restored public identity as something managed around her.",
+        "Her public recognition and her access to her own history proceed at different speeds.",
+        "Genuine affection for Juliette can coexist with institutional use of her reputation; manipulation does not require every resident's attachment to be false."
+      ],
+      "local_answer": "The chapter distinguishes being publicly identified with a role from consenting to that role, rather than simply repeating chapter 17's argument about false footage.",
+      "open_issues": [
+        "The discussion of Jahns and Bernard adds historical detours where the chapter would benefit from staying with Juliette's public identification.",
+        "The final third repeatedly returns to the same consent problem, although the paragraph about genuine affection supplies a useful distinct development."
+      ],
+      "evidence_notes": "Supplied proof S5 supports managed public hero imagery, memory loss, and Camille's suppressants. Expectations of reassurance or endorsement are generally framed as possible consequences rather than invented scenes. The supplied proof does not independently document every earlier-season comparison."
+    },
+    {
+      "number": 19,
+      "summary": "Billings learns that Ed Harwood built an illegal elevator and used it to steal from Critical Supply, demonstrating that the transport prohibition is not a technical impossibility.",
+      "new_information": [
+        "Ed Harwood is the named builder of the illegal elevator.",
+        "The elevator was used to steal from Critical Supply.",
+        "Billings learns of the construction and its use in S3E8.",
+        "The discovery establishes unauthorized infrastructure, not an officially reserved elevator for rulers."
+      ],
+      "local_answer": "The factual answer is clear and correctly bounded, but it is substantially complete in the opening paragraph and is then restated throughout most of the chapter.",
+      "open_issues": [
+        "This chapter needs a structural compression pass: repeated accounts of illegality, technical feasibility, theft, and investigative relevance occupy nearly every paragraph.",
+        "The two comparisons with generator maintenance do not supply further information about Ed's construction or Billings's discovery.",
+        "Calling the elevator an exception to the rule can suggest an authorized exemption, despite the chapter's later correct clarification."
+      ],
+      "evidence_notes": "The central account matches supplied proof S6. No dimensions, capacity, endpoints, official privilege, or construction method are invented. The discussion of questions Billings must consider is analytical expansion, not a supplied sequence of investigative discoveries."
+    },
+    {
+      "number": 20,
+      "summary": "Walker and Carla's tape intervention and Ed Harwood's separate theft show how access to materials can change events without altering the public procedure.",
+      "new_information": [
+        "The tape intervention depends on a material-performance comparison reaching someone with access to suit supplies.",
+        "Material preparation gives custodians opportunities unavailable to residents who only observe the finished equipment.",
+        "Ed's theft and Carla's assistance have different actors and purposes despite both depending on access.",
+        "A material label or official inventory does not by itself establish how an item performs or whether it remains available."
+      ],
+      "local_answer": "The chapter makes the assigned connection between material custody and outcomes while keeping Carla's assistance separate from Ed's unauthorized theft.",
+      "open_issues": [
+        "The tape sequence occupies much of the chapter before the later supply connection arrives.",
+        "The final paragraphs repeatedly explain that the two events are separate but share the importance of access.",
+        "The counterfactual about what Walker would have lacked without Juliette's complaint makes the causal dependence more absolute than the supplied proof establishes."
+      ],
+      "evidence_notes": "Supplied proofs S2 and S6 support the tape/Supply survival connection and Ed's theft from Critical Supply. The chapter correctly rejects a unified Supply resistance organization and does not infer a harmless outdoor environment. The proof bank does not independently establish every detailed step or counterfactual in the expanded tape account."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For a repairer like Juliette, that's a difficult change in how a problem can be approached. Her work in Mechanical involved equipment whose behavior could expose a bad explanation. A machine could fail, a part could be inspected, and an attempted repair could have an observable result. Camille's account concerns experiences that aren't present for Juliette to examine in the same way. Her habit of paying attention still matters, but attention to the footage alone can't supply the missing connection between an image and an actual event.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' This is the third extended comparison between inspectable evidence and Camille's account, after the mirror and implant paragraphs. It adds no new released development and prolongs the methodological explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "On a rewatch, Camille's presentation deserves attention for that reason. The images don't arrive alone. They come through a person who can help determine how Juliette encounters them and what account accompanies them. A recording may appear more detached than a spoken explanation, yet Camille remains involved in its use. Juliette's task includes assessing the person offering assistance, even while she needs that assistance. The missing recollections make it harder to establish where Camille's explanation ends and Juliette's own knowledge begins.",
+      "reason": "H18 requires a second mention to add 'a consequence, a comparison, the next number.' This late paragraph returns to the opening two paragraphs' point that Camille supplies both the account and its apparent corroboration. The remaining ending already closes the local answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's an earlier example of how quickly the silo can change the public meaning of an office. After Jahns dies, Bernard takes on the mayoral role. Residents encounter the same institution through a different person, and the familiar title continues to organize public life. Juliette's situation adds another complication. The familiar person herself is present, but her ability to explain what she accepts has been damaged. Residents recognizing her face may assume a continuity that she can't experience with anything like the same confidence.",
+      "reason": "H18 warns against every section 'looping back to the same observation.' The Bernard detour returns to the public-recognition-versus-personal-memory distinction already established at the opening and developed through Juliette's sheriff appointment. Removing it preserves the more useful next development about genuine affection being usable by image managers.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "When Billings learns this in season three's eighth episode, the transport rule acquires a very practical exception.",
+      "reason": "An illegal violation is not an authorized exception. Supplied proof S6 specifically requires unauthorized infrastructure to remain distinct from official privilege; the present wording briefly blurs that distinction.",
+      "replacement": "When Billings learns this in season three's eighth episode, he discovers a working violation of the transport rule.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "Ed's elevator leaves Billings with a more complete account of how the stealing happened. It also leaves the transport ban with a clearer meaning for the viewer. The prohibition concerns equipment that can be built and used inside the silo, as Ed has demonstrated through his own unauthorized work. The rule hasn't changed, but Billings now knows about a way around it. Somewhere within the same regulated home, Ed made a forbidden machine useful to himself and used it to take supplies.",
+      "reason": "H18 says that when repetition is thematic, 'the fix is structural: give the repeated observation one home paragraph.' This closing passage repeats the opening rather than concluding a sequence of distinct developments. Across the chapter, paragraphs 2, 6, and 7 repeat the theft/access connection; paragraphs 3, 4, 8, and 9 repeat technical feasibility; paragraphs 5, 10, and 11 repeat unauthorized status. A single replacement cannot repair that architecture. Retain a compact account of Billings's discovery, one explanation of the access consequence, and one distinction between prohibition and impossibility; do not invent investigative steps to fill the space. The empty replacement is not a claim that deleting this ending alone completes the repair.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "chapter": 20,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "If Juliette had treated the IT material as equivalent because it looked like the same category of supply, Walker would have lacked the particular complaint that makes the later intervention possible.",
+      "reason": "S2 establishes the connection between better tape, Supply, and survival, but does not establish this exclusive counterfactual. Calling the complaint what 'makes the later intervention possible' turns a useful causal contribution into a necessary condition.",
+      "replacement": "Juliette's complaint gives Walker a specific reason to question the tape intended for the suit.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Ed's theft raises a related problem from the other direction. A supply system depends on goods remaining available where they're expected to be. Billings's investigation concerns someone who has found a way to take them. The released account doesn't require every missing item elsewhere in the silo to be part of the same scheme. Ed's named activity is already consequential enough. Critical Supply holds materials worth reaching through an illegal route, and Billings learns that the route has been used for that purpose. The place matters because its contents can be put to use.",
+      "reason": "H18 describes repeated facts whose later mentions add nothing. The preceding Critical Supply and separate-circumstances paragraphs already establish Ed's theft, unauthorized access, and the limited connection to Carla. 'The released account doesn't require' also shifts into the evidence-review register the sleep adaptation asks the narration not to repeat.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Both chapters revisit Juliette's impaired recollection and Camille's suppressants. This overlap is justified where chapter 17 concerns private biographical manipulation and chapter 18 concerns public endorsement; preserve that distinction and avoid adding more footage analysis to chapter 18."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Ed's illegal elevator and theft from Critical Supply receive a full explanation in chapter 19 and are explained again across several paragraphs in chapter 20. Chapter 20 needs the connection, but its first Critical Supply paragraph and the explicit separation of Ed from Carla are sufficient."
+    },
+    {
+      "chapters": [
+        17,
+        19,
+        20
+      ],
+      "detail": "All three use Juliette's Mechanical experience to explain that material behavior can test an account or rule. The comparison is most concrete and necessary in chapter 20's tape discussion; chapter 17's repairer paragraph and chapter 19's repeated generator analogies contribute less."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the television-only scope through S3E10 Troy. No novel extinction mechanism, ancestry claim, sentient Algorithm, literal robot identity, official rulers' elevator, or globally safe exterior is asserted. The supplied 2026 release facts have been accepted as authoritative.",
+  "limitations": "Reviewed the complete supplied texts of chapters 17-20 against their assignments, the episode outline, the supplied proof bank, and the supplied prose guidance. Chapters 1-16 and 21-24 were not supplied, so repetition against them can only be anticipated from their assignments, not established by quotation. No external sources were opened, no episodes were watched, and no audio timing or human read-aloud was performed. Fine-grained scene details beyond the supplied proof bank have not been independently verified.",
+  "input_hashes": {
+    "17": "ce4babee159b9c834c3f58995d27630be5148b8a59f4e920ccc1aa9efa187cde",
+    "18": "b1147f1ca76dc16ca2f37b0be83d141e36536767be5bae10698454b516e35d20",
+    "19": "8c05dfcfdd1e36449c36d3c058ef88b3837ec402761d042e8e3f0fd33d5ec631",
+    "20": "de4f2febcb2676af44feaedb84f91ccfa54b975736187e71e6432b5da6ae5a05"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

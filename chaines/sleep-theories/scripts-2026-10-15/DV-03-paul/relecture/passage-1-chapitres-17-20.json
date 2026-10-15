@@ -1,0 +1,191 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Edric's prescience helps conceal a conspiracy whose members approach Paul through institutional interests, household access and his attachment to Duncan Idaho.",
+      "new_information": [
+        "Another prescient person's involvement can obstruct Paul's view of the conspirators' activities.",
+        "Mohiam seeks renewed Bene Gesserit influence over Paul's bloodline.",
+        "Irulan's exclusion from an intimate marriage and motherhood gives her a personal stake in the conspiracy.",
+        "Edric represents a Guild threatened by Paul's control of spice.",
+        "Scytale combines Face Dancer abilities, contact with disaffected Fremen and the planned use of Hayt to reach Paul."
+      ],
+      "local_answer": "The chapter answers how enemies can organize against a prophet: Edric supplies concealment, while the other conspirators exploit forms of access that prescience does not make harmless.",
+      "open_issues": [
+        "The second paragraph largely repeats the opening explanation of Edric's protection.",
+        "Scytale's contribution is explained more distinctly than his ultimate Tleilaxu objective, although chapter 18 develops the purpose of Hayt."
+      ],
+      "evidence_notes": "The conspiracy fits the supplied P4 account and assignment. The narration does not claim that Paul knows the conspirators' entire conversation. The short explanation of Guild interests remains within the requested scope rather than becoming a separate institutional history."
+    },
+    {
+      "number": 18,
+      "summary": "Paul accepts Hayt despite recognizing the danger, and the ghola's resistance to killing him restores Duncan's memories while creating further Tleilaxu leverage.",
+      "new_information": [
+        "Hayt has artificial eyes and initially lacks accessible memories of Duncan's life.",
+        "His Mentat and Zensunni training makes him a challenging adviser rather than a comforting replica.",
+        "Paul's attachment to Duncan helps explain why he accepts an acknowledged threat.",
+        "Hayt develops a relationship with Alia.",
+        "The command to kill Paul conflicts with Duncan's former loyalty, and resistance brings back his memories.",
+        "The recovery demonstrates that the Tleilaxu can offer more than a restored body."
+      ],
+      "local_answer": "The chapter explains both Paul's acceptance of Hayt and why Duncan's return depends on an act of resistance rather than perfect obedience to his makers.",
+      "open_issues": [
+        "The assertion that Alia tests Hayt in combat introduces a questionable scene-level detail.",
+        "One paragraph repeats the already established combination of genuine companionship, conditioning and Paul's knowingly accepted risk."
+      ],
+      "evidence_notes": "The main arc is consistent with P4 and the assigned treatment of Hayt's recovered identity. The forward reference to Chani's death is allowed by this chapter's assignment; it is not a release-scope violation, although it anticipates chapter 21."
+    },
+    {
+      "number": 19,
+      "summary": "Irulan interferes with Chani's fertility, Chani changes her diet and conceives, and Paul's knowledge of the interference exposes his own responsibility for withholding information.",
+      "new_information": [
+        "Irulan secretly administers contraceptives through Chani's food.",
+        "Chani takes practical action through a traditional Fremen fertility diet.",
+        "The pregnancy remains dangerous rather than erasing the consequences of the intervention.",
+        "Paul knows about the contraceptives and tolerates the delay because of the death he foresees.",
+        "Chani's discovery produces anger that Paul's protective rationale cannot resolve.",
+        "The pregnancy connects personal loss, dynastic succession and Bene Gesserit breeding interests."
+      ],
+      "local_answer": "The chapter answers how succession politics enter private bodily decisions and makes Paul accountable for his silence without reducing the pregnancy to a single uncomplicated cause.",
+      "open_issues": [
+        "The pregnancy explanation introduces Paul's inheritance as an undefined causal complication without establishing its role.",
+        "A methodological aside interrupts the account to explain how not to simplify it.",
+        "The late paragraph about household access repeats material already developed in chapters 17 and 18."
+      ],
+      "evidence_notes": "The treatment respects the explicit prohibition against making Irulan harmless or absolving Paul through prescience. P4 is a broad event reference rather than detailed medical documentation, so the narration should avoid extending its causal account through vague biological implications."
+    },
+    {
+      "number": 20,
+      "summary": "The stone burner physically blinds Paul, whose continued ability to navigate depends on following a foreseen sequence rather than possessing unrestricted awareness.",
+      "new_information": [
+        "The attack follows Paul's visit to the ill former Fedaykin Otheym.",
+        "Bijaz enters Paul's proximity through that visit and belongs to the conspiracy.",
+        "The injury destroys Paul's physical sight rather than replacing it with another bodily sense.",
+        "Continued prescient navigation affects Paul's standing under Fremen expectations concerning blindness.",
+        "Losing ordinary vision increases his dependence on the future he has already perceived.",
+        "Accurate navigation does not remove the conspiracy's prescient obstructions."
+      ],
+      "local_answer": "The chapter clearly distinguishes functioning without physical eyes from omniscience and explains why that achievement increases Paul's confinement.",
+      "open_issues": [
+        "The explanation of confidence combined with confinement is repeated after the mechanism has already been established.",
+        "The Hayt paragraph supplies no distinct event or consequence arising from the stone burner.",
+        "The closing paragraph restates the same dependence at excessive length."
+      ],
+      "evidence_notes": "The principal distinction is directly supported by P5 and remains within the weapon-detail restriction. The chapter does not suggest that prescience controls Paul's body or that blindness makes every conspirator visible to him."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That protection matters because Paul has made ordinary secrecy difficult. A concealed message or an unspoken intention might still lead toward an event he can foresee. Edric interferes with that advantage. In the meeting, the conspirators discuss his ability to shelter those associated with him from Paul's prescience. Their confidence depends on keeping their undertaking within that shelter. They still have to arrange meetings, approach the court, and persuade people to cooperate. The Navigator gives them room to attempt those things without expecting Paul to anticipate the entire undertaking.",
+      "reason": "The opening paragraph has already explained Edric's protection and its practical purpose. Most of this paragraph repeats that mechanism rather than developing the conspiracy. This matches H18: 'keeps re-stating it with nothing new attached.' Preserve only the distinction between concealment and actually executing the plot.",
+      "replacement": "Edric's protection doesn't arrange the plot for them. They still have to approach the court and persuade people to cooperate.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Alia tests him in combat, where his physical abilities are plainly his own to exercise.",
+      "reason": "This presents a specific combat encounter as a novel event. Alia's notable combat-training scene involves a training device; it should not be converted into her testing Hayt in combat. The supplied P4 does not establish this additional encounter, and the surrounding account of their attraction does not require it.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Yet Hayt's conduct gives Paul reasons to continue treating him as a person. He isn't merely concealing an attack behind a convincing imitation of friendship. He struggles with the possibility that he's been made into an instrument against someone he would otherwise protect. The novel allows that struggle to develop alongside his usefulness to the conspiracy. Paul receives real counsel from a man whose conditioning threatens him. Keeping Hayt close therefore involves a risk Paul knowingly takes, with affection and the hope of recovering Duncan bound up in that decision.",
+      "reason": "Paul's knowingly accepted risk and affection are established in paragraph four, genuine counsel in paragraphs five and six, and dangerous conditioning in paragraph eight. The next paragraph supplies the concrete act of resistance this passage anticipates. Under H18, 'the third identical mention is the tell'; deleting this bridge lets the actual crisis demonstrate Hayt's agency.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "It's tempting to make the whole sequence into a simple explanation in which a changed diet solves one problem and leaves everything else untouched. Her pregnancy carries the effects of the interference that preceded it, within circumstances already complicated by spice and Paul's extraordinary inheritance.",
+      "reason": "The first sentence is an unnecessary methodological caveat after the paragraph has already established continuing harm. The second introduces Paul's inheritance into the pregnancy's causal explanation without explaining or supporting that connection. The supplied constraints permit a complex account, not an undefined hereditary explanation. The preceding sentences already retain the established connection between contraceptive treatment and the dangerous pregnancy.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The conspirators understand how much Paul wants to preserve that life. Their plans reach him through people whose presence he has accepted: Irulan within the marriage settlement, and Hayt through his attachment to Duncan Idaho. The interference with Chani's fertility makes the household vulnerable long before an open attack arrives. Palace guards can't settle this problem by keeping strangers outside. Irulan already belongs inside, and the Bene Gesserit can pursue their interests through a woman whose public position requires her continued proximity to Paul.",
+      "reason": "This returns to chapter 17's household-access conclusion and chapter 18's explanation of Hayt without adding a new development concerning Chani. Irulan's access and the Bene Gesserit's interest have also already been explained within this chapter. H18 directs that a repeated theme receive 'one home paragraph' rather than becoming each section's conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This helps explain the strange mixture of confidence and confinement in his behavior. Paul can seem certain about a detail that would defeat anyone else in his condition, while remaining unable to find a future he can bear. Knowing where someone stands doesn't settle what he ought to do about Chani's danger, the conspiracy, or the succession. The ability operates within those difficulties. It lets him continue participating in imperial life, with its conversations and decisions, while the sequence he relies upon carries him toward experiences he wants desperately to avoid.",
+      "reason": "The preceding two paragraphs already explain the anticipated sequence, the loss of ordinary visual checking and the resulting pressure to continue toward dreaded events. This paragraph restates that interpretation without another event or causal step. It matches H18's 're-stating it with nothing new attached.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Hayt's presence makes that situation more personal. Paul has accepted the ghola because Duncan Idaho matters to him, although he knows the gift contains a threat. Now he must continue dealing with that familiar presence after losing the ordinary means of seeing him. Recognition already involved difficult questions about who Hayt is and what the Tleilaxu have done to him. Paul's injury adds another dependence to their encounters. His anticipated future has to provide the setting in which he judges a man whose face once belonged to his friend.",
+      "reason": "This repeats chapter 18's emotional explanation and applies the already explained substitute for sight without supplying a distinct encounter, decision or consequence. Under H18, a second mention must add 'a consequence, a comparison, the next number'; merely saying that the same mechanism also applies around Hayt does not justify a full paragraph.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul returns to his responsibilities with his physical blindness unmistakable and his apparent vision intact. Attendants can speak to him, officials can approach him, and he can continue responding without accepting the helplessness they might expect. Each successful response helps preserve his position among the Fremen and within the court. It also requires him to keep inhabiting the future that supplies those responses. For the time being, he can still find his way through the palace. He has to follow the course on which he can perceive it.",
+      "reason": "The paragraph repeats the chapter's opening contrast, its explanation of Fremen standing and its account of dependence on an anticipated sequence. H18 identifies this document-scale return to an already established framing as an echo. A concise closing statement can retain the chapter's local answer without another full explanation.",
+      "replacement": "Paul can still move through the palace without a guide, but only while events remain within the future he can perceive.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18,
+        19
+      ],
+      "detail": "Paul's enemies reach him through accepted intimacies, especially Irulan's household position and Duncan's returned presence. Chapter 17 usefully introduces the strategy and chapter 18 develops Hayt, but chapter 19's paragraph beginning 'The conspirators understand how much Paul wants to preserve that life' repeats the framing without advancing the fertility story."
+    },
+    {
+      "chapters": [
+        17,
+        20
+      ],
+      "detail": "Edric's concealment returns in chapter 20. This recurrence is useful because it distinguishes accurate local navigation after blindness from unrestricted awareness; retain it rather than treating every reminder as redundant."
+    },
+    {
+      "chapters": [
+        18,
+        20
+      ],
+      "detail": "Chapter 20's Hayt paragraph repeats why Paul accepted the ghola and why identity remains uncertain, but gives no new Hayt-related event after the injury. Chapter 18 is the proper home for that explanation."
+    },
+    {
+      "chapters": [
+        18,
+        19
+      ],
+      "detail": "Chapter 18 reveals Chani's death to complete Hayt's recovery arc before chapter 19 returns to conception. This is permitted by the assignments and supplies a distinct causal development, so it is not a spoiler violation or an automatic deletion."
+    }
+  ],
+  "scope_status": "The supplied chapters 17-20 remain within Dune Messiah and the authorized first-three-original-novels scope. No film ending, expanded-prequel adventure, invented date, exact battle statistic or claim of unrestricted prescience appears. All four chapters substantially answer their assigned questions. The main release issues are a questionable Alia combat detail, an unsupported hereditary implication in the pregnancy explanation and repeated interpretation that delays concrete developments. No aggressive rehook or closing CTA is needed.",
+  "limitations": "This review covers the complete supplied texts of chapters 17-20, not the unsupplied chapters. Chapter one's spoiler announcement and one-time optional audience request therefore cannot be checked. The supplied proof bank was treated as authoritative, but its broad summaries do not independently substantiate every scene-level detail. No websites were opened, episodes watched, audio measured or human read-aloud performed, and this is not a claim of independent line-by-line verification against the novels.",
+  "input_hashes": {
+    "17": "6d8b47f7707d5e0962fdb6c2a6bb181d95ca390f76f45bb172c1866d04d0235c",
+    "18": "5b52d80f2690507fc1360cf428969b6f890cdc18c00540665f9c0522fe797490",
+    "19": "a7953190e58ef2491400c879b273d895ce6ee6f834459e12e322bef4f8e43090",
+    "20": "36a9156f8617e9f337dda1bb9124be558032940c332c389607d5b21188290b29"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

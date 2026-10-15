@@ -1,0 +1,20 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 1
+  [floor: reframe: isn't X, it's Y] ...r own Bene Gesserit abilities don't let her bring him back into ordinary contact. This is a difficult position for the ...
+-- ECHO CHECK (H18): 14
+  [echo H18: phrase repeated 7x] "the water of life"
+  [echo H18: phrase repeated 6x] "the people around him"
+  [echo H18: phrase repeated 4x] "the bene gesserit have"
+  [echo H18: phrase repeated 4x] "a place in the"
+  [echo H18: phrase repeated 3x] "the destruction of his"
+  [echo H18: phrase repeated 3x] "trained by the bene"
+  [echo H18: phrase repeated 3x] "has prepared him to"
+  [echo H18: phrase repeated 3x] "to the atreides family"
+  [echo H18: phrase repeated 3x] "in the original novel"
+  [echo H18: phrase repeated 3x] "place among the fremen"
+  [echo H18: phrase repeated 3x] "a connection to the"
+  [echo H18: phrase repeated 3x] "the possibility of a"
+  [echo H18: phrase repeated 3x] "at the center of"
+  [echo H18: phrase repeated 3x] "of the future he"

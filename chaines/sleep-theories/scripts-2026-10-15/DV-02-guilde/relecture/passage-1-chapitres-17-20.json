@@ -1,0 +1,210 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Edric joins Mohiam, Irulan and Scytale in a conspiracy against Paul, providing prescient concealment while representing a Guild vulnerable to Paul's control of spice.",
+      "new_information": [
+        "The conspiracy brings together a Guild Navigator, a Bene Gesserit Reverend Mother, Paul's politically married wife and a Tleilaxu Face Dancer.",
+        "Mohiam's breeding-program concerns overlap with, but differ from, Irulan's personal and dynastic grievances.",
+        "Scytale contributes Tleilaxu capabilities and an approach centered on Paul's personal attachments.",
+        "Edric's prescience conceals the participants from Paul's prescient observation.",
+        "The Guild's continued dependence on Paul's spice supply makes covert opposition an intelligible political risk."
+      ],
+      "local_answer": "The chapter answers who participates, what distinguishes their interests and why Edric is useful, while explicitly treating the Guild's institutional motive as interpretation.",
+      "open_issues": [
+        "Several passages repeat the participants' contributions after those contributions have already been explained.",
+        "The concluding recap repeats both the opening tank image and the concealment explanation without a substantial new development."
+      ],
+      "evidence_notes": "The central meeting and concealment claims match G5. The additional character background is not individually documented in the supplied proof bank, but no contradiction with the supplied scope is apparent. The Guild's proposed motive is appropriately identified as a political reading rather than quoted private intent."
+    },
+    {
+      "number": 18,
+      "summary": "Edric's prescience protects the conspiracy from Paul's foresight but cannot prevent ordinary discovery, disagreement or resistance when its plans are carried out.",
+      "new_information": [
+        "Concealment from prescience does not erase testimony or prevent participants from disclosing information.",
+        "The conspirators must move from protected deliberation into ordinary interactions within Paul's household.",
+        "Paul retains ordinary sources of information and judgment even where his foresight is obstructed.",
+        "The draft introduces Fenring as a separate example of someone absent from Paul's visions, while distinguishing that case from Edric's ability."
+      ],
+      "local_answer": "The distinction between a prescient blind region and operational safety is clearly answered, but the chapter repeatedly explains that distinction instead of developing it economically.",
+      "open_issues": [
+        "The opening substantially repeats chapter 17's account of the meeting and Edric's value.",
+        "Several later paragraphs restate that concealment does not produce agreement or control behavior.",
+        "The Fenring excursion introduces an additional lore example not established by the supplied evidence for this assignment.",
+        "The mechanism caveat spends too much time warning against a literal model rather than explaining the practical consequence."
+      ],
+      "evidence_notes": "G5 supports Edric's concealment role. The ordinary-witness comparison is clearly explanatory reasoning, not an invented event. The Fenring episode is not established by the supplied proof bank; it should not be treated as independently verified here."
+    },
+    {
+      "number": 19,
+      "summary": "The Guild presents the Tleilaxu-made ghola Hayt to Paul, combining diplomatic access with Duncan Idaho's emotional significance while leaving Hayt a thinking participant rather than merely an instrument.",
+      "new_information": [
+        "Hayt is a ghola made from Duncan Idaho's flesh and presented through Edric.",
+        "Tleilaxu manufacture and conditioning are distinct from Guild delivery and presentation.",
+        "Hayt initially lacks Duncan's remembered life and has artificial eyes.",
+        "His Mentat and Zensunni training gives him intellectual usefulness beyond his resemblance to Duncan.",
+        "Paul's suspicion coexists with his attachment to Duncan.",
+        "Hayt develops relationships within the household, including with Alia, beyond the conspirators' intended use."
+      ],
+      "local_answer": "The chapter successfully separates manufacture, delivery, manipulation and personhood, and explains why a suspect diplomatic gift can still gain intimate access.",
+      "open_issues": [
+        "One comparison invents an unnecessary acquisition timescale for emotional trust.",
+        "The emotional-access argument recurs often, though most returns add a distinct element such as suspicion, diplomacy or Hayt's agency."
+      ],
+      "evidence_notes": "The central institutional distinction matches G6 and does not invent Guild authority over Tleilaxu production. Several descriptive and biographical details exceed the proof bank's granularity; they are not independently verified by this review."
+    },
+    {
+      "number": 20,
+      "summary": "Duncan's recovered identity and Paul's refusal of the Tleilaxu bargain demonstrate that Edric's concealment cannot guarantee obedience or determine the conspiracy's outcome.",
+      "new_information": [
+        "Hayt's conditioning conflicts with Duncan's former loyalty and precipitates the recovery of his identity.",
+        "That recovery gives the Tleilaxu evidence supporting their offer to restore Chani as a ghola.",
+        "Tleilaxu success in recovering identity does not preserve control over the recovered person.",
+        "Paul refuses the attempt to exploit his desire for Chani's return.",
+        "Scytale and Bijaz die, Duncan remains himself, and Paul ultimately leaves for the desert."
+      ],
+      "local_answer": "The chapter answers why protection is incomplete, but its extended endgame narration displaces the assigned institutional focus and repeats chapter 18's general explanation.",
+      "open_issues": [
+        "The detailed Scytale confrontation and infant-vision explanation expand into precisely the assassination-plot recap the assignment asks to avoid.",
+        "The narration recounts Bijaz's actions after Scytale's death before returning to Scytale's confrontation, creating an unnecessary chronological backtrack.",
+        "The closing movement includes more of Paul's departure than the local argument requires.",
+        "The ordinary-secret-meeting comparison repeats chapter 18 rather than adding a new explanation."
+      ],
+      "evidence_notes": "G5 and G6 establish concealment and Hayt's presentation, while the assignment expressly authorizes discussion of Duncan's recovery and Paul's disruptive choices. The supplied proof bank does not separately document the detailed endgame mechanics. No contradiction is asserted solely on that basis."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "With Scytale present, the meeting becomes more complicated than an agreement among dispossessed political interests. The Tleilaxu have purposes of their own, and the others must consider proposals whose full value to their author may differ from their value to everyone else. Mohiam has the Sisterhood's priorities. Irulan has her position in the household. Edric brings the Guild's exposure to Paul's power over spice. Their cooperation requires negotiation among those interests, even while his prescience gives them a protected opportunity to conduct it.",
+      "reason": "H18, \"the script gets stuck on one fact, one phrase, or one framing and keeps re-stating it with nothing new attached.\" The preceding four paragraphs already distinguish these participants and their interests; this paragraph largely lists them again.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The opening meeting gives Edric an active place in imperial politics while keeping his dependence physically present. Mohiam can bring the Sisterhood's demands, Irulan can bring knowledge of the household, and Scytale can bring Tleilaxu proposals. Edric supplies the prescient concealment under which they meet. Their differences remain around him as they discuss what to do about Paul. Throughout that discussion, the Navigator stays inside his tank, surrounded by the spice-rich gas that allows him to take part at all.",
+      "reason": "H18 says a second mention must add \"a consequence, a comparison, the next number.\" This ending repeats the opening tank image, the participant list and the concealment explanation. The preceding paragraph already provides a complete local conclusion about the Guild's risky dependence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It helps to keep the practical situation in view. Scytale can put an idea before the others without assuming that Paul is following the exchange through a vision. Mohiam can consider what that proposal means for the Bene Gesserit. Irulan can speak as someone who lives within Paul's household. Edric allows this discussion to happen under conditions more favorable to them. He hasn't supplied agreement, and his presence doesn't remove their separate interests. Everything they say still has to pass between people capable of misunderstanding, resisting or using one another.",
+      "reason": "H18 identifies repeated framing with \"nothing new attached.\" The preceding paragraph already says Edric enables discussion but cannot supply agreement, and chapter 17 has already explained each participant's role. Deleting this paragraph moves directly into the useful ordinary-witness comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The novel doesn't give an exact mechanism for how Edric's foresight obscures another prescient observer. It gives the conspirators a usable advantage, with Edric's presence central to their concealment. Thinking of that advantage as a blind region is helpful, provided we don't imagine a mapped boundary around the tank. Paul lacks a view the conspirators want to deny him. Inside that uncertainty, they still need workable plans, suitable opportunities and cooperation. None of those arrives automatically with the Navigator, and the gathering spends its time discussing them because they remain unresolved.",
+      "reason": "The assignment forbids inventing an exact mechanism, but does not require a paragraph policing the listener's mental model. This is excessive methodological caveating followed by another restatement of the chapter's established distinction.",
+      "replacement": "Edric denies Paul a view of their deliberations, but the conspirators still have to turn those deliberations into actions other people may resist.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "There's an earlier encounter that makes Paul's difficulty easier to recognize. Near the end of Dune, Count Fenring stands before him, and Paul recognizes that this dangerous man has been absent from his prescient visions. Fenring's presence matters immediately because the Emperor wants him to kill Paul. Paul has reached a confrontation he'd seen approaching, yet a person capable of changing its outcome has escaped his view. The room contains a danger that his previous visions haven't allowed him to account for in the way he might have expected.\n\nFenring isn't another Guild Navigator, and his absence from Paul's visions shouldn't be treated as an explanation of Edric's ability. The useful comparison is Paul's experience of meeting someone his foresight hasn't disclosed. Fenring can act, and Paul must confront that possibility in the room. Fenring then refuses the Emperor's demand. That refusal comes from Fenring himself. Even in this earlier encounter, a blind spot leaves Paul facing a person whose response matters, rather than an empty place where the future has stopped happening.",
+      "reason": "This two-paragraph excursion introduces a separate prescient exception and confrontation not established by G5 or the supplied proof bank. It is not being rejected as false; it is unnecessary additional lore when the assigned ordinary-witness comparison already explains the distinction without requiring another mechanism disclaimer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The conspirators therefore gain an opportunity they have to use with care. They can exchange proposals under Edric's protection, then carry those proposals into places where other people will react. A private agreement may encounter resistance. A participant may pursue a separate priority. Paul may respond in a way their discussion hasn't prepared them for. Those difficulties are already present around the opening meeting, in the differences between Mohiam, Irulan, Scytale and Edric. The Navigator conceals their deliberations from Paul's prescient sight while they continue the uncertain business of deciding what to do.",
+      "reason": "H18 calls for giving a repeated observation \"one home paragraph.\" This conclusion repeats the ordinary-action limitation already explained through witnesses, household activity, competing interests and Paul's responses. The preceding paragraph can close the chapter without another general summary.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Hayt therefore arrives with an emotional importance that an unfamiliar servant, adviser or ambassador would have to spend years acquiring.",
+      "reason": "The assertion that an unfamiliar person would require years is an unsupported comparative timescale. The emotional-access point is supported by Duncan's relationship with Paul and needs no invented duration.",
+      "replacement": "Hayt therefore arrives with an emotional importance rooted in Paul's life with Duncan, even before Paul knows what to make of the man before him.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Bijaz gives that danger another route into the room. He has helped carry the conditioning placed within Hayt, and he continues the pressure after Scytale's death by renewing the possibility of bringing Chani back. Paul recognizes how difficult that offer will be to keep refusing. He tells Duncan to kill Bijaz, and Duncan obeys. The recovered man now helps Paul end the approach that depended on his altered existence. Edric's concealment couldn't prevent this exchange between Paul and someone whose allegiance had survived the Tleilaxu intervention.",
+      "reason": "This recounts events after Scytale's death before the narration returns to his confrontation. It also adds a secondary plot mechanism when the assigned point is Duncan's recovered agency and the limits of Edric's protection.",
+      "replacement": "Duncan's recovery gives Paul an ally who can resist the purposes imposed on Hayt. Edric's concealment has protected the conspiracy's preparations without preserving its control over the man it brought into Paul's household.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "scope",
+      "severity": "major",
+      "quote": "Scytale's confrontation with Paul makes the limits of the plot more immediate. He threatens Paul's children and tries to compel agreement while Paul is physically blind. Paul has been moving and acting through prescient vision since the stone burner destroyed his eyes. In this encounter, however, his access to the situation changes. He sees through the eyes of his infant son, Leto, and uses that unexpected view to strike Scytale with a knife. The Tleilaxu negotiator dies before he can enforce his terms.\n\nPaul hadn't foreseen the twins' birth as it actually happens. That matters alongside the sudden view through his son's eyes, because the resolution includes a surprise for Paul himself. His enemies are dealing with someone whose foresight has real limits, yet those limits don't leave him helpless in the way they expect. A child whose arrival escaped his anticipated future provides the sight he needs. The outcome depends on an encounter within the family, at close range, far removed from the Guild's familiar work of finding a safe passage between stars.",
+      "reason": "The assignment says to focus on the failure of Edric's advantage rather than retell the assassination plot. These paragraphs introduce the stone burner, physical blindness, the twins, shared sight and the killing's mechanics. Their cumulative effect is an endgame recap rather than a targeted account of concealment's limits.",
+      "replacement": "Scytale cannot turn his offer into the agreement he wants, and Paul survives the confrontation. Edric's protection has hidden the conspiracy's preparations without ensuring that its final demands succeed.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The comparison with an ordinary secret meeting helps here. Keeping Paul from observing the conspirators through foresight doesn't remove the people who can meet them, hear their proposals or resist their actions. Hayt spends time with Paul and Alia. His behavior gives them opportunities to respond to him as a person, despite the purposes behind his arrival. Once Duncan returns, those encounters have helped place a capable ally near Paul. The plot's protected preparation has delivered someone who can assist its intended victim when the final pressure comes.",
+      "reason": "H18 identifies document-scale repetition, not merely repeated wording. Chapter 18 already develops the ordinary-secret-meeting comparison, and chapter 19 explains Hayt's household relationships. Chapter 20's concrete recovery and refusal already demonstrate the conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Paul eventually walks into the desert after losing the prescient sight that had allowed him to live as a sighted man. He follows the Fremen custom for the blind, leaving the imperial household and his children behind. That departure isn't the submission Scytale tried to purchase through the offer of Chani's restoration. Paul has refused the bargain, Scytale and Bijaz are dead, and Duncan remains himself. Edric helped hide the conspiracy's preparations. He couldn't make Duncan kill Paul, make Paul accept the Tleilaxu offer, or decide what Paul would do when that offer was gone.",
+      "reason": "Paul's desert departure extends the plot recap beyond what is needed to answer the assigned question. A shorter ending can preserve the specific outcomes that demonstrate the failure of control.",
+      "replacement": "Paul refuses the Tleilaxu bargain, and Duncan remains himself. Edric helped hide the preparations, but his protection could neither make Duncan kill Paul nor make Paul accept the offer of Chani's return.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18,
+        20
+      ],
+      "detail": "Edric enables Mohiam, Irulan and Scytale to deliberate outside Paul's prescient view in repeated participant lists. Establish the meeting and roles in chapter 17, explain the protection's limits in chapter 18, and let chapter 20 demonstrate those limits through outcomes rather than explain the meeting again."
+    },
+    {
+      "chapters": [
+        18,
+        20
+      ],
+      "detail": "Both chapters explicitly compare prescient concealment with an ordinary secret meeting and explain that witnesses, resistance and individual choices remain possible. Chapter 18 is the natural home for that explanation."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Hayt's relationships with Paul and Alia are explained in chapter 19 and invoked again in chapter 20's ordinary-meeting paragraph. The recovery of Duncan's identity is the new development chapter 20 should prioritize."
+    }
+  ],
+  "scope_status": "The supplied chapters remain in Frank Herbert's book continuity and contain no evident expanded-prequel imports, film-specific Navigator design, invented Guild ownership hierarchy or claim of unlimited prescience. The principal scope problem is chapter 20's excessive assassination-endgame detail; chapter 18 also adds an unprovided Fenring excursion. Spoilers for Dune and Dune Messiah are within the stated scope.",
+  "limitations": "Reviewed all four supplied chapters in full against the episode plan, proof bank and supplied editorial files. Chapters 1-16 and 21-24 were not supplied, so whole-episode repetition, the early optional CTA and the final tank-image requirement cannot be assessed. No websites or primary passages were opened, no audio was measured, and fictional details beyond the supplied evidence were not independently verified.",
+  "input_hashes": {
+    "17": "b991d7440132f08fc36f54511a0365383360fee5a5e3f4b3686780f884dc406c",
+    "18": "9a8b1b829572d50ab6ceed844dd69ea3c10b751786f50586677fee3c8f44983d",
+    "19": "b5b00285cb1c7dc1f63e055b2bb409ac6c9f20744f21de9653bd97eb303798fa",
+    "20": "9c46e3d358fab62fb442e17e68693e803d80256411c47909c2ad6d2dcc2f6f3e"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

@@ -1,0 +1,160 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Luke's armed encounter with the Dagobah apparition exposes his fear and invites both a future-facing interpretation and a psychological warning without establishing the cave's mechanism.",
+      "new_information": [
+        "Luke takes both weapons despite Yoda's advice and ignites his lightsaber before the apparition ignites its own.",
+        "The defeated apparition reveals Luke's face beneath Vader's helmet.",
+        "Vader's later revelation adds a possible family association without making the cave an explicit disclosure of parentage.",
+        "Yoda subsequently calls the cave encounter a failure, distinguishing Luke's apparent combat victory from success in training."
+      ],
+      "local_answer": "The vision asks Luke to examine how he responds to fear; it can also suggest a possible future without proving that the cave literally predicts one.",
+      "open_issues": [
+        "The explanation of Luke bringing fear and weapons into the encounter is repeated after its behavioral significance is already clear.",
+        "The cave's mechanism and the relationship between its psychological and predictive meanings appropriately remain unresolved."
+      ],
+      "evidence_notes": "The central encounter agrees with F4 and the assigned film scene. The chapter marks its interpretations as interpretations and does not invent an origin for the cave."
+    },
+    {
+      "number": 10,
+      "summary": "Anakin's intervention to save Luke connects balance with rejecting Sith domination and acting selflessly rather than equalizing faction membership.",
+      "new_information": [
+        "Qui-Gon's identification of Anakin and the Council's reservations establish uncertainty around the prophecy.",
+        "Yoda later acknowledges that the prophecy may have been misunderstood.",
+        "The Force's relationship to living things makes Jedi and Sith membership an inadequate measure of it.",
+        "Luke refuses the Emperor's invitation to kill Vader, and Anakin subsequently saves Luke at fatal cost.",
+        "Sidious's return does not erase Anakin's rescue, and Anakin's later encouragement to Rey explicitly recognizes his earlier restoration of balance."
+      ],
+      "local_answer": "The films connect Anakin's fulfillment of the prophecy with turning against Sidious, not with maintaining equal numbers of Jedi and Sith or guaranteeing that evil can never return.",
+      "open_issues": [
+        "A generic sentence about the child's unknowable future adds little beside the concrete disagreement between Qui-Gon and the Council.",
+        "The closing conceptual recap repeats conclusions already established immediately before the grounded unmasking scene."
+      ],
+      "evidence_notes": "The account follows F1 and the expressly assigned prequel, Return of the Jedi, and later Sidious material. It avoids numerical balance, Sith creation of Anakin, and a fabricated timetable for renewed darkness."
+    },
+    {
+      "number": 11,
+      "summary": "The Father tests Anakin's ability to restrain his children and offers him permanent responsibility for their containment, which Anakin declines.",
+      "new_information": [
+        "The Father uses danger to Obi-Wan and Ahsoka to test Anakin, who subdues both children rather than choosing one companion.",
+        "Mortis associates the Daughter and Son with light and dark amid unusual environmental changes.",
+        "The Father describes isolation and restraint as necessary because of the danger his children could pose beyond Mortis.",
+        "The Father's declining ability creates a need for a successor.",
+        "Accepting would require Anakin to remain on Mortis rather than complete a temporary Jedi assignment.",
+        "The coercive test complicates the Father's invitation, and demonstrated strength does not establish readiness for continuing guardianship."
+      ],
+      "local_answer": "Anakin proves capable of restraining the Son and Daughter in the test, but the Father's proposed succession requires a continuing commitment that Anakin does not accept.",
+      "open_issues": [
+        "A standalone restatement of the test result interrupts the progression without adding information.",
+        "The explanation of permanent guardianship repeats across adjacent paragraphs before the useful distinction between strength and readiness."
+      ],
+      "evidence_notes": "The chapter stays within F3 and the assigned Overlords encounter. Cosmic symbolism is explicitly interpretive, and the family is not presented as the Force's creators or a universal model requiring equal use of both sides."
+    },
+    {
+      "number": 12,
+      "summary": "The Daughter's remaining life restores Ahsoka through Anakin, while later Morai imagery suggests a continuing association without confirming reincarnation or a repeatable revival method.",
+      "new_information": [
+        "The Daughter intercepts the Son's attack on the Father and receives a fatal wound.",
+        "The Son corrupts Ahsoka, uses her against her companions, and leaves her lifeless after obtaining the dagger.",
+        "Under the Father's guidance, Anakin acts as the conduit for the Daughter's remaining life to restore Ahsoka.",
+        "Ahsoka resumes her place with her companions rather than receiving an explicitly assigned identity or office within the Mortis family.",
+        "The Lothal mural and Morai's presence in the World Between Worlds connect the Daughter's imagery with Ahsoka's later story."
+      ],
+      "local_answer": "The transfer establishes one guided restoration involving these particular participants; Morai supports a continuing association, not a confirmed claim that Ahsoka is the Daughter reborn.",
+      "open_issues": [
+        "The Son-versus-Daughter comparison repeats the same sequence of harm and restoration after both actions and the Daughter's generosity have already been explained.",
+        "The precise nature of Morai's connection and the transfer's broader applicability appropriately remain unanswered."
+      ],
+      "evidence_notes": "The narration follows the assigned Mortis and Rebels scenes under F3 and F6. It does not generalize the transfer into a universal healing rule or treat reincarnation as confirmed."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Luke hears that advice and equips himself anyway. His difficulty is concrete: he can accept Yoda as a teacher while still falling back on a familiar precaution when he's frightened. The cave gives that small disagreement a consequence Luke can see, even if he can't yet explain it.",
+      "reason": "H18 identifies repeated framing with 'nothing new attached.' The opening already establishes Luke's precaution despite Yoda's advice, and the preceding paragraph explains fear directing his response. These sentences repeat both points; the paragraph's earlier distinction between carrying a weapon generally and needing one here is the useful development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Everyone involved is considering a child whose life will continue beyond this meeting, with consequences none of them can see completely.",
+      "reason": "H12 flags 'inflated connective tissue.' This generic observation adds no specific uncertainty beyond the already stated disagreement about Anakin's potential and fear, which the following paragraph develops concretely through Yoda's admission.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Balance, as these events present it, doesn't offer the characters an accounting method for arranging the galaxy. Qui-Gon can recognize promise in a child without knowing how that child's life will unfold. Luke can follow Jedi teaching without rebuilding every part of the old Order. And Anakin can answer his son's suffering after years of serving Sidious.",
+      "reason": "H18 calls for cutting a re-mention that 'adds nothing.' This closing sequence restates the chapter's accounting argument, Qui-Gon's uncertainty, institutional distinction, and Anakin's intervention after each has received its own explanation. The subsequent unmasking detail already supplies a grounded close.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "What Anakin demonstrates here is specific: on Mortis, he can restrain both children at once.",
+      "reason": "H18 limits repeated facts to mentions that add a consequence or development. The opening describes the simultaneous restraint, and the later explanation of the Father's test has already established its significance. This isolated paragraph adds neither.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That differs from the responsibilities Anakin already carries as a Jedi. In the war, he can finish an operation, bring his troops back, and receive another assignment. On Mortis, the continuing presence of a guardian is the arrangement. The Father's declining strength creates the opening, and Anakin's successful test makes him eligible to fill it.",
+      "reason": "H18 flags the script circling an established framing. The immediately preceding paragraph already contrasts remaining on Mortis with a mission that permits a return, while earlier paragraphs establish the Father's decline and Anakin's eligibility. Retaining the following sentences about strength not teaching sustained guardianship preserves this paragraph's actual new development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Son's treatment of Ahsoka provides a close comparison. He alters her, sends her against her companions, and leaves her dead after securing the dagger. The Daughter intervenes so that Ahsoka can return to those companions. We can follow that difference through what happens to the apprentice herself. Under the Son's influence, she fights Anakin. After the Daughter's gift, she wakes and can leave with him. The two encounters change the same person's condition in ways that show what each sibling has done with the abilities available to them.",
+      "reason": "H18 describes repeated facts and framing with 'nothing new attached.' The capture, corruption, abandonment, and restoration have already been narrated, and the preceding paragraph interprets the Daughter's generosity. This paragraph repeats the sequence twice within its comparison instead of developing it further.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10
+      ],
+      "detail": "Both chapters discuss Luke's risk of becoming like Vader. The recurrence is useful: chapter 9 interprets the cave image, while chapter 10 develops the later hand comparison and refusal to kill. No cross-chapter deletion is needed."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Both address balance and Anakin's promised role, but chapter 10 rejects faction arithmetic while chapter 11 explains the Father's local containment problem. The distinction is maintained rather than collapsing Mortis into a universal balance formula."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "Chapter 12 briefly recalls Anakin restraining the children, but adds a useful contrast with acting as a conduit under guidance. This is a justified callback rather than an echo requiring removal."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within their assigned released-film and named animated-scene scope. No supplied prohibition is clearly violated. The main defects are local repetition and one abstract filler sentence, not factual or structural failures requiring a rewrite. The chapter-one request and chapter-24 ending requirements cannot be assessed from this excerpt.",
+  "limitations": "Reviewed all supplied narration for chapters 9-12 against the supplied proof bank, assignments, outline, and voice rules. The proof entries are summaries rather than complete scene transcripts; no websites were opened, episodes watched, audio measured, or independent verification of every fictional detail performed. Chapters 1-8 and 13-24 were not supplied as narration, so whole-episode repetition and compliance cannot be fully assessed.",
+  "input_hashes": {
+    "9": "ab43f5cbd03dd81736e0459992cd7f77f3cd4ca2a26aad90603f47be4af62abd",
+    "10": "8b905a2b15944e43c437f43d1a1b6dd4a738c4d019d590ac935757f6756d34b3",
+    "11": "10494b483f912bdcf0bbc46e0b0af80c4fd8df721b844a0804d02b2636e2fa1c",
+    "12": "6a8e2f5f909fb9875129aa46c30a645bff72d58fed77b6a4e750da781ce14400"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

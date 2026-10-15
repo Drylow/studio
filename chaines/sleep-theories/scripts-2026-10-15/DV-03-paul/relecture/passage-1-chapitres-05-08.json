@@ -1,0 +1,162 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "During an inspection of spice harvesting, Paul sees Leto abandon valuable equipment to rescue workers, earning Kynes's respect while exposing the fragility of Atreides control.",
+      "new_information": [
+        "Harvesters depend on carryalls to escape approaching sandworms, and the missing carrier turns the inspection into a rescue.",
+        "Paul's stillsuit fitting attracts Kynes's attention and acquires religious significance in his assessment.",
+        "Leto prioritizes the workers over the harvester and its spice.",
+        "Kynes's response shows how Leto's conduct can win allegiance beyond his existing household.",
+        "Paul encounters spice production directly, while Leto discovers that formal authority does not guarantee reliable local infrastructure."
+      ],
+      "local_answer": "The chapter answers its assignment: Leto teaches Paul through an actual rescue that protecting workers can create loyalty, but decisive leadership cannot compensate for everything a new ruler does not know.",
+      "open_issues": [
+        "The explanation that Jessica's training causes Paul's instinctive stillsuit fitting is not established by the supplied evidence.",
+        "Several paragraphs repeat the harvester's dependence on transport or the political value of saving its workers without enough additional development."
+      ],
+      "evidence_notes": "The rescue and its intended biographical significance are expressly authorized by the assignment. P2 supplies broad background rather than detailed corroboration of the inspection. The chapter stays in novel continuity and does not reproduce film dialogue."
+    },
+    {
+      "number": 6,
+      "summary": "Yueh exploits the household's confidence in his conditioning to betray Leto, while attempting both revenge against the Baron and an assisted escape for Paul and Jessica.",
+      "new_information": [
+        "Yueh's Suk conditioning makes his access appear safe to the Atreides.",
+        "Harkonnen coercion involving Wanna coexists with Yueh's genuine affection for members of the household.",
+        "Suspicion directed toward Jessica helps conceal the actual betrayer.",
+        "Yueh disables the defenses, incapacitates Leto, and equips him with a poisoned tooth intended for the Baron.",
+        "Yueh arranges survival provisions for Paul and Jessica.",
+        "Yueh and Leto die, Piter is killed by the poison, and the Baron survives.",
+        "Paul's survival depends on assistance and enemy miscalculations rather than comprehensive foresight."
+      ],
+      "local_answer": "The chapter clearly distinguishes confidence in conditioning from knowledge of Yueh's circumstances and explains why Paul's survival remains contingent despite his developing abilities.",
+      "open_issues": [
+        "The signet ring is incorrectly identified as Paul's rather than Leto's, contradicting the next chapter's correct identification."
+      ],
+      "evidence_notes": "The betrayal, destruction of the Atreides position, and assisted survival fit P2 and the assignment. The detailed account goes beyond P2's brief wording; the ring identification is a concrete continuity error rather than a general objection to that additional detail."
+    },
+    {
+      "number": 7,
+      "summary": "Paul and Jessica escape captivity and repeated attacks through training and assistance, while Paul's expanding awareness reveals his Harkonnen ancestry and disturbing possible futures.",
+      "new_information": [
+        "Paul's use of the Voice enables Jessica to act against their captors.",
+        "Hidden supplies and desert equipment make escape physically survivable.",
+        "Paul's emerging awareness complicates his ability to grieve Leto and unsettles Jessica.",
+        "Paul recognizes that Jessica is the Baron's daughter during the original novel's desert flight.",
+        "He perceives possible religious violence in the Atreides name without possessing an exhaustive map of the future.",
+        "Duncan and Kynes provide temporary refuge, and Duncan dies defending the fugitives.",
+        "Paul and Jessica survive a storm and continue toward Fremen territory with inherited skills but without their former household's protection."
+      ],
+      "local_answer": "The chapter successfully explains how political dispossession leaves Paul's training intact while his new awareness destabilizes both his family identity and his relationship with Jessica.",
+      "open_issues": [],
+      "evidence_notes": "The chapter follows the assigned novel chronology for the ancestry revelation and does not import the film's later timing. Its discussion of grief and identity is grounded interpretation of the narrated events, not invented dialogue or a fabricated private scene."
+    },
+    {
+      "number": 8,
+      "summary": "Jessica's fighting ability and recognition of planted religious expectations help secure Fremen protection, while Stilgar and others continue to make independent judgments about the newcomers.",
+      "new_information": [
+        "Fremen water discipline makes an outsider's usefulness a matter of survival.",
+        "Duncan's earlier dealings give Paul an existing connection to Stilgar's people.",
+        "Jessica demonstrates a teachable fighting skill by overcoming Stilgar.",
+        "The Missionaria Protectiva has planted beliefs that a Bene Gesserit fugitive can use for protection.",
+        "The earlier encounter with Shadout Mapes helps Jessica recognize that preparation.",
+        "Fremen ecological ambitions and practical competence exist independently of Jessica's use of their beliefs.",
+        "Jamis's hostility and Chani's assistance show that protection does not produce a uniform response to Paul."
+      ],
+      "local_answer": "The chapter answers the assigned question by showing that recognition results from an interaction between planted expectations, demonstrated abilities, and active Fremen decisions rather than establishing divine design.",
+      "open_issues": [
+        "The stillsuit example substantially repeats chapter 5.",
+        "Stilgar's recognition of Jessica's useful fighting skill is explained twice in adjacent paragraphs."
+      ],
+      "evidence_notes": "The Missionaria Protectiva, Jessica's demonstration, and active Fremen agency are expressly required by the assignment. The chapter appropriately distinguishes religious interpretation from proof without turning the entire discussion into an evidence disclaimer."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Paul's response to the unfamiliar equipment draws on the physical awareness Jessica has helped develop in him.",
+      "reason": "This supplies a definite causal explanation for Paul's instinctive stillsuit fitting that neither the proof bank nor the assignment establishes. The surrounding account can describe the competence and Kynes's interpretation without resolving its origin.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The harvester gives their inspection a different scale. Spice production requires people to remain on sand where their activity can attract a worm. Lookouts and aircraft help make the work possible, but the danger doesn't disappear because the operation is organized. The crew's protection depends on warning, communication and transport working together. For Leto, who's just inherited responsibility for production, this is an immediate lesson in what a report about spice output leaves out. Every load comes from people working within reach of something that can swallow the machinery.",
+      "reason": "H18 identifies the problem as repeatedly 're-stating it with nothing new attached.' The opening already explains the harvester's exposure and dependence on aircraft, and the following rescue demonstrates the human stakes more concretely. This is the least useful preliminary explanation of that same dependency.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That response matters because Leto needs people who understand the planet. He can bring soldiers and experienced officers from Caladan, but they can't replace local knowledge. Kynes knows what the desert demands, while the workers know the conditions under which spice is harvested. By treating their survival as his concern, Leto gives them a reason to regard his arrival with something beyond fear or resignation. It would be too tidy to turn the rescue into a calculated recruitment exercise. His action can be humane and politically useful at the same time.",
+      "reason": "H18 warns against a theme that keeps 'looping back to the same observation.' Kynes's local knowledge is established earlier, and the immediately preceding paragraph already explains why the rescue wins allegiance. Retain only the useful distinction between humane conduct and political calculation.",
+      "replacement": "The rescue can earn Leto political support without having been undertaken merely to recruit followers.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "He leaves Paul's ducal signet ring among those provisions, along with a message explaining his actions.",
+      "reason": "The ring is Duke Leto's signet, which passes to Paul; chapter 7 correctly calls it his father's ring. The existing possessive obscures whose ring Yueh removes and preserves.",
+      "replacement": "He leaves Duke Leto's signet ring among those provisions, along with a message explaining his actions.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The encounter also reveals how readily Stilgar can adapt. He doesn't keep treating Jessica as helpless after she's demonstrated otherwise. He recognizes the value of what the Fremen call the weirding way and considers how it might be shared. That response matters to Paul. The man before them can weigh a changed situation and make a useful agreement under pressure. Paul and Jessica's escape now depends partly on Stilgar's judgment, including his willingness to accept an outsider whose abilities have challenged him in front of his own people.",
+      "reason": "H18 flags repeated framing with no new development. The preceding paragraph already says Stilgar reconsiders Jessica because she has a valuable discipline she can teach. This paragraph's useful addition is his adaptive judgment, which needs only one sentence.",
+      "replacement": "Stilgar's willingness to revise his judgment also matters: Paul and Jessica need a leader who can recognize their usefulness even after Jessica has challenged him before his people.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul has already attracted attention through how he wears a stillsuit. When Kynes inspects him earlier in the novel, Paul's instinctive adjustment of the suit fits a Fremen expectation about someone who will know their ways without instruction. Paul has a practical explanation for what he's done: the arrangement seemed right to him. Kynes hears something with religious significance as well. This helps explain the situation Paul enters now. A small act of competence can carry a second meaning for people whose traditions have prepared them to recognize it.",
+      "reason": "H18 requires that a second mention add a consequence or comparison rather than retell the same example. Chapter 5 already covers the fitting, Kynes's surprise, and its religious significance. The specific expectation about knowing Fremen ways without instruction is the useful addition here.",
+      "replacement": "The expectation that the newcomer will know Fremen ways without instruction helps explain Kynes's earlier reaction to Paul's stillsuit fitting. Practical competence can be read as fulfillment of a prophecy.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        8
+      ],
+      "detail": "Both chapters explain Paul's instinctive stillsuit fitting, Kynes's attention, and the religious meaning attached to the act. Chapter 8 should retain only the more specific expectation about knowing Fremen ways without instruction."
+    },
+    {
+      "chapters": [
+        5,
+        7
+      ],
+      "detail": "Chapter 7 recalls Leto's rescue as a reason for Kynes's assistance. This is a useful recurrence because it supplies a later consequence rather than merely repeating that Leto inspires loyalty."
+    },
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "The survival provisions and inherited training recur, but chapter 6 establishes who supplies the opportunity and chapter 7 shows how Paul and Jessica use it. This continuity is justified."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the original Dune novel and their assigned portions of the first-three-novel biography. No expanded-prequel material, film-only departure, later-novel spoiler intrusion, or claim of unrestricted prescience was found. Chapter 1 was not supplied, so its spoiler announcement and optional early audience request cannot be assessed.",
+  "limitations": "Reviewed all supplied text for chapters 5 through 8 against the outline, proof bank, and supplied editorial rules. The linked sources were not opened, and the proof bank's broad summaries do not independently substantiate every scene-level detail. No episode viewing, audio measurement, human read-aloud, or independent verification of every fictional fact is claimed.",
+  "input_hashes": {
+    "5": "81a5b6c06758a129f54e126191616bfab5d76c4d0c4ff5abe47fe3a0e9ac1d8f",
+    "6": "46a2f872d98d9dfe729968d3582c608dc8e186b1a07f0accb049fc6ee4bf3988",
+    "7": "3df00a0a1dab4ca3c0931de394a9dab8ba25bfe889b5562f8466ed3e8ccc8c97",
+    "8": "7435318ae3f7fa936f9def0f0961a13edda864ab3bc7484aa2f9b7bc2755692e"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

@@ -1,0 +1,644 @@
+{
+  "text_status": "assembled_not_an_editorial_approval",
+  "words": 20347,
+  "whitespace_words": 20347,
+  "chapters": 24,
+  "duration_estimates_minutes": {
+    "145": 140.3,
+    "150": 135.6,
+    "160": 127.2,
+    "170": 119.7
+  },
+  "duration_measured_seconds": null,
+  "audio_gate": "Measure final narration: at least 120 minutes before publishing. No padding, silence or loops.",
+  "two_hours_at_170_wpm": false,
+  "scanner": {
+    "hard": 0,
+    "flags": 1,
+    "floor": 0,
+    "echo": 17,
+    "mech": 0
+  },
+  "non_ascii_characters": [],
+  "headings_or_placeholders": [],
+  "subscribe_occurrences": 1,
+  "last_chapter_has_subscribe": false,
+  "identical_long_paragraphs": [],
+  "exact_12_word_reference_matches": [],
+  "review_round": 1,
+  "current_chapters_covered_by_review": 0,
+  "review_findings_for_editor": [
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "Its monopoly has therefore left it strong in one part of the arrangement and exposed in another. Clients have no equivalent imperial transport service ready to take its place. The Guild, in turn, has no equivalent source of the spice on which its Navigators rely. Those circumstances meet at Arrakis. Paul doesn't need to build a rival transport organization before he can bargain with the existing one. His leverage comes from the Guild's need to preserve a supply that lies beyond the protection its monopoly alone can provide.",
+      "reason": "This paragraph restates the opening dependency after the chapter has already explained the threat, the Guild's incentive to restrain force, and the resulting limit on its customers. H18 identifies the document-scale failure as 'the script gets stuck on one fact, one phrase, or one framing and keeps re-stating it with nothing new attached.' The same loop occupies much of this chapter and anticipates chapters 14 and 16. Resolving it requires consolidating several paragraphs, not substituting one polished summary.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There is a competing way to read the Guild's retreat: perhaps its representatives are making a temporary accommodation with the apparent winner. That fits an organization concerned with surviving political upheaval. Yet it doesn't account for the particular demand Paul puts before them. The spice threat explains why accommodation becomes necessary even while armed opposition remains nearby. Political caution and material dependence can operate together here. The Guild can prefer a settlement because it avoids immediate danger, while also recognizing that its own continued work requires the supply Paul threatens.",
+      "reason": "This is the least useful self-contained passage in the chapter: it invents a competing reading only to return to the already-established explanation. It adds neither an event nor a distinct consequence. H18 says, 'A re-mention that adds nothing gets cut,' and the sleep adaptation calls for lore and thoughtful interpretation rather than repeated methodological argument.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "As an analogy, a smaller vessel carried aboard a larger transport helps separate ownership from reach. That's an explanatory comparison, rather than a claim about the exact engineering of a heighliner.",
+      "reason": "The preceding paragraph has already described a House vessel aboard a heighliner as the actual arrangement. Calling the same arrangement an analogy creates unnecessary uncertainty about which part is literal. It also adds a second engineering caveat immediately after the loading-procedure caveat.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The book doesn't provide a complete inventory of everything transported from Caladan, so an account of particular containers or quantities would go beyond it.",
+      "reason": "This explains an editorial restriction the narration has not violated, rather than giving the listener useful information. In a chapter already disclaiming loading details and unseen itineraries, it contributes to an excessive methodological-caveat pattern. Deleting it leaves the surrounding discussion of governing and military capacity intact.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For the Atreides, this also means that preparations on Caladan and preparations on Arrakis have to meet across an interval neither household authority nor military discipline can bridge alone. A carefully trained force is useful only after it can reach its posting. Equipment left on the old homeworld can't help the people already at the new one. This is the practical implication of the relocation: transport belongs inside the work of government. Leto's plans require access to a service his House doesn't provide for itself.",
+      "reason": "The chapter has already shown that the Duke's appointment, personnel, equipment, and vessels require Guild passage. This late paragraph gives that same explanation again without a new development. H18 directs that 'the second mention must add something the first did not carry'; this passage is the clearest removable late echo.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "For someone traveling aboard a heighliner, those separate contributions arrive together as a single result: passage to another world. There's little reason for the passenger to distinguish them during an uneventful arrival. In understanding the Guild, though, the distinction matters. Its Navigator anticipates a safe course through possible futures, while its vessel carries the people who depend on that judgment. The journey requires both. The extraordinary part of the navigation can remain extraordinary without turning the person responsible for it into the ship's engine.",
+      "reason": "The closing repeats the opening answer and the conclusions of several intervening paragraphs. This exemplifies the chapter-wide H18 pattern: 'every section looping back to the same observation.' The steering analogy and the limit on destination safety provide useful development, but the repeated ship-versus-person explanations and Atreides examples need consolidation across the chapter. A local replacement would merely produce another version of the same conclusion.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 3,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "There's another distinction worth keeping within the ship itself. Selecting a course doesn't mean that the Navigator personally performs every task required for transport. A heighliner belongs to an organization, and its operation includes more than the special capacity on which the Guild's reputation rests. Dune doesn't give us a complete account of the work aboard one, so assigning particular duties to an invented crew would only make the picture falsely precise. We can recognize the Navigator's specialized contribution while leaving the unreported details of ship operation unfilled.",
+      "reason": "Most of this paragraph explains why the writer will not invent crew duties. The useful distinction can be retained in one sentence without another account of evidentiary limits.",
+      "replacement": "The Navigator's specialized task is only one part of operating the Guild's physical transport system.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 4,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Piter de Vries adds another useful detail. The Baron Harkonnen has a Mentat too, and Piter's service involves calculation in support of the Baron's plans. The profession itself doesn't guarantee kindness or loyalty to a humane cause. Piter and Hawat serve opposing Houses, bringing their abilities into the conflict between them. That makes the Mentat a recognizable part of imperial employment: a specialist whose work can be directed toward the purposes of a patron. Exceptional mental training hasn't removed the familiar problem of whom the trained person serves.",
+      "reason": "The assignment asks for minimum Butlerian context and a functional comparison with Mentats. Hawat already supplies that comparison. This additional paragraph changes the subject to the morality and patronage of Mentat employment without adding a necessary step in the explanation of Guild navigation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 4,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Paul's education makes the difference easier to follow. In Dune, he learns that his training has included preparation for becoming a Mentat. That discovery sits alongside his Bene Gesserit education under Jessica and the developing prescience that becomes central to his life. Several unusual abilities can exist in the same person without becoming one ability. Paul's analytical training doesn't explain away his visions. Nor does the existence of his visions mean that every trained analyst can look ahead as he does. Herbert gives these capacities separate histories and demands within Paul's experience.",
+      "reason": "The distinction is relevant, but the full paragraph repeats the analysis-versus-foresight comparison just made through Hawat and the Navigator. Condensing it preserves the useful example while keeping this minimum-context chapter focused.",
+      "replacement": "Paul's education brings the distinction into one person: his Mentat training and his developing prescience are separate capacities. His visions don't mean that every trained analyst can see possible futures.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "Melange reaches Paul Atreides before he understands how much of his life will depend on it. On Caladan, Dr. Yueh tells him that the spice is already present in his food. It's a small domestic detail beside the preparations for Arrakis, but it places the substance inside the Atreides household before the family reaches the desert. Paul is already consuming the commodity his father has been ordered to administer. The new appointment will bring them much closer to its source, and to the dangers surrounding it.",
+      "reason": "Editorial refinement after fresh checking: the claimed Caladan conversation is not supported. Avoid relocating the same uncertain Paul-Yueh exchange to Arrakis. Use the independently confirmed presence of melange in food and its household role instead.",
+      "replacement": "Melange is present in meals and drinks on Arrakis as well as the cargo leaving the planet. The Atreides encounter it within the household whose income now depends on producing it. Spice can reach a person through an ordinary daily routine, long before that person has understood all its effects.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For the Guild, successful bargaining can keep spice available without removing the underlying need. Its transport monopoly gives it considerable leverage over customers, and customers can't easily replace what it provides. Even so, favorable terms have to result in actual access to melange. The need continues after an agreement has been reached. That makes the Guild's interest in a dependable supply quite concrete: ships may be ready and clients may have paid, while the specialist who makes safe passage possible still requires spice.",
+      "reason": "H18 identifies repetition 'with nothing new attached.' This paragraph repeats the institutional dependence already explained in the Guild-demand paragraph and the political-versus-bodily distinction just illustrated through Leto. The closing paragraph makes the same point again. Keep only the specific bargaining consequence here.",
+      "replacement": "The Guild's monopoly strengthens its bargaining position, but even favorable terms must secure an actual supply of melange.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Herbert's description also places Edric in suspension. He doesn't occupy the meeting in the ordinary manner of someone standing or sitting beside the others. He floats within the tank's orange atmosphere. That gives him a different physical relation to the conversation, even though he's fully involved in it. The enclosure allows contact, while its walls keep the participants apart. They can exchange arguments across that separation. They can't forget it in quite the way a passenger might forget the specialist responsible for a safe voyage.",
+      "reason": "H18 calls for cutting a re-mention that 'adds nothing.' The opening three paragraphs have already established floating, the orange atmosphere, participation in the meeting and physical separation. This paragraph supplies no further bodily detail or political development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For a House passenger, reaching Arrakis means entering a new assignment, a new residence, or a dangerous political situation. The Navigator has a separate task that makes those arrivals possible. Edric gives that professional category an individual body, with needs that continue outside the voyage itself. When he's participating in the meeting in Dune Messiah, he's still surrounded by melange. The navigation service may be used for a journey with a beginning and an end, while the person capable of providing it carries an ongoing dependence.",
+      "reason": "H18's 'third identical mention' problem applies to the continuing-dependence contrast. The preceding paragraph already establishes the passenger's departure-and-arrival perspective, and earlier paragraphs establish that Edric needs his environment during the meeting. The ending returns to this contrast more concretely.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Irulan's presence gives the encounter another familiar human reference. She's a princess, Paul's wife, and a participant in imperial politics. Her position can be understood through family, marriage, and the court. Edric's standing includes something immediately harder to overlook: the altered body enclosed before her. Both can speak for interests larger than themselves, but the Navigator brings a visible requirement into every exchange conducted this way. Even an influential Guild representative can't leave his need for spice outside the meeting while he attends to business.",
+      "reason": "H18 says a repeated theme should have 'one home paragraph.' The immediately preceding Mohiam comparison already contrasts another institution's representative with Edric's need for a tank. Irulan's titles are new details, but they do not produce a distinct answer to this chapter's bodily-cost question.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives secrecy a physical setting. The great ship carries people who have reasons to be curious about one another, yet their presence aboard doesn't give them access to everything it contains. A House can know where its own vessels are going while knowing very little about the work surrounding them. Herbert doesn't have to describe a hidden laboratory or a collection of locked records to make this separation understandable. The Atreides bring their own organization into a larger one, and the larger organization decides how far their access extends.",
+      "reason": "H18 applies because the preceding paragraph already explains the physical access restrictions aboard the heighliner. The imagined laboratory and records add methodological commentary rather than lore, and the final sentence restates who controls access.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 7,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "There's a useful comparison in Paul's own household. Thufir Hawat's work as a Mentat gives Leto access to trained analysis, while Jessica possesses Bene Gesserit abilities whose full extent isn't common household knowledge. Paul grows up among specialists. Their abilities are real, but being near them doesn't mean he already understands everything they can do. With the Guild, that distance is greater. The Navigator isn't a familiar adviser Paul can approach during an ordinary day on Caladan. The family deals with a service whose essential specialist is kept apart.",
+      "reason": "This comparison does not develop the assigned bargaining mechanism. It moves away from the concrete heighliner restrictions into a general observation about specialists, then returns to the already established inaccessible Navigator. The chapter reaches its specific spice-dependence explanation more directly without it.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 7,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Even a face can withhold useful information.",
+      "reason": "H17's Wise Narrator pattern is a 'knowing VERDICT or aphorism.' This polished generalization closes a paragraph that has already supplied the concrete information: contact lenses hide spice-saturated eyes. It adds a maxim rather than spoken explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul's position also helps explain why the Guild's secrecy has lasted without making the organization all-knowing. Most clients need transport for a particular purpose. Leto needs relocation; other Houses need the same system for their affairs. They can obtain the result they came for without discovering the carrier's deepest vulnerability. Paul arrives at the audience after experiences on Arrakis that give him a different understanding of spice. The Guild representatives now face someone who can connect their distant transport service to a living process on the planet beneath them. Their covered eyes and their response to his threat bring that connection into the room.",
+      "reason": "H18 identifies a script that 'keeps re-stating' its strongest point. The preceding paragraph already concludes that Paul changes negotiations by understanding and threatening the Guild's requirement. Ordinary clients' ability to use the service without understanding it has also been explained earlier. The chapter can close on the preceding paragraph's local answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Leto, this means that judging the carrier and judging the destination are separate tasks. He can rely on the Guild to take his people to Arrakis without expecting it to defend their rule there. His military preparations therefore have to address threats that passage itself won't remove. The Atreides inspect the position they've inherited and try to establish themselves among a population shaped by Harkonnen rule. Their journey has ended, but their vulnerability to forces arriving through the same system continues. Arrival doesn't close the route behind them.",
+      "reason": "H18 applies to the repeated passage-versus-protection distinction, already made in the first three paragraphs and developed through neutrality. H17's Wise Narrator pattern also appears in the final aphoristic sentence. Deleting this paragraph lets the Emperor's arrival supply the next distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Seen through these movements, the Guild's consistency can be useful and deeply unsettling at once. An Atreides commander doesn't need to believe that the carrier shares his loyalties to make use of its ships. He needs passage. The difficulty is that successful service to his own House gives him no assurance about the next customer. A Guild transport can fulfill the purpose for which the Atreides require it, while the organization continues to carry people who intend to kill them. The client's confidence has to remain limited to the service being obtained.",
+      "reason": "H18's repeated-framing problem is present: this restates the opening and the neutrality paragraph without a new consequence. The final paragraph already provides a concrete closing application to both Houses' dependence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It's worth keeping that conclusion close to what happens in the novel. The attack is expensive, and the Guild's charges contribute heavily to the expense. Herbert doesn't give us a tariff that would let us calculate the price of any other invasion.",
+      "reason": "The opening announces evidentiary restraint instead of advancing the explanation, then repeats the expense already established in the opening paragraph. H18 identifies the problem as a script that 'keeps re-stating it with nothing new attached.' A single sentence can preserve the useful limit on generalization without turning the narration into a methodological aside.",
+      "replacement": "This invasion shows the burden of one enormous deployment, not a standard price for interplanetary war.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "There's a useful comparison within the attack itself. The Harkonnens employ artillery against Atreides troops who take refuge in caves. In the circumstances of the battle, an old weapon has a specific use, and the Baron is willing to treat the equipment as expendable after it has done its job. Moving an army presents a different practical problem. The force has to reach Arrakis before any of its weapons can be useful. Clever decisions about equipment may improve an assault, while the requirement for interstellar passage remains an expense the commander has to face.",
+      "reason": "The artillery detour does not establish a meaningful cost comparison and returns to the already explained need to obtain passage. It adds battle detail without a distinct development in the assigned transport-cost argument. Deleting the paragraph preserves the chapter's causal sequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "The assault's concentration of force, its reliance on surprise and Yueh's betrayal all help produce the swift collapse the Baron needs. His spending is intended to leave as little unfinished fighting as possible.",
+      "reason": "The preceding sentences correctly identify the preference for a rapid result as a practical inference. These sentences turn it into a definite claim about what the Baron needs and specifically intends his spending to accomplish. The supplied evidence does not establish that precise motive.",
+      "replacement": "The assault's concentration of force, its reliance on surprise and Yueh's betrayal all help produce a swift collapse. That outcome also reduces the risk of further fighting delaying the revenue the Baron wants.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Baron's demands on Rabban carry that expense into ordinary rule. The investment that helped put soldiers onto Arrakis becomes pressure on the governor to make the planet pay. This is where the Guild's transport charges acquire a consequence far beyond the journey itself. The Guild doesn't have to govern Arrakis or issue Rabban's orders for its costly service to affect life there. The Baron has already paid to move his war across interstellar space. Under Rabban, the conquered population faces his determination to recover the money.",
+      "reason": "The closing paragraph restates the same repayment-to-occupation chain already explained in the opening, the paragraph ending with Rabban's inherited task, and the paragraph beginning 'For the people of Arrakis.' H18 requires that a second mention add 'a consequence, a comparison, the next number'; this final repetition adds none. The preceding paragraph already closes on the cost reaching into restored administration.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 10,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Following the cargo makes their separate roles easier to picture without assigning an invented contract or accounting procedure to Herbert's setting.",
+      "reason": "The example has already been explicitly identified as explanatory rather than a novel transaction. This sentence repeats that qualification and comments on the author's method instead of delivering lore. H12 calls for cutting 'inflated connective tissue'; the sleep adaptation likewise discourages repeated lectures about evidence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That inspection gives Leto a responsibility quite different from the Guild's. He's confronting conditions on the producing world, including equipment failures that threaten lives and output. Kynes evaluates him through what he does when the harvester is in danger. The Guild, meanwhile, supplies the interstellar connection on which the wider economy depends. These activities meet around the same valuable substance, yet the people carrying them out face different decisions. Leto's rescue of the workers tells us something about his administration that no statement about CHOAM dividends could provide.",
+      "reason": "The preceding paragraph has already used the harvester incident to distinguish local production from commercial reach and Guild passage. Almost this entire paragraph repeats that distinction. Under H18, the least useful repeated passage should be removed rather than expanded; the distinct observation about Kynes can remain on its own.",
+      "replacement": "Kynes also judges Leto by his decision to rescue the workers, so the inspection reveals something about the duke's rule as well as the condition of spice production.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "What they can't do is place a lasting watch above the desert and begin checking everything the Fremen would rather leave uncounted.",
+      "reason": "G3 supports exclusion of observation satellites, not the ability of such satellites to check everything the Fremen conceal. The sentence overstates the counterfactual observational capability and conflicts with the chapter's later, appropriately limited treatment.",
+      "replacement": "The bargain keeps observation satellites away, removing one way outsiders might check estimates of Fremen numbers and activity.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The water reserves make the stakes especially clear. Jessica encounters a community willing to preserve water for a purpose whose fulfillment lies beyond an individual's immediate comfort. That requires agreement among people who could otherwise use the water now. An outsider who saw only scattered desert inhabitants would miss the organization behind such a commitment. The satellite payment helps protect the space in which that organization operates. Fremen secrecy covers stores, work and collective plans, as well as the location of people who might take up weapons.",
+      "reason": "The preceding paragraph already explains communal water reserves, ecological work, long-term purposes and the value of poor observation. This paragraph adds an interpretation of collective commitment but then repeats the same concealment conclusion. H18 identifies repetition without a distinct development as an echo; retain only the interpretive addition.",
+      "replacement": "Preserving water for that distant goal also requires collective agreement: people accept limits on what they can use now for a change they may never live to see.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 12,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Stilgar's people can receive fugitives, decide whether to accept them, and give them places within an existing community. Paul has to face Jamis, and Jessica's abilities affect how the Fremen assess her. Neither arrival leaves the community waiting for an offworld ruler to organize it.",
+      "reason": "The initiation details begin a recap of Paul and Jessica's entry into Fremen society, already introduced in chapter 11, when the assigned question concerns what commodity access does and does not reveal. The useful development is the existence of an organized society before Paul, which can be stated directly without the scene detour.",
+      "replacement": "Paul and Jessica enter a society already able to shelter fugitives, judge newcomers and enforce its own decisions.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 12,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Their dependence has brought them into negotiations over spice for years, yet Paul's position rests on kinds of knowledge those transactions haven't supplied.",
+      "reason": "The satellite bargain establishes contact and dependence but does not establish a complete inventory of knowledge the Guild failed to acquire. Earlier wording properly treats this as a political interpretation. The ending should not convert that inference into a categorical statement about Guild knowledge or add an unnecessary duration.",
+      "replacement": "Their dealings over spice give them access to the Fremen, but access alone doesn't establish how fully they understand the society now supporting Paul.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 13,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "Jessica encounters a concentrated example when the Fremen prepare the Water of Life. They drown a small maker, and the resulting poisonous substance becomes part of the ritual through which she takes on the role of a Reverend Mother. The ceremony has consequences for Jessica and the unborn Alia, but it also places worm biology inside Fremen religious life. The maker isn't merely an obstacle encountered during travel. Its body, its vulnerability, and the substances associated with it enter practices preserved within the community.",
+      "reason": "The assignment requests only the ecological relationship needed to understand a supply threat. Jessica's initiation, Alia, and the broader religious interpretation move into a ritual subplot; the preceding paragraph has already established the relevant vulnerability to water. A short connection to the substance used in the following chapter preserves the useful bridge.",
+      "replacement": "The Fremen obtain the poisonous Water of Life by drowning a small maker. This gives them practical knowledge of a vulnerability that will matter when Paul threatens the source of spice.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For a House administering Arrakis, the most visible problems are often closer at hand. Harvesters need maintenance. Crews need rescue when machinery fails. Carryalls have to retrieve equipment before worms reach it. These are demanding responsibilities, and failure can cost lives as well as spice. Still, solving them would leave the underground cycle untouched. An administration could improve extraction while depending on ecological conditions it had done little to preserve. More efficient collection would increase the importance of continued replenishment.",
+      "reason": "The opening and Leto's rescue already establish the practical extraction problem, while the warehouse paragraph establishes the difference between harvested stock and biological replenishment. H18 says, \"A re-mention that adds nothing gets cut or replaced with the next piece of information from the research.\" This is the least useful return to both points.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Shaddam, this narrows the value of forces outside his immediate reach. His imperial position has depended in part on the ability to bring overwhelming strength against opponents, with Sardaukar providing the military core. On Arrakis, the Fremen have already challenged that superiority in combat. Now the Guild's response prevents the Emperor from treating the wider imperial order as an assured source of rescue. Paul hasn't personally defeated every House army. He's made the transport of further opposition unacceptable to the carrier those armies require.",
+      "reason": "The preceding paragraph already explains that waiting House forces cannot intervene because Paul has pressured their carrier. Changing the viewpoint to Shaddam does not add a further causal step. H18 identifies the defect as \"keeps re-stating it with nothing new attached.\" Deletion also moves directly from the Guild's accommodation to the important question of Paul's credibility.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Edric, in turn, needs collaborators who bring access and skills he doesn't supply. Irulan lives within the imperial household. Mohiam brings Bene Gesserit interests, and Scytale brings the Tleilaxu contribution. The Navigator's presence doesn't absorb their roles into his own.",
+      "reason": "The chapter has already named the participants. This second allocation of their roles belongs to chapter 17's explicit assignment to identify their distinct interests; here it delays the useful distinction between concealment and guaranteed success. Removing it leaves that distinction intact.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "His protection makes their gathering possible under conditions that would otherwise expose them to Paul's unusual awareness.",
+      "reason": "G5 establishes that Edric conceals participants, not that Paul would certainly detect this particular gathering without him. The counterfactual certainty also conflicts with the chapter's otherwise careful account of incomplete prescience.",
+      "replacement": "His presence helps conceal their gathering from Paul's prescient awareness.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Shaddam's presence on Arrakis provides a direct comparison. The old Emperor brings military force to the planet, but that expedition also depends on interstellar carriage. Imperial troops and Guild transport have separate jobs. Removing Shaddam doesn't merge those jobs into Paul's person or his household. Paul gains the throne through the settlement at Arrakis, while the organization that carried imperial forces there retains its specialized function. He has changed the conditions under which that organization must deal with the throne. The need to carry people across space survives the defeated Emperor.",
+      "reason": "The opening states that imperial change does not replace the transport system, and the Atreides relocation already provides a concrete example. This second historical comparison repeats the same division of labor. H18 requires that \"the second mention must add something the first did not carry.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul's own background makes the distinction quite concrete. He has learned to fight under Gurney Halleck and Duncan Idaho, and he has received Mentat training from Thufir Hawat. His abilities expand far beyond what his teachers expected. None of those accomplishments makes him the workforce of an interstellar carrier. Even his prescience doesn't place him aboard every ship that needs guidance. As a political implication of the setting, an Emperor with unusual personal abilities still needs other people to perform specialized work throughout his realm.",
+      "reason": "The preceding paragraph already distinguishes imperial authority from possession of Navigators, vessels, and institutional practice. Paul's training adds biographical material but no new explanation of transport dependence. H18 describes the document-scale problem as \"the script gets stuck on one fact, one phrase, or one framing and keeps re-stating it with nothing new attached.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Continued service can therefore coexist with political hostility. That shouldn't be mistaken for an ordinary commercial relationship with no consequences beyond payment. Paul has demonstrated that he can put the Guild's future at risk, and the Guild retains a necessary place in the movement of his empire. Each voyage takes place within that altered situation, although the novels don't require us to imagine a new negotiation for every departure. The larger accommodation allows transport to continue while leaving serious reasons for resentment among those who provide it.",
+      "reason": "Edric's participation has just concretely demonstrated service without loyalty, and the final paragraph already closes on that implication. This intervening paragraph repeats the conclusion and adds an unnecessary caveat about imagined departure negotiations. H18 says, \"A re-mention that adds nothing gets cut.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "With Scytale present, the meeting becomes more complicated than an agreement among dispossessed political interests. The Tleilaxu have purposes of their own, and the others must consider proposals whose full value to their author may differ from their value to everyone else. Mohiam has the Sisterhood's priorities. Irulan has her position in the household. Edric brings the Guild's exposure to Paul's power over spice. Their cooperation requires negotiation among those interests, even while his prescience gives them a protected opportunity to conduct it.",
+      "reason": "H18, \"the script gets stuck on one fact, one phrase, or one framing and keeps re-stating it with nothing new attached.\" The preceding four paragraphs already distinguish these participants and their interests; this paragraph largely lists them again.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The opening meeting gives Edric an active place in imperial politics while keeping his dependence physically present. Mohiam can bring the Sisterhood's demands, Irulan can bring knowledge of the household, and Scytale can bring Tleilaxu proposals. Edric supplies the prescient concealment under which they meet. Their differences remain around him as they discuss what to do about Paul. Throughout that discussion, the Navigator stays inside his tank, surrounded by the spice-rich gas that allows him to take part at all.",
+      "reason": "H18 says a second mention must add \"a consequence, a comparison, the next number.\" This ending repeats the opening tank image, the participant list and the concealment explanation. The preceding paragraph already provides a complete local conclusion about the Guild's risky dependence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It helps to keep the practical situation in view. Scytale can put an idea before the others without assuming that Paul is following the exchange through a vision. Mohiam can consider what that proposal means for the Bene Gesserit. Irulan can speak as someone who lives within Paul's household. Edric allows this discussion to happen under conditions more favorable to them. He hasn't supplied agreement, and his presence doesn't remove their separate interests. Everything they say still has to pass between people capable of misunderstanding, resisting or using one another.",
+      "reason": "H18 identifies repeated framing with \"nothing new attached.\" The preceding paragraph already says Edric enables discussion but cannot supply agreement, and chapter 17 has already explained each participant's role. Deleting this paragraph moves directly into the useful ordinary-witness comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 18,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The novel doesn't give an exact mechanism for how Edric's foresight obscures another prescient observer. It gives the conspirators a usable advantage, with Edric's presence central to their concealment. Thinking of that advantage as a blind region is helpful, provided we don't imagine a mapped boundary around the tank. Paul lacks a view the conspirators want to deny him. Inside that uncertainty, they still need workable plans, suitable opportunities and cooperation. None of those arrives automatically with the Navigator, and the gathering spends its time discussing them because they remain unresolved.",
+      "reason": "The assignment forbids inventing an exact mechanism, but does not require a paragraph policing the listener's mental model. This is excessive methodological caveating followed by another restatement of the chapter's established distinction.",
+      "replacement": "Edric denies Paul a view of their deliberations, but the conspirators still have to turn those deliberations into actions other people may resist.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 18,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "There's an earlier encounter that makes Paul's difficulty easier to recognize. Near the end of Dune, Count Fenring stands before him, and Paul recognizes that this dangerous man has been absent from his prescient visions. Fenring's presence matters immediately because the Emperor wants him to kill Paul. Paul has reached a confrontation he'd seen approaching, yet a person capable of changing its outcome has escaped his view. The room contains a danger that his previous visions haven't allowed him to account for in the way he might have expected.\n\nFenring isn't another Guild Navigator, and his absence from Paul's visions shouldn't be treated as an explanation of Edric's ability. The useful comparison is Paul's experience of meeting someone his foresight hasn't disclosed. Fenring can act, and Paul must confront that possibility in the room. Fenring then refuses the Emperor's demand. That refusal comes from Fenring himself. Even in this earlier encounter, a blind spot leaves Paul facing a person whose response matters, rather than an empty place where the future has stopped happening.",
+      "reason": "This two-paragraph excursion introduces a separate prescient exception and confrontation not established by G5 or the supplied proof bank. It is not being rejected as false; it is unnecessary additional lore when the assigned ordinary-witness comparison already explains the distinction without requiring another mechanism disclaimer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The conspirators therefore gain an opportunity they have to use with care. They can exchange proposals under Edric's protection, then carry those proposals into places where other people will react. A private agreement may encounter resistance. A participant may pursue a separate priority. Paul may respond in a way their discussion hasn't prepared them for. Those difficulties are already present around the opening meeting, in the differences between Mohiam, Irulan, Scytale and Edric. The Navigator conceals their deliberations from Paul's prescient sight while they continue the uncertain business of deciding what to do.",
+      "reason": "H18 calls for giving a repeated observation \"one home paragraph.\" This conclusion repeats the ordinary-action limitation already explained through witnesses, household activity, competing interests and Paul's responses. The preceding paragraph can close the chapter without another general summary.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 19,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Hayt therefore arrives with an emotional importance that an unfamiliar servant, adviser or ambassador would have to spend years acquiring.",
+      "reason": "The assertion that an unfamiliar person would require years is an unsupported comparative timescale. The emotional-access point is supported by Duncan's relationship with Paul and needs no invented duration.",
+      "replacement": "Hayt therefore arrives with an emotional importance rooted in Paul's life with Duncan, even before Paul knows what to make of the man before him.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Bijaz gives that danger another route into the room. He has helped carry the conditioning placed within Hayt, and he continues the pressure after Scytale's death by renewing the possibility of bringing Chani back. Paul recognizes how difficult that offer will be to keep refusing. He tells Duncan to kill Bijaz, and Duncan obeys. The recovered man now helps Paul end the approach that depended on his altered existence. Edric's concealment couldn't prevent this exchange between Paul and someone whose allegiance had survived the Tleilaxu intervention.",
+      "reason": "This recounts events after Scytale's death before the narration returns to his confrontation. It also adds a secondary plot mechanism when the assigned point is Duncan's recovered agency and the limits of Edric's protection.",
+      "replacement": "Duncan's recovery gives Paul an ally who can resist the purposes imposed on Hayt. Edric's concealment has protected the conspiracy's preparations without preserving its control over the man it brought into Paul's household.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "scope",
+      "severity": "major",
+      "quote": "Scytale's confrontation with Paul makes the limits of the plot more immediate. He threatens Paul's children and tries to compel agreement while Paul is physically blind. Paul has been moving and acting through prescient vision since the stone burner destroyed his eyes. In this encounter, however, his access to the situation changes. He sees through the eyes of his infant son, Leto, and uses that unexpected view to strike Scytale with a knife. The Tleilaxu negotiator dies before he can enforce his terms.\n\nPaul hadn't foreseen the twins' birth as it actually happens. That matters alongside the sudden view through his son's eyes, because the resolution includes a surprise for Paul himself. His enemies are dealing with someone whose foresight has real limits, yet those limits don't leave him helpless in the way they expect. A child whose arrival escaped his anticipated future provides the sight he needs. The outcome depends on an encounter within the family, at close range, far removed from the Guild's familiar work of finding a safe passage between stars.",
+      "reason": "The assignment says to focus on the failure of Edric's advantage rather than retell the assassination plot. These paragraphs introduce the stone burner, physical blindness, the twins, shared sight and the killing's mechanics. Their cumulative effect is an endgame recap rather than a targeted account of concealment's limits.",
+      "replacement": "Scytale cannot turn his offer into the agreement he wants, and Paul survives the confrontation. Edric's protection has hidden the conspiracy's preparations without ensuring that its final demands succeed.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The comparison with an ordinary secret meeting helps here. Keeping Paul from observing the conspirators through foresight doesn't remove the people who can meet them, hear their proposals or resist their actions. Hayt spends time with Paul and Alia. His behavior gives them opportunities to respond to him as a person, despite the purposes behind his arrival. Once Duncan returns, those encounters have helped place a capable ally near Paul. The plot's protected preparation has delivered someone who can assist its intended victim when the final pressure comes.",
+      "reason": "H18 identifies document-scale repetition, not merely repeated wording. Chapter 18 already develops the ordinary-secret-meeting comparison, and chapter 19 explains Hayt's household relationships. Chapter 20's concrete recovery and refusal already demonstrate the conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Paul eventually walks into the desert after losing the prescient sight that had allowed him to live as a sighted man. He follows the Fremen custom for the blind, leaving the imperial household and his children behind. That departure isn't the submission Scytale tried to purchase through the offer of Chani's restoration. Paul has refused the bargain, Scytale and Bijaz are dead, and Duncan remains himself. Edric helped hide the conspiracy's preparations. He couldn't make Duncan kill Paul, make Paul accept the Tleilaxu offer, or decide what Paul would do when that offer was gone.",
+      "reason": "Paul's desert departure extends the plot recap beyond what is needed to answer the assigned question. A shorter ending can preserve the specific outcomes that demonstrate the failure of control.",
+      "replacement": "Paul refuses the Tleilaxu bargain, and Duncan remains himself. Edric helped hide the preparations, but his protection could neither make Duncan kill Paul nor make Paul accept the offer of Chani's return.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The change on Arrakis is especially important because it prevents the Guild from treating this as a dispute with a difficult supplier whose competitors might welcome its business. In the original imperial order, rival Houses could compete for the privilege of administering the same planet. Their competition never created another Arrakis. Under Leto, even that succession of managers has given way to his personal rule. Melange remains bound to the history and ecology of one world, while the usable reserves sit within an order he has spent millennia shaping.",
+      "reason": "H18 identifies repetition where a script 'keeps re-stating it with nothing new attached.' The opening two paragraphs already establish the vanished harvesting alternative and Leto's stockpile control. The comparison with rival managers does not materially develop that mechanism here.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This doesn't mean every Guild journey requires a fresh personal instruction from Leto. The political implication is that the Guild has to plan its continuing operations around access he can restrict. A ship already available for service doesn't become a replacement source of spice. Neither does a long record of successful voyages. The organization's achievements remain useful, but they can't refill its reserves. Leto can leave its specialized work in its own hands and still establish the material conditions under which that work continues.",
+      "reason": "H18 requires cutting a 're-mention that adds nothing.' The earlier paragraph beginning 'For a Navigator' already explains that ships and accumulated experience cannot replace spice and that Leto need not direct individual journeys. This is the least useful full repetition of that explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild survives this long subordination. Its ships, Navigators and institutional knowledge remain part of human life under Leto, even as its bargaining position has narrowed. That survival matters: he has kept a useful carrier in operation while making its continued functioning dependent on his allocations. Across the transformed Arrakis, there are no harvesting crews bringing in a fresh desert crop to relieve that dependence. The spice reaching the Guild comes from reserves, and Leto decides what leaves them.",
+      "reason": "H18's document-scale echo applies to this final return to reserves, vanished harvesting and constrained bargaining. Retain the useful closing point that subordination does not mean abolition, without explaining the entire mechanism again.",
+      "replacement": "The Guild survives under Leto, still carrying people between worlds, but its control of transport doesn't let it set the terms of his spice allocations.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 22,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "Ix already has an unusual place in God Emperor of Dune. Its people produce sophisticated devices within a civilization still shaped by the prohibition against thinking machines. Leto deals with them despite the unease that their work provokes. Hwi Noree arrives as the Ixian ambassador, and the circumstances of her creation involve another Ixian achievement: a place hidden from prescient observation. Around her, technical invention and political maneuvering are closely connected. Ix can make things that interfere with advantages Leto possesses, although those inventions don't give the Ixians command of everything he does.",
+      "reason": "The release scope permits later novels for Leto's leverage and the Ixian challenge, not an adjacent account of Hwi's political role. Her concealed origin is useful to the next paragraph's distinction, but the surrounding generalizations and diplomacy are unnecessary.",
+      "replacement": "In God Emperor of Dune, the Ixians conceal the creation of Hwi Noree from Leto's prescient observation. That hidden place provides an example of concealment, which is a different capability from navigating a ship.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For comparison, the Atreides move to Arrakis takes place within an arrangement where House possessions and forces depend on the Guild's interstellar service. The family can prepare for departure and command the people being moved, but that doesn't give it a substitute for Guild passage. The later availability of navigation machinery changes that practical relationship. An operator with a suitable vessel and the necessary system can dispense with the Navigator's service. This is the point at which a customer can begin to have an alternative, rather than merely another reason to negotiate with the same carrier.",
+      "reason": "H18 says a second mention must add 'a consequence, a comparison, the next number.' Although framed as a comparison, this paragraph repeats the opening's existing comparison between House vessels, Guild dependence and the new navigational alternative. The following paragraph supplies the actual new bargaining consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 23,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "The returns also expose how little the old worlds know about the places beyond them. In Chapterhouse: Dune, Murbella gives the Bene Gesserit access to Honored Matre experience through a person they can question, train and eventually incorporate into their leadership. She carries knowledge acquired in a society the Sisterhood didn't direct. Her presence matters because having ships capable of reaching somewhere doesn't supply an understanding of its inhabitants. Odrade's problem includes learning what the newcomers fear and how they behave, while those newcomers are already acting against her.",
+      "reason": "The assignment asks for brief setting changes followed by analysis of transport resilience. This paragraph shifts into Murbella's incorporation and Odrade's intelligence problem, while the preceding opening paragraphs have already established unfamiliar returning societies. Removing it keeps the later-book material tied to the authorized transport question.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 23,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "When we call this later arrangement more resilient, the claim needs to stay with those particulars. The original Guild monopoly concentrated ordinary interstellar passage in one institution whose Navigators shared a physiological requirement. Later vessels can navigate without that personnel, while human settlements extend beyond the old imperial structure. It follows that a ruler who captures a spice stockpile or intimidates one carrier has fewer grounds for expecting universal obedience. People elsewhere may still possess the means to leave, return or continue supplying their own communities.",
+      "reason": "The first sentence gives the listener a methodological instruction rather than lore. The sleep adaptation asks for thoughtful interpretation without repeated lessons about evidentiary framing. The concrete causal explanation can stand directly.",
+      "replacement": "The original monopoly concentrated interstellar passage in an institution whose Navigators all needed spice. Later navigation machinery and settlements beyond the old imperial structure reduce the reach of that bottleneck. Control of one carrier or stockpile no longer gives a ruler the same hold over communities that can move and supply themselves independently.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The tank also changes the usual picture of a powerful Guild official. Edric belongs to an organization that carries the great powers of the Imperium, yet he conducts this meeting inside a specialized enclosure. Mohiam can bring Bene Gesserit knowledge to the discussion, and Irulan brings her position within Paul's household. Edric brings prescience along with the environmental needs of his altered body. His usefulness to the conspiracy and his dependence exist together in the room. Neither makes the other disappear.",
+      "reason": "H18 flags an observation repeatedly given new wording without development. Edric's visible dependence and political participation have already been established in the third and fourth paragraphs. The final paired verdict also repeats the contrast rather than giving the closing chapter a new concrete detail.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "His prescience gives the gathering a particular advantage. Edric's involvement conceals the conspirators from Paul's prescient sight, allowing people threatened by Paul to plan under that protection. The ability associated with finding a safe course through space therefore matters even when Edric isn't navigating a ship. He can affect what another prescient person perceives. That helps explain why these participants want him present, rather than dealing only with an ordinary Guild intermediary who could carry messages or negotiate on the organization's behalf.",
+      "reason": "The final chapter is assigned a specific passenger-and-body contrast and expressly should not become an all-chapter summary. Explaining prescient concealment again reopens the subjects assigned to chapters 17 and 18 rather than resolving this ending. Its removal leaves the tank scene intelligible.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Still, Edric has to participate in a conversation. Mohiam, Irulan and Scytale bring different interests and abilities, and they must arrange actions involving people outside the meeting. His presence doesn't settle those practical difficulties for them. The tank contains a conspirator who needs other conspirators, as well as a Navigator whose abilities they need. Seeing him among these particular people keeps him from becoming an abstract explanation for Guild success. He has a place in an unstable arrangement, with Paul as their shared opponent.",
+      "reason": "This continues the detour into the conspiracy's operational limits, a subject assigned to chapters 18 and 20. It adds neither a new bodily detail nor a new aspect of the customer's experience. Deleting it also prevents the preceding deletion from leaving an unsupported 'Still' transition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The secret beneath reliable passage is therefore quite practical. The Atreides can prepare to leave Caladan because the Guild supplies something their own forces can't replace. Edric shows what that supply asks of a person inside the organization. Ships and their passengers remain necessary parts of the journey, alongside the Navigator's limited foresight and his dependence on melange. To the departing household, those requirements can stay out of sight. They experience transport as the means of reaching the place where their own difficulties will begin.",
+      "reason": "H18's echo rule applies: this repeats the opening's Atreides comparison, the fifth paragraph's continuing bodily requirement and the immediately preceding paragraph's visible spice connection. The title's answer remains clear without another full synthesis immediately before the final tank image.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Dune Messiah gives Edric time away from that unseen position, although it never gives him the ordinary freedom of the people meeting around him.",
+      "reason": "Edric's depicted enclosure supports a contrast in bodily circumstances, not the broader categorical claim that the novel never gives him ordinary freedom. 'Freedom' can also imply political or personal restrictions not established by the supplied evidence.",
+      "replacement": "Edric's political role doesn't remove the needs of his altered body.",
+      "rewrite_required": false
+    }
+  ],
+  "narration_sha256": "2af2724a85e728750ce8e326edac25aaf219be1fbd0f8949839ae728d18436e8",
+  "method": "Mechanical checks plus separate quoted editorial reports. Neither establishes actual audio duration or a complete independent episode/book viewing."
+}

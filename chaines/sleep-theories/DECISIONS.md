@@ -1,5 +1,13 @@
 # Décisions à conserver
 
+- 15 octobre : l'utilisateur demande de réduire la part de Star Wars car sa vidéo
+  la plus vue est Dune. Le prochain lot Deep Void contient **deux Dune, un Star Wars**.
+  La proposition Revan est remplacée par **Paul Atréides** ; la Guilde reste l'autre Dune.
+- Les six sujets du lot du 15 octobre sont autorisés pour recherche, validation
+  et rédaction complètes. Pas de nouvelle confirmation à demander pour écrire.
+  Plans et limites dans scripts-2026-10-15 ; la voix, le montage et la publication
+  ne sont pas lancés par cette commande de scripts.
+
 - Échanges avec l'utilisateur en français, familiers et concis. Titres, narration
   et descriptions destinés à YouTube en anglais.
 - Deux chaînes sœurs : Deep Void Theories pour le lore de science-fiction ;

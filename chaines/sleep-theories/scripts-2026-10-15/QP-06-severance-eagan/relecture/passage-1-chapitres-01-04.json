@@ -1,0 +1,187 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Cobel's recovered severance research challenges the credit given to Jame Eagan and establishes a concrete reason to question the family's official history.",
+      "new_information": [
+        "Sweet Vitriol reveals Cobel's original severance work and Jame's appropriation of credit.",
+        "Cobel retrieves documentation that gives her contribution a material basis beyond an accusation.",
+        "Her continued devotion to Lumon can coexist with resentment toward its leadership.",
+        "Correcting authorship does not explain every contributor, component or intended future use of severance."
+      ],
+      "local_answer": "The family's invention story cannot be accepted at face value: the supplied evidence establishes that work credited to Jame was Cobel's.",
+      "open_issues": [
+        "The chapter repeatedly restates the authorship correction after delivering it clearly in the opening.",
+        "Several paragraphs anticipate the research, devotion and retained-document analysis assigned to chapters 10-12 and 24.",
+        "The authorship qualification and the later warning against inferring immortality give methodological boundaries more space than this opening needs."
+      ],
+      "evidence_notes": "The central correction agrees with E4, and the draft appropriately avoids claiming that Cobel personally manufactured the entire system. The season-one-and-two spoiler announcement is explicit. The optional subscribe and listening-location/day-or-night request appears once, early in this chapter, and is not repeated in the other supplied chapters."
+    },
+    {
+      "number": 2,
+      "summary": "The Perpetuity Wing presents Eagan leadership as a continuous company-curated history to workers who cannot readily compare it with outside accounts.",
+      "new_information": [
+        "The museum presents successive Eagan leaders through figures, biographical displays and recorded voices.",
+        "Placing successive leaders together encourages employees to understand Lumon through a continuous family history.",
+        "Severed employees can learn the employer's biography while lacking access to their own outside biographies.",
+        "Irving helps transmit the company's historical reverence socially, while his colleagues respond differently.",
+        "The exhibits preserve leaders' influence without demonstrating any technological survival."
+      ],
+      "local_answer": "Employees encounter the room as a workplace introduction to institutional authority, not as access to a complete or independently verified family history.",
+      "open_issues": [
+        "The general museum-source caveat is followed by an extended family-tree caveat, slowing the transition to the stronger analysis of employee access.",
+        "The final paragraph repeats the distinction already established between a curated account and a complete history."
+      ],
+      "evidence_notes": "The chapter follows E1 and the assigned outline without inventing CEO dates or genealogical links. Claims about the museum's persuasive effects are presented as interpretation. The account preserves differences among the employees rather than treating the display as uniformly successful indoctrination."
+    },
+    {
+      "number": 3,
+      "summary": "Kier's teachings retain practical authority because employees and current managers circulate them through handbooks, artwork, supervision and discipline.",
+      "new_information": [
+        "Irving uses the handbook as a resource for discussing conduct and meaning at work.",
+        "Irving and Burt's shared interest gives company teaching a social and personal use beyond managerial enforcement.",
+        "Different handbook editions show that teachings attributed to Kier reach employees through later institutional decisions.",
+        "The break room gives supervisors control over prescribed speech and the acceptance of contrition.",
+        "Milchick's presentation of the Fourth Appendix demonstrates a current manager selecting the occasion for additional doctrine."
+      ],
+      "local_answer": "Authority passes from the absent founder to present managers through company-controlled texts, images and procedures, while employees also give those materials meanings of their own.",
+      "open_issues": [
+        "The claim that shared reverence supplies a permitted reason to spend time together implies a specific institutional permission that the supplied material does not establish.",
+        "The statement that workers are not choosing when to expand their reading is broader than the particular company-organized presentation demonstrates."
+      ],
+      "evidence_notes": "The chapter attributes the teachings to Lumon and Kier rather than presenting them as objective moral science. It invents no exact quotations. E1 and E3 support the principal authority chain; several scene-level details come from the supplied narrative rather than the short proof-bank summaries and have not been independently verified here."
+    },
+    {
+      "number": 4,
+      "summary": "Lumon turns Kier's four-tempers doctrine into an emotionally guided sorting task whose connection to Gemma's testing becomes consequential in the finale.",
+      "new_information": [
+        "Kier's presented classification names woe, frolic, dread and malice.",
+        "MDR's interface connects those categories to bins, progress and file completion.",
+        "Helly learns to select numbers through a felt response rather than a conventional numerical rule.",
+        "The work depends on emotional and practical capacities that severance has not erased.",
+        "Cold Harbor links Mark's refinement work to testing whether Gemma's outside emotional pain crosses into a separate identity."
+      ],
+      "local_answer": "The four tempers are Lumon's doctrinal and operational categories, not a validated account of all human emotion; the finale shows that the sorting work affects another person's partitioned experience.",
+      "open_issues": [
+        "Two late passages speculate about whether the category names are merely branding or correspond to usable technical properties without adding a supported mechanism.",
+        "The chapter spends several passages qualifying what the numbers do not explain after already establishing the employees' limited knowledge."
+      ],
+      "evidence_notes": "The four categories and MDR task are authorized by the assignment, while the narrow Cold Harbor interpretation agrees with E6. The draft does not assert a complete neuroscience, a solved corporate purpose or permanent emotional erasure. Its proposed relationship between the category labels and equipment remains explicitly hypothetical, but is unnecessary speculation."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "A familiar name can make an invention seem easier to understand. With Jame Eagan attached to severance, the technology fits into a continuing family story. Kier founded Lumon, later Eagans led it, and the present leadership can present this achievement under the same name. Cobel's work interrupts that account. Once she enters it as a developer whose credit was taken, the invention has a history involving someone the family's version has pushed aside. We have to make room for her contribution before considering what Jame says the technology will accomplish.",
+      "reason": "H18 identifies the problem as a script that 'keeps re-stating it with nothing new attached.' The opening and third paragraph have already explained the family-credit narrative and Cobel's exclusion. This paragraph repeats that explanation immediately after the core question instead of advancing it.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "There's a limit to the correction, and it's worth keeping clear from the beginning. Sweet Vitriol reveals Cobel's original severance work and Jame's appropriation of credit. It doesn't provide a complete account of every person who helped develop the procedure, every stage of testing, or every component of its equipment. Calling Cobel its true inventor is useful shorthand, provided we retain that distinction. Her recovered work challenges Jame's claim without requiring us to imagine her designing and manufacturing an entire system alone.",
+      "reason": "The factual boundary is useful, but five sentences repeat the correction and explain a shorthand the narration does not need. The sleep adaptation calls for lore and interpretation rather than an extended lecture about evidentiary limits; one sentence can preserve the necessary qualification.",
+      "replacement": "Her recovered research establishes her original contribution and Jame's appropriation of credit, without making her the sole developer of every part of severance.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It's possible to read her retained research chiefly as something she can use when her position becomes precarious. Documents that establish authorship can give her a stronger position than an unsupported accusation would. That reading fits the practical value of recovering them. Keeping them may also suggest that the work still matters to her personally, though the papers can't tell us every reason she preserved them. We can stay with the concrete fact: she has kept a record that allows her contribution to survive outside the account that credits Jame.",
+      "reason": "H18 warns against repeating a fact without a new consequence. The third paragraph already establishes that the documents can be carried into her dealings with others and make her claim more than a complaint. This paragraph largely repeats that point, adds a hedged motive, and spends material assigned to chapter 12.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This is where the opening correction helps us approach the family's other secrets without treating every unanswered question as the same kind of mystery. Authorship is something Sweet Vitriol addresses with Cobel's research and the account of what Jame took. The Eagans' eventual plans for severance remain a different matter. Knowing that the invention story has been distorted doesn't supply a missing mechanism for immortality, or reveal who might inhabit a chip. It gives us a specific reason to question a specific piece of family history.",
+      "reason": "The first paragraph already promises to separate the public history, underlying work and unexplained future. This paragraph repeats that methodological promise and introduces speculative chip occupancy only to disclaim it. Under H18, the least useful repeated framing should be cut rather than expanded with further caveats.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The succession also needs to be kept separate from a detailed family tree. The room identifies an Eagan dynasty associated with Lumon's leadership. It doesn't give us permission to fill every gap between its members with an assumed parent, child or sibling relationship. Sharing the surname and occupying successive positions tells us something about the family's continuing place in the company. It doesn't settle every private connection between the people represented. We can follow the institutional sequence without supplying generations the story hasn't explained.",
+      "reason": "The assigned genealogical boundary is respected, but this six-sentence passage narrates the review rule rather than developing the museum's effect on workers. Coming directly after another source-limitation paragraph, it delays the chapter's most concrete distinction between access to employer history and access to personal history.",
+      "replacement": "The displays establish a succession of Eagan leaders, but they don't establish every family relationship between them.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Their growing affection develops in a workplace that gives them very little privacy, and a shared reverence offers a permitted reason to spend time together.",
+      "reason": "Shared interest can explain their connection, but neither the supplied proof bank nor the assignment establishes that discussing Kier gives them institutional permission to spend time together. The sentence moves from observed affinity to an unsupported rule about access.",
+      "replacement": "Their growing affection develops in a workplace that gives them very little privacy, and their shared interest in Kier gives them something personal to talk about.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "The workers aren't choosing when to expand their reading or which account deserves their attention. Milchick brings the text and sets the occasion for receiving it.",
+      "reason": "E3 supports a company-organized encounter with the Fourth Appendix, not the broader claim that employees cannot choose when to expand their reading. The preceding discussion of Irving and Burt already depicts active interest in texts. Keep the conclusion local to this outing.",
+      "replacement": "For this outing, Milchick chooses the text and the occasion on which the workers receive it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "For much of the story, the obscurity of the numbers leaves room for the possibility that the doctrine mainly supplies a company-approved explanation for an unrelated process. Businesses can name technical systems after things their founders admired. With MDR, however, the second-season finale brings the work much closer to a person's emotional life. Mark's Cold Harbor file is connected to Gemma's testing. The refiners' activity has consequences beyond their department, even though the workers at the desks haven't been allowed to see those consequences for themselves.",
+      "reason": "The first two sentences introduce an unsupported hypothetical about unrelated technical branding rather than advancing the supplied account. The useful development is the finale's connection to Gemma, which can be delivered directly without rehearsing an alternative the chapter has not otherwise established.",
+      "replacement": "The second-season finale connects Mark's Cold Harbor file to Gemma's testing. The refiners' activity has consequences beyond their department, even though the workers at the desks haven't been allowed to see those consequences for themselves.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It would still be a stretch to assign each temper a precise technical function. The finale doesn't provide a complete explanation of how selecting a number helps produce a partition, or how the four categories relate to every part of Gemma's experience. The labels might organize the process according to Lumon's established doctrine, while also corresponding to something its equipment can use. What we can say is that the categories participate in real work within the story. Their presence on the screen has acquired consequences that a museum display alone couldn't show.",
+      "reason": "H18 describes repeated framing with no new information. Earlier paragraphs already establish incomplete employee knowledge, the difference between doctrine and a validated emotional model, and the newly visible consequences for Gemma. The equipment sentence adds an unneeded hypothetical mechanism. Retain only the narrow unresolved technical boundary.",
+      "replacement": "The finale links refinement to Gemma's partitions without explaining exactly how the four categories contribute to creating them.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2
+      ],
+      "detail": "Both chapters repeatedly distinguish the family's official account from a complete history. The connection is appropriate, but chapter 1 should establish the concrete authorship correction and chapter 2 should develop the museum's effect on employees, rather than each repeatedly explaining why curated history needs qualification."
+    },
+    {
+      "chapters": [
+        2,
+        3
+      ],
+      "detail": "Both explain that innies lack access to personal history while Lumon supplies a source of meaning. The second use adds Irving's sincere attachment and companionship with Burt, so it is useful development rather than a passage requiring deletion."
+    },
+    {
+      "chapters": [
+        3,
+        4
+      ],
+      "detail": "Both return to doctrine becoming a practical workplace procedure. The developments are distinct: chapter 3 examines managerial authority and prescribed speech; chapter 4 examines emotion-guided refinement and its consequences for Gemma."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10, Cold Harbor, and do not assert the prohibited resurrection, cloning, genealogy or solved-endgame claims. The spoiler notice and single optional early request comply with the supplied sleep adaptation. Chapters 5-24 were supplied as outline assignments only and have not been reviewed as narration.",
+  "limitations": "This review covers all four supplied chapter texts against the supplied proof bank, outline and voice guidance. The source URLs and their recorded opening dates were treated as supplied evidence metadata; no websites were opened, episodes watched, audio measured or independent verification of every scene-level detail performed. No clear machine-tier banned phrase or non-ASCII narration artifact was identified in the supplied chapter prose. The principal defects are repeated framing, oversized methodological qualifications and two local claims broader than their stated support.",
+  "input_hashes": {
+    "1": "86f8cd35dbbd7b103f4009562413222fefa143eb5d3f12ea2ecdaa329d021a0d",
+    "2": "ced259b57dc7a8009236a99336b0768e3a9b5fdc0e7963b4b06635bcab5693d0",
+    "3": "96559886b341865e2e304f910b24027314f5b86ca5fea15831f7244b2b77c09f",
+    "4": "4bf9df18067c0dc2a4068ad95f1cc61493c78470f542a7725ec72461dff8c7db"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

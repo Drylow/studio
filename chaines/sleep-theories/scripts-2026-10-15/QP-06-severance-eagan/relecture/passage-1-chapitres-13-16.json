@@ -1,0 +1,213 @@
+{
+  "chapters": [
+    {
+      "number": 13,
+      "summary": "Lumon introduces Dieter as Kier's twin through a company-controlled appendix that uses his fate to reinforce Kier's moral authority.",
+      "new_information": [
+        "Kier's Fourth Appendix introduces Dieter during the Woe's Hollow retreat.",
+        "The appendix connects Dieter's sexual conduct, Kier's condemnation and a supernatural destructive fate.",
+        "Dieter's perspective is available only through the account attributed to Kier.",
+        "The twin relationship offers a thematic comparison with severed identities but does not establish a severance experiment or manufactured duplicate."
+      ],
+      "local_answer": "The chapter answers how Dieter enters the story and why Lumon's use of that account matters independently of its historical truth.",
+      "open_issues": [
+        "The paragraph beginning 'For Helly' does not clearly distinguish Helly's earlier experiences from Helena's presence at the retreat.",
+        "Several paragraphs repeat that Lumon controls the account and denies Dieter an independent perspective."
+      ],
+      "evidence_notes": "The central account is consistent with E3 and the assignment. The supernatural material is attributed to the appendix rather than presented as verified history. The psychological and institutional readings are generally marked as interpretation."
+    },
+    {
+      "number": 14,
+      "summary": "The outdoor retreat gives the innies new experiences while keeping their route, activities and return under Lumon's control.",
+      "new_information": [
+        "The innies become conscious outside without experiencing the journey there.",
+        "The appendix supplies a route and destination that turn reading into a supervised physical activity.",
+        "Figures resembling the refiners introduce uncertainty without demonstrating cloning.",
+        "Dylan's permitted outdoor experience does not give him access to his outie's family.",
+        "Milchick's supervision continues at the camp, extending the managerial relationship beyond the office."
+      ],
+      "local_answer": "The chapter clearly distinguishes expanded surroundings from greater autonomy or access to information.",
+      "open_issues": [
+        "The opening assigns the journey to the outies more definitively than the supplied evidence supports.",
+        "The control-versus-freedom conclusion is restated after the chapter has already established it through concrete examples."
+      ],
+      "evidence_notes": "The retreat, appendix and impersonation context accord with E3 and the assignment. The chapter appropriately avoids identifying the doubles as clones. The precise allocation of consciousness during transport is not established by the supplied proof bank."
+    },
+    {
+      "number": 15,
+      "summary": "Irving exposes Helena's impersonation at Woe's Hollow, Milchick restores Helly, and Irving is dismissed after forcing the intervention.",
+      "new_information": [
+        "Helena's appeal to Milchick as Seth reveals familiarity inconsistent with her presented workplace status.",
+        "Irving's suspicion precedes the first-name appeal and is not based on that detail alone.",
+        "Milchick orders the Glasgow Block removed, providing procedural confirmation of the substitution.",
+        "Helly returns rather than remaining secretly replaced in every subsequent appearance.",
+        "Irving loses access to the severed workplace and his friendships after the confrontation."
+      ],
+      "local_answer": "The chapter answers why the social detail matters while correctly locating confirmation in Milchick's intervention rather than in personality detection alone.",
+      "open_issues": [
+        "The first-name clue and the restoration are explained repeatedly after their significance is already clear.",
+        "Some generalized discussion of identity recognition delays the concrete consequences of Irving's discovery."
+      ],
+      "evidence_notes": "E3 supports exposure of the impersonation and restoration of Helly; the assignment expressly authorizes discussion of the first-name clue. The chapter preserves the scope boundary that Helly actually returns. The supplied evidence excerpts do not independently document every procedural detail, including the block's name."
+    },
+    {
+      "number": 16,
+      "summary": "Helena uses Helly's established relationships while concealing her identity, depriving Mark and the team of information essential to their participation.",
+      "new_information": [
+        "Helena views workplace footage of Mark and Helly, gaining access to their relationship without sharing Helly's experience.",
+        "Her impersonation exploits the team's trust arising from Helly's participation in their resistance.",
+        "Mark's intimate encounter occurs under a mistaken understanding of his partner's identity.",
+        "Helly returns to consequences involving her body and relationship that she did not experience.",
+        "Jame's later preference for qualities he attributes to Helly offers a possible context for Helena's attraction to that life, without fully explaining or excusing her conduct."
+      ],
+      "local_answer": "The chapter gives a concrete consent analysis and distinguishes possible genuine feeling from permission to maintain the deception.",
+      "open_issues": [
+        "One sentence contains a confusing pronoun construction at the center of the consent explanation.",
+        "An explicit comment about avoiding descriptive detail interrupts the narration.",
+        "A late paragraph repeats conclusions already established about the team's lack of informed participation."
+      ],
+      "evidence_notes": "The analysis is compatible with E3, E5 and the assignment, and does not invent orders from Jame or claim complete knowledge of Helena's motives. The footage and intimacy details are not individually documented in the short proof-bank entries, so their assessment here is not independent verification."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "For Helly, that expectation has a particular sharpness. Her experience at Lumon has already included attempts to refuse the life assigned to her, followed by demands that she continue it. She doesn't need an ancient family lesson to discover that the company treats refusal as a problem.",
+      "reason": "At this stage of the retreat Helena is impersonating Helly. The passage moves from Helly's earlier experiences to the current lesson without acknowledging that she is absent, blurring the identity distinction established by E3.",
+      "replacement": "The lesson also echoes Helly's earlier experience of refusing the life assigned to her and being required to continue it. At the retreat, however, Helena is occupying her place, so Helly is absent from the lesson ostensibly intended for the refiners.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That arrangement gives Dieter a very different place in company history from Kier. Employees receive Kier's words as guidance. They encounter Dieter through the account that makes him an example of going wrong. Although the two men are introduced as twins, the story doesn't grant their perspectives equal space. Kier gets to interpret what happens to his brother. Dieter's place in the lesson depends on that interpretation. For the refiners, learning that another Eagan existed therefore doesn't open a second sustained account of the family's beginnings. It adds another person to Kier's account.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The preceding paragraph already establishes Kier's exclusive moral explanation and Dieter's lack of a comparable voice; the later comparison with the innies develops that point more usefully. This is the least useful intervening restatement.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's no need to settle Dieter's historical existence to understand what Lumon does with his story. The company has placed it before living employees, and those employees have to spend their time with it. Its practical use is visible even while its account of the distant past remains unverified.",
+      "reason": "H18's repeated-framing problem applies here: the opening and the account of the appendix's supernatural elements have already established this evidentiary boundary. Repeating the method at the close delays the more concrete final observation about Dieter's missing perspective.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Their outies have made that journey, and the switch leaves the innies at its destination.",
+      "reason": "The assignment establishes that the workers find themselves outside, not the precise consciousness or transport arrangements throughout their journey. This sentence fills that gap with an unsupported categorical account.",
+      "replacement": "They become conscious at a destination Lumon has chosen for them.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The outing also places an unusual burden on disagreement. Back at their desks, the refiners can sometimes turn to one another within routines they understand. At the retreat, questioning the story means questioning the purpose of the event they're currently inside. They're already on the route, already dependent on arrangements made before they became conscious there. They can argue, doubt and respond differently, as they do throughout their lives at Lumon. But they haven't been given the practical independence that would make accepting the invitation a meaningful decision.",
+      "reason": "H18 describes repeated framing without new development. The second paragraph already explains their lack of choice, and the route, camp and Milchick paragraphs make their dependence concrete. This late paragraph largely repeats that conclusion through abstract claims about disagreement.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That matters for how we understand his discovery. People don't have one fixed manner that identifies them in every circumstance. Helly can be angry, impatient or unkind without becoming someone else. Irving himself has changed considerably since his early days of defending Lumon's rules.",
+      "reason": "H18's echo applies to this additional explanation that mannerisms are not proof: the preceding paragraph already says the name is not the sole basis, and the following procedural confirmation supplies the stronger evidence. The generalized caveat slows the assigned social-detail analysis.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Irving's attention moves toward a different kind of detail: how this woman relates to someone outside their group. An imitation can remain convincing while the conversation follows familiar workplace subjects. An appeal to Milchick under pressure brings another relationship into view. Helena speaks as someone who can call upon Seth to intervene for her. That familiarity is especially revealing beside Irving's demand, because the manager's next action shows that he understands exactly which person Irving wants returned.",
+      "reason": "H18 requires a re-mention to add a consequence or comparison. This paragraph repeats the opening explanation of the first-name appeal and the already established significance of Milchick's response without adding either.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helly's return also places a clear limit on the impersonation. From this point, her presence has been restored through the switch Irving demanded. What happened before it still matters, particularly to the people who believed they were spending that time with her. Yet Helena's exposure doesn't turn every later appearance into another hidden substitution. The immediate result at Woe's Hollow is specific. Milchick ends the block, Helly returns, and Irving loses his place among the refiners after insisting that the colleague they knew should be allowed back.",
+      "reason": "The scope correction is useful, but H18's echo is pronounced: restoration has already been described in several paragraphs, and the immediately preceding paragraph explains Irving's dismissal. Retain the boundary without another full recap.",
+      "replacement": "Helly has returned; Helena's exposure is not evidence that every later appearance conceals another substitution. The deception still leaves Mark and the team with experiences they believed they had shared with someone who was absent.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "There's no need to describe the encounter in detail to see the problem.",
+      "reason": "This is an authorial instruction about how the scene will be narrated rather than information about the characters. The requested non-explicit treatment can be observed without announcing it.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Whatever she feels during the encounter, she knows something about the person beside him that Mark doesn't know, and that information would matter to his decision.",
+      "reason": "The switch from 'she' to 'the person beside him' makes Helena refer to herself through a needlessly indirect spatial description. It obscures the otherwise concrete consent argument.",
+      "replacement": "Whatever Helena feels during the encounter, she knows Mark has mistaken her for Helly, and that distinction would matter to his decision.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That family tension deserves room without becoming an excuse. Mark hasn't agreed to help Helena escape her father's disappointment. Helly hasn't agreed to lend Helena her friendships. The refiners haven't invited an Eagan to observe them under a colleague's identity. Each relationship asks something different of Helena, and she avoids those separate conversations by maintaining the impersonation. Once she's exposed, whatever she might have said as herself remains an opportunity she didn't give the others.",
+      "reason": "H18's repeated-framing rule applies: the chapter has separately established Mark's mistaken consent, Helly's exclusion and the team's uninformed trust, while the preceding discussion of attraction already says feelings do not excuse concealment. This paragraph gathers those same conclusions without a new development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        13,
+        14
+      ],
+      "detail": "Both chapters compare the retreat with the Perpetuity Wing and repeat that Lumon supplies the material and setting. The comparison earns its second appearance because chapter 14 develops the difference between viewing exhibits and physically enacting a route; avoid expanding either comparison further."
+    },
+    {
+      "chapters": [
+        14,
+        15,
+        16
+      ],
+      "detail": "Unequal knowledge of Helena's identity appears in all three chapters. The progression is useful when kept distinct: chapter 14 establishes the retreat's informational imbalance, chapter 15 explains exposure and managerial intervention, and chapter 16 examines consequences for consent."
+    },
+    {
+      "chapters": [
+        15,
+        16
+      ],
+      "detail": "The overtime contingency is used twice as a comparison with Helena's impersonation. Chapter 16 gives the fuller and more relevant explanation of unequal preparation; chapter 15's comparison is less necessary to its first-name and status question."
+    },
+    {
+      "chapters": [
+        13,
+        16
+      ],
+      "detail": "Helly's refusal and Helena's power to keep her at work recur as background. Chapter 13 uses them for a comparison about whose account receives standing, while chapter 16 adds distinct consequences for relationships, so these mentions are not interchangeable."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10 and do not assert confirmed resurrection, cloning, an explained revolving or continued Helena substitution after Helly's restoration. Local corrections are needed for the retreat's identity framing and the unsupported allocation of the transport journey to the outies. No chapter-wide rewrite is required.",
+  "limitations": "Reviewed all supplied text for chapters 13-16 against the supplied proof bank, assignments, episode scope and voice rules. Chapters 1-12 and 17-24 were not supplied, so whole-episode repetition, the early optional request, spoiler announcement and final ending cannot be assessed. No websites were opened, episodes watched, audio measured or independent verification of every fictional detail performed.",
+  "input_hashes": {
+    "13": "0c0b83f4dcd0c877babd7b277b2d8c074ffd99684c8d8330b9a5f8333235905d",
+    "14": "6d69955704a6ebae0cc2222d43b728faf6c25ee6c8923ef5c524fd15ed5ece62",
+    "15": "3e6e8e39ee70090f30286c48233ac99962264346a1a1c2dd263cda99bb418dcd",
+    "16": "fbde11062e3171c6967caacfb665dd1d32f17edf6ca399c4094d8d0b863ba6c2"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

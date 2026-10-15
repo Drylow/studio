@@ -1,8 +1,13 @@
 # Reprise — Deep Void Theories et Quiet Paradox
 
-État enregistré le **12 octobre 2026**, fuseau **Europe/Paris**.
+État mis à jour le **15 octobre 2026**, fuseau **Europe/Paris**.
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
+
+**Commande active du 15 octobre :** les [six nouveaux scripts](scripts-2026-10-15/README.md)
+sont en rédaction et relecture. Deep Void : Force, Guilde, Paul Atréides ; Quiet :
+Silo, Victor/FROM, Eagan/Severance. Le troisième sujet Revan est abandonné en faveur
+de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets Ultravid.
 
 ## Lire dans cet ordre
 
@@ -16,7 +21,13 @@ Dans le dépôt principal, lire aussi CLAUDE.md et AGENTS.md. Les règles des fi
 historiques 2D ne définissent pas le style de ces deux chaînes sleep.
 Ne pas modifier le frontend du studio pour produire les contenus.
 
-## Situation immédiate
+## Premier lot : états antérieurs et complément
+
+Complément de la conversation : l'utilisateur a ensuite dit être en train d'uploader
+Severance et vouloir poster FROM après. Les kits de ces deux vidéos ont été livrés
+dans les dossiers 02-from et 03-severance de chaines/quiet-paradox. Leur publication
+finale n'a pas été vérifiée. Les mentions « prochaine vidéo » ci-dessous décrivent
+la sauvegarde du 12 octobre et ne doivent pas annuler ce complément.
 
 - **Quiet Paradox** : première vidéo Silo publiée le **11 octobre 2026**.
   La capture fournie montre une durée de **2:55:31**, 55 vues et 1 commentaire :

@@ -1,0 +1,175 @@
+{
+  "chapters": [
+    {
+      "number": 13,
+      "summary": "Spice production depends on the sandworm life cycle and Arrakis's desert ecology, so protecting harvested supplies is different from preserving the source of future harvests.",
+      "new_information": [
+        "Sandtrout isolate water and help maintain the dry conditions needed by adult worms.",
+        "Underground pre-spice activity leads to spice blows and the surface material collected by harvesters.",
+        "Adult worms are vulnerable to water, linking Fremen water practices and ecological change to the future of spice.",
+        "Stored melange can support consumption temporarily but cannot replace the living production cycle."
+      ],
+      "local_answer": "The chapter explains why a threat to the worm-spice cycle is more consequential than the loss of harvesting equipment or a shipment.",
+      "open_issues": [
+        "The Water of Life ceremony receives more narrative attention than the assigned minimum ecological explanation requires.",
+        "The later inventory of harvesting responsibilities repeats the opening harvester example without advancing the supply argument."
+      ],
+      "evidence_notes": "The central dependency is consistent with G1 and G4. The assignment expressly permits the necessary worm-spice ecology, although the proof bank does not separately document its biological details. No invented quantities, Guild-created ecology, or adaptation-specific biology appear."
+    },
+    {
+      "number": 14,
+      "summary": "Paul forces Guild accommodation by credibly threatening the biological source of spice, making further military intervention dangerous to the transport system on which his opponents depend.",
+      "new_information": [
+        "The novel's threat to spice production is distinct from the film's nuclear threat to spice fields.",
+        "Paul uses the family atomics against the Shield Wall, while his supply threat relies on ecological knowledge.",
+        "Guild representatives recognize the credibility of the threat and accommodate his demand concerning the forces above Arrakis.",
+        "The representatives' concealed spice-blue eyes connect the institution's political position to personal dependence on melange.",
+        "The spice threat limits external intervention but does not itself complete Paul's duel, marriage arrangement, or imperial settlement."
+      ],
+      "local_answer": "The Guild cannot use its transport monopoly against Paul without risking the supply that makes that monopoly operable.",
+      "open_issues": [
+        "The separate paragraph explaining Shaddam's loss of outside military options repeats the immediately preceding explanation of the waiting forces."
+      ],
+      "evidence_notes": "The central confrontation follows G4 and the assigned book-continuity distinction. The narration does not invent a chemical procedure or conflate the atomics with the novel's spice-destruction mechanism. The additional audience details are not individually established by the supplied proof entries."
+    },
+    {
+      "number": 15,
+      "summary": "Navigators and Paul use overlapping but limited prescient abilities for different purposes, and Edric's concealment demonstrates that wider political foresight does not confer complete visibility.",
+      "new_information": [
+        "Navigational foresight addresses safe passage rather than guaranteeing the political safety of passengers after arrival.",
+        "Paul's visions encompass political and religious consequences but remain incomplete and difficult to interpret.",
+        "The Guild's accommodation of Paul can be read as institutional caution rather than an innate rule governing every Navigator.",
+        "Edric's prescience can conceal conspirators from Paul's view without ensuring that their undertaking succeeds."
+      ],
+      "local_answer": "The chapter distinguishes the purposes and limits of prescience without reducing the comparison to a simple ranking of who sees more.",
+      "open_issues": [
+        "The detailed allocation of conspiracy participants' roles anticipates chapter 17 and interrupts the present comparison.",
+        "One sentence treats the counterfactual exposure of the meeting without Edric as certain, despite the chapter's emphasis on limited foresight."
+      ],
+      "evidence_notes": "G1 and G4 support the navigation and confrontation material; G5 supports Edric's concealment role. The institutional-caution interpretation is appropriately identified as a reading rather than a universal psychological law. The supplied proof bank does not separately substantiate the Jamis example."
+    },
+    {
+      "number": 16,
+      "summary": "Paul's control of spice subordinates the Guild politically without replacing its transport infrastructure, leaving continued service compatible with institutional hostility.",
+      "new_information": [
+        "Paul's victory changes the Guild's bargaining position rather than transferring its specialized workforce and transport capacity into his household.",
+        "Maintaining interstellar movement serves Paul's interests as ruler as well as the Guild's interests as a carrier.",
+        "Dependence runs in both directions without making the parties equally powerful.",
+        "Edric's later participation in conspiracy shows that compliance with Paul does not imply loyalty."
+      ],
+      "local_answer": "The Guild remains necessary because control over its essential supply is not the same as possessing the people, vessels, and practices needed to conduct its voyages.",
+      "open_issues": [
+        "Several paragraphs independently restate that becoming Emperor does not make Paul a transport workforce.",
+        "The closing third repeatedly returns to service without loyalty after Edric has already supplied the concrete development."
+      ],
+      "evidence_notes": "The political implications are explicitly framed as interpretations of G1, G4, and G5 rather than invented treaties or decrees. There is no claim of the Guild's immediate disappearance. The main defect is repeated exposition, not a demonstrated contradiction of the supplied evidence."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "Jessica encounters a concentrated example when the Fremen prepare the Water of Life. They drown a small maker, and the resulting poisonous substance becomes part of the ritual through which she takes on the role of a Reverend Mother. The ceremony has consequences for Jessica and the unborn Alia, but it also places worm biology inside Fremen religious life. The maker isn't merely an obstacle encountered during travel. Its body, its vulnerability, and the substances associated with it enter practices preserved within the community.",
+      "reason": "The assignment requests only the ecological relationship needed to understand a supply threat. Jessica's initiation, Alia, and the broader religious interpretation move into a ritual subplot; the preceding paragraph has already established the relevant vulnerability to water. A short connection to the substance used in the following chapter preserves the useful bridge.",
+      "replacement": "The Fremen obtain the poisonous Water of Life by drowning a small maker. This gives them practical knowledge of a vulnerability that will matter when Paul threatens the source of spice.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For a House administering Arrakis, the most visible problems are often closer at hand. Harvesters need maintenance. Crews need rescue when machinery fails. Carryalls have to retrieve equipment before worms reach it. These are demanding responsibilities, and failure can cost lives as well as spice. Still, solving them would leave the underground cycle untouched. An administration could improve extraction while depending on ecological conditions it had done little to preserve. More efficient collection would increase the importance of continued replenishment.",
+      "reason": "The opening and Leto's rescue already establish the practical extraction problem, while the warehouse paragraph establishes the difference between harvested stock and biological replenishment. H18 says, \"A re-mention that adds nothing gets cut or replaced with the next piece of information from the research.\" This is the least useful return to both points.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Shaddam, this narrows the value of forces outside his immediate reach. His imperial position has depended in part on the ability to bring overwhelming strength against opponents, with Sardaukar providing the military core. On Arrakis, the Fremen have already challenged that superiority in combat. Now the Guild's response prevents the Emperor from treating the wider imperial order as an assured source of rescue. Paul hasn't personally defeated every House army. He's made the transport of further opposition unacceptable to the carrier those armies require.",
+      "reason": "The preceding paragraph already explains that waiting House forces cannot intervene because Paul has pressured their carrier. Changing the viewpoint to Shaddam does not add a further causal step. H18 identifies the defect as \"keeps re-stating it with nothing new attached.\" Deletion also moves directly from the Guild's accommodation to the important question of Paul's credibility.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Edric, in turn, needs collaborators who bring access and skills he doesn't supply. Irulan lives within the imperial household. Mohiam brings Bene Gesserit interests, and Scytale brings the Tleilaxu contribution. The Navigator's presence doesn't absorb their roles into his own.",
+      "reason": "The chapter has already named the participants. This second allocation of their roles belongs to chapter 17's explicit assignment to identify their distinct interests; here it delays the useful distinction between concealment and guaranteed success. Removing it leaves that distinction intact.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "His protection makes their gathering possible under conditions that would otherwise expose them to Paul's unusual awareness.",
+      "reason": "G5 establishes that Edric conceals participants, not that Paul would certainly detect this particular gathering without him. The counterfactual certainty also conflicts with the chapter's otherwise careful account of incomplete prescience.",
+      "replacement": "His presence helps conceal their gathering from Paul's prescient awareness.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Shaddam's presence on Arrakis provides a direct comparison. The old Emperor brings military force to the planet, but that expedition also depends on interstellar carriage. Imperial troops and Guild transport have separate jobs. Removing Shaddam doesn't merge those jobs into Paul's person or his household. Paul gains the throne through the settlement at Arrakis, while the organization that carried imperial forces there retains its specialized function. He has changed the conditions under which that organization must deal with the throne. The need to carry people across space survives the defeated Emperor.",
+      "reason": "The opening states that imperial change does not replace the transport system, and the Atreides relocation already provides a concrete example. This second historical comparison repeats the same division of labor. H18 requires that \"the second mention must add something the first did not carry.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul's own background makes the distinction quite concrete. He has learned to fight under Gurney Halleck and Duncan Idaho, and he has received Mentat training from Thufir Hawat. His abilities expand far beyond what his teachers expected. None of those accomplishments makes him the workforce of an interstellar carrier. Even his prescience doesn't place him aboard every ship that needs guidance. As a political implication of the setting, an Emperor with unusual personal abilities still needs other people to perform specialized work throughout his realm.",
+      "reason": "The preceding paragraph already distinguishes imperial authority from possession of Navigators, vessels, and institutional practice. Paul's training adds biographical material but no new explanation of transport dependence. H18 describes the document-scale problem as \"the script gets stuck on one fact, one phrase, or one framing and keeps re-stating it with nothing new attached.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Continued service can therefore coexist with political hostility. That shouldn't be mistaken for an ordinary commercial relationship with no consequences beyond payment. Paul has demonstrated that he can put the Guild's future at risk, and the Guild retains a necessary place in the movement of his empire. Each voyage takes place within that altered situation, although the novels don't require us to imagine a new negotiation for every departure. The larger accommodation allows transport to continue while leaving serious reasons for resentment among those who provide it.",
+      "reason": "Edric's participation has just concretely demonstrated service without loyalty, and the final paragraph already closes on that implication. This intervening paragraph repeats the conclusion and adds an unnecessary caveat about imagined departure negotiations. H18 says, \"A re-mention that adds nothing gets cut.\"",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        13,
+        14
+      ],
+      "detail": "The contrast between interrupting collection and destroying future production recurs in both chapters. This is a justified handoff: chapter 13 establishes the ecological dependency, and chapter 14 applies it to Paul's specific threat. Trimming chapter 13's repeated operational inventory would keep the handoff from feeling like another full explanation."
+    },
+    {
+      "chapters": [
+        14,
+        15,
+        16
+      ],
+      "detail": "Paul's credible spice threat and the Guild's inability to replace the supply recur throughout. Each chapter has a legitimate different purpose: coercion, cautious use of foresight, and continued institutional necessity. The redundant Shaddam passages in chapters 14 and 16 blur those distinctions and are the best deletion targets."
+    },
+    {
+      "chapters": [
+        15,
+        16
+      ],
+      "detail": "Both chapters introduce Edric's conspiracy participation. The mentions can remain because chapter 15 uses him to demonstrate a limit on Paul's sight, whereas chapter 16 uses him to distinguish compliance from loyalty. Chapter 15's additional participant-role inventory unnecessarily extends the preview into chapter 17's assignment."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within Frank Herbert's original-book continuity and their assigned sequence. Chapter 14 explicitly distinguishes the novel's ecological threat from the film's nuclear presentation. No supplied prohibition is clearly breached. Local scope and repetition edits are needed, but no chapter requires a wholesale rewrite.",
+  "limitations": "Reviewed the complete supplied texts of chapters 13-16 against the episode brief, outline, proof bank, and supplied voice rules. Chapters 1-12 and 17-24 were not supplied, so full-episode repetition, the opening listening request, and the final ending cannot be assessed. External links and primary passages were not independently opened or verified; the proof bank does not separately document every ecological, biographical, or audience detail used here. No audio measurement or human read-aloud was performed.",
+  "input_hashes": {
+    "13": "e2f07003e6e2300b1f2cbf5ec35d61c737cd64d77048b5a6a2fd9129d7cddddf",
+    "14": "c9ff8a22b73077f309b2fb7c8732f855272eb3e0de1538cd0111f8b6a3fe18f6",
+    "15": "68861adf34c9308bec7ff145f9ca5634d7087c485b7bd0859c778eb1b6a296a8",
+    "16": "41381d03bd81af5b8a56218b8450c0d98daa728dcac2c6da3c6cddbe35bbedf9"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

@@ -1,0 +1,351 @@
+{
+  "timing_note": "Word offsets are exact under the documented regex. Times at 150 wpm are estimates, NOT publication timestamps. Generate YouTube chapters from the final measured audio/video.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "The emperor who walks away",
+      "file": "chapitres/01.txt",
+      "words": 758,
+      "start_word": 0,
+      "end_word": 758,
+      "estimated_start_seconds_at_150_wpm": 0,
+      "measured_timestamp": null,
+      "sources": [
+        "P1",
+        "P5"
+      ],
+      "sha256": "19c640dbbb4536632c3515d39daef958f1e04484ae71b1b7f608173b4b589c3f"
+    },
+    {
+      "number": 2,
+      "title": "A childhood prepared by several teachers",
+      "file": "chapitres/02.txt",
+      "words": 960,
+      "start_word": 758,
+      "end_word": 1718,
+      "estimated_start_seconds_at_150_wpm": 303,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "5d0b43271be5bff0f91db229a8cff0183f11fc9065132e3e160a183c6f29eb0e"
+    },
+    {
+      "number": 3,
+      "title": "Jessica's decision and the box",
+      "file": "chapitres/03.txt",
+      "words": 992,
+      "start_word": 1718,
+      "end_word": 2710,
+      "estimated_start_seconds_at_150_wpm": 687,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "69fa41385c0cb7021158525d31c6dca064c8c8b818e7eef524d41f7f1657f81a"
+    },
+    {
+      "number": 4,
+      "title": "An inheritance on a dangerous planet",
+      "file": "chapitres/04.txt",
+      "words": 1034,
+      "start_word": 2710,
+      "end_word": 3744,
+      "estimated_start_seconds_at_150_wpm": 1084,
+      "measured_timestamp": null,
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "sha256": "2c686edd3bcd9392e97d9146a82883a35b99c3e9ea9e3522576e0b2b211f03fa"
+    },
+    {
+      "number": 5,
+      "title": "What Leto teaches through a rescue",
+      "file": "chapitres/05.txt",
+      "words": 854,
+      "start_word": 3744,
+      "end_word": 4598,
+      "estimated_start_seconds_at_150_wpm": 1498,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "33ff9ab313bb12426d7181b68049a95c8bc4cfb18d7f3cc752f6494c07ea9bba"
+    },
+    {
+      "number": 6,
+      "title": "A trusted doctor opens the way",
+      "file": "chapitres/06.txt",
+      "words": 982,
+      "start_word": 4598,
+      "end_word": 5580,
+      "estimated_start_seconds_at_150_wpm": 1839,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "3ba4a747ccf9ee484193c0cc236a498dca99f8534d8f66c1bb39073196cfe3e9"
+    },
+    {
+      "number": 7,
+      "title": "Mother and son beyond the household",
+      "file": "chapitres/07.txt",
+      "words": 1057,
+      "start_word": 5580,
+      "end_word": 6637,
+      "estimated_start_seconds_at_150_wpm": 2232,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "3df00a0a1dab4ca3c0931de394a9dab8ba25bfe889b5562f8466ed3e8ccc8c97"
+    },
+    {
+      "number": 8,
+      "title": "Meeting people prepared to recognize him",
+      "file": "chapitres/08.txt",
+      "words": 902,
+      "start_word": 6637,
+      "end_word": 7539,
+      "estimated_start_seconds_at_150_wpm": 2655,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "bfc3cd2c4d1ac05094a7f0aaf05b222f56a73f67088cecf6cef16f32fb0d5cbb"
+    },
+    {
+      "number": 9,
+      "title": "Jamis and the burden of admission",
+      "file": "chapitres/09.txt",
+      "words": 957,
+      "start_word": 7539,
+      "end_word": 8496,
+      "estimated_start_seconds_at_150_wpm": 3016,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "9a159c7177d83cbc8d839fa4d3a42a3a958840df5eb9c5e69406f08df54ff164"
+    },
+    {
+      "number": 10,
+      "title": "Usul and Muad'Dib",
+      "file": "chapitres/10.txt",
+      "words": 839,
+      "start_word": 8496,
+      "end_word": 9335,
+      "estimated_start_seconds_at_150_wpm": 3398,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "941d28b6a4a134f28e6b24f688d3bb776f39b477f58dcd9c55c401b3fc8860f9"
+    },
+    {
+      "number": 11,
+      "title": "Chani and a life that might have been private",
+      "file": "chapitres/11.txt",
+      "words": 929,
+      "start_word": 9335,
+      "end_word": 10264,
+      "estimated_start_seconds_at_150_wpm": 3734,
+      "measured_timestamp": null,
+      "sources": [
+        "P2",
+        "P3"
+      ],
+      "sha256": "d0fb92bd9572b3697ec1e2a078d369875536b9e3b826250040c6220c153e3dbb"
+    },
+    {
+      "number": 12,
+      "title": "The worm and the community's expectations",
+      "file": "chapitres/12.txt",
+      "words": 986,
+      "start_word": 10264,
+      "end_word": 11250,
+      "estimated_start_seconds_at_150_wpm": 4106,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "5412c04f1d735e3e06c537ebe05bb73be7ce9e38fcce5b07abe7a1e2da24b919"
+    },
+    {
+      "number": 13,
+      "title": "The Water of Life changes his horizon",
+      "file": "chapitres/13.txt",
+      "words": 932,
+      "start_word": 11250,
+      "end_word": 12182,
+      "estimated_start_seconds_at_150_wpm": 4500,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "d4ef0ef6a796e9360f5cb265591c176147f89b0da02efda8f1087fdc1bbe908c"
+    },
+    {
+      "number": 14,
+      "title": "Winning Arrakis and losing a child",
+      "file": "chapitres/14.txt",
+      "words": 1078,
+      "start_word": 12182,
+      "end_word": 13260,
+      "estimated_start_seconds_at_150_wpm": 4873,
+      "measured_timestamp": null,
+      "sources": [
+        "P2",
+        "P3"
+      ],
+      "sha256": "b80f10b07ea6c491e9ddce67485430bbc710b584050e6755656152d98b8a8f26"
+    },
+    {
+      "number": 15,
+      "title": "Irulan's marriage and Chani's position",
+      "file": "chapitres/15.txt",
+      "words": 906,
+      "start_word": 13260,
+      "end_word": 14166,
+      "estimated_start_seconds_at_150_wpm": 5304,
+      "measured_timestamp": null,
+      "sources": [
+        "P3"
+      ],
+      "sha256": "30173d61200733dc89ff7fe84e2e1f1dadb5289c54f09a891877f4dda2a6cb7d"
+    },
+    {
+      "number": 16,
+      "title": "A victory followed by an empire-wide war",
+      "file": "chapitres/16.txt",
+      "words": 895,
+      "start_word": 14166,
+      "end_word": 15061,
+      "estimated_start_seconds_at_150_wpm": 5666,
+      "measured_timestamp": null,
+      "sources": [
+        "P4"
+      ],
+      "sha256": "ff33eac3672774db01c1dab773e64f8451264c8713a856d2a98da6d8f9867b31"
+    },
+    {
+      "number": 17,
+      "title": "Enemies learn to hide from a prophet",
+      "file": "chapitres/17.txt",
+      "words": 904,
+      "start_word": 15061,
+      "end_word": 15965,
+      "estimated_start_seconds_at_150_wpm": 6024,
+      "measured_timestamp": null,
+      "sources": [
+        "P4"
+      ],
+      "sha256": "c61c8dfe11570704f6cd6d770cc7ee77de1fc8f1a5f8e538fa2cf648504e6c6c"
+    },
+    {
+      "number": 18,
+      "title": "Duncan returns as Hayt",
+      "file": "chapitres/18.txt",
+      "words": 875,
+      "start_word": 15965,
+      "end_word": 16840,
+      "estimated_start_seconds_at_150_wpm": 6386,
+      "measured_timestamp": null,
+      "sources": [
+        "P4"
+      ],
+      "sha256": "55f5539cfe3bcd0b6c4bba2442e0e827ee4390134a9219d4341141f52b8a54a3"
+    },
+    {
+      "number": 19,
+      "title": "A household entangled in succession",
+      "file": "chapitres/19.txt",
+      "words": 905,
+      "start_word": 16840,
+      "end_word": 17745,
+      "estimated_start_seconds_at_150_wpm": 6736,
+      "measured_timestamp": null,
+      "sources": [
+        "P4"
+      ],
+      "sha256": "f6e8f6fed256b4a618f84548fd20ae0732c86e8eb4a082a5b241843688098628"
+    },
+    {
+      "number": 20,
+      "title": "Seeing without physical eyes",
+      "file": "chapitres/20.txt",
+      "words": 792,
+      "start_word": 17745,
+      "end_word": 18537,
+      "estimated_start_seconds_at_150_wpm": 7098,
+      "measured_timestamp": null,
+      "sources": [
+        "P4",
+        "P5"
+      ],
+      "sha256": "77ee61867b472791a1db7cededf6d8424e6c0d44155df62d5490d2396da0d0b2"
+    },
+    {
+      "number": 21,
+      "title": "The twins and the choice to leave",
+      "file": "chapitres/21.txt",
+      "words": 882,
+      "start_word": 18537,
+      "end_word": 19419,
+      "estimated_start_seconds_at_150_wpm": 7415,
+      "measured_timestamp": null,
+      "sources": [
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "sha256": "43fc9470aca5374db5d8ce5050927dd9e49d1e1785a4a1077f0b0c7d4e32b9ed"
+    },
+    {
+      "number": 22,
+      "title": "A preacher challenges Muad'Dib's religion",
+      "file": "chapitres/22.txt",
+      "words": 798,
+      "start_word": 19419,
+      "end_word": 20217,
+      "estimated_start_seconds_at_150_wpm": 7768,
+      "measured_timestamp": null,
+      "sources": [
+        "P6",
+        "P7"
+      ],
+      "sha256": "bc641f8ca8566c8f388e84d61b95d25321a64ad3202329716e2e0619514cb9c1"
+    },
+    {
+      "number": 23,
+      "title": "The future his son accepts",
+      "file": "chapitres/23.txt",
+      "words": 882,
+      "start_word": 20217,
+      "end_word": 21099,
+      "estimated_start_seconds_at_150_wpm": 8087,
+      "measured_timestamp": null,
+      "sources": [
+        "P7",
+        "P8"
+      ],
+      "sha256": "d6ed01390c16ec3ad73246b26c609f17f3e1d59b3372520de21b2c6faf604341"
+    },
+    {
+      "number": 24,
+      "title": "The end of the man behind the name",
+      "file": "chapitres/24.txt",
+      "words": 834,
+      "start_word": 21099,
+      "end_word": 21933,
+      "estimated_start_seconds_at_150_wpm": 8440,
+      "measured_timestamp": null,
+      "sources": [
+        "P7",
+        "P8"
+      ],
+      "sha256": "ce465e00bf7ddb4b3665c6bf80cceb6bfb48307bbe3f2f1939658331821c6687"
+    }
+  ]
+}

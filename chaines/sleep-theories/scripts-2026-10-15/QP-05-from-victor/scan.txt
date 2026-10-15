@@ -1,0 +1,21 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 1
+  [narrator tease] ...rriving to explain it or take charge of what happens next. We don't need an extended description ...
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 1
+  [floor: reframe: isn't X, it's Y] ... else. An empty area of paper doesn't tell us that nothing happened there. This is part of what makes his collec...
+-- ECHO CHECK (H18): 31
+  [echo H18: phrase repeated 33x] "the boy in white"
+  [echo H18: phrase repeated 11x] "the man in yellow"
+  [echo H18: phrase repeated 10x] "a complete account of"
+  [echo H18: phrase repeated 9x] "in front of him"
+  [echo H18: phrase repeated 8x] "to save the children"
+  [echo H18: phrase repeated 6x] "he doesn't have to"
+  [echo H18: phrase repeated 6x] "without being able to"
+  [echo H18: phrase repeated 5x] "there's no need to"
+  [echo H18: phrase repeated 4x] "part of the story"
+  [echo H18: phrase repeated 4x] "the identity of the"
+  [echo H18: phrase repeated 4x] "history of the town"
+  [echo H18: phrase repeated 4x] "in a town where"
+  [echo H18: phrase repeated 4x] "gives him a reason"
+  [echo H18: phrase repeated 4x] "the season four finale"

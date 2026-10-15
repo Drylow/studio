@@ -1,0 +1,77 @@
+{
+  "accessed": "2026-10-15",
+  "scope": "Released television through S2E10 Cold Harbor, March 21, 2025. No season-three story, leaks, unsupported family tree, pregnancy twist, confirmed cloning or resurrection. Corporate doctrine and family accounts must be attributed as claims. Original analysis, not a recap of a competing theorist.",
+  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "sources": [
+    {
+      "id": "E1",
+      "fact": "The Perpetuity Wing presents Kier and succeeding Eagan CEOs through a curated company history; the severed floor treats his words as authority.",
+      "work": "S1E3 In Perpetuity",
+      "url": "https://en.wikipedia.org/wiki/In_Perpetuity",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E2",
+      "fact": "The first-season finale reveals Helly's outie is Helena Eagan, Jame's daughter, participating in a public severance promotion; Jame mentions his revolving.",
+      "work": "S1E9 The We We Are",
+      "url": "https://en.wikipedia.org/wiki/Severance_(TV_series)",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E3",
+      "fact": "Woe's Hollow uses Kier's Fourth Appendix and Dieter's story; Irving exposes Helena's impersonation, and Milchick restores Helly.",
+      "work": "S2E4 Woe's Hollow",
+      "url": "https://readysteadycut.com/2025/02/07/severance-season-2-episode-4-recap/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E4",
+      "fact": "Cobel's return to Salt's Neck reveals her original severance work and Jame's appropriation of credit, challenging the family's invention story.",
+      "work": "S2E8 Sweet Vitriol",
+      "url": "https://www.cultofmac.com/reviews/severance-season-2-episode-8-recap",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E5",
+      "fact": "Jame's conversations with Helly/Helena distinguish his daughter's compliant role from the spirit he says he recognizes in her innie.",
+      "work": "S2E9-10",
+      "url": "https://en.wikipedia.org/wiki/Cold_Harbor_(Severance)",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E6",
+      "fact": "Cold Harbor tests Gemma with dismantling a crib without emotional spillover; its ultimate corporate purpose is intentionally still partly withheld by the creator.",
+      "work": "S2E10 Cold Harbor",
+      "url": "https://www.thewrap.com/severance-season-2-finale-dan-erickson-interview/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E7",
+      "fact": "Mark and Gemma escape the testing rooms; innie Mark ultimately chooses to return toward Helly instead of leaving with Gemma. This is an identity conflict, not simply a love-triangle puzzle.",
+      "work": "S2E10",
+      "url": "https://www.tvguide.com/news/severance-dichen-lachman-season-2-finale-interview-gemma-cold-harbor/",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "E8",
+      "fact": "Apple renewed the series after season two; no third-season plot is included in this script.",
+      "work": "Production scope only",
+      "url": "https://www.apple.com/uk/tv-pr/news/2025/03/praise-kier-apples-global-hit-emmy-and-peabody-award-winning-workplace-thriller-severance-lands-season-three-renewal/",
+      "opened": "2026-10-15"
+    }
+  ],
+  "forbidden": [
+    "Kier is confirmed alive in the Board, in a chip or secretly reincarnated",
+    "Revolving has been fully explained",
+    "All Eagans have identical beliefs or know the whole plan",
+    "Helena is Kier's granddaughter without accounting for generations",
+    "Dieter's story is objectively verified history",
+    "Helly is secretly Helena in every later scene after the Woe's Hollow switch",
+    "Jame truly invented severance despite S2E8",
+    "A severance chip erases all memory, skills or feelings",
+    "Gemma's full kidnapping history or the ultimate purpose of Cold Harbor is solved",
+    "Goats prove human cloning or literal soul transfer",
+    "Invented CEO dates, bloodlines, scientific mechanisms, quotes or room counts",
+    "Claimed exact runtime before audio measurement"
+  ]
+}

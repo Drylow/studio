@@ -1,0 +1,162 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Lumon uses its reconstruction of Kier's home first as a reverential employee exhibit and later as the setting for Dylan's waffle-party reward, which he leaves to help his colleagues.",
+      "new_information": [
+        "The Perpetuity Wing gives employees access to a company-presented version of Kier's domestic life.",
+        "The innies can encounter the founder's preserved household while remaining unable to remember their own homes.",
+        "The waffle party turns the domestic exhibit into a performance-based reward involving Kier's imagery and the four tempers.",
+        "Dylan leaves the reward to activate the overtime contingency for his colleagues."
+      ],
+      "local_answer": "The chapter answers how a claimed private life becomes institutional instruction: Lumon makes the founder's home a place for learning reverence and rewarding work, without establishing that its ritual reproduces historical events.",
+      "open_issues": [
+        "The paragraph beginning 'There's something quite practical' substantially repeats the opening explanation of the house's institutional function.",
+        "Several later paragraphs revisit the connection between reward, founder imagery and work; these remain distinguishable, but the chapter would benefit from the identified deletion."
+      ],
+      "evidence_notes": "E1 supports the curated Perpetuity Wing framing. The assignment also expressly supplies the reconstructed domestic space and its waffle-party use, although the short E1 entry does not independently document the detailed reward sequence. The chapter does not assert resurrection or invent an account of Kier's actual household."
+    },
+    {
+      "number": 6,
+      "summary": "The gala uses Helena Eagan's severance participation and photographs of Helly as publicity, until Helly uses the expected speech to contradict Lumon's account.",
+      "new_information": [
+        "Helena's identity as Jame's daughter makes her participation a family endorsement of severance.",
+        "Selected photographs can depict genuine moments of connection while omitting Helly's distress and refusal.",
+        "The overtime contingency lets Helly occupy Helena's public role without the guests visibly distinguishing the identities.",
+        "Jame supplies a childhood recollection connecting Helena to the family's promotion of severance.",
+        "Helly turns the promotional platform into an opportunity to report suffering downstairs."
+      ],
+      "local_answer": "The chapter explains why an Eagan heir's participation is persuasive publicity and how that publicity excludes the experience of the identity actually performing the work.",
+      "open_issues": [
+        "The opening states the surrounding people's knowledge categorically rather than describing their observable treatment of Helly.",
+        "The third paragraph repeats the preceding explanation of Helena as a reassuring demonstration before the recorded account and photographs provide more concrete developments."
+      ],
+      "evidence_notes": "E2 supports Helena's identity, Jame's relationship to her and the public severance promotion. Jame's childhood recollection is appropriately attributed to him. The chapter does not claim universal political acceptance or settle individual guests' responses, although its opening needs a narrower statement about their knowledge."
+    },
+    {
+      "number": 7,
+      "summary": "Helly's failed exits, blocked communications and rejected resignation expose the conflict between Helena's voluntary participation and Helly's continuing refusal to work.",
+      "new_information": [
+        "The innie's next conscious experience after leaving work is another arrival, rather than the outie's evening.",
+        "The stairwell boundary changes the active identity, allowing Helena to return the body despite Helly's intention to leave.",
+        "Lumon's communication restrictions obstruct Helly's attempts to ask for outside help.",
+        "Helena receives and rejects Helly's recorded request while denying her standing as a person.",
+        "Helly returns after a life-threatening crisis, demonstrating that her distress has not secured release.",
+        "Helly's attachments to colleagues do not amount to agreement that Lumon should keep her there."
+      ],
+      "local_answer": "The chapter answers the consent question concretely: the person authorizing the body's return is not the person experiencing and refusing its working hours.",
+      "open_issues": [
+        "The paragraph beginning 'Lumon's language of voluntary employment' restates the consent conflict already established through the recording and the immediately preceding paragraph.",
+        "The assignment's non-graphic treatment is maintained; the references to threatened injury and the later crisis are brief and do not describe methods in detail."
+      ],
+      "evidence_notes": "E2 establishes the Eagan identity underlying this analysis, while the assignment expressly authorizes discussion of Helly's attempts to leave and Helena's refusal. The supplied proof summary does not separately document every resignation, stairwell or communication detail. The chapter avoids inventing legal rules or claiming that severance removes general knowledge and abilities."
+    },
+    {
+      "number": 8,
+      "summary": "Jame's unexplained reference to his revolving permits readings involving succession, ceremony or family continuity, but neither the gala conversation nor his later interest in Helly establishes a mechanism.",
+      "new_information": [
+        "Jame uses revolving as a personal, anticipated event without defining it for the woman he believes is Helena.",
+        "The displayed succession of Eagan leaders gives a leadership-transition interpretation a concrete context.",
+        "Lumon's reverential practices make a ceremonial interpretation plausible without proving it.",
+        "Jame's language about Kier's children connects severance promotion to an expansive family mission.",
+        "His later recognition of Kier's spirit in Helly is an attributed judgment, not evidence of possession.",
+        "No shown event through the released second season supplies the missing definition."
+      ],
+      "local_answer": "The chapter provides the requested interpretations and closes at the correct boundary: revolving remains undefined, and continuity language does not demonstrate consciousness transfer or immortality.",
+      "open_issues": [
+        "The second paragraph repeats the opening's explanation that Jame assumes shared family knowledge while Helly lacks Helena's memories.",
+        "The penultimate paragraph again recounts mistaken identity and Helly's coming gala intervention, repeating both this chapter's setup and chapter 6 rather than advancing the revolving analysis.",
+        "The chapter contains useful distinctions between interpretations, but its repeated gala framing makes the answer longer than its distinct developments require."
+      ],
+      "evidence_notes": "E2 supports the revolving reference and gala context; E5 supports Jame's later distinction between Helena and Helly. Succession, ceremony and continuity are consistently presented as interpretations. The chapter does not equate the founder's spirit with literal possession or introduce a season-three explanation."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's something quite practical about putting a home on the employee's route through a company museum. A portrait leaves the viewer standing outside the subject's life. A reconstructed house lets the visitor enter rooms and occupy space associated with that person. Kier's importance becomes something an employee can move through. The house doesn't need to supply a new instruction at every turn. Its presence already tells the visiting workers that the founder's domestic surroundings deserve preservation and a place within their working day.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The opening already contrasts the home with a CEO's likeness, and the following paragraphs establish company control and expected respect. This paragraph repeats those points before the more distinct observation about the innies' inaccessible homes.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "She's awake outside the office, surrounded by people who recognize her body and have no idea which person is looking back at them.",
+      "reason": "The narration categorically assigns ignorance to everyone surrounding Helly. E2 establishes the public promotion and identity reveal, not the knowledge of every person present. Describe the observable response to her rather than universal private knowledge.",
+      "replacement": "She's awake outside the office, surrounded by people who respond to her as Helena.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a practical appeal to that kind of demonstration. Helena can stand among the guests as an apparently intact person with her family position and public role still available to her. The hours spent downstairs haven't prevented her from attending the event. For someone hearing Lumon's account, this could make severance look manageable and familiar. A person goes to work, another part of her handles the working day, and she returns to a life that seems undisturbed. Helly's experience of those same hours has no direct route into that reassuring picture.",
+      "reason": "H18 warns against returning to the same framing without a useful development. The preceding paragraph already explains why Helena's participation reassures an audience, while the next two paragraphs demonstrate the exclusion of Helly's experience through the recorded account and selected photographs. This is the least concrete of those overlapping passages.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Lumon's language of voluntary employment leaves those hours inside Helena's original agreement. The series gives us a practical problem with that explanation before we need to imagine any legal answer. Helly can speak, make plans and explain why she wants to leave. Her refusal reaches the person who can stop sending her back, and that person declines. The disagreement remains active every time Helena enters the elevator. Nothing about repeating the journey makes Helly's answer match the answer given outside.",
+      "reason": "H18's repeated-framing problem applies here: Helena's rejection has already been explained through the recording, the threat and the preceding paragraph's contrast between volunteering upstairs and refusing downstairs. The reference to not needing a legal answer also announces an analytical boundary instead of adding lore. Deleting this paragraph lets the chapter move directly to the consequential return after Helly's crisis.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives their conversation an unusual shape. Jame thinks he's speaking within a shared family history, while Helly is gathering information about the life attached to her own face. She can recognize that he's important without having Helena's memories of him. His references to childhood and the family's future reach someone who hasn't lived those experiences. The conversation lets us hear something usually kept inside the Eagan household, though the person receiving it can't ask the obvious follow-up without risking discovery.",
+      "reason": "H18 describes repeated facts or framing whose later mentions add no consequence or new information. The opening already establishes that Jame assumes Helena understands while Helly must conceal her ignorance. The next paragraph supplies the actual childhood recollection, so this intermediate explanation delays the concrete development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That makes the setting more revealing than the unfamiliar word alone. Jame can tell a story about Helena's childhood because he assumes the woman before him remembers it. He can anticipate her presence at his revolving because he assumes she belongs within whatever family expectation the term carries. Helly shares Helena's appearance and access to the room, so those assumptions pass without immediate correction. But she has her own reason for being there, and she will use the gala to speak about what Lumon has done to the people downstairs.",
+      "reason": "H18 requires document-scale attention to repeated framing. This paragraph repeats Jame's mistaken assumption from the opening and chapter 6's account of Helly using Helena's access to address the gala. It does not advance any of the three revolving interpretations or sharpen their evidentiary limits. The following paragraph already supplies the assigned close.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "Both chapters contrast Helena's voluntary public participation with Helly's unwanted working hours. The overlap is justified when chapter 6 develops publicity and chapter 7 develops the resignation process; the identified deletions remove explanatory restatements without sacrificing that distinction."
+    },
+    {
+      "chapters": [
+        6,
+        8
+      ],
+      "detail": "Jame's childhood recollection, his assumption that he is speaking to Helena, and Helly's use of the gala platform recur. Chapter 8 needs the family-language context for revolving, but its second and penultimate paragraphs repeat the mistaken-identity setup without adding to that analysis."
+    },
+    {
+      "chapters": [
+        5,
+        8
+      ],
+      "detail": "The reconstructed home and reverential company practices recur briefly in chapter 8 as support for a ceremonial interpretation. This is a functional comparison rather than redundant retelling and can remain."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within released television through S2E10 and do not assert a solved revolving, resurrection, possession or season-three story. Corporate presentation and Jame's recollections are generally attributed appropriately. One categorical statement about the gala attendees' knowledge should be narrowed. Chapters 1-4 and 9-24 were supplied only as outline assignments, so their execution, the early optional audience request and the final ending cannot be assessed.",
+  "limitations": "Reviewed all four supplied chapter texts against their assignments, the supplied proof summaries and the supplied voice rules. The proof entries are concise and do not independently substantiate every scene detail in the narration; no external pages or episodes were opened or watched. No audio duration, performed read-aloud, checksum verification or independent verification of every fictional fact is claimed.",
+  "input_hashes": {
+    "5": "ed7275d04e85f86cfb800556ad465907d666f9aad3ed953de283275c12fd6a53",
+    "6": "d41035537553ec3bc2eab6c373afc51fb153b3c51b95ee2714a24761364ff2b0",
+    "7": "a8101b58081cc719ee004c71a837eef646c7c14ed438fdc6567e5cc0a6d7e496",
+    "8": "eb75bc2b4ac425ac85e721176266d9d18af39d5f0515fb58b1a93bbf30b36376"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

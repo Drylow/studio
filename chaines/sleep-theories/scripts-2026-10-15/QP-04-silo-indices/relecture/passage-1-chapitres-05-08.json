@@ -1,0 +1,170 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Juliette recognizes the visor's birds from an earlier recording, which undermines the apparent spontaneity of the green exterior without independently establishing the condition of the entire outside world.",
+      "new_information": [
+        "The green recording associated with Jane Carmody's cleaning supplies a comparison for Juliette's visor experience.",
+        "Recognizing a repeated movement gives Juliette a reason to distrust an apparently live scene.",
+        "The misleading display does not reliably show the bodies and terrain she encounters.",
+        "The wider exterior view supplies information that the repeated birds alone cannot establish."
+      ],
+      "local_answer": "The chapter answers why repetition exposes a prepared image and why that discovery does not authenticate every other representation, but it incorrectly treats prior exposure to the recording as an advantage unavailable to Allison.",
+      "open_issues": [
+        "Correct the implied distinction between Allison's and Juliette's prior exposure to the recording.",
+        "Separate the bodies' contradiction of the display from the cause of the cleaners' deaths.",
+        "Reduce repeated explanations of recognition and recorded imagery."
+      ],
+      "evidence_notes": "S2 supports the connection between repeating visor birds, recognition of a display and Juliette's survival. The chapter generally respects the distinction between detecting a false image and proving global outdoor safety. Its wording about the bodies introduces a causal claim that the supplied material instead associates with suit sealing."
+    },
+    {
+      "number": 6,
+      "summary": "The cafeteria's brief green image during the generator shutdown establishes a change in the display, while later visor knowledge prevents treating that change as an authenticated glimpse of the real exterior.",
+      "new_information": [
+        "The green flash occurs during the generator shutdown rather than a deliberate selection of another view.",
+        "The repair explains the occasion of the interruption but not the source of the green picture.",
+        "The visor's prepared scenery gives viewers a concrete alternative to the early interpretation that green means real.",
+        "An independent exterior observation or inspection of the image source would be needed to test that interpretation."
+      ],
+      "local_answer": "The assigned distinction between event, explanation and verification is clear, but repeated qualifications and a generator-repair detour make the chapter substantially longer than its useful development requires.",
+      "open_issues": [
+        "Remove the detailed mechanical-emergency detour.",
+        "Consolidate repeated statements that the visor does not establish how the cafeteria equipment works."
+      ],
+      "evidence_notes": "The cafeteria flash is expressly supplied by the chapter assignment. S2 supports the later visor comparison. The supplied proof bank does not separately document the chapter's detailed generator-repair choreography, and no independent episode inspection is claimed here. The chapter appropriately leaves the display's technical mechanism unresolved."
+    },
+    {
+      "number": 7,
+      "summary": "Allison's retained implant exposes a discrepancy between authorized treatment and bodily evidence, while Gloria's account places that deception within selective reproductive control.",
+      "new_information": [
+        "Permission to attempt pregnancy and actual removal of contraception are separate institutional actions.",
+        "The retained implant directly contradicts the reported completion of Allison's procedure.",
+        "Gloria links reproductive suppression to people who preserve knowledge and question authority.",
+        "Hanna's history and Dr. Nichols's participation bring the reproductive system into Juliette's family relationships.",
+        "Failure to conceive would not by itself expose the deception, whereas finding the retained device does."
+      ],
+      "local_answer": "The chapter answers its assigned question, keeps Gloria's broader account attributed and distinguishes reproductive policy from an unsupported biological theory of inherited curiosity.",
+      "open_issues": [
+        "Delete one repeated explanation of what finding the implant establishes.",
+        "Leave the remaining attribution and inheritance qualifications intact; they perform distinct necessary work."
+      ],
+      "evidence_notes": "The retained implant is supplied by the assignment, and S3 supports the connection among the Flamekeepers, reproductive suppression and restricted inquiry. The chapter does not turn Gloria's testimony into a demonstrated genetic mechanism or claim that permission guarantees pregnancy."
+    },
+    {
+      "number": 8,
+      "summary": "The discovery of a camera behind a mirror recasts Hanna's flowers as an obstruction and distinguishes surveillance footage from the watchers' interpretations and residents' fear of observation.",
+      "new_information": [
+        "A familiar domestic fixture can conceal a camera without losing its ordinary reflective function.",
+        "Hanna's placement of flowers acquires a practical surveillance-related meaning.",
+        "The surveillance operation involves people inspecting images rather than an all-knowing observer.",
+        "Obstructions and framing limit what a camera can record.",
+        "Knowing that surveillance is possible can change conduct even when nobody is watching.",
+        "Observers must infer motives and intentions from incomplete images."
+      ],
+      "local_answer": "The chapter answers all three assigned distinctions: actual observation, anticipated observation and interpretation of incomplete footage.",
+      "open_issues": [
+        "Remove the late paragraph that repeats both the flowers' ambiguity and the camera's inability to reveal Hanna's knowledge."
+      ],
+      "evidence_notes": "S3 supports mirror cameras and their connection to restricted inquiry. The chapter avoids universal monitoring and mind-reading claims. Its possible observer interpretations are appropriately marked with conditional language rather than presented as additional scenes."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "Juliette has an advantage neither of those experiences gives her by itself. She's encountered the green view as a recording before encountering it as her surroundings. That changes what familiarity means. A tree or a patch of grass could resemble something in an earlier image without attracting much attention. A recognizable movement across the view is harder to absorb into the idea of a spontaneous discovery. She's able to notice how the scene is being presented while she's still inside the presentation.",
+      "reason": "The contrast misleadingly makes prior exposure to the green recording Juliette's distinguishing advantage. Allison also encountered that recording before going outside. The useful distinction is how Juliette interprets the repeated birds, not exclusive access to the earlier image.",
+      "replacement": "Allison has also seen the green recording before going outside, so familiarity alone doesn't explain the difference. For Juliette, recognizing the birds turns that familiarity into a reason to question the view rather than accept it as confirmation.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "The repeated flight tells Juliette that she's seeing something prepared. The bodies confront her with a physical consequence of relying on it.",
+      "reason": "The second sentence implies that reliance on the image caused Holston's and Allison's deaths. The supplied S2 evidence identifies tape and suit sealing as material to survival; the bodies establish that the green display omits physical reality, not that trusting the picture itself caused death.",
+      "replacement": "The repeated flight tells Juliette that she's seeing something prepared. The bodies give her another reason to distrust it: the display fails to show people who are physically there.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The birds also make Juliette's response feel consistent with the way she approaches a faulty piece of equipment. She notices a repeat, connects it to something she's already encountered, and changes how she uses the thing in front of her. She doesn't need an explanation of every component in the helmet before she stops relying on its picture. The immediate consequence is concrete: she leaves the camera untouched and keeps moving. The same flight that makes the green world look alive gives her the familiar detail she needs to look past it.",
+      "reason": "H18 identifies the pattern as a script that 'keeps re-stating it with nothing new attached.' This closing paragraph again explains recognition, distrust and refusal to clean after those developments have already received several paragraphs. Its mechanical comparison can survive in one sentence without repeating the entire causal sequence.",
+      "replacement": "It's a response that fits Juliette's work as a mechanic: she can stop trusting a faulty piece of equipment before she understands every part of it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Elsewhere, the shutdown has consequences that are much easier to identify. Juliette and the workers in Mechanical have a repair to complete while the silo depends on them. The steam that normally drives the generator still has to be dealt with, and the work becomes dangerous as heat builds. Juliette goes into the water beneath the generator to help cool the overheated equipment. These are physical problems with immediate feedback. A damaged component, rising heat and a repair crew's actions give us a fairly direct account of what's happening below.",
+      "reason": "The assigned subject is the cafeteria image's change of state, not a retelling of the generator emergency. The preceding paragraphs already establish the shutdown and repair. This detour adds mechanical choreography only to contrast it with an unexplained screen, delaying the chapter's actual development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's also a useful difference between the cafeteria and the helmet. Residents share the large screen inside the silo. A cleaner encounters the visor image alone, after leaving through the airlock. Those pictures reach people in different places and under different circumstances. Discovering how the helmet misleads Juliette gives us a comparison for the cafeteria, though it doesn't amount to an inspection of the cafeteria's equipment. The same kind of scenery can appear in both situations while the route by which it reaches each display remains a separate question.",
+      "reason": "H18 warns against a repeated framing that returns without a new development. The preceding two paragraphs already establish both the visor comparison and the unknown source of the cafeteria image. Restating that distinction here adds another methodological qualification immediately before the chapter's useful hypothetical verification tests.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Finding the implant doesn't answer every question about a pregnancy that hasn't happened. It does answer whether the promised removal was carried out. That's the immediate breach Allison can identify. She doesn't have to establish the entire reproductive policy to know that her own procedure failed to match what she was told. Her discovery is especially unsettling because the relevant evidence was concealed inside her. During the ordinary course of treatment, she couldn't inspect the doctor's work as it happened or compare it with a result she could see.",
+      "reason": "H18 describes repeating a fact or framing without advancing it. The opening already establishes the retained device, its contradiction of the promised procedure and Allison's previous dependence on reassurance. The final paragraph supplies the more useful new distinction between an inconclusive failure to conceive and the directly observable implant. This middle paragraph is the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That matters for Hanna as well. An observer could see flowers without knowing whether their position was accidental. Even if someone suspected an obstruction, the arrangement wouldn't reveal the details of her work with the magnifying device or everything she understood about the silo. The same household object could be harmless to one person and useful cover to another. Hanna's situation makes that ambiguity practical. She was trying to investigate under restrictions while continuing to live among people who might notice a more obvious attempt to conceal her activities.",
+      "reason": "H18 identifies repeated framing without additional development. The flowers' unobtrusive appearance is already explained in the second paragraph, their obstruction of the camera in the sixth, and the limits of observers' interpretations immediately before this passage. This paragraph combines those established points rather than adding a distinct step.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        6
+      ],
+      "detail": "Both explain that a false green picture does not authenticate the cafeteria feed or the whole exterior. That overlap is required by the adjacent assignments, but chapter 5 should retain the boundary as a short conclusion while chapter 6 owns the fuller discussion of the cafeteria flash and hypothetical verification."
+    },
+    {
+      "chapters": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detail": "Each chapter repeatedly moves from an observation to a statement about what it cannot establish. The underlying distinctions are useful and assigned, but repeated qualifications within chapters 5 and 6 make the sequence sound more like an evidence-method lesson than progressing lore narration. The proposed deletions preserve the distinctions while reducing that cumulative effect."
+    },
+    {
+      "chapters": [
+        6,
+        8
+      ],
+      "detail": "The cafeteria comparison in chapter 8 adds a genuinely different point: residents knowingly receive a public image while secretly becoming the subjects of another image. It is not redundant with chapter 6's discussion of an uncertain image source and should remain."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within television scope through S3E10 and their assigned early-season subjects. No novel biography, ancestry assertion, autonomous-Algorithm claim, invented display mechanism or global-safety conclusion appears. The main factual corrections concern Allison's prior exposure to the recording and the implied cause of the cleaners' deaths. Only chapters 5-8 were supplied; the chapter-one optional request and the complete episode's sequel structure cannot be assessed.",
+  "limitations": "Reviewed all four supplied chapter texts against their assignments, the supplied proof bank and the provided prose rules. No websites were opened, episodes watched, narration audio measured or independent verification of every fictional detail performed. The proof bank is a constrained summary rather than a transcript, so scene-level details not explicitly documented there have not been treated as independently confirmed. No machine-banned phrase or non-ASCII narration artifact was found in the supplied chapter text.",
+  "input_hashes": {
+    "5": "18230450b45b7f720d927a645310be771fc8388ea8b2541b668c6a841e68f78b",
+    "6": "cf5c8f80ebacaaceb97a347b4a25beaf9c0ec617e7cf9c24177d060ee012e37e",
+    "7": "5a8737c5be5a7c91d8510c1a811ba832f2521860eb78a29b7cecb7e8e3af38bf",
+    "8": "15014219e6e48f4d8236b29310e009705eac1dd88dcc1d141f544d4f299f1a72"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

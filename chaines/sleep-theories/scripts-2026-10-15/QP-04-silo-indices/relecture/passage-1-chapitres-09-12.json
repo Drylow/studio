@@ -1,0 +1,215 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Lukas records changes in the apparent stars on the cafeteria display, developing an inquiry beyond sanctioned explanations while remaining dependent on a mediated image.",
+      "new_information": [
+        "Lukas returns to the cafeteria display and uses drawings to compare the lights' positions over time.",
+        "His inquiry concerns a publicly visible phenomenon rather than access to a hidden object or restricted room.",
+        "His technical employment does not supply an explanation for everything he observes.",
+        "The visor deception gives viewers a reason to distinguish a pattern on the cafeteria screen from independently verified conditions outside."
+      ],
+      "local_answer": "The chapter answers its assigned question: sustained comparison makes an unexplained pattern available for investigation, but the display does not independently establish a complete astronomical account.",
+      "open_issues": [
+        "Several paragraphs repeat the same observation-recording-comparison sequence without adding a development.",
+        "The chapter's later explanation of how curiosity challenges sanctioned knowledge substantially repeats its earlier explanation."
+      ],
+      "evidence_notes": "The central activity is authorized by the assignment. The visor comparison is consistent with S2. The supplied summaries of S1 and S8 do not independently document the detailed cafeteria interactions, drawings, or employment information, so those details have not been independently verified here."
+    },
+    {
+      "number": 10,
+      "summary": "The Before Times characters complicate the collective authority of the founders by showing individual relationships, a stated preservation plan, and the personal consequences of separation.",
+      "new_information": [
+        "References to the founders do not establish unanimous intentions or individual authorship of every rule.",
+        "Victor is one founder among several, not the sole creator.",
+        "The founders describe the project as a human seed bank.",
+        "Helen's pregnancy and her separation from Daniel give the project's arrangements specific personal consequences.",
+        "The unveiling includes an explosion, complicating a picture of an orderly founding transition."
+      ],
+      "local_answer": "The chapter explains why viewers should no longer hear founding wisdom as the expression of one undifferentiated will, although it establishes different positions and experiences more concretely than different motives.",
+      "open_issues": [
+        "The chapter borrows several substantial developments assigned to later chapters, particularly Daniel/Troy and the Algorithm's operators.",
+        "Its repeated separation example supplies less development on its final appearance.",
+        "The available evidence supports distinguishing the characters' situations, but not inventing a complete account of each person's private motives."
+      ],
+      "evidence_notes": "S6 supports the attributed seed-bank rationale; S7 supports pregnancy, separation, and the explosion; S8 supports Daniel/Troy and human operators. Victor's status as one founder among several is expressly supplied by the assignment. The text appropriately avoids certifying the founders' threat model."
+    },
+    {
+      "number": 11,
+      "summary": "Daniel's identification as Troy separates retained practical capability from impaired access to personal history and raises questions about how his present role uses those surviving abilities.",
+      "new_information": [
+        "The finale identifies Daniel as Troy.",
+        "Troy retains practical abilities despite difficulty accessing Daniel's personal history.",
+        "The audience can connect the two identities more readily than Troy can reconstruct his own past.",
+        "Describing his demeanor as mechanical does not make him a literal machine.",
+        "His condition should not be generalized into a diagnosis or a universal account of memory impairment."
+      ],
+      "local_answer": "The distinction between capability and accessible autobiography is clear, but the chapter does not develop enough distinct material beyond that distinction to sustain its present length.",
+      "open_issues": [
+        "Most paragraphs restate the same capability-versus-personal-history contrast.",
+        "References to demanding work and assignments remain generic; the supplied proof summary does not identify a specific task that could safely be added.",
+        "The claim that competence makes his condition easier for others to work around attributes an operational consequence more confidently than the supplied evidence supports.",
+        "Substantial consolidation is needed rather than additional synonyms for the central distinction."
+      ],
+      "evidence_notes": "S8 and the assignment authorize Daniel/Troy, retained skills, persistent memories of Helen, and the human setting of Silo 1. They do not supply a detailed task sequence or establish how other people assess and exploit his memory impairment. No medical mechanism should be added."
+    },
+    {
+      "number": 12,
+      "summary": "Troy's recurring recollections of Helen connect his imposed identity to a particular relationship whose significance survives without restoring a complete personal history.",
+      "new_information": [
+        "Helen repeatedly appears in Troy's flashes of recollection.",
+        "The assignment expressly authorizes the creator-confirmed identification of Helen in those flashes.",
+        "The earlier gift scene gives viewers a concrete relationship to recognize when Helen recurs.",
+        "Separation into Silo 18 and Silo 1 means recollection does not itself restore proximity or their former circumstances.",
+        "Personal recollection raises questions about attachment and recognition that retained practical skills alone do not raise."
+      ],
+      "local_answer": "The chapter successfully distinguishes relational memory from procedural competence and avoids claiming that affection universally reverses memory interventions.",
+      "open_issues": [
+        "The audience's ability to recognize Helen before Troy can place her is explained repeatedly.",
+        "The Pez exchange receives more explanation than this chapter needs after the earlier object-focused chapter and its reuse in chapter 10.",
+        "Several late paragraphs restate the opening distinction rather than advancing the relationship's particular significance."
+      ],
+      "evidence_notes": "S4 supports the gift; S7 supports separation; S8 supports persistent memories of Helen. The assignment supplies the creator-confirmation framing. The narration appropriately stops short of claiming complete recovery or a universal cure."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That makes the cafeteria an interesting place for the inquiry. Lukas hasn't uncovered a hidden room or obtained an object that someone has locked away. Other residents can look at the same display. The difference is the time he gives it and the record he keeps. A feature of the picture that can pass unnoticed during a meal becomes a subject once he returns to it. The silo can restrict access to certain places and materials. Here, a resident begins asking an unsupplied question about something already in public view.",
+      "reason": "H18 identifies an echo as repeatedly stating a fact or framing \"with nothing new attached.\" Most of this paragraph repeats the public-space and repeated-observation discussion already established in paragraph two. Preserve its useful distinction between public visibility and restricted access in a shorter passage.",
+      "replacement": "He hasn't entered a restricted room or recovered a forbidden object. His question begins with a display other residents can also see.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This is where his habit challenges the silo's sanctioned knowledge. Lukas doesn't need to stand before the cafeteria and declare the official history false. His drawings already contain a question that the explanations available to him haven't answered. If the lights move regularly, he wants to know why. Each return to the display gives that question another concrete basis. He's making room for an answer that would have to account for what he's seen, rather than allowing the absence of an explanation to end his interest.",
+      "reason": "H18 says a re-mention must add \"a consequence, a comparison, the next number.\" This paragraph repeats the unanswered-question framing from paragraphs four and six and the comparison method from paragraphs two and five. It is the least useful late restatement and can be removed without losing the chapter's answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "By the finale, Daniel's identification as Troy gives the audience another reason to keep the individuals in view. The man connected to Helen in the Before Times remains relevant inside the later operation of Silo 1. His history doesn't disappear from the story just because the name in use changes. The finale also places human operators behind the Algorithm. Together, those released facts make the founding world feel populated by people whose lives continue to bear on its workings. A collective account of the project's purpose can't replace attention to those people.",
+      "reason": "This paragraph spends the central reveals assigned to chapters 11 and 22 without developing the present chapter's distinction among founding participants. The human-operator fact is supported, but its placement makes this sequel more recap-heavy and weakens the planned division of useful developments.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "So an early reference to the founders now asks for a little more attention. Which person is being spoken for, and which part of the beginning has survived into the official account? The question has a practical basis in what the show gives us: a stated preservation plan, an unveiling interrupted by an explosion, and Helen and Daniel assigned to different silos. Future residents inherit the resulting arrangements without having stood beside either of them. We can now picture the separation behind that inheritance, with Helen bound for Silo 18 and Daniel for Silo 1.",
+      "reason": "H18 warns against returning to one framing \"with nothing new attached.\" The conclusion repeats the plan, explosion, and separation immediately after their explanations, including the silo destinations already stated in paragraph eight. A shorter ending can retain the chapter's answer without another inventory.",
+      "replacement": "When a later official invokes the founders, the collective name no longer tells us whose judgment is being preserved. Helen's experience of separation and the planners' account of preservation belong to the same beginning, but they don't describe it in the same way.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "So when Troy carries out his work, Daniel remains relevant to what we're seeing. The earlier name attaches that competence to a human history, even where Troy can't readily retrieve it. An instruction can give him a task, and his surviving skills can give him a way to complete it. Neither supplies the missing account of Daniel. At the end of the assignment, the same man is still there, capable of acting in the present and unable to reach all of the life that brought him to it.",
+      "reason": "This conclusion exemplifies the chapter-wide H18 problem: the script \"keeps re-stating\" one distinction \"with nothing new attached.\" Paragraphs one, three, four, six, nine, ten, eleven, and twelve repeatedly explain that successful work does not restore personal history. The assigned question is answered early, but the remaining length is not supported by distinct developments or a supplied concrete task. The chapter needs substantial consolidation around the reveal, the capability-memory distinction, and its limited interpretation. A one-to-three-sentence replacement for the ending would not repair that structure, and no task details should be invented to fill it.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "chapter": 11,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "That gives his competence an uncomfortable consequence. A failed task would draw attention to a missing ability. A completed task can let the missing personal history pass without interrupting the operation. Troy's effectiveness therefore makes his condition easier for others to work around. They can deal with the man who can do what's required, using the name and role currently assigned to him. For Troy himself, however, success at the task can't supply the absent explanation of how he came to occupy that role.",
+      "reason": "The supplied material establishes retained capability and impaired personal recollection, not that successful work demonstrably makes his condition easier for others to manage. This is a plausible interpretation presented as an established causal consequence. Keep the distinction but mark the operational reading as an inference.",
+      "replacement": "His competence may make the gap less apparent to anyone judging him only by the work he completes. For Troy, completing that work still doesn't explain how he came to occupy the role.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Daniel's earlier scenes make the loss of context concrete. He has a name used by another person, a connection with Helen, and a place in events before the later silo operation. Those are parts of a life that an assignment under the name Troy can't explain. Being told what to do now doesn't answer where he belonged before. Even a successful performance leaves those questions untouched. The work may have a clear endpoint, while his understanding of the person doing it remains unsettled.",
+      "reason": "H18 requires a repeated fact to add something beyond its earlier appearance. Paragraph two already establishes Daniel's relationship with Helen and the contrast with Troy's present work; paragraph six already explains the audience's greater access to that continuity. This paragraph adds no distinct event or consequence and is a safe deletion during the larger consolidation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Silo 1 also gives this separation a practical setting. Work continues there through people occupying roles and carrying out instructions. Troy can fit into that activity because he retains abilities the operation can use. From the outside, a functioning role can look complete: someone receives an assignment and has the means to perform it. Daniel's identity complicates that appearance. We now have reason to look beyond whether Troy performs successfully and consider how much of the person has been left out of the role others recognize.",
+      "reason": "H18 calls for giving a repeated thematic observation \"one home paragraph.\" This is another version of paragraphs three and four, with generic references to work and instructions rather than a new supplied event. It should be deleted rather than expanded with invented operational detail.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That earlier exchange matters here because recollections of Helen have somewhere to lead. She isn't an unexplained face added to Troy's experience solely to make him seem troubled. The series has already put her in Daniel's company. We've seen a gesture pass between them. When she recurs in his awareness, the audience can understand why this particular person might matter before Troy has recovered enough context to explain it himself. The discomfort comes partly from that distance between what we recognize and what he can presently understand.",
+      "reason": "H18 describes repeated framing \"with nothing new attached.\" Paragraph three already explains the audience's ability to recognize Helen through the Before Times scenes, and paragraph four supplies the gift as its concrete example. This paragraph explains both again instead of moving to the separation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The recurrence matters as well. Helen comes back in flashes, rather than appearing as a single isolated disturbance that the story leaves without a connection. Each return keeps the same relationship within reach, however briefly. Still, a recurring recollection isn't the same experience as sitting down with Helen and recovering their shared history through conversation. Troy hasn't been handed a reliable sequence of events merely because her image persists. The finale leaves him with contact with the past that remains difficult to organize into an account.",
+      "reason": "H12 targets \"Inflated connective tissue and hedges piled on hedges.\" The paragraph takes six sentences to restate recurrence and incomplete recovery, and its imagined conversation adds an unnecessary methodological comparison rather than lore. The qualification is useful but can be spoken directly.",
+      "replacement": "Helen returns more than once, so the relationship remains within reach even when Troy can't place it. Those flashes don't restore a continuous account of their time together.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This is why the finale's identity reveal benefits from the earlier scenes between Daniel and Helen. Without them, learning that Troy had another name could remain a puzzle about identification. Helen makes the consequences easier to grasp. There's someone associated with that name, someone whose presence returns when the larger history won't come into focus. Daniel's past includes an exchange with her, a separation from her, and an attachment that continues to trouble the boundaries of his assigned identity.",
+      "reason": "H18 says a repeated observation needs a new consequence or comparison. This late paragraph repeats the function of the earlier relationship scenes already explained in paragraphs two through five. The following ending already returns to the gift and interruption, making this additional summary the least useful passage at the close.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Chapter 10 introduces Daniel/Troy and explains that his earlier history persists beneath the later name immediately before chapter 11 makes that its central subject. Removing chapter 10's finale paragraph preserves the planned handoff."
+    },
+    {
+      "chapters": [
+        10,
+        12
+      ],
+      "detail": "Both chapters explain the Pez gift as an ordinary personal exchange outside silo duties. Chapter 12 has the stronger reason to retain that example because it makes Helen's personal significance recognizable; chapter 10 should not expand it further."
+    },
+    {
+      "chapters": [
+        10,
+        12
+      ],
+      "detail": "Helen's placement in Silo 18 and Daniel's placement in Silo 1 recur as evidence of personal cost. The uses are legitimately different when chapter 10 addresses founding arrangements and chapter 12 addresses the limits of recollection, but chapter 10's concluding repetition adds no further consequence."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "The distinction between performing work and remembering a personal life appears throughout chapter 11 and again at the start of chapter 12. A brief transition is justified; the extensive restatement within chapter 11 makes the adjacent relationship chapter feel more repetitive than its distinct assignment warrants."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within television continuity through S3E10 under the authoritative release scope. No novel biography, future-season answer, ancestry claim, literal robot claim, confirmed autonomous-AI claim, or global-safety conclusion appears. Chapter 10 uses supported later reveals prematurely rather than exceeding the release boundary. The early optional CTA cannot be assessed because chapter 1 was not supplied; no repeated CTA appears here.",
+  "limitations": "Only chapters 9-12 were supplied in full, and all four were reviewed. Cross-chapter conclusions about other chapters are limited to the supplied outline. Evidence review used the proof summaries and assignments as authoritative, including the released 2026 material; linked pages and episodes were not independently opened or watched. No narration timing, audio measurement, human read-aloud, or independent verification of every fictional detail was performed.",
+  "input_hashes": {
+    "9": "18b254fc7ec341f2c7aec7f71b76a0e81a58741230cbfaf738d9b7fc59d1445c",
+    "10": "b8ad5bae2d727a9092a9be1ce49b01f7eb283a1102b6eb1f949023251a123930",
+    "11": "5a8bff1c0ebdba4dbb1fe8b4a9832628f3d57a2ce7969324d227ba780a621a0f",
+    "12": "3f35fbd72e6e7d315793ecdee11e44860961e9546d79fb237b3785e4f315d18b"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

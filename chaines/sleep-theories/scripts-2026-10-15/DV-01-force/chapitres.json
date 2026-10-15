@@ -1,0 +1,351 @@
+{
+  "timing_note": "Word offsets are exact under the documented regex. Times at 150 wpm are estimates, NOT publication timestamps. Generate YouTube chapters from the final measured audio/video.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "The fighter Yoda lifts",
+      "file": "chapitres/01.txt",
+      "words": 950,
+      "start_word": 0,
+      "end_word": 950,
+      "estimated_start_seconds_at_150_wpm": 0,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F4"
+      ],
+      "sha256": "c43eae696025a01851f139e8c6a90090210c98c5d28de190ab82d6e1321735a0"
+    },
+    {
+      "number": 2,
+      "title": "A blood test and a spiritual field",
+      "file": "chapitres/02.txt",
+      "words": 917,
+      "start_word": 950,
+      "end_word": 1867,
+      "estimated_start_seconds_at_150_wpm": 380,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F2"
+      ],
+      "sha256": "fa9cd7107fa785c5491efd92f4ff9037b09a1ada7b691aa5e88a1ff7696b82ad"
+    },
+    {
+      "number": 3,
+      "title": "What training can change",
+      "file": "chapitres/03.txt",
+      "words": 976,
+      "start_word": 1867,
+      "end_word": 2843,
+      "estimated_start_seconds_at_150_wpm": 747,
+      "measured_timestamp": null,
+      "sources": [
+        "F2"
+      ],
+      "sha256": "c4d3d7ceb91b1fbe65e9c720d35dab470d80d2b5f08ad424c70c00214289077a"
+    },
+    {
+      "number": 4,
+      "title": "Chirrut on the beach",
+      "file": "chapitres/04.txt",
+      "words": 879,
+      "start_word": 2843,
+      "end_word": 3722,
+      "estimated_start_seconds_at_150_wpm": 1137,
+      "measured_timestamp": null,
+      "sources": [
+        "F1"
+      ],
+      "sha256": "fa59be21c1ec99cfeb8be30b540f7f742e0dd930315dc1f0a51046efeff988bb"
+    },
+    {
+      "number": 5,
+      "title": "Qui-Gon pays attention to the present",
+      "file": "chapitres/05.txt",
+      "words": 996,
+      "start_word": 3722,
+      "end_word": 4718,
+      "estimated_start_seconds_at_150_wpm": 1489,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F2"
+      ],
+      "sha256": "dcc299891ce69ce1b27e61a127de4aa903ef54b8892dca7dec3b39594107d05a"
+    },
+    {
+      "number": 6,
+      "title": "Yoda listens to a dead teacher",
+      "file": "chapitres/06.txt",
+      "words": 936,
+      "start_word": 4718,
+      "end_word": 5654,
+      "estimated_start_seconds_at_150_wpm": 1887,
+      "measured_timestamp": null,
+      "sources": [
+        "F5"
+      ],
+      "sha256": "aff78630d76a777bedaccfb57ccba1665df5c2c3f135aaf6b3f9e37658fc36c6"
+    },
+    {
+      "number": 7,
+      "title": "Anakin's dreams of losing Padme",
+      "file": "chapitres/07.txt",
+      "words": 952,
+      "start_word": 5654,
+      "end_word": 6606,
+      "estimated_start_seconds_at_150_wpm": 2262,
+      "measured_timestamp": null,
+      "sources": [
+        "F1"
+      ],
+      "sha256": "eb84bbb85eb506a1d3242db1b9317394a0fe3171112c6f16d227eb7007670e01"
+    },
+    {
+      "number": 8,
+      "title": "Luke sees his friends in pain",
+      "file": "chapitres/08.txt",
+      "words": 926,
+      "start_word": 6606,
+      "end_word": 7532,
+      "estimated_start_seconds_at_150_wpm": 2642,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F4"
+      ],
+      "sha256": "e9612b40979dd6466108224b81b25f118da5fa6b6a0795c1bbc0e147e92fb00b"
+    },
+    {
+      "number": 9,
+      "title": "The face inside the helmet",
+      "file": "chapitres/09.txt",
+      "words": 888,
+      "start_word": 7532,
+      "end_word": 8420,
+      "estimated_start_seconds_at_150_wpm": 3013,
+      "measured_timestamp": null,
+      "sources": [
+        "F4"
+      ],
+      "sha256": "ab43f5cbd03dd81736e0459992cd7f77f3cd4ca2a26aad90603f47be4af62abd"
+    },
+    {
+      "number": 10,
+      "title": "Balance without a head count",
+      "file": "chapitres/10.txt",
+      "words": 1067,
+      "start_word": 8420,
+      "end_word": 9487,
+      "estimated_start_seconds_at_150_wpm": 3368,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F3"
+      ],
+      "sha256": "8b905a2b15944e43c437f43d1a1b6dd4a738c4d019d590ac935757f6756d34b3"
+    },
+    {
+      "number": 11,
+      "title": "The Father's proposed successor",
+      "file": "chapitres/11.txt",
+      "words": 974,
+      "start_word": 9487,
+      "end_word": 10461,
+      "estimated_start_seconds_at_150_wpm": 3795,
+      "measured_timestamp": null,
+      "sources": [
+        "F3"
+      ],
+      "sha256": "10494b483f912bdcf0bbc46e0b0af80c4fd8df721b844a0804d02b2636e2fa1c"
+    },
+    {
+      "number": 12,
+      "title": "The Daughter and Ahsoka",
+      "file": "chapitres/12.txt",
+      "words": 974,
+      "start_word": 10461,
+      "end_word": 11435,
+      "estimated_start_seconds_at_150_wpm": 4184,
+      "measured_timestamp": null,
+      "sources": [
+        "F3",
+        "F6"
+      ],
+      "sha256": "6a8e2f5f909fb9875129aa46c30a645bff72d58fed77b6a4e750da781ce14400"
+    },
+    {
+      "number": 13,
+      "title": "A future removed from memory",
+      "file": "chapitres/13.txt",
+      "words": 989,
+      "start_word": 11435,
+      "end_word": 12424,
+      "estimated_start_seconds_at_150_wpm": 4574,
+      "measured_timestamp": null,
+      "sources": [
+        "F3"
+      ],
+      "sha256": "ebf80c22727eaa5882146f1d2e405f650060351eb1d9c57cbb2651761f06226d"
+    },
+    {
+      "number": 14,
+      "title": "Obi-Wan remains after death",
+      "file": "chapitres/14.txt",
+      "words": 956,
+      "start_word": 12424,
+      "end_word": 13380,
+      "estimated_start_seconds_at_150_wpm": 4970,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F5"
+      ],
+      "sha256": "e6a631f524ff94b70815bc1124333a859776a4a5de694f98cbfcf2d4f87b0ed1"
+    },
+    {
+      "number": 15,
+      "title": "Yoda meets what he denies",
+      "file": "chapitres/15.txt",
+      "words": 866,
+      "start_word": 13380,
+      "end_word": 14246,
+      "estimated_start_seconds_at_150_wpm": 5352,
+      "measured_timestamp": null,
+      "sources": [
+        "F5"
+      ],
+      "sha256": "27bb5c68aff8124e6cc0024218d661b3b0d743bc792043b8a21008d2a14819fc"
+    },
+    {
+      "number": 16,
+      "title": "The Sith promise of continuing forever",
+      "file": "chapitres/16.txt",
+      "words": 853,
+      "start_word": 14246,
+      "end_word": 15099,
+      "estimated_start_seconds_at_150_wpm": 5698,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F7"
+      ],
+      "sha256": "971e7e72e7429d13c3f8b2a4e9ccfd0ae7645ca6d5b9669203c10792b14758c5"
+    },
+    {
+      "number": 17,
+      "title": "Two people share a connection",
+      "file": "chapitres/17.txt",
+      "words": 908,
+      "start_word": 15099,
+      "end_word": 16007,
+      "estimated_start_seconds_at_150_wpm": 6040,
+      "measured_timestamp": null,
+      "sources": [
+        "F7"
+      ],
+      "sha256": "7ba307e66520306a49d09bfdfde8b77e0d3c2075b09b784fe6fcc4750e751fcd"
+    },
+    {
+      "number": 18,
+      "title": "Healing has different costs",
+      "file": "chapitres/18.txt",
+      "words": 962,
+      "start_word": 16007,
+      "end_word": 16969,
+      "estimated_start_seconds_at_150_wpm": 6403,
+      "measured_timestamp": null,
+      "sources": [
+        "F7"
+      ],
+      "sha256": "b6a0ed601075b04dc06a8caeb9b9709687d3efa426a99a7d501a3683777e8d44"
+    },
+    {
+      "number": 19,
+      "title": "The lightsaber calls up an experience",
+      "file": "chapitres/19.txt",
+      "words": 889,
+      "start_word": 16969,
+      "end_word": 17858,
+      "estimated_start_seconds_at_150_wpm": 6788,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F7"
+      ],
+      "sha256": "35e695fea4e573d8416abad12ccd98d710a48fc0fad7b3abc1c64475e7db031e"
+    },
+    {
+      "number": 20,
+      "title": "A crystal chosen through the Force",
+      "file": "chapitres/20.txt",
+      "words": 981,
+      "start_word": 17858,
+      "end_word": 18839,
+      "estimated_start_seconds_at_150_wpm": 7143,
+      "measured_timestamp": null,
+      "sources": [
+        "F1"
+      ],
+      "sha256": "b3c16798e54de8da023b23812d0b09fa9cfcb2e364e94241f8a1a2f9cb6d4a2f"
+    },
+    {
+      "number": 21,
+      "title": "Ezra hears living creatures",
+      "file": "chapitres/21.txt",
+      "words": 904,
+      "start_word": 18839,
+      "end_word": 19743,
+      "estimated_start_seconds_at_150_wpm": 7536,
+      "measured_timestamp": null,
+      "sources": [
+        "F8"
+      ],
+      "sha256": "c2782156cedac67407bf350c39c00685cb9d49d2bfb5c6fbc693b22d787bbaff"
+    },
+    {
+      "number": 22,
+      "title": "A door between moments",
+      "file": "chapitres/22.txt",
+      "words": 940,
+      "start_word": 19743,
+      "end_word": 20683,
+      "estimated_start_seconds_at_150_wpm": 7897,
+      "measured_timestamp": null,
+      "sources": [
+        "F6"
+      ],
+      "sha256": "8b93a9a0f099ed7478fdfac95626c9009c786809e0ba6db9f41cce7145710d1a"
+    },
+    {
+      "number": 23,
+      "title": "Luke stands on Crait from far away",
+      "file": "chapitres/23.txt",
+      "words": 993,
+      "start_word": 20683,
+      "end_word": 21676,
+      "estimated_start_seconds_at_150_wpm": 8273,
+      "measured_timestamp": null,
+      "sources": [
+        "F1"
+      ],
+      "sha256": "84a72d52840c369b88a8ec381a9693ffcabe5116b23905ade5e4d36aacd2ef76"
+    },
+    {
+      "number": 24,
+      "title": "What an unfinished explanation leaves us",
+      "file": "chapitres/24.txt",
+      "words": 921,
+      "start_word": 21676,
+      "end_word": 22597,
+      "estimated_start_seconds_at_150_wpm": 8670,
+      "measured_timestamp": null,
+      "sources": [
+        "F1",
+        "F7"
+      ],
+      "sha256": "c6a8c83b7de3e31bacc89a00874d3da2b675866a350497aa39be146b6a28abb9"
+    }
+  ]
+}

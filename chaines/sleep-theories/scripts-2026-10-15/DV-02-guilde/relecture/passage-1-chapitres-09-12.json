@@ -1,0 +1,209 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "The Harkonnen attack illustrates how expensive Guild transport can shape both the scale of an invasion and the revenue demands imposed after victory.",
+      "new_information": [
+        "The Baron expects the cost of recovering Arrakis to burden Harkonnen finances beyond the fighting itself.",
+        "Guild passage is a substantial deployment expense that House-owned craft cannot simply bypass.",
+        "The unusually large attacking force combines Harkonnen expenditure, disguised Sardaukar support and internal betrayal.",
+        "The Baron's demands on Rabban connect the invasion's expense to subsequent extraction of wealth from Arrakis.",
+        "The chapter draws the political inference that repeated deployments require resources beyond those needed to win an individual battle."
+      ],
+      "local_answer": "It answers the assigned question by connecting deployment costs to military concentration, constrained transport choices and occupation policy, without inventing prices or tariffs.",
+      "open_issues": [
+        "The repayment-to-exploitation causal chain is explained several times after it has already become clear.",
+        "The rapid-victory paragraph starts as an explicitly identified inference but ends by asserting a specific spending motive.",
+        "The artillery comparison adds a concrete detail but contributes little to the explanation of transport economics."
+      ],
+      "evidence_notes": "The use of Guild transport for the attack is consistent with G2. The Baron-Rabban discussion, artillery and military expectations are additional original-novel details not reproduced in the supplied proof bank; they have not been independently checked here. The general economic implications are mostly identified as reasoning rather than numerical canon."
+    },
+    {
+      "number": 10,
+      "summary": "CHOAM, the Great Houses, the Emperor and the Guild have overlapping commercial interests but exercise different kinds of authority over production, profits and transport.",
+      "new_information": [
+        "CHOAM is identified as Combine Honnete Ober Advancer Mercantiles.",
+        "The Emperor and Great Houses participate in CHOAM, with the Guild and Bene Gesserit described as silent partners.",
+        "CHOAM directorships connect commercial income to political strength.",
+        "An explicitly hypothetical spice shipment distinguishes planetary administration, commercial arrangements and interstellar carriage.",
+        "The harvester rescue illustrates the local production responsibilities that neither commercial participation nor Guild transport can replace.",
+        "The Guild's commercial participation gives it interests within the system without establishing ownership of CHOAM."
+      ],
+      "local_answer": "It clearly distinguishes the company from the carrier and explains why imperial authority, House administration and transport leverage cannot be treated as interchangeable.",
+      "open_issues": [
+        "The hypothetical-shipment paragraph explains its noncanonical status more often than necessary.",
+        "Two successive paragraphs use the same harvester incident to repeat the distinction between planetary administration and interstellar transport."
+      ],
+      "evidence_notes": "G1 and G2 support the transport distinction. The CHOAM terminology, silent-partner arrangement, directorship discussion and harvester incident are additional book-specific material not detailed in those proof entries. The chapter does not invent an ownership hierarchy or present its illustrative shipment as a documented transaction."
+    },
+    {
+      "number": 11,
+      "summary": "The Fremen exchange spice for the exclusion of observation satellites, helping conceal their population, settlements and ecological work without making Arrakis inaccessible or literally invisible.",
+      "new_information": [
+        "The satellite bargain uses spice rather than formal imperial authority to obtain Guild cooperation.",
+        "The Guild can provide the benefit by withholding infrastructure rather than openly recognizing a Fremen political cause.",
+        "The lack of satellite observation makes outside estimates harder to check while leaving patrols, aircraft and ground encounters possible.",
+        "The protected activities include communal water reserves and ecological work as well as settlements and fighters.",
+        "The bargain shows the Guild maintaining relationships with parties whose interests differ from those of the ruling House.",
+        "The chapter interprets continued concealment as a relationship the Fremen must maintain, rather than a permanent technological condition."
+      ],
+      "local_answer": "It answers what each party gains and what outsiders lose the opportunity to inspect, while explicitly distinguishing restricted observation from total invisibility.",
+      "open_issues": [
+        "The opening overstates what a lasting orbital watch would allow outsiders to check.",
+        "The water-reserve paragraph repeats the preceding account of protected communal ecological work.",
+        "The concluding explanation of apparent emptiness revisits an answer already established several times."
+      ],
+      "evidence_notes": "The central exchange and its protection of Fremen numbers and activities are directly supported by G3. The chapter generally treats satellite observation as an opportunity for scrutiny rather than assigning specific sensor capabilities, but the opening needs that same restraint. The ecological examples go beyond the brief proof entry without importing adaptation material."
+    },
+    {
+      "number": 12,
+      "summary": "The chapter contrasts outsiders' underestimation of Fremen organization and fighting strength with the Guild's narrower success in obtaining spice and accommodating concealment.",
+      "new_information": [
+        "Hawat's encounter with reports of Fremen combat against Sardaukar provides a concrete example of failed outside estimates.",
+        "Leto and Duncan seek Fremen support before Paul and Jessica gain deeper access to Fremen society.",
+        "Established Fremen communities supply the organization and practical support within which Paul's campaign develops.",
+        "Fremen interference with spice production demonstrates that suppliers can also disrupt the commodity flow.",
+        "The southern raid supplies another example of resistance exceeding imperial expectations.",
+        "The ecological interests associated with Liet-Kynes differ from the Guild's immediate need for continuing melange supplies."
+      ],
+      "local_answer": "It answers the assigned question through military and social examples, but its conclusion needs to preserve the distinction between demonstrated outside misjudgment and an inferred limit on Guild knowledge.",
+      "open_issues": [
+        "Some military and initiation recap is more detailed than the Guild-focused argument requires.",
+        "The chapter sometimes moves from the supported claim that a transaction need not reveal a society to the stronger claim that these transactions did not supply particular knowledge.",
+        "Several passages repeat chapter 11's account of concealment and communal organization rather than developing the separate question of institutional understanding."
+      ],
+      "evidence_notes": "G3 and G4 support the satellite bargain and the Guild's eventual accommodation of Paul's threat. They do not establish a comprehensive account of what Guild members knew about Fremen society. The chapter appropriately labels its delivery-focused interpretation in one paragraph, but that qualification should also govern the ending. The Hawat, Jamis and southern-raid material is additional original-novel detail not independently verified here."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It's worth keeping that conclusion close to what happens in the novel. The attack is expensive, and the Guild's charges contribute heavily to the expense. Herbert doesn't give us a tariff that would let us calculate the price of any other invasion.",
+      "reason": "The opening announces evidentiary restraint instead of advancing the explanation, then repeats the expense already established in the opening paragraph. H18 identifies the problem as a script that 'keeps re-stating it with nothing new attached.' A single sentence can preserve the useful limit on generalization without turning the narration into a methodological aside.",
+      "replacement": "This invasion shows the burden of one enormous deployment, not a standard price for interplanetary war.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "There's a useful comparison within the attack itself. The Harkonnens employ artillery against Atreides troops who take refuge in caves. In the circumstances of the battle, an old weapon has a specific use, and the Baron is willing to treat the equipment as expendable after it has done its job. Moving an army presents a different practical problem. The force has to reach Arrakis before any of its weapons can be useful. Clever decisions about equipment may improve an assault, while the requirement for interstellar passage remains an expense the commander has to face.",
+      "reason": "The artillery detour does not establish a meaningful cost comparison and returns to the already explained need to obtain passage. It adds battle detail without a distinct development in the assigned transport-cost argument. Deleting the paragraph preserves the chapter's causal sequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "The assault's concentration of force, its reliance on surprise and Yueh's betrayal all help produce the swift collapse the Baron needs. His spending is intended to leave as little unfinished fighting as possible.",
+      "reason": "The preceding sentences correctly identify the preference for a rapid result as a practical inference. These sentences turn it into a definite claim about what the Baron needs and specifically intends his spending to accomplish. The supplied evidence does not establish that precise motive.",
+      "replacement": "The assault's concentration of force, its reliance on surprise and Yueh's betrayal all help produce a swift collapse. That outcome also reduces the risk of further fighting delaying the revenue the Baron wants.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Baron's demands on Rabban carry that expense into ordinary rule. The investment that helped put soldiers onto Arrakis becomes pressure on the governor to make the planet pay. This is where the Guild's transport charges acquire a consequence far beyond the journey itself. The Guild doesn't have to govern Arrakis or issue Rabban's orders for its costly service to affect life there. The Baron has already paid to move his war across interstellar space. Under Rabban, the conquered population faces his determination to recover the money.",
+      "reason": "The closing paragraph restates the same repayment-to-occupation chain already explained in the opening, the paragraph ending with Rabban's inherited task, and the paragraph beginning 'For the people of Arrakis.' H18 requires that a second mention add 'a consequence, a comparison, the next number'; this final repetition adds none. The preceding paragraph already closes on the cost reaching into restored administration.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Following the cargo makes their separate roles easier to picture without assigning an invented contract or accounting procedure to Herbert's setting.",
+      "reason": "The example has already been explicitly identified as explanatory rather than a novel transaction. This sentence repeats that qualification and comments on the author's method instead of delivering lore. H12 calls for cutting 'inflated connective tissue'; the sleep adaptation likewise discourages repeated lectures about evidence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That inspection gives Leto a responsibility quite different from the Guild's. He's confronting conditions on the producing world, including equipment failures that threaten lives and output. Kynes evaluates him through what he does when the harvester is in danger. The Guild, meanwhile, supplies the interstellar connection on which the wider economy depends. These activities meet around the same valuable substance, yet the people carrying them out face different decisions. Leto's rescue of the workers tells us something about his administration that no statement about CHOAM dividends could provide.",
+      "reason": "The preceding paragraph has already used the harvester incident to distinguish local production from commercial reach and Guild passage. Almost this entire paragraph repeats that distinction. Under H18, the least useful repeated passage should be removed rather than expanded; the distinct observation about Kynes can remain on its own.",
+      "replacement": "Kynes also judges Leto by his decision to rescue the workers, so the inspection reveals something about the duke's rule as well as the condition of spice production.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "What they can't do is place a lasting watch above the desert and begin checking everything the Fremen would rather leave uncounted.",
+      "reason": "G3 supports exclusion of observation satellites, not the ability of such satellites to check everything the Fremen conceal. The sentence overstates the counterfactual observational capability and conflicts with the chapter's later, appropriately limited treatment.",
+      "replacement": "The bargain keeps observation satellites away, removing one way outsiders might check estimates of Fremen numbers and activity.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The water reserves make the stakes especially clear. Jessica encounters a community willing to preserve water for a purpose whose fulfillment lies beyond an individual's immediate comfort. That requires agreement among people who could otherwise use the water now. An outsider who saw only scattered desert inhabitants would miss the organization behind such a commitment. The satellite payment helps protect the space in which that organization operates. Fremen secrecy covers stores, work and collective plans, as well as the location of people who might take up weapons.",
+      "reason": "The preceding paragraph already explains communal water reserves, ecological work, long-term purposes and the value of poor observation. This paragraph adds an interpretation of collective commitment but then repeats the same concealment conclusion. H18 identifies repetition without a distinct development as an echo; retain only the interpretive addition.",
+      "replacement": "Preserving water for that distant goal also requires collective agreement: people accept limits on what they can use now for a change they may never live to see.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Stilgar's people can receive fugitives, decide whether to accept them, and give them places within an existing community. Paul has to face Jamis, and Jessica's abilities affect how the Fremen assess her. Neither arrival leaves the community waiting for an offworld ruler to organize it.",
+      "reason": "The initiation details begin a recap of Paul and Jessica's entry into Fremen society, already introduced in chapter 11, when the assigned question concerns what commodity access does and does not reveal. The useful development is the existence of an organized society before Paul, which can be stated directly without the scene detour.",
+      "replacement": "Paul and Jessica enter a society already able to shelter fugitives, judge newcomers and enforce its own decisions.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Their dependence has brought them into negotiations over spice for years, yet Paul's position rests on kinds of knowledge those transactions haven't supplied.",
+      "reason": "The satellite bargain establishes contact and dependence but does not establish a complete inventory of knowledge the Guild failed to acquire. Earlier wording properly treats this as a political interpretation. The ending should not convert that inference into a categorical statement about Guild knowledge or add an unnecessary duration.",
+      "replacement": "Their dealings over spice give them access to the Fremen, but access alone doesn't establish how fully they understand the society now supporting Paul.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10
+      ],
+      "detail": "Both chapters explain that House authority and House-owned craft cannot substitute for Guild passage. The recurrence is justified because chapter 9 concerns deployment costs and chapter 10 distinguishes institutional roles, but further explanations of the same point would add little."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Leto's harvester inspection appears first as an illustration of local production responsibility and then as an example of the limited scope of an individual flight. These are different uses, so this is not an automatic deletion, but the second reference could be shortened if overall pacing remains slow."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "The satellite payment, underestimated Fremen organization, communal resources and ecological ambitions recur across both chapters. Chapter 11 should retain the detailed account of what concealment protects; chapter 12 is most useful when it moves to Hawat's miscalculation, military capacity, disrupted production and the limits of inferring knowledge from a working transaction."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "Both endings return to hidden desert communities beneath the Guild's interstellar activity. Chapter 12's conclusion should emphasize the changed bargaining position at the final confrontation rather than repeat chapter 11's resolution about apparent emptiness."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the original-six-novel book-continuity scope and primarily discuss Dune. No expanded-prequel origins, film-specific physiology, invented numerical tariffs, absolute Guild pacifism, CHOAM ownership claim or conflation of navigation machinery with no-ships appears. The principal concerns are repetition, occasional overstatement of inference and Guild-focused sections drifting into familiar plot recap. No early subscribe or listening-location request is required in these chapters, and none is repeated.",
+  "limitations": "Only chapters 9 through 12 were supplied as narration; all four were read in full. The remaining outline was used to assess assigned roles and likely overlap, not treated as completed prose. Evidence review used the supplied proof bank and text; no linked pages or primary passages were opened, no episode or adaptation was watched, and no independent verification of every fictional detail, audio measurement, external scanner run or human read-aloud is claimed.",
+  "input_hashes": {
+    "9": "7c1c8aee90bcb64bf8eaba86d8b4859ec5809921f79775241bd618994c6c9ee6",
+    "10": "1601aa4a7965bd5e8a6cad0b20e1261608560bfe3a0cd001567b71cdd63bf8a1",
+    "11": "d4a131d765fe99baf1221900e47fa5c284984c9e5428fafaed2b8d67a5eb4c27",
+    "12": "08a603d8a6a9070bb43e9433f40a956ed3855adbf214b1ac6b14154bb9a052d2"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

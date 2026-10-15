@@ -1,0 +1,166 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Paul's departure into the desert frames a return to his upbringing as the Atreides heir and the competing obligations embedded in his education.",
+      "new_information": [
+        "Paul becomes emperor and is known on Arrakis as Muad'Dib before his desert departure in Dune Messiah.",
+        "After losing his physical eyes, Paul temporarily navigates through prescience.",
+        "His departure has significance within Fremen customs concerning blindness.",
+        "The narration covers only Dune, Dune Messiah and Children of Dune and announces major spoilers.",
+        "Paul grows up on water-rich Caladan as the son of Duke Leto and Jessica, with responsibilities attached to inheriting House Atreides.",
+        "Jessica's Bene Gesserit affiliation brings another institution's purposes into his family education."
+      ],
+      "local_answer": "The chapter establishes why imperial victory is not the endpoint of Paul's biography and returns to his childhood, but the opening spends too long explaining the later departure and repeatedly announcing the interpretive framework.",
+      "open_issues": [
+        "The prescient navigation and Fremen departure material anticipates substantial parts of chapters 20 and 21 rather than remaining a brief opening frame.",
+        "Several paragraphs restate that training, achievement and other people's expectations restrict Paul's options without adding a distinct development."
+      ],
+      "evidence_notes": "The principal framing agrees with P1 and P5. The requested early subscribe and listening-location/day-or-night invitation appears once and is optional in wording. The chapter does not claim Paul's disappearance is his death or disclose the Children of Dune ending. Its broader upbringing details are consistent with the supplied outline, although the proof summaries do not individually document every detail."
+    },
+    {
+      "number": 2,
+      "summary": "Paul's Caladan education combines Gurney and Duncan's weapons instruction, Thufir's analytical preparation and Jessica's Bene Gesserit disciplines without making him an already qualified Mentat.",
+      "new_information": [
+        "Gurney's practice fight makes readiness a requirement independent of Paul's willingness to train.",
+        "Personal shields require controlled blade speed rather than an exclusively fast attack.",
+        "Gurney's experience of Harkonnen brutality gives the family conflict a personal connection within Paul's household.",
+        "Duncan and Gurney are distinct teachers and personal attachments, not interchangeable military resources.",
+        "Thufir is both the Atreides Mentat and Master of Assassins.",
+        "Paul initially receives Mentat preparation without knowing its full purpose and later has an opportunity to accept its continuation.",
+        "Jessica teaches attention to fear, bodily responses and subtle behavior, which is distinct from Paul's emerging dreams."
+      ],
+      "local_answer": "The chapter clearly distinguishes the practical purposes of Paul's teachers and explains how their disciplines can work together without eliminating his need to choose.",
+      "open_issues": [
+        "The paragraph immediately after the explicit Mentat qualification repeats that Paul remains inexperienced and dependent on adult judgment.",
+        "The closing synthesis partly repeats chapter one's account of education creating expectations, though here it follows substantially more concrete material."
+      ],
+      "evidence_notes": "The teacher assignments follow P2 and the chapter's supplied job. The draft expressly avoids calling Paul a fully qualified Mentat. The practice fight is paraphrased without fabricated dialogue, dates or numerical claims. Shield mechanics and the more detailed training sequence extend beyond P2's short summary, so this review does not represent independent verification of every detail."
+    },
+    {
+      "number": 3,
+      "summary": "Jessica's decision to bear a son disrupts the Bene Gesserit breeding plan, and Mohiam's lethal test establishes Paul's endurance without establishing either the sisterhood's moral authority or its control over him.",
+      "new_information": [
+        "Jessica was instructed to bear a daughter intended for a Harkonnen marriage.",
+        "The proposed union belonged to the Bene Gesserit effort to produce the Kwisatz Haderach.",
+        "Jessica's disobedience coexists with her continued use of Bene Gesserit teaching and ambitions.",
+        "Mohiam is Jessica's former teacher and the Emperor's Truthsayer.",
+        "The pain box produces the experience of injury while the gom jabbar threatens death if Paul withdraws.",
+        "Jessica waits outside while Paul uses her fear discipline to endure the examination.",
+        "Mohiam presents the test through the sisterhood's distinction between human restraint and animal reaction.",
+        "Paul's dreams provide a separate reason for scrutiny, but passing the test does not guarantee obedience or protection."
+      ],
+      "local_answer": "The chapter answers both parts of its assignment: why Paul's birth unsettles the breeding plan and what Mohiam believes her test establishes, while distinguishing that belief from objective moral authority.",
+      "open_issues": [
+        "One sentence conflates forcing Paul to comply with the test and requiring him to accept the sisterhood's ideological definition of humanity."
+      ],
+      "evidence_notes": "The material follows the specific chapter assignment, which supplies more detail than the broad P2 summary. The cruelty is presented as the Bene Gesserit's method rather than endorsed as objective science. No exact dialogue or invented private scene is supplied. Jessica's motives are the familiar motives explicitly developed in this account, not an invented childhood adventure or intervening event."
+    },
+    {
+      "number": 4,
+      "summary": "The imperial transfer of Arrakis gives House Atreides access to spice wealth while exposing it to a concealed imperial-Harkonnen attack that Leto hopes to counter through preparation and a Fremen alliance.",
+      "new_information": [
+        "The Atreides replace Harkonnen administration of Arrakis under imperial authority.",
+        "Arrakis is the sole source of melange, making its administration important beyond the planet itself.",
+        "Spice connects longevity, Guild navigation and the commercial interests represented by CHOAM.",
+        "Taking over Arrakeen also means assessing inherited personnel, procedures and production equipment.",
+        "Leto recognizes danger in the appointment rather than mistaking it for imperial goodwill.",
+        "His standing among the great houses and the effectiveness of his forces concern the Emperor.",
+        "Concealing imperial participation helps prevent the Landsraad from treating the attack as a shared threat.",
+        "Leto sends Duncan to contact the Fremen and hopes their strength can improve the Atreides position.",
+        "Paul's status as heir makes the risks and obligations of the appointment his own prospective inheritance."
+      ],
+      "local_answer": "The chapter explains the trap causally: the appointment transfers immediate production obligations and unfamiliar security problems to Leto while his enemies retain local knowledge and conceal imperial assistance.",
+      "open_issues": [],
+      "evidence_notes": "The account fits P1, P2 and the detailed outline. The Guild and CHOAM explanation remains confined to one paragraph and serves the Atreides biography rather than becoming a separate institutional history. No film-only scene, fabricated statistic or easy-refusal counterfactual is introduced. The proof summaries are not a line-by-line source record for all of the political detail."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This telling includes major spoilers for Frank Herbert's Dune, Dune Messiah, and Children of Dune. Those three novels set the boundary of Paul's story here. His desert departure belongs to Dune Messiah, well after his rise on Arrakis, and it helps explain why becoming emperor can't be treated as the completion of his life. There's still a person living inside that achievement, with a family, an inherited education, and responsibilities that reach far beyond anything his younger self could have managed.",
+      "reason": "The spoiler warning and book boundary are necessary, but the remainder repeats the first paragraph's contrast between imperial achievement and personal obligations. H18 identifies the problem as a re-mention that 'adds nothing'; the assignment also requests a brief opening frame.",
+      "replacement": "This telling includes major spoilers for Frank Herbert's Dune, Dune Messiah, and Children of Dune. Those three novels set the boundary of Paul's story here, and his desert departure belongs to Dune Messiah.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The immediate difficulty is concrete. Paul has lost his eyes, yet for a time his prescience allows him to move through events he has already perceived. That unusual ability lets him continue where another blind man would need someone to guide him. It also leaves him dependent on the future unfolding along an anticipated course. Even at this height of his abilities, seeing ahead doesn't give him an easy way to preserve everything he cares about. If you'd like to subscribe to Deep Void Theories, you're welcome to, and you can leave a comment saying where you're listening and whether it's day or night there.",
+      "reason": "The explanation of prescient navigation and dependence on an anticipated sequence substantially performs chapter 20's assigned work before the biography has begun. The opening assignment asks for a brief hook, not an early explanation of the later mechanism. Retain the expressly requested optional invitation while reserving this explanation for its chronological home.",
+      "replacement": "If you'd like to subscribe to Deep Void Theories, you're welcome to, and you can leave a comment saying where you're listening and whether it's day or night there.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "There's a Fremen custom behind his departure. A blind person who can no longer live within the community's demands goes into the desert. Paul's ability to navigate by prescience has complicated his place within that practice. His eventual departure therefore has a meaning among the Fremen that an emperor's abdication alone wouldn't carry. He's a ruler who has made their world the center of an empire, and he's also a man whose life has become bound to their customs. We'll leave the circumstances of that decision in their proper place later in his life.",
+      "reason": "This paragraph explains the cultural significance assigned to chapter 21 and then announces that the explanation will be deferred. Removing it makes the hook genuinely brief and avoids giving the departure's interpretation twice.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That combination matters because Paul's abilities develop within existing loyalties. His education is meant to help him survive and eventually lead, although the people preparing him don't all have the same purpose in mind. The duke needs an heir capable of handling the dangers around House Atreides. Jessica brings knowledge from an order with its own long ambitions. The household's other teachers bring skills shaped by military service and political calculation. Paul receives these preparations together. Later, when circumstances force him to act, he can't separate his upbringing into neat portions and use only the harmless parts.",
+      "reason": "This is the least useful restatement of the chapter's educational framework: the preceding paragraphs already establish Leto's expectations and Jessica's separate institutional purposes, and the closing paragraph names the teachers before chapter two develops them. H18 says that when the echo is a theme, 'give the repeated observation one home paragraph.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That distinction helps keep the young Paul in view. A child can be unusually observant and still require instruction about what his observations mean. Thufir has experience of service, rival houses and concealed threats that Paul hasn't accumulated. Mental speed doesn't supply those years. Paul's preparation encourages him to take in details and connect them, while the people teaching him remain responsible for decisions whose reach he can't yet fully grasp. He's being brought toward adult duties within a household that still has adults performing them.",
+      "reason": "The preceding paragraph already states that Paul is developing rather than fully qualified and explicitly distinguishes him from Thufir. This additional paragraph largely repeats that limitation instead of delivering another part of his education. H18 flags a re-mention that adds no new consequence; the editorial brief also cautions against repeatedly explaining evidentiary or interpretive limits.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Its language places those who fail outside the category of humanity, a judgment Paul is being required to accept under threat.",
+      "reason": "The threat forces Paul to keep his hand in the box; it does not establish that he must inwardly accept Mohiam's classification. The sentence turns coerced behavior into compelled ideological agreement without a supplied causal basis.",
+      "replacement": "Its language places those who fail outside the category of humanity, while Paul must comply with the test to stay alive.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2
+      ],
+      "detail": "Chapter one repeatedly explains that Paul's teachers prepare him for survival while creating expectations; chapter two then delivers the concrete teacher-by-teacher explanation. Keep the detailed account in chapter two and reduce chapter one's repeated educational synthesis."
+    },
+    {
+      "chapters": [
+        1,
+        3
+      ],
+      "detail": "Chapter one previews Jessica's competing maternal and Bene Gesserit loyalties, and chapter three develops their specific expression through the birth decision and test. The short introduction is useful; chapter one's additional general synthesis is unnecessary."
+    },
+    {
+      "chapters": [
+        1,
+        4
+      ],
+      "detail": "Both chapters explain that being an Atreides heir carries responsibilities beyond a private household. Chapter four adds a concrete consequence through the Arrakis appointment, so this recurrence is justified rather than a deletion target."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the first-three-original-novels scope, announce major spoilers and contain no identified film-continuity import or forbidden later-life claim. Only chapters 1-4 were supplied; chapters 5-24 are outline assignments, not reviewed narration. The early optional subscribe and listening-location/day-or-night request appears once and should not recur.",
+  "limitations": "This is a prose and evidence review of the supplied narration against the supplied proof summaries, outline and voice files. No websites were opened, narration audio measured or human read-aloud performed. The proof bank contains broad event summaries rather than complete passages supporting every subsidiary detail, so the review does not claim independent verification of every fictional fact or originality against the full novels.",
+  "input_hashes": {
+    "1": "7819c6936b35747679c3e64ce1e0e1e109e52d8cc4ec59548736bf9217935dfc",
+    "2": "80e71cc986f9e638de011c70af80a0ec11b3d65738b8d3992942b799b908fd7d",
+    "3": "f83fbb8873a281090bdaeb8c0caae1dd823eca81adda925c08b01dec3fdcf334",
+    "4": "2c686edd3bcd9392e97d9146a82883a35b99c3e9ea9e3522576e0b2b211f03fa"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

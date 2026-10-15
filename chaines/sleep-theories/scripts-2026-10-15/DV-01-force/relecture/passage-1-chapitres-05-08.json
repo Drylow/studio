@@ -1,0 +1,144 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Qui-Gon's attention to Anakin reveals extraordinary potential and generosity, but neither his observations nor the blood test settles how the child should be trained.",
+      "new_information": [
+        "Qui-Gon treats attention to the present as compatible with considering the future.",
+        "Anakin's hospitality and concern for others provide information different from his midi-chlorian count.",
+        "Shmi's account of Anakin's birth contributes to Qui-Gon's interpretation of the prophecy.",
+        "Qui-Gon secures Anakin's freedom but cannot secure Shmi's, leaving a concrete difficulty that Jedi training will inherit.",
+        "The Council's concern about fear addresses Anakin's suitability for training rather than simply denying his abilities.",
+        "Qui-Gon offers to assume responsibility for Anakin's instruction himself."
+      ],
+      "local_answer": "Sensing Anakin's potential gives Qui-Gon reasons to investigate and advocate for him, not an infallible understanding of his future needs.",
+      "open_issues": [
+        "The film does not establish what would have happened if Qui-Gon had trained Anakin.",
+        "The closing paragraph repeats the already-developed distinction between opportunity and unresolved separation."
+      ],
+      "evidence_notes": "The distinction between midi-chlorians, communication and potential is consistent with F1 and F2. The chapter keeps Qui-Gon's interpretation of Anakin's birth and the prophecy attributed to him rather than presenting a confirmed explanation of Anakin's conception."
+    },
+    {
+      "number": 6,
+      "summary": "Yoda investigates Qui-Gon's voice despite institutional doubt and learns that continuing personal identity after death involves knowledge beyond the Council's ordinary teaching.",
+      "new_information": [
+        "The Council considers deception as an explanation for Yoda's experience.",
+        "Medical investigation does not give the other Jedi shared confirmation of Qui-Gon's contact.",
+        "Anakin helps Yoda leave, and R2-D2 accompanies his investigation.",
+        "Qui-Gon explains the relationship between the living Force, the cosmic Force and communication through midi-chlorians.",
+        "Qui-Gon's incomplete preparation limits the form in which he can communicate.",
+        "Yoda must seek further teachers and undergo trials despite his existing expertise."
+      ],
+      "local_answer": "The Council's expertise does not encompass everything the Force permits; Yoda learns by investigating a contact that its existing procedures cannot explain.",
+      "open_issues": [
+        "The mechanics and demands of the subsequent training remain for later chapters.",
+        "One paragraph repeats the distinction between continuing identity and physical return without materially advancing this chapter's investigation."
+      ],
+      "evidence_notes": "The central account follows F5 and the assigned Voices material. It does not make persistence after death automatic, introduce Whills cosmology or treat medical examination as an exhaustive test of the Force."
+    },
+    {
+      "number": 7,
+      "summary": "Anakin responds to his dreams of Padme's death by accepting Palpatine's unproved promise, and his resulting choices contribute to the catastrophe he hoped to prevent.",
+      "new_information": [
+        "Anakin's experience of dreaming about Shmi gives him a concrete reason to fear the new dreams.",
+        "The secrecy of his marriage restricts the information he gives potential advisers.",
+        "Yoda offers counsel about responding to loss, whereas Palpatine advertises a means of preventing it.",
+        "Anakin initially reports Palpatine before intervening against Mace to preserve his perceived chance of saving Padme.",
+        "Palpatine qualifies his promise after Anakin submits, leaving the promised knowledge unavailable.",
+        "Anakin's subsequent violence reaches Padme herself.",
+        "The film supports a self-fulfilling interpretation without showing an alternative outcome that would establish inevitability or preventability."
+      ],
+      "local_answer": "The dream supplies something to fear, but Anakin and Palpatine supply the proposed remedy; the film shows the harm of that response without proving whether Padme's death was fixed.",
+      "open_issues": [
+        "The source of the dreams is not established.",
+        "The film does not show whether a different response would have prevented Padme's death.",
+        "Palpatine's accusation is not independent confirmation of the precise cause of her death."
+      ],
+      "evidence_notes": "The chapter stays within the assigned film account and F1's limited account of perception and agency. It correctly attributes the Plagueis story and the accusation about Padme to Palpatine, and it does not claim that he sent the dreams."
+    },
+    {
+      "number": 8,
+      "summary": "Luke's vision accurately alerts him to danger on Bespin but omits Vader's preparations, his friends' independent efforts and the confrontation that leaves Luke needing rescue.",
+      "new_information": [
+        "Yoda recognizes the vision while remaining unable to determine whether Luke's friends will die.",
+        "Vader uses Han's suffering to draw Luke into a prepared trap.",
+        "The carbon-freezing process is tested on Han before Luke arrives.",
+        "Leia gives Luke a direct warning that the vision did not contain.",
+        "Lando and R2-D2 contribute materially to the escape independently of Luke's intended rescue.",
+        "Luke loses his hand and learns Vader's identity during the encounter.",
+        "Luke's later contact with Leia communicates an immediate need that she can act upon."
+      ],
+      "local_answer": "A genuine vision can reveal distress without supplying the causes, preparations or possible outcomes needed for an informed rescue.",
+      "open_issues": [
+        "The chapter repeats its inventory of missing information before developing the individual omissions.",
+        "The closing verdict treats incomplete knowledge itself as Luke's mistake rather than distinguishing that unavoidable limitation from his decision to confront Vader before completing his preparation."
+      ],
+      "evidence_notes": "The account remains within The Empire Strikes Back and the supplied perception framework. Its emphasis on missing operational information is distinct from chapter 7's self-fulfilling reading. The conclusion should describe the decision and its demonstrated costs without implying that Luke could have obtained a complete briefing from the vision."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Anakin's departure makes that uncertainty easy to grasp. Before leaving home, he turns back to his mother and struggles with the separation. The opportunity Qui-Gon offers is real, and so is what it asks of him. Paying attention to the living Force brings Qui-Gon into contact with both parts of that moment. He can help Anakin take the journey, but he can't make the journey painless or know every consequence of it. Shmi remains on Tatooine as her son leaves to begin his training.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The earlier freedom-and-separation paragraph already establishes the opportunity, the pain and Qui-Gon's inability to resolve Shmi's situation; the immediately preceding paragraph again establishes his inability to guarantee Anakin's future. Preserve the concrete departure rather than delivering the same qualification a third time.",
+      "replacement": "Before leaving home, Anakin turns back to his mother and struggles with the separation. Shmi remains on Tatooine as her son leaves to begin his training.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The difference matters because a voice can be mistaken for a complete return. Qui-Gon hasn't resumed his place among the Jedi as though his death on Naboo had been undone. Obi-Wan hasn't regained the living master who could travel beside him and take part in the war. Yoda is encountering a continuing person through a particular kind of contact. What draws him onward is the possibility of learning how that contact exists. The journey concerns a practice that can be taught, with preparation and demands of its own.",
+      "reason": "H18 flags repeated framing without a new development. The preceding paragraph already explains continuing identity, incomplete preparation and voice-only contact, while the following paragraph advances to teachers and trials. This intervening paragraph largely restates the distinction and briefly shifts attention toward Obi-Wan, whose teacher-student contact has its own assigned chapter.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The city matters because it gives the danger a location. Pain matters because it makes the danger personal. Yet those details leave almost every practical question unanswered. Luke doesn't know who has captured his friends, what their captor wants, or what will happen if he arrives. He also doesn't see the efforts they're going to make for themselves. He receives enough to recognize people he loves in trouble, and he has to decide what to do without the rest of their situation.",
+      "reason": "H18 calls for removing a re-mention that adds nothing. The preceding paragraph already establishes a genuine glimpse without a definite outcome, and the following paragraphs concretely explain the captor, the trap and the friends' own efforts. This abstract inventory previews those explanations rather than adding a distinct development; its opening mirrored sentences also lean toward H17's 'Dramatic parallels.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Luke's mistake was to arrive without knowing how their suffering connected to Vader's plans, or how their escape might happen. That gap costs him his hand and leaves him wounded by a truth he hadn't expected to hear.",
+      "reason": "The assigned question concerns what a vision leaves out. This verdict makes Luke's lack of unavailable knowledge the mistake and compresses the causal chain from limited information to his injury. The chapter itself supplies the more concrete distinction: Luke leaves before completing his training and continues despite warnings, then suffers injury during the confrontation.",
+      "replacement": "Luke leaves before completing his training and continues despite warnings that Vader is waiting for him. In the confrontation, he loses his hand and hears a truth about his father that the vision hadn't prepared him for.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detail": "All four chapters distinguish a genuine perception or ability from complete understanding. That is the episode's assigned organizing question, not inherently redundant: the chapters respectively address judging a child, revising institutional knowledge, responding to feared loss and acting without operational information. Avoid adding further generic reminders that the Force does not explain everything."
+    },
+    {
+      "chapters": [
+        7,
+        8
+      ],
+      "detail": "Both visions chapters explain that a glimpse does not include instructions or a complete outcome, but their substantive answers remain distinct. Chapter 7 follows Anakin's response into a potentially self-fulfilling catastrophe; chapter 8 follows the information missing from Luke's attempted rescue. The proposed cuts help preserve that distinction."
+    }
+  ],
+  "scope_status": "The supplied chapters 5-8 remain within the assigned released films and named Clone Wars material. No Legends answer, future-season claim, forbidden conception claim, automatic ghost rule or invented dialogue appears. These chapters answer their assigned questions and do not require a structural rewrite.",
+  "limitations": "Only chapters 5-8 were supplied in full. Cross-chapter judgments cover those texts and use the remaining outline only to assess intended division of material. The review uses the supplied proof bank and scene constraints; it does not claim website access, episode viewing, audio measurement or independent verification of every fictional detail.",
+  "input_hashes": {
+    "5": "2e44dfdf56da4736f2ec90ab659f1345b4bc6815baadca4ea2e8ad8394b9918e",
+    "6": "bdd67cedf55e8b24d3b4e7dff8efac5a11c32cffdb79becdc442b50ffbf67161",
+    "7": "eb84bbb85eb506a1d3242db1b9317394a0fe3171112c6f16d227eb7007670e01",
+    "8": "57e9201e0ea1d8941a38df3ab848a84e27ef52abcb64f116cfa17f93d1b3a49c"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

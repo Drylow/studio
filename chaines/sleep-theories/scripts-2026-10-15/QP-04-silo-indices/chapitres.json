@@ -1,0 +1,350 @@
+{
+  "timing_note": "Word offsets are exact under the documented regex. Times at 150 wpm are estimates, NOT publication timestamps. Generate YouTube chapters from the final measured audio/video.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "A toy acquires a past",
+      "file": "chapitres/01.txt",
+      "words": 796,
+      "start_word": 0,
+      "end_word": 796,
+      "estimated_start_seconds_at_150_wpm": 0,
+      "measured_timestamp": null,
+      "sources": [
+        "S4",
+        "S7"
+      ],
+      "sha256": "b286b33a691d6bc519aa72c4ffa478c56af2b652994cc107da19fdcb7c4e0059"
+    },
+    {
+      "number": 2,
+      "title": "Eighteen on a forbidden drive",
+      "file": "chapitres/02.txt",
+      "words": 856,
+      "start_word": 796,
+      "end_word": 1652,
+      "estimated_start_seconds_at_150_wpm": 318,
+      "measured_timestamp": null,
+      "sources": [
+        "S8",
+        "S9"
+      ],
+      "sha256": "9a60028a3201d4c3a2ee5a4092982e30c898351326b232891a856591308ba578"
+    },
+    {
+      "number": 3,
+      "title": "The rule about looking more closely",
+      "file": "chapitres/03.txt",
+      "words": 760,
+      "start_word": 1652,
+      "end_word": 2412,
+      "estimated_start_seconds_at_150_wpm": 661,
+      "measured_timestamp": null,
+      "sources": [
+        "S3"
+      ],
+      "sha256": "86649473151742c47935d7e6e27948ab0cfb5e55fc7b2f28bc5c0d6834f170ce"
+    },
+    {
+      "number": 4,
+      "title": "Tape changes the reading of a theft",
+      "file": "chapitres/04.txt",
+      "words": 860,
+      "start_word": 2412,
+      "end_word": 3272,
+      "estimated_start_seconds_at_150_wpm": 965,
+      "measured_timestamp": null,
+      "sources": [
+        "S2"
+      ],
+      "sha256": "d3ee4209f23e7105864a509a65631a12452c9bec0272195e77f54b3cf2860a2b"
+    },
+    {
+      "number": 5,
+      "title": "The repeated birds are a seam in an image",
+      "file": "chapitres/05.txt",
+      "words": 913,
+      "start_word": 3272,
+      "end_word": 4185,
+      "estimated_start_seconds_at_150_wpm": 1309,
+      "measured_timestamp": null,
+      "sources": [
+        "S2"
+      ],
+      "sha256": "686e8ae35d824a33d2abe04cc6fc879b325b31baff081301ee579867acd96c03"
+    },
+    {
+      "number": 6,
+      "title": "The cafeteria flash has a narrower meaning",
+      "file": "chapitres/06.txt",
+      "words": 850,
+      "start_word": 4185,
+      "end_word": 5035,
+      "estimated_start_seconds_at_150_wpm": 1674,
+      "measured_timestamp": null,
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "sha256": "b4a75a5a244409488c64474d0dd94b393aefe8be79e8e818c0940cb0f2d71d5e"
+    },
+    {
+      "number": 7,
+      "title": "Allison's implant and a procedure no one can inspect",
+      "file": "chapitres/07.txt",
+      "words": 878,
+      "start_word": 5035,
+      "end_word": 5913,
+      "estimated_start_seconds_at_150_wpm": 2014,
+      "measured_timestamp": null,
+      "sources": [
+        "S3"
+      ],
+      "sha256": "40e12a71ab1e4cda96bd1357217fe9dfaa0b0330917073febd13398df51cefc9"
+    },
+    {
+      "number": 8,
+      "title": "A mirror has another audience",
+      "file": "chapitres/08.txt",
+      "words": 944,
+      "start_word": 5913,
+      "end_word": 6857,
+      "estimated_start_seconds_at_150_wpm": 2365,
+      "measured_timestamp": null,
+      "sources": [
+        "S3"
+      ],
+      "sha256": "8aaf924d077ce13b4d8d09433a69e06866d0328add1df9ed680197aecdd3aca8"
+    },
+    {
+      "number": 9,
+      "title": "Lukas looks at a pattern the rules do not explain",
+      "file": "chapitres/09.txt",
+      "words": 889,
+      "start_word": 6857,
+      "end_word": 7746,
+      "estimated_start_seconds_at_150_wpm": 2743,
+      "measured_timestamp": null,
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "sha256": "ddf33c826a439928b8cc336124ee335f8591722c5aa4a9ee155d0d7f6e158164"
+    },
+    {
+      "number": 10,
+      "title": "The founders become people with separate interests",
+      "file": "chapitres/10.txt",
+      "words": 927,
+      "start_word": 7746,
+      "end_word": 8673,
+      "estimated_start_seconds_at_150_wpm": 3098,
+      "measured_timestamp": null,
+      "sources": [
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "sha256": "f8a931080376344cf1206591428f0e6538fbfaa11b075a2d535ed19697d80cae"
+    },
+    {
+      "number": 11,
+      "title": "Daniel's skills survive a different name",
+      "file": "chapitres/11.txt",
+      "words": 825,
+      "start_word": 8673,
+      "end_word": 9498,
+      "estimated_start_seconds_at_150_wpm": 3469,
+      "measured_timestamp": null,
+      "sources": [
+        "S8"
+      ],
+      "sha256": "1f2e0ea120f383e172d4133642e5d1f8db583a3c34fac9450a32822323686477"
+    },
+    {
+      "number": 12,
+      "title": "A remembered relationship interrupts the assignment",
+      "file": "chapitres/12.txt",
+      "words": 788,
+      "start_word": 9498,
+      "end_word": 10286,
+      "estimated_start_seconds_at_150_wpm": 3799,
+      "measured_timestamp": null,
+      "sources": [
+        "S8"
+      ],
+      "sha256": "6129d6bf51e12df494f5663d8a05bb842f764c25371644ec1e91c6c5d3341745"
+    },
+    {
+      "number": 13,
+      "title": "Helen's pregnancy does not supply a family tree",
+      "file": "chapitres/13.txt",
+      "words": 855,
+      "start_word": 10286,
+      "end_word": 11141,
+      "estimated_start_seconds_at_150_wpm": 4114,
+      "measured_timestamp": null,
+      "sources": [
+        "S7"
+      ],
+      "sha256": "3810e4f0df46348289e5a881a4cbdffae720c481f19e0ca21f812c8328961d5c"
+    },
+    {
+      "number": 14,
+      "title": "A human seed bank still contains human choices",
+      "file": "chapitres/14.txt",
+      "words": 972,
+      "start_word": 11141,
+      "end_word": 12113,
+      "estimated_start_seconds_at_150_wpm": 4456,
+      "measured_timestamp": null,
+      "sources": [
+        "S6"
+      ],
+      "sha256": "2cf8c77f47bf8a0a7598af167d0c0565f9fad79b201326827bf6483f05e29e56"
+    },
+    {
+      "number": 15,
+      "title": "The unveiling becomes a forced threshold",
+      "file": "chapitres/15.txt",
+      "words": 874,
+      "start_word": 12113,
+      "end_word": 12987,
+      "estimated_start_seconds_at_150_wpm": 4845,
+      "measured_timestamp": null,
+      "sources": [
+        "S7"
+      ],
+      "sha256": "5fc496d2f232874a2cf5e6f46a8a952ae8392d848a25b3f33932465478d5c1f8"
+    },
+    {
+      "number": 16,
+      "title": "Charlotte and Susan complicate a familiar face",
+      "file": "chapitres/16.txt",
+      "words": 701,
+      "start_word": 12987,
+      "end_word": 13688,
+      "estimated_start_seconds_at_150_wpm": 5195,
+      "measured_timestamp": null,
+      "sources": [
+        "S8"
+      ],
+      "sha256": "0324a16cf9caff76c86a4c42927e5c37f926c1ec96ecd26420b277e585bfb27f"
+    },
+    {
+      "number": 17,
+      "title": "Juliette sees footage of a life she cannot check",
+      "file": "chapitres/17.txt",
+      "words": 868,
+      "start_word": 13688,
+      "end_word": 14556,
+      "estimated_start_seconds_at_150_wpm": 5475,
+      "measured_timestamp": null,
+      "sources": [
+        "S5"
+      ],
+      "sha256": "fd1aeaf71cb62b5dedf75e4e06b535d5b1e0562630cd627c1bd501dc380c913e"
+    },
+    {
+      "number": 18,
+      "title": "A public hero can be managed before she remembers",
+      "file": "chapitres/18.txt",
+      "words": 921,
+      "start_word": 14556,
+      "end_word": 15477,
+      "estimated_start_seconds_at_150_wpm": 5822,
+      "measured_timestamp": null,
+      "sources": [
+        "S5"
+      ],
+      "sha256": "ce07d5f2832d2af11eb3354a1f377ffbf960b2afecc2f40aa91461fb6ccb0bbf"
+    },
+    {
+      "number": 19,
+      "title": "The forbidden elevator actually exists",
+      "file": "chapitres/19.txt",
+      "words": 871,
+      "start_word": 15477,
+      "end_word": 16348,
+      "estimated_start_seconds_at_150_wpm": 6191,
+      "measured_timestamp": null,
+      "sources": [
+        "S6"
+      ],
+      "sha256": "071001649e8995c80dc2e796365147d01df739905985a76878340837750f039f"
+    },
+    {
+      "number": 20,
+      "title": "Supply is more than a storeroom",
+      "file": "chapitres/20.txt",
+      "words": 943,
+      "start_word": 16348,
+      "end_word": 17291,
+      "estimated_start_seconds_at_150_wpm": 6539,
+      "measured_timestamp": null,
+      "sources": [
+        "S2",
+        "S6"
+      ],
+      "sha256": "e8b9f1f270ee741fad9e10d7e0500c7d37752e125f92f1244f2744738abea0bf"
+    },
+    {
+      "number": 21,
+      "title": "A disabled Safeguard leaves another danger",
+      "file": "chapitres/21.txt",
+      "words": 596,
+      "start_word": 17291,
+      "end_word": 17887,
+      "estimated_start_seconds_at_150_wpm": 6916,
+      "measured_timestamp": null,
+      "sources": [
+        "S6",
+        "S8"
+      ],
+      "sha256": "cd48e7ca0f55721ea32fb996f8f131e2a4a13f6dfd0b84c31bf0490b4c4aa948"
+    },
+    {
+      "number": 22,
+      "title": "The voice has an operator",
+      "file": "chapitres/22.txt",
+      "words": 844,
+      "start_word": 17887,
+      "end_word": 18731,
+      "estimated_start_seconds_at_150_wpm": 7155,
+      "measured_timestamp": null,
+      "sources": [
+        "S8"
+      ],
+      "sha256": "14c96bdde47a64ffce308118cdacad7d25b368aa34c331d35ea01eaee496f0a1"
+    },
+    {
+      "number": 23,
+      "title": "The ban on contact protects an information gap",
+      "file": "chapitres/23.txt",
+      "words": 909,
+      "start_word": 18731,
+      "end_word": 19640,
+      "estimated_start_seconds_at_150_wpm": 7492,
+      "measured_timestamp": null,
+      "sources": [
+        "S8"
+      ],
+      "sha256": "e258b12ff8fd24c50131caea6cb64a16ea61971d4c0d7d60c9c0ad2147476acc"
+    },
+    {
+      "number": 24,
+      "title": "The clues that would change an answer",
+      "file": "chapitres/24.txt",
+      "words": 591,
+      "start_word": 19640,
+      "end_word": 20231,
+      "estimated_start_seconds_at_150_wpm": 7856,
+      "measured_timestamp": null,
+      "sources": [
+        "S4",
+        "S8"
+      ],
+      "sha256": "89ecab0989168ad771d63933bce0a0fae8e55f25de0ab644daf9e4e9a59e1bdc"
+    }
+  ]
+}

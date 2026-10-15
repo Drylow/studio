@@ -1,0 +1,130 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Luke's armed encounter in the Dagobah cave ends with his own face inside Vader's helmet, supporting both a possible-future reading and a warning about his present responses to fear.",
+      "new_information": [
+        "Luke takes both weapons despite Yoda's advice and ignites his lightsaber before the apparition does.",
+        "The face beneath the helmet complicates an apparent victory by connecting Luke personally with the enemy he fears.",
+        "Vader's later revelation supplies a retrospective family association without making the cave an explicit explanation of Luke's parentage.",
+        "Yoda later calls the encounter a failure, distinguishing success in the apparent duel from success in the lesson."
+      ],
+      "local_answer": "The cave directs Luke toward examining his own behavior; a psychological warning and a glimpse of a possible future can coexist without establishing the vision's mechanism.",
+      "open_issues": [
+        "The ninth paragraph repeats the duel's circumstances and psychological conclusion without adding a distinct development.",
+        "The closing description unnecessarily implies that Luke expected an actual inhabitant beneath the roots."
+      ],
+      "evidence_notes": "The central account agrees with F4 and the assigned film scene. Predictions, psychological meaning and the retrospective parentage association are appropriately presented as readings rather than confirmed explanations. The scene description remains concrete, although its central behavioral interpretation is repeated too often."
+    },
+    {
+      "number": 10,
+      "summary": "Anakin's intervention against Sidious fulfills his role through saving Luke rather than through equalizing faction membership, and Sidious's later return does not erase that intervention.",
+      "new_information": [
+        "Qui-Gon's confidence in Anakin contrasts with the Council's concern and Yoda's later uncertainty about the prophecy's interpretation.",
+        "The Force's relationship to living things makes Jedi and Sith membership an inadequate measure of balance.",
+        "Luke's refusal to kill his defeated father distinguishes practicing Jedi responsibility from restoring the old institution.",
+        "Anakin accepts a fatal cost to save Luke and oppose Sidious.",
+        "The Exegol return and Anakin's later appeal to Rey acknowledge renewed danger while retaining the significance of his earlier restoration of balance."
+      ],
+      "local_answer": "The films connect balance with Anakin's rejection of Sidious and selfless rescue of Luke, not a numerical equality between Jedi and Sith.",
+      "open_issues": [],
+      "evidence_notes": "The chapter answers its assignment through concrete film events and uses F1's account of the Force appropriately. Its discussion of institutional limits remains distinct from its account of selfless action. The later released film material is within the supplied scope; no arithmetic law or permanent immunity from evil is invented."
+    },
+    {
+      "number": 11,
+      "summary": "The Father tests Anakin's ability to restrain his children and offers him permanent responsibility on Mortis, which Anakin declines despite demonstrating the required power.",
+      "new_information": [
+        "The Father stages a threatened choice between Obi-Wan and Ahsoka, and Anakin rescues both by subduing the Son and Daughter.",
+        "The family's isolation is intended to contain dangers that could extend beyond Mortis.",
+        "The Father's approaching death creates a succession problem rather than an ordinary Jedi assignment.",
+        "The coercive test complicates the Father's invitation.",
+        "Demonstrated restraint of the children does not itself establish Anakin's preparedness for a lifetime of guardianship.",
+        "The family's light-and-dark symbolism need not make its household a universal explanation of the Force."
+      ],
+      "local_answer": "Anakin demonstrates the capability the Father seeks, but accepting succession would require a continuing life on Mortis, not merely another successful rescue.",
+      "open_issues": [
+        "The seventh paragraph repeats the opening test and the Father's conclusion.",
+        "That repeated paragraph also extends the Father's guardianship to his entire life without support in the supplied constraints."
+      ],
+      "evidence_notes": "The local family situation, succession offer and distinction between ability and responsibility fit F3 and the assigned Overlords scene. Cosmic symbolism is explicitly interpretive. Discussion of Padme and the coercive examination is grounded interpretation rather than invented dialogue or a new explanation of the beings' origin."
+    },
+    {
+      "number": 12,
+      "summary": "The Daughter's remaining life restores Ahsoka through Anakin under the Father's guidance, while Morai later sustains a visual association without confirming that Ahsoka is the Daughter reincarnated.",
+      "new_information": [
+        "The Daughter receives the dagger wound intended for the Father.",
+        "The Son corrupts and then discards Ahsoka, giving her condition a different cause from the Daughter's injury.",
+        "The restoration involves the Daughter as donor, Anakin as conduit and the Father's guidance.",
+        "The siblings' contrasting treatment of Ahsoka gives the transfer a specific ethical meaning.",
+        "Ahsoka resumes her life as Anakin's apprentice rather than accepting an explicitly assigned Mortis office.",
+        "The Lothal mural and Morai's World Between Worlds appearance extend the association beyond the original transfer."
+      ],
+      "local_answer": "This scene establishes one guided transfer that restores Ahsoka; neither a universally repeatable procedure nor Ahsoka's confirmed identity as a reincarnated Daughter follows from it.",
+      "open_issues": [],
+      "evidence_notes": "The chapter stays within the assigned Mortis and Rebels material associated with F3 and F6. It distinguishes the shown restoration from interpretation of Morai and does not turn the Daughter's death into a universal healing cost. Its comparisons generally add ethical or narrative consequences rather than merely repeating evidence caveats."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The apparition also offers Luke an unusually simple encounter with Vader. There's no prisoner to rescue, no Imperial installation to destroy, and no escape route to keep open for his friends. Luke can direct his attention toward the armored figure in front of him. When the head falls, the fight seems finished. Then his own face makes that outcome troubling. On the psychological reading, defeating the image of Vader has done little to settle the fear that brought Luke's weapon into his hand. He's left with something he can't answer by striking again.",
+      "reason": "H18 identifies the echo as repeatedly restating a point 'with nothing new attached.' Earlier paragraphs already establish the absence of another person to protect, the apparent victory, the unexpected face and the warning about fear. This is the least useful repetition; deleting it lets Yoda's later judgment supply the next distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "He entered expecting to confront whatever lived beneath the roots.",
+      "reason": "Luke asks what is inside and prepares for danger, but the scene does not establish that he expects a living inhabitant. The wording turns his uncertainty into a specific unsupported expectation.",
+      "replacement": "He entered prepared to meet danger with his weapons.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Son and the Daughter are powerful enough to make that demand credible. Yet Anakin brings them both to submission. His unusual capability has a concrete shape here: on Mortis, in this confrontation, he can restrain the two beings the Father has spent his life containing. The Father recognizes the result as confirmation that Anakin is the Chosen One. The episode gives Anakin an achievement far beyond an ordinary rescue, while keeping it attached to the particular place and the particular beings before him.",
+      "reason": "H18 flags a script that 'keeps re-stating it with nothing new attached.' The opening already describes Anakin subduing both children, and the fifth paragraph already explains the test's confirmation of the Father's expectation. Retain only the useful clarification that the demonstrated capability belongs to this particular encounter. This also removes the unsupported claim that the Father has spent his entire life containing his children.",
+      "replacement": "What Anakin demonstrates here is specific: on Mortis, he can restrain both children at once.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10
+      ],
+      "detail": "Both chapters discuss Luke recognizing himself in Vader, but the second use adds a distinct consequence: the artificial-hand resemblance helps prompt Luke's refusal to kill. This is useful development rather than a redundant recap."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "Chapter 12 briefly recalls Anakin restraining the Father's children to contrast domination with acting as a conduit for restoration. The callback adds a new comparison and should remain."
+    },
+    {
+      "chapters": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "detail": "All four chapters distinguish demonstrated events from broader conclusions, as the episode's angle requires. Their local questions remain different, and the methodological qualifications do not become a repeated standalone lecture."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the authorized films and named released animated scenes. No Legends explanation, unreleased answer, forbidden balance arithmetic, universal healing rule or confirmed reincarnation claim appears. Only chapters 9-12 were supplied, so the chapter-one request and final-chapter ending cannot be assessed.",
+  "limitations": "Review is based on the supplied narration, assignments and authoritative proof bank. The proof bank is concise rather than a transcript of every described action. No websites were opened, episodes watched, audio measured or independent verification of every fictional detail performed. Cross-chapter assessment covers only the four supplied chapters.",
+  "input_hashes": {
+    "9": "eb13d75699cde5eb21f735e24f3fde15a884cda7361b97d10b556720e1478e52",
+    "10": "8b905a2b15944e43c437f43d1a1b6dd4a738c4d019d590ac935757f6756d34b3",
+    "11": "a52d99e9d9100ae048478e7f4aeeb7b5adf5d5164f7c05cb3899dd0cd37d36bc",
+    "12": "6a8e2f5f909fb9875129aa46c30a645bff72d58fed77b6a4e750da781ce14400"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

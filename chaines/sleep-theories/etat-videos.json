@@ -1,5 +1,5 @@
 {
-  "updated_date": "2026-10-12",
+  "updated_date": "2026-10-15",
   "timezone": "Europe/Paris",
   "deep_void_latest_user_report": {
     "date": "2026-10-12",
@@ -96,22 +96,27 @@
       "project_url": null,
       "script_export": null,
       "video_export": null,
-      "thumbnail_status": "not_created"
+      "thumbnail_status": "delivered_proposal_final_selection_unconfirmed",
+      "thumbnail": "../quiet-paradox/02-from/miniature-from-1280x720.jpg",
+      "description_file": "../quiet-paradox/02-from/description.txt",
+      "later_user_intent": "User planned to post FROM after Severance; completion unverified"
     },
     {
       "id": "quiet-severance",
       "channel": "Quiet Paradox",
       "rotation_position": 3,
       "title": "2 Hours of Severance's Biggest Mysteries & Theories to Fall Asleep To",
-      "status": "next_title_and_duration_proposed",
+      "status": "upload_in_progress_user_report",
       "target_duration_seconds": 9000,
       "duration_choice_confirmed": false,
       "creation_started": null,
-      "evidence": "User asked to move on to Severance; assistant supplied title and 2 h 30; no launch confirmation",
+      "evidence": "Later user message: en train d uploader une video Severns; publication completion unverified",
       "project_url": null,
       "script_export": null,
       "video_export": null,
-      "thumbnail_status": "not_created"
+      "thumbnail_status": "delivered_proposal_final_selection_unconfirmed",
+      "thumbnail": "../quiet-paradox/03-severance/miniature-severance-1280x720.jpg",
+      "description_file": "../quiet-paradox/03-severance/description.txt"
     }
   ],
   "notes": [
@@ -119,5 +124,21 @@
     "No final MP4 exports are included",
     "Do not relaunch FROM",
     "Quiet handle and website project links need confirmation"
-  ]
+  ],
+  "next_script_batch": {
+    "date": "2026-10-15",
+    "state": "drafting_and_reviewing",
+    "user_authorized": true,
+    "deep_void_balance": {
+      "Dune": 2,
+      "Star_Wars": 1
+    },
+    "replaced": {
+      "old": "Darth Revan",
+      "new": "Paul Atreides"
+    },
+    "folder": "scripts-2026-10-15",
+    "publication_authorized": false,
+    "audio_generated": false
+  }
 }

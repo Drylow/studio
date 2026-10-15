@@ -1,0 +1,76 @@
+{
+  "accessed": "2026-10-15",
+  "scope": "Dune, Dune Messiah and Children of Dune, with major book spoilers announced. The entire story means Paul's life as told in those three original novels. No expanded prequels, fictional intervening adventures, or scene details imported from the films.",
+  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "sources": [
+    {
+      "id": "P1",
+      "fact": "The official original-series description introduces Paul, House Atreides' destruction and his rise on Arrakis.",
+      "work": "Dune",
+      "url": "https://www.penguinrandomhouse.com/series/AU8/dune/",
+      "opened": "2026-10-15",
+      "access_note": "Search result description read; direct page returned an error. Not claimed as a fully read novel."
+    },
+    {
+      "id": "P2",
+      "fact": "Paul is trained by Jessica, Gurney, Duncan and Thufir, survives the betrayal, joins the Fremen and rises to the imperial throne.",
+      "work": "Dune: original novel events",
+      "url": "https://en.wikipedia.org/wiki/Paul_Atreides",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "P3",
+      "fact": "The novel has a first child of Paul and Chani who dies, a born Alia at its climax, and a political marriage to Irulan alongside Paul's relationship with Chani.",
+      "work": "Dune",
+      "url": "https://en.wikipedia.org/wiki/Dune_(novel)",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "P4",
+      "fact": "Dune Messiah follows Paul's reign, conspiracy, Hayt's arrival, the stone burner, Chani's death and the birth of twins.",
+      "work": "Dune Messiah",
+      "url": "https://en.wikipedia.org/wiki/Dune_Messiah",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "P5",
+      "fact": "Paul loses his physical eyes but initially continues using prescience; after events surrounding the twins he walks into the desert in the Fremen tradition.",
+      "work": "Dune Messiah: ending",
+      "url": "https://en.wikipedia.org/wiki/Paul_Atreides",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "P6",
+      "fact": "The twins are Leto and Ghanima; Children of Dune begins after Paul's desert disappearance with Alia as regent.",
+      "work": "Children of Dune",
+      "url": "https://penguinrandomhouselibrary.com/book/?isbn=9780593098240",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "P7",
+      "fact": "The Preacher is Paul. He condemns the religion built around his name, encounters his son and is killed near the end.",
+      "work": "Children of Dune",
+      "url": "https://en.wikipedia.org/wiki/Children_of_Dune",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "P8",
+      "fact": "Leto II accepts a transformative future that Paul could not accept. This is the endpoint of Paul's biography, not a second full God Emperor biography.",
+      "work": "Children of Dune",
+      "url": "https://en.wikipedia.org/wiki/Leto_II_Atreides",
+      "opened": "2026-10-15"
+    }
+  ],
+  "forbidden": [
+    "Chani leaves Paul at the end of the original Dune novel as in the 2024 film",
+    "Alia is unborn during the novel's final confrontation",
+    "Paul never makes choices because prescience controls his body",
+    "The first infant Leto and the later twin Leto II are the same child",
+    "Paul completes the Golden Path himself",
+    "Irulan's actions are harmless or Chani's pregnancy has one simple cause",
+    "Paul knows every possible future without blind spots",
+    "Ghanima dies or becomes the worm emperor",
+    "Invented dates, private thoughts, quotes, childhood adventures or exact battle statistics",
+    "Paul of Dune events merged without labeling them"
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "chapters": [
+    {
+      "number": 13,
+      "summary": "Henry's reunion with Victor supplies recognition and family knowledge from outside the town, but cannot independently confirm events during their separation.",
+      "new_information": [
+        "Henry knew Victor, Miranda and Eloise before their disappearance and can contribute a separate account of the family's earlier life.",
+        "Henry recognizes the adult Victor without having witnessed his intervening years in the town.",
+        "The chapter describes Victor's reluctance to meet Henry, his fear of anger and Henry's welcoming embrace.",
+        "Henry's parental relationship and Ethan's friendship give Victor different relationships through which to communicate."
+      ],
+      "local_answer": "The chapter answers its assignment: Henry corroborates Victor's family background, not the town events he missed. However, several later paragraphs repeat this distinction or return to the embrace without developing it.",
+      "open_issues": [
+        "The specific avoidance, fear-of-anger and embrace details are not enumerated in V3's supplied fact summary and have not been independently verified here.",
+        "The chapter's closing stretch becomes a sentimental and methodological restatement of material already established."
+      ],
+      "evidence_notes": "V3 supports the reunion and Henry's independent connection to Victor's former home. The limits placed on Henry's knowledge are appropriate. No claim resolves Eloise's fate or makes Henry a witness to Victor's missing years."
+    },
+    {
+      "number": 14,
+      "summary": "Miranda's paintings connect Henry's home with Tabitha's town experience, and the later reincarnation revelation gives that correspondence a historical context without establishing Victor's control over it.",
+      "new_information": [
+        "Tabitha encounters Miranda's paintings at Henry's home, outside the town.",
+        "The chapter explains that Victor's lunchbox address leads Tabitha to Henry.",
+        "Henry supplies the paintings' family provenance while Tabitha recognizes their town-related imagery.",
+        "Miranda's paintings originate in visions outside the town, unlike Victor's drawings of experiences within it.",
+        "The season-three revelation connects Miranda and Tabitha, and Christopher and Jade, with earlier attempts to save the children."
+      ],
+      "local_answer": "The chapter clearly distinguishes cross-location correspondence from proof that Victor sent or controlled the images. Its comparison of the two image collections is useful, but the explanation of Henry and Tabitha contributing complementary knowledge is repeated too often.",
+      "open_issues": [
+        "The lunchbox-address detail and the account of Miranda's visions beginning after taking acid are not explicitly itemized in the supplied V3 and V4 fact summaries.",
+        "The phrasing about a 'released revelation' addresses the production brief rather than the listener's experience of the story."
+      ],
+      "evidence_notes": "The assignment authorizes the paintings, Henry's home and Tabitha's recognition; V4 supports the later reincarnation connection. The chapter does not turn the paintings into universal predictions or evidence of Victor's authorship of the town."
+    },
+    {
+      "number": 15,
+      "summary": "Tabitha and Jade's recovered past lives connect them to Miranda and Christopher while leaving Victor's and Henry's present relationships distinct from those earlier lives.",
+      "new_information": [
+        "The chapter states the Miranda/Tabitha and Christopher/Jade reincarnation revelation directly.",
+        "It places those lives within an older history involving a daughter and attempts to save the children.",
+        "It describes Tabitha experiencing Miranda's memory while embracing Victor.",
+        "It distinguishes Tabitha's remembered connection to Miranda from being Henry's current wife or simply resuming Miranda's parental relationship with Victor.",
+        "It explains how Jade's connection to Christopher makes Victor's testimony personally consequential for Jade."
+      ],
+      "local_answer": "The reincarnation development and its relational limits are clear. The chapter is weaker on its assigned emphasis on Victor's and Henry's reactions: much of that material describes plausible difficulties rather than concrete responses in the season-four conversations.",
+      "open_issues": [
+        "The season-four conversations are invoked but not described through a specific supported response or exchange.",
+        "Several paragraphs revisit the same point that remembered lives do not automatically replace current relationships.",
+        "The supplied V4 summary does not independently detail the embrace-triggered memory or the remembered daughter; these details have not been independently checked."
+      ],
+      "evidence_notes": "V4 and the assignment explicitly authorize treating reincarnation as a released development, not a speculative theory. The chapter correctly avoids making Tabitha literally Henry's current wife. Some emotional consequences remain interpretation and should sound like interpretation rather than reported reactions."
+    },
+    {
+      "number": 16,
+      "summary": "Victor's season-four recollection places the Man in Yellow among apparent earlier arrivals and later with the bodies, while separating that involvement from Miranda's killing.",
+      "new_information": [
+        "S4E4 adds Victor's recollection that the Man in Yellow appeared to arrive like another resident.",
+        "Victor associates him with the later treatment of bodies, including Miranda's.",
+        "The chapter distinguishes Miranda's fatal encounter with Smiley from the Man in Yellow's subsequent involvement.",
+        "It contrasts the Man in Yellow's earlier apparent-resident role with his known violence against Jim.",
+        "It explains why the new recollection extends the Man in Yellow's history without explaining his full nature."
+      ],
+      "local_answer": "The chapter answers the assignment and preserves its essential chronology. It then repeats the apparent-arrival contrast and death-versus-aftermath distinction across several paragraphs instead of allowing the new information to stand.",
+      "open_issues": [
+        "The chapter occasionally states Victor's emotional experience as known rather than interpreting the subject matter cautiously.",
+        "The closing paragraphs repeat material already explained in the central chronology paragraph.",
+        "Specific Smiley staging and Jim-encounter details are not independently documented in the supplied V5 summary."
+      ],
+      "evidence_notes": "V5 and the assignment support the apparent arrival, later involvement with the bodies and distinction between Miranda's killing and subsequent treatment. The chapter attributes the new account to Victor and remains non-graphic. No contradiction with the supplied season-four scope was found."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The embrace can be moving without carrying every missing answer inside it. Henry's relief tells us about finding his son alive. Victor's distress tells us about facing his father after their separation. Those responses belong to the reunion itself. If Victor later describes an event involving Miranda, Henry still needs to hear where Victor was and what he actually saw. Loving recognition gives them a reason to listen closely to each other. The details of an event still have to come from whoever was there.",
+      "reason": "H18 identifies a passage that 'keeps re-stating it with nothing new attached.' The third paragraph already distinguishes family recognition from verification of town events, and the fifth already explains the embrace. This paragraph repeats both as an evidence lesson rather than developing the reunion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Henry's arrival also changes how Victor's drawings and recollections sit within the group. Until then, the people around Victor have little opportunity to compare his account of home with someone who knew it. Now there's another person they can ask about the family before the town. A remembered name or relationship can have a second source. That's useful even when Henry has nothing to add about a drawing's town setting. His contribution concerns the life from which Miranda, Victor and Eloise disappeared.",
+      "reason": "H18 requires that a second mention add 'a consequence, a comparison, the next number.' This is another explanation of Henry as an outside family source, already established in paragraphs two and three; it supplies no actual comparison of a drawing or recollection.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Their reunion leaves them with ordinary difficulties inside an extraordinary situation. They can recognize each other and still struggle to talk. Henry can want to help while misunderstanding what Victor needs. Victor can want his father nearby while finding the encounter painful. The hesitation before they meet already gives a reason to take that difficulty seriously. Reunion hasn't returned them to the point where their family was separated. They're meeting after lives spent apart, and they'll have to learn how to be together in the present.",
+      "reason": "H18's repeated-framing problem applies: paragraphs four, six and ten already develop the difficulty of meeting after separate lives. These hypothetical difficulties add no observed response, and deleting this paragraph lets the chapter return directly to the established embrace.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "A painting can carry recognizable details without explaining how the painter received them. Tabitha's response gives the images a connection to her experience, but a painted scene doesn't come with a complete account of its own origin. Henry's recollections help with that surrounding history. Miranda's account of being called to save the children supplies another part. The house therefore offers several things together: physical work Miranda left behind, a husband who remembers her making it, and a visitor who knows the place it concerns.",
+      "reason": "H18 describes an echo as restating a point 'with nothing new attached.' Paragraphs three and four already establish Henry's provenance knowledge and Tabitha's recognition. This paragraph returns to the same evidence inventory immediately after the more useful comparison with Victor's drawings.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "That's a released revelation that changes how the earlier visit to Henry's house can be understood.",
+      "reason": "The release-status wording belongs to the editorial instructions, not the narration. H16 warns against 'Announcing the content instead of delivering it'; the surrounding sentences already deliver the revelation and its implication.",
+      "replacement": "That discovery changes how the earlier visit to Henry's house can be understood.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Back in Henry's house, the practical action is still straightforward. Henry shows Tabitha the paintings, and she looks at them with knowledge he doesn't yet have. Neither needs Victor to stand beside every image and supply an explanation. Miranda left work they can examine together. Through it, Tabitha can recognize the town in a home beyond its boundaries, and Henry can begin to connect his wife's visions with the place where his son survived.",
+      "reason": "H18's document-scale echo applies to this return to the opening encounter. The paragraph repeats the location, shared examination and complementary knowledge without advancing the reincarnation discussion or Victor's position; the preceding paragraph already provides a relevant local conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The embrace makes that awkwardness easier to understand than a discussion of repeated lives alone would. Tabitha is close to Victor when the memory arrives. He isn't presenting her with a drawing to interpret or answering a question about where Miranda went. An ordinary act of comfort brings an earlier relationship into her experience. From Victor's position, a woman he knows in the present is responding to a past he carries. The encounter gives their closeness a new significance before either has an easy way to describe it.",
+      "reason": "H18 requires a repeated mention to add something substantive. The opening paragraph already describes the embrace, memory and collision of present and earlier relationships. This return adds interpretive framing rather than a new response from Victor.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "In the fourth season's conversations, this family history has to be discussed among people whose present relationships remain real.",
+      "reason": "The assignment specifically asks for the S4 conversations and for Victor's and Henry's reactions to remain central. This sentence gestures toward those conversations without reporting what either man actually says or does, and the surrounding paragraphs largely substitute hypothetical relational consequences. Repair needs a supported scene-specific development; V4's supplied summary does not provide enough detail to invent one locally.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "chapter": 15,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "That may offer him some relief, though that's an interpretation of what shared remembering could make possible.",
+      "reason": "The developer's sleep adaptation asks for interpretation without excessive methodological caveats. H12 calls for stacked hedges to 'collapse to one'; this sentence qualifies an already tentative interpretation a second time.",
+      "replacement": "Sharing that history may leave Victor with less to explain on his own.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "This is difficult information for Victor to recover because it concerns what happened to his mother after he lost her.",
+      "reason": "V5 supports the recollection, but does not establish this precise internal explanation for the difficulty of recovering it. The sentence reports an inferred emotional cause as fact.",
+      "replacement": "The recollection concerns what happened to his mother after her death.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The apparent arrival matters alongside that later conduct. Taken together, the two parts of Victor's account describe someone who could first be understood as another resident and who was subsequently involved with the dead. That would make his earlier presence more troubling to remember. Victor isn't merely adding a frightening stranger to a distant event. He's revisiting the place that a person already had in his childhood understanding of the town. A figure who seemed to fit one familiar category now has to be considered alongside actions Victor associates with the aftermath.",
+      "reason": "H18 identifies repeated framing as a structural echo. The first three paragraphs already explain the apparent-resident category, and paragraphs five and six add the later involvement. This paragraph recombines those points without a new observation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The new recollection also gives Henry something especially difficult to hear. He knew Miranda before the town and has now found the son who survived her. Victor carries experiences of Miranda's last period of life that Henry couldn't share, including this account of what happened after her death. Henry's recognition of his son can't supply those missing events for him. If he learns about them through Victor, he's receiving part of his wife's history from the child who had to remain there after she was gone.",
+      "reason": "H18 warns against sections 'looping back to the same observation.' This revisits chapter 13's established limit on Henry's knowledge without describing Henry actually hearing or responding to the new memory. The conditional final sentence exposes the absence of a new event.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "detail": "Henry's knowledge of Miranda before the town, contrasted with Victor's knowledge inside it, becomes a recurring explanatory conclusion. Chapter 13 is its proper home; chapter 14 adds the paintings' provenance, but chapter 16's hypothetical Henry paragraph supplies no comparable development."
+    },
+    {
+      "chapters": [
+        13,
+        14,
+        15
+      ],
+      "detail": "All three chapters conclude or nearly conclude that other people can contribute pieces so Victor need not explain everything. The sources of those contributions are distinct, but repeatedly stating the resulting relief or reduced burden makes the chapters converge on the same answer."
+    },
+    {
+      "chapters": [
+        14,
+        15
+      ],
+      "detail": "Both chapters explain the Miranda/Tabitha and Christopher/Jade revelation. The overlap is justified as a bridge only if chapter 14 stays focused on interpreting the paintings and chapter 15 develops specific family reactions rather than repeating the revelation's general implications."
+    },
+    {
+      "chapters": [
+        13,
+        15
+      ],
+      "detail": "The embrace in chapter 13 and Tabitha's embrace in chapter 15 are different events and should not be conflated. The repetition defect is internal to each chapter's explanation of its own encounter, not the use of two separate embraces."
+    }
+  ],
+  "scope_status": "The supplied chapters respect the authorized through-S4E10 scope and explicitly incorporate released season-four developments. No supplied prohibition is directly asserted: Eloise remains unresolved, reincarnation is treated as revealed, Victor is not made the town's controller, and Miranda's killing is distinguished from subsequent treatment of her body. Later finale events are appropriately outside these chapters' assignments. Chapter 15 needs a supported development of its assigned season-four reactions.",
+  "limitations": "Reviewed all supplied narration for chapters 13-16 against the supplied outline, proof-bank summaries and voice files. Chapters 1-12 and 17-24 were not supplied, so whole-episode repetition, the early optional listening request and final closure cannot be fully audited. Source URLs were not opened, episodes were not watched, and individual fictional details beyond the supplied summaries were not independently verified. Findings distinguish demonstrable repetition and unsupported internal attribution from details merely absent from the condensed proof bank.",
+  "input_hashes": {
+    "13": "0880bdc35d14c94f9dd22a34aed194c2d1668193e25dc2e5c5af81d0f79c7aa3",
+    "14": "dc6b5d85cc0a5278c30c2bf0f1d5b09b14bf4800e47e0202c0c9ac7813498ac3",
+    "15": "814b9b20ad159505b70213de5344fdaf0e160919e725fff7b080ed46d397cab7",
+    "16": "54c3ca7f8a0509576cfee0e27e3dbcfdbcc0cc8180dfe9440f699bd8520fa925"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

@@ -1,0 +1,191 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Lumon's planned goat sacrifice links Gemma's technical testing to an afterlife ceremony, while Lorne's resistance interrupts the operation without demonstrating any literal spiritual transfer.",
+      "new_information": [
+        "The goat is intended to accompany and serve Gemma in the afterlife according to the ceremony's religious account.",
+        "Drummond expects Lorne's animal-care responsibilities to culminate in obedience to the planned sacrifice.",
+        "Lorne resists Drummond and helps Mark continue toward Gemma.",
+        "The coexistence of ritual and technical testing does not establish that severance can transfer a soul."
+      ],
+      "local_answer": "The ritual reveals how Lumon gives religious meaning to its procedures and demands, not that its promised afterlife mechanism works.",
+      "open_issues": [
+        "Several later paragraphs repeat the opening explanation of care, institutional control, and the intended burial.",
+        "The account of what whole departments know exceeds the supplied evidence."
+      ],
+      "evidence_notes": "The supplied assignment expressly authorizes the Lorne, Drummond, goat, and intended sacrifice/burial material. E6 and E7 support the surrounding test and rescue context but do not individually document every ritual detail. The chapter appropriately attributes the afterlife account and avoids graphic violence or confirmed soul transfer."
+    },
+    {
+      "number": 22,
+      "summary": "The chapter tests Kier-return theories against revolving language, Jame's recognition of Kier in Helly, Gemma's partitions, and the interrupted ritual, finding no demonstrated preservation or transfer of Kier's consciousness.",
+      "new_information": [
+        "Jame's revolving remains an unexplained term rather than an established technological procedure.",
+        "A literal Kier return would require evidence of preserved consciousness, a means of reactivation, and an identifiable recipient.",
+        "Helly's existing memories and opposition to Lumon do not demonstrate the arrival of Kier's identity.",
+        "Cold Harbor tests separation from Gemma's own emotional associations, not the introduction of another person's past."
+      ],
+      "local_answer": "Continuity motifs make resurrection a possible interpretation of the family's ambitions, but the released material does not demonstrate the additional operations that literal resurrection would require.",
+      "open_issues": [
+        "One sentence ambiguously assigns the childhood recollection to Jame and calls the recalled chip visible.",
+        "The ritual discussion substantially revisits chapter 21, although its application to the resurrection hypothesis gives it a distinct purpose."
+      ],
+      "evidence_notes": "The treatment is consistent with E2, E5, E6, and the assigned theory-testing scope. Missing evidence is presented as a limit on confirmation, not as proof that a future resurrection reveal is impossible. No named theorist's scenario or future plot is asserted."
+    },
+    {
+      "number": 23,
+      "summary": "Mark and Gemma's rescue exposes the incompatible interests created by partitioned experience, culminating in innie Mark choosing Helly rather than crossing the threshold with Gemma.",
+      "new_information": [
+        "The two Marks coordinate through recordings while having different stakes in the rescue's aftermath.",
+        "Gemma's recognition changes across the building's identity boundaries, complicating physical escape.",
+        "Innie Mark knows who Gemma is without possessing the marriage that makes her his outie's wife.",
+        "His final choice gives practical force to an innie's interest in continuing a life of his own."
+      ],
+      "local_answer": "Sharing a body does not make the Marks' relationships or interests interchangeable, so securing the outie's desired outcome cannot guarantee the innie's willing disappearance.",
+      "open_issues": [
+        "The threshold's identity asymmetry is explained repeatedly after the opening has already established it.",
+        "The opening briefly shifts into symmetrical dramatic beats rather than the supplied conversational register."
+      ],
+      "evidence_notes": "E7 supports the rescue and final choice, and the assignment authorizes discussion of identity switches during the escape. The chapter preserves the identity conflict rather than reducing the ending to a romantic ranking. It does not claim the choice guarantees either innie's future."
+    },
+    {
+      "number": 24,
+      "summary": "The conclusion connects the appropriation of Cobel's research with the use of Helly's working life as Eagan publicity, ending with each woman's means of contradicting the official account.",
+      "new_information": [
+        "Cobel's research and Helly's testimony expose two distinct contributions absorbed into Eagan self-presentation.",
+        "Cobel's managerial responsibility distinguishes her position from Helly's despite their shared grievance.",
+        "The gala lets Helly contradict the promotion through the very Eagan body being used to endorse it.",
+        "The closing synthesis identifies authorship and lived experience as claims the family's public account cannot legitimately settle on its own."
+      ],
+      "local_answer": "The strongest established secret is the family's appropriation of other people's work and experience, challenged by Cobel's retained research and Helly's own account.",
+      "open_issues": [
+        "Cobel's continued devotion and retained authorship receive a redundant third explanation.",
+        "A late return to Mark's finale choice repeats chapter 23 and delays the assigned Cobel-Helly conclusion.",
+        "The practical comparison between research and testimony is restated after the chapter has already made it."
+      ],
+      "evidence_notes": "The central comparison follows E2 and E4, with E7 supporting the late Mark reference. The chapter acknowledges Cobel's complicity, leaves the complete endgame open, and ends on concrete acts without a CTA or season-three tease."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Each department has carried out its own work without an ordinary view of the person or creature at the other end of the process.",
+      "reason": "The supplied evidence establishes separated assignments, not the full extent of every department's knowledge. This universal account of departmental awareness turns a reasonable interpretation into an unsupported fact.",
+      "replacement": "The arrangement keeps animal care and Gemma's testing in separate assignments, then joins them in the planned ceremony.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The comparison with Gemma's test is especially uncomfortable because the goat's care and Gemma's confinement both require ongoing work. Someone has to raise the animal. Someone has to maintain the testing floor and escort Gemma through its procedures. The institution depends on people attending to living subjects over time, yet those responsibilities don't give the workers the final say over what happens to them. Lorne's intervention changes the outcome because she acts beyond the assignment she's been given.",
+      "reason": "H18 identifies a script that \"keeps re-stating it with nothing new attached.\" Earlier paragraphs already explain that Lorne's care does not confer decision-making authority and that her refusal changes the outcome. This paragraph restates both points without a further development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The burial plan also makes the ritual more specific than a general display of reverence for Kier. Lumon intends to do something with Gemma's body after the test, and the goat has been prepared for a place within that plan. The ceremony concerns the same woman whom Mark is trying to bring home. For him, reaching Gemma means recovering someone from a place that's held her apart from her life. For Drummond, her planned death belongs within an operation he's responsible for completing. Their actions collide in the same passage through the building.",
+      "reason": "H18's \"a re-mention that adds nothing gets cut\" applies here: the opening establishes the burial connection, and the confrontation paragraphs establish Mark's and Drummond's opposed objectives. This late paragraph repeats those developments immediately before the useful soul-transfer boundary.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "The visible chip in Jame's childhood story is a device associated with separating experience in living people. His recollection doesn't describe a stored founder waiting inside it.",
+      "reason": "The chapter has established a recollection of Helena's childhood, not Jame's. Calling the chip \"visible\" also implies a directly shown object where the argument rests on his account of showing it to her.",
+      "replacement": "The chip Jame recalls showing Helena is associated with separating experience in living people. His account doesn't describe a stored founder waiting inside it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "She's close enough to call to him. He's close enough to follow.",
+      "reason": "The Voice Anchoring shape test rejects \"Dramatic parallels. Mirrored beats engineered for the page.\" These adjacent, matched sentences stage the doorway as a cinematic beat rather than explaining it in the conversational register of the supplied samples.",
+      "replacement": "She can call to him from the doorway, and he could still follow her.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "By the final threshold, Gemma can recognize Mark as her husband while innie Mark can't recognize her as his wife. He understands who she is. He knows that helping her leave matters. What he doesn't have is the remembered life that would make following her an uncomplicated return home. Gemma sees the person she's been separated from standing within reach. Mark sees a woman he's helped rescue asking him to cross into a life where another version of him will take over. Both responses follow from what they've lived.",
+      "reason": "H18 warns that \"the third identical mention is the tell.\" The opening and the discussion of Ms. Casey already establish that innie Mark knows Gemma's identity without remembering their marriage; the relationship paragraph adds the competing commitments. This paragraph returns to the same threshold explanation rather than advancing to his choice.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Cobel's continued service makes the discovery harder to dismiss as an ordinary dispute between rivals. She hasn't spent her career publicly opposing everything Lumon stands for. She's enforced its demands and invested herself in its teachings. Keeping her research suggests that recognition for her work continued to matter even within that devotion. She could remain attached to Kier's institution while retaining material that contradicted the credit given to Jame. Her loyalty didn't make the question of authorship disappear, however long she lived with that contradiction.",
+      "reason": "H18's \"keeps re-stating it with nothing new attached\" describes this return to devotion coexisting with authorship. The opening already makes that exact point, and the later comparison preserves the important qualification that Cobel enforced Lumon's conditions. Deletion also avoids leaning on an unestablished hypothetical dismissal as a dispute between rivals.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Cobel's retained research and Helly's public objection also have something practical in common. Each gives another person a way to encounter what the official presentation excludes. Research can be examined apart from Jame's reputation. Helly can describe working conditions apart from Helena's approval. Neither act immediately removes the family from its position, and neither guarantees that listeners will respond fairly. Still, the dispute now has a form outside the family's preferred account. Someone can hold the material, or hear the person who lived the experience.",
+      "reason": "H18 says a second mention must add \"a consequence, a comparison, the next number.\" The earlier common-grievance paragraph already explains that both women possess material capable of disrupting the presentation if it reaches others. This paragraph mostly repeats that comparison and adds procedural qualifications rather than a distinct concluding development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "By the end of Cold Harbor, that claim to a life has consequences within the building as well. Innie Mark's attachment to Helly affects what he does after helping Gemma escape. The relationship formed during Lumon's assigned working hours matters to the person who is present to act. That creates a difficulty for any arrangement that treats those hours as available for someone else's purposes alone. Helly has become part of a life Mark wants to continue, even though Lumon never offered either of them a secure way to continue it.",
+      "reason": "The assigned conclusion should resolve the Cobel-Helly connection without summarizing other mysteries. Chapter 23 has just developed this exact consequence of Mark's choice. H18 directs the editor to \"give the repeated observation one home paragraph\"; retaining it here delays the already prepared ending on research and testimony.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        22
+      ],
+      "detail": "Both explain the goat ceremony and the absence of demonstrated consciousness transfer. The overlap is justified as a short bridge from ritual analysis to resurrection testing, but chapter 21's repeated burial and obedience explanations make the transition feel longer than necessary."
+    },
+    {
+      "chapters": [
+        23,
+        24
+      ],
+      "detail": "Chapter 24's penultimate paragraph repeats chapter 23's conclusion that Mark's attachment to Helly gives his innie a competing interest in continued existence. Removing that paragraph keeps the final chapter centered on Cobel's authorship and Helly's testimony."
+    },
+    {
+      "chapters": [
+        22,
+        23
+      ],
+      "detail": "Gemma's partitioned experience appears in both chapters but performs distinct work: chapter 22 distinguishes partitioning from importing Kier, while chapter 23 explains the rescue's identity switches. This is useful continuity rather than a deletion target."
+    },
+    {
+      "chapters": [
+        22,
+        24
+      ],
+      "detail": "The gala and Helly's hostile testimony recur, but with different analytical purposes: chapter 22 tests whether her identity supplies evidence of Kier's return, while chapter 24 examines appropriation of her experience. The repeated event remains relevant."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within released television through S2E10 and do not assert confirmed resurrection, cloning, soul transfer, an explained revolving, or a season-three plot. Religious claims and Jame's recognition of Kier are appropriately attributed. The principal defects are redundant development, one unsupported generalization about departmental knowledge, and a misleading description of Jame's recollection. No chapter requires a wholesale rewrite.",
+  "limitations": "Reviewed all supplied narration for chapters 21-24 against the episode brief, full outline, proof bank, and supplied voice rules. Chapters 1-20 were not supplied as narration, so their execution, early spoiler warning, optional one-time audience request, and full-series repetition cannot be assessed. External links were not opened, episode footage was not independently reviewed, and narration audio or runtime was not measured.",
+  "input_hashes": {
+    "21": "5bbd2e45c5f19ce09e43507a6ee1b9e83f87991d13f35af8006e6cc78e7589bd",
+    "22": "b0d25680633730e2721fe08b02b4ab0634ad068a69e38d4889de0c37894e2c58",
+    "23": "4668be28ac2650957606042b4139351ae94ffc3f253588a5b689779c321ea167",
+    "24": "2474d34a2c5a43602fb4b94b51e8e671c275a214fd761245d2abd06101cdfe94"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

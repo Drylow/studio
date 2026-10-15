@@ -1,0 +1,664 @@
+{
+  "text_status": "assembled_not_an_editorial_approval",
+  "words": 20231,
+  "whitespace_words": 20231,
+  "chapters": 24,
+  "duration_estimates_minutes": {
+    "145": 139.5,
+    "150": 134.9,
+    "160": 126.4,
+    "170": 119.0
+  },
+  "duration_measured_seconds": null,
+  "audio_gate": "Measure final narration: at least 120 minutes before publishing. No padding, silence or loops.",
+  "two_hours_at_170_wpm": false,
+  "scanner": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 1,
+    "echo": 19,
+    "mech": 0
+  },
+  "non_ascii_characters": [],
+  "headings_or_placeholders": [],
+  "subscribe_occurrences": 1,
+  "last_chapter_has_subscribe": false,
+  "identical_long_paragraphs": [],
+  "exact_12_word_reference_matches": [],
+  "review_round": 1,
+  "current_chapters_covered_by_review": 0,
+  "review_findings_for_editor": [
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "There's something quite specific about choosing a gift for this connection. A relic found during an investigation can seem detached from everyone who once handled it. Its immediate significance comes from where it was discovered and what trouble follows. Daniel's gift introduces another setting for it. Helen receives something from a person she's getting to know. The toy has a place in their interaction before it has a place in Juliette's investigation. That gives the audience a reason to notice the individual lives behind the silo's broad category of the past.",
+      "reason": "This fifth paragraph returns to the opening's already completed contrast between a suspicious relic and Daniel's personal gift, without adding an event or consequence. It exemplifies H18's 'keeps re-stating it with nothing new attached'; deleting it preserves the chapter's factual and emotional argument.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The scene also changes the scale of the history we're considering. The silo's residents hear about founders and a distant past through inherited accounts and restrictions. Daniel and Helen occupy a world in which a small gift can pass between people without carrying the meaning that relic rules later give it. The dispenser makes that distance easier to grasp. We don't have to imagine a whole lost civilization at once. We can begin with someone giving something to someone else, and then consider how far removed the later residents are from understanding that exchange.",
+      "reason": "The preceding paragraph already distinguishes the audience's knowledge of the exchange from the early residents' restricted understanding. This is another abstract expansion of that contrast rather than a distinct development. H18 calls for giving a repeated theme 'one home paragraph.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This is the approach we'll use with the earlier objects and rules: return to the particular detail after receiving later information, and see what has changed. Sometimes a scene acquires a personal context, as this one does. Sometimes the later information changes how a practical detail works. There's no need to make every early appearance into a complete explanation planted in miniature. Here, the later gift scene gives us a more specific past for something that initially reached us through an investigation and the silo's suspicion of relics.",
+      "reason": "The opening already promises precisely this rewatch approach. Repeating the method immediately before another closing summary delays closure and adds an unnecessary lesson about interpretation. This matches H18's repeated framing 'with nothing new attached.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "George's interest takes him toward the physical structure beneath the residents' familiar routes. For him, a stored plan can suggest somewhere to look. Juliette later inherits the difficulty of understanding what he was investigating, along with the danger attached to his discoveries. The drive therefore passes through the story as a working source of information. People use it, conceal it and search for it because its contents can lead to actions. Its importance doesn't depend on anyone understanding the number eighteen at the beginning.",
+      "reason": "The earlier contents paragraph already explains that structural information feeds George's investigation of unfamiliar spaces. Most of this passage repeats that functional point. Under H18's requirement that a second mention add 'a consequence, a comparison, the next number,' retain only Juliette's inheritance of the investigation.",
+      "replacement": "Juliette later has to understand what George was investigating, while facing the danger attached to his discoveries.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Bernard's urgency makes sense in that setting: the files remain available to someone he hasn't persuaded to leave them alone.",
+      "reason": "The supplied evidence establishes Bernard's urgent search, not persuasion as the relevant failed mechanism. The sentence unnecessarily supplies a specific account of his dealings with Juliette when continued access to the files is sufficient to explain the immediate problem.",
+      "replacement": "The files remain available to Juliette while Bernard is trying to recover the drive.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For George and Allison, the work remains close at hand: open the drive, recover what was deleted, examine what appears. They have questions about the place where they live, and their skills give them a way to start answering some of them. Bernard later wants that same drive found because those answers can keep moving between people. On a rewatch, eighteen accompanies each of those actions with an added sense of location. The files belong to an investigation inside one numbered silo, carried on by residents who haven't yet learned how to place their home beside the others.",
+      "reason": "The previous paragraph already closes the local answer by linking the identifier to the installation while leaving the drive's origin unresolved. This second ending rehearses recovery, pursuit and numbering without adding information. H18 identifies this document-scale habit as 'keeps re-stating it with nothing new attached.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "There's a possible practical defense of restrictions on unfamiliar medical tools. Hanna's wish to help doesn't by itself establish that her device is safe, that her interpretation is correct, or that a treatment based on it would work. Those are separate concerns. But the episode doesn't show a process in which she can submit the instrument for examination and answer those concerns. The intervention treats her work as a violation. Whatever uncertainty surrounds its medical usefulness, the prohibition stops her inquiry before that usefulness can be established.",
+      "reason": "The hypothetical safety defense is not presented as fact, but it introduces an unassigned debate and an absent approval process instead of developing the shown restriction. The preceding paragraph already establishes that prohibition stops Hanna's inquiry. Removing this detour keeps the narration focused on lore and interpretation rather than excessive methodological caveats.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The device also helps us read the silo's dependence on specialized workers. Mechanical needs people who can discover faults. Medicine needs people who can recognize illness. Neither task works well if practitioners merely repeat words without checking the machine or the patient in front of them. Yet Hanna's experience suggests that permission to solve a problem has limits. An investigation can become unacceptable when it requires a prohibited method, even if the person conducting it began with an ordinary responsibility to repair or heal.",
+      "reason": "The medicine paragraph and the two Mechanical comparisons have already supplied this entire argument. This is the least useful later restatement of the chapter's central theme, matching H18's instruction to 'give the repeated observation one home paragraph.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "That doesn't mean Hanna has uncovered the silo's full history, or that every small structure would expose a secret the authorities already understand. The episode gives her a particular instrument and a particular reason for using it. Her work is worth taking seriously on those terms. The more cautious inference is that the restriction narrows what residents can discover for themselves. It needn't depend on officials knowing in advance every result that an enlarged view might produce.",
+      "reason": "The opening disclaimer rebuts claims the chapter has not made and repeats its established limit on discovery. Only the final distinction adds useful interpretation: suppressing a method need not require foreknowledge of every possible finding. Retain that point without the additional evidence lecture.",
+      "replacement": "Officials don't need to know every result Hanna might obtain for the restriction to narrow what she can discover.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Mechanical gives her experience that Bernard's account of the theft leaves out. Down below, a replacement part or a repair material has to work in the machinery where it's installed. Calling it approved doesn't resolve a fault. Juliette's complaint therefore has a concrete basis even before the finale gives the tape another use. She has handled the material and found it wanting. The later events ask us to take that unglamorous piece of professional knowledge seriously, alongside the orders and procedures that surround a cleaning.",
+      "reason": "The preceding three paragraphs already establish that Juliette tested inferior tape through maintenance work before understanding its relevance to suits. This fourth account adds no new link in the material chain. H18 specifically flags repeated facts whose subsequent mentions add no consequence or comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That also changes how Bernard's concern sounds. On first hearing, his anger can fit a department head resenting a theft, especially a theft by someone already difficult for him to manage. After the finale, the material itself deserves closer attention. IT possesses tape that Juliette finds inferior, and better tape helps her survive outside. His earlier objection now sits beside a much more troubling use for the same kind of material. The theft has brought Juliette into contact with a difference that matters beyond departmental supplies.",
+      "reason": "The following paragraph makes the same comparison more carefully by distinguishing Bernard's anger from the later material evidence. Keeping both produces the H18 pattern of a re-mention that 'adds nothing.' Deleting this paragraph preserves the stronger account and avoids unnecessary speculation about why Juliette particularly irritates him.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "Juliette has an advantage neither of those experiences gives her by itself. She's encountered the green view as a recording before encountering it as her surroundings. That changes what familiarity means. A tree or a patch of grass could resemble something in an earlier image without attracting much attention. A recognizable movement across the view is harder to absorb into the idea of a spontaneous discovery. She's able to notice how the scene is being presented while she's still inside the presentation.",
+      "reason": "The contrast misleadingly makes prior exposure to the green recording Juliette's distinguishing advantage. Allison also encountered that recording before going outside. The useful distinction is how Juliette interprets the repeated birds, not exclusive access to the earlier image.",
+      "replacement": "Allison has also seen the green recording before going outside, so familiarity alone doesn't explain the difference. For Juliette, recognizing the birds turns that familiarity into a reason to question the view rather than accept it as confirmation.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "The repeated flight tells Juliette that she's seeing something prepared. The bodies confront her with a physical consequence of relying on it.",
+      "reason": "The second sentence implies that reliance on the image caused Holston's and Allison's deaths. The supplied S2 evidence identifies tape and suit sealing as material to survival; the bodies establish that the green display omits physical reality, not that trusting the picture itself caused death.",
+      "replacement": "The repeated flight tells Juliette that she's seeing something prepared. The bodies give her another reason to distrust it: the display fails to show people who are physically there.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The birds also make Juliette's response feel consistent with the way she approaches a faulty piece of equipment. She notices a repeat, connects it to something she's already encountered, and changes how she uses the thing in front of her. She doesn't need an explanation of every component in the helmet before she stops relying on its picture. The immediate consequence is concrete: she leaves the camera untouched and keeps moving. The same flight that makes the green world look alive gives her the familiar detail she needs to look past it.",
+      "reason": "H18 identifies the pattern as a script that 'keeps re-stating it with nothing new attached.' This closing paragraph again explains recognition, distrust and refusal to clean after those developments have already received several paragraphs. Its mechanical comparison can survive in one sentence without repeating the entire causal sequence.",
+      "replacement": "It's a response that fits Juliette's work as a mechanic: she can stop trusting a faulty piece of equipment before she understands every part of it.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 6,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Elsewhere, the shutdown has consequences that are much easier to identify. Juliette and the workers in Mechanical have a repair to complete while the silo depends on them. The steam that normally drives the generator still has to be dealt with, and the work becomes dangerous as heat builds. Juliette goes into the water beneath the generator to help cool the overheated equipment. These are physical problems with immediate feedback. A damaged component, rising heat and a repair crew's actions give us a fairly direct account of what's happening below.",
+      "reason": "The assigned subject is the cafeteria image's change of state, not a retelling of the generator emergency. The preceding paragraphs already establish the shutdown and repair. This detour adds mechanical choreography only to contrast it with an unexplained screen, delaying the chapter's actual development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's also a useful difference between the cafeteria and the helmet. Residents share the large screen inside the silo. A cleaner encounters the visor image alone, after leaving through the airlock. Those pictures reach people in different places and under different circumstances. Discovering how the helmet misleads Juliette gives us a comparison for the cafeteria, though it doesn't amount to an inspection of the cafeteria's equipment. The same kind of scenery can appear in both situations while the route by which it reaches each display remains a separate question.",
+      "reason": "H18 warns against a repeated framing that returns without a new development. The preceding two paragraphs already establish both the visor comparison and the unknown source of the cafeteria image. Restating that distinction here adds another methodological qualification immediately before the chapter's useful hypothetical verification tests.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Finding the implant doesn't answer every question about a pregnancy that hasn't happened. It does answer whether the promised removal was carried out. That's the immediate breach Allison can identify. She doesn't have to establish the entire reproductive policy to know that her own procedure failed to match what she was told. Her discovery is especially unsettling because the relevant evidence was concealed inside her. During the ordinary course of treatment, she couldn't inspect the doctor's work as it happened or compare it with a result she could see.",
+      "reason": "H18 describes repeating a fact or framing without advancing it. The opening already establishes the retained device, its contradiction of the promised procedure and Allison's previous dependence on reassurance. The final paragraph supplies the more useful new distinction between an inconclusive failure to conceive and the directly observable implant. This middle paragraph is the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That matters for Hanna as well. An observer could see flowers without knowing whether their position was accidental. Even if someone suspected an obstruction, the arrangement wouldn't reveal the details of her work with the magnifying device or everything she understood about the silo. The same household object could be harmless to one person and useful cover to another. Hanna's situation makes that ambiguity practical. She was trying to investigate under restrictions while continuing to live among people who might notice a more obvious attempt to conceal her activities.",
+      "reason": "H18 identifies repeated framing without additional development. The flowers' unobtrusive appearance is already explained in the second paragraph, their obstruction of the camera in the sixth, and the limits of observers' interpretations immediately before this passage. This paragraph combines those established points rather than adding a distinct step.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That makes the cafeteria an interesting place for the inquiry. Lukas hasn't uncovered a hidden room or obtained an object that someone has locked away. Other residents can look at the same display. The difference is the time he gives it and the record he keeps. A feature of the picture that can pass unnoticed during a meal becomes a subject once he returns to it. The silo can restrict access to certain places and materials. Here, a resident begins asking an unsupplied question about something already in public view.",
+      "reason": "H18 identifies an echo as repeatedly stating a fact or framing \"with nothing new attached.\" Most of this paragraph repeats the public-space and repeated-observation discussion already established in paragraph two. Preserve its useful distinction between public visibility and restricted access in a shorter passage.",
+      "replacement": "He hasn't entered a restricted room or recovered a forbidden object. His question begins with a display other residents can also see.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This is where his habit challenges the silo's sanctioned knowledge. Lukas doesn't need to stand before the cafeteria and declare the official history false. His drawings already contain a question that the explanations available to him haven't answered. If the lights move regularly, he wants to know why. Each return to the display gives that question another concrete basis. He's making room for an answer that would have to account for what he's seen, rather than allowing the absence of an explanation to end his interest.",
+      "reason": "H18 says a re-mention must add \"a consequence, a comparison, the next number.\" This paragraph repeats the unanswered-question framing from paragraphs four and six and the comparison method from paragraphs two and five. It is the least useful late restatement and can be removed without losing the chapter's answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 10,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "By the finale, Daniel's identification as Troy gives the audience another reason to keep the individuals in view. The man connected to Helen in the Before Times remains relevant inside the later operation of Silo 1. His history doesn't disappear from the story just because the name in use changes. The finale also places human operators behind the Algorithm. Together, those released facts make the founding world feel populated by people whose lives continue to bear on its workings. A collective account of the project's purpose can't replace attention to those people.",
+      "reason": "This paragraph spends the central reveals assigned to chapters 11 and 22 without developing the present chapter's distinction among founding participants. The human-operator fact is supported, but its placement makes this sequel more recap-heavy and weakens the planned division of useful developments.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "So an early reference to the founders now asks for a little more attention. Which person is being spoken for, and which part of the beginning has survived into the official account? The question has a practical basis in what the show gives us: a stated preservation plan, an unveiling interrupted by an explosion, and Helen and Daniel assigned to different silos. Future residents inherit the resulting arrangements without having stood beside either of them. We can now picture the separation behind that inheritance, with Helen bound for Silo 18 and Daniel for Silo 1.",
+      "reason": "H18 warns against returning to one framing \"with nothing new attached.\" The conclusion repeats the plan, explosion, and separation immediately after their explanations, including the silo destinations already stated in paragraph eight. A shorter ending can retain the chapter's answer without another inventory.",
+      "replacement": "When a later official invokes the founders, the collective name no longer tells us whose judgment is being preserved. Helen's experience of separation and the planners' account of preservation belong to the same beginning, but they don't describe it in the same way.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "So when Troy carries out his work, Daniel remains relevant to what we're seeing. The earlier name attaches that competence to a human history, even where Troy can't readily retrieve it. An instruction can give him a task, and his surviving skills can give him a way to complete it. Neither supplies the missing account of Daniel. At the end of the assignment, the same man is still there, capable of acting in the present and unable to reach all of the life that brought him to it.",
+      "reason": "This conclusion exemplifies the chapter-wide H18 problem: the script \"keeps re-stating\" one distinction \"with nothing new attached.\" Paragraphs one, three, four, six, nine, ten, eleven, and twelve repeatedly explain that successful work does not restore personal history. The assigned question is answered early, but the remaining length is not supported by distinct developments or a supplied concrete task. The chapter needs substantial consolidation around the reveal, the capability-memory distinction, and its limited interpretation. A one-to-three-sentence replacement for the ending would not repair that structure, and no task details should be invented to fill it.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "That gives his competence an uncomfortable consequence. A failed task would draw attention to a missing ability. A completed task can let the missing personal history pass without interrupting the operation. Troy's effectiveness therefore makes his condition easier for others to work around. They can deal with the man who can do what's required, using the name and role currently assigned to him. For Troy himself, however, success at the task can't supply the absent explanation of how he came to occupy that role.",
+      "reason": "The supplied material establishes retained capability and impaired personal recollection, not that successful work demonstrably makes his condition easier for others to manage. This is a plausible interpretation presented as an established causal consequence. Keep the distinction but mark the operational reading as an inference.",
+      "replacement": "His competence may make the gap less apparent to anyone judging him only by the work he completes. For Troy, completing that work still doesn't explain how he came to occupy the role.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Daniel's earlier scenes make the loss of context concrete. He has a name used by another person, a connection with Helen, and a place in events before the later silo operation. Those are parts of a life that an assignment under the name Troy can't explain. Being told what to do now doesn't answer where he belonged before. Even a successful performance leaves those questions untouched. The work may have a clear endpoint, while his understanding of the person doing it remains unsettled.",
+      "reason": "H18 requires a repeated fact to add something beyond its earlier appearance. Paragraph two already establishes Daniel's relationship with Helen and the contrast with Troy's present work; paragraph six already explains the audience's greater access to that continuity. This paragraph adds no distinct event or consequence and is a safe deletion during the larger consolidation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Silo 1 also gives this separation a practical setting. Work continues there through people occupying roles and carrying out instructions. Troy can fit into that activity because he retains abilities the operation can use. From the outside, a functioning role can look complete: someone receives an assignment and has the means to perform it. Daniel's identity complicates that appearance. We now have reason to look beyond whether Troy performs successfully and consider how much of the person has been left out of the role others recognize.",
+      "reason": "H18 calls for giving a repeated thematic observation \"one home paragraph.\" This is another version of paragraphs three and four, with generic references to work and instructions rather than a new supplied event. It should be deleted rather than expanded with invented operational detail.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That earlier exchange matters here because recollections of Helen have somewhere to lead. She isn't an unexplained face added to Troy's experience solely to make him seem troubled. The series has already put her in Daniel's company. We've seen a gesture pass between them. When she recurs in his awareness, the audience can understand why this particular person might matter before Troy has recovered enough context to explain it himself. The discomfort comes partly from that distance between what we recognize and what he can presently understand.",
+      "reason": "H18 describes repeated framing \"with nothing new attached.\" Paragraph three already explains the audience's ability to recognize Helen through the Before Times scenes, and paragraph four supplies the gift as its concrete example. This paragraph explains both again instead of moving to the separation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 12,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The recurrence matters as well. Helen comes back in flashes, rather than appearing as a single isolated disturbance that the story leaves without a connection. Each return keeps the same relationship within reach, however briefly. Still, a recurring recollection isn't the same experience as sitting down with Helen and recovering their shared history through conversation. Troy hasn't been handed a reliable sequence of events merely because her image persists. The finale leaves him with contact with the past that remains difficult to organize into an account.",
+      "reason": "H12 targets \"Inflated connective tissue and hedges piled on hedges.\" The paragraph takes six sentences to restate recurrence and incomplete recovery, and its imagined conversation adds an unnecessary methodological comparison rather than lore. The qualification is useful but can be spoken directly.",
+      "replacement": "Helen returns more than once, so the relationship remains within reach even when Troy can't place it. Those flashes don't restore a continuous account of their time together.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This is why the finale's identity reveal benefits from the earlier scenes between Daniel and Helen. Without them, learning that Troy had another name could remain a puzzle about identification. Helen makes the consequences easier to grasp. There's someone associated with that name, someone whose presence returns when the larger history won't come into focus. Daniel's past includes an exchange with her, a separation from her, and an attachment that continues to trouble the boundaries of his assigned identity.",
+      "reason": "H18 says a repeated observation needs a new consequence or comparison. This late paragraph repeats the function of the earlier relationship scenes already explained in paragraphs two through five. The following ending already returns to the gift and interruption, making this additional summary the least useful passage at the close.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Silo 18 makes the ancestry idea feel more substantial than a resemblance between two characters. Helen has entered a named place that the audience knows through Juliette, her father, and the people she works with in Mechanical. We can put Helen and Juliette within the history of the same installation. That's useful geographical information. It gives a family connection somewhere to have developed, although a shared place can also connect people through work, institutions, and the rules they inherit without making them relatives.",
+      "reason": "H18 identifies an echo when a framing keeps being restated with nothing new attached. The opening already establishes the shared installation and possible family connection; the later chronology and relationship tests explain its limits more concretely. This is the least useful repetition of the geographical premise.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The strongest reason to consider the ancestry theory is therefore quite specific. Helen is pregnant, and she enters Silo 18. Those facts put a possible descendant within the history of a place already central to the series. The reason to leave the theory open is equally specific: the released story hasn't supplied a complete chain connecting her child to Juliette. Familiarity can make that missing stretch feel shorter. We've spent time with both women, so joining their lives can seem natural even when the family relationships remain unaccounted for.",
+      "reason": "H18's document-scale echo applies: this repeats the opening premise and the missing-chain conclusion after several paragraphs have already demonstrated both. The audience-familiarity observation does not justify another full summary of the same evidence test.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 13,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "She enters the silo carrying expectations about a child whose life will begin under circumstances very different from the life she knew outside.",
+      "reason": "S7 establishes pregnancy and entry into Silo 18, not Helen's particular expectations or a confirmed subsequent birth circumstance. The sentence turns an implication of pregnancy into an asserted future outcome and inward state.",
+      "replacement": "Her pregnancy makes the separation concern a possible family future as well as the relationship she and Daniel already have.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives the early emphasis on keeping the silo alive a more particular background. When Juliette insists that the generator needs attention, she's dealing with a fault she can investigate. She knows the machinery through her work, and she accepts the danger involved in repairing it. The repair also serves the kind of preservation the founders describe. Yet Juliette doesn't need their full account of the project to know that losing power would harm her neighbors. Her reason for doing the job is already there in front of her.",
+      "reason": "H18 applies to the repeated maintenance-versus-founding-purpose contrast. The preceding paragraph already establishes residents' practical work, and the following paragraph explains the information gap. This intervening passage repeats the bridge without supplying a necessary new development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 14,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Each of those people also has a life they're trying to understand. Allison examining the implant gives that concern a definite shape: a patient looking at what remains in her body after she'd been told the procedure was complete.",
+      "reason": "The closing wording implies a literal scene of Allison visually inspecting an implant that remains inside her body. The supplied material supports her discovery that the implant remains, not this staged physical image. The point can close on the established discrepancy instead.",
+      "replacement": "Allison's discovery makes the issue concrete: she was told the implant had been removed, but it remained in place.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Whatever explanations surround the silos, the immediate situation includes a danger that changes the conditions under which people enter them. There's a substantial difference between considering a place of refuge while other options remain available and reaching it during a violent disruption. The latter leaves much less room to pause, compare accounts, or decide what accepting shelter will involve.",
+      "reason": "Keep this explicitly as a general interpretation of the crisis, without asserting the exact range of choices available to the named entrants. Avoid reciting an editorial caveat in the narration.",
+      "replacement": "The explosion places danger beside the promise of refuge. In a crisis, the need to find shelter can crowd out questions about who designed it and what conditions come with entering.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Juliette's work makes the inheritance more concrete. Long after the circumstances of entry, she has machinery to maintain and failures to prevent. The generator isn't an abstract promise about shelter. People depend on it, and her knowledge comes through repairing equipment whose continued operation matters to everyone above her. The residents inherit an installation that requires real labor, regardless of how much they know about its creation. Their competence keeps that inherited place habitable without necessarily bringing them closer to an account of why its original occupants arrived there.",
+      "reason": "This repeats chapter 14's extended generator example and its distinction between maintaining the silo and knowing its origin. H18 calls for giving a repeated thematic observation one home. Here it diverts attention from the unveiling, separation, and access consequences assigned to chapter 15.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Later people have to search for what earlier people had no calm occasion to record or explain.",
+      "reason": "Neither S7 nor the supplied outline establishes that earlier participants lacked an opportunity to record or explain events. The sentence invents a causal explanation for later information gaps.",
+      "replacement": "Later people have to search for accounts of events they never witnessed.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "What remains most immediate in the unveiling is that Helen is pregnant when she and Daniel are separated. The future they're expecting together has to continue across that division. For later occupants, Silo 18 is already a home, a workplace, and the limit of the world they can reach. For Helen at this threshold, it's a destination entered amid disruption, while Daniel goes to Silo 1. Those numbered places will acquire their own histories. At this moment, they are also the two places keeping Helen and Daniel apart.",
+      "reason": "H18 applies to this closing return to pregnancy, the two destinations, inherited life, and separation, all already developed repeatedly in this chapter and chapter 13. A short close can preserve the distinct information consequence without another full recap.",
+      "replacement": "After the separation, an account from Silo 18 alone cannot follow both of their lives. Daniel's part of that shared history continues in Silo 1.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "With Daniel, the name Troy doesn't remove the significance of Helen. Their relationship continues to trouble the assignment he's been given. That's something the story supplies about him through those recurring memories. For Charlotte and Susan, the confirmed connection does a different amount of work. It joins the names and appearances. Filling the space between them with Daniel's memories, attachments, or exact response would turn his particular experience into a biography for someone else. Charlotte still needs to be understood through what belongs to her own appearances.",
+      "reason": "H18 applies because the immediately preceding paragraph already explains Daniel's persistent skills and Helen memories, then explicitly warns against assigning those features to Charlotte. This paragraph repeats that caution rather than adding Charlotte-specific information.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "A useful earlier comparison is Holston and Juliette occupying the sheriff's office. The office supplies recognizable duties, expectations, and access. Holston investigates Allison's death and eventually asks to go outside. Juliette takes the position with George's death unresolved and pursues questions that lead her toward the hard drive. Seeing either person as sheriff tells us something practical about what they can do. It doesn't make their reasons interchangeable. A familiar role helps the viewer follow the silo's routines, though it can also encourage assumptions about the person performing it.",
+      "reason": "The assignment asks how a familiar face and role can mislead the viewer, but this extended succession-of-sheriffs example concerns two different people rather than one altered identity. Its useful principle can be delivered locally without retelling unrelated investigations.",
+      "replacement": "A familiar role can tell us what someone is expected to do without explaining how that person came to occupy it. Susan's later place in the system therefore gives us only part of her history.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Bernard offers another concrete example of how a role shapes an initial reading. He heads IT, where the silo's technical work and restrictions meet. As Juliette investigates, his concern with the forbidden drive and his actions against her give that position a sharper meaning. The viewer learns about him through what he does with the access he has. Charlotte's connection to Susan asks for a similar adjustment in attention: the present name and setting remain relevant, but an earlier identity now belongs in the account as well.",
+      "reason": "This is a second extended role analogy after the sheriff comparison and Susan's procedural context have already made the point. H18 warns against sections circling the same framing; the Bernard excursion adds no new information about Charlotte/Susan.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's also a difference between learning who someone is and learning what that person knows. The audience can now connect Charlotte and Susan. That doesn't automatically tell us how Susan would describe Charlotte's life, which experiences she could recall, or how she would respond to the earlier name. Daniel makes that distinction tangible when his capabilities and his flashes of Helen persist in different ways. His story shows why a new name deserves attention. It doesn't make another person's inward response available just because her identity has been revealed.",
+      "reason": "The opening already distinguishes identity recognition from accessible personal memory, and the first Daniel comparison supplies the same warning about transferring his experience. H18's echo rule applies to this further restatement, which prolongs the evidence lecture without a new development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For a repairer like Juliette, that's a difficult change in how a problem can be approached. Her work in Mechanical involved equipment whose behavior could expose a bad explanation. A machine could fail, a part could be inspected, and an attempted repair could have an observable result. Camille's account concerns experiences that aren't present for Juliette to examine in the same way. Her habit of paying attention still matters, but attention to the footage alone can't supply the missing connection between an image and an actual event.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' This is the third extended comparison between inspectable evidence and Camille's account, after the mirror and implant paragraphs. It adds no new released development and prolongs the methodological explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "On a rewatch, Camille's presentation deserves attention for that reason. The images don't arrive alone. They come through a person who can help determine how Juliette encounters them and what account accompanies them. A recording may appear more detached than a spoken explanation, yet Camille remains involved in its use. Juliette's task includes assessing the person offering assistance, even while she needs that assistance. The missing recollections make it harder to establish where Camille's explanation ends and Juliette's own knowledge begins.",
+      "reason": "H18 requires a second mention to add 'a consequence, a comparison, the next number.' This late paragraph returns to the opening two paragraphs' point that Camille supplies both the account and its apparent corroboration. The remaining ending already closes the local answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's an earlier example of how quickly the silo can change the public meaning of an office. After Jahns dies, Bernard takes on the mayoral role. Residents encounter the same institution through a different person, and the familiar title continues to organize public life. Juliette's situation adds another complication. The familiar person herself is present, but her ability to explain what she accepts has been damaged. Residents recognizing her face may assume a continuity that she can't experience with anything like the same confidence.",
+      "reason": "H18 warns against every section 'looping back to the same observation.' The Bernard detour returns to the public-recognition-versus-personal-memory distinction already established at the opening and developed through Juliette's sheriff appointment. Removing it preserves the more useful next development about genuine affection being usable by image managers.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 19,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "When Billings learns this in season three's eighth episode, the transport rule acquires a very practical exception.",
+      "reason": "An illegal violation is not an authorized exception. Supplied proof S6 specifically requires unauthorized infrastructure to remain distinct from official privilege; the present wording briefly blurs that distinction.",
+      "replacement": "When Billings learns this in season three's eighth episode, he discovers a working violation of the transport rule.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "Ed's elevator leaves Billings with a more complete account of how the stealing happened. It also leaves the transport ban with a clearer meaning for the viewer. The prohibition concerns equipment that can be built and used inside the silo, as Ed has demonstrated through his own unauthorized work. The rule hasn't changed, but Billings now knows about a way around it. Somewhere within the same regulated home, Ed made a forbidden machine useful to himself and used it to take supplies.",
+      "reason": "H18 says that when repetition is thematic, 'the fix is structural: give the repeated observation one home paragraph.' This closing passage repeats the opening rather than concluding a sequence of distinct developments. Across the chapter, paragraphs 2, 6, and 7 repeat the theft/access connection; paragraphs 3, 4, 8, and 9 repeat technical feasibility; paragraphs 5, 10, and 11 repeat unauthorized status. A single replacement cannot repair that architecture. Retain a compact account of Billings's discovery, one explanation of the access consequence, and one distinction between prohibition and impossibility; do not invent investigative steps to fill the space. The empty replacement is not a claim that deleting this ending alone completes the repair.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "If Juliette had treated the IT material as equivalent because it looked like the same category of supply, Walker would have lacked the particular complaint that makes the later intervention possible.",
+      "reason": "S2 establishes the connection between better tape, Supply, and survival, but does not establish this exclusive counterfactual. Calling the complaint what 'makes the later intervention possible' turns a useful causal contribution into a necessary condition.",
+      "replacement": "Juliette's complaint gives Walker a specific reason to question the tape intended for the suit.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Ed's theft raises a related problem from the other direction. A supply system depends on goods remaining available where they're expected to be. Billings's investigation concerns someone who has found a way to take them. The released account doesn't require every missing item elsewhere in the silo to be part of the same scheme. Ed's named activity is already consequential enough. Critical Supply holds materials worth reaching through an illegal route, and Billings learns that the route has been used for that purpose. The place matters because its contents can be put to use.",
+      "reason": "H18 describes repeated facts whose later mentions add nothing. The preceding Critical Supply and separate-circumstances paragraphs already establish Ed's theft, unauthorized access, and the limited connection to Carla. 'The released account doesn't require' also shifts into the evidence-review register the sleep adaptation asks the narration not to repeat.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "There's a useful distinction here between a device and the people who can order harm. Jimmy's mother acts against the internal mechanism. By the end of the third season, external action against Silo 17 shows that the threat extends beyond that mechanism. Her success hasn't removed the silo from the attention of people elsewhere. Nor has it made the building physically immune to an attack arriving from outside. The finale adds a separate danger without taking away the importance of what she accomplished.",
+      "reason": "The opening already establishes the internal mechanism, separate external action, and continuing human threat. This paragraph repeats all three rather than developing them. H18 describes a script that \"keeps re-stating it with nothing new attached.\" Delete this least-useful early restatement while retaining the opening and the following account of Jimmy's lived circumstances.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The comparison is useful because both situations can invite an answer that's too broad. After Juliette keeps walking, the immediate discovery concerns the equipment that was supposed to protect her. After the Safeguard fails, the immediate result concerns a mechanism inside Silo 17. In both cases, the person who changes the outcome has done something specific. Walker's effort reaches the preparation of Juliette's suit. Jimmy's mother's effort reaches the internal Safeguard. Their actions have consequences that depend on which part of the danger they can actually affect.",
+      "reason": "The preceding paragraph already makes the complete tape/Safeguard comparison, including its limits. This is H18's \"keeps re-stating it with nothing new attached\" and turns a concrete comparison into a repeated explanation of how to interpret evidence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Poison also needs to remain attached to its own means of delivery. An internal device, the substance it might deliver, and an attack made from outside aren't interchangeable parts of a single action. Disabling equipment can interrupt what that equipment is meant to do. It doesn't follow that the same intervention would stop an external attack. The finale's sequence matters here: the internal Safeguard fails, and Silo 17 still faces action from beyond its walls. Calling both events a reset would conceal the difference that makes the second danger possible.",
+      "reason": "The instruction to avoid conflating poison, device, and external attack has become an audible editorial lesson, including a rebuttal to the unused word \"reset.\" The supplied bank establishes separate mechanisms but supplies no delivery-system detail to develop the poison reference. The opening already conveys the supported distinction.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Jimmy's mother supplies one answer through what she does. She acts upon something within reach and disables it. There's no reason to diminish that success because the finale reveals another attack channel. Stopping the internal Safeguard changes the circumstances in Silo 17, and its failure remains part of the history the finale depends on. The later external action shows the extent of the remaining danger. It doesn't turn her earlier intervention into an illusion or make the mechanism she stopped irrelevant.",
+      "reason": "This paragraph again defends the significance of the intervention without supplying an event or consequence beyond those already stated. H18 calls for cutting a \"re-mention that adds nothing.\" The following final paragraph already closes the local answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Earlier scenes with Bernard offer a smaller version of that double attention. When he searches for the drive associated with eighteen, his urgency belongs to a particular man pursuing a particular object. His office helps him conduct the search, but the search still requires action. He has to locate something that other people have handled and investigated. The later revelation of human operators encourages the same concrete reading of the Algorithm. Its name may sound comprehensive. Its operation involves people carrying out work, receiving information, and participating in decisions that affect the silos.",
+      "reason": "Bernard's physical search does not further explain the distinction between an official script and operator discretion. The paragraph returns to human participation after several demonstrations of that point and revisits chapter 2's assigned drive material. This fits H18's \"keeps re-stating it with nothing new attached.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Charlotte's identification as Susan adds another familiar person to this revised picture. Alongside the Daniel and Troy reveal, it gives the operation recognizable human participants whose identities have been altered. These aren't anonymous names added to an organizational chart. The finale connects people across the Before Times story and the silo story. Hearing an official voice after those revelations involves a different kind of attention. A listener can follow what the voice says while also recognizing that its speaker belongs to a history beyond the immediate exchange.",
+      "reason": "The Daniel paragraph already establishes that an operator can have a history outside the institutional role. Charlotte's reveal adds another example but no distinct consequence for the assigned question, and it repeats material allocated to chapter 16. H18 requires the second mention to add \"a consequence, a comparison, the next number\" rather than simply restage the same observation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 22,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "Daniel's presence as Troy leaves the voice attached to someone the audience can recognize. His assignment belongs to Silo 1, while the flashes of Helen bring part of his earlier life into the same man. That gives an official exchange two things to attend to: the instruction being delivered and the person required to deliver it. The recipient may hear only the authorized answer. The audience now has reason to picture a human speaker taking part, with Helen still returning to his thoughts.",
+      "reason": "S8 confirms Daniel/Troy and human operators but does not identify Troy as the speaker of the particular official voice or exchange being reconsidered. The conclusion merges those separate confirmations into a specific speaker identification.",
+      "replacement": "The finale places human operators behind the Algorithm's official guidance. An earlier instruction can now be heard as part of a procedure people carry out, without assuming that its speaker chose the answer or controlled the outcome.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Silo 17 gives that difference a concrete setting. Juliette finds a place built for people to live underground, with recognizable infrastructure, yet its condition is unlike the home she left. The similarities make comparison possible. She can recognize purposes in the machinery and spaces around her. The differences require explanation. Silo 18's continued operation and Silo 17's collapse now belong beside each other in her experience, even though the residents of her home haven't had the same opportunity to examine them together.",
+      "reason": "The preceding paragraph already places Juliette in the aftermath of another community's decisions, and the following paragraph develops the meaningful distinction between structural requirements and local decisions. This intervening paragraph mostly repeats that comparison is possible. H18 identifies the problem as \"keeps re-stating it with nothing new attached.\"",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 23,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The finale places external action against Silo 17 alongside the failure of its internal Safeguard. From the residents' position, understanding danger would therefore involve more than knowing the condition of equipment inside their own walls. Some consequential actions originate elsewhere. The no-contact Directive limits the ordinary exchanges through which separate populations might compare those experiences. This is an inference about how isolation works in the released story, rather than a complete account of every connection between the installations. The shown arrangement is enough to make the imbalance clear.",
+      "reason": "The Safeguard recap duplicates chapter 21, while the final two sentences describe the narration's evidentiary method rather than the residents' circumstances. A short conditional connection preserves the useful interpretation without an editorial disclaimer.",
+      "replacement": "Residents comparing accounts of threats to their silos might discover that some dangers originate beyond their own walls. The no-contact Directive makes that comparison harder.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's something useful about leaving the dispenser with the people actually shown handling it. Daniel gives it to Helen before their separation into Silo 1 and Silo 18. The later viewer knows those destinations, so a small gift sits within a much more painful situation. Helen and Daniel won't continue together in the circumstances they knew. The toy gives their earlier exchange a material presence that the silo's treatment of relics had concealed. Something officials regard as forbidden can have begun as an affectionate, everyday possession.",
+      "reason": "The first two paragraphs already establish the ordinary personal gift behind the forbidden relic, and the final paragraph returns to the exchange more effectively. This intermediate return is H18's \"re-mention that adds nothing\" to the chapter's required comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The season-three finale gives Daniel a different kind of connection to the silo's present. Daniel is Troy. Here, the story identifies a person across an altered identity, and his memories of Helen persist. The viewer no longer has to approach Troy only through the name and assignment attached to him. Daniel's Before Times life belongs to the same person. His connection with Helen has consequences within his experience, even though he doesn't have easy access to a complete personal account of that life.\n\nThat identification does work the dispenser can't do. A toy remains separate from the people who carry it, while the Daniel and Troy reveal joins two presentations of a person. His retained skills and flashes of Helen can now be understood alongside the life shown before his arrival in Silo 1. The consequence is specific to Daniel. When Helen returns in his recollections, she's someone he knew, someone from the life the viewer has seen him living. Her appearance interrupts the account of himself available through his imposed identity.",
+      "reason": "These paragraphs introduce a third extended comparison, between object continuity and personal identity, before reaching the assigned object-versus-operated-voice comparison. Daniel's identity and emotional memory already feature in chapter 22 and are assigned separate earlier chapters. Removing this detour preserves the intended concluding structure.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For someone receiving an instruction, that human involvement changes the practical situation. A response may pass through a person whose knowledge and responsibilities differ from their own. The formal language can remain consistent even when the participants know different things. The finale allows the viewer to place human activity behind that exchange. It doesn't establish an autonomous, conscious intelligence called the Algorithm. What it supplies is a setting in which people operate it, with all the particular limits that come with the positions those people occupy.",
+      "reason": "The preceding paragraph already supplies the human-operation fact and its limit, and chapter 22 develops the same procedural distinction at length. H18 describes this as \"keeps re-stating it with nothing new attached.\" The following comparison paragraph is the more useful place to retain the point.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Nothing like that is being claimed as a released event. It's a way of naming exactly what the present interpretation depends on: the connection between an identifiable design and an individual object that has travelled through time.",
+      "reason": "The paragraph already says \"hypothetical\" and \"Suppose,\" so this disclaimer needlessly explains the narration's method. The assignment asks for an explicitly hypothetical observation, which the existing setup already provides.",
+      "replacement": "The design could still link the scenes, but it wouldn't identify which individual dispenser survived.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The finale's human operators require a different response because their participation has already been shown. After seeing people operate the Algorithm in Silo 1, an earlier instruction can't be treated as evidence that nobody stands behind the voice. The viewer can listen again with a more concrete situation in mind: a recipient hears an official communication, while another person participates in delivering it. There's room to consider that speaker's role without supplying an unseen biography or imagining that every word comes from unrestricted personal discretion. A formal procedure can constrain its operators too.",
+      "reason": "The chapter has already stated human participation, compared it with the toy, and explained restricted discretion. This paragraph repeats chapter 22's answer immediately before the grounded ending. H18 calls for cutting a \"re-mention that adds nothing.\"",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "narration_sha256": "f156e8de44e870ea09d1684397882a50fce7014973c16ff7ddf66d7c55012ec0",
+  "method": "Mechanical checks plus separate quoted editorial reports. Neither establishes actual audio duration or a complete independent episode/book viewing."
+}

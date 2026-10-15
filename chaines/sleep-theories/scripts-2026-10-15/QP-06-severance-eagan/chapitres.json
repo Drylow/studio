@@ -1,0 +1,355 @@
+{
+  "timing_note": "Word offsets are exact under the documented regex. Times at 150 wpm are estimates, NOT publication timestamps. Generate YouTube chapters from the final measured audio/video.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "The inventor's name is wrong",
+      "file": "chapitres/01.txt",
+      "words": 667,
+      "start_word": 0,
+      "end_word": 667,
+      "estimated_start_seconds_at_150_wpm": 0,
+      "measured_timestamp": null,
+      "sources": [
+        "E4"
+      ],
+      "sha256": "be5cb7d12149d864268e96d381ecb9c8e2b8a3dbaa05430f3e97c364a1e0871d"
+    },
+    {
+      "number": 2,
+      "title": "A dynasty arranged as a museum",
+      "file": "chapitres/02.txt",
+      "words": 972,
+      "start_word": 667,
+      "end_word": 1639,
+      "estimated_start_seconds_at_150_wpm": 267,
+      "measured_timestamp": null,
+      "sources": [
+        "E1"
+      ],
+      "sha256": "856eb742e46d3c6d785c9c001ae2e1b19a1916afcfa0f8429adeb33dbbdf1ec7"
+    },
+    {
+      "number": 3,
+      "title": "Kier's words enter an ordinary workday",
+      "file": "chapitres/03.txt",
+      "words": 1040,
+      "start_word": 1639,
+      "end_word": 2679,
+      "estimated_start_seconds_at_150_wpm": 656,
+      "measured_timestamp": null,
+      "sources": [
+        "E1",
+        "E3"
+      ],
+      "sha256": "8cbad20cba6d9a04e776299d841ebac828b770c2d818f453b17facf7e819be91"
+    },
+    {
+      "number": 4,
+      "title": "Four tempers and what the company does with them",
+      "file": "chapitres/04.txt",
+      "words": 921,
+      "start_word": 2679,
+      "end_word": 3600,
+      "estimated_start_seconds_at_150_wpm": 1072,
+      "measured_timestamp": null,
+      "sources": [
+        "E1",
+        "E6"
+      ],
+      "sha256": "fe00ed28a4f7c5cc5053791436b5d1f5b5e217c70c5b479a822c4069be3427ae"
+    },
+    {
+      "number": 5,
+      "title": "The founder's home inside the workplace",
+      "file": "chapitres/05.txt",
+      "words": 923,
+      "start_word": 3600,
+      "end_word": 4523,
+      "estimated_start_seconds_at_150_wpm": 1440,
+      "measured_timestamp": null,
+      "sources": [
+        "E1"
+      ],
+      "sha256": "d89ca6cc50511692e1cac033f18fe96b85da82a4b1e2ff6d55b177ce6a24e04b"
+    },
+    {
+      "number": 6,
+      "title": "Helena offers her own body as publicity",
+      "file": "chapitres/06.txt",
+      "words": 952,
+      "start_word": 4523,
+      "end_word": 5475,
+      "estimated_start_seconds_at_150_wpm": 1809,
+      "measured_timestamp": null,
+      "sources": [
+        "E2"
+      ],
+      "sha256": "c365cd2247c8d677b1af25f9094eeaad356fe9a1f643cdd52cc9f19c996953f8"
+    },
+    {
+      "number": 7,
+      "title": "Helly's refusal belongs to the same body",
+      "file": "chapitres/07.txt",
+      "words": 931,
+      "start_word": 5475,
+      "end_word": 6406,
+      "estimated_start_seconds_at_150_wpm": 2190,
+      "measured_timestamp": null,
+      "sources": [
+        "E2"
+      ],
+      "sha256": "ca9fe61ee48d7174f83504232130c12f8136375c5cf2717ca8bf256df3d59e7c"
+    },
+    {
+      "number": 8,
+      "title": "Jame speaks about a revolving",
+      "file": "chapitres/08.txt",
+      "words": 905,
+      "start_word": 6406,
+      "end_word": 7311,
+      "estimated_start_seconds_at_150_wpm": 2562,
+      "measured_timestamp": null,
+      "sources": [
+        "E2",
+        "E5"
+      ],
+      "sha256": "87c944a74015a448ad9773313fa53ffd7d5aea4b33a7b28e26e3caa8dfbb8429"
+    },
+    {
+      "number": 9,
+      "title": "Natalie conveys a Board we cannot fully inspect",
+      "file": "chapitres/09.txt",
+      "words": 929,
+      "start_word": 7311,
+      "end_word": 8240,
+      "estimated_start_seconds_at_150_wpm": 2924,
+      "measured_timestamp": null,
+      "sources": [
+        "E1",
+        "E2"
+      ],
+      "sha256": "5fe5dd9c4cbecc8db0243fbb8fa142ba452aa5ba027c5e730058071d3c19c2d2"
+    },
+    {
+      "number": 10,
+      "title": "Harmony's devotion has a personal history",
+      "file": "chapitres/10.txt",
+      "words": 905,
+      "start_word": 8240,
+      "end_word": 9145,
+      "estimated_start_seconds_at_150_wpm": 3296,
+      "measured_timestamp": null,
+      "sources": [
+        "E4"
+      ],
+      "sha256": "ca740328de18bcdfdafb2bde293287cc9184cb59d9c7d2c5206f5cbd70812ecf"
+    },
+    {
+      "number": 11,
+      "title": "Salt's Neck puts people behind the company story",
+      "file": "chapitres/11.txt",
+      "words": 895,
+      "start_word": 9145,
+      "end_word": 10040,
+      "estimated_start_seconds_at_150_wpm": 3658,
+      "measured_timestamp": null,
+      "sources": [
+        "E4"
+      ],
+      "sha256": "f2bdb8e72c6113e3ed4bfd2bdd4075c638c0c3d1dbf4bbcf5c4036e051fa7686"
+    },
+    {
+      "number": 12,
+      "title": "Cobel keeps evidence of her own work",
+      "file": "chapitres/12.txt",
+      "words": 890,
+      "start_word": 10040,
+      "end_word": 10930,
+      "estimated_start_seconds_at_150_wpm": 4016,
+      "measured_timestamp": null,
+      "sources": [
+        "E4"
+      ],
+      "sha256": "b99b094376346bbd5ab93711729f5ea4e60df4f77f6959eb42f3ae8287ba2fe0"
+    },
+    {
+      "number": 13,
+      "title": "Dieter appears through an appendix",
+      "file": "chapitres/13.txt",
+      "words": 845,
+      "start_word": 10930,
+      "end_word": 11775,
+      "estimated_start_seconds_at_150_wpm": 4372,
+      "measured_timestamp": null,
+      "sources": [
+        "E3"
+      ],
+      "sha256": "f0bd626923ffd572fd2238d010a4e96355576ef4c6d286529253ff0fbad4b75f"
+    },
+    {
+      "number": 14,
+      "title": "The retreat makes the innies enact the lesson",
+      "file": "chapitres/14.txt",
+      "words": 903,
+      "start_word": 11775,
+      "end_word": 12678,
+      "estimated_start_seconds_at_150_wpm": 4710,
+      "measured_timestamp": null,
+      "sources": [
+        "E3"
+      ],
+      "sha256": "b024c7c04861b330a6217f5ad186c09ab4f343ae503deaf34fad533e800f1fb8"
+    },
+    {
+      "number": 15,
+      "title": "A first name exposes a different status",
+      "file": "chapitres/15.txt",
+      "words": 799,
+      "start_word": 12678,
+      "end_word": 13477,
+      "estimated_start_seconds_at_150_wpm": 5071,
+      "measured_timestamp": null,
+      "sources": [
+        "E3"
+      ],
+      "sha256": "2366d1986a5ac871985de15567b7656a8793a1587c49ab401f35070cd5c66d3c"
+    },
+    {
+      "number": 16,
+      "title": "Helena enters relationships on borrowed trust",
+      "file": "chapitres/16.txt",
+      "words": 913,
+      "start_word": 13477,
+      "end_word": 14390,
+      "estimated_start_seconds_at_150_wpm": 5391,
+      "measured_timestamp": null,
+      "sources": [
+        "E3",
+        "E5"
+      ],
+      "sha256": "4889c92e56d4806f65793192251694a12dce1cc7760f5ee4f3059047d561027b"
+    },
+    {
+      "number": 17,
+      "title": "Jame finds a spirit he wants to recognize",
+      "file": "chapitres/17.txt",
+      "words": 962,
+      "start_word": 14390,
+      "end_word": 15352,
+      "estimated_start_seconds_at_150_wpm": 5756,
+      "measured_timestamp": null,
+      "sources": [
+        "E5"
+      ],
+      "sha256": "d2af5c9e2e7a641042d39e74c9f10b5fc7423dd4d4d92feab7cd08613ea72b98"
+    },
+    {
+      "number": 18,
+      "title": "A family name cannot make two lives identical",
+      "file": "chapitres/18.txt",
+      "words": 878,
+      "start_word": 15352,
+      "end_word": 16230,
+      "estimated_start_seconds_at_150_wpm": 6141,
+      "measured_timestamp": null,
+      "sources": [
+        "E2",
+        "E3",
+        "E5"
+      ],
+      "sha256": "c0b5313763d6bebb723f287b5d62c03d5b6a9096132c019ced8d0d0a56f46868"
+    },
+    {
+      "number": 19,
+      "title": "Gemma becomes a set of separate experiences",
+      "file": "chapitres/19.txt",
+      "words": 920,
+      "start_word": 16230,
+      "end_word": 17150,
+      "estimated_start_seconds_at_150_wpm": 6492,
+      "measured_timestamp": null,
+      "sources": [
+        "E6",
+        "E7"
+      ],
+      "sha256": "2d37eb3d105902a05f78431e5f35258aefe68565407e280636189df530dcdde5"
+    },
+    {
+      "number": 20,
+      "title": "Cold Harbor reverses the direction of the test",
+      "file": "chapitres/20.txt",
+      "words": 776,
+      "start_word": 17150,
+      "end_word": 17926,
+      "estimated_start_seconds_at_150_wpm": 6860,
+      "measured_timestamp": null,
+      "sources": [
+        "E6"
+      ],
+      "sha256": "b97da1a75b7e38ab50c752710d048584a9885a6fbd60bd4407679356c1090b1c"
+    },
+    {
+      "number": 21,
+      "title": "The goat ritual reveals belief alongside a procedure",
+      "file": "chapitres/21.txt",
+      "words": 812,
+      "start_word": 17926,
+      "end_word": 18738,
+      "estimated_start_seconds_at_150_wpm": 7170,
+      "measured_timestamp": null,
+      "sources": [
+        "E6",
+        "E7"
+      ],
+      "sha256": "492169cfa467c3a903892aae7c4278c7b2ed4958cf5867db0671a6c4826d90a0"
+    },
+    {
+      "number": 22,
+      "title": "What a resurrection theory would have to explain",
+      "file": "chapitres/22.txt",
+      "words": 1022,
+      "start_word": 18738,
+      "end_word": 19760,
+      "estimated_start_seconds_at_150_wpm": 7495,
+      "measured_timestamp": null,
+      "sources": [
+        "E2",
+        "E5",
+        "E6"
+      ],
+      "sha256": "35d496a83204f64335f0b538af340c0c6a6165fa56107fe182331bff24d5bf90"
+    },
+    {
+      "number": 23,
+      "title": "Mark and Gemma do not move as one identity",
+      "file": "chapitres/23.txt",
+      "words": 944,
+      "start_word": 19760,
+      "end_word": 20704,
+      "estimated_start_seconds_at_150_wpm": 7904,
+      "measured_timestamp": null,
+      "sources": [
+        "E6",
+        "E7"
+      ],
+      "sha256": "74537a5e94f09497f62e2b05c1e9a884e22939754a61054b6acc32704a5c1f12"
+    },
+    {
+      "number": 24,
+      "title": "Who gets to keep a person's work and life",
+      "file": "chapitres/24.txt",
+      "words": 780,
+      "start_word": 20704,
+      "end_word": 21484,
+      "estimated_start_seconds_at_150_wpm": 8282,
+      "measured_timestamp": null,
+      "sources": [
+        "E2",
+        "E4",
+        "E7"
+      ],
+      "sha256": "b36ab46448e1866dce2aafa92218b8a65a3093654753785e4879f9a2f42dd324"
+    }
+  ]
+}

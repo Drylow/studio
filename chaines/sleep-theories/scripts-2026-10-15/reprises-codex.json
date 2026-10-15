@@ -1,0 +1,32 @@
+[
+  {
+    "episode": "DV-02-guilde",
+    "chapter": 1,
+    "resolution": "Complete editor rewrite replaces repetitious architecture or adds directly checked scene detail",
+    "file": "DV-02-guilde\\relecture\\reprises-codex\\01.txt"
+  },
+  {
+    "episode": "DV-02-guilde",
+    "chapter": 3,
+    "resolution": "Complete editor rewrite replaces repetitious architecture or adds directly checked scene detail",
+    "file": "DV-02-guilde\\relecture\\reprises-codex\\03.txt"
+  },
+  {
+    "episode": "QP-04-silo-indices",
+    "chapter": 11,
+    "resolution": "Complete editor rewrite replaces repetitious architecture or adds directly checked scene detail",
+    "file": "QP-04-silo-indices\\relecture\\reprises-codex\\11.txt"
+  },
+  {
+    "episode": "QP-04-silo-indices",
+    "chapter": 19,
+    "resolution": "Complete editor rewrite replaces repetitious architecture or adds directly checked scene detail",
+    "file": "QP-04-silo-indices\\relecture\\reprises-codex\\19.txt"
+  },
+  {
+    "episode": "QP-05-from-victor",
+    "chapter": 15,
+    "resolution": "Complete editor rewrite replaces repetitious architecture or adds directly checked scene detail",
+    "file": "QP-05-from-victor\\relecture\\reprises-codex\\15.txt"
+  }
+]

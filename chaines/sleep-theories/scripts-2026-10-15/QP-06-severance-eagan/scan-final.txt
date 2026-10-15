@@ -1,0 +1,21 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 2
+  [staccato x2/8] "As Mrs." | "Casey."  << Her conduct around Mark shows how far she will go beyond her assigned ...
+  [staccato x2/8] "Ms." | "Below, Gemma's confinement continues."  << Ms. Casey's dismissal also exposes how little say that working identit...
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
+-- ECHO CHECK (H18): 16
+  [echo H18: phrase repeated 19x] "on the severed floor"
+  [echo H18: phrase repeated 5x] "in the perpetuity wing"
+  [echo H18: phrase repeated 4x] "in front of him"
+  [echo H18: phrase repeated 4x] "changes the meaning of"
+  [echo H18: phrase repeated 4x] "mark irving and dylan"
+  [echo H18: phrase repeated 3x] "account of the eagans"
+  [echo H18: phrase repeated 3x] "the founder and the"
+  [echo H18: phrase repeated 3x] "at the lumon gala"
+  [echo H18: phrase repeated 3x] "surrounded by people who"
+  [echo H18: phrase repeated 3x] "has undergone the procedure"
+  [echo H18: phrase repeated 3x] "an early severance chip"
+  [echo H18: phrase repeated 3x] "in the eagan family"
+  [echo H18: phrase repeated 3x] "to the company and"
+  [echo H18: phrase repeated 3x] "a different kind of"

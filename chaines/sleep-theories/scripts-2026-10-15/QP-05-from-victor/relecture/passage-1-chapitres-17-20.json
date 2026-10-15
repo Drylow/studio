@@ -1,0 +1,222 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Victor brings Tabitha and Ethan to the Man in Yellow's car, where a disturbing discovery gives his recollection a shared physical reference without verifying its entire history.",
+      "new_information": [
+        "The season-four episode-seven visit connects Victor's account of the Man in Yellow to a location Tabitha and Ethan can encounter themselves.",
+        "The sack is a present discovery, distinct from Victor's recollection of earlier events.",
+        "Tabitha and Ethan's presence makes Victor's fear of another child's isolation more immediate."
+      ],
+      "local_answer": "The car and sack corroborate a physical connection within Victor's account, but they do not establish every action, association or event he remembers.",
+      "open_issues": [
+        "Several paragraphs repeat the distinction between a shared present discovery and Victor's unshared past without adding another development.",
+        "The discussion of the mother-son arrangement begins chapter 18's assigned analysis before this chapter has finished."
+      ],
+      "evidence_notes": "The visit and discovery are authorized by the supplied chapter assignment, with V5 supporting the surrounding season-four recollections and fear for Ethan. No graphic contents, invented car history or definitive causal explanation are supplied. The comparisons with drawings and Jasper are consistent with V1 and V2."
+    },
+    {
+      "number": 18,
+      "summary": "Victor fears that Ethan's family could repeat the losses of his own childhood, and Ethan's request for preparation turns that fear into a practical responsibility within their friendship.",
+      "new_information": [
+        "Victor recognizes a mother-son-daughter arrangement resembling his own childhood family.",
+        "The established Miranda-Tabitha connection gives this resemblance more significance than family composition alone.",
+        "Ethan asks to be prepared in season four's eighth episode.",
+        "Victor can offer experience without treating Ethan's feared isolation as inevitable."
+      ],
+      "local_answer": "Victor's fear arises from recognizable circumstances and personal experience, while Ethan's request creates a reason to help him prepare without declaring his future predetermined.",
+      "open_issues": [
+        "The distinction between resemblance and destiny is restated after it has already been clearly established.",
+        "One sentence describes a development as a released part of the story rather than discussing it naturally within the narration.",
+        "The return to Christopher's corrected conversation adds another evidence caveat instead of developing Ethan's request."
+      ],
+      "evidence_notes": "V5 supports Victor's fear for Ethan, V4 supports the established connection between Tabitha and Miranda, and the supplied assignment explicitly authorizes Ethan's S4E8 request. The chapter does not assert that Ethan is another incarnation of Victor or that Victor spent every intervening decade alone."
+    },
+    {
+      "number": 19,
+      "summary": "Henry's visions offer an apparently ordinary life with another Victor, exploiting the difficulty of their reunion while requiring harm to the son who actually survived.",
+      "new_information": [
+        "Henry's season-four hospital and normal-life visions include another version of Victor.",
+        "The promised alternative is conditional on removing or harming the real Victor.",
+        "The apparent restoration of family life targets the years and familiarity Henry lost.",
+        "The visions do not verify an alternate universe, a dream explanation or a genuine escape route."
+      ],
+      "local_answer": "The offer appeals to Henry's longing for a recovered family life, but its coercive condition makes the real Victor an obstacle to the reunion it claims to promise.",
+      "open_issues": [
+        "The chapter repeatedly explains the same appeal through missed years, unfamiliar habits, restored familiarity and relief from the work of reunion.",
+        "The coercive condition receives several substantially equivalent explanations after it has already been established.",
+        "Some of the comparison with Victor's memory work belongs more usefully in chapter 20."
+      ],
+      "evidence_notes": "V6 authorizes the visions, the alternate-looking son, the demand against Victor and the interpretation of manipulation. The hospital's emotional associations and the offer's appeal are interpretive rather than independently established motives; the prose generally signals that distinction adequately. No finale outcome is invented."
+    },
+    {
+      "number": 20,
+      "summary": "Victor's correction with Sara is contrasted with Henry's coercive visions to examine independent corroboration, room for disagreement and the action an account demands.",
+      "new_information": [
+        "Sara's assistance does not make her an independent eyewitness to Christopher's childhood conversation.",
+        "Henry's promised destination and the instruction for reaching it come through the same unverified experience.",
+        "Victor accepts a correction despite having invested effort in retrieving Jasper.",
+        "Henry's offer makes obedience a condition of obtaining the promised life and demands an irreversible action against another person."
+      ],
+      "local_answer": "These particular accounts can be compared by asking what is independently supported, whether revision remains possible and whether accepting the account requires harming someone.",
+      "open_issues": [
+        "A hypothetical question from Boyd unnecessarily stages an invented exchange inside an otherwise concrete analysis.",
+        "The demand-versus-unverified-result distinction is explained more than once.",
+        "The concluding caveat repeats limits already maintained throughout the comparison."
+      ],
+      "evidence_notes": "The comparison is supported by V2 and V6. The chapter correctly distinguishes assistance with recollection from independent corroboration and avoids general psychiatric advice or a claim that all visions share a source. Its proposed tests are interpretation of the supplied scenes, not additional supernatural rules."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Victor, returning to something associated with the past carries a difficulty that telling the story at a distance doesn't have. He can decide how much to say, or struggle to explain an association, but the car gives the others something to encounter for themselves. Tabitha and Ethan become participants in the discovery. They aren't present for the earlier events Victor describes. They're present for what remains available now, in a town where the remains of earlier lives can still be found.",
+      "reason": "H18 identifies the echo as a script that 'keeps re-stating it with nothing new attached.' The opening paragraph already establishes that the car gives Tabitha and Ethan direct experience beyond Victor's words, and paragraph four supplies the useful limit on that experience. This intervening paragraph largely repeats those points.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "There's no need to dwell on its contents to understand the effect.",
+      "reason": "This narrates the writer's decision to withhold detail instead of simply keeping the discovery non-graphic. H16 calls this 'Announcing the content instead of delivering it.' The surrounding sentences already convey the effect without an inventory.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Here, though, Victor isn't left trying to make an object answer him. Tabitha is there, and so is Ethan. Whatever Victor can explain about the earlier period, the present discovery can be discussed among people who were together when it happened. That matters for someone whose childhood experiences have so often reached the others through interrupted accounts or pictures they don't immediately understand. He has brought them to something they can acknowledge without first asking him to reconstruct an entire night.",
+      "reason": "H18 requires that a second mention add 'a consequence, a comparison, the next number.' The opening and the drawing comparison already establish the shared reference and reduced dependence on Victor's explanation. This paragraph repeats that conclusion rather than advancing the visit.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "artifact",
+      "severity": "minor",
+      "quote": "The connection between Tabitha and Miranda is a released part of the story; the possibility that Ethan will suffer Victor's isolation remains Victor's fear.",
+      "reason": "Calling a connection 'a released part of the story' exposes release-scope language inside the narration. The distinction is necessary, but it should be stated as lore and interpretation rather than editorial status.",
+      "replacement": "Tabitha's connection to Miranda is established, but Ethan's future isolation remains something Victor fears.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That doesn't require Victor to believe he can predict a particular death. A person can recognize the beginning of a situation he fears without knowing how it will end. In Victor's case, the resemblance includes the family, the town and a mother's involvement with the children who need saving. Those are substantial connections. They explain why his worry grows stronger around Tabitha and Ethan, even though they don't tell him what will happen to either of them.",
+      "reason": "H18 describes a thematic echo as 'every section looping back to the same observation.' Paragraphs one through three have already identified these connections and separated them from a predetermined outcome. This paragraph repeats both sides of that distinction before Ethan's request finally advances the chapter.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Preparation also has limits that are particular to this place. Victor's years in the town have given him experience, yet he's had to recover and revise parts of his account. His correction about Christopher's conversation is one clear example. Ethan can learn from him without treating every recollection as an instruction that will always work. It would be unfair to place that expectation on Victor, and dangerous for Ethan to mistake familiarity with the town for a complete account of its rules.",
+      "reason": "H18 requires a repeated fact to add something new. Chapter 17 has already revisited the Jasper correction, and chapter 20 examines it directly. Here it interrupts the useful comparison between Victor's childhood and Ethan's opportunity to ask for help, substituting another methodological warning for development of their relationship.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Victor's survival has also made him someone with habits and attachments Henry didn't help form. His drawings matter to him. So do the things he has preserved and the friendships he has made. Henry has entered a life that was continuing before he arrived, however strange or painful parts of it may look from outside. The alternate-looking son invites a different response. Henry can imagine being returned to a more recognizable place within his son's life, instead of learning where he belongs in the life Victor actually has.",
+      "reason": "H18's trigger is restating a point 'with nothing new attached.' The immediately preceding paragraph already names the routines, dangers and people Henry missed and explains that the visions offer relief from unfamiliar history. This paragraph supplies near-equivalent examples without changing the analysis.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It also puts an especially cruel pressure on Henry's role as a father. He came to the town and found that Victor had survived. Now the visions ask him to approach that surviving son as an obstacle to getting his family back. To accept the offer, Henry would have to let an image of Victor outweigh the adult he can speak to and spend time with. His longing for the years they missed gives the manipulation something personal to use. The promised future is attached to the very loss he's already endured.",
+      "reason": "H18 requires a new consequence or comparison on a return to the same point. The preceding paragraph has already explained that Henry's desire for reunion is turned against the surviving son and that the offer requires another separation. This is the least useful immediate restatement of that coercive reversal.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "That makes Henry's situation different from the difficulty Victor faces when he tries to remember. Victor has to return to experiences he'd rather leave alone, and sometimes correct the account he first gives. Henry is receiving an account with something he desperately wants inside it. The hospital and the other son make that account easier to welcome. Its emotional appeal helps explain why it can exert pressure without supplying a dependable explanation of the town or a workable route out.",
+      "reason": "This begins chapter 20's assigned comparison before chapter 19 has ended, while repeating the appeal and lack of verification already explained here. H18 says to 'give the repeated observation one home paragraph and let every other section make its own point.' Chapter 20 is the appropriate home for this comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Henry's distress doesn't make his affection for Victor unreal. The visions gain their force because the relationship matters to him. A father with no wish to recover life with his son would have little reason to care about the alternative being offered. Here, the promised ordinary life reaches into an attachment that already exists. The strain comes from the condition attached to it. Henry is asked to direct his hope toward an imagined reunion while becoming a danger to the son with whom he has already reunited.",
+      "reason": "H18 identifies repeated framing without new information as an echo. Henry's attachment, the offer's appeal and the coercive contradiction have all been established. The hypothetical father without such an attachment explains an obvious premise rather than adding a useful development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "If Boyd later asks who heard the Boy in White speak, Sara's assistance and Victor's recollection would need to be described separately.",
+      "reason": "The hypothetical Boyd exchange is clearly conditional, so it is not a fabricated event presented as fact. Nevertheless, it stages an unnecessary future interaction to illustrate a distinction the preceding sentences have already made concretely. It can be removed without losing the assigned evidence test.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The action itself deserves attention apart from the hospital's appearance. Henry is being asked to do something to a person he can encounter outside the vision. The promised result remains within the vision's account. Before accepting that bargain, he'd need some reason to believe that hurting Victor could produce the life being offered. An image of that life doesn't provide the missing connection. Through these encounters, Henry receives a demand with an appealing result attached, rather than a route whose destination someone else has verified.",
+      "reason": "H18 requires repeated framing to carry new information. Paragraph five already contrasts the publicly encountered Victor with the unverified alternative and states that the promise and demand arrive through the same experience. The immediately preceding paragraph adds the pressure on disagreement, and the following paragraph adds irreversibility. This paragraph merely restates the earlier verification test between those useful developments.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This doesn't make every painful memory dependable, or every reassuring vision deceptive. The comparison concerns these particular encounters: Victor changes his account with Sara's help, while Henry receives a promise that demands harm to Victor. Their experiences don't establish a common source for all the town's visions. They do give the family a concrete way to examine this offer. Henry can ask whether anyone outside it confirms the promised life, whether he can question its condition, and why reaching it supposedly requires an attack on his son.",
+      "reason": "The scene-specific boundary is appropriate, but this paragraph repeats the comparison and all three tests after each has already received its own explanation. H18 warns against repeatedly returning to the same framing. A short boundary sentence preserves the necessary limit without turning the ending into another evidence-method recap.",
+      "replacement": "The comparison applies to these encounters; it doesn't establish a common source or a single rule for every vision in the town.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18,
+        20
+      ],
+      "detail": "The Jasper-to-Boy-in-White correction appears as a full comparison in chapter 17, a cautionary example in chapter 18 and the central case in chapter 20. The chapter-17 use distinguishes objects from understanding, and chapter 20 develops revision with another person's help; the chapter-18 reminder adds the least and is marked for deletion."
+    },
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Chapter 17's final third begins explaining the mother-son arrangement and Victor's fear of Ethan's future isolation, which chapter 18 then develops at length. A brief transition is justified, but the opening of chapter 18 should remain the principal home for the family-pattern analysis."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Both chapters explain that Henry's pleasant alternative demands harm and lacks independent verification. Chapter 19 needs those facts to establish the offer; chapter 20 earns their return through corroboration, disagreement and consequences. Chapter 19's advance comparison with Victor's correction is unnecessary and is marked for deletion."
+    }
+  ],
+  "scope_status": "The four supplied chapters, 17 through 20, remain within the authorized television scope through S4E10. They explicitly incorporate released season-four developments and do not present the visions as a verified alternate universe, assign Eloise a resolved fate, declare Ethan destined to become Victor, or claim that Victor controls the town. No unsupported factual contradiction was identified against the supplied proof bank and assignments. The main defects are repeated explanation, one release-status artifact and an unnecessary hypothetical exchange.",
+  "limitations": "This review covers all four supplied chapter texts, not the unsupplied chapters in the outline. The early spoiler notice and optional chapter-one subscription/listening request therefore cannot be assessed. Factual assessment uses the supplied proof bank and authoritative assignments; linked pages and episodes were not independently opened or watched. Voice assessment uses the supplied raw samples and textual sentence shapes, not measured audio or a performed read-aloud.",
+  "input_hashes": {
+    "17": "64d976438a89ee641c511e395ae0fc6a64897c5dfde1b657b2361d56514d1cf8",
+    "18": "b3149fb174d89574a48ce5b49f0bc60b7005406d1e5f5f9d892f2b08e4af1ce6",
+    "19": "8bd7d3b6973f4f3de7a82baf4b4052a721cc590b591b4b221284010bf324459a",
+    "20": "06d6445184c619714cb4fb94ba2e98897deb618170854ea389446fb37f00778b"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

@@ -1,0 +1,162 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Victor's saved possessions help him remember people, but their associations still depend on his account, while Henry's later visions turn a similar promise of remembrance toward harm.",
+      "new_information": [
+        "Victor preserves belongings associated with people who died in the town.",
+        "Sharing the collection with Sara gives him a material starting point for discussing people and events.",
+        "An object's presence does not independently establish its owner or what happened to that person.",
+        "Henry's season-four visions manipulate the idea of preserving a connection while demanding the removal of the living Victor."
+      ],
+      "local_answer": "The belongings preserve personal connections and can support inquiry, but they do not independently verify the histories Victor associates with them.",
+      "open_issues": [
+        "The claim that the collection remained exclusively within Victor's private arrangements until Sara's involvement is not established by the supplied evidence.",
+        "Several paragraphs repeat the personal value of preservation or the coercive use of remembrance without advancing either comparison."
+      ],
+      "evidence_notes": "The core treatment follows V1 and V6 and the assignment's explicit authorization to compare preservation with the later manipulation of remembrance through possessions. The visions are correctly distinguished from verified access to another world. No exact objects, owners, labels or dialogue are invented."
+    },
+    {
+      "number": 6,
+      "summary": "Recognizing Eloise as the maker of some preserved drawings restores a missing family relationship and changes the collection's attribution without resolving her fate.",
+      "new_information": [
+        "Some drawings Victor preserved were made by Eloise rather than by Victor.",
+        "His recognition occurs while examining the stored drawings with Tabitha in season two.",
+        "The drawings connect Eloise's record with Miranda's accounts of the tower and children.",
+        "Henry provides a separate connection to the family's life before the town, but cannot account for the missing years.",
+        "Eloise's fate remains unresolved through the season-four finale."
+      ],
+      "local_answer": "The discovery establishes Eloise's place in Victor's childhood and the authorship of part of the collection, not her survival, death or present identity.",
+      "open_issues": [
+        "The middle of the chapter restates the recovery of a missing family member after that development has already been explained.",
+        "The account of the drawings' subjects is more detailed than the compressed V3 entry; it is consistent with the assigned outline, but the proof entry alone does not document every scene detail."
+      ],
+      "evidence_notes": "The chapter respects V3's unresolved family boundary and introduces no adult identity twist or reincarnation claim for Eloise. Henry's corroborative value is appropriately limited to the family he knew rather than events he missed."
+    },
+    {
+      "number": 7,
+      "summary": "Miranda's instruction leaves Victor as a child waiting in hiding, able to report the goodbye and aftermath but not every step of her final journey.",
+      "new_information": [
+        "Miranda instructs Victor and Eloise to remain hidden while she leaves.",
+        "Eloise follows Miranda, while Victor stays behind.",
+        "Victor's account combines direct experience, Miranda's earlier explanations and what he encountered afterward.",
+        "Finding Miranda near the tree identifies an endpoint without making Victor a witness to her entire journey.",
+        "His later knowledge of the outcome can burden his recollection without making him responsible for an adult's undertaking."
+      ],
+      "local_answer": "Victor knew what Miranda asked him to do and experienced the separation and aftermath; he did not possess her full knowledge or a guaranteed way to prevent the loss.",
+      "open_issues": [
+        "The paragraph revisiting Eloise's drawings repeats chapter six and interrupts the more distinctive analysis of waiting and responsibility.",
+        "The chapter's opening and closing both summarize obedience and the return that never happened, but the closing remains a defensible sleep-narration resolution."
+      ],
+      "evidence_notes": "The narration follows the assignment's distinction between direct knowledge and reconstruction. It avoids diagnoses, universal claims about memory and a fabricated rescue option. Finding Miranda's body is not conflated with witnessing her killing or the later treatment of her body."
+    },
+    {
+      "number": 8,
+      "summary": "Victor's guidance helps Tabitha reach the lighthouse and eventually Henry, but Tabitha's passage, Dale's death and later route limitations do not establish a repeatable escape procedure.",
+      "new_information": [
+        "Victor's practical guidance includes the tunnels and the bottle tree associated with the tower.",
+        "The stone demonstration establishes transportation without supplying a map of destinations.",
+        "Tabitha's passage involves the tree, the lighthouse and the Boy in White's intervention rather than the tree alone.",
+        "Victor's lunch box supplies the childhood address that leads Tabitha to Henry.",
+        "Dale's passage through the bottle tree does not reproduce Tabitha's destination.",
+        "The earlier route cannot simply be repeated as before in season four."
+      ],
+      "local_answer": "Victor can provide consequential directions without understanding or guaranteeing the entire passage; one successful journey is not a safe general escape method.",
+      "open_issues": [
+        "The lunch-box paragraph states an inability to accompany Tabitha that the supplied evidence does not establish.",
+        "The season-four update is explicit but generic: it states the route limitation without identifying the particular later event that demonstrates it."
+      ],
+      "evidence_notes": "The chapter maintains the required distinction between reaching a destination and establishing a repeatable escape procedure. Its season-four limitation is authorized by the assignment, although the supplied proof summaries do not provide enough detail to expand it into a more specific scene account safely. The lunch-box and travel details are not independently verified here."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Until then, the things he's saved have remained within his own arrangements for dealing with the past.",
+      "reason": "This adds an exclusive chronology: it implies that no earlier exchange brought the saved belongings into another person's involvement. V1 establishes the collection and its personal significance, not that Sara marks its first departure from entirely private use. The surrounding sentences already establish the supported change in this exchange.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The belongings also let Sara encounter a part of Victor's life that the other residents couldn't have shared. The people connected with these things aren't available to introduce themselves. Sara has to learn about them through Victor, and he has to do the work of describing their place in his past. That gives the conversation a personal weight. What another resident might approach as a search for useful information asks Victor to return to people whose absence has been part of his life for years.",
+      "reason": "H18 identifies a passage that 'keeps re-stating it with nothing new attached.' The first three paragraphs already establish that the belongings connect Victor to absent people and help him speak with Sara. This paragraph repeats that setup immediately before the more useful distinction between possessing an object and verifying its history.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Henry's visions don't establish another world waiting for him. What they do show is how an appealing account can recruit something tender and recognizable. Remembering a person through what they leave behind is an idea already close to Victor's life. Henry is encouraged toward an imagined family while the real Victor becomes the person endangered by the offer. That leaves a sharp cost attached to the comparison. The comfort of being able to keep a reminder can be used to make separation from a living person seem bearable.",
+      "reason": "H18's 'keeps re-stating it with nothing new attached' applies to this third consecutive paragraph about the offer's appeal and its danger to Victor. The preceding two paragraphs already make the comparison. Retain only the useful boundary that the visions do not verify another world.",
+      "replacement": "Henry's visions don't establish that another world is waiting for him.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For this part of Victor's story, the more immediate change is that he can remember having a sister at all. Eloise isn't introduced as a stranger who suddenly arrives in town. She's recovered within a childhood Victor has already been trying to describe. His earlier account was missing a member of his own family. That's a substantial gap, because the presence of another child changes what that childhood involved. There were experiences he shared with someone close to his own age, even though the adult Victor hasn't been able to bring her into the conversation.",
+      "reason": "H18 describes repetition that 'keeps re-stating it with nothing new attached.' The opening paragraph already explains that Eloise was missing from Victor's remembered childhood and returns through recognition of her drawings. This paragraph adds no distinct event or interpretive consequence before the following paragraph develops the emotional cost.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The pictures associated with Eloise add another route back to what Miranda had told the family. They preserve subjects that Victor hadn't been able to place in his remembered childhood. When he recognizes that his sister made them, he can reconnect those pictures with their mother's stories. This gives Tabitha more to work with than a bare statement that Miranda went away. It still leaves Victor describing an adult undertaking from the position of a son who heard about it and was then told to wait.",
+      "reason": "H18's document-scale warning applies: a re-mention should add 'a consequence, a comparison, the next number.' Chapter six already explains the drawings' authorship and connection to Miranda's stories, while the immediately preceding paragraph distinguishes those stories from Victor's direct experience. Removing this paragraph lets the chapter proceed to its distinct development: the practical and emotional burden of waiting.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "It's something from his own childhood that he can send with her when he can't accompany her through the rest of the journey.",
+      "reason": "The sentence converts Victor's not accompanying Tabitha into an established inability to accompany her. Neither the supplied proof nor the assignment establishes that constraint. The object's role can be stated without inventing a reason for his remaining behind.",
+      "replacement": "It's something from his own childhood that she can carry with her on the journey.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        6
+      ],
+      "detail": "Both chapters distinguish preservation from interpretation, but the distinction earns its return: chapter five concerns ownership and personal associations, while chapter six introduces a correction of authorship. Preserve those different applications rather than cutting the shared principle wholesale."
+    },
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "Chapter seven's paragraph beginning 'The pictures associated with Eloise add another route back' repeats chapter six's explanation of Eloise recording subjects from Miranda's accounts. It is the least useful return to the drawings and is marked for deletion."
+    },
+    {
+      "chapters": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detail": "Each chapter returns to the distinction between a useful record or recollection and complete knowledge. That is the episode's governing angle, and the objects, corrected authorship, childhood vantage point and failed repeat passage provide distinct applications. The repetition becomes excessive mainly in the specific restatement paragraphs identified above, not in the overall chapter sequence."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within the authorized television scope through S4E10 and explicitly acknowledge season-four developments. They do not confirm Eloise's fate, treat Henry's visions as another universe, conflate Miranda's death with later treatment of her body, or turn Victor into an omniscient controller. Chapter eight's season-four route update could be more concrete, but the supplied evidence does not support inventing the missing scene detail. Chapter one was not supplied, so its spoiler notice and optional one-time listening request cannot be assessed.",
+  "limitations": "Read and reviewed all four supplied chapters, numbered 5 through 8, against the supplied outline, proof bank and voice rules. The proof bank and release scope were treated as authoritative, including the released 2026 material. No websites were opened, episodes watched, narration audio measured or human read-aloud performed. The compressed proof entries do not independently document every scene-level detail in the draft; observations distinguish unsupported additions from details authorized by the assignments.",
+  "input_hashes": {
+    "5": "f9c4af117bf0060fc084319e0a80a5e4bdf1507cf28aa153517e2f934d681f66",
+    "6": "b224c3564f1fb2da9351a0c30a3d8a55dcd459e70489781f58673a5d9db8aefe",
+    "7": "39abc2a19e91a5d554ff0dc89e9f7bc0bc6c9dd154342e45d2c3292c05ff2a76",
+    "8": "02b26a1410390d813815a4f61b13e29f102c62ada53ba0cf8e1364c0ac41dfd7"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

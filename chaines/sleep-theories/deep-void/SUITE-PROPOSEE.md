@@ -1,5 +1,17 @@
 # Suite proposée — 12 octobre 2026
 
+## Décision plus récente : 15 octobre 2026
+
+Le prochain lot est désormais autorisé pour rédaction, dans cet ordre :
+1. The Biggest Mysteries of the Force Explained to Fall Asleep To | Star Wars Theories
+2. The Secrets of Dune's Spacing Guild Explained to Fall Asleep To | Dune Lore
+3. The Entire Story of Paul Atreides Explained to Fall Asleep To | Dune Lore
+
+Paul remplace Revan à la demande de l'utilisateur : deux Dune pour un Star Wars.
+Les [scripts et contrôles](../scripts-2026-10-15/README.md) font foi pour l'état du lot.
+Les anciennes propositions ci-dessous sont conservées comme historique, pas comme
+une autre commande. Aucun test d'un nouvel univers n'est lancé.
+
 Le lot de quatre vidéos est programmé selon l'utilisateur. Dates non fournies.
 Ces idées sont des recommandations ; aucun nouveau sujet n'est encore approuvé.
 

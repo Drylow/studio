@@ -1,0 +1,19 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
+-- ECHO CHECK (H18): 19
+  [echo H18: phrase repeated 10x] "in front of him"
+  [echo H18: phrase repeated 7x] "revenge of the sith"
+  [echo H18: phrase repeated 4x] "it through the force"
+  [echo H18: phrase repeated 4x] "without being able to"
+  [echo H18: phrase repeated 4x] "the rise of skywalker"
+  [echo H18: phrase repeated 4x] "obi wan and ahsoka"
+  [echo H18: phrase repeated 3x] "the empire strikes back"
+  [echo H18: phrase repeated 3x] "gives us a useful"
+  [echo H18: phrase repeated 3x] "a concrete reason to"
+  [echo H18: phrase repeated 3x] "understanding of the force"
+  [echo H18: phrase repeated 3x] "it's possible to read"
+  [echo H18: phrase repeated 3x] "at the jedi temple"
+  [echo H18: phrase repeated 3x] "in the clone wars"
+  [echo H18: phrase repeated 3x] "the place where luke"

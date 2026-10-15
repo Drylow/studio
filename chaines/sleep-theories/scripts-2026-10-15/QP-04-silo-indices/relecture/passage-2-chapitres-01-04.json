@@ -1,0 +1,179 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Daniel's gift of the Pez dispenser to Helen gives the earlier forbidden relic a personal history, but does not establish its complete ownership chain or Helen's descendants.",
+      "new_information": [
+        "The season-two final Before Times scene connects the dispenser with Daniel giving it to Helen.",
+        "Season three separates pregnant Helen and Daniel into Silo 18 and Silo 1, changing the emotional context of the earlier gift.",
+        "The released scenes do not establish the dispenser's intervening journey or a family connection to Juliette."
+      ],
+      "local_answer": "The later gift scene changes the audience's understanding of the early prop without changing the danger of possessing relics inside the silo.",
+      "open_issues": [
+        "Several paragraphs repeat the same audience-versus-resident distinction without adding another development.",
+        "The ancestry discussion is appropriately limited, but its fuller treatment should remain with the separately assigned ancestry chapter."
+      ],
+      "evidence_notes": "The central object connection follows S4, and the pregnancy and separation follow S7. The chapter does not claim a complete ownership chain or confirmed ancestry. The optional subscribe and listening-location/day-or-night request appears once, as expressly requested."
+    },
+    {
+      "number": 2,
+      "summary": "George and Allison recover forbidden information from the drive marked eighteen, Bernard pursues it, and later knowledge of numbered silos changes how the identifier reads.",
+      "new_information": [
+        "Allison's IT skills allow her to help George recover deleted information.",
+        "The recovered material includes a cleaning recording and structural information that lead Allison and George toward different investigations.",
+        "Bernard urgently seeks the drive in the first season's ninth episode.",
+        "Knowledge of Silo 18 gives the identifier a specific association without establishing the drive's full origin.",
+        "Season three places human operators in Silo 1, widening the context around Allison's restricted access to information."
+      ],
+      "local_answer": "Eighteen changes from a seemingly ordinary administrative identifier into a recognizable association with one installation in a larger inhabited system.",
+      "open_issues": [
+        "A standalone transition about Juliette adds little before the chapter immediately explains Bernard's pursuit and the drive's continuing usefulness.",
+        "The chapter repeats the persistence and recoverability of the files within a single paragraph."
+      ],
+      "evidence_notes": "S9 supports the identifier, George and Allison's investigation, and Bernard's search; S8 supports the Silo 1 operators and Daniel/Troy connection. The recording and structural-file details are consistent with the assigned recovery narrative, but are not individually enumerated in the condensed proof-bank entry. No numerology, exclusive drive-per-silo rule, or unsupported explanation of Bernard's key is asserted."
+    },
+    {
+      "number": 3,
+      "summary": "Hanna's magnifying device illustrates a restriction on expanding medical inquiry rather than a blanket prohibition of lenses, medicine, or practical observation.",
+      "new_information": [
+        "Hanna's device belongs to her medical investigation and the Nichols family's experience of Jacob's death.",
+        "Permitted medical practice can coexist with restrictions on tools that might expand medical knowledge.",
+        "Juliette's repair work supplies a concrete comparison between testing a physical explanation and accepting an authorized account.",
+        "Pete and Hanna occupy different positions toward permitted practice and prohibited investigation."
+      ],
+      "local_answer": "The authorities can permit useful professional work while preventing practitioners from obtaining a closer view that might challenge accepted explanations.",
+      "open_issues": [
+        "One sentence states the review's evidentiary limits instead of narrating the restriction naturally.",
+        "The chapter returns repeatedly to the same consequence of confiscation: Hanna cannot pursue the unresolved examination.",
+        "The detailed family and professional background exceeds what the short S3 proof-bank summary independently documents, although it is compatible with the supplied assignment."
+      ],
+      "evidence_notes": "S3 supports Hanna's device and the broader distinction between separate means of limiting inquiry. The chapter correctly avoids an invented legal threshold and a blanket ban on science. Its account of Juliette's possible response to her family history is explicitly interpretive rather than a confirmed motive."
+    },
+    {
+      "number": 4,
+      "summary": "Juliette's complaint about inferior IT tape becomes part of the material chain through which Walker and Supply improve her suit's sealing and help her survive outside.",
+      "new_information": [
+        "Juliette evaluates the stolen IT tape as inferior through her maintenance work.",
+        "Walker approaches Carla in Supply so that better material can reach Juliette's suit preparation.",
+        "The intervention helps explain Juliette's survival compared with earlier cleaners.",
+        "Improved sealing does not establish that the exterior is harmless or identify the complete outdoor hazard.",
+        "Bernard's anger over the theft does not by itself establish everything he knew about the tape."
+      ],
+      "local_answer": "The apparent theft dispute acquires a second meaning when the finale connects differences in tape quality with suit performance and survival.",
+      "open_issues": [
+        "The third paragraph repeats the first two paragraphs' maintenance-versus-later-significance distinction.",
+        "The account of Walker's message spends several sentences repeating that Juliette cannot personally verify the preparation before going outside."
+      ],
+      "evidence_notes": "S2 supports the better-tape, Supply, and survival connection. Walker and Carla's detailed interaction is not separately itemized in the condensed bank, so this review does not claim independent verification of that scene. The chapter preserves the distinction between a compromised suit component and the reality of an outdoor hazard."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "We're staying with the television story through season three's finale, Troy. That includes the Before Times material involving Helen and Daniel, without bringing in the novels or answers from a later season. For this first object, the important scene arrives at the end of season two. Until then, the dispenser belongs to a past the silo's residents can't readily describe. Once Daniel gives it to Helen, the audience can connect its familiar shape to two named people and an ordinary act of giving.",
+      "reason": "H18 identifies the problem as a script that 'keeps re-stating it with nothing new attached.' After the useful scope statement, this paragraph repeats the opening's scene placement and gift connection before the next paragraph develops the relic rules.",
+      "replacement": "We're staying with the television story through season three's finale, Troy. That includes the Before Times material involving Helen and Daniel, without bringing in the novels or answers from a later season.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "On a return to the earlier episodes, that additional context can affect even a brief appearance. A first viewing might leave us concentrating on the risk of possession: who has the dispenser, who knows about it, and what an official might make of it. After the Before Times scene, Helen and Daniel may come to mind as well. That's a change in the viewer's attention. The early characters haven't acquired our information, so their reactions still follow the circumstances they know. We can hold both settings in mind while they have access to only one.",
+      "reason": "H18 calls for cutting a 're-mention that adds nothing.' The preceding two paragraphs already explain both the residents' risk and the audience's additional knowledge; this is the least useful full restatement of that contrast.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "We can stay with her situation while remembering the earlier exchange: two people, a small gift, and a piece of their world that remains recognizable long after their separation.",
+      "reason": "H17 identifies Reading-Not-Speaking as 'poetic compression' and 'clever written pairs.' After several explanations of the same association, this carefully balanced closing list turns the gift into a literary summation rather than adding a concrete observation.",
+      "replacement": "When Juliette encounters the dispenser, we can now remember Daniel giving it to Helen, even though Juliette doesn't know that part of its history.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Juliette later has to understand what George was investigating, while facing the danger attached to his discoveries.",
+      "reason": "This standalone transition contains no specific development. The following paragraphs already explain Juliette's possession of the drive, Bernard's response, and how George's investigation continues through the recovered files.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Juliette can encounter material connected to their work and continue asking questions of her own. The files remain available to Juliette while Bernard is trying to recover the drive.",
+      "reason": "H18 describes a 're-mention that adds nothing.' These adjacent sentences make the same availability point, immediately after the paragraph has already explained that the drive preserves the investigation beyond George and Allison.",
+      "replacement": "Juliette can continue their investigation while Bernard is still trying to recover the drive.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Hanna's device crosses a boundary, and we can discuss that boundary without inventing an exact legal threshold the episode hasn't supplied.",
+      "reason": "This sounds like an instruction to an evidence reviewer rather than sleep narration. The developer specifically asks for lore and interpretation rather than repeated explanations of what counts as evidence; the preceding sentences already establish the necessary limitation.",
+      "replacement": "Hanna's device crosses a boundary within a society that still depends on medical treatment and practical tools.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Officials don't need to know every result Hanna might obtain for the restriction to narrow what she can discover.",
+      "reason": "H18 warns against repeatedly returning to one framing without development. The chapter has already explained that the ban prevents checking explanations and that Hanna cannot openly pursue the work; the concluding paragraph then makes the same point through confiscation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That's a useful detail to keep in mind during a rewatch, because the later discovery doesn't require Juliette's earlier complaint to have been a coded warning. She was dealing with a maintenance problem. Tape was a material she could obtain and put to work, and taking it brought consequences. The connection to the suits emerges afterward. An ordinary judgment about whether something holds up under use acquires a second context, one Juliette had no reason to include in her original assessment.",
+      "reason": "H18 describes a script that 'keeps re-stating it with nothing new attached.' Both preceding paragraphs already distinguish Juliette's practical complaint from its later relevance to cleaning suits. Deleting this paragraph moves directly to Walker's intervention without losing a causal step.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The message Juliette receives from Walker gives her reason to think about the quality of Supply's materials. It can't give her the experience of testing the finished suit outside. She's still being asked to step into conditions she hasn't encountered, wearing equipment assembled by others. That leaves a considerable distance between Walker's effort and Juliette's own knowledge. The audience can follow the intervention more clearly than Juliette can verify it, which makes the tape a very particular kind of help: someone has improved her equipment before she needs it.",
+      "reason": "H18's repeated-framing problem appears within the paragraph: four sentences successively explain Juliette's inability to verify the suit. The useful development is the message and her dependence on an intervention she cannot test beforehand.",
+      "replacement": "Walker's message gives Juliette reason to trust Supply's materials, though she can't test the finished suit outside before relying on it. She has to depend on help arranged elsewhere in the silo.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2,
+        4
+      ],
+      "detail": "Each chapter appropriately applies the episode's rewatch premise, but repeatedly explaining that an ordinary early detail acquires a later context becomes a shared framing echo. Chapter 1 can establish the method; chapters 2 and 4 are strongest when they proceed through file recovery, Bernard's search, tape quality, and Supply's intervention rather than explaining the method again."
+    },
+    {
+      "chapters": [
+        1,
+        4
+      ],
+      "detail": "Both chapters pause to explain that the audience can understand an intervention or association more clearly than Juliette can. The distinction is relevant in both cases, but the extended passages repeat the same viewer-versus-character lesson; the proposed cuts preserve each local fact."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the authorized television scope through S3E10 Troy, including the supplied released 2026 events. No novel biography, confirmed ancestry, autonomous-AI claim, global outdoor-safety claim, or blanket ban on magnification appears. The requested early optional CTA occurs once. No major factual or scope defect is established by the supplied materials.",
+  "limitations": "Only chapters 1-4 were supplied as narration; the remaining outline entries were considered as assignments, not reviewed as completed chapters. Review used the supplied proof bank and text without opening the linked sources, watching episodes, measuring audio, running an external scanner, or independently verifying every scene detail. The machine-ban and mechanical checks were performed against the supplied text by inspection.",
+  "input_hashes": {
+    "1": "b286b33a691d6bc519aa72c4ffa478c56af2b652994cc107da19fdcb7c4e0059",
+    "2": "9a60028a3201d4c3a2ee5a4092982e30c898351326b232891a856591308ba578",
+    "3": "86649473151742c47935d7e6e27948ab0cfb5e55fc7b2f28bc5c0d6834f170ce",
+    "4": "d3ee4209f23e7105864a509a65631a12452c9bec0272195e77f54b3cf2860a2b"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

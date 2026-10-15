@@ -1,0 +1,217 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Victor relays the Boy in White's warning against uprooting the bottle tree, but Boyd restrains him and allows the plan to continue.",
+      "new_information": [
+        "The warning concerns a specific proposed action rather than a reconstruction of Victor's childhood.",
+        "Boyd physically prevents Victor from interfering with the work.",
+        "Victor's earlier correction about Jasper does not establish that this later warning is mistaken."
+      ],
+      "local_answer": "The chapter answers its assignment: Boyd must make a constrained decision, but Victor's prior mistake is not sufficient grounds for dismissing a separate warning.",
+      "open_issues": [
+        "Several later paragraphs repeat the already established contrast between incomplete information and pressure to act.",
+        "The tree-travel background is repeated in chapter 22 without a substantial new development."
+      ],
+      "evidence_notes": "The central sequence matches V7. The discussion of Boyd's decision is generally presented as interpretation rather than invented dialogue or a guaranteed alternative rescue plan. Some background about earlier tree journeys goes beyond the detail expressly recorded in the supplied proof bank."
+    },
+    {
+      "number": 22,
+      "summary": "The tree's uprooting and the subsequent failure of protections strengthen Victor's warning without establishing the complete supernatural mechanism.",
+      "new_information": [
+        "The bottle tree is uprooted in the season-four finale.",
+        "The residents' protections fail amid the ensuing crisis.",
+        "That shared outcome gives this particular advance warning greater evidential weight without erasing the talismans' previous usefulness."
+      ],
+      "local_answer": "The chapter clearly distinguishes increased confidence in the warning from proof of a complete causal explanation.",
+      "open_issues": [
+        "The chapter repeatedly restates that the outcome strengthens the warning without explaining everything.",
+        "The Jasper correction and lighthouse-route background repeat chapter 21 rather than advancing the finale analysis."
+      ],
+      "evidence_notes": "The principal events and the limited causal conclusion are consistent with V7. The narration appropriately avoids declaring every talisman intrinsically powerless or the Boy in White omniscient."
+    },
+    {
+      "number": 23,
+      "summary": "Ethan interrupts Henry's attempt to shoot Victor, Victor disarms his father, and both men survive the confrontation.",
+      "new_information": [
+        "Henry acts on the coercive demand attached to the offered life with another Victor.",
+        "Ethan's interruption helps prevent the attempt from succeeding.",
+        "Victor disarms Henry, reversing their expected protective roles without establishing forgiveness or reconciliation."
+      ],
+      "local_answer": "The chapter explains how intervention by Ethan and action by Victor interrupt the vision's demanded outcome, but it does not meet the assignment's request to tell this briefly.",
+      "open_issues": [
+        "The same interruption, disarming and survival sequence receives several concluding treatments.",
+        "An explicit editorial caveat interrupts the narration.",
+        "The repeated discussion of the vision's failed bargain adds little after the initial explanation."
+      ],
+      "evidence_notes": "The confrontation and survival match V8; the coercive offer is supported by V6 and the supplied assignment. No alternate universe, forgiveness, death or season-five outcome is asserted."
+    },
+    {
+      "number": 24,
+      "summary": "Victor's emerging responsibility for Henry closes the argument that his memories can be preserved and questioned while he remains someone deserving protection and companionship.",
+      "new_information": [
+        "The confrontation leaves Victor in a caregiving role toward Henry.",
+        "Henry's family knowledge remains useful even though his visions have manipulated him.",
+        "The closing synthesis separates preserving Victor's records, evaluating his accounts and caring for him as a person."
+      ],
+      "local_answer": "The ending resolves the episode's stated angle and closes on established actions, but its extended return to Henry's corroboration and the drawings becomes a recap the assignment specifically sought to avoid.",
+      "open_issues": [
+        "The family-history discussion repeats its own limits across adjacent paragraphs.",
+        "Two paragraphs re-explain the drawings after the chapter has already established the caregiving ending.",
+        "Ethan's interruption and Victor's disarming of Henry recur several times immediately after chapter 23."
+      ],
+      "evidence_notes": "The reunion material is consistent with V3, and the caregiving reversal is supported by V8. The ending does not invent dialogue, a final drawing, forgiveness or a settled future."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's no need to imagine an easy rescue plan Boyd has overlooked to recognize the cost of that decision. The town hasn't supplied its residents with a dependable manual, and Victor hasn't brought one either. Leaving the tree standing would preserve it while leaving the residents with their existing dangers. Proceeding means accepting a different uncertainty, one attached to altering the tree itself. Boyd's circumstances explain why taking action can feel necessary. They also make the warning harder to weigh, because desperation gives possible solutions an appeal of their own.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The chapter has already explained the cost of waiting, incomplete information and Boyd's pressure to act. This paragraph also announces an excluded interpretation instead of developing the scene.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Neither man's position becomes complete because the other is struggling.",
+      "reason": "The voice-anchoring guide identifies Wise Narrator delivery as 'a sentence that pronounces a general truth.' This abstract verdict interrupts an otherwise concrete closing account and adds no distinct explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The bottle tree already has a history that makes its removal different from ordinary work around the settlement. Tabitha's journey through a faraway tree took her to the lighthouse, and her passage eventually brought her outside the town. Victor's remembered guidance helped her reach that route. Trees in this place can therefore be involved in something far beyond shelter or a supply of wood. People have entered them and arrived somewhere else. Altering one associated with that history carries consequences the residents can't judge through its visible shape alone.",
+      "reason": "H18 requires that 'the second mention must add something the first did not carry.' Chapter 21 has already developed Tabitha's passage and the danger of altering an incompletely understood route. Repeating that background delays this chapter's assigned analysis of the outcome.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His history with Jasper helps explain why the residents might have struggled to hear him, but it also shows why each account needs its own attention. Victor once remembered Jasper as the speaker in Christopher's conversation. With Sara's help, he corrected that memory to the Boy in White. At the bottle tree, he's relaying a warning about a present decision. These accounts arise in different circumstances. The correction about Christopher gives people a reason to ask careful questions, while the outcome at the tree gives them a reason to take this warning seriously.",
+      "reason": "H18 calls for a repeated thematic observation to have 'one home paragraph.' Chapter 21 already contains the full Jasper-versus-current-warning comparison. This return also speculates about the residents' reasons for discounting Victor without supplied evidence that they invoked Jasper.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "artifact",
+      "severity": "minor",
+      "quote": "The action itself is brief enough to describe plainly, but there's a great deal inside that change of direction.",
+      "reason": "This is commentary about how to narrate the scene rather than narration of the scene or its meaning. It also draws attention to brevity before a chapter that repeatedly revisits the same short action.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "We shouldn't give Ethan an elaborate intention the scene doesn't supply. His interruption has a concrete effect: it interrupts Henry's attempt, and Victor gets the gun away from him. That's enough to make Ethan's part substantial.",
+      "reason": "The opening sentence turns a useful evidential boundary into an instruction to the writer or reviewer. The assignment asks for scene-based interpretation without invented intention, not a lecture announcing that restriction.",
+      "replacement": "Ethan's interruption gives Victor the chance to get the gun away from Henry. His intervention matters even though the scene doesn't explain everything he intends.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "The contrast with Henry's offered life is concrete. The visions present another Victor, while the man Henry confronts has a history with Ethan and can act on his own behalf. He isn't merely an obstacle placed between Henry and a promised reunion. He recognizes danger and disarms the person threatening him. Ethan's interruption and Victor's response together bring consequences into the encounter that the offer doesn't accommodate: this son has someone who intervenes for him, and he can prevent his father from completing the demanded act.",
+      "reason": "H18 describes repeated framing 'with nothing new attached.' The opening, the Ethan discussion and the disarming paragraph have already established every part of this contrast. This full restatement materially contributes to the failure to follow the assignment's 'Tell this briefly' instruction.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "That makes the survival of both men especially difficult for the vision's apparent bargain. Henry hasn't obtained the life he was offered through the action it required. Victor remains present, and so does Henry, now without the gun in his hands. The episode doesn't need to verify an alternate world for that result to matter. The demand has already endangered their existing relationship. What interrupts it happens among the people standing there, through Ethan's involvement and Victor's ability to stop his father.",
+      "reason": "H18 requires cutting a 're-mention that adds nothing.' This is another conclusion to the same interrupted bargain immediately after the preceding paragraph reaches that conclusion. It also repeats an alternate-world boundary already handled by the account's framing as visions.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That distinction matters when Victor speaks about the past. Henry's presence gives some of Victor's history a person outside the town who can answer back. Miranda and Eloise belong to Henry's life as well as Victor's. Yet Henry wasn't beside Victor through the events Victor later struggles to recall. His recognition helps anchor the family story without supplying every missing event. A father can confirm that the family existed and still need to listen when his son describes what happened after they were separated.",
+      "reason": "H18 flags multiple paragraphs that repeat a point without development. The preceding paragraph already says Henry brings family knowledge but cannot supply the years he missed. This adjacent explanation repeats the same boundary rather than advancing the ending.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Victor's drawings have a place in that exchange because they let something survive beyond the moment when he can explain it. He doesn't always have a complete account ready for another person. A picture can remain available while the words around it change or arrive slowly. Someone can return to it with him, ask what he remembers, and compare the answer with another part of his story. Keeping the drawing gives that conversation something concrete to return to. It doesn't require anyone to accept every interpretation offered on the first attempt.",
+      "reason": "The closing assignment says not to recap all mysteries. Although the drawings belong in the final synthesis, this paragraph and its successor reopen an extended explanation of record interpretation. A short bridge preserves the angle and lets the ending return to Ethan and Henry.",
+      "replacement": "Victor's drawings can remain available even when he can't yet explain them. Keeping them gives others something to discuss with him as his account develops.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a practical kindness in allowing Victor to keep those records while asking questions about them. He doesn't have to surrender the things that help him remember in order to be taken seriously. Equally, the people around him don't have to treat each image as a complete explanation. With Victor, preservation and questioning can happen together. The drawing stays; an account of what it means can be corrected. That leaves room for a useful detail to emerge without making the whole picture carry more certainty than Victor can give it.",
+      "reason": "H18 says a repeated observation should have 'one home paragraph.' This repeats the immediately preceding discussion of retaining drawings while revising their interpretation. The surrender framing also introduces a hypothetical obstacle that is not needed to resolve the supplied scenes.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "In the finale, Ethan's importance to Victor becomes concrete through his interruption of Henry. He doesn't need to settle the disputed history of the town before intervening. He's responding to what Henry is doing to someone he knows. That action gives their earlier companionship a consequence beyond the information they've shared. Victor has a relationship in the present that can help keep him alive. The boy who asks him questions is also a person who interrupts when his father threatens him.",
+      "reason": "H18 requires a renewed mention to add a consequence or development. Chapter 23 has already explained this exact movement from companionship to intervention at length. The final paragraph of chapter 24 retains the interruption as a grounded closing action, so this intermediate restatement is expendable.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        22
+      ],
+      "detail": "Both chapters retell Tabitha's lighthouse passage to establish that tree travel is consequential and poorly understood. Chapter 21 is the more useful home because that information explains the decision before the tree falls."
+    },
+    {
+      "chapters": [
+        21,
+        22
+      ],
+      "detail": "Both chapters recount the Jasper-to-Boy-in-White correction and distinguish a childhood memory from a current warning. Chapter 22 should spend its space on the new outcome rather than rebuilding chapter 21's reliability argument."
+    },
+    {
+      "chapters": [
+        23,
+        24
+      ],
+      "detail": "Ethan's interruption, Victor's disarming of Henry and both men's survival recur throughout both chapters. Chapter 23 needs one clear account and its immediate interpretation; chapter 24 can retain a brief closing reference while developing the caregiving reversal."
+    },
+    {
+      "chapters": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "detail": "Each chapter repeatedly pauses to explain what an event does not prove or what an interpretation must not assume. Individual limits are appropriate, but their accumulation makes the narration resemble a recurring evidence lesson rather than a steadily developing account of Victor's relationships and choices."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within the authorized television scope through S4E10 and explicitly incorporate released season-four developments. No forbidden claim, adaptation mixing, graphic description, clinical diagnosis or season-five outcome was identified. No additional CTA is present in these chapters.",
+  "limitations": "Only chapters 21-24 were supplied as narration and reviewed in full. The outline permits assessment of their assigned roles, but repetition with the actual prose of chapters 1-20 and the early spoiler notice or optional CTA cannot be checked. Factual assessment uses the supplied proof bank and assignments as authoritative; linked pages and episodes were not independently accessed.",
+  "input_hashes": {
+    "21": "027c6e26092d6aaa8af47d896e375c123c648b928c94901bc0d346dc607e8ca5",
+    "22": "90d087cb9d16cb6e6bfbb37f54cd6224d71b9615cd3ef3fa74c1293a2214262c",
+    "23": "ca51226073ee3fc63b42b4a4528b6cd81bbe41456b76d2299fd341ee26afe372",
+    "24": "6703af5529d9e597d271e5e71acd8c1e10ee1283da9bb7984d19c14a161506d4"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

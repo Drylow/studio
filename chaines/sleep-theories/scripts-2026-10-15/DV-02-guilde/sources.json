@@ -1,0 +1,76 @@
+{
+  "accessed": "2026-10-15",
+  "scope": "Frank Herbert's six original Dune novels. The main evidence is Dune and Dune Messiah; later novels enter only for Leto II's leverage and the later Ixian challenge. Book continuity throughout. No prequel origin story or film-specific navigator physiology.",
+  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "sources": [
+    {
+      "id": "G1",
+      "fact": "The Guild has an imperial-era monopoly over interstellar transport and uses spice-dependent limited prescience for navigation.",
+      "work": "Dune: Terminology, Guild material and final audience",
+      "url": "https://en.wikipedia.org/wiki/Spacing_Guild",
+      "opened": "2026-10-15",
+      "note": "Independent plot/reference check; chapter analysis must be original, not a paraphrase of this page."
+    },
+    {
+      "id": "G2",
+      "fact": "House Atreides and enemy military forces depend on Guild transport; neutrality permits transport of opposing powers rather than eliminating war.",
+      "work": "Dune: relocation to Arrakis, Harkonnen attack and imperial arrival",
+      "url": "https://en.wikipedia.org/wiki/Dune_(novel)",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "G3",
+      "fact": "Fremen bribe the Guild in spice to keep observation satellites away from Arrakis, protecting their numbers and activities.",
+      "work": "Dune: Paul and Jessica learning from the Fremen",
+      "url": "https://en.wikipedia.org/wiki/Spacing_Guild",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "G4",
+      "fact": "Paul's credible threat against spice production forces Guild representatives to accommodate his demands at the climax.",
+      "work": "Dune: final confrontation",
+      "url": "https://en.wikipedia.org/wiki/Paul_Atreides",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "G5",
+      "fact": "The Navigator Edric joins the conspiracy with the Bene Gesserit, Irulan and Scytale; his prescience conceals participants from Paul's view.",
+      "work": "Dune Messiah: opening conspiracy meeting",
+      "url": "https://en.wikipedia.org/wiki/Dune_Messiah",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "G6",
+      "fact": "Hayt is a Tleilaxu ghola presented through the Guild as a gift to Paul. The arrangement combines several groups' interests.",
+      "work": "Dune Messiah: Hayt's arrival and the conspiracy",
+      "url": "https://en.wikipedia.org/wiki/Duncan_Idaho",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "G7",
+      "fact": "Leto II later controls spice distribution, subordinating the Guild; later Ixian navigation technology challenges dependence on Navigators.",
+      "work": "God Emperor of Dune; Heretics of Dune; Chapterhouse: Dune",
+      "url": "https://en.wikipedia.org/wiki/Spacing_Guild",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "G8",
+      "fact": "The published Navigators of Dune concerns the expanded prequel period, which is separate from this script's original-six-book scope.",
+      "work": "Scope exclusion only",
+      "url": "https://www.brianherbertnovels.com/dune-series/navigators-of-dune-2016/",
+      "opened": "2026-10-15"
+    }
+  ],
+  "forbidden": [
+    "The Navigators magically create spaceflight without ships or propulsion",
+    "Exact prices, travel times, crew sizes or accident percentages without a cited primary passage",
+    "Every Guild employee is a mutated Navigator",
+    "Humanity had no space travel before the Guild",
+    "The Guild owns CHOAM or can order every emperor",
+    "A no-ship and a navigation machine are the same device",
+    "Norma Cenva or expanded-universe events folded into Frank Herbert's original account",
+    "Edric sees every detail of every possible future",
+    "Guild neutrality is absolute pacifism",
+    "Speculation about economics asserted as numerical canon"
+  ]
+}

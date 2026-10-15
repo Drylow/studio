@@ -1,0 +1,344 @@
+{
+  "text_status": "assembled_not_an_editorial_approval",
+  "words": 22597,
+  "whitespace_words": 22597,
+  "chapters": 24,
+  "duration_estimates_minutes": {
+    "145": 155.8,
+    "150": 150.6,
+    "160": 141.2,
+    "170": 132.9
+  },
+  "duration_measured_seconds": null,
+  "audio_gate": "Measure final narration: at least 120 minutes before publishing. No padding, silence or loops.",
+  "two_hours_at_170_wpm": true,
+  "scanner": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 0,
+    "echo": 19,
+    "mech": 0
+  },
+  "non_ascii_characters": [],
+  "headings_or_placeholders": [],
+  "subscribe_occurrences": 1,
+  "last_chapter_has_subscribe": false,
+  "identical_long_paragraphs": [],
+  "exact_12_word_reference_matches": [],
+  "review_round": 1,
+  "current_chapters_covered_by_review": 4,
+  "review_findings_for_editor": [
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Yoda's success answers a local question completely. The X-wing can be lifted, and Luke was mistaken about its being beyond what the Force could accomplish there. We can also take Yoda's explanation seriously without turning it into an exhaustive account of every limitation. He hasn't tested every object at every distance under every condition. The scene gives us a teacher moving a particular ship while his student watches. An unlimited power claim would go much further than the achievement we're shown, and would leave out the very real work of learning that occupies Luke's time on Dagobah.",
+      "reason": "H18 identifies an echo as a script that \"keeps re-stating it with nothing new attached.\" The earlier paragraph beginning \"There's a tempting shortcut here\" has already rejected unlimited belief-based power and preserved the need for practice. This paragraph adds an unnecessarily elaborate testing caveat rather than another development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Qui-Gon takes a blood sample from Anakin on Tatooine and sends it to Obi-Wan for analysis.",
+      "reason": "The film has Qui-Gon transmit the reading for analysis; he does not send the physical blood sample to Obi-Wan. The distinction matters because this sentence describes the actual procedure.",
+      "replacement": "Qui-Gon takes a blood sample from Anakin on Tatooine and asks Obi-Wan to analyze the reading.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Obi-Wan reports a midi-chlorian count beyond the Jedi records he's comparing it with, including Yoda's.",
+      "reason": "The scene establishes an exceptional reading and a comparison with Yoda, not a result exceeding the Jedi records as a whole. F2 does not authorize that added superlative.",
+      "replacement": "Obi-Wan reports an exceptionally high midi-chlorian count, higher even than Yoda's.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That doesn't require us to decide that either the Council or Qui-Gon has a complete understanding of Anakin. Qui-Gon sees a reason to make an exception. The Council sees difficulties that an exceptional reading won't remove. Both responses concern what adults should do after discovering an unusual capacity. The disagreement would make little sense if the blood test already guaranteed a wise and successful Jedi. Instead, the adults still have to judge his readiness, accept responsibility for teaching him, and consider what that responsibility will involve.",
+      "reason": "H18's \"third identical mention\" problem applies to the repeated distinction between exceptional potential and the adults' unresolved educational judgment. The preceding paragraphs already explain Qui-Gon's reasons, the Council's reservations and the test's inability to guarantee an outcome. This is the least useful restatement.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "By the Ahsoka season-one finale, Sabine's circumstances have become much more dangerous than a training session. During the fighting on Peridea, Shin's absence hasn't made the journey safe; Morgan Elsbeth and Thrawn's forces still stand between the group and escape.",
+      "reason": "Shin's absence answers no question raised in this chapter and briefly diverts the explanation into an unnecessary threat inventory. The assigned development is the contrast between unsuccessful practice and Sabine's later actions.",
+      "replacement": "By the Ahsoka season-one finale, Sabine has to use what she's practiced during the fighting on Peridea.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's also a larger reason his connection needn't resemble a Jedi's training demonstration. In A New Hope, Obi-Wan describes the Force as arising from living things and binding the galaxy together. That account leaves room for a Guardian on Jedha to have a meaningful relationship with it. Chirrut doesn't have to lift a fighter or carry a lightsaber before his devotion belongs in that world. At the same time, the Force's presence throughout life doesn't tell us that every person can perform the same actions with the same degree of awareness.",
+      "reason": "H18 directs the reviewer to give a recurring theme \"one home paragraph\" rather than repeat it in each section. Chapters 1 and 2 already explain the living field, and chapter 3 expressly rejects equal potential. Chirrut's demonstrated awareness and Guardian background have already supplied the concrete local explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-01-04.json",
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The strongest reason to consider some form of guidance on Scarif is the way Chirrut's concentration accompanies his successful passage through the fire. Rogue One gives the moment time and draws attention to his prayer. A purely practical account, based on his skill and the shots happening to miss, doesn't capture all of its religious meaning. Still, that meaning doesn't supply a hidden mechanism. We can understand the walk as an expression of his connection to the Force without claiming that he redirects each bolt or knows exactly where every shot will land.",
+      "reason": "H18 describes repeatedly returning to a framing \"with nothing new attached.\" The second paragraph already distinguishes prayer and successful passage from an invisible shield, while the sixth separates courage, awareness and possible guidance. This additional mechanism disclaimer delays the decisive evidence of Chirrut's mortal vulnerability.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Anakin's departure makes that uncertainty easy to grasp. Before leaving home, he turns back to his mother and struggles with the separation. The opportunity Qui-Gon offers is real, and so is what it asks of him. Paying attention to the living Force brings Qui-Gon into contact with both parts of that moment. He can help Anakin take the journey, but he can't make the journey painless or know every consequence of it. Shmi remains on Tatooine as her son leaves to begin his training.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The earlier freedom-and-separation paragraph already establishes the opportunity, the pain and Qui-Gon's inability to resolve Shmi's situation; the immediately preceding paragraph again establishes his inability to guarantee Anakin's future. Preserve the concrete departure rather than delivering the same qualification a third time.",
+      "replacement": "Before leaving home, Anakin turns back to his mother and struggles with the separation. Shmi remains on Tatooine as her son leaves to begin his training.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The difference matters because a voice can be mistaken for a complete return. Qui-Gon hasn't resumed his place among the Jedi as though his death on Naboo had been undone. Obi-Wan hasn't regained the living master who could travel beside him and take part in the war. Yoda is encountering a continuing person through a particular kind of contact. What draws him onward is the possibility of learning how that contact exists. The journey concerns a practice that can be taught, with preparation and demands of its own.",
+      "reason": "H18 flags repeated framing without a new development. The preceding paragraph already explains continuing identity, incomplete preparation and voice-only contact, while the following paragraph advances to teachers and trials. This intervening paragraph largely restates the distinction and briefly shifts attention toward Obi-Wan, whose teacher-student contact has its own assigned chapter.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The city matters because it gives the danger a location. Pain matters because it makes the danger personal. Yet those details leave almost every practical question unanswered. Luke doesn't know who has captured his friends, what their captor wants, or what will happen if he arrives. He also doesn't see the efforts they're going to make for themselves. He receives enough to recognize people he loves in trouble, and he has to decide what to do without the rest of their situation.",
+      "reason": "H18 calls for removing a re-mention that adds nothing. The preceding paragraph already establishes a genuine glimpse without a definite outcome, and the following paragraphs concretely explain the captor, the trap and the friends' own efforts. This abstract inventory previews those explanations rather than adding a distinct development; its opening mirrored sentences also lean toward H17's 'Dramatic parallels.'",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-05-08.json",
+      "chapter": 8,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Luke's mistake was to arrive without knowing how their suffering connected to Vader's plans, or how their escape might happen. That gap costs him his hand and leaves him wounded by a truth he hadn't expected to hear.",
+      "reason": "The assigned question concerns what a vision leaves out. This verdict makes Luke's lack of unavailable knowledge the mistake and compresses the causal chain from limited information to his injury. The chapter itself supplies the more concrete distinction: Luke leaves before completing his training and continues despite warnings, then suffers injury during the confrontation.",
+      "replacement": "Luke leaves before completing his training and continues despite warnings that Vader is waiting for him. In the confrontation, he loses his hand and hears a truth about his father that the vision hadn't prepared him for.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The apparition also offers Luke an unusually simple encounter with Vader. There's no prisoner to rescue, no Imperial installation to destroy, and no escape route to keep open for his friends. Luke can direct his attention toward the armored figure in front of him. When the head falls, the fight seems finished. Then his own face makes that outcome troubling. On the psychological reading, defeating the image of Vader has done little to settle the fear that brought Luke's weapon into his hand. He's left with something he can't answer by striking again.",
+      "reason": "H18 identifies the echo as repeatedly restating a point 'with nothing new attached.' Earlier paragraphs already establish the absence of another person to protect, the apparent victory, the unexpected face and the warning about fear. This is the least useful repetition; deleting it lets Yoda's later judgment supply the next distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 9,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "He entered expecting to confront whatever lived beneath the roots.",
+      "reason": "Luke asks what is inside and prepares for danger, but the scene does not establish that he expects a living inhabitant. The wording turns his uncertainty into a specific unsupported expectation.",
+      "replacement": "He entered prepared to meet danger with his weapons.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-09-12.json",
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Son and the Daughter are powerful enough to make that demand credible. Yet Anakin brings them both to submission. His unusual capability has a concrete shape here: on Mortis, in this confrontation, he can restrain the two beings the Father has spent his life containing. The Father recognizes the result as confirmation that Anakin is the Chosen One. The episode gives Anakin an achievement far beyond an ordinary rescue, while keeping it attached to the particular place and the particular beings before him.",
+      "reason": "H18 flags a script that 'keeps re-stating it with nothing new attached.' The opening already describes Anakin subduing both children, and the fifth paragraph already explains the test's confirmation of the Father's expectation. Retain only the useful clarification that the demonstrated capability belongs to this particular encounter. This also removes the unsupported claim that the Father has spent his entire life containing his children.",
+      "replacement": "What Anakin demonstrates here is specific: on Mortis, he can restrain both children at once.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The visions draw on events familiar from the films, including the destruction and betrayal that accompany Anakin's fall. Within this encounter, though, Anakin has to absorb them before he's lived through the circumstances surrounding them. He receives an overwhelming view of what he will do without the years of decisions that lead there. That helps explain his reaction. He's horrified by the destination, and he wants a way away from it immediately. The Son can make his proposal while Anakin is still struggling with that horror.",
+      "reason": "H18 identifies the pattern as a script that 'keeps re-stating it with nothing new attached.' The opening already establishes the future images, Anakin's horror, his wish to prevent them, and the Son's ready offer. The later paragraph beginning 'There's a painful feature' develops the useful causal point about recruitment more concretely. This intervening paragraph is the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Luke meets Vader without the teacher who once stood between them on the Death Star. He loses his hand, receives a devastating revelation about his father, and needs Leia and the others to get him away. Obi-Wan's continued presence hasn't spared him those experiences. What remains available is contact with a recognizable person, someone who remembers teaching him and still cares where his path leads. On Dagobah, that person can stand beside Yoda and speak to Luke. Luke can hear the advice, answer it, and climb into his fighter.",
+      "reason": "H18 says a second mention must add 'a consequence, a comparison, the next number.' The Bespin consequences add something, but the remaining sentences repeat surviving identity, continued care, advice, disagreement, and Luke's departure, all already demonstrated. Retain the concrete consequence and remove the recap.",
+      "replacement": "Luke meets Vader without the teacher who once stood between them on the Death Star. He loses his hand, learns that Vader is his father, and needs Leia and the others to get him away.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives the fight a different shape from a duel with Dooku. In Attack of the Clones, Yoda confronts a former student who has joined the Sith and threatens others through his actions. Yoda has immediate reasons to stop him. During the trial in Destiny, the hostile figure draws attention back toward Yoda himself. He can't resolve this encounter through his usual role as the Jedi who arrives to oppose a dangerous adversary. The examination concerns something he has brought with him.",
+      "reason": "H18 warns against repeating 'one fact, one phrase, or one framing.' The preceding paragraph already contrasts confronting darkness in others with confronting a figure connected to Yoda himself. The Dooku excursion supplies no further causal step in the trial and delays the actual resolution.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 15,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "By the end of the encounter, Yoda can name what he initially tried to disown. He hasn't discovered that the hostile creature deserves obedience, and he hasn't earned a permanent freedom from temptation. He's found a way to face it without continuing the fight on its terms. The figure that attacked him has diminished, and he can proceed with the trials. For this part of his journey, the task is that immediate: acknowledge what is present, refuse its direction, and take the next step the Priestesses place before him.",
+      "reason": "The paragraph repeats the resolution already explained twice, then closes with H17's 'Essayist pronouncements' and H5's 'Triads manufactured for rhythm, usually abstract nouns in parallel.' Here the three abstract instructions compress the lesson into a polished closing formula rather than continuing the concrete, conversational register. The creature's diminished presence supplies a sufficient quiet ending.",
+      "replacement": "The figure that attacked Yoda has diminished. He can continue the trials without pretending it was never part of him.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Obi-Wan's presence after death looks very different in A New Hope and The Empire Strikes Back. Vader strikes him down aboard the Death Star, and Luke subsequently hears his voice. Later, Luke sees him on Hoth and Dagobah. Obi-Wan retains enough of his identity to recognize Luke, address his circumstances, and continue teaching him. Yet he doesn't resume his old physical life or gather machinery to rebuild his body. His contact with Luke takes place within the loss that has already occurred.",
+      "reason": "The assignment requests a contrast with Obi-Wan, but not a second account of his appearances. H18 permits a return when it adds 'a consequence, a comparison'; the useful addition here is the contrast with Sidious's bodily restoration, not the repeated Death Star, Hoth, and Dagobah sequence from chapter 14.",
+      "replacement": "Obi-Wan continues teaching Luke after death without restoring his former physical life. Sidious instead seeks another person's body or takes the vitality he needs from Rey and Ben.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-13-16.json",
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That contact has limits. Obi-Wan warns Luke that he can't intervene for him when Luke leaves to confront Vader. He can advise his former student, but Luke must face the encounter himself. On the first Death Star, his guidance helps Luke turn toward the Force during the attack run. The action remains Luke's to carry out. Beside that kind of help, Sidious's demands on Exegol become very specific: Rey must kill on his terms, or Rey and Ben must supply the strength his damaged body lacks. When he drains their connection, his fingers recover, and he releases his grip.",
+      "reason": "H18 describes document-scale repetition as the script getting stuck on 'one fact, one phrase, or one framing.' Chapter 14 already explains both the attack-run guidance and the warning before Bespin, including Luke's responsibility to act. Following the shortened comparison, this paragraph should close on the distinct Exegol evidence rather than repeating both examples again.",
+      "replacement": "On Exegol, Sidious's damaged fingers recover as he drains Rey and Ben. The restoration comes by taking strength from the two people standing before him.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "On the wreckage of the second Death Star, Ben tells Rey that they share this bond.",
+      "reason": "This places the explicit dyad explanation in the wrong encounter. Ben tells Rey aboard his Star Destroyer, before their confrontation on the Death Star wreckage.",
+      "replacement": "Aboard his Star Destroyer, Ben tells Rey that they share this bond.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That encounter also changes the significance of what each can perceive. In The Last Jedi, Kylo struggles to see beyond Rey herself. Here, something from the room around her reaches him and exposes her location. Rey can't assume that distance keeps her hiding place separate from the fight. The bond allows an encounter to intrude into the physical space she's occupying, with consequences for her escape. It's a particular development between these two people, whose connection has already carried touch and water across their separation.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The preceding paragraph already explains that the helmet crosses locations and reveals Rey's whereabouts, while earlier paragraphs establish the limited view and physical contact. This is the least useful repetition of that development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 17,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "No stated romantic destiny is needed to account for that cooperation.",
+      "reason": "This reads as a response to the assignment's prohibition rather than a development in the narration. The preceding sentences already explain the cooperation through Ben's decision and Rey's response, making the methodological disclaimer unnecessary.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Even the parts associated with Luke don't arrive in an orderly sequence that Rey can inspect. She can't pause beside R2-D2 and ask Luke what happened, or return to the corridor for a clearer explanation. The experience moves her through fear and recognition, then releases her. In A New Hope, Obi-Wan describes a Force that connects living things and surrounds them. Rey's encounter fits a world where a person's awareness can reach beyond immediate surroundings, although the film gives this particular contact its own unsettling form.",
+      "reason": "The preceding paragraph already establishes why this is not a straightforward recording, and the earlier image survey establishes Rey's lack of explanatory context. Under H18, 'A re-mention that adds nothing gets cut.' The categorical claims that she cannot pause or return also assert limits the scene does not test. Deleting this paragraph lets the concrete discussion move directly to Maz's guidance.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-17-20.json",
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Gungi's difficulty is patience. His crystal lies within sight, which makes waiting especially frustrating. There's no uncertainty about which direction attracts him. The water between him and the crystal is what needs his attention now. Once he settles and allows the lake to freeze, he can cross. That gives attunement a practical meaning. Gungi has to notice the conditions around him and adjust his behavior to them. His eagerness has brought him to the lake, but it can't make the crossing safe any sooner.",
+      "reason": "The opening already explains the visible crystal, unsafe crossing, necessary wait, and inability to force progress. H18 warns against repeatedly stating one fact without a new consequence. Retain only the concise interpretive connection needed before moving to Ganodi.",
+      "replacement": "For Gungi, attunement means noticing the conditions around him and adjusting his behavior, even when he's already sure where he needs to go.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives the episode a physical basis for Ezra's growing connection. The purrgil feed on the gas. Their journey brings them into conflict with an industrial facility exploiting the same resource. Ezra isn't receiving a detached lesson about respecting life while standing somewhere safe. He's trying to survive an armed encounter, and understanding the animals changes what he can do. Their needs become part of his understanding of the place, alongside the fuel supply and the Mining Guild's weapons.",
+      "reason": "H18 identifies a script that \"keeps re-stating it with nothing new attached.\" The preceding paragraph already establishes the shared resource and industrial conflict, while the following paragraph supplies the concrete survival consequence. This intervening explanation is the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 21,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Then the animals make the discovery larger than the immediate rescue.",
+      "reason": "H17's Reading-Not-Speaking test targets \"written syntax no mouth produces live.\" Making a discovery \"larger\" is an abstract significance transition here; the next sentence already states the actual discovery.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives his decision a practical shape. He has to consider where the fire would go if Kanan disappeared. The doorway offers a view of the whole situation, including the people behind Kanan who still need his protection. Ezra's desire to bring him back is immediate, but Ahsoka helps him follow the consequences beyond that first movement of his hand. He understands that pulling Kanan free would undo the rescue Kanan is carrying out. He leaves his teacher in place, despite having a route toward him.",
+      "reason": "H18 warns against a framing that \"keeps re-stating it with nothing new attached.\" The previous paragraph already explains the causal dependency sentence by sentence, and the ending returns to Ezra's acceptance with a concrete image. Keep the decision here, but remove the second explanation of the same mechanism.",
+      "replacement": "Ezra leaves Kanan in place, accepting that his teacher must finish the rescue.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 23,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Their escape involves several people doing different things in different places, with Luke unable to see or direct every movement inside the base.",
+      "reason": "The scene establishes distributed action, but not this precise limit on Luke's perception. The assignment specifically cautions against deriving unsupported rules from the projection.",
+      "replacement": "Their escape involves several people doing different things in different places.",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Their last meeting has given her a farewell, and his time outside the entrance has given the others a route off the planet.",
+      "reason": "H18 describes repeated statements with \"nothing new attached.\" Leia's farewell has already been explained in the fourth paragraph, and the escape enabled by Luke's delay has occupied several subsequent paragraphs. This sentence repeats both immediately before the stronger physical closing image.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "report": "passage-1-chapitres-21-24.json",
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Their abilities give them different ways to respond. Luke's skill with a lightsaber has put Vader on the ground, but he has to decide whether to strike again. Rey can close the serpent's wound, but first she has to approach and use that ability for its benefit. Neither action follows automatically from having access to the Force. Sidious is present in Luke's scene as a particularly clear reminder of that. He recognizes Luke's strength and wants the young man to use it to kill.",
+      "reason": "H18's theme-level warning applies when sections keep \"looping back to the same observation.\" The preceding paragraph already compares the two choices, the opening establishes Sidious's desired use of Luke's anger, and the final paragraph supplies the concluding distinction between awareness and action. This is the least useful additional statement of that thesis.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "narration_sha256": "486481d38be3f397682bab5ec6abe0be6822aa8dfcdeefefa7e2973175d3c893",
+  "method": "Mechanical checks plus separate quoted editorial reports. Neither establishes actual audio duration or a complete independent episode/book viewing."
+}

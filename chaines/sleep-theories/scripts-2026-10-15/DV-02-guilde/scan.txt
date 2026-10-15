@@ -1,0 +1,21 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 1
+  [staccato x2/7] "Spice is being gathered." | "Transport can continue."  << For the Guild, a continuing supply of spice could therefore give a mis...
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 1
+  [floor: reframe: isn't X, it's Y] ... everyone aboard, although it doesn't provide the vessel's propulsion. This is only a comparison of jobs, no...
+-- ECHO CHECK (H18): 30
+  [echo H18: phrase repeated 4x] "that helps explain why"
+  [echo H18: phrase repeated 4x] "there's no need to"
+  [echo H18: phrase repeated 4x] "doesn't remove the need"
+  [echo H18: phrase repeated 4x] "doesn't give us a"
+  [echo H18: phrase repeated 4x] "a complete account of"
+  [echo H18: phrase repeated 4x] "there's a useful comparison"
+  [echo H18: phrase repeated 4x] "the reach of the"
+  [echo H18: phrase repeated 3x] "the great houses have"
+  [echo H18: phrase repeated 3x] "of spice the guild"
+  [echo H18: phrase repeated 3x] "the guild has to"
+  [echo H18: phrase repeated 3x] "has to consider what"
+  [echo H18: phrase repeated 3x] "gives the guild a"
+  [echo H18: phrase repeated 3x] "the atreides move to"
+  [echo H18: phrase repeated 3x] "the people responsible for"
