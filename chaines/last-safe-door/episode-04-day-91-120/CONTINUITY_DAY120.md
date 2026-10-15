@@ -43,7 +43,7 @@ route de la corde.
 | **La conductrice** | **Nouvelle à l'écran depuis le jour 94** (fiche ci-dessous) : **lunettes de conduite marron relevées sur la tête**, **longue écharpe grise** | Vivante, **sur la colline**. Toujours **sans nom** : « Mine's only a name. Nothing happened to it. I'd like to keep it that way. » A failli le dire (jour 113). A refusé de ramener Patch en camion : « An engine at that gate isn't a ride. It's a key. » A corrigé son itinéraire et lui a confié une radio : « The hill only has three. Don't make it two. » Le jour 120, sa voix n'est plus calme. |
 | **Gens de la colline** | Environ **une douzaine** de silhouettes anonymes, chacune avec **un pansement bleu** quelque part | À la station des eaux. Appellent le dépôt **« the pen »** et Nora et Wes **« the keepers »**, sans méchanceté. Rabattent les morts chaque matin. **Menacés au jour 120** par la queue qui monte. Jamais nommés. |
 | **Le Doorman** | Zombie vert, **gilet olive-gris déchiré** (« Cart Infected ») | Parti avec la queue le jour 90 ; **à l'avant de la foule sur le viaduc** (« The Doorman has a new door »), jours 91-119. Au jour 120, avec la queue sur la route de la colline (déduit). |
-| **Le chauffeur au gilet bleu** et **les onze passagers** | Zombies verts dans le car (gilet bleu marine à deux poches pour le chauffeur) | Toujours enfermés. Le jour 115, onze visages collés aux vitres, le car cerné par la cour pleine. |
+| **Les onze passagers**, dont **le chauffeur au gilet bleu** | Zombies verts dans le car (gilet bleu marine à deux poches pour le chauffeur) | Toujours enfermés. Le jour 115, onze visages collés aux vitres, le car cerné par la cour pleine. |
 | **Le fleuve (la cour)** | Des milliers de zombies | **Cour pleine du portail à l'auvent.** Nuit du jour 103-104 : ils penchent tous en même temps vers le quai, la porte de quai « boomed like a drum ». Sous la pluie, ils se serrent sous l'auvent (marée lente) ; ceux près du mur lèvent la tête vers la corde (jour 115). |
 | **La queue du fleuve** | Des centaines, « more behind them » | Menée par le camion la nuit du 90-91, laissée au sommet du viaduc (truc du moteur coupé). Descendue pendant la pluie (jours 115-119). **Monte vers la colline au jour 120.** |
 
@@ -87,7 +87,7 @@ route de la corde.
   pluie du jour 115 (encore lisible).
 - **Cour** : pleine, du portail à l'auvent. **Portail** fermé, verrou tombé ; barre d'acier :
   inconnu. Personne ne descend l'échelle.
-- **Car** : onze passagers + le chauffeur, cernés. Réveil de voyage toujours sous la banquette du
+- **Car** : onze passagers **en tout, chauffeur compris** (épisode 2 : il monte en dernier), cernés. Réveil de voyage toujours sous la banquette du
   fond (non mentionné).
 - **Rue devant le portail** : vide le jour 115. **Arrêt de bus** dans la ville basse avec un mort
   assis sur le banc.
