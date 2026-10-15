@@ -1,0 +1,192 @@
+{
+  "cast": {
+    "Margot": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional ADULT documentary guide Margot,30, not a real victim or historical portrait. Dusty blue ankle-length gown with wide bell cuffs, long brown belt tail, white linen veil, dark shoes. Ivory round head, dot eyes, tiny neutral mouth, no hair or nose. Dignified and fully clothed.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/court-margot-default-v2.png",
+              "review_state": "verified",
+              "sha256": "781ffb8f8c413fc1e6de74561dc0338de1db3b9541e57a507410770e25809977",
+              "role": "identity",
+              "character": "Margot",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Clerk": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional ADULT documentary Clerk,45, not a historical portrait. Olive cote and olive soft cap, brown hood collar, long brown belt tail, dark hose and brown shoes. Ivory circular head, tiny dot eyes and mouth, no hair, beard, nose or ears.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/court-clerk-default-v2.png",
+              "review_state": "verified",
+              "sha256": "7852baaf85c11da01d2ea1346cb32af7158591f1ff11a6dbfbe18aee05487f2c",
+              "role": "identity",
+              "character": "Clerk",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Judge": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional ADULT documentary Judge,55, not a historical portrait. Burgundy long robe and dark soft cap, dark shoes. Ivory circular dot-eye head, tiny mouth, no beard, nose or hair.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/court-judge-default-v2.png",
+              "review_state": "verified",
+              "sha256": "7d37a3c65d364c781a6545a0e9fcada06169d6e1662bc449427408a617b70437",
+              "role": "identity",
+              "character": "Judge",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Agnes": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional ADULT documentary companion Agnes,45. Ochre ankle-length gown, white linen veil, narrow brown belt tail, dark shoes. Ivory circular head, dot eyes and tiny mouth, no hair or nose.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/court-agnes-default-v2.png",
+              "review_state": "verified",
+              "sha256": "9cdf25ce107618af4059bf1e01ac7a497ce45f44ef079c2ca1283f75352bb051",
+              "role": "identity",
+              "character": "Agnes",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "locations": {
+    "town-court": {
+      "description": "Fictional late-medieval documentary courtroom, not a reconstruction of any named case.",
+      "layout": "Window left, low bench left wall, raised judge bench back centre with plain burgundy hanging and two narrow blue banners, clerk desk foreground right with quill inkpot and two books, shelves at right edge, tiled floor.",
+      "anchors": [
+        "Left window and bench",
+        "back-centre judge bench",
+        "burgundy hanging with blue banners",
+        "foreground-right clerk desk",
+        "right shelves",
+        "red rug foreground left"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/court-courtroom-master.png",
+        "review_state": "verified",
+        "sha256": "1f8c6c3409e5f492dd7fadd92a05db8ebd4d7229a9f3e2131fd3dc6082b4b3a5",
+        "role": "location-master",
+        "location_id": "town-court"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/court-courtroom-master.png",
+            "review_state": "verified",
+            "sha256": "1f8c6c3409e5f492dd7fadd92a05db8ebd4d7229a9f3e2131fd3dc6082b4b3a5",
+            "role": "location-view",
+            "location_id": "town-court",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "court-street": {
+      "description": "Modest late-medieval town court street.",
+      "layout": "Stone courthouse right with large arched wooden door and two low steps, one small window left of that door, bench along courthouse wall; closed timber-and-plaster shop left with awning; narrow bend back centre.",
+      "anchors": [
+        "Right courthouse door and two steps",
+        "small window left of door",
+        "right-wall bench",
+        "left closed shop and awning",
+        "back-centre bend and low roofs"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/court-town-street-master.png",
+        "review_state": "verified",
+        "sha256": "2c29bba73bd88205c867d5147a27b0bce6e250225a57dcda7b718bff441238b0",
+        "role": "location-master",
+        "location_id": "court-street"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/court-town-street-master.png",
+            "review_state": "verified",
+            "sha256": "2c29bba73bd88205c867d5147a27b0bce6e250225a57dcda7b718bff441238b0",
+            "role": "location-view",
+            "location_id": "court-street",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "records-room": {
+      "description": "Fictional late-medieval records room used for documentary object illustrations.",
+      "layout": "Window left, low bench and coffer left, parchment and plain-book shelves back centre, wooden door back right, working desk foreground right with quill roll inkpot and stool.",
+      "anchors": [
+        "Left window",
+        "left bench and coffer",
+        "back-centre shelves",
+        "back-right wooden door",
+        "right foreground desk and stool"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/court-records-room-master.png",
+        "review_state": "verified",
+        "sha256": "c92ff9dab642f0a49ae5032c6b1df1bea2503f0b75d05dcc79d235059b431533",
+        "role": "location-master",
+        "location_id": "records-room"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/court-records-room-master.png",
+            "review_state": "verified",
+            "sha256": "c92ff9dab642f0a49ae5032c6b1df1bea2503f0b75d05dcc79d235059b431533",
+            "role": "location-view",
+            "location_id": "records-room",
+            "location_view": "master"
+          }
+        }
+      }
+    }
+  },
+  "drawing_reference": {
+    "owner": "style",
+    "path": "refs/drawing-guide-court.png",
+    "role": "style-only",
+    "sha256": "1f8c6c3409e5f492dd7fadd92a05db8ebd4d7229a9f3e2131fd3dc6082b4b3a5",
+    "review_state": "verified"
+  }
+}

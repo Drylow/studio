@@ -1,9 +1,9 @@
 {
-  "status": "awaiting_subject_approval",
-  "visual_direction_approval": "User approved the images on 2026-10-15; ideas remain pending.",
+  "status": "production_in_progress",
+  "visual_direction_approval": "User approved the images and all three subjects on2026-10-15.",
   "date": "2026-10-15",
-  "full_video_production_started": false,
-  "scope": "Three concepts, actual source-frame study, two visual iterations; no full scripts, voice or film jobs.",
+  "full_video_production_started": true,
+  "scope": "Three original reviewed scripts, real Ryan Kurk narration and manually authored timed scenes. Scene generation in progress.",
   "references": [
     {
       "video_id": "CTCTAW5o5Zk",

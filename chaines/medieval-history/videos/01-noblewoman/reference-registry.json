@@ -1,0 +1,245 @@
+{
+  "cast": {
+    "Alix": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult Alix,25. Ivory round dot-eye head, small neutral mouth, white linen veil, dusty blue ankle-length gown with fine ochre neckline and belt trim, full sleeves, dark flat shoes. Slim compact adult body, mitten hands. No hair, ears or nose.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/noble-alix-default-v2.png",
+              "review_state": "verified",
+              "sha256": "2cad98f7c050c1cb4cc9596ea40287c6fa930b793489bd7ead262e4ff29cc3fd",
+              "role": "identity",
+              "character": "Alix",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Etienne": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult Etienne,35. Bare ivory round head, dot eyes, olive knee-length cote with shoulder hood, dark brown hose, narrow brown belt and small pouch, brown flat shoes. No hair, beard, cap, ears or nose.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/noble-etienne-default-v2.png",
+              "review_state": "verified",
+              "sha256": "82c8974e2c021b4121eebae9e47304489d7036c1f3c21e06aaf03213e8168100",
+              "role": "identity",
+              "character": "Etienne",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Henri": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult Henri,55. Burgundy calf-length cote with narrow vertical ochre front stripes, matching soft burgundy cap, narrow belt, dark hose and brown shoes. Ivory round head, dot eyes, no beard or realistic features.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/noble-henri-default-v2.png",
+              "review_state": "verified",
+              "sha256": "287b72998a361693fbc3d4417984b266bf1bafd74e2d7ca5ebc2f1c9f9aa640c",
+              "role": "identity",
+              "character": "Henri",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Jeanne": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult Jeanne,50. Ochre ankle-length gown, narrow brown belt, white linen veil, brown shoes. Ivory perfectly round head, dot eyes, tiny mouth, no hair or human nose.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/noble-jeanne-default-v2.png",
+              "review_state": "verified",
+              "sha256": "9a9e2f633a684c10082af9857e442784ee89d704607134cbbcabccf125b7da17",
+              "role": "identity",
+              "character": "Jeanne",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Martin": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult household steward Martin,45. Dark charcoal-blue cote, grey soft cap, narrow brown belt, dark hose and brown shoes. Smooth ivory round head, dot eyes, tiny mouth, no facial hair or ears.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/noble-martin-default.png",
+              "review_state": "verified",
+              "sha256": "8c3d545fbd00baad7a026fa386f79198a5b142277f601995734beeea636931c9",
+              "role": "identity",
+              "character": "Martin",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "locations": {
+    "manor-hall": {
+      "description": "Modest northern French manor hall,14th century.",
+      "layout": "Window on left wall, Alix chair foreground left with red seat, heavy oak table centre, Henri high-back chair back centre before plain burgundy hanging, arched wooden door back right, coffer right wall.",
+      "anchors": [
+        "Left tall leaded window",
+        "central oak table with crossbars",
+        "back-centre high chair and burgundy hanging",
+        "right arched door and metalbound coffer",
+        "pewter jug and fruit bowl back-left area of table"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/noble-manor-hall-master-v2.png",
+        "review_state": "verified",
+        "sha256": "e0250a918a1f0936f8548e94f9e00b91cbf425ea9c3adca2faee97458bc6c9ba",
+        "role": "location-master",
+        "location_id": "manor-hall"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/noble-manor-hall-master-v2.png",
+            "review_state": "verified",
+            "sha256": "e0250a918a1f0936f8548e94f9e00b91cbf425ea9c3adca2faee97458bc6c9ba",
+            "role": "location-view",
+            "location_id": "manor-hall",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "private-chamber": {
+      "description": "Private northern French manor chamber.",
+      "layout": "High leaded window left, writing desk left foreground with stool, bed back centre with blue cover, arched closed wooden door back right, two separate chests: left under window and foreground right.",
+      "anchors": [
+        "Left window and desk",
+        "back-centre blue-covered bed",
+        "right-back door",
+        "left chest under window",
+        "foreground-right chest",
+        "small straw bedside mat"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/noble-private-chamber-master.png",
+        "review_state": "verified",
+        "sha256": "6682b798010e4b0e8aa92631a4dbb9cac9b40d6604e6e0b785752e383d4d8b15",
+        "role": "location-master",
+        "location_id": "private-chamber"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/noble-private-chamber-master.png",
+            "review_state": "verified",
+            "sha256": "6682b798010e4b0e8aa92631a4dbb9cac9b40d6604e6e0b785752e383d4d8b15",
+            "role": "location-view",
+            "location_id": "private-chamber",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "manor-courtyard": {
+      "description": "Ordinary northern French manor courtyard.",
+      "layout": "Circular stone well foreground left with windlass, central-back manor doorway and two narrow windows, stable building right with double doors, bench foreground right.",
+      "anchors": [
+        "Left well with fixed windlass",
+        "back manor entrance",
+        "right stable double doors",
+        "right foreground bench",
+        "modest credible low horizon"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/noble-manor-courtyard-master.png",
+        "review_state": "verified",
+        "sha256": "1875e464f154a7a17aaafbc97b2c807ebeea870bac1c1d91072a76f4dd47cd14",
+        "role": "location-master",
+        "location_id": "manor-courtyard"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/noble-manor-courtyard-master.png",
+            "review_state": "verified",
+            "sha256": "1875e464f154a7a17aaafbc97b2c807ebeea870bac1c1d91072a76f4dd47cd14",
+            "role": "location-view",
+            "location_id": "manor-courtyard",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "estate-storeroom": {
+      "description": "Working manor storeroom.",
+      "layout": "Sacks on two-tier left shelves, three barrels back-left and centre, small square window back left, wood door back right, counting table foreground right with balance and bowl, stool at table.",
+      "anchors": [
+        "Left sack shelves",
+        "back-left square window",
+        "back-right door",
+        "right counting table and balance",
+        "three barrels at back"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/noble-estate-storeroom-master.png",
+        "review_state": "verified",
+        "sha256": "f38e27791ef91ebb696eb7fe84c0ca77b3f21d36466a5901c1a1ee70e3ae4f5d",
+        "role": "location-master",
+        "location_id": "estate-storeroom"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/noble-estate-storeroom-master.png",
+            "review_state": "verified",
+            "sha256": "f38e27791ef91ebb696eb7fe84c0ca77b3f21d36466a5901c1a1ee70e3ae4f5d",
+            "role": "location-view",
+            "location_id": "estate-storeroom",
+            "location_view": "master"
+          }
+        }
+      }
+    }
+  },
+  "drawing_reference": {
+    "owner": "style",
+    "path": "refs/drawing-guide-noble.png",
+    "role": "style-only",
+    "sha256": "e0250a918a1f0936f8548e94f9e00b91cbf425ea9c3adca2faee97458bc6c9ba",
+    "review_state": "verified"
+  }
+}
