@@ -63,11 +63,28 @@ other Space Marine rank videos were found during the research.
 Private analytics, visual-test receipts and the editorial diagnosis are kept in
 the ignored working directory `work/ofl-retention-2026-10-15/`, not published here.
 
-## Jabba visual feasibility proposal
+## Approved drawing style
 
-[View the inspected palace test](visual-tests/jabba-palace-2026-10-15.jpg).
-The exact authored prompt and inspection limits are retained alongside it in
-[the test record](visual-tests/jabba-palace-2026-10-15.json). This is a single
-proposal, not a multi-shot continuity test or an adopted preset. Before final
-production, enforce the selected humanoid face/skin rules against actual cast
-references; the proposal introduced eyebrow marks and a warm white tint.
+The user approved the Jabba test and its white round-head employee as the house
+illustration style. Read [VISUAL-STYLE.md](VISUAL-STYLE.md) and view the actual
+[approved image](visual-tests/jabba-palace-2026-10-15.jpg) before creating any new
+cast. Small expressive brows and the compact employee proportions are accepted.
+The individual identity and outfit still change per episode. Halo and Space
+Marine tests use this image as a style-only input, not a palace/location reference.
+
+The [exact Jabba test record](visual-tests/jabba-palace-2026-10-15.json) retains the
+authored prompt, visual inspection and scope of the user's approval. No claim of
+multi-shot coherence follows from this single image.
+
+## Other-universe drawing tests
+
+- [Halo / Covenant](visual-tests/halo-covenant-2026-10-15.jpg): species-specific
+  aliens drawn using the approved house technique.
+- [Space Marine chapter](visual-tests/space-marine-2026-10-15.jpg): white round
+  heads preserved alongside power armour and episode-specific environment.
+- [Neutral white-head drawing guide](visual-tests/white-head-guide-2026-10-15.jpg):
+  inspected individual candidate derived from the approved employee.
+
+[Exact prompts, actual ordered input and primary visual inspection](visual-tests/universe-tests-2026-10-15.json).
+The source drawing style is user-approved; these three new outputs remain
+proposals, with no claim of full-episode continuity or adopted hosted presets.

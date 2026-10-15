@@ -16,3 +16,14 @@ target, not approval of six titles, scripts, voice jobs or image batches.
 Keep the round white cast, episode-specific identities and stable geography.
 Visual experiments are proposals, not silently adopted character references.
 All future media production and rendering uses the hosted Studio/VPS.
+
+User visual approval, 15 October 2026: the Jabba palace image and especially its
+round-white-head employee are now the approved HOUSE DRAWING STYLE for this
+channel. Read `VISUAL-STYLE.md` and actually view the approved image before
+creating any future humanoid cast. The newer explicit approval includes its
+compact proportions, small expressive brows/mouth and simple white mitten hands;
+do not restore the older rigid no-eyebrow rule as if it were the latest decision.
+Episode costumes and identities change; the house drawing language does not.
+Aliens such as Jabba and Covenant species preserve their recognisable anatomy
+and natural colour. New Halo/Space Marine trials still require inspection and
+are not approved merely because the Jabba style was approved.

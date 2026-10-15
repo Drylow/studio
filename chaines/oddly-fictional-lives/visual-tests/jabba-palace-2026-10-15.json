@@ -14,17 +14,20 @@
   "file": "jabba-palace-2026-10-15.jpg",
   "sha256": "cac80a496371443a9c9f88a3f44641b7f544ed394f86f45133fa83f124bb7bb8",
   "primary_visual_review": {
-    "state": "proposal_inspected",
+    "state": "user_approved_house_drawing_style",
     "observations": [
       "One recognisable olive-green Jabba, broad pale-ochre belly, short arms, heavy orange eyes, one curling tail; no humanoid legs.",
       "One distinct round white-head employee with a wooden tray; obvious small-coin payment interaction; no duplicated actors.",
       "Readable matte outlined illustration in a sandstone palace; character silhouette and palette distinguish alien from employee."
     ],
     "limitations": [
-      "Employee has eyebrow marks and warm off-white face tint, despite initial strict styling instructions; correct against the eventual approved humanoid sheet before final production.",
-      "Decor and Jabba surface texture could be simplified if the selected direction requires flatter backgrounds.",
-      "One image does not establish multi-shot identity or location consistency."
+      "One image does not establish multi-shot cast or location consistency.",
+      "The user explicitly accepted the character as drawn, including restrained brow strokes and warm scene lighting. Earlier no-brow text is superseded for the new house style."
     ],
-    "adopted_as_reference": false
+    "adopted_as_reference": true
+  },
+  "user_approval": {
+    "date": "2026-10-15",
+    "scope": "Approved illustration style and especially white round-head employee for future humanoids on this channel; alien Jabba rendering also approved. Not approval of every future frame or a completed consistency test."
   }
 }

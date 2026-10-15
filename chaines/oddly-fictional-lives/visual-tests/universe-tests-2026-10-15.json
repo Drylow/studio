@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-15",
+  "drawing_style_approved": "jabba-palace-2026-10-15.jpg",
+  "scope": "Visual feasibility and neutral house-style candidates only; no script/voice/episode production started.",
+  "tests": [
+    {
+      "id": "ofl-H1-alien-supply-scene-20261015",
+      "purpose": "New universe scene matched to user-approved Jabba illustration style; technical visual feasibility only.",
+      "file": "halo-covenant-2026-10-15.jpg",
+      "sha256": "3f0c01dd0a9aaccbdf3e0b656f446021e14ec6f40b4d3775ed5da3528657c909",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "preview_dimensions": [
+        1280,
+        720
+      ],
+      "prompt": "Create ONE landscape16:9 finished illustrated story frame. IMAGE1 IS THE USER-APPROVED ODDLY FICTIONAL LIVES DRAWING STYLE REFERENCE. Match its illustrated technique: bold clean black outer contours, thinner interior lines, matte controlled colours, clear readable staging, simple clothing shadows, restrained painted architecture, strong silhouettes. Match its balance of character simplicity and detailed-but-subordinate setting. Never copy Jabba, the employee, his tray/coin, the sandstone palace, drapes, composition or warm palette into the new scene. This is a different universe. No logo, text, watermark, collage, duplicate character, motion blur, excessive texture, 3D rendering, photographic face or skin. Characters and actions must read easily on a phone. Large characters, useful framing, no wasted ceiling or floor. Avoid generic standing cast lineup: one specific interaction. SETTING HALO, THE COVENANT. An original stylised Covenant Elite officer on LEFT wearing recognisable cobalt-blue segmented alien armour over a charcoal bodysuit, angular shoulder guards, elbow/knee plates and blue open-face helmet. Retain Sangheili alien anatomy in simplified cartoon form: tall digitigrade two-legged silhouette, brown-grey alien skin, split four-mandible lower jaw visible below helmet, small eyes under brow. Exactly two arms, two hands, two legs. Large expressive alien head proportional to the reference's stylisation, no human nose/hair/beard, not a Space Marine, not Master Chief or an armoured human with a beard. IMPORTANT: this character is an ALIEN, so do not attach our white human head to it. The channel's round-white-head treatment applies to actual humans, while recognisable aliens keep their natural species silhouette.\nOn RIGHT a distinct much shorter round-bodied Grunt in an orange environmental harness, dark grey breathing mask, one compact triangular methane tank visibly strapped to the back with real connected straps, short thick legs and brown-grey alien hands. The tank is an intentional functional species equipment, not a floating backpack. Exactly ONE Elite and ONE Grunt. The Elite calmly points to a waist-high rectangular supply crate between them. The Grunt struggles to lift it with BOTH hands, knees bent, mask tilted toward the officer; physical comedy and obvious difference in authority. No firearms, fight, injury, prison or human captives. A normal supply-duty moment in an alien military.\nInterior: readable Covenant ship cargo antechamber, curved purple structural ribs, cyan inset lights, ONE tall rounded triangular doorway behind Grunt, simple dark metal floor. One additional small crate stack back-left, no fake holographic text. Same matte2D drawing language as image1, appropriate cool violet/cobalt/teal palette with orange accent, face/body of aliens never pure white. Medium-wide frame with both whole silhouettes and central crate visible. Both feet/legs grounded, no floating equipment. Keep architecture coherent, no hall-of-mirrors depth. This is a visual style test, no claim of a specific canon event.",
+      "sent_references": [
+        {
+          "file": "jabba-palace-2026-10-15.jpg",
+          "sha256": "cac80a496371443a9c9f88a3f44641b7f544ed394f86f45133fa83f124bb7bb8",
+          "role": "user-approved-drawing-style-only"
+        }
+      ],
+      "state": "primary_inspected_proposal",
+      "user_approved": false,
+      "primary_review": {
+        "observations": [
+          "Primary actually viewed generated full frame: one tall blue-armoured alien officer pointing at one crate, one short orange-harness masked alien trying to lift it; no duplicated people or unintended white human heads.",
+          "Recognisable alien military palette and curved purple/cyan cargo architecture, matte outlined drawing, original scene rather than copied Jabba palace.",
+          "Equipment visibly attached, clear crate-lifting interaction, no weapons or injuries."
+        ],
+        "limits": [
+          "Species anatomy and armour details remain a proposal to verify against franchise references before canonical named-cast sheets.",
+          "No consecutive shot/location continuity test performed."
+        ]
+      }
+    },
+    {
+      "id": "ofl-M1-white-head-armoury-20261015",
+      "purpose": "New universe scene matched to user-approved Jabba illustration style; technical visual feasibility only.",
+      "file": "space-marine-2026-10-15.jpg",
+      "sha256": "97dd0ad7bb4c438e0fa22f3946fd95f9c6ae813fa94d46788e809044c0ad5849",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "preview_dimensions": [
+        1280,
+        720
+      ],
+      "prompt": "Create ONE landscape16:9 finished illustrated story frame. IMAGE1 IS THE USER-APPROVED ODDLY FICTIONAL LIVES DRAWING STYLE REFERENCE. Match its illustrated technique: bold clean black outer contours, thinner interior lines, matte controlled colours, clear readable staging, simple clothing shadows, restrained painted architecture, strong silhouettes. Match its balance of character simplicity and detailed-but-subordinate setting. Never copy Jabba, the employee, his tray/coin, the sandstone palace, drapes, composition or warm palette into the new scene. This is a different universe. No logo, text, watermark, collage, duplicate character, motion blur, excessive texture, 3D rendering, photographic face or skin. Characters and actions must read easily on a phone. Large characters, useful framing, no wasted ceiling or floor. Avoid generic standing cast lineup: one specific interaction. SETTING WARHAMMER40000, A SPACE MARINE CHAPTER. One ADULT unhelmeted Space Marine on RIGHT receives his first oversized blue power-armour shoulder plate from a distinct chapter armourer on LEFT. EXACTLY TWO PEOPLE. The marine has the SAME simple perfectly round WHITE head, small black oval/dot eyes, tiny worried mouth and light expressive eyebrow strokes as the approved employee in image1, no nose/ears/hair/beard, no realistic face, no stretched oval head. Large head, compact sturdy adult body around FOUR head diameters tall including boots, not tiny child, not tall long-legged man, not inflatable bodybuilder. He wears recognisable bulky cobalt-blue Space Marine power armour: broad rounded pauldrons, deep breastplate, thick segmented arms and legs, integrated chest cabling, large armoured boots, ONE secured rear power pack with physical shoulder connections. One shoulder plate on his LEFT body shoulder is temporarily off during fitting. He holds still, white face slightly nervous, one empty PURE-WHITE mitten hand held out naturally; exposed skin/neck/hands remains white like reference.\nThe armourer is an ADULT with a large smooth round WHITE head and same simple dot eyes/expressive small mouth/eyebrow strokes as image1. Plain covered dark-red work robe, leather apron, black boots, white mitten hands, no hair/beard/nose/ears. He braces the removable blue pauldron with BOTH hands, about to fit it onto the marine's exposed LEFT shoulder socket, visibly checking its size. The amusing story beat: a huge imposing armoured warrior looks nervous while the smaller calm technician adjusts his equipment. No weapons, battle, injuries, body modification procedure or duplicate armour pieces. An empty helmet sits on a low shelf in the background, not worn or growing from a shoulder.\nReadable fortress-monastery armoury interior, grey gothic stone vault, ONE tall narrow warm amber window at back-left, orderly workbench with a few simple tools and one armour stand at back-right. Broad plain walls, no skull decoration, real-world insignia or writing. Blue armour, muted crimson robe, neutral stone and amber light; flatter matte comic surfaces, no metallic photo reflections. The circular white faces and body gestures are focal; chest detail must not swamp heads. Frame characters full-body or three-quarter, large enough to recognise expression, armour plate action central. Keep armour recognizable and physically coherent, not generic medieval armour or a giant robot.",
+      "sent_references": [
+        {
+          "file": "jabba-palace-2026-10-15.jpg",
+          "sha256": "cac80a496371443a9c9f88a3f44641b7f544ed394f86f45133fa83f124bb7bb8",
+          "role": "user-approved-drawing-style-only"
+        }
+      ],
+      "state": "primary_inspected_proposal",
+      "user_approved": false,
+      "primary_review": {
+        "observations": [
+          "Primary actually viewed: exactly two round white-face adults; small oval eyes, small expressive mouths/brows, compact bodies in the approved house technique.",
+          "One large blue power-armoured marine, one red-robed apron-wearing armourer fitting a blue shoulder plate; one spare helmet on shelf.",
+          "Readable grey gothic armoury, amber window, equipment interaction; no realistic human face or stretched long-legged body.",
+          "Covered armoured gauntlet may be blue; the white-skin rule applies to exposed skin, not painted gloves."
+        ],
+        "limits": [
+          "Proposed episode armour/cast/room, not user-approved individual identity sheets or a fixed location master.",
+          "No consecutive shot/location continuity test performed."
+        ]
+      }
+    },
+    {
+      "id": "ofl-house-W1-20261015",
+      "purpose": "Neutral individual reference derived from the user-approved round-white-head worker; drawing identity/proportions for future named casts, wardrobe remains episode-specific.",
+      "file": "white-head-guide-2026-10-15.jpg",
+      "sha256": "e2187b8c44e581f77328d3282aabbd886ef4667cef2b1db00a64cf3448d5e242",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "preview_dimensions": [
+        1280,
+        720
+      ],
+      "prompt": "Create a SINGLE adult cartoon character reference in landscape16:9, one full-body figure only, plain solid light muted grey background. Use the provided approved Jabba scene ONLY to reproduce the exact HUMAN WORKER on its RIGHT: same perfectly round white head, same small black oval eyes, small slightly worried line mouth, same very light expressive eyebrows, no nose/ears/hair/beard, same warm white appearance, same pure-white simplified mitten hands. Match his compact adult body and rounded boots, approximately3.5 head diameters tall including boots; NOT a child, baby, thin long stickman, muscular superhero, stretched human or chibi toddler. Same rust-brown long-sleeve plain tunic with black edging, charcoal full-length trousers, plain modest dark waist belt, simple black rounded boots. Neutral relaxed standing pose, both empty hands visible near sides, head slightly tilted, expression mildly uncertain. Two arms/twohands/twolegs; keep simplified mitten fingers. Clean bold black outer contour, thin clothing-fold lines, matte muted colours, minimal one-plane clothing shadow. Leave the round white face and hands almost flat, no skin-colour substitution. No Jabba, palace, tray, coin, tools, backpack, armour, cape, character duplicates, action inset, turnaround grid, text, labels, logo, photoreal face, 3Drender or heavy texture. Large clearly visible isolated figure centered; head and whole boots within canvas. This exact approved drawing character serves as the house proportions and facial-language reference.",
+      "sent_references": [
+        {
+          "file": "jabba-palace-2026-10-15.jpg",
+          "sha256": "cac80a496371443a9c9f88a3f44641b7f544ed394f86f45133fa83f124bb7bb8",
+          "role": "user-approved-drawing-style-only"
+        }
+      ],
+      "state": "primary_inspected_proposal",
+      "user_approved": false,
+      "primary_review": {
+        "observations": [
+          "Primary actually viewed ONE isolated adult, white round head, small oval eyes, worried small mouth and restrained brows, white mitten hands, rust tunic, charcoal trousers and rounded boots.",
+          "Head, compact covered torso/legs, line weight and simple shading remain close to approved employee; neutral grey background removes palace/action influence.",
+          "Full head and boots in canvas, no tools/bag/extra person or action panels."
+        ],
+        "limits": [
+          "Derived neutral house-style candidate; the original palace image remains the explicitly user-approved anchor.",
+          "Rust costume is not mandatory across episodes and this drawing is not automatically every new protagonist."
+        ]
+      }
+    }
+  ]
+}
