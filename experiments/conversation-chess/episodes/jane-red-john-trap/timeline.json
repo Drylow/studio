@@ -1,0 +1,188 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Patrick Jane vs Red John's Trap Analyzed Like Chess | The Mentalist",
+  "demo": false,
+  "source_reviewed": true,
+  "source_in": 0,
+  "source_out": 98.83333333333333,
+  "intro_seconds": 16,
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "source_not_upscaled": true,
+    "source_metadata_note": "Four public Clip.cafe clips from The Mentalist S01E23 measured native 1920x1080 (23.976 fps), conformed without resize to 30 fps. No broadcaster logo, watermark or burned caption seen in reviewed frames. No mirroring, pitch change or reframing. Compressed public clips; maximum source quality not claimed."
+  },
+  "white_label": "Jane",
+  "black_label": "Lisbon",
+  "opening": {
+    "speaker": "white",
+    "label": "Jane",
+    "reviewed": true,
+    "source_at": 0.0,
+    "evidence": "Chapter card 'HE'S MINE' then first retained line: If we catch Red John, he's not walking anywhere. He's mine. (S01E23). Speaker checked on native frames and word-level speech alignment; clip SHA 934c89898572c2c620deee0dc067bec04fcc77dfaa1d935f4017078be618ae92. No continuous human listening claimed."
+  },
+  "initial_score_text": "0.0",
+  "initial_control": 0.5,
+  "analysis_background": "replay",
+  "analysis_pawn_by_speaker": true,
+  "show_source_quality_label": false,
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Neutral pawn in the guide and recap, as in Death Note V3. Analysis pawns follow the speaker's camp."
+  },
+  "dialogue_gain": 1,
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  },
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "ending_fade_seconds": 0.5,
+  "outro_summary": "Jane wants Red John so badly that he threatens the one ally protecting him. Then he catches Red John's man with a detail as small as nicotine gum, and Hardy confirms it himself. Lisbon wins the last exchange by naming the cost. Seven moves, and Red John still out of reach.",
+  "annotations": [
+    {
+      "id": "m01",
+      "source_at": 14.2,
+      "speaker": "white",
+      "rating": "inaccuracy",
+      "comment": "Red John is mine. Jane answers Lisbon's warning by raising the stakes. It shows his hand to the one person trying to keep him on the case.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.3",
+      "control_after": 0.526974
+    },
+    {
+      "id": "m02",
+      "source_at": 18.0,
+      "speaker": "white",
+      "rating": "mistake",
+      "comment": "You will regret it. Jane threatens his own ally. Lisbon now has every reason to keep him away from the investigation.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-1.2",
+      "control_after": 0.606351
+    },
+    {
+      "id": "m03",
+      "source_at": 27.266666666666666,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Lure me into the open. Slick. Caught, Hardy still compliments the trap. Composure is the only card he has left.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "m04",
+      "source_at": 39.333333333333336,
+      "speaker": "black",
+      "rating": "brilliant",
+      "comment": "A heavy smoker trying to quit, and a sheriff chewing nicotine gum all day. Jane turns a small habit into proof.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.8",
+      "control_after": 0.571506
+    },
+    {
+      "id": "m05",
+      "source_at": 50.7,
+      "speaker": "white",
+      "rating": "blunder",
+      "comment": "I'll persuade Red John. Trying to scare Jane, Hardy confirms out loud that he works for Red John.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-2.5",
+      "control_after": 0.71095
+    },
+    {
+      "id": "m06",
+      "source_at": 73.3,
+      "speaker": "black",
+      "rating": "inaccuracy",
+      "comment": "Jane would trade his own life for a lead on Red John. Honest, but it gives Lisbon the argument she needs.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.4",
+      "control_after": 0.464062
+    },
+    {
+      "id": "m07",
+      "source_at": 95.2,
+      "speaker": "white",
+      "rating": "brilliant",
+      "comment": "Selfish and childish. Lisbon stops debating tactics and names what the obsession costs the people around him.",
+      "hold_seconds": 7,
+      "replay_seconds": 2,
+      "reviewed": true,
+      "review_method": "Word-level speech alignment of each public clip mapped onto the reviewed cuts; speaker checked on native frames. Editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.4",
+      "control_after": 0.376601
+    }
+  ],
+  "conversations": [
+    {
+      "source_at": 0.0,
+      "white_label": "Jane",
+      "black_label": "Lisbon",
+      "opening": {
+        "speaker": "white",
+        "label": "Jane",
+        "reviewed": true,
+        "source_at": 0.0,
+        "evidence": "Chapter card 'HE'S MINE' then first retained line: If we catch Red John, he's not walking anywhere. He's mine. (S01E23). Speaker checked on native frames and word-level speech alignment; clip SHA 934c89898572c2c620deee0dc067bec04fcc77dfaa1d935f4017078be618ae92. No continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 18.033333333333335,
+      "white_label": "Hardy",
+      "black_label": "Jane",
+      "opening": {
+        "speaker": "white",
+        "label": "Hardy",
+        "reviewed": true,
+        "source_at": 18.033333333333335,
+        "evidence": "Chapter card 'THE TRAP' then first retained line: Well, you fooled us, huh? Bravo. (S01E23). Speaker checked on native frames and word-level speech alignment; clip SHA 22776b9766e030d4a01403df10e86a5088297231fd48095fbb0f34f528660e9a. No continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 52.43333333333333,
+      "white_label": "Lisbon",
+      "black_label": "Jane",
+      "opening": {
+        "speaker": "white",
+        "label": "Lisbon",
+        "reviewed": true,
+        "source_at": 52.43333333333333,
+        "evidence": "Chapter card 'CHOOSE LIFE' then first retained line: We saved a girl's life, Jane. (S01E23). Speaker checked on native frames and word-level speech alignment; clip SHA 61c9553dd7c5c2c4c11ff62e0b19b697f387f163e0cfd5ac76b9e01cf3387bac. No continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    }
+  ],
+  "source_sha256": "e76df77d55beac378eae5c209b3a97cb43f00b26904f2296624d81e1da439ea7"
+}

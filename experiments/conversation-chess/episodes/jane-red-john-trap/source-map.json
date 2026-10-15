@@ -1,0 +1,178 @@
+{
+ "schema": "conversation-chess-actual-three-episode-edl-v1",
+ "status": "The Mentalist S01E23 public Clip.cafe clips; tight reviewed cuts.",
+ "master_fps": 30,
+ "master_duration_frames": 2965,
+ "source_map": [
+  {
+   "kind": "chapter_card",
+   "title": "HE'S MINE",
+   "chapter": "c01",
+   "duration_frames": 90,
+   "master_in_frames": 0,
+   "master_out_frames": 90,
+   "master_in": 0.0,
+   "master_out": 3.0
+  },
+  {
+   "kind": "source",
+   "id": "if-catch-red-john-hes-not-walk-0",
+   "chapter_title": "HE'S MINE",
+   "episode": "S01E23",
+   "file": "if-catch-red-john-hes-not-walking-hes-mine.mp4",
+   "source_in": 0.367,
+   "source_out": 15.400333,
+   "duration_frames": 451,
+   "master_in_frames": 90,
+   "master_out_frames": 541,
+   "master_in": 3.0,
+   "master_out": 18.033333333333335,
+   "source_sha256": "934c89898572c2c620deee0dc067bec04fcc77dfaa1d935f4017078be618ae92",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/if-catch-red-john-hes-not-walking-hes-mine/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "THE TRAP",
+   "chapter": "c02",
+   "duration_frames": 90,
+   "master_in_frames": 541,
+   "master_out_frames": 631,
+   "master_in": 18.033333333333335,
+   "master_out": 21.033333333333335
+  },
+  {
+   "kind": "source",
+   "id": "put-your-hands-behind-your-hea-0",
+   "chapter_title": "THE TRAP",
+   "episode": "S01E23",
+   "file": "put-your-hands-behind-your-head-s1.mp4",
+   "source_in": 3.0,
+   "source_out": 5.966667,
+   "duration_frames": 89,
+   "master_in_frames": 631,
+   "master_out_frames": 720,
+   "master_in": 21.033333333333335,
+   "master_out": 24.0,
+   "source_sha256": "22776b9766e030d4a01403df10e86a5088297231fd48095fbb0f34f528660e9a",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/put-your-hands-behind-your-head-s1/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "put-your-hands-behind-your-hea-1",
+   "chapter_title": "THE TRAP",
+   "episode": "S01E23",
+   "file": "put-your-hands-behind-your-head-s1.mp4",
+   "source_in": 11.433,
+   "source_out": 15.633,
+   "duration_frames": 126,
+   "master_in_frames": 720,
+   "master_out_frames": 846,
+   "master_in": 24.0,
+   "master_out": 28.2,
+   "source_sha256": "22776b9766e030d4a01403df10e86a5088297231fd48095fbb0f34f528660e9a",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/put-your-hands-behind-your-head-s1/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "put-your-hands-behind-your-hea-2",
+   "chapter_title": "THE TRAP",
+   "episode": "S01E23",
+   "file": "put-your-hands-behind-your-head-s1.mp4",
+   "source_in": 16.533,
+   "source_out": 27.733,
+   "duration_frames": 336,
+   "master_in_frames": 846,
+   "master_out_frames": 1182,
+   "master_in": 28.2,
+   "master_out": 39.4,
+   "source_sha256": "22776b9766e030d4a01403df10e86a5088297231fd48095fbb0f34f528660e9a",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/put-your-hands-behind-your-head-s1/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "you-think-youre-pretty-cool-ri-3",
+   "chapter_title": "THE TRAP",
+   "episode": "S01E23",
+   "file": "you-think-youre-pretty-cool-right-now.mp4",
+   "source_in": 0.0,
+   "source_out": 5.9,
+   "duration_frames": 177,
+   "master_in_frames": 1182,
+   "master_out_frames": 1359,
+   "master_in": 39.4,
+   "master_out": 45.3,
+   "source_sha256": "86c667a5718e9513f957bd742d7be70c1b3964de2fb88a9c15d88fe0cfedc7a9",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/you-think-youre-pretty-cool-right-now/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "source",
+   "id": "you-think-youre-pretty-cool-ri-4",
+   "chapter_title": "THE TRAP",
+   "episode": "S01E23",
+   "file": "you-think-youre-pretty-cool-right-now.mp4",
+   "source_in": 8.433,
+   "source_out": 15.566333,
+   "duration_frames": 214,
+   "master_in_frames": 1359,
+   "master_out_frames": 1573,
+   "master_in": 45.3,
+   "master_out": 52.43333333333333,
+   "source_sha256": "86c667a5718e9513f957bd742d7be70c1b3964de2fb88a9c15d88fe0cfedc7a9",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/you-think-youre-pretty-cool-right-now/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  },
+  {
+   "kind": "chapter_card",
+   "title": "CHOOSE LIFE",
+   "chapter": "c03",
+   "duration_frames": 90,
+   "master_in_frames": 1573,
+   "master_out_frames": 1663,
+   "master_in": 52.43333333333333,
+   "master_out": 55.43333333333333
+  },
+  {
+   "kind": "source",
+   "id": "he-was-here-s2-0",
+   "chapter_title": "CHOOSE LIFE",
+   "episode": "S01E23",
+   "file": "he-was-here-s2.mp4",
+   "source_in": 2.4,
+   "source_out": 45.8,
+   "duration_frames": 1302,
+   "master_in_frames": 1663,
+   "master_out_frames": 2965,
+   "master_in": 55.43333333333333,
+   "master_out": 98.83333333333333,
+   "source_sha256": "61c9553dd7c5c2c4c11ff62e0b19b697f387f163e0cfd5ac76b9e01cf3387bac",
+   "clip_cafe_page": "https://clip.cafe/the-mentalist-2008/he-was-here-s2/",
+   "actual_dimensions": [
+    1920,
+    1080
+   ]
+  }
+ ]
+}

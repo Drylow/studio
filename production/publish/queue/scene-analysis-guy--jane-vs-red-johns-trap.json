@@ -1,0 +1,18 @@
+{
+  "channel": "Scene Analysis Guy",
+  "title": "Patrick Jane vs Red John's Trap Analyzed Like Chess | The Mentalist",
+  "description_file": "experiments/conversation-chess/episodes/jane-red-john-trap/description.txt",
+  "video": {
+    "file": "jane-red-john-trap.mp4",
+    "sha256": "3cd17cae7b8f1034a04c070d335092b550919ed1248c24f61e3cfe30afbb4fe3",
+    "gofile": "https://gofile.io/d/zKkJdT0G",
+    "url": "http://media.edgerunners.fr/scene-analysis-guy--jane-vs-red-johns-trap-d149f7a872bd1175.mp4"
+  },
+  "thumbnail": "experiments/conversation-chess/episodes/jane-red-john-trap/Jane-Hardy-trap-YouTube.jpg",
+  "captions": "experiments/conversation-chess/episodes/jane-red-john-trap/English-Captions.srt",
+  "tags_file": "experiments/conversation-chess/episodes/jane-red-john-trap/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-17T10:00",
+  "copyright_check": "private_first",
+  "copyright_rule": "STRICT : si les Checks YouTube montrent un blocage OU un claim (même simple, sans blocage), ne programme pas : laisse la vidéo en privé et note-le dans le journal (status blocked ou claimed, avec le détail). Programme seulement si « No issues found »."
+}

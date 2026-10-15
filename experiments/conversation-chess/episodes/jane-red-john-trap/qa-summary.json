@@ -1,0 +1,58 @@
+{
+  "schema": "conversation-chess-public-qa-summary-v1",
+  "status": "reviewed_native_short_clip_test_hosted_for_private_first_youtube_checks",
+  "title": "Patrick Jane vs Red John's Trap Analyzed Like Chess | The Mentalist",
+  "video": {
+    "sha256": "3cd17cae7b8f1034a04c070d335092b550919ed1248c24f61e3cfe30afbb4fe3",
+    "bytes": 48794569,
+    "frames": 5275,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "picture_duration_seconds": 175.833,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "export_backend": "Kdenlive / MLT"
+  },
+  "source_master": {
+    "sha256": "e76df77d55beac378eae5c209b3a97cb43f00b26904f2296624d81e1da439ea7",
+    "frames": 2965,
+    "seconds": 98.833,
+    "played_scene_seconds": 89.83,
+    "chapter_cards": 3,
+    "clips": 4,
+    "episode": "The Mentalist S01E23",
+    "manipulation": "none (no mirror, pitch change, crop or reframing)"
+  },
+  "checks": {
+    "full_av_decode": "pass",
+    "audio_technical_qa": "pass",
+    "sample_peak_dbfs": -1.366,
+    "full_scale_samples": 0,
+    "correlated_audio_segments": 21,
+    "silent_reading_tails": 7,
+    "contact_sheets": {
+      "intro": 5,
+      "chapters": 3,
+      "analyses": 7,
+      "boundaries": 42,
+      "outro": 3,
+      "inspected_one_by_one": true,
+      "issues": []
+    },
+    "captions": {
+      "cues": 45,
+      "overlap_with_chapter_cards": 0,
+      "text_fixed_from_clip_transcripts": [
+        "Jane",
+        "faked the warrant",
+        "instead of slow and nasty",
+        "But you would have Red John"
+      ]
+    }
+  },
+  "human_audio_listening": false,
+  "youtube_result": "not known yet; no claim-free outcome is promised"
+}
