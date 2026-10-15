@@ -11,10 +11,12 @@ de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets
 
 ## Miniatures du nouveau lot
 
-Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient cinq nouvelles
-propositions exportées : Guilde, Paul, Silo, FROM, Severance. La Force reste bloquée
-par deux refus du générateur intégré ; confirmation de la voie API demandée.
-Les images sont des propositions, sans choix utilisateur ni publication.
+Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient les six nouvelles
+propositions exportées : Force, Guilde, Paul, Silo, FROM, Severance. Force a été créée
+via le proxy API autorisé, avec deux Jedi humains originaux et des vaisseaux Star Wars.
+Les cinq autres viennent du générateur intégré. Les images sont revues visuellement,
+sans choix utilisateur ni publication. Copie simple : Miniatures sleep - 15 octobre 2026
+sur le Bureau.
 
 ## Lire dans cet ordre
 
