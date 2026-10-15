@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "purpose": "Single-scene feasibility proposal requested by user; not approval of an episode or a character bible",
+  "prompt": "Create ONE finished LANDSCAPE16:9 illustrated story frame for Oddly Fictional Lives: an adult white round-headed worker reporting to Jabba the Hutt inside Jabba palace in Star Wars. This is a clean expressive matte 2D cartoon, not a film still, not photorealism, not a 3D render, not a logo or character grid. Strong black outlines, flat matte colours, simple single-plane shadows, detailed readable stone architecture with restrained texture. Clear shapes readable at phone size.\n\nJABBA THE HUTT is the central dominant character on LEFT/CENTRE, occupying about half the image width. He is a recognisable enormous olive-green alien SLUG, heavy pear-shaped body, thick pale ochre belly folds, broad head merging smoothly into shoulders, TWO heavy-lidded orange-brown eyes with dark pupils, one very wide flat downturned mouth with a smug slightly amused corner, two SHORT fat arms and small stubby alien hands, and ONE thick tail curling to frame right on the raised dais. No legs, feet, humanoid torso, horns, hair, beard, or human costume. His natural alien face and entire exposed slug body remain OLIVE GREEN, with muted tan belly. IMPORTANT species exception: the round-white humanoid rule does NOT apply to Jabba. Do not turn him into a white-headed person in a green suit. Keep him stylised, appealingly grotesque and imposing rather than frighteningly realistic. One Jabba only. He leans on one arm on his low broad stone dais while his free small hand holds one simple gold payment coin toward the worker.\n\nRIGHT FOREGROUND is ONE distinct ADULT worker, about half Jabba height, wearing a plain rust-brown long-sleeve tunic, charcoal long trousers, black boots and a modest dark waist belt; no hood, cape, weapons or backpack. Compact adult proportions with a LARGE perfectly round PURE WHITE head, small black dot eyes, a tiny nervous mouth, no nose/ears/hair/beard. Pure-white neck and simplified mitten hands, no shaded skin. He stands slightly hunched holding a small empty wooden tray at waist height and looks at Jabba payment with a worried expression. He is an anonymous employee, NOT Han Solo, Luke Skywalker, a Sith or Kratos. Exactly one worker.\n\nThe scene tells a funny uneasy payment moment: an enormous wealthy boss offers a ridiculously tiny single coin to a nervous employee. Clearly separate the two silhouettes. Medium-wide framing, large characters; do not waste half the canvas on floor or ceiling. Background only one palace stone arch behind Jabba and a shadowy corridor behind worker; a hanging amber lamp and small muted burgundy drape give restrained colour. Warm sandstone versus olive green and white, no photographic depth, no noisy surface grunge. No extra guards, creatures, crowds, inset portraits or foreground objects obscuring faces. No text, subtitles, logo, watermark, montage, split panels, gradients or motion blur. A normal frame in our story, not a glamorous thumbnail composition.",
+  "sent_references": [],
+  "native_dimensions": [
+    1672,
+    941
+  ],
+  "preview_dimensions": [
+    1280,
+    720
+  ],
+  "file": "jabba-palace-2026-10-15.jpg",
+  "sha256": "cac80a496371443a9c9f88a3f44641b7f544ed394f86f45133fa83f124bb7bb8",
+  "primary_visual_review": {
+    "state": "proposal_inspected",
+    "observations": [
+      "One recognisable olive-green Jabba, broad pale-ochre belly, short arms, heavy orange eyes, one curling tail; no humanoid legs.",
+      "One distinct round white-head employee with a wooden tray; obvious small-coin payment interaction; no duplicated actors.",
+      "Readable matte outlined illustration in a sandstone palace; character silhouette and palette distinguish alien from employee."
+    ],
+    "limitations": [
+      "Employee has eyebrow marks and warm off-white face tint, despite initial strict styling instructions; correct against the eventual approved humanoid sheet before final production.",
+      "Decor and Jabba surface texture could be simplified if the selected direction requires flatter backgrounds.",
+      "One image does not establish multi-shot identity or location consistency."
+    ],
+    "adopted_as_reference": false
+  }
+}

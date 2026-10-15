@@ -5,7 +5,7 @@ decisions, abilities, relationships and consequences. Original narration and
 episode-specific white round-headed actors; no universal rank ladder imposed on
 every universe.
 
-## Current stage — 15 October 2026
+## Current stage â€” 15 October 2026
 
 The user requested a writing-method overhaul before further production.
 Read [SCRIPTWRITING.md](SCRIPTWRITING.md) and the local [AGENTS.md](AGENTS.md).
@@ -18,7 +18,7 @@ Public inventory checked through the channel's Videos tab:
 | Episode | Published title | Link |
 | --- | --- | --- |
 | 01 | Your Life as Kratos, the God of War | https://www.youtube.com/watch?v=EVxsT_MzpZc |
-| 02 | Your Life as a Pokémon Trainer | https://www.youtube.com/watch?v=MedQ1PocBcw |
+| 02 | Your Life as a PokÃ©mon Trainer | https://www.youtube.com/watch?v=MedQ1PocBcw |
 | 03 | Your Life as a Sith Lord | https://www.youtube.com/watch?v=Ped8ynPl3ZM |
 | 04 | Your Life as a Viltrumite | https://www.youtube.com/watch?v=26NuLvArgjw |
 
@@ -26,6 +26,26 @@ Production folder numbers place Viltrumite before Sith; publication order is the
 opposite. Do not rename or overwrite the existing video folders to match this table.
 Four public uploads means six additional completed releases to reach ten total.
 Ideas considered during research are not an approved slate.
+
+## User shortlist â€” 15 October 2026
+
+The user selected these three directions after reviewing the reference channel
+and Makina's analysis:
+
+- Your Life as Every Rank in the Covenant (Halo).
+- Your Life Working for Jabba the Hutt.
+- Your Life as Every Rank in a Space Marine Chapter.
+
+The current request is a visual feasibility test for Jabba through the configured
+image workflow, not a full episode-production launch. Jabba keeps his recognisable
+green alien-slug anatomy; the white round-head rule remains for humanoid employees.
+Do not make him a white-headed human wearing a green suit. A successful isolated
+image does not establish consistency over an entire episode.
+
+Ranks and species must be distinguished in future research: Covenant roles are
+not one character changing species, and a chapter's specialisations are not all
+successive promotions. Do not claim the subjects are absent from all of YouTube;
+other Space Marine rank videos were found during the research.
 
 ## Established constraints
 
@@ -35,10 +55,19 @@ Ideas considered during research are not an approved slate.
   Authored close shots may show a meaningful detail; changing the camera merely
   to vary an image is not a story beat.
 - Voice first, real transcript/word alignment second, timed image plan third.
-- Keep Ryan Kurk – Pleasant and Smooth, using the existing configured voice.
+- Keep Ryan Kurk â€“ Pleasant and Smooth, using the existing configured voice.
 - No automatic rewrite, unrequested media regeneration or replacement of uploads.
 - Public descriptions contain no external links or source blocks; keep research
   and production provenance separately.
 
 Private analytics, visual-test receipts and the editorial diagnosis are kept in
 the ignored working directory `work/ofl-retention-2026-10-15/`, not published here.
+
+## Jabba visual feasibility proposal
+
+[View the inspected palace test](visual-tests/jabba-palace-2026-10-15.jpg).
+The exact authored prompt and inspection limits are retained alongside it in
+[the test record](visual-tests/jabba-palace-2026-10-15.json). This is a single
+proposal, not a multi-shot continuity test or an adopted preset. Before final
+production, enforce the selected humanoid face/skin rules against actual cast
+references; the proposal introduced eyebrow marks and a warm white tint.
