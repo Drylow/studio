@@ -1,0 +1,17 @@
+{
+  "channel": "One Stick Left",
+  "title": "Alien Outbreak Survival: Day 151 to Day 180",
+  "description_file": "chaines/alien-outbreak-survival/episode-06-day-151-180/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/NSBJyzZ6",
+    "file": "final.mp4",
+    "sha256": "43469640b73e7ddc9f30ed1a99e1477b8e5f10855bd3ac915cff55cfa5ec7ac9",
+    "url": "http://media.edgerunners.fr/one-stick-left--episode-06-day-151-180-aba440b229e257b9.mp4"
+  },
+  "thumbnail": "chaines/alien-outbreak-survival/episode-06-day-151-180/thumbnail.jpg",
+  "captions": "chaines/alien-outbreak-survival/episode-06-day-151-180/English-Captions.srt",
+  "tags_file": "chaines/alien-outbreak-survival/episode-06-day-151-180/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-19T10:00",
+  "tubeforge_video_id": "alien-outbreak-survival-day-151-to-day-1-570dda"
+}

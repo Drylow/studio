@@ -1,0 +1,17 @@
+{
+  "channel": "Pirate Pages",
+  "title": "Why Being a Pirate Carpenter Was Worse Than You Think",
+  "description_file": "chaines/pirate-pages/episode-05/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/D0gTGK0I",
+    "file": "final.mp4",
+    "sha256": "a3b177b83b96e4d6e5c84e6dee6da030cc4c811f8a601226a61f149bad5f547e",
+    "url": "http://media.edgerunners.fr/pirate-pages--episode-05-ff757c84d63677d8.mp4"
+  },
+  "thumbnail": "chaines/pirate-pages/episode-05/thumbnail.jpg",
+  "captions": "chaines/pirate-pages/episode-05/English-Captions.srt",
+  "tags_file": "chaines/pirate-pages/episode-05/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-18T10:00",
+  "tubeforge_video_id": "why-being-a-pirate-carpenter-was-worse-t-43f8b0"
+}

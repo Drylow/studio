@@ -1,0 +1,376 @@
+[
+  {
+    "id": "noble-alix-default-v2",
+    "group": "noble",
+    "kind": "cast",
+    "title": "Alix,25, mutedblue gown and white veil",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  ALIX, age25: match the ADULT blue-dressed woman seated LEFT in Image1. Long dusty muted-blue kirtle, close full sleeves, narrow brown belt, tiny plain muted-gold edging at neckline, simple white linen veil covering head/hair/neck sides, dark flat shoes. Keep slim simple adult proportions and identical ivory round dot-eye face. No crown, cone hat, corset, jewellery, extra cloak or hair. Her whole ankle-length gown and both dark shoes are visible. Calm neutral tiny mouth. No parchment or gift.",
+    "sha256": "2cad98f7c050c1cb4cc9596ea40287c6fa930b793489bd7ead262e4ff29cc3fd",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: one adult, blue long gown with narrow ochre neckline/belt edging, white veil, dark shoes, cream dot-eye head, no hair/nose/ears or extra actor; empty hands and sand background. Slim adult covered proportion matches approved visual family; not a numeric guarantee of exactly four heads.",
+    "file": "assets/canonical/noble/cast/noble-alix-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-etienne-default-v2",
+    "group": "noble",
+    "kind": "cast",
+    "title": "Etienne,35, olive cote and dark hose",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  ETIENNE, age35: match the ADULT olive-clothed suitor RIGHT in Image1. Plain olive knee-length long-sleeved cote with short hood resting on shoulders, slim dark-brown hose, simple narrow brown belt with a small plain belt pouch, flat dark-brown medieval shoes. Bare smooth circular ivory head, NO hair, beard, cap or ears. Small neutral mouth. Both hands empty and relaxed, no gift. Adult narrow figure, not a long muscular body.",
+    "sha256": "82c8974e2c021b4121eebae9e47304489d7036c1f3c21e06aaf03213e8168100",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: one slim adult, olive knee-length cote/shoulder hood, narrow brown belt and pouch, dark brown hose/shoes, bare smooth cream round head and dot eyes; no hair or realistic face, two empty hands, opaque sand background.",
+    "file": "assets/canonical/noble/cast/noble-etienne-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-henri-default-v2",
+    "group": "noble",
+    "kind": "cast",
+    "title": "Henri,55, burgundy cote and soft cap",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  HENRI, age55: extract the central ADULT father seated at the table in Image1. Full-length burgundy long-sleeved cote with two broad simple muted-ochre vertical front edges, soft burgundy cloth cap, dark flat shoes, simple brown belt. Round smooth ivory head, dot eyes and small neutral mouth. NO beard, moustache, hair, ears, chain of office or heraldic symbols. Adult covered body, compact not childlike. Both hands empty, no parchment.",
+    "sha256": "287b72998a361693fbc3d4417984b266bf1bafd74e2d7ca5ebc2f1c9f9aa640c",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: one adult in burgundy long cote with ochre vertical panels, brown belt and soft burgundy cap, dark shoes; no beard, ears, hair or chain; cream dot-eye round head and empty hands, sand background.",
+    "file": "assets/canonical/noble/cast/noble-henri-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-jeanne-default-v2",
+    "group": "noble",
+    "kind": "cast",
+    "title": "Jeanne,50, ochre gown white veil",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  JEANNE, age50: match the ADULT mother standing behind father in Image1. Long plain ochre gown, full-length simple sleeves, narrow brown belt, white linen veil with simple plain band at forehead, dark flat shoes. Same round smooth ivory head and dot eyes with neutral tiny mouth. Hair fully covered. No jewellery, cone hat, corset, crown or additional accessories. Both hands empty, one on each side with visible mittens.",
+    "sha256": "9a9e2f633a684c10082af9857e442784ee89d704607134cbbcabccf125b7da17",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: one adult woman in long ochre gown, thin brown belt and plain white veil with simple front band, dark shoes; round cream dot-eye face, no hair/ears or extra props, hands empty; sand backdrop.",
+    "file": "assets/canonical/noble/cast/noble-jeanne-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-martin-default",
+    "group": "noble",
+    "kind": "cast",
+    "title": "Martin,45, charcoal-blue steward, grey cap",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  MARTIN, age45: a NEW recurring ADULT estate steward in the same approvedVIDEOstyle. Longplain DARK CHARCOAL BLUE cote, narrow plainbrown belt, GREYsoftclothcap, darkflatshoes, nofurtrim/ochre/olive/burgundy. This costume MUST lookdistinctfromEtienneolive, Henriburgundy andJeanneochre. Perfectroundivoryhead, doteyes, tinyneutralmouth, smoothnohair/beard/ears. Compactcoveredadultfigure matchingapprovedvideoImage1: headroughlyONEquarter totalheight, bodyroughly3headheights, around4heads total, noelongated5-6headsor babychibi. Bothhandsemptyandrelaxed, noledger/quill/furniture. UniformOPAQUE lightsandbackgroundoverentirelandscape16:9frame, noalpha/black/transparentarea. Onefullbodythree-quarterview,entireheadfeetvisible.",
+    "sha256": "8c3d545fbd00baad7a026fa386f79198a5b142277f601995734beeea636931c9",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: one adult steward wearing dark charcoal-blue long cote, grey soft cap, brown belt and shoes; distinct from olive Etienne and burgundy Henri. Cream round dot-eye head, empty mitten hands, no beard/hair/ears, opaque sand backdrop.",
+    "file": "assets/canonical/noble/cast/noble-martin-default.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-manor-hall-master-v2",
+    "group": "noble",
+    "kind": "location",
+    "title": "French manor hall c1350, approved geometry",
+    "prompt": "EDIT Image1 on its EXACT SAME16:9canvas. REMOVE the FOUR human characters and alltheirbodyparts. Repaironlybackgroundfurniture/stone occludedbythosepeople. Do NOT zoomout, changeviewpoint, moveobjects, widenroom orredesignchairs/table. This is a precise emptybackground extraction, not a newroom illustration. Fixedlandmarks: LEFTwindow remainscentredabout8percentframewidth; burgundyhangingonbackwallcentredabout51percentframewidth; oakmain table remainsfromabout20to80percentframewidth withitsfrontstretcherexactlyintact; leftwoodseat staysfarLEFT; father'swoodchairback staysbehindtableatcentre; doorstaysRIGHTedge, cheststaysRIGHTedge, sameceilingbeams andstoneblocks. PreserveEXACT perspective,crop,horizon,windowheight,objectsizeandlightdirection. Removeonlythegiftboxandsealedparchmentfromtable, preservejugandfruitbowlinplace. No actorremnant/face/hand/ghost/shadowofmissingperson, no newfurniture orsymmetry. Emptyroommustretainclearcentraloccupiedarea correspondingtoapprovedsource. Matchtheexistingmattevideoinkstyle and quietcream/ochre/burgundypalette. No writing, newheraldry oraddeddecorations. One opaque finished16:9roomillustration.",
+    "sha256": "e0250a918a1f0936f8548e94f9e00b91cbf425ea9c3adca2faee97458bc6c9ba",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: approved room axis retained with left leaded window, plain burgundy hanging back-centre, central oak table with front stretcher, left seat, high wooden chair behind table, arched door at right edge and chest at right edge. Jug/fruit bowl remain tabletop-left; no people, detached hands, gift or letter. Empty master frames the room wider than populated approval sample; use this exact new master consistently for the movie, not alternating source-sample geography.",
+    "file": "assets/canonical/noble/location/noble-manor-hall-master-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "jester-colin-default-v2",
+    "group": "jester",
+    "kind": "cast",
+    "title": "Colin,30, jester with marotte",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  COLIN, age30: match the ADULT jester in CENTRE of Image1, standing upright in a relaxed neutral three-quarter pose. Same simple half-burgundy half-ochre knee-length loose tunic with plain zigzag hem/collar, alternating burgundy/ochre hose, small two-point burgundy/ochre cloth hood with ONE tiny bell on each point, simple dark medieval shoes with only slight upturned toes. He holds exactly ONE short wooden marotte in his RIGHT mitten hand, small rounded ivory fool head with matchingtwo-pointcap at tip. Left hand relaxedandempty. The marotte's face is an OBJECT decoration, not a second human or a floating head. Exactly one fullbodyadult. Do NOT make modern circus clown: no makeup/ruff/big rednose, no hair, ears or beard.",
+    "sha256": "c7021e389c71837354f1623b2681c424d2a08875f395ab14f72b9bad7eef25f6",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult jester in burgundy/ochre mi-parti tunic/hood/hose, small hood bells, dark red slightly upturned shoes, one marotte held in right hand, left hand empty. Small fool head on marotte is object decoration, not second character. Cream round dot-eye face and opaque light sand background; black-background defect from v1 corrected.",
+    "file": "assets/canonical/jester/cast/jester-colin-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "jester-king-default-v2",
+    "group": "jester",
+    "kind": "cast",
+    "title": "King,45, blue gown and small crown",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  KING, age45: isolate ADULT king seated RIGHT in Image1 but now neutral standing fullbody. Long mutedblue gown, plain burgundy cloak with narrow cream fur edging and few sparse dark marks, narrow brown belt, small simple gold open crown, dark flat shoes. Smooth round ivory head nohair/beard/ears, small dot eyes and tiny neutral mouth. Simple ordinary royalhouseholdadultcaricature, compactcoveredbody. Both hands empty. No sceptre, weapon, throne, necklace, extrafigures or enormous crown.",
+    "sha256": "61950c4616c4e013d7447e348ad78a9366f16d0938e8a0ccd130e889cf566be5",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult king, blue full-length gown, burgundy cloak with narrow cream fur edge and sparse dark marks, small gold crown, thin belt, dark shoes. Round cream dot-eye face, no beard/hair/ears, two empty hands. No throne or spare props on canonical sand sheet.",
+    "file": "assets/canonical/jester/cast/jester-king-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "jester-steward-default-v2",
+    "group": "jester",
+    "kind": "cast",
+    "title": "Steward,50, olive cote",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  STEWARD, age50: match the ADULT steward LEFT in Image1. Plain darkolive full-length cote, narrow ochre front panel and simplebrown belt, small olive softclothcap, short simplebrown shoulderfurtrim, dark flat shoes. Smooth roundcream head, doteyes, tinyneutralmouth, NOhair/ears/beard. Both hands relaxedempty; no ledger, accountroll or furniture. Compactadult body, not a child or elongatedhero.",
+    "sha256": "9042e543df6b341c3fbe5a7ee21e6e7e51f903b1f5926312bab0925cef199115",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult steward, olive long cote and soft cap, simple brown fur shoulder trim, ochre front edge, brown belt, dark shoes, round ivory dot-eye head. Hands empty, no ledger, no extra figure or scenery, opaque sand background.",
+    "file": "assets/canonical/jester/cast/jester-steward-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-margot-default-v2",
+    "group": "court",
+    "kind": "cast",
+    "title": "Margot,30, blue gown cream veil",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  MARGOT, age30: match the adultwoman LEFT in Image1. Plainlongdustyblue gown withwidefull-lengthsleeves, narrowbrownbelt andoneplainhangingbeltend, simplecreamlinenveil, darkflatshoes. Round smooth ivoryhead doteyes smallneutralmouth, nohair/ears/nose/beard. Both handsrelaxedempty, nopetitionletter, injuries orjewellery. Modestcompactadultcaricature, notrealisticfashionanatomy. Distinctidentity/costumeentryfromAlix even if similarsimplebluepalette.",
+    "sha256": "781ffb8f8c413fc1e6de74561dc0338de1db3b9541e57a507410770e25809977",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult woman, long dustyblue gown with broad simple sleeves, cream veil, brown belt with hanging end, dark flat shoes. Cream round dot-eye head, no hair/ears/nose. Empty hands, opaque sand sheet. Distinct canonical file from noble Alix; retain wider sleeves and plain neckline without Alix gold-edged front panel.",
+    "file": "assets/canonical/court/cast/court-margot-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-clerk-default-v2",
+    "group": "court",
+    "kind": "cast",
+    "title": "Clerk,45, olive cote soft cap",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  CLERK, age45: match the adultclerk seatedRIGHT in Image1 butshowfullstandingbody. Olivefull-lengthcote withshortmutedochre shoulderhoodandfrontedge, plainnarrowbrownbelt, darkoliveflatsoftcap, darkflatshoes. Same roundivorydoteyehead and tinyneutralmouth, nohair/beard/ears. Both handsempty relaxed, noquillinkpotletter orfurniture. Coveredcompactadultbody, simplemittenhands.",
+    "sha256": "7852baaf85c11da01d2ea1346cb32af7158591f1ff11a6dbfbe18aee05487f2c",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult clerk, olive full-length cote with ochre short shoulder hood/front edge, dark olive soft cap, brown belt/hanging end and dark shoes. Cream round dot-eye face, no beard/ears/hair, hands empty. Sand background, no quill or desk in identity sheet.",
+    "file": "assets/canonical/court/cast/court-clerk-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-judge-default-v2",
+    "group": "court",
+    "kind": "cast",
+    "title": "Judge,55, burgundy robe dark cap",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  JUDGE, age55: match the adultjudge sittingBACK in Image1 butnowfullstandingbody. Longplainburgundyrobe withsimpledarkfrontopeningedges anddarkhighneckundertunic, plaindarksoftcap, darkflatshoes, no powderedwig, gavel, medals, erminecape orchain. Roundivoryhead doteyes tinyneutralmouth, nohair/beard/ears. Bothhandsempty visible andrelaxed, compactadultcaricature.",
+    "sha256": "7d37a3c65d364c781a6545a0e9fcada06169d6e1662bc449427408a617b70437",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult judge, plain long burgundy robe with dark front opening/undertunic, dark soft cap and shoes, cream round dot-eye head. Empty hands, no wig, gavel, chain, hair, beard or ears, opaque sand background.",
+    "file": "assets/canonical/court/cast/court-judge-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-agnes-default-v2",
+    "group": "court",
+    "kind": "cast",
+    "title": "Agnes,45, ochre gown white veil",
+    "prompt": "Create ONE corrected canonical ADULT full-body character sheet. Image1 is the USER-APPROVED VIDEO drawing style and correct adult body/head proportion. Image2 supplies the exact costume and character identity, but its body is TOO TALL; do not copy that elongated proportion. Keep its precise colours, garment shapes, veil/cap/hood/crown and specified accessory. Redraw the SAME ADULT with a larger perfect-circle ivory head and SHORTER compact covered body, closely matching the people in Image1. Head circle roughly ONE QUARTER of full figure height excluding hat decoration, body about THREE head-heights: around4heads total, not a tiny baby/chibi and not a longthin5-6head adult. Narrow adult shoulders, simple coveredarms, thinlegs, smallmittenhands. Tiny black doteyes and tiny neutralmouth; NO nose/ears/hair/beard or realisticface. One neutral relaxed full-body three-quarter standing pose, both feet and entireheadinsidecanvas, generousmarginaroundfigure. Background MUST be uniformly opaque lightSAND/CREAM acrossENTIRE16:9canvas, no transparency, no blackarea, no frame, no furniture, no scenery, no text, no labels, no secondview. One smallflat contactshadow underfeet only. Mattefill, fewbroadclothfolds and consistentblackoutline likeImage1. No shiny3D, no muscles, no eroticcontext orviolence.  CHARACTER REFERENCE. Exactly ONE named adult, one full body in three-quarter standing view, head and feet completely inside frame. Neutral relaxed pose, arms separated slightly from torso, both hands visible. One simple neutral light sand backdrop and one small flat ground contact shadow; absolutely no furniture/architecture/props besides the one specified costume accessory. No multiple poses, duplicate figure, layout, text or labels. Use the specified identity from Image1 but isolate that individual into a canonical full-body reference.  AGNES, age45: NEWfictionaladultwoman SAME VIDEOdrawingstyle, simplelongplainochregown withstraightfullsleeves, narrowdarkbrownbelt, plainwhitelinenveil coveringhairandneckedges, darkflatshoes. Roundivoryhead doteyes tinyneutralmouth, nohair/ears/nose. Bothhandsempty relaxed. Her costumeissimplerthanwealthynoblemotherJeanne: no goldtrim orbrooch. No apron unlesslaterexplicitlystated. Onefullbodyadult onneutralsandbackground.",
+    "sha256": "9cdf25ce107618af4059bf1e01ac7a497ce45f44ef079c2ca1283f75352bb051",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed: ONE adult neighbour, simple ochre full-length gown with straight broad sleeves, narrow brown belt/hanging end, plain white veil, dark shoes. Cream round dot-eye head and empty hands. No Jeanne gold edging or jewellery, no additional actor, opaque sand background.",
+    "file": "assets/canonical/court/cast/court-agnes-default-v2.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-private-chamber-master",
+    "group": "noble",
+    "kind": "location",
+    "title": "French manor private chamber c1350",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEW modest private chamber in the SAME French manor around1350; Image1 provides drawing style only, do NOT copy its hall layout. Fixed three-quarter eye-level camera from near the south-west corner facing north-east. LEFT wall: one small leaded window, below it a narrow oak writing table and plain stool. BACK wall: a simple low wooden bed parallel to that back wall, plain mutedblue wool coverlet and cream linen pillow, no canopy. RIGHT wall: one closed arched plank door near the back corner and an oak coffer nearer the foreground. Rough light limestone, two exposed roof beams, plain pale stone floor with a small straw mat beside bed. A single quill/inkpot and folded blank parchment on writingtable; no books with readable writing. Restrained daylight from LEFT. Clear empty floor centre. No modernglass, bedposts fantasy, wall tapestries or goldheraldry.",
+    "sha256": "6682b798010e4b0e8aa92631a4dbb9cac9b40d6604e6e0b785752e383d4d8b15",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: left leaded window and writing table/stool, small left coffer under/next to writing area, bed against back wall with blue cover, wooden back-right door, second large coffer foreground-right. One useful quill/inkpot/blank parchment on writing surface. No people or detached hands. Actual master has TWO coffers; preserve both in shots rather than reverting to text-only count.",
+    "file": "assets/canonical/noble/location/noble-private-chamber-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-manor-courtyard-master",
+    "group": "noble",
+    "kind": "location",
+    "title": "French manor courtyard c1350",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEW courtyard of the same modest northern French manor around1350; Image1 supplies drawing style only. Fixed eye-level three-quarter view from courtyard SOUTH-EAST corner toward NORTH-WEST. LEFT midground: a low circular stone well with simple two-post wooden pulley and grounded wooden bucket, no huge crane. BACK wall: ordinary limestone manor facade, one plain arched wooden entrance slightly LEFT of centre, two small leaded windows. RIGHT midground: a low stable bay with open simple plank doors showing empty stalls and straw, no horses. RIGHT foreground: grounded oak feed trough against stable wall. Mutedgrey slate pitched roofs of believable height, no distanttowers/castle skyline. Clear central dirt/stone path. Soft daylight upperLEFT, pale blue sky. No flags, ornate gate, luxurious fountain or scatteredunusedprops.",
+    "sha256": "1875e464f154a7a17aaafbc97b2c807ebeea870bac1c1d91072a76f4dd47cd14",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: stone well left with two-post pulley and grounded bucket, manor back-centre arched door and two modest leaded windows, stable open on right showing empty stalls, trough foreground-right. Ordinary low slate roofs, dirt courtyard, no people/animals/large fantasy skyline.",
+    "file": "assets/canonical/noble/location/noble-manor-courtyard-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "noble-estate-storeroom-master",
+    "group": "noble",
+    "kind": "location",
+    "title": "French estate storeroom c1350",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEW small functional estate storeroom in the same French manor around1350. Fixed eye-level camera from SOUTH-WEST corner toward NORTH-EAST. LEFT wall: low wooden shelves holding tied plain linen grain sacks and two wicker baskets. BACK wall: one small high rectangular shuttered daylight window LEFT of centre and three ordinary closed wooden barrels BELOW it. RIGHT wall: a closed vertical-plank door at backRIGHT. ForegroundRIGHT: one broad plain oak countingtable with clear top, simple balance scale and tiny empty wooden bowl near backedge. An ordinary stool underneath table. Pale rough limestone walls, exposed plain roof beam, earth/stone floor. Leave centre aisle spacious for twoadultfigures. No writing, labels, numbers, food heaps, precious metal piles, Ottoman objects or luxurious tapestry. Daylight from high backLEFT window.",
+    "sha256": "f38e27791ef91ebb696eb7fe84c0ca77b3f21d36466a5901c1a1ee70e3ae4f5d",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: sacks/baskets on left shelving, small high back-left shuttered window, three closed barrels back wall, plank door back-right, counting table foreground-right with balance and bowl, stool below. Clear central aisle; no text or people.",
+    "file": "assets/canonical/noble/location/noble-estate-storeroom-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "jester-hall-master",
+    "group": "jester",
+    "kind": "location",
+    "title": "French household hall c1400, approved geometry",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  EDIT Image1: remove ALL THREEpeople and the hand-heldmarotte, preserving EXACTapprovedcam axis/perspective/geometry. Keep the stonefireplace LEFT, the smallwindow CENTRE-LEFT, the lowbackwallcabinet beneath metalcandlesandjug, plainburgundy hanging with mutedblueborder backRIGHT, raisedwooden chair RIGHT on its single lowstonestep, plainburgundy floor rug lowerLEFT and lightpale rectangularfloortiles. Repair occludedchair/stonework where king sat, no bodyparts, nooneinthefire. Keep existingdaylight fromwindowLEFTandgentlefirewarmth. No newdoor/table/secondthrone, heraldicpatterns, extraweapons orpeople.",
+    "sha256": "89b142c47e36dc8808353975475dd23c4c05c81aa122d48faaa0f7c02a571b54",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: left fireplace and grate/fire, window centre-left, back-wall cabinet with jug/candles, plain burgundy hanging bordered dusty blue, raised empty wooden chair right on one low stone step, rug foreground-left. No actor/marotte/ghost hands. Same room landmarks as approved v2; clean new empty master is the fixed reference for the film.",
+    "file": "assets/canonical/jester/location/jester-hall-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "jester-service-corridor-master",
+    "group": "jester",
+    "kind": "location",
+    "title": "French household service corridor c1400",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEW modest servicecorridor in same French household around1400. Fixedeye-levelcam at SOUTHend looking NORTH along corridor, slightlytowardRIGHTwall. LEFTwall nearestcam: plainwoodbench beneath one small leadedwindow. FarLEFTwall: one closedplankdoor. RIGHTwall: one lowarch opening nearback showinga smallsectionof pantry shelf with plainceramicjugs, nopeople. BACKwall: simpleclosedarchedwoodendoor withironlatch. Pale limestoneblocks, fewplainceilingbeams, simple rectangularstonefloor. Modestdaylight fromwindowLEFT, muted ochre/cream/brown. Wideclearactionspace downcentre. No tapestries, castleornament, torches on everywall, fantastyskyline ormodernfixtures.",
+    "sha256": "e6119d9eb32235437acdc5b16872b8f15092b135b426be13e418b38a0c53cc68",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: left leaded window/bench, left closed plank door farther back, closed arched end door, right arched pantry recess with plain pots on shelves, clear stone corridor floor and exposed beams. No people or floating props.",
+    "file": "assets/canonical/jester/location/jester-service-corridor-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "jester-delivery-courtyard-master",
+    "group": "jester",
+    "kind": "location",
+    "title": "French household delivery courtyard c1400",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEW householddelivery courtyard Francearound1400. Fixeye-levelcamera fromSOUTH-EAST lookingNORTH-WEST. LEFTforeground one EMPTYtwo-wheeledwoodenhandcart withnormalaxle andtwoshafts restingontheground, nohorse. BACKwall anordinary limestonebuilding with widearchedservicedoor LEFT-of-centre andsmallshutteredwindowRIGHT-of-centre. RIGHTmidground a lowplankshed with slopedslateroof andcloseddoor; two closedbarrels placed againstitswall. Clearcentraldirtpath withsmallstonepatch nearthreshold. Palecloudysky, no palace/gianttowers/flags, nohangingcart orfloatingwheel. SoftdaylightupperLEFT. Match approvedquietmatteinkedVIDEOstyle.",
+    "sha256": "1c8b5d4f4ce5b4099da44342fb6ea6fc8ee1c8e05caf1b092d7e0e556a158b4d",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: two-wheeled wooden cart foreground-left with grounded shafts, open arched back-left service entrance, small closed back-right shutter, low shed right with two closed barrels. Ordinary low slate roofs and clear dirt court, no people/horses or unsupported wheels.",
+    "file": "assets/canonical/jester/location/jester-delivery-courtyard-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-courtroom-master",
+    "group": "court",
+    "kind": "location",
+    "title": "French town court c1380, approved geometry",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  EDIT Image1: removeALLTHREEadults, theirheldsealedletterandtheirbodypartsonsurfaces. PreserveEXACTapprovedcameraaxis/roomperspective. Keep leadedwindowLEFT, emptylowwoodcabinetalongLEFTwall, emptyclerkdesk foregroundRIGHT, inkpot/quillonitsbackedgeandtwoplainclosedbooksrightofinkpot, normalclerkchairbehinddesk, raisedjudgewoodbench BACKCENTREwithtwolowsteps andemptyhighbackchair, plainburgundyandmutedbluebackwallhangings, plain RIGHTshelfwithtiedparchmentbundles andcofferunderit. Retain samequietstonewalls, pale rectangularfloortilesandplainburgundyrug. No heraldicpatterns, writing, wigs,gavel, chains,secondtableornewdoor. ExactdaylightfromLEFTwindow.",
+    "sha256": "1f8c6c3409e5f492dd7fadd92a05db8ebd4d7229a9f3e2131fd3dc6082b4b3a5",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: left leaded window and cabinet, clerk desk foreground-right with inkpot/quill/two books, normal clerk chair, raised wooden judge bench at back with empty high chair, plain blue/burgundy hanging, right shelf with tied parchment and coffer. No petition held in midair or actor remnants.",
+    "file": "assets/canonical/court/location/court-courtroom-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-town-street-master",
+    "group": "court",
+    "kind": "location",
+    "title": "French town court entrance c1380",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEWsmalltownstreet andcourtentrance northernFrancearound1380. Fixedeye-levelthree-quartercamera fromSOUTH-WEST lookingNORTH-EAST acrosscobblestreet. RIGHTmidground thecourtbuilding ismodestpale limestonewithoneplainwidearchedwoodendoor, twolowstonesteps andonesmallleadedwindowLEFT ofdoor. LEFTmidground ordinarytimber-and-plasterhouse withclosedshopshutters andsmallplainclothawning, noproductswithlabels. BACKCENTRE narrowstreetturnsbehindlowbuildings, onlymodestroofheights, nofantasycastletower orcathedraladdedatdistance. One lowwoodenbenchagainstcourthousewall. Emptycobbledforeground enoughroomforadultconversation, softpaledaylightfromupperLEFT. Nopeople/animals/carts/banners/statue/signage.",
+    "sha256": "2c29bba73bd88205c867d5147a27b0bce6e250225a57dcda7b718bff441238b0",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: right modest stone courthouse with arched closed door and two low steps, small leaded window left of entrance, low bench along wall; left timber/plaster ordinary houses with closed shutters/awning, quiet cobble street bends into background, no fantasy skyline or people.",
+    "file": "assets/canonical/court/location/court-town-street-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  },
+  {
+    "id": "court-records-room-master",
+    "group": "court",
+    "kind": "location",
+    "title": "French records room c1380",
+    "prompt": "One clean landscape16:9 canonical VIDEO illustration, in precisely the approved drawing style of Image1. The reference is an approved VIDEO frame, not a human-face thumbnail. Simple perfect ROUND flat ivory/cream heads, small black dot eyes, tiny neutral curved mouth, no nose/ears/hair/beard/realistic face. All characters are ADULT caricatures; compact covered bodies roughly3.5heads total height, no muscles or hero anatomy, slim simple covered limbs and small oval mitten hands. Medium black actor outlines, quiet thin scenery linework, matte colours, few broad folds, restrained simple cel-shadows. Never photorealistic, glossy, cinematic3D, painterly, crosshatched, heavily textured or fantasy. Medieval French setting and costume only, no Ottoman domes/turbans, modern objects or anachronistic furniture. No logos, watermarks, writing, captions, collage, panels, nudity, assault, gore, sexuality or children. Do not add heraldic symbols or fleur-de-lis decoration.  EMPTY LOCATION MASTER. Remove ALL people, faces, bodies, ghosts, hands and silhouettes: this scene is completely unoccupied. Nothing is floating or held by an invisible person. This file will be the fixed geometry reference for subsequent scenes, so draw clear, stable readable placement of furniture, walls, openings and useful surfaces, with enough free space for adults to act. No extreme wide-angle distortion, no split or multi-view, no tiny architectural skyline ornaments. Ordinary functional furniture and credible object scale.  NEWmodestsecularcourthouse recordsroom Francearound1380. Fixedeye-levelthree-quartercamera fromSOUTH-WEST lookingNORTH-EAST. LEFTwallonesmallhighleadwindow; belowit simplewoodbenchwithONEclosedoakcoffer. BACKwallbroadlowwoodenshelf containsseveral tiedparchmentbundles andplainclosedledgerbookswithNOwritingonspines. RIGHTwallclosedplainplankdoornearthebackcorner. ForegroundRIGHT oneplainoakdesk withONErolledparchment, inkpotandquillatthebackedge; normalstoolunderdesk. Clearcentralaisle. Pale limestonemasonry, plainwoodbeamceiling, simplegreyflagstonefloor, mutedbrown/ochre/cream, gentledaylightfromupperLEFT. No hugevaultlibrary, ladders, heraldry, candleseverywhere, modernbooks/cabinets, chainedperson orsecretdungeon.",
+    "sha256": "c92ff9dab642f0a49ae5032c6b1df1bea2503f0b75d05dcc79d235059b431533",
+    "native_dimensions": [
+      1672,
+      941
+    ],
+    "review_notes": "Personally viewed EMPTY: high leaded left window, left bench/coffer, back shelving of tied parchment bundles and plain books, back-right wooden door, foreground-right desk with roll/quill/inkpot and stool. No text, people, giant vault or modern fixtures.",
+    "file": "assets/canonical/court/location/court-records-room-master.png",
+    "review_state": "verified",
+    "reviewer": "Codex visual agent and primary",
+    "scope": "Actual canonical image inspected; no claim of full-film quality."
+  }
+]

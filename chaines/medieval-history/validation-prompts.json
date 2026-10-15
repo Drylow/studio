@@ -1,0 +1,220 @@
+{
+  "status": "production_in_progress",
+  "visual_direction_approval": "User approved the images and all three subjects on2026-10-15.",
+  "date": "2026-10-15",
+  "full_video_production_started": true,
+  "scope": "Three original reviewed scripts, real Ryan Kurk narration and manually authored timed scenes. Scene generation in progress.",
+  "references": [
+    {
+      "video_id": "CTCTAW5o5Zk",
+      "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=3s",
+      "timestamp_seconds": 3,
+      "file": "CTCTAW5o5Zk-003.png",
+      "sha256": "6b0042a109b0575ded07457dffefd8279ebec6f891433f71ce3856ff88f18d29"
+    },
+    {
+      "video_id": "CTCTAW5o5Zk",
+      "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=12s",
+      "timestamp_seconds": 12,
+      "file": "CTCTAW5o5Zk-012.png",
+      "sha256": "f044bc5b3be8aa9c95135bde02e21ac2785dcdf5b96cd4a8ab5af56215622307"
+    },
+    {
+      "video_id": "CTCTAW5o5Zk",
+      "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=24s",
+      "timestamp_seconds": 24,
+      "file": "CTCTAW5o5Zk-024.png",
+      "sha256": "5712f9b5aec6235f82e0fd4d40dc82b9e57990bc5c9a17ff9d3e310c3723a43a"
+    },
+    {
+      "video_id": "CTCTAW5o5Zk",
+      "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=36s",
+      "timestamp_seconds": 36,
+      "file": "CTCTAW5o5Zk-036.png",
+      "sha256": "9cd787e054a70a47e547ba80d5d83bf8ec999c9d2b8ed1ab4d2668638a91242d"
+    },
+    {
+      "video_id": "57nK03ZggRQ",
+      "source_url": "https://www.youtube.com/watch?v=57nK03ZggRQ&t=92s",
+      "timestamp_seconds": 92,
+      "file": "57nK03ZggRQ-092.png",
+      "sha256": "8d8a902c1eb3d5b4cc1385052335be415392e50690997bb0b3bbb9875d921c0c"
+    },
+    {
+      "video_id": "57nK03ZggRQ",
+      "source_url": "https://www.youtube.com/watch?v=57nK03ZggRQ&t=100s",
+      "timestamp_seconds": 100,
+      "file": "57nK03ZggRQ-100.png",
+      "sha256": "dea70a7650a4aaeea5d48fe4262ac4be853e7d0d9b2465aa6516e784d8df8866"
+    },
+    {
+      "video_id": "57nK03ZggRQ",
+      "source_url": "https://www.youtube.com/watch?v=57nK03ZggRQ&t=110s",
+      "timestamp_seconds": 110,
+      "file": "57nK03ZggRQ-110.png",
+      "sha256": "9eeab5114bbf5c36050a732697cb363b255cc08892fc558b1c80bf3e615958a8"
+    },
+    {
+      "video_id": "57nK03ZggRQ",
+      "source_url": "https://www.youtube.com/watch?v=57nK03ZggRQ&t=117s",
+      "timestamp_seconds": 117,
+      "file": "57nK03ZggRQ-117.png",
+      "sha256": "b055975d6df28be233736297e0bb325fe85e094fd1ce024db5773e30d7d5f975"
+    }
+  ],
+  "tests": [
+    {
+      "concept": 1,
+      "video": {
+        "prompt": "Create a NEW full16:9 VIDEO illustration. Image1 and Image2 are actual VIDEO ART STYLE references. Image3 is only a staging/composition guide: SIMPLIFY it to precisely match the economical graphic rendering in Image1 and Image2. Important correction from previous attempt: round heads must be PERFECT CIRCLES, simple cream/ivory flat fill with black dot eyes and one tiny curved mouth, NO face gradients, nose, ears, beards or cheeks. NO realistic faces. Narrow straight or tapered covered torsos, thin sticklike forearms and legs, oval or mitten hands. Adult caricatures, not children. Draw ALL actors in the SAME extremely simple style. Few broad cloth folds only, thin quiet background linework, flat pastel colour areas, ONE flat shadowshape max per object. NO wood grain, stone mottling, tiny textures, shiny highlights, sun shafts, vignette or ornamental filigree. Remove ALL gold fleur-de-lis and heraldic emblems from Image3: use plain burgundy and muted blue textiles. Keep clear readable architecture, ordinary furniture and coherent spatial action. No visual title/text/letters/caption/speechbubble. No Ottoman architecture/turbans, modern objects, horror, sexual imagery, violence or nudity. Allpeople adult and fully clothed. The action and French14th/early15thcentury costume follow the scene below, while the drawing simplicity follows Image1 and Image2.  SCENE: A modest noble manor hall in northern France around1350. Three-quarter medium-wide camera at seated eye level. LEFT foreground, an adult woman about25 in a long muted-blue kirtle with long sleeves and a simple white linen veil sits sideways on a bench, hands folded, head slightly tilted in dry scepticism. CENTRE, her adult father wearing a burgundy cote and small cap points one hand toward a single rolled parchment with a red wax seal on a substantial oak table. RIGHT, an adult suitor about35 in an olive cote and hose nervously offers a small cloth-wrapped gift using both hands. The adult mother in ochre gown and white veil stands behind the father, watching. Exactly FOUR adults, no children. The parchment has no visible legible writing. One narrow glazed stone window on LEFT wall, one wooden chest against RIGHT wall, plain burgundy wool wall hanging behind table, visible limestone blocks, a few simple roof beams, rush-strewn stone floor. Warm daylight from left. Capture the family discussing an alliance while the woman evaluates the suitor; no wedding ceremony or coercive physical contact. Emphasize humorous social discomfort through poses, not exaggerated facial anatomy.",
+        "ordered_references": [
+          {
+            "file": "CTCTAW5o5Zk-012.png",
+            "role": "video-style-only",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=12s",
+            "timestamp_seconds": 12,
+            "sha256": "f044bc5b3be8aa9c95135bde02e21ac2785dcdf5b96cd4a8ab5af56215622307"
+          },
+          {
+            "file": "CTCTAW5o5Zk-036.png",
+            "role": "video-style-only",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=36s",
+            "timestamp_seconds": 36,
+            "sha256": "9cd787e054a70a47e547ba80d5d83bf8ec999c9d2b8ed1ab4d2668638a91242d"
+          },
+          {
+            "file": "01-noble-marriage-video.png",
+            "role": "composition-only-rejected-rendering",
+            "sha256": "0287c62e9dc69297295502d0b46f00484f9c87bd780942f741643fed3962ac8f",
+            "archive": "Previous composition attempt preserved privately; rejected rendering."
+          }
+        ],
+        "file": "assets/video-01-noblewoman.jpg",
+        "sha256": "249403924c8b00142945c12bc733689aafc6da561b542f6e1cf7c1d3d3ccbc46",
+        "review": "Personally viewed by visual agent and primary Codex; stylistic proposal, not full-film consistency proof."
+      },
+      "thumbnail": {
+        "prompt": "Recreate the attached Ottoman reference thumbnail as a NEW medieval French thumbnail. Image1 defines the EXACT DRAWING LANGUAGE: oversized perfectly round pale-ivory heads, very simple rounded covered adult bodies, huge expressive cartoon eyes and eyebrows, tiny mouths, no visible anatomical nose or ears, mostly flat colour with only one shadow shape. Rounded face identity must stay evident even under medieval veils or a fool hood. Image2 is the PREVIOUS ATTEMPT supplied ONLY for its COMPOSITION, character positions and exact headline; its realistic noses, elaborately embroidered garments and gold fleur-de-lis are REJECTED. Simplify those rather than copying them. All actors are fully clothed adults with adult facial maturity; this is expressive adult-history cartoon, not children. Keep enormous foreground head LEFT and smaller incident RIGHT, thick clean outlines, untextured matte colour, clear upper-right YELLOW text with thick BLACK border. No royal fleur-de-lis repeat pattern, no elaborate modern necklace, no fantasy tower skyline, no Ottoman tiles/turbans/fez. Plain wool wall hangings and sober stone rooms; French late medieval costume. 16:9. A noble manor in France around1350. ForegroundLEFT, huge sceptical face of a25-year-old noblewoman, one eyebrow raised, glancing RIGHT at her proposed suitor. Deep burgundy long-sleeved gown with modest neckline, period white linen veil over restrained side braids, no tall cone hennin. RIGHT, a nervous35-year-old suitor in muted-blue cotehardie offers ONE tiny embroidered pouch; behind him TWO middle-aged parents negotiate over ONE wax-sealed parchment on a plain wooden table. Stone walls, wooden bench, coffer, muted-blue hanging. New fictional adult faces. Family matchmaking comedy, not a sexual scene. Exact ONLY text in large bright yellow black-outlined capitals: \"HIM? REALLY?\". No other lettering, logos, modern clothes or fantasy armour.",
+        "ordered_references": [
+          {
+            "role": "drawing-style",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk",
+            "file": "daughter.jpg",
+            "sha256": "109e0a1277580c9811f41929d323d2109478dd9941cb2704b3ed042f7738fc34"
+          },
+          {
+            "role": "composition-only-rejected-rendering",
+            "file": "01-noblewoman.png",
+            "sha256": "7d3db6e5f1a416a887eb75f60edbb52de52b131e9d922aed9336eb5bf366bb22"
+          }
+        ],
+        "text": "HIM? REALLY?",
+        "file": "assets/thumbnail-01-noblewoman.jpg",
+        "sha256": "eeeb6dadc6d2e554eb51ff62dca54ef2dae7532fc2a7c3427d58661c17b006ed",
+        "review": "Personally viewed by primary Codex; adult cast, exact readable headline, no assault depiction."
+      }
+    },
+    {
+      "concept": 2,
+      "video": {
+        "prompt": "Create a NEW full16:9 VIDEO illustration. Image1 and Image2 are actual VIDEO ART STYLE references. Image3 is only a staging/composition guide: SIMPLIFY it to precisely match the economical graphic rendering in Image1 and Image2. Important correction from previous attempt: round heads must be PERFECT CIRCLES, simple cream/ivory flat fill with black dot eyes and one tiny curved mouth, NO face gradients, nose, ears, beards or cheeks. NO realistic faces. Narrow straight or tapered covered torsos, thin sticklike forearms and legs, oval or mitten hands. Adult caricatures, not children. Draw ALL actors in the SAME extremely simple style. Few broad cloth folds only, thin quiet background linework, flat pastel colour areas, ONE flat shadowshape max per object. NO wood grain, stone mottling, tiny textures, shiny highlights, sun shafts, vignette or ornamental filigree. Remove ALL gold fleur-de-lis and heraldic emblems from Image3: use plain burgundy and muted blue textiles. Keep clear readable architecture, ordinary furniture and coherent spatial action. No visual title/text/letters/caption/speechbubble. No Ottoman architecture/turbans, modern objects, horror, sexual imagery, violence or nudity. Allpeople adult and fully clothed. The action and French14th/early15thcentury costume follow the scene below, while the drawing simplicity follows Image1 and Image2.  SCENE: A small royal household hall in France around1400, not a fantasy castle. Medium-wide slightly three-quarter view across a plain tiled floor. CENTRE foreground an ADULT court jester about30 wearing a simple half-burgundy half-ochre loose tunic, hose and small two-point cloth hood with two tiny bells performs a pompous courtly bow, holding his little wooden fool staff like a grand official. He mimics ceremony without touching the king. RIGHT midground the ADULT king sits on a carved wooden high-backed chair on one low step, in a muted blue long gown and small gold crown, eyebrows absent but tiny tilted eyes and a short flat mouth suggesting 'not amused'. LEFT behind the jester an ADULT steward in a dark olive long cote holds a closed account roll and suppresses a smile. Exactly THREE adults. A simple stone fireplace back LEFT, plain stone wall and burgundy tapestry back RIGHT, one narrow daylight window. No banquet crowd, giant throne, golden palace, swords, execution props or childish clown costume. Clear comic cause-and-reaction, minimal detail and flat gentle colours as in supplied VIDEO frames.",
+        "ordered_references": [
+          {
+            "file": "CTCTAW5o5Zk-012.png",
+            "role": "video-style-only",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=12s",
+            "timestamp_seconds": 12,
+            "sha256": "f044bc5b3be8aa9c95135bde02e21ac2785dcdf5b96cd4a8ab5af56215622307"
+          },
+          {
+            "file": "CTCTAW5o5Zk-036.png",
+            "role": "video-style-only",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=36s",
+            "timestamp_seconds": 36,
+            "sha256": "9cd787e054a70a47e547ba80d5d83bf8ec999c9d2b8ed1ab4d2668638a91242d"
+          },
+          {
+            "file": "02-court-jester-video.png",
+            "role": "composition-only-rejected-rendering",
+            "sha256": "8b28fb88010dd460cc98c93c36cfd12f3b72807efc97f002ceb0fcac726f2b9f",
+            "archive": "Previous composition attempt preserved privately; rejected rendering."
+          }
+        ],
+        "file": "assets/video-02-jester.jpg",
+        "sha256": "5358d5256f9402bc9b6c1e2ffff216f177e80bcba977ac0fe560f5bf6adfc7f5",
+        "review": "Personally viewed by visual agent and primary Codex; stylistic proposal, not full-film consistency proof."
+      },
+      "thumbnail": {
+        "prompt": "Recreate the attached Ottoman reference thumbnail as a NEW medieval French thumbnail. Image1 defines the EXACT DRAWING LANGUAGE: oversized perfectly round pale-ivory heads, very simple rounded covered adult bodies, huge expressive cartoon eyes and eyebrows, tiny mouths, no visible anatomical nose or ears, mostly flat colour with only one shadow shape. Rounded face identity must stay evident even under medieval veils or a fool hood. Image2 is the PREVIOUS ATTEMPT supplied ONLY for its COMPOSITION, character positions and exact headline; its realistic noses, elaborately embroidered garments and gold fleur-de-lis are REJECTED. Simplify those rather than copying them. All actors are fully clothed adults with adult facial maturity; this is expressive adult-history cartoon, not children. Keep enormous foreground head LEFT and smaller incident RIGHT, thick clean outlines, untextured matte colour, clear upper-right YELLOW text with thick BLACK border. No royal fleur-de-lis repeat pattern, no elaborate modern necklace, no fantasy tower skyline, no Ottoman tiles/turbans/fez. Plain wool wall hangings and sober stone rooms; French late medieval costume. 16:9. French court around1400. ForegroundLEFT, a30-year-old professional court fool with a strained theatrical smile and one small sweat bead, looking RIGHT after a joke falls flat. Wearing a burgundy/muted-blue mi-parti tunic and a cloth hood with modest bells, holding ONE small wooden marotte at his chest; comic embarrassment, not terror or crying. RIGHT, a bored middle-aged fictional noble patron in a simple coronet and navy robe sits on a raised wooden chair with one eyebrow lifted; two adult courtiers exchange unimpressed looks behind him. Stone hall, a bench, plain ochre hanging, no executioner, blade, threats or gallows. Exact ONLY large yellow black-outlined text: \"LAUGH. PLEASE.\" Two short lines if needed. No copied Ottoman fez/turbans, no modern clown paint/red nose.",
+        "ordered_references": [
+          {
+            "role": "drawing-style",
+            "source_url": "https://www.youtube.com/watch?v=_QGM1JwPwiw",
+            "file": "doctor.jpg",
+            "sha256": "eb760df3aa06fc4b9e415c98b5383fb444f41fa5a60fd9fdd81d851be428b7ef"
+          },
+          {
+            "role": "composition-only-rejected-rendering",
+            "file": "02-court-jester.png",
+            "sha256": "433bed56d6713a10bf1e258ead092ba8607ced70cd5abfbfa4bed145c5ddbda8"
+          }
+        ],
+        "text": "LAUGH. PLEASE.",
+        "file": "assets/thumbnail-02-jester.jpg",
+        "sha256": "9b43692d40a6a03208f769c1e730b0f414ea0db05f29f1a5de0811deb2c8c2e4",
+        "review": "Personally viewed by primary Codex; adult cast, exact readable headline, no assault depiction."
+      }
+    },
+    {
+      "concept": 3,
+      "video": {
+        "prompt": "Create a NEW full16:9 VIDEO illustration. Image1 and Image2 are actual VIDEO ART STYLE references. Image3 is only a staging/composition guide: SIMPLIFY it to precisely match the economical graphic rendering in Image1 and Image2. Important correction from previous attempt: round heads must be PERFECT CIRCLES, simple cream/ivory flat fill with black dot eyes and one tiny curved mouth, NO face gradients, nose, ears, beards or cheeks. NO realistic faces. Narrow straight or tapered covered torsos, thin sticklike forearms and legs, oval or mitten hands. Adult caricatures, not children. Draw ALL actors in the SAME extremely simple style. Few broad cloth folds only, thin quiet background linework, flat pastel colour areas, ONE flat shadowshape max per object. NO wood grain, stone mottling, tiny textures, shiny highlights, sun shafts, vignette or ornamental filigree. Remove ALL gold fleur-de-lis and heraldic emblems from Image3: use plain burgundy and muted blue textiles. Keep clear readable architecture, ordinary furniture and coherent spatial action. No visual title/text/letters/caption/speechbubble. No Ottoman architecture/turbans, modern objects, horror, sexual imagery, violence or nudity. Allpeople adult and fully clothed. The action and French14th/early15thcentury costume follow the scene below, while the drawing simplicity follows Image1 and Image2.  SCENE: A small secular town court in northern France around1380. Documentary social-history mood, no scene of violence. Medium-wide eye-level three-quarter camera. LEFT foreground an adult woman about30 in a dusty-blue long-sleeved gown, white linen veil and simple brown belt stands upright presenting a single sealed folded parchment across a low oak clerk's desk with her RIGHT hand. Her LEFT hand rests against her waist; subtle worried tiny mouth, no tears or visible injuries. RIGHT at that desk the ADULT male clerk in an olive cote and soft cap reaches with ONE empty hand to receive the petition; his other hand rests next to an inkpot and quill. BACK CENTRE an ADULT judge in a muted burgundy robe and plain dark cap sits on an ordinary raised wooden bench, looking toward her. Exactly THREE adults, sober attentive expressions. A tiny bundle of tied parchment rolls on a shelf, limestone wall, modest wood beams, one small leaded window casting soft daylight from upper left. No wigs, gavel, powdered hair, modern courthouse, crowd, chained prisoner, weapon, assault enactment or sexual imagery. Keep the visual language of simple cream round-headed sticklike adults from references, not human-faced thumbnail art.",
+        "ordered_references": [
+          {
+            "file": "CTCTAW5o5Zk-012.png",
+            "role": "video-style-only",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=12s",
+            "timestamp_seconds": 12,
+            "sha256": "f044bc5b3be8aa9c95135bde02e21ac2785dcdf5b96cd4a8ab5af56215622307"
+          },
+          {
+            "file": "CTCTAW5o5Zk-036.png",
+            "role": "video-style-only",
+            "source_url": "https://www.youtube.com/watch?v=CTCTAW5o5Zk&t=36s",
+            "timestamp_seconds": 36,
+            "sha256": "9cd787e054a70a47e547ba80d5d83bf8ec999c9d2b8ed1ab4d2668638a91242d"
+          },
+          {
+            "file": "03-court-petition-video.png",
+            "role": "composition-only-rejected-rendering",
+            "sha256": "ce93e84bf545e629eb48887c4f7c913ae0d7af437d0a792f8da3b3fc430c0145",
+            "archive": "Previous composition attempt preserved privately; rejected rendering."
+          }
+        ],
+        "file": "assets/video-03-petition.jpg",
+        "sha256": "e2cb83a93ce092e4d9e108c8dc955a093e0959928516a85f0509dcca16dfb73d",
+        "review": "Personally viewed by visual agent and primary Codex; stylistic proposal, not full-film consistency proof."
+      },
+      "thumbnail": {
+        "prompt": "Recreate the attached Ottoman reference thumbnail as a NEW medieval French thumbnail. Image1 defines the EXACT DRAWING LANGUAGE: oversized perfectly round pale-ivory heads, very simple rounded covered adult bodies, huge expressive cartoon eyes and eyebrows, tiny mouths, no visible anatomical nose or ears, mostly flat colour with only one shadow shape. Rounded face identity must stay evident even under medieval veils or a fool hood. Image2 is the PREVIOUS ATTEMPT supplied ONLY for its COMPOSITION, character positions and exact headline; its realistic noses, elaborately embroidered garments and gold fleur-de-lis are REJECTED. Simplify those rather than copying them. All actors are fully clothed adults with adult facial maturity; this is expressive adult-history cartoon, not children. Keep enormous foreground head LEFT and smaller incident RIGHT, thick clean outlines, untextured matte colour, clear upper-right YELLOW text with thick BLACK border. No royal fleur-de-lis repeat pattern, no elaborate modern necklace, no fantasy tower skyline, no Ottoman tiles/turbans/fez. Plain wool wall hangings and sober stone rooms; French late medieval costume. 16:9. A sober historical courtroom in northern France around1380. ForegroundLEFT, huge expressive face of a clearly ADULT30-year-old woman in a modest muted-blue gown and cream linen veil, calm but incredulous, looking RIGHT while holding ONE folded sealed petition at her chest. RIGHT, an older court official in a simple burgundy hooded gown studies her petition behind a wooden desk; one adult clerk with quill and a bound register behind him. The official points to the document, nobody touches the woman. Dry institutional irony, dignified complainant, no tears or humiliation. Stone chamber, wooden coffer, narrow daylight window, restrained burgundy/blue/sand palette. This image depicts only an ordinary nonviolent legal petition hearing: no attack, sexual act, injury, restraint, nudity, bedroom, intimate contact, weapons or child. Exact ONLY yellow text with thick black outline: \"PROVE IT.\" No Ottoman headgear/tiles, no English wigs/gavels.",
+        "ordered_references": [
+          {
+            "role": "drawing-style",
+            "source_url": "https://www.youtube.com/watch?v=_QGM1JwPwiw",
+            "file": "doctor.jpg",
+            "sha256": "eb760df3aa06fc4b9e415c98b5383fb444f41fa5a60fd9fdd81d851be428b7ef"
+          },
+          {
+            "role": "composition-only-rejected-rendering",
+            "file": "03-court-petition.png",
+            "sha256": "9dfe65443ef0491713344e436b61162fabe7aff33b6d5d9fc40b2c6cb587b90d"
+          }
+        ],
+        "text": "PROVE IT.",
+        "file": "assets/thumbnail-03-petition.jpg",
+        "sha256": "e67ffc56799d7e8bffd5ce77b086f6c741a6b19b24ba59bc2283380d6f1b1d60",
+        "review": "Personally viewed by primary Codex; adult cast, exact readable headline, no assault depiction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "channel": "Viking Chapters",
+  "title": "Why Being a Viking Trader Was Worse Than You Think",
+  "description_file": "chaines/viking-chapters/episode-05/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/oQOvHf0J",
+    "file": "final.mp4",
+    "sha256": "8e526da9ca846b1cb06abbd24087780a23e4c42ccf59bacb2c8f8ca8e0180083",
+    "url": "http://media.edgerunners.fr/viking-chapters--episode-05-ae14a732eb781369.mp4"
+  },
+  "thumbnail": "chaines/viking-chapters/episode-05/thumbnail.jpg",
+  "captions": "chaines/viking-chapters/episode-05/English-Captions.srt",
+  "tags_file": "chaines/viking-chapters/episode-05/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-18T10:00",
+  "tubeforge_video_id": "why-being-a-viking-trader-was-worse-than-21be04"
+}

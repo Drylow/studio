@@ -1,0 +1,173 @@
+{
+  "cast": {
+    "Colin": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult court performer Colin,30. Burgundy and ochre divided tunic and hose, matching two-point bell hood, curved red shoes, one small wooden marotte. Ivory round head, dot eyes, tiny mouth. Compact covered adult body, no nose, hair or ears.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/jester-colin-default-v2.png",
+              "review_state": "verified",
+              "sha256": "c7021e389c71837354f1623b2681c424d2a08875f395ab14f72b9bad7eef25f6",
+              "role": "identity",
+              "character": "Colin",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "King": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult patron King,45, not a portrait of a real monarch. Long blue gown, small plain gold crown, burgundy cloak with cream fur trim. Ivory circular dot-eye head, tiny mouth, no hair or beard.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/jester-king-default-v2.png",
+              "review_state": "verified",
+              "sha256": "61950c4616c4e013d7447e348ad78a9366f16d0938e8a0ccd130e889cf566be5",
+              "role": "identity",
+              "character": "King",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Steward": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Fictional adult Steward,50. Olive cote and olive soft cap, brown fur shoulder trim, narrow brown belt, dark hose, brown shoes. Ivory circular head and dot eyes, no hair, beard or nose.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "refs/canonical/jester-steward-default-v2.png",
+              "review_state": "verified",
+              "sha256": "9042e543df6b341c3fbe5a7ee21e6e7e51f903b1f5926312bab0925cef199115",
+              "role": "identity",
+              "character": "Steward",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "locations": {
+    "royal-hall": {
+      "description": "French court hall around1400, fictional modest royal household interior.",
+      "layout": "Fireplace at left edge, leaded window back left, small cabinet back centre-left with jug and candlestick, raised wooden royal chair right on one stone step, burgundy hanging with blue border behind chair.",
+      "anchors": [
+        "Left fireplace",
+        "back-left window",
+        "back-centre-left cabinet",
+        "right royal chair on one step",
+        "burgundy hanging behind chair",
+        "red foreground rug"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/jester-hall-master.png",
+        "review_state": "verified",
+        "sha256": "89b142c47e36dc8808353975475dd23c4c05c81aa122d48faaa0f7c02a571b54",
+        "role": "location-master",
+        "location_id": "royal-hall"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/jester-hall-master.png",
+            "review_state": "verified",
+            "sha256": "89b142c47e36dc8808353975475dd23c4c05c81aa122d48faaa0f7c02a571b54",
+            "role": "location-view",
+            "location_id": "royal-hall",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "service-corridor": {
+      "description": "Working service corridor adjoining the court hall.",
+      "layout": "Window left, wooden bench left foreground, narrow side door left mid-ground, closed arched wooden door back centre, pottery recess right, exposed ceiling beams and stone floor.",
+      "anchors": [
+        "Left window",
+        "left foreground bench",
+        "left-mid side door",
+        "back-centre arched door",
+        "right pottery recess"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/jester-service-corridor-master.png",
+        "review_state": "verified",
+        "sha256": "e6119d9eb32235437acdc5b16872b8f15092b135b426be13e418b38a0c53cc68",
+        "role": "location-master",
+        "location_id": "service-corridor"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/jester-service-corridor-master.png",
+            "review_state": "verified",
+            "sha256": "e6119d9eb32235437acdc5b16872b8f15092b135b426be13e418b38a0c53cc68",
+            "role": "location-view",
+            "location_id": "service-corridor",
+            "location_view": "master"
+          }
+        }
+      }
+    },
+    "royal-courtyard": {
+      "description": "Court delivery courtyard, same French household.",
+      "layout": "Two-wheel wooden cart foreground left, large stone arch back left, low wooden shed right with central wood door, two barrels at right wall, ordinary low horizon.",
+      "anchors": [
+        "Left cart",
+        "back-left stone arch",
+        "right shed and central door",
+        "two right-wall barrels",
+        "low modest roofs"
+      ],
+      "master": {
+        "owner": "project",
+        "path": "refs/canonical/jester-delivery-courtyard-master.png",
+        "review_state": "verified",
+        "sha256": "1c8b5d4f4ce5b4099da44342fb6ea6fc8ee1c8e05caf1b092d7e0e556a158b4d",
+        "role": "location-master",
+        "location_id": "royal-courtyard"
+      },
+      "views": {
+        "master": {
+          "description": "The exact inspected master image, without changed camera direction.",
+          "angle": "Fixed original master three-quarter camera, same height and viewing direction. Crop on this axis only; preserve screen orientation.",
+          "reference": {
+            "owner": "project",
+            "path": "refs/canonical/jester-delivery-courtyard-master.png",
+            "review_state": "verified",
+            "sha256": "1c8b5d4f4ce5b4099da44342fb6ea6fc8ee1c8e05caf1b092d7e0e556a158b4d",
+            "role": "location-view",
+            "location_id": "royal-courtyard",
+            "location_view": "master"
+          }
+        }
+      }
+    }
+  },
+  "drawing_reference": {
+    "owner": "style",
+    "path": "refs/drawing-guide-jester.png",
+    "role": "style-only",
+    "sha256": "89b142c47e36dc8808353975475dd23c4c05c81aa122d48faaa0f7c02a571b54",
+    "review_state": "verified"
+  }
+}
