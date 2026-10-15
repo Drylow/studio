@@ -1,0 +1,17 @@
+{
+  "channel": "Pirate Pages",
+  "title": "Why Being a Pirate Navigator Was Worse Than You Think",
+  "description_file": "chaines/pirate-pages/episode-06/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/lBEIuWJI",
+    "file": "final.mp4",
+    "sha256": "982a712489e5aa0a36c21784d4cc31fd9edfca8ab90fdb34983cf57b732bbdac",
+    "url": "http://media.edgerunners.fr/pirate-pages--episode-06-6228ec1378f61275.mp4"
+  },
+  "thumbnail": "chaines/pirate-pages/episode-06/thumbnail.jpg",
+  "captions": "chaines/pirate-pages/episode-06/English-Captions.srt",
+  "tags_file": "chaines/pirate-pages/episode-06/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-19T10:00",
+  "tubeforge_video_id": "why-being-a-pirate-navigator-was-worse-t-ccbdba"
+}
