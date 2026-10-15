@@ -168,6 +168,11 @@ Le premier essai intégral a été refusé pour taille, sans job ni débit ; les
     start, end = text.index("3. "), text.index("4. ")
     text = text[:start] + "3. Les six voix Algrow Mellow Matt sont récupérées et contrôlées, toutes au-delà\n   de deux heures. Voir `narrations-2026-10-15/README.md` et le dossier Bureau\n   **Voix sleep - 15 octobre 2026**. Ne pas les régénérer. Le montage reste à faire.\n" + text[end:]
     write(p, text)
+    tools_path = BASE / "OUTILS-ET-REPRISE.md"
+    tools_text = tools_path.read_text(encoding="utf-8")
+    if "## Voix Algrow du 15 octobre" not in tools_text:
+        tools_text += "\n## Voix Algrow du 15 octobre\n\nLes six narrations ont été produites avec l'API Algrow, voix Mellow Matt\n`IsEXLHzSvLH9UMB6SLHj`, vitesse 0,90. Les douze parties sources sont terminées ;\nne pas les relancer. Voir `narrations-2026-10-15/README.md` et le registre privé\n`work/sleep-voiceovers-2026-10-15/ledger.json`. MP3 complets sur le Bureau dans\n**Voix sleep - 15 octobre 2026**, et dans **VOIX-FINALES** de la sauvegarde.\n\nCet accès API utilise `ALGROW_API_KEY` dans le `.env` privé du dépôt ; il peut\nfonctionner après un changement de compte ChatGPT sur le même PC. La connexion\nMCP de recherche reste propre au compte de l'application. Une ancienne variable\nWindows du même nom est refusée : l'exécuteur choisit la clé du `.env` uniquement\npour son processus. Ne pas modifier Windows ni afficher la clé.\n\nCompte professionnel : 100 000 caractères maximum par génération, et sous-titres\navec supplément. Les fichiers sont découpés sans réécriture puis réunis en MP3\nsans silence ou répétition ajoutés. Les SRT sont automatiques, noms à relire.\nL'exécuteur de reprise ne soumet pas de nouveau job en mode `monitor`.\n"
+        write(tools_path, tools_text)
     p = BASE / "README.md"
     text = p.read_text(encoding="utf-8")
     a, b = text.index("## Narrations du nouveau lot"), text.index("## Miniatures du nouveau lot")
@@ -190,7 +195,7 @@ Le premier essai intégral a été refusé pour taille, sans job ni débit ; les
     text = text.replace("La voix finale doit être générée puis chronométrée dans Ultravid. Aucun audio ou upload n'a été réalisé pour ce lot.",
         "Les six voix ont ensuite été générées dans Algrow avec Mellow Matt et mesurées : toutes dépassent deux heures. Voir `../narrations-2026-10-15/README.md`. Aucun montage ou upload lancé.")
     write(p, text)
-    for name in ["README.md", "PROCHAINES-ACTIONS.md", "etat-videos.json"]:
+    for name in ["README.md", "PROCHAINES-ACTIONS.md", "etat-videos.json", "OUTILS-ET-REPRISE.md"]:
         shutil.copy2(BASE / name, BACKUP / name)
     for folder in ["narrations-2026-10-15", "scripts-2026-10-15"]:
         shutil.copytree(BASE / folder, BACKUP / folder, dirs_exist_ok=True)

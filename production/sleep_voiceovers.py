@@ -35,8 +35,18 @@ def now():
 def save(data):
     STATE.mkdir(parents=True, exist_ok=True)
     temp = STATE / "ledger.tmp"
-    temp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    temp.replace(STATE / "ledger.json")
+    content = json.dumps(data, ensure_ascii=False, indent=2)
+    for attempt in range(10):
+        try:
+            temp.write_text(content, encoding="utf-8")
+            temp.replace(STATE / "ledger.json")
+            return
+        except PermissionError:
+            # A Windows reader/backup can briefly lock replacement. This only
+            # retries local persistence, never a chargeable network request.
+            if attempt == 9:
+                raise
+            time.sleep(0.05 * (attempt + 1))
 
 
 def emit(kind, **values):
