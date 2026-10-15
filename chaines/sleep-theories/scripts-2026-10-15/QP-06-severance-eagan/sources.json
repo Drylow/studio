@@ -1,7 +1,6 @@
 {
   "accessed": "2026-10-15",
   "scope": "Released television through S2E10 Cold Harbor, March 21, 2025. No season-three story, leaks, unsupported family tree, pregnancy twist, confirmed cloning or resurrection. Corporate doctrine and family accounts must be attributed as claims. Original analysis, not a recap of a competing theorist.",
-  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
   "sources": [
     {
       "id": "E1",
@@ -58,20 +57,21 @@
       "work": "Production scope only",
       "url": "https://www.apple.com/uk/tv-pr/news/2025/03/praise-kier-apples-global-hit-emmy-and-peabody-award-winning-workplace-thriller-severance-lands-season-three-renewal/",
       "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-portraits",
+      "fact": "S2E3 Natalie presents whole Kier cycle reimagined as Black to promoted Milchick, says received same promotion gift and found loving. He politely awkward. S2E5 asks her about paintings, describes complicated feelings. Tillman interview describes discomfort. Corporate reinterpretation, not literal history.",
+      "url": "https://www.tvline.com/interviews/severance-milchick-paintings-explained-lumon-founder-blackface-episode-3-1235404526/",
+      "work": "S2E3 and S2E5",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-book",
+      "fact": "S1 Ricken leaves The You You Are for Mark; Cobel takes from doorstep into Lumon; Milchick inspects and leaves it in conference room, Mark and Dylan read and find encouragement for autonomy. S2E3 Natalie approaches Ricken; S2E5 he drafts Lumon edition, Devon criticizes corporate direction and reversal. This is drafting/co-option attempt, success unconfirmed.",
+      "url": "https://www.tvline.com/recaps/severance-recap-season-2-episode-5-helly-irving-1235408645/",
+      "work": "S1 book arc; S2E3-5",
+      "opened": "2026-10-15",
+      "corroboration": "https://en.wikipedia.org/wiki/Severance_(TV_series)"
     }
-  ],
-  "forbidden": [
-    "Kier is confirmed alive in the Board, in a chip or secretly reincarnated",
-    "Revolving has been fully explained",
-    "All Eagans have identical beliefs or know the whole plan",
-    "Helena is Kier's granddaughter without accounting for generations",
-    "Dieter's story is objectively verified history",
-    "Helly is secretly Helena in every later scene after the Woe's Hollow switch",
-    "Jame truly invented severance despite S2E8",
-    "A severance chip erases all memory, skills or feelings",
-    "Gemma's full kidnapping history or the ultimate purpose of Cold Harbor is solved",
-    "Goats prove human cloning or literal soul transfer",
-    "Invented CEO dates, bloodlines, scientific mechanisms, quotes or room counts",
-    "Claimed exact runtime before audio measurement"
   ]
 }

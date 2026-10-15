@@ -1,0 +1,108 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Rey and Ben's remote encounters develop into physical exchanges through their dyad, while their conflicting choices and Sidious's exploitation show that connection does not guarantee understanding or safety.",
+      "new_information": [
+        "Their early encounters permit conversation and limited perception across distance, with water providing an early physical crossover.",
+        "Their contact on Ahch-To produces incompatible expectations about each other's future rather than an agreed course of action.",
+        "Snoke claims responsibility for joining their minds, but the later dyad revelation does not establish that he created the underlying bond.",
+        "The displaced helmet gives Kylo information about Rey's location, and the later lightsaber transfer deliberately uses the connection to help Ben.",
+        "Sidious can exploit the connection that Rey and Ben use to reach each other."
+      ],
+      "local_answer": "The films establish communication, partial perception and physical transfer through this particular dyad, but leave its origin unexplained and do not make its participants morally or practically united.",
+      "open_issues": [
+        "The closing paragraph repeats the lightsaber handoff after two paragraphs have already explained its mechanics and significance."
+      ],
+      "evidence_notes": "Consistent with F7 and the assigned film scope. Snoke's claim remains attributed, the dyad's origin remains unresolved, and no universal bond powers or romantic destiny are asserted."
+    },
+    {
+      "number": 18,
+      "summary": "Rey's nonfatal healing of the serpent and Ben contrasts with Ben's fatal restoration of Rey, while Anakin's predicament illustrates the difference between seeing a later ability and possessing the knowledge to use it.",
+      "new_information": [
+        "Rey describes healing as giving her own life energy, yet survives both the serpent's wound and Ben's injury.",
+        "The serpent establishes that healing is not restricted to the dyad.",
+        "Rey's healing repairs Ben's body without making his subsequent moral decision for him.",
+        "Ben restores a lifeless Rey and dies, establishing a different outcome without supplying a universal price schedule.",
+        "Anakin receives a promise about preserving life rather than a demonstrated lesson in the healing Rey later performs.",
+        "The chapter interprets freely giving another person life as distinct from demanding that the person remain with the healer."
+      ],
+      "local_answer": "Healing has different shown outcomes in different circumstances; these examples neither require a death for every wound nor establish an easy technique Anakin already knew.",
+      "open_issues": [
+        "The account of Ben's healing states the nonfatal outcome several times before the later comparison states it again."
+      ],
+      "evidence_notes": "Consistent with F7 and the assignment's authorized comparison with Revenge of the Sith. The text appropriately leaves the dyad's precise contribution and any universal healing cost unresolved."
+    },
+    {
+      "number": 19,
+      "summary": "Rey's contact with the Skywalker lightsaber produces a disordered experience of inherited history, personal memory and apparent anticipation that Maz helps her interpret without explaining its mechanism.",
+      "new_information": [
+        "The saber's known passage from Anakin to Luke contrasts with Rey's lack of that historical context.",
+        "The vision combines Cloud City imagery, Luke and R2-D2, Kylo and the Knights of Ren, Rey's separation on Jakku and a snowy confrontation.",
+        "Rey's childhood and the forward-looking forest imagery prevent the experience from being treated simply as the weapon's recorded memories.",
+        "Maz identifies the weapon and offers direction without establishing a bloodline-based selection mechanism.",
+        "Rey initially rejects the saber, Finn subsequently carries it, and Rey later calls it to her during the confrontation with Kylo."
+      ],
+      "local_answer": "The saber occasions a Force experience associated with both its history and Rey, not a demonstrated perfect archive or a proven automatic bloodline response.",
+      "open_issues": [],
+      "evidence_notes": "The chapter answers its assignment with concrete film events and clearly marked interpretation. F1 and F7 are broad rather than shot-level support for this sequence; the supplied assignment expressly authorizes the named Force Awakens scene. No game-only mechanism or invented dialogue is introduced."
+    },
+    {
+      "number": 20,
+      "summary": "The younglings' crystal searches on Ilum require different practical responses to impatience, confusion, dependence on equipment, fear and self-interest.",
+      "new_information": [
+        "Gungi must wait for a frozen crossing rather than force immediate progress.",
+        "Ganodi distinguishes her crystal by settling herself and attending through the Force rather than inspecting every visible possibility.",
+        "Zatt changes his approach after reliance on his scanner fails.",
+        "Byph discovers that the threatening creature shape is ice, while Katooni must persist through a climb.",
+        "Petro's mistaken collection of ice and later assistance to Katooni turn the search into a test of conduct as well as retrieval.",
+        "The younglings discover that the frozen entrance is breakable, revising their assumption about being trapped."
+      ],
+      "local_answer": "Attunement is explained through the children's different actions and obstacles, without inventing crystal color psychology, numerical frequencies or a uniform solution to every trial.",
+      "open_issues": [
+        "A standalone paragraph repeats Gungi's opening lesson without adding an event or a distinct consequence."
+      ],
+      "evidence_notes": "Within the explicitly assigned scope of The Gathering. F1 supplies the general Force framework rather than detailed verification of each youngling's search. The chapter keeps its interpretation tied to physical tasks and does not invent a crystal classification system."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Still, the object transfer gives their bond a precise, human use amid the larger claims made about it. Ben is separated from Rey and surrounded by enemies. She knows he's there. The lightsaber leaves her hand and reaches his, allowing him to continue toward her.",
+      "reason": "H18 identifies a script that \"keeps re-stating it with nothing new attached.\" The preceding two paragraphs already establish Ben's separation, the weapon transfer, its defensive purpose and Rey's reason for helping him. This closing passage adds no further development; deleting it leaves the paragraph's distinct point about Sidious exploiting the bond intact.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Whatever the effort requires of her, this second use still doesn't demand her death. The film has now shown healing an animal and healing a person without either act becoming a fatal exchange.",
+      "reason": "H18 requires that a second mention add \"a consequence, a comparison, the next number.\" This paragraph has already said that the giver survives and that Rey speaks and leaves afterward. The later paragraph comparing Ben's death with Rey's earlier healing supplies the useful comparison, making these two intervening sentences the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Gungi, attunement means noticing the conditions around him and adjusting his behavior, even when he's already sure where he needs to go.",
+      "reason": "H18 flags repeated framing with \"nothing new attached.\" The opening paragraph already explains that Gungi knows where the crystal is but must wait for the crossing instead of pushing harder. This standalone return only relabels that explanation before Ganodi's distinct example begins.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [],
+  "scope_status": "The supplied chapters 17-20 remain within their assigned released-film and named Clone Wars scope. No supplied prohibition is clearly violated. The recurring distinction between an extraordinary ability and a character's decisions serves different concrete examples rather than duplicating a chapter's answer.",
+  "limitations": "Reviewed all four supplied chapters in full against the supplied outline, proof bank and editorial rules. Chapters 1-16 and 21-24 were not supplied, so episode-wide repetition, the early optional subscribe request and the final ending cannot be assessed. The supplied source links were not opened, and shot-level details were not independently verified against episode or film playback.",
+  "input_hashes": {
+    "17": "7ba307e66520306a49d09bfdfde8b77e0d3c2075b09b784fe6fcc4750e751fcd",
+    "18": "b6a0ed601075b04dc06a8caeb9b9709687d3efa426a99a7d501a3683777e8d44",
+    "19": "35e695fea4e573d8416abad12ccd98d710a48fc0fad7b3abc1c64475e7db031e",
+    "20": "b3c16798e54de8da023b23812d0b09fa9cfcb2e364e94241f8a1a2f9cb6d4a2f"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

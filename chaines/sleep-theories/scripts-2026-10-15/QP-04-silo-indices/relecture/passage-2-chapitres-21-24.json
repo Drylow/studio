@@ -1,0 +1,167 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Jimmy's mother's disabling of Silo 17's internal Safeguard does not prevent the separate external action against that silo in the finale.",
+      "new_information": [
+        "The internal Safeguard and the later external action are distinct mechanisms.",
+        "A successful intervention against one mechanism does not establish protection against another.",
+        "The founders' stated preservation rationale does not explain how an individual silo's inhabitants are protected from these threats."
+      ],
+      "local_answer": "The chapter answers its assigned question and keeps the internal mechanism separate from external action, but states that distinction more often than its developments require.",
+      "open_issues": [
+        "The final paragraph repeats the opening answer after the chapter has already explained it through several comparisons.",
+        "The second paragraph repeats the internal-versus-external distinction without adding much beyond its useful observation about the name Safeguard."
+      ],
+      "evidence_notes": "The central distinction follows S6 and S8. The tape comparison follows S2. The founders' preservation account remains attributed rather than certified. No specific external attack technology, novel mechanism, or universal reset device is invented."
+    },
+    {
+      "number": 22,
+      "summary": "Silo 1's human operation of the Algorithm changes an apparently impersonal source of guidance into a procedure involving people whose authority and discretion may be limited.",
+      "new_information": [
+        "The Algorithm has human operators in Silo 1.",
+        "An operator's delivery of an instruction does not establish that the operator authored or freely chose it.",
+        "Daniel's identity as Troy and his continuing recollections of Helen distinguish the person from his assigned institutional role.",
+        "The recipient of guidance may encounter its consequences without knowing the operator's history or the instruction's authorization chain."
+      ],
+      "local_answer": "The chapter answers the question about human mediation and appropriately leaves the extent of operator discretion unresolved.",
+      "open_issues": [
+        "The opening and ending deliver substantially the same answer.",
+        "Two paragraphs use Daniel's relationship with Helen to make nearly the same point about a person exceeding an assigned role.",
+        "The extended sheriff comparison is useful interpretation, but the chapter would move more efficiently if the surrounding restatements were reduced."
+      ],
+      "evidence_notes": "S8 supports human operation, Daniel/Troy, and persistent memories of Helen. Statements about prescribed answers and limited discretion are presented as possibilities, not established operating specifications. The chapter does not assert autonomous AI or literal robotic biology."
+    },
+    {
+      "number": 23,
+      "summary": "The no-contact Directive prevents separated silo populations from comparing histories, rules, and threats while people in Silo 1 occupy a wider informational position.",
+      "new_information": [
+        "Isolation prevents residents from checking local explanations against another population's account.",
+        "Agreement between accounts could itself reveal shared customs or institutional language.",
+        "Helen and Daniel's separation supplies an audience-known connection across later institutional boundaries.",
+        "Juliette and Solo demonstrate that contact creates an opportunity for comparison without automatically producing a complete or reliable history.",
+        "Knowledge remains uneven within individual silos as well as between them."
+      ],
+      "local_answer": "The chapter explains the information gap clearly and treats the effects of contact as interpretation rather than a complete technical account of the network.",
+      "open_issues": [
+        "Several paragraphs return to the same proposition that separate populations cannot compare accounts.",
+        "The short paragraph about comparing threats adds no development to the opening argument.",
+        "The final cafeteria sentence changes the subject rather than completing the preceding example of a useful exchange."
+      ],
+      "evidence_notes": "The no-contact Directive is authorized by the supplied assignment, although the abbreviated S8 proof entry does not separately describe it. S7 supports Helen and Daniel's destinations; S8 supports Silo 1's operators. The chapter does not invent contact routes or present an escape tutorial."
+    },
+    {
+      "number": 24,
+      "summary": "The conclusion distinguishes the Pez dispenser's connection to an earlier personal exchange from the finale's confirmation of human participation in the Algorithm, then proposes a hypothetical duplicate-object test.",
+      "new_information": [
+        "An earlier appearance of a matching object establishes a different kind of connection from an identified human role in an operating procedure.",
+        "The gift does not supply a continuous ownership history or establish descendants.",
+        "A hypothetical scene showing two matching dispensers would challenge identification of the later relic solely by appearance."
+      ],
+      "local_answer": "The chapter fulfills the concluding comparison, supplies a precise and explicitly hypothetical challenge, and ends on the grounded exchange of Daniel giving Helen the toy.",
+      "open_issues": [
+        "The second paragraph repeats the first paragraph's personal-connection point before the chapter reaches its actual comparison."
+      ],
+      "evidence_notes": "S4 supports Daniel's gift to Helen; S8 supports human operation of the Algorithm and Daniel/Troy. The duplicate-dispenser scene is unmistakably hypothetical. The chapter preserves the limits on provenance and ancestry and supplies no season-four answer."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "In Jimmy's account of his home, the practical meaning is much harsher. This is an internal danger that his mother disables. Her intervention gives the word a concrete association with a particular system inside a particular silo. Once that's understood, hearing that the Safeguard failed should direct attention to what she stopped, rather than suggest that Silo 17 has become unreachable.",
+      "reason": "H18 identifies repeated framing with \"nothing new attached.\" After the opening has already distinguished the internal mechanism from external action, these sentences repeat that distinction and turn the useful observation about the protective-sounding name into another explanation of how to interpret evidence.",
+      "replacement": "In Jimmy's account of his home, his mother has to disable the very mechanism whose name sounds protective.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "On a rewatch, references to the Safeguard therefore need their surrounding circumstances. Which silo is involved matters. Whether the action begins inside or outside matters. So does the difference between a mechanism failing and someone deciding to pursue another course. In Silo 17, those distinctions explain how a successful intervention and a continuing threat can exist in the same story. Jimmy's mother disables the internal Safeguard. When the finale brings external action against his home, the danger reaches Silo 17 by a route her intervention hasn't closed.",
+      "reason": "H18 warns against a script that \"keeps re-stating\" its framing without further development. This paragraph repeats the opening answer and the tape comparison, while adding another methodological instruction. The preceding paragraph already closes on the concrete question of Silo 17's inhabitants.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Troy's continuing flashes of Helen give that chain a particular point of strain. He has an imposed identity and an assignment, yet his connection with Helen persists. The audience can therefore consider something an official exchange might conceal: the person taking part has experiences that don't fit neatly inside the job. His recollections don't need to produce an immediate refusal to matter. Their presence means that the man carrying out the work isn't wholly described by the name and duties attached to him in Silo 1.",
+      "reason": "H18's requirement that a second mention add a consequence or development applies here. The earlier Daniel/Troy paragraph already explains the relationship's human cost and the distinction between the individual and institutional speech. The concrete new detail is the persistence of Helen's memory; the remaining sentences restate the same interpretation.",
+      "replacement": "Troy's continuing flashes of Helen show that his connection with her persists within the imposed identity and assignment.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The finale places human operators behind the Algorithm's official guidance. An earlier instruction can now be heard as part of a procedure people carry out, without assuming that its speaker chose the answer or controlled the outcome.",
+      "reason": "H18 describes a document getting stuck on \"one fact, one phrase, or one framing.\" The opening establishes human operation, and the sixth paragraph already explains why delivery does not establish authorship or discretion. This final restatement adds no information after the more concrete account of instructions reaching residents through officials.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Residents comparing accounts of threats to their silos might discover that some dangers originate beyond their own walls. The no-contact Directive makes that comparison harder.",
+      "reason": "H18 calls for cutting a re-mention that \"adds nothing.\" The opening already explains the restriction's information gap, and the fourth paragraph explicitly covers checking official explanations against events elsewhere. This isolated paragraph repeats that consequence without a new example.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Back in Silo 18, the cafeteria still contains the place where residents gather to look at the world outside.",
+      "reason": "The assigned question concerns what residents could learn through comparison. This ending abruptly substitutes a static cafeteria image for the exchange being discussed, and \"contains the place\" is awkwardly abstract. A local closing sentence can retain the chapter's concrete contact example without adding lore.",
+      "replacement": "Her conversation with Solo gives her something the cafeteria display cannot: another resident's account of life in a different silo.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helen receives the gift from Daniel. Those names matter because the scene attaches the dispenser to particular people, rather than leaving it as a general example of life before the silo. A manufactured object can tell George or Juliette that people once made things their community no longer understands. Daniel's gesture adds something more personal. Someone selected this object and passed it to Helen. Its survival into the silo's story now invites attention to a connection that the early investigation couldn't have supplied on its own.",
+      "reason": "H18 requires the second mention to add something the first did not carry. The preceding paragraph already names Daniel and Helen, identifies the gift, and explains the shift from suspicious relic to personal exchange. This paragraph delays the ownership limitation and the assigned comparison without adding a distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        23
+      ],
+      "detail": "Both chapters invoke the founders' human seed-bank rationale. The applications are distinct enough to retain: chapter 21 contrasts preservation language with threats to an individual silo, while chapter 23 considers how other populations could compare founding accounts."
+    },
+    {
+      "chapters": [
+        22,
+        24
+      ],
+      "detail": "Both explain that human operation does not establish an operator's unrestricted discretion. Chapter 24 needs a concise return to this point for its assigned comparison, making chapter 22's additional closing restatement the less useful repetition."
+    },
+    {
+      "chapters": [
+        22,
+        23,
+        24
+      ],
+      "detail": "Human operators in Silo 1 recur throughout the supplied sequence. The recurrence has distinct functions: identifying mediation in chapter 22, explaining unequal access to information in chapter 23, and contrasting evidence types in chapter 24. The problem is repeated explanation within chapters, not the necessary connection between them."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within television continuity through S3E10 Troy under the authoritative release scope. No novel biography, future explanation, autonomous-AI claim, literal robot claim, confirmed ancestry, complete Pez ownership chain, or conflation of internal Safeguard and external action was found. The main defects are redundant explanation and one weak closing transition, all locally editable.",
+  "limitations": "All four supplied chapters, 21 through 24, were reviewed in full against the supplied assignments, proof bank, and voice guidance. Chapters 1 through 20 and the earlier channel episode were not supplied, so their execution, the early optional audience request, and full-episode repetition cannot be assessed. Linked sources were not opened, episodes were not watched, and fictional facts were not independently verified beyond the supplied material.",
+  "input_hashes": {
+    "21": "cd48e7ca0f55721ea32fb996f8f131e2a4a13f6dfd0b84c31bf0490b4c4aa948",
+    "22": "14c96bdde47a64ffce308118cdacad7d25b368aa34c331d35ea01eaee496f0a1",
+    "23": "e258b12ff8fd24c50131caea6cb64a16ea61971d4c0d7d60c9c0ad2147476acc",
+    "24": "89ecab0989168ad771d63933bce0a0fae8e55f25de0ab644daf9e4e9a59e1bdc"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

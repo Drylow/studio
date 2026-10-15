@@ -1,0 +1,137 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Paul's departure into the desert in Dune Messiah introduces a biography that returns to his upbringing as the Atreides heir on Caladan.",
+      "new_information": [
+        "Paul leaves imperial life after losing his physical eyes.",
+        "The narration covers Dune, Dune Messiah and Children of Dune and explicitly announces major spoilers.",
+        "Paul is the son of Duke Leto and Jessica, with inherited political responsibilities.",
+        "His upbringing combines the protection of the Atreides household with Bene Gesserit influence and instruction from several teachers."
+      ],
+      "local_answer": "The chapter establishes the promised relationship between Paul's achievements and his narrowing choices, then returns to Caladan as assigned.",
+      "open_issues": [
+        "The introduction spends several paragraphs explaining its interpretive approach after the opening has already established it.",
+        "Its substantial preview of Paul's education overlaps with chapter 2, although the family context remains useful."
+      ],
+      "evidence_notes": "The opening departure agrees with P5, and the family and training overview is consistent with P2. The spoiler notice and single optional subscribe and listening-location request satisfy the supplied requirements. The chapter does not disclose the Children of Dune ending."
+    },
+    {
+      "number": 2,
+      "summary": "Paul's education combines weapons training, developing Mentat abilities and Jessica's Bene Gesserit disciplines within his preparation to inherit House Atreides.",
+      "new_information": [
+        "Gurney's practice fight teaches Paul that readiness cannot depend on his mood.",
+        "Shield combat requires controlled attack speed rather than speed alone.",
+        "Gurney and Duncan provide both martial instruction and personal attachments.",
+        "Thufir combines Mentat analysis with responsibility for household security.",
+        "Paul's developing Mentat preparation is distinguished from completed professional qualification.",
+        "Jessica teaches physical control, attention to behavior and methods of managing fear."
+      ],
+      "local_answer": "The chapter clearly distinguishes the teachers and the kinds of preparation they provide without treating Paul as an already qualified Mentat.",
+      "open_issues": [
+        "The final two paragraphs partly repeat the overview of complementary training already established in chapter 1, but they also explain its practical overlap and increasing demands."
+      ],
+      "evidence_notes": "The teachers and their contribution to Paul's preparation agree with P2. The supplied proof bank does not individually document every training detail, so those details are not represented here as independently source-verified. No invented dialogue, dated lesson or childhood adventure is apparent."
+    },
+    {
+      "number": 3,
+      "summary": "Jessica's decision to bear a son brings Paul under Bene Gesserit scrutiny, and Mohiam's lethal examination tests his restraint without establishing either the sisterhood's moral authority or its control over his future.",
+      "new_information": [
+        "Jessica bears a son despite instructions to bear a daughter intended for a Harkonnen marriage.",
+        "The intended union belongs to the Bene Gesserit breeding program associated with the Kwisatz Haderach.",
+        "Mohiam is both Jessica's former teacher and the Emperor's Truthsayer.",
+        "The pain box produces the experience of injury while the gom jabbar makes withdrawal potentially fatal.",
+        "Jessica's fear training helps Paul endure the test.",
+        "The Bene Gesserit interpretation of the test is distinguished from an objective definition of humanity.",
+        "Paul's endurance and unusual dreams attract scrutiny without guaranteeing obedience or protection."
+      ],
+      "local_answer": "The chapter answers why Jessica's decision matters, what Mohiam tests and why passing does not make Paul a controllable fulfillment of the breeding program.",
+      "open_issues": [
+        "The distinction between demonstrated potential and an uncertified future is explained more often than necessary near the end."
+      ],
+      "evidence_notes": "The treatment follows the assigned original-novel events and preserves the required distinction between Mohiam's ideology and objective science. P2 is a broad supporting entry rather than a detailed citation for every aspect of the test or breeding program. No exact dialogue is fabricated."
+    },
+    {
+      "number": 4,
+      "summary": "The imperial transfer of Arrakis gives House Atreides responsibility for spice production while exposing it to a concealed imperial-Harkonnen attack that Leto hopes to counter partly through Fremen alliance.",
+      "new_information": [
+        "An imperial order transfers administration of Arrakis from the Harkonnens to the Atreides.",
+        "Spice makes the planet strategically important to the Guild, wealthy consumers and imperial commerce.",
+        "The transfer requires Leto to maintain production while examining inherited equipment, personnel and security.",
+        "The Emperor fears Leto's standing and military strength.",
+        "Concealing imperial participation prevents the attack from openly threatening the collective interests of the Landsraad.",
+        "Leto regards the Fremen as potential allies and sends Duncan to establish contact.",
+        "Paul's inheritance places him inside the risks and obligations of the transfer."
+      ],
+      "local_answer": "The chapter explains why apparent promotion is dangerous and why Leto nevertheless believes he has grounds to act, while keeping the Guild and CHOAM discussion subordinate to Paul's biography.",
+      "open_issues": [
+        "The explanation of Leto's informed gamble is repeated after its political causes and proposed Fremen countermeasure have already been established."
+      ],
+      "evidence_notes": "The transfer, destruction trajectory and Atreides context are consistent with P1 and P2 and the assigned chapter constraints. The institutional explanation remains brief enough for this episode. The chapter does not import film dialogue or advance into the later battle."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Starting here gives us a useful way to approach the boy Paul once was. His story contains remarkable accomplishments, and each deserves its own attention. He survives the destruction of his family's position. He finds protection among people whose desert home is dangerous to outsiders. He gains the strength to challenge the emperor. But those accomplishments involve other people, and those people bring their own expectations. Following Paul means keeping track of what he gains alongside what he agrees to carry, sometimes knowingly and sometimes before he understands the extent of it.",
+      "reason": "The opening paragraph already promises survival, assistance and narrowing obligations. This second methodological overview delays the assigned return to Paul's upbringing and previews developments that will receive their own chapters. It fits H18's warning about a framing that \"keeps re-stating it with nothing new attached\" and H16's \"Announcing the content instead of delivering it.\" Deleting this paragraph lets the family introduction follow the housekeeping directly.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "These signs matter because the sisterhood is searching for an unusual kind of awareness. They still don't give her a complete account of what Paul might become. The examination of his endurance and the discussion of his dreams address different capacities. Neither lets Mohiam look ahead and inspect the whole of his future. Her knowledge of the breeding program leaves her with questions about the boy sitting before her.",
+      "reason": "The paragraph repeats uncertainty in three formulations, and the following paragraph again says that Mohiam cannot certify Paul's future. H18 identifies the problem as a framing that \"keeps re-stating it with nothing new attached.\" Preserve the useful distinction between endurance and unusual awareness without repeatedly explaining the limits of the evidence.",
+      "replacement": "His dreams suggest an unusual awareness, distinct from the restraint he's demonstrated with the box. Mohiam has reasons to investigate both, but neither establishes that he'll become the person the sisterhood intended.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That hope keeps the decision from being a simple case of a sensible man accepting certain ruin. Leto knows he's walking into a hostile arrangement, yet he believes there are resources on Arrakis that could improve his position. His reputation, his soldiers and a possible Fremen alliance give him grounds to act. None guarantees success. His plans depend partly on learning enough about the planet before his enemies act, while those enemies have helped determine the conditions of his arrival.",
+      "reason": "Leto's awareness of danger, his standing and soldiers, the Fremen opportunity and his enemies' control of the transfer have all been explained in preceding paragraphs. This is the least useful restatement of that argument. H18 specifically warns against a script that \"keeps re-stating it with nothing new attached.\" Deletion preserves the causal account and allows the discussion to proceed to the pressure of the imperial appointment.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2
+      ],
+      "detail": "Chapter 1 introduces Jessica's disciplines, the household's loyalty and the four teachers before chapter 2 explains those subjects in detail. Some orientation is justified, but removing chapter 1's second statement of the biographical framework would reduce the sense of two successive introductions."
+    },
+    {
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "detail": "The distinction between unusual potential and guaranteed knowledge recurs in chapter 1's discussion of dreams, chapter 2's limits on training and chapter 3's assessment by Mohiam. These applications are distinct, but chapter 3's repeated uncertainty language is where the theme begins to outweigh new information."
+    },
+    {
+      "chapters": [
+        1,
+        2,
+        4
+      ],
+      "detail": "Each chapter returns to the idea that inherited status supplies protection while imposing obligations. That is the assigned biographical angle, not inherently a defect; the strongest passages attach it to concrete mechanisms such as household service, weapons training and responsibility for spice production."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the first-three-original-novel scope. The Dune Messiah opening is explicitly identified, major spoilers are announced, and the narration returns to the early Dune chronology. No clear forbidden adaptation claim or concrete factual contradiction was identified. The optional early audience request appears once and is not repeated. Chapters 5 through 24 were outlined but not supplied as narration and were not reviewed.",
+  "limitations": "This review covers all four supplied chapter texts against the supplied assignments, proof bank and voice rules. The proof bank is broad and does not substantiate every sentence individually. No external pages were opened, no episodes or films were watched, and no audio measurement, human read-aloud or independent verification of every fictional detail was performed.",
+  "input_hashes": {
+    "1": "19c640dbbb4536632c3515d39daef958f1e04484ae71b1b7f608173b4b589c3f",
+    "2": "5d0b43271be5bff0f91db229a8cff0183f11fc9065132e3e160a183c6f29eb0e",
+    "3": "69fa41385c0cb7021158525d31c6dca064c8c8b818e7eef524d41f7f1657f81a",
+    "4": "2c686edd3bcd9392e97d9146a82883a35b99c3e9ea9e3522576e0b2b211f03fa"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

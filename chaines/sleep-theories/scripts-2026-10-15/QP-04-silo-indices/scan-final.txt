@@ -2,19 +2,19 @@
 -- MECHANICAL SWEEP (delete on sight): 0
 -- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
 -- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 1
-  [floor: reframe: isn't X, it's Y] ...somewhere the supplied events don't take it. It's enough to let the connection ...
+  [floor: reframe: isn't X, it's Y] ...ity that the collection alone doesn't communicate. It's a practical limit of inheriti...
 -- ECHO CHECK (H18): 19
-  [echo H18: phrase repeated 7x] "the before times story"
-  [echo H18: phrase repeated 5x] "into silo 18 and"
+  [echo H18: phrase repeated 7x] "in the before times"
   [echo H18: phrase repeated 5x] "a different kind of"
   [echo H18: phrase repeated 5x] "a human seed bank"
-  [echo H18: phrase repeated 4x] "in front of her"
+  [echo H18: phrase repeated 4x] "into silo 18 and"
   [echo H18: phrase repeated 4x] "on a rewatch the"
+  [echo H18: phrase repeated 4x] "gives the audience a"
   [echo H18: phrase repeated 4x] "the people responsible for"
   [echo H18: phrase repeated 4x] "has a place in"
-  [echo H18: phrase repeated 3x] "the end of season"
-  [echo H18: phrase repeated 3x] "helen and daniel are"
-  [echo H18: phrase repeated 3x] "the circumstances in which"
+  [echo H18: phrase repeated 3x] "it's worth keeping the"
+  [echo H18: phrase repeated 3x] "elsewhere in the silo"
+  [echo H18: phrase repeated 3x] "in front of her"
   [echo H18: phrase repeated 3x] "a concrete reason to"
   [echo H18: phrase repeated 3x] "place in the story"
-  [echo H18: phrase repeated 3x] "gives the audience a"
+  [echo H18: phrase repeated 3x] "the people around her"

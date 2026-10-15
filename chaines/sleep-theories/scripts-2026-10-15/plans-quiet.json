@@ -61,7 +61,7 @@
         },
         {
           "id": "S6",
-          "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers.",
+          "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers. Billings investigates Orla Kent's death and discovers Ed's elevator. Ed attributes his theft to preserving lightbulbs during the rebellion. Orla's boyfriend Mike is identified as her killer; Ed's supply theft is a separate offense.",
           "work": "S3E8",
           "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/",
           "opened": "2026-10-15"
@@ -75,7 +75,7 @@
         },
         {
           "id": "S8",
-          "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist.",
+          "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist. Victor wakes and handles Troy, whose ordered response to S17 residents leaving is an external drone operation. Susan proposes targeting the sheriff so others retreat; she refuses Troy, is arrested, and Troy leads the operation. Victor watches it and later files Troy's repeated notes about Helen.",
           "work": "S3E10",
           "url": "https://www.thewrap.com/creative-content/tv-shows/silo-season-3-ending-explained-season-4/",
           "opened": "2026-10-15",
@@ -86,6 +86,27 @@
           "fact": "The drive George and Allison investigate carries the identifier eighteen; Bernard searches for it in S1E9. Its full origin is not thereby solved.",
           "work": "S1E1 and S1E9",
           "url": "https://cartermatt.com/598431/silo-season-1-episode-9-what-is-hard-drive-18/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-legacy",
+          "fact": "S2E6-7 Bernard swears Lukas as shadow. Vault has living quarters, food, Order, old books, relics, servers/tablet with history. Bernard reports 352-year age; purpose/origins absent. Tasks Lukas with Quinn letter; book cipher; suggests Meadows Wizard of Oz. No omniscient AI.",
+          "url": "https://tvobsessive.com/2024/12/27/silo-s2e7-recap-the-dive-turns-on-the-fountain-of-information/",
+          "work": "S2E6-7",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-quinn",
+          "fact": "S2E8-9 Lukas unsuccessfully tries Meadows books then seeks Quinn descendants Penbrook family. They distrust him and disavow ancestor because rebellion story. Bernard says Quinn destroyed past records to prevent recurring rebellions; attribute account. Family says Meadows visited and received Quinn Pact copy. Lukas decodes letter and goes hidden tunnel. Do not resolve fifty/fifty-one ambiguity.",
+          "url": "https://tvobsessive.com/2025/01/03/silo-s2e8-recap-the-book-of-quinn-has-some-blank-pages-to-fill/",
+          "work": "S2E8-9",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-jimmy",
+          "fact": "S2E7-10 Juliette needs suit to leave; Solo needs pump repaired as rising water threatens IT. After dive he is missing/injured. Audrey, Rick, Hope and children need food behind vault. Solo is Jimmy, child at collapse sheltered by father. Juliette brokers peace; learns poison pipe/Safeguard. S3E8 says his mother disabled Safeguard. No invented ages or dive measurements.",
+          "url": "https://tvobsessive.com/2025/01/17/silo-s2e10-recap-throw-all-the-theories-into-the-fire/",
+          "work": "S2E7-10; S3E8",
           "opened": "2026-10-15"
         }
       ],
@@ -155,6 +176,20 @@
           "sources": [
             "S1",
             "S8"
+          ]
+        },
+        {
+          "title": "Lukas enters a library the public cannot use",
+          "job": "Tell Lukas becoming shadow and entering vault/Legacy. Books, relics, living supplies and historical database coexist with forbidden history outside. Same object changes legal status with reader. Bernard needs subordinate to solve what he cannot. Concrete lore, no lecture on epistemology or invented technical interfaces.",
+          "sources": [
+            "ADD-legacy"
+          ]
+        },
+        {
+          "title": "Quinn hides a message in the rulebook",
+          "job": "Continue from Legacy: failed book candidates, descendants, stigma, Meadows earlier visit, Pact copy, code leads down. Badge authority versus earning trust; government text as private key; descendants responding to inherited reputation. No invented decoding algorithm, long quote or technical explanation.",
+          "sources": [
+            "ADD-quinn"
           ]
         },
         {
@@ -238,6 +273,13 @@
           ]
         },
         {
+          "title": "Solo is a name that protects Jimmy",
+          "job": "Private identity and practical repair: Juliette needs suit, Solo needs submerged pump, young survivors and vault food, adult witness was a child at collapse. Mechanical tasks and concealed knowledge change relationship. Return to mother's Safeguard intervention briefly, no S3 war recap. Distinguish floodwater pump from poison pipe.",
+          "sources": [
+            "ADD-jimmy"
+          ]
+        },
+        {
           "title": "A disabled Safeguard leaves another danger",
           "job": "Jimmy's mother disables the internal Safeguard; S3E10 still brings external action against S17. Explain why defeating one mechanism is not evidence that every attack channel is gone. Do not conflate the device, poison, external attack or silo-network authority into one vague reset button.",
           "sources": [
@@ -267,6 +309,11 @@
             "S8"
           ]
         }
+      ],
+      "supplements_integrated": [
+        "legacy",
+        "quinn",
+        "jimmy"
       ]
     },
     {
@@ -349,11 +396,32 @@
         },
         {
           "id": "V9",
-          "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct.",
+          "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct. Boyd tells Henry and Victor about Miranda and Tabitha. In S4E7 Victor asks Tabitha in the graveyard whether she is his mother, seeks her help, and takes her and Ethan to the Man in Yellow's car. Tabitha and Ethan tell Julie. Henry struggles with the revelation and Sophia's manipulation.",
           "work": "S4E7 Best Laid Plans, supported by cast interview and episode recap",
           "url": "https://www.horrorgeeklife.com/2026/06/08/from-season-4-scott-mccord-robert-joy-interview/",
           "opened": "2026-10-15",
           "corroboration": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/"
+        },
+        {
+          "id": "ADD-trees",
+          "fact": "S1E3 Victor measures by steps from house corner to nearby trees. Initially dismisses Ethan, becomes interested when Ethan asks about boy in forest. Says checking whether trees move. Julie comes out to scold Ethan for being outside. No established tree speed, cause, teleportation or compass survey.",
+          "url": "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/3/",
+          "work": "S1E3",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-tunnels",
+          "fact": "S1E10 and S2E1 Boy in White sends Victor underground; he meets Tabitha after excavation, guides her among sleeping creatures, warns quiet. They exit to forest and cargo truck. Boyd, Tabitha, Victor, Elgin survive and return town S2E2. Victor has hidden supplies/drawings. No control over creatures/portals.",
+          "url": "https://www.whattowatch.com/features/from-season-2-episode-1-recap-welcome-to-the-nightmare",
+          "work": "S1E10; S2E1-2",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-lunchbox",
+          "fact": "Victor gives Tabitha lunchbox for tower journey S2 end. Wakes outside in Camden, finds address on lunchbox and visits Henry. Henry recognizes missing sons lunchbox but doubts her story; missing-family news helps discussion. Distinguish address from supernatural exit directions. Victor predicting result unconfirmed.",
+          "url": "https://www.dexerto.com/tv-movies/from-season-3-episode-2-recap-2914406/",
+          "work": "S2E10; S3E1-2",
+          "opened": "2026-10-15"
         }
       ],
       "chapters": [
@@ -381,6 +449,13 @@
           ]
         },
         {
+          "title": "Victor counts the distance to the trees",
+          "job": "Early concrete observation, Victor pacing from Colony House corner to forest; Ethan asks and wants to help. Bodily habit and remembered layout, child accepting peculiar routine, changing forest versus trapped road. No lecture on scientific falsification or invented measured numbers.",
+          "sources": [
+            "ADD-trees"
+          ]
+        },
+        {
           "title": "The child in the aftermath",
           "job": "Victor's childhood survival after the town's massacre. Distinguish the event he witnessed, the time he spent surviving and unsupported claims about all intervening decades. Discuss why a long residence gives experiential knowledge but not automatic knowledge of the town's origin. Keep violence non-graphic.",
           "sources": [
@@ -394,6 +469,13 @@
           "sources": [
             "V1",
             "V6"
+          ]
+        },
+        {
+          "title": "He guides Tabitha through the tunnels",
+          "job": "Victor as practical guide. Waiting underground at Boy in White direction, finds Tabitha, sleeping creatures, quiet passage, forest escape and truck shelter; Boyd and Elgin survive night too. Fear coexists with useful spatial knowledge. No detailed gore, fabricated maps or safety rules. Distinct from Jasper retrieval.",
+          "sources": [
+            "ADD-tunnels"
           ]
         },
         {
@@ -449,6 +531,13 @@
           "sources": [
             "V2",
             "V7"
+          ]
+        },
+        {
+          "title": "An address survives inside the lunchbox",
+          "job": "Gift before tower to old address leading Tabitha to Henry in Camden. Ordinary childhood belonging carrying information across boundary. Henry frightened skeptical, missing-family past meets grown son account. Do not retell next chapters father reunion or Miranda paintings. No preplanned rescue prediction.",
+          "sources": [
+            "ADD-lunchbox"
           ]
         },
         {
@@ -540,6 +629,11 @@
             "V8"
           ]
         }
+      ],
+      "supplements_integrated": [
+        "trees",
+        "tunnels",
+        "lunchbox"
       ]
     },
     {
@@ -618,6 +712,21 @@
           "work": "Production scope only",
           "url": "https://www.apple.com/uk/tv-pr/news/2025/03/praise-kier-apples-global-hit-emmy-and-peabody-award-winning-workplace-thriller-severance-lands-season-three-renewal/",
           "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-portraits",
+          "fact": "S2E3 Natalie presents whole Kier cycle reimagined as Black to promoted Milchick, says received same promotion gift and found loving. He politely awkward. S2E5 asks her about paintings, describes complicated feelings. Tillman interview describes discomfort. Corporate reinterpretation, not literal history.",
+          "url": "https://www.tvline.com/interviews/severance-milchick-paintings-explained-lumon-founder-blackface-episode-3-1235404526/",
+          "work": "S2E3 and S2E5",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "ADD-book",
+          "fact": "S1 Ricken leaves The You You Are for Mark; Cobel takes from doorstep into Lumon; Milchick inspects and leaves it in conference room, Mark and Dylan read and find encouragement for autonomy. S2E3 Natalie approaches Ricken; S2E5 he drafts Lumon edition, Devon criticizes corporate direction and reversal. This is drafting/co-option attempt, success unconfirmed.",
+          "url": "https://www.tvline.com/recaps/severance-recap-season-2-episode-5-helly-irving-1235408645/",
+          "work": "S1 book arc; S2E3-5",
+          "opened": "2026-10-15",
+          "corroboration": "https://en.wikipedia.org/wiki/Severance_(TV_series)"
         }
       ],
       "chapters": [
@@ -689,6 +798,13 @@
           ]
         },
         {
+          "title": "The founder changes in a set of paintings",
+          "job": "Natalie brings Kier portraits depicting him Black to Milchick; restrained discomfort; her claimed same gift; later complicated feelings. Original analysis of racial paternalism, corporate gift dictating response, founder likeness and unchanged power. No claim historical Kier race changed, performed blackface, clones or proven exact Board motive.",
+          "sources": [
+            "ADD-portraits"
+          ]
+        },
+        {
           "title": "Harmony's devotion has a personal history",
           "job": "Cobel's worshipful household imagery and later Salt's Neck background. Explain why loyalty can come from upbringing, personal loss and career investment without diagnosing her or assuming one exclusive motive. Separate being a Kier devotee from being reliably loyal to Jame's management.",
           "sources": [
@@ -736,6 +852,13 @@
           "sources": [
             "E3",
             "E5"
+          ]
+        },
+        {
+          "title": "Lumon orders a different edition of a dangerous book",
+          "job": "Original Ricken book inspires innies; Natalie commissions workers edition; eager author and critical Devon. Tie to Eagan canon: corporation absorbs alternative authority by commissioning wording. Outside book leakage versus approved Kier appendix. No secret family bloodline, no inventing author of Kier text, no claim new edition actually distributed.",
+          "sources": [
+            "ADD-book"
           ]
         },
         {
@@ -803,6 +926,10 @@
             "E7"
           ]
         }
+      ],
+      "supplements_integrated": [
+        "portraits",
+        "book"
       ]
     }
   ]

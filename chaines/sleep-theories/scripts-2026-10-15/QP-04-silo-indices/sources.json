@@ -1,7 +1,7 @@
 {
   "accessed": "2026-10-15",
   "scope": "Television only through S3E10 Troy, released 4 September 2026. No novel events, future season-four explanations, ancestry claims or unreleased lore. This is a sequel to the channel's first broad Silo episode, not the same overview with shuffled paragraphs.",
-  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "method": "Sources opened and book/episode locators. Original analysis, no claim of new complete viewing.",
   "sources": [
     {
       "id": "S1",
@@ -41,7 +41,7 @@
     },
     {
       "id": "S6",
-      "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers.",
+      "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers. Billings investigates Orla Kent's death and discovers Ed's elevator. Ed attributes his theft to preserving lightbulbs during the rebellion. Orla's boyfriend Mike is identified as her killer; Ed's supply theft is a separate offense.",
       "work": "S3E8",
       "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/",
       "opened": "2026-10-15"
@@ -55,7 +55,7 @@
     },
     {
       "id": "S8",
-      "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist.",
+      "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist. Victor wakes and handles Troy, whose ordered response to S17 residents leaving is an external drone operation. Susan proposes targeting the sheriff so others retreat; she refuses Troy, is arrested, and Troy leads the operation. Victor watches it and later files Troy's repeated notes about Helen.",
       "work": "S3E10",
       "url": "https://www.thewrap.com/creative-content/tv-shows/silo-season-3-ending-explained-season-4/",
       "opened": "2026-10-15",
@@ -67,19 +67,27 @@
       "work": "S1E1 and S1E9",
       "url": "https://cartermatt.com/598431/silo-season-1-episode-9-what-is-hard-drive-18/",
       "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-legacy",
+      "fact": "S2E6-7 Bernard swears Lukas as shadow. Vault has living quarters, food, Order, old books, relics, servers/tablet with history. Bernard reports 352-year age; purpose/origins absent. Tasks Lukas with Quinn letter; book cipher; suggests Meadows Wizard of Oz. No omniscient AI.",
+      "url": "https://tvobsessive.com/2024/12/27/silo-s2e7-recap-the-dive-turns-on-the-fountain-of-information/",
+      "work": "S2E6-7",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-quinn",
+      "fact": "S2E8-9 Lukas unsuccessfully tries Meadows books then seeks Quinn descendants Penbrook family. They distrust him and disavow ancestor because rebellion story. Bernard says Quinn destroyed past records to prevent recurring rebellions; attribute account. Family says Meadows visited and received Quinn Pact copy. Lukas decodes letter and goes hidden tunnel. Do not resolve fifty/fifty-one ambiguity.",
+      "url": "https://tvobsessive.com/2025/01/03/silo-s2e8-recap-the-book-of-quinn-has-some-blank-pages-to-fill/",
+      "work": "S2E8-9",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-jimmy",
+      "fact": "S2E7-10 Juliette needs suit to leave; Solo needs pump repaired as rising water threatens IT. After dive he is missing/injured. Audrey, Rick, Hope and children need food behind vault. Solo is Jimmy, child at collapse sheltered by father. Juliette brokers peace; learns poison pipe/Safeguard. S3E8 says his mother disabled Safeguard. No invented ages or dive measurements.",
+      "url": "https://tvobsessive.com/2025/01/17/silo-s2e10-recap-throw-all-the-theories-into-the-fire/",
+      "work": "S2E7-10; S3E8",
+      "opened": "2026-10-15"
     }
-  ],
-  "forbidden": [
-    "Importing Donald's novel biography or the novels' full extinction mechanism",
-    "The Algorithm is a confirmed autonomous artificial intelligence",
-    "Daniel/Troy is a robot or literal killing machine",
-    "Helen is confirmed to be Juliette's ancestor",
-    "The Pez dispenser alone proves a complete chain of ownership",
-    "Outside is globally safe because a screen is false",
-    "Every magnifying device or all science is banned",
-    "Illuminated map markers prove exactly seven surviving silos",
-    "Fifty versus fifty-one is silently resolved without accounting for context",
-    "Every memory loss has one medically identical mechanism",
-    "A found relic demonstrates the founders' stated history is true"
   ]
 }

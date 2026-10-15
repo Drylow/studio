@@ -3,9 +3,10 @@
 Commande active : écrire les six scripts du [nouveau lot](chaines/sleep-theories/scripts-2026-10-15/README.md).
 Deep Void : Force, Guilde spatiale, **Paul Atréides**. Revan est remplacé ; deux sujets Dune pour un Star Wars.
 Quiet : indices Silo, souvenirs de Victor dans FROM, famille Eagan dans Severance.
-Les chapitres et relectures sont enregistrés à mesure. Consulter le README du lot
-pour distinguer rédaction en cours et livraison ; ne pas annoncer les scripts
-finalisés sur la seule présence de fichiers de chapitres.
+Les six scripts finaux sont livrés dans ce lot, avec sources, relectures et décomptes.
+Copie simple sur le Bureau : **6 scripts sleep - 15 octobre 2026**.
+Ils font chacun plus de 20 500 mots. Voix, durée mesurée et nouveaux uploads restent
+à produire dans Ultravid. Le README du lot distingue les archives des versions finales.
 
 Lire [le dossier de reprise](chaines/sleep-theories/README.md) pour **Deep Void Theories**
 et **Quiet Paradox**. Il contient les décisions, titres, descriptions, miniatures

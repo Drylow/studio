@@ -1,0 +1,192 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Paul kills Jamis in a formal Fremen challenge, encounters the community's mourning customs, and acquires responsibilities toward the household Jamis leaves behind.",
+      "new_information": [
+        "Paul fights as Jessica's champion after Jamis challenges the arrangement made by Stilgar.",
+        "Paul's shield-trained timing and attempts to permit surrender are misunderstood during a fight that must end in death.",
+        "Killing Jamis is Paul's first actual killing, and Jessica challenges any pride he might take in it.",
+        "The Fremen recover the dead man's water and interpret Paul's tears as a gift of moisture.",
+        "Paul's admission includes obligations toward Harah and her sons, rather than merely recognition of his fighting ability."
+      ],
+      "local_answer": "The chapter answers its assignment: surviving the duel admits Paul into relationships and obligations whose meaning his combat training has not taught him.",
+      "open_issues": [
+        "One paragraph repeats the preceding explanation of how Paul's mourning changes the community's understanding of him.",
+        "The closing sentence of the training comparison introduces unnecessary anticipatory suspense."
+      ],
+      "evidence_notes": "The chapter stays within original-novel continuity and avoids invented dialogue or a close recreation of the funeral. P2 supports the broad survival-and-integration arc, but the supplied proof entry does not individually document the duel's detailed customs, shield timing, or Harah's household arrangements."
+    },
+    {
+      "number": 10,
+      "summary": "Paul receives the private name Usul and chooses the public name Muad'Dib while retaining Paul, joining Fremen belonging to his continuing Atreides identity.",
+      "new_information": [
+        "Usul is an in-group name bestowed by Stilgar, while Muad'Dib is Paul's chosen public name.",
+        "Usul means strength at the base of a pillar.",
+        "Muad'Dib names a desert mouse whose survival abilities the Fremen respect.",
+        "Paul retains his existing name in Paul-Muad'Dib rather than discarding his earlier identity.",
+        "The public name connects his developing Fremen reputation with his Atreides political inheritance and feared visions of religious war."
+      ],
+      "local_answer": "The chapter clearly distinguishes intimate membership from public leadership and explains how Paul's naming preserves his political past while admitting him into a new community.",
+      "open_issues": [
+        "The paragraph following the desert-mouse explanation repeats its lesson about practical learning without adding a naming fact or consequence.",
+        "The final paragraph substantially returns to the opening explanation that the Fremen actively receive and judge Paul."
+      ],
+      "evidence_notes": "The naming discussion remains within the assigned novel scope, and the stated meaning of Usul is not embellished with invented etymology. P2 supplies broad context rather than direct documentation of each naming detail. The political significance of retaining Paul is appropriately presented as interpretation."
+    },
+    {
+      "number": 11,
+      "summary": "Paul and Chani form a partnership and have their first son Leto while their family life becomes inseparable from Paul's growing Fremen leadership and Atreides campaign.",
+      "new_information": [
+        "Chani has appeared in Paul's dreams before their meeting and has her own standing as Liet-Kynes's daughter and a Sayyadina.",
+        "Paul and Chani's first infant son Leto is distinct from the later twin Leto II.",
+        "Jessica and Duke Leto's earlier household provides a relevant precedent for the distinction between devoted partnership and political marriage.",
+        "Chani confronts would-be challengers to Paul, directly protecting his time and public position.",
+        "Paul's family develops within the community and campaign that make his survival possible, rather than outside his political life."
+      ],
+      "local_answer": "The chapter establishes Chani as an active partner and explains why their family cannot simply be separated from the movement gathering around Paul.",
+      "open_issues": [
+        "Two adjacent sentences repeat that the relationship develops while Paul's Fremen standing grows.",
+        "The penultimate interpretive paragraph describes a wish to keep loved ones safe as a settled motive rather than limiting itself to the demonstrated connection between family and campaign.",
+        "The final paragraph largely recaps facts and implications already developed in the chapter."
+      ],
+      "evidence_notes": "P3 supports the existence of the first child and the later distinction between political marriage and Paul's relationship with Chani. The chapter does not import the film's departing Chani or confuse the two children named Leto. Chani's standing and handling of challengers are additional original-novel details not individually established by the abbreviated proof entries."
+    },
+    {
+      "number": 12,
+      "summary": "Paul successfully rides a sandworm, gaining practical Fremen standing while facing increased pressure to lead without killing Stilgar.",
+      "new_information": [
+        "A rider exposes sensitive tissue beneath a worm's ring segment so that the worm turns that area upward.",
+        "Fremen distinguish irregular walking that avoids worms from deliberate disturbances, including thumpers, that summon them for transport.",
+        "Paul mounts an exceptionally large worm and enables others to join the journey.",
+        "Riding contributes to his adult standing without automatically giving him authority over every Fremen.",
+        "Growing expectations of leadership threaten Stilgar, and Paul argues for a command structure that preserves Stilgar's life and usefulness."
+      ],
+      "local_answer": "The chapter explains both the concrete skill Paul achieves and the political pressure that follows, while preserving the difference between practical competence and universal authority.",
+      "open_issues": [
+        "The opening briefly shifts into an aphoristic contrast between courage and knowledge.",
+        "The later comparison with Gurney repeats the earlier distinction between inherited training and Stilgar's desert expertise."
+      ],
+      "evidence_notes": "The chapter observes the assigned limits: no extended worm biology digression, no automatic universal authority from one ride, and no film-specific scene reconstruction. P2 supports the broader rise among the Fremen but does not separately substantiate the riding mechanics or leadership discussion."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Paul is about to discover how much that difference matters.",
+      "reason": "H16 identifies 'Announcing the content instead of delivering it,' and H17 identifies cinematic setup as a written-not-spoken risk. This sentence forecasts a consequence that the next two paragraphs explain concretely; the sleep adaptation does not require this suspense beat.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That response matters to his admission into the group. The people around Paul have watched him fight with a skill that seemed difficult to explain, and some have mistaken his delay for cruelty. Now they see him mourn Jamis. The funeral gives them a different way to understand the boy who survived.",
+      "reason": "H18 describes a script that 'keeps re-stating it with nothing new attached.' The preceding paragraphs already explain the mistaken interpretation of Paul's hesitation and the Fremen interpretation of his tears. This paragraph restates both without adding an event or obligation; moving directly to Harah provides the useful next development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That choice sits comfortably beside the practical attention Fremen life demands. Paul has been taught to notice small things, to observe movement and assess danger, but Arrakis supplies unfamiliar things to notice. Even a small desert animal can suggest ways of living that deserve respect. His education continues through the people who explain such things to him. In this exchange, Stilgar can approve Paul's judgment while also giving him knowledge he didn't possess when he first asked about the name.",
+      "reason": "H18 identifies repeated framing without new information. The preceding paragraph has already established the mouse's resourcefulness, Fremen respect for its survival skills, and Stilgar's approval. This paragraph repeats those points through the document-wide theme that Paul still needs local teaching.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Stilgar's people, meanwhile, the immediate business is admitting Paul into their lives. They aren't merely supplying a title for an imperial campaign. Their naming customs exist within a society that has its own loyalties, dangers and expectations. Stilgar speaks with the standing of a leader responsible for that society. His approval matters because Paul is joining people who can receive him, teach him and judge his conduct. The name gains its first substance through those encounters, before distant followers have any occasion to hear it.",
+      "reason": "H18 calls for giving a repeated thematic observation 'one home paragraph.' The chapter has already established the group's independent judgment in paragraph two and the practical community meaning of the names in paragraphs three and four. This ending returns to that argument without another concrete development; the preceding paragraph already closes on Paul's consequential choice.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Their relationship grows during the same years in which he learns to live and fight beside the Fremen.",
+      "reason": "H18 identifies restatement without added information. The immediately preceding sentence already says their partnership develops as Paul's importance in the community grows, and the following sentence supplies the useful implication that leadership and family formation do not occur in separate phases.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "His wish to keep the people he loves safe is entangled with the struggle that's making him more prominent.",
+      "reason": "The supplied instructions prohibit unsupported motives. The surrounding paragraph supports an interpretation about the family's circumstances, but this sentence converts that interpretation into a specific internal wish without supplied evidence. The causal point can remain without asserting private motivation.",
+      "replacement": "The safety of his family is entangled with the struggle that's making him more prominent.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For this part of his life, though, Paul does have a partner and a young son. Chani can advise him, fight on his behalf and meet him as someone she knows within the community. Their child carries the name of the father Paul lost. These are concrete parts of his years among the Fremen, alongside the expanding stories about Muad'Dib. Each new demand on Paul now reaches into a family that has already begun.",
+      "reason": "H18 describes repeated facts or framing with no further development. This closing paragraph repeats the partnership, Chani's assistance, the child's name, and the intersection of public demands with family life, all already established. The preceding paragraph supplies a more specific local conclusion about why a private alternative is difficult.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Courage gets him close enough to try. What keeps him alive is the practical knowledge that Stilgar and his people have learned to use.",
+      "reason": "H17's Wise Narrator and Reading-Not-Speaking patterns include 'aphorism pairs' and 'clever written pairs.' These adjacent sentences turn the concrete riding explanation into a polished courage-versus-knowledge maxim rather than continuing the conversational account.",
+      "replacement": "To survive the attempt, Paul needs the riding technique Stilgar and his people teach him.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a useful comparison here with Paul's earlier weapons training. Gurney trained Paul for armed combat within the Atreides household. Stilgar teaches him a different skill, one that requires him to respond to a living worm and the conditions of the open desert. The worm continues moving, and Paul must act within the conditions it creates. His education now involves learning how people without his inherited advantages have made a home in a place that offers very little forgiveness.",
+      "reason": "H18 identifies an echo when narration returns to the same framing without a new consequence. Paragraph two already contrasts Jessica's training with Stilgar's desert experience, and the intervening paragraphs explain the actual riding skill. Switching the earlier teacher to Gurney does not create a distinct development here.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "detail": "All four chapters repeatedly explain that inherited Atreides or Bene Gesserit preparation cannot replace Fremen knowledge. The strongest concrete homes are Paul's misunderstood duel timing in chapter 9 and worm-riding instruction in chapter 12. Chapter 10's additional practical-attention paragraph and chapter 12's later Gurney comparison repeat the theme without a new consequence; their deletions are specified in the findings."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Chapter 10 explains that Paul's foresight of religious violence does not remove his need to choose; chapter 11 returns to feared religious war and states that prescience does not prevent attachment or fatherhood. The applications differ, so this is not inherently defective, but further repetitions elsewhere should not again explain the same general limit without a new event."
+    },
+    {
+      "chapters": [
+        10,
+        11,
+        12
+      ],
+      "detail": "Each chapter repeatedly contrasts Paul as a familiar community member with Muad'Dib as a growing public figure. This supports the episode's angle, but several paragraphs restate the contrast after the chapter's concrete evidence has already made it. The specified deletions preserve the names, family, and riding developments while reducing the repeated interpretive summaries."
+    }
+  ],
+  "scope_status": "The supplied chapters 9-12 remain within the original Dune portion of the authorized first-three-novel biography. The brief identification of the later twin Leto II is expressly required by chapter 11's assignment. No expanded-prequel events, film-only continuity, invented dialogue, exact battle statistics, or full later Leto biography appear. The overall spoiler announcement and optional early request cannot be assessed because chapter 1 was not supplied.",
+  "limitations": "Review covers all four supplied chapter texts, not the unsupplied chapters in the outline. The supplied proof bank is abbreviated and supports several detailed passages only at the level of the broader original-novel narrative; this review does not claim independent verification of every fictional detail, website access, episode viewing, audio measurement, or a human read-aloud. No serious structural problem requiring a chapter rewrite was identified.",
+  "input_hashes": {
+    "9": "9a159c7177d83cbc8d839fa4d3a42a3a958840df5eb9c5e69406f08df54ff164",
+    "10": "941d28b6a4a134f28e6b24f688d3bb776f39b477f58dcd9c55c401b3fc8860f9",
+    "11": "d0fb92bd9572b3697ec1e2a078d369875536b9e3b826250040c6220c153e3dbb",
+    "12": "5412c04f1d735e3e06c537ebe05bb73be7ce9e38fcce5b07abe7a1e2da24b919"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

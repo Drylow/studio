@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "status": "final_text_ready_for_narration",
+  "narration_sha256": "4c793266fa6804108661d8ba39fa232cb884aeaf6a66cf83c38cd956acc0aa16",
+  "chapters_reviewed_in_integrated_pass": 27,
+  "local_findings_applied": 10,
+  "remaining_findings": [],
+  "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+  "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+  "scope": "Frank Herbert's six original Dune novels. Main evidence: Dune and Dune Messiah; later novels cover Leto II's leverage, Ixian navigation and concealment, Tleilaxu spice production and the changed conditions of travel. Book continuity; no expanded prequels/sequels or film-specific Navigator physiology.",
+  "measured_audio_seconds": null,
+  "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+  "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+  "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+}

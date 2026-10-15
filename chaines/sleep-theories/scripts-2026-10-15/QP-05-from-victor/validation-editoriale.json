@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "status": "final_text_ready_for_narration",
+  "narration_sha256": "b044e15e851e38e807cb2324b2a7192c81b1c84b0d08ff99c0b6d994a9cead12",
+  "chapters_reviewed_in_integrated_pass": 27,
+  "local_findings_applied": 17,
+  "remaining_findings": [],
+  "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+  "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+  "scope": "FROM television through S4E10 If a Tree Falls in the Forest..., aired 28 June 2026. Spoilers for seasons one through four. No leaks, season-five predictions presented as fact, clinical diagnoses or extended graphic descriptions. Important late updates are explicit; do not write as if only season three has aired.",
+  "measured_audio_seconds": null,
+  "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+  "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+  "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+}

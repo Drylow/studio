@@ -1,0 +1,136 @@
+{
+  "jobs": [
+    {
+      "episode": "DV-02-guilde",
+      "key": "tupile",
+      "after": 7,
+      "title": "A House can buy a route into exile",
+      "target_words": 1300,
+      "job": "Explain the sanctuary service: a threatened noble family may preserve its household by departure. Follow atomics and shields, secret destinations, Guild Peace, feudal diplomacy. Contrast Leto accepting Arrakis without inventing a Tupile offer. Differentiate hiding a destination from no-ships hiding from prescience. No repeated monopoly lecture.",
+      "facts": "Original Dune terminology: renegade Houses may flee beyond Imperium with family atomics and shields, contracting for safety outside System. Tupile is a sanctuary planet or planets known only to Guild, protected by Guild Peace. No specified fee, residents, exact location or atmosphere.",
+      "url": "https://en.wikipedia.org/wiki/Spacing_Guild",
+      "work": "Dune terminology: Tupile and renegade Houses"
+    },
+    {
+      "episode": "DV-02-guilde",
+      "key": "banker",
+      "after": 10,
+      "title": "A banker at the Atreides table",
+      "target_words": 1300,
+      "job": "Focus on Guild financial representative in original dinner scene. Transport institution has financial seat among provincial elite. Distinguish official office, private allegiance, Jessica reading reactions. Water commerce and competing interests. No invented account balances or institution-wide conspiracy. Keep scene central and develop specific consequences.",
+      "facts": "Guild banking as well as transport monopoly. At Arrakeen dinner Jessica reads banker as Harkonnen agent; banker fears Kynes, smuggler Tuek aligned with Kynes. Duke leaves on security business; Paul and Jessica remain with guests. No invented dialogue or fights.",
+      "url": "https://www.gradesaver.com/dune/study-guide/summary-book-1-dune-chapters-13-22",
+      "work": "Dune original novel: dinner and terminology"
+    },
+    {
+      "episode": "DV-02-guilde",
+      "key": "synthetic",
+      "after": 22,
+      "title": "Spice can come from somewhere else",
+      "target_words": 1300,
+      "job": "Later original-book change to production, distinct from preceding chapter on Ixian navigation. Axlotl melange, geographic dependency broken, switching supplier versus eliminating requirement, contrast earlier rationing. No invented market price or biochemistry. Develop original implications without recapping previous chapters.",
+      "facts": "Heretics and Chapterhouse: Bene Tleilax produce melange in axlotl tanks, breaking Rakis geographic monopoly; natural melange remains in market. Separate from Ixian navigation and no-ships. Navigators still need spice. No Project Amal, ultraspice, seaworms, expanded sequels.",
+      "url": "https://en.wikipedia.org/wiki/Melange_(Dune)",
+      "work": "Heretics of Dune; Chapterhouse: Dune"
+    },
+    {
+      "episode": "QP-04-silo-indices",
+      "key": "legacy",
+      "after": 9,
+      "title": "Lukas enters a library the public cannot use",
+      "target_words": 1300,
+      "job": "Tell Lukas becoming shadow and entering vault/Legacy. Books, relics, living supplies and historical database coexist with forbidden history outside. Same object changes legal status with reader. Bernard needs subordinate to solve what he cannot. Concrete lore, no lecture on epistemology or invented technical interfaces.",
+      "facts": "S2E6-7 Bernard swears Lukas as shadow. Vault has living quarters, food, Order, old books, relics, servers/tablet with history. Bernard reports 352-year age; purpose/origins absent. Tasks Lukas with Quinn letter; book cipher; suggests Meadows Wizard of Oz. No omniscient AI.",
+      "url": "https://tvobsessive.com/2024/12/27/silo-s2e7-recap-the-dive-turns-on-the-fountain-of-information/",
+      "work": "S2E6-7"
+    },
+    {
+      "episode": "QP-04-silo-indices",
+      "key": "quinn",
+      "after": 9,
+      "title": "Quinn hides a message in the rulebook",
+      "target_words": 1300,
+      "job": "Continue from Legacy: failed book candidates, descendants, stigma, Meadows earlier visit, Pact copy, code leads down. Badge authority versus earning trust; government text as private key; descendants responding to inherited reputation. No invented decoding algorithm, long quote or technical explanation.",
+      "facts": "S2E8-9 Lukas unsuccessfully tries Meadows books then seeks Quinn descendants Penbrook family. They distrust him and disavow ancestor because rebellion story. Bernard says Quinn destroyed past records to prevent recurring rebellions; attribute account. Family says Meadows visited and received Quinn Pact copy. Lukas decodes letter and goes hidden tunnel. Do not resolve fifty/fifty-one ambiguity.",
+      "url": "https://tvobsessive.com/2025/01/03/silo-s2e8-recap-the-book-of-quinn-has-some-blank-pages-to-fill/",
+      "work": "S2E8-9"
+    },
+    {
+      "episode": "QP-04-silo-indices",
+      "key": "jimmy",
+      "after": 20,
+      "title": "Solo is a name that protects Jimmy",
+      "target_words": 1300,
+      "job": "Private identity and practical repair: Juliette needs suit, Solo needs submerged pump, young survivors and vault food, adult witness was a child at collapse. Mechanical tasks and concealed knowledge change relationship. Return to mother's Safeguard intervention briefly, no S3 war recap. Distinguish floodwater pump from poison pipe.",
+      "facts": "S2E7-10 Juliette needs suit to leave; Solo needs pump repaired as rising water threatens IT. After dive he is missing/injured. Audrey, Rick, Hope and children need food behind vault. Solo is Jimmy, child at collapse sheltered by father. Juliette brokers peace; learns poison pipe/Safeguard. S3E8 says his mother disabled Safeguard. No invented ages or dive measurements.",
+      "url": "https://tvobsessive.com/2025/01/17/silo-s2e10-recap-throw-all-the-theories-into-the-fire/",
+      "work": "S2E7-10; S3E8"
+    },
+    {
+      "episode": "QP-05-from-victor",
+      "key": "trees",
+      "after": 3,
+      "title": "Victor counts the distance to the trees",
+      "target_words": 1200,
+      "job": "Early concrete observation, Victor pacing from Colony House corner to forest; Ethan asks and wants to help. Bodily habit and remembered layout, child accepting peculiar routine, changing forest versus trapped road. No lecture on scientific falsification or invented measured numbers.",
+      "facts": "S1E3 Victor measures by steps from house corner to nearby trees. Initially dismisses Ethan, becomes interested when Ethan asks about boy in forest. Says checking whether trees move. Julie comes out to scold Ethan for being outside. No established tree speed, cause, teleportation or compass survey.",
+      "url": "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/3/",
+      "work": "S1E3"
+    },
+    {
+      "episode": "QP-05-from-victor",
+      "key": "tunnels",
+      "after": 5,
+      "title": "He guides Tabitha through the tunnels",
+      "target_words": 1200,
+      "job": "Victor as practical guide. Waiting underground at Boy in White direction, finds Tabitha, sleeping creatures, quiet passage, forest escape and truck shelter; Boyd and Elgin survive night too. Fear coexists with useful spatial knowledge. No detailed gore, fabricated maps or safety rules. Distinct from Jasper retrieval.",
+      "facts": "S1E10 and S2E1 Boy in White sends Victor underground; he meets Tabitha after excavation, guides her among sleeping creatures, warns quiet. They exit to forest and cargo truck. Boyd, Tabitha, Victor, Elgin survive and return town S2E2. Victor has hidden supplies/drawings. No control over creatures/portals.",
+      "url": "https://www.whattowatch.com/features/from-season-2-episode-1-recap-welcome-to-the-nightmare",
+      "work": "S1E10; S2E1-2"
+    },
+    {
+      "episode": "QP-05-from-victor",
+      "key": "lunchbox",
+      "after": 12,
+      "title": "An address survives inside the lunchbox",
+      "target_words": 1200,
+      "job": "Gift before tower to old address leading Tabitha to Henry in Camden. Ordinary childhood belonging carrying information across boundary. Henry frightened skeptical, missing-family past meets grown son account. Do not retell next chapters father reunion or Miranda paintings. No preplanned rescue prediction.",
+      "facts": "Victor gives Tabitha lunchbox for tower journey S2 end. Wakes outside in Camden, finds address on lunchbox and visits Henry. Henry recognizes missing sons lunchbox but doubts her story; missing-family news helps discussion. Distinguish address from supernatural exit directions. Victor predicting result unconfirmed.",
+      "url": "https://www.dexerto.com/tv-movies/from-season-3-episode-2-recap-2914406/",
+      "work": "S2E10; S3E1-2"
+    },
+    {
+      "episode": "QP-06-severance-eagan",
+      "key": "portraits",
+      "after": 9,
+      "title": "The founder changes in a set of paintings",
+      "target_words": 1150,
+      "job": "Natalie brings Kier portraits depicting him Black to Milchick; restrained discomfort; her claimed same gift; later complicated feelings. Original analysis of racial paternalism, corporate gift dictating response, founder likeness and unchanged power. No claim historical Kier race changed, performed blackface, clones or proven exact Board motive.",
+      "facts": "S2E3 Natalie presents whole Kier cycle reimagined as Black to promoted Milchick, says received same promotion gift and found loving. He politely awkward. S2E5 asks her about paintings, describes complicated feelings. Tillman interview describes discomfort. Corporate reinterpretation, not literal history.",
+      "url": "https://www.tvline.com/interviews/severance-milchick-paintings-explained-lumon-founder-blackface-episode-3-1235404526/",
+      "work": "S2E3 and S2E5"
+    },
+    {
+      "episode": "QP-06-severance-eagan",
+      "key": "book",
+      "after": 16,
+      "title": "Lumon orders a different edition of a dangerous book",
+      "target_words": 1150,
+      "job": "Original Ricken book inspires innies; Natalie commissions workers edition; eager author and critical Devon. Tie to Eagan canon: corporation absorbs alternative authority by commissioning wording. Outside book leakage versus approved Kier appendix. No secret family bloodline, no inventing author of Kier text, no claim new edition actually distributed.",
+      "facts": "S1 Ricken leaves The You You Are for Mark; Cobel takes from doorstep into Lumon; Milchick inspects and leaves it in conference room, Mark and Dylan read and find encouragement for autonomy. S2E3 Natalie approaches Ricken; S2E5 he drafts Lumon edition, Devon criticizes corporate direction and reversal. This is drafting/co-option attempt, success unconfirmed.",
+      "url": "https://www.tvline.com/recaps/severance-recap-season-2-episode-5-helly-irving-1235408645/",
+      "work": "S1 book arc; S2E3-5"
+    },
+    {
+      "episode": "DV-03-paul",
+      "key": "dinner",
+      "after": 5,
+      "title": "Paul takes his fathers place at dinner",
+      "target_words": 1100,
+      "job": "Original novel chronological dinner before betrayal. Paul and Jessica host elite after Leto leaves. Political education enacted: water interests, Kynes influence, Tuek, banker allegiance. Competence and overconfidence, mother assessing conversational risk, security note interrupts. No commanding all guests, preventing invasion or film mixture.",
+      "facts": "Leto leaves dinner on security business, Paul and Jessica remain. Paul confident sometimes boastful, Jessica proud/wary. Kynes, Tuek, Harkonnen-aligned banker and water interests attend; banker fears Kynes. Duke sends coded message involving Harkonnen lasguns. No invented dialogue, seating or physical violence.",
+      "url": "https://www.gradesaver.com/dune/study-guide/summary-book-1-dune-chapters-13-22",
+      "work": "Dune original novel: Arrakeen dinner"
+    }
+  ]
+}

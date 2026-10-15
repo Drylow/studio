@@ -5,25 +5,25 @@
       "number": 1,
       "title": "The emperor who walks away",
       "file": "chapitres/01.txt",
-      "words": 758,
+      "words": 666,
       "start_word": 0,
-      "end_word": 758,
+      "end_word": 666,
       "estimated_start_seconds_at_150_wpm": 0,
       "measured_timestamp": null,
       "sources": [
         "P1",
         "P5"
       ],
-      "sha256": "19c640dbbb4536632c3515d39daef958f1e04484ae71b1b7f608173b4b589c3f"
+      "sha256": "4a4cc5be426ba757d2f13d69f74bc7db82bfed4f05d8a54409011011606107c2"
     },
     {
       "number": 2,
       "title": "A childhood prepared by several teachers",
       "file": "chapitres/02.txt",
       "words": 960,
-      "start_word": 758,
-      "end_word": 1718,
-      "estimated_start_seconds_at_150_wpm": 303,
+      "start_word": 666,
+      "end_word": 1626,
+      "estimated_start_seconds_at_150_wpm": 266,
       "measured_timestamp": null,
       "sources": [
         "P2"
@@ -34,53 +34,67 @@
       "number": 3,
       "title": "Jessica's decision and the box",
       "file": "chapitres/03.txt",
-      "words": 992,
-      "start_word": 1718,
-      "end_word": 2710,
-      "estimated_start_seconds_at_150_wpm": 687,
+      "words": 955,
+      "start_word": 1626,
+      "end_word": 2581,
+      "estimated_start_seconds_at_150_wpm": 650,
       "measured_timestamp": null,
       "sources": [
         "P2"
       ],
-      "sha256": "69fa41385c0cb7021158525d31c6dca064c8c8b818e7eef524d41f7f1657f81a"
+      "sha256": "16a1d8f7f985f71f7895e91ea8677c398ec7da6b315468428fb96dc7c82899a2"
     },
     {
       "number": 4,
       "title": "An inheritance on a dangerous planet",
       "file": "chapitres/04.txt",
-      "words": 1034,
-      "start_word": 2710,
-      "end_word": 3744,
-      "estimated_start_seconds_at_150_wpm": 1084,
+      "words": 954,
+      "start_word": 2581,
+      "end_word": 3535,
+      "estimated_start_seconds_at_150_wpm": 1032,
       "measured_timestamp": null,
       "sources": [
         "P1",
         "P2"
       ],
-      "sha256": "2c686edd3bcd9392e97d9146a82883a35b99c3e9ea9e3522576e0b2b211f03fa"
+      "sha256": "d0f4b8b8543744570cd3de207756a32caf5317624bd26358729fe8883437cbdc"
     },
     {
       "number": 5,
       "title": "What Leto teaches through a rescue",
       "file": "chapitres/05.txt",
-      "words": 854,
-      "start_word": 3744,
-      "end_word": 4598,
-      "estimated_start_seconds_at_150_wpm": 1498,
+      "words": 800,
+      "start_word": 3535,
+      "end_word": 4335,
+      "estimated_start_seconds_at_150_wpm": 1414,
       "measured_timestamp": null,
       "sources": [
         "P2"
       ],
-      "sha256": "33ff9ab313bb12426d7181b68049a95c8bc4cfb18d7f3cc752f6494c07ea9bba"
+      "sha256": "cf535005b2dda8792b3ff357796daae0ba9363799f1398f08eda376faa8536bb"
     },
     {
       "number": 6,
-      "title": "A trusted doctor opens the way",
+      "title": "Paul takes his fathers place at dinner",
       "file": "chapitres/06.txt",
+      "words": 1118,
+      "start_word": 4335,
+      "end_word": 5453,
+      "estimated_start_seconds_at_150_wpm": 1734,
+      "measured_timestamp": null,
+      "sources": [
+        "ADD-dinner"
+      ],
+      "sha256": "1f57d2463a68bf5836e640f03181c985acae60ee38909d74568e7bb19c0475c3"
+    },
+    {
+      "number": 7,
+      "title": "A trusted doctor opens the way",
+      "file": "chapitres/07.txt",
       "words": 982,
-      "start_word": 4598,
-      "end_word": 5580,
-      "estimated_start_seconds_at_150_wpm": 1839,
+      "start_word": 5453,
+      "end_word": 6435,
+      "estimated_start_seconds_at_150_wpm": 2181,
       "measured_timestamp": null,
       "sources": [
         "P2"
@@ -88,228 +102,228 @@
       "sha256": "3ba4a747ccf9ee484193c0cc236a498dca99f8534d8f66c1bb39073196cfe3e9"
     },
     {
-      "number": 7,
-      "title": "Mother and son beyond the household",
-      "file": "chapitres/07.txt",
-      "words": 1057,
-      "start_word": 5580,
-      "end_word": 6637,
-      "estimated_start_seconds_at_150_wpm": 2232,
-      "measured_timestamp": null,
-      "sources": [
-        "P2"
-      ],
-      "sha256": "3df00a0a1dab4ca3c0931de394a9dab8ba25bfe889b5562f8466ed3e8ccc8c97"
-    },
-    {
       "number": 8,
-      "title": "Meeting people prepared to recognize him",
+      "title": "Mother and son beyond the household",
       "file": "chapitres/08.txt",
-      "words": 902,
-      "start_word": 6637,
-      "end_word": 7539,
-      "estimated_start_seconds_at_150_wpm": 2655,
+      "words": 1034,
+      "start_word": 6435,
+      "end_word": 7469,
+      "estimated_start_seconds_at_150_wpm": 2574,
       "measured_timestamp": null,
       "sources": [
         "P2"
       ],
-      "sha256": "bfc3cd2c4d1ac05094a7f0aaf05b222f56a73f67088cecf6cef16f32fb0d5cbb"
+      "sha256": "86ae093da5fa29ce4e4d1dc69ed185eb35b1dd198e62b30798086e04f5c848c0"
     },
     {
       "number": 9,
-      "title": "Jamis and the burden of admission",
+      "title": "Meeting people prepared to recognize him",
       "file": "chapitres/09.txt",
-      "words": 957,
-      "start_word": 7539,
-      "end_word": 8496,
-      "estimated_start_seconds_at_150_wpm": 3016,
+      "words": 859,
+      "start_word": 7469,
+      "end_word": 8328,
+      "estimated_start_seconds_at_150_wpm": 2988,
       "measured_timestamp": null,
       "sources": [
         "P2"
       ],
-      "sha256": "9a159c7177d83cbc8d839fa4d3a42a3a958840df5eb9c5e69406f08df54ff164"
+      "sha256": "a64781813c4bcc20df3b91d604a7abbba962c06f0d0d1187d5112e7cda1fc268"
     },
     {
       "number": 10,
-      "title": "Usul and Muad'Dib",
+      "title": "Jamis and the burden of admission",
       "file": "chapitres/10.txt",
-      "words": 839,
-      "start_word": 8496,
-      "end_word": 9335,
-      "estimated_start_seconds_at_150_wpm": 3398,
+      "words": 895,
+      "start_word": 8328,
+      "end_word": 9223,
+      "estimated_start_seconds_at_150_wpm": 3331,
       "measured_timestamp": null,
       "sources": [
         "P2"
       ],
-      "sha256": "941d28b6a4a134f28e6b24f688d3bb776f39b477f58dcd9c55c401b3fc8860f9"
+      "sha256": "829799226ef7d8764879b2d1fd4a73f492b7166060c08927312f40bf4929b28c"
     },
     {
       "number": 11,
-      "title": "Chani and a life that might have been private",
+      "title": "Usul and Muad'Dib",
       "file": "chapitres/11.txt",
-      "words": 929,
-      "start_word": 9335,
-      "end_word": 10264,
-      "estimated_start_seconds_at_150_wpm": 3734,
+      "words": 673,
+      "start_word": 9223,
+      "end_word": 9896,
+      "estimated_start_seconds_at_150_wpm": 3689,
       "measured_timestamp": null,
       "sources": [
-        "P2",
-        "P3"
+        "P2"
       ],
-      "sha256": "d0fb92bd9572b3697ec1e2a078d369875536b9e3b826250040c6220c153e3dbb"
+      "sha256": "4fede66206b25ef4a9f021e76783d01d2365dbbc492365596b93603e1ac88d93"
     },
     {
       "number": 12,
-      "title": "The worm and the community's expectations",
+      "title": "Chani and a life that might have been private",
       "file": "chapitres/12.txt",
-      "words": 986,
-      "start_word": 10264,
-      "end_word": 11250,
-      "estimated_start_seconds_at_150_wpm": 4106,
-      "measured_timestamp": null,
-      "sources": [
-        "P2"
-      ],
-      "sha256": "5412c04f1d735e3e06c537ebe05bb73be7ce9e38fcce5b07abe7a1e2da24b919"
-    },
-    {
-      "number": 13,
-      "title": "The Water of Life changes his horizon",
-      "file": "chapitres/13.txt",
-      "words": 932,
-      "start_word": 11250,
-      "end_word": 12182,
-      "estimated_start_seconds_at_150_wpm": 4500,
-      "measured_timestamp": null,
-      "sources": [
-        "P2"
-      ],
-      "sha256": "d4ef0ef6a796e9360f5cb265591c176147f89b0da02efda8f1087fdc1bbe908c"
-    },
-    {
-      "number": 14,
-      "title": "Winning Arrakis and losing a child",
-      "file": "chapitres/14.txt",
-      "words": 1078,
-      "start_word": 12182,
-      "end_word": 13260,
-      "estimated_start_seconds_at_150_wpm": 4873,
+      "words": 833,
+      "start_word": 9896,
+      "end_word": 10729,
+      "estimated_start_seconds_at_150_wpm": 3958,
       "measured_timestamp": null,
       "sources": [
         "P2",
         "P3"
       ],
-      "sha256": "b80f10b07ea6c491e9ddce67485430bbc710b584050e6755656152d98b8a8f26"
+      "sha256": "74b57c1081a14d0b36919768498a417413d6a72ac9a59d1404e318acea569952"
+    },
+    {
+      "number": 13,
+      "title": "The worm and the community's expectations",
+      "file": "chapitres/13.txt",
+      "words": 883,
+      "start_word": 10729,
+      "end_word": 11612,
+      "estimated_start_seconds_at_150_wpm": 4292,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "8469ac194976b654d2a0d2ce3f6fb79ccc88f5836d43c1e0e2902e57f9670d4b"
+    },
+    {
+      "number": 14,
+      "title": "The Water of Life changes his horizon",
+      "file": "chapitres/14.txt",
+      "words": 872,
+      "start_word": 11612,
+      "end_word": 12484,
+      "estimated_start_seconds_at_150_wpm": 4645,
+      "measured_timestamp": null,
+      "sources": [
+        "P2"
+      ],
+      "sha256": "21f894c121c34dba0490b5ed975c5129c16ff645e46af430d8e283216dd75de9"
     },
     {
       "number": 15,
-      "title": "Irulan's marriage and Chani's position",
+      "title": "Winning Arrakis and losing a child",
       "file": "chapitres/15.txt",
-      "words": 906,
-      "start_word": 13260,
-      "end_word": 14166,
-      "estimated_start_seconds_at_150_wpm": 5304,
+      "words": 1033,
+      "start_word": 12484,
+      "end_word": 13517,
+      "estimated_start_seconds_at_150_wpm": 4994,
+      "measured_timestamp": null,
+      "sources": [
+        "P2",
+        "P3"
+      ],
+      "sha256": "8ca867f34370e8f163537fa38f93aa7cd0e4576001fcd8e253cec73455447203"
+    },
+    {
+      "number": 16,
+      "title": "Irulan's marriage and Chani's position",
+      "file": "chapitres/16.txt",
+      "words": 815,
+      "start_word": 13517,
+      "end_word": 14332,
+      "estimated_start_seconds_at_150_wpm": 5407,
       "measured_timestamp": null,
       "sources": [
         "P3"
       ],
-      "sha256": "30173d61200733dc89ff7fe84e2e1f1dadb5289c54f09a891877f4dda2a6cb7d"
-    },
-    {
-      "number": 16,
-      "title": "A victory followed by an empire-wide war",
-      "file": "chapitres/16.txt",
-      "words": 895,
-      "start_word": 14166,
-      "end_word": 15061,
-      "estimated_start_seconds_at_150_wpm": 5666,
-      "measured_timestamp": null,
-      "sources": [
-        "P4"
-      ],
-      "sha256": "ff33eac3672774db01c1dab773e64f8451264c8713a856d2a98da6d8f9867b31"
+      "sha256": "087e5814d38a1d714dcf8248b024a48d122e83c3b9b4bc84a83859f826143a91"
     },
     {
       "number": 17,
-      "title": "Enemies learn to hide from a prophet",
+      "title": "A victory followed by an empire-wide war",
       "file": "chapitres/17.txt",
-      "words": 904,
-      "start_word": 15061,
-      "end_word": 15965,
-      "estimated_start_seconds_at_150_wpm": 6024,
+      "words": 803,
+      "start_word": 14332,
+      "end_word": 15135,
+      "estimated_start_seconds_at_150_wpm": 5733,
       "measured_timestamp": null,
       "sources": [
         "P4"
       ],
-      "sha256": "c61c8dfe11570704f6cd6d770cc7ee77de1fc8f1a5f8e538fa2cf648504e6c6c"
+      "sha256": "e12543c24a0b8ddec9bad960cb903f8a004c5c9847c7676be74ff163fe338aec"
     },
     {
       "number": 18,
-      "title": "Duncan returns as Hayt",
+      "title": "Enemies learn to hide from a prophet",
       "file": "chapitres/18.txt",
-      "words": 875,
-      "start_word": 15965,
-      "end_word": 16840,
-      "estimated_start_seconds_at_150_wpm": 6386,
+      "words": 905,
+      "start_word": 15135,
+      "end_word": 16040,
+      "estimated_start_seconds_at_150_wpm": 6054,
       "measured_timestamp": null,
       "sources": [
         "P4"
       ],
-      "sha256": "55f5539cfe3bcd0b6c4bba2442e0e827ee4390134a9219d4341141f52b8a54a3"
+      "sha256": "a001e135faf8c89723a340d6192bcd8fafb961ce60da28897b87efd5d97c0272"
     },
     {
       "number": 19,
-      "title": "A household entangled in succession",
+      "title": "Duncan returns as Hayt",
       "file": "chapitres/19.txt",
-      "words": 905,
-      "start_word": 16840,
-      "end_word": 17745,
-      "estimated_start_seconds_at_150_wpm": 6736,
+      "words": 623,
+      "start_word": 16040,
+      "end_word": 16663,
+      "estimated_start_seconds_at_150_wpm": 6416,
       "measured_timestamp": null,
       "sources": [
         "P4"
       ],
-      "sha256": "f6e8f6fed256b4a618f84548fd20ae0732c86e8eb4a082a5b241843688098628"
+      "sha256": "054db7d68fe6d8904e3cffb721ed4a8eed01de52465dd66a95c2ae0ae02a3301"
     },
     {
       "number": 20,
-      "title": "Seeing without physical eyes",
+      "title": "A household entangled in succession",
       "file": "chapitres/20.txt",
-      "words": 792,
-      "start_word": 17745,
-      "end_word": 18537,
-      "estimated_start_seconds_at_150_wpm": 7098,
+      "words": 822,
+      "start_word": 16663,
+      "end_word": 17485,
+      "estimated_start_seconds_at_150_wpm": 6665,
+      "measured_timestamp": null,
+      "sources": [
+        "P4"
+      ],
+      "sha256": "859ec6f9cedbbbad6c0fb08fb83851b8439b687e990354708bac6813313c662d"
+    },
+    {
+      "number": 21,
+      "title": "Seeing without physical eyes",
+      "file": "chapitres/21.txt",
+      "words": 711,
+      "start_word": 17485,
+      "end_word": 18196,
+      "estimated_start_seconds_at_150_wpm": 6994,
       "measured_timestamp": null,
       "sources": [
         "P4",
         "P5"
       ],
-      "sha256": "77ee61867b472791a1db7cededf6d8424e6c0d44155df62d5490d2396da0d0b2"
+      "sha256": "198c3bbaf497ca94ecd4055fd82842dde03bca88f94b62b9e840fa63dcb29513"
     },
     {
-      "number": 21,
+      "number": 22,
       "title": "The twins and the choice to leave",
-      "file": "chapitres/21.txt",
-      "words": 882,
-      "start_word": 18537,
-      "end_word": 19419,
-      "estimated_start_seconds_at_150_wpm": 7415,
+      "file": "chapitres/22.txt",
+      "words": 893,
+      "start_word": 18196,
+      "end_word": 19089,
+      "estimated_start_seconds_at_150_wpm": 7278,
       "measured_timestamp": null,
       "sources": [
         "P4",
         "P5",
         "P6"
       ],
-      "sha256": "43fc9470aca5374db5d8ce5050927dd9e49d1e1785a4a1077f0b0c7d4e32b9ed"
+      "sha256": "4c33b5db2ac362500b99838b5435eca615ea51b8f603942f02b76902040fc582"
     },
     {
-      "number": 22,
+      "number": 23,
       "title": "A preacher challenges Muad'Dib's religion",
-      "file": "chapitres/22.txt",
+      "file": "chapitres/23.txt",
       "words": 798,
-      "start_word": 19419,
-      "end_word": 20217,
-      "estimated_start_seconds_at_150_wpm": 7768,
+      "start_word": 19089,
+      "end_word": 19887,
+      "estimated_start_seconds_at_150_wpm": 7636,
       "measured_timestamp": null,
       "sources": [
         "P6",
@@ -318,34 +332,34 @@
       "sha256": "bc641f8ca8566c8f388e84d61b95d25321a64ad3202329716e2e0619514cb9c1"
     },
     {
-      "number": 23,
+      "number": 24,
       "title": "The future his son accepts",
-      "file": "chapitres/23.txt",
-      "words": 882,
-      "start_word": 20217,
-      "end_word": 21099,
-      "estimated_start_seconds_at_150_wpm": 8087,
+      "file": "chapitres/24.txt",
+      "words": 780,
+      "start_word": 19887,
+      "end_word": 20667,
+      "estimated_start_seconds_at_150_wpm": 7955,
       "measured_timestamp": null,
       "sources": [
         "P7",
         "P8"
       ],
-      "sha256": "d6ed01390c16ec3ad73246b26c609f17f3e1d59b3372520de21b2c6faf604341"
+      "sha256": "cbc504146842354fcb02dbf98c820b9babc963c6d010d1a200f34080b05f23b8"
     },
     {
-      "number": 24,
+      "number": 25,
       "title": "The end of the man behind the name",
-      "file": "chapitres/24.txt",
-      "words": 834,
-      "start_word": 21099,
-      "end_word": 21933,
-      "estimated_start_seconds_at_150_wpm": 8440,
+      "file": "chapitres/25.txt",
+      "words": 578,
+      "start_word": 20667,
+      "end_word": 21245,
+      "estimated_start_seconds_at_150_wpm": 8267,
       "measured_timestamp": null,
       "sources": [
         "P7",
         "P8"
       ],
-      "sha256": "ce465e00bf7ddb4b3665c6bf80cceb6bfb48307bbe3f2f1939658331821c6687"
+      "sha256": "6a21a3b9fddb1e41c0dd91f57115a11dbb27f9a8b4ec2927664c633f299ca2b7"
     }
   ]
 }

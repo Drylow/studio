@@ -1,0 +1,30 @@
+[
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-2-chapitres-09-12.json",
+    "finding": {
+      "chapter": 11,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "Susan objects to the response he wants. She proposes targeting the sheriff who has led Silo 17's uprising, hoping the others will retreat. That alternative is still violent, but it establishes a disagreement inside the control room. The operation doesn't proceed because everyone present has independently arrived at the same decision. Someone offers a different course, and Troy rejects it. When she refuses his orders, he has her arrested and takes charge of the operation himself.",
+      "reason": "Neither S8 nor the assignment establishes this targeting proposal, the proposed motive, the refusal or the arrest. Subsequent paragraphs repeatedly depend on this scene account, and other unsupported staging includes Victor handling the awakening and watching the operation. This needs source-backed revision across the chapter, not a local substitution that pretends to preserve verified detail. Retain the authorized distinction between skills and personal memory; substantiate or remove the detailed operational sequence.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    "disposition": "Source-supported scene retained. Review proof bank was too compressed, now expanded from opened episode recap.",
+    "source_id": "S8"
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-2-chapitres-17-20.json",
+    "finding": {
+      "chapter": 19,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "By the end of the episode, Orla's boyfriend Mike is identified as her killer. Ed's illegal construction and theft belong to the investigation without turning him into the answer to every question it raises. This is useful when we return to Silo's clues. The discovery of a concealed activity can be real, significant and dangerous, while another person is responsible for the particular death that brought the sheriff there. Billings needs the connections between events as well as evidence that someone has broken a rule.",
+      "reason": "S6 establishes the illegal elevator and theft, but the supplied materials do not establish Orla Kent's death, Mike's identity or guilt, the investigation's sequence, or Ed's attributed rebellion-and-lightbulb explanation. Those additions drive several paragraphs and recur in the opening and later discussion. This requires a source-bounded rewrite of the affected investigation thread, or additional authoritative proof, rather than a cosmetic replacement of this paragraph. The supported elevator discovery can remain.",
+      "replacement": "",
+      "rewrite_required": true
+    },
+    "disposition": "Source-supported scene retained. Review proof bank was too compressed, now expanded from opened episode recap.",
+    "source_id": "S6"
+  }
+]

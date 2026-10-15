@@ -1,23 +1,23 @@
-# Prochaines actions
+# Prochaines actions — 15 octobre 2026
 
-1. Vérifier où en est le projet FROM déjà lancé dans Ultravid, sans en créer un second.
-   Enregistrer son lien, sa durée réelle et son fichier final quand disponibles.
-2. Pour la troisième vidéo Quiet, utiliser :
-   **2 Hours of Severance's Biggest Mysteries & Theories to Fall Asleep To**.
-   Durée proposée : 2 h 30. Lancement non confirmé à la date de sauvegarde.
-3. Préparer les miniatures FROM puis Severance à partir de la référence Silo C
-   effectivement envoyée au générateur. Deux à quatre variantes lisibles ; conserver
-   les essais et laisser l'utilisateur choisir. Aucune miniature de ces deux séries
-   n'est encore enregistrée comme approuvée.
-4. Donner titre, description et miniature de chaque vidéo dans un dossier simple.
-   Ajouter des chapitres uniquement après mesure du montage final.
-5. Le 12 octobre, l'utilisateur confirme la programmation des quatre vidéos Deep Void.
-   Ne pas les uploader ou programmer de nouveau. Les dates exactes restent à relever.
-   La suite proposée est dans deep-void/SUITE-PROPOSEE.md.
-6. Après Severance : retour à **Silo**, puis **FROM**, puis **Severance**.
-   Les angles plus ciblés de RECHERCHE.md sont des propositions, pas des commandes.
-7. Mettre à jour etat-videos.json et ce README après chaque état confirmé.
-   Ne pas transformer une annonce « je vais scheduler » en statut « programmée ».
+1. Les six nouveaux scripts sont finalisés dans `scripts-2026-10-15/`.
+   Deep Void : Force, Guilde spatiale, Paul Atréides. Deux Dune et un Star Wars.
+   Quiet : Silo, FROM/Victor, Severance/Eagan, dans cet ordre.
+2. Utiliser les `script-voix.txt` finaux ou les six textes simples du dossier
+   Bureau **6 scripts sleep - 15 octobre 2026**. Sources et contrôles sont dans
+   le dossier canonique et la sauvegarde autonome de reprise.
+3. Dans Ultravid, générer la narration puis vérifier au moins deux heures de
+   voix réelle. Les durées calculées sur les mots restent des estimations.
+   Ne pas ajouter de silence ou de boucle.
+4. Préparer les miniatures et descriptions de ce nouveau lot quand demandé.
+   Les directions visuelles précédentes restent les références.
+5. Premier lot Quiet : Silo publié, upload de Severance signalé, FROM prévu après.
+   Vérifier ces états avant de créer un projet en double. Leurs kits existent
+   déjà dans les dossiers `chaines/quiet-paradox/02-from` et `03-severance`.
+6. Les quatre vidéos précédentes Deep Void ont été programmées selon l'utilisateur.
+   Conserver ce lot ; ne pas l'uploader de nouveau.
+7. Relever les liens Ultravid et durées mesurées quand disponibles, puis mettre
+   à jour `etat-videos.json` sur preuve ou confirmation.
 
-Ne pas reprendre le logo Quiet, régénérer les miniatures acceptées ou lancer une
-nouvelle chaîne à la place de ces étapes.
+Le logo Quiet reste en pause. La commande de rédaction des six scripts ne lance
+aucun nouvel audio, montage ou upload.

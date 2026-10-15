@@ -1,0 +1,233 @@
+{
+  "chapters": [
+    {
+      "number": 13,
+      "summary": "Helen's pregnancy and entry into Silo 18 make a connection to Juliette conceivable, but they do not establish descent.",
+      "new_information": [
+        "Helen is pregnant when she and Daniel are separated into Silo 18 and Silo 1.",
+        "A shared installation establishes a geographical connection, not a genealogical one.",
+        "Testing the ancestry theory would require compatible dates, identification of Helen's child and connected relationships across the intervening generations.",
+        "The audience's access to Helen's story does not give Juliette the same information."
+      ],
+      "local_answer": "The chapter answers its assigned question correctly: the released pregnancy supports a possible continuing family line, not a confirmed relationship to Juliette. Its useful test of the theory is stretched into too many paragraphs about missing links.",
+      "open_issues": [
+        "The opening, second paragraph and penultimate paragraph repeatedly explain the personal consequences of the same separation.",
+        "The hypothetical records discussion repeats the preceding explanation of intervening generations rather than advancing the test.",
+        "The final hypothetical discussion of what ancestry would mean for Juliette introduces an unnecessary thematic defense of her existing relationships."
+      ],
+      "evidence_notes": "The pregnancy and destinations agree with S7. No ancestry is asserted as fact. The dates and records are correctly presented as requirements for testing a theory, not as documents or chronology already supplied by the series."
+    },
+    {
+      "number": 14,
+      "summary": "The founders' description of a human seed bank explains their stated preservation objective without establishing that residents understood or consented to the project.",
+      "new_information": [
+        "In S3E8, the founders describe the silos as a human seed-bank project.",
+        "Maintaining a refuge and agreeing to its underlying purposes are different acts.",
+        "Unequal access to founding information limits residents' ability to assess the project.",
+        "Allison's retained implant provides a concrete conflict between population administration and an individual's informed expectations."
+      ],
+      "local_answer": "The chapter fulfills the assignment by attributing the survival rationale and distinguishing preservation from informed agreement. Its concrete examples are useful, but the implant example and the contrast between founding ambitions and ordinary work receive redundant restatements.",
+      "open_issues": [
+        "The paragraph following Allison's implant example largely explains the same ethical consequence again.",
+        "The closing repeats both the ordinary-work framing and the retained-implant fact after each has already been developed."
+      ],
+      "evidence_notes": "The human seed-bank account is appropriately attributed to the founders under S6, and the chapter expressly declines to certify their threat model. The reproductive-control example is consistent with S3 and the supplied earlier-chapter assignment. No novel extinction mechanism is introduced."
+    },
+    {
+      "number": 15,
+      "summary": "The explosion at the unveiling accompanies Helen and Daniel's separation into different silos, leaving later residents with different access to the history of their confinement.",
+      "new_information": [
+        "An explosion occurs at the unveiling in the Before Times story.",
+        "Helen enters Silo 18 and Daniel enters Silo 1.",
+        "Helen's experience of life before entry differs from the inherited knowledge available to later underground-born residents.",
+        "The separation means an account confined to one installation cannot follow both lives."
+      ],
+      "local_answer": "The chapter explains separation, unequal historical knowledge and the later administration of departure, but does not clearly distinguish those supported consequences from assumptions about the couple's immediate freedom of movement. Repeated descriptions of the two destinations dilute the development.",
+      "open_issues": [
+        "Several sentences imply established restrictions on immediate reunion that S7 does not itself specify.",
+        "The chapter repeats the destinations and their significance across the opening, third, fourth and sixth paragraphs.",
+        "The final paragraph repeats the preceding paragraph's conclusion almost exactly.",
+        "The hard-drive discussion returns to a general forbidden-history overview instead of adding a distinct consequence of the unveiling."
+      ],
+      "evidence_notes": "S7 supports the explosion, pregnancy and separation into S18 and S1. It does not specify the explosion's perpetrator, mechanism or casualties, and the draft appropriately avoids those claims. Immediate restrictions on reunion need narrower wording; the later cleaning procedure should not silently establish conditions at entry."
+    },
+    {
+      "number": 16,
+      "summary": "The finale identifies Charlotte as Susan, joining two apparent identities without establishing cloning, reincarnation or a manufactured duplicate.",
+      "new_information": [
+        "S3E10 confirms Charlotte is Susan.",
+        "The identity connection changes how earlier Charlotte appearances relate to the later story.",
+        "Daniel/Troy offers a comparison for altered identity, but his retained skills and memories do not establish Charlotte's experience.",
+        "The identity reveal does not by itself explain the mechanism or the extent of personal memory retained."
+      ],
+      "local_answer": "The chapter answers the identity question within scope and avoids invented biography, but repeatedly announces the same rewatch consequence rather than delivering distinct developments. Its face-versus-role distinction is useful and should remain the organizing point.",
+      "open_issues": [
+        "Multiple paragraphs restate that the later name adds a continuation to Charlotte's earlier appearances.",
+        "Two adjacent paragraphs separately explain that a person's current role is not their complete history.",
+        "The phrase 'the supplied events' exposes the editorial brief inside the narration."
+      ],
+      "evidence_notes": "The Charlotte/Susan and Daniel/Troy identifications agree with S8. The chapter correctly avoids transferring Daniel's specific memory experience to Charlotte. S8 establishes human operators in Silo 1, but does not supply a detailed Charlotte/Susan biography or identity-change mechanism."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Helen, though, the immediate situation is separation. The unveiling and the explosion belong to the circumstances in which she and Daniel end up in different silos. Her pregnancy means that the consequences extend beyond where the two adults are sent. Daniel is separated from a pregnant Helen, and Helen enters Silo 18 without him. Before trying to connect that child to someone in Juliette's time, it's worth keeping that particular family situation in view. Their lives have already been divided by the arrangements around them.",
+      "reason": "H18 identifies a re-mention that 'adds nothing' as an echo. The opening already establishes the pregnancy and both destinations, while the later paragraph beginning 'Helen's pregnancy still matters' provides the personal interpretation. This intervening paragraph repeats both without advancing the ancestry test.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Written records could help, provided they connected identifiable people. A record naming Helen and her child would answer a different question from a record naming one of Juliette's grandparents. Together, they might begin a chain, and further records could join it. The useful detail would be the relationship written down and how it connected with the next entry. An old document mentioning Helen somewhere in Silo 18's history would give her a place in that history without automatically attaching her to the Nichols family.",
+      "reason": "H18 calls for cutting a re-mention without a new consequence. The preceding two paragraphs already explain identifying Helen's child and connecting the intervening generations. The genuinely useful addition here is simply the distinction between a historical mention and a documented relationship.",
+      "replacement": "Records could help if they named parents and children across those generations. A document merely placing Helen in Silo 18 wouldn't connect her to the Nichols family.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "And if a family connection were eventually documented, it would add a particular history to Juliette's life. It wouldn't replace the relationships already shown: Pete as her father, the losses within her family, and the work through which she makes a life in Mechanical. Those experiences have their own causes and consequences.",
+      "reason": "H18 warns against repeatedly returning to one framing without new information. Pete's confirmed relationship has already supplied the comparison, and defending Juliette's existing biography against a hypothetical future revelation does not help test ancestry. The remaining closing sentences already provide a grounded conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The founders' explanation can therefore help us recognize why reproduction would concern the people running the project without settling whether their methods are acceptable. A plan to sustain a population still has to deal with particular patients and particular families. Allison's discovery can't be made harmless by placing it inside a larger survival objective. She and Holston have organized their hopes around information supplied to them. The retained implant changes their understanding of what has happened to her body, regardless of how an official might explain the long-term purpose.",
+      "reason": "H18's 'third identical mention' principle applies to the recurring contrast between population planning and individual agreement. The preceding paragraph has already made this precise point through Allison's expectations and retained implant. This paragraph supplies a second explanation of the same example rather than another development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Preservation continues in the hands of people such as Juliette and Pete, through repairs and medical care that someone actually needs. That's where the seed-bank idea meets a lived day underground. A future generation requires people in the present who can keep the machinery running, and it requires children who survive to grow up. Allison's discovery makes the issue concrete: she was told the implant had been removed, but it remained in place.",
+      "reason": "H18 says the second mention must add 'a consequence, a comparison, the next number.' Juliette's repairs, Pete's medical work and Allison's implant have all already carried the argument. This ending repeats the chapter's examples rather than closing on their implication for informed agreement.",
+      "replacement": "Allison agreed to a procedure she was told would let her try for a child. The founders' plan doesn't turn that agreement into consent to keeping the implant in place.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "The project now determines where each of them can be, with consequences neither can settle through an ordinary conversation together.",
+      "reason": "S7 establishes their destinations and separation, not a complete account of their immediate movement or communication restrictions. 'Determines where each of them can be' turns placement into a broader established confinement rule.",
+      "replacement": "They enter different installations, separating the couple at a moment when Helen is pregnant.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Silo 18 and Silo 1 are precise destinations, and that precision matters. Helen hasn't merely disappeared into an unspecified refuge somewhere beyond Daniel's reach. The story assigns them different places within the same larger system. As an interpretation, that makes their separation especially troubling: the project can accommodate both of them while keeping them apart. Housing people across multiple installations doesn't automatically preserve the connections they had before entering. A plan can account for where bodies will go without giving those people a practical way to remain together.",
+      "reason": "H18 identifies document-scale circling of one fact as an echo. The opening and immediately preceding paragraph already give both destinations and explain that survival infrastructure separates the couple. This third treatment adds no distinct event or supported restriction.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "scope",
+      "severity": "minor",
+      "quote": "Daniel's destination creates a separate problem of access. Going into Silo 1 places him somewhere other than the community Helen enters. Knowing where she has gone wouldn't, by itself, let him reach her. The separation makes the distinction practical. There are two people who share a past, two assigned locations, and a system between them. We don't have to supply an unseen journey or an attempted reunion to understand what has changed. Continuing their relationship now depends on possibilities that the couple can't arrange as they could before.",
+      "reason": "The supplied S7 establishes separation but does not establish what reunion options the couple could arrange immediately afterward. The passage also repeats their destinations and substitutes a methodological assurance about an 'unseen journey' for the missing access evidence.",
+      "replacement": "Daniel enters Silo 1 rather than the community Helen enters. That establishes their separation, but not what opportunities either has to reach the other.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "George and Allison approach another part of that inheritance through the hard drive. Recovering deleted information gives them material outside the approved account available in ordinary silo life. Their investigation belongs to a population for whom the beginning has become a problem to reconstruct. Helen and Daniel, by comparison, are living through a beginning as it happens, with incomplete opportunities to understand its consequences. The pairing is useful because it shows how an urgent experience can eventually become inaccessible history. Later people have to search for accounts of events they never witnessed.",
+      "reason": "H18 warns against every section looping back to the same observation. The preceding paragraph already contrasts Helen's direct experience with Allison's inherited explanations. The hard drive also has its assigned home in chapter 2 and has just been reused in chapter 14; here it adds another general explanation of inaccessible history rather than a new consequence of the unveiling.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "After the separation, an account from Silo 18 alone cannot follow both of their lives. Daniel's part of that shared history continues in Silo 1.",
+      "reason": "H18 requires a repeated mention to add something. The preceding paragraph already concludes that an account from one installation misses the continuation elsewhere. This is an immediate duplicate ending.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Before Times story has already given Charlotte a place in the account of how this world began. Susan belongs to the later situation the series has brought into view. Connecting them asks us to carry a person across that separation, instead of leaving each appearance inside its own stretch of the story. That's a substantial change on a rewatch. An earlier Charlotte scene now concerns someone who will also be known as Susan, even when nothing in that particular scene explains how the change happens.",
+      "reason": "H18 describes repeated framing without additional information as an echo. The opening already establishes the two names, the connected history and the mechanism left unexplained. The following paragraph develops the more useful distinction between recognition and assumptions about continuity.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "A familiar role can tell us what someone is expected to do without explaining how that person came to occupy it. Susan's later place in the system therefore gives us only part of her history.",
+      "reason": "H18 calls for one home for a repeated observation. The next paragraph immediately develops this same role-versus-history distinction in the concrete context of Silo 1's human operators, making this standalone announcement unnecessary.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "artifact",
+      "severity": "minor",
+      "quote": "The finale identifies Charlotte with Susan; treating the familiar face as evidence of a manufactured replacement would take that identification somewhere the supplied events don't take it.",
+      "reason": "'The supplied events' refers to the editor's evidence packet rather than the listener's television experience. It exposes production methodology inside the narration and repeats the paragraph's already clear distinction between identity and duplication.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Susan's face now brings Charlotte into the later setting with her. The name used around her can organize a present encounter, assign a place in a procedure, and tell other people how to address her. The viewer has another name to hold beside it. When Susan appears again within the released story, recognition carries that additional piece of her past, even where the conversation concerns only the work in front of her.",
+      "reason": "H18's echo applies to this further restatement that Susan's face now carries Charlotte's past. The opening and preceding rewatch paragraph already establish that consequence. 'Within the released story' also sounds like scope-management language rather than natural narration.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        13,
+        15
+      ],
+      "detail": "Both repeatedly explain that pregnant Helen enters Silo 18 while Daniel enters Silo 1 and that the separation concerns a child as well as the adults. Chapter 13 needs the fact for the ancestry test; chapter 15 should spend its additional space on entry, departure and divided historical knowledge."
+    },
+    {
+      "chapters": [
+        14,
+        15
+      ],
+      "detail": "Both use George and Allison's hard-drive investigation to explain residents' lack of access to founding history. The chapter 15 passage is the less useful repetition because its preceding Helen/Allison comparison already establishes inherited uncertainty."
+    },
+    {
+      "chapters": [
+        13,
+        16
+      ],
+      "detail": "Both expand a limited reveal into several paragraphs explaining what further information would be needed. These are different questions, but the repeated methodological delivery risks turning the narration into an evidence-review lesson. Keep the concrete ancestry test in 13 and the face-versus-role distinction in 16."
+    }
+  ],
+  "scope_status": "Chapters 13-16 remain within television scope through S3E10 Troy. No novel biography, confirmed ancestry, autonomous-AI claim or invented identity mechanism appears. Chapter 15 needs narrower wording about immediate access and reunion possibilities; the supplied proof establishes separation, not every restriction inferred from it.",
+  "limitations": "Reviewed all four supplied chapters against the supplied proof bank, assignments and voice guidance. The remaining chapters were supplied only as outline entries, so full-script repetition and the opening-only optional subscription request cannot be assessed. Sources were not independently opened, episode footage was not watched, and narration timing was not measured.",
+  "input_hashes": {
+    "13": "3810e4f0df46348289e5a881a4cbdffae720c481f19e0ca21f812c8328961d5c",
+    "14": "2cf8c77f47bf8a0a7598af167d0c0565f9fad79b201326827bf6483f05e29e56",
+    "15": "5fc496d2f232874a2cf5e6f46a8a952ae8392d848a25b3f33932465478d5c1f8",
+    "16": "0324a16cf9caff76c86a4c42927e5c37f926c1ec96ecd26420b277e585bfb27f"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

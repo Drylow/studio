@@ -1,0 +1,131 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Lumon uses the reconstructed founder's home first as a reverential exhibit and later as the setting for Dylan's performance reward, turning a presented private life into workplace instruction.",
+      "new_information": [
+        "The Perpetuity Wing includes a reconstruction presented as Kier's home, giving employees a domestic image of the founder.",
+        "The innies can enter the founder's represented household while remaining unable to remember their own homes.",
+        "Dylan's waffle-party reward places him in the founder's domestic setting and then in a masked ritual associated with Kier's doctrine.",
+        "Dylan leaves the reward to activate the overtime contingency for his colleagues."
+      ],
+      "local_answer": "The chapter answers its assignment: Lumon makes the founder's represented domestic life a place where employees learn reverence and receive rewards, without establishing that the ritual recreates a historical event.",
+      "open_issues": [
+        "The meal paragraph repeats the established point that the reward keeps Dylan within the founder's approved setting."
+      ],
+      "evidence_notes": "The curated-history framing agrees with E1, and the reconstructed home and waffle-party connection are expressly authorized by the assignment. The ritual reference remains brief and non-explicit. The chapter does not claim resurrection or reconstruct an unshown event in Kier's life."
+    },
+    {
+      "number": 6,
+      "summary": "Helena's gala campaign uses an Eagan's severed body and selected workplace images to endorse the procedure, while Helly uses the same public identity to contradict that endorsement.",
+      "new_information": [
+        "Helena is Jame Eagan's daughter and participates in a public severance promotion.",
+        "The campaign presents photographs and Helena's account rather than Helly's account of working downstairs.",
+        "Helly reaches the gala through the overtime contingency and is initially treated as Helena.",
+        "Jame recounts Helena's childhood enthusiasm for an early severance chip.",
+        "Helly uses the anticipated promotional speech to tell the audience about suffering on the severed floor."
+      ],
+      "local_answer": "The chapter explains why an heir's participation is persuasive publicity and why that participation does not establish the working identity's consent or satisfaction.",
+      "open_issues": [
+        "The phrase 'that absence' has no established antecedent.",
+        "The childhood-chip recollection is subsequently repeated at length in chapter 8."
+      ],
+      "evidence_notes": "The central identity reveal, family relationship and promotional purpose agree with E2. The chapter appropriately leaves individual audience reactions unresolved and does not claim universal political acceptance or audience knowledge of abuse."
+    },
+    {
+      "number": 7,
+      "summary": "Helly's failed attempts to leave and Helena's refusal of her resignation expose how an outie's authorization can compel another conscious identity to continue working.",
+      "new_information": [
+        "The stairwell boundary changes the active identity, preventing Helly's decision to leave from determining whether the body returns.",
+        "Lumon's communication restrictions obstruct Helly's attempts to seek help outside.",
+        "The permitted resignation channel delivers Helena's refusal and denial of Helly's standing.",
+        "Helly returns to work even after a life-threatening crisis.",
+        "Her later attachments to colleagues do not establish acceptance of her continued confinement."
+      ],
+      "local_answer": "The chapter answers the consent question through specific requests, refusals and boundary crossings rather than invented legal rules: Helena's willingness to participate does not resolve Helly's expressed unwillingness.",
+      "open_issues": [],
+      "evidence_notes": "The Eagan identity and promotional stakes follow E2, while the assigned job expressly calls for the resignation conflict. References to self-harm are non-graphic. The chapter does not claim that severance removes general knowledge, skills or feelings."
+    },
+    {
+      "number": 8,
+      "summary": "Jame's unexplained revolving is considered as possible succession, ceremony or family continuity, with his later interest in Helly kept separate from proof of Kier's survival.",
+      "new_information": [
+        "Jame treats his revolving as an anticipated event Helena should already understand.",
+        "Leadership succession has a contextual connection to the displayed sequence of Eagan leaders but is not an established definition.",
+        "A family ceremony could accompany a transition without implying a technical transfer of consciousness.",
+        "Jame's language about Kier's children and his recognition of Kier's spirit in Helly express his account of continuity, not demonstrated possession.",
+        "No event through the supplied release boundary defines the revolving."
+      ],
+      "local_answer": "The chapter supplies the requested interpretations and closes at the correct evidentiary boundary: the term is spoken, but its mechanism and meaning remain unconfirmed.",
+      "open_issues": [
+        "The childhood-chip recollection repeats chapter 6 before reaching the new point about Kier's children.",
+        "Two consecutive succession paragraphs develop substantially the same possibility from Helena's promotional role."
+      ],
+      "evidence_notes": "The revolving reference follows E2, and Jame's distinction between Helena and Helly follows E5. Succession, ceremony and continuity are consistently identified as interpretations. There is no assertion of immortality, mind transfer or a confirmed future reveal."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Dylan eats his waffles at a table in the reconstructed house. The meal makes the reward's name sound straightforward enough, especially beside the smaller treats and celebrations available on the severed floor. Food is something the employees can enjoy without understanding the purpose of their files. Here, though, the setting changes the experience. Dylan's meal takes place within an exhibit devoted to Kier. Even a reward with such an ordinary name keeps the employee inside the founder's approved surroundings.",
+      "reason": "H18 identifies a re-mention that 'adds nothing' as an echo. The preceding paragraph already explains that the reward returns Dylan to the founder's domestic setting, and the later paragraph about refinement develops the withheld-understanding point more concretely. This is the least useful repeated treatment; retain the meal detail without another full explanation of the setting.",
+      "replacement": "Dylan eats his waffles at a table in the reconstructed house, before the reward moves into a different kind of participation.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Helena's recorded account helps fill that absence.",
+      "reason": "The preceding paragraph establishes the persuasive presence of an Eagan participant, not an absence. The demonstrative points to a missing causal step and makes the transition sound as though an explanatory sentence has been removed.",
+      "replacement": "Helena's recorded account gives the guests her explanation for taking part.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Jame recalls showing Helena an early severance chip when she was a child. In his account, she responded with enthusiasm and imagined that everyone should have one. He connects that recollection to a future in which people will become Kier's children. This is a father's account of a childhood exchange, delivered during an event promoting the technology. It tells us how Jame presents the connection between his daughter, severance and the family mission. He describes her present participation as the continuation of an attachment that began long before her employment downstairs.",
+      "reason": "H18 requires that a second mention add something the first did not carry. Chapter 6 already recounts the chip, childhood enthusiasm, attributed memory and connection to Helena's present participation. The genuinely new development here is Jame's projected expansion of Kier's family; the repeated setup delays it.",
+      "replacement": "In the same conversation, Jame imagines a future in which everyone will become Kier's children. He presents severance as part of a family mission extending beyond Helena's participation at the gala.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helena's role at the gala makes that possibility worth considering. She's there as an Eagan who has undergone the procedure Lumon wants others to accept. Her body supplies a particularly useful endorsement because her father leads the company. If the family were preparing a change in leadership, that participation could help present her as committed to its central project. That's an interpretation of her public role, though. Jame doesn't tell her in the bathroom that the event makes her his successor, and the gala doesn't announce an appointment.",
+      "reason": "H18 describes a script 're-stating it with nothing new attached.' The preceding paragraph already connects Jame's leadership and Helena's promotion to possible succession, then states that no handover or definition has been shown. This paragraph repeats that argument using promotional details already explained in chapter 6 and adds another methodological qualification rather than a distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        6,
+        8
+      ],
+      "detail": "Both chapters recount Jame showing Helena an early severance chip, her childhood enthusiasm and his presentation of her gala participation as a continuation of that enthusiasm. Keep the full recollection in chapter 6; chapter 8 needs only the additional language about everyone becoming Kier's children."
+    },
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "Both explain that Helena's voluntary promotional participation depends on Helly supplying unwanted working hours. The overlap is functional rather than a deletion target: chapter 6 establishes the misleading public exhibit, while chapter 7 supplies the requests and refusals that make the consent conflict concrete."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10, March 21, 2025. No season-three story, confirmed resurrection, solved revolving, unsupported family tree or graphic ritual description appears. The requested early optional CTA belongs to chapter 1, which was not supplied; its absence here is not a defect.",
+  "limitations": "Reviewed the complete supplied texts of chapters 5-8 against the supplied outline, proof bank and voice rules. The proof entries are summaries rather than full episode transcripts, so they do not independently establish every scene-level detail in these chapters. No websites were opened, episodes watched, audio measured or independent verification of every fictional fact performed. Cross-chapter conclusions apply only to the four supplied chapters.",
+  "input_hashes": {
+    "5": "d89ca6cc50511692e1cac033f18fe96b85da82a4b1e2ff6d55b177ce6a24e04b",
+    "6": "c365cd2247c8d677b1af25f9094eeaad356fe9a1f643cdd52cc9f19c996953f8",
+    "7": "ca9fe61ee48d7174f83504232130c12f8136375c5cf2717ca8bf256df3d59e7c",
+    "8": "87c944a74015a448ad9773313fa53ffd7d5aea4b33a7b28e26e3caa8dfbb8429"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

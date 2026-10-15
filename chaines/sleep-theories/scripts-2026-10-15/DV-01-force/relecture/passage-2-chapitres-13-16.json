@@ -1,0 +1,147 @@
+{
+  "chapters": [
+    {
+      "number": 13,
+      "summary": "The Son uses visions of Anakin's future to recruit him, and the Father ends that immediate manipulation by removing Anakin's memory of the revelation rather than erasing future events.",
+      "new_information": [
+        "The Son reveals Anakin's future fall and offers an alliance supposedly capable of preventing it.",
+        "Anakin accepts coercive actions against his companions while trying to prevent the harm he has foreseen.",
+        "The alliance creates a practical danger because the Son also needs transport to escape Mortis.",
+        "The Father removes Anakin's advance knowledge, not the future depicted in the films.",
+        "Removing the warning also prevents Anakin from subsequently reconsidering or discussing its contents."
+      ],
+      "local_answer": "The chapter answers its assignment: knowing a terrible outcome does not give Anakin the judgment needed to prevent it, and the Son exploits that gap by presenting domination as a remedy. The distinction between changing memory and changing events is explicit.",
+      "open_issues": [
+        "The chapter cannot establish what Anakin would have done with the warning under different circumstances.",
+        "The explanation of the Son's coercive remedy is repeated after the concrete encounters have already demonstrated it."
+      ],
+      "evidence_notes": "The central revelation and memory removal agree with supplied proof F3. The ship and confrontation details belong to the specifically assigned Ghosts of Mortis scene. Psychological explanations are generally grounded in Anakin's response, although the categorical claim that he could not bear the knowledge goes beyond what the chapter establishes."
+    },
+    {
+      "number": 14,
+      "summary": "Obi-Wan retains a recognizable teaching relationship with Luke after death, but his guidance does not restore his former physical companionship or remove Luke's responsibility to act.",
+      "new_information": [
+        "Obi-Wan first addresses Luke after his disappearance on the Death Star and later guides his attack-run decision.",
+        "Luke's success still depends on his own actions and Han's intervention.",
+        "Obi-Wan becomes visible to Luke on Hoth and directs him toward Yoda.",
+        "His conversations with Yoda preserve personal memory, advocacy and disagreement rather than presenting an impersonal supernatural message.",
+        "Qui-Gon's instruction and Yoda's journey provide a learning history for persistence after death.",
+        "Obi-Wan's warnings do not prevent Luke from leaving Dagobah or facing Vader without his intervention."
+      ],
+      "local_answer": "The chapter clearly distinguishes continuing personal identity from escaping physical death. It keeps the explanation centered on teacher-student contact and demonstrates limits through the attack run, Han's rescue and Luke's departure for Bespin.",
+      "open_issues": [
+        "The mechanism and full range of posthumous contact remain unexplained, appropriately without invented restrictions.",
+        "The chapter does not attempt to settle why particular Jedi achieve this persistence while others do not."
+      ],
+      "evidence_notes": "The assigned film scenes support the account of Obi-Wan's continuing guidance. F5 supports the learned rather than automatic character of persistence after death; the Revenge of the Sith training reference is within the permitted film scope. No universal ghost-location rule or automatic afterlife claim is introduced."
+    },
+    {
+      "number": 15,
+      "summary": "Yoda's trial requires him to acknowledge his own darkness without allowing it to govern him, exposing a limitation in his self-understanding despite his experience and rank.",
+      "new_information": [
+        "The Force Priestesses test Yoda during the journey initiated by Qui-Gon's voice.",
+        "Yoda initially rejects the dark reflection's connection to himself.",
+        "The reflection diminishes when he acknowledges that connection while refusing its authority.",
+        "Other trial visions test his responses to loss, companionship and comforting appearances.",
+        "The chapter interprets the encounter as a correction to pride that has practical consequences for a teacher and wartime leader.",
+        "Yoda's later instruction of Luke gains context from his own experience of an obstructive assumption."
+      ],
+      "local_answer": "The chapter answers the assigned question by separating recognition of temptation from obedience to it. Its concrete account of the reflection's defeat supports the rejection of an equal-use-of-both-sides interpretation.",
+      "open_issues": [
+        "The trial's implications for Yoda's later leadership are interpretation, not proof that his subsequent decisions become correct.",
+        "The closing restates the already completed explanation without adding a consequence or new detail."
+      ],
+      "evidence_notes": "F5 establishes the broader journey and trials, while the supplied Destiny assignment identifies the particular encounter being analyzed. The chapter does not introduce Grey Jedi doctrine or claim that acknowledging darkness requires practicing cruelty."
+    },
+    {
+      "number": 16,
+      "summary": "Palpatine's promise of power over death recruits Anakin without delivering a demonstrated remedy, while Exegol shows Sidious continuing through bodily support and the exploitation of other lives.",
+      "new_information": [
+        "Palpatine's Plagueis account includes the supposed master's murder despite his extraordinary knowledge.",
+        "The promised answer becomes a secret to pursue after Anakin has already committed himself.",
+        "Anakin begins carrying out orders without receiving a shown lesson capable of saving Padme.",
+        "Sidious's damaged body on Exegol depends on mechanical support, with manufactured bodies providing additional material context.",
+        "His proposed transfer into Rey requires her participation in a directed act of violence.",
+        "Draining Rey and Ben restores his body and changes his plan.",
+        "Obi-Wan's continuing instruction provides a contrast to Sidious's pursuit of bodily continuation."
+      ],
+      "local_answer": "The chapter distinguishes a recruiting story from demonstrated knowledge and contrasts Sidious's dependent bodily continuation with Obi-Wan's posthumous teaching. It avoids presenting a complete cloning explanation or identifying a Sith as Anakin's confirmed creator.",
+      "open_issues": [
+        "The film does not provide the complete procedure behind Sidious's return, and the chapter appropriately leaves that unresolved.",
+        "The final paragraph repeats the immediately preceding account of restoration through draining the dyad."
+      ],
+      "evidence_notes": "The opera-house, Exegol and Obi-Wan comparisons are authorized by the assignment and film scope. F7 supports the dyad context but is not an exhaustive proof entry for every Exegol detail. Palpatine's assertions remain attributed to him rather than being promoted into verified biography."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This makes the Son's proposed solution deeply suspect even on its own terms. Anakin wants to prevent his future participation in oppression, but the first steps require him to overpower Obi-Wan and assist someone already willing to use others. His knowledge hasn't supplied a patient way to avoid each harmful decision. It has made one sweeping promise feel necessary. The Son places himself beside Anakin as a partner in saving the galaxy, while Anakin begins accepting the use of force against people trying to help him.",
+      "reason": "H18 identifies an echo when the script keeps \"re-stating it with nothing new attached.\" The preceding paragraphs have already explained the appeal of preventing suffering, the Son's demonstrated conduct, Anakin's attack on Obi-Wan and the consequences for Ahsoka. This paragraph repeats that explanation, and the later comparison with Padme supplies the same interpretation with a genuinely new comparison. This is the least useful full passage to remove.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "The Father has ended an immediate danger by removing something Anakin couldn't bear and was already acting upon.",
+      "reason": "The scene and supplied F3 establish distress, recruitment and memory removal, but not a categorical inability to bear the knowledge. The assignment asks the narration to examine that psychological question, not settle it as a demonstrated fact. The observable causal point is that Anakin is using the revelation to justify his alliance.",
+      "replacement": "The Father has ended an immediate danger by removing the warning Anakin was using to justify siding with the Son.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The figure that attacked Yoda has diminished. He can continue the trials without pretending it was never part of him.",
+      "reason": "H18 says that \"a second mention must add something the first did not carry.\" The fourth paragraph already explains the figure's diminution through acknowledgment, and the eighth repeats that result while adding the important distinction between recognition and submission. This third closing statement adds nothing after the useful comparison with Luke.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "On Exegol, Sidious's damaged fingers recover as he drains Rey and Ben. The restoration comes by taking strength from the two people standing before him.",
+      "reason": "H18 identifies repeated facts without a new consequence as an echo. The dyad paragraph has already stated that Sidious drains the pair, visibly recovers and uses his renewed strength to attack the fleet; the intervening comparison with Obi-Wan repeats the taking of vitality. The fingers add a small visual detail, but the paragraph mainly delivers the same conclusion for a third time and weakens the more useful comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        13,
+        16
+      ],
+      "detail": "Both chapters explain recruitment through the desire to prevent suffering. This is a justified thematic return: chapter 13 examines explicit foreknowledge and immediate coercion, while chapter 16 examines an unverified promise whose delivery is deferred until after commitment. Preserve those different mechanisms rather than adding another shared summary."
+    },
+    {
+      "chapters": [
+        14,
+        15
+      ],
+      "detail": "Both chapters return to an experienced teacher remaining capable of learning. The developments are distinct: chapter 14 supplies the learning history behind posthumous contact, while chapter 15 examines Yoda's denial of his own darkness. No cross-chapter deletion is needed."
+    },
+    {
+      "chapters": [
+        14,
+        16
+      ],
+      "detail": "Chapter 16 briefly reuses Obi-Wan's posthumous teaching from chapter 14, but adds a direct comparison with Sidious's dependence on other bodies and vitality. This is useful synthesis rather than redundant exposition."
+    }
+  ],
+  "scope_status": "The supplied chapters 13-16 remain within their assigned released-film and named Clone Wars scope. No Legends answer, unreleased development, invented dialogue, power ranking, confirmed Sith creation of Anakin, automatic Jedi afterlife or Grey Jedi solution appears. The chapters generally answer their local questions through concrete scenes rather than excessive evidentiary caveats. The identified defects require only local edits.",
+  "limitations": "Only chapters 13-16 were supplied as narration and reviewed in full. The remaining outline entries provide context but cannot establish the wording, repetition, early optional CTA placement or final ending of the complete episode. Assessment uses the supplied proof bank, assignments and permitted scenes; it does not claim website access, episode viewing, audio measurement or independent verification of every fictional detail.",
+  "input_hashes": {
+    "13": "ebf80c22727eaa5882146f1d2e405f650060351eb1d9c57cbb2651761f06226d",
+    "14": "e6a631f524ff94b70815bc1124333a859776a4a5de694f98cbfcf2d4f87b0ed1",
+    "15": "27bb5c68aff8124e6cc0024218d661b3b0d743bc792043b8a21008d2a14819fc",
+    "16": "971e7e72e7429d13c3f8b2a4e9ccfd0ae7645ca6d5b9669203c10792b14758c5"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

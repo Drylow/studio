@@ -1,0 +1,649 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Daniel's gift to Helen gives the Pez relic an earlier personal context without establishing its complete journey or a later family connection.",
+      "new_information": [
+        "The season-two Before Times scene links the dispenser to Daniel and Helen.",
+        "Their later separation changes the emotional context of the gift."
+      ],
+      "local_answer": "The later scene changes the audience's understanding of the relic, not the facts of Juliette's investigation.",
+      "open_issues": [
+        "The final paragraph repeats its conclusion almost verbatim.",
+        "The ancestry discussion anticipates chapter 15 more fully than this opening needs."
+      ],
+      "evidence_notes": "The central connection is supported by S4 and the separation by S7. The scope announcement and single optional subscribe/location/day-or-night request are appropriate."
+    },
+    {
+      "number": 2,
+      "summary": "The forbidden drive's eighteen identifier acquires a new association once the audience knows that the residents occupy one numbered installation.",
+      "new_information": [
+        "Allison helps George recover deleted information.",
+        "The drive carries both cleaning imagery and structural information.",
+        "Bernard urgently seeks the drive in S1E9."
+      ],
+      "local_answer": "Eighteen now reads against knowledge of Silo 18, while the drive's full origin remains unresolved.",
+      "open_issues": [],
+      "evidence_notes": "S9 directly supports the identifier and Bernard's search. The outline authorizes the recovery narrative; the supplied proof summary does not independently document every recovered file."
+    },
+    {
+      "number": 3,
+      "summary": "Hanna's magnifying device illustrates a restriction on expanding medical inquiry rather than a universal prohibition on medicine or lenses.",
+      "new_information": [
+        "Hanna's prohibited investigation belongs to the Nichols family's experience of loss.",
+        "Permitted professional practice can coexist with restrictions on developing new investigative tools."
+      ],
+      "local_answer": "The authorities restrict particular means of looking more closely, even while depending on medical and mechanical skill.",
+      "open_issues": [],
+      "evidence_notes": "S3 supports the device and restricted inquiry. The chapter avoids inventing a legal magnification threshold. Its family-history interpretation is presented with appropriate qualifications."
+    },
+    {
+      "number": 4,
+      "summary": "Juliette's complaint about inferior IT tape becomes a causal clue when Walker and Supply help improve the seals on her cleaning suit.",
+      "new_information": [
+        "Juliette's material judgment precedes her knowledge of the suit problem.",
+        "Walker reaches Carla in Supply to affect suit preparation.",
+        "Improved sealing helps explain Juliette's survival without establishing a safe exterior."
+      ],
+      "local_answer": "The theft matters because nominally equivalent tape performs differently in a life-critical application.",
+      "open_issues": [
+        "Chapter 22 later retells most of this material chain."
+      ],
+      "evidence_notes": "The central chain is supported by S2 and the assigned outline. Bernard's earlier knowledge is not overstated."
+    },
+    {
+      "number": 5,
+      "summary": "Juliette recognizes the repeated birds as evidence that her visor is presenting a prepared scene rather than an independent outdoor event.",
+      "new_information": [
+        "Recognition depends on comparison with the earlier cleaning recording.",
+        "Forbidden footage can itself contain a manufactured image.",
+        "The wider ruined exterior supplies information beyond what the repeated birds establish."
+      ],
+      "local_answer": "The repeated pattern undermines the visor's apparent spontaneity without proving everything about the exterior or other screens.",
+      "open_issues": [],
+      "evidence_notes": "S2 supports the repeated birds, recognition and survival context. The distinction between Allison's familiarity and Juliette's interpretation is useful original analysis."
+    },
+    {
+      "number": 6,
+      "summary": "The green cafeteria flash during the generator shutdown demonstrates a change in display state, not a verified glimpse of a safe exterior.",
+      "new_information": [
+        "The flash occurs during the authorized generator repair shutdown.",
+        "Later visor knowledge changes the plausibility of the early green-equals-truth interpretation.",
+        "The image's source is not identified by the shutdown scene."
+      ],
+      "local_answer": "The screen behaves as equipment with more than one visible state, while the source of the green state remains unresolved.",
+      "open_issues": [],
+      "evidence_notes": "The shutdown event is explicitly supplied by the outline; the proof summaries are less specific about it. No unseen circuit or technical implementation is invented."
+    },
+    {
+      "number": 7,
+      "summary": "Allison's retained implant exposes a concealed difference between reproductive permission and the medical treatment residents are told they received.",
+      "new_information": [
+        "Allison physically checks the claimed implant removal.",
+        "Gloria describes selective reproductive suppression and the Flamekeepers.",
+        "The policy reaches Juliette through her parents' involvement in medicine and restricted inquiry."
+      ],
+      "local_answer": "The retained device contradicts the reported procedure, while Gloria's attributed testimony supplies a wider account of suppression.",
+      "open_issues": [],
+      "evidence_notes": "S3 supports reproductive suppression and the Flamekeepers, and the outline supplies the retained-implant incident. The chapter correctly avoids treating inherited curiosity as established science."
+    },
+    {
+      "number": 8,
+      "summary": "The mirror camera reveals a concealed audience for domestic life while leaving both residents and observers with incomplete information.",
+      "new_information": [
+        "Gloria's information changes the reading of Hanna's flowers.",
+        "Juliette exposes a physical camera behind a familiar fixture.",
+        "Obstruction, framing and human interpretation limit surveillance."
+      ],
+      "local_answer": "The mirror is both a domestic object and a surveillance interface, but its camera does not provide comprehensive knowledge.",
+      "open_issues": [],
+      "evidence_notes": "S3 supports mirror cameras and the assignment supplies Juliette's discovery. Conditional language appropriately distinguishes possible observer inferences from established events."
+    },
+    {
+      "number": 9,
+      "summary": "Lukas turns the cafeteria's apparent stars into a sustained observational problem without gaining an independent view of the sky.",
+      "new_information": [
+        "Repeated visits and drawings allow Lukas to compare changes over time.",
+        "His inquiry begins with a publicly available display rather than a forbidden relic.",
+        "His observations remain mediated by that display."
+      ],
+      "local_answer": "Lukas identifies a pattern worth investigating, not a complete astronomical model.",
+      "open_issues": [],
+      "evidence_notes": "The assigned outline supplies the star observations. S1 and S8 do not directly substantiate their detailed staging, so those particulars are not independently verified here."
+    },
+    {
+      "number": 10,
+      "summary": "Bernard appoints Lukas as shadow and admits him to restricted books, historical resources and provisions so that he can solve Quinn's letter.",
+      "new_information": [
+        "The vault contains living quarters, food, the Order, books, relics and digital historical resources.",
+        "Bernard reports a silo age of 352 years but lacks its purpose and origins.",
+        "Lukas identifies a book cipher, and Bernard suggests Meadows's Wizard of Oz."
+      ],
+      "local_answer": "Authorized access changes what Lukas may study, but Bernard still depends on his subordinate to interpret an unresolved message.",
+      "open_issues": [
+        "The legal-status point is restated in the books, relics and closing discussion; chapter 11 should carry the subsequent investigation rather than re-explain this premise."
+      ],
+      "evidence_notes": "ADD-legacy directly supports the concrete inventory, reported age and cipher lead. The chapter does not turn Legacy into an omniscient AI."
+    },
+    {
+      "number": 11,
+      "summary": "Failed book candidates lead Lukas to Quinn's descendants, whose recollection of Meadows obtaining Quinn's Pact copy enables the investigation to proceed toward the hidden tunnel.",
+      "new_information": [
+        "The Penbrooks distance themselves from Quinn's inherited reputation.",
+        "Bernard attributes the destruction of historical records to Quinn.",
+        "Meadows previously obtained Quinn's Pact copy from the family.",
+        "The decoded letter leads Lukas down to a hidden tunnel."
+      ],
+      "local_answer": "Progress comes from connecting a particular book to a remembered visit, not simply from possessing official access.",
+      "open_issues": [
+        "Several later paragraphs revisit the same family-book-visit contribution after it has already been explained."
+      ],
+      "evidence_notes": "ADD-quinn supports the sequence. Bernard's explanation is correctly attributed, and no fifty/fifty-one resolution or decoding algorithm is supplied."
+    },
+    {
+      "number": 12,
+      "summary": "The Before Times characters complicate later references to a single founding intention by giving the project's beginning distinct human perspectives.",
+      "new_information": [
+        "Victor is situated among founders rather than presented as the sole creator.",
+        "The founders' seed-bank explanation differs from Helen and Daniel's experience of separation."
+      ],
+      "local_answer": "A collective founding label does not establish agreement among everyone associated with the beginning.",
+      "open_issues": [
+        "The separation and pregnancy material recurs in several later chapters and needs a narrower supporting role here."
+      ],
+      "evidence_notes": "S6-S8 and the assignment authorize the founders discussion. The chapter generally distinguishes stated purpose from individual experience rather than inventing private motives."
+    },
+    {
+      "number": 13,
+      "summary": "Daniel's appearance as Troy shows practical capability operating alongside inaccessible personal history and consequential human choices.",
+      "new_information": [
+        "Victor wakes and handles Troy.",
+        "Susan proposes a different response to S17 residents leaving.",
+        "Troy rejects her proposal, has her arrested after her refusal, and leads the external operation."
+      ],
+      "local_answer": "Retained competence does not amount to recovered biography, and altered identity does not make Troy a literal machine.",
+      "open_issues": [
+        "The chapter assigns Safeguard's disabling to S17's present population instead of Jimmy's mother."
+      ],
+      "evidence_notes": "S8 supports the identity, command sequence and external drone operation; S6 identifies Jimmy's mother as the person who disabled Safeguard."
+    },
+    {
+      "number": 14,
+      "summary": "Troy's recurring recollections of Helen preserve a specific relationship within his imposed identity without restoring a complete personal history.",
+      "new_information": [
+        "The recollections concern Helen rather than only retained practical ability.",
+        "The relationship's persistence does not undo their separation or establish a universal cure for memory intervention."
+      ],
+      "local_answer": "Helen gives the missing past a personal subject, which competence alone cannot provide.",
+      "open_issues": [
+        "Repeated descriptions of incomplete flashes crowd out the supplied concrete detail that Victor files Troy's repeated notes about Helen."
+      ],
+      "evidence_notes": "S8 supports persistent memories and Victor's handling of the notes. No invented creator quotation is used."
+    },
+    {
+      "number": 15,
+      "summary": "Helen's pregnancy and placement in Silo 18 allow an ancestry hypothesis but do not identify Juliette as a descendant.",
+      "new_information": [
+        "A viable ancestry claim would require chronology and connected parent-child relationships.",
+        "The audience's comparative view is not information Juliette automatically possesses."
+      ],
+      "local_answer": "Shared location and a pregnancy do not supply a family tree.",
+      "open_issues": [
+        "The separate chronology, child, intervening-generation and records paragraphs overextend essentially the same verification requirement."
+      ],
+      "evidence_notes": "S7 supports pregnancy and separation. Proposed records and relationships are explicitly hypothetical rather than invented lore."
+    },
+    {
+      "number": 16,
+      "summary": "The founders' human seed-bank rationale does not establish informed agreement by the people whose work and reproduction sustain the silos.",
+      "new_information": [
+        "The stated plan concerns preservation across generations.",
+        "Agreement to work or medical treatment is narrower than consent to the entire founding project.",
+        "Allison's concealed implant makes that distinction concrete."
+      ],
+      "local_answer": "A preservation rationale can explain an institutional goal without legitimizing concealed interventions in individual lives.",
+      "open_issues": [],
+      "evidence_notes": "S6 supports the attributed rationale. The use of Allison's treatment develops a distinct consent argument rather than merely repeating chapter 7."
+    },
+    {
+      "number": 17,
+      "summary": "The unveiling explosion and Helen and Daniel's placement in different silos turn the project's beginning into a crisis of separation and uneven experience.",
+      "new_information": [
+        "The explosion interrupts the unveiling.",
+        "Helen and Daniel's subsequent experiences continue in different installations.",
+        "Later formalized departure contrasts with entry during the founding upheaval."
+      ],
+      "local_answer": "The founding event produces separate human continuations rather than one complete shared account.",
+      "open_issues": [
+        "The first paragraph states the pregnancy and separation twice."
+      ],
+      "evidence_notes": "S7 supports the explosion and placements. The chapter appropriately leaves perpetrator, mechanism, casualties and wider catastrophe chronology unspecified."
+    },
+    {
+      "number": 18,
+      "summary": "Charlotte's identification as Susan joins two appearances without establishing a duplicate body or transferring every feature of Daniel's memory experience to her.",
+      "new_information": [
+        "Charlotte and Susan are the same person.",
+        "Identity recognition does not supply her complete biography or a detailed mechanism of alteration."
+      ],
+      "local_answer": "The reveal changes whose history is being followed, not the person into a clone, reincarnation or artificial duplicate.",
+      "open_issues": [],
+      "evidence_notes": "S8 directly supports the identity. The restraint about Charlotte's undocumented personal history is appropriate, although this is one of the more abstract chapters."
+    },
+    {
+      "number": 19,
+      "summary": "Camille exploits Juliette's impaired memory by supplying false footage and suppressants while presenting an apparently corroborated biography.",
+      "new_information": [
+        "The apparent account and its visual corroboration come from the same deceptive source.",
+        "Juliette lacks a dependable recollection or independent witness against which to compare the footage."
+      ],
+      "local_answer": "Visible material can remain deceptive when the source controls both the story and its apparent confirmation.",
+      "open_issues": [],
+      "evidence_notes": "S5 supports the manipulation. The chapter does not claim the suppressants explain every memory gap or that the entire series is hallucinatory."
+    },
+    {
+      "number": 20,
+      "summary": "Juliette's managed hero and mayoral imagery creates public expectations before she can independently understand or consent to the role.",
+      "new_information": [
+        "Public recognition and personal recollection develop at different speeds.",
+        "Genuine affection for Juliette can coexist with management of her reputation."
+      ],
+      "local_answer": "Being recognized as a hero does not establish agreement to the duties or decisions attached to that image.",
+      "open_issues": [],
+      "evidence_notes": "S5 and the assignment support the managed public symbolism. The chapter successfully distinguishes public consent from chapter 19's question of video truth."
+    },
+    {
+      "number": 21,
+      "summary": "Billings's murder investigation exposes Ed's illegal elevator and supply theft while identifying Mike as Orla's killer.",
+      "new_information": [
+        "Ed built and used an unauthorized elevator.",
+        "Ed attributes his theft to preserving supplies such as lightbulbs during the rebellion.",
+        "Mike's responsibility for Orla's death is separate from Ed's offenses."
+      ],
+      "local_answer": "The ban does not mean an elevator is technically impossible, and the discovered lift does not establish official privilege.",
+      "open_issues": [],
+      "evidence_notes": "S6 directly supports the investigation and distinctions. This chapter adds substantial concrete infrastructure lore without inventing dimensions or endpoints."
+    },
+    {
+      "number": 22,
+      "summary": "The tape intervention and Ed's theft show how access to materials can change outcomes without establishing a unified Supply conspiracy.",
+      "new_information": [
+        "The useful new contribution is the comparison between benevolent intervention and unauthorized removal through distinct forms of access."
+      ],
+      "local_answer": "Material custody gives particular people practical leverage, but Carla and Ed do not thereby share an organization or purpose.",
+      "open_issues": [
+        "The first six paragraphs largely retell chapter 4 before reaching the assigned comparison.",
+        "The ending again returns to Juliette's tape-assisted survival after that outcome has already been established."
+      ],
+      "evidence_notes": "S2 and S6 support both events. The analytical connection is sound and should remain; the extensive second tape narrative is unnecessary."
+    },
+    {
+      "number": 23,
+      "summary": "Juliette's pump repair and the survivors' need for vault food transform her dealings with Solo, whose identity as Jimmy reveals the child behind the adult survivor.",
+      "new_information": [
+        "Juliette needs a suit while rising water threatens IT.",
+        "Solo's disappearance and injury expose other survivors and their food needs.",
+        "His father sheltered him as a child, and his mother separately disabled Safeguard.",
+        "The floodwater pump and poison pipe have different functions."
+      ],
+      "local_answer": "Practical cooperation and access to food change a relationship that concealed identity alone could not resolve.",
+      "open_issues": [],
+      "evidence_notes": "ADD-jimmy supports the repair, survivors, childhood identity and family interventions. Reading Solo as a protective name is clearly interpretation, not a claimed quotation or diagnosis."
+    },
+    {
+      "number": 24,
+      "summary": "Jimmy's mother's disabling of the internal Safeguard does not prevent Silo 1 from directing a separate external attack against S17.",
+      "new_information": [
+        "Internal sabotage and external enforcement are separate attack mechanisms.",
+        "Surviving one mechanism does not remove the authority or capacity behind another."
+      ],
+      "local_answer": "Disabling Safeguard defeats one particular means of attack, not every means of threatening the silo.",
+      "open_issues": [
+        "The external mechanism is repeatedly called an action without being identified as the supplied drone operation.",
+        "The wording attributes knowledge of the mother's intervention to Jimmy's account without supplied support.",
+        "The tape comparison repeats an already established limitation."
+      ],
+      "evidence_notes": "S6 and S8 directly support the mother's intervention and separate drone operation. Their specificity should replace generic terminology."
+    },
+    {
+      "number": 25,
+      "summary": "Silo 1's human operators change the earlier reading of the Algorithm's voice from apparently self-originating authority to human-mediated procedure.",
+      "new_information": [
+        "An operator, the procedure and the authority authorizing it need not be the same entity.",
+        "Consistent institutional speech does not establish identical private judgments or unlimited operator discretion."
+      ],
+      "local_answer": "The voice has human participation without the finale proving autonomous sentient AI or unrestricted human discretion.",
+      "open_issues": [
+        "The standalone Helen-flashes paragraph repeats chapter 14 without developing the voice argument."
+      ],
+      "evidence_notes": "S8 supports human operation. Specific scripts and discretion are discussed as interpretive possibilities rather than invented interfaces."
+    },
+    {
+      "number": 26,
+      "summary": "The no-contact Directive prevents silo populations from comparing local histories and rules even while Silo 1 participates in procedures affecting multiple installations.",
+      "new_information": [
+        "Isolation creates unequal opportunities to compare accounts.",
+        "Contact supplies testimony, not an automatically complete or reliable history.",
+        "Juliette and Jimmy demonstrate both the value and practical difficulty of comparison."
+      ],
+      "local_answer": "The Directive has an informational effect by restricting exchanges through which separate populations could investigate their inherited explanations.",
+      "open_issues": [
+        "The Helen-and-Daniel separation paragraph repeats a connection already established in numerous chapters."
+      ],
+      "evidence_notes": "The outline authorizes the released Directive; S8 supports its enforcement context. The informational analysis is framed as consequence and inference, not a comprehensive account of all communication technology."
+    },
+    {
+      "number": 27,
+      "summary": "The ending compares a relic's personal association with a procedure's human operation and offers a hypothetical duplicate dispenser as a test of object identification.",
+      "new_information": [
+        "The two clues establish different kinds of connection.",
+        "Two matching dispensers shown together would challenge identification based on design alone."
+      ],
+      "local_answer": "A reappearing object and an identified human operation change earlier interpretations through different evidentiary routes.",
+      "open_issues": [],
+      "evidence_notes": "S4 and S8 support the comparison. The duplicate-dispenser scene is explicitly hypothetical, and the ending stays with the grounded gift exchange rather than adding a CTA or unreleased answer."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "When Juliette encounters the dispenser, we can now remember Daniel giving it to Helen, even though Juliette doesn't know that part of its history.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The preceding sentences already say that Daniel gives Helen the toy, that the audience remembers the association, and that Juliette encounters it in her own circumstances.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a small but important difference between knowing that Meadows was interested in Quinn and learning what she took away. General interest leaves Lukas with a broad field of possible books. The family's account connects a particular text to her inquiry. It also gives the Penbrooks a place in the investigation beyond their inherited surname. They know something Lukas hasn't found in the material available to him. A recollection that may have seemed like an episode in the family's dealings with officials becomes the detail that helps him move forward.",
+      "reason": "H18's document-scale 'echo' applies: the preceding paragraph has already identified Meadows's visit, the obtained Pact copy and its value as a concrete lead. This paragraph explains that contribution again without advancing the search.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "People in Silo 17 have disabled their Safeguard and are leaving.",
+      "reason": "S6 identifies Jimmy's mother as the person who disabled Safeguard. The existing sentence assigns that intervention to the population now leaving and collapses separate events.",
+      "replacement": "People are leaving Silo 17, where Jimmy's mother had disabled the internal Safeguard.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Helen returns more than once, so the relationship remains within reach even when Troy can't place it. Those flashes don't restore a continuous account of their time together.",
+      "reason": "The opening and second paragraph already establish repeated, incomplete recollection. B5 requires useful development, and S8 supplies an unused concrete consequence: Victor files Troy's repeated notes about Helen.",
+      "replacement": "Victor later files Troy's repeated notes about Helen. Her recurrence has left a record that someone managing Troy can collect, even though Troy still lacks a continuous account of their time together.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Then the same work would have to continue through the intervening generations. A family tree needs links that meet: this person's child is the parent of that person, whose child can in turn be identified. One secure relationship near Helen and another near Juliette would still leave a gap if nothing joined them. The people in that gap would have their own births and families. Treating them as a blank passage of time makes the theory sound smoother, but it also removes the information needed to test it.",
+      "reason": "The chapter needs the intervening-generations requirement, but this full paragraph extends the preceding explanation of missing people into a methodological lecture. H18 calls for consolidating repeated framing rather than restating it.",
+      "replacement": "The child's descendants would then need to be traced through connected parent-child relationships to the Nichols family.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "They enter different installations, separating the couple at a moment when Helen is pregnant.",
+      "reason": "H18's 're-mention that adds nothing' applies locally: the preceding two sentences already establish Helen's pregnancy and their placement in Silo 18 and Silo 1.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "The tape Juliette takes from IT seems, at first, like an unusually small thing for Bernard to resent. She works on machinery that keeps the silo alive, and tape is a practical material she can put to use. Yet her theft continues to matter to him. By the end of the first season, the question of which department holds which tape has become part of her survival. Supply can affect what happens to Juliette through the materials that reach her suit, even while the public procedure continues around her.",
+      "reason": "Chapter 4 already gives this opening, material history and survival consequence a full home. H18 says a recurring theme should have 'one home paragraph' while other sections make their own point. Chapter 22 should begin with its comparative contribution.",
+      "replacement": "Walker's appeal to Carla shows how access to materials can affect an outcome even when neither person can cancel the official order. Ed's theft from Critical Supply gives that access a different use: removing goods that other residents depend on.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "Juliette's original interest in the tape comes from her work in Mechanical. She judges equipment by whether it does the job, and the IT tape disappoints her. That's an awkward detail if we assume the department with protected resources must always have the better stock. Her complaint gives the material a history before anyone sends her outside. She has handled it and compared its performance with the tape used in Mechanical. Later, that ordinary maintenance judgment gives Walker a reason to worry about what will seal Juliette's suit.\n\nWalker takes that concern to Carla in Supply. The visit matters because Walker has spent years unable to leave her workshop, and reaching Carla requires her to cross a boundary that has kept her apart from the rest of the silo. But the practical purpose of the journey is quite specific. Carla is in a position to help with the tape. Walker can't cancel Juliette's sentence. She can bring a problem to someone whose work touches the equipment Juliette will depend on.",
+      "reason": "These two paragraphs repeat chapter 4's material comparison, Walker's isolation, her visit and Carla's practical position. They delay the new supply-access comparison without adding a distinct consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "The message about the tape's quality gives Juliette a small piece of reassurance before she leaves. She doesn't receive a full account of Walker's effort or a chance to inspect the entire preparation process herself. She has to act with what reaches her. For the viewer, the connection between Walker, Carla, and the better tape explains why a departmental supply issue deserves attention. A difference that sounds petty during an argument about stolen property can matter enormously when that material is used around a person's suit.\n\nThere's a limit to that conclusion: better sealing helps explain Juliette's survival without making the outdoor danger imaginary. The intervention concerns the equipment placed between her body and the environment. Walker's concern makes sense precisely because failure there would leave Juliette exposed. Supply's contribution is therefore concrete. Someone has helped her receive material that performs better, and the result changes what she's able to do after the doors close behind her. The public hasn't had to hear a speech about tape for that help to take effect.",
+      "reason": "Chapter 4 has already explained the message, inability to test the finished suit, survival consequence and outdoor-hazard limitation. H18 requires removing unchanged repetitions; the immediately preceding paragraph already preserves chapter 22's useful contrast between watching and material access.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "The internal mechanism has failed, yet Silo 17 can still be targeted through a separate external action.",
+      "reason": "The assigned job is to distinguish mechanisms concretely. S8 identifies the external action as a drone operation led by Troy; repeatedly calling it an 'action' leaves the causal distinction unnecessarily vague.",
+      "replacement": "The internal mechanism has been disabled, yet Troy leads an external drone operation against the people leaving Silo 17.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "In Jimmy's account of his home, his mother has to disable the very mechanism whose name sounds protective.",
+      "reason": "The supplied evidence establishes the mother's intervention as a season-three revelation, not specifically as Jimmy's testimony. The sentence also shifts from an accomplished intervention back to an unexplained present-tense necessity.",
+      "replacement": "Jimmy's mother disabled that lethal mechanism inside his home.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That makes her intervention different from Juliette's earlier escape through the cleaning procedure. Juliette survives with better tape sealing her suit, after Walker seeks help through Supply. The seals protect her long enough to continue walking outside. Jimmy's mother interferes with an internal mechanism that threatens the population of a silo. Each action addresses a particular physical danger. Juliette's working seals don't make everything beyond the door harmless, and disabling Silo 17's internal Safeguard doesn't remove every way its inhabitants can be attacked.",
+      "reason": "The tape route and limited implication have already been explained in chapters 4 and 22. Here the comparison repeats chapter 24's opening conclusion instead of developing the separate internal mechanism and drone operation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 25,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Troy's continuing flashes of Helen show that his connection with her persists within the imposed identity and assignment.",
+      "reason": "H18's echo applies across chapters 13-14 and 25. This standalone paragraph adds no consequence for speaking, interpreting or carrying out an instruction.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The season-three Before Times story makes the missing comparison especially relevant. Helen and Daniel are separated into Silo 18 and Silo 1. Their shared history crosses the boundary that later divides those settings. Residents who know only their own silo's account wouldn't necessarily have access to that connection. The audience can place the separation beside the later isolation because both events have been shown. Within the story, bringing those pieces together would require some continuity of information across people and places that have been kept apart.",
+      "reason": "Chapter 17 already develops how separation creates different continuations and incomplete accounts. H18 calls for each section to make its own point; chapter 26's stronger distinct material concerns comparing rules, local histories and resident testimony.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        4,
+        22,
+        24
+      ],
+      "detail": "The inferior IT tape, Walker-to-Carla route, improved seals and safe-exterior limitation recur with little change. Chapter 4 should retain the full causal account; chapter 22 needs only a brief bridge into material access, and chapter 24 can omit the comparison."
+    },
+    {
+      "chapters": [
+        1,
+        12,
+        14,
+        15,
+        17,
+        26,
+        27
+      ],
+      "detail": "Helen's pregnancy, the gift and the S18/S1 separation repeatedly reintroduce the same relationship. Their different uses are often legitimate: chapter 14 concerns recollection, chapter 15 ancestry, and chapter 17 entry and separation. The chapter 26 return adds the least and is identified for deletion."
+    },
+    {
+      "chapters": [
+        13,
+        14,
+        18,
+        25,
+        27
+      ],
+      "detail": "Daniel/Troy and Helen's persistent memories recur as the default illustration of human identity. Chapter 14 is their proper home; the isolated memory reminder in chapter 25 does not advance its operator argument."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "The Legacy and Quinn additions provide substantial new lore and a sound continuous investigation. Their weaker repetitions concern explaining the value of book access and repeatedly summarizing the Penbrooks' remembered visit, rather than duplicate events."
+    },
+    {
+      "chapters": [
+        5,
+        6,
+        9,
+        19,
+        27
+      ],
+      "detail": "These chapters repeatedly distinguish an image from independent verification, but the applications differ: repeated footage, a shutdown state, longitudinal observation, manipulated biography and a final comparison. This is primarily a coherent investigative thread, not grounds for wholesale deletion."
+    },
+    {
+      "chapters": [
+        7,
+        16,
+        19
+      ],
+      "detail": "Allison's implant recurs as physical contradiction, a consent problem and a contrast with inaccessible memory. Each return adds a different consequence and should remain."
+    }
+  ],
+  "scope_status": "Within the supplied television-only release scope through S3E10 Troy, accepted as released on 4 September 2026. No novel biography, full extinction mechanism, confirmed autonomous AI, literal robot identity, established Helen-Juliette ancestry, globally safe exterior, universal magnification ban, seven-silo count or silent fifty/fifty-one resolution was found. The principal factual correction concerns who disabled S17's Safeguard; the principal structural defect is the repeated tape narrative.",
+  "limitations": "Reviewed all 27 supplied chapters against the supplied outline, proof summaries and embedded FacelessOS material. The supplied 2026 facts were treated as authoritative. No episodes or linked pages were opened, no audio was measured, and no human read-aloud or independent verification of every scene detail was performed. Several early-season particulars are authorized by the outline but not documented at equal detail in the proof summaries. The full master anti-slop file, retention-mechanics file, external comparison research and channel publishing history were not supplied, so checks depending on those materials cannot be certified. The title's two-hour duration has not been verified. Findings are proposed edits, not an already-applied revision or a fresh post-edit pass.",
+  "greenlight": {
+    "overall_verdict": "FIX-THEN-PASS",
+    "A": {
+      "verdict": "PASS_WITH_LIMITATIONS",
+      "supporting_evidence": [
+        "Sentence one: \"The Pez dispenser looks like a small thing to cause so much trouble in Silo.\"",
+        "The first paragraph is 86 words. Its turn is the season-two gift scene changing the interpretation of an early suspicious relic.",
+        "The promise is to revisit early details through later information. Chapters 2-11 apply it to objects, displays, medical procedures and restricted records; chapters 12-20 to founding perspectives and identity; chapters 21-26 to infrastructure and human operation; chapter 27 compares two kinds of clue.",
+        "The opening uses the assigned Pez hook rather than repeating the channel's earlier tape hook."
+      ],
+      "actionable_defects": [],
+      "limitations": "The sleep adaptation does not require an aggressive opening jolt. The supplied voice excerpts are not a documented competitive hook comparison, so A4 is not independently established. The two-hour title claim requires production-duration checking."
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "supporting_evidence": [
+        "The opening question about the toy's changed meaning closes within chapter 1 and returns as a distinct comparison in chapter 27.",
+        "Lukas's pattern observation in chapter 9 leads into restricted access in chapter 10; the unresolved cipher task closes in chapter 11 with decoding and the tunnel.",
+        "Daniel/Troy's capability question closes in chapter 13, followed by the distinct relationship-memory question in chapter 14.",
+        "The suit/pump exchange in chapter 23 develops into the survivors' food problem and Jimmy's identity, then closes with practical cooperation.",
+        "Chapters 24-26 distinguish attack mechanisms, human operators and the informational consequences of isolation."
+      ],
+      "actionable_defects": [
+        "Apply the chapter 22 cuts so its assigned comparison begins without another long tape retelling.",
+        "Remove the identified unchanged reminders in chapters 24-26.",
+        "Use Victor's handling of Troy's notes to give chapter 14 another concrete development."
+      ],
+      "limitations": "Local closure is appropriate for sleep narration. No aggressive rehook cadence, mandatory new suspense loop or final CTA is required, and no audio timing is claimed."
+    },
+    "C": {
+      "verdict": "FIX-THEN-PASS",
+      "supporting_evidence": [
+        "The connecting thread is stable: later released information changes the interpretation of an earlier object, rule, identity or procedure.",
+        "The legacy, Quinn and Jimmy additions each answer their assigned questions and add concrete developments rather than merely enlarging the broad-mystery overview.",
+        "Chapter 20 successfully separates managed public reputation from chapter 19's false-footage problem.",
+        "Chapter 21 keeps Mike's murder responsibility separate from Ed's elevator and theft.",
+        "Chapter 27 ends with the gift exchange and an explicitly hypothetical test rather than an unreleased answer."
+      ],
+      "actionable_defects": [
+        "Identify the external drone operation in chapter 24 instead of repeatedly referring to generic external action.",
+        "Condense the identified ancestry-method paragraph in chapter 15.",
+        "Delete the redundant Penbrook explanation in chapter 11."
+      ],
+      "limitations": "Comprehensibility was assessed from text, not a claimed human read-aloud. The topic remains understandable, but repeated methodological framing can make the assembled narration feel more static than individual chapters suggest."
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS",
+      "supporting_evidence": [
+        "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+        "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+        "A matching explanatory script shape is chapter 4's \"A protective suit can have a deliberately weak component and still be protecting its wearer from a real danger.\"",
+        "A manual sweep found no listed machine-tier banned phrase, em dash, curly quotation mark, emoji or chatbot sign-off in the narration.",
+        "The single early optional subscribe and listening-location/day-or-night request is not repeated."
+      ],
+      "actionable_defects": [
+        "Correct chapter 13's attribution of the disabled Safeguard.",
+        "Remove chapter 24's unsupported attribution to Jimmy's account.",
+        "Apply the exact H18 repetition fixes rather than broadly flattening the script's analytical voice."
+      ],
+      "numbers_evidence": [
+        "Eighteen / Silo 18: S9 for the drive identifier; S7 for Helen's placement.",
+        "Silo 1: S7-S8.",
+        "Silo 17: ADD-jimmy and S8.",
+        "Three hundred and fifty-two years: Bernard's report in ADD-legacy, correctly attributed.",
+        "Season and episode references: the supplied outline and named S1-S9 and supplement work entries.",
+        "Two matching dispensers: an explicitly hypothetical observation in chapter 27, not a claimed event.",
+        "Two hours: title metadata only; duration not verified."
+      ],
+      "limitations": "The scanner was not executed. The full master checklist was unavailable, and no complete extract-then-count D7 ledger is asserted; the assembled draft therefore has no certified full Group D pass. The strongest demonstrated voice problem is repetition, not a reason to rewrite otherwise sound conversational analysis."
+    },
+    "E": {
+      "verdict": "NOT_FULLY_VERIFIABLE",
+      "supporting_evidence": [
+        "Editorial interpretation is visible in the different treatments of access, consent, reputation and human discretion.",
+        "The comparison between material custody in chapters 21-22 and human operation in chapter 25 supplies non-obvious connections.",
+        "The chapter structure is specifically tailored to the supplied rewatch investigation rather than copied from either voice sample.",
+        "No verbatim copying from the supplied voice excerpts was found."
+      ],
+      "actionable_defects": [
+        "Complete the buyer's human edit pass and review the revised assembled narration.",
+        "If a formal platform-authenticity score is required, supply the research comparison, source integration record and production context rather than treating absent evidence as proof of originality."
+      ],
+      "limitations": "Only editorial voice and non-obvious connections are clearly evidenced for the seven-signal score. Original research depth, distinction from the top five videos, distinctiveness against popular structures, three named sources woven into narration and buyer-confirmed human review are not established by this session. Duplicate publishing, bulk output, video assets and narration provenance are unknown. No platform monetization outcome is predicted."
+    }
+  },
+  "input_hashes": {
+    "1": "2a6414802aabaab69c8855197645950a12ca5f44d8075dd539311cd31686a086",
+    "2": "c3b6aca689985cd0c3cb13a96519286108035647eb0602e85b92235a6fb00827",
+    "3": "54e8d70a3de65d887154cec5ffde1ad7008aefe686841ff337b095a85711cc33",
+    "4": "1fd7d4f56483dfa603fc3ff336b89c7a4fc7145d9d1deac852f7b7cbba29d7bf",
+    "5": "7010cb6e1ebcca82411ebd6872f287bd6deb8563c09e202e6b7a520c348ce9ce",
+    "6": "2e31b1530bf4d116a8c8d4b64dcce86595404c048ef4afbedb3024d86566dd0a",
+    "7": "40e12a71ab1e4cda96bd1357217fe9dfaa0b0330917073febd13398df51cefc9",
+    "8": "ede8f063022f7989c3c08281823d2909cc7c51cf85666d94d18886fe8e0ed9c3",
+    "9": "592cdd70c00acc64cab9e53168d9e4823cbb45ab0491f76ea4955a40a8f2cb06",
+    "10": "f74a75b3be2ce47e7c9aa02b0fb7d657b140ab07b779381b1d85f2806ac7b2c6",
+    "11": "74f004fccb6ddb328edb7e560533944bbdf040e6731567600a0581c875a0979c",
+    "12": "ddc86e83d31e6e882ee6a6aa7ea35dbf7f5f0a7b66c8f832a0261fa039c1c06b",
+    "13": "de949c659ca425cb79ac5ade7a8473770fbff411a336ba0157295c7479b04626",
+    "14": "24cf7df6911fb00cc0df29e928b210bcef313dd8f93106646d71eccad018751a",
+    "15": "92a8e81ef7a9c3a5c5c54037b2c91146560a96c4f85ed26129934dd141f8cd37",
+    "16": "30e4ab4cabae4e885a80c4563654d59beb63781992c92a92928eadf970531b66",
+    "17": "59ce5973cd353d17267d8e813b942e1afe6ad5acee92f8b945605158317a24c9",
+    "18": "658bc25361ca3347c3f3ea4f83f594b84a9d49445497a7db4e23c72d16ad8074",
+    "19": "9e8a0f6c097e33126aaabe8c6c8972f560b940a83ac42ac8c10841a42eb1932d",
+    "20": "1ea12d410238046fe319f4e78378c113c20908b8a396efdd3581a56f0b018374",
+    "21": "c53d627baa40cec8a061709a3471f8e49e1ed25c0a76b94526c922656766a83c",
+    "22": "28c0f19d32c9b2948ef5f8b09b7f34b6447b3553e30d31b8d6e29539f52952a7",
+    "23": "175e630952b191b22bf3e66bec47e99989df7550a4a9191a4cac8040d6c3f764",
+    "24": "e0c7b622507c8069095c443d5f9641cbb6cf1b74ec84871f4fad659c4878dcc0",
+    "25": "d4df3a6f8e9ac09dcba729997c9aa95be06da1d003a7b41eecf25a4456ea4e7f",
+    "26": "1f3d7db200d4b6fcb461673660bcbf43ad8eeab73eeb20118e55b3df8037cca8",
+    "27": "8a46f392c51b23cd83ab24ebc95681f95edf86bdb862db5049ce7f688f8031cd"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

@@ -1,0 +1,193 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Melange's life-extending, awareness-altering and addictive properties make continued access a bodily necessity, while the Guild also needs it to sustain safe interstellar navigation.",
+      "new_information": [
+        "Spice is consumed in ordinary food and drink on Arrakis, not only used as an industrial or specialist substance.",
+        "Its geriatric benefits help explain wealthy consumers' demand, while established addiction makes withdrawal fatal.",
+        "Paul's heightened awareness illustrates spice's perceptual effects without establishing that every consumer gains his abilities.",
+        "Navigators' dependence supports an essential transport service, giving the Guild an institutional need beyond an individual consumer's demand.",
+        "Political responsibility for spice production, such as Duke Leto's appointment, does not confer navigational ability or remove physiological dependence."
+      ],
+      "local_answer": "The chapter answers its assignment: access secured through wealth or political office is different from the continuing bodily requirement of a consumer or Navigator.",
+      "open_issues": [
+        "Several paragraphs repeat the ordinary-consumption premise or the continuing-supply conclusion without adding a distinct development.",
+        "One sentence introduces an unnecessary hypothetical dining-room crisis rather than advancing the explanation."
+      ],
+      "evidence_notes": "G1 supports the core account of spice-dependent navigation. The assignment also expressly authorizes discussion of melange's geriatric, awareness and addictive properties. The Yueh taste attribution and details of Paul's developing perceptions are additional book-specific claims not separately documented in the supplied proof entries; they have not been independently passage-verified here."
+    },
+    {
+      "number": 6,
+      "summary": "Edric's altered body and melange-rich tank reveal the physical requirements of a Navigator's specialization without making his condition universal among Guild employees.",
+      "new_information": [
+        "Dune Messiah introduces Edric floating in orange, spice-rich gas within a transparent tank.",
+        "His fishlike appearance, finned feet and large hands distinguish his body from those of the other conspirators.",
+        "His enclosure permits participation in political affairs away from a Guild vessel.",
+        "Other Guild representatives do not necessarily share Edric's anatomy or enclosure.",
+        "Comparison with Mohiam shows that specialized human capacities impose different bodily requirements."
+      ],
+      "local_answer": "The chapter makes the Navigator's bodily specialization concrete and distinguishes that specialist from the wider organization, but revisits the same physical details too often.",
+      "open_issues": [
+        "The paragraph devoted to Edric's hands and feet repeats the opening description without a sufficiently distinct development.",
+        "The bodily-cost paragraph partly repeats both the anatomical description and the comparison with Mohiam.",
+        "The passenger-distance theme is developed here even though chapter 24 is assigned its final treatment; that later chapter will need to avoid repeating this chapter's conclusion."
+      ],
+      "evidence_notes": "G5 establishes Edric's role in the opening conspiracy, and the assignment expressly authorizes his altered body and spice-gas environment. No film-specific stage designation or universal claim about Guild anatomy appears. The exact anatomical descriptions are not quoted in the supplied proof bank and have not been independently passage-verified."
+    },
+    {
+      "number": 7,
+      "summary": "Guild privacy separates familiar transport services from guarded navigational dependencies, giving the carrier a bargaining advantage that Paul's spice threat undermines.",
+      "new_information": [
+        "Paul's interest in seeing a Navigator meets the Guild's guarded privacy.",
+        "House vessels travel aboard a heighliner under conditions that restrict access and contact.",
+        "A monopoly lets clients depend on the service without gaining access to its methods.",
+        "The final audience's Guild representatives conceal spice-saturated eyes with contact lenses.",
+        "Paul changes the negotiation by credibly threatening the supply on which the Guild depends."
+      ],
+      "local_answer": "The chapter explains information asymmetry through concrete client restrictions and the final confrontation, while appropriately identifying its bargaining analysis as inference.",
+      "open_issues": [
+        "The general paragraph about familiar service repeats the Atreides relocation rather than developing the secrecy argument.",
+        "The bargaining paragraph explains the same asymmetry several times after already stating and qualifying the inference.",
+        "The spice-dependence paragraph substantially revisits chapter 5 before reaching the chapter-specific issue of hidden vulnerability."
+      ],
+      "evidence_notes": "G1 and G4 support the dependence-and-leverage argument. The privacy conversation, heighliner arrangements and contact-lens detail are additional primary-text claims not individually documented in the supplied proof entries. The chapter does not invent a secret rulebook or surveillance system, and it marks the central political inference explicitly."
+    },
+    {
+      "number": 8,
+      "summary": "Guild transport enables Atreides relocation, the Harkonnen assault and imperial intervention, showing that neutrality permits rival military customers rather than protecting them from one another.",
+      "new_information": [
+        "House forces retain their own command structures while depending on Guild interstellar carriage.",
+        "Disguised Sardaukar add imperial military power to the Harkonnen assault while concealing Shaddam's participation.",
+        "Transport is a material contribution to the attack but does not establish that the Guild designed the entire betrayal.",
+        "Houses have practical reasons to accept reciprocal access even when enemies benefit from it.",
+        "The Emperor's later intervention also depends on the transport system."
+      ],
+      "local_answer": "The chapter answers its assignment with a clear distinction between military command, logistical participation and neutrality, and explains why hostile clients continue to use the same carrier.",
+      "open_issues": [
+        "The final paragraph repeats the shared-dependence argument after the chapter has already explained both its mechanism and the Houses' reason for tolerating it.",
+        "The chapter's frequent returns to Leto's relocation overlap with chapters 5 through 7 and should not displace its stronger material about rival armies."
+      ],
+      "evidence_notes": "G2 directly supports the movement of opposing forces and the non-pacifist meaning of neutrality. The reciprocal-access argument is presented as political reasoning rather than a canonical Guild policy statement. No unsupported force figures, transport prices or claim of Guild authorship of the entire betrayal appears."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Spice isn't confined to a sealed industrial shipment or a physician's supply. People eat it. They encounter it through an ordinary appetite, in food that can be enjoyed. That helps explain why its place in the Imperium extends far beyond the Guild's specialized work. A person can value melange without ever thinking about the course of a spacecraft.",
+      "reason": "H18 identifies re-statements 'with nothing new attached.' The opening paragraph has already established ordinary dietary consumption and contrasted it with cargo. This passage repeats that premise at length after the useful Yueh taste detail.",
+      "replacement": "Its appeal extends beyond the Guild's specialized work.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "There's no need for a visible crisis in an Atreides dining room for the danger to matter. It already belongs to the conditions under which the household enjoys the benefit, and it follows the consumer wherever the next supply must come from.",
+      "reason": "The first sentence tells the listener what scene is unnecessary rather than delivering lore; the second repeats the already explained need for continued consumption. H16 describes this problem as 'Announcing the content instead of delivering it,' and H18 also applies to the repeated dependence explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Arrakis supplies a substance people eat, seek for longer life, and use to extend human awareness. The Guild brings those properties into a demanding form of work. Its service has become familiar across the Imperium, while the bodily requirement behind it remains with the people performing that work. Every successful voyage leaves that requirement in place. The Guild must continue obtaining melange, because its Navigators have to remain capable of making another passage.",
+      "reason": "H18 says that a second mention must add 'a consequence, a comparison, the next number.' This closing paragraph repeats the chapter's properties list and continuing-supply conclusion after both have already received substantive explanations. The preceding sentence about monopoly terms securing actual spice already provides a sufficient local close.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His hands are worth pausing over because they remain recognizably hands while looking profoundly altered. The same is true of his feet, which Herbert describes in terms of fins. These are human features that have developed into unfamiliar forms. Edric belongs to the human world of the Imperium, and he deals with its rulers and institutions. Yet someone meeting him encounters a body very different from Irulan's or Mohiam's. The work performed by Guild Navigators has a bodily expression that ordinary passengers rarely have to consider.",
+      "reason": "H18 describes the document getting 'stuck on one fact, one phrase, or one framing.' The opening already gives the hands, feet and altered human appearance; this paragraph adds neither a new physical detail nor a distinct consequence. The surrounding paragraphs retain both the political participation and passenger-distance interpretation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "What it does give us is a person whose shape and environment have become inseparable from an extreme specialization. His hands, his finned feet, and his suspension in spice gas make that specialization concrete. His position may carry considerable influence. It also requires arrangements that Irulan and Mohiam don't need in order to remain present and take part.",
+      "reason": "H18 requires a re-mention to add something new. These sentences repeat the anatomical description and the immediately preceding comparison with Mohiam. The paragraph's opening sentence already supplies its distinct contribution: bodily cost is an interpretation, not testimony about Edric's feelings.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild is familiar throughout the Imperium in a different sense. Its transport service is part of what allows a House to accept a distant planetary assignment at all. Leto's preparations concern Arrakis, its people, and the dangers of taking over spice production. He can plan around the existence of interstellar carriage. He doesn't need a complete account of a Navigator's abilities before making those preparations. Successful passage gives clients a strong practical reason to keep using the service, even while the people providing its most unusual skill remain out of sight.",
+      "reason": "H18 calls for repeated thematic observations to have 'one home paragraph.' The two preceding paragraphs already establish that the Atreides can purchase relocation without access to Navigators or their methods. This paragraph repeats that contrast and returns to general relocation preparations rather than advancing the secrecy argument.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "In Dune, melange is known for its value and its effects on human life and awareness. The Guild's particular dependence goes further: Navigators need the prescient capacity associated with spice to guide interstellar passage safely. Someone who knows that the Guild carries ships still has another question to answer before understanding its position. What does the Guild itself require to keep carrying them? Its customers' dependence is visible whenever a House has to move. The carrier's dependence is easier to overlook.",
+      "reason": "H18 applies across the full supplied document: chapter 5 has already explained these properties and the Guild's special dependence, and chapter 6 has made the bodily requirement visible. A brief bridge can preserve the secrecy argument without teaching that dependence again.",
+      "replacement": "Clients need passage, but knowing that doesn't tell them how much the carrier itself depends on a continuing spice supply.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Leto needs his forces and household delivered to Arrakis. The Guild doesn't have to provide him with an equally detailed account of what would make it unable to deliver them. Negotiation begins with one side's requirement already apparent. The other side can conduct business without laying out every pressure acting upon it.",
+      "reason": "H18 identifies repeated framing without new information. The paragraph's first two sentences already state the bargaining advantage, identify it as inference and explain the asymmetry. These four sentences restate that explanation rather than supplying another mechanism.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Houses tolerate that limit because refusing the Guild would leave their own plans stranded. Leto's suspicions about Arrakis don't produce another established carrier for his household. The Baron's hostility to the Atreides doesn't give him an independent interstellar transport network either. Both enemies depend on passage supplied outside their own commands. Their rivalry continues through that shared dependence, with each side preparing for what it intends to do after arrival. On Arrakis, the consequences are painfully concrete: the Atreides have barely begun governing their new world when soldiers carried by the same system come to take it from them.",
+      "reason": "H18 says that repeated observations should not occupy multiple home paragraphs. The chapter has already established external carriage, explained why rival Houses tolerate reciprocal access, and described the attack. This conclusion repeats all three. Ending with the preceding imperial-arrival paragraph retains a concrete new development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        6,
+        7
+      ],
+      "detail": "The Guild's familiar service versus its hidden bodily dependence is explained at the end of chapter 5, repeatedly illustrated through Edric in chapter 6, and reintroduced at length in chapter 7. Preserve chapter 5's commodity-versus-physiology distinction, chapter 6's physical evidence and chapter 7's bargaining mechanism rather than giving each chapter the same general conclusion."
+    },
+    {
+      "chapters": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "detail": "Duke Leto's relocation repeatedly supplies the illustration: political access in chapter 5, passenger distance in chapter 6, restricted client knowledge in chapter 7 and rival military access in chapter 8. Those functions are distinct, but the accompanying explanations of household movement and lack of an alternative carrier recur without always adding information."
+    },
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "The final audience's non-enclosed Guild representatives provide a useful distinction in chapter 6, while their concealed spice-blue eyes provide genuinely new evidence in chapter 7. These mentions are complementary and should not be removed merely because they concern the same encounter."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within Frank Herbert's original-book continuity and their assigned subjects. No expanded-prequel founders, film-specific Navigator stage, invented transport statistics, magical propulsion claim, universal Navigator anatomy or absolute-pacifist neutrality appears. Chapters 5 through 8 were supplied; the chapter-one invitation and the execution of the remaining outline cannot be assessed.",
+  "limitations": "Review covers every supplied chapter and uses the supplied proof bank and assignments as authoritative constraints. No websites were opened, primary passages independently checked, scanner executed or narration audio measured. Several detailed book descriptions extend beyond the brief proof entries; their absence from those entries is not treated as evidence that they are false. The principal demonstrated defects are redundant explanation and occasional commentary about how to present the evidence, not established factual or scope violations.",
+  "input_hashes": {
+    "5": "c793077221021214d4de98762844f731a14f4e5f33d9159f827a66891dbde02a",
+    "6": "a0fc04f406b32b263a745409649ee33068c1d1e851fdd1bc14b66dd10ec35a20",
+    "7": "643332b05679b38e1d6441f0384c19a761f6c5a3e26607a3dd249567401c3dc8",
+    "8": "06e1ffd8587db1c4a99b5cf3c4c2d271cdf716dd5f1944654ceb9527d6af3cfd"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

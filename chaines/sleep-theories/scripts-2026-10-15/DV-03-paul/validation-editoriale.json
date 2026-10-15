@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "status": "final_text_ready_for_narration",
+  "narration_sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b",
+  "chapters_reviewed_in_integrated_pass": 25,
+  "local_findings_applied": 5,
+  "remaining_findings": [],
+  "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+  "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+  "scope": "Dune, Dune Messiah and Children of Dune, with major book spoilers announced. The entire story means Paul's life as told in those three original novels. No expanded prequels, fictional intervening adventures, or scene details imported from the films.",
+  "measured_audio_seconds": null,
+  "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+  "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+  "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+}

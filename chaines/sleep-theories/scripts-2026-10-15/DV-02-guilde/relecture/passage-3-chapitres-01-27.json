@@ -1,0 +1,596 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Paul exposes the Guild's dependence on spice and uses it to overcome the transport leverage supporting the old imperial order.",
+      "new_information": [
+        "Guild transport serves rival military powers.",
+        "Spice-dependent foresight makes the Guild vulnerable to Paul's ecological threat.",
+        "Paul's victory preserves rather than replaces the carrier."
+      ],
+      "local_answer": "The Guild controls passage, but Paul can threaten the prerequisite that makes its service possible.",
+      "open_issues": [
+        "The opening previews considerably more material than it needs, increasing repetition when the assigned chapters develop those subjects."
+      ],
+      "evidence_notes": "The central account follows G1, G2 and G4. The optional subscribe and listening-location request occurs once, early, as requested."
+    },
+    {
+      "number": 2,
+      "summary": "The Atreides relocation demonstrates how House vessels and personnel depend on a larger Guild carrier.",
+      "new_information": [
+        "A House frigate can travel within a heighliner.",
+        "Relocation transfers a functioning administration and military household.",
+        "Interstellar passage and establishing the household on the surface are different tasks."
+      ],
+      "local_answer": "Owning spacecraft does not make a House independent of Guild interstellar transport.",
+      "open_issues": [
+        "One paragraph repeats the already established need to transport a functioning government."
+      ],
+      "evidence_notes": "Consistent with G1 and G2; no invented cabins, tickets, manifests or numerical capacities."
+    },
+    {
+      "number": 3,
+      "summary": "The chapter separates a vessel's physical transport function from the Navigator's prescient selection of a survivable course.",
+      "new_information": [
+        "Navigation uses anticipatory information rather than replacing machinery.",
+        "The sailor comparison explains the distinction without proposing canonical physics.",
+        "Safe passage does not imply safety after arrival."
+      ],
+      "local_answer": "The ship carries its occupants, while the Navigator helps select a safe passage.",
+      "open_issues": [],
+      "evidence_notes": "Within G1 and the assigned explanatory limits. The analogy is recognizable as a comparison, not an engineering claim."
+    },
+    {
+      "number": 4,
+      "summary": "The thinking-machine prohibition helps explain the institutional cultivation of Mentats and Navigators without making their abilities interchangeable.",
+      "new_information": [
+        "Mentat analysis depends on available information.",
+        "Navigator prescience addresses a different uncertainty from analytical reasoning.",
+        "The prohibition does not forbid sophisticated machinery generally."
+      ],
+      "local_answer": "Specialized human capacities answer different needs in a society that prohibits mindlike machines.",
+      "open_issues": [
+        "The return to Atreides transport dependence repeats an explanation already established in Chapters 1-3."
+      ],
+      "evidence_notes": "Uses original-novel context without expanded-prequel founders or a reconstruction of the Butlerian war."
+    },
+    {
+      "number": 5,
+      "summary": "Melange's desirable effects and fatal established dependence explain why continued access matters personally and institutionally.",
+      "new_information": [
+        "Spice has geriatric, awareness-altering and addictive properties.",
+        "Paul's response reflects his particular preparation and inheritance.",
+        "Navigators need spice both as dependent people and as providers of a specialized service."
+      ],
+      "local_answer": "Political access can secure melange, but it cannot abolish the bodily requirement for it.",
+      "open_issues": [],
+      "evidence_notes": "The general melange discussion is within the assignment's original-Dune scope, although the supplied G1 entry does not separately document every taste and physiological detail."
+    },
+    {
+      "number": 6,
+      "summary": "Edric's enclosed, spice-rich environment makes the bodily demands behind Guild service visible.",
+      "new_information": [
+        "Edric has an altered body and lives within orange melange-rich gas.",
+        "His portable enclosure permits participation away from a vessel.",
+        "His anatomy does not describe every Guild employee."
+      ],
+      "local_answer": "Edric reveals a specialist's continuous bodily dependence that ordinary customers need not encounter.",
+      "open_issues": [],
+      "evidence_notes": "Consistent with the assigned Dune Messiah description and G5; no identifiable film-specific stage-three anatomy is imported."
+    },
+    {
+      "number": 7,
+      "summary": "Guild privacy limits what even noble customers can learn and helps conceal the institution's bargaining vulnerability.",
+      "new_information": [
+        "Paul's curiosity about Navigators encounters Guild privacy.",
+        "Passenger access aboard the carrier is restricted.",
+        "Contact lenses conceal spice-saturated eyes at the final audience."
+      ],
+      "local_answer": "Customers purchase a result without obtaining equivalent access to the carrier's methods and needs.",
+      "open_issues": [],
+      "evidence_notes": "The bargaining advantage is explicitly identified as inference rather than a documented secret policy."
+    },
+    {
+      "number": 8,
+      "summary": "Tupile offers renegade Houses contracted sanctuary through concealed geography and Guild protection.",
+      "new_information": [
+        "Renegade Houses can depart with atomics and shields.",
+        "Tupile may designate one sanctuary planet or several.",
+        "Guild Peace and a secret destination differ from technological concealment from prescience."
+      ],
+      "local_answer": "A House may preserve its household by surrendering its active imperial position and relying on protected exile.",
+      "open_issues": [
+        "Several passages explain elementary implications of shields and refuge after the specific sanctuary mechanism is already clear."
+      ],
+      "evidence_notes": "ADD-tupile supports the core. No fee, resident list, atmosphere or specific offer to Leto is invented."
+    },
+    {
+      "number": 9,
+      "summary": "The Guild's carriage of opposing armies makes neutrality compatible with enabling violent conflict.",
+      "new_information": [
+        "Disguised Sardaukar combine imperial intervention with concealed responsibility.",
+        "Military command and interstellar carriage remain separate.",
+        "Reciprocal access helps explain why Houses tolerate a carrier serving enemies."
+      ],
+      "local_answer": "Guild neutrality concerns access for opposing customers, not protection against their attacks.",
+      "open_issues": [],
+      "evidence_notes": "G2 supports the logistical account. The chapter appropriately distinguishes participation in transport from authorship of the whole betrayal."
+    },
+    {
+      "number": 10,
+      "summary": "The Harkonnen transport bill connects overwhelming military deployment with later pressure to extract revenue from Arrakis.",
+      "new_information": [
+        "The Baron's expenditure exceeds Atreides expectations.",
+        "Recovering deployment costs shapes Rabban's occupation.",
+        "Troop strength and the affordability of repeated deployments are different constraints."
+      ],
+      "local_answer": "Transport costs influence both the scale of an invasion and what its victors subsequently demand.",
+      "open_issues": [],
+      "evidence_notes": "No numerical tariff or repayment period is invented. The general campaign implications are presented as reasoning from the Harkonnen example."
+    },
+    {
+      "number": 11,
+      "summary": "CHOAM, the Houses, imperial authority and Guild transport overlap without becoming one institution.",
+      "new_information": [
+        "CHOAM directorships connect political strength with commercial income.",
+        "The Guild and Bene Gesserit have silent-partner status.",
+        "Production, commercial participation and carriage require different capabilities."
+      ],
+      "local_answer": "Shared commercial interests do not establish Guild ownership of CHOAM or imperial control of navigation.",
+      "open_issues": [],
+      "evidence_notes": "The hypothetical shipment is expressly labeled. Detailed CHOAM claims extend beyond the short proof entries but remain within original-Dune subject matter."
+    },
+    {
+      "number": 12,
+      "summary": "Jessica's observations at dinner distinguish the Guild banker's official position from suspected Harkonnen allegiance and fear of Kynes.",
+      "new_information": [
+        "Guild influence includes banking.",
+        "Jessica reads the banker as a Harkonnen agent.",
+        "The banker fears Kynes, while Tuek's alignment with Kynes reveals local associations.",
+        "Paul and Jessica remain responsible for the guests after Leto leaves."
+      ],
+      "local_answer": "An institutional representative can carry private loyalties and local vulnerabilities that his office alone does not explain.",
+      "open_issues": [
+        "The conservatory paragraph takes an extended detour from the banker's relationships.",
+        "The banker's three defining attributes receive another full explanation immediately before the closing return to them."
+      ],
+      "evidence_notes": "The central observations follow ADD-banker. Water customs, the conservatory and Paul's exchanges are additional novel details not individually established by that proof entry."
+    },
+    {
+      "number": 13,
+      "summary": "Fremen spice payments purchase the absence of observation satellites and protect practical activity from scrutiny.",
+      "new_information": [
+        "The payment secures a specific absence of infrastructure.",
+        "Reduced observation protects population estimates and ecological work.",
+        "The Guild can serve official rulers while accommodating Fremen concealment."
+      ],
+      "local_answer": "The bargain removes one means of checking Fremen numbers and activities without making Arrakis invisible.",
+      "open_issues": [],
+      "evidence_notes": "G3 supports the central exchange. Satellite capabilities remain unquantified and the ecological consequences are reasoned rather than presented as a surveillance specification."
+    },
+    {
+      "number": 14,
+      "summary": "Fremen military and social capacity demonstrates the difference between receiving spice and understanding its producers.",
+      "new_information": [
+        "Hawat's experience challenges imperial assessments of Fremen fighting ability.",
+        "Fremen institutions sustain resistance beyond isolated encounters.",
+        "Reliable deliveries do not establish knowledge of the society supplying them."
+      ],
+      "local_answer": "A working commercial relationship can coexist with serious limits in political and ecological understanding.",
+      "open_issues": [
+        "The final two paragraphs repeat the same qualification about what Guild access does and does not prove."
+      ],
+      "evidence_notes": "G3 and G4 support the framing. The text correctly avoids claiming a documented inventory of Guild knowledge."
+    },
+    {
+      "number": 15,
+      "summary": "The worm-sandtrout cycle explains why spice supply depends on a living desert system rather than harvesting equipment alone.",
+      "new_information": [
+        "Sandtrout isolate water and participate in pre-spice formation.",
+        "Spice blows connect underground processes to surface deposits.",
+        "Water harms makers, and future harvests require continued ecological production."
+      ],
+      "local_answer": "Protecting stored spice or harvesters does not by itself preserve the processes producing future melange.",
+      "open_issues": [],
+      "evidence_notes": "The ecology is permitted by the assignment but more detailed than G1 and G4. No fabricated measurements or procedural chemistry appear."
+    },
+    {
+      "number": 16,
+      "summary": "Paul's credible biological threat to spice makes further resistance unacceptable to the Guild.",
+      "new_information": [
+        "The novel separates the atomics used on the Shield Wall from the ecological spice threat.",
+        "Guild foresight helps its representatives recognize the danger.",
+        "Paul uses that recognition to prevent intervention by forces overhead."
+      ],
+      "local_answer": "Military control cannot secure a resource whose continued production Paul can destroy.",
+      "open_issues": [],
+      "evidence_notes": "Follows G4 and preserves the book-film distinction. The repeated climax now receives its fullest causal explanation, so this chapter should retain that explanation."
+    },
+    {
+      "number": 17,
+      "summary": "Different uses and limitations of prescience explain both Guild caution and Edric's ability to obstruct Paul's view.",
+      "new_information": [
+        "Paul's political visions reach beyond navigational problems without becoming complete knowledge.",
+        "Jamis illustrates uncertainty in interpreting possible futures.",
+        "Edric's concealment prevents a simple hierarchy in which Paul's foresight defeats every other seer."
+      ],
+      "local_answer": "Prescient usefulness within one task does not confer universal knowledge or control.",
+      "open_issues": [
+        "The extended Edric preview substantially anticipates Chapters 19 and 20."
+      ],
+      "evidence_notes": "Institutional caution is properly marked as interpretation. Neither Paul nor Edric is described as omniscient."
+    },
+    {
+      "number": 18,
+      "summary": "Paul's accession changes bargaining power without eliminating the Guild's practical necessity or independent interests.",
+      "new_information": [
+        "Imperial rule continues to require movement of people, forces and supplies.",
+        "Submission does not transfer Guild expertise and vessels to the throne.",
+        "Cooperation with Paul does not entail loyalty."
+      ],
+      "local_answer": "Paul controls leverage over the carrier, not an immediate replacement for it.",
+      "open_issues": [
+        "The Edric conspiracy preview repeats Chapter 17 and immediately precedes the chapter assigned to that meeting."
+      ],
+      "evidence_notes": "The mutual dependence is explicitly political interpretation, consistent with G1, G4 and G5."
+    },
+    {
+      "number": 19,
+      "summary": "The conspiracy brings distinct institutional and personal interests together under Edric's prescient protection.",
+      "new_information": [
+        "Mohiam's breeding concerns differ from Irulan's marital and dynastic circumstances.",
+        "Scytale brings Tleilaxu interests and methods.",
+        "The Guild risks covert opposition while remaining dependent on Paul's spice."
+      ],
+      "local_answer": "Edric contributes both institutional participation and an ability the other conspirators need.",
+      "open_issues": [
+        "The first four paragraphs must compete with substantial prior introductions of the same tank, participants and concealment function."
+      ],
+      "evidence_notes": "G5 supports the meeting. The proposed Guild motive is expressly distinguished from a complete account of Edric's private reasoning."
+    },
+    {
+      "number": 20,
+      "summary": "Edric's protection blocks a mode of discovery but cannot prevent testimony, mistakes or independent responses.",
+      "new_information": [
+        "Prescient concealment does not erase ordinary witnesses.",
+        "Plans must leave the protected discussion and operate through observable conduct.",
+        "Paul retains ordinary means of attention and judgment."
+      ],
+      "local_answer": "A blind region in Paul's visions is not guaranteed operational safety.",
+      "open_issues": [],
+      "evidence_notes": "The chapter stays within G5's functional description without inventing field equations or exact shielding mechanics."
+    },
+    {
+      "number": 21,
+      "summary": "Hayt's presentation combines Tleilaxu manufacture, Guild diplomacy and Paul's attachment to Duncan Idaho.",
+      "new_information": [
+        "Hayt has artificial eyes, Mentat training and Zensunni philosophy.",
+        "Manufacture, delivery and manipulation belong to distinct contributors.",
+        "Hayt's relationships and agency exceed his intended use as a weapon."
+      ],
+      "local_answer": "The Guild delivers access to Paul's emotional life without owning the Tleilaxu process or fully determining Hayt's personhood.",
+      "open_issues": [],
+      "evidence_notes": "G6 supports the arrangement. The chapter preserves useful original analysis rather than reducing Hayt to a plot device."
+    },
+    {
+      "number": 22,
+      "summary": "Duncan's recovered identity and Paul's refusal expose the limits of the conspiracy's protection.",
+      "new_information": [
+        "The conditioning crisis restores Duncan's identity.",
+        "That recovery simultaneously proves a Tleilaxu capability and undermines immediate obedience.",
+        "Scytale uses the result to bargain over Chani's possible restoration."
+      ],
+      "local_answer": "Concealing preparations cannot compel Duncan's obedience or Paul's acceptance.",
+      "open_issues": [],
+      "evidence_notes": "Consistent with G5 and G6 and the assigned Messiah resolution. The distinction between Tleilaxu experimental success and immediate political failure is valuable."
+    },
+    {
+      "number": 23,
+      "summary": "Leto II turns spice dependence into an enduring system of controlled distribution.",
+      "new_information": [
+        "Transformed Arrakis no longer supplies the old harvest economy.",
+        "Leto controls accumulated spice reserves over a reign exceeding three thousand years.",
+        "Rationing constrains Guild service without requiring him to operate individual voyages."
+      ],
+      "local_answer": "Transport monopoly cannot force a ruler holding the essential reserves to release more spice.",
+      "open_issues": [],
+      "evidence_notes": "G7 supports the institutional account. The duration and ecological details require the novel rather than the abbreviated proof entry; no allocation quantities are invented."
+    },
+    {
+      "number": 24,
+      "summary": "Ixian navigation creates an alternative to Navigators, while no-ships address the separate problem of concealment.",
+      "new_information": [
+        "Navigation machines replace a specialized task rather than supplying an entire vessel.",
+        "Prescient concealment and navigation can coexist without being identical.",
+        "Existing Navigators remain spice-dependent after competitors acquire alternatives."
+      ],
+      "local_answer": "Alternative navigation weakens exclusivity without curing the people whose service it can replace.",
+      "open_issues": [
+        "The Gammu refuge is incorrectly presented as an ancient no-ship rather than the Harkonnen no-globe."
+      ],
+      "evidence_notes": "G7 supports the technological challenge. The Gammu example introduces an original-book device conflation and should be removed."
+    },
+    {
+      "number": 25,
+      "summary": "Tleilaxu tank-produced melange breaks geographic exclusivity while introducing new supplier, knowledge and bodily dependencies.",
+      "new_information": [
+        "Natural and tank-produced melange coexist.",
+        "Obtaining a shipment differs from acquiring production knowledge.",
+        "Rakis's destruction increases the significance of both Tleilaxu production and the rescued worm.",
+        "Axlotl production has a concealed human basis and remains vulnerable through its custodians."
+      ],
+      "local_answer": "A second origin changes access to spice without eliminating the Navigator's need for it.",
+      "open_issues": [
+        "The later-novel context is much broader than the brief proof entry, so detailed scene claims need primary-text checking before release."
+      ],
+      "evidence_notes": "ADD-synthetic supports the central distinction. Waff, Scytale, the Sisterhood's negotiations and the nature of axlotl tanks are additional original-book material, not independently documented by that entry."
+    },
+    {
+      "number": 26,
+      "summary": "Dispersal and alternative navigation reduce universal transport bottlenecks without preventing war or local vulnerability.",
+      "new_information": [
+        "Returning populations developed beyond the old imperial center.",
+        "Independent movement can carry attackers as well as preserve dispersed humanity.",
+        "Survival through dispersal differs from security for any particular old-world institution."
+      ],
+      "local_answer": "More independent routes make universal immobilization harder but do not make individual communities safe.",
+      "open_issues": [
+        "Two consecutive paragraphs repeat the Rakis destruction, rescued worm and Chapterhouse project just developed in Chapter 25."
+      ],
+      "evidence_notes": "G7 supports diversification. The Scattering discussion remains qualitative and avoids invented totals or destinations."
+    },
+    {
+      "number": 27,
+      "summary": "The conclusion returns to Edric's continuing bodily dependence behind a passenger's completed journey.",
+      "new_information": [
+        "The final synthesis contrasts the customer's temporary use of passage with the specialist's continuing requirements.",
+        "Edric's appearance outside a voyage makes those requirements visible independently of transport spectacle."
+      ],
+      "local_answer": "The Guild's hidden practical dependencies persist after its customer arrives.",
+      "open_issues": [],
+      "evidence_notes": "Grounded in G1 and G5. This is an assigned interpretive return rather than a chapter expected to introduce another historical development; the final tank detail and absence of a closing CTA satisfy the brief."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That last part is why the cargo matters alongside the named passengers. The Duke's family can't run Arrakis through their presence alone. His soldiers need the means to operate, and his administrators need a working organization around them.  What we do know is that the Atreides arrive as a governing and military presence. Interstellar transport has made that transfer of organized activity possible.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The second paragraph already explains the transfer of a functioning government, and the intervening paragraphs establish the carriage of vessels and loads. This paragraph adds no distinct mechanism.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild has organized its navigational capacity on a different scale. Hawat belongs to the Atreides household, while the Guild supplies transport across the imperial order. Its monopoly means that rival Houses depend on the same institution for interstellar movement. A House can retain its own Mentat without gaining an independent equivalent of Guild navigation. The comparison helps explain why impressive human resources within a House don't make that House self-sufficient. Leto's household has Hawat, Jessica, and highly trained military leaders, yet its relocation still requires the carrier.",
+      "reason": "The useful Mentat/Navigator distinction is followed by another extended relocation-and-monopoly explanation. H18 requires a re-mention to add a consequence or comparison; the comparison can be retained without repeating the prior chapters' full conclusion.",
+      "replacement": "A House can retain its own Mentat without gaining an independent equivalent of Guild navigation. Hawat's analysis helps Leto govern and prepare, but it doesn't supply the foresight needed to guide a heighliner.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Shields belong to the same description, although their practical role differs from that of atomics. Throughout Dune, shields shape how people defend themselves and how fighters approach an opponent. A household allowed to take them into exile retains familiar protective equipment. Herbert doesn't take us through a renegade family's departure, so the useful detail is the permission itself. The arrangement recognizes that a noble family consists of people who still need protection after losing their place in imperial politics. Survival continues to require material means once the political decision to leave has been made.",
+      "reason": "This expands the previous paragraph's already explicit point that exiles retain defensive resources, then substitutes a methodological caveat and a general statement about survival for development of the sanctuary mechanism. H18's 're-stating it with nothing new attached' applies.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Jessica's conservatory gives another measure of the differences inside the residence. Its plants require water on a planet where conserving moisture shapes everyday conduct. For Jessica, the room is a private place of greenery and a reminder of conditions she has left behind. Its existence also makes the household's privilege tangible. Leto can change the distribution of water at his door, yet he and his family still inhabit a residence that sustains such a room. The dinner takes place within that uneven world. A discussion of water can't remain an abstract exchange about sensible policy when the hosts and guests occupy such different positions from the people outside.",
+      "reason": "The preceding water-merchant and towel paragraphs already establish the dinner's material inequalities. This additional location detour postpones the assigned banker's fear of Kynes without developing the banker's role or relationships. This is a local focus problem, not an objection to the analysis of privilege itself.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For the banker, this makes the dinner a more complicated setting than a meeting between a financial official and his new provincial ruler. Kynes and Tuek have their own standing, and the banker must reckon with people beyond the Atreides household. His fear of Kynes is particularly striking beside the Guild name he carries. In this room, institutional prestige doesn't spare him from personal apprehension. An interpretation worth considering is that he recognizes local consequences which the newcomers haven't yet learned to anticipate. Jessica's attention stays on the reaction itself, because it helps her identify where caution already exists among people familiar with Arrakis.",
+      "reason": "H18 applies: the preceding Kynes and Tuek paragraphs have already delivered the fear, alignment and contrast between formal rank and local standing. The closing paragraph returns to the same attributes again. This middle restatement is the least useful occurrence, and its proposed 'local consequences' remain unspecified.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild's dealings with the Fremen give it access to people largely hidden from imperial authorities, but they don't tell us how fully it understands them. The bargain secures spice and protects concealment; it doesn't give the Guild control over what Fremen communities may later do. Their eventual challenge to the rulers of Arrakis shows the limits of that arrangement, without establishing exactly what the Guild knew beforehand.",
+      "reason": "The following paragraph immediately repeats that access does not establish understanding. H18's document-scale echo is compounded here by an evidence-limit explanation already made earlier in this chapter. Deleting this occurrence preserves the important uncertainty in the closing paragraph.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Dune Messiah also gives us a glimpse of how uncomfortable this continuing arrangement is for the Guild. Edric participates in a conspiracy against Paul alongside people whose interests differ from his own. The details of their undertaking belong to that gathering, but his participation already tells us something about the imperial settlement. The Guild hasn't disappeared, and compliance hasn't made every Guild interest identical to Paul's. A Navigator can come into contact with the new imperial order while seeking a way to change the circumstances under which his organization must exist.",
+      "reason": "Chapter 17 already introduces Edric's meeting and political role, and Chapter 19 opens with the full gathering. H18 requires re-mentions to develop the subject; this third introduction mainly announces material immediately ahead. The following paragraph independently preserves the useful cooperation-versus-loyalty conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "The no-ship on Gammu in Heretics of Dune gives the distinction a concrete setting. The ancient vessel hidden there becomes a refuge for people whose survival depends on escaping their pursuers. Its concealment and its capacity for travel both matter to their situation.",
+      "reason": "This conflates the ancient Harkonnen no-globe used as a refuge on Gammu with a no-ship. The concealed refuge does not establish the claimed capacity for interstellar travel. That device distinction is especially important in a chapter expressly assigned to separate concealment from navigation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The destruction of Rakis gives this wider setting a concrete loss. The Honored Matres destroy the planet that once supplied the spice around which imperial transport was organized. The attack is devastating, and it destroys the familiar home of the sandworms. Yet the later story continues across other worlds. Ships still carry people, the Bene Gesserit continue their work, and the struggle with the Honored Matres continues. The old planet's destruction doesn't bring all human movement to an end.",
+      "reason": "Chapter 25 has just narrated Rakis's destruction and the survival of other production possibilities. H18 requires the returning fact to carry its new consequence rather than replay the event. Here the useful new point is continued movement.",
+      "replacement": "Even the destruction of Rakis doesn't end all human movement. The later struggle continues across worlds, showing how far travel has moved beyond dependence on the old planetary source.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Before that destruction, a sandworm is removed from Rakis and taken to Chapterhouse. The Bene Gesserit undertake the transformation of their own world to establish the worm cycle there. That effort shows how much spice still matters after the Guild's exclusive position has weakened. The Sisterhood uses melange for purposes that navigation machines don't replace, including the practices of its Reverend Mothers. Moving a worm and changing a planet are demanding responses to the loss of Rakis. A substitute for a Navigator leaves those other needs in place.",
+      "reason": "The rescued worm, Chapterhouse transformation and continued non-navigation demand all have a developed home in Chapter 25. H18's 'same point restated with the wording shuffled' applies. The next paragraph already supplies the necessary bridge through Chapterhouse's combination of independence and vulnerability.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        11,
+        18,
+        27
+      ],
+      "detail": "The Atreides relocation repeatedly proves that House vessels and authority do not replace Guild passage. Chapters 2 and 3 need the full distinction; elsewhere retain only the consequence specific to the assigned subject. The Chapter 4 finding removes the least useful extended reprise."
+    },
+    {
+      "chapters": [
+        1,
+        7,
+        14,
+        16,
+        17,
+        18
+      ],
+      "detail": "Paul's threat and the Guild's accommodation recur frequently. The opening frame, secrecy consequence, full Chapter 16 causal explanation and Chapter 18 aftermath have distinct jobs. Avoid expanding the surrounding references into additional versions of the confrontation."
+    },
+    {
+      "chapters": [
+        6,
+        17,
+        18,
+        19,
+        20,
+        27
+      ],
+      "detail": "Edric's tank, the meeting's participants and the concealment function receive multiple introductions. Chapters 6, 19 and 20 have distinct bodily, political and operational jobs; Chapter 27 is an intentional closing return. The Chapter 18 preview is expendable."
+    },
+    {
+      "chapters": [
+        13,
+        14
+      ],
+      "detail": "The satellite bargain legitimately returns as evidence of the difference between access and understanding. Chapter 14's repeated qualifications about unknown Guild knowledge should not become a second explanation of the bargain."
+    },
+    {
+      "chapters": [
+        25,
+        26
+      ],
+      "detail": "Rakis's destruction, the rescued worm and Chapterhouse's ecological project are substantially repeated in adjacent chapters. Chapter 25 should own the production account; Chapter 26 should retain only consequences for diversified movement and survival."
+    }
+  ],
+  "scope_status": "Substantially within Frank Herbert's original-six-book continuity and the supplied release scope. No expanded-prequel origin story, invented tariff, accident percentage, universal Guild mutation, magical shipless travel or film-specific spice-destruction mechanism is asserted. One concrete original-book device conflation occurs in Chapter 24. The requested early CTA appears once and is not repeated.",
+  "limitations": "This review uses the supplied narration, assignments, proof bank and pasted editorial files. I did not open the linked pages, inspect primary-text editions, watch adaptations, run an external scanner, measure audio or perform a human read-aloud. The short proof entries do not independently establish every added ecological, dinner-scene or later-novel detail. Missing source documentation is not treated as proof of fabrication. Files referenced but not supplied, including the full master checklist and retention-mechanics file, cannot be represented as fully audited.",
+  "greenlight": {
+    "overall_verdict": "FIX-THEN-PASS",
+    "A": {
+      "verdict": "PASS_WITH_LIMITATIONS",
+      "evidence": [
+        "Sentence one: \"At the end of Dune, the Guild can still decide whether an emperor's soldiers get a passage home.\"",
+        "The opening paragraph contains 73 words. Its turn is the contrast between Guild control of passage and Paul's control of the supply condition, reinforced by \"but their Navigators depend on a substance produced on the planet below.\"",
+        "Promise map: voyages and transport = Chapters 2-4 and 9-11; Navigators and spice dependence = Chapters 5-7 and 15-17; concealed arrangements and bargaining = Chapters 8, 12-14 and 18-22; later changes = Chapters 23-26; bodily closing perspective = Chapter 27."
+      ],
+      "actionable_defects": [],
+      "limitations": "Aggressive scroll-stop and suspense requirements are overridden by the sleep brief. A4's competitive ranking is blocked: supplied voice samples are not a documented set of comparable Dune sleep-video hooks."
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "Loop ledger: apparent Guild supremacy opens in Chapter 1 and receives its full causal answer in Chapter 16; transport mechanics open in Chapters 1-2 and close in Chapters 3-4; guarded bodily dependence opens in Chapters 1 and 5 and closes in Chapters 6-7; sanctuary closes locally in Chapter 8; satellite concealment closes in Chapter 13 and gains its political consequence in Chapter 14.",
+        "The conspiracy opens in Chapter 19, its protection is bounded in Chapter 20, its delivery mechanism develops in Chapter 21 and its failure closes in Chapter 22.",
+        "Leto's leverage closes locally in Chapter 23; technological and supply alternatives close in Chapters 24-25; diversification's consequences close in Chapter 26; the title's hidden-dependence perspective resolves in Chapter 27.",
+        "The principal pacing issue is repeated explanation, not missing suspense or a failure to reopen questions."
+      ],
+      "actionable_defects": [
+        "Apply the listed repetition edits, especially the Chapter 18 conspiracy preview and the Chapter 26 production recap."
+      ],
+      "limitations": "No timed rehook cadence is imposed or claimed. Quiet local closure is appropriate."
+    },
+    "C": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "The full arc follows service, bodily requirement, secrecy, bargaining, political reversal and later alternatives.",
+        "Each assigned chapter supplies a recognizable local answer.",
+        "The distinction between changing a spice supplier and replacing spice-dependent navigation is especially clear across Chapters 24 and 25.",
+        "Chapter 27 ends on the requested concrete detail: \"Edric remains suspended inside his tank, surrounded by orange spice gas.\""
+      ],
+      "actionable_defects": [
+        "Remove the Chapter 12 conservatory detour so the dinner's banker-Kynes-Tuek relationships remain central.",
+        "Remove the Chapter 24 Gammu example, which undermines the chapter's central device distinction."
+      ],
+      "limitations": "Comprehensibility was assessed from text, not a performed read-aloud."
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+        "Anchor shape: \"So, we'll start with Vecner and his master plan, then move on to the mysteries of the upside down itself.\" Matched script shape: \"We'll begin where its dependence becomes visible, then spend time with the voyages, the Navigators and the arrangements that usually keep it out of sight.\" Both use a natural spoken itinerary.",
+        "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+        "Manual machine-list and mechanical review found no listed hard-ban phrase, em dash, curly quotation mark or chatbot artifact in the narration.",
+        "Number ledger: six original novels in Chapter 1 = supplied scope; more than three thousand years in Chapter 23 = God Emperor of Dune chronology, not separately substantiated by a quoted passage in the proof bank. Leto II is a character designation, not an invented statistic.",
+        "The evident register defect is H18 repetition, rather than a pervasive trailer or aphorism pattern."
+      ],
+      "actionable_defects": [
+        "Apply the exact repetition deletions and condensation supplied in findings.",
+        "Before release, check the Chapter 23 duration and detailed additions against primary-text passages; do not invent citations or replace the duration with an invented alternative."
+      ],
+      "limitations": "The external scanner and full master checklist were not available. A formally exhaustive D6/D7 certification, including a complete quoted antithesis ledger, is not claimed."
+    },
+    "E": {
+      "verdict": "LIMITED_ASSESSMENT",
+      "evidence": [
+        "Visible originality signals include editorial interpretation and non-obvious connections: transport expenditure shaping occupation, restored ghola identity succeeding experimentally while failing politically, and supplier diversification differing from technological substitution.",
+        "No verbatim copying from the supplied voice anchors is apparent.",
+        "The prose contains topic-specific institutional analysis rather than an obvious noun-swapped template.",
+        "Only two E1 signals can be confidently awarded from the available evidence: editorial voice and non-obvious connections."
+      ],
+      "actionable_defects": [],
+      "limitations": "Page-one research, top-five comparisons, structural uniqueness against existing videos, buyer-confirmed human editing, publishing frequency, duplicate distribution, footage and narration production are not established. The 2/7 evidenced-signal score is a documentation limit, not evidence that YouTube would classify this script as reused or inauthentic. E4 cannot be assessed from narration alone."
+    }
+  },
+  "input_hashes": {
+    "1": "a481d1178b29c1c4942fc62b075311914aab6cf39a6bdd5a0bc37ab251754815",
+    "2": "78104c4c2cdc2b9ca18607182179a81e90a3285da8e4dde50dec13f9f0ae035a",
+    "3": "90eda9582edd54b4ec92d941a8fd8eba49cbf24a952cf4ccbdac7b225ffbb510",
+    "4": "b23c6e7afb151c6f738738da5400f9edf55d09bcf1c79c1f6ecde1d66a8ce448",
+    "5": "b94043d6374ad025c87164738b83da836000816e55dfd35dccf3ed2830cffda4",
+    "6": "08115384e65fead22f751c42f6388f71e8443dea336de61bc72460a78f28accb",
+    "7": "d708d57560f7ec5e07ed925cdf07fc7612f10ce7e61fab811bc3878a6b797f7f",
+    "8": "7a6fb127e1d348f27c0de63f0815d33e6930ba01c55c99e99496abb9fc4c45f9",
+    "9": "ea8b1f8c49fbcf7711b5cb15242d3d5a7a0e6dffaaa7697bc5fda25e3abdb8c8",
+    "10": "1491af94a6488a83c3195aed800057e0b0ce323c8cd492e6590ea45a2702292f",
+    "11": "a29e9180402c2023f497537e9bce471a2b0fcfd81a5ca47994aef478f757141f",
+    "12": "44aadd8f6e100d3a2f016973b0e18599c7beb84f8f5c78a6ef03e12eeeb25a93",
+    "13": "56a9ae6effcd390b73bec4b56c00ab98572ea3aabb98873cc8f13c2e70e9eacf",
+    "14": "f285c311dff0c18332c479a0f2a78e0c14ed29efadd98b9e2eddc2916b9bef9d",
+    "15": "d18cd69ad63391558ebd598ea0d95286606880afd3c7360e8e9202a6c2bf16b4",
+    "16": "21c2321082b986606ab98024ae18196aa7c326dc6543056549426b6c15a39de4",
+    "17": "704717cc2b28ca747009282f8557407d562803291e42137cc09c521d021d5a26",
+    "18": "7fadf7d6af295b51985d64e7344533cba931a5d03a1ced943e45cf40617ae4aa",
+    "19": "06aaa94f973cc2fd1802080c6a711db3c2272a5a1cb330de71418694c89cb94d",
+    "20": "ebddda2ad7c6ae1014ba2c01e6893672a7f9e0b7cf7648a77ed582bfa0979856",
+    "21": "3b42f16d217e3c614c7c796e84c0803fee0a1bc5e30d50b73cfd009c2ddadfd9",
+    "22": "7058b588c0964cb4fcfa4d55ae1fa9f5cbd98ded09336725ac40c07d37bf9267",
+    "23": "ae0635bc088a03f1220c839400a18a5d7538207a98a02f4e48c4e7f825c3fbab",
+    "24": "3853d2be2dbc4e15ee38fe2a9e6a4bc16c8d13af840cc750c34e5741fa63595c",
+    "25": "dfd0d96d6af0f90c950ca7f722fb0ca14e22c4052de4f7af5f30ff6a9aa16198",
+    "26": "4d6d077dc8bf436e0ed9e4919fcb6f549cf37f8923935fca3bdd302388e92aef",
+    "27": "20309a8c2c446232cf0fa5499648f6463dfef5fa597cb50f11d090ec700e3775"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

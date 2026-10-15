@@ -1,0 +1,809 @@
+{
+  "date": "2026-10-15",
+  "rotation": "Silo, FROM, Severance",
+  "authorship": "Manually assigned editorial chapters and evidence boundaries; separate prose execution and review.",
+  "episodes": [
+    {
+      "id": "QP-04-silo-indices",
+      "channel": "Quiet Paradox",
+      "title": "2 Hours of Silo's Hidden Clues & Secrets to Fall Asleep To",
+      "angle": "A rewatch investigation: pair ordinary early objects and rules with information released by season three. Explain which earlier interpretations must change, and which apparent clues still prove very little. Heavier emphasis on season-three identity, restricted infrastructure and human operators than the first broad mysteries upload.",
+      "scope": "Television only through S3E10 Troy, released 4 September 2026. No novel events, future season-four explanations, ancestry claims or unreleased lore. This is a sequel to the channel's first broad Silo episode, not the same overview with shuffled paragraphs.",
+      "forbidden": [
+        "Importing Donald's novel biography or the novels' full extinction mechanism",
+        "The Algorithm is a confirmed autonomous artificial intelligence",
+        "Daniel/Troy is a robot or literal killing machine",
+        "Helen is confirmed to be Juliette's ancestor",
+        "The Pez dispenser alone proves a complete chain of ownership",
+        "Outside is globally safe because a screen is false",
+        "Every magnifying device or all science is banned",
+        "Illuminated map markers prove exactly seven surviving silos",
+        "Fifty versus fifty-one is silently resolved without accounting for context",
+        "Every memory loss has one medically identical mechanism",
+        "A found relic demonstrates the founders' stated history is true"
+      ],
+      "proof": [
+        {
+          "id": "S1",
+          "fact": "The third season ran July 3 to September 4, 2026 and follows Juliette's memory loss alongside Helen and Daniel in the Before Times.",
+          "work": "Official scope and S3E1",
+          "url": "https://www.apple.com/tv-pr/news/2026/04/apples-globally-acclaimed-drama-silo-starring-and-executive-produced-by-rebecca-ferguson-returns-for-season-three-on-july-3-2026/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "S2",
+          "fact": "The finale of season one connects better tape, Supply and repeating visor birds with Juliette's survival and recognition of a display.",
+          "work": "S1E10",
+          "url": "https://www.tvline.com/recaps/silo-recap-season-1-finale-episode-10-juliette-outside-wasteland-rebecca-ferguson-1235007079/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "S3",
+          "fact": "Hanna's magnifying device, the Flamekeepers, reproductive suppression and mirror cameras show several distinct ways of limiting inquiry.",
+          "work": "S1E7",
+          "url": "https://readysteadycut.com/2023/06/09/silo-season-1-episode-7-recap/",
+          "opened": "2026-10-15",
+          "note": "Refreshed with original episode-source file; keep testimony attributed."
+        },
+        {
+          "id": "S4",
+          "fact": "The Pez toy in the earlier investigation is linked to Daniel's gift to Helen by the season-two final Before Times scene.",
+          "work": "S2E10",
+          "url": "https://time.com/7206478/silo-season-2-finale-explained/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "S5",
+          "fact": "Camille uses false footage and suppressants while Juliette has memory loss; restored public hero imagery is managed.",
+          "work": "S3E1",
+          "url": "https://readysteadycut.com/2026/07/03/silo-season-3-episode-1-recap/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "S6",
+          "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers. Billings investigates Orla Kent's death and discovers Ed's elevator. Ed attributes his theft to preserving lightbulbs during the rebellion. Orla's boyfriend Mike is identified as her killer; Ed's supply theft is a separate offense.",
+          "work": "S3E8",
+          "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "S7",
+          "fact": "Pregnant Helen and Daniel are separated into S18 and S1, with an explosion at the unveiling in the Before Times story.",
+          "work": "S3E9",
+          "url": "https://tvobsessive.com/2026/08/28/silo-s3e9-recap-farewell-cruel-world-im-off-to-join-the-circus/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "S8",
+          "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist. Victor wakes and handles Troy, whose ordered response to S17 residents leaving is an external drone operation. Susan proposes targeting the sheriff so others retreat; she refuses Troy, is arrested, and Troy leads the operation. Victor watches it and later files Troy's repeated notes about Helen.",
+          "work": "S3E10",
+          "url": "https://www.thewrap.com/creative-content/tv-shows/silo-season-3-ending-explained-season-4/",
+          "opened": "2026-10-15",
+          "corroboration": "https://tvobsessive.com/2026/09/04/silo-s3e10-recap-troy-who-are-we-freed-from-the-past/"
+        },
+        {
+          "id": "S9",
+          "fact": "The drive George and Allison investigate carries the identifier eighteen; Bernard searches for it in S1E9. Its full origin is not thereby solved.",
+          "work": "S1E1 and S1E9",
+          "url": "https://cartermatt.com/598431/silo-season-1-episode-9-what-is-hard-drive-18/",
+          "opened": "2026-10-15"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "A toy acquires a past",
+          "job": "Hook on the Pez dispenser: an object treated as a suspicious relic later appears as Daniel's gift to Helen. Explain how a later scene changes the viewer's interpretation of an early prop, while stopping short of a proved full ownership chain or ancestry. This rewatch method is the promise of the whole episode; don't repeat the first upload's tape hook.",
+          "sources": [
+            "S4",
+            "S7"
+          ]
+        },
+        {
+          "title": "Eighteen on a forbidden drive",
+          "job": "The hard drive George and Allison investigate is associated with the number eighteen, and Bernard urgently wants it located. Later knowledge of Silo 18 makes this mundane identifier read differently. Tell the drive's role in recovering deleted information and Bernard's response, then the shift from a presumed whole world to one numbered installation. No numerology, claim of one and only one drive per silo, or claim that Bernard's key lights up solely because this drive is used. Do not repeat the Pez provenance discussion.",
+          "sources": [
+            "S8",
+            "S9"
+          ]
+        },
+        {
+          "title": "The rule about looking more closely",
+          "job": "Hanna's magnifying device and restrictions on magnification: explain the difference between ordinary permitted tools and a restriction on certain ways of investigating. Compare what a repairer can see with what an authority can allow. Don't claim all lenses, all medicine or every magnification level is banned, and do not invent the exact legal threshold.",
+          "sources": [
+            "S3"
+          ]
+        },
+        {
+          "title": "Tape changes the reading of a theft",
+          "job": "Revisit Juliette taking tape from IT and the later Supply intervention. Focus on the material chain: a maintenance complaint becomes evidence that nominally equivalent materials differ. No long retelling of the cleaning. Separate proof of a suit-seal problem from an unsupported claim that the whole outdoor hazard is artificial.",
+          "sources": [
+            "S2"
+          ]
+        },
+        {
+          "title": "The repeated birds are a seam in an image",
+          "job": "Explain why recognizing the same bird pattern undermines the visor's apparently spontaneous scene. Distinguish a repeated image from a complete knowledge of the real environment. Analyze repeatability as a clue, including the alternative that one faulty representation does not settle every other representation.",
+          "sources": [
+            "S2"
+          ]
+        },
+        {
+          "title": "The cafeteria flash has a narrower meaning",
+          "job": "S1E3 generator shutdown and brief green screen: explain a display changing state under a power interruption. With later visor knowledge, a green image cannot simply be declared the truth. Distinguish raw event, candidate explanation and what a viewer would need to verify it; no new technical system invented.",
+          "sources": [
+            "S2",
+            "S3"
+          ]
+        },
+        {
+          "title": "Allison's implant and a procedure no one can inspect",
+          "job": "The early retained implant and later reproductive-control revelations. Separate a person's physical evidence from the verbal reassurance about an authorized operation. Keep Gloria's testimony attributed and avoid claiming curiosity is scientifically inherited as a simple trait. Compare institutional paperwork with observable medical outcomes.",
+          "sources": [
+            "S3"
+          ]
+        },
+        {
+          "title": "A mirror has another audience",
+          "job": "Mirror cameras and Juliette's discovery: explain how a domestic object changes function once surveillance is known. Focus on differences between actual observation, the belief of being observed and an authority's interpretation of incomplete images. No claim every surface is monitored or cameras reveal people's thoughts.",
+          "sources": [
+            "S3"
+          ]
+        },
+        {
+          "title": "Lukas looks at a pattern the rules do not explain",
+          "job": "Lukas observing the apparent stars from the cafeteria display. Discuss sustained observation and pattern as a challenge to sanctioned knowledge, while acknowledging he is observing mediated information. Do not retell his whole investigation or invent a complete astronomical model from the screen.",
+          "sources": [
+            "S1",
+            "S8"
+          ]
+        },
+        {
+          "title": "The founders become people with separate interests",
+          "job": "Before Times scenes put actual Helen, Daniel and Victor behind the later language of founders. Explain how this changes early appeals to a unified founding wisdom. Victor is one founder among several, not the sole creator. Do not import future novel explanations or reduce each founder to the same motive.",
+          "sources": [
+            "S6",
+            "S7",
+            "S8"
+          ]
+        },
+        {
+          "title": "Daniel's skills survive a different name",
+          "job": "S3E10 Daniel/Troy identity and retained skills. Explain the distinction between practical capability and accessible personal memory. The word 'machine' describes his demeanor only, never his literal biology. No real-world diagnosis or assertion that skills and emotional memory always separate this neatly.",
+          "sources": [
+            "S8"
+          ]
+        },
+        {
+          "title": "A remembered relationship interrupts the assignment",
+          "job": "Troy repeatedly has flashes of Helen, as confirmed by the creator. Center the specific interference of a relationship with an imposed identity. This is different from the previous chapter's procedural skills: explain why a personal attachment raises a question that competence alone did not. No claim love universally cures every memory intervention.",
+          "sources": [
+            "S8"
+          ]
+        },
+        {
+          "title": "Helen's pregnancy does not supply a family tree",
+          "job": "Helen is pregnant when the Before Times story separates her from Daniel. Explain what this released fact can suggest and why it does not identify later descendants. Build a careful test of the ancestry theory: dates, documented continuity and intervening generations would all matter, but the show has not supplied a complete chain.",
+          "sources": [
+            "S7"
+          ]
+        },
+        {
+          "title": "A human seed bank still contains human choices",
+          "job": "S3E8 founders' stated survival rationale. Attribute their account, distinguish planning a refuge from obtaining the informed agreement of those inside it, and relate this to early language of preservation. Don't certify the founders' threat model or reveal the novels' eventual explanation.",
+          "sources": [
+            "S6"
+          ]
+        },
+        {
+          "title": "The unveiling becomes a forced threshold",
+          "job": "S3E9 explosion and the separation into S18 and S1. Explain the consequences for who can leave, who has knowledge and what later occupants inherit. Don't invent the bomb's exact mechanism, perpetrator, casualties or a complete external catastrophe chronology beyond the released scene.",
+          "sources": [
+            "S7"
+          ]
+        },
+        {
+          "title": "Charlotte and Susan complicate a familiar face",
+          "job": "S3E10 identity reveal. Discuss how a familiar person's face and a familiar role can pull the viewer toward an incomplete explanation. Distinguish confirmed identity alteration from cloning, reincarnation or an artificial duplicate. Do not invent biographies for Charlotte/Susan beyond the named released reveal.",
+          "sources": [
+            "S8"
+          ]
+        },
+        {
+          "title": "Juliette sees footage of a life she cannot check",
+          "job": "S3E1 Camille's false footage while Juliette's memory is impaired. Compare visual evidence apparently corroborating a biography with the lack of an independent memory or witness. Keep this local to the particular manipulation; don't claim every frame in the television show is an unreliable hallucination.",
+          "sources": [
+            "S5"
+          ]
+        },
+        {
+          "title": "A public hero can be managed before she remembers",
+          "job": "S3E1 managed mayoral/hero symbolism around Juliette. Explain the practical difference between her reputation in the silo and her access to her own account. Focus on public identification and consent rather than repeating the footage chapter's argument about video truth.",
+          "sources": [
+            "S5"
+          ]
+        },
+        {
+          "title": "The forbidden elevator actually exists",
+          "job": "S3E8: Billings learns Ed Harwood built an illegal elevator and used it to steal from Critical Supply. Tell that specific investigation and how the new route changes the reading of the general transport ban. This is unauthorized construction, NOT a confirmed secret lift officially reserved for rulers. Distinguish a ban from technical impossibility. No invented dimensions, endpoints or capacity; do not retell the old stairs chapter.",
+          "sources": [
+            "S6"
+          ]
+        },
+        {
+          "title": "Supply is more than a storeroom",
+          "job": "Connect the tape intervention with later supply theft/access. Explain how material custody can alter an order's outcome without a public speech. Keep distinct actors and events separate, and avoid asserting Supply is one unified resistance organization or that every missing part was deliberate sabotage.",
+          "sources": [
+            "S2",
+            "S6"
+          ]
+        },
+        {
+          "title": "A disabled Safeguard leaves another danger",
+          "job": "Jimmy's mother disables the internal Safeguard; S3E10 still brings external action against S17. Explain why defeating one mechanism is not evidence that every attack channel is gone. Do not conflate the device, poison, external attack or silo-network authority into one vague reset button.",
+          "sources": [
+            "S6",
+            "S8"
+          ]
+        },
+        {
+          "title": "The voice has an operator",
+          "job": "The Algorithm's human operators in S1 change the earlier impersonal-voice reading. Explain a human-mediated procedure and the difference between an official script and a speaker's discretion. No assertion of a sentient AI, no prediction about unreleased control rooms, and no literal robot descriptions.",
+          "sources": [
+            "S8"
+          ]
+        },
+        {
+          "title": "The ban on contact protects an information gap",
+          "job": "The released no-contact Directive and the silos' isolation. Analyze what separate populations cannot compare about their rules and histories; this is an inference about the information structure. Do not declare every line, tunnel or possible contact method known or give a technological escape tutorial.",
+          "sources": [
+            "S8"
+          ]
+        },
+        {
+          "title": "The clues that would change an answer",
+          "job": "Finish by comparing two genuinely different evidence standards: a reappearing object such as the Pez toy and a human voice identified through the finale. Explain what each establishes, and one precise future observation that could challenge an interpretation, explicitly hypothetical. No season-four answer, novel spoiler or recap of all chapters. End on a grounded object or exchange.",
+          "sources": [
+            "S4",
+            "S8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "QP-05-from-victor",
+      "channel": "Quiet Paradox",
+      "title": "Victor's Memories Explained — FROM Theories to Fall Asleep To",
+      "angle": "Treat Victor as a witness whose drawings, corrections and protective choices have to be checked, rather than a secret villain with every answer. Follow how his relationship with Ethan and Henry changes the evidential value and cost of remembering.",
+      "scope": "FROM television through S4E10 If a Tree Falls in the Forest..., aired 28 June 2026. Spoilers for seasons one through four. No leaks, season-five predictions presented as fact, clinical diagnoses or extended graphic descriptions. Important late updates are explicit; do not write as if only season three has aired.",
+      "forbidden": [
+        "Jasper is still the confirmed speaker in Christopher's crucial conversation",
+        "Eloise is confirmed alive, dead, a named adult character or outside the town",
+        "Victor has lived entirely alone for every intervening decade",
+        "Victor deliberately created the town or is its confirmed immortal controller",
+        "Every drawing is an exact photograph or prediction",
+        "The Boy in White is confirmed wholly good, omniscient or the creator",
+        "Henry's hospital visions prove an actual alternate universe or that the show is a dream",
+        "Miranda's killing and the later treatment of her body are necessarily the same event",
+        "The characters' reincarnation revelation is just an unmentioned pre-season-three theory",
+        "Victor or Henry dies in the season-four finale",
+        "Trauma scientifically guarantees false memory",
+        "Graphic gore or invented dialogue"
+      ],
+      "proof": [
+        {
+          "id": "V1",
+          "fact": "Victor's childhood survival, drawings, cached possessions and his relationship with Ethan form a persistent record, but the series shows gaps and corrections.",
+          "work": "FROM S1-S3",
+          "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V2",
+          "fact": "Victor initially attributes Christopher's conversation to Jasper; S3E8 corrects this to the Boy in White. Sara helps him recall it.",
+          "work": "S3E8 Thresholds",
+          "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V3",
+          "fact": "Victor remembers Eloise and Miranda; the reunion with Henry introduces an independent person from his former home, without resolving every missing-family question.",
+          "work": "S2E8-10; S3 father-son reunion",
+          "url": "https://freshpairofiis.com/2024/10/21/interview-from-scott-mccord-victor-meeting-his-dad/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V4",
+          "fact": "The S3 finale reveals Tabitha and Jade's relation to Miranda and Christopher and the earlier attempts to save the children; Victor's personal history intersects that longer pattern.",
+          "work": "S3E10; S4E7",
+          "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V5",
+          "fact": "S4 Victor recalls the Man in Yellow as a former apparent resident and the later treatment of Miranda's body; at the car he fears Ethan may repeat his childhood isolation.",
+          "work": "S4E4 and S4E7",
+          "url": "https://en.wikipedia.org/wiki/List_of_From_episodes",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V6",
+          "fact": "Henry's visions offer a life with another Victor and demand he remove the real Victor. The actors discuss the manipulation and strain; these visions are not verified escape instructions.",
+          "work": "S4E6-9",
+          "url": "https://www.tvinsider.com/1270854/from-scott-mccord-robert-joy-season-4-episode-9-recap-victor-henry-interview/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V7",
+          "fact": "The Boy in White warns against uprooting the bottle tree; Boyd restrains Victor, the plan goes ahead, and the finale's protections fail amid a new crisis.",
+          "work": "S4E9-10",
+          "url": "https://readysteadycut.com/2026/06/28/from-season-4-sophia-boy-in-white/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "V8",
+          "fact": "Henry attempts to shoot Victor; Ethan interrupts and Victor disarms his father. Both survive this scene. The actors describe a reversal toward Victor caring for Henry.",
+          "work": "S4E10",
+          "url": "https://www.tvinsider.com/1271846/",
+          "opened": "2026-10-15",
+          "corroboration": "https://tvbrittanyf.com/2026/07/07/from-season-4-scott-mccord-robert-joy-interview/"
+        },
+        {
+          "id": "V9",
+          "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct. Boyd tells Henry and Victor about Miranda and Tabitha. In S4E7 Victor asks Tabitha in the graveyard whether she is his mother, seeks her help, and takes her and Ethan to the Man in Yellow's car. Tabitha and Ethan tell Julie. Henry struggles with the revelation and Sophia's manipulation.",
+          "work": "S4E7 Best Laid Plans, supported by cast interview and episode recap",
+          "url": "https://www.horrorgeeklife.com/2026/06/08/from-season-4-scott-mccord-robert-joy-interview/",
+          "opened": "2026-10-15",
+          "corroboration": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "The witness who corrects himself",
+          "job": "Hook on Victor being wrong about who spoke to Christopher: the apparent Jasper memory is later corrected to the Boy in White. Promise a calm examination of memories, clues and theories, not a solution to the whole show. Announce through-season-four spoilers before later revelations. Explain why one correction changes how we use his testimony without making every memory worthless.",
+          "sources": [
+            "V1",
+            "V2"
+          ]
+        },
+        {
+          "title": "A drawing preserves some things and leaves others out",
+          "job": "Victor's drawings as a record with choices of emphasis. Distinguish seeing an image on paper from knowing its date, context or interpretation. No new drawings invented and no universal assumption that every image predicts the future. Explore how a partial record can remain useful when the person cannot explain it immediately.",
+          "sources": [
+            "V1"
+          ]
+        },
+        {
+          "title": "Ethan asks questions adults have stopped asking",
+          "job": "Victor's relationship with Ethan: shared stories, simple questions and vulnerability allow exchanges that adult interrogation often does not. Avoid claiming a magical special destiny from age alone. Center how the relationship changes access to information, with no invented conversation or diagnosis.",
+          "sources": [
+            "V1",
+            "V5"
+          ]
+        },
+        {
+          "title": "The child in the aftermath",
+          "job": "Victor's childhood survival after the town's massacre. Distinguish the event he witnessed, the time he spent surviving and unsupported claims about all intervening decades. Discuss why a long residence gives experiential knowledge but not automatic knowledge of the town's origin. Keep violence non-graphic.",
+          "sources": [
+            "V1",
+            "V3"
+          ]
+        },
+        {
+          "title": "Keeping what the dead leave behind",
+          "job": "The possessions Victor saves as memory aids. Explain the difference between a personal association and an object that independently verifies an event. Avoid inventing exact objects, owners or labels. Compare preservation with the later suggestion that remembering people through their things can itself be manipulated.",
+          "sources": [
+            "V1",
+            "V6"
+          ]
+        },
+        {
+          "title": "Remembering that Eloise was there",
+          "job": "Victor's recovered recognition of his sister and the drawings associated with her. Explain how a missing person can return to the narrative without the series resolving her fate. No adult-character identity twist, reincarnation claim or invented last sighting. Make the unresolved boundary part of the actual analysis.",
+          "sources": [
+            "V3"
+          ]
+        },
+        {
+          "title": "Miranda's instruction and what a child could know",
+          "job": "Miranda tells the children to hide while she goes to act. Separate what Victor directly knew from later reconstructions of her destination and purpose. Discuss the burden of a child treating an adult's decision as his own responsibility. No universal clinical claims about survivor guilt or invented hidden plan.",
+          "sources": [
+            "V1",
+            "V3"
+          ]
+        },
+        {
+          "title": "A lighthouse can be a destination without being the answer",
+          "job": "The route through the trees and Tabitha's lighthouse passage involve Victor's remembered guidance. Distinguish one successful passage from a repeatable escape procedure. Use S4 information that a route cannot simply be repeated as before, without turning this chapter into a whole-series travel recap.",
+          "sources": [
+            "V1",
+            "V4",
+            "V5"
+          ]
+        },
+        {
+          "title": "Christopher changes in the remembered story",
+          "job": "Victor's account of Christopher before and after his fixation on the symbol. Distinguish observed behavior, Victor's fear and later knowledge about previous lives. Don't declare Christopher the sole perpetrator of every death or turn the symbol into an independently proven mind-control device.",
+          "sources": [
+            "V1",
+            "V2",
+            "V4"
+          ]
+        },
+        {
+          "title": "Jasper is retrieved but does not provide the answer",
+          "job": "Victor's attempt to recover the dummy in search of a crucial memory. Analyze the mismatch between recovering an object and recovering what happened around it. No magical dialogue attributed to Jasper as fact. Focus on the investigative detour and the difference between a trigger and a reliable witness.",
+          "sources": [
+            "V2"
+          ]
+        },
+        {
+          "title": "Sara helps separate the speakers",
+          "job": "S3E8: the corrected conversation involves Christopher and the Boy in White. Explain the actual correction and its limits, including that Sara helping him recall is not an independent recording of the past. Don't repeat the hook; examine how cooperative questioning changes the account without declaring it infallible.",
+          "sources": [
+            "V2"
+          ]
+        },
+        {
+          "title": "The Boy in White gives help without a full explanation",
+          "job": "Compare the Boy in White's interventions in Victor's remembered story with his later tree warning. Analyze limited guidance, possible protective intent and what remains unknown. Don't flatten the character into a proven benevolent god or a proven villain; identify the specific evidence either interpretation would need.",
+          "sources": [
+            "V2",
+            "V7"
+          ]
+        },
+        {
+          "title": "Henry recognizes a son who grew up elsewhere",
+          "job": "The father-son reunion provides recognition from outside Victor's long town life. Explain what Henry can corroborate about the family and what he cannot know about events he missed. Their shared distress is not itself a complete verification of every detail. Avoid a sentimental recap and invented reunion dialogue.",
+          "sources": [
+            "V3"
+          ]
+        },
+        {
+          "title": "Miranda's paintings belong to a wider pattern",
+          "job": "The paintings and Tabitha's recognition at Henry's home connect the town with a life beyond it. Distinguish a cross-location correspondence from proof that Victor consciously sent the images or controls the place. Relate this evidence to the later reincarnation revelation, not to arbitrary dream theories.",
+          "sources": [
+            "V3",
+            "V4"
+          ]
+        },
+        {
+          "title": "Tabitha's connection changes the family story",
+          "job": "The S3 finale and S4 conversations reveal the Miranda/Tabitha and Christopher/Jade pattern. State this released development clearly. Distinguish continuity of remembered lives from replacing a living person's relationships or making Tabitha literally Henry's current wife. Center Victor and Henry's reactions, not a broad recap of reincarnation lore.",
+          "sources": [
+            "V4",
+            "V9"
+          ]
+        },
+        {
+          "title": "A new memory of the Man in Yellow",
+          "job": "S4E4 Victor's account: the Man in Yellow once appeared to arrive like other residents and was later involved with the bodies, including Miranda's. Keep this non-graphic and attributed to Victor. Distinguish the moment of Miranda's death shown elsewhere from what later happened to her; no contradiction flattened into one killer scene.",
+          "sources": [
+            "V5"
+          ]
+        },
+        {
+          "title": "The car makes a fear concrete",
+          "job": "S4E7 Victor, Tabitha and Ethan at the Man in Yellow's car, and the disturbing sack. Mention the discovery without graphic inventory. Analyze why a place/object corroborates part of a story yet does not prove every associated recollection. No invented dates, driver motives or car history.",
+          "sources": [
+            "V5"
+          ]
+        },
+        {
+          "title": "Victor sees his own childhood in Ethan's future",
+          "job": "After the car visit Victor fears another mother, son and daughter may lead to another isolated surviving boy. Separate a witnessed repeating arrangement from an inevitable cycle. Ethan's request for preparation in S4E8 gives the fear a practical consequence. Do not state Ethan is destined to become Victor or that ages imply reincarnation.",
+          "sources": [
+            "V5",
+            "V7"
+          ]
+        },
+        {
+          "title": "Henry is offered a different Victor",
+          "job": "Henry's hospital/normal-life visions and the alternate-looking son. Explain the offer's appeal and the condition that demands harm to the real Victor. The series presents manipulation; the vision does not verify an actual other universe or coma ending. No imitation of the villain's persuasion or graphic threats.",
+          "sources": [
+            "V6"
+          ]
+        },
+        {
+          "title": "A comforting vision can be tested by its demand",
+          "job": "Compare Victor correcting a distressing memory with Henry receiving a pleasant but coercive account. Develop an evidence test: independent corroboration, how the message treats disagreement and what action it demands. Keep the analysis tied to these specific scenes, without real-life psychiatric advice or claims all visions have the same source.",
+          "sources": [
+            "V2",
+            "V6"
+          ]
+        },
+        {
+          "title": "Victor's warning loses to a plan",
+          "job": "S4E9 Boy in White warns about the bottle tree; Victor objects and Boyd restrains him. Distinguish a witness's prior unreliability from a reason to ignore every new warning. Discuss Boyd's constrained decision without inventing a better guaranteed rescue plan or treating Victor as omniscient.",
+          "sources": [
+            "V7"
+          ]
+        },
+        {
+          "title": "What the fallen tree establishes",
+          "job": "S4E10 the tree is uprooted and a crisis follows. Explain that the outcome gives weight to the warning while leaving the complete causal mechanism unresolved. Do not declare all supernatural rules permanently solved or every talisman intrinsically powerless. Keep focus on how the event updates trust in this particular warning.",
+          "sources": [
+            "V7"
+          ]
+        },
+        {
+          "title": "Ethan interrupts the false escape",
+          "job": "S4 finale Henry raises the gun, Ethan interrupts, Victor disarms him and both survive. Tell this briefly and without gore. Analyze how an actual person intervening breaks the logic of the supplied vision; Victor becomes someone who has to protect his father. No fabricated forgiveness or season-five outcome.",
+          "sources": [
+            "V8"
+          ]
+        },
+        {
+          "title": "A witness can be protected while being questioned",
+          "job": "End on Victor caring for Henry after the confrontation and Ethan's concrete interruption. Resolve the angle: useful memories are preserved, checked and shared without requiring their owner to know everything. Don't recap all mysteries or proclaim the town solved. Close on a grounded human action already established, with no invented final drawing or dialogue.",
+          "sources": [
+            "V3",
+            "V8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "QP-06-severance-eagan",
+      "channel": "Quiet Paradox",
+      "title": "The Secrets of the Eagan Family — Severance Theories to Fall Asleep To",
+      "angle": "Separate the Eagans' curated family history, the contemporary technology credited to them, and the unconfirmed future they promise. The strongest secret concerns who receives credit and whose separate life counts, rather than assuming a solved Kier-resurrection conspiracy.",
+      "scope": "Released television through S2E10 Cold Harbor, March 21, 2025. No season-three story, leaks, unsupported family tree, pregnancy twist, confirmed cloning or resurrection. Corporate doctrine and family accounts must be attributed as claims. Original analysis, not a recap of a competing theorist.",
+      "forbidden": [
+        "Kier is confirmed alive in the Board, in a chip or secretly reincarnated",
+        "Revolving has been fully explained",
+        "All Eagans have identical beliefs or know the whole plan",
+        "Helena is Kier's granddaughter without accounting for generations",
+        "Dieter's story is objectively verified history",
+        "Helly is secretly Helena in every later scene after the Woe's Hollow switch",
+        "Jame truly invented severance despite S2E8",
+        "A severance chip erases all memory, skills or feelings",
+        "Gemma's full kidnapping history or the ultimate purpose of Cold Harbor is solved",
+        "Goats prove human cloning or literal soul transfer",
+        "Invented CEO dates, bloodlines, scientific mechanisms, quotes or room counts",
+        "Claimed exact runtime before audio measurement"
+      ],
+      "proof": [
+        {
+          "id": "E1",
+          "fact": "The Perpetuity Wing presents Kier and succeeding Eagan CEOs through a curated company history; the severed floor treats his words as authority.",
+          "work": "S1E3 In Perpetuity",
+          "url": "https://en.wikipedia.org/wiki/In_Perpetuity",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E2",
+          "fact": "The first-season finale reveals Helly's outie is Helena Eagan, Jame's daughter, participating in a public severance promotion; Jame mentions his revolving.",
+          "work": "S1E9 The We We Are",
+          "url": "https://en.wikipedia.org/wiki/Severance_(TV_series)",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E3",
+          "fact": "Woe's Hollow uses Kier's Fourth Appendix and Dieter's story; Irving exposes Helena's impersonation, and Milchick restores Helly.",
+          "work": "S2E4 Woe's Hollow",
+          "url": "https://readysteadycut.com/2025/02/07/severance-season-2-episode-4-recap/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E4",
+          "fact": "Cobel's return to Salt's Neck reveals her original severance work and Jame's appropriation of credit, challenging the family's invention story.",
+          "work": "S2E8 Sweet Vitriol",
+          "url": "https://www.cultofmac.com/reviews/severance-season-2-episode-8-recap",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E5",
+          "fact": "Jame's conversations with Helly/Helena distinguish his daughter's compliant role from the spirit he says he recognizes in her innie.",
+          "work": "S2E9-10",
+          "url": "https://en.wikipedia.org/wiki/Cold_Harbor_(Severance)",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E6",
+          "fact": "Cold Harbor tests Gemma with dismantling a crib without emotional spillover; its ultimate corporate purpose is intentionally still partly withheld by the creator.",
+          "work": "S2E10 Cold Harbor",
+          "url": "https://www.thewrap.com/severance-season-2-finale-dan-erickson-interview/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E7",
+          "fact": "Mark and Gemma escape the testing rooms; innie Mark ultimately chooses to return toward Helly instead of leaving with Gemma. This is an identity conflict, not simply a love-triangle puzzle.",
+          "work": "S2E10",
+          "url": "https://www.tvguide.com/news/severance-dichen-lachman-season-2-finale-interview-gemma-cold-harbor/",
+          "opened": "2026-10-15"
+        },
+        {
+          "id": "E8",
+          "fact": "Apple renewed the series after season two; no third-season plot is included in this script.",
+          "work": "Production scope only",
+          "url": "https://www.apple.com/uk/tv-pr/news/2025/03/praise-kier-apples-global-hit-emmy-and-peabody-award-winning-workplace-thriller-severance-lands-season-three-renewal/",
+          "opened": "2026-10-15"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "The inventor's name is wrong",
+          "job": "Hook on S2E8: work credited to Jame Eagan belongs to Cobel. State the core question of how much the family's official story can be trusted and promise an evidence-led account of remaining theories. Announce seasons-one-and-two spoilers. Provide the actual correction early, without delaying it until the last chapter.",
+          "sources": [
+            "E4"
+          ]
+        },
+        {
+          "title": "A dynasty arranged as a museum",
+          "job": "The Perpetuity Wing displays a succession of Eagan leaders. Explain the difference between this company-curated presentation and an independently verified family history. No long speculative family tree, invented CEO dates or unsupported parent-child links. Focus on why employees encounter this room as part of work.",
+          "sources": [
+            "E1"
+          ]
+        },
+        {
+          "title": "Kier's words enter an ordinary workday",
+          "job": "How the handbook and founder's sayings guide work on the severed floor. Analyze the practical transfer of authority from an absent founder to present managers. Attribute every doctrine to Lumon or Kier's presented teaching; no claim its moral system is objective science. Avoid invented quotations.",
+          "sources": [
+            "E1",
+            "E3"
+          ]
+        },
+        {
+          "title": "Four tempers and what the company does with them",
+          "job": "Woe, frolic, dread and malice in Kier's doctrine and MDR's sorting categories. Distinguish the fictional classification from a validated model of real emotions. Explain how sorting feelings becomes a labor task and how the finale changes what that task may mean. No claim the four categories exhaust human personhood.",
+          "sources": [
+            "E1",
+            "E6"
+          ]
+        },
+        {
+          "title": "The founder's home inside the workplace",
+          "job": "The reconstructed Kier domestic space in the Perpetuity Wing and its later use in the waffle-party reward. Explain how a claimed private life becomes institutional instruction. Keep any sexual ritual reference brief and non-explicit; do not assert literal resurrection or reconstruct an unshown historical event.",
+          "sources": [
+            "E1"
+          ]
+        },
+        {
+          "title": "Helena offers her own body as publicity",
+          "job": "The season-one gala and severance promotion. Explain why an Eagan heir's participation is a persuasive exhibit, and distinguish the public version of her experience from what Helly lived. No claim every audience member knows the abuse or the company has convinced every government.",
+          "sources": [
+            "E2"
+          ]
+        },
+        {
+          "title": "Helly's refusal belongs to the same body",
+          "job": "Helly's attempts to leave and Helena's refusal to let her. Analyze how their conflicting wishes challenge the family's language of consent without inventing legal rules. Avoid graphic self-harm description. Keep the episode centered on the Eagan claim to authorize another conscious person's ongoing work.",
+          "sources": [
+            "E2"
+          ]
+        },
+        {
+          "title": "Jame speaks about a revolving",
+          "job": "The first-season bathroom conversation gives the term revolving without explaining its mechanism. Present succession, ceremony and attempted continuity as interpretations with different evidence requirements. Do not claim mind transfer, immortality or one proven meaning. Avoid a speculative technology catalogue and close with the actual boundary of the evidence.",
+          "sources": [
+            "E2",
+            "E5"
+          ]
+        },
+        {
+          "title": "Natalie conveys a Board we cannot fully inspect",
+          "job": "The Board communicates through controlled intermediaries and occasional limited contact. Explain the difference between secrecy of governance and proof the Board is an AI or a dead founder. Keep this grounded in the shown managerial chain; no invented identities, organizational charts or mind-uploading facts.",
+          "sources": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "title": "Harmony's devotion has a personal history",
+          "job": "Cobel's worshipful household imagery and later Salt's Neck background. Explain why loyalty can come from upbringing, personal loss and career investment without diagnosing her or assuming one exclusive motive. Separate being a Kier devotee from being reliably loyal to Jame's management.",
+          "sources": [
+            "E4"
+          ]
+        },
+        {
+          "title": "Salt's Neck puts people behind the company story",
+          "job": "S2E8 town, family home and Sissy's loyalty. Explain the local life shaped by Lumon and the pressure to remain within it. Avoid invented illness causation, medical numbers or economic statistics. The concrete point is what continued devotion asks Cobel to give up, not a general corporate-evil speech.",
+          "sources": [
+            "E4"
+          ]
+        },
+        {
+          "title": "Cobel keeps evidence of her own work",
+          "job": "The recovered original research and the claim Jame took credit. Analyze documentation, authorship and why a person might keep evidence while still serving the institution. Don't invent the age at which she drew a plan or say she personally built every component. Differentiate severance development from Reghabi's later reintegration work.",
+          "sources": [
+            "E4"
+          ]
+        },
+        {
+          "title": "Dieter appears through an appendix",
+          "job": "Woe's Hollow introduces Kier's twin Dieter through a text controlled by the company. Explain newly presented doctrine versus independently verified historical life. Analyze the moral uses of the story without inventing a historical murder, literal doubles program or a secret Eagan genetic experiment.",
+          "sources": [
+            "E3"
+          ]
+        },
+        {
+          "title": "The retreat makes the innies enact the lesson",
+          "job": "The workers find themselves outside, follow the appendix and rely on a company-organized route. Explain the difference between entering a larger space and receiving more freedom or information. Keep environment details limited to the shown forest/waterfall; no invented weather symbolism or proof their doubles are clones.",
+          "sources": [
+            "E3"
+          ]
+        },
+        {
+          "title": "A first name exposes a different status",
+          "job": "Irving identifies Helena's impersonation at Woe's Hollow; she can address Milchick in a way that reveals her access and status. Explain how a small social detail can be evidence more reliable than her performed personality. No claim this single clue solves every impersonation question or that Helly never returned.",
+          "sources": [
+            "E3"
+          ]
+        },
+        {
+          "title": "Helena enters relationships on borrowed trust",
+          "job": "While posing as Helly, Helena interacts with Mark and the team on terms they do not understand. Analyze consent, unequal access to shared memories and the limits of using her later distress to excuse the deception. Keep intimacy references non-explicit; don't invent secret orders from Jame.",
+          "sources": [
+            "E3",
+            "E5"
+          ]
+        },
+        {
+          "title": "Jame finds a spirit he wants to recognize",
+          "job": "S2E9-10 Jame's attention to Helly and his dissatisfaction with Helena. Attribute his claim of seeing Kier's spirit; don't turn it into proof of literal possession. Discuss why a father might value an identity he also helps subordinate, while distinguishing his expressed motives from a complete explanation.",
+          "sources": [
+            "E5"
+          ]
+        },
+        {
+          "title": "A family name cannot make two lives identical",
+          "job": "Use Helly and Helena's different responses to being Eagan. Distinguish shared body and background inaccessible to one identity from present relationships and commitments. This is original analysis of specific choices, not a generic identity lecture or a claim that biological relatives automatically share values.",
+          "sources": [
+            "E2",
+            "E3",
+            "E5"
+          ]
+        },
+        {
+          "title": "Gemma becomes a set of separate experiences",
+          "job": "S2E7 and S2E10 testing-floor experiences. Explain partitioned rooms and what Mark's refinement is reported to create. No unverified total count, complete kidnapping history or real neuroscience. Keep the focus on the Eagans' credited technology being used on a person with an existing life.",
+          "sources": [
+            "E6",
+            "E7"
+          ]
+        },
+        {
+          "title": "Cold Harbor reverses the direction of the test",
+          "job": "Gemma dismantles a crib in Cold Harbor without the expected emotional response. The creator explains the test differs in checking whether outside pain crosses inward, while the full purpose remains open. State that narrow supported point; no certainty about mass-market use, resurrection, permanent erasure or a solved business plan.",
+          "sources": [
+            "E6"
+          ]
+        },
+        {
+          "title": "The goat ritual reveals belief alongside a procedure",
+          "job": "S2E10 Lorne, Drummond, the goat and the intended sacrifice/burial linked to Gemma. Keep violence minimal. Explain ritual commitment alongside technical testing, and why this coexistence cannot prove literal soul transfer. Don't invent the meaning of every earlier goat scene.",
+          "sources": [
+            "E6",
+            "E7"
+          ]
+        },
+        {
+          "title": "What a resurrection theory would have to explain",
+          "job": "Test the popular class of Kier-return theories against the actual evidence: family continuity language, revolving, partitions and ritual. Distinguish suggestive motifs from a demonstrated transfer of consciousness. Give concrete disconfirming/missing evidence; don't borrow any named theorist's unique scenario or claim a future reveal.",
+          "sources": [
+            "E2",
+            "E5",
+            "E6"
+          ]
+        },
+        {
+          "title": "Mark and Gemma do not move as one identity",
+          "job": "The rescue requires switches between Mark's identities; at the threshold Gemma and innie Mark have different relationships to the same shared past. The finale's choice gives practical resistance to treating an innie as disposable. Keep centered on the limit this poses to family ownership, not a full finale recap or romantic ranking.",
+          "sources": [
+            "E6",
+            "E7"
+          ]
+        },
+        {
+          "title": "Who gets to keep a person's work and life",
+          "job": "End with the specific connection between Cobel's retained research and Helly's assertion of a separate life. Resolve the angle through two kinds of appropriation supported by the story, without summarizing every mystery. The Eagans' complete endgame remains unconfirmed. Finish on a grounded record or choice, no CTA or season-three tease.",
+          "sources": [
+            "E2",
+            "E4",
+            "E7"
+          ]
+        }
+      ]
+    }
+  ]
+}

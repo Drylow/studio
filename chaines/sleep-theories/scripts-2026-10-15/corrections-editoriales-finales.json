@@ -1,0 +1,33 @@
+[
+  {
+    "file": "QP-06-severance-eagan\\chapitres\\18.txt",
+    "input_sha256": "7889a4e6a5f94a8f779ad2541eef74029f33e7e3fdf3000d31eb6913a7a07e86",
+    "changes": [
+      {
+        "old": "Milchick takes the book inside, where it eventually reaches readers Ricken never intended to address.",
+        "new": "Cobel takes it from Mark's doorstep and brings it to Lumon for inspection, where it eventually reaches readers Ricken never intended to address."
+      },
+      {
+        "old": "Milchick doesn't bring the volume downstairs as approved reading for Macrodata Refinement.",
+        "new": "Cobel hasn't brought the volume downstairs as approved reading for Macrodata Refinement."
+      }
+    ],
+    "reason": "Cobel takes the gift from doorstep to Lumon; Milchick inspects and leaves it. Corrected after checking S1E3 recap and episode synopsis.",
+    "source": "https://en.wikipedia.org/wiki/Severance_(TV_series)",
+    "output_sha256": "b73e6b47147a4f843773420296aabc3046d01f65856a06b1f57c6a97587acebc"
+  },
+  {
+    "file": "QP-04-silo-indices/chapitres/01.txt",
+    "reason": "Remove outline-facing narration artifact.",
+    "changes": [
+      {
+        "old": "For this chapter, the useful change is the connection to Helen and Daniel's exchange.",
+        "new": "The later scene connects the toy to Helen and Daniel's exchange."
+      }
+    ]
+  },
+  {
+    "file": "DV-03-paul/chapitres/01.txt",
+    "reason": "Move unchanged optional CTA after the first substantive family-responsibility paragraph, within early narration."
+  }
+]

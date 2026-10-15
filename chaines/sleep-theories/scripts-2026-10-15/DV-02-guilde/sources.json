@@ -1,7 +1,7 @@
 {
   "accessed": "2026-10-15",
-  "scope": "Frank Herbert's six original Dune novels. The main evidence is Dune and Dune Messiah; later novels enter only for Leto II's leverage and the later Ixian challenge. Book continuity throughout. No prequel origin story or film-specific navigator physiology.",
-  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
+  "scope": "Frank Herbert's six original Dune novels. Main evidence: Dune and Dune Messiah; later novels cover Leto II's leverage, Ixian navigation and concealment, Tleilaxu spice production and the changed conditions of travel. Book continuity; no expanded prequels/sequels or film-specific Navigator physiology.",
+  "method": "Sources opened and book/episode locators. Original analysis, no claim of new complete viewing.",
   "sources": [
     {
       "id": "G1",
@@ -59,18 +59,27 @@
       "work": "Scope exclusion only",
       "url": "https://www.brianherbertnovels.com/dune-series/navigators-of-dune-2016/",
       "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-tupile",
+      "fact": "Original Dune terminology: renegade Houses may flee beyond Imperium with family atomics and shields, contracting for safety outside System. Tupile is a sanctuary planet or planets known only to Guild, protected by Guild Peace. No specified fee, residents, exact location or atmosphere.",
+      "url": "https://en.wikipedia.org/wiki/Spacing_Guild",
+      "work": "Dune terminology: Tupile and renegade Houses",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-banker",
+      "fact": "Guild banking as well as transport monopoly. At Arrakeen dinner Jessica reads banker as Harkonnen agent; banker fears Kynes, smuggler Tuek aligned with Kynes. Duke leaves on security business; Paul and Jessica remain with guests. No invented dialogue or fights.",
+      "url": "https://www.gradesaver.com/dune/study-guide/summary-book-1-dune-chapters-13-22",
+      "work": "Dune original novel: dinner and terminology",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-synthetic",
+      "fact": "Heretics and Chapterhouse: Bene Tleilax produce melange in axlotl tanks, breaking Rakis geographic monopoly; natural melange remains in market. Separate from Ixian navigation and no-ships. Navigators still need spice. No Project Amal, ultraspice, seaworms, expanded sequels.",
+      "url": "https://en.wikipedia.org/wiki/Melange_(Dune)",
+      "work": "Heretics of Dune; Chapterhouse: Dune",
+      "opened": "2026-10-15"
     }
-  ],
-  "forbidden": [
-    "The Navigators magically create spaceflight without ships or propulsion",
-    "Exact prices, travel times, crew sizes or accident percentages without a cited primary passage",
-    "Every Guild employee is a mutated Navigator",
-    "Humanity had no space travel before the Guild",
-    "The Guild owns CHOAM or can order every emperor",
-    "A no-ship and a navigation machine are the same device",
-    "Norma Cenva or expanded-universe events folded into Frank Herbert's original account",
-    "Edric sees every detail of every possible future",
-    "Guild neutrality is absolute pacifism",
-    "Speculation about economics asserted as numerical canon"
   ]
 }

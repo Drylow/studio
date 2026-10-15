@@ -133,5 +133,6 @@
     "7": "eb84bbb85eb506a1d3242db1b9317394a0fe3171112c6f16d227eb7007670e01",
     "8": "e9612b40979dd6466108224b81b25f118da5fa6b6a0795c1bbc0e147e92fb00b"
   },
-  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
 }

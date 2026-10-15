@@ -1,0 +1,171 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Jame contrasts his disappointment in Helena with the spirit he claims to recognize in Helly, without offering Helly greater control over her life.",
+      "new_information": [
+        "The gala encounter occurs while Jame mistakes Helly for Helena, whereas his later attention knowingly addresses the innie.",
+        "Jame associates what interests him in Helly with Kier's spirit; the chapter correctly presents that association as his interpretation.",
+        "His admiration sits uneasily beside Lumon's suppression of the resistance that may attract his attention.",
+        "Helly cannot consult Helena's memories of their father when assessing his judgments."
+      ],
+      "local_answer": "The chapter answers its assignment: Jame may value qualities in Helly that he finds absent in Helena, but his recognition neither establishes possession nor changes Helly's subordinate position.",
+      "open_issues": [
+        "Several later paragraphs repeat the contrast between personal fascination and unchanged control after that contrast has already been established.",
+        "The paragraph about Helly's relationships anticipates chapter 18 without adding much to this chapter's account of Jame.",
+        "The speculative discussion of parental longing repeats the earlier, more specific interpretation of Jame's interest."
+      ],
+      "evidence_notes": "The central account follows E5 and attributes the Kier-spirit claim appropriately. The gala material is consistent with E2. Possible motives are marked as interpretations rather than presented as a complete explanation."
+    },
+    {
+      "number": 18,
+      "summary": "Helly and Helena use their shared body's Eagan status differently because their accessible experiences, relationships, and commitments differ.",
+      "new_information": [
+        "Helly learns her family position at the gala without recovering Helena's childhood or family attachments.",
+        "Helly uses Helena's promotional platform to oppose the treatment of severed workers.",
+        "Helena's impersonation creates relationship consequences that Helly returns to without the corresponding memories.",
+        "The chapter distinguishes inaccessible autobiographical experience from retained language, practical understanding, and feelings."
+      ],
+      "local_answer": "The chapter grounds the distinction between Helly and Helena in the gala speech, the impersonation, and their different relationships rather than treating the Eagan name as a shared set of values.",
+      "open_issues": [
+        "The closing paragraph mostly restates the already established contrast between family status and lived commitments.",
+        "The Jame discussion repeats chapter 17, although its application to whether family membership determines values gives it a legitimate local purpose."
+      ],
+      "evidence_notes": "The principal developments align with E2, E3, and E5. The chapter correctly states that Milchick restores Helly and does not extend Helena's impersonation into every subsequent scene. It also avoids claiming that severance removes general knowledge or emotional capacity."
+    },
+    {
+      "number": 19,
+      "summary": "Gemma's testing-floor experiences reveal increasingly partitioned identities, and Cobel connects those divisions to Mark's refinement work.",
+      "new_information": [
+        "Gemma's corridor experience is separated from experiences inside individual testing rooms.",
+        "The dental, simulated-flight, and thank-you-note tasks illustrate different situations imposed on partitioned identities.",
+        "Gemma's questions about Mark preserve the importance of her existing marriage despite her confinement.",
+        "Ms. Casey's wellness sessions place Mark and Gemma together without ordinary access to their shared past.",
+        "Cobel reports that Mark's files create separate consciousnesses within Gemma, connecting his grief-driven employment to her continued exploitation."
+      ],
+      "local_answer": "The chapter explains the partitioned-room arrangement and attributes the explanation of Mark's work to Cobel while keeping Gemma's preexisting life central.",
+      "open_issues": [
+        "One metaphor makes the testing floor sound as though it literally occupies Gemma's body rather than describing what Lumon does to her.",
+        "The supplied proof summaries do not independently document every S2E7 scene detail used here."
+      ],
+      "evidence_notes": "The chapter avoids an invented room count, a complete kidnapping explanation, and real-neuroscience claims. E6 and E7 support the finale context, but the detailed S2E7 material and precise account of Cobel's explanation exceed the detail recorded in the supplied proof summaries; that is a verification limitation, not evidence that those claims are false."
+    },
+    {
+      "number": 20,
+      "summary": "Cold Harbor tests whether Gemma can dismantle a crib without pain from her outside life crossing into that severed experience.",
+      "new_information": [
+        "The crib connects the assigned task to Gemma and Mark's painful attempts to have a child.",
+        "Erickson's explanation identifies the test's direction as outside pain crossing inward.",
+        "The chapter distinguishes lack of explicit recollection from the possibility of an emotional response to a reminder.",
+        "Mark's arrival demonstrates that the partition also affects Gemma's recognition of someone attempting to help her.",
+        "The observed result does not establish Lumon's ultimate business plan."
+      ],
+      "local_answer": "The narrow supported answer is clear and correctly bounded, but the chapter spends too many paragraphs re-explaining the same task and emotional barrier.",
+      "open_issues": [
+        "Paragraphs two, five, and seven mostly restate information already delivered by the opening and the creator-attributed explanation.",
+        "Some claims about what the observers need and why the crib is especially suitable sound like established procedural criteria rather than the narrator's interpretation."
+      ],
+      "evidence_notes": "The central claim follows E6, including attribution to Dan Erickson and acknowledgment that the ultimate purpose remains unconfirmed. The chapter does not convert the test into proof of permanent erasure, resurrection, or a solved commercial application."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helly's own attachments have developed elsewhere. She knows Mark through their work together, their attempts to resist Lumon and the closeness they've formed on the severed floor. Irving and Dylan are colleagues whose troubles she has shared. These experiences give her reasons to act that don't require Jame's recognition. When he sees a resemblance to Kier, he's interpreting a person who has already built commitments outside the family story. His approval arrives after those commitments exist, and it doesn't explain them.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' This paragraph moves away from Jame's expressed interest into the relationships that chapter 18 develops more concretely through Helly's choices. Removing it preserves this chapter's answer and gives the relationship argument a clearer home.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It's possible to hear longing in Jame's attention. His dissatisfaction with Helena and his search for something familiar in Helly give that reading a basis. That possible longing doesn't mean he understands either woman on her own terms. A disappointed parent may describe a child through what he wanted her to become. Here, the desired resemblance reaches back to Kier, so Helena is being measured against a family ideal while Helly is praised through it. Neither woman gets much room in that description to be valued on her own terms.",
+      "reason": "Under H18, a repeated framing needs a new consequence or development. The chapter has already explained Jame's dissatisfaction, his Kier comparison, and the limitations of his admiration. This paragraph adds a hedged motive and a general observation about disappointed parents rather than further evidence or a distinct consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The name Eagan tells Helly something consequential about where her body goes when the elevator takes her away. It doesn't give her Helena's evening, her relationship with Jame, or her reasons for supporting Lumon. Helly returns to colleagues who know her through what she's done with them. She has spoken for those colleagues in a room arranged to promote her outie's decision. That action remains hers, even with Helena's name attached to every photograph.",
+      "reason": "H18 cautions against repeating a framing without a new development. The opening five paragraphs already establish all of these distinctions. A shorter ending can close the assigned question through the concrete gala choice without another inventory of inaccessible experiences.",
+      "replacement": "At the gala, Helly uses the access Helena's name gives her to speak against Lumon. Their shared body makes that opportunity possible, but their different commitments determine what each woman does with it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The testing floor occupies the body of a woman who already had work, plans, and attachments beyond the company.",
+      "reason": "H17's 'poetic compression' applies to the claim that a floor occupies a body. The surrounding account is concrete, but this metaphor momentarily obscures the actual action and actor.",
+      "replacement": "Lumon is using a woman who already had work, plans, and attachments beyond the company.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The room gives her something to do that she can understand without knowing why she's there. She can recognize the crib and use the tools provided. Severance hasn't removed the practical knowledge required to handle familiar objects. What's absent is access to Gemma's personal connection with this particular kind of furniture. That makes the procedure uncomfortable to consider in a very specific way. The task is manageable because the person carrying it out can't draw on the experience that would make it painful.",
+      "reason": "H18 applies because the opening already describes the ordinary physical task and the missing emotional response, while chapter 19 has established retained practical understanding. This paragraph delays the distinct new information supplied by Erickson's explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The difference matters when we look at what counts as success for the people conducting the test. Gemma doesn't need to feel happy about dismantling the crib. She doesn't need to approve of what Lumon is doing elsewhere in the building. She needs to perform the assigned actions without the expected emotional spillover from her outside life. That gives the staff a narrow result to observe. Her ability to finish tells them something about the separation under these conditions, while leaving her wishes outside the room unanswered.",
+      "reason": "H18's repeated framing has reached a third explanation of the same criterion: completing the task without outside emotional spillover. The happiness and approval exclusions add hypothetical criteria not needed to explain E6.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The crib is especially suited to making the result visible. Dismantling it takes a sequence of actions, so the observers have more to assess than a brief glance or a spoken answer. Gemma has to remain engaged with the object as she works. The procedure gives a practical shape to an otherwise hidden question about what she's experiencing. Lumon can watch her continue, and the audience can recognize the significance of her composure because we've been shown parts of the life she can't access in that room.",
+      "reason": "H18 applies to another explanation of why observable task completion matters. The comparative claim that this gives observers more to assess than a glance or answer is plausible interpretation, not a procedural explanation supplied by E6. Deletion removes both the redundant account and the unnecessary assertion of experimental design.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Both chapters explain that Jame's recognition cannot supply Helly with Helena's family memories or replace her relationships with Mark, Irving, and Dylan. Keep chapter 17 centered on his contradictory admiration and chapter 18 on Helly's concrete choices; the proposed chapter 17 deletion supports that division."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Both explain retained practical abilities alongside inaccessible personal history. Chapter 19 establishes this through several testing situations, so chapter 20 need not re-establish it before delivering the distinctive outside-pain-crossing-inward explanation."
+    },
+    {
+      "chapters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "detail": "Each returns to the contrast between institutional or family authority and a person's inaccessible or disregarded life. This is the assigned unifying theme, not itself a defect, but repeated closing explanations risk flattening the distinct developments. The strongest concrete anchors are Jame's visit, Helly's gala speech, Cobel's account of refinement, and Gemma's crib task."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within released television through S2E10 and do not assert confirmed resurrection, a solved revolving mechanism, continued Helena impersonation after Helly's restoration, or a complete Cold Harbor endgame. Only chapters 17-20 were supplied; the opening spoiler notice, optional early audience request, and final chapter's ending cannot be assessed.",
+  "limitations": "Reviewed all four supplied chapters against the supplied outline, proof summaries, and voice rules. No linked pages were opened, episodes watched, narration audio measured, or independent verification of every fictional detail performed. The proof summaries are less detailed than chapter 19's S2E7 account, so those scene-level claims remain outside what this proof bank alone establishes.",
+  "input_hashes": {
+    "17": "d2af5c9e2e7a641042d39e74c9f10b5fc7423dd4d4d92feab7cd08613ea72b98",
+    "18": "c0b5313763d6bebb723f287b5d62c03d5b6a9096132c019ced8d0d0a56f46868",
+    "19": "2d37eb3d105902a05f78431e5f35258aefe68565407e280636189df530dcdde5",
+    "20": "b97da1a75b7e38ab50c752710d048584a9885a6fbd60bd4407679356c1090b1c"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

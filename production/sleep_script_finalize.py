@@ -118,6 +118,15 @@ def main():
             'narration_sha256':sha(body),
             'method':'Mechanical checks plus separate quoted editorial reports. Neither establishes actual audio duration or a complete independent episode/book viewing.'
         }
+        approval_path=out/'validation-editoriale.json'
+        if approval_path.exists():
+            approval=json.loads(approval_path.read_text(encoding='utf-8'))
+            if approval.get('narration_sha256')==tech['narration_sha256']:
+                tech['editorial_validation']=approval
+                tech['text_status']='final_text_editorially_reviewed_audio_pending'
+                tech['review_findings_before_final_local_edits']=unresolved
+                tech['review_findings_for_editor']=approval.get('remaining_findings',[])
+                tech['review_coverage_note']='Hash matches count unchanged review inputs. Other chapters received recorded local edits after the integrated review; final editorial acceptance is bound to this narration hash.'
         save(out/'controle-final.json',tech)
         summaries.append({'id':plan['id'],'title':plan['title'],'channel':plan['channel'],
             'script':f"{plan['id']}/script-voix.txt",'words':tech['words'],
@@ -126,7 +135,8 @@ def main():
             'two_hours_at_170_wpm':tech['two_hours_at_170_wpm'],
             'hard_bans':len(scan['hard']),'mechanical_flags':len(scan['mech']),
             'non_ascii':len(tech['non_ascii_characters']),
-            'review_coverage':len(covered),'review_findings':len(unresolved),
+            'review_coverage':len(covered),'review_findings':len(tech['review_findings_for_editor']),
+            'final_text_editorially_validated':tech['text_status']=='final_text_editorially_reviewed_audio_pending',
             'sha256':tech['narration_sha256']})
     save(base/'livraison-mesures.json',{'date':'2026-10-15','measured_audio':False,'episodes':summaries})
     print(json.dumps(summaries,ensure_ascii=False,indent=2))

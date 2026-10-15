@@ -2,7 +2,7 @@
 -- MECHANICAL SWEEP (delete on sight): 0
 -- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
 -- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
--- ECHO CHECK (H18): 19
+-- ECHO CHECK (H18): 18
   [echo H18: phrase repeated 10x] "in front of him"
   [echo H18: phrase repeated 7x] "revenge of the sith"
   [echo H18: phrase repeated 4x] "it through the force"

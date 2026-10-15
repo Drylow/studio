@@ -5,7 +5,7 @@ Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique 
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
 
 **Commande active du 15 octobre :** les [six nouveaux scripts](scripts-2026-10-15/README.md)
-sont en rédaction et relecture. Deep Void : Force, Guilde, Paul Atréides ; Quiet :
+sont finalisés, relus et prêts pour la narration. Deep Void : Force, Guilde, Paul Atréides ; Quiet :
 Silo, Victor/FROM, Eagan/Severance. Le troisième sujet Revan est abandonné en faveur
 de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets Ultravid.
 

@@ -1,13 +1,13 @@
 {
-  "text_status": "assembled_not_an_editorial_approval",
-  "words": 21933,
-  "whitespace_words": 21933,
-  "chapters": 24,
+  "text_status": "final_text_editorially_reviewed_audio_pending",
+  "words": 21245,
+  "whitespace_words": 21245,
+  "chapters": 25,
   "duration_estimates_minutes": {
-    "145": 151.3,
-    "150": 146.2,
-    "160": 137.1,
-    "170": 129.0
+    "145": 146.5,
+    "150": 141.6,
+    "160": 132.8,
+    "170": 125.0
   },
   "duration_measured_seconds": null,
   "audio_gate": "Measure final narration: at least 120 minutes before publishing. No padding, silence or loops.",
@@ -16,7 +16,7 @@
     "hard": 0,
     "flags": 0,
     "floor": 1,
-    "echo": 13,
+    "echo": 12,
     "mech": 0
   },
   "non_ascii_characters": [],
@@ -25,440 +25,77 @@
   "last_chapter_has_subscribe": false,
   "identical_long_paragraphs": [],
   "exact_12_word_reference_matches": [],
-  "review_round": 1,
-  "current_chapters_covered_by_review": 3,
-  "review_findings_for_editor": [
+  "review_round": 3,
+  "current_chapters_covered_by_review": 20,
+  "review_findings_for_editor": [],
+  "narration_sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b",
+  "method": "Mechanical checks plus separate quoted editorial reports. Neither establishes actual audio duration or a complete independent episode/book viewing.",
+  "editorial_validation": {
+    "date": "2026-10-15",
+    "status": "final_text_ready_for_narration",
+    "narration_sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b",
+    "chapters_reviewed_in_integrated_pass": 25,
+    "local_findings_applied": 5,
+    "remaining_findings": [],
+    "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+    "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+    "scope": "Dune, Dune Messiah and Children of Dune, with major book spoilers announced. The entire story means Paul's life as told in those three original novels. No expanded prequels, fictional intervening adventures, or scene details imported from the films.",
+    "measured_audio_seconds": null,
+    "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+    "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+    "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+  },
+  "review_findings_before_final_local_edits": [
     {
-      "report": "passage-1-chapitres-01-04.json",
-      "chapter": 1,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "This telling includes major spoilers for Frank Herbert's Dune, Dune Messiah, and Children of Dune. Those three novels set the boundary of Paul's story here. His desert departure belongs to Dune Messiah, well after his rise on Arrakis, and it helps explain why becoming emperor can't be treated as the completion of his life. There's still a person living inside that achievement, with a family, an inherited education, and responsibilities that reach far beyond anything his younger self could have managed.",
-      "reason": "The spoiler warning and book boundary are necessary, but the remainder repeats the first paragraph's contrast between imperial achievement and personal obligations. H18 identifies the problem as a re-mention that 'adds nothing'; the assignment also requests a brief opening frame.",
-      "replacement": "This telling includes major spoilers for Frank Herbert's Dune, Dune Messiah, and Children of Dune. Those three novels set the boundary of Paul's story here, and his desert departure belongs to Dune Messiah.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-01-04.json",
-      "chapter": 1,
-      "kind": "structure",
-      "severity": "minor",
-      "quote": "The immediate difficulty is concrete. Paul has lost his eyes, yet for a time his prescience allows him to move through events he has already perceived. That unusual ability lets him continue where another blind man would need someone to guide him. It also leaves him dependent on the future unfolding along an anticipated course. Even at this height of his abilities, seeing ahead doesn't give him an easy way to preserve everything he cares about. If you'd like to subscribe to Deep Void Theories, you're welcome to, and you can leave a comment saying where you're listening and whether it's day or night there.",
-      "reason": "The explanation of prescient navigation and dependence on an anticipated sequence substantially performs chapter 20's assigned work before the biography has begun. The opening assignment asks for a brief hook, not an early explanation of the later mechanism. Retain the expressly requested optional invitation while reserving this explanation for its chronological home.",
-      "replacement": "If you'd like to subscribe to Deep Void Theories, you're welcome to, and you can leave a comment saying where you're listening and whether it's day or night there.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-01-04.json",
-      "chapter": 1,
-      "kind": "structure",
-      "severity": "minor",
-      "quote": "There's a Fremen custom behind his departure. A blind person who can no longer live within the community's demands goes into the desert. Paul's ability to navigate by prescience has complicated his place within that practice. His eventual departure therefore has a meaning among the Fremen that an emperor's abdication alone wouldn't carry. He's a ruler who has made their world the center of an empire, and he's also a man whose life has become bound to their customs. We'll leave the circumstances of that decision in their proper place later in his life.",
-      "reason": "This paragraph explains the cultural significance assigned to chapter 21 and then announces that the explanation will be deferred. Removing it makes the hook genuinely brief and avoids giving the departure's interpretation twice.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-01-04.json",
-      "chapter": 1,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "That combination matters because Paul's abilities develop within existing loyalties. His education is meant to help him survive and eventually lead, although the people preparing him don't all have the same purpose in mind. The duke needs an heir capable of handling the dangers around House Atreides. Jessica brings knowledge from an order with its own long ambitions. The household's other teachers bring skills shaped by military service and political calculation. Paul receives these preparations together. Later, when circumstances force him to act, he can't separate his upbringing into neat portions and use only the harmless parts.",
-      "reason": "This is the least useful restatement of the chapter's educational framework: the preceding paragraphs already establish Leto's expectations and Jessica's separate institutional purposes, and the closing paragraph names the teachers before chapter two develops them. H18 says that when the echo is a theme, 'give the repeated observation one home paragraph.'",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-01-04.json",
-      "chapter": 2,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "That distinction helps keep the young Paul in view. A child can be unusually observant and still require instruction about what his observations mean. Thufir has experience of service, rival houses and concealed threats that Paul hasn't accumulated. Mental speed doesn't supply those years. Paul's preparation encourages him to take in details and connect them, while the people teaching him remain responsible for decisions whose reach he can't yet fully grasp. He's being brought toward adult duties within a household that still has adults performing them.",
-      "reason": "The preceding paragraph already states that Paul is developing rather than fully qualified and explicitly distinguishes him from Thufir. This additional paragraph largely repeats that limitation instead of delivering another part of his education. H18 flags a re-mention that adds no new consequence; the editorial brief also cautions against repeatedly explaining evidentiary or interpretive limits.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-01-04.json",
-      "chapter": 3,
-      "kind": "factual",
-      "severity": "minor",
-      "quote": "Its language places those who fail outside the category of humanity, a judgment Paul is being required to accept under threat.",
-      "reason": "The threat forces Paul to keep his hand in the box; it does not establish that he must inwardly accept Mohiam's classification. The sentence turns coerced behavior into compelled ideological agreement without a supplied causal basis.",
-      "replacement": "Its language places those who fail outside the category of humanity, while Paul must comply with the test to stay alive.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-05-08.json",
-      "chapter": 5,
-      "kind": "factual",
-      "severity": "minor",
-      "quote": "Paul's response to the unfamiliar equipment draws on the physical awareness Jessica has helped develop in him.",
-      "reason": "This supplies a definite causal explanation for Paul's instinctive stillsuit fitting that neither the proof bank nor the assignment establishes. The surrounding account can describe the competence and Kynes's interpretation without resolving its origin.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-05-08.json",
-      "chapter": 5,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "The harvester gives their inspection a different scale. Spice production requires people to remain on sand where their activity can attract a worm. Lookouts and aircraft help make the work possible, but the danger doesn't disappear because the operation is organized. The crew's protection depends on warning, communication and transport working together. For Leto, who's just inherited responsibility for production, this is an immediate lesson in what a report about spice output leaves out. Every load comes from people working within reach of something that can swallow the machinery.",
-      "reason": "H18 identifies the problem as repeatedly 're-stating it with nothing new attached.' The opening already explains the harvester's exposure and dependence on aircraft, and the following rescue demonstrates the human stakes more concretely. This is the least useful preliminary explanation of that same dependency.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-05-08.json",
-      "chapter": 5,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "That response matters because Leto needs people who understand the planet. He can bring soldiers and experienced officers from Caladan, but they can't replace local knowledge. Kynes knows what the desert demands, while the workers know the conditions under which spice is harvested. By treating their survival as his concern, Leto gives them a reason to regard his arrival with something beyond fear or resignation. It would be too tidy to turn the rescue into a calculated recruitment exercise. His action can be humane and politically useful at the same time.",
-      "reason": "H18 warns against a theme that keeps 'looping back to the same observation.' Kynes's local knowledge is established earlier, and the immediately preceding paragraph already explains why the rescue wins allegiance. Retain only the useful distinction between humane conduct and political calculation.",
-      "replacement": "The rescue can earn Leto political support without having been undertaken merely to recruit followers.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-05-08.json",
-      "chapter": 6,
-      "kind": "factual",
-      "severity": "minor",
-      "quote": "He leaves Paul's ducal signet ring among those provisions, along with a message explaining his actions.",
-      "reason": "The ring is Duke Leto's signet, which passes to Paul; chapter 7 correctly calls it his father's ring. The existing possessive obscures whose ring Yueh removes and preserves.",
-      "replacement": "He leaves Duke Leto's signet ring among those provisions, along with a message explaining his actions.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-05-08.json",
-      "chapter": 8,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "The encounter also reveals how readily Stilgar can adapt. He doesn't keep treating Jessica as helpless after she's demonstrated otherwise. He recognizes the value of what the Fremen call the weirding way and considers how it might be shared. That response matters to Paul. The man before them can weigh a changed situation and make a useful agreement under pressure. Paul and Jessica's escape now depends partly on Stilgar's judgment, including his willingness to accept an outsider whose abilities have challenged him in front of his own people.",
-      "reason": "H18 flags repeated framing with no new development. The preceding paragraph already says Stilgar reconsiders Jessica because she has a valuable discipline she can teach. This paragraph's useful addition is his adaptive judgment, which needs only one sentence.",
-      "replacement": "Stilgar's willingness to revise his judgment also matters: Paul and Jessica need a leader who can recognize their usefulness even after Jessica has challenged him before his people.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-05-08.json",
-      "chapter": 8,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Paul has already attracted attention through how he wears a stillsuit. When Kynes inspects him earlier in the novel, Paul's instinctive adjustment of the suit fits a Fremen expectation about someone who will know their ways without instruction. Paul has a practical explanation for what he's done: the arrangement seemed right to him. Kynes hears something with religious significance as well. This helps explain the situation Paul enters now. A small act of competence can carry a second meaning for people whose traditions have prepared them to recognize it.",
-      "reason": "H18 requires that a second mention add a consequence or comparison rather than retell the same example. Chapter 5 already covers the fitting, Kynes's surprise, and its religious significance. The specific expectation about knowing Fremen ways without instruction is the useful addition here.",
-      "replacement": "The expectation that the newcomer will know Fremen ways without instruction helps explain Kynes's earlier reaction to Paul's stillsuit fitting. Practical competence can be read as fulfillment of a prophecy.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 9,
-      "kind": "voice",
-      "severity": "minor",
-      "quote": "It also keeps the Fremen group from becoming a single, undifferentiated opponent in his story.",
-      "reason": "This explains the author's representational method rather than Paul's experience. The surrounding concrete actions already distinguish Chani, Jamis and Stilgar, so this sentence adds an unnecessary analytical aside.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 9,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Paul, meanwhile, learns that emotion has a material cost here. Tears leave the body as water, and the people who conserve water so carefully recognize what he has given without intending a formal gesture.",
-      "reason": "H18 identifies a re-mention that 'adds nothing' as an echo. The preceding paragraph already explains the tears as an extraordinary gift of moisture and an unintended act of generosity. Retain this paragraph's useful contrast between apparent cruelty and mourning, but delete this repeated explanation.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 10,
-      "kind": "factual",
-      "severity": "major",
-      "quote": "The request preserves a connection to the person he was before the desert, including the father whose name and position he inherited.",
-      "reason": "Paul's father is Leto. Keeping Paul in Paul-Muad'Dib preserves Paul's own personal name and his connection to his earlier life; it does not preserve a personal name inherited from his father. His political inheritance is also still contested at this point.",
-      "replacement": "The request preserves his own name and his connection to House Atreides, whose surviving heir he remains.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 10,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "There's warmth in that admission, though it comes with expectations. Stilgar's people have accepted someone whose habits were formed on another planet, and Paul has to learn how to live beside them. He can't assume that being Leto's son settles a disagreement or excuses a mistake. Within this community, he needs to respond to people who understand the desert better than he does. Usul gives him a recognized place while leaving him with the ordinary work of becoming someone the group can depend on.",
-      "reason": "H18 warns against sections repeatedly returning to the same observation. The preceding paragraphs establish that inherited rank does not secure this belonging, and the later Stilgar paragraph already establishes the community's authority to teach and judge Paul. This is the least necessary middle restatement.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 10,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "As Paul settles among them, the two names remain useful in different ways. Usul belongs to the circle that can speak to him with familiarity. Muad'Dib will pass through a much wider world, attached to reports of what he does and to expectations about what he'll do next. Paul has retained his own name within that growing reputation, carrying his Atreides inheritance into Fremen life. For now, he has people who will call him by either name, and a place among them that he must learn how to inhabit.",
-      "reason": "H18 describes a script getting 'stuck on one fact, one phrase, or one framing.' This closing paragraph repeats the opening distinction, the retained-name discussion and the later Usul paragraph without a new consequence. The preceding paragraph already supplies a grounded local ending through Stilgar and the community.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 11,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Their first encounters place that difference close at hand. Around the confrontation with Jamis, Chani offers Paul practical advice about the man he's going to face. She knows the people around him and understands the danger in a way he can't yet share. Paul brings years of weapons training, but he's entering a dispute governed by unfamiliar customs. Chani can help him understand the immediate situation. That beginning matters to their later partnership, because her usefulness to him has substance before their relationship becomes a love story.",
-      "reason": "H18 permits a second mention only when it adds a consequence or other new information. Chapter 9 already develops this intervention and Paul's dependence on Chani's knowledge; chapter 11's opening independently establishes her competence. The final interpretive sentence does not justify repeating the whole encounter.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 11,
-      "kind": "voice",
-      "severity": "minor",
-      "quote": "As their attachment develops, the novel moves across a substantial period of life among the Fremen. It doesn't supply a continuous account of their days together. What it does give us is an established partnership: Chani becomes Paul's beloved and the mother of his child, while Paul becomes increasingly important to the people around them.",
-      "reason": "The middle sentence is an unnecessary methodological caveat about missing narration. The assignment asks for biography without invented domestic scenes, not an explanation of the restraint used to produce it.",
-      "replacement": "During Paul's years among the Fremen, Chani becomes his beloved and the mother of his child. Their partnership develops as his importance within the community grows.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 12,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Once the exposed segment is held above the sand, the creature won't willingly roll that vulnerable area downward. The equipment works because the rider understands the animal's response. Strength alone wouldn't make the same arrangement possible, and Paul's skill with a blade wouldn't help him maintain it.",
-      "reason": "H18 applies because the opening already explains the exposed tissue, the worm's response and the primacy of practical knowledge over courage. The first two sentences of this later paragraph adequately preserve Stilgar's instruction and Paul's actions.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-09-12.json",
-      "chapter": 12,
-      "kind": "factual",
-      "severity": "minor",
-      "quote": "Gurney could expose a weakness during a practice fight, correct it, and make Paul try again. A mistake belonged within a lesson arranged for him by his father's household. Stilgar also teaches, but the desert can't be made into that kind of protected room.",
-      "reason": "The comparison depends on treating Paul's earlier weapons instruction as safely contained. His household training itself includes genuine danger, so the distinction should concern the setting and kind of skill rather than an unsupported guarantee of protection.",
-      "replacement": "Gurney trained Paul for armed combat within the Atreides household. Stilgar teaches him a different skill, one that requires him to respond to a living worm and the conditions of the open desert.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-13-16.json",
+      "report": "passage-3-chapitres-01-25.json",
       "chapter": 13,
       "kind": "repetition",
       "severity": "minor",
-      "quote": "Paul's account of the experience makes the interval stranger still. His inward experience hasn't matched the weeks that have passed around his unresponsive body. Jessica and Chani have had to live through that absence in ordinary time, with no certainty that he'd return. Paul comes back with an enlarged awareness, while they have endured the possibility of losing him. That difference belongs within the achievement. Whatever he has gained, the risk has already been shared by people who weren't present when he decided to drink.",
-      "reason": "H18 identifies a passage that \"keeps re-stating it with nothing new attached.\" The subjective-time difference is new, but the remainder repeats the unshared decision, the women's uncertainty, and their exposure to his risk already established in the third, fourth, and sixth paragraphs. Retain the new distinction without explaining that cost again.",
-      "replacement": "Paul's account of the experience makes the interval stranger still. His inward experience hasn't matched the weeks that have passed around his unresponsive body.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-13-16.json",
-      "chapter": 13,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Jessica's earlier ordeal offers a useful comparison. She entered a Fremen office with a place in the community and predecessors whose experience became available to her. Paul awakens into a position for which neither the Fremen nor the Bene Gesserit have an ordinary role ready. Chani has helped restore him to their company, and Jessica can recognize the reach of his transformation. Neither can make his new awareness easy to live with. When Paul resumes speaking to them, he brings possibilities into their conversation that they can't examine as he does.",
-      "reason": "H18's structural remedy is to \"give the repeated observation one home paragraph.\" Jessica's inherited awareness was explained in the second paragraph, Paul's reach beyond hers in the eighth, his independence from the sisterhood in the ninth, and Chani's intervention in the sixth. This late comparison adds little concrete development and interrupts the move from the limits of prescience to the biographical conclusion.",
+      "quote": "To survive the attempt, Paul needs the riding technique Stilgar and his people teach him.",
+      "reason": "H18 identifies a point restated with nothing new attached. The preceding sentence already explains that Paul must understand precisely how a Fremen survives the encounter, and the following paragraphs identify the teaching and technique concretely.",
       "replacement": "",
       "rewrite_required": false
     },
     {
-      "report": "passage-1-chapitres-13-16.json",
-      "chapter": 15,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "There's a difference between the two circumstances, though. Leto kept the possibility of marriage open; Paul agrees to the marriage itself. Irulan will be an actual person in his household, with an imperial ancestry and a formal claim to a place beside him. Chani won't merely live with the knowledge that some alliance might someday be proposed. The settlement gives that alliance a name. Paul's promise of fidelity may reassure her about his affection, but it also defines the boundary he plans to maintain with the woman he marries.",
-      "reason": "H18 calls for cutting a \"re-mention that adds nothing.\" The distinction between Leto's available alliance and Paul's actual marriage is useful, but the rest repeats Irulan's formal position and Paul's promise already explained in the fourth and fifth paragraphs and revisited in the next paragraph. Compress around the genuinely new comparison.",
-      "replacement": "Leto kept a possible marriage alliance open; Paul makes one. Irulan will therefore have a formal place in the household Chani shares with him.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-13-16.json",
-      "chapter": 15,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Paul isn't being carried into this marriage without a decision of his own. He demands it, explains its limits and expects Chani to live within the resulting arrangement. The political reasons are clear. So are the people who must carry its daily consequences. Chani keeps his love without the title of wife. Irulan receives the title under an explicit restriction on intimacy. Paul gains a recognized route into the imperial dynasty while committing himself to a divided household.",
-      "reason": "H18 describes a script circling \"one fact, one phrase, or one framing\" instead of moving on. Paul's agency is explicit in the opening and examined again in the ninth paragraph; the allocation of title, intimacy, and legitimacy has already been explained several times. This is the least useful full recap, and the following paragraph already supplies the chapter's conclusion through Jessica's reassurance.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-13-16.json",
-      "chapter": 16,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "The distance between the two novels matters. Dune ends with Paul forcing a political settlement after his victory on Arrakis. Messiah brings us into the consequences after that victory has had years to develop. Taking the throne hasn't settled the danger Paul saw gathering around his name. His followers have carried their faith outward, and the imperial position gives that faith the means to travel with armies. The struggle that restored House Atreides has become a war inflicted on people who had no part in its destruction.",
-      "reason": "H18 flags repeated framing with \"nothing new attached.\" The first paragraph already names Dune Messiah, establishes the elapsed reign, and explains the outward movement of armies and religion. Chapter 15 has just supplied the political settlement. Deleting this second introduction lets Bronso provide the first concrete development without losing the explicit novel transition.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-17-20.json",
-      "chapter": 17,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "That protection matters because Paul has made ordinary secrecy difficult. A concealed message or an unspoken intention might still lead toward an event he can foresee. Edric interferes with that advantage. In the meeting, the conspirators discuss his ability to shelter those associated with him from Paul's prescience. Their confidence depends on keeping their undertaking within that shelter. They still have to arrange meetings, approach the court, and persuade people to cooperate. The Navigator gives them room to attempt those things without expecting Paul to anticipate the entire undertaking.",
-      "reason": "The opening paragraph has already explained Edric's protection and its practical purpose. Most of this paragraph repeats that mechanism rather than developing the conspiracy. This matches H18: 'keeps re-stating it with nothing new attached.' Preserve only the distinction between concealment and actually executing the plot.",
-      "replacement": "Edric's protection doesn't arrange the plot for them. They still have to approach the court and persuade people to cooperate.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-17-20.json",
-      "chapter": 18,
-      "kind": "factual",
-      "severity": "minor",
-      "quote": "Alia tests him in combat, where his physical abilities are plainly his own to exercise.",
-      "reason": "This presents a specific combat encounter as a novel event. Alia's notable combat-training scene involves a training device; it should not be converted into her testing Hayt in combat. The supplied P4 does not establish this additional encounter, and the surrounding account of their attraction does not require it.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-17-20.json",
-      "chapter": 18,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Yet Hayt's conduct gives Paul reasons to continue treating him as a person. He isn't merely concealing an attack behind a convincing imitation of friendship. He struggles with the possibility that he's been made into an instrument against someone he would otherwise protect. The novel allows that struggle to develop alongside his usefulness to the conspiracy. Paul receives real counsel from a man whose conditioning threatens him. Keeping Hayt close therefore involves a risk Paul knowingly takes, with affection and the hope of recovering Duncan bound up in that decision.",
-      "reason": "Paul's knowingly accepted risk and affection are established in paragraph four, genuine counsel in paragraphs five and six, and dangerous conditioning in paragraph eight. The next paragraph supplies the concrete act of resistance this passage anticipates. Under H18, 'the third identical mention is the tell'; deleting this bridge lets the actual crisis demonstrate Hayt's agency.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-17-20.json",
+      "report": "passage-3-chapitres-01-25.json",
       "chapter": 19,
-      "kind": "factual",
+      "kind": "structure",
       "severity": "minor",
-      "quote": "It's tempting to make the whole sequence into a simple explanation in which a changed diet solves one problem and leaves everything else untouched. Her pregnancy carries the effects of the interference that preceded it, within circumstances already complicated by spice and Paul's extraordinary inheritance.",
-      "reason": "The first sentence is an unnecessary methodological caveat after the paragraph has already established continuing harm. The second introduces Paul's inheritance into the pregnancy's causal explanation without explaining or supporting that connection. The supplied constraints permit a complex account, not an undefined hereditary explanation. The preceding sentences already retain the established connection between contraceptive treatment and the dangerous pregnancy.",
+      "quote": "The crisis comes when Chani's death provides the circumstance for the implanted command to kill Paul. For Hayt, carrying out that command would mean murdering the person Duncan Idaho had died defending. The conflict is unbearable, and Duncan's memories return through it. His recovered identity matters because he resists the act demanded of him. The Tleilaxu conditioning meets a loyalty rooted in his earlier life, and that loyalty becomes active again. Paul survives this intended attack because the person within Hayt refuses to complete it.",
+      "reason": "This paragraph advances to the childbirth climax, after which chapters 20 and 21 return to the pregnancy and stone burner without a marked retrospective handoff. Chapter 22 repeats the same crisis and resistance in their chronological home. H18 says a repeated observation should have one home paragraph; deletion here preserves all substantive developments later.",
       "replacement": "",
       "rewrite_required": false
     },
     {
-      "report": "passage-1-chapitres-17-20.json",
+      "report": "passage-3-chapitres-01-25.json",
       "chapter": 19,
       "kind": "repetition",
       "severity": "minor",
-      "quote": "The conspirators understand how much Paul wants to preserve that life. Their plans reach him through people whose presence he has accepted: Irulan within the marriage settlement, and Hayt through his attachment to Duncan Idaho. The interference with Chani's fertility makes the household vulnerable long before an open attack arrives. Palace guards can't settle this problem by keeping strangers outside. Irulan already belongs inside, and the Bene Gesserit can pursue their interests through a woman whose public position requires her continued proximity to Paul.",
-      "reason": "This returns to chapter 17's household-access conclusion and chapter 18's explanation of Hayt without adding a new development concerning Chani. Irulan's access and the Bene Gesserit's interest have also already been explained within this chapter. H18 directs that a repeated theme receive 'one home paragraph' rather than becoming each section's conclusion.",
+      "quote": "The recovery changes what the Tleilaxu can offer Paul. Before this moment, they could return a body with familiar features and new training. Now Duncan's awakening demonstrates that personal memories can return as well. For a man facing bereavement, that is a terrible discovery to receive from an enemy. Duncan is genuinely restored to him, and the restoration gives the Tleilaxu a stronger means of applying pressure. Paul has regained someone who can remember him as the young Atreides heir. He must also live with knowing that the people who arranged their reunion intended to use that love against him.",
+      "reason": "This advances beyond Hayt's arrival to the consequence of his recovered identity, which chapter 22 explains again through Scytale's concrete offer concerning Chani. Under H18, the later version adds the actual demand and is the more useful home. Removing this paragraph together with the preceding finding leaves chapter 19 ending coherently on the danger of Hayt's conditioning.",
       "replacement": "",
       "rewrite_required": false
     },
     {
-      "report": "passage-1-chapitres-17-20.json",
-      "chapter": 20,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "This helps explain the strange mixture of confidence and confinement in his behavior. Paul can seem certain about a detail that would defeat anyone else in his condition, while remaining unable to find a future he can bear. Knowing where someone stands doesn't settle what he ought to do about Chani's danger, the conspiracy, or the succession. The ability operates within those difficulties. It lets him continue participating in imperial life, with its conversations and decisions, while the sequence he relies upon carries him toward experiences he wants desperately to avoid.",
-      "reason": "The preceding two paragraphs already explain the anticipated sequence, the loss of ordinary visual checking and the resulting pressure to continue toward dreaded events. This paragraph restates that interpretation without another event or causal step. It matches H18's 're-stating it with nothing new attached.'",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-17-20.json",
-      "chapter": 20,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Hayt's presence makes that situation more personal. Paul has accepted the ghola because Duncan Idaho matters to him, although he knows the gift contains a threat. Now he must continue dealing with that familiar presence after losing the ordinary means of seeing him. Recognition already involved difficult questions about who Hayt is and what the Tleilaxu have done to him. Paul's injury adds another dependence to their encounters. His anticipated future has to provide the setting in which he judges a man whose face once belonged to his friend.",
-      "reason": "This repeats chapter 18's emotional explanation and applies the already explained substitute for sight without supplying a distinct encounter, decision or consequence. Under H18, a second mention must add 'a consequence, a comparison, the next number'; merely saying that the same mechanism also applies around Hayt does not justify a full paragraph.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-17-20.json",
-      "chapter": 20,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Paul returns to his responsibilities with his physical blindness unmistakable and his apparent vision intact. Attendants can speak to him, officials can approach him, and he can continue responding without accepting the helplessness they might expect. Each successful response helps preserve his position among the Fremen and within the court. It also requires him to keep inhabiting the future that supplies those responses. For the time being, he can still find his way through the palace. He has to follow the course on which he can perceive it.",
-      "reason": "The paragraph repeats the chapter's opening contrast, its explanation of Fremen standing and its account of dependence on an anticipated sequence. H18 identifies this document-scale return to an already established framing as an echo. A concise closing statement can retain the chapter's local answer without another full explanation.",
-      "replacement": "Paul can still move through the palace without a guide, but only while events remain within the future he can perceive.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 21,
-      "kind": "voice",
-      "severity": "minor",
-      "quote": "Paul's knowledge of the approaching loss hasn't given him an ordinary way to share her final future, or a way to remain with her afterward.",
-      "reason": "The phrases 'share her final future' and 'remain with her afterward' obscure the concrete consequence of Chani's death. This fits the Voice Anchoring warning against 'Poetic compression': the surrounding account is clearer and more spoken.",
-      "replacement": "Foreseeing Chani's death hasn't enabled Paul to save her.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
+      "report": "passage-3-chapitres-01-25.json",
       "chapter": 21,
       "kind": "repetition",
       "severity": "minor",
-      "quote": "Paul's walk ends his participation in the court without settling what the court will become. The empire remains, the religious movement continues, and his sister governs while his children grow up surrounded by the consequences of his reign. His acceptance of Fremen custom may help preserve his standing among the Fremen, even as it removes the living father his children might have known.",
-      "reason": "H18 identifies a re-mention that 'adds nothing' as an echo. These sentences repeat the preceding paragraphs' departure, absent father, continuing imperial responsibilities, and Alia's regency; the remaining two sentences already provide the necessary unconfirmed-death ending.",
+      "quote": "Paul is among those injured, even as his conduct begins to make him seem separate from them.",
+      "reason": "H18 applies because the paragraph has already said that Paul suffers the same bodily loss as other victims, while both the opening and next paragraph explain his unusual conduct. This sentence adds neither a new injury nor a new consequence.",
       "replacement": "",
       "rewrite_required": false
     },
     {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 22,
+      "report": "passage-3-chapitres-01-25.json",
+      "chapter": 25,
       "kind": "repetition",
       "severity": "minor",
-      "quote": "The Preacher speaks into that settled arrangement. He condemns what Muad'Dib's religion has become and challenges the people who claim to speak for it. His attacks have a very particular target: the religious life that surrounds the ruling household and helps sustain it. Arrakeen can receive pilgrims, honor Muad'Dib and conduct the business of an imperial capital while leaving little room for someone to dispute what any of those activities mean. The Preacher makes that dispute public. People can hear criticism in a place where reverence has become an expected response.",
-      "reason": "Under H18, 'the script gets stuck on one fact, one phrase, or one framing and keeps re-stating it with nothing new attached.' The opening has established public criticism, the preceding paragraph has established the religious administration, and the following paragraph supplies the useful political consequence. This intervening paragraph mostly restates the setup.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 22,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "The people listening in Arrakeen don't all have the same reason to attend. Some hear a religious challenge, while the possibility of Paul's return draws attention of its own. For the ruling household, each appearance can become a political problem. Paul has found a way to speak beyond the formal business of the regency, but his old name still shapes how every word is received. He comes before them as a blind man with a guide. Around him, the city continues to honor Muad'Dib through institutions that have learned to operate without his presence.",
-      "reason": "H18 requires the second mention to add 'a consequence, a comparison, the next number.' This conclusion repeats the audience's uncertainty, Alia's political difficulty, the guide, and the independently operating institutions. The preceding paragraph already closes with the more useful point about Paul's responsibility.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 23,
-      "kind": "voice",
-      "severity": "minor",
-      "quote": "Whatever they decide to say to each other, they can't return to being a father and son whose main difficulty is finding their way home.",
-      "reason": "This invents an ordinary-family counterfactual rather than explaining the actual encounter. It also fits the Voice Anchoring warning against 'Clever written pairs': the finding-their-way-home contrast is a literary flourish unsupported by the assignment or proof bank.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 23,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "Paul's refusal deserves to be understood without turning it into an uncomplicated act of mercy. He recoils from the suffering and inhumanity involved in the future Leto describes. Yet leaving that course untaken doesn't make its consequences disappear. If Leto's account is accepted, Paul preserved a limit for himself while humanity's danger remained. Now his son has taken the next step. Paul has to look at the cost of his refusal in the person standing before him, whose altered body makes the disagreement much harder to keep within the language of visions.",
-      "reason": "H18 warns against sections 'looping back to the same observation.' The earlier paragraphs already establish Paul's recoil, Leto's extinction claim, unequal understanding, and the bodily embodiment of the refusal's cost. This paragraph repeats those points and adds another instruction about how the refusal should be judged.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 24,
-      "kind": "factual",
-      "severity": "minor",
-      "quote": "The priesthood has developed its own means of defending what it considers sacred, and the living Paul has become an intolerable presence within that arrangement.",
-      "reason": "The killing supports a contrast between the living Paul and the religion surrounding him, but this sentence presents a collective institutional motive as established fact. P7 supplies the killing, not this explanation of what the priesthood considers sacred or why the killer acts.",
-      "replacement": "The killing exposes the conflict between the living Paul and the religious order surrounding his name.",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 24,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "That makes his last position painfully specific. As the Preacher, Paul can speak in his own voice, but he can't require his listeners to accept that voice as the final interpretation of Muad'Dib. The people administering the religion already have their offices and their understanding of what must be preserved. His return doesn't make those structures dissolve. Even the recognition that he is Paul leaves the practical problem untouched: the man standing before them opposes what they do, and their duties have been organized around continuing to do it.",
-      "reason": "H18 says a repeated theme should have 'one home paragraph.' Chapter 22 already explains this institutional independence, and this chapter's opening and preceding paragraph repeat it. The passage delays the distinct development concerning Leto without adding a new event or consequence.",
-      "replacement": "",
-      "rewrite_required": false
-    },
-    {
-      "report": "passage-1-chapitres-21-24.json",
-      "chapter": 24,
-      "kind": "repetition",
-      "severity": "minor",
-      "quote": "For Paul, the opportunity to answer has ended. Earlier, he could still return from the desert, enter Arrakeen, and make people confront the difference between their expectations and his actual words. Death removes that possibility. Others can preserve his sayings, interpret his actions, or attach meanings to his killing. None of those activities allows him another reply. The Preacher's protest remains part of what he did, alongside the imperial acts that made such a priesthood possible.",
-      "reason": "H18's 'third identical mention' applies to the repeated finality of Paul's death and his inability to return or answer. The death paragraph has already established that consequence, and the final paragraph delivers it again more concretely. This is the least useful late repetition.",
+      "quote": "Leto's rise also means that Muad'Dib can remain useful after the Preacher has been killed. The new ruler is Paul's son. His descent gives Paul's name a continuing place in the succession, alongside the religious life already built around it. Paul has become part of the ancestry through which the next government is understood. His public name can be spoken in accounts of legitimate succession even though the man himself had returned to attack the order governing under that name.",
+      "reason": "H18 identifies repeated framing without sufficient new development. The preceding paragraph has already established succession through the surviving children, and the final paragraph gives the stronger concrete endpoint through Arrakeen's temple, officials and Atreides descent. This intervening paragraph makes the ending land twice.",
       "replacement": "",
       "rewrite_required": false
     }
   ],
-  "narration_sha256": "a17ab79354bdf172f7267a4a0950f91dd25ff70e54e1f6d994fb77b898d55811",
-  "method": "Mechanical checks plus separate quoted editorial reports. Neither establishes actual audio duration or a complete independent episode/book viewing."
+  "review_coverage_note": "Hash matches count unchanged review inputs. Other chapters received recorded local edits after the integrated review; final editorial acceptance is bound to this narration hash."
 }

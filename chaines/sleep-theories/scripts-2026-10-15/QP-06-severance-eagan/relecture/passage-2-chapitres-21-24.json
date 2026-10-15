@@ -1,0 +1,178 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Lumon's planned sacrifice and burial connect its technical testing of Gemma to religious belief, while Lorne's intervention interrupts the operation.",
+      "new_information": [
+        "The goat is intended to accompany and serve the woman being buried in the afterlife, according to the religious explanation Lorne has received.",
+        "Drummond expects Lorne's animal-care duties to culminate in carrying out the sacrifice.",
+        "Lorne intervenes against Drummond and helps Mark continue toward Gemma.",
+        "The ceremony supplies evidence of institutional belief, not a demonstrated transfer of consciousness."
+      ],
+      "local_answer": "The ritual shows Lumon organizing religious observance alongside technical procedures, but neither its intended meaning nor its interruption establishes literal soul transfer.",
+      "open_issues": [
+        "Several paragraphs repeat the same account of departmental separation and Lorne's refusal after those points have already been established.",
+        "The confrontation briefly becomes an abstract explanation of Lorne's decision-making rather than a concrete account of what she faces."
+      ],
+      "evidence_notes": "The central account follows the chapter assignment's explicit description of Lorne, Drummond, the goat, and the intended sacrifice and burial. E6 and E7 support the surrounding testing and rescue context but do not independently document every detail of this encounter. Religious claims are appropriately attributed, and violence remains non-explicit."
+    },
+    {
+      "number": 22,
+      "summary": "The chapter tests Kier-return theories against Jame's language, severance's demonstrated effects, Gemma's testing, and the interrupted ritual without treating any of them as proof of resurrection.",
+      "new_information": [
+        "Jame presents Helena's involvement in severance through a family account involving her childhood response to an early chip.",
+        "A literal Kier return would require evidence of preserved identity, a means of reactivation, and an identifiable recipient.",
+        "Jame's recognition of Kier's spirit in Helly supplies no demonstrated recollection from Kier's life.",
+        "Helly's resistance complicates a straightforward reading of Jame's admiration as recognition of the obedient founder promoted by Lumon.",
+        "Gemma's partitioned experience demonstrates exclusion of her own associations rather than introduction of another person's past."
+      ],
+      "local_answer": "Continuity and resurrection remain possible subjects of interpretation, but the supplied evidence does not demonstrate a surviving Kier or a transfer of his consciousness.",
+      "open_issues": [
+        "The gala discussion repeats its account of Helly's testimony without adding a necessary step to the resurrection test.",
+        "The chapter is strongest where it identifies specific missing mechanisms; repeated statements that no transfer has been shown risk turning the analysis into an evidence lecture."
+      ],
+      "evidence_notes": "The main distinctions accord with E2, E5, E6, and the assigned theory-testing scope. Succession and ceremony are presented as interpretations rather than established meanings of revolving. The childhood-chip account is explicitly attributed to Jame. No future reveal, confirmed immortality, or named theorist's scenario is asserted."
+    },
+    {
+      "number": 23,
+      "summary": "Mark and Gemma's rescue depends on identity switches, and innie Mark ultimately chooses his own relationships rather than following Gemma into his outie's life.",
+      "new_information": [
+        "The Marks communicate through recordings rather than sharing a continuous discussion.",
+        "Innie Mark's cooperation carries a personal risk because successful rescue may remove the reason for his outie to return to Lumon.",
+        "Gemma's recognition of her husband becomes available during the rescue and is interrupted by subsequent identity boundaries.",
+        "The final doorway places Gemma's marriage and innie Mark's relationship with Helly in conflict without making either relationship unreal.",
+        "Mark's choice demonstrates that an innie's interests can interrupt an outcome desired by the outie."
+      ],
+      "local_answer": "The rescue reveals a limit to treating an innie as disposable labor: the person carrying out the task can judge its consequences for his own continuing life and choose differently.",
+      "open_issues": [
+        "A general paragraph about navigating identity boundaries previews information that the following concrete rescue paragraphs explain more effectively.",
+        "The closing paragraph repeats the consequences and final choice already established immediately above it."
+      ],
+      "evidence_notes": "The rescue, identity conflict, and final choice accord with E6, E7, and the supplied assignment. The chapter does not rank the relationships or present the ending as merely a romantic contest. Fine-grained recording and transition details are not independently established by the abbreviated proof entries."
+    },
+    {
+      "number": 24,
+      "summary": "The ending connects the appropriation of Cobel's research with Helena's use of Helly's working life as publicity, while preserving the differences between the two women's circumstances.",
+      "new_information": [
+        "Cobel's retained research challenges the family's presentation of severance as an Eagan achievement.",
+        "Helena's public endorsement depends on experiences lived by Helly, whose refusal is excluded from the promotional account.",
+        "Cobel's managerial complicity distinguishes her grievance from Helly's position and is not excused by the theft of her credit.",
+        "The overtime contingency lets Helly contradict the publicity account before its intended audience.",
+        "Research retained and testimony delivered provide two concrete ways the family's preferred account can be challenged."
+      ],
+      "local_answer": "The supported secret is not a solved resurrection scheme but two forms of appropriation: an Eagan receives credit for another person's research, and an Eagan authorizes and publicizes another conscious person's unwanted working life.",
+      "open_issues": [
+        "One late paragraph repeats the shared-body versus separate-commitments argument after the comparison and gala example have already established it."
+      ],
+      "evidence_notes": "The central comparison is supported by E2 and E4 and remains identifiable as original analysis rather than an additional plot claim. Cobel is not credited with personally building every component. The complete Eagan endgame remains explicitly unconfirmed, and the ending uses a record and a choice rather than a CTA or season-three tease."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a practical separation built into that arrangement. Lorne knows the animal she's raised. Gemma, meanwhile, has a life and a marriage that the workers caring for goats haven't shared. Lumon brings them together at the point where it wants both lives to end. The arrangement keeps animal care and Gemma's testing in separate assignments, then joins them in the planned ceremony. The ceremony joins those assignments under a meaning supplied from above.",
+      "reason": "H18 identifies the problem as a script that \"keeps re-stating it with nothing new attached.\" The preceding two paragraphs already distinguish testing from sacrifice and explain the company's religious framing. This paragraph then repeats its own joining claim in its final two sentences. A concise bridge preserves the useful contrast without another full explanation.",
+      "replacement": "Lorne knows the animal she's raised, while Gemma's life and marriage remain outside her experience. Lumon joins their separate assignments in the planned burial.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "That expectation becomes harder to sustain when Mark arrives. Drummond turns the demand for violence toward a person standing in front of Lorne. The encounter interrupts the distance between a sacred account of an assignment and its immediate consequences. Mark is trying to reach Gemma, and Drummond wants him stopped. Lorne has to respond to an unfolding confrontation, with someone else's life dependent on what she does. There isn't time for the department's familiar explanation to settle the matter for her.",
+      "reason": "The H17 shape test rejects \"Poetic compression\" and requires register translation. \"Interrupts the distance\" is an abstract construction that obscures the concrete confrontation. The final sentence also supplies an unestablished account of how much time Lorne has to process her religious explanation. The scene can carry the conflict without that speculative interior narration.",
+      "replacement": "When Mark arrives, Drummond wants him stopped before he can reach Gemma. Lorne is now being asked to act against a person in front of her, with his life dependent on what she does.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "In the finale, that attachment has a concrete consequence. The person entrusted with raising an animal for Lumon's purposes also has enough independence to disrupt the operation when Drummond demands her compliance.",
+      "reason": "H18 says that \"a re-mention that adds nothing gets cut.\" The preceding paragraph has already explained Lorne's intervention, her independence despite earlier participation, and its consequence for Mark. These sentences repeat that interpretation after the useful reminder about Mammalians Nurturable.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "By the end of the encounter, Lorne has done something the ceremonial plan didn't allow for. She's helped Mark continue toward a woman whom Lumon had already assigned a burial. Her decision matters without requiring her to understand Cold Harbor or abandon every belief she's been taught. She encounters a particular demand from Drummond and refuses to complete it.",
+      "reason": "H18 describes an echo as repeated framing with \"nothing new attached.\" These four closing sentences restate the refusal and its compatibility with continued belief, both already explained in the intervention paragraph. Deleting them leaves the existing final sentence to close on the concrete outcomes for the goat, ceremony, and rescue.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helly's arrival at the gala makes that difference concrete. When the overtime contingency activates her outside the office, she brings her own experience into Helena's surroundings. She recognizes the suffering of the severed workers and tries to tell the audience about it. The procedure has allowed an existing identity to wake somewhere she normally can't go. Her speech comes from the life she's lived downstairs. Nobody has supplied her with Kier's recollections, and her opposition to Lumon grows out of what Lumon has done to her.",
+      "reason": "H18 says that a second mention must add \"a consequence, a comparison, the next number.\" This passage revisits the gala setting already discussed above and the testimony developed again in chapter 24. Its theoretical conclusion repeats the preceding paragraph's missing-Kier-evidence point; the following paragraph supplies the more relevant test of Jame's specific claim about Helly.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Lumon's building makes those differences unavoidable during the escape. Movement between its spaces can change which identity is present. Mark and Gemma don't pass through every boundary as a steady pair who remember the whole journey. The rescue has to accommodate those interruptions. A person can arrive somewhere with intentions formed elsewhere, then lose access to the experiences that explain them. For the people attempting to leave, knowing the route isn't enough. They also need someone present who understands why they must keep moving.",
+      "reason": "H18 flags a script that \"keeps re-stating it with nothing new attached.\" This general explanation delays the two following paragraphs, which show the same problem concretely through Gemma's recognition and her return as Ms. Casey. Those specific developments answer the assignment more effectively without the preview.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The refusal doesn't give Mark a secure future. He remains inside Lumon, and Gemma's escape hasn't restored the marriage in the form she hoped for. But she's beyond the threshold, alive, while he turns toward Helly. The people whose experiences Lumon has divided are now acting on those experiences in ways its arrangements can't comfortably contain.",
+      "reason": "H18 requires that a re-mention add something the earlier mention did not carry. Gemma's unmet wish, Mark's turn toward Helly, and the institutional consequence have just been covered in the preceding two paragraphs. Removing this additional summary preserves the final two sentences as a concrete close.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That moment helps explain why a separate life matters even when the body belongs to an Eagan. Helly's experiences have given her reasons to oppose what Helena supports. Her friendships on the floor, her attempts to leave, and the refusal she receives all become part of how she understands Lumon. Sharing Helena's body doesn't give her Helena's commitments. The procedure the company promotes has allowed a person to develop who can stand before its guests and reject the purpose for which her experience has been collected.",
+      "reason": "H18 says that when an echo is a theme, \"give the repeated observation one home paragraph and let every other section make its own point.\" This paragraph repeats the separate-commitments argument developed in chapter 23 and already demonstrated here through Helena's refusal, the comparison with Cobel, and Helly's gala testimony. Deletion lets the chapter move directly from that concrete testimony to its grounded final comparison.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        22
+      ],
+      "detail": "Chapter 21 establishes that the goat ritual expresses belief without demonstrating soul transfer. Chapter 22 legitimately revisits it as one element of a resurrection theory, but should retain that new comparative function rather than expand into another account of Lorne's obedience and refusal."
+    },
+    {
+      "chapters": [
+        22,
+        24
+      ],
+      "detail": "Helly's gala appearance and testimony are narrated in both chapters. Chapter 24 gives them a necessary role in the appropriation argument; the additional full testimony paragraph in chapter 22 is the least useful occurrence and is marked for deletion."
+    },
+    {
+      "chapters": [
+        22,
+        23,
+        24
+      ],
+      "detail": "All three chapters explain that a shared body does not produce shared memories or commitments. Each has a distinct potential use: testing Jame's recognition claim, explaining Mark's rescue choice, and comparing appropriation. Chapter 24's penultimate paragraph repeats the general lesson after its specific comparison is already complete."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10 Cold Harbor. They do not confirm resurrection, explain revolving as a settled mechanism, introduce season-three story, assert a solved Cold Harbor business plan, or treat religious doctrine as demonstrated technology. No substantive contradiction with the supplied proof bank is established. Local repetition and voice edits are needed, but no chapter-wide rewrite is required.",
+  "limitations": "Only chapters 21-24 were supplied in full; the other chapters were available as outline assignments only. Cross-chapter repetition findings therefore concern the supplied prose, not unseen drafts. Review used the supplied proof bank, assignments, and voice samples without opening the linked sources, watching episodes, independently verifying every fictional detail, running an external scanner, or measuring narration audio. The early chapter-one listening request and whole-episode placement cannot be assessed from this excerpt.",
+  "input_hashes": {
+    "21": "492169cfa467c3a903892aae7c4278c7b2ed4958cf5867db0671a6c4826d90a0",
+    "22": "35d496a83204f64335f0b538af340c0c6a6165fa56107fe182331bff24d5bf90",
+    "23": "74537a5e94f09497f62e2b05c1e9a884e22939754a61054b6acc32704a5c1f12",
+    "24": "b36ab46448e1866dce2aafa92218b8a65a3093654753785e4879f9a2f42dd324"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

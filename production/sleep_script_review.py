@@ -99,6 +99,19 @@ performed a human read-aloud or verified every fictional fact independently.
 '''
     system+='\nVOICE SAMPLE (register, never content or wording):\n'+anchor
     system+='\n'+facelessos.skill('humanizer-skill.md')+'\n'+facelessos.skill('voice-anchoring-skill.md')
+    if count > 4:
+        system += '\n' + facelessos.skill('greenlight-audit-skill.md')
+        system += '''\nFINAL INTEGRATED REVIEW: this is the entire assembled narration.
+Assess the whole arc and every chapter, including additions. Supply an extra
+greenlight object with separate A through E verdicts, supporting evidence and
+actionable defects. The sleep adaptation overrides aggressive retention,
+unresolved loops and final CTA requirements. Do not demand material prohibited
+by the supplied spoiler scope or invent fresh facts. Distinguish real factual
+errors, damaging repetition and broken transitions from mere stylistic taste.
+Findings must be exact local fixes. Do not delete useful original analysis
+solely because it could have been phrased more briefly. Avoid editing already
+sound prose for preference. Record uncertain source limitations honestly.
+'''
     payload={'episode':{k:v for k,v in plan.items() if k!='chapters'},
              'outline':[{'number':i+1,'title':c['title'],'job':c['job']} for i,c in enumerate(plan['chapters'])],
              'chapters':chapters}

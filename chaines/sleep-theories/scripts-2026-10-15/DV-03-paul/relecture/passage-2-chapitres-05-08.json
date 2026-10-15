@@ -1,0 +1,133 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "During the harvester inspection, Leto rescues endangered workers at the cost of equipment, giving Paul an example of leadership and changing Kynes's assessment of the duke.",
+      "new_information": [
+        "Harvesters depend on carryalls to escape approaching sandworms, and the missing carrier turns the inspection into a rescue.",
+        "Paul's stillsuit fitting attracts Kynes's attention through Fremen religious expectations.",
+        "Leto prioritizes the crew over the harvester and its spice, giving Kynes a concrete reason to respect him.",
+        "Paul encounters spice production as both an economic activity and dangerous human work.",
+        "The emergency exposes the gap between Leto's formal authority and his knowledge of the systems he now governs."
+      ],
+      "local_answer": "The chapter answers its assignment: Leto demonstrates how practical care can earn loyalty, while the failed evacuation arrangements reveal the limits of ruling with incomplete information.",
+      "open_issues": [
+        "The closing paragraph repeats the rescue decision and its political meaning after both have already been explained."
+      ],
+      "evidence_notes": "The treatment stays within the assigned original-novel episode and does not introduce film dialogue or detailed cockpit staging. P2 provides broad biographical support rather than passage-level documentation for the rescue; the supplied chapter assignment expressly authorizes the central event and interpretation."
+    },
+    {
+      "number": 6,
+      "summary": "Yueh exploits the household's confidence in his conditioning to deliver Leto to the Harkonnens, while leaving Paul and Jessica a limited opportunity to survive.",
+      "new_information": [
+        "Yueh's Suk conditioning makes his access seem safe to the Atreides household.",
+        "The Harkonnens exploit Wanna's fate to coerce Yueh, whose betrayal also contains an attempt at revenge.",
+        "Suspicion directed toward Jessica helps leave Yueh unexposed.",
+        "Yueh disables the shields, incapacitates Leto, and prepares the poisoned tooth.",
+        "He also arranges desert supplies and preserves Leto's signet ring for Paul.",
+        "The poison kills Piter rather than the Baron, and both Yueh and Leto die.",
+        "Paul's survival depends on assistance and openings in enemy plans, not comprehensive tactical foreknowledge."
+      ],
+      "local_answer": "The chapter clearly distinguishes confidence in conditioning from knowledge of Yueh's circumstances, and explains both the betrayal's causal role and the contingent assistance that preserves Paul.",
+      "open_issues": [],
+      "evidence_notes": "The chapter maintains original-novel continuity and makes Yueh's coercion explanatory without making it exculpatory. Its specific account of the betrayal exceeds the detail explicitly recorded in P2, so this review does not constitute independent passage-level verification of every action."
+    },
+    {
+      "number": 7,
+      "summary": "Paul and Jessica escape captivity and successive desert dangers while Paul's expanding awareness reveals his Harkonnen ancestry and possible religious violence in his name.",
+      "new_information": [
+        "Paul and Jessica combine their use of the Voice and their judgment of the captors to escape.",
+        "Yueh's supplies and desert equipment make survival possible after the household's destruction.",
+        "Paul's developing awareness disrupts his ability to grieve alongside Jessica.",
+        "Paul recognizes that Jessica is the Baron's daughter during the desert flight, before his later transformation.",
+        "His visions include possible violence under the Atreides banner but remain incomplete.",
+        "Duncan and Kynes provide temporary protection before the Sardaukar attack and Duncan's death.",
+        "Training, equipment, and decisions under pressure help Paul and Jessica survive the storm and continue toward Fremen territory."
+      ],
+      "local_answer": "The chapter answers how Paul can lose the material protections of his inherited position while retaining its training, loyalties, and burdens, including an unwelcome discovery about his ancestry.",
+      "open_issues": [
+        "The testing-station paragraph explains the temporary nature of the refuge several times without adding another development."
+      ],
+      "evidence_notes": "The ancestry revelation is placed in the original novel's desert flight rather than at the film's later point. Prescience is presented as incomplete, and survival remains assisted. P2 supports the broad escape and survival arc but does not individually document all the narrated details."
+    },
+    {
+      "number": 8,
+      "summary": "Jessica secures negotiating room through her fighting ability and recognition of planted religious expectations, while Paul and Jessica remain dependent on distinct Fremen judgments and skills.",
+      "new_information": [
+        "Stilgar's group evaluates the fugitives through practical questions of danger, water, and usefulness.",
+        "Jessica's defeat of Stilgar establishes that she has a teachable skill valuable to the community.",
+        "The Missionaria Protectiva planted beliefs that a Bene Gesserit sister could use for protection.",
+        "The earlier encounter with Shadout Mapes alerted Jessica to those expectations on Arrakis.",
+        "Fremen religious recognition exists alongside their own ecological work, social obligations, and desert expertise.",
+        "Stilgar, Jamis, and Chani respond differently, so initial protection does not amount to universal acceptance."
+      ],
+      "local_answer": "The chapter explains why the fugitives can appear religiously recognizable without treating prophecy as proof of divine design or reducing the Fremen to passive followers.",
+      "open_issues": [
+        "One paragraph repeats the explanation of planted expectations in the form of an instruction about how to interpret evidence."
+      ],
+      "evidence_notes": "The chapter follows the assignment's distinction between protective religious preparation and independent Fremen agency. Its Missionaria Protectiva and encounter details are authorized by the assignment but are not separately substantiated in the brief wording of P2."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Paul, the result gives his father's priorities a physical form. An expensive machine is gone because Leto used the aircraft to carry its workers. The decision doesn't remove the demands of spice production or make Arrakis safe for the Atreides. It does leave Paul with an example he can understand without a formal lesson: when his father had room to save people, he made room, and people who'd been strangers had reason to remember him.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' These closing sentences repeat the equipment-versus-workers decision, the earning of loyalty, and the continuing limits of authority after each has already received its own explanation. A brief biographical conclusion is sufficient.",
+      "replacement": "Paul has watched his father accept a material loss to protect workers who had little prior reason to trust their new duke.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The testing station offers only a temporary pause in their flight, and its concealment can't give them the settled safety they're looking for.",
+      "reason": "H18 flags a re-mention that 'adds nothing.' The preceding paragraph already says 'For a time,' and this paragraph opens with the refuge becoming insecure, the attack, and their renewed escape. This final sentence states that same development again.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "There's no need to treat that recognition as confirmation that a divine plan arranged his arrival. The Bene Gesserit's planted expectations explain why a trained mother and her unusually capable son can seem familiar to people who've never met them. Paul's developing prescience adds a genuine and unsettling ability to the situation, but the Fremen still encounter him through their own beliefs. Jessica can use that reception to protect him without knowing everything that will grow from it.",
+      "reason": "The opening tells listeners how to adjudicate a claim instead of advancing the biography, and the next sentence repeats the mechanism already explained in the Missionaria Protectiva and mother-and-son paragraphs. H18 describes this as repeatedly returning to one framing; the useful remaining development is the interaction between Paul's real ability, Fremen belief, and Jessica's limited control.",
+      "replacement": "Paul's developing prescience is a real ability, but the Fremen interpret him through beliefs already present in their community. Jessica can use that reception to protect him without knowing everything that will grow from it.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        7
+      ],
+      "detail": "Chapter 7 recalls Leto's rescue as a reason for Kynes's assistance. This adds a consequence to chapter 5's account of earned loyalty and is a useful callback, not a deletion target."
+    },
+    {
+      "chapters": [
+        5,
+        8
+      ],
+      "detail": "Chapter 8 returns to Kynes's reaction to Paul's stillsuit fitting, now supplying the planted-expectation mechanism. The second appearance adds explanation and can remain."
+    },
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "Yueh's supplies and Jessica's training appear first as conditions of survival and then in the actual escape. The overlap is justified by the transition from preparation to use; neither chapter needs another general statement that Paul survives through assistance."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the Dune portion of the authorized first-three-novel biography. No concrete film-continuity import, expanded-prequel material, premature later-novel biography, or forbidden omniscience claim was identified. Each chapter answers its assigned question and delivers distinct developments; the identified defects are local repetition and explanatory overstatement rather than structural failures.",
+  "limitations": "Only chapters 5-8 were supplied and reviewed in full. Episode-wide spoiler announcements, the single early optional audience request, and the complete biographical ending cannot be assessed from this excerpt. The proof bank and assignments were treated as authoritative, but their short entries do not independently document every scene-level detail. No websites or novel passages were opened, no audio was measured, and no independent verification of every fictional fact is claimed.",
+  "input_hashes": {
+    "5": "33ff9ab313bb12426d7181b68049a95c8bc4cfb18d7f3cc752f6494c07ea9bba",
+    "6": "3ba4a747ccf9ee484193c0cc236a498dca99f8534d8f66c1bb39073196cfe3e9",
+    "7": "3df00a0a1dab4ca3c0931de394a9dab8ba25bfe889b5562f8466ed3e8ccc8c97",
+    "8": "bfc3cd2c4d1ac05094a7f0aaf05b222f56a73f67088cecf6cef16f32fb0d5cbb"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

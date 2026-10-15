@@ -5,273 +5,301 @@
       "number": 1,
       "title": "A fleet waiting for permission",
       "file": "chapitres/01.txt",
-      "words": 913,
+      "words": 657,
       "start_word": 0,
-      "end_word": 913,
+      "end_word": 657,
       "estimated_start_seconds_at_150_wpm": 0,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G4"
       ],
-      "sha256": "f9c3c9541152fc356f8acff8c92a37d179b6354f71790d9973224683711d369a"
+      "sha256": "a481d1178b29c1c4942fc62b075311914aab6cf39a6bdd5a0bc37ab251754815"
     },
     {
       "number": 2,
       "title": "The interval between planets",
       "file": "chapitres/02.txt",
-      "words": 876,
-      "start_word": 913,
-      "end_word": 1789,
-      "estimated_start_seconds_at_150_wpm": 365,
+      "words": 641,
+      "start_word": 657,
+      "end_word": 1298,
+      "estimated_start_seconds_at_150_wpm": 263,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G2"
       ],
-      "sha256": "7e18a088288ca2fc563e4cc315cead7e873e04b7cc4b72227a7e8251817035d4"
+      "sha256": "1acd0e21317982ddbf8617de270dd644ed5b68e9e740832667a92b98eb668118"
     },
     {
       "number": 3,
       "title": "The ship and the Navigator do different jobs",
       "file": "chapitres/03.txt",
-      "words": 870,
-      "start_word": 1789,
-      "end_word": 2659,
-      "estimated_start_seconds_at_150_wpm": 716,
+      "words": 501,
+      "start_word": 1298,
+      "end_word": 1799,
+      "estimated_start_seconds_at_150_wpm": 519,
       "measured_timestamp": null,
       "sources": [
         "G1"
       ],
-      "sha256": "5aa36cd742d2769029180cc231e52fb2f213994d55986e306e63ffac0c2949fd"
+      "sha256": "90eda9582edd54b4ec92d941a8fd8eba49cbf24a952cf4ccbdac7b225ffbb510"
     },
     {
       "number": 4,
       "title": "A human skill after the thinking-machine prohibition",
       "file": "chapitres/04.txt",
-      "words": 819,
-      "start_word": 2659,
-      "end_word": 3478,
-      "estimated_start_seconds_at_150_wpm": 1064,
+      "words": 608,
+      "start_word": 1799,
+      "end_word": 2407,
+      "estimated_start_seconds_at_150_wpm": 720,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G8"
       ],
-      "sha256": "5a4243b11bf7697252c7de5a6a19fd5789d506b8b97f7d5df3eda43ca3688306"
+      "sha256": "3d035e177d5cf1be29fa0c48a0b8041e98e52db5d4b427f6b2f254b9f8e71bc9"
     },
     {
       "number": 5,
       "title": "Spice becomes a daily requirement",
       "file": "chapitres/05.txt",
-      "words": 941,
-      "start_word": 3478,
-      "end_word": 4419,
-      "estimated_start_seconds_at_150_wpm": 1391,
+      "words": 776,
+      "start_word": 2407,
+      "end_word": 3183,
+      "estimated_start_seconds_at_150_wpm": 963,
       "measured_timestamp": null,
       "sources": [
         "G1"
       ],
-      "sha256": "c793077221021214d4de98762844f731a14f4e5f33d9159f827a66891dbde02a"
+      "sha256": "b94043d6374ad025c87164738b83da836000816e55dfd35dccf3ed2830cffda4"
     },
     {
       "number": 6,
       "title": "Edric inside his tank",
       "file": "chapitres/06.txt",
-      "words": 746,
-      "start_word": 4419,
-      "end_word": 5165,
-      "estimated_start_seconds_at_150_wpm": 1768,
+      "words": 602,
+      "start_word": 3183,
+      "end_word": 3785,
+      "estimated_start_seconds_at_150_wpm": 1273,
       "measured_timestamp": null,
       "sources": [
         "G5"
       ],
-      "sha256": "a0fc04f406b32b263a745409649ee33068c1d1e851fdd1bc14b66dd10ec35a20"
+      "sha256": "08115384e65fead22f751c42f6388f71e8443dea336de61bc72460a78f28accb"
     },
     {
       "number": 7,
       "title": "Why clients know so little",
       "file": "chapitres/07.txt",
-      "words": 705,
-      "start_word": 5165,
-      "end_word": 5870,
-      "estimated_start_seconds_at_150_wpm": 2066,
+      "words": 500,
+      "start_word": 3785,
+      "end_word": 4285,
+      "estimated_start_seconds_at_150_wpm": 1514,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G4"
       ],
-      "sha256": "643332b05679b38e1d6441f0384c19a761f6c5a3e26607a3dd249567401c3dc8"
+      "sha256": "d708d57560f7ec5e07ed925cdf07fc7612f10ce7e61fab811bc3878a6b797f7f"
     },
     {
       "number": 8,
-      "title": "Transporting rival armies",
+      "title": "A House can buy a route into exile",
       "file": "chapitres/08.txt",
-      "words": 830,
-      "start_word": 5870,
-      "end_word": 6700,
-      "estimated_start_seconds_at_150_wpm": 2348,
+      "words": 1201,
+      "start_word": 4285,
+      "end_word": 5486,
+      "estimated_start_seconds_at_150_wpm": 1714,
       "measured_timestamp": null,
       "sources": [
-        "G2"
+        "ADD-tupile"
       ],
-      "sha256": "06e1ffd8587db1c4a99b5cf3c4c2d271cdf716dd5f1944654ceb9527d6af3cfd"
+      "sha256": "31a51789fd03b8ba227a3b3582f0e77a01a8fd02a4f64009fb9354a04c3c479e"
     },
     {
       "number": 9,
-      "title": "The price of moving a war",
+      "title": "Transporting rival armies",
       "file": "chapitres/09.txt",
-      "words": 856,
-      "start_word": 6700,
-      "end_word": 7556,
-      "estimated_start_seconds_at_150_wpm": 2680,
+      "words": 730,
+      "start_word": 5486,
+      "end_word": 6216,
+      "estimated_start_seconds_at_150_wpm": 2194,
       "measured_timestamp": null,
       "sources": [
         "G2"
       ],
-      "sha256": "3d8c1226aaaaec220638d060efa2caeb712841ff95041c90ff56baecb35c3f8f"
+      "sha256": "ea8b1f8c49fbcf7711b5cb15242d3d5a7a0e6dffaaa7697bc5fda25e3abdb8c8"
     },
     {
       "number": 10,
-      "title": "The company and the carrier",
+      "title": "The price of moving a war",
       "file": "chapitres/10.txt",
-      "words": 900,
-      "start_word": 7556,
-      "end_word": 8456,
-      "estimated_start_seconds_at_150_wpm": 3022,
+      "words": 759,
+      "start_word": 6216,
+      "end_word": 6975,
+      "estimated_start_seconds_at_150_wpm": 2486,
+      "measured_timestamp": null,
+      "sources": [
+        "G2"
+      ],
+      "sha256": "1491af94a6488a83c3195aed800057e0b0ce323c8cd492e6590ea45a2702292f"
+    },
+    {
+      "number": 11,
+      "title": "The company and the carrier",
+      "file": "chapitres/11.txt",
+      "words": 872,
+      "start_word": 6975,
+      "end_word": 7847,
+      "estimated_start_seconds_at_150_wpm": 2790,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G2"
       ],
-      "sha256": "320cda2e8ed7de35d04ad6d23ebf40da7903b5d276d54e1f8ca1ec52eb0b651d"
+      "sha256": "a29e9180402c2023f497537e9bce471a2b0fcfd81a5ca47994aef478f757141f"
     },
     {
-      "number": 11,
+      "number": 12,
+      "title": "A banker at the Atreides table",
+      "file": "chapitres/12.txt",
+      "words": 1025,
+      "start_word": 7847,
+      "end_word": 8872,
+      "estimated_start_seconds_at_150_wpm": 3139,
+      "measured_timestamp": null,
+      "sources": [
+        "ADD-banker"
+      ],
+      "sha256": "0435bca4ffa2ff91aa12c55ef387a14bb1d1e1820f355d06e85d0b33ba95d223"
+    },
+    {
+      "number": 13,
       "title": "The Fremen buy an empty sky",
-      "file": "chapitres/11.txt",
-      "words": 989,
-      "start_word": 8456,
-      "end_word": 9445,
-      "estimated_start_seconds_at_150_wpm": 3382,
+      "file": "chapitres/13.txt",
+      "words": 864,
+      "start_word": 8872,
+      "end_word": 9736,
+      "estimated_start_seconds_at_150_wpm": 3549,
       "measured_timestamp": null,
       "sources": [
         "G3"
       ],
-      "sha256": "f9771192697b1eb4fd132d2e6a8dfd059e3d2044f11b0c11ec668976c8a63298"
+      "sha256": "56a9ae6effcd390b73bec4b56c00ab98572ea3aabb98873cc8f13c2e70e9eacf"
     },
     {
-      "number": 12,
+      "number": 14,
       "title": "What the Guild fails to understand about Arrakis",
-      "file": "chapitres/12.txt",
-      "words": 980,
-      "start_word": 9445,
-      "end_word": 10425,
-      "estimated_start_seconds_at_150_wpm": 3778,
+      "file": "chapitres/14.txt",
+      "words": 893,
+      "start_word": 9736,
+      "end_word": 10629,
+      "estimated_start_seconds_at_150_wpm": 3894,
       "measured_timestamp": null,
       "sources": [
         "G3",
         "G4"
       ],
-      "sha256": "a11cca74f72d2828fbe922b77d540d0ad58a788b0231b4eb3546ed7091fcadcf"
-    },
-    {
-      "number": 13,
-      "title": "The maker behind the cargo",
-      "file": "chapitres/13.txt",
-      "words": 885,
-      "start_word": 10425,
-      "end_word": 11310,
-      "estimated_start_seconds_at_150_wpm": 4170,
-      "measured_timestamp": null,
-      "sources": [
-        "G1",
-        "G4"
-      ],
-      "sha256": "90a3cf852ca24234050b8aad96e71ca2e920df55480aca534ea443a2a961a0fb"
-    },
-    {
-      "number": 14,
-      "title": "Paul names the dependency",
-      "file": "chapitres/14.txt",
-      "words": 955,
-      "start_word": 11310,
-      "end_word": 12265,
-      "estimated_start_seconds_at_150_wpm": 4524,
-      "measured_timestamp": null,
-      "sources": [
-        "G4"
-      ],
-      "sha256": "bc2bfc9ca146bc1367ef72256950f7cd5e22a5faf774ec9f705cf85c62bec462"
+      "sha256": "533b636df6522e1eeb3884c3c063d3ec562a18fd682288c9c8ae56956e67fd92"
     },
     {
       "number": 15,
-      "title": "The Navigator's limited horizon",
+      "title": "The maker behind the cargo",
       "file": "chapitres/15.txt",
-      "words": 967,
-      "start_word": 12265,
-      "end_word": 13232,
-      "estimated_start_seconds_at_150_wpm": 4906,
+      "words": 791,
+      "start_word": 10629,
+      "end_word": 11420,
+      "estimated_start_seconds_at_150_wpm": 4252,
       "measured_timestamp": null,
       "sources": [
         "G1",
-        "G4",
-        "G5"
+        "G4"
       ],
-      "sha256": "8262dda7efba830075891295a72ee5edc8a6f54b492664c3335f8f10eeea3412"
+      "sha256": "d18cd69ad63391558ebd598ea0d95286606880afd3c7360e8e9202a6c2bf16b4"
     },
     {
       "number": 16,
-      "title": "A new ruler still needs the carrier",
+      "title": "Paul names the dependency",
       "file": "chapitres/16.txt",
-      "words": 781,
-      "start_word": 13232,
-      "end_word": 14013,
-      "estimated_start_seconds_at_150_wpm": 5293,
+      "words": 933,
+      "start_word": 11420,
+      "end_word": 12353,
+      "estimated_start_seconds_at_150_wpm": 4568,
+      "measured_timestamp": null,
+      "sources": [
+        "G4"
+      ],
+      "sha256": "21c2321082b986606ab98024ae18196aa7c326dc6543056549426b6c15a39de4"
+    },
+    {
+      "number": 17,
+      "title": "The Navigator's limited horizon",
+      "file": "chapitres/17.txt",
+      "words": 894,
+      "start_word": 12353,
+      "end_word": 13247,
+      "estimated_start_seconds_at_150_wpm": 4941,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G4",
         "G5"
       ],
-      "sha256": "afb125e5c38fd026fe0f9ab04dcb98017fd06b183853fff3aaa3def265f5e844"
-    },
-    {
-      "number": 17,
-      "title": "Edric joins a conspiracy",
-      "file": "chapitres/17.txt",
-      "words": 844,
-      "start_word": 14013,
-      "end_word": 14857,
-      "estimated_start_seconds_at_150_wpm": 5605,
-      "measured_timestamp": null,
-      "sources": [
-        "G5"
-      ],
-      "sha256": "25de9b32ea84a90ee9873bc69dac5136a226a2c0cf9f59eaa290f2e91a8a6614"
+      "sha256": "704717cc2b28ca747009282f8557407d562803291e42137cc09c521d021d5a26"
     },
     {
       "number": 18,
-      "title": "When foresight conceals another observer",
+      "title": "A new ruler still needs the carrier",
       "file": "chapitres/18.txt",
-      "words": 662,
-      "start_word": 14857,
-      "end_word": 15519,
-      "estimated_start_seconds_at_150_wpm": 5943,
+      "words": 540,
+      "start_word": 13247,
+      "end_word": 13787,
+      "estimated_start_seconds_at_150_wpm": 5299,
+      "measured_timestamp": null,
+      "sources": [
+        "G1",
+        "G4",
+        "G5"
+      ],
+      "sha256": "bb2f48b94f44c9f57af73fa6e04ed1bdebd70a71de8eb41e34d02a6fa14dfe67"
+    },
+    {
+      "number": 19,
+      "title": "Edric joins a conspiracy",
+      "file": "chapitres/19.txt",
+      "words": 848,
+      "start_word": 13787,
+      "end_word": 14635,
+      "estimated_start_seconds_at_150_wpm": 5515,
       "measured_timestamp": null,
       "sources": [
         "G5"
       ],
-      "sha256": "82ae6945886e1524c194f56268b430a30fe99e5ce932f87b98bfbdfb46d18d60"
+      "sha256": "06aaa94f973cc2fd1802080c6a711db3c2272a5a1cb330de71418694c89cb94d"
     },
     {
-      "number": 19,
+      "number": 20,
+      "title": "When foresight conceals another observer",
+      "file": "chapitres/20.txt",
+      "words": 551,
+      "start_word": 14635,
+      "end_word": 15186,
+      "estimated_start_seconds_at_150_wpm": 5854,
+      "measured_timestamp": null,
+      "sources": [
+        "G5"
+      ],
+      "sha256": "ebddda2ad7c6ae1014ba2c01e6893672a7f9e0b7cf7648a77ed582bfa0979856"
+    },
+    {
+      "number": 21,
       "title": "A gift with several owners' intentions",
-      "file": "chapitres/19.txt",
+      "file": "chapitres/21.txt",
       "words": 975,
-      "start_word": 15519,
-      "end_word": 16494,
-      "estimated_start_seconds_at_150_wpm": 6208,
+      "start_word": 15186,
+      "end_word": 16161,
+      "estimated_start_seconds_at_150_wpm": 6074,
       "measured_timestamp": null,
       "sources": [
         "G6"
@@ -279,76 +307,90 @@
       "sha256": "3b42f16d217e3c614c7c796e84c0803fee0a1bc5e30d50b73cfd009c2ddadfd9"
     },
     {
-      "number": 20,
+      "number": 22,
       "title": "Why the conspiracy's protection is incomplete",
-      "file": "chapitres/20.txt",
-      "words": 615,
-      "start_word": 16494,
-      "end_word": 17109,
-      "estimated_start_seconds_at_150_wpm": 6598,
+      "file": "chapitres/22.txt",
+      "words": 468,
+      "start_word": 16161,
+      "end_word": 16629,
+      "estimated_start_seconds_at_150_wpm": 6464,
       "measured_timestamp": null,
       "sources": [
         "G5",
         "G6"
       ],
-      "sha256": "6c660b189cb00dbf957e42a9d67b03c61d617e36e06c3b174c3e34aa272d0f5d"
-    },
-    {
-      "number": 21,
-      "title": "Leto II rations what the Guild needs",
-      "file": "chapitres/21.txt",
-      "words": 814,
-      "start_word": 17109,
-      "end_word": 17923,
-      "estimated_start_seconds_at_150_wpm": 6844,
-      "measured_timestamp": null,
-      "sources": [
-        "G7"
-      ],
-      "sha256": "38390b6e65e91ebe6dcd4e484133964828a0933a02703a06a7c863853dd85d25"
-    },
-    {
-      "number": 22,
-      "title": "Ix offers a different kind of navigation",
-      "file": "chapitres/22.txt",
-      "words": 850,
-      "start_word": 17923,
-      "end_word": 18773,
-      "estimated_start_seconds_at_150_wpm": 7169,
-      "measured_timestamp": null,
-      "sources": [
-        "G7"
-      ],
-      "sha256": "fc1537a703022a9951e533ca5a9fe88a5d531775aaf003634764e43b92722b5a"
+      "sha256": "7058b588c0964cb4fcfa4d55ae1fa9f5cbd98ded09336725ac40c07d37bf9267"
     },
     {
       "number": 23,
-      "title": "An empire with more ways to move",
+      "title": "Leto II rations what the Guild needs",
       "file": "chapitres/23.txt",
-      "words": 906,
-      "start_word": 18773,
-      "end_word": 19679,
-      "estimated_start_seconds_at_150_wpm": 7509,
+      "words": 698,
+      "start_word": 16629,
+      "end_word": 17327,
+      "estimated_start_seconds_at_150_wpm": 6652,
       "measured_timestamp": null,
       "sources": [
         "G7"
       ],
-      "sha256": "aec0a25a4ae1958d99aa2487bb87d06c59b8525e4ed1ea47e2d3222a03ab31b5"
+      "sha256": "ae0635bc088a03f1220c839400a18a5d7538207a98a02f4e48c4e7f825c3fbab"
     },
     {
       "number": 24,
-      "title": "The person a passenger never meets",
+      "title": "Ix offers a different kind of navigation",
       "file": "chapitres/24.txt",
-      "words": 668,
-      "start_word": 19679,
-      "end_word": 20347,
-      "estimated_start_seconds_at_150_wpm": 7872,
+      "words": 710,
+      "start_word": 17327,
+      "end_word": 18037,
+      "estimated_start_seconds_at_150_wpm": 6931,
+      "measured_timestamp": null,
+      "sources": [
+        "G7"
+      ],
+      "sha256": "4bb7d7b6a4e55de559b3cf318c6efd7f4acc6d3d6c8dbb402959b0c58701e25b"
+    },
+    {
+      "number": 25,
+      "title": "Spice can come from somewhere else",
+      "file": "chapitres/25.txt",
+      "words": 1314,
+      "start_word": 18037,
+      "end_word": 19351,
+      "estimated_start_seconds_at_150_wpm": 7215,
+      "measured_timestamp": null,
+      "sources": [
+        "ADD-synthetic"
+      ],
+      "sha256": "dfd0d96d6af0f90c950ca7f722fb0ca14e22c4052de4f7af5f30ff6a9aa16198"
+    },
+    {
+      "number": 26,
+      "title": "An empire with more ways to move",
+      "file": "chapitres/26.txt",
+      "words": 715,
+      "start_word": 19351,
+      "end_word": 20066,
+      "estimated_start_seconds_at_150_wpm": 7740,
+      "measured_timestamp": null,
+      "sources": [
+        "G7"
+      ],
+      "sha256": "817dd05ecda470ec6004f58c6a81e0fc9f041943720f0f5969b1dc5d61ec5cc1"
+    },
+    {
+      "number": 27,
+      "title": "The person a passenger never meets",
+      "file": "chapitres/27.txt",
+      "words": 492,
+      "start_word": 20066,
+      "end_word": 20558,
+      "estimated_start_seconds_at_150_wpm": 8026,
       "measured_timestamp": null,
       "sources": [
         "G1",
         "G5"
       ],
-      "sha256": "11ff11dfd26ace6b383222d1dcfa8c0d824ed519663c2753dc1541471a315c09"
+      "sha256": "20309a8c2c446232cf0fa5499648f6463dfef5fa597cb50f11d090ec700e3775"
     }
   ]
 }

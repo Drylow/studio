@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "status": "final_text_ready_for_narration",
+  "narration_sha256": "989c1d08ba1e601ca54e632f53ea654b2bd84fc7c2c075221634b2a81b117689",
+  "chapters_reviewed_in_integrated_pass": 27,
+  "local_findings_applied": 14,
+  "remaining_findings": [],
+  "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+  "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+  "scope": "Television only through S3E10 Troy, released 4 September 2026. No novel events, future season-four explanations, ancestry claims or unreleased lore. This is a sequel to the channel's first broad Silo episode, not the same overview with shuffled paragraphs.",
+  "measured_audio_seconds": null,
+  "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+  "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+  "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+}

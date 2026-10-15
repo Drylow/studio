@@ -1,0 +1,152 @@
+{
+  "chapters": [
+    {
+      "number": 5,
+      "summary": "Victor's saved possessions preserve personal connections to the dead, while Henry's later visions turn a similar idea of remembrance into pressure to harm his living son.",
+      "new_information": [
+        "Victor keeps belongings associated with people who died in the town.",
+        "Sharing the collection with Sara gives him a way to approach particular memories rather than explain the town's entire history at once.",
+        "An object's presence does not independently verify its ownership or the circumstances of its owner's death.",
+        "Henry's season-four visions attach the promise of another family life to a demand that threatens the real Victor."
+      ],
+      "local_answer": "The chapter answers its assignment: belongings can help Victor remember people without independently proving everything he remembers, and that caring practice can be appropriated by manipulation.",
+      "open_issues": [
+        "The explanation of how a possession narrows the work of remembering continues after the opening two paragraphs have established the point.",
+        "The specific possessions-related element of Henry's manipulation is authorized by the assignment but is not separately detailed in the short V6 proof entry."
+      ],
+      "evidence_notes": "The collection and its limitations follow V1 and the assignment. Henry's coercive visions follow V6; the explicit comparison involving remembrance through possessions is supplied by the chapter's authoritative job. No exact object, owner, invented dialogue, or verified alternate universe is asserted."
+    },
+    {
+      "number": 6,
+      "summary": "Recognizing Eloise as the maker of some saved drawings restores her place in Victor's family history without resolving her fate.",
+      "new_information": [
+        "Some drawings Victor preserved were made by Eloise rather than by Victor.",
+        "His recognition occurs while examining the stored drawings with Tabitha near the old car.",
+        "The chapter connects Eloise's drawings with Miranda's accounts of the tower and the children.",
+        "Henry provides an independent connection to the family's earlier life but cannot account for the years after their separation.",
+        "Eloise's fate remains unresolved through the season-four finale."
+      ],
+      "local_answer": "The chapter clearly distinguishes recovering a missing family member's place in an account from discovering what ultimately happened to her.",
+      "open_issues": [
+        "The ownership-versus-custody distinction receives three consecutive treatments before the chapter advances to the drawings' subjects.",
+        "A later counterfactual paragraph about Tabitha's presence repeats the already established benefit of sharing the recognition."
+      ],
+      "evidence_notes": "V3 and the assigned job support the recovered family connection, the drawings, Henry's limited corroboration, and the unresolved boundary. The chapter avoids an adult-identity theory, a reincarnation claim about Eloise, and a declaration that she survived or died."
+    },
+    {
+      "number": 7,
+      "summary": "Miranda's instruction to remain hidden leaves Victor with direct knowledge of her departure and its aftermath, but not of her entire journey or a responsibility to have prevented its outcome.",
+      "new_information": [
+        "Miranda leaves Victor and Eloise hidden in the cellar.",
+        "Eloise follows Miranda while Victor remains behind.",
+        "Victor's account combines his own experience, Miranda's explanations, and what he encountered afterward.",
+        "Victor later reports finding Miranda's body near the tree she had intended to reach.",
+        "The chapter interprets his continued waiting as obedience under limited knowledge rather than a missed guaranteed rescue."
+      ],
+      "local_answer": "The chapter answers what Victor could know as a child and separates that knowledge from retrospective responsibility for an adult's decision.",
+      "open_issues": [
+        "The obedience-and-responsibility distinction is substantially repeated late in the chapter.",
+        "One sentence extends the absence of a rescue instruction into a more specific claim about what Miranda did not ask Victor to do for Eloise."
+      ],
+      "evidence_notes": "The treatment follows V1, V3, and the assigned childhood sequence. Violence remains non-graphic. The interpretation of Victor's burden is qualified rather than presented as a diagnosis or a universal psychological law. The passage does not conflate Miranda's death with the later treatment of her body."
+    },
+    {
+      "number": 8,
+      "summary": "Victor's guidance helps Tabitha reach the lighthouse and then Henry, but her successful journey does not establish a safe, repeatable escape route.",
+      "new_information": [
+        "Victor's underground guidance gives Tabitha practical experience of relying on his knowledge.",
+        "His faraway-tree demonstration establishes transport without establishing a complete map.",
+        "Tabitha reaches the lighthouse through the bottle tree, encounters the Boy in White, and later wakes outside the town.",
+        "Victor's lunch box supplies the childhood address that leads Tabitha to Henry.",
+        "Dale's fatal passage demonstrates that the same entrance does not reliably reproduce Tabitha's destination.",
+        "The chapter states that season four further prevents simply repeating the earlier route."
+      ],
+      "local_answer": "The chapter successfully separates useful directions, arrival at a destination, and a repeatable escape procedure.",
+      "open_issues": [
+        "The season-four update is stated only generally; unlike the season-two and season-three material, it is not attached to a particular event.",
+        "The explanation following that update repeats the route's already established lack of repeatability."
+      ],
+      "evidence_notes": "The supplied assignment expressly authorizes the lighthouse passage and the season-four nonrepeatability update. The short proof entries do not provide a specific season-four route scene, so no additional scene has been supplied in the edits. The chapter appropriately distinguishes the tree passage from the Boy in White's intervention and does not treat every talisman or supernatural rule as solved."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's something practical about that arrangement. Victor doesn't have to begin with the whole history of the town. He can begin with something that belonged to someone. The association gives his attention a place to settle. A question as large as what happened to everyone can draw him toward an overwhelming stretch of his childhood. A possession can bring him to a smaller part of it, a particular person he remembers. Whether that recollection helps explain a larger event depends on what he can say around it.",
+      "reason": "H18 identifies passages that keep \"re-stating it with nothing new attached.\" The opening already explains belongings as memory aids, and the preceding paragraph establishes Sara helping Victor develop an account around them. This third explanation delays the distinct question of what an object can independently verify.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a small, practical distinction here that's easy to lose among the town's stranger mysteries. Keeping a picture doesn't mean you drew it. Victor has become the person responsible for preserving these pages, so someone finding them with him could naturally assume they all came from his hand. Once he remembers Eloise, that assumption has to change. Questions about an image now include what Eloise was trying to record and what she might have heard from someone else. Victor can help identify her work without automatically knowing everything she meant by it.",
+      "reason": "H18's \"third identical mention is the tell\" applies to the consecutive explanations that Victor preserved drawings he did not make. The preceding paragraph already states the interpretive consequence, and the next paragraph supplies the useful development about Miranda's accounts reaching Eloise's drawings.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Tabitha's presence helps the recognition become something that can be shared. If Victor had encountered the pictures alone, the recovered association would still have mattered to him, but no one else would have heard his explanation at that moment. With Tabitha there, the pages acquire context for another person. She can connect the name Eloise to a particular part of the collection. She also sees the difficulty Victor has in remembering. Their exchange gives her a reason to handle his account with patience, especially when a question that looks straightforward to her carries an entire missing relationship for him.",
+      "reason": "H18 warns against returning to the same framing without a new consequence. Tabitha's access to the recognition and its emotional cost to Victor have already been developed in the opening and the paragraph beginning \"His reaction makes that recognition difficult\"; the hypothetical solitary encounter adds no new event or evidence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 7,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Victor's childhood obedience also deserves to remain part of the account. Miranda didn't ask him to rescue her or supervise Eloise through every possible danger. She told the children to stay hidden. Eloise's departure puts Victor in a situation that her instruction hasn't resolved for him: his sister has gone after their mother, and following her would mean leaving too. We can read his continued waiting as an attempt to do what Miranda asked. There isn't a guaranteed rescue he could have carried out simply by making the other decision.",
+      "reason": "The supplied account establishes Miranda's instruction to hide, not a comprehensive account of every responsibility she did or did not assign Victor concerning Eloise. The paragraph also repeats the obedience argument already made earlier. Retain the concrete dilemma without asserting an additional negative fact about Miranda's instructions.",
+      "replacement": "Miranda's instruction was to stay hidden. Once Eloise leaves, Victor can't both follow his sister and remain where his mother told him to wait. His staying behind doesn't establish that he had a safe way to rescue either of them.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Season four keeps that limitation in place: the earlier route can't simply be repeated as before. Tabitha's journey remains part of what happened, and Victor's directions remain part of how she made it. The later difficulty doesn't undo her arrival at the tower. It changes what anyone can responsibly ask the route to do again. Returning to a familiar landmark isn't enough to recover all the circumstances of an earlier passage, especially when the travelers never understood why that passage ended where it did.",
+      "reason": "H18 flags repeated framing without new information. The season-four update belongs here, but the rest restates the distinction already demonstrated through Dale and then repeated in the closing paragraph. Condensing preserves the released update without extending the methodological explanation.",
+      "replacement": "By season four, the earlier route can no longer simply be repeated. That doesn't undo Tabitha's journey, but it leaves Victor unable to promise the same result to someone else.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        6
+      ],
+      "detail": "Both chapters repeatedly explain that preserving an item does not establish its history or authorship. The distinction serves different material, but chapter 5's extended memory-aid explanation and chapter 6's third ownership explanation make the shared method more prominent than the new lore. The proposed deletions retain each chapter's distinct answer."
+    },
+    {
+      "chapters": [
+        6,
+        7
+      ],
+      "detail": "Both chapters explain that a practical question for Tabitha carries a painful missing family relationship for Victor. The applications are distinct enough to retain, but further repetitions of this framing would add little."
+    },
+    {
+      "chapters": [
+        7,
+        8
+      ],
+      "detail": "Both chapters establish that Victor knows part of Miranda's intended route without knowing every event or mechanism. Chapter 8 earns the return by adding Tabitha's actual passage, Henry's address, and Dale's different outcome; those concrete developments should remain more prominent than repeated cautions about incomplete knowledge."
+    }
+  ],
+  "scope_status": "The supplied chapters 5-8 remain within the authorized television scope through S4E10 and explicitly acknowledge season-four developments. No forbidden identity resolution, confirmed alternate universe, clinical diagnosis, graphic description, invented dialogue, or season-five outcome is asserted. The absence of an opening spoiler notice or optional subscription request is not a defect in this excerpt, because chapter 1 was not supplied.",
+  "limitations": "All four supplied chapters were read in full. This review uses the supplied proof bank and authoritative assignments, including their released season-four facts; it does not claim independent episode or website verification. Only chapters 5-8 were available for prose comparison, so whole-script repetition and chapter-one housekeeping cannot be fully assessed. The bank does not identify the specific season-four event behind chapter 8's route limitation, and no such detail has been invented.",
+  "input_hashes": {
+    "5": "62ce915cecf5e1b81bc5e3caa91e2ff028ad4a22b35e0c307fcd984aeb2057aa",
+    "6": "9eb50e600ea4236188c9d659fc58b31f4203afeb2de3ef4dab2bc3f5bf6859ca",
+    "7": "93615d9d9f65040698e5e6c8442982bf49ec79be1a8bc6bb1f822dd89f7eb097",
+    "8": "a22da097e892a1d3ae99c1ab6781f8e87f4f92e9f26ab9085b542a7aa29ca25e"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

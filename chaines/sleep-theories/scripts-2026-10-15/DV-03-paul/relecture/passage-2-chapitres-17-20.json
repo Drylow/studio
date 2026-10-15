@@ -1,0 +1,173 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Edric's prescience helps conceal a coalition whose members approach Paul through institutional interests, household access and personal attachments.",
+      "new_information": [
+        "Edric's presence can obscure the conspirators' preparations from Paul's prescient vision.",
+        "Mohiam seeks influence over Paul's bloodline, while Irulan wants a substantive dynastic and personal position within her marriage.",
+        "The Guild's dependence on spice gives Edric an institutional reason to oppose Paul's control.",
+        "Scytale uses Face Dancer abilities and contact with Farok to exploit discontent within Paul's empire.",
+        "Hayt is introduced as a Tleilaxu gift that reaches Paul's attachment to Duncan Idaho."
+      ],
+      "local_answer": "The chapter explains how enemies can organize against a prescient emperor: they combine another prescient person's concealment with ordinary political access and emotional leverage.",
+      "open_issues": [
+        "Scytale's methods are clearer than the Tleilaxu objective; one local clarification would better satisfy the assignment to distinguish individual motives."
+      ],
+      "evidence_notes": "The conspiracy fits the supplied P4 framework and the assigned novel continuity. The detailed meeting circumstances, Farok material and individual motives extend beyond P4's brief synopsis; these were reviewed for consistency, not independently source-verified."
+    },
+    {
+      "number": 18,
+      "summary": "Paul accepts Hayt despite recognizing the danger, and Duncan's eventual resistance to an implanted killing command restores his memories while giving the Tleilaxu new leverage.",
+      "new_information": [
+        "Hayt has artificial metal eyes and initially lacks accessible memories of Duncan's life.",
+        "His Mentat and Zensunni training makes him a challenging adviser rather than an obedient replica.",
+        "Paul's acceptance combines attachment to Duncan with uncertainty about whether his former companion can return.",
+        "Hayt develops an attachment to Alia independent of Paul's relationship with Duncan.",
+        "The conflict between conditioning and Duncan's loyalty restores his memories.",
+        "Successful memory restoration strengthens the Tleilaxu's ability to pressure a bereaved Paul."
+      ],
+      "local_answer": "Hayt matters because he is both a deliberately dangerous gift and a person capable of resisting his makers; his restored identity is demonstrated through resistance rather than simple obedience.",
+      "open_issues": [
+        "The account of Duncan's former loyalty repeats material immediately established in chapter 17 and elsewhere within this chapter.",
+        "The chapter advances to Chani's death, so chapter 19 needs a clear backward transition."
+      ],
+      "evidence_notes": "Hayt's arrival and the surrounding crisis fall within P4. The assignment expressly calls for recovered identity to matter through choice, and the chapter fulfills that requirement. The supplied proof summary does not independently document every detail of ghola production, conditioning or training."
+    },
+    {
+      "number": 19,
+      "summary": "Irulan's covert contraception, Chani's effort to conceive and Paul's knowing tolerance of the interference expose how succession politics compromise Chani's private choices.",
+      "new_information": [
+        "Irulan secretly administers contraceptives through Chani's food.",
+        "Chani changes to a traditional Fremen diet and becomes pregnant.",
+        "The earlier treatment is connected to the pregnancy's dangerous accelerated course.",
+        "Paul knows about the interference and permits it because he associates childbirth with Chani's death.",
+        "Chani discovers the intervention and wants Irulan punished.",
+        "Paul weighs anticipated bereavement against other futures in which Chani suffers."
+      ],
+      "local_answer": "The household becomes vulnerable because dynastic ambitions and Paul's attempts to manage a foreseen loss intrude on Chani's reproductive decisions without her informed participation.",
+      "open_issues": [
+        "The opening does not mark the return to events before the death already narrated in chapter 18.",
+        "The second paragraph repeats Irulan's marital grievance and dynastic position without enough development beyond chapter 17 and this chapter's opening."
+      ],
+      "evidence_notes": "The chapter preserves the requested distinction between explanation and exoneration: Irulan's intervention is harmful, and Paul's protective rationale does not remove his responsibility. It also avoids making pregnancy and death a single-cause medical claim. The detailed dietary and treatment account is not separately substantiated by the supplied P4 synopsis."
+    },
+    {
+      "number": 20,
+      "summary": "After the stone burner destroys Paul's physical sight, prescience lets him continue functioning publicly while making him dependent on an anticipated sequence of events.",
+      "new_information": [
+        "Paul encounters Otheym and takes Bijaz away while investigating a conspiracy among the Fremen.",
+        "The stone burner physically blinds Paul along with other exposed victims.",
+        "His continued ability to navigate complicates the application of the Fremen custom concerning blindness.",
+        "His apparent sight can reinforce religious awe despite the reality of his injury.",
+        "Following a foreseen sequence becomes a practical necessity once ordinary visual observation is unavailable.",
+        "Immediate navigational precision does not eliminate the blind spots associated with other prescient people."
+      ],
+      "local_answer": "Paul can function without physical eyes because he follows events he has foreseen, but this substitute makes deviation costly and does not give him unrestricted knowledge.",
+      "open_issues": [
+        "The opening spends unnecessary time denying unproposed alternatives to physical blindness.",
+        "A generic description of disaster response interrupts the biographical explanation without establishing a specific event.",
+        "The final sentence repeats the dependence on a foreseen sequence already explained in the preceding paragraphs."
+      ],
+      "evidence_notes": "P5 directly supports physical blindness followed by continued use of prescience, and P4 supplies the stone-burner context. The chapter does not invent technical weapon specifications or claim omniscience. Otheym, Bijaz and the more detailed sequence-dependence explanation are not independently verified by the short supplied proof entries."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The conspirators have chosen a person whose significance reaches back before Paul's imperial power.",
+      "reason": "The assignment requires individual motives to be distinguished. Mohiam, Irulan and Edric receive explicit objectives, but Scytale's section chiefly describes methods and repeats Duncan's personal significance. Naming the Tleilaxu leverage already established in this paragraph makes their immediate objective clearer without adding a new plot event.",
+      "replacement": "For the Tleilaxu, Hayt offers a way to turn Paul's attachment to Duncan into leverage.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Duncan's death belongs to a period when Paul still depended on his father's household for protection. During the flight from the Harkonnen attack, Duncan fought the Sardaukar while Paul and Jessica escaped. His service ended in an act of loyalty that Paul couldn't repay. Now the people opposing Paul's reign have returned that particular man to him. The gift reaches an attachment formed before the throne, before the Fremen armies and the official worship of Muad'Dib. Accepting Hayt brings something of that earlier household into an imperial life where it has almost vanished.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' Chapter 17 already explains Duncan's protective death and the gift's connection to Paul's pre-imperial life, while this chapter's opening and fourth paragraph establish the same emotional attachment. Retain the concrete Sardaukar detail and shorten the repeated framing.",
+      "replacement": "Duncan died fighting the Sardaukar while Paul and Jessica escaped. Hayt returns that former protector to a court now organized around Paul's imperial and religious authority.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Irulan has been putting contraceptives into Chani's food.",
+      "reason": "Chapter 18 has already narrated Chani's death and Duncan's recovery. This opening returns to the period before pregnancy without a temporal marker, making a deliberate thematic rewind sound like continuous chronology.",
+      "replacement": "Before Chani's pregnancy, Irulan is secretly putting contraceptives into her food.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Irulan is a Corrino princess, the daughter of the Emperor Paul displaced. Her marriage gives the new reign a connection to the old dynasty, but Paul has denied her the intimate relationship and children she wants. For Irulan, a child would give her a lasting place in the succession. Without one, she remains an imperial wife whose position doesn't carry the future she expected. That grievance helps explain her participation in the conspiracy. It doesn't excuse her decision to interfere with Chani's body without her knowledge.",
+      "reason": "H18 warns against a framing that 'keeps re-stating it with nothing new attached.' Chapter 17 already gives Irulan's parentage, political marriage, exclusion and desire for motherhood; chapter 19's opening supplies her succession motive again. The later discussion of Chani's lack of informed choice preserves the moral distinction, making this the least useful repeated paragraph.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His eyes haven't survived in some altered form, and he hasn't acquired a replacement organ.",
+      "reason": "H18 concerns repeated information without a new consequence. The opening has already said that Paul is without physical eyes and that the injury is real; this additional denial introduces alternatives the narration has not proposed instead of advancing the explanation.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "For the men around him, the aftermath demands the ordinary responses to a catastrophe: finding out who has been injured, helping survivors, and trying to understand what's happened.",
+      "reason": "This generic account of what a disaster demands supplies neither a concrete narrated action nor a causal development in Paul's biography. It has the H17 Reading-Not-Speaking quality of an abstract explanatory aside rather than the supplied samples' concrete spoken account. Deletion leaves the injury and the contrast with Paul's subsequent conduct intact.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul can still move through the palace without a guide, but only while events remain within the future he can perceive.",
+      "reason": "H18 flags repeated framing without additional information. The seventh paragraph explains dependence on the anticipated sequence, and the eighth explains why departure would deprive Paul of usable observation. This final sentence states that same limit again after the chapter has already added the distinct point about Edric's concealment.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Duncan's protective death, Paul's attachment to his earlier household and the gift's emotional danger recur across chapter 17's Hayt introduction and several paragraphs of chapter 18. The handoff is useful, but chapter 18's third paragraph can be shortened while preserving its concrete Sardaukar detail."
+    },
+    {
+      "chapters": [
+        17,
+        19
+      ],
+      "detail": "Irulan's parentage, political marriage, exclusion from Paul's intimate life and desire for motherhood receive substantially the same explanation twice. Chapter 19 should spend its space on contraception, Chani's response and Paul's knowledge rather than repeat the full grievance."
+    },
+    {
+      "chapters": [
+        17,
+        20
+      ],
+      "detail": "Edric's prescient concealment returns in chapter 20, but this recurrence is useful: it distinguishes Paul's precise navigation after blindness from unrestricted awareness. It should not be removed merely because the mechanism was introduced earlier."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within Dune Messiah and the authorized first-three-original-novels scope. No clear film-continuity import, expanded-prequel event, invented exact quotation, casualty statistic or claim of omniscience appears. Chapter 18's advance to Chani's death is authorized by its assignment, but the subsequent rewind needs marking. No repeated CTA appears in this excerpt; chapter one's requested optional invitation cannot be assessed because that chapter was not supplied.",
+  "limitations": "Reviewed all supplied text for chapters 17-20 against the episode plan, assignments, proof summaries and supplied voice rules. The other twenty chapters were not provided, so full-episode repetition, spoiler announcements, opening requirements and the final biographical conclusion cannot be assessed. The proof entries are brief summaries rather than passages establishing every detailed claim; no websites were opened and no independent verification of every fictional fact, audio measurement or human read-aloud was performed.",
+  "input_hashes": {
+    "17": "c61c8dfe11570704f6cd6d770cc7ee77de1fc8f1a5f8e538fa2cf648504e6c6c",
+    "18": "55f5539cfe3bcd0b6c4bba2442e0e827ee4390134a9219d4341141f52b8a54a3",
+    "19": "f6e8f6fed256b4a618f84548fd20ae0732c86e8eb4a082a5b241843688098628",
+    "20": "77ee61867b472791a1db7cededf6d8424e6c0d44155df62d5490d2396da0d0b2"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

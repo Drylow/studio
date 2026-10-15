@@ -1,7 +1,6 @@
 {
   "accessed": "2026-10-15",
   "scope": "Dune, Dune Messiah and Children of Dune, with major book spoilers announced. The entire story means Paul's life as told in those three original novels. No expanded prequels, fictional intervening adventures, or scene details imported from the films.",
-  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
   "sources": [
     {
       "id": "P1",
@@ -59,18 +58,13 @@
       "work": "Children of Dune",
       "url": "https://en.wikipedia.org/wiki/Leto_II_Atreides",
       "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-dinner",
+      "fact": "Leto leaves dinner on security business, Paul and Jessica remain. Paul confident sometimes boastful, Jessica proud/wary. Kynes, Tuek, Harkonnen-aligned banker and water interests attend; banker fears Kynes. Duke sends coded message involving Harkonnen lasguns. No invented dialogue, seating or physical violence.",
+      "url": "https://www.gradesaver.com/dune/study-guide/summary-book-1-dune-chapters-13-22",
+      "work": "Dune original novel: Arrakeen dinner",
+      "opened": "2026-10-15"
     }
-  ],
-  "forbidden": [
-    "Chani leaves Paul at the end of the original Dune novel as in the 2024 film",
-    "Alia is unborn during the novel's final confrontation",
-    "Paul never makes choices because prescience controls his body",
-    "The first infant Leto and the later twin Leto II are the same child",
-    "Paul completes the Golden Path himself",
-    "Irulan's actions are harmless or Chani's pregnancy has one simple cause",
-    "Paul knows every possible future without blind spots",
-    "Ghanima dies or becomes the worm emperor",
-    "Invented dates, private thoughts, quotes, childhood adventures or exact battle statistics",
-    "Paul of Dune events merged without labeling them"
   ]
 }

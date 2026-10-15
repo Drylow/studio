@@ -1,0 +1,170 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "The Harkonnen attack illustrates how the expense of Guild transport commits a House's resources before battle and contributes to demands for revenue after conquest.",
+      "new_information": [
+        "The Baron's expenditure on recovering Arrakis becomes a financial burden for the occupation administered by Rabban.",
+        "The Atreides anticipate an attack but underestimate the scale of force their enemy is prepared to finance.",
+        "The absence of a competing interstellar carrier limits the Baron's bargaining options.",
+        "Imperial military support and Yueh's betrayal contribute to the victory alongside Harkonnen spending.",
+        "The chapter derives a broader distinction between possessing effective troops and being able to afford their deployment."
+      ],
+      "local_answer": "Military transport costs constrain the force a House can deploy and can shape its subsequent administration, but this particular invasion does not establish a universal Guild tariff or campaign budget.",
+      "open_issues": [
+        "One passage repeats the financial argument while adding a speculative preference for a rapid victory.",
+        "The term interplanetary should be interstellar in the discussion of transport between imperial worlds."
+      ],
+      "evidence_notes": "G2 supports the dependence of hostile military forces on Guild transport. The chapter also invokes identifiable material from Dune concerning the Baron, Rabban, Sardaukar and Atreides expectations that is not reproduced in the supplied proof entry. It avoids invented amounts and generally distinguishes economic implications from explicit Guild rules."
+    },
+    {
+      "number": 10,
+      "summary": "CHOAM, the Great Houses, the Emperor and the Guild have overlapping interests but provide different kinds of commercial, political and transport power.",
+      "new_information": [
+        "CHOAM is a commercial combine whose directorships and profits are objects of political competition.",
+        "The Guild and Bene Gesserit are described as silent partners rather than owners of the entire commercial system.",
+        "An Arrakis appointment provides commercial opportunities without giving its holder command of Guild navigation.",
+        "A clearly identified hypothetical shipment illustrates the separate requirements of production, commercial arrangements and transport.",
+        "The Emperor's authority and military strength do not remove his dependence on Guild passage."
+      ],
+      "local_answer": "The company and the carrier are distinct institutions with overlapping investments; commercial influence or planetary authority does not confer control over interstellar transport.",
+      "open_issues": [
+        "The standalone observation about Kynes judging Leto's character interrupts the institutional explanation without developing it."
+      ],
+      "evidence_notes": "G1 and G2 support the transport monopoly and the dependence of Houses and imperial forces. The CHOAM terminology and silent-partner arrangement are additional original-novel material not detailed in those proof entries. The shipment is explicitly illustrative, and the chapter neither invents a transaction nor conflates partnership with ownership."
+    },
+    {
+      "number": 11,
+      "summary": "The Fremen exchange spice for the exclusion of observation satellites, helping conceal their population and ecological activities without making Arrakis inaccessible or invisible.",
+      "new_information": [
+        "The satellite exclusion is purchased with spice rather than secured through formal planetary authority.",
+        "The arrangement removes a means of checking outside estimates of Fremen numbers and movements.",
+        "Concealment also protects communal water reserves and ecological work.",
+        "The Guild can serve the official administration while maintaining a separate bargain with communities seeking less scrutiny.",
+        "Continued concealment depends partly on an ongoing relationship with an outside institution."
+      ],
+      "local_answer": "The Fremen obtain a specific observational gap, while the Guild obtains spice; neither the bargain nor Guild transport implies an open political alliance.",
+      "open_issues": [
+        "A later paragraph repeats the opening explanation that satellite exclusion does not prevent ordinary observation.",
+        "The water-conservation aside moves away from the assigned bargain into a separate account of Fremen collective discipline.",
+        "One sentence comments on Herbert's evidentiary method instead of explaining the arrangement."
+      ],
+      "evidence_notes": "G3 directly supports the spice bribe, satellite exclusion and protection of Fremen numbers and activities. The chapter appropriately avoids payment quantities and does not assign precise technical capabilities to the absent satellites. Its account of bargaining consequences is interpretation rather than a documented enforcement procedure."
+    },
+    {
+      "number": 12,
+      "summary": "Fremen military and ecological capacities exceed outside estimates, illustrating why obtaining spice from a society does not establish a full understanding of that society.",
+      "new_information": [
+        "Hawat's encounter with accounts of Fremen fighting ability challenges imperial assumptions about Sardaukar superiority.",
+        "Leto seeks Fremen military support, but Paul and Jessica subsequently encounter a more extensive society than an initial diplomatic contact reveals.",
+        "Fremen attacks demonstrate that people supplying spice can also disrupt its extraction.",
+        "Resistance in the southern communities exposes weaknesses in imperial estimates of Fremen strength.",
+        "Fremen ecological ambitions concern Arrakis's future, whereas the Guild's immediate institutional requirement is continued melange access."
+      ],
+      "local_answer": "Reliable deliveries and a successful concealment bargain do not establish comprehensive knowledge of Fremen strength or ecological intentions; however, the chapter cannot establish precisely what the Guild itself knew.",
+      "open_issues": [
+        "One paragraph treats the Guild's failure to prevent a political outcome as evidence of deficient understanding, although those are different claims.",
+        "Several explanations of outside ignorance need to remain distinct from assertions about the Guild's private knowledge."
+      ],
+      "evidence_notes": "G3 supports the Guild's dealings with the Fremen, and G4 supports its eventual accommodation of Paul's threat. Neither establishes the extent of Guild knowledge before that confrontation. The chapter mostly recognizes this limitation, but one paragraph overstates what the outcome proves. The additional Hawat, southern-raid and ecological material remains within the original-novel scope."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "This invasion shows the burden of one enormous deployment, not a standard price for interplanetary war.",
+      "reason": "The chapter concerns Guild passage between worlds in different star systems. Interplanetary is an imprecise substitution for interstellar here.",
+      "replacement": "This invasion shows the burden of one enormous deployment, not a standard price for interstellar war.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "A deployment on this scale also gives the Baron reasons to want a rapid result. Once he's paid to bring overwhelming strength to Arrakis, a surviving Atreides army would leave the purpose of that expense unfinished. Continued resistance could demand further commitments while delaying the income he wants from the planet. That's a practical implication of his investment, rather than a separate Guild rule. The assault's concentration of force, its reliance on surprise and Yueh's betrayal all help produce a swift collapse. That outcome also reduces the risk of further fighting delaying the revenue the Baron wants.",
+      "reason": "H18 identifies the problem as repeatedly 're-stating it with nothing new attached.' Earlier paragraphs already explain decisive force, removal of the Atreides, repayment through production and the contribution of treachery. This is the least useful return to that chain and adds an inferred preference for speed rather than a distinct transport mechanism.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Kynes also judges Leto by his decision to rescue the workers, so the inspection reveals something about the duke's rule as well as the condition of spice production.",
+      "reason": "The preceding harvester example already establishes the production problem relevant to the assigned institutional comparison. This standalone character observation interrupts the return to imperial authority and does not explain CHOAM or Guild leverage.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Keeping satellites away helps leave those questions unsettled. It makes checking the distribution of settlements and the extent of movement across remote regions more difficult. That doesn't mean every Fremen can cross every open stretch without being seen. Patrols, aircraft and encounters on the ground still matter. Arrakis remains a place people can visit and fight over. The bargain removes a particular means of observation, and the Fremen's other habits of secrecy continue to do their own work beneath that unoccupied sky.",
+      "reason": "H18 describes repeated framing as 'the script gets stuck on one fact, one phrase, or one framing.' The opening already explains that outsiders can land, fly and inspect while satellite exclusion prevents checks on numbers and activity; the intervening flight comparison develops the same distinction. This third explanation adds little.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Preserving water for that distant goal also requires collective agreement: people accept limits on what they can use now for a change they may never live to see.",
+      "reason": "This aside develops Fremen attitudes toward ecological sacrifice rather than the Guild bargain. The preceding paragraph has already supplied the concrete ecological activities that concealment protects, so the aside is unnecessary to the assigned answer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Herbert doesn't need to describe an enforcement procedure for the practical dependence to be clear.",
+      "reason": "The sleep adaptation calls for lore and interpretation rather than repeated instruction about what counts as evidence. This sentence comments on the author's explanatory method, while the surrounding sentences already explain the continuing relationship without inventing enforcement details.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "There's no need to suppose the Guild knows nothing about the desert. Its dealings with the Fremen already place it closer to hidden activity than an uninformed customer would be. The narrower failure is visible in what that access achieves. The Guild can secure spice and accommodate secrecy without preventing the emergence of a Fremen force capable of overturning the political arrangement around production. Its bargain works for the purpose for which it was made. The consequences of leaving that society underestimated reach far beyond the bargain.",
+      "reason": "G3 establishes access and a bargain, while G4 establishes the eventual response to Paul's threat. Failure to prevent Fremen ascendancy does not establish what the Guild understood or prove that it underestimated them. The paragraph slides from a supported distinction between access and knowledge into an unsupported diagnosis of institutional ignorance.",
+      "replacement": "The Guild's dealings with the Fremen give it access to people largely hidden from imperial authorities, but they don't tell us how fully it understands them. The bargain secures spice and protects concealment; it doesn't give the Guild control over what Fremen communities may later do. Their eventual challenge to the rulers of Arrakis shows the limits of that arrangement, without establishing exactly what the Guild knew beforehand.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10
+      ],
+      "detail": "Both chapters explain that House troops and imperial forces require Guild passage. The recurrence is useful because chapter 9 examines deployment costs and chapter 10 separates institutional powers; neither needs another general explanation of the monopoly."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "The harvester rescue appears first as a concrete production failure and then as an example of the limited purpose of an ornithopter visit. These are distinct uses, but the chapter 11 reference should remain brief rather than becoming another account of the rescue."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "The satellite bargain, underestimated Fremen population and ecological project recur across both chapters. Chapter 11 gives these facts their main explanatory home; chapter 12 earns the return through Hawat, military resistance and the distinction between obtaining a commodity and understanding its producers."
+    }
+  ],
+  "scope_status": "The supplied chapters 9-12 remain within Frank Herbert's original-book continuity and concentrate on Dune. No expanded-prequel origins, film-specific Navigator physiology, invented numerical tariffs or out-of-scope future events appear. The principal evidence problem is the inference about Guild knowledge in chapter 12, not an adaptation or spoiler violation. The early chapter-one listening request cannot be assessed because chapter 1 was not supplied.",
+  "limitations": "Reviewed all four supplied chapters against the supplied assignments, proof bank and voice guidance. The other outlined chapters were not supplied, so whole-episode repetition and execution cannot be fully assessed. No websites or primary texts were opened, no audio was measured, and no independent verification of every fictional detail is claimed. Original-novel details beyond the brief proof entries have been distinguished from claims those entries directly support.",
+  "input_hashes": {
+    "9": "3d8c1226aaaaec220638d060efa2caeb712841ff95041c90ff56baecb35c3f8f",
+    "10": "320cda2e8ed7de35d04ad6d23ebf40da7903b5d276d54e1f8ca1ec52eb0b651d",
+    "11": "f9771192697b1eb4fd132d2e6a8dfd059e3d2044f11b0c11ec668976c8a63298",
+    "12": "a11cca74f72d2828fbe922b77d540d0ad58a788b0231b4eb3546ed7091fcadcf"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

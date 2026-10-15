@@ -1,0 +1,171 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Natalie's mediation of the Board's decisions limits Cobel's access to leadership without establishing that the Board is an AI or a surviving Kier.",
+      "new_information": [
+        "Natalie mediates Cobel's exchanges with the Board and also represents Lumon publicly.",
+        "Cobel's attempt to report reintegration encounters resistance through that managerial channel.",
+        "Cobel's dismissal includes brief direct contact with the Board but does not reveal its membership or decision-making mechanism.",
+        "The Eagans' visible institutional history contrasts with the Board's restricted accessibility."
+      ],
+      "local_answer": "The Board's secrecy demonstrably controls managerial access; it does not demonstrate an artificial intelligence, a dead founder, or a consciousness-transfer mechanism.",
+      "open_issues": [
+        "Two early paragraphs explain substantially the same restriction on Cobel's access.",
+        "The Board's membership and the identity of its briefly heard speaker remain unresolved, appropriately."
+      ],
+      "evidence_notes": "E1 supports the curated leadership-history comparison, and E2 supports the Jame and Helena comparison. The detailed Natalie, reintegration, and dismissal material is not independently documented by the supplied proof-bank summaries; that is a verification limitation, not evidence that those details are false."
+    },
+    {
+      "number": 10,
+      "summary": "Cobel's household devotion, upbringing, bereavement, research, and contradictory conduct distinguish her attachment to Kier from dependable obedience to Lumon's current leadership.",
+      "new_information": [
+        "Cobel's private shrine connects founder imagery with objects associated with Charlotte.",
+        "Her Lumon-associated schooling places her devotion before her managerial career.",
+        "Her investigation of recognition between Mark and Gemma extends into Mark's outside family life.",
+        "Her destruction of the shrine and subsequent effort to protect the gala show that anger and institutional allegiance coexist."
+      ],
+      "local_answer": "Cobel's allegiance has several personal roots, so resentment toward Jame and the Board need not eliminate her devotion to Kier or her habits of service.",
+      "open_issues": [
+        "A full paragraph recapitulates the shrine, schooling, and research immediately after those subjects have already been explained.",
+        "One sentence discusses the sufficiency of character detail rather than narrating Cobel's conduct.",
+        "The chapter previews enough Salt's Neck and authorship material that chapters 11 and 12 need tighter boundaries."
+      ],
+      "evidence_notes": "E4 supports the Salt's Neck background and the authorship correction. The assignment expressly authorizes the household-devotion and personal-history focus. The connection between Charlotte and Cobel's investigation is appropriately presented as interpretation rather than a confirmed motive."
+    },
+    {
+      "number": 11,
+      "summary": "Salt's Neck places Cobel's grievances within a family home and industrial community where Sissy continues to defend Lumon.",
+      "new_information": [
+        "The former ether factory gives Lumon's local influence a physical setting outside the severed workplace.",
+        "Sissy's continued allegiance brings pressure to respect Lumon into Cobel's family relationships.",
+        "Charlotte's remembered suffering complicates the women's disagreement without establishing a medical cause.",
+        "Sissy's ether use connects the town's industrial history with household life.",
+        "Cobel leaves with recovered research despite the unresolved family disagreement."
+      ],
+      "local_answer": "Continued devotion would ask Cobel to subordinate personal grievances and her claim to recognition to a family expectation of allegiance.",
+      "open_issues": [
+        "The two-sentence education paragraph adds no concrete development beyond chapter 10 and the preceding paragraphs.",
+        "The phrase 'that arrangement' lacks a clear antecedent and obscures what Sissy expects Harmony to accept.",
+        "An explicit warning against inventing medical causation interrupts an otherwise concrete account."
+      ],
+      "evidence_notes": "E4 and the chapter assignment support the Salt's Neck, family-home, and Sissy framework. The narration does not invent medical statistics or assert that Lumon caused Charlotte's illness. Specific factory and household details exceed the short proof-bank summary and have not been independently verified here."
+    },
+    {
+      "number": 12,
+      "summary": "Cobel's recovered research challenges Jame's inventor credit while distinguishing her severance development from Reghabi's reintegration work.",
+      "new_information": [
+        "The recovered drawings and notes give material support to Cobel's authorship claim.",
+        "Original research does not establish that Cobel manufactured every component or developed every application alone.",
+        "Preserving evidence of authorship can coexist with continued institutional service, although Cobel's exact calculation remains unknown.",
+        "Reghabi's reintegration work reconnects divided experiences and is distinct from Cobel's original severance research.",
+        "Possession of the records does not itself amount to public correction of Lumon's account."
+      ],
+      "local_answer": "The records support correcting the attribution of severance's original work without crediting Cobel with every technical contribution or treating her victimization as an excuse for her conduct.",
+      "open_issues": [
+        "The paragraph recounting Cobel's outside access to Mark and interest in Ms. Casey repeats material already developed in chapter 10.",
+        "The ending revisits the survival and usefulness of the records several times, although its distinction between private evidence and public recognition adds a useful final consequence."
+      ],
+      "evidence_notes": "E4 directly supports the original-work and appropriated-credit correction. The distinction from Reghabi is required by the assignment and avoids conflating severance with reintegration. The chapter appropriately qualifies both Cobel's possible reasons for retaining evidence and the limits of her technical authorship."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Cobel's insistence matters because she isn't approaching this as a casual critic of Lumon. She supervises Mark's department, pursues information about Petey, and treats the severed floor as work that deserves close attention. Her commitment doesn't buy her unrestricted access to senior decision makers. Through Natalie, the Board can reject the premise of a report before Cobel gets the kind of hearing she wants. The same woman who can summon employees into her office has to keep asking for an audience herself.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The preceding paragraphs already establish Cobel's managerial authority, her pursuit of the reintegration findings, and her restricted access through Natalie. This is the least useful repetition of that contrast.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives her loyalty several possible sources at once. The shrine connects Lumon to her private mourning. The school material connects it to childhood. Her research connects it to intellectual work for which Jame receives the credit. None of those attachments requires her to approve of every decision made by Jame or the Board. Together, they help explain why an insult from Lumon can provoke such fierce anger. She's reacting to a company that has occupied several parts of her life, with very little separation between them.",
+      "reason": "H18 warns against repeatedly stating the same framing without a new consequence. Most of this paragraph inventories the three subjects just explained; only the distinction between personal attachment and approval of current management needs to remain.",
+      "replacement": "Those attachments don't require her to approve of every decision made by Jame or the Board. They may help explain why rejection by Lumon feels personal to her.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "What she does supplies enough character detail on its own.",
+      "reason": "This is commentary about how much characterization the narration needs, rather than lore or interpretation of Cobel's actions. The preceding sentence already marks the motive as uncertain, and the following sentence supplies the concrete conduct.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Her education places Lumon's influence before her managerial career. Sissy's continued loyalty brings that early attachment into conflict with the grievances Harmony has brought home.",
+      "reason": "H18 describes repeated framing with no new information. Chapter 10 has already developed the education point, while this chapter's preceding paragraphs establish the early influence and family conflict. This short paragraph stalls the visit rather than developing it.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Sissy's defense asks Harmony to continue accepting that arrangement.",
+      "reason": "The antecedent of 'that arrangement' is unclear: the preceding material describes education, belongings, and loyalty rather than one defined arrangement. The assigned question concerns the concrete personal cost of continued allegiance.",
+      "replacement": "Sissy's defense pressures Harmony to remain loyal despite the grievances she has brought home.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "There's no need to assign an unshown medical cause to see the difficulty for Harmony.",
+      "reason": "This introduces an editorial evidence-handling instruction into the narration. The surrounding sentences already avoid asserting medical causation and explain the emotional difficulty concretely, so the caveat adds no necessary protection.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Her conduct around Mark gives this history a sharper edge. As Mrs. Selvig, Cobel places herself in his outside life while also supervising the workplace his innie knows. She takes an interest in whether his connection to Gemma can reach across the severance barrier. Her attention to his encounters with Ms. Casey goes beyond an ordinary supervisor checking that employees finish their assignments. After Salt's Neck, her technical background helps explain why she can approach those encounters with such sustained interest. She understands the procedure as someone whose own work helped develop it.",
+      "reason": "H18 requires a second mention to add a consequence or other useful development. Chapter 10 already gives the outside-life intrusion and recognition inquiry in detail. The genuinely new consequence here is that her research background informs that inquiry; it can be retained without recounting the entire setup.",
+      "replacement": "Her technical background gives another context for her interest in whether Mark recognizes Ms. Casey. She's observing the limits of a procedure her own research helped develop.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Both chapters repeatedly establish that Lumon shaped Harmony before her managerial career and that Sissy's allegiance complicates her grievances. Keep the schooling explanation primarily in chapter 10 and let chapter 11 develop the factory, household, Charlotte, and the practical departure with the notebooks."
+    },
+    {
+      "chapters": [
+        10,
+        12
+      ],
+      "detail": "Cobel's access to Mark's outside life and her observation of Mark with Ms. Casey receive substantial treatment twice. Chapter 10 is their stronger home because it examines personal motivation; chapter 12 needs only the new relevance of her technical background."
+    },
+    {
+      "chapters": [
+        10,
+        11,
+        12
+      ],
+      "detail": "The recovered research and Jame's appropriated credit appear in all three chapters. The recurrence is partly functional: chapter 10 identifies a source of attachment, chapter 11 follows the recovery, and chapter 12 examines authorship. Avoid re-explaining the correction in the earlier chapters beyond what those distinct jobs require."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10. They do not establish resurrection, an AI Board, a solved revolving, a complete technical mechanism, or season-three events. Corporate history and uncertain motives are generally distinguished from demonstrated events. No definite factual or spoiler violation is established by the supplied evidence.",
+  "limitations": "Only chapters 9-12 were supplied and reviewed in full. Repetition findings therefore cover those chapters, not the complete 24-chapter narration. The proof-bank summaries and assignments were treated as authoritative; linked pages were not opened, episodes were not watched, and every incidental fictional detail was not independently verified. No audio measurement, scanner execution, or human read-aloud was performed.",
+  "input_hashes": {
+    "9": "5fe5dd9c4cbecc8db0243fbb8fa142ba452aa5ba027c5e730058071d3c19c2d2",
+    "10": "ca740328de18bcdfdafb2bde293287cc9184cb59d9c7d2c5206f5cbd70812ecf",
+    "11": "f2bdb8e72c6113e3ed4bfd2bdd4075c638c0c3d1dbf4bbcf5c4036e051fa7686",
+    "12": "b99b094376346bbd5ab93711729f5ea4e60df4f77f6959eb42f3ae8287ba2fe0"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

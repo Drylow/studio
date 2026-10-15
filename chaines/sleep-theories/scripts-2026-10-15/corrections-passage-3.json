@@ -1,0 +1,926 @@
+[
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 1,
+    "status": "applied",
+    "finding": {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Yoda's success gives Luke a concrete reason to trust his instruction, without establishing that Yoda understands everything the Force might do.",
+      "reason": "This standalone paragraph adds nothing between the preceding discussion of instruction and the final paragraph's nearly identical conclusion. H18 identifies the problem as a re-mention that \"adds nothing.\" The final paragraph already retains both the concrete result and the reason to keep learning.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 5,
+    "status": "applied",
+    "finding": {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Qui-Gon also looks for a more specific explanation of Anakin's abilities. He has Obi-Wan analyze a blood sample, and the result confirms an exceptional midi-chlorian count. Later, Qui-Gon explains to Anakin that these living organisms allow communication with the Force. That gives the boy a way to begin understanding what Qui-Gon has detected. It still leaves the teacher with separate questions. A test can indicate extraordinary potential without telling him how Anakin will respond to instruction, separation from home, or the responsibilities of Jedi life.",
+      "reason": "Chapter 2 already develops every element here: the test, communication role, exceptional potential and inability to predict educational needs. Under H18, a second mention must add \"a consequence, a comparison, the next number.\" This paragraph does not advance chapter 5's distinctive attention-to-character argument; the following birth-account paragraph supplies the next development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 5,
+    "status": "applied",
+    "finding": {
+      "chapter": 5,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Before leaving home, Anakin turns back to his mother and struggles with the separation. Shmi remains on Tatooine as her son leaves to begin his training.",
+      "reason": "After the Council discussion and Qui-Gon's offer to teach, this unmarked return to the earlier departure creates an unnecessary chronological reset. It also repeats the chapter's earlier account of leaving Shmi enslaved. The preceding paragraph already closes the assigned distinction between attentive teaching and a guaranteed future.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 8,
+    "status": "applied",
+    "finding": {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The warning on Dagobah was genuine. Han and Leia suffered, and Vader was a danger to them. Luke leaves before completing his training and continues despite warnings that Vader is waiting for him. In the confrontation, he loses his hand and hears a truth about his father that the vision hadn't prepared him for. Aboard the Falcon, Leia tends to him as they flee. He'd crossed the distance to Bespin because he'd seen her in pain. Now she's beside him, helping him endure his own.",
+      "reason": "The first four sentences repeat the chapter's established warning, departure, trap, injury and revelation. H18 calls for cutting a re-mention that \"adds nothing.\" The final image adds a useful emotional reversal and should remain.",
+      "replacement": "Aboard the Falcon, Leia tends to Luke as they flee. He'd crossed the distance to Bespin because he'd seen her in pain. Now she's beside him, helping him endure his own.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 14,
+    "status": "applied",
+    "finding": {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Luke meets Vader without the teacher who once stood between them on the Death Star. He loses his hand, learns that Vader is his father, and needs Leia and the others to get him away.",
+      "reason": "The preceding paragraph has already established Obi-Wan's inability to intervene, while chapter 8 fully narrates these consequences. H18 warns against repeating a fact without a new consequence or comparison. Ending on Luke's refusal of continuing instruction keeps this chapter centered on teacher-student contact.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 16,
+    "status": "applied",
+    "finding": {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a practical change in Anakin's position here. At the opera, he can still ask whether such a power can be learned. After Windu's death, he needs Palpatine to deliver it. He's helped destroy the possibility of returning to his former life, and Padme is still in danger as far as he knows. Palpatine sends him to attack the Jedi Temple and then to Mustafar. None of those orders comes with a shown lesson in saving Padme. His service begins immediately, while the promised remedy remains out of reach.",
+      "reason": "The preceding paragraph already establishes that Anakin commits before the promised knowledge becomes a shared search. Chapter 7 supplies the orders and their consequences in detail. Under H18's requirement that a repeat add something new, this additional paragraph delays the chapter's distinctive Exegol comparison without materially extending the argument.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 18,
+    "status": "applied",
+    "finding": {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Rey's first healing offers a smaller, clearer version of that generosity. She touches an injured creature, repairs what she can, and lets it leave. In the tunnel, the serpent moves away under its own strength, and the passage is open.",
+      "reason": "The serpent's unbargained-for help and departure have already been explained within this chapter, and chapter 24 deliberately reserves the same scene and open-passage image for the episode's final synthesis. H18 warns that a document can keep \"re-stating\" its strongest material \"with nothing new attached.\" The preceding sentence about Ben giving without securing a future is a complete local ending.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-01-force\\relecture\\passage-3-chapitres-01-24.json",
+    "chapter": 20,
+    "status": "applied",
+    "finding": {
+      "chapter": 20,
+      "kind": "artifact",
+      "severity": "minor",
+      "quote": "Nothing in the gathering requires a chart assigning personality traits to crystal colors.",
+      "reason": "This answers the outline's prohibition rather than a claim raised by the narration. H16 identifies \"announcing the content instead of delivering it\" as a problem; here the sentence similarly announces an excluded explanatory device instead of continuing the concrete search. The following sentences already explain which differences actually matter.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 2,
+    "status": "applied",
+    "finding": {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That last part is why the cargo matters alongside the named passengers. The Duke's family can't run Arrakis through their presence alone. His soldiers need the means to operate, and his administrators need a working organization around them.  What we do know is that the Atreides arrive as a governing and military presence. Interstellar transport has made that transfer of organized activity possible.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The second paragraph already explains the transfer of a functioning government, and the intervening paragraphs establish the carriage of vessels and loads. This paragraph adds no distinct mechanism.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 4,
+    "status": "applied",
+    "finding": {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild has organized its navigational capacity on a different scale. Hawat belongs to the Atreides household, while the Guild supplies transport across the imperial order. Its monopoly means that rival Houses depend on the same institution for interstellar movement. A House can retain its own Mentat without gaining an independent equivalent of Guild navigation. The comparison helps explain why impressive human resources within a House don't make that House self-sufficient. Leto's household has Hawat, Jessica, and highly trained military leaders, yet its relocation still requires the carrier.",
+      "reason": "The useful Mentat/Navigator distinction is followed by another extended relocation-and-monopoly explanation. H18 requires a re-mention to add a consequence or comparison; the comparison can be retained without repeating the prior chapters' full conclusion.",
+      "replacement": "A House can retain its own Mentat without gaining an independent equivalent of Guild navigation. Hawat's analysis helps Leto govern and prepare, but it doesn't supply the foresight needed to guide a heighliner.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 8,
+    "status": "applied",
+    "finding": {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Shields belong to the same description, although their practical role differs from that of atomics. Throughout Dune, shields shape how people defend themselves and how fighters approach an opponent. A household allowed to take them into exile retains familiar protective equipment. Herbert doesn't take us through a renegade family's departure, so the useful detail is the permission itself. The arrangement recognizes that a noble family consists of people who still need protection after losing their place in imperial politics. Survival continues to require material means once the political decision to leave has been made.",
+      "reason": "This expands the previous paragraph's already explicit point that exiles retain defensive resources, then substitutes a methodological caveat and a general statement about survival for development of the sanctuary mechanism. H18's 're-stating it with nothing new attached' applies.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 12,
+    "status": "applied",
+    "finding": {
+      "chapter": 12,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Jessica's conservatory gives another measure of the differences inside the residence. Its plants require water on a planet where conserving moisture shapes everyday conduct. For Jessica, the room is a private place of greenery and a reminder of conditions she has left behind. Its existence also makes the household's privilege tangible. Leto can change the distribution of water at his door, yet he and his family still inhabit a residence that sustains such a room. The dinner takes place within that uneven world. A discussion of water can't remain an abstract exchange about sensible policy when the hosts and guests occupy such different positions from the people outside.",
+      "reason": "The preceding water-merchant and towel paragraphs already establish the dinner's material inequalities. This additional location detour postpones the assigned banker's fear of Kynes without developing the banker's role or relationships. This is a local focus problem, not an objection to the analysis of privilege itself.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 12,
+    "status": "applied",
+    "finding": {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For the banker, this makes the dinner a more complicated setting than a meeting between a financial official and his new provincial ruler. Kynes and Tuek have their own standing, and the banker must reckon with people beyond the Atreides household. His fear of Kynes is particularly striking beside the Guild name he carries. In this room, institutional prestige doesn't spare him from personal apprehension. An interpretation worth considering is that he recognizes local consequences which the newcomers haven't yet learned to anticipate. Jessica's attention stays on the reaction itself, because it helps her identify where caution already exists among people familiar with Arrakis.",
+      "reason": "H18 applies: the preceding Kynes and Tuek paragraphs have already delivered the fear, alignment and contrast between formal rank and local standing. The closing paragraph returns to the same attributes again. This middle restatement is the least useful occurrence, and its proposed 'local consequences' remain unspecified.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 14,
+    "status": "applied",
+    "finding": {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild's dealings with the Fremen give it access to people largely hidden from imperial authorities, but they don't tell us how fully it understands them. The bargain secures spice and protects concealment; it doesn't give the Guild control over what Fremen communities may later do. Their eventual challenge to the rulers of Arrakis shows the limits of that arrangement, without establishing exactly what the Guild knew beforehand.",
+      "reason": "The following paragraph immediately repeats that access does not establish understanding. H18's document-scale echo is compounded here by an evidence-limit explanation already made earlier in this chapter. Deleting this occurrence preserves the important uncertainty in the closing paragraph.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 18,
+    "status": "applied",
+    "finding": {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Dune Messiah also gives us a glimpse of how uncomfortable this continuing arrangement is for the Guild. Edric participates in a conspiracy against Paul alongside people whose interests differ from his own. The details of their undertaking belong to that gathering, but his participation already tells us something about the imperial settlement. The Guild hasn't disappeared, and compliance hasn't made every Guild interest identical to Paul's. A Navigator can come into contact with the new imperial order while seeking a way to change the circumstances under which his organization must exist.",
+      "reason": "Chapter 17 already introduces Edric's meeting and political role, and Chapter 19 opens with the full gathering. H18 requires re-mentions to develop the subject; this third introduction mainly announces material immediately ahead. The following paragraph independently preserves the useful cooperation-versus-loyalty conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 24,
+    "status": "applied",
+    "finding": {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "The no-ship on Gammu in Heretics of Dune gives the distinction a concrete setting. The ancient vessel hidden there becomes a refuge for people whose survival depends on escaping their pursuers. Its concealment and its capacity for travel both matter to their situation.",
+      "reason": "This conflates the ancient Harkonnen no-globe used as a refuge on Gammu with a no-ship. The concealed refuge does not establish the claimed capacity for interstellar travel. That device distinction is especially important in a chapter expressly assigned to separate concealment from navigation.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 26,
+    "status": "applied",
+    "finding": {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The destruction of Rakis gives this wider setting a concrete loss. The Honored Matres destroy the planet that once supplied the spice around which imperial transport was organized. The attack is devastating, and it destroys the familiar home of the sandworms. Yet the later story continues across other worlds. Ships still carry people, the Bene Gesserit continue their work, and the struggle with the Honored Matres continues. The old planet's destruction doesn't bring all human movement to an end.",
+      "reason": "Chapter 25 has just narrated Rakis's destruction and the survival of other production possibilities. H18 requires the returning fact to carry its new consequence rather than replay the event. Here the useful new point is continued movement.",
+      "replacement": "Even the destruction of Rakis doesn't end all human movement. The later struggle continues across worlds, showing how far travel has moved beyond dependence on the old planetary source.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-02-guilde\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 26,
+    "status": "applied",
+    "finding": {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Before that destruction, a sandworm is removed from Rakis and taken to Chapterhouse. The Bene Gesserit undertake the transformation of their own world to establish the worm cycle there. That effort shows how much spice still matters after the Guild's exclusive position has weakened. The Sisterhood uses melange for purposes that navigation machines don't replace, including the practices of its Reverend Mothers. Moving a worm and changing a planet are demanding responses to the loss of Rakis. A substitute for a Navigator leaves those other needs in place.",
+      "reason": "The rescued worm, Chapterhouse transformation and continued non-navigation demand all have a developed home in Chapter 25. H18's 'same point restated with the wording shuffled' applies. The next paragraph already supplies the necessary bridge through Chapterhouse's combination of independence and vulnerability.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-03-paul\\relecture\\passage-3-chapitres-01-25.json",
+    "chapter": 13,
+    "status": "applied",
+    "finding": {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "To survive the attempt, Paul needs the riding technique Stilgar and his people teach him.",
+      "reason": "H18 identifies a point restated with nothing new attached. The preceding sentence already explains that Paul must understand precisely how a Fremen survives the encounter, and the following paragraphs identify the teaching and technique concretely.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-03-paul\\relecture\\passage-3-chapitres-01-25.json",
+    "chapter": 19,
+    "status": "applied",
+    "finding": {
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The crisis comes when Chani's death provides the circumstance for the implanted command to kill Paul. For Hayt, carrying out that command would mean murdering the person Duncan Idaho had died defending. The conflict is unbearable, and Duncan's memories return through it. His recovered identity matters because he resists the act demanded of him. The Tleilaxu conditioning meets a loyalty rooted in his earlier life, and that loyalty becomes active again. Paul survives this intended attack because the person within Hayt refuses to complete it.",
+      "reason": "This paragraph advances to the childbirth climax, after which chapters 20 and 21 return to the pregnancy and stone burner without a marked retrospective handoff. Chapter 22 repeats the same crisis and resistance in their chronological home. H18 says a repeated observation should have one home paragraph; deletion here preserves all substantive developments later.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-03-paul\\relecture\\passage-3-chapitres-01-25.json",
+    "chapter": 19,
+    "status": "applied",
+    "finding": {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The recovery changes what the Tleilaxu can offer Paul. Before this moment, they could return a body with familiar features and new training. Now Duncan's awakening demonstrates that personal memories can return as well. For a man facing bereavement, that is a terrible discovery to receive from an enemy. Duncan is genuinely restored to him, and the restoration gives the Tleilaxu a stronger means of applying pressure. Paul has regained someone who can remember him as the young Atreides heir. He must also live with knowing that the people who arranged their reunion intended to use that love against him.",
+      "reason": "This advances beyond Hayt's arrival to the consequence of his recovered identity, which chapter 22 explains again through Scytale's concrete offer concerning Chani. Under H18, the later version adds the actual demand and is the more useful home. Removing this paragraph together with the preceding finding leaves chapter 19 ending coherently on the danger of Hayt's conditioning.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-03-paul\\relecture\\passage-3-chapitres-01-25.json",
+    "chapter": 21,
+    "status": "applied",
+    "finding": {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul is among those injured, even as his conduct begins to make him seem separate from them.",
+      "reason": "H18 applies because the paragraph has already said that Paul suffers the same bodily loss as other victims, while both the opening and next paragraph explain his unusual conduct. This sentence adds neither a new injury nor a new consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "DV-03-paul\\relecture\\passage-3-chapitres-01-25.json",
+    "chapter": 25,
+    "status": "applied",
+    "finding": {
+      "chapter": 25,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Leto's rise also means that Muad'Dib can remain useful after the Preacher has been killed. The new ruler is Paul's son. His descent gives Paul's name a continuing place in the succession, alongside the religious life already built around it. Paul has become part of the ancestry through which the next government is understood. His public name can be spoken in accounts of legitimate succession even though the man himself had returned to attack the order governing under that name.",
+      "reason": "H18 identifies repeated framing without sufficient new development. The preceding paragraph has already established succession through the surviving children, and the final paragraph gives the stronger concrete endpoint through Arrakeen's temple, officials and Atreides descent. This intervening paragraph makes the ending land twice.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 1,
+    "status": "applied",
+    "finding": {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "When Juliette encounters the dispenser, we can now remember Daniel giving it to Helen, even though Juliette doesn't know that part of its history.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The preceding sentences already say that Daniel gives Helen the toy, that the audience remembers the association, and that Juliette encounters it in her own circumstances.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 11,
+    "status": "applied",
+    "finding": {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a small but important difference between knowing that Meadows was interested in Quinn and learning what she took away. General interest leaves Lukas with a broad field of possible books. The family's account connects a particular text to her inquiry. It also gives the Penbrooks a place in the investigation beyond their inherited surname. They know something Lukas hasn't found in the material available to him. A recollection that may have seemed like an episode in the family's dealings with officials becomes the detail that helps him move forward.",
+      "reason": "H18's document-scale 'echo' applies: the preceding paragraph has already identified Meadows's visit, the obtained Pact copy and its value as a concrete lead. This paragraph explains that contribution again without advancing the search.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 13,
+    "status": "applied",
+    "finding": {
+      "chapter": 13,
+      "kind": "factual",
+      "severity": "major",
+      "quote": "People in Silo 17 have disabled their Safeguard and are leaving.",
+      "reason": "S6 identifies Jimmy's mother as the person who disabled Safeguard. The existing sentence assigns that intervention to the population now leaving and collapses separate events.",
+      "replacement": "People are leaving Silo 17, where Jimmy's mother had disabled the internal Safeguard.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 14,
+    "status": "applied",
+    "finding": {
+      "chapter": 14,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Helen returns more than once, so the relationship remains within reach even when Troy can't place it. Those flashes don't restore a continuous account of their time together.",
+      "reason": "The opening and second paragraph already establish repeated, incomplete recollection. B5 requires useful development, and S8 supplies an unused concrete consequence: Victor files Troy's repeated notes about Helen.",
+      "replacement": "Victor later files Troy's repeated notes about Helen. Her recurrence has left a record that someone managing Troy can collect, even though Troy still lacks a continuous account of their time together.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 15,
+    "status": "applied",
+    "finding": {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Then the same work would have to continue through the intervening generations. A family tree needs links that meet: this person's child is the parent of that person, whose child can in turn be identified. One secure relationship near Helen and another near Juliette would still leave a gap if nothing joined them. The people in that gap would have their own births and families. Treating them as a blank passage of time makes the theory sound smoother, but it also removes the information needed to test it.",
+      "reason": "The chapter needs the intervening-generations requirement, but this full paragraph extends the preceding explanation of missing people into a methodological lecture. H18 calls for consolidating repeated framing rather than restating it.",
+      "replacement": "The child's descendants would then need to be traced through connected parent-child relationships to the Nichols family.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 17,
+    "status": "applied",
+    "finding": {
+      "chapter": 17,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "They enter different installations, separating the couple at a moment when Helen is pregnant.",
+      "reason": "H18's 're-mention that adds nothing' applies locally: the preceding two sentences already establish Helen's pregnancy and their placement in Silo 18 and Silo 1.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 22,
+    "status": "applied",
+    "finding": {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "The tape Juliette takes from IT seems, at first, like an unusually small thing for Bernard to resent. She works on machinery that keeps the silo alive, and tape is a practical material she can put to use. Yet her theft continues to matter to him. By the end of the first season, the question of which department holds which tape has become part of her survival. Supply can affect what happens to Juliette through the materials that reach her suit, even while the public procedure continues around her.",
+      "reason": "Chapter 4 already gives this opening, material history and survival consequence a full home. H18 says a recurring theme should have 'one home paragraph' while other sections make their own point. Chapter 22 should begin with its comparative contribution.",
+      "replacement": "Walker's appeal to Carla shows how access to materials can affect an outcome even when neither person can cancel the official order. Ed's theft from Critical Supply gives that access a different use: removing goods that other residents depend on.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 22,
+    "status": "applied",
+    "finding": {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "Juliette's original interest in the tape comes from her work in Mechanical. She judges equipment by whether it does the job, and the IT tape disappoints her. That's an awkward detail if we assume the department with protected resources must always have the better stock. Her complaint gives the material a history before anyone sends her outside. She has handled it and compared its performance with the tape used in Mechanical. Later, that ordinary maintenance judgment gives Walker a reason to worry about what will seal Juliette's suit.\n\nWalker takes that concern to Carla in Supply. The visit matters because Walker has spent years unable to leave her workshop, and reaching Carla requires her to cross a boundary that has kept her apart from the rest of the silo. But the practical purpose of the journey is quite specific. Carla is in a position to help with the tape. Walker can't cancel Juliette's sentence. She can bring a problem to someone whose work touches the equipment Juliette will depend on.",
+      "reason": "These two paragraphs repeat chapter 4's material comparison, Walker's isolation, her visit and Carla's practical position. They delay the new supply-access comparison without adding a distinct consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 22,
+    "status": "applied",
+    "finding": {
+      "chapter": 22,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "The message about the tape's quality gives Juliette a small piece of reassurance before she leaves. She doesn't receive a full account of Walker's effort or a chance to inspect the entire preparation process herself. She has to act with what reaches her. For the viewer, the connection between Walker, Carla, and the better tape explains why a departmental supply issue deserves attention. A difference that sounds petty during an argument about stolen property can matter enormously when that material is used around a person's suit.\n\nThere's a limit to that conclusion: better sealing helps explain Juliette's survival without making the outdoor danger imaginary. The intervention concerns the equipment placed between her body and the environment. Walker's concern makes sense precisely because failure there would leave Juliette exposed. Supply's contribution is therefore concrete. Someone has helped her receive material that performs better, and the result changes what she's able to do after the doors close behind her. The public hasn't had to hear a speech about tape for that help to take effect.",
+      "reason": "Chapter 4 has already explained the message, inability to test the finished suit, survival consequence and outdoor-hazard limitation. H18 requires removing unchanged repetitions; the immediately preceding paragraph already preserves chapter 22's useful contrast between watching and material access.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 24,
+    "status": "applied",
+    "finding": {
+      "chapter": 24,
+      "kind": "structure",
+      "severity": "major",
+      "quote": "The internal mechanism has failed, yet Silo 17 can still be targeted through a separate external action.",
+      "reason": "The assigned job is to distinguish mechanisms concretely. S8 identifies the external action as a drone operation led by Troy; repeatedly calling it an 'action' leaves the causal distinction unnecessarily vague.",
+      "replacement": "The internal mechanism has been disabled, yet Troy leads an external drone operation against the people leaving Silo 17.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 24,
+    "status": "applied",
+    "finding": {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "In Jimmy's account of his home, his mother has to disable the very mechanism whose name sounds protective.",
+      "reason": "The supplied evidence establishes the mother's intervention as a season-three revelation, not specifically as Jimmy's testimony. The sentence also shifts from an accomplished intervention back to an unexplained present-tense necessity.",
+      "replacement": "Jimmy's mother disabled that lethal mechanism inside his home.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 24,
+    "status": "applied",
+    "finding": {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That makes her intervention different from Juliette's earlier escape through the cleaning procedure. Juliette survives with better tape sealing her suit, after Walker seeks help through Supply. The seals protect her long enough to continue walking outside. Jimmy's mother interferes with an internal mechanism that threatens the population of a silo. Each action addresses a particular physical danger. Juliette's working seals don't make everything beyond the door harmless, and disabling Silo 17's internal Safeguard doesn't remove every way its inhabitants can be attacked.",
+      "reason": "The tape route and limited implication have already been explained in chapters 4 and 22. Here the comparison repeats chapter 24's opening conclusion instead of developing the separate internal mechanism and drone operation.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 25,
+    "status": "applied",
+    "finding": {
+      "chapter": 25,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Troy's continuing flashes of Helen show that his connection with her persists within the imposed identity and assignment.",
+      "reason": "H18's echo applies across chapters 13-14 and 25. This standalone paragraph adds no consequence for speaking, interpreting or carrying out an instruction.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-04-silo-indices\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 26,
+    "status": "applied",
+    "finding": {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The season-three Before Times story makes the missing comparison especially relevant. Helen and Daniel are separated into Silo 18 and Silo 1. Their shared history crosses the boundary that later divides those settings. Residents who know only their own silo's account wouldn't necessarily have access to that connection. The audience can place the separation beside the later isolation because both events have been shown. Within the story, bringing those pieces together would require some continuity of information across people and places that have been kept apart.",
+      "reason": "Chapter 17 already develops how separation creates different continuations and incomplete accounts. H18 calls for each section to make its own point; chapter 26's stronger distinct material concerns comparing rules, local histories and resident testimony.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 2,
+    "status": "applied",
+    "finding": {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His own account of why he draws gives the collection its most immediate purpose. He uses pictures to help him remember. That makes keeping them an ongoing activity, with consequences beyond whether another resident finds a useful clue. Victor is trying to retain access to people and events that can otherwise become difficult for him to describe. An investigator might want to remove one image from the collection and examine it in isolation. For Victor, that same image belongs among other things he's chosen to preserve, and separating it may lose associations he hasn't yet explained.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The opening already establishes preservation as memory support; the investigator and removal scenario is hypothetical and adds no supplied development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 3,
+    "status": "applied",
+    "finding": {
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "By season four, Victor's concern for Ethan has acquired a painful specificity. At the car, with Tabitha and Ethan, his thoughts turn toward the possibility that Ethan could be left as he was. The details of that discovery belong to their own part of the story. What matters for their relationship here is that Victor looks at Ethan and fears an outcome for him. His attention has moved beyond whether the boy believes him. He wants Ethan to avoid a childhood shaped by the absence of the people he needs.",
+      "reason": "H18 says a repeated fact's second mention must add something. Chapters 20 and 21 fully develop this fear; this preview also interrupts itself to announce that the details belong elsewhere. Its deletion preserves the chapter's already-complete friendship analysis.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 4,
+    "status": "applied",
+    "finding": {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "The remembered layout also makes his task personal. A newcomer can look across the grounds and see the arrangement that exists today. Victor has an older arrangement in mind to compare it with. His steps give him a way to bring that comparison into the present. The scene doesn't supply a speed or a cause for moving trees. It stays with his effort to check them. That modest scale is part of its interest. He isn't describing an entire hidden mechanism. He's attending to the distance between two places he knows.",
+      "reason": "H18's document-scale echo is present within this chapter: the starting point, bodily measurement and comparison with remembered surroundings have each already been explained. This paragraph adds another methodological boundary instead of another scene development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 4,
+    "status": "applied",
+    "finding": {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Ethan's offer fits that scale. Helping Victor count wouldn't require him to solve the road, explain the boy in the forest, or make the town safe for his family. It would give him a part in something happening directly in front of him. For a child whose arrival has involved injury and frightening events he couldn't prevent, that small opportunity has weight. This is an interpretation of his willingness, rather than a motive he explains. The action itself is straightforward: he hears what Victor is doing and wants to take part.",
+      "reason": "H18 applies because the paragraph beginning 'When Victor explains' already develops the accessible scale of Ethan's participation. The added motive speculation then requires an explicit methodological disclaimer, making this the less useful treatment.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 5,
+    "status": "applied",
+    "finding": {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "As an adult, Victor has practical familiarity that newer residents lack. His response to changes in the town can come from having something older to compare them with. When he measures the distance between trees and worries that they're moving, he's attending to the physical place around him. Someone who arrived recently couldn't make the same comparison from personal experience. His measurements still require interpretation, but the activity tells us something useful about him: he notices differences and tries to give them a concrete form.",
+      "reason": "H18: chapter 4 has just established this observation and its meaning at length. The following tunnel example already supplies the practical-knowledge contrast needed here.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 10,
+    "status": "applied",
+    "finding": {
+      "chapter": 10,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Victor's lunch box then helps connect that journey with a real person outside. Tabitha finds his childhood address in it and goes to Henry's home in Camden, Maine. Directions associated with Victor have now helped her reach both the lighthouse and his father, though by very different means. The address can be read and followed through ordinary streets. The tree requires a leap into a passage whose workings remain hidden. Having both in the same journey makes it easier to see how specific each piece of guidance is.",
+      "reason": "This delivers chapter 15's central discovery and its ordinary-versus-supernatural-information analysis before that chapter. The lighthouse argument needs only the distinction between reaching outside and establishing a repeatable route.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 12,
+    "status": "applied",
+    "finding": {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Jasper's ordinary purpose makes that mistake especially understandable. A ventriloquist's act encourages an audience to follow a conversation between a person and a figure whose voice comes from that person. Christopher's performances gave Jasper an apparent presence long before Victor began searching for an explanation. The town also contains creatures and experiences that make an impossible speaker difficult to dismiss on appearance alone. Victor therefore has reasons to try. The difficulty comes when he expects Jasper's recovery to confirm the speaking role he's already assigned it.",
+      "reason": "H18 applies to the repeated explanation of the performance-based association, already supplied in the second paragraph. The additional general appeal to impossible experiences does not advance the retrieval or correction.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 13,
+    "status": "applied",
+    "finding": {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The corrected account connects Christopher's attention to the symbol with the message about the children and the information Victor carried to Miranda.",
+      "reason": "H18: this standalone summary repeats the preceding three paragraphs without adding a consequence or preparing a necessary transition.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 15,
+    "status": "applied",
+    "finding": {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For Tabitha, the difficulty is that the most relevant part of her account is also the hardest part to explain. Victor isn't a child she recently saw somewhere. He's an adult who has spent decades in a place she can't locate for Henry on a map. She can speak about meeting him because she has met him. Henry has no comparable experience that would make the rest easy to accept. Their conversation has to cross the distance between a father's missing son and a woman's account of the man that son became.",
+      "reason": "H18: the paragraph beginning 'At the house' already establishes the missing-child versus grown-man discrepancy, and the intervening paragraph explains Henry's skepticism. This is the third treatment without a new event.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 15,
+    "status": "applied",
+    "finding": {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Tabitha can therefore begin with something Henry can recognize, even when her explanation is difficult to hear. She has an address she followed, a lunchbox he knows, and a disappearance that can be found in the news. Henry has a stranger at his home who says his son is alive. Their discussion grows out of those particular things. The object Victor sent along for Tabitha's journey has reached the place written inside it, where his father can recognize it and ask how it came to be in her hands.",
+      "reason": "H18: this closing inventory repeats the address, recognition, reporting and skeptical encounter after each has already received its own explanation. The preceding paragraph already closes on the object's connection to Henry's remembered child.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 18,
+    "status": "applied",
+    "finding": {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Victor's question and Henry's distress therefore reach toward different things. Victor's question suggests a wish for maternal connection, while Henry is struggling with the revelation and Sophia's manipulation. Henry is trying to understand what the revelation does to the family life he remembers. They hear Boyd's information together, but it does not give them a single shared response. Each has lost something different, and each is being asked to reconsider the person associated with that loss.",
+      "reason": "H18: the second and third sentences duplicate Henry's struggle, while the surrounding chapter has already distinguished the two responses. A concise synthesis retains the useful comparison.",
+      "replacement": "Victor's question suggests a wish for maternal connection, while Henry is trying to understand what the revelation does to the family life he remembers. They hear Boyd's information together, but each responds from a different relationship with Miranda.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 20,
+    "status": "applied",
+    "finding": {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His attempt to recover Jasper offers a useful comparison. Victor went looking for the dummy because he believed it would help him recover a conversation. Having Jasper again didn't make the remembered speaker correct. Sara later helped him recall that Christopher had been speaking with the Boy in White. The car visit has a different outcome and its own disturbing discovery, but that earlier detour explains why an object can matter deeply while still needing interpretation. Finding something and understanding everything connected with it are separate parts of the work.",
+      "reason": "H18: the Jasper correction has already received the opening and two dedicated chapters. The first four paragraphs here already establish the car's evidential limits, so this analogy repeats both the example and the lesson.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 23,
+    "status": "applied",
+    "finding": {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Victor's correction concerns a particular event. Christopher was involved, there was a conversation, and Victor had attached the wrong speaker to it. Keeping those details separate lets him revise the account without abandoning everything around it. Jasper's presence in his recollections doesn't require Jasper to have spoken. Once Victor recognizes the Boy in White's role, the question becomes what that figure told Christopher and how Christopher responded. The correction gives them a more specific account to work with.",
+      "reason": "H18: the immediately preceding paragraph supplies all the correction needed for this comparison, and chapters 1 and 13 already explain why revision does not invalidate the entire account.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 23,
+    "status": "applied",
+    "finding": {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Sara can help Victor reconsider who spoke to Christopher without making anyone's safety depend on accepting his revised account. Henry's offer ties the life he wants to harming Victor, putting pressure on him to obey rather than keep questioning.",
+      "reason": "H18: this repeats the immediately preceding paragraph's contrast between continued conversation and coercive obedience. The original paragraph contains the fuller useful analysis and should remain.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 26,
+    "status": "applied",
+    "finding": {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The visions have given Henry something painfully attractive: a version of life in which he can have his son under different circumstances. His reunion with Victor brought him face to face with the adult his child became during their separation. That reunion couldn't return the years they missed. The alternate-looking son in the visions gives Henry an image of another possibility, and the demand to remove the real Victor attaches violence to that apparent comfort. By the finale, Henry is acting against the person whose absence made the offer appealing.",
+      "reason": "H18: chapters 22 and 23 have established this appeal and demand in detail. Chapter 26's opening already reconnects the confrontation to the offer, so this paragraph delays the distinct development: Ethan's intervention.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 26,
+    "status": "applied",
+    "finding": {
+      "chapter": 26,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Henry's position is harder to separate from the offer he's received. He came back into Victor's life as someone who knew the family before the town and could recognize the child within the adult. Now Victor has to protect himself from that same father. The reversal doesn't erase Henry's earlier recognition or make their reunion meaningless. It adds an event they must live with. Victor has seen Henry attempt to harm him. After Ethan interrupts and Victor takes away the gun, both men are still alive.",
+      "reason": "H18: this again recites the recognition, threat, disarming and survival. The following paragraph adds the genuinely useful limit about unsettled trust, while the final paragraph retains the caregiving transition.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-05-from-victor\\relecture\\passage-3-chapitres-01-27.json",
+    "chapter": 27,
+    "status": "applied",
+    "finding": {
+      "chapter": 27,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Henry can help with the family history he shared with Victor, while Victor's drawings and possessions preserve parts of the years Henry missed.\n\nVictor's drawings can remain available even when he can't yet explain them. Keeping them gives others something to discuss with him as his account develops.",
+      "reason": "H18: these two short paragraphs return to conclusions already developed in chapters 2, 6 and 16 without adding information. They also interrupt the opening's grounded movement from danger toward care, contrary to the assignment's request not to recap the mysteries.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 1,
+    "status": "applied",
+    "finding": {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "That doesn't make her the sole developer of every part of severance.",
+      "reason": "The isolated 'That' follows a question about company credit rather than a clear statement of Cobel's contribution. The necessary qualification can stand without making the listener recover its antecedent across the CTA.",
+      "replacement": "Cobel's original research doesn't mean she developed every part of severance alone.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 10,
+    "status": "applied",
+    "finding": {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Consider what Milchick has actually gained with his promotion. He now has responsibility for the severed floor, where the refiners' behavior and the demands placed on their work become problems he has to handle. Natalie arrives with images of Kier, rather than an image of Milchick undertaking that responsibility. As an interpretation, this makes the gift feel like a redirection of attention. His achievement is acknowledged through another celebration of the founder. Even at a moment when Milchick might reasonably expect recognition as an individual, Lumon places Kier at the center of the exchange.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The second paragraph already explains that Milchick's advancement is recognized through another depiction of Kier rather than his own accomplishment; this paragraph does not develop that interpretation further.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 10,
+    "status": "applied",
+    "finding": {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The choice of Natalie as messenger adds another layer without making her feelings easy to settle. She's a Black woman who says this same gesture meant something loving to her. Milchick is therefore dealing with someone whose stated experience differs from his own emerging discomfort. She may mean what she says; her testimony belongs to her. The pressure comes from the way that testimony enters his presentation. Her response can become a standard against which his response is measured, even though receiving similar paintings doesn't oblige them to experience the gift in the same way.",
+      "reason": "The approved-response pressure has already been established in the third paragraph. Preserve the useful distinction between Natalie's potentially sincere response and Milchick's independent reaction without repeating the entire analysis. H18 requires the second mention to add something.",
+      "replacement": "Natalie may sincerely value her own gift. Her response doesn't oblige Milchick to feel the same way about his.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 10,
+    "status": "applied",
+    "finding": {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His decision to ask Natalie about the paintings is also specific. She was the person who delivered them, and she told him she'd received the same thing. Returning to her gives him someone with whom there is at least a stated shared experience. Yet she's still the colleague who carried Lumon's message into the original exchange. That makes the conversation delicate. The person who might understand his discomfort is also someone before whom expressing it could feel professionally risky. He has to find language that permits the subject to exist between them.",
+      "reason": "The messenger's dual role and the professional difficulty of disagreement were already explained in the third paragraph, and the immediately preceding paragraph has established his later conversation. This is the least necessary additional explanation of that same pressure.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 13,
+    "status": "applied",
+    "finding": {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "When Harmony takes possession of the research, she gains no immediate public correction. Jame hasn't withdrawn his claim, and Lumon hasn't replaced its account with hers. What she has is the material needed to press the matter beyond a private complaint. She can show someone her work rather than ask them to judge only between her word and the Eagan name. After years spent administering severance under Lumon's authority, Cobel has recovered pages on which her own part in its development can still be read.",
+      "reason": "The opening already establishes material evidence beyond her job title, while the preceding paragraph contrasts her recovered pages with the family's institutional record. The absence of an immediate public correction is the useful remaining development. H18 calls for removing re-mentions that add nothing.",
+      "replacement": "Recovering the pages doesn't produce an immediate public correction. Jame retains the inventor's credit, while Cobel now has material with which to challenge it.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 16,
+    "status": "applied",
+    "finding": {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helly has returned; Helena's exposure is not evidence that every later appearance conceals another substitution. The deception still leaves Mark and the team with experiences they believed they had shared with someone who was absent.",
+      "reason": "Restoration and mismatched shared experience have already been explained twice in this chapter. The remaining sentence is an explicit theory-policing caveat where the positive procedural outcome has already supplied the boundary. H18 identifies repeated framing without new information.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 18,
+    "status": "applied",
+    "finding": {
+      "chapter": 18,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The apparent inference is that Lumon sees value in adapting that appeal to its own purposes.",
+      "reason": "H12 calls for collapsing stacked hedging. 'Apparent inference' needlessly qualifies an interpretation already introduced through the concrete commission and revision.",
+      "replacement": "The commission suggests that Lumon sees value in adapting that appeal to its own purposes.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 20,
+    "status": "applied",
+    "finding": {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "At the Lumon gala, Helly finds photographs of herself looking happy at work. The pictures belong to a public account of Helena Eagan's decision to undergo severance. Helly recognizes the people beside her, and she knows what their working days have actually been like. The same face can therefore carry two very different accounts into that room. For Helena, the photographs help advertise participation in a family enterprise. For Helly, they're images of a life whose difficult parts have been removed before anyone outside gets to hear about it.",
+      "reason": "Chapter 6 already gives the photograph-selection analysis in detail. Chapter 20's distinct contribution begins in the next paragraph with learning a family identity without remembering its relationships. Removing this setup preserves that contribution and avoids H18's document-scale echo.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 20,
+    "status": "applied",
+    "finding": {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helena has agreed to be part of that arrangement. Whatever her private feelings about the Eagan family, she participates in a campaign that uses her position as Jame's daughter to make severance more persuasive. Helly's refusal creates a difficulty that another promotional photograph can't settle. The employee inside the exhibit can speak. She can disagree with the purpose for which her image is being used. At the gala, Helena's family standing gives Helly a brief opportunity to reach people who otherwise wouldn't hear from the severed floor.",
+      "reason": "The immediately preceding paragraph already explains Helly's use of the microphone against the campaign, and chapter 6 has established why Helena's surname makes that access persuasive. This paragraph adds no separate identity distinction. H18 applies to the repeated analysis, not merely repeated scene names.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 20,
+    "status": "applied",
+    "finding": {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Helly then has to encounter consequences produced during her absence. Mark's experience of the retreat includes Helena's impersonation, while Helly doesn't possess Helena's memories of it. Even their closest relationships can become difficult to follow under those conditions. Mark recognizes the person in front of him by her face and by the name he's used for her, but neither guarantees that she remembers the encounter he remembers. The Eagan identity adds another complication: the woman who entered that relationship under Helly's name could leave the severed world and resume her place outside.",
+      "reason": "Chapters 16 and 17 already explain the mismatched memories and Helena's unequal outside access. The preceding paragraph supplies enough retreat context for this chapter's next, useful distinction between bodily background and accessible experience. This is H18's third treatment without a new consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 24,
+    "status": "applied",
+    "finding": {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Jame tells Helena about his revolving while she's preparing to appear before the people gathered for Lumon's gala. He speaks as though the term belongs to a family conversation she already understands. For the listener, though, it arrives without an explanation. That gap makes it tempting to connect the word to severance and imagine an Eagan surviving inside another body. Before making that connection, it's worth staying with what Jame actually does in the room. He addresses his daughter, recalls her childhood, and places her participation in severance within the family's plans.",
+      "reason": "E2 and chapters 6 and 8 establish that Helly is awake during this exchange; Jame only believes he is addressing Helena. The paragraph also repeats chapter 8's setup. A compact correction can retain the theory connection while identifying the actual listener.",
+      "replacement": "Jame mentions his revolving to Helly at the gala, believing he's speaking to Helena. The unexplained term invites a connection with severance, but he describes no process by which an Eagan could survive inside another body.",
+      "rewrite_required": false
+    }
+  },
+  {
+    "report": "QP-06-severance-eagan\\relecture\\passage-3-chapitres-01-26.json",
+    "chapter": 24,
+    "status": "applied",
+    "finding": {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "His account of showing her an early severance chip gives that conversation a particular intimacy. According to Jame, the child Helena responded to the device with an idea about everyone receiving one. He presents her current involvement as the fulfillment of something that began between father and daughter. It's a family account, delivered by a man with a strong interest in the public story being told that evening. Even so, its immediate subject is understandable: the technology has become part of how Jame describes his daughter's place in the Eagan family.",
+      "reason": "The childhood account and its family-promotion function were already explained in chapter 6 and revisited in chapter 8. Chapter 24 later uses the chip recollection directly in its preservation-and-transfer test, so this preliminary explanation is unnecessary. H18 requires a new consequence on re-mention.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  }
+]

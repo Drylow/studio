@@ -1,0 +1,156 @@
+{
+  "chapters": [
+    {
+      "number": 17,
+      "summary": "Edric joins Mohiam, Irulan and Scytale in a concealed conspiracy against Paul, bringing prescient protection while remaining dependent on Paul's spice supply.",
+      "new_information": [
+        "The opening conspiracy brings together a Guild Navigator, a Bene Gesserit Reverend Mother, Paul's politically married wife and a Tleilaxu Face Dancer.",
+        "Edric's prescience conceals the participants from Paul's prescient observation.",
+        "Mohiam's breeding-program interests overlap with, but differ from, Irulan's personal and dynastic interests.",
+        "The Guild's dependence on Paul's spice supply gives its representative a reason to seek change without an open confrontation."
+      ],
+      "local_answer": "The chapter explains why Edric is useful to the conspiracy and why participation can be understood as a calculated institutional risk, but Scytale's distinct objective remains less concrete than the other participants' interests.",
+      "open_issues": [
+        "Give Scytale a specific Tleilaxu objective rather than referring generally to Tleilaxu capabilities and aims.",
+        "Some explanation of Edric's concealment is repeated at the start of chapter 18."
+      ],
+      "evidence_notes": "The participants and Edric's concealment role agree with G5. The Guild's motive is appropriately identified as political interpretation rather than reported private testimony. No expanded-prequel material or adaptation-specific physiology appears."
+    },
+    {
+      "number": 18,
+      "summary": "Edric's prescience conceals the conspiracy from Paul's foresight without preventing ordinary discovery, disagreement or resistance.",
+      "new_information": [
+        "Concealment from foresight does not erase testimony or prevent participants from disclosing information.",
+        "Paul can receive information through his household and political institutions rather than relying exclusively on visions.",
+        "Plans developed under prescient concealment still require actions that expose them to ordinary observation and resistance.",
+        "Knowing Paul's attachments does not guarantee that the conspirators can determine his response."
+      ],
+      "local_answer": "The chapter answers the assigned question clearly by distinguishing a prescient blind region from operational safety, but repeats that distinction after it has already been established.",
+      "open_issues": [
+        "Delete the repeated explanation of Edric's basic contribution.",
+        "Remove the standalone sentence that merely restates the surrounding paragraphs' conclusion."
+      ],
+      "evidence_notes": "The central concealment claim follows G5. The ordinary-witness comparison is explanatory reasoning, not an invented canonical incident. The chapter avoids an exact physical theory of interacting prescient abilities."
+    },
+    {
+      "number": 19,
+      "summary": "The Guild presents the Tleilaxu-made Hayt to Paul, combining diplomatic access, Duncan Idaho's emotional significance and concealed conditioning in a person who exceeds his intended use.",
+      "new_information": [
+        "Hayt is a ghola made from Duncan Idaho's body, with artificial eyes and initially without Duncan's remembered life.",
+        "Tleilaxu manufacture and conditioning are separate from Guild delivery and diplomatic presentation.",
+        "Duncan's death protecting Paul and Jessica gives the gift a particular emotional force.",
+        "Hayt's Mentat training and Zensunni philosophy give him intellectual usefulness beyond his resemblance to Duncan.",
+        "Paul accepts the gift despite recognizing its possible danger.",
+        "Hayt develops relationships within the household, including with Alia, beyond the conspirators' intended manipulation."
+      ],
+      "local_answer": "The chapter successfully distinguishes manufacture, delivery, manipulation and personhood, showing why a distrusted diplomatic gift can still gain intimate access to Paul.",
+      "open_issues": [],
+      "evidence_notes": "The institutional division agrees with G6, and the chapter does not give the Guild authority over Tleilaxu production. The additional novel details are not individually documented in the supplied proof bank; no contradiction with the supplied scope is apparent. Interpretations of emotional access are presented as analysis rather than invented dialogue or scenes."
+    },
+    {
+      "number": 20,
+      "summary": "Duncan's recovered identity and Paul's refusal of the Tleilaxu bargain demonstrate that Edric's concealment cannot guarantee the conspiracy's desired outcome.",
+      "new_information": [
+        "The conflict between Hayt's conditioning and Duncan's loyalty precipitates the recovery of Duncan's identity.",
+        "That recovery demonstrates the possibility underlying Scytale's offer to return Chani as a ghola.",
+        "Recovering ghola memory is itself a Tleilaxu objective, so the result is not simply a technical failure for them.",
+        "Paul's desire for Chani's return does not make him accept the accompanying bargain."
+      ],
+      "local_answer": "The chapter supplies concrete outcomes that answer chapter 18's distinction between concealment and control, but repeatedly returns to the same conclusion after those outcomes have demonstrated it.",
+      "open_issues": [
+        "Delete the intermediate summaries of concealment's limits.",
+        "Remove the late recap of the opening conspiracy meeting, which adds no new causal explanation."
+      ],
+      "evidence_notes": "The chapter develops the supplied assignment's recovery and refusal events while keeping Chani's death brief. It correctly acknowledges the Tleilaxu interest in restoring identity rather than treating Duncan's recovery as an entirely unforeseen malfunction. No invented quantities, treaties or technical procedures appear."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 17,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "As a Face Dancer, he belongs to a tradition of bodily alteration very different from Edric's, and his approach to Paul draws on Tleilaxu capabilities and aims.",
+      "reason": "The assignment asks for the participants' distinct interests. This sentence names Scytale's affiliation and capabilities without identifying an objective, leaving his account less concrete than Mohiam's or Irulan's. The ghola-memory objective is already supplied in chapter 20 and can be introduced briefly without recounting the plot.",
+      "replacement": "As a Face Dancer, he brings Tleilaxu methods into the discussion. His people's interest includes whether a ghola can recover the memories of the person from whose body it was made.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The arrangement depends on Edric being prescient himself. A Navigator's ability to look ahead, already useful to the Guild in moving ships, has a political use here. Mohiam, Irulan and Scytale can meet under the concealment he provides. They don't each have to possess his abilities to benefit from them. This makes Edric valuable before the group has carried out any proposal. His contribution gives the others room to argue and plan, though they still have to decide what to attempt and persuade one another to take part.",
+      "reason": "H18 identifies the echo as repeatedly stating a fact or framing with nothing new attached. Chapter 17 already explains all of these points, including the navigation comparison and Edric's usefulness before agreement; chapter 18's opening also reestablishes the protection. Deleting this paragraph lets the chapter reach its distinct ordinary-witness comparison sooner.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Edric denies Paul a view of their deliberations, but the conspirators still have to turn those deliberations into actions other people may resist.",
+      "reason": "H18's document-scale echo applies: the preceding paragraph already explains that the conspirators must act outside the meeting and face Paul's ordinary attention, while the following paragraph develops the same practical burden. This isolated summary adds no development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Duncan's recovery gives Paul an ally who can resist the purposes imposed on Hayt. Edric's concealment has protected the conspiracy's preparations without preserving its control over the man it brought into Paul's household.",
+      "reason": "H18 warns against restating the same observation without new information. The preceding paragraph already says Duncan can recognize Paul and resist manipulation, and the chapter's ending retains the explicit connection to Edric's limited protection.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Scytale cannot turn his offer into the agreement he wants, and Paul survives the confrontation. Edric's protection has hidden the conspiracy's preparations without ensuring that its final demands succeed.",
+      "reason": "H18's echo pattern applies to another summary of concealment without control. Paul's refusal is explained immediately before this passage and retained in the final paragraph, so this intermediate conclusion is the least useful repetition.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Edric's contribution remains substantial. At the conspiracy's opening meeting, his presence protects participants from Paul's prescient scrutiny. Irulan, Reverend Mother Mohiam and Scytale can discuss their plans with the Navigator there for a reason. They need shelter from a ruler who might otherwise perceive their activity before they can act. But the shelter leaves each participant with work to do afterward. Irulan must live within the imperial household. Scytale must approach his intended victims. Hayt must respond when the conditioning presses against Duncan's old loyalty.",
+      "reason": "H18 says a thematic echo should have one home rather than recur in every section. This paragraph returns to the meeting, participant list and ordinary-action distinction already developed in chapters 17 and 18. After chapter 20's concrete recovery and bargaining developments, it delays the ending without adding a new consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "Both openings explain that an ordinary closed room cannot protect the plot from Paul's foresight, and both explain that Edric is valuable before proposals are enacted. Chapter 18 needs a brief premise for orientation, but its second paragraph repeats chapter 17 rather than advancing the ordinary-witness comparison."
+    },
+    {
+      "chapters": [
+        18,
+        20
+      ],
+      "detail": "Chapter 18 establishes that concealment cannot determine decisions; chapter 20 usefully demonstrates that limit through Duncan and Paul. The overlap becomes excessive only when chapter 20 repeatedly restates the general principle and recaps the opening meeting instead of allowing those outcomes to carry the explanation."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "The return to Hayt's conditioning and Duncan's emotional importance is justified: chapter 19 explains access and intended manipulation, while chapter 20 adds recovered identity and the Tleilaxu bargain. This is progression rather than a deletion target."
+    }
+  ],
+  "scope_status": "The supplied chapters remain within Frank Herbert's original-book continuity and focus on Dune Messiah. No expanded-prequel origin story, film-specific Navigator design, absolute prescient omniscience, invented numerical economics or Guild ownership of Tleilaxu manufacture appears. The early optional listening-location and subscribe request cannot be assessed because chapter 1 was not supplied; it is appropriately absent here.",
+  "limitations": "Reviewed all four supplied chapters, numbered 17 through 20, against the supplied outline, proof bank and voice guidance. The other twenty chapters were not supplied, so whole-episode repetition and final-release completeness cannot be assessed. The proof bank supports the central claims but does not document every subsidiary novel detail individually. No websites were opened, no audio was measured, and no independent verification of every fictional detail is claimed.",
+  "input_hashes": {
+    "17": "25de9b32ea84a90ee9873bc69dac5136a226a2c0cf9f59eaa290f2e91a8a6614",
+    "18": "82ae6945886e1524c194f56268b430a30fe99e5ce932f87b98bfbdfb46d18d60",
+    "19": "3b42f16d217e3c614c7c796e84c0803fee0a1bc5e30d50b73cfd009c2ddadfd9",
+    "20": "6c660b189cb00dbf957e42a9d67b03c61d617e36e06c3b174c3e34aa272d0f5d"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

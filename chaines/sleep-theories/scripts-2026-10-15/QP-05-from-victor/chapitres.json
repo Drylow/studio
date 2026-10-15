@@ -5,351 +5,394 @@
       "number": 1,
       "title": "The witness who corrects himself",
       "file": "chapitres/01.txt",
-      "words": 892,
+      "words": 629,
       "start_word": 0,
-      "end_word": 892,
+      "end_word": 629,
       "estimated_start_seconds_at_150_wpm": 0,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V2"
       ],
-      "sha256": "06bf055aaf45b2d00d32de7a2c9eef07ceb48fbb7c17d8940c10a87820752844"
+      "sha256": "9c339beb2339720b811026f8b571a30508e1ae85688a0fb06c06bb7c3a8d15ca"
     },
     {
       "number": 2,
       "title": "A drawing preserves some things and leaves others out",
       "file": "chapitres/02.txt",
-      "words": 942,
-      "start_word": 892,
-      "end_word": 1834,
-      "estimated_start_seconds_at_150_wpm": 357,
+      "words": 675,
+      "start_word": 629,
+      "end_word": 1304,
+      "estimated_start_seconds_at_150_wpm": 252,
       "measured_timestamp": null,
       "sources": [
         "V1"
       ],
-      "sha256": "03095b0a1a5ac8d174e5e02323cfb2538a1159e56da1e62504bb6c7f46890a01"
+      "sha256": "ea6db6130fe92d020408786eda5b0e442ea2ef668e721606cb55ad73ff923f49"
     },
     {
       "number": 3,
       "title": "Ethan asks questions adults have stopped asking",
       "file": "chapitres/03.txt",
-      "words": 1075,
-      "start_word": 1834,
-      "end_word": 2909,
-      "estimated_start_seconds_at_150_wpm": 734,
+      "words": 899,
+      "start_word": 1304,
+      "end_word": 2203,
+      "estimated_start_seconds_at_150_wpm": 522,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V5"
       ],
-      "sha256": "6514e7cd1025b95056e359a6d76d343fe39ae743ecffabbfa232e8af61cc7a8f"
+      "sha256": "27d8624c7aba3ab46a6d4426ae41ec2bfb6e573269df224c8e36fb56315a93bd"
     },
     {
       "number": 4,
-      "title": "The child in the aftermath",
+      "title": "Victor counts the distance to the trees",
       "file": "chapitres/04.txt",
-      "words": 859,
-      "start_word": 2909,
-      "end_word": 3768,
-      "estimated_start_seconds_at_150_wpm": 1164,
+      "words": 1058,
+      "start_word": 2203,
+      "end_word": 3261,
+      "estimated_start_seconds_at_150_wpm": 881,
+      "measured_timestamp": null,
+      "sources": [
+        "ADD-trees"
+      ],
+      "sha256": "8d39414e11d59190b6cc741c421bf7c420039e653dea2ab9d9599fd7ce4d3dd3"
+    },
+    {
+      "number": 5,
+      "title": "The child in the aftermath",
+      "file": "chapitres/05.txt",
+      "words": 686,
+      "start_word": 3261,
+      "end_word": 3947,
+      "estimated_start_seconds_at_150_wpm": 1304,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V3"
       ],
-      "sha256": "9ee840f5256d3a7a7145ca8cd2992ecd65238944e763d291b0c11ada81fc6189"
+      "sha256": "6e2410d0a44a07444b215b2e257202b092a5e171816622d61487c6a04595b1cf"
     },
     {
-      "number": 5,
+      "number": 6,
       "title": "Keeping what the dead leave behind",
-      "file": "chapitres/05.txt",
-      "words": 878,
-      "start_word": 3768,
-      "end_word": 4646,
-      "estimated_start_seconds_at_150_wpm": 1507,
+      "file": "chapitres/06.txt",
+      "words": 791,
+      "start_word": 3947,
+      "end_word": 4738,
+      "estimated_start_seconds_at_150_wpm": 1579,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V6"
       ],
-      "sha256": "62ce915cecf5e1b81bc5e3caa91e2ff028ad4a22b35e0c307fcd984aeb2057aa"
+      "sha256": "0a954616f059e70518680d7ac2a32280f4873f9101e9989fe232adf423d7fbc3"
     },
     {
-      "number": 6,
+      "number": 7,
+      "title": "He guides Tabitha through the tunnels",
+      "file": "chapitres/07.txt",
+      "words": 1192,
+      "start_word": 4738,
+      "end_word": 5930,
+      "estimated_start_seconds_at_150_wpm": 1895,
+      "measured_timestamp": null,
+      "sources": [
+        "ADD-tunnels"
+      ],
+      "sha256": "fa9bf09e4f3da156a9b634fe3f7904c5a9439d6a6fa945c4ff5d259b75bfb634"
+    },
+    {
+      "number": 8,
       "title": "Remembering that Eloise was there",
-      "file": "chapitres/06.txt",
-      "words": 900,
-      "start_word": 4646,
-      "end_word": 5546,
-      "estimated_start_seconds_at_150_wpm": 1858,
+      "file": "chapitres/08.txt",
+      "words": 709,
+      "start_word": 5930,
+      "end_word": 6639,
+      "estimated_start_seconds_at_150_wpm": 2372,
       "measured_timestamp": null,
       "sources": [
         "V3"
       ],
-      "sha256": "9eb50e600ea4236188c9d659fc58b31f4203afeb2de3ef4dab2bc3f5bf6859ca"
+      "sha256": "51dae825d6fa4d77b09377dae4757e1e83a24593b9a300f6888cd7e3e0763a35"
     },
     {
-      "number": 7,
+      "number": 9,
       "title": "Miranda's instruction and what a child could know",
-      "file": "chapitres/07.txt",
-      "words": 969,
-      "start_word": 5546,
-      "end_word": 6515,
-      "estimated_start_seconds_at_150_wpm": 2218,
+      "file": "chapitres/09.txt",
+      "words": 919,
+      "start_word": 6639,
+      "end_word": 7558,
+      "estimated_start_seconds_at_150_wpm": 2656,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V3"
       ],
-      "sha256": "93615d9d9f65040698e5e6c8442982bf49ec79be1a8bc6bb1f822dd89f7eb097"
+      "sha256": "162b0f8f3f31c8416e19c1bebbe644516946cbdb1f8484f2bf61cd9c4265efc8"
     },
     {
-      "number": 8,
+      "number": 10,
       "title": "A lighthouse can be a destination without being the answer",
-      "file": "chapitres/08.txt",
-      "words": 1007,
-      "start_word": 6515,
-      "end_word": 7522,
-      "estimated_start_seconds_at_150_wpm": 2606,
+      "file": "chapitres/10.txt",
+      "words": 865,
+      "start_word": 7558,
+      "end_word": 8423,
+      "estimated_start_seconds_at_150_wpm": 3023,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V4",
         "V5"
       ],
-      "sha256": "a22da097e892a1d3ae99c1ab6781f8e87f4f92e9f26ab9085b542a7aa29ca25e"
+      "sha256": "6707e1c868075d1486eb618aef2340448686572f32af68e1fc30e7fc59a54c29"
     },
     {
-      "number": 9,
+      "number": 11,
       "title": "Christopher changes in the remembered story",
-      "file": "chapitres/09.txt",
-      "words": 925,
-      "start_word": 7522,
-      "end_word": 8447,
-      "estimated_start_seconds_at_150_wpm": 3009,
+      "file": "chapitres/11.txt",
+      "words": 916,
+      "start_word": 8423,
+      "end_word": 9339,
+      "estimated_start_seconds_at_150_wpm": 3369,
       "measured_timestamp": null,
       "sources": [
         "V1",
         "V2",
         "V4"
       ],
-      "sha256": "e97943aec001a567da4702e9c6eaf5d40ddc3e3b3561ebc9335b904f7e97f5e1"
-    },
-    {
-      "number": 10,
-      "title": "Jasper is retrieved but does not provide the answer",
-      "file": "chapitres/10.txt",
-      "words": 895,
-      "start_word": 8447,
-      "end_word": 9342,
-      "estimated_start_seconds_at_150_wpm": 3379,
-      "measured_timestamp": null,
-      "sources": [
-        "V2"
-      ],
-      "sha256": "798541507e1fedf855b0a5e10301e10fe17146b325e242524c46153048684771"
-    },
-    {
-      "number": 11,
-      "title": "Sara helps separate the speakers",
-      "file": "chapitres/11.txt",
-      "words": 763,
-      "start_word": 9342,
-      "end_word": 10105,
-      "estimated_start_seconds_at_150_wpm": 3737,
-      "measured_timestamp": null,
-      "sources": [
-        "V2"
-      ],
-      "sha256": "9625c09037a02d972257af31c4d0fd01c1190cc7c341b7652605798f4f3ab00b"
+      "sha256": "ad1ad98f4c82bdba24835119f7b426613ad5af647ad7289956152051b44c894e"
     },
     {
       "number": 12,
-      "title": "The Boy in White gives help without a full explanation",
+      "title": "Jasper is retrieved but does not provide the answer",
       "file": "chapitres/12.txt",
-      "words": 883,
-      "start_word": 10105,
-      "end_word": 10988,
-      "estimated_start_seconds_at_150_wpm": 4042,
+      "words": 738,
+      "start_word": 9339,
+      "end_word": 10077,
+      "estimated_start_seconds_at_150_wpm": 3736,
+      "measured_timestamp": null,
+      "sources": [
+        "V2"
+      ],
+      "sha256": "f4ecf082a2534609804c49d0066920c27e09ae98f8aa371f773bf62e709296e8"
+    },
+    {
+      "number": 13,
+      "title": "Sara helps separate the speakers",
+      "file": "chapitres/13.txt",
+      "words": 678,
+      "start_word": 10077,
+      "end_word": 10755,
+      "estimated_start_seconds_at_150_wpm": 4031,
+      "measured_timestamp": null,
+      "sources": [
+        "V2"
+      ],
+      "sha256": "e81ed8067b1145d90f69a23eabe2436600aef024fd2655d3e5626bb9cf1de50e"
+    },
+    {
+      "number": 14,
+      "title": "The Boy in White gives help without a full explanation",
+      "file": "chapitres/14.txt",
+      "words": 806,
+      "start_word": 10755,
+      "end_word": 11561,
+      "estimated_start_seconds_at_150_wpm": 4302,
       "measured_timestamp": null,
       "sources": [
         "V2",
         "V7"
       ],
-      "sha256": "8668df52a7fc4f825c27715515c3809f16e7e65b8c81d74b2ad57a49ddf8a9cd"
+      "sha256": "10992a2561255d2776f01cf0188284a0ab98e93915f9187b28f62b88538ebfc9"
     },
     {
-      "number": 13,
+      "number": 15,
+      "title": "An address survives inside the lunchbox",
+      "file": "chapitres/15.txt",
+      "words": 1049,
+      "start_word": 11561,
+      "end_word": 12610,
+      "estimated_start_seconds_at_150_wpm": 4624,
+      "measured_timestamp": null,
+      "sources": [
+        "ADD-lunchbox"
+      ],
+      "sha256": "5bfa6d1af5e8533d2c7a950a1e128bc4a48ce9a05e5d592a93cd1946618751db"
+    },
+    {
+      "number": 16,
       "title": "Henry recognizes a son who grew up elsewhere",
-      "file": "chapitres/13.txt",
-      "words": 747,
-      "start_word": 10988,
-      "end_word": 11735,
-      "estimated_start_seconds_at_150_wpm": 4395,
+      "file": "chapitres/16.txt",
+      "words": 689,
+      "start_word": 12610,
+      "end_word": 13299,
+      "estimated_start_seconds_at_150_wpm": 5044,
       "measured_timestamp": null,
       "sources": [
         "V3"
       ],
-      "sha256": "f763624a4804f6721474fa123a0b4813ffc450772a000354b6eb7316693bea24"
+      "sha256": "e7ef74e89b3412e2b7b7034c389afb7901814d9cf56467603c893b549298e985"
     },
     {
-      "number": 14,
+      "number": 17,
       "title": "Miranda's paintings belong to a wider pattern",
-      "file": "chapitres/14.txt",
-      "words": 879,
-      "start_word": 11735,
-      "end_word": 12614,
-      "estimated_start_seconds_at_150_wpm": 4694,
+      "file": "chapitres/17.txt",
+      "words": 794,
+      "start_word": 13299,
+      "end_word": 14093,
+      "estimated_start_seconds_at_150_wpm": 5320,
       "measured_timestamp": null,
       "sources": [
         "V3",
         "V4"
       ],
-      "sha256": "75f4087625df379a4639b28ce134d40c51d132c109257b8070b9af668ae1586b"
-    },
-    {
-      "number": 15,
-      "title": "Tabitha's connection changes the family story",
-      "file": "chapitres/15.txt",
-      "words": 892,
-      "start_word": 12614,
-      "end_word": 13506,
-      "estimated_start_seconds_at_150_wpm": 5046,
-      "measured_timestamp": null,
-      "sources": [
-        "V4"
-      ],
-      "sha256": "f5f88995340d49d47ad7b9ca94c0ea5f0d51a4b2fcefcb70f0835b00bc10e943"
-    },
-    {
-      "number": 16,
-      "title": "A new memory of the Man in Yellow",
-      "file": "chapitres/16.txt",
-      "words": 861,
-      "start_word": 13506,
-      "end_word": 14367,
-      "estimated_start_seconds_at_150_wpm": 5402,
-      "measured_timestamp": null,
-      "sources": [
-        "V5"
-      ],
-      "sha256": "868b5dee3459d83d4d37cae920f8a97232f14bf528b1b68b8f984cf6e03a4c58"
-    },
-    {
-      "number": 17,
-      "title": "The car makes a fear concrete",
-      "file": "chapitres/17.txt",
-      "words": 832,
-      "start_word": 14367,
-      "end_word": 15199,
-      "estimated_start_seconds_at_150_wpm": 5747,
-      "measured_timestamp": null,
-      "sources": [
-        "V5"
-      ],
-      "sha256": "c1a94413c7eebe8fcf57453f692c81327fac899009126e8e15d10ae98869a113"
+      "sha256": "87532943f1497c02329f0ebb2c4cd1f040b589f5963a6449f5b139464f9d0166"
     },
     {
       "number": 18,
-      "title": "Victor sees his own childhood in Ethan's future",
+      "title": "Tabitha's connection changes the family story",
       "file": "chapitres/18.txt",
-      "words": 819,
-      "start_word": 15199,
-      "end_word": 16018,
-      "estimated_start_seconds_at_150_wpm": 6080,
+      "words": 777,
+      "start_word": 14093,
+      "end_word": 14870,
+      "estimated_start_seconds_at_150_wpm": 5637,
+      "measured_timestamp": null,
+      "sources": [
+        "V4",
+        "V9"
+      ],
+      "sha256": "f53184e05154bab1782f10f481566a5d80415b89b51811b864bee8a4896d0c5b"
+    },
+    {
+      "number": 19,
+      "title": "A new memory of the Man in Yellow",
+      "file": "chapitres/19.txt",
+      "words": 728,
+      "start_word": 14870,
+      "end_word": 15598,
+      "estimated_start_seconds_at_150_wpm": 5948,
+      "measured_timestamp": null,
+      "sources": [
+        "V5"
+      ],
+      "sha256": "ef5cc853f978ba36bf31c6e5e79fcd7e7bea3b630a70a78b5d38fbc9c68e4e90"
+    },
+    {
+      "number": 20,
+      "title": "The car makes a fear concrete",
+      "file": "chapitres/20.txt",
+      "words": 591,
+      "start_word": 15598,
+      "end_word": 16189,
+      "estimated_start_seconds_at_150_wpm": 6239,
+      "measured_timestamp": null,
+      "sources": [
+        "V5"
+      ],
+      "sha256": "2b447528b0f89a88e33a79301a51bddf5d8a4c772f199eacda5145477a9a4b99"
+    },
+    {
+      "number": 21,
+      "title": "Victor sees his own childhood in Ethan's future",
+      "file": "chapitres/21.txt",
+      "words": 776,
+      "start_word": 16189,
+      "end_word": 16965,
+      "estimated_start_seconds_at_150_wpm": 6476,
       "measured_timestamp": null,
       "sources": [
         "V5",
         "V7"
       ],
-      "sha256": "968326075edf81bbea327cce36dc5209834198d84625dbfeea9587e75ba61160"
+      "sha256": "de6d4f342d6d4f97f5397b9cdb7f4bbf21d731d02f7fa8e7babfa45293a2d30c"
     },
     {
-      "number": 19,
+      "number": 22,
       "title": "Henry is offered a different Victor",
-      "file": "chapitres/19.txt",
-      "words": 684,
-      "start_word": 16018,
-      "end_word": 16702,
-      "estimated_start_seconds_at_150_wpm": 6407,
+      "file": "chapitres/22.txt",
+      "words": 600,
+      "start_word": 16965,
+      "end_word": 17565,
+      "estimated_start_seconds_at_150_wpm": 6786,
       "measured_timestamp": null,
       "sources": [
         "V6"
       ],
-      "sha256": "ccc7687458c5a0b0f359158a6e62f9f648b571017f359b2e3878d0c6fa0d3a6b"
+      "sha256": "9992e4ee539d3ab160c04934cc5daf52737fb19c22e6b19f1b077e740960249f"
     },
     {
-      "number": 20,
+      "number": 23,
       "title": "A comforting vision can be tested by its demand",
-      "file": "chapitres/20.txt",
-      "words": 850,
-      "start_word": 16702,
-      "end_word": 17552,
-      "estimated_start_seconds_at_150_wpm": 6681,
+      "file": "chapitres/23.txt",
+      "words": 601,
+      "start_word": 17565,
+      "end_word": 18166,
+      "estimated_start_seconds_at_150_wpm": 7026,
       "measured_timestamp": null,
       "sources": [
         "V2",
         "V6"
       ],
-      "sha256": "b99cc6ee2fee43ce103ab9467b4dcef680cf80a35a4755c1cdbda8dcf6c55db7"
+      "sha256": "89dc918100fc7f98e4176563afba08e1edee37deb3feb352555d817a069f1455"
     },
     {
-      "number": 21,
+      "number": 24,
       "title": "Victor's warning loses to a plan",
-      "file": "chapitres/21.txt",
-      "words": 895,
-      "start_word": 17552,
-      "end_word": 18447,
-      "estimated_start_seconds_at_150_wpm": 7021,
+      "file": "chapitres/24.txt",
+      "words": 748,
+      "start_word": 18166,
+      "end_word": 18914,
+      "estimated_start_seconds_at_150_wpm": 7266,
       "measured_timestamp": null,
       "sources": [
         "V7"
       ],
-      "sha256": "395c04e0150a7b7796390d0cbbbe317aa5cb1b889342be99e59386c45eee408f"
+      "sha256": "7a6ba73baddd9252f9264876f88beabbd0b3c6f490f604c5c80182bebae2b6f2"
     },
     {
-      "number": 22,
+      "number": 25,
       "title": "What the fallen tree establishes",
-      "file": "chapitres/22.txt",
-      "words": 861,
-      "start_word": 18447,
-      "end_word": 19308,
-      "estimated_start_seconds_at_150_wpm": 7379,
+      "file": "chapitres/25.txt",
+      "words": 695,
+      "start_word": 18914,
+      "end_word": 19609,
+      "estimated_start_seconds_at_150_wpm": 7566,
       "measured_timestamp": null,
       "sources": [
         "V7"
       ],
-      "sha256": "0c2a598d114265fd7a22c7be8db65f458d307b0a1822bc6a380836ed55a90450"
+      "sha256": "5fa0557847b28bcb1702644e3cc433bbe5218a279390194a085c5516a41b9b52"
     },
     {
-      "number": 23,
+      "number": 26,
       "title": "Ethan interrupts the false escape",
-      "file": "chapitres/23.txt",
-      "words": 827,
-      "start_word": 19308,
-      "end_word": 20135,
-      "estimated_start_seconds_at_150_wpm": 7723,
+      "file": "chapitres/26.txt",
+      "words": 499,
+      "start_word": 19609,
+      "end_word": 20108,
+      "estimated_start_seconds_at_150_wpm": 7844,
       "measured_timestamp": null,
       "sources": [
         "V8"
       ],
-      "sha256": "8f365a3110602e6e9fc58821df2de379098ad82c14459507ae2c0b762d39bec4"
+      "sha256": "91c2c0eca6ffa47175f51c98aead711fbc62c1d6fe01c002948cb3537f8023cc"
     },
     {
-      "number": 24,
+      "number": 27,
       "title": "A witness can be protected while being questioned",
-      "file": "chapitres/24.txt",
-      "words": 649,
-      "start_word": 20135,
-      "end_word": 20784,
-      "estimated_start_seconds_at_150_wpm": 8054,
+      "file": "chapitres/27.txt",
+      "words": 395,
+      "start_word": 20108,
+      "end_word": 20503,
+      "estimated_start_seconds_at_150_wpm": 8043,
       "measured_timestamp": null,
       "sources": [
         "V3",
         "V8"
       ],
-      "sha256": "d5ccf33f235093771a9e95bdfbaa60307c813625d4d3e002e4d13d0b3302bc15"
+      "sha256": "8054f19d5011e9234184496214400322abef3dea59c9735038bf74b1a1d4ee6a"
     }
   ]
 }

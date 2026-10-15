@@ -1,0 +1,619 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Paul's departure into the desert frames a biography about how survival and success progressively restrict his choices.",
+      "new_information": [
+        "The opening departure occurs after Paul's physical blinding in Dune Messiah.",
+        "The narration covers only Dune, Dune Messiah and Children of Dune.",
+        "Paul begins as the Atreides heir on Caladan, with obligations inherited through Leto and Jessica."
+      ],
+      "local_answer": "The chapter establishes the interpretive promise, announces spoilers, includes the requested single early listening invitation and returns to Paul's upbringing.",
+      "open_issues": [],
+      "evidence_notes": "The opening accords with P5 and the stated scope. The childhood orientation anticipates later chapters but provides a usable entry point rather than disclosing the final ending."
+    },
+    {
+      "number": 2,
+      "summary": "Paul's teachers provide distinct forms of combat, analytical and bodily discipline without making him invulnerable or a fully qualified Mentat.",
+      "new_information": [
+        "Gurney and Duncan contribute weapons training and personal attachments.",
+        "Shield combat requires controlled attack speed.",
+        "Thufir combines household security with Mentat analysis.",
+        "Jessica teaches observation, bodily control and responses to fear."
+      ],
+      "local_answer": "The chapter clearly distinguishes Paul's preparations and explains their practical limits.",
+      "open_issues": [],
+      "evidence_notes": "P2 supports the teacher framework. The detailed descriptions of shield practice and Mentat preparation extend beyond the abbreviated proof-bank statements; no contradiction with the supplied constraints is apparent."
+    },
+    {
+      "number": 3,
+      "summary": "Jessica's disobedience brings Paul into the Bene Gesserit's plans, and Mohiam tests his restraint through coercive pain.",
+      "new_information": [
+        "Jessica was instructed to bear a daughter for an intended Harkonnen marriage.",
+        "The breeding program seeks the Kwisatz Haderach.",
+        "The pain box and gom jabbar make restraint a condition of survival.",
+        "Passing the test does not establish the sisterhood's moral authority or control over Paul."
+      ],
+      "local_answer": "The chapter explains the test from the Bene Gesserit's viewpoint without presenting its definition of humanity as objective science.",
+      "open_issues": [],
+      "evidence_notes": "The account respects the assignment's distinction between potential and obedience. Detailed test mechanics are not separately documented in the supplied proof summaries."
+    },
+    {
+      "number": 4,
+      "summary": "The imperial appointment to Arrakis offers wealth and standing while exposing House Atreides to a coordinated political trap.",
+      "new_information": [
+        "Arrakis is the sole source of melange.",
+        "Spice dependence connects local production to Guild transport and imperial commerce.",
+        "The Emperor fears Leto's standing and military effectiveness.",
+        "Leto seeks a Fremen alliance through Duncan."
+      ],
+      "local_answer": "The chapter explains why the apparent elevation creates immediate obligations and strategic exposure.",
+      "open_issues": [],
+      "evidence_notes": "The account fits P1-P2 and keeps the Guild and CHOAM explanation subordinate to Paul's biography. It does not treat Leto as unaware of the danger."
+    },
+    {
+      "number": 5,
+      "summary": "The harvester rescue shows Paul how Leto's practical concern for workers can earn loyalty under unreliable inherited arrangements.",
+      "new_information": [
+        "A harvester depends on a carryall for evacuation from an approaching worm.",
+        "Leto sacrifices equipment to rescue its crew.",
+        "Kynes reassesses Leto after witnessing the rescue.",
+        "Paul's stillsuit competence attracts religious interpretation."
+      ],
+      "local_answer": "The chapter supplies a concrete example of Leto's leadership and distinguishes its immediate humanitarian purpose from its political consequences.",
+      "open_issues": [],
+      "evidence_notes": "The rescue follows the assigned novel continuity and avoids film dialogue or invented cockpit staging. Its connection to Kynes later helping Paul is useful causal groundwork."
+    },
+    {
+      "number": 6,
+      "summary": "Paul's performance at the Arrakeen dinner exposes both his political competence and the limits of winning a conversation.",
+      "new_information": [
+        "Paul and Jessica continue hosting after Leto leaves on security business.",
+        "Water interests, Tuek and a Harkonnen-aligned banker bring competing interests into the household.",
+        "The banker's fear reveals Kynes's influence beyond his office.",
+        "A coded warning involving Harkonnen lasguns interrupts the evening."
+      ],
+      "local_answer": "The supplement is integrated chronologically and makes Paul's political education visible through an actual social responsibility.",
+      "open_issues": [],
+      "evidence_notes": "ADD-dinner directly supports the central participants, Paul's confidence, Jessica's mixed assessment, the banker's fear and the security message. The towel custom and lasgun explanation are additional novel details not separately substantiated by that abbreviated entry."
+    },
+    {
+      "number": 7,
+      "summary": "Yueh's coerced betrayal defeats the household's assumptions about safety, destroys Leto's position and leaves Paul a contingent escape route.",
+      "new_information": [
+        "Suk conditioning is mistakenly treated as a sufficient guarantee of loyalty.",
+        "Wanna's fate gives the Harkonnens leverage over Yueh.",
+        "Yueh disables defenses and prepares Leto's poisoned tooth.",
+        "The Baron survives while Leto, Yueh and Piter die.",
+        "Yueh leaves supplies and the signet ring for Paul and Jessica."
+      ],
+      "local_answer": "The chapter explains the causal breach and preserves both Yueh's coercion and his responsibility.",
+      "open_issues": [],
+      "evidence_notes": "The broad betrayal and destruction are supported by P2. Specific objects and actions exceed the proof-bank summary, but no supplied evidence contradicts them."
+    },
+    {
+      "number": 8,
+      "summary": "Paul and Jessica survive through training and assistance while Paul's expanding awareness disrupts his grief and his understanding of his ancestry.",
+      "new_information": [
+        "The Voice helps them escape their captors.",
+        "Paul recognizes Jessica as the Baron's daughter during the desert flight.",
+        "His visions include religious violence but remain incomplete.",
+        "Duncan and Kynes provide further assistance before another flight into the desert."
+      ],
+      "local_answer": "The chapter connects practical survival, altered identity and developing prescience without importing the film's timing.",
+      "open_issues": [],
+      "evidence_notes": "The early Harkonnen revelation follows the assignment's explicit novel-continuity requirement. The narration does not make prescience the sole cause of survival."
+    },
+    {
+      "number": 9,
+      "summary": "Jessica secures room for negotiation through demonstrated ability and religious expectations, while the Fremen retain their own judgments and purposes.",
+      "new_information": [
+        "Stilgar evaluates the fugitives through practical community needs.",
+        "Jessica's fighting skill gives the Fremen a reason to preserve and recruit her.",
+        "The Missionaria Protectiva has planted usable religious expectations.",
+        "Mapes's earlier response and Kynes's reaction illustrate those expectations taking effect."
+      ],
+      "local_answer": "The chapter explains Paul's reception without reducing the Fremen to passive believers or treating prophecy as proof of divine design.",
+      "open_issues": [],
+      "evidence_notes": "The distinction between planted expectations, actual abilities and independent Fremen agency is sound. The Mapes passage is a clearly marked retrospective explanation, not a chronology error."
+    },
+    {
+      "number": 10,
+      "summary": "Killing Jamis admits Paul into Fremen life through grief, unfamiliar customs and responsibilities to the dead man's household.",
+      "new_information": [
+        "Paul fights as Jessica's champion.",
+        "Shield-conditioned timing and an expectation of surrender complicate the duel.",
+        "The Fremen reclaim the dead person's water and interpret Paul's tears through water scarcity.",
+        "Harah and her sons become responsibilities following his victory."
+      ],
+      "local_answer": "The chapter explains why surviving the duel creates obligations rather than merely proving fighting superiority.",
+      "open_issues": [],
+      "evidence_notes": "The account avoids exact dialogue and close reconstruction of the funeral. Its treatment of Harah supplies a useful consequence beyond the familiar duel."
+    },
+    {
+      "number": 11,
+      "summary": "Paul's Fremen names distinguish intimate belonging from an increasingly public identity while preserving his Atreides connection.",
+      "new_information": [
+        "Usul is the community name and Muad'Dib the chosen public name.",
+        "Usul refers to strength at the base of a pillar.",
+        "Muad'Dib names a respected desert mouse.",
+        "Paul retains his personal name in Paul-Muad'Dib."
+      ],
+      "local_answer": "The chapter explains the names' different social uses and their political continuity.",
+      "open_issues": [],
+      "evidence_notes": "The supplied proof bank does not independently document the name meanings or the exact relation of the naming moment to Paul's earlier visions. These remain source-check limitations, not established errors."
+    },
+    {
+      "number": 12,
+      "summary": "Paul's partnership with Chani and their first child develop within the same Fremen struggle that expands his public role.",
+      "new_information": [
+        "Chani is Liet-Kynes's daughter and a Sayyadina.",
+        "Their first son Leto is distinct from the later twin Leto II.",
+        "Chani actively discourages would-be challengers.",
+        "Paul's childhood household provides a precedent for separating partnership from dynastic marriage."
+      ],
+      "local_answer": "The chapter gives the relationship an independent biographical place without inventing domestic scenes or importing film Chani's departure.",
+      "open_issues": [],
+      "evidence_notes": "P3 supports the essential distinction between the children. The argument that private safety remains entangled with political conflict is clearly interpretation rather than invented interior monologue."
+    },
+    {
+      "number": 13,
+      "summary": "Paul's first worm ride demonstrates acquired Fremen competence and intensifies pressure to assume leadership without killing Stilgar.",
+      "new_information": [
+        "Hooks exploit the worm's response to exposed tissue.",
+        "Thumpers deliberately summon worms for transport.",
+        "Paul successfully mounts an exceptionally large worm.",
+        "He argues for a command structure that preserves Stilgar."
+      ],
+      "local_answer": "The chapter connects a concrete achievement to increased expectations without claiming that one ride automatically grants universal authority.",
+      "open_issues": [
+        "The opening explains twice in succession that survival requires the taught riding technique."
+      ],
+      "evidence_notes": "The riding and leadership material fits the assignment. Technical details are brief enough to remain biographical rather than becoming a separate biology discussion."
+    },
+    {
+      "number": 14,
+      "summary": "The Water of Life expands Paul's awareness through a dangerous ordeal from which Chani helps him return.",
+      "new_information": [
+        "The poisonous substance comes from a drowned young worm.",
+        "Jessica's earlier ordeal also affected unborn Alia.",
+        "Paul remains unresponsive for weeks.",
+        "Chani recognizes the cause and intervenes.",
+        "His expanded capacities do not produce omniscience or Bene Gesserit obedience."
+      ],
+      "local_answer": "The chapter explains the transformation, dependence on Chani and continuing limits of foresight.",
+      "open_issues": [],
+      "evidence_notes": "The narration avoids dosage instructions and does not present a universal biological law about men. The recovery's detailed mechanics are not separately supplied in the proof bank."
+    },
+    {
+      "number": 15,
+      "summary": "Paul defeats the imperial position through combined Atreides and Fremen resources while losing his first son.",
+      "new_information": [
+        "The southern raid kills Paul and Chani's first child.",
+        "The already-born Alia is captured and kills the Baron.",
+        "Atomics breach the Shield Wall and worms enter the assault.",
+        "Paul's spice threat prevents outside intervention.",
+        "He kills Feyd-Rautha before arranging the succession."
+      ],
+      "local_answer": "The chapter delivers the novel's military and personal turning point without becoming a blow-by-blow battle account.",
+      "open_issues": [],
+      "evidence_notes": "P3 supports the crucial child and Alia distinctions. The comparison between Leto's rescue and Paul's resource threat is useful original analysis grounded in events already narrated."
+    },
+    {
+      "number": 16,
+      "summary": "Paul uses marriage to Irulan for dynastic legitimacy while maintaining his partnership with Chani, assigning unequal costs to both women.",
+      "new_information": [
+        "The marriage connects the new reign to House Corrino.",
+        "Chani remains with Paul in the original novel.",
+        "Irulan receives formal status without the intended intimate partnership.",
+        "Jessica recognizes the arrangement through her own history.",
+        "Irulan's historical writings give her a further role in Paul's public identity."
+      ],
+      "local_answer": "The chapter explains the settlement without excusing Paul's choice or confusing the novel with the 2024 film.",
+      "open_issues": [],
+      "evidence_notes": "P3 directly supports the marriage and continuing relationship. The discussion preserves consequences for all three people rather than treating Irulan as a purely administrative object."
+    },
+    {
+      "number": 17,
+      "summary": "Dune Messiah presents the war, institutions and altered Fremen lives produced by Paul's victory.",
+      "new_information": [
+        "The narrative moves explicitly into Paul's later reign.",
+        "Bronso's treatment illustrates punishment of historical inquiry.",
+        "Korba represents the institutional priesthood.",
+        "Farok and his blinded son make the campaigns' consequences personal.",
+        "Paul recognizes the devastation associated with his rule."
+      ],
+      "local_answer": "The chapter establishes responsibility without claiming that Paul personally commands every distant act.",
+      "open_issues": [],
+      "evidence_notes": "P4 supports the novel transition and reign context. The twelve-year interval and named examples are not individually documented in the supplied proof summaries; no casualty statistics are introduced."
+    },
+    {
+      "number": 18,
+      "summary": "The conspirators combine prescient concealment, household access and emotional leverage against Paul.",
+      "new_information": [
+        "Edric's prescience obscures associated activity.",
+        "Mohiam prioritizes the bloodline, Irulan her excluded marital position, and the Guild its dependence on spice.",
+        "Scytale uses impersonation and local discontent.",
+        "Hayt is designed to exploit Paul's attachment to Duncan."
+      ],
+      "local_answer": "The chapter distinguishes the conspirators' interests and explains why partial knowledge of danger does not amount to complete knowledge of the plot.",
+      "open_issues": [],
+      "evidence_notes": "The conspiracy accords with the Dune Messiah assignment. Institutional explanation stays focused on Paul's predicament rather than duplicating a full Guild history."
+    },
+    {
+      "number": 19,
+      "summary": "Hayt's arrival forces Paul to confront the uncertain survival of Duncan's identity inside an enemy-prepared ghola.",
+      "new_information": [
+        "Hayt has artificial eyes and initially lacks accessible Duncan memories.",
+        "His Mentat and Zensunni preparation makes him a challenging companion.",
+        "Alia develops an attachment to him.",
+        "His conditioning exploits the access created by Paul's affection."
+      ],
+      "local_answer": "The arrival and identity problem are well explained, but the final two paragraphs prematurely deliver the childbirth crisis later narrated in chapter 22.",
+      "open_issues": [
+        "The chapter advances to Chani's death and Duncan's recovery before chapters 20 and 21 return to the pregnancy and stone-burner sequence.",
+        "The duplicated recovery and its bargaining consequence weaken chapter 22's progression."
+      ],
+      "evidence_notes": "The problem is structural repetition, not a factual objection to Duncan's recovery. Chapter 22 already preserves the recovery, resistance and Tleilaxu leverage."
+    },
+    {
+      "number": 20,
+      "summary": "Irulan's reproductive interference and Paul's knowing tolerance of it expose the private injuries beneath imperial succession planning.",
+      "new_information": [
+        "Irulan secretly administers contraceptives.",
+        "Chani changes to a traditional Fremen diet and becomes pregnant.",
+        "The earlier treatment is connected to the dangerous pregnancy.",
+        "Paul permits the interference because he associates childbirth with Chani's death.",
+        "Chani objects when she learns what was done."
+      ],
+      "local_answer": "The chapter explains the household's competing purposes without absolving either Irulan or Paul or reducing the pregnancy to a single medical cause.",
+      "open_issues": [
+        "Its chronological return is unnecessarily complicated by chapter 19's advance to the birth."
+      ],
+      "evidence_notes": "The account follows the supplied causal constraints. Paul's protective rationale is presented as his judgment, not as proof that withholding information was objectively merciful."
+    },
+    {
+      "number": 21,
+      "summary": "After the stone burner destroys Paul's eyes, his apparent sight depends on continuing through an anticipated sequence.",
+      "new_information": [
+        "The attack follows the visit to Otheym.",
+        "Bijaz enters Paul's reach through the conspiracy.",
+        "Prescience temporarily substitutes for physical sight.",
+        "Fremen blindness customs make Paul's continued ability politically significant.",
+        "Edric's concealment remains a limit."
+      ],
+      "local_answer": "The chapter clearly distinguishes precise local anticipation from unlimited awareness.",
+      "open_issues": [
+        "One sentence repeats Paul's injury without adding a consequence."
+      ],
+      "evidence_notes": "P5 supports physical blindness and continued prescient navigation. Weapon description remains general and does not invent exact operating mechanics."
+    },
+    {
+      "number": 22,
+      "summary": "Chani's death, the unexpected son and Scytale's threat end Paul's navigable future and lead to his desert departure.",
+      "new_information": [
+        "Paul expected a daughter but not the male twin.",
+        "Duncan recovers his memories and resists the implanted command.",
+        "Scytale offers Chani's restoration while threatening the twins.",
+        "Paul briefly sees through Leto's eyes and kills Scytale.",
+        "Irulan turns toward caring for the children, and Alia assumes the regency."
+      ],
+      "local_answer": "The chapter provides a complete causal account of the departure while leaving Paul's survival unresolved at this novel's ending.",
+      "open_issues": [
+        "Duncan's recovery and the new Tleilaxu leverage have already been fully delivered in chapter 19."
+      ],
+      "evidence_notes": "P4-P6 support the central ending. The distinction between the first infant Leto and the later twin is accurate and appropriately retained here because the second child has now entered the story."
+    },
+    {
+      "number": 23,
+      "summary": "Paul returns as the Preacher to challenge institutions sustained by his name while Alia's regency and Arrakis deteriorate in different ways.",
+      "new_information": [
+        "Children of Dune introduces the blind Preacher and his guide.",
+        "The Preacher is Paul.",
+        "His uncertain identity complicates Alia's response.",
+        "Ecological change pressures older Fremen life.",
+        "Alia yields to the Baron's ancestral influence."
+      ],
+      "local_answer": "The chapter explains the conflict between the living critic and his institutional image without treating criticism as absolution.",
+      "open_issues": [],
+      "evidence_notes": "P6-P7 support the regency, identification and public opposition. Details about the guide and Alia's possession are additional novel material beyond those short entries."
+    },
+    {
+      "number": 24,
+      "summary": "Paul's encounter with his transformed son exposes the limits of the future he understood and was willing to accept.",
+      "new_information": [
+        "Leto has joined sandtrout to his skin.",
+        "Leto presents the Golden Path as necessary to avert extinction.",
+        "Father and son differ in both knowledge and willingness.",
+        "Leto's changed body connects his future to Arrakis's threatened ecological cycle."
+      ],
+      "local_answer": "The chapter distinguishes Paul's refusal from Leto's undertaking and limits the son's biography to its significance for Paul.",
+      "open_issues": [],
+      "evidence_notes": "P8 supports the central distinction. The extinction claim is appropriately attributed to Leto's account, and the narration does not endorse all later acts or import a full God Emperor biography."
+    },
+    {
+      "number": 25,
+      "summary": "The Preacher's killing ends Paul's personal capacity to act while Atreides succession and the religious use of Muad'Dib continue.",
+      "new_information": [
+        "A priest kills Paul during his final public confrontation.",
+        "The death definitively closes the uncertainty left by Dune Messiah.",
+        "Alia's regency ends in the subsequent upheaval.",
+        "Leto and Ghanima survive into the succession."
+      ],
+      "local_answer": "The chapter supplies the assigned biographical endpoint and a grounded final contrast, but states the persistence of Paul's public name once too often immediately before the ending.",
+      "open_issues": [
+        "The penultimate paragraph repeats the institutional-survival conclusion that the final paragraph delivers more concretely."
+      ],
+      "evidence_notes": "P7-P8 support the death and endpoint. The chapter does not kill Ghanima, assign her Leto's transformation or credit Paul with completing the Golden Path."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "To survive the attempt, Paul needs the riding technique Stilgar and his people teach him.",
+      "reason": "H18 identifies a point restated with nothing new attached. The preceding sentence already explains that Paul must understand precisely how a Fremen survives the encounter, and the following paragraphs identify the teaching and technique concretely.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The crisis comes when Chani's death provides the circumstance for the implanted command to kill Paul. For Hayt, carrying out that command would mean murdering the person Duncan Idaho had died defending. The conflict is unbearable, and Duncan's memories return through it. His recovered identity matters because he resists the act demanded of him. The Tleilaxu conditioning meets a loyalty rooted in his earlier life, and that loyalty becomes active again. Paul survives this intended attack because the person within Hayt refuses to complete it.",
+      "reason": "This paragraph advances to the childbirth climax, after which chapters 20 and 21 return to the pregnancy and stone burner without a marked retrospective handoff. Chapter 22 repeats the same crisis and resistance in their chronological home. H18 says a repeated observation should have one home paragraph; deletion here preserves all substantive developments later.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 19,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The recovery changes what the Tleilaxu can offer Paul. Before this moment, they could return a body with familiar features and new training. Now Duncan's awakening demonstrates that personal memories can return as well. For a man facing bereavement, that is a terrible discovery to receive from an enemy. Duncan is genuinely restored to him, and the restoration gives the Tleilaxu a stronger means of applying pressure. Paul has regained someone who can remember him as the young Atreides heir. He must also live with knowing that the people who arranged their reunion intended to use that love against him.",
+      "reason": "This advances beyond Hayt's arrival to the consequence of his recovered identity, which chapter 22 explains again through Scytale's concrete offer concerning Chani. Under H18, the later version adds the actual demand and is the more useful home. Removing this paragraph together with the preceding finding leaves chapter 19 ending coherently on the danger of Hayt's conditioning.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Paul is among those injured, even as his conduct begins to make him seem separate from them.",
+      "reason": "H18 applies because the paragraph has already said that Paul suffers the same bodily loss as other victims, while both the opening and next paragraph explain his unusual conduct. This sentence adds neither a new injury nor a new consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 25,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Leto's rise also means that Muad'Dib can remain useful after the Preacher has been killed. The new ruler is Paul's son. His descent gives Paul's name a continuing place in the succession, alongside the religious life already built around it. Paul has become part of the ancestry through which the next government is understood. His public name can be spoken in accounts of legitimate succession even though the man himself had returned to attack the order governing under that name.",
+      "reason": "H18 identifies repeated framing without sufficient new development. The preceding paragraph has already established succession through the surviving children, and the final paragraph gives the stronger concrete endpoint through Arrakeen's temple, officials and Atreides descent. This intervening paragraph makes the ending land twice.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "detail": "Chapter 19's final two paragraphs deliver Chani's death, Duncan's recovery and the resulting Tleilaxu leverage before the narration returns to the pregnancy and attack. Chapter 22 then delivers the same developments in their causal sequence. Keep that payoff in chapter 22."
+    },
+    {
+      "chapters": [
+        5,
+        8,
+        15
+      ],
+      "detail": "The harvester rescue recurs productively: chapter 5 establishes the act, chapter 8 connects it to surviving assistance, and chapter 15 contrasts its scale of responsibility with Paul's spice threat. These are distinct consequences, not deletion targets."
+    },
+    {
+      "chapters": [
+        12,
+        15,
+        20,
+        22
+      ],
+      "detail": "The first child's identity returns at his introduction, death, the later pregnancy and the second Leto's birth. These references prevent the expressly forbidden conflation and generally add chronological or emotional information; they should not be removed merely to reduce repeated names."
+    },
+    {
+      "chapters": [
+        8,
+        14,
+        18,
+        21,
+        22
+      ],
+      "detail": "Limits of prescience recur through different mechanisms: branching visions, expanded but incomplete awareness, Edric's concealment, dependence on an anticipated sequence and the unexpected twin. This is substantive development rather than a repeated evidence disclaimer."
+    },
+    {
+      "chapters": [
+        17,
+        23,
+        25
+      ],
+      "detail": "Responsibility for the movement develops from imperial consequences to the returning critic and finally the end of Paul's ability to act. The recurrence supports the biographical argument. The excess is local to chapter 25's repeated institutional-survival conclusion."
+    }
+  ],
+  "scope_status": "Within the supplied first-three-original-novel scope. Major spoilers are announced early. No clear instance of a forbidden film substitution, expanded-prequel merger, completed Golden Path attributed to Paul, omniscient prescience, conflated sons or incorrect fate for Ghanima was found. The dinner supplement is placed before the betrayal and serves its assigned biographical purpose.",
+  "limitations": "This review uses the supplied narration, outline, proof summaries and voice samples. The supplied proof bank is authoritative but abbreviated; it does not independently substantiate every detailed novel claim in the draft. I did not open the linked pages, inspect full novel passages, run an external scanner, measure audio or perform a human read-aloud. No factual contradiction is asserted merely because a detail is absent from the short proof entries. Publication practices, footage, channel-wide originality and external source overlap cannot be established from this submission.",
+  "greenlight": {
+    "overall_verdict": "FIX-THEN-PASS",
+    "A": {
+      "verdict": "PASS_WITH_SLEEP_ADAPTATION",
+      "evidence": {
+        "first_sentence": "Paul Atreides leaves his throne and walks into the desert after losing his physical eyes.",
+        "hook_word_count": 76,
+        "hook_boundary": "The first paragraph.",
+        "turn": "Yet",
+        "promise": "Explain Paul's life through survival, enabling relationships and obligations that narrow his choices.",
+        "promise_map": [
+          "Preparation and inherited obligations: chapters 1-4.",
+          "Assistance, survival and Fremen belonging: chapters 5-14.",
+          "Victory, marriage and imperial responsibility: chapters 15-17.",
+          "Conspiracy, family vulnerability and departure: chapters 18-22.",
+          "Return, refusal and death: chapters 23-25."
+        ]
+      },
+      "actionable_defects": [],
+      "qualification": "The supplied voice samples are register references, not documented performance comparisons for this episode. Competitive hook superiority is not established. No aggressive suspense requirement has been imposed."
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": {
+        "question_and_answer_ledger": [
+          "How does the emperor reach his departure? Opened in chapter 1; answered through chapters 17-22.",
+          "What prepares Paul to survive? Introduced in chapter 1; answered in chapters 2-3 and demonstrated in chapters 7-10.",
+          "Why is Arrakis an apparent advancement and a trap? Opened and answered in chapter 4; consequences arrive in chapter 7.",
+          "What does Fremen acceptance require? Opened in chapter 9; answered through chapters 10-13.",
+          "What does victory cost? Developed in chapters 12-16; its imperial consequences arrive in chapter 17.",
+          "How can enemies threaten a prescient ruler? Opened in chapter 18; answered through chapters 19-22.",
+          "Did the desert departure end Paul's life? Left open in chapter 22; answered through chapters 23-25.",
+          "What future does Paul decline? Raised in chapter 24 and answered there through his encounter with Leto."
+        ],
+        "progression": "Every chapter has a distinct assigned development. The dinner addition converts earlier political preparation into enacted responsibility rather than adding an unrelated digression.",
+        "sleep_adaptation": "Local answers may close without immediate new curiosity gaps. The absence of timed rehooks or a final CTA is not a defect."
+      },
+      "actionable_defects": [
+        "Delete chapter 19's final two paragraphs so the childbirth crisis and restored-memory leverage arrive once, in chapter 22.",
+        "Remove the isolated duplicate statements identified in chapters 13 and 21.",
+        "Delete chapter 25's penultimate paragraph to let the final institutional contrast land once."
+      ]
+    },
+    "C": {
+      "verdict": "PASS_WITH_SOURCE_LIMITATIONS",
+      "evidence": {
+        "connecting_thread": "Training and alliances preserve Paul while creating commitments that increasingly restrict his personal choices.",
+        "causal_examples": [
+          "Leto's rescue earns Kynes's regard, which helps explain later assistance.",
+          "Jessica's demonstrated skill changes Stilgar's practical assessment.",
+          "Paul's dynastic marriage creates household access that Irulan exploits.",
+          "Duncan's recovered identity makes Scytale's proposed restoration of Chani credible."
+        ],
+        "perspective_shift": "The narration moves from success understood as survival and accession to success understood through the obligations and injuries it creates.",
+        "payoff": "The ending separates Paul's death as a speaking person from the continued institutional use of Muad'Dib."
+      },
+      "actionable_defects": [],
+      "qualification": "Sentence-level clarity was reviewed in text. An actual spoken performance was not tested. The chapter 19 sequencing defect is recorded under B rather than counted again here."
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": {
+        "anchor_sources": [
+          "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+          "Conversational register compared against two private reference excerpts. Reference wording omitted from public report."
+        ],
+        "anchor_shapes": [
+          "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+          "Some of it comes from the old expanded universe, now called",
+          "Now, growing up watching this show, I honestly didn't realize how deep the lore actually went until I started looking into all the interviews, behind the scenes stuff, and what the Duffer brothers have been hinting at over the years."
+        ],
+        "matched_script_lines": [
+          "Paul understands that the Tleilaxu haven't done this out of kindness.",
+          "For the Fremen who hear her, the significance can be much greater.",
+          "Paul has to listen to that larger account."
+        ],
+        "register_assessment": "The draft predominantly uses explanatory spoken sentences with named actors and concrete consequences. Its analysis is not merely a repeated lecture about evidence. No machine-tier phrase, em dash or obvious chatbot artifact was found in the narration during the manual sweep.",
+        "antithesis_ledger": [
+          {
+            "chapter": 16,
+            "quote": "Leto kept a possible marriage alliance open; Paul makes one.",
+            "assessment": "One compact mirrored contrast with a concrete biographical distinction; retain."
+          }
+        ],
+        "antithesis_count": 1,
+        "aphoristic_closer_ledger": [],
+        "aphoristic_closer_count": 0,
+        "mechanical_reframe_floor": 0,
+        "counting_note": "Ordinary explanatory distinctions, such as distinguishing physical sight from prescience or the two children named Leto, are not counted as crafted mirrored antitheses merely because they contrast facts.",
+        "number_ledger": [
+          {
+            "item": "Three novels and first-three-novel scope",
+            "source": "Supplied release scope and named works."
+          },
+          {
+            "item": "Shaddam IV",
+            "source": "Character designation in the draft; not separately documented in the abbreviated proof bank."
+          },
+          {
+            "item": "First infant Leto versus later Leto II",
+            "source": "P3, P6, P8 and the explicit forbidden-conflation constraint."
+          },
+          {
+            "item": "Two Fremen names",
+            "source": "Chapter 11 assignment specifies the two names; exact meanings are not separately supplied in the proof summaries."
+          },
+          {
+            "item": "Twelve years into Paul's reign",
+            "source": "Dune Messiah chronology as stated in the draft; the supplied P4 summary does not document the interval separately."
+          },
+          {
+            "item": "Two children, the twins Leto and Ghanima",
+            "source": "P4 and P6."
+          },
+          {
+            "item": "Weeks unresponsive after the Water of Life",
+            "source": "Draft's account of the Dune event; duration is not independently documented in the supplied proof summaries."
+          }
+        ]
+      },
+      "actionable_defects": [
+        "Apply the five quoted findings, primarily H18 repetition and the associated chronological duplication."
+      ],
+      "qualification": "No invented statistic or exact casualty figure was found. This is not a claim that every quantitative detail has been independently source-verified. The full master checklist and external scanner were not supplied as executable or complete files, so checks unique to those materials cannot be certified."
+    },
+    "E": {
+      "verdict": "NOT_FULLY_VERIFIABLE",
+      "evidence": {
+        "supported_originality_signals": [
+          "A sustained biographical angle connects preparation, assistance and restricted choice.",
+          "Editorial interpretation distinguishes explanation from absolution, especially in the marriage and pregnancy chapters.",
+          "Specific connections include Leto's rescue versus Paul's spice threat and Irulan's formal exclusion versus her historical voice."
+        ],
+        "reference_comparison": "No verbatim borrowing from the two supplied voice samples was identified.",
+        "observed_textual_red_flags": [],
+        "unverified_signals": [
+          "Search-result originality and differentiation from the top five competing videos.",
+          "External transcript overlap beyond the supplied samples.",
+          "Buyer-confirmed human editing.",
+          "Duplicate publishing, bulk channel practices, narration provenance and visual production."
+        ]
+      },
+      "actionable_defects": [],
+      "qualification": "The session supports original editorial analysis, but not a full platform-authenticity score or monetization guarantee. Missing external evidence is not a demonstrated prose defect and should not be repaired by inserting intrusive source announcements or new lore."
+    }
+  },
+  "input_hashes": {
+    "1": "9f26c5453f7b90ff2b65daaeda4610b5739a483dcad77ba6c055f6e2b0e4bd4f",
+    "2": "5d0b43271be5bff0f91db229a8cff0183f11fc9065132e3e160a183c6f29eb0e",
+    "3": "16a1d8f7f985f71f7895e91ea8677c398ec7da6b315468428fb96dc7c82899a2",
+    "4": "d0f4b8b8543744570cd3de207756a32caf5317624bd26358729fe8883437cbdc",
+    "5": "cf535005b2dda8792b3ff357796daae0ba9363799f1398f08eda376faa8536bb",
+    "6": "1f57d2463a68bf5836e640f03181c985acae60ee38909d74568e7bb19c0475c3",
+    "7": "3ba4a747ccf9ee484193c0cc236a498dca99f8534d8f66c1bb39073196cfe3e9",
+    "8": "86ae093da5fa29ce4e4d1dc69ed185eb35b1dd198e62b30798086e04f5c848c0",
+    "9": "a64781813c4bcc20df3b91d604a7abbba962c06f0d0d1187d5112e7cda1fc268",
+    "10": "829799226ef7d8764879b2d1fd4a73f492b7166060c08927312f40bf4929b28c",
+    "11": "4fede66206b25ef4a9f021e76783d01d2365dbbc492365596b93603e1ac88d93",
+    "12": "74b57c1081a14d0b36919768498a417413d6a72ac9a59d1404e318acea569952",
+    "13": "0ad205969069e400bf291ff25c807ac4b26be5fbe71bda18909145e48aa0872a",
+    "14": "21f894c121c34dba0490b5ed975c5129c16ff645e46af430d8e283216dd75de9",
+    "15": "8ca867f34370e8f163537fa38f93aa7cd0e4576001fcd8e253cec73455447203",
+    "16": "087e5814d38a1d714dcf8248b024a48d122e83c3b9b4bc84a83859f826143a91",
+    "17": "e12543c24a0b8ddec9bad960cb903f8a004c5c9847c7676be74ff163fe338aec",
+    "18": "a001e135faf8c89723a340d6192bcd8fafb961ce60da28897b87efd5d97c0272",
+    "19": "fad3b3277f0fb44d6009802079219a9ed4f2baafc9ac0d2c78961eae1f5e5ee3",
+    "20": "859ec6f9cedbbbad6c0fb08fb83851b8439b687e990354708bac6813313c662d",
+    "21": "81a206232036585db12f858e51d1e422ef0c1ed30deed1adb126de6c377cb500",
+    "22": "4c33b5db2ac362500b99838b5435eca615ea51b8f603942f02b76902040fc582",
+    "23": "bc641f8ca8566c8f388e84d61b95d25321a64ad3202329716e2e0619514cb9c1",
+    "24": "cbc504146842354fcb02dbf98c820b9babc963c6d010d1a200f34080b05f23b8",
+    "25": "b0f594473f4ba6aee136e89a7b7a736959e8846e81f9f893169f31781db63cdd"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

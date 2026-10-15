@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "status": "final_text_ready_for_narration",
+  "narration_sha256": "59408ed0a6bce3d35d1faca8f24458d56414b3edb7cccebda646c04b4d280352",
+  "chapters_reviewed_in_integrated_pass": 24,
+  "local_findings_applied": 8,
+  "remaining_findings": [],
+  "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+  "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+  "scope": "Canon films and the named released Clone Wars, Rebels and Ahsoka scenes. No Legends lore or unreleased answers. Mysteries means explained evidence and remaining interpretive questions, not claimed secret revelations.",
+  "measured_audio_seconds": null,
+  "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+  "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+  "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+}

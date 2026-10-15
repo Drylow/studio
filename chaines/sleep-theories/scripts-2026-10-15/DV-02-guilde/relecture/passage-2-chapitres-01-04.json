@@ -1,0 +1,243 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Paul exposes the Guild's dependence on spice at Dune's final confrontation, showing that its transport monopoly does not give it control over the resource its Navigators require.",
+      "new_information": [
+        "The Guild's transport monopoly makes imperial orders and military deployments dependent on an institution outside the ruling Houses.",
+        "Spice supports the limited prescience used in Guild navigation.",
+        "Paul's credible threat to spice production gives him leverage over the Guild and, through it, Shaddam.",
+        "The Guild survives the change of ruler because its transport services remain necessary."
+      ],
+      "local_answer": "The Guild can control access to interstellar passage while remaining vulnerable to whoever can credibly threaten the spice supply that makes its navigation possible.",
+      "open_issues": [
+        "The opening expands into relocation logistics, the satellite bargain and the Messiah conspiracy before their assigned chapters, weakening the division of work across the outline.",
+        "The final paragraph repeats the dependency already established in the opening and confrontation paragraphs rather than adding a useful consequence."
+      ],
+      "evidence_notes": "The central argument agrees with G1 and G4. The military transport, satellite bargain and conspiracy references are also supported elsewhere in the supplied proof bank, but their factual support does not make all of them necessary in this opening. The optional subscribe and listening-location/day-or-night request appears once and should remain."
+    },
+    {
+      "number": 2,
+      "summary": "The Atreides relocation illustrates how House-owned vessels and personnel depend on the Guild's larger interstellar transport system.",
+      "new_information": [
+        "Moving the Atreides government requires transferring an organized household and military presence, not merely the ruling family.",
+        "House vessels can be carried within a Guild heighliner rather than independently replacing its interstellar service.",
+        "An imperial appointment grants authority at a destination without supplying the transport needed to exercise it.",
+        "Successful passage to Arrakis does not make the political situation awaiting the passengers safe."
+      ],
+      "local_answer": "The Guild supplies the interstellar connection through which a House can move its own vessels, personnel and equipment to a new seat of government.",
+      "open_issues": [
+        "Several paragraphs restate the distinction between owning House ships and needing a Guild carrier after it has already been explained.",
+        "Two methodological asides interrupt the practical account to discuss details the narration is not going to invent.",
+        "Much of the chapter's central example has already been delivered in chapter one."
+      ],
+      "evidence_notes": "The relocation and transport dependence accord with G1 and G2 and the assigned outline. No unsupported price, timetable, loading procedure or cabin scene is supplied. The principal weakness is development density rather than a demonstrated factual contradiction."
+    },
+    {
+      "number": 3,
+      "summary": "Guild navigation uses limited spice-enabled foresight to select a safe passage, a different task from the vessel's physical transport function.",
+      "new_information": [
+        "Prescient route selection and the physical movement of a carrier are separate contributions to the same service.",
+        "The sailor comparison illustrates the distinction between a vessel's ability to move and the safety of a selected course.",
+        "Navigational foresight does not guarantee political safety after arrival or universal knowledge in other situations.",
+        "Navigation machines and no-ships address different problems, although this later-series distinction belongs more naturally in its assigned chapter."
+      ],
+      "local_answer": "The Navigator helps identify a viable course; the ship remains the transport, and prescience is not presented as an engine.",
+      "open_issues": [
+        "The chapter repeatedly returns to the Atreides relocation instead of developing its assigned ship-versus-navigation distinction.",
+        "The Edric and conspiracy digression anticipates chapters six, seventeen and eighteen without explaining the navigation mechanism further.",
+        "The Ixian and no-ship paragraph delivers material assigned to chapter twenty-two.",
+        "A late paragraph repeats the hidden-service and spice-dependence framing already established in chapters one and two."
+      ],
+      "evidence_notes": "The core distinction is consistent with G1 and the explicit prohibition against treating Navigators as magical substitutes for ships or propulsion. The sailor comparison is clearly introduced as a comparison rather than canonical physics. Edric and later Ixian material agree with G5 and G7, but their placement is structurally premature."
+    },
+    {
+      "number": 4,
+      "summary": "The thinking-machine prohibition helps explain the Imperium's reliance on specialized human abilities, while Mentat analysis and Navigator prescience remain distinct capacities.",
+      "new_information": [
+        "The prohibition concerns mindlike machinery rather than a rejection of sophisticated technology generally.",
+        "Mentats analyze information, whereas Navigators use limited prescience to find safe courses.",
+        "Paul's Mentat training and developing prescience are separate abilities.",
+        "A House's own specialists do not give it an independent substitute for the Guild's transport service.",
+        "The prohibition provides context for human specialization without establishing that the Guild's exact monopoly was historically inevitable."
+      ],
+      "local_answer": "Navigators and Mentats answer different practical needs in a society that restricts thinking machines; extraordinary analysis is not the same ability as prescient navigation.",
+      "open_issues": [
+        "The Hawat betrayal paragraph detours into an individual subplot beyond the minimum Butlerian and comparative context requested.",
+        "The final paragraph repeats both the Mentat/Navigator distinction and House dependence after those points have already been established."
+      ],
+      "evidence_notes": "The chapter respects the original-six-book boundary and does not introduce expanded-prequel founders or retell the Butlerian war. The Hawat and Paul details are not independently documented in the supplied G1/G8 entries, although the outline expressly authorizes the Mentat comparison. No contradiction with the supplied constraints is established."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The Atreides have already experienced that arrangement before Paul becomes a threat to it. Duke Leto receives responsibility for Arrakis, and his household must leave Caladan. The family has ships and trained people of its own. For the interstellar passage, those vessels travel aboard a Guild heighliner. The transport belongs to a different organization, with its own rules about the people and craft carried inside it. Leto's appointment gives him authority at his destination. Getting there still requires the Guild.",
+      "reason": "This supplies most of chapter two's assigned explanation before that chapter begins. A short example supports the opening's monopoly argument without pre-delivering the House-vessel/heighliner distinction in full.",
+      "replacement": "Even the Atreides move from Caladan to Arrakis requires Guild passage. Leto's imperial appointment gives him authority at his destination, but getting there depends on another organization.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Arrakis is therefore a concern that the Guild cannot leave entirely to its clients. The Emperor and the Great Houses can quarrel over its government, but spice must keep reaching the wider Imperium. The Fremen understand the value of the Guild's appetite well enough to pay in spice for a sky without the observation satellites that would expose their activities. The carrier accepts a useful arrangement with people whom outsiders badly underestimate. Its need for a commodity creates a relationship that imperial titles alone don't explain.",
+      "reason": "The satellite bargain is supported by G3, but it belongs to chapters eleven and twelve and interrupts the opening's movement from spice dependence to Paul's threat. The following paragraph already makes the necessary transition to Paul's bargaining position.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The carrier survives that change of ruler. Its ships and skills are still needed, which helps explain why the confrontation doesn't end with Paul replacing the whole organization. He gains a way to constrain it. That distinction follows the Guild into Dune Messiah, where a Navigator can still be important enough to shelter a conspiracy against him. Being forced into a settlement hasn't made its members content with the new arrangement, and their service remains woven into the empire he now rules.",
+      "reason": "The survival of the carrier is a useful consequence of the confrontation, but the conspiracy preview shifts into chapter seventeen's material and generalizes dissatisfaction across Guild members. G5 supports Edric's participation, not the attitudes of the membership generally.",
+      "replacement": "The carrier survives that change of ruler because its ships and navigational skills are still needed. Paul gains leverage over an indispensable service, rather than an immediate replacement for it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For a passenger, a successful voyage can seem reassuringly ordinary. The ship arrives, the House disembarks, and work begins on another planet. At Arrakis, Paul forces the people behind those arrivals to confront the source of their own uncertainty. A Guild heighliner can carry a ruler's ships across the space between worlds. Its Navigator still needs the spice produced by the world waiting beneath them.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' This closing returns to the opening's ship-above/spice-below contrast after the intervening confrontation has already resolved it. It also spends the routine-passenger contrast reserved for chapter twenty-four. The preceding survival paragraph provides a substantive local close.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Herbert doesn't give us a detailed account of loading procedures during the relocation, and there isn't a need to supply one.",
+      "reason": "This is an authorial statement about avoiding invention rather than narration about the Guild. The assignment requires no invented loading procedures, not a spoken explanation that they are being omitted.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": " Leto can possess ships, issue orders to their crews, and decide what his House needs to take to Arrakis. The interstellar stage still requires Guild service. His authority remains real throughout the move, though one indispensable part of carrying out his orders belongs to an organization outside his household.",
+      "reason": "H18's 're-mention that adds nothing gets cut' applies here: the preceding two paragraphs have already explained House ownership, heighliner carriage and dependence on the Guild. This paragraph adds no new logistical step or consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "We don't need to assign an unseen itinerary to the Atreides to recognize the distinction.",
+      "reason": "This is a second methodological aside about what the author will not invent. The surrounding sentences already distinguish interstellar arrival from taking up responsibilities on the surface without requiring an evidentiary disclaimer.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "It's tempting to read the House's dependence as evidence that its own ships are merely decorative. They have practical uses, and their ownership matters. A ruler who can move personnel in his own vessels has capabilities that a ruler without them would lack. The limit concerns the larger connection between systems. A frigate and a heighliner occupy different places in that connection. Once those roles are kept separate, there's no contradiction in a powerful House maintaining a fleet while still needing to arrange passage through the Guild.",
+      "reason": "H18 describes repeated framing without useful development. This paragraph invents a reader objection in order to explain the House-ship/heighliner distinction again; the third and fourth paragraphs already make that distinction concrete. It is the least useful extended restatement in the chapter.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Atreides move gives the arrangement a familiar example. Their own vessels become cargo within the Guild's much larger transport. Duke Leto can command the craft belonging to his House, but he cannot make those craft provide an independent alternative to the Guild's interstellar service. The move from Caladan to Arrakis uses both. The smaller ships carry the household's organization, and the heighliner takes that collection of people and equipment between distant worlds.",
+      "reason": "H18 requires checking repetition across the full supplied text. Chapter two has just explained this example at length, and chapter three's opening already recalls the necessary distinction. This paragraph delays the new subject, prescient course selection.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Edric gives that experience a person in Dune Messiah. He's a Guild Navigator whose altered body lives in a tank filled with spice gas. His presence makes the dependence visible. Navigation has become a human specialization with consequences for the life and body of its practitioner. He cannot be understood merely as another officer who happens to know the route. The substance that sustains his unusual awareness also connects him to the political struggle over Arrakis.\n\nHis prescience doesn't make him generally incapable of being surprised or defeated. The same novel brings him into a conspiracy, where his awareness has a use beyond transport. Those plans can still fail. A useful ability in one situation does not remove the other people involved, or give its possessor every fact they might withhold. For the Guild's ordinary service, the specialization is narrower and more practical: anticipate a viable passage and help bring the carrier through it.",
+      "reason": "These paragraphs leave the assigned distinction between transport and navigation to preview Edric's body, conspiracy role and limitations, which have dedicated homes in chapters six and seventeen through twenty. A short statement of limited navigational foresight preserves the relevant qualification without delivering those later developments early.",
+      "replacement": "The foresight used for navigation is limited. Finding a viable passage doesn't require knowing every future event or every danger awaiting the passengers after they arrive.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The difference matters to how we read the Guild's reputation. Reliable passage encourages people to treat the whole arrangement as settled. Once a House has booked its movement, its attention can turn toward the destination. Yet the successful service still depends on the Navigator's access to spice. Familiarity with the result doesn't make that requirement disappear. The immense ship and the specialized human being aboard it belong to the same journey, with different needs and different vulnerabilities.",
+      "reason": "H18's repeated-framing pattern applies: reliable service concealing spice dependence has already been explained in chapter one and again in this chapter's customer-perspective paragraph. This passage supplies neither a new mechanism nor a distinct consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Later in Frank Herbert's original series, Ixian navigation technology challenges the need for the human specialist. The challenge concerns a method of navigating. It doesn't mean that a ship no longer has to move, or that every other part of interstellar travel has been abolished. Nor is a navigation machine the same invention as a no-ship, whose concealment from prescience addresses another problem. Keeping those developments separate allows the later changes to make sense: one can reduce reliance on a Navigator, while another changes who can perceive a vessel at all.",
+      "reason": "This is supported later-series material, not a spoiler violation, but it delivers chapter twenty-two's assigned explanation in chapter three. The ship-versus-Navigator distinction is already understandable without introducing a second technological distinction here.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Hawat's work also shows how much depends on the information reaching him. During the destruction of House Atreides, the Harkonnens' deception helps turn suspicion toward Jessica. Hawat's formidable abilities don't spare him that mistake. The false picture he accepts affects his loyalties after he's captured and brought into Harkonnen service. This is a very concrete limit on trained analysis. A person may handle information with extraordinary skill and still draw a damaging conclusion when an enemy has arranged the available facts to point in the wrong direction.",
+      "reason": "The assignment requests minimum Butlerian context and a functional comparison with Mentats. This extended betrayal subplot adds names, chronology and loyalties without being needed to distinguish analysis from prescience. The useful limitation can be retained locally.",
+      "replacement": "A Mentat's conclusions still depend on the information available. Extraordinary analysis doesn't guarantee a sound judgment when crucial facts are false or missing.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "For the Guild's customers, the practical result is dependence on a human capability they can't obtain just by acquiring equipment. The older prohibition has helped create a civilization that invests heavily in trained and altered human capacities, then gives certain specialists enormous responsibility. Hawat's calculations can influence a House's survival. A Navigator's foresight can make its passage possible. Keeping their work separate gives us a clearer picture of the Guild's place: one specialized institution among others, with an indispensable task that even a well-equipped and carefully advised House can't perform for itself.",
+      "reason": "H18 identifies repeated framing that does not advance the account. The chapter has already established human specialization, distinguished Hawat from a Navigator and explained why House specialists cannot replace Guild service. This closing summarizes those points again; the preceding paragraph already closes the machinery/prohibition distinction concretely.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "detail": "The Caladan-to-Arrakis relocation and the distinction between House ships and Guild heighliners receive full explanations in all three chapters. Give the practical logistics their main home in chapter two, with only a short example in chapter one and a brief recall in chapter three."
+    },
+    {
+      "chapters": [
+        1,
+        3
+      ],
+      "detail": "Both chapters introduce Edric's conspiracy role before its assigned development, and both return to the contrast between an apparently routine service and hidden spice dependence. The second treatment does not yet provide the specific concealment mechanism that would justify revisiting the conspiracy."
+    },
+    {
+      "chapters": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "detail": "Each chapter returns to the conclusion that a powerful, well-equipped House still needs the Guild. This is an appropriate overarching premise, but repeated closing statements of it crowd out each chapter's distinct endpoint: spice leverage, relocation infrastructure, safe-course selection and the difference between trained analysis and prescience."
+    },
+    {
+      "chapters": [
+        2,
+        3
+      ],
+      "detail": "Successful passage versus a dangerous destination is explained in chapter two's Leto paragraph and again through the Atreides political trap in chapter three. The second use has a narrower navigational purpose, so keep that version concise rather than expanding the same relocation example again."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within Frank Herbert's original-six-book scope and the authorized spoiler range. No expanded-prequel origin story, film-specific Navigator physiology, invented numerical tariff, universal prescience, CHOAM ownership claim or conflation of navigation machines with no-ships was found. The film comparison distinguishes the novel's threat rather than importing the adaptation's mechanism. The main release-readiness issue is structural repetition and premature delivery of later chapter assignments, not a demonstrated major canon violation.",
+  "limitations": "Reviewed all four supplied chapter texts against the supplied outline, proof bank and voice rules. Chapters five through twenty-four were supplied only as assignments, so repetition against their eventual narration cannot be assessed. The linked pages and primary novels were not opened or independently checked, and no claim is made to independent verification of every fictional detail. Voice judgments use the supplied raw transcript excerpts; no audio measurement or human read-aloud was performed.",
+  "input_hashes": {
+    "1": "f9c3c9541152fc356f8acff8c92a37d179b6354f71790d9973224683711d369a",
+    "2": "7e18a088288ca2fc563e4cc315cead7e873e04b7cc4b72227a7e8251817035d4",
+    "3": "5aa36cd742d2769029180cc231e52fb2f213994d55986e306e63ffac0c2949fd",
+    "4": "5a4243b11bf7697252c7de5a6a19fd5789d506b8b97f7d5df3eda43ca3688306"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

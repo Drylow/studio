@@ -1,0 +1,168 @@
+{
+  "chapters": [
+    {
+      "number": 9,
+      "summary": "Victor remembers Christopher changing after becoming absorbed in the symbol, while Jade's later discoveries connect that history to the children and to his own previous life.",
+      "new_information": [
+        "Victor identifies Christopher in a photograph and remembers that he once made people laugh.",
+        "Christopher's journal provides a surviving record of his attention to the symbol.",
+        "Miranda's instruction to hide somewhere Christopher did not know gives Victor's fear a specific basis without identifying the perpetrator of every death.",
+        "Jade's encounter with the children and the roots gives the symbol a context beyond Christopher's behavior.",
+        "The released reincarnation revelation changes Christopher from a historical comparison into part of Jade's earlier involvement."
+      ],
+      "local_answer": "The chapter answers its assignment by separating Christopher's observed change, Victor's understandable fear, and the later explanation involving previous lives; it does not establish either universal mind control or Christopher's sole responsibility for the massacre.",
+      "open_issues": [
+        "One sentence presents an interpretation of Jade's motivation as an established cause.",
+        "The phrase 'released revelation' exposes the production brief rather than speaking naturally to the listener."
+      ],
+      "evidence_notes": "The central distinctions agree with V1, V2 and V4 and the assigned outline. The photograph, journal, hiding instruction and roots scene are additional episode-specific details not individually documented in the supplied proof entries; no independent verification of those details is claimed."
+    },
+    {
+      "number": 10,
+      "summary": "Victor and Henry recover Jasper from the tunnels, but possessing the dummy does not recover the conversation Victor has mistakenly associated with it.",
+      "new_information": [
+        "Victor pursues Jasper as a physical route back to an incomplete childhood memory.",
+        "Henry accompanies the retrieval but cannot corroborate the original conversation.",
+        "The search exposes both men to danger in the creatures' territory.",
+        "Jasper remains silent after retrieval, leaving the central question unanswered.",
+        "Sara's involvement shifts the investigation from recovering an object to reconsidering the remembered event."
+      ],
+      "local_answer": "The chapter clearly distinguishes a recovered possession from a reliable witness and explains why successful retrieval does not validate the role Victor assigned Jasper.",
+      "open_issues": [
+        "Two consecutive paragraphs explain substantially the same limit on Henry's corroboration.",
+        "The closing phrase about a 'confirmed speaker' sounds like an editorial compliance check rather than narration."
+      ],
+      "evidence_notes": "The investigative detour and eventual correction agree with V2. The tunnel journey, Henry's participation and the creature's intervention extend beyond the detail recorded in that proof entry; they are not treated here as independently verified."
+    },
+    {
+      "number": 11,
+      "summary": "With Sara's help, Victor identifies the Boy in White rather than Jasper as Christopher's interlocutor and recalls carrying the message about saving the children to Miranda.",
+      "new_information": [
+        "The corrected speaker is the Boy in White.",
+        "The recalled conversation concerns the children, their suffering, hope and a proposed rescue.",
+        "Victor remembers telling Miranda what he overheard after Christopher resisted the message.",
+        "Sara facilitates recollection without becoming an independent witness to the childhood conversation.",
+        "The correction connects Victor's overheard information with Miranda's later action without making him responsible for her choices."
+      ],
+      "local_answer": "The chapter moves beyond repeating the hook by explaining what the correction changes about the message's transmission and Victor's connection to Miranda's departure.",
+      "open_issues": [
+        "The paragraph beginning 'Still, Sara is helping Victor remember' substantially repeats the earlier explanation that Sara cannot independently corroborate the event.",
+        "Some detailed contents of the recalled conversation exceed the granularity of V2 and require source checking if a fully documented factual audit is needed."
+      ],
+      "evidence_notes": "V2 explicitly supports Sara's assistance and the correction from Jasper to the Boy in White. The fuller account of the children and Victor's transmission of the message is not transcribed in the supplied proof bank, so its exact wording and sequence have not been independently established in this review."
+    },
+    {
+      "number": 12,
+      "summary": "The Boy in White's practical interventions and later bottle-tree warning give Victor reasons to listen without proving the figure's complete knowledge or benevolence.",
+      "new_information": [
+        "Victor's history with the Boy in White helps explain the weight he gives later guidance.",
+        "The tunnel assistance and lighthouse passage have observable results but different demands and costs.",
+        "Victor and Tabitha possess different firsthand experiences rather than a shared complete account.",
+        "The season-four tree warning requires collective cooperation that Victor cannot secure by acting alone.",
+        "Neither a wholly benevolent nor a proven-villain interpretation is established by the interventions described."
+      ],
+      "local_answer": "The chapter answers its assigned question by comparing specific interventions and explaining why useful assistance does not settle the Boy in White's intentions or authority.",
+      "open_issues": [
+        "The last paragraph repeats the burden, restraint and public-persuasion analysis already developed in the two tree paragraphs.",
+        "The chapter previews material assigned to chapters 21 and 22; those later chapters will need to develop the decision and outcome rather than repeat this account."
+      ],
+      "evidence_notes": "The remembered conversation and season-four warning align with V2 and V7. The outline expressly permits comparing earlier interventions with that warning. The tunnel and lighthouse details are not separately documented in the supplied proof entries. No claim of omniscience, proven villainy or a fully solved causal mechanism is made."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 9,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Jade keeps pursuing the symbol because it's already intruding into his life.",
+      "reason": "The causal 'because' turns a plausible interpretation of Jade's motivation into an established explanation. The supplied evidence supports his experiences and pursuit, not this exclusive account of why he continues.",
+      "replacement": "Jade keeps pursuing the symbol while it continues to intrude into his life.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 9,
+      "kind": "artifact",
+      "severity": "minor",
+      "quote": "Season four carries that released revelation into the ongoing story.",
+      "reason": "'Released revelation' imports the editor's release-status terminology into the narration. The surrounding sentences already state the development clearly, and this sentence adds no concrete season-four information.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gives Henry's presence a particular value. He can witness the retrieval and see where Jasper has ended up. He can help Victor face the journey without being able to settle the question that brought them there. The two men come away with an object whose present location they've both encountered. The older event still belongs to Victor's account. Having his father beside him changes the experience of searching, and it gives him someone to return with, even though Henry can't fill in the missing exchange.",
+      "reason": "H18 identifies re-statements 'with nothing new attached.' The preceding paragraph already establishes Henry's companionship, Victor's superior local experience and Henry's inability to corroborate the childhood exchange. This paragraph's useful additional distinction is simply that Henry witnesses the present retrieval.",
+      "replacement": "Henry can witness where they find Jasper, even though he can't verify the conversation Victor associates with it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 10,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "The correction that follows in season three's \"Thresholds\" means the dummy can't remain the confirmed speaker in that childhood exchange.",
+      "reason": "'Can't remain the confirmed speaker' describes how an editor should classify the claim rather than what Victor discovers. It echoes the brief's prohibition instead of delivering the event in spoken narration.",
+      "replacement": "In season three's \"Thresholds,\" Victor remembers that Christopher was speaking to the Boy in White, not Jasper.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 11,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Still, Sara is helping Victor remember an exchange from childhood. Their conversation isn't an independent recording of it, and the Boy in White's promise remains something Victor recalls him saying. This is a fuller account with a corrected speaker, rather than a guarantee that every detail or promise has been verified. Its value comes partly from the connections it supplies: Christopher's attention to the symbol, the message about the children, and the information Victor carried to his mother now belong to the same remembered occasion.",
+      "reason": "H18's repeated-framing problem applies: the third paragraph already explains at length that Sara was absent from the original event and cannot independently verify it. Keep the new causal connection instead of delivering another evidence-method caveat.",
+      "replacement": "The corrected account connects Christopher's attention to the symbol with the message about the children and the information Victor carried to Miranda.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 12,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The burden remains uneven. The Boy in White can appear, speak and leave. Victor has to face Boyd, interrupt the plan and endure being restrained when his objection isn't accepted. Whatever the boy intends, that cost falls on the person carrying his words. Victor's history with him helps explain why he persists. He's trying to prevent an action he's been warned against, using the only account he has available to tell the people standing around the tree.",
+      "reason": "H18 describes a theme repeatedly returning to the same observation. The opening already establishes guidance followed by absence, while the seventh and eighth paragraphs establish restraint, Victor's reasons for trust and his inability to make the group accept a private warning. This final paragraph combines those points without a distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        9,
+        10
+      ],
+      "detail": "Christopher's earlier association with laughter recurs usefully: chapter 9 establishes the behavioral change, while chapter 10 connects the performance with Victor's association between Christopher and Jasper. Preserve that distinction rather than expanding the recap."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Both chapters explain that another person's present involvement cannot independently verify Victor's childhood memory. Henry's role should stay tied to witnessing the retrieval, and Sara's to helping Victor revise the account; repeated general lessons about corroboration are unnecessary."
+    },
+    {
+      "chapters": [
+        10,
+        11
+      ],
+      "detail": "Chapter 10's ending and chapter 11's opening both announce the speaker correction. A brief handoff is appropriate, but chapter 11's substantive contribution is the message's content and its transmission to Miranda, not another extended Jasper recap."
+    },
+    {
+      "chapters": [
+        11,
+        12
+      ],
+      "detail": "The promise about saving the children recurs with a distinct purpose: chapter 11 reconstructs the remembered exchange, while chapter 12 compares the scale of that promise with immediately observable assistance. Avoid repeating the full children's account in chapter 12."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the authorized television scope through S4E10 and explicitly incorporate season-four material. They do not assert the prohibited Jasper identification, a confirmed fate for Eloise, Victor's control of the town, a guaranteed mind-control symbol or the Boy in White's proven moral status. The opening spoiler notice and one-time optional audience request cannot be assessed because chapter 1 was not supplied.",
+  "limitations": "Read and reviewed all supplied prose for chapters 9-12 against the episode brief, outline, proof bank and supplied voice guidance. Chapters 1-8 and 13-24 were available only as outline assignments, not narration, so full-episode repetition and their execution cannot be audited. No websites were opened, episodes watched, audio measured or fictional details independently verified. Episode-specific details beyond the proof bank's summaries are distinguished from contradictions rather than presumed false.",
+  "input_hashes": {
+    "9": "e97943aec001a567da4702e9c6eaf5d40ddc3e3b3561ebc9335b904f7e97f5e1",
+    "10": "798541507e1fedf855b0a5e10301e10fe17146b325e242524c46153048684771",
+    "11": "9625c09037a02d972257af31c4d0fd01c1190cc7c341b7652605798f4f3ab00b",
+    "12": "8668df52a7fc4f825c27715515c3809f16e7e65b8c81d74b2ad57a49ddf8a9cd"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

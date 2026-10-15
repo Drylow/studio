@@ -3,10 +3,9 @@
 -- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
 -- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 1
   [floor: reframe: isn't X, it's Y] ...r own Bene Gesserit abilities don't let her bring him back into ordinary contact. This is a difficult position for the ...
--- ECHO CHECK (H18): 13
+-- ECHO CHECK (H18): 12
   [echo H18: phrase repeated 7x] "the water of life"
   [echo H18: phrase repeated 5x] "the people around him"
-  [echo H18: phrase repeated 3x] "the destruction of his"
   [echo H18: phrase repeated 3x] "trained by the bene"
   [echo H18: phrase repeated 3x] "has prepared him to"
   [echo H18: phrase repeated 3x] "to the atreides family"

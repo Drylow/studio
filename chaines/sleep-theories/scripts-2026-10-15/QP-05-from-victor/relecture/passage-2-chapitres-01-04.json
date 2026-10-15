@@ -1,0 +1,182 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Victor's correction of Jasper to the Boy in White establishes that his memories can provide useful leads while still requiring revision.",
+      "new_information": [
+        "Victor initially seeks Jasper because he remembers the dummy as Christopher's conversation partner.",
+        "In S3E8, Thresholds, Sara helps him recall that Christopher was speaking to the Boy in White.",
+        "Victor's drawings, saved possessions and childhood experience provide records beyond his spoken recollections.",
+        "The episode announces spoilers through the season-four finale and includes the requested optional subscription and listening-location invitation."
+      ],
+      "local_answer": "The chapter answers its assigned question: a corrected identification changes the investigation without invalidating Victor's entire history. It spends too long repeating that distinction and develops Sara's role more fully than this opening needs.",
+      "open_issues": [
+        "Several paragraphs repeat the distinction between useful testimony and complete verification.",
+        "The detailed treatment of Sara's questioning anticipates chapter 11's assigned development.",
+        "The drawings-and-Ethan discussion previews subjects that have dedicated chapters immediately afterward."
+      ],
+      "evidence_notes": "The central correction agrees with V2, and the account of Victor's persistent but incomplete record agrees with V1. Sara's assistance is appropriately distinguished from independent verification. The spoiler notice precedes the season-four material in the supplied chapters, and the optional invitation appears only once."
+    },
+    {
+      "number": 2,
+      "summary": "Victor's drawings preserve partial recollections that can remain useful even when their dates, context and meaning are not immediately clear.",
+      "new_information": [
+        "The drawings give Victor a persistent memory aid that can be revisited without completing a spoken account.",
+        "A drawing's creation date and the date of its depicted event are separate questions.",
+        "Selection and emphasis limit what an image can establish about events outside Victor's view.",
+        "An apparent match with a present event may indicate recurrence rather than prediction.",
+        "Comparison with a recognized place or later discovery can clarify a drawing's significance."
+      ],
+      "local_answer": "The chapter answers the assigned question and correctly preserves the usefulness of an incomplete record. Its middle and ending repeatedly explain why Victor may be unable to discuss an image, instead of advancing the analysis.",
+      "open_issues": [
+        "The chapter relies heavily on hypothetical viewing and questioning situations rather than particular established developments.",
+        "The preservation-versus-explanation distinction receives several substantially equivalent treatments.",
+        "The ending returns to instructions for interpreting evidence after that approach has already been established."
+      ],
+      "evidence_notes": "V1 supports the drawings as a persistent record with gaps and corrections. The chapter does not invent a named drawing, exact inscription or prophetic event. Its examples about dating, isolation and comparison are interpretive possibilities, not independently documented scenes in the supplied proof bank."
+    },
+    {
+      "number": 3,
+      "summary": "Ethan's shared stories, questions and experiences give Victor a conversational opening, while their friendship also raises real questions about safety and protection.",
+      "new_information": [
+        "Ethan uses the Cromenockle stories to approach the town's mysteries.",
+        "Jim's objection to Victor taking Ethan into the woods introduces a legitimate safety conflict.",
+        "Ethan and Victor share recognition of the Boy in White.",
+        "Victor demonstrates a faraway tree's behavior with a stone, giving Ethan access to practical knowledge without establishing a universally safe route.",
+        "By season four, Victor fears that Ethan could experience an isolation resembling his own childhood."
+      ],
+      "local_answer": "The chapter explains how the relationship changes access to information without making childhood a supernatural qualification. Its strongest developments are the shared recognition, the tree demonstration and the conflict between useful knowledge and Ethan's safety.",
+      "open_issues": [
+        "One paragraph speculates about protective motives behind hesitation without tying that interpretation to a specific refusal.",
+        "The car-related fear previews chapters 17 and 18; those chapters should supply the scene-specific development rather than repeat this relationship summary.",
+        "Several early-season scene details are more specific than the supplied proof-bank summaries."
+      ],
+      "evidence_notes": "V1 supports the enduring Ethan relationship, and V5 supports Victor's later fear at the car. The Cromenockle, Jim confrontation and stone demonstration are not individually documented in the supplied proof summaries; their inclusion is not, by itself, evidence that they are wrong, but their exact execution has not been independently verified here. The chapter appropriately rejects an age-based destiny claim."
+    },
+    {
+      "number": 4,
+      "summary": "Victor survives the childhood massacre without witnessing its full course, and his subsequent familiarity with the town does not give him complete knowledge of its history or origin.",
+      "new_information": [
+        "Victor emerges from hiding and encounters the massacre's aftermath rather than witnessing its entire sequence.",
+        "The Boy in White appears in his recollections of the period after the massacre.",
+        "His immediate childhood isolation must be distinguished from the full span of his later residence among subsequent arrivals.",
+        "His attention to changing tree distances illustrates observational knowledge accumulated over time.",
+        "His guidance through the tunnels illustrates practical knowledge that does not require a complete explanation of the town."
+      ],
+      "local_answer": "The chapter directly answers its assignment, separates survival from comprehensive witnessing, and avoids extending childhood solitude across every intervening decade. Its practical examples are useful, but their shared conclusion is restated unnecessarily.",
+      "open_issues": [
+        "A paragraph summarizing Victor's practical competence duplicates the two examples immediately before it.",
+        "The repeated statements about unavailable knowledge contribute to the broader methodological echo across all four chapters.",
+        "The tree-measurement and tunnel details are not individually documented in the supplied proof summaries."
+      ],
+      "evidence_notes": "The central survival and incomplete-record claims agree with V1 and V3. The chapter avoids graphic description and explicitly rejects the forbidden claim of uninterrupted lifelong solitude. The supplied bank does not independently establish every detail of the hiding place, tree measurements or tunnel sequence."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The correction gives us a useful way to approach Victor's other accounts. When he remembers a person being present, that's one part of the story. What that person said, what Victor understood at the time, and what he now thinks it meant are further parts. They don't always return together. In the Christopher conversation, the identity of the speaker needs revising. It would be a mistake to carry on treating Jasper as the confirmed speaker once Victor has recovered the Boy in White's involvement.",
+      "reason": "H18 identifies repeated framing as an echo when a re-mention adds nothing. The opening three paragraphs have already established the mistaken speaker, the correction and its practical consequence; this paragraph restates those points as an evidence-handling lesson.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Sara's involvement in Thresholds matters within those limits. Victor doesn't reach the revised account entirely on his own; another person helps him work through what he's trying to remember. That gives the correction a social setting. He can say something, encounter a response, and continue. Sara hasn't brought a recording of Christopher's conversation, so her presence can't independently verify every detail. Still, the exchange allows Victor to move beyond the account that had sent him after Jasper. Someone listening to him becomes part of how the investigation progresses.",
+      "reason": "Chapter 11 is specifically assigned cooperative questioning and the limits of Sara's corroboration. Chapter 1 already identifies her assistance and returns to it in its closing paragraph. This additional treatment uses up that later chapter's development and repeats the methodological framing; H18 says a repeated observation should have one home paragraph.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The same patience applies to the things Victor preserves. A drawing can remain available when its maker can't explain it, and an object can bring a person back into conversation after a long silence. Neither supplies all its own context. Someone still has to ask what Victor associates with it, and whether anything else fits that association. This is where his exchanges with Ethan become valuable. Ethan gives Victor someone to share things with, while Victor's knowledge gives Ethan ways to approach a place the adults are also struggling to understand.",
+      "reason": "This paragraph supplies another general lesson about incomplete evidence rather than advancing the opening's correction. Drawings, Ethan and saved possessions have dedicated assignments in chapters 2, 3 and 5, and chapter 1 has already introduced the drawings and possessions. Under H18, this preview adds insufficient development to justify another statement of the same framework.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "This also helps account for the gap between possessing a record and being able to discuss it. Victor can have kept something for years without having a clear account ready for whoever asks. The continued existence of the paper doesn't mean that speaking about its subject has become easy. In his dealings with the Matthews family, information often arrives in pieces, as the present gives him a reason to return to something earlier. His drawings allow an earlier impression to remain nearby during that process. They don't require him to settle its meaning every time he sees it.",
+      "reason": "The opening, second paragraph and immediately preceding paragraph already explain that drawings persist when Victor cannot readily explain them. H18 describes the third equivalent treatment as an echo; this is the least useful middle repetition and can be removed without losing the chapter's dating, emphasis or prediction distinctions.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a cost to that comparison when every picture becomes a demand for an explanation. Victor has kept these images through a life the newcomers didn't share. Their need for answers is real, but it doesn't make him able to produce those answers on request. The most useful approach leaves room for both the visible detail and his unfinished account of it. Someone can keep looking at the picture, remember what Victor has said, and allow a later discovery to clarify the connection. Until then, the paper has already done something worthwhile: it's kept a particular part of his past available to be shared.",
+      "reason": "The ending repeats the opening's preservation point and the second paragraph's allowance for pauses, then gives another set of interpretive instructions. H18 calls for cutting re-mentions that add nothing; the sleep adaptation also asks for lore and interpretation rather than a repeated lecture about evidence.",
+      "replacement": "Victor's drawings preserve parts of his past that he can't always explain when someone asks. Their meaning can become clearer later, when he or another resident recognizes something on the page.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "That fear can affect what Victor is willing to share. A person who wants information might interpret hesitation as obstruction, while Victor may be struggling with the possibility that explaining something will draw Ethan closer to it. Protective intent wouldn't make every refusal helpful, and it wouldn't make every fear a forecast. It does give his reluctance a context. Ethan's questions reach someone who cares what happens after the answer is given. Victor has to consider the boy who will carry that answer away with him.",
+      "reason": "The paragraph moves from the supported fear at the car to a hypothetical explanation of unspecified hesitation and refusals. It does not assert that motive unequivocally, but it supplies no particular exchange through which to examine it. Deletion preserves the supported protective concern and avoids padding the chapter with an unanchored motive.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The distinction becomes easier to follow if we stay with what Victor actually does. He finds shelter, watches his surroundings, and recognizes places. He also becomes frightened, hesitates, and struggles to explain parts of his past. Those things can exist together without cancelling each other out. A person may know where to go during a dangerous encounter and still misunderstand why that danger exists. Victor's usefulness often depends on a local detail, such as a route or a remembered change, rather than a finished account of the town.",
+      "reason": "The tree-measurement and tunnel paragraphs have just demonstrated this exact distinction with concrete actions. This paragraph converts those examples back into an abstract lesson already established in chapter 1. H18 says a repeated observation should have one home rather than recur as each section's conclusion.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "detail": "All four chapters repeatedly return to the proposition that Victor knows useful things but cannot explain everything. That is the episode's valid organizing idea, but repeated statements about incomplete accounts, unanswered questions and the limits of knowledge start to displace each chapter's distinct material. Keep chapter 1 as the main statement of the framework and let drawings, friendship and survival demonstrate it afterward."
+    },
+    {
+      "chapters": [
+        1,
+        2
+      ],
+      "detail": "Chapter 1's paragraph beginning 'The same patience applies to the things Victor preserves.' anticipates chapter 2's central explanation that a drawing can persist without an immediately available interpretation. Removing that preview gives chapter 2 a clearer informational contribution."
+    },
+    {
+      "chapters": [
+        1,
+        3
+      ],
+      "detail": "Chapter 1 already explains Ethan as someone with whom Victor can share incomplete knowledge. Chapter 3 adds useful scene-specific material, so the general preview in chapter 1 is the less useful occurrence."
+    },
+    {
+      "chapters": [
+        1,
+        4
+      ],
+      "detail": "Chapter 1 explains that a child could not follow every adult or witness every conversation; chapter 4 develops the same limit through Victor's concealment during the massacre. The latter is the stronger, concrete treatment, although a brief opening statement remains appropriate."
+    }
+  ],
+  "scope_status": "The four supplied chapters respect the declared through-S4E10 scope and do not contradict the supplied 2026 developments. The season-four spoiler notice appears before chapter 3's car reference. No supplied chapter claims Jasper remains the confirmed speaker, Eloise has a resolved fate, Victor spent every decade alone, or Victor controls the town. The requested optional invitation appears once in chapter 1. Only chapters 1-4 were supplied as narration; chapters 5-24 were supplied as outline assignments and have not been reviewed as completed chapters.",
+  "limitations": "This review uses the supplied narration, outline, proof bank and voice samples. No linked pages were opened, episodes watched, audio measured or independent verification of every fictional detail performed. Several early-season scene details exceed the granularity of the proof summaries; that limitation is noted without treating absence from those summaries as proof of error. No machine-banned phrase or non-ASCII artifact was identified in the supplied narration.",
+  "input_hashes": {
+    "1": "06bf055aaf45b2d00d32de7a2c9eef07ceb48fbb7c17d8940c10a87820752844",
+    "2": "03095b0a1a5ac8d174e5e02323cfb2538a1159e56da1e62504bb6c7f46890a01",
+    "3": "6514e7cd1025b95056e359a6d76d343fe39ae743ecffabbfa232e8af61cc7a8f",
+    "4": "9ee840f5256d3a7a7145ca8cd2992ecd65238944e763d291b0c11ada81fc6189"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

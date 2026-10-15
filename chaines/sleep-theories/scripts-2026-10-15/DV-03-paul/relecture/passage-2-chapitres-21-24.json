@@ -1,0 +1,178 @@
+{
+  "chapters": [
+    {
+      "number": 21,
+      "summary": "Chani dies delivering the twins, Duncan recovers his identity, Paul defeats Scytale, and his loss of prescient sight leads him to leave imperial life for the desert.",
+      "new_information": [
+        "The unexpected son exposes a limit in Paul's anticipation of the birth.",
+        "The newborn Leto is distinct from Paul and Chani's first son, who died during the struggle for Arrakis.",
+        "Hayt's conditioning crisis restores Duncan's memories and makes the offer of a restored Chani credible.",
+        "Paul briefly sees through his son's eyes and kills Scytale, saving the twins.",
+        "Paul follows the Fremen custom concerning blindness, leaving the children in the care of others rather than receiving a confirmed death at the novel's close.",
+        "Irulan turns away from the conspiracy and commits herself to the children, while Alia assumes the regency."
+      ],
+      "local_answer": "The chapter answers why Paul leaves: after Chani's death and the collapse of his usable prescient future, he accepts the Fremen practice governing blindness, but his departure transfers unresolved responsibilities to his children's guardians.",
+      "open_issues": [
+        "The explanation of Hayt's conditioning needs to acknowledge its engineered role in demonstrating restored ghola memory, rather than presenting that restoration chiefly as the accidental defeat of an assassination plan."
+      ],
+      "evidence_notes": "The central sequence fits P4-P6 and the assigned scope. The knife attack, sight through Leto, Scytale's disguise, and Irulan's reported change of allegiance are finer-grained novel details than the supplied proof summaries explicitly document; those summaries alone do not independently establish every detail."
+    },
+    {
+      "number": 22,
+      "summary": "In Children of Dune, Paul returns as the Preacher and challenges a religious government that has developed interests and authority around his absent public identity.",
+      "new_information": [
+        "The Preacher's uncertain identity complicates Alia's ability to suppress him.",
+        "Alia rules as regent while pilgrimage, religious offices, and wealth sustain the worship of Muad'Dib.",
+        "The Preacher is Paul, but recognition would not automatically restore his control over the institutions using his name.",
+        "Assan Tariq accompanies him as his guide.",
+        "Ecological change and Stilgar's responsibilities show how Atreides rule has altered Fremen life beyond the court.",
+        "Alia's vulnerability to the Baron's ancestral personality further destabilizes the regency."
+      ],
+      "local_answer": "The chapter clearly explains the discrepancy between Paul and Muad'Dib's institutional image, while retaining Paul's responsibility for helping that institutional order arise.",
+      "open_issues": [],
+      "evidence_notes": "P6 and P7 support the regency, Paul's identity as the Preacher, and his opposition to the religion built around him. The guide, ecological developments, Stilgar's position, and Alia's ancestral struggle extend beyond those brief proof entries but remain within the assigned novel continuity."
+    },
+    {
+      "number": 23,
+      "summary": "Paul encounters a son who has begun the bodily transformation associated with the Golden Path and must confront both his own refusal and their unequal understanding of humanity's danger.",
+      "new_information": [
+        "Leto has joined sandtrout to his body before meeting Paul.",
+        "The transformation gives Leto extraordinary physical capacities and commits him to a prolonged departure from ordinary human life.",
+        "Leto presents the Golden Path as a response to humanity's threatened extinction, while Paul has not seen or understood the same possibilities in the same way.",
+        "Leto's forced spice exposure and ancestral awareness help explain his unusual position in the encounter.",
+        "The changing ecology of Arrakis connects Leto's transformation to the threatened sandworm and spice cycle.",
+        "Paul and Leto proceed toward Arrakeen together after their confrontation."
+      ],
+      "local_answer": "The chapter distinguishes Paul's refusal from Leto's acceptance without declaring every act on Leto's proposed path justified, but repeats the bodily cost and commitment more often than the explanation requires.",
+      "open_issues": [
+        "Several paragraphs restate that Leto accepts an inhuman future Paul could not bear, delaying the chapter's distinct developments.",
+        "The phrase describing Paul as having been drawn into decisions by prescience weakens the otherwise careful distinction between foresight and agency."
+      ],
+      "evidence_notes": "P7-P8 establish the encounter, Paul's refusal, and Leto's acceptance of a transformative future. The chapter appropriately attributes extinction and necessity to Leto's account rather than treating his certainty as independent proof of universal moral justification. Technical and experiential details are more granular than the proof summaries."
+    },
+    {
+      "number": 24,
+      "summary": "Paul is killed while publicly challenging Alia's religious order, ending his personal life while Atreides succession and the public use of Muad'Dib's name continue.",
+      "new_information": [
+        "A priest kills the Preacher during his final public confrontation.",
+        "This death supplies the definite biographical ending that Paul's departure in Dune Messiah did not.",
+        "Paul's death does not complete or authorize Leto's separate undertaking.",
+        "Alia's regency ends and she dies during the final upheaval.",
+        "Leto and Ghanima survive into the succession, while Paul's name remains part of the dynasty's inherited authority."
+      ],
+      "local_answer": "The chapter reaches the assigned grounded contrast between the dead man and his surviving institutional identity, but spends too much of its opening and middle repeating explanations already completed in chapter 22.",
+      "open_issues": [
+        "Repeated explanations of the Preacher's identity and Paul's continuing responsibility make the final chapter partly a recap rather than a sustained conclusion.",
+        "The paragraph about Leto's need to preserve Paul's religious legacy overstates an inferred political constraint as an impossibility."
+      ],
+      "evidence_notes": "P7 supports Paul's killing, and P8 supports keeping Leto's future separate from Paul's completed biography. Alia's death and the specific identity of Paul's killer are finer-grained details not expressly established by the supplied proof summaries. The political usefulness of Paul's name is interpretation and should remain phrased as such."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 21,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "Chani's death also brings the purpose concealed inside Hayt to its crisis. The Tleilaxu have prepared the ghola to kill Paul under the pressure of this loss.",
+      "reason": "This explains the assassination conditioning but omits its engineered conflict with Duncan's loyalty, which makes restored memory credible for the subsequent bargain over Chani. Without that causal step, the following restoration reads chiefly as an unforeseen failure of the Tleilaxu plan.",
+      "replacement": "Chani's death brings Hayt's conditioning to its crisis. The Tleilaxu have set his impulse to kill Paul against Duncan's loyalty, creating a conflict that can restore his former identity and demonstrate what they might offer Paul through Chani.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "He'd wanted a life with Chani, and prescience had drawn him into decisions around her death that left him devastated.",
+      "reason": "The scope requires preserving Paul's agency rather than making prescience an actor that directs him. This sentence's causal phrasing obscures his participation in the decisions.",
+      "replacement": "He'd wanted a life with Chani, but the choices he made with knowledge of her approaching death had left him devastated.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's also a difference between the power Paul once gained and the commitment Leto is making. Paul could become emperor through alliances, military victory and a settlement with the existing imperial order. He remained a human ruler surrounded by a household, officials and people who interpreted his wishes. Leto's sandtrout skin begins a change in the ruler himself. The future he describes requires his continued presence for a span no ordinary human emperor could survive. His body has become part of the undertaking, and he can't treat that body as something separate from his political intentions.",
+      "reason": "H18 identifies a script that 'keeps re-stating it with nothing new attached.' The preceding paragraphs have already established Leto's bodily transformation, extraordinary lifespan, and departure from ordinary human attachments. The useful comparison with Paul's accession can be retained without another full explanation of the transformation.",
+      "replacement": "Paul gained the throne through alliances, military victory and a settlement with the existing imperial order. Leto's proposed rule requires something those achievements never demanded of Paul: a body capable of outlasting an ordinary human reign.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 23,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Here, the immediate fact is that he accepts responsibility for a course Paul refused, including its cruelty. Paul hears the claim of necessity from someone who has already acted on it. He can't answer by pretending his son is considering a remote possibility.",
+      "reason": "H18 requires a repeated mention to add 'a consequence, a comparison, the next number.' These sentences repeat the opening paragraph's established fact that Leto has already crossed the threshold Paul refused; the preceding two sentences already supply this paragraph's useful ethical qualification.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "major",
+      "quote": "In Children of Dune, the uncertainty around the Preacher's identity has allowed his appearances to trouble the religious establishment. A blind man can be dismissed as a wandering critic. Paul Atreides is much harder to dismiss, because the worship practiced in Arrakeen rests on his life and deeds. Once the man behind the preaching is understood, his objections carry an awkward personal weight. The founder of the imperial religion has returned to condemn its present conduct, and the priests can't accommodate him merely by praising Muad'Dib more enthusiastically.",
+      "reason": "H18 says that a repeated thematic observation should have 'one home paragraph.' Chapter 22 already explains the political protection and difficulty created by the Preacher's uncertain identity, and chapter 24's opening already establishes the living man's challenge to his religious image. This paragraph delays the final confrontation without adding a distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The killing exposes the conflict between the living Paul and the religious order surrounding his name.",
+      "reason": "H18 flags repeated framing without new information. The immediately preceding sentence already makes this exact conflict concrete by identifying the killer as a member of the order that reveres Paul.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a temptation to grant the Preacher's death a cleansing effect, as though opposing the priesthood could release Paul from everything done in his name. His final actions don't work that neatly. The war and the empire have already entered other people's lives. Families have suffered, religious officials have gained their positions, and Arrakis has changed under Atreides rule. Paul's willingness to expose himself to danger gives his protest seriousness. It doesn't return the people harmed by his movement, or remove the advantages his family received through its success.",
+      "reason": "H18 warns against sections 'looping back to the same observation.' Chapter 22's final paragraph already establishes that Paul's criticism cannot erase his responsibility for the war or the institutions his victories empowered. A brief connection to his death preserves the necessary qualification without repeating that argument.",
+      "replacement": "His death doesn't undo his responsibility for the war or the empire. It ends his opportunity to act within the history he helped create.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 24,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "He doesn't need to erase his father's place in Atreides history to establish that descent, and he can't erase the religious life already built around it.",
+      "reason": "The claim that Leto 'can't erase' this religious life turns a political interpretation into an unsupported absolute. P7-P8 establish the surviving legacy and succession, not an immutable limit on Leto's power.",
+      "replacement": "His descent gives Paul's name a continuing place in the succession, alongside the religious life already built around it.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        21,
+        24
+      ],
+      "detail": "Chapter 24 appropriately contrasts Paul's confirmed killing with the unconfirmed desert disappearance in chapter 21. This return adds a definite biographical endpoint and should remain."
+    },
+    {
+      "chapters": [
+        22,
+        24
+      ],
+      "detail": "The political force of the Preacher's uncertain identity, the conflict between Paul and his institutional image, and the persistence of his responsibility all receive full explanations in chapter 22 and are then substantially repeated in chapter 24. Keep chapter 22 as the explanatory home and let chapter 24 concentrate on the killing, immediate family consequences, and surviving name."
+    },
+    {
+      "chapters": [
+        23,
+        24
+      ],
+      "detail": "Chapter 24's reminder that Leto's undertaking is separate from Paul's biography adds a useful consequence to chapter 23: Paul's death neither completes the Golden Path nor makes him its author. It is functional continuity rather than a redundant second Leto biography."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within Dune, Dune Messiah and Children of Dune. They distinguish the two sons named Leto, preserve Ghanima, avoid the film ending for Chani, do not declare Paul dead at the end of Dune Messiah, and do not credit him with completing the Golden Path. The principal release issue is repetition in the concluding chapter, with a smaller causal clarification needed for Hayt's restoration.",
+  "limitations": "Only chapters 21-24 were supplied; chapters 1-20, the opening spoiler announcement, and the single permitted early listening-location or subscription request could not be reviewed. Assessment uses the supplied proof summaries, outline, chapter text, and editorial rules; it does not claim that linked pages were opened or that every granular novel detail was independently verified.",
+  "input_hashes": {
+    "21": "43fc9470aca5374db5d8ce5050927dd9e49d1e1785a4a1077f0b0c7d4e32b9ed",
+    "22": "bc641f8ca8566c8f388e84d61b95d25321a64ad3202329716e2e0619514cb9c1",
+    "23": "d6ed01390c16ec3ad73246b26c609f17f3e1d59b3372520de21b2c6faf604341",
+    "24": "ce465e00bf7ddb4b3665c6bf80cceb6bfb48307bbe3f2f1939658331821c6687"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

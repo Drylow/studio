@@ -1,0 +1,149 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Sweet Vitriol reveals Cobel's original severance research and Jame's appropriation of credit, undermining the Eagans' official invention story.",
+      "new_information": [
+        "Cobel retrieves documentary evidence of her original contribution in Salt's Neck.",
+        "Jame's credited authorship must be distinguished from his institutional power over the technology's use.",
+        "Cobel's continuing devotion to Lumon can coexist with resentment toward its leadership.",
+        "Correcting authorship would not itself resolve what Lumon does to severed people."
+      ],
+      "local_answer": "The chapter answers its assigned question immediately: Jame received credit for work originating with Cobel, giving a concrete reason to question the family's official history without making Cobel the sole developer of severance.",
+      "open_issues": [
+        "The authorship correction is restated several times after it has already been established.",
+        "The extent of Cobel's contribution beyond the supplied finding remains appropriately unspecified."
+      ],
+      "evidence_notes": "The central correction follows E4. The chapter announces spoilers through Cold Harbor and includes the requested optional subscription and listening-location/day-or-night invitation once. Its discussion of Cobel's attachment is framed as interpretation rather than a complete explanation of her motives."
+    },
+    {
+      "number": 2,
+      "summary": "The Perpetuity Wing presents Eagan leadership as a continuous company history that severed employees encounter without ordinary access to alternative accounts.",
+      "new_information": [
+        "The museum organizes successive Eagan leaders into a shared commemorative presentation.",
+        "The employees receive extensive information about their employer's family while lacking access to their own outside biographies.",
+        "Irving helps transmit the institution's history socially, while his colleagues respond with differing degrees of reverence.",
+        "Figures, displays and recorded voices preserve leadership identities without requiring a supernatural or technological survival explanation."
+      ],
+      "local_answer": "The chapter explains why the museum belongs within the working environment: it supplies institutional history, models belonging and gives employees a shared account of the family whose name governs their workplace.",
+      "open_issues": [
+        "The distinction between curated history and independent verification receives more explanation than necessary.",
+        "The late hypothetical defense of an ordinary company-museum visit repeats qualifications already established through the employees' differing reactions."
+      ],
+      "evidence_notes": "The central presentation follows E1 and the assigned outline. No unsupported CEO dates, detailed genealogy or parent-child links are introduced. Claims about the display's persuasive effects are recognizable analysis, not assertions that every worker accepts its message."
+    },
+    {
+      "number": 3,
+      "summary": "Kier's teachings retain practical authority because employees and present-day managers circulate, interpret and enforce them through workplace texts, art and procedures.",
+      "new_information": [
+        "Irving uses the handbook as a source of meaning and a vocabulary for workplace conduct.",
+        "Irving and Burt's shared interest shows that institutional doctrine can support genuine personal connection.",
+        "The break room converts company-approved moral language into a compulsory supervised performance.",
+        "Woe's Hollow demonstrates how additional doctrine reaches employees through current management."
+      ],
+      "local_answer": "The chapter clearly explains the transfer of authority from an absent founder to living employees and managers, while allowing sincere belief and coercive enforcement to coexist.",
+      "open_issues": [
+        "The narration assigns Milchick personal control over selecting the appendix and its occasion, although the supplied evidence establishes his delivery and supervision rather than that decision-making authority."
+      ],
+      "evidence_notes": "The broad argument follows E1 and E3. Doctrine is consistently attributed to Kier or Lumon, and no exact fictional quotations are invented. Some supporting scene details are not independently established by the abbreviated proof bank, but the specific unsupported inference about Milchick's discretion can be corrected locally."
+    },
+    {
+      "number": 4,
+      "summary": "Lumon's four-tempers doctrine becomes an operational classification in MDR, and Cold Harbor connects the refiners' emotionally guided work to Gemma's partitioned testing.",
+      "new_information": [
+        "Woe, frolic, dread and malice are Lumon's inherited categories rather than a validated model of human emotion.",
+        "MDR combines those categories with bins, progress indicators and quotas.",
+        "Helly learns to identify a number group through an emotional response rather than an explicit numerical rule.",
+        "Cold Harbor links refinement to testing whether pain from Gemma's outside life crosses into a partitioned experience."
+      ],
+      "local_answer": "The chapter answers how doctrine becomes labor and why the finale changes the apparent meaning of that labor, without claiming the four categories exhaust personhood or explain the full mechanism.",
+      "open_issues": [
+        "Two paragraphs explain nearly the same connection between the museum's emotional doctrine and the desk interface.",
+        "The draft appropriately leaves the numerical mechanism and ultimate corporate purpose unresolved."
+      ],
+      "evidence_notes": "The treatment of the tempers follows the assignment, and the narrow Cold Harbor interpretation follows E6. The chapter does not turn the classification into real neuroscience, claim permanent emotional erasure or supply an unsupported business plan."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Her recovered research establishes her original contribution and Jame's appropriation of credit, without making her the sole developer of every part of severance.",
+      "reason": "H18 identifies a re-mention that adds nothing as an echo. This standalone paragraph repeats the opening correction and the preceding discussion of documentary authorship; only its useful limit on sole authorship needs retaining.",
+      "replacement": "That doesn't make her the sole developer of every part of severance.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "That gap gives this account of the Eagans its starting point. We can examine their curated history, the technology credited to them, and their promises about what comes next without assuming those three things confirm one another. Cobel's research has already changed one of them. Whatever explanations remain open elsewhere, the correction here is concrete: Jame received credit for original severance work that was hers. In Salt's Neck, Cobel recovers the record of that work and takes it with her.",
+      "reason": "H18 warns against repeatedly restating a fact or framing without development. This closing paragraph repeats both the opening's three-part review plan and its authorship correction after those points have already received substantial explanation. The concrete act of retaining the record supplies a sufficient local close.",
+      "replacement": "In Salt's Neck, Cobel recovers the record of her work and takes it with her.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There is a more ordinary reading of the visit worth keeping alongside that. A company museum can introduce employees to an institution's past, and a trip away from the desks can offer variety in a restricted workday. Irving's interest needn't be treated as evidence that he knows some concealed plan. The immediate experience is enough to explain his enthusiasm. What makes Lumon's version unusual is the employees' lack of alternatives. This account reaches people who can't finish their shift, go home and read a different history while retaining what they learned that day.",
+      "reason": "H18 calls for cutting a re-mention that adds nothing. The chapter has already explained Irving's sincere enthusiasm, the group's varied responses and the workers' restricted access to alternative histories. This late caveat revisits all three and introduces a concealed-plan hypothesis only to dismiss it.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 3,
+      "kind": "factual",
+      "severity": "minor",
+      "quote": "For this outing, Milchick chooses the text and the occasion on which the workers receive it.",
+      "reason": "E3 and the assignment support Milchick presenting the appendix during a company-organized outing, not his personally choosing the doctrine or deciding when it should be introduced. The distinction matters in a chapter about who exercises institutional authority.",
+      "replacement": "For this outing, Milchick delivers the text and supervises the activities organized around it.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 4,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The connection to the four tempers helps make that routine seem consistent with the rest of the building. In the museum, Kier's teaching describes the handling of emotions as part of his understanding of human character. At the desk, workers handle categories bearing those same names. It suggests that Lumon has built the founder's vocabulary into its procedures. Whether Kier's account accurately describes people is a different matter from whether the company can organize a workplace around it. The labeled bins demonstrate the latter in a very practical way.",
+      "reason": "H18 describes the document-scale echo as repeatedly restating a fact or framing without new information. The opening paragraphs already establish the doctrine, distinguish it from validated psychology and show its labels embedded in MDR's interface. This paragraph repeats that complete argument just before the genuinely new Cold Harbor development.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "detail": "Each chapter distinguishes Lumon's account from what the story establishes. That distinction belongs to the episode's angle, but repeated explanations of verification limits can become a methodological refrain. The local deletions preserve the necessary boundaries while giving more room to authorship, museum design, managerial enforcement and emotional labor as distinct subjects."
+    },
+    {
+      "chapters": [
+        2,
+        3
+      ],
+      "detail": "Both chapters explain that innies lack access to their outside biographies and receive Lumon's history or values in that gap. The second use adds a distinct consequence, Irving's personal attachment to the handbook, so it is justified rather than a deletion target."
+    },
+    {
+      "chapters": [
+        3,
+        4
+      ],
+      "detail": "Kier's teachings recur, but their functions develop: chapter three concerns interpersonal meaning and managerial enforcement, while chapter four concerns their incorporation into a technical labor interface. Preserve that distinction rather than repeating general conclusions about the founder's continuing influence."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within released television through S2E10 Cold Harbor. They do not introduce season-three plot, confirmed resurrection, an invented family tree, solved Cold Harbor motives or a repeated CTA. Only chapters 1-4 were supplied as narration; outline entries 5-24 were treated as planning context, not reviewed chapters.",
+  "limitations": "This review uses the supplied proof bank, assignments, narration and voice samples. The linked pages were not opened, episodes were not watched, and supporting fictional details were not all independently verified. No narration audio was measured or human read-aloud performed.",
+  "input_hashes": {
+    "1": "be5cb7d12149d864268e96d381ecb9c8e2b8a3dbaa05430f3e97c364a1e0871d",
+    "2": "856eb742e46d3c6d785c9c001ae2e1b19a1916afcfa0f8429adeb33dbbdf1ec7",
+    "3": "8cbad20cba6d9a04e776299d841ebac828b770c2d818f453b17facf7e819be91",
+    "4": "fe00ed28a4f7c5cc5053791436b5d1f5b5e217c70c5b479a822c4069be3427ae"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

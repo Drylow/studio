@@ -1,0 +1,553 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Yoda's recovery of the X-wing challenges Luke's assumption that its size makes lifting it impossible.",
+      "new_information": [
+        "Luke already moves smaller objects, and his attempt briefly moves the fighter.",
+        "Yoda identifies disbelief as an obstacle within an ongoing course of practical instruction."
+      ],
+      "local_answer": "The demonstration exposes a limit in Luke's present understanding, not a verified absence of limits on Force abilities.",
+      "open_issues": [
+        "A standalone sentence repeats the conclusion developed immediately around it."
+      ],
+      "evidence_notes": "Consistent with F1 and the assigned Empire scene. The optional subscribe and listening-location request appears once, as requested."
+    },
+    {
+      "number": 2,
+      "summary": "Anakin's blood test identifies exceptional potential without determining his wisdom, educational needs or future.",
+      "new_information": [
+        "Qui-Gon describes midi-chlorians as symbiotic organisms enabling communication with the Force.",
+        "Anakin's abilities, separation from Shmi and the Council's reservations inform distinct parts of the training decision."
+      ],
+      "local_answer": "The biological reading helps identify potential but cannot supply a complete judgment about the child or his education.",
+      "open_issues": [
+        "The following Qui-Gon chapter repeats several of this chapter's developments."
+      ],
+      "evidence_notes": "F1 and F2 support the central distinction. No unsupported numerical count or confirmed explanation of Anakin's conception is supplied."
+    },
+    {
+      "number": 3,
+      "summary": "Sabine progresses from unsuccessful exercises to retrieving her lightsaber and helping Ezra reach the departing ship.",
+      "new_information": [
+        "Ahsoka continues teaching despite Huyang's unfavorable assessment of Sabine's aptitude.",
+        "The finale supplies concrete achievements without measuring Sabine's eventual ceiling."
+      ],
+      "local_answer": "Early failure does not establish permanent incapacity, but Sabine's progress does not prove identical potential in everyone.",
+      "open_issues": [],
+      "evidence_notes": "F2 supports the talent-and-training distinction; the supplied assignment expressly authorizes the season-one finale developments."
+    },
+    {
+      "number": 4,
+      "summary": "Chirrut's successful walk to the switch is placed alongside his practiced abilities, devotion and subsequent death.",
+      "new_information": [
+        "Activating the switch enables Bodhi's communications task.",
+        "Baze's intervention and both men's deaths prevent the scene from establishing guaranteed protection through faith."
+      ],
+      "local_answer": "Chirrut's devotion helps explain his conduct, while the film leaves the exact contribution of supernatural protection unresolved.",
+      "open_issues": [],
+      "evidence_notes": "Rogue One is expressly authorized by the assignment. Mentioning the Guardians of the Whills does not introduce the prohibited Whills cosmology."
+    },
+    {
+      "number": 5,
+      "summary": "Qui-Gon's attention to present circumstances reveals Anakin's generosity while leaving his interpretation of the child's future fallible.",
+      "new_information": [
+        "Qui-Gon's opening advice to Obi-Wan connects present attention with practical danger.",
+        "Anakin's hospitality supplies information about character that a blood test cannot provide.",
+        "The Council's concern about fear is presented as a competing judgment rather than simple blindness."
+      ],
+      "local_answer": "Recognizing a person's gifts and needs does not provide an infallible plan for that person's life.",
+      "open_issues": [
+        "The blood-test paragraph substantially repeats chapter 2.",
+        "The final paragraph jumps backward to a separation already described without adding a new consequence."
+      ],
+      "evidence_notes": "The Council comparison is useful original analysis grounded in the assigned scenes. Qui-Gon's birth interpretation remains attributed to him."
+    },
+    {
+      "number": 6,
+      "summary": "Yoda investigates Qui-Gon's voice and learns that established Jedi expertise does not encompass every form of persistence after death.",
+      "new_information": [
+        "The Council considers deception and seeks observable confirmation.",
+        "Qui-Gon explains the relationship between the living and cosmic Force.",
+        "Qui-Gon's incomplete preparation and Yoda's further trials make continued identity a learned exception."
+      ],
+      "local_answer": "Yoda's authority does not remove his need to investigate unfamiliar experiences and accept further instruction.",
+      "open_issues": [],
+      "evidence_notes": "Aligned with F5 and the assigned Voices arc. The medical and travel details are scene-level claims supplied by the narration, not individually documented in the abbreviated proof entry."
+    },
+    {
+      "number": 7,
+      "summary": "Anakin responds to dreams of Padme's death by accepting Palpatine's unproven promise and committing acts that contribute to the surrounding catastrophe.",
+      "new_information": [
+        "His earlier experience with Shmi explains why he treats the dreams urgently.",
+        "Secrecy limits the advice he requests.",
+        "Palpatine qualifies the promised remedy only after Anakin has intervened against Mace."
+      ],
+      "local_answer": "A self-fulfilling interpretation is supported by Anakin's actions, but the film does not establish the outcome of a different response.",
+      "open_issues": [],
+      "evidence_notes": "The narration attributes the medical account and Palpatine's accusation rather than treating either as an exhaustive explanation. It does not assert that Palpatine sent the dreams."
+    },
+    {
+      "number": 8,
+      "summary": "Luke's vision reveals his friends' suffering but omits the trap, its mechanisms and the changing circumstances of their escape.",
+      "new_information": [
+        "Vader uses Han's suffering to draw Luke toward Bespin.",
+        "Yoda cannot give Luke a certain answer about his friends' fate.",
+        "Lando, R2-D2 and Leia contribute to an escape that ends with Luke needing rescue."
+      ],
+      "local_answer": "A genuine warning can still leave its recipient without the information needed to understand or control the situation.",
+      "open_issues": [
+        "The final paragraph repeats the warning, interrupted training, injury and revelation already narrated."
+      ],
+      "evidence_notes": "The chapter successfully differs from chapter 7 by centering missing information rather than another self-fulfilling prediction."
+    },
+    {
+      "number": 9,
+      "summary": "Luke's cave encounter connects his armed response to fear with the disturbing image of his own face inside Vader's helmet.",
+      "new_information": [
+        "Luke carries weapons despite Yoda's instruction and ignites his blade first.",
+        "The later parentage revelation adds a retrospective association without turning the vision into a clear genealogical message.",
+        "Yoda regards the encounter as a failure despite Luke's apparent victory."
+      ],
+      "local_answer": "The vision can warn about both a possible future and Luke's current behavior without revealing the cave's proven mechanism.",
+      "open_issues": [],
+      "evidence_notes": "Consistent with F4. The predictive and psychological readings remain interpretations."
+    },
+    {
+      "number": 10,
+      "summary": "Anakin's intervention against Sidious explains balance through a consequential act rather than equal membership of Jedi and Sith factions.",
+      "new_information": [
+        "Yoda acknowledges uncertainty about the prophecy's interpretation.",
+        "Luke's refusal distinguishes Jedi responsibility from restoration of the former institution.",
+        "Sidious's later return does not erase Luke's rescue or establish an arithmetic cycle."
+      ],
+      "local_answer": "The story supports Anakin's restoration of balance without defining balance as equal numbers of opposing Force users.",
+      "open_issues": [],
+      "evidence_notes": "The assigned scope authorizes the Endor and Exegol comparison. Anakin's later appeal to Rey is used consistently with that comparison."
+    },
+    {
+      "number": 11,
+      "summary": "The Father tests Anakin's ability to restrain his children and proposes a permanent responsibility on Mortis.",
+      "new_information": [
+        "Anakin saves both threatened companions rather than accepting the forced choice.",
+        "The Father's succession plan entails coercion and separation from Anakin's existing life.",
+        "Demonstrated strength does not establish readiness for sustained stewardship."
+      ],
+      "local_answer": "Anakin proves a particular capability, but accepting the Father's role would require a life commitment beyond that demonstration.",
+      "open_issues": [],
+      "evidence_notes": "Consistent with F3 and the Overlords assignment. Cosmic symbolism is explicitly distinguished from a confirmed account of the Force's creation."
+    },
+    {
+      "number": 12,
+      "summary": "The Daughter's remaining life restores Ahsoka through Anakin, and Morai later supplies a continuing visual association.",
+      "new_information": [
+        "The Father guides the transfer, with Anakin serving as conduit.",
+        "The Daughter's sacrifice continues her protective conduct.",
+        "The Lothal mural and Morai's presence connect Ahsoka's survival with Mortis imagery."
+      ],
+      "local_answer": "The episode establishes one restoration and an enduring association, not confirmed reincarnation or a generally repeatable procedure.",
+      "open_issues": [],
+      "evidence_notes": "F3, F6 and the specific assignment authorize the transfer and Morai discussion. The abbreviated proof entries do not independently document every visual detail."
+    },
+    {
+      "number": 13,
+      "summary": "The Son exploits Anakin's horror at his future, and the Father ends that leverage by removing the remembered visions.",
+      "new_information": [
+        "Anakin's wish to prevent harm becomes a reason to cooperate with a demonstrably dangerous being.",
+        "The alliance changes what Obi-Wan and Ahsoka can safely do.",
+        "The Father's intervention removes advance knowledge rather than the future events themselves."
+      ],
+      "local_answer": "Knowing a feared outcome does not guarantee wise action, and removing that knowledge is not equivalent to rewriting history.",
+      "open_issues": [],
+      "evidence_notes": "Directly aligned with F3. The moral analysis follows the shown bargain without claiming an additional mechanism."
+    },
+    {
+      "number": 14,
+      "summary": "Obi-Wan continues guiding Luke after death while living people still perform the physical work of rescue and combat.",
+      "new_information": [
+        "His voice and later visible appearances preserve recognizable teacher-student contact.",
+        "Qui-Gon's discovery and Obi-Wan's subsequent training give that persistence a learning history.",
+        "Luke can reject his advice, and Obi-Wan cannot replace him in the confrontation with Vader."
+      ],
+      "local_answer": "Personal identity and instruction continue, but neither ordinary bodily companionship nor unlimited intervention follows.",
+      "open_issues": [
+        "The final paragraph repeats the Bespin outcome already fully developed in chapter 8."
+      ],
+      "evidence_notes": "Consistent with F5 and the assigned films. The narration avoids treating ghosthood as automatic."
+    },
+    {
+      "number": 15,
+      "summary": "Yoda's trial requires him to acknowledge his dark reflection without allowing it to govern him.",
+      "new_information": [
+        "Denial sustains the confrontation, while recognition changes it.",
+        "Other visions test his grief, hopes and attachment to comforting appearances.",
+        "The trial gives humility practical importance for a teacher whose judgments affect others."
+      ],
+      "local_answer": "Acknowledging troubling impulses is compatible with refusing their authority; it does not require equal practice of both sides.",
+      "open_issues": [],
+      "evidence_notes": "Aligned with F5 and Destiny. The institutional application is clearly interpretation, not Grey Jedi doctrine."
+    },
+    {
+      "number": 16,
+      "summary": "Palpatine's promise of overcoming death is contrasted with his dependent condition and predatory recovery on Exegol.",
+      "new_information": [
+        "The Plagueis account remains recruiting testimony rather than a demonstrated lesson.",
+        "Exegol supplies machinery and manufactured bodies as material context without a complete survival mechanism.",
+        "Sidious seeks continuation through Rey's body and then through draining the dyad."
+      ],
+      "local_answer": "Sidious's continued existence does not validate the easy, secure mastery over death implied by his pitch to Anakin.",
+      "open_issues": [
+        "The paragraph recounting Anakin's post-Windu orders repeats chapter 7's already established causal sequence."
+      ],
+      "evidence_notes": "The chapter respects the assignment's limit on cloning explanations and does not claim that a Sith created Anakin."
+    },
+    {
+      "number": 17,
+      "summary": "Rey and Ben's connection develops from distant conversation to physical transfer without supplying a complete account of its origin.",
+      "new_information": [
+        "Their shared contact produces incompatible expectations rather than mutual certainty.",
+        "The connection persists after Snoke's death.",
+        "Water, Vader's helmet and the saber handoff establish increasingly deliberate physical consequences."
+      ],
+      "local_answer": "The dyad enables specific shown interactions, but neither Snoke's boast nor those interactions establishes a universal rule for Force bonds.",
+      "open_issues": [],
+      "evidence_notes": "Consistent with F7 and the assigned Last Jedi scenes. Origin and destiny claims remain appropriately unresolved."
+    },
+    {
+      "number": 18,
+      "summary": "Rey's survivable healing acts are compared with Ben's fatal restoration of her after Exegol.",
+      "new_information": [
+        "The serpent demonstrates healing outside the dyad.",
+        "Repairing Ben's body does not make his subsequent moral decision for him.",
+        "Anakin never receives a demonstrated lesson equivalent to Rey's healing."
+      ],
+      "local_answer": "The shown costs differ by circumstance; they do not establish that every healing requires a death.",
+      "open_issues": [
+        "The final return to the serpent pre-empts the same closing image reserved for chapter 24."
+      ],
+      "evidence_notes": "F7 supports the comparison. The suggestion that restoring Rey takes everything Ben has left is presented as a reading, not an energy formula."
+    },
+    {
+      "number": 19,
+      "summary": "Rey's contact with the Skywalker saber combines inherited history, personal memory and apparently future-facing imagery.",
+      "new_information": [
+        "The saber's known ownership history differs from Rey's own knowledge.",
+        "Jakku and the snowy forest make the experience unlike a straightforward archive of the object's past.",
+        "Maz's guidance does not prevent Rey's initial rejection."
+      ],
+      "local_answer": "The saber mediates an experience whose associations exceed a perfect recording, without establishing a proven bloodline-selection mechanism.",
+      "open_issues": [],
+      "evidence_notes": "The Force Awakens assignment authorizes these scenes. No game-only psychometry rules or invented dialogue are introduced."
+    },
+    {
+      "number": 20,
+      "summary": "The Ilum search makes attunement concrete through different younglings' difficulties with patience, fear, tools and cooperation.",
+      "new_information": [
+        "Gungi's waiting and Katooni's climbing require different responses.",
+        "Ganodi and Zatt must move beyond their initial ways of seeking information.",
+        "Petro's haste and eventual assistance to Katooni give the search a social as well as individual dimension."
+      ],
+      "local_answer": "Finding a crystal involves applying attention to a particular obstacle, not consulting a personality or color chart.",
+      "open_issues": [
+        "An explicit rejection of personality charts sounds like an outline prohibition imported into narration."
+      ],
+      "evidence_notes": "The assignment authorizes The Gathering and its individual trials. Six younglings are identified through the subsequent account rather than used as an unsupported statistical claim."
+    },
+    {
+      "number": 21,
+      "summary": "Ezra's engagement with purrgil develops from a hazardous fuel encounter into a consequential part of Lothal's liberation.",
+      "new_information": [
+        "The creatures' need for Clouzon-36 connects feeding with natural hyperspace travel.",
+        "Hera's practical caution and Ezra's perception supply different valid information.",
+        "The later rescue combines an established connection with coordinated action by Ezra's friends."
+      ],
+      "local_answer": "The Force connects Ezra with an existing living ecology; the purrgil are not simply equipment available to any Jedi.",
+      "open_issues": [],
+      "evidence_notes": "Directly supported by F8 and the assigned Rebels episodes. Hyperdrive origins are not asserted as established history."
+    },
+    {
+      "number": 22,
+      "summary": "Ezra rescues Ahsoka through the World Between Worlds but recognizes that removing Kanan would undo the protection on which his own survival depends.",
+      "new_information": [
+        "Ahsoka's previously shown survival accommodates the later revelation of Ezra's intervention.",
+        "Kanan's presence is causally inseparable from the rescue Ezra wants to preserve.",
+        "The Emperor's intrusion makes access dangerous rather than consequence-free."
+      ],
+      "local_answer": "The shown intervention does not establish unlimited historical revision, and Ezra's restraint follows from a specific causal problem.",
+      "open_issues": [],
+      "evidence_notes": "Consistent with F6. A connected-history interpretation is labeled as a reading rather than declared the definitive temporal model."
+    },
+    {
+      "number": 23,
+      "summary": "Luke's distant projection occupies Kylo long enough for the Resistance to organize and complete its escape.",
+      "new_information": [
+        "Luke's appearance, saber and lack of matching footprints become retrospective clues.",
+        "Kylo's personal anger makes the deception effective.",
+        "Poe, Rey and the survivors must act on the time Luke provides."
+      ],
+      "local_answer": "The achievement is a coordinated rescue enabled by projection and Kylo's misreading, not a demonstration of a universal power ranking.",
+      "open_issues": [],
+      "evidence_notes": "The assignment authorizes the Crait sequence and Luke's subsequent death. The narration avoids universal projection rules."
+    },
+    {
+      "number": 24,
+      "summary": "Luke's refusal to kill Vader and Rey's treatment of the serpent show awareness opening possibilities that still require personal decisions.",
+      "new_information": [
+        "The comparison distinguishes an accountable human opponent from an injured animal rather than making them morally equivalent.",
+        "Neither character can guarantee the response to the help or restraint offered.",
+        "Remaining with dying Anakin gives Luke a form of care distinct from preventing death."
+      ],
+      "local_answer": "Incomplete understanding need not prevent a grounded, compassionate action, and the Force does not make that choice for the characters.",
+      "open_issues": [
+        "Its intended comparison works, but the final serpent image has already been used to close chapter 18."
+      ],
+      "evidence_notes": "The assigned conclusion expressly requests these returns to Return of the Jedi and Pasaana. They are purposeful synthesis, not grounds for deleting the comparison wholesale. The ending is quiet and contains no CTA."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 1,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Yoda's success gives Luke a concrete reason to trust his instruction, without establishing that Yoda understands everything the Force might do.",
+      "reason": "This standalone paragraph adds nothing between the preceding discussion of instruction and the final paragraph's nearly identical conclusion. H18 identifies the problem as a re-mention that \"adds nothing.\" The final paragraph already retains both the concrete result and the reason to keep learning.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Qui-Gon also looks for a more specific explanation of Anakin's abilities. He has Obi-Wan analyze a blood sample, and the result confirms an exceptional midi-chlorian count. Later, Qui-Gon explains to Anakin that these living organisms allow communication with the Force. That gives the boy a way to begin understanding what Qui-Gon has detected. It still leaves the teacher with separate questions. A test can indicate extraordinary potential without telling him how Anakin will respond to instruction, separation from home, or the responsibilities of Jedi life.",
+      "reason": "Chapter 2 already develops every element here: the test, communication role, exceptional potential and inability to predict educational needs. Under H18, a second mention must add \"a consequence, a comparison, the next number.\" This paragraph does not advance chapter 5's distinctive attention-to-character argument; the following birth-account paragraph supplies the next development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 5,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Before leaving home, Anakin turns back to his mother and struggles with the separation. Shmi remains on Tatooine as her son leaves to begin his training.",
+      "reason": "After the Council discussion and Qui-Gon's offer to teach, this unmarked return to the earlier departure creates an unnecessary chronological reset. It also repeats the chapter's earlier account of leaving Shmi enslaved. The preceding paragraph already closes the assigned distinction between attentive teaching and a guaranteed future.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 8,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The warning on Dagobah was genuine. Han and Leia suffered, and Vader was a danger to them. Luke leaves before completing his training and continues despite warnings that Vader is waiting for him. In the confrontation, he loses his hand and hears a truth about his father that the vision hadn't prepared him for. Aboard the Falcon, Leia tends to him as they flee. He'd crossed the distance to Bespin because he'd seen her in pain. Now she's beside him, helping him endure his own.",
+      "reason": "The first four sentences repeat the chapter's established warning, departure, trap, injury and revelation. H18 calls for cutting a re-mention that \"adds nothing.\" The final image adds a useful emotional reversal and should remain.",
+      "replacement": "Aboard the Falcon, Leia tends to Luke as they flee. He'd crossed the distance to Bespin because he'd seen her in pain. Now she's beside him, helping him endure his own.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Luke meets Vader without the teacher who once stood between them on the Death Star. He loses his hand, learns that Vader is his father, and needs Leia and the others to get him away.",
+      "reason": "The preceding paragraph has already established Obi-Wan's inability to intervene, while chapter 8 fully narrates these consequences. H18 warns against repeating a fact without a new consequence or comparison. Ending on Luke's refusal of continuing instruction keeps this chapter centered on teacher-student contact.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "There's a practical change in Anakin's position here. At the opera, he can still ask whether such a power can be learned. After Windu's death, he needs Palpatine to deliver it. He's helped destroy the possibility of returning to his former life, and Padme is still in danger as far as he knows. Palpatine sends him to attack the Jedi Temple and then to Mustafar. None of those orders comes with a shown lesson in saving Padme. His service begins immediately, while the promised remedy remains out of reach.",
+      "reason": "The preceding paragraph already establishes that Anakin commits before the promised knowledge becomes a shared search. Chapter 7 supplies the orders and their consequences in detail. Under H18's requirement that a repeat add something new, this additional paragraph delays the chapter's distinctive Exegol comparison without materially extending the argument.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 18,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Rey's first healing offers a smaller, clearer version of that generosity. She touches an injured creature, repairs what she can, and lets it leave. In the tunnel, the serpent moves away under its own strength, and the passage is open.",
+      "reason": "The serpent's unbargained-for help and departure have already been explained within this chapter, and chapter 24 deliberately reserves the same scene and open-passage image for the episode's final synthesis. H18 warns that a document can keep \"re-stating\" its strongest material \"with nothing new attached.\" The preceding sentence about Ben giving without securing a future is a complete local ending.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 20,
+      "kind": "artifact",
+      "severity": "minor",
+      "quote": "Nothing in the gathering requires a chart assigning personality traits to crystal colors.",
+      "reason": "This answers the outline's prohibition rather than a claim raised by the narration. H16 identifies \"announcing the content instead of delivering it\" as a problem; here the sentence similarly announces an excluded explanatory device instead of continuing the concrete search. The following sentences already explain which differences actually matter.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        2,
+        5
+      ],
+      "detail": "The strongest avoidable overlap is the repeated blood-test explanation and its inability to predict Anakin's educational future. Chapter 2 should retain that explanation; chapter 5 earns its place through generosity, present attention and the Council's competing judgment."
+    },
+    {
+      "chapters": [
+        7,
+        16
+      ],
+      "detail": "Revisiting the opera-house promise is necessary for chapter 16's contrast with Exegol, but repeating Anakin's subsequent orders adds little after chapter 7. The proposed deletion preserves the promise and its qualification."
+    },
+    {
+      "chapters": [
+        8,
+        14
+      ],
+      "detail": "Chapter 14 needs the Dagobah disagreement to demonstrate the limits of a dead teacher's influence, but does not need another summary of Luke's hand loss, parentage revelation and rescue."
+    },
+    {
+      "chapters": [
+        18,
+        24
+      ],
+      "detail": "The healing comparison in chapter 18 and the ethical comparison in chapter 24 serve different purposes. Their nearly identical closing serpent-and-passage images do not; reserve that final image for chapter 24."
+    },
+    {
+      "chapters": [
+        1,
+        3,
+        6,
+        15,
+        20
+      ],
+      "detail": "Luke's Dagobah training recurs as a reference point. These returns mostly add distinct comparisons: different starting aptitude, unavailable institutional instruction, a teacher's self-correction and task-specific learning. They are not interchangeable recaps and do not warrant blanket deletion."
+    },
+    {
+      "chapters": [
+        10,
+        24
+      ],
+      "detail": "The throne-room material returns extensively, but the assignment expressly calls for this concluding comparison. Chapter 10 addresses balance and institutions; chapter 24 addresses choices made without guaranteed responses. Preserve that distinction rather than treating all repeated scene material as defective."
+    }
+  ],
+  "scope_status": "Within the supplied release and spoiler scope. No definite factual contradiction with the authoritative proof bank was identified. The narration does not confirm Sith creation of Anakin, equate balance with faction counts, import Legends answers, make ghosthood automatic, define midi-chlorians as the Force, universalize fatal healing costs, promise identical potential or assert unlimited historical revision. The named film and episode scenes in the assignments authorize material beyond the eight abbreviated proof entries.",
+  "limitations": "This review used the supplied narration, outline, proof bank and pasted FacelessOS materials. It did not open the linked pages, watch episodes, verify hashes, measure audio or perform a human read-aloud. The proof bank is authoritative but abbreviated, so it does not independently document every gesture, visual detail or sequence described in the narration. No external originality search, channel publishing review or production-footage audit was available. The supplied master checklist, retention-mechanics file and executable scanner were not present; their contents were not reconstructed from memory.",
+  "greenlight": {
+    "overall_verdict": "FIX-THEN-PASS",
+    "A": {
+      "verdict": "PASS_WITH_SLEEP_ADAPTATION",
+      "evidence": [
+        "Sentence one: \"Luke can lift stones on Dagobah, but when his X-wing sinks into the swamp, he can't bring it back.\"",
+        "The opening paragraph is 74 words and contains the turn \"but\" in its first sentence.",
+        "The opening promises to examine Luke's difficulty, Yoda's instruction and what the achievement establishes; chapter 1 pays off all three before the episode proceeds.",
+        "The episode-wide promise of explained mysteries is delivered through observable scenes followed by bounded interpretations."
+      ],
+      "actionable_defects": [],
+      "limitations": "The two supplied transcripts provide register references, not a documented set of comparable high-performing Force-explainer hooks. Competitive hook ranking is therefore not established."
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "The broad progression is coherent: perception and aptitude, instruction and visions, balance and Mortis, persistence and connection, then ecological and spatial interventions before the final ethical comparison.",
+        "Local questions close within their chapters, appropriately for sleep narration.",
+        "Chapter 8 explains what a warning leaves out; chapter 13 distinguishes removed memory from removed events; chapter 22 explains why Kanan's rescue cannot be detached from his sacrifice.",
+        "The least useful repetition occurs in the passages quoted in findings for chapters 1, 5, 8, 14, 16 and 18."
+      ],
+      "actionable_defects": [
+        "Apply the quoted repetition deletions and the shortened chapter 8 ending.",
+        "Reserve the serpent-and-open-passage closing image for chapter 24."
+      ],
+      "sleep_adaptation": "No aggressive rehooks, continuously unresolved loops, suspense cadence or final CTA are required."
+    },
+    "C": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "Every chapter answers its assigned question and supplies a distinct development, as recorded in the chapter artifacts.",
+        "The connecting thread remains the difference between perceiving or performing something and understanding all its implications.",
+        "Chapter 24 compares two specific choices rather than recapping all 23 preceding chapters.",
+        "Chapter 5's final return to Anakin leaving Shmi is an unnecessary chronological reset after the Council and teaching discussion."
+      ],
+      "actionable_defects": [
+        "Delete the quoted final paragraph of chapter 5.",
+        "Remove chapter 20's outline-facing crystal-chart disclaimer."
+      ]
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+        "Conversational register compared against two private reference excerpts. Reference wording omitted from public report.",
+        "A matching spoken explanatory shape appears in chapter 3: \"The cup remains still after the explanation, and Sabine has to deal with that gap between understanding the lesson and being able to perform it.\"",
+        "A manual sweep found no machine-banned phrases or non-ASCII punctuation in the chapter narration.",
+        "The clearest voice problems are document-scale echoes rather than trailer fragments, vocabulary clusters or fabricated aphorisms."
+      ],
+      "actionable_defects": [
+        "Apply the exact local edits rather than globally shortening the analysis or adding more methodological caveats."
+      ],
+      "numbers_notes": [
+        "The narration supplies no exact midi-chlorian count, invented percentage, power ranking or quantified healing formula.",
+        "The six younglings in chapter 20 are tied to the named Gathering episode and individually discussed.",
+        "Part Three, season-one finale references and film-title ordinals are identifiers authorized by the assignments."
+      ],
+      "contrast_review": {
+        "mechanical_reframe_floor": 0,
+        "evidence_ledger": [
+          {
+            "chapter": 6,
+            "quote": "Luke has to attempt something his teacher already understands. Yoda has to pursue instruction that his own colleagues can't yet give him.",
+            "assessment": "A concrete comparison between two educational situations; useful analysis rather than a decorative reversal."
+          },
+          {
+            "chapter": 16,
+            "quote": "Obi-Wan continues teaching Luke after death without restoring his former physical life. Sidious instead seeks another person's body or takes the vitality he needs from Rey and Ben.",
+            "assessment": "The chapter's assigned substantive contrast, not an unsupported general maxim."
+          },
+          {
+            "chapter": 20,
+            "quote": "Waiting is right for the lake; movement is necessary on the climb.",
+            "assessment": "A concise comparison supported by two immediately preceding physical tasks."
+          },
+          {
+            "chapter": 24,
+            "quote": "Luke notices his resemblance to his father. Rey notices the creature's wound.",
+            "assessment": "A grounded comparison required by the concluding assignment."
+          }
+        ],
+        "assessment": "These factual comparisons should not be removed merely to satisfy a generic contrast quota. No excess poster-style aphoristic closing pattern was identified."
+      }
+    },
+    "E": {
+      "verdict": "NO_VISIBLE_REUSE_DEFECT; EXTERNAL_CHECKS_UNVERIFIED",
+      "evidence": [
+        "The narration contains sustained editorial interpretation, including the Father's coercive succession test, incompatible expectations after Rey and Ben's contact, and the causal cost of extracting Kanan.",
+        "The structure follows the supplied knowledge-limits angle rather than copying either voice sample's topic or opening.",
+        "No verbatim borrowing from the supplied voice samples was identified.",
+        "Nothing supplied establishes duplicate publishing or a bulk-production plan."
+      ],
+      "actionable_defects": [],
+      "limitations": "Page-one originality, top-five-video differentiation, buyer human review, publishing practices and audiovisual production cannot be scored from this record. A monetization or platform-policy clearance would exceed the available evidence."
+    }
+  },
+  "input_hashes": {
+    "1": "a0e1f2c1b69b8f88d1ed72d697c9141348dbeb43ad30806ccee3f10dafd0a8e2",
+    "2": "06aefbe7c5655741ed697b13acbb6c8bf3dc20b745e100ef24c68e4d65a8cdd8",
+    "3": "0921f24aa0709143ba106bbc7b7ff0c3ddc0b8f3ec6e18b67037607228015bef",
+    "4": "dcde9f57f6f77c95511b5c2ac43c4cffc4355d729037df2b64f69fd7f0c3fdcd",
+    "5": "c0ec2b746cde889d0e530a65fe61410d0290e992451f96bdddaec8b753c32191",
+    "6": "0b36461ec7497275f02f7071b3b55ce0d83241a9af2edeb70c92191cdad72a5b",
+    "7": "eb84bbb85eb506a1d3242db1b9317394a0fe3171112c6f16d227eb7007670e01",
+    "8": "710281d654904ec8a7184a8f091facc376a973d13386589921a4b9b9d15460a2",
+    "9": "79f03b0fe3840c17a0cb2afc91ceedc58170a459448940788af6127695a6f5c3",
+    "10": "b7fed0c95c0f7fc1b809b935220bd351097de724a7759a8898cfdcba50c95344",
+    "11": "8cd122931c5372e84e056c94a2b56b1ab330e01eb57514256c99066d3c3ea669",
+    "12": "0d4cabdbdc53f8835f0e37b14a62df3e35f66cd7cf1e4d65484362bde8f1aee6",
+    "13": "9e2d9cbace4fa20bbc99f1be3c5bfbe83f98d31e874ba23c51858e1a56178419",
+    "14": "e6a631f524ff94b70815bc1124333a859776a4a5de694f98cbfcf2d4f87b0ed1",
+    "15": "0f8881222eb253593f51d88c38a7891f5faca943a6157fc3cca1fedd9346642b",
+    "16": "f9fcc9f0cae67664d54e7a8d5eb614e7817298a8731651cbaa340c90299781f0",
+    "17": "a0575f57de2ca21d644143789481ee73a46657d55a09cbed4bde9683334d8d4d",
+    "18": "1048253ece90572644b4ed10f63074d4c7b12339b5028b75af3c8376e314df2f",
+    "19": "35e695fea4e573d8416abad12ccd98d710a48fc0fad7b3abc1c64475e7db031e",
+    "20": "4e9b464cfb4ed6bfe1ae5de8401b0ce281cb2dd723206456f9b22dd7b5f8175c",
+    "21": "415d2caba3002321c4c8677d0723571959866ce1622070c50bdd7884118393f5",
+    "22": "98e4ec81824f632e00570ac3fbee36d089404ae93f6c125827ed327c1aba1595",
+    "23": "84a72d52840c369b88a8ec381a9693ffcabe5116b23905ade5e4d36aacd2ef76",
+    "24": "c6a8c83b7de3e31bacc89a00874d3da2b675866a350497aa39be146b6a28abb9"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement."
+}

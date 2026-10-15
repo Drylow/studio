@@ -1,7 +1,6 @@
 {
   "accessed": "2026-10-15",
   "scope": "FROM television through S4E10 If a Tree Falls in the Forest..., aired 28 June 2026. Spoilers for seasons one through four. No leaks, season-five predictions presented as fact, clinical diagnoses or extended graphic descriptions. Important late updates are explicit; do not write as if only season three has aired.",
-  "method": "Opened public plot references, official production/Databank sources and creator/cast interviews; primary fictional works are episode/book locators. Original commentary; no copied dialogue. Not a claim to have watched every episode or newly read each whole novel.",
   "sources": [
     {
       "id": "V1",
@@ -62,25 +61,32 @@
     },
     {
       "id": "V9",
-      "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct.",
+      "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct. Boyd tells Henry and Victor about Miranda and Tabitha. In S4E7 Victor asks Tabitha in the graveyard whether she is his mother, seeks her help, and takes her and Ethan to the Man in Yellow's car. Tabitha and Ethan tell Julie. Henry struggles with the revelation and Sophia's manipulation.",
       "work": "S4E7 Best Laid Plans, supported by cast interview and episode recap",
       "url": "https://www.horrorgeeklife.com/2026/06/08/from-season-4-scott-mccord-robert-joy-interview/",
       "opened": "2026-10-15",
       "corroboration": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/"
+    },
+    {
+      "id": "ADD-trees",
+      "fact": "S1E3 Victor measures by steps from house corner to nearby trees. Initially dismisses Ethan, becomes interested when Ethan asks about boy in forest. Says checking whether trees move. Julie comes out to scold Ethan for being outside. No established tree speed, cause, teleportation or compass survey.",
+      "url": "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/3/",
+      "work": "S1E3",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-tunnels",
+      "fact": "S1E10 and S2E1 Boy in White sends Victor underground; he meets Tabitha after excavation, guides her among sleeping creatures, warns quiet. They exit to forest and cargo truck. Boyd, Tabitha, Victor, Elgin survive and return town S2E2. Victor has hidden supplies/drawings. No control over creatures/portals.",
+      "url": "https://www.whattowatch.com/features/from-season-2-episode-1-recap-welcome-to-the-nightmare",
+      "work": "S1E10; S2E1-2",
+      "opened": "2026-10-15"
+    },
+    {
+      "id": "ADD-lunchbox",
+      "fact": "Victor gives Tabitha lunchbox for tower journey S2 end. Wakes outside in Camden, finds address on lunchbox and visits Henry. Henry recognizes missing sons lunchbox but doubts her story; missing-family news helps discussion. Distinguish address from supernatural exit directions. Victor predicting result unconfirmed.",
+      "url": "https://www.dexerto.com/tv-movies/from-season-3-episode-2-recap-2914406/",
+      "work": "S2E10; S3E1-2",
+      "opened": "2026-10-15"
     }
-  ],
-  "forbidden": [
-    "Jasper is still the confirmed speaker in Christopher's crucial conversation",
-    "Eloise is confirmed alive, dead, a named adult character or outside the town",
-    "Victor has lived entirely alone for every intervening decade",
-    "Victor deliberately created the town or is its confirmed immortal controller",
-    "Every drawing is an exact photograph or prediction",
-    "The Boy in White is confirmed wholly good, omniscient or the creator",
-    "Henry's hospital visions prove an actual alternate universe or that the show is a dream",
-    "Miranda's killing and the later treatment of her body are necessarily the same event",
-    "The characters' reincarnation revelation is just an unmentioned pre-season-three theory",
-    "Victor or Henry dies in the season-four finale",
-    "Trauma scientifically guarantees false memory",
-    "Graphic gore or invented dialogue"
   ]
 }

@@ -1,0 +1,126 @@
+{
+  "state": "draft_complete_editorial_review_pending",
+  "completed": [
+    {
+      "chapter": 1,
+      "words": 1047,
+      "sha256": "28ec4866397ea25bd2e9cac61b59a77c34dc42534c2c26328d911a08b037c063"
+    },
+    {
+      "chapter": 2,
+      "words": 1007,
+      "sha256": "4858a13637be7dda28a0d765ad8f82f4ba1ec72d36fa1c4be11be62d10e296b8"
+    },
+    {
+      "chapter": 3,
+      "words": 999,
+      "sha256": "b08068e58aba5d3681ee0aeccc85d400b9544b2c05710e5d527c44471440ac70"
+    },
+    {
+      "chapter": 4,
+      "words": 1063,
+      "sha256": "6ccf4ef52c6334af450c610ab3709f0a2421b9104a7818c0e9f46b15f45f9346"
+    },
+    {
+      "chapter": 5,
+      "words": 1054,
+      "sha256": "2e44dfdf56da4736f2ec90ab659f1345b4bc6815baadca4ea2e8ad8394b9918e"
+    },
+    {
+      "chapter": 6,
+      "words": 1024,
+      "sha256": "bdd67cedf55e8b24d3b4e7dff8efac5a11c32cffdb79becdc442b50ffbf67161"
+    },
+    {
+      "chapter": 7,
+      "words": 952,
+      "sha256": "eb84bbb85eb506a1d3242db1b9317394a0fe3171112c6f16d227eb7007670e01"
+    },
+    {
+      "chapter": 8,
+      "words": 1009,
+      "sha256": "57e9201e0ea1d8941a38df3ab848a84e27ef52abcb64f116cfa17f93d1b3a49c"
+    },
+    {
+      "chapter": 9,
+      "words": 982,
+      "sha256": "eb13d75699cde5eb21f735e24f3fde15a884cda7361b97d10b556720e1478e52"
+    },
+    {
+      "chapter": 10,
+      "words": 1067,
+      "sha256": "8b905a2b15944e43c437f43d1a1b6dd4a738c4d019d590ac935757f6756d34b3"
+    },
+    {
+      "chapter": 11,
+      "words": 1043,
+      "sha256": "a52d99e9d9100ae048478e7f4aeeb7b5adf5d5164f7c05cb3899dd0cd37d36bc"
+    },
+    {
+      "chapter": 12,
+      "words": 974,
+      "sha256": "6a8e2f5f909fb9875129aa46c30a645bff72d58fed77b6a4e750da781ce14400"
+    },
+    {
+      "chapter": 13,
+      "words": 1075,
+      "sha256": "0dec39baf73bdae22e54346c25d5fc99f67abce6971f37ece2e01b1ec6656cbf"
+    },
+    {
+      "chapter": 14,
+      "words": 1010,
+      "sha256": "cdfa2cc56d301074650a1c30ff2040d57b14e9b5f9ae337c27067d1b7370e75d"
+    },
+    {
+      "chapter": 15,
+      "words": 1017,
+      "sha256": "03d8f19d46dbce4becd6a9bbc9c055bb989b935cdbbdca9d45075c7d27a55cf2"
+    },
+    {
+      "chapter": 16,
+      "words": 981,
+      "sha256": "37b7d8491394cef5fcfa2f064ffafa20042fa8083bf5468f98a3ba8fe6058157"
+    },
+    {
+      "chapter": 17,
+      "words": 1008,
+      "sha256": "ab28f948fa433b92fa03d0103a1cd949b7271f4b5850978a0160130ae92f3f73"
+    },
+    {
+      "chapter": 18,
+      "words": 962,
+      "sha256": "b6a0ed601075b04dc06a8caeb9b9709687d3efa426a99a7d501a3683777e8d44"
+    },
+    {
+      "chapter": 19,
+      "words": 975,
+      "sha256": "6f5b3612ba80a8652e69f05f46ed1ca8f3d9533a541669afd425fedf86d9435e"
+    },
+    {
+      "chapter": 20,
+      "words": 1042,
+      "sha256": "5c3492907f5ad498dfe9c7b24825ccf52e866bae83209bed063381056a6cd12d"
+    },
+    {
+      "chapter": 21,
+      "words": 994,
+      "sha256": "3e41494805233c944113b432f054e34dd631f9e07322a53ba092b2ae2f6f4cef"
+    },
+    {
+      "chapter": 22,
+      "words": 1013,
+      "sha256": "2e15a710616ad36c5d18b83f4a59c618f7d402a3bc641b1c4bb3e63854442f93"
+    },
+    {
+      "chapter": 23,
+      "words": 1028,
+      "sha256": "0617e4b9b2b52ae11cb42f53165c416f923266452fc6a9d6da5d54bb8842ce9a"
+    },
+    {
+      "chapter": 24,
+      "words": 1005,
+      "sha256": "256f2ad573c28c87b1b04f1daa8aa89ad7d567ca4a05a3f0e19e1f02edc53c2e"
+    }
+  ],
+  "planned_chapters": 24
+}

@@ -1,0 +1,175 @@
+{
+  "chapters": [
+    {
+      "number": 13,
+      "summary": "Spice production depends on the sandtrout and worm life cycle, so preserving harvested supplies is different from preserving the ecological source of future harvests.",
+      "new_information": [
+        "Leto's rescue of a harvester crew illustrates the immediate danger adult worms pose to spice collection.",
+        "Sandtrout isolate water and participate in the underground processes that produce pre-spice masses and spice blows.",
+        "Adult worms are vulnerable to water, and the Fremen obtain the Water of Life by drowning a small maker.",
+        "Stored spice cannot replace the ecological processes needed to replenish it."
+      ],
+      "local_answer": "The Guild's cargo comes from a living desert system; a threat to that system reaches future spice supplies rather than merely interrupting collection.",
+      "open_issues": [
+        "The chapter spends more time on Kynes's environmental project than its narrowly assigned ecological explanation requires.",
+        "The distinction between stored spice and a continuing biological source is explained more than once without a substantial new consequence."
+      ],
+      "evidence_notes": "The central dependency follows the assignment and G1/G4. The ecological details and harvester episode are additional primary-novel claims not individually documented in the supplied proof entries; no invented quantities or step-by-step destructive chemistry appear."
+    },
+    {
+      "number": 14,
+      "summary": "Paul forces the Guild to accommodate him by credibly threatening the biological source of spice, a vulnerability that military strength and transport control cannot remedy.",
+      "new_information": [
+        "Paul's Fremen experience and survival of the Water of Life give him knowledge relevant to threatening spice production.",
+        "The novel's use of atomics against the Shield Wall is separate from Paul's ecological threat to spice.",
+        "Guild representatives recognize the threat through their limited prescience and expose their own spice dependence during the confrontation.",
+        "The Guild's accommodation prevents the forces above Arrakis from becoming further military opposition."
+      ],
+      "local_answer": "Paul targets the prerequisite for the Guild's service, leaving its customary leverage over passage unable to protect it.",
+      "open_issues": [
+        "The closing paragraph briefly recaps the remaining succession settlement despite the chapter's tighter transport-and-spice assignment.",
+        "Several explanations of why military occupation cannot restore spice overlap, although their separate military and institutional applications generally justify retaining them."
+      ],
+      "evidence_notes": "The decisive accommodation is supported by G4. The chapter explicitly preserves the book/film distinction and does not invent a chemical procedure, fleet count, tariff or treaty. The Shield Wall, contact-lens and succession details are not individually documented by the supplied proof entry."
+    },
+    {
+      "number": 15,
+      "summary": "Navigator prescience serves safe passage rather than comprehensive political knowledge, while Paul's broader foresight also remains incomplete and vulnerable to concealment.",
+      "new_information": [
+        "Safe arrival does not imply protection from the political consequences awaiting passengers.",
+        "Paul's visions of religious war and his uncertain understanding of Jamis illustrate limitations on his foresight.",
+        "The Guild's response to Paul supports an explicitly qualified interpretation of institutional caution.",
+        "Edric's presence conceals conspirators from Paul's prescient observation without guaranteeing the success of their actions."
+      ],
+      "local_answer": "Different uses of foresight confer different advantages, but neither safe navigation nor broad political vision provides complete knowledge or control.",
+      "open_issues": [
+        "Two adjacent sentences repeat Edric's concealment function without adding a distinct limitation.",
+        "The concluding discussion repeats the already qualified institutional-caution interpretation.",
+        "The Edric material begins developments assigned more fully to chapters 17 and 18; those later chapters will need to advance beyond this introduction."
+      ],
+      "evidence_notes": "G1, G4 and G5 support the navigation, confrontation and concealment claims. The institutional-psychology interpretation is appropriately identified as a reading rather than a universal rule. The Jamis example is not individually documented in the supplied proof bank, but the chapter does not claim omniscience for either Paul or Edric."
+    },
+    {
+      "number": 16,
+      "summary": "Paul's control of spice subordinates the Guild without replacing its transport infrastructure, leaving both ruler and carrier with reasons to maintain an unequal working relationship.",
+      "new_information": [
+        "Paul's accession does not transfer the Guild's Navigators, vessels or institutional expertise to the throne.",
+        "Spice leverage and reliance on transport can coexist without making Paul and the Guild equally powerful.",
+        "Imperial campaigns and the circulation of goods still require material transport after the political settlement.",
+        "Edric's participation in conspiracy shows that continued service does not mean Guild loyalty."
+      ],
+      "local_answer": "The Guild survives because Paul can compel its cooperation but still needs the service it provides; compliance does not erase its separate interests.",
+      "open_issues": [
+        "The Atreides relocation example repeats the opening's explanation instead of developing the post-accession relationship.",
+        "The Guild's reasons for continuing service are restated after the chapter has already explained both spice dependence and continuing customer demand."
+      ],
+      "evidence_notes": "G1 and G4 establish the monopoly and Paul's leverage; G5 supports the distinction between compliance and loyalty. The chapter explicitly presents mutual dependence as a political implication and avoids inventing decrees, treaties or an immediate end to the Guild."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 13,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "Kynes approaches Arrakis on a different scale. His work concerns the connections among water, plants, animals, and the conditions that allow them to survive. The Fremen project grows from that understanding. Their stored water and efforts toward changing the environment belong to a plan extending beyond the needs of a single settlement. Greener conditions would affect the dry habitat of the makers. Kynes's ecological thinking therefore has to consider what happens across the system when one part of it changes, including the desert needed for spice production.",
+      "reason": "The assignment requests only the ecological relationship necessary to understand the supply threat. This paragraph expands into the environmental project after water isolation, adult-worm vulnerability and spice formation have already supplied that relationship.",
+      "replacement": "The Fremen plan to change the environment also has to account for the makers' need for dry habitat. Making Arrakis greener would affect the living conditions on which spice production depends.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 13,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The distinction matters even without knowing how much melange anyone has stored. A reserve can supply consumption for a time, but every use draws on material already produced. Its usefulness doesn't remove the need for a living source.",
+      "reason": "H18 identifies a 're-mention that adds nothing.' The earlier warehouse paragraph already explains that stored spice is the result of an earlier cycle and cannot replace sandtrout activity. These sentences repeat that explanation and add an unnecessary methodological aside about unavailable quantities.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 14,
+      "kind": "structure",
+      "severity": "minor",
+      "quote": "The remaining settlement still involves human decisions. Paul must face Feyd-Rautha, deal with Shaddam, and arrange the marriage to Irulan through which he claims the throne. The spice threat doesn't perform those acts for him.",
+      "reason": "The qualification is useful, but listing the duel and marriage pulls the closing back toward the broader victory recap that the episode angle asks to avoid. The next sentences already explain the specific political effect of the threat.",
+      "replacement": "The spice threat doesn't settle every part of Paul's claim to the throne.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "  His presence helps conceal their gathering from Paul's prescient awareness.",
+      "reason": "H18 calls for cutting a 're-mention that adds nothing.' The preceding sentence already says Edric creates a region Paul cannot clearly observe, and the preceding paragraph has explicitly explained concealment of the participants.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 15,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild's caution makes sense beside the work that sustains it. A Navigator repeatedly faces the need to bring a vessel through uncertainty with its passengers alive. Paul has entered a struggle in which people may follow him into futures he dreads, and refusing an immediate danger may leave another danger growing. Their abilities overlap, but their responsibilities pull them toward different decisions.",
+      "reason": "H18 warns against a section repeatedly returning to the same framing. The opening establishes the difference in tasks, the religious-war paragraph develops Paul's burden, and the middle paragraphs already connect navigational caution with the Guild's response. This concluding restatement adds no distinct development.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Atreides move to Arrakis gives us a familiar example of what remains necessary. Leto brings his household and military forces from Caladan through Guild transport. His authority over those people doesn't carry them between planets on its own. Paul inherits an empire whose powerful families face the same requirement. A House can command its soldiers, maintain its ships and possess a planet, yet moving beyond that planet involves an organization outside its household. Changing the person on the imperial throne leaves that distance in place.",
+      "reason": "H18 flags repetition of a framing without new information. The opening paragraph already establishes that the Great Houses still require Guild passage after Paul's victory. Chapter 15 also uses the Atreides relocation to distinguish transport competence from political outcomes. This is the least useful full restatement.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 16,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The Guild, meanwhile, has its own reason to continue serving a ruler it has been forced to accept. Its Navigators require spice. Refusing all dealings with Paul would put it at odds with the man who holds the supply it needs to keep working. Its customers also remain scattered across the empire. The transport monopoly still has value because those customers need passage, even though the Guild has lost its ability to treat Arrakis as a political problem it can safely manage from a distance.",
+      "reason": "H18 describes a script getting 'stuck on one fact, one phrase, or one framing.' Spice dependence, Paul's leverage and continuing customer demand have all been established earlier in this chapter and across the supplied sequence. The paragraph needs only the carrier's resulting incentive, not another explanation of the entire dependency.",
+      "replacement": "For the Guild, continued service preserves its business while avoiding a complete break with the ruler who controls its essential supply.",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        13,
+        14
+      ],
+      "detail": "Both explain that protecting harvested spice or occupying spice fields cannot replace the living source. The transition is justified: chapter 13 establishes the ecological distinction and chapter 14 applies it to Paul's threat. Avoid expanding either into another general account of reserves and replenishment."
+    },
+    {
+      "chapters": [
+        14,
+        15,
+        16
+      ],
+      "detail": "Paul's credible spice threat, the Guild's accommodation and its inability to replace the supply recur throughout. Each chapter has a legitimate different purpose, but chapter 15's concluding caution recap and chapter 16's repeated dependence explanations slow progression."
+    },
+    {
+      "chapters": [
+        15,
+        16
+      ],
+      "detail": "The Atreides relocation is used twice to show that authority or foresight cannot substitute for transport. Chapter 16's version is dispensable because its opening already states the relevant post-accession consequence."
+    },
+    {
+      "chapters": [
+        15,
+        16
+      ],
+      "detail": "Both introduce Edric's conspiracy role. Chapter 15 uses him to demonstrate limits of foresight, while chapter 16 uses him to distinguish compliance from loyalty. These are distinct applications, but chapters 17 and 18 must add participant interests and operational limitations rather than repeat these introductions."
+    }
+  ],
+  "scope_status": "The four supplied chapters remain within the original-six-book scope and their assigned Dune/Dune Messiah focus. No expanded-prequel origin story, film Navigator physiology, invented numerical economics, magical propulsion claim or conflation of no-ships with navigation machines appears. Chapter 14 explicitly distinguishes the novel's ecological threat from the film presentation.",
+  "limitations": "Only chapters 13-16 were supplied and reviewed; repetition against the other planned chapters cannot be established from outline entries alone. The supplied proof bank was treated as authoritative, but its linked pages and primary passages were not independently opened or verified. No audio timing, human read-aloud or external scanner execution was performed.",
+  "input_hashes": {
+    "13": "90a3cf852ca24234050b8aad96e71ca2e920df55480aca534ea443a2a961a0fb",
+    "14": "bc2bfc9ca146bc1367ef72256950f7cd5e22a5faf774ec9f705cf85c62bec462",
+    "15": "8262dda7efba830075891295a72ee5edc8a6f54b492664c3335f8f10eeea3412",
+    "16": "afb125e5c38fd026fe0f9ab04dcb98017fd06b183853fff3aaa3def265f5e844"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "editor_adjudications": []
+}

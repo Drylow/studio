@@ -18,6 +18,26 @@ sauvegarde les décisions, ressources locales et méthodes de notre projet.
 
 ## Scriptwriting local
 
+Lot du 15 octobre : `scripts-2026-10-15/` contient les six narrations,
+les plans éditoriaux, les sources et les relectures. Les textes complets
+ne nécessitent aucun outil pour être lus ou importés dans Ultravid.
+
+Exécuteurs techniques du dépôt : `production/sleep_script_batch.py`,
+`sleep_script_supplements.py`, `sleep_script_review.py` et
+`sleep_script_finalize.py`. Ils utilisent `services/ai.py` et le fournisseur
+déjà configuré dans le `.env` privé ; aucune clé n'est incluse dans la reprise.
+La sélection de rédaction du `.env` était obsolète lors du travail : une
+sélection disponible a été passée dans l'environnement du processus, sans
+modifier le fichier partagé. Sur une nouvelle session, consulter les capacités
+annoncées par ce même proxy. Ne pas changer de fournisseur par défaut.
+
+Les plans et les ajouts de sujets sont écrits par Codex ; la rédaction assistée
+et les rapports ne valent pas approbation. Les relectures séparées sont suivies
+de corrections et d'arbitrages sourcés. Ne pas relancer l'exécuteur de brouillons
+sur les textes corrigés : son seuil de reprise pourrait écraser un chapitre
+raccourci volontairement. Le finaliseur assemble les chapitres existants sans
+appel IA. Les décomptes de mots ne mesurent pas la durée de la voix.
+
 Dans le dépôt :
 
 - services/facelessos.py : lecture des skills, scanner et statistiques.

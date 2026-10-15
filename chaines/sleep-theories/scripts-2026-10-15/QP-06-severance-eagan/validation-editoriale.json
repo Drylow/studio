@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "status": "final_text_ready_for_narration",
+  "narration_sha256": "33620c8c582abce8b2d2639e94fd80be84f28d7e6e1adb9b56ecee06af16d813",
+  "chapters_reviewed_in_integrated_pass": 26,
+  "local_findings_applied": 12,
+  "remaining_findings": [],
+  "manual_final_edits": "Book collection chain, opening artifact and CTA placement recorded separately where applicable.",
+  "method": "Three editorial passes, source-bounded fact checks, exact local corrections, editor examination of material findings and changed joins, mechanical and limited reference comparison. Not new full episode viewing or audio measurement.",
+  "scope": "Released television through S2E10 Cold Harbor, March 21, 2025. No season-three story, leaks, unsupported family tree, pregnancy twist, confirmed cloning or resurrection. Corporate doctrine and family accounts must be attributed as claims. Original analysis, not a recap of a competing theorist.",
+  "measured_audio_seconds": null,
+  "duration_gate": "Measure generated voice >= 120 minutes before publication.",
+  "hash_method": "UTF-8 text after universal newline normalization to LF; copy manifests separately hash raw bytes.",
+  "final_formatting": "Trailing line spaces removed after local corrections; no wording changed."
+}

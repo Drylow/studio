@@ -1,21 +1,22 @@
 -- HARD-BAN (fix on sight, no adjudication): 0
 -- MECHANICAL SWEEP (delete on sight): 0
--- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 1
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 2
   [narrator tease] ...rriving to explain it or take charge of what happens next. We don't need an extended description ...
+  [staccato x3/8] "Keep quiet." | "Keep moving with him." | "Find the way out."  << He knows enough to lead her among them, but he doesn't treat the passa...
 -- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 1
   [floor: reframe: isn't X, it's Y] ... else. An empty area of paper doesn't tell us that nothing happened there. This is part of what makes his collec...
--- ECHO CHECK (H18): 25
-  [echo H18: phrase repeated 28x] "the boy in white"
-  [echo H18: phrase repeated 11x] "the man in yellow"
-  [echo H18: phrase repeated 10x] "in front of him"
-  [echo H18: phrase repeated 7x] "a complete account of"
-  [echo H18: phrase repeated 6x] "without being able to"
+-- ECHO CHECK (H18): 24
+  [echo H18: phrase repeated 30x] "the boy in white"
+  [echo H18: phrase repeated 13x] "in front of him"
+  [echo H18: phrase repeated 10x] "the man in yellow"
+  [echo H18: phrase repeated 6x] "a complete account of"
   [echo H18: phrase repeated 5x] "he doesn't have to"
   [echo H18: phrase repeated 5x] "to save the children"
-  [echo H18: phrase repeated 4x] "the identity of the"
-  [echo H18: phrase repeated 4x] "history of the town"
+  [echo H18: phrase repeated 4x] "without being able to"
   [echo H18: phrase repeated 4x] "the season four finale"
-  [echo H18: phrase repeated 4x] "belong to the same"
-  [echo H18: phrase repeated 3x] "part of the story"
-  [echo H18: phrase repeated 3x] "his mother and sister"
+  [echo H18: phrase repeated 3x] "history of the town"
+  [echo H18: phrase repeated 3x] "he can return to"
   [echo H18: phrase repeated 3x] "in a town where"
+  [echo H18: phrase repeated 3x] "complete explanation of the"
+  [echo H18: phrase repeated 3x] "he knows enough to"
+  [echo H18: phrase repeated 3x] "a different kind of"
