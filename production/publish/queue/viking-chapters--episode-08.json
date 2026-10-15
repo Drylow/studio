@@ -1,0 +1,17 @@
+{
+  "channel": "Viking Chapters",
+  "title": "Why Being a Viking Skald Was Worse Than You Think",
+  "description_file": "chaines/viking-chapters/episode-08/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/mFrjbNIv",
+    "file": "final.mp4",
+    "sha256": "50d8da5a1c0098b34d7cb459ca32d3350e34c472df1ff498998d3fbeb3d678a2",
+    "url": "http://media.edgerunners.fr/viking-chapters--episode-08-b8390d1c53969d8f.mp4"
+  },
+  "thumbnail": "chaines/viking-chapters/episode-08/thumbnail.jpg",
+  "captions": "chaines/viking-chapters/episode-08/English-Captions.srt",
+  "tags_file": "chaines/viking-chapters/episode-08/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-21T10:00",
+  "tubeforge_video_id": "why-being-a-viking-skald-was-worse-than-184175"
+}

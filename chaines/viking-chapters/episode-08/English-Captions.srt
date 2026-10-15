@@ -1,0 +1,1795 @@
+1
+00:00:00,096 --> 00:00:01,668
+You wanted to be a poet.
+
+2
+00:00:01,668 --> 00:00:04,447
+A seat near the jarl's high table,
+
+3
+00:00:04,447 --> 00:00:07,002
+a gold ring pulled from his own arm,
+
+4
+00:00:07,002 --> 00:00:08,938
+and your verses repeated
+
+5
+00:00:08,938 --> 00:00:11,305
+in every hall for a hundred years.
+
+6
+00:00:11,305 --> 00:00:14,513
+Instead, it is the middle of the night,
+
+7
+00:00:14,513 --> 00:00:16,845
+the lamp is smoking, your head hurts,
+
+8
+00:00:16,845 --> 00:00:19,806
+and you need eight perfect lines by morning.
+
+9
+00:00:20,116 --> 00:00:22,438
+Somebody has to find the next word.
+
+10
+00:00:22,438 --> 00:00:24,572
+Tonight, that somebody is you.
+
+11
+00:00:24,572 --> 00:00:26,167
+Imagine you are Brand,
+
+12
+00:00:26,167 --> 00:00:30,253
+Bjorn's nephew, from the valley of our earlier chapters.
+
+13
+00:00:30,253 --> 00:00:32,125
+Like Eirik and Aslaug,
+
+14
+00:00:32,125 --> 00:00:33,659
+you are an imagined person,
+
+15
+00:00:33,659 --> 00:00:35,715
+built from what poems, sagas,
+
+16
+00:00:35,715 --> 00:00:39,892
+laws and scholars tell us, not a real man from history.
+
+17
+00:00:39,892 --> 00:00:42,046
+You are a slim young man with long
+
+18
+00:00:42,046 --> 00:00:44,810
+light-brown hair tied at the neck,
+
+19
+00:00:44,810 --> 00:00:47,899
+no beard yet, a pale blue tunic,
+
+20
+00:00:47,899 --> 00:00:51,987
+a grey-green cloak, and one thin silver ring on your arm.
+
+21
+00:00:51,987 --> 00:00:53,295
+It is the first thing
+
+22
+00:00:53,295 --> 00:00:54,902
+poetry ever paid you.
+
+23
+00:00:55,340 --> 00:00:57,433
+You polish it more than your shoes.
+
+24
+00:00:57,433 --> 00:00:58,950
+Popular culture imagines
+
+25
+00:00:58,950 --> 00:01:01,140
+Viking poets as cheerful bards,
+
+26
+00:01:01,140 --> 00:01:03,128
+strumming a harp at a feast.
+
+27
+00:01:03,128 --> 00:01:05,488
+The real court poets of the north,
+
+28
+00:01:05,488 --> 00:01:08,372
+the skalds, worked in one of the most
+
+29
+00:01:08,372 --> 00:01:11,089
+demanding styles of poetry ever invented.
+
+30
+00:01:11,639 --> 00:01:13,786
+It was a job with real money,
+
+31
+00:01:13,786 --> 00:01:16,401
+real danger and very real enemies.
+
+32
+00:01:16,401 --> 00:01:18,549
+And at the end of this story,
+
+33
+00:01:18,922 --> 00:01:21,886
+we will read a stone on the Swedish island of
+
+34
+00:01:21,886 --> 00:01:24,529
+Öland that carries the only complete
+
+35
+00:01:24,529 --> 00:01:27,145
+skaldic stanza ever found on a runestone.
+
+36
+00:01:27,727 --> 00:01:29,917
+It starts with Bjorn's voyages.
+
+37
+00:01:29,917 --> 00:01:32,137
+All your life, you have heard him
+
+38
+00:01:32,137 --> 00:01:34,214
+tell the same stories at the hearth:
+
+39
+00:01:34,214 --> 00:01:37,087
+the storm, the raid, the silver,
+
+40
+00:01:37,087 --> 00:01:41,117
+the cut on Eirik's arm that he swears was heroic.
+
+41
+00:01:41,117 --> 00:01:42,561
+One winter,
+
+42
+00:01:42,561 --> 00:01:44,457
+you put the stories into verse.
+
+43
+00:01:44,457 --> 00:01:46,534
+People stop eating to listen.
+
+44
+00:01:47,212 --> 00:01:49,197
+Bjorn pretends not to be moved,
+
+45
+00:01:49,197 --> 00:01:51,702
+then asks you to say it again,
+
+46
+00:01:51,702 --> 00:01:53,739
+louder, with more about him.
+
+47
+00:01:53,739 --> 00:01:55,230
+That spring,
+
+48
+00:01:55,230 --> 00:01:58,293
+a jarl's man passing through the valley hears you.
+
+49
+00:01:58,293 --> 00:02:00,883
+The jarl in the north likes poets,
+
+50
+00:02:00,883 --> 00:02:01,419
+he says.
+
+51
+00:02:01,419 --> 00:02:03,344
+Come and try your luck.
+
+52
+00:02:03,344 --> 00:02:04,526
+Your mother cries.
+
+53
+00:02:04,526 --> 00:02:07,252
+Bjorn gives you his second-best cloak.
+
+54
+00:02:07,818 --> 00:02:10,129
+Aslaug gives you bread for the road and a
+
+55
+00:02:10,129 --> 00:02:13,171
+look that says: come back with your head.
+
+56
+00:02:13,171 --> 00:02:14,868
+The form you will be judged on
+
+57
+00:02:14,868 --> 00:02:17,286
+is called dróttkvætt, court metre.
+
+58
+00:02:17,286 --> 00:02:19,552
+The scholar Margaret Clunies Ross
+
+59
+00:02:19,552 --> 00:02:22,622
+calls it the commonest metre of skaldic verse,
+
+60
+00:02:22,622 --> 00:02:23,786
+and explains that its
+
+61
+00:02:23,786 --> 00:02:25,594
+name means something like:
+
+62
+00:02:25,594 --> 00:02:28,221
+that which is recited before the retinue.
+
+63
+00:02:28,221 --> 00:02:29,774
+The rules are brutal.
+
+64
+00:02:29,774 --> 00:02:32,011
+Hurstwic, a history site that
+
+65
+00:02:32,011 --> 00:02:34,669
+studies the sagas, sets them out.
+
+66
+00:02:34,669 --> 00:02:36,966
+Each stanza has eight lines.
+
+67
+00:02:36,966 --> 00:02:38,750
+Each line has six syllables,
+
+68
+00:02:38,750 --> 00:02:40,371
+three of them stressed,
+
+69
+00:02:40,745 --> 00:02:43,022
+and it must end on an unstressed one.
+
+70
+00:02:43,022 --> 00:02:44,978
+The lines come in pairs bound
+
+71
+00:02:44,978 --> 00:02:46,669
+together by alliteration,
+
+72
+00:02:46,669 --> 00:02:49,737
+and every single line needs an internal rhyme.
+
+73
+00:02:49,737 --> 00:02:51,889
+The rules were so tight that,
+
+74
+00:02:51,889 --> 00:02:54,556
+as Hurstwic notes, poets often shuffled the
+
+75
+00:02:54,556 --> 00:02:57,551
+normal word order just to make the metre work.
+
+76
+00:02:57,551 --> 00:02:59,391
+Listeners had to untangle the sentence
+
+77
+00:02:59,391 --> 00:03:02,663
+in their heads, at speed, while drinking.
+
+78
+00:03:02,663 --> 00:03:04,587
+So imagine a crossword,
+
+79
+00:03:04,587 --> 00:03:06,483
+a riddle and a rap battle,
+
+80
+00:03:06,483 --> 00:03:09,223
+all at once, performed in front of armed men
+
+81
+00:03:09,223 --> 00:03:11,269
+who have been drinking since noon.
+
+82
+00:03:11,723 --> 00:03:13,115
+That is the job.
+
+83
+00:03:13,115 --> 00:03:14,507
+The art was old.
+
+84
+00:03:14,507 --> 00:03:17,168
+The earliest skald whose verses
+
+85
+00:03:17,168 --> 00:03:18,668
+survive is Bragi the Old,
+
+86
+00:03:18,668 --> 00:03:20,640
+a Norwegian of the early eight hundreds.
+
+87
+00:03:20,640 --> 00:03:23,173
+But after Iceland was settled,
+
+88
+00:03:23,173 --> 00:03:24,547
+Clunies Ross notes,
+
+89
+00:03:24,547 --> 00:03:27,905
+Icelanders increasingly took over the craft,
+
+90
+00:03:27,905 --> 00:03:30,039
+and made themselves its specialists.
+
+91
+00:03:30,039 --> 00:03:31,693
+Somewhere in Iceland,
+
+92
+00:03:31,693 --> 00:03:34,970
+Grim's grandchildren may yet put you out of work.
+
+93
+00:03:34,970 --> 00:03:36,944
+Then there are the kennings.
+
+94
+00:03:36,944 --> 00:03:39,977
+A kenning is a poetic name for something.
+
+95
+00:03:40,368 --> 00:03:42,050
+You never say the plain word if
+
+96
+00:03:42,050 --> 00:03:43,732
+you can say something stranger.
+
+97
+00:03:43,732 --> 00:03:45,548
+A ship becomes a wave's horse.
+
+98
+00:03:45,548 --> 00:03:48,159
+A warrior becomes a feeder of ravens,
+
+99
+00:03:48,159 --> 00:03:50,800
+because of what he leaves on the battlefield.
+
+100
+00:03:50,800 --> 00:03:53,444
+One poem calls blood the sea of wounds.
+
+101
+00:03:53,444 --> 00:03:55,307
+Every skaldic battle is,
+
+102
+00:03:55,307 --> 00:03:58,544
+by definition, a very good day for the ravens.
+
+103
+00:03:58,544 --> 00:04:00,808
+In one poem quoted in his saga,
+
+104
+00:04:00,808 --> 00:04:03,818
+Egil, a poet we will meet shortly,
+
+105
+00:04:03,818 --> 00:04:05,030
+calls the English king
+
+106
+00:04:05,030 --> 00:04:07,490
+Athelstan the feeder of the battle-hawk.
+
+107
+00:04:07,832 --> 00:04:09,596
+Gold has dozens of names.
+
+108
+00:04:09,596 --> 00:04:11,830
+In his handbook for poets,
+
+109
+00:04:11,830 --> 00:04:13,393
+written in the twelve hundreds,
+
+110
+00:04:13,393 --> 00:04:17,463
+the Icelander Snorri Sturluson lists some of them:
+
+111
+00:04:17,463 --> 00:04:21,816
+Sif's hair, Freyja's tears, the seed of the Fyris plains.
+
+112
+00:04:21,816 --> 00:04:23,818
+To understand that last one,
+
+113
+00:04:24,191 --> 00:04:26,129
+you need to know a whole legend.
+
+114
+00:04:26,129 --> 00:04:27,603
+That was the point.
+
+115
+00:04:28,218 --> 00:04:29,552
+Kennings demanded a deep
+
+116
+00:04:29,552 --> 00:04:31,774
+knowledge of Norse myth and legend.
+
+117
+00:04:32,308 --> 00:04:34,118
+A good poem flattered the patron
+
+118
+00:04:34,118 --> 00:04:36,224
+and the audience at the same time:
+
+119
+00:04:36,224 --> 00:04:38,848
+only clever people could follow it.
+
+120
+00:04:39,302 --> 00:04:41,925
+Snorri, a Christian writing more than
+
+121
+00:04:41,925 --> 00:04:44,525
+two centuries after the conversion,
+
+122
+00:04:44,525 --> 00:04:46,917
+addressed his handbook to young skalds who
+
+123
+00:04:46,917 --> 00:04:49,595
+wanted to learn the old language of poetry,
+
+124
+00:04:49,595 --> 00:04:51,538
+and told them to master his book.
+
+125
+00:04:52,042 --> 00:04:53,110
+In the same breath,
+
+126
+00:04:53,110 --> 00:04:56,132
+he warned them not to believe in the heathen gods.
+
+127
+00:04:56,539 --> 00:04:57,235
+By his time,
+
+128
+00:04:57,235 --> 00:04:59,891
+the old myths had become a kind of grammar.
+
+129
+00:05:00,217 --> 00:05:02,540
+Poetry itself had kennings too:
+
+130
+00:05:02,540 --> 00:05:06,765
+Odin's drink, Odin's gift, Kvasir's blood.
+
+131
+00:05:07,301 --> 00:05:09,406
+Snorri tells the myth behind them.
+
+132
+00:05:09,406 --> 00:05:12,422
+Odin stole the mead of poetry from a giant,
+
+133
+00:05:12,422 --> 00:05:14,363
+turned himself into an eagle,
+
+134
+00:05:14,689 --> 00:05:17,190
+flew home, and spat the mead into jars
+
+135
+00:05:17,190 --> 00:05:19,742
+that the gods had set out in their yard.
+
+136
+00:05:19,742 --> 00:05:21,964
+But the giant was close behind.
+
+137
+00:05:22,401 --> 00:05:24,800
+So, in his hurry, Odin let some of
+
+138
+00:05:24,800 --> 00:05:27,550
+the mead escape out of his back end.
+
+139
+00:05:27,550 --> 00:05:29,254
+Nobody bothered to collect it,
+
+140
+00:05:29,254 --> 00:05:30,268
+Snorri says.
+
+141
+00:05:30,722 --> 00:05:32,853
+Anyone who wanted it could have it.
+
+142
+00:05:32,853 --> 00:05:33,977
+And that, he says,
+
+143
+00:05:33,977 --> 00:05:37,995
+is called the share of the poetasters: the bad poets.
+
+144
+00:05:38,561 --> 00:05:39,786
+Every skald believes
+
+145
+00:05:39,786 --> 00:05:41,185
+he drank from the jars.
+
+146
+00:05:41,185 --> 00:05:43,114
+Every skald suspects his
+
+147
+00:05:43,114 --> 00:05:44,844
+rivals drank from the other part.
+
+148
+00:05:44,844 --> 00:05:46,014
+The jarl's hall is the
+
+149
+00:05:46,014 --> 00:05:48,434
+biggest building you have ever seen.
+
+150
+00:05:48,434 --> 00:05:50,914
+Long benches, a fire down the middle,
+
+151
+00:05:50,914 --> 00:05:53,445
+shields on the walls, and a hundred men who
+
+152
+00:05:53,445 --> 00:05:56,653
+all seem to be related to someone important.
+
+153
+00:05:56,653 --> 00:05:58,914
+Skalds worked mainly at the courts of
+
+154
+00:05:58,914 --> 00:06:01,612
+Norwegian kings and sometimes of jarls.
+
+155
+00:06:01,612 --> 00:06:03,811
+Their main business was praise.
+
+156
+00:06:03,811 --> 00:06:05,788
+The National Museum of Denmark
+
+157
+00:06:05,788 --> 00:06:07,881
+notes that skaldic poems praise
+
+158
+00:06:07,881 --> 00:06:10,190
+kings and magnates who gave gold
+
+159
+00:06:10,190 --> 00:06:12,198
+rings to those who fought for them.
+
+160
+00:06:12,747 --> 00:06:15,386
+Clunies Ross puts it simply:
+
+161
+00:06:15,386 --> 00:06:19,038
+patrons rewarded their poets for effective praise.
+
+162
+00:06:19,038 --> 00:06:20,823
+Your first poem is about a battle
+
+163
+00:06:20,823 --> 00:06:22,536
+the jarl fought the summer before.
+
+164
+00:06:22,536 --> 00:06:23,815
+You were not there.
+
+165
+00:06:24,284 --> 00:06:24,764
+It was,
+
+166
+00:06:24,764 --> 00:06:27,581
+by most accounts, a short, muddy skirmish.
+
+167
+00:06:27,890 --> 00:06:28,747
+In your poem,
+
+168
+00:06:28,747 --> 00:06:30,583
+the ravens are very well fed.
+
+169
+00:06:30,583 --> 00:06:32,548
+The jarl listens without moving.
+
+170
+00:06:32,548 --> 00:06:33,893
+Then he pulls a ring from
+
+171
+00:06:33,893 --> 00:06:36,003
+his arm and tosses it to you.
+
+172
+00:06:36,003 --> 00:06:38,113
+It is heavier than your whole cloak.
+
+173
+00:06:38,113 --> 00:06:39,580
+The hall cheers.
+
+174
+00:06:39,580 --> 00:06:40,748
+A rival poet stops
+
+175
+00:06:40,748 --> 00:06:42,285
+cheering rather quickly.
+
+176
+00:06:42,285 --> 00:06:43,531
+He is an Icelander,
+
+177
+00:06:43,531 --> 00:06:46,209
+of course: a sharp-nosed man in a black cloak
+
+178
+00:06:46,209 --> 00:06:48,075
+who knows a hundred names for gold
+
+179
+00:06:48,075 --> 00:06:50,656
+and uses all of them in every poem.
+
+180
+00:06:51,062 --> 00:06:53,282
+He nods at your ring and says nothing.
+
+181
+00:06:53,282 --> 00:06:54,992
+In a hall full of warriors,
+
+182
+00:06:54,992 --> 00:06:57,657
+he is the one you are most afraid of.
+
+183
+00:06:58,209 --> 00:06:59,407
+Life at court is less
+
+184
+00:06:59,407 --> 00:07:00,823
+glamorous than the poems.
+
+185
+00:07:00,823 --> 00:07:02,865
+You sleep on a bench near the door,
+
+186
+00:07:02,865 --> 00:07:04,736
+eat at the far end of the table,
+
+187
+00:07:04,736 --> 00:07:08,538
+and spend a great deal of time watching the jarl's face.
+
+188
+00:07:08,538 --> 00:07:10,298
+A good mood means a ring.
+
+189
+00:07:10,298 --> 00:07:12,428
+A bad mood means you are
+
+190
+00:07:12,428 --> 00:07:15,169
+suddenly very interested in the fire.
+
+191
+00:07:15,169 --> 00:07:17,750
+But there was a limit to flattery.
+
+192
+00:07:17,750 --> 00:07:19,313
+In the prologue to his history
+
+193
+00:07:19,313 --> 00:07:21,020
+of the kings of Norway,
+
+194
+00:07:21,020 --> 00:07:23,918
+Snorri explains why he trusted these poems.
+
+195
+00:07:24,291 --> 00:07:25,289
+Poets, he says,
+
+196
+00:07:25,289 --> 00:07:28,992
+praise most the man they are standing in front of.
+
+197
+00:07:28,992 --> 00:07:32,148
+But no one would dare to tell a chief,
+
+198
+00:07:32,148 --> 00:07:33,075
+to his face,
+
+199
+00:07:33,075 --> 00:07:37,124
+about deeds that everyone listening knew were false.
+
+200
+00:07:37,124 --> 00:07:40,224
+That would be mockery, not praise.
+
+201
+00:07:40,224 --> 00:07:43,289
+Modern scholars are less trusting,
+
+202
+00:07:43,289 --> 00:07:44,509
+and argue about how
+
+203
+00:07:44,509 --> 00:07:46,762
+far the poems can be relied on.
+
+204
+00:07:47,360 --> 00:07:49,855
+But you learn Snorri's rule fast:
+
+205
+00:07:49,855 --> 00:07:52,927
+exaggerate if you must, but never invent.
+
+206
+00:07:52,927 --> 00:07:54,179
+Everybody in the hall
+
+207
+00:07:54,179 --> 00:07:55,704
+was at that skirmish.
+
+208
+00:07:55,704 --> 00:07:58,052
+Everybody remembers who ran.
+
+209
+00:07:58,052 --> 00:07:59,884
+The old men at court tell
+
+210
+00:07:59,884 --> 00:08:01,840
+you a story to make the point.
+
+211
+00:08:01,840 --> 00:08:04,602
+Only a few years ago, the saga says,
+
+212
+00:08:04,602 --> 00:08:06,699
+a veteran poet named Eyvind,
+
+213
+00:08:06,699 --> 00:08:08,801
+who had served the generous King Hákon,
+
+214
+00:08:08,801 --> 00:08:12,191
+made a verse about the new kings, the sons of Gunnhild.
+
+215
+00:08:12,191 --> 00:08:14,368
+He mocked them for burying
+
+216
+00:08:14,368 --> 00:08:16,042
+their gold in the ground instead
+
+217
+00:08:16,042 --> 00:08:18,067
+of giving it away, as Hákon had.
+
+218
+00:08:18,442 --> 00:08:20,634
+King Harald, one of those sons,
+
+219
+00:08:20,634 --> 00:08:23,627
+summoned him and accused him of disloyalty.
+
+220
+00:08:23,627 --> 00:08:26,550
+Eyvind had to hand over his great gold ring,
+
+221
+00:08:26,550 --> 00:08:28,490
+called Molde, as a fine.
+
+222
+00:08:29,041 --> 00:08:31,200
+He went home, and the saga says nothing
+
+223
+00:08:31,200 --> 00:08:33,703
+of him ever coming near that king again.
+
+224
+00:08:33,703 --> 00:08:35,214
+The lesson was clear:
+
+225
+00:08:35,214 --> 00:08:37,895
+the king's gold was for praising the king.
+
+226
+00:08:37,895 --> 00:08:39,664
+Not every poet got a ring.
+
+227
+00:08:40,119 --> 00:08:41,711
+Some got a death sentence.
+
+228
+00:08:41,711 --> 00:08:43,792
+The most famous escape belongs to
+
+229
+00:08:43,792 --> 00:08:47,834
+the Icelandic poet and Viking Egil Skallagrímsson,
+
+230
+00:08:48,242 --> 00:08:50,210
+not long before your time.
+
+231
+00:08:50,210 --> 00:08:52,993
+His saga, written down in the twelve hundreds,
+
+232
+00:08:52,993 --> 00:08:55,465
+says that Egil was shipwrecked
+
+233
+00:08:55,465 --> 00:08:58,540
+in Northumbria and fell into the hands of his enemy,
+
+234
+00:08:58,540 --> 00:09:00,625
+King Eirik Bloodaxe, at York.
+
+235
+00:09:00,625 --> 00:09:03,628
+A friend advised him to stay up all
+
+236
+00:09:03,628 --> 00:09:05,600
+night and compose a great praise poem
+
+237
+00:09:05,600 --> 00:09:07,932
+for the very king who had condemned him.
+
+238
+00:09:07,932 --> 00:09:10,534
+In the morning, Egil recited it.
+
+239
+00:09:10,534 --> 00:09:12,085
+According to the saga,
+
+240
+00:09:12,085 --> 00:09:15,113
+the king was so impressed that he let Egil live.
+
+241
+00:09:15,113 --> 00:09:17,585
+The poem is called Höfuðlausn:
+
+242
+00:09:17,585 --> 00:09:18,963
+the Head-Ransom.
+
+243
+00:09:18,963 --> 00:09:20,985
+It was not a one-off.
+
+244
+00:09:20,985 --> 00:09:23,088
+Clunies Ross explains that patrons
+
+245
+00:09:23,088 --> 00:09:25,965
+rewarded poets for praise, but a poet who
+
+246
+00:09:25,965 --> 00:09:28,861
+overstepped the limits of what they would
+
+247
+00:09:28,861 --> 00:09:31,266
+tolerate might find himself begging for his life.
+
+248
+00:09:31,721 --> 00:09:34,352
+The Head-Ransom became a whole kind of poem,
+
+249
+00:09:34,352 --> 00:09:36,439
+written to calm a furious patron.
+
+250
+00:09:36,439 --> 00:09:38,372
+The same saga claims that Egil
+
+251
+00:09:38,372 --> 00:09:40,903
+composed his first poem at the age of three.
+
+252
+00:09:40,903 --> 00:09:42,494
+Your mother says that you
+
+253
+00:09:42,494 --> 00:09:45,119
+composed your first poem at three as well.
+
+254
+00:09:45,119 --> 00:09:46,274
+It was about a sheep.
+
+255
+00:09:46,274 --> 00:09:48,133
+It did not save anyone's head.
+
+256
+00:09:48,133 --> 00:09:50,737
+Which brings us back to tonight.
+
+257
+00:09:50,737 --> 00:09:52,254
+At supper, you made a joke
+
+258
+00:09:52,254 --> 00:09:53,828
+about the jarl's new horse.
+
+259
+00:09:53,828 --> 00:09:55,164
+It was a good joke.
+
+260
+00:09:55,164 --> 00:09:56,817
+The jarl did not laugh.
+
+261
+00:09:56,817 --> 00:09:58,602
+Now he wants a poem in its
+
+262
+00:09:58,602 --> 00:10:00,363
+honour by morning, and you have a
+
+263
+00:10:00,363 --> 00:10:02,940
+strong feeling that this is a test.
+
+264
+00:10:02,940 --> 00:10:05,085
+You work until the lamp goes out.
+
+265
+00:10:05,085 --> 00:10:07,247
+By dawn, the horse is the swiftest
+
+266
+00:10:07,247 --> 00:10:10,015
+steed of the north, the terror of the wave's horses,
+
+267
+00:10:10,015 --> 00:10:11,750
+and a credit to its owner.
+
+268
+00:10:12,253 --> 00:10:13,323
+The jarl listens,
+
+269
+00:10:13,323 --> 00:10:15,346
+nods once, and says nothing.
+
+270
+00:10:15,865 --> 00:10:18,078
+You will take nothing as a yes.
+
+271
+00:10:18,078 --> 00:10:19,553
+Praise was safe.
+
+272
+00:10:19,959 --> 00:10:21,774
+Mockery was dangerous.
+
+273
+00:10:21,774 --> 00:10:24,539
+Clunies Ross points out that a
+
+274
+00:10:24,539 --> 00:10:26,393
+skald's role could also stretch to
+
+275
+00:10:26,393 --> 00:10:28,657
+social and political criticism,
+
+276
+00:10:28,657 --> 00:10:31,616
+and some scholars even think the word skald
+
+277
+00:10:31,616 --> 00:10:34,421
+is related to the English word scold.
+
+278
+00:10:34,908 --> 00:10:35,716
+Icelandic law,
+
+279
+00:10:35,716 --> 00:10:39,100
+written down later in the law collection called Grágás,
+
+280
+00:10:39,100 --> 00:10:41,357
+took words very seriously.
+
+281
+00:10:41,795 --> 00:10:43,591
+Clunies Ross shows that it was
+
+282
+00:10:43,591 --> 00:10:46,664
+both explicit and severe about verbal offences,
+
+283
+00:10:46,664 --> 00:10:48,885
+especially in poetic form.
+
+284
+00:10:48,885 --> 00:10:51,978
+A lampoon, a mocking poem about someone,
+
+285
+00:10:51,978 --> 00:10:54,077
+could be punished with outlawry.
+
+286
+00:10:54,494 --> 00:10:56,559
+In the same section of the law,
+
+287
+00:10:56,559 --> 00:10:59,887
+a love poem about a woman carried the same punishment,
+
+288
+00:10:59,887 --> 00:11:00,782
+because of what
+
+289
+00:11:00,782 --> 00:11:03,391
+it implied about her and her family.
+
+290
+00:11:03,391 --> 00:11:05,001
+A single clever verse could
+
+291
+00:11:05,001 --> 00:11:07,132
+cost a man everything he owned.
+
+292
+00:11:07,132 --> 00:11:07,883
+And yet,
+
+293
+00:11:07,883 --> 00:11:11,996
+poets used insults as weapons, even against kings.
+
+294
+00:11:13,222 --> 00:11:14,838
+A saga written in the twelve
+
+295
+00:11:14,838 --> 00:11:17,244
+hundreds says that when an Icelandic ship
+
+296
+00:11:17,244 --> 00:11:19,500
+was stranded on the coast of Denmark,
+
+297
+00:11:19,500 --> 00:11:22,144
+the Danes seized its cargo as wreck.
+
+298
+00:11:22,144 --> 00:11:24,658
+The Icelanders responded by
+
+299
+00:11:24,658 --> 00:11:26,367
+passing a law that lampoons should
+
+300
+00:11:26,367 --> 00:11:28,367
+be composed about the Danish king,
+
+301
+00:11:28,367 --> 00:11:30,957
+another Harald, and his steward.
+
+302
+00:11:30,957 --> 00:11:32,371
+How many lampoons?
+
+303
+00:11:32,371 --> 00:11:34,512
+It depends on the translation.
+
+304
+00:11:34,512 --> 00:11:36,983
+One English version says one lampoon
+
+305
+00:11:36,983 --> 00:11:39,816
+for every headland in the king's country.
+
+306
+00:11:40,269 --> 00:11:41,468
+Another says one for
+
+307
+00:11:41,468 --> 00:11:43,196
+every person in Iceland.
+
+308
+00:11:43,714 --> 00:11:44,407
+Either way,
+
+309
+00:11:44,407 --> 00:11:46,786
+it was a great deal of rude poetry.
+
+310
+00:11:47,319 --> 00:11:48,619
+The saga adds that Harald
+
+311
+00:11:48,619 --> 00:11:50,070
+was so angry that he planned
+
+312
+00:11:50,070 --> 00:11:52,207
+to sail to Iceland in revenge.
+
+313
+00:11:52,207 --> 00:11:54,613
+First, it says, he sent a wizard there in
+
+314
+00:11:54,613 --> 00:11:57,292
+the shape of a whale, to scout the coast.
+
+315
+00:11:57,292 --> 00:11:59,968
+But the land was guarded by spirits:
+
+316
+00:11:59,968 --> 00:12:00,894
+a dragon,
+
+317
+00:12:00,894 --> 00:12:04,547
+a great bird, a bull and a rock giant.
+
+318
+00:12:04,547 --> 00:12:06,455
+The wizard reported back,
+
+319
+00:12:06,455 --> 00:12:08,053
+and the king turned his fleet
+
+320
+00:12:08,053 --> 00:12:10,218
+around and sailed home to Denmark.
+
+321
+00:12:10,543 --> 00:12:11,666
+Those four guardians,
+
+322
+00:12:11,666 --> 00:12:14,102
+as Heimskringla describes them,
+
+323
+00:12:14,102 --> 00:12:16,742
+still stand on Iceland's coat of arms today.
+
+324
+00:12:17,356 --> 00:12:19,731
+A row about a shipwreck and some very
+
+325
+00:12:19,731 --> 00:12:22,603
+rude poems ended up on a national symbol.
+
+326
+00:12:22,603 --> 00:12:23,758
+You make a note:
+
+327
+00:12:23,758 --> 00:12:26,316
+never mock the man who feeds you.
+
+328
+00:12:26,316 --> 00:12:27,913
+Then you make another note:
+
+329
+00:12:27,913 --> 00:12:29,357
+never mock his horse.
+
+330
+00:12:29,357 --> 00:12:30,518
+The Icelander,
+
+331
+00:12:30,518 --> 00:12:33,974
+you notice, never makes jokes at supper.
+
+332
+00:12:33,974 --> 00:12:35,420
+He saves them for verses,
+
+333
+00:12:35,420 --> 00:12:37,513
+which he recites very quietly,
+
+334
+00:12:37,870 --> 00:12:40,430
+to other Icelanders, far from the high table.
+
+335
+00:12:40,771 --> 00:12:42,825
+Being a court poet also meant travelling,
+
+336
+00:12:42,825 --> 00:12:43,827
+and travelling meant
+
+337
+00:12:43,827 --> 00:12:46,620
+depending on other people's doors.
+
+338
+00:12:46,620 --> 00:12:47,902
+In ten nineteen,
+
+339
+00:12:47,902 --> 00:12:51,062
+the poet Sigvat Thordarson set out from Norway to
+
+340
+00:12:51,062 --> 00:12:53,441
+Sweden on a mission for his king.
+
+341
+00:12:53,441 --> 00:12:56,852
+The saga preserves his verses about the journey,
+
+342
+00:12:56,852 --> 00:12:58,231
+and they are not happy.
+
+343
+00:12:58,231 --> 00:13:00,019
+A hundred miles through the forest,
+
+344
+00:13:00,019 --> 00:13:03,015
+he complains, and not a single alehouse.
+
+345
+00:13:03,533 --> 00:13:04,970
+Every man in his party had
+
+346
+00:13:04,970 --> 00:13:06,866
+a bleeding sore on each foot.
+
+347
+00:13:07,240 --> 00:13:09,912
+At a farm called Hof, the door was bolted.
+
+348
+00:13:09,912 --> 00:13:12,656
+The people inside said it was a holy time,
+
+349
+00:13:12,656 --> 00:13:14,265
+and would not let him in.
+
+350
+00:13:14,622 --> 00:13:16,573
+At the next farm, a woman stood in the
+
+351
+00:13:16,573 --> 00:13:18,974
+doorway and told him not to come in:
+
+352
+00:13:18,974 --> 00:13:20,423
+they were heathens there,
+
+353
+00:13:20,423 --> 00:13:24,185
+afraid of Odin's wrath, and busy with a sacrifice to the elves.
+
+354
+00:13:24,185 --> 00:13:25,704
+According to his verses,
+
+355
+00:13:25,704 --> 00:13:27,859
+more farms turned him away after that,
+
+356
+00:13:27,859 --> 00:13:30,592
+and the man said to be the most hospitable
+
+357
+00:13:30,592 --> 00:13:32,453
+in the district only scowled at him.
+
+358
+00:13:32,453 --> 00:13:34,425
+Sigvat put all of it into poetry.
+
+359
+00:13:34,425 --> 00:13:35,982
+When you are a skald,
+
+360
+00:13:35,982 --> 00:13:38,782
+even your bad days end up in verse.
+
+361
+00:13:38,782 --> 00:13:40,643
+Your own travels are less dramatic.
+
+362
+00:13:40,643 --> 00:13:42,408
+On your way home that autumn,
+
+363
+00:13:42,408 --> 00:13:44,256
+you stop at Eirik's farm.
+
+364
+00:13:44,256 --> 00:13:44,736
+Thora,
+
+365
+00:13:44,736 --> 00:13:48,102
+who is nearly grown now, asks you to recite.
+
+366
+00:13:48,102 --> 00:13:49,713
+Eirik asks you,
+
+367
+00:13:49,713 --> 00:13:51,441
+politely, to leave him out of it.
+
+368
+00:13:51,441 --> 00:13:52,647
+You do not.
+
+369
+00:13:52,647 --> 00:13:54,679
+Skalds were also witnesses.
+
+370
+00:13:54,679 --> 00:13:57,023
+The saga of King Olaf says that
+
+371
+00:13:57,023 --> 00:13:59,208
+before the battle of Stiklestad,
+
+372
+00:13:59,208 --> 00:14:01,283
+in ten thirty, the king asked his
+
+373
+00:14:01,283 --> 00:14:03,853
+skalds to stand inside the shield wall.
+
+374
+00:14:03,853 --> 00:14:05,141
+That way, he told them,
+
+375
+00:14:05,141 --> 00:14:07,855
+they would see with their own eyes what happened,
+
+376
+00:14:07,855 --> 00:14:09,782
+and would not have to follow other
+
+377
+00:14:09,782 --> 00:14:12,587
+men's reports in what they later sang.
+
+378
+00:14:12,587 --> 00:14:13,940
+One of those skalds,
+
+379
+00:14:13,940 --> 00:14:17,222
+Thormod, fell at Stiklestad with his king.
+
+380
+00:14:17,222 --> 00:14:19,040
+A poet was not a spectator.
+
+381
+00:14:19,040 --> 00:14:20,794
+He could be the last witness,
+
+382
+00:14:20,794 --> 00:14:21,968
+or one of the dead.
+
+383
+00:14:21,968 --> 00:14:24,921
+That was the strange power of the job.
+
+384
+00:14:24,921 --> 00:14:25,702
+Kings died.
+
+385
+00:14:25,702 --> 00:14:27,205
+Halls burned.
+
+386
+00:14:27,205 --> 00:14:30,573
+But a well-made stanza could survive for centuries,
+
+387
+00:14:30,573 --> 00:14:32,005
+memorised and repeated,
+
+388
+00:14:32,005 --> 00:14:34,903
+until someone finally wrote it down.
+
+389
+00:14:34,903 --> 00:14:37,385
+Snorri says that the poems of the
+
+390
+00:14:37,385 --> 00:14:40,449
+skalds at King Harald Fairhair's court,
+
+391
+00:14:40,449 --> 00:14:42,537
+more than three centuries before him,
+
+392
+00:14:42,537 --> 00:14:45,339
+were still known by heart in his day.
+
+393
+00:14:45,339 --> 00:14:47,711
+Most surviving skaldic verse is known
+
+394
+00:14:47,711 --> 00:14:50,051
+to us because later writers quoted it
+
+395
+00:14:50,051 --> 00:14:53,062
+in the sagas, and in Snorri's handbook.
+
+396
+00:14:53,062 --> 00:14:55,922
+A few poets did something more permanent.
+
+397
+00:14:55,922 --> 00:14:58,072
+Which brings us to Öland.
+
+398
+00:14:58,672 --> 00:14:59,646
+Near Karlevi,
+
+399
+00:14:59,646 --> 00:15:03,271
+on that Swedish island, stands a runestone from
+
+400
+00:15:03,271 --> 00:15:04,350
+the late nine hundreds,
+
+401
+00:15:04,350 --> 00:15:07,746
+raised in memory of a chieftain named Sibbi.
+
+402
+00:15:07,746 --> 00:15:11,849
+Part of its inscription is a full stanza in dróttkvætt,
+
+403
+00:15:11,849 --> 00:15:12,589
+court metre,
+
+404
+00:15:12,589 --> 00:15:16,557
+with kennings for a chieftain built on the names of gods.
+
+405
+00:15:16,557 --> 00:15:19,161
+It is the only complete skaldic
+
+406
+00:15:19,161 --> 00:15:21,470
+stanza ever found on a runestone.
+
+407
+00:15:21,470 --> 00:15:24,019
+Someone paid to have a court poem
+
+408
+00:15:24,019 --> 00:15:25,740
+carved in stone, so that no one
+
+409
+00:15:25,740 --> 00:15:28,417
+would ever have to remember it again.
+
+410
+00:15:28,417 --> 00:15:30,232
+So why was being a Viking
+
+411
+00:15:30,232 --> 00:15:31,777
+skald worse than you think?
+
+412
+00:15:31,777 --> 00:15:33,823
+Because the rules were brutal,
+
+413
+00:15:33,823 --> 00:15:35,109
+the audience was armed,
+
+414
+00:15:35,109 --> 00:15:37,200
+and your patron's mood decided whether
+
+415
+00:15:37,200 --> 00:15:39,784
+you got a ring or a death sentence.
+
+416
+00:15:39,784 --> 00:15:40,894
+You could not lie,
+
+417
+00:15:40,894 --> 00:15:43,948
+you could not mock, and you could not write a
+
+418
+00:15:43,948 --> 00:15:46,082
+love poem without risking outlawry.
+
+419
+00:15:46,488 --> 00:15:46,984
+And yet,
+
+420
+00:15:46,984 --> 00:15:49,817
+your words could outlast the men you praised.
+
+421
+00:15:50,319 --> 00:15:51,208
+Kings are dust.
+
+422
+00:15:51,208 --> 00:15:53,670
+Some of the poems are still being read,
+
+423
+00:15:53,670 --> 00:15:55,097
+a thousand years later.
+
+424
+00:15:55,097 --> 00:15:57,861
+That winter, at Bjorn's hearth,
+
+425
+00:15:57,861 --> 00:16:00,631
+you recite your new poem about Bjorn's voyages.
+
+426
+00:16:00,631 --> 00:16:01,932
+The storm is bigger,
+
+427
+00:16:01,932 --> 00:16:04,718
+the silver is brighter, and Eirik's arm is
+
+428
+00:16:04,718 --> 00:16:07,256
+wounded in the most heroic way possible.
+
+429
+00:16:07,256 --> 00:16:09,366
+Everybody knows the truth.
+
+430
+00:16:09,366 --> 00:16:10,161
+Nobody minds.
+
+431
+00:16:10,161 --> 00:16:11,468
+Thora helps you with a
+
+432
+00:16:11,468 --> 00:16:13,768
+difficult line about the storm.
+
+433
+00:16:13,768 --> 00:16:14,890
+Her kenning for the
+
+434
+00:16:14,890 --> 00:16:16,349
+sea is better than yours.
+
+435
+00:16:16,349 --> 00:16:17,640
+You tell her so,
+
+436
+00:16:17,640 --> 00:16:20,336
+which no court poet has ever said to a rival,
+
+437
+00:16:20,336 --> 00:16:22,502
+and she never lets you forget it.
+
+438
+00:16:22,502 --> 00:16:23,313
+Next spring,
+
+439
+00:16:23,313 --> 00:16:25,993
+Bjorn will talk about another voyage.
+
+440
+00:16:25,993 --> 00:16:26,548
+This time,
+
+441
+00:16:26,548 --> 00:16:28,711
+he will ask you to come along and watch.
+
+442
+00:16:28,711 --> 00:16:30,545
+And somewhere behind the house,
+
+443
+00:16:30,545 --> 00:16:32,640
+the sheep has escaped again,
+
+444
+00:16:32,640 --> 00:16:36,550
+which is, you decide, the start of a very promising poem.
+
+445
+00:16:36,550 --> 00:16:38,471
+This is Viking Chapters,
+
+446
+00:16:38,471 --> 00:16:40,811
+the lives behind the legends.
+
+447
+00:16:40,811 --> 00:16:42,166
+If you would like to see another
+
+448
+00:16:42,166 --> 00:16:43,642
+life behind the legends,
+
+449
+00:16:43,642 --> 00:16:46,496
+subscribe, and we will meet in the next chapter.
