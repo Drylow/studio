@@ -1,5 +1,18 @@
 # Droits et restrictions avant publication
 
+## Dexter / Doakes bloqué le 15 octobre 2026
+
+Le long Dexter vs Doakes (SHA256 `81f8b70c…`, 573 s de scènes Showtime sur
+14 min 17) a été **bloqué net** par YouTube pour droits d'auteur lors de
+l'envoi privé : impossible à publier, pas une simple question de revenus.
+Fiche retirée de la file de publication. Troisième série commerciale
+réclamée ou bloquée après Sopranos et Peaky Blinders.
+
+**Règle de l'utilisateur (15 oct.) : que ça n'arrive plus.** Un long fait
+surtout d'extraits d'une série commerciale n'est plus produit pour la chaîne,
+quelle que soit la série (The Mentalist compris : Warner Bros). Le format doit
+passer sans image ni son du titulaire, ou avec une source sous licence réelle.
+
 ## Incident Peaky signalé le 11 octobre 2026
 
 Le montage Tommy/Alfie a été livré et vérifié techniquement. L’utilisateur
