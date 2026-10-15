@@ -64,11 +64,20 @@ def caption_evidence(episode, source):
         original = source[part["start"]:part["end"]]
         normalized = lambda value: re.findall(r"[a-z0-9]+", value.lower())
         a, b = normalized(original), normalized(" ".join(w["w"] for w in words))
-        matcher = difflib.SequenceMatcher(None, a, b, autojunk=False)
+        raw_ratio = difflib.SequenceMatcher(None, a, b, autojunk=False).ratio()
+        # Reviewed spelling variants in the automatic transcript, not edits to
+        # the script/audio/captions and not a claim about spoken pronunciation.
+        aliases = ({"lumen": "lumon", "keir": "kier", "egan": "eagan", "egans": "eagans",
+                    "coble": "cobel", "kobel": "cobel", "cobble": "cobel", "james": "jame"}
+                   if episode["id"] == "QP-06-severance-eagan" else {})
+        canonical_a = [aliases.get(w, w) for w in a]
+        canonical_b = [aliases.get(w, w) for w in b]
+        matcher = difflib.SequenceMatcher(None, canonical_a, canonical_b, autojunk=False)
         gaps = [j-i for op, i, j, k, l in matcher.get_opcodes() if op != "equal"]
         ratio = matcher.ratio()
         tail = part["duration_seconds"] - words[-1]["e"]
         check = {"id": part["id"], "alignment_ratio": round(ratio, 6),
+                 "raw_alignment_ratio": round(raw_ratio, 6), "reviewed_spelling_aliases": aliases,
                  "longest_nonmatching_source_span_words": max(gaps, default=0),
                  "first_50_words_identical": a[:50] == b[:50],
                  "last_50_words_identical": a[-50:] == b[-50:],
