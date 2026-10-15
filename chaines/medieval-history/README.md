@@ -1,6 +1,6 @@
 # Projet medieval — trois episodes et essais de style
 
-15 octobre 2026. **Les trois sujets et la direction visuelle sont valides. Production autorisee et en cours.**
+15 octobre 2026. **Les trois sujets et la direction visuelle sont valides. Les trois films sont livres et verifies.**
 
 ![Planche des trois scenes et trois miniatures proposees](assets/00-review-board.jpg)
 
@@ -32,7 +32,7 @@ Promesse : ta famille negocie une alliance pendant que tu essaies de savoir qui 
 
 Accroche de travail : *You have a fine dress, a family name, and a room full of people negotiating your future. Somehow, you are the quietest person at the table.*
 
-Trajectoire a developper apres validation : proposition du pretendant → terres et liens familiaux → consentement religieux et pression familiale → obligations domestiques et transmission → marges de choix et d'action. Le conflit doit evoluer, pas empiler des malheurs.
+Trajectoire du script relu : proposition du pretendant → terres et liens familiaux → consentement religieux et pression familiale → obligations domestiques et transmission → marges de choix et d'action. Le conflit doit evoluer, pas empiler des malheurs.
 
 La negociation matrimoniale est un point d'entree, pas toute la vie d'une noble. Genevieve Ribordy distingue le modele familial, dominant et politique/economique, d'un modele personnel de couples qui se marient sans l'accord parental. Ne pas dire « aucune femme ne pouvait refuser », ni confondre consentement canonique et liberte sociale totale. [Recherche, resume et references d'archives](https://journals.sagepub.com/doi/abs/10.1177/036319900102600301).
 
@@ -62,7 +62,7 @@ Miniature proposee : grand visage du bouffon avec sourire force a gauche, patron
 
 ### 3. What Happened When a Medieval Woman Reported Rape?
 
-**France de la fin du Moyen Age ; juridiction et dossier precis a fixer avec le script. Miniature : PROVE IT.**
+**Comparaison separee de l'Angleterre1287, la France1386 et Dijon1472. Miniature : PROVE IT.**
 
 Promesse : quitter la scene du crime ne termine pas l'histoire. Qui recueille la plainte ? Quels temoignages sont conserves ? Comment l'institution examine-t-elle l'affaire, et que permettent vraiment les sources de savoir ?
 
@@ -103,3 +103,16 @@ Les trois images constituent des tests de direction, soumis a validation. La sec
 Ensuite : recherche complementaire par episode → script original et controle des faits → voix → transcription et timings → decoupage avec narration, lieu et personnages nommes → references personnages et lieux approuvees → images controlees → montage et rendu sur VPS. Aucun rendu video sur le PC. Conserver les references effectivement envoyees, pas seulement leur intention dans un prompt.
 
 Prompts exacts des tests et ordre des references : [manifest de validation](validation-prompts.json). Les modeles, acces et recus techniques restent prives. Aucune modification du frontend ni relance d'anciens projets n'est necessaire pour cette validation.
+
+
+Les trois films sont termines et livres dans le dossier local `01 - Videos/Medieval History - 2026-10-15/`, avec un sous-dossier par episode : `final.mp4`, `thumbnail.jpg` et un seul `publication.md` contenant titre, description, tags, sources et ordre recommande.
+
+| Ordre conseille | Episode | Duree | Plans |
+| --- | --- | --- | ---: |
+| 1 | Medieval Noblewoman | 15:58 | 116 |
+| 2 | King's Jester | 13:48 | 112 |
+| 3 | Reported Rape | 14:30 | 108 |
+
+Voix **Ryan Kurk - Pleasant and Smooth**, toujours la meme. Rendus exclusivement sur le VPS, en1920×1080 a24images/s, coupes franches. Toutes les images sources puis les captures de chaque plan du montage final ont ete personnellement regardees par Codex. Decodage integral, durees et empreintes des transferts verifies. Ces controles sont des inspections IA explicites, pas une ecoute humaine ou un clic humain inventes.
+
+Les exports MP4 du VPS ont ete supprimes seulement APRES verification de leurs copies locales. Les voix, images, scripts, references canoniques et recus techniques restent conserves pour les reprises. Le lien de telechargement de l'ancien export sur le site n'est donc plus actif ; ne pas relancer de generation payante pour cela. Voir [le manifest de livraison](delivery-manifest.json) pour les empreintes finales. Aucune mise en ligne YouTube ni aucun envoi Discord n'a ete effectue.

@@ -82,3 +82,26 @@ Le scan mecanique des trois versions relues donne zero terme interdit ou marque 
 Les images de plans viennent APRES les voix et l'alignement. Les references de personnages et de lieux peuvent etre preparees avant, car ce ne sont pas des plans cales au transcript. Les references canoniques doivent etre personnellement regardees avant import. Une description de lieu seule ne suffit pas.
 
 Montage : coupes franches, mouvement discret, 16:9, sortie 1080p ; aucun lot de clips separes ni ZIP a produire par defaut. Telechargement verifie par taille et SHA avant nettoyage des exports du VPS, suivant la politique deja convenue.
+
+
+## Reprise de production — voix et decoupage
+
+Les trois voix sont terminees avec Ryan Kurk - Pleasant and Smooth, identifiant rU18Fk3uSDhmg5Xh41o4, fournisseur de voix habituel exclusivement. Cette voix reste la regle demandee pour les productions suivantes.
+
+| Episode | Voix reelle | Plans manuels | Mots alignes |
+| --- | --- | ---: | ---: |
+| Noblewoman | 15:58 | 116 | 2483 |
+| King's Jester | 13:48 | 112 | 2358 |
+| Reported Rape | 14:30 | 108 | 2342 |
+
+La voix Noblewoman complete a recu une tres legere acceleration de 0,77 pour cent sur le VPS pour rester sous 16 minutes ; l'original est conserve. Les trois fichiers ont ete entierement decodes et leurs bornes de mots verifiees; aucune ecoute humaine n'est revendiquee. Les voix et transcriptions sont sur le VPS dans leurs projets; les acces restent dans le dossier de travail prive ignore.
+
+Les 22 references canoniques (12 adultes et 10 decors vides) sont conservees dans assets/canonical avec manifest canonical-references.json. Chacune a ete regardee par l'agent visuel et le Codex principal. Les fichiers scenes.json lient les actions manuelles aux extraits exacts du transcript et aux horloges reelles, avec references ordonnees, lieux, tenues et contrats de camera. Le code ne redacte aucun prompt par modele.
+
+Etat final du 15 octobre : trois films rendus, verifies et telecharges. Les 336 images sources ont toutes ete personnellement regardees par Codex ; les erreurs de proportions, inserts trop larges, accessoires, documents et ouvertures de decor ont ete corrigees explicitement, puis regardees a nouveau. Les 58 planches extraites des MP4 finaux couvrent chaque plan ainsi que le debut et la fin ; aucun rendu n'a ete valide par la seule presence de references.
+
+Les trois MP4 ont passe un decodage video/audio integral, la verification1920×1080/24images/s et la comparaison de duree a la voix. Les fichiers de voix utilises ont exactement les empreintes des voix Ryan Kurk deja controlees. Taille et SHA du transfert final correspondent au VPS. Il s'agit de controles IA documentes ; aucune ecoute humaine n'est revendiquee.
+
+Livraison locale : `01 - Videos/Medieval History - 2026-10-15/`. Chaque episode a son MP4, sa miniature et un unique fichier publication.md. Les exports finaux et leurs copies temporaires de transfert sur le VPS ont ete supprimes APRES transfert verifie, selon la politique utilisateur. Les sources de production restent conservees ; ne pas interpreter l'absence volontaire du MP4 sur le site comme un echec de generation. Les trois entrees de queue sont terminees et ne doivent pas etre relancees.
+
+Les illustrations conservent de petites variations de dessin ; notamment certains inserts alimentaires de la noble sont plus textures. La relecture ne revendique ni une identite pixel par pixel, ni une performance d'audience garantie. Aucune publication ou notification externe n'a ete faite. Les acces et recus de production restent dans le travail prive ignore ; [delivery-manifest.json](delivery-manifest.json) conserve les preuves publiques utiles.

@@ -10,8 +10,24 @@ Based on historical scholarship. Alix and her household are fictional composites
 
 #MedievalHistory #History #MiddleAges
 
+## Tags
+
+medieval noblewoman, medieval women, medieval marriage, medieval France, Middle Ages, medieval history, women in history, historical storytelling
+
+## Thumbnail
+
+HIM? REALLY?
+
+## Sources
+
+- [Genevieve Ribordy, research abstract on noble marriage](https://journals.sagepub.com/doi/abs/10.1177/036319900102600301)
+- [Met, Spectrum of Desire](https://www.metmuseum.org/fr/exhibitions/spectrum-of-desire-love-sex-and-gender-in-the-middle-ages/inside-the-galleries)
+- [Historical scholarship and research limits](https://github.com/Drylow/studio/blob/codex/medieval-channel-validation/chaines/medieval-history/PRODUCTION.md)
+
 ## Production
 
-Language: English. Voice: Ryan Kurk - Pleasant and Smooth, same saved voice as previous productions. Actual narration: 15:58. Hard cuts,16:9,1080p output. Render and per-frame visual inspection still in progress; this file is not a ready-to-upload certificate.
+English. Ryan Kurk - Pleasant and Smooth. Duration: 15:58. 1920×1080, 24 fps, hard cuts. Suggested upload order: 1/3.
 
-Historical references and their scope: [production brief](../../PRODUCTION.md).
+All 116 source images personally inspected by Codex; actual final scene captures plus opening/end inspected. Full-file video/audio decode, timing and transferred file SHA/size verified. These are delegated AI checks; no human listening claim.
+
+Final MP4 and thumbnail are in this folder. Export removed from VPS after verified transfer, following the requested retention policy. Source images, voice and canonical references remain available for edits.

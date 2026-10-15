@@ -10,8 +10,23 @@ Inspired by research on the medieval fool and court patronage. Colin and his hou
 
 #MedievalHistory #History #MiddleAges
 
+## Tags
+
+medieval jester, court jester, medieval fool, medieval court, medieval France, Middle Ages, history, historical storytelling
+
+## Thumbnail
+
+LAUGH. PLEASE.
+
+## Sources
+
+- [Louvre, Figures du fou](https://www.louvre.fr/expositions-et-evenements/expositions/figures-du-fou)
+- [The jester's attributes](https://virtuelles-fastnachtsmuseum.de/themenbereiche/the-jesters-attributes-1/?lang=en)
+
 ## Production
 
-Language: English. Voice: Ryan Kurk - Pleasant and Smooth, same saved voice as previous productions. Actual narration: 13:48. Hard cuts,16:9,1080p output. Render and per-frame visual inspection still in progress; this file is not a ready-to-upload certificate.
+English. Ryan Kurk - Pleasant and Smooth. Duration: 13:48. 1920×1080, 24 fps, hard cuts. Suggested upload order: 2/3.
 
-Historical references and their scope: [production brief](../../PRODUCTION.md).
+All 112 source images personally inspected by Codex; actual final scene captures plus opening/end inspected. Full-file video/audio decode, timing and transferred file SHA/size verified. These are delegated AI checks; no human listening claim.
+
+Final MP4 and thumbnail are in this folder. Export removed from VPS after verified transfer, following the requested retention policy. Source images, voice and canonical references remain available for edits.

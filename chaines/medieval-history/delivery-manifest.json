@@ -1,0 +1,61 @@
+{
+  "voice": "Ryan Kurk - Pleasant and Smooth",
+  "voice_id": "rU18Fk3uSDhmg5Xh41o4",
+  "date": "2026-10-15",
+  "episodes": [
+    {
+      "episode": "01-noblewoman",
+      "duration": "15:58",
+      "scenes": 116,
+      "output": "1920x1080,24fps",
+      "final_sha256": "1b0e6ba7dba15748fbba805238d99b9d8e0acc00e0a22c757ea4b2b6d025c6dc",
+      "bytes": 241919336,
+      "state": "delivered",
+      "vps_final_removed": true,
+      "checks": {
+        "source_images_personally_inspected": true,
+        "actual_render_scene_frames_personally_inspected": true,
+        "full_decode": true,
+        "timing": true,
+        "transfer_sha_and_size": true
+      },
+      "inspection_source": "delegated_ai_inspection"
+    },
+    {
+      "episode": "02-jester",
+      "duration": "13:48",
+      "scenes": 112,
+      "output": "1920x1080,24fps",
+      "final_sha256": "cc704823a9f108c2267c968ce62d14b9c3ab6e3e3adf96058d804786776a2c08",
+      "bytes": 177901971,
+      "state": "delivered",
+      "vps_final_removed": true,
+      "checks": {
+        "source_images_personally_inspected": true,
+        "actual_render_scene_frames_personally_inspected": true,
+        "full_decode": true,
+        "timing": true,
+        "transfer_sha_and_size": true
+      },
+      "inspection_source": "delegated_ai_inspection"
+    },
+    {
+      "episode": "03-reporting-rape",
+      "duration": "14:30",
+      "scenes": 108,
+      "output": "1920x1080,24fps",
+      "final_sha256": "341dca6b3e7bee76031a8d174c1ce8c3419b3d38abd91868ce569a29682d2526",
+      "bytes": 192933302,
+      "state": "delivered",
+      "vps_final_removed": true,
+      "checks": {
+        "source_images_personally_inspected": true,
+        "actual_render_scene_frames_personally_inspected": true,
+        "full_decode": true,
+        "timing": true,
+        "transfer_sha_and_size": true
+      },
+      "inspection_source": "delegated_ai_inspection"
+    }
+  ]
+}

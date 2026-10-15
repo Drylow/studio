@@ -10,8 +10,24 @@ A non-graphic historical explanation based on published scholarship. The illustr
 
 #MedievalHistory #History #MiddleAges
 
+## Tags
+
+medieval women, medieval law, medieval justice, women in history, Middle Ages, medieval history, historical records, legal history
+
+## Thumbnail
+
+PROVE IT.
+
+## Sources
+
+- [Gwen Seabourne, Rape and Law in Medieval Western Europe](https://www.cambridge.org/core/books/abs/companion-to-crime-and-deviance-in-the-middle-ages/rape-and-law-in-medieval-western-europe/456E800DCA0EE9F051BDA59F6A828CF5)
+- [Sara McDougall and David Perry, Fact and Fiction in The Last Duel](https://www.historynewsnetwork.org/article/fact-and-fiction-in-the-last-duel)
+- [Justice for Jehanne, interview introduction](https://www.historicallythinking.org/p/justice-for-jehanne)
+
 ## Production
 
-Language: English. Voice: Ryan Kurk - Pleasant and Smooth, same saved voice as previous productions. Actual narration: 14:30. Hard cuts,16:9,1080p output. Render and per-frame visual inspection still in progress; this file is not a ready-to-upload certificate.
+English. Ryan Kurk - Pleasant and Smooth. Duration: 14:30. 1920×1080, 24 fps, hard cuts. Suggested upload order: 3/3.
 
-Historical references and their scope: [production brief](../../PRODUCTION.md).
+All 108 source images personally inspected by Codex; actual final scene captures plus opening/end inspected. Full-file video/audio decode, timing and transferred file SHA/size verified. These are delegated AI checks; no human listening claim.
+
+Final MP4 and thumbnail are in this folder. Export removed from VPS after verified transfer, following the requested retention policy. Source images, voice and canonical references remain available for edits.
