@@ -167,7 +167,7 @@ TEMPLATES = {
                      "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
                      "understated expressions that sell the joke. Put the cultural details on screen (food, clothes, "
                      "architecture, objects, customs). Night city skylines and warm interiors for emotional beats.",
-        "default_minutes": 14,
+        "default_minutes": 21, "minutes_rev": 1,  # 21 min depuis le 15 oct. 2026 (choix de l'utilisateur)
         "montage": {"pacing": 6.0, "hook_pacing": 6.0, "hook_seconds": 0, "min_scene": 3.0, "max_scene": 11.0,
                     "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "full",
@@ -627,6 +627,10 @@ def _refresh_from_template(c, template):
         if not (c.get("thumb_style") or "").strip() or c.get("thumb_style") in t.get("thumb_style_prev", ()):
             c["thumb_style"] = t["thumb_style"]
         c["thumb_rev"] = t["thumb_rev"]
+        changed = True
+    if (c.get("minutes_rev") or 0) < t.get("minutes_rev", 0):
+        # nouvelle durée par défaut décidée pour la chaîne : appliquée aux vidéos créées ensuite
+        c["default_minutes"], c["minutes_rev"] = t["default_minutes"], t["minutes_rev"]
         changed = True
     refs = lambda: ((c.get("style") or {}).get("ref"), c.get("thumb_ref"), (c.get("board") or {}).get("presenter"),
                     (c.get("board") or {}).get("poses"))
