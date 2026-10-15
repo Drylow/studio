@@ -127,7 +127,7 @@
   ],
   "next_script_batch": {
     "date": "2026-10-15",
-    "state": "six_final_texts_delivered_audio_pending",
+    "state": "six_final_scripts_voiceovers_processing",
     "user_authorized": true,
     "deep_void_balance": {
       "Dune": 2,
@@ -287,6 +287,15 @@
           "status": "proposal_visually_reviewed_not_user_approved"
         }
       ]
+    },
+    "narration_batch": {
+      "folder": "narrations-2026-10-15",
+      "authorized": true,
+      "provider": "Algrow",
+      "voice_id": "IsEXLHzSvLH9UMB6SLHj",
+      "voice_name": "Mellow Matt",
+      "parts_accepted": 12,
+      "completed_audio_verified": 0
     }
   }
 }

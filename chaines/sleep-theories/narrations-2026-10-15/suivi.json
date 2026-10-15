@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-15",
+  "state": "twelve_parts_accepted_processing",
+  "user_authorized": true,
+  "voice_id": "IsEXLHzSvLH9UMB6SLHj",
+  "voice_name": "Mellow Matt",
+  "speed": 0.9,
+  "source_characters": 778870,
+  "audio_measured": false,
+  "private_ledger": "work/sleep-voiceovers-2026-10-15/ledger.json",
+  "desktop_folder": "Voix sleep - 15 octobre 2026",
+  "episodes": [
+    {
+      "id": "DV-01-force",
+      "script_sha256": "59408ed0a6bce3d35d1faca8f24458d56414b3edb7cccebda646c04b4d280352",
+      "characters": 127436,
+      "parts": [
+        {
+          "id": "DV-01-force-part1",
+          "job_id": "1be77f29-fba6-4386-b035-12dde2446060",
+          "characters": 63914
+        },
+        {
+          "id": "DV-01-force-part2",
+          "job_id": "faf79d70-09eb-4e0c-a12a-9f2eb0b4788e",
+          "characters": 63522
+        }
+      ]
+    },
+    {
+      "id": "DV-02-guilde",
+      "script_sha256": "4c793266fa6804108661d8ba39fa232cb884aeaf6a66cf83c38cd956acc0aa16",
+      "characters": 132429,
+      "parts": [
+        {
+          "id": "DV-02-guilde-part1",
+          "job_id": "87782602-f021-497e-8bd0-af51a6f0e9e8",
+          "characters": 66034
+        },
+        {
+          "id": "DV-02-guilde-part2",
+          "job_id": "dd98d114-3662-433c-9ab4-4535eaf7877d",
+          "characters": 66395
+        }
+      ]
+    },
+    {
+      "id": "DV-03-paul",
+      "script_sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b",
+      "characters": 131895,
+      "parts": [
+        {
+          "id": "DV-03-paul-part1",
+          "job_id": "a99cf577-5476-46b4-99c1-b07a1086bdb6",
+          "characters": 65930
+        },
+        {
+          "id": "DV-03-paul-part2",
+          "job_id": "bcc19e62-72ba-44ef-8c09-d02723aa267e",
+          "characters": 65965
+        }
+      ]
+    },
+    {
+      "id": "QP-04-silo-indices",
+      "script_sha256": "989c1d08ba1e601ca54e632f53ea654b2bd84fc7c2c075221634b2a81b117689",
+      "characters": 129617,
+      "parts": [
+        {
+          "id": "QP-04-silo-indices-part1",
+          "job_id": "4a25f19d-f9e1-4500-9461-80b41f3b1a1e",
+          "characters": 64732
+        },
+        {
+          "id": "QP-04-silo-indices-part2",
+          "job_id": "230b2bd4-4528-4251-80f2-70c28d8c32e2",
+          "characters": 64885
+        }
+      ]
+    },
+    {
+      "id": "QP-05-from-victor",
+      "script_sha256": "b044e15e851e38e807cb2324b2a7192c81b1c84b0d08ff99c0b6d994a9cead12",
+      "characters": 125392,
+      "parts": [
+        {
+          "id": "QP-05-from-victor-part1",
+          "job_id": "056f7b92-cfc6-4a73-89e2-78b6ce995a42",
+          "characters": 62480
+        },
+        {
+          "id": "QP-05-from-victor-part2",
+          "job_id": "d933aaa0-afdd-4150-9c78-b09431e9166b",
+          "characters": 62912
+        }
+      ]
+    },
+    {
+      "id": "QP-06-severance-eagan",
+      "script_sha256": "33620c8c582abce8b2d2639e94fd80be84f28d7e6e1adb9b56ecee06af16d813",
+      "characters": 132101,
+      "parts": [
+        {
+          "id": "QP-06-severance-eagan-part1",
+          "job_id": "62e2de4e-86e3-41c2-879f-9082817c050c",
+          "characters": 65932
+        },
+        {
+          "id": "QP-06-severance-eagan-part2",
+          "job_id": "c60fbaa4-1e36-49c5-b764-f3ef99d2528e",
+          "characters": 66169
+        }
+      ]
+    }
+  ]
+}

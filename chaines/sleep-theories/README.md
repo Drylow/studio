@@ -9,6 +9,13 @@ sont finalisés, relus et prêts pour la narration. Deep Void : Force, Guilde, P
 Silo, Victor/FROM, Eagan/Severance. Le troisième sujet Revan est abandonné en faveur
 de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets Ultravid.
 
+## Narrations du nouveau lot
+
+La génération Algrow Voiceover est autorisée le 15 octobre, avec la voix Mellow Matt
+`IsEXLHzSvLH9UMB6SLHj`. Les douze parties sont acceptées et en cours.
+Lire [le suivi des voix](narrations-2026-10-15/README.md) avant toute reprise : ne pas
+renvoyer les scripts déjà acceptés.
+
 ## Miniatures du nouveau lot
 
 Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient les six nouvelles
