@@ -1,0 +1,111 @@
+{
+  "schema": "conversation-chess-public-qa-summary-v1",
+  "status": "reviewed_native_long_hosted_for_private_first_youtube_checks",
+  "title": "Dexter Morgan vs James Doakes Analyzed Like Chess | Dexter",
+  "video": {
+    "sha256": "81f8b70cfc15be9535d758b2a2196311820814d32849dc8290ae6b01bb67541e",
+    "bytes": 426063023,
+    "frames": 25719,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "picture_duration_seconds": 857.3,
+    "container_duration_seconds": 857.301,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "export_engine": "Kdenlive 24.12.3 / MLT",
+    "export_completed": true
+  },
+  "source": {
+    "master_sha256": "db25ed2eb1beaf7a8323045b47d3f67c114b858de28297f59bdac0be765f9cf4",
+    "master_seconds": 573.3,
+    "master_frames": 17199,
+    "chapter_cards": 11,
+    "clips": 19,
+    "conversations": 11,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "not_upscaled": true,
+    "full_video_audio_decode_ok": true,
+    "origin": "Public Clip.cafe clips (dexter-2006), no YouTube download",
+    "quality_limitation": "Native 1080p public clips are highly compressed; facial detail is softer than a disc master. One S02E07 Doakes close-up is warped in the public clip itself."
+  },
+  "dialogue": {
+    "language": "English",
+    "added_voiceover": false,
+    "editable_native_caption_cues": 235,
+    "captions_during_dialogue_only": true,
+    "caption_timing": "Per-clip speech-recognition word timings mapped onto master cuts; no caption overlaps cards, holds, guide or recap (checked on the final SRT)."
+  },
+  "technical_review": {
+    "completed": true,
+    "full_video_audio_decode_ok": true,
+    "technical_audio_passed": true,
+    "failures": [],
+    "warnings": [],
+    "sample_peak_dbfs": -0.43,
+    "true_peak_dbtp": -0.3,
+    "samples_at_or_above_full_scale": 0,
+    "correlated_audio_segments": 87,
+    "quiet_reading_tails_passed": 32,
+    "single_grade_onsets_passed": 32,
+    "evidence_retained_privately": true
+  },
+  "sampled_visual_review": {
+    "completed": true,
+    "contact_sheets": 29,
+    "reviewed_images": 225,
+    "root_review": {
+      "analysis_captures": 32,
+      "guide_captures": 5,
+      "chapter_captures": 11,
+      "recap_captures": 3
+    },
+    "independent_boundary_caption_review": {
+      "reviewers": 2,
+      "captures": 174,
+      "defects_found": []
+    },
+    "defects_found": [],
+    "corrected_before_delivery": [
+      "captions touching three chapter cards",
+      "analysis holds starting on the last syllable of a line (caption/hold timing re-derived)",
+      "hold m04 moved after 'In a cargo box?'"
+    ],
+    "human_audio_listening": false,
+    "continuous_playback_reviewed": false
+  },
+  "counter_review": {
+    "total": 32,
+    "counts": {
+      "brilliant": 6,
+      "great": 6,
+      "best": 7,
+      "excellent": 2,
+      "good": 1,
+      "book": 7,
+      "inaccuracy": 2,
+      "mistake": 1,
+      "blunder": 0
+    },
+    "recap_read_back_matches": true
+  },
+  "openings": {
+    "conversation_count": 11,
+    "white_is_first_retained_speaker": true,
+    "reset_to_0_0_each_conversation": true
+  },
+  "hosting": {
+    "studio_server_url": "http://media.edgerunners.fr/scene-analysis-guy--dexter-vs-doakes-75bb3f0b7ccc5960.mp4",
+    "studio_server_sha256_verified": true,
+    "gofile": "https://gofile.io/d/o25ulc0t"
+  },
+  "rights": {
+    "licence_established": false,
+    "youtube_checks": "pending (private_first on the publishing PC)"
+  }
+}

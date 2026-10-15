@@ -1,0 +1,17 @@
+{
+  "schema": "conversation-chess-approved-mascot-v1",
+  "character": "Dexter Morgan",
+  "actor": "Michael C. Hall",
+  "approved_by_user": false,
+  "selection": "Built on 15 October 2026 for the delegated Dexter vs Doakes long; the user delegated the analyst pawn choice ('fait exactement comme le pion Hannibal approuvé'). Not separately shown to the user before delivery.",
+  "file": "dexter-pawn-2026-10-15.png",
+  "sha256": "221087d315d030ee93621d490a70b57e7144845d18805273b2be0df5b3cf80be",
+  "photographic_reference": "Frame at 23.4 s of the public Clip.cafe clip https://clip.cafe/dexter-2006/excuse-me-s1199/ (Dexter S01E07), native 1920x1080",
+  "reference_clip_sha256": "2c6199b2f2d5ffb094c107bef2f09c5b16baa24e796dc00e9ceb215cec7370e6",
+  "reference_frame_sha256": "47f9a92e8eb29469f8bf5acf474e9253828996f34f3796eddbd0754375a4ccab",
+  "construction": "Head cut out from the real series frame (automatic person segmentation, hand-shaped jaw/neck mask), converted to black and white with light denoising and auto-contrast, set on the unchanged black pawn body of the approved Hannibal pawn (hannibal-pawn-approved-2026-10-11.png, whose neck was extended upward behind the new head). No generative image model was used.",
+  "transparent_background": true,
+  "badges_in_asset": false,
+  "render_original_chess_svg_badges": true,
+  "reuse_rights_established": false
+}
