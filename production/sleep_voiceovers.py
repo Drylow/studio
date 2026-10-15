@@ -13,6 +13,7 @@ import re
 import subprocess
 import sys
 import time
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -134,7 +135,7 @@ def download(row, status):
     target = folder / row["audio_file"]
     if not target.exists():
         temporary = target.with_suffix(".partial")
-        tts._download(status["audio_url"], str(temporary), timeout=300)
+        tts._download(quote(status["audio_url"], safe=":/?&=#%+;,~@!$'()*[]"), str(temporary), timeout=300)
         temporary.replace(target)
     row["audio_path"] = str(target)
     row["audio_bytes"] = target.stat().st_size
@@ -143,7 +144,7 @@ def download(row, status):
         transcript = target.with_suffix(".srt")
         if not transcript.exists():
             temporary = transcript.with_suffix(".partial")
-            tts._download(status["transcript_url"], str(temporary), timeout=180)
+            tts._download(quote(status["transcript_url"], safe=":/?&=#%+;,~@!$'()*[]"), str(temporary), timeout=180)
             temporary.replace(transcript)
         row["transcript_path"] = str(transcript)
     row.update(state="downloaded", downloaded_at=now())
