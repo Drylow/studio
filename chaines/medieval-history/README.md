@@ -4,7 +4,7 @@
 
 ![Planche des trois scenes et trois miniatures proposees](assets/00-review-board.jpg)
 
-Ce projet est une nouvelle chaine anglophone, independante des cinq anciennes chaines historiques archivees. Le nom de chaine reste a choisir. Apres avoir valide les images, l'utilisateur confirme explicitement les trois sujets (« les trois go »). Il demande de conserver la voix Ryan Kurk. L'autorisation couvre maintenant les scripts, voix, images, montage et livraison. Voir [la fiche de production](PRODUCTION.md) pour les sources, les briefs et les identifiants TubeForge ; [audits des scripts](script-audits.json). Aucune publication YouTube n'est demandee.
+Ce projet est une nouvelle chaine anglophone, independante des cinq anciennes chaines historiques archivees. Nom confirme par l'utilisateur : **The Grumpy Peasant**. Apres avoir valide les images, l'utilisateur confirme explicitement les trois sujets (« les trois go »). Il demande de conserver la voix Ryan Kurk. L'autorisation couvre maintenant les scripts, voix, images, montage et livraison. Voir [la fiche de production](PRODUCTION.md) pour les sources, les briefs et les identifiants TubeForge ; [audits des scripts](script-audits.json). Aucune publication YouTube n'est demandee.
 
 ## Ce que montre la reference
 
@@ -120,4 +120,4 @@ Les exports MP4 du VPS ont ete supprimes seulement APRES verification de leurs c
 
 ## Kit de chaine
 
-Proposition de nom : **Medieval Misery**, a confirmer par l'utilisateur. [Kit complet](channel-kit/CHANNEL_KIT.md) : avatar, variante, banniere, handle suggere et description anglaise. Aucun compte YouTube n'a ete cree ou renomme.
+Nom valide : **The Grumpy Peasant**. [Kit complet](channel-kit/CHANNEL_KIT.md) : avatar, variante, banniere, handle suggere et description anglaise. L'utilisateur configure lui-meme sa chaine YouTube ; attendre son message explicite indiquant qu'elle est prete avant les uploads. Ne pas modifier ses reglages de chaine a sa place.

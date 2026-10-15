@@ -4,8 +4,11 @@
     "style": "../assets/video-02-jester.jpg",
     "avatar": {
       "native_reference_sha256": "5dbdb5dd5e4acaf27aa5f733f86f8af86bb9336c69134c78f2bbd47e661733d5",
-      "upload_derivative": "profile-picture.jpg",
-      "note": "The native avatar PNG is retained privately and was actually sent to the banner generator."
+      "upload_derivative": "profile-picture.jpg"
+    },
+    "banner-edit": {
+      "native_reference_sha256": "1fcf242a8249b1dbf1e0806d3e2b7bec44b81376f6cbe55930a016e20fbcf097",
+      "role": "Previous mobile-safe banner used as edit target; original retained privately and in prior source commit"
     }
   },
   "requests": [
@@ -28,11 +31,11 @@
       "output": "profile-picture-alternative.jpg"
     },
     {
-      "id": "banner-mobile-safe",
+      "id": "banner-grumpy-peasant-v2",
       "aspect": "16:9",
-      "prompt": "Create one original brand asset for an English medieval social-history cartoon channel. Match the provided reference ONLY for its economical 2D linework, flat ivory round heads, tiny black dot eyes, tiny line mouth and matte muted colours. This is a distinct fictional adult channel mascot, not a replacement of a video character. A completely round smooth pale ivory face with no nose, ears, hair, beard, cheeks, giant eyes or face shading. Adult peasant in a simple muted burgundy medieval wool hood with short shoulder cowl, dark brown covered tunic. Clean bold dark outlines, simple flat fills, no gradients or texture. Dry understated medieval humour, readable at very small size. No child, weapons, injuries, gore, flowers, crown, heraldry, fancy ornamental frame, realism or 3D. Create the matching wide 16:9 YouTube channel banner. The provided avatar is the EXACT mascot identity and drawing reference: retain its face, burgundy hood and expression. Solid warm parchment/sand background with only two very faint simple stone-block lines at the far outside edges, no busy panorama. In the exact centre of the entire canvas, make a compact horizontal logo lockup: small mascot head on the LEFT of the title, title to its RIGHT. All meaningful artwork, lettering and tagline MUST fit inside a central rectangle covering only 42 percent of canvas width and 16 percent of canvas height. Leave huge empty margins above, below and at both sides; this is intentional mobile crop safety. Exact main text on one line: \"MEDIEVAL MISERY\" in bold dark-brown friendly slightly irregular serif lettering. Under it, smaller readable dark-brown exact tagline: \"Great castles. Rough lives.\" Keep the title much larger than the tagline. Burgundy and ivory mascot, dark-brown text on warm sand, simple matte cartoon brand. No other characters, decorative objects, extra captions, border, watermark or gradient. The face and both lines of type must remain together as one central compact group. The entire logo group must be SMALL with abundant blank space. Do not enlarge it to fill the banner. Maximum combined width of mascot plus title is 42 percent of the total image. Centre the whole group both vertically and horizontally.",
+      "prompt": "Image 1 is the EDIT TARGET: an existing YouTube channel banner. Preserve its warm sand background, simple burgundy-hood round-headed grumpy peasant mascot, dark-brown serif type, compact centered composition, faint side stone lines and wide empty margins. Change ONLY the large main title to this exact text: THE GRUMPY PEASANT. Keep the existing tagline exactly: Great castles. Rough lives. Reduce the main-title letter size as needed so the longer new name stays on ONE line, fully inside the same central group width. Keep the complete mascot/title/tagline group within the middle 50 percent of canvas width and middle 22 percent of canvas height, with generous mobile-safe margins. Do not expand the logo, redraw the mascot, add decoration or change colours. Final canvas 16:9, one clean complete banner.",
       "ordered_references": [
-        "avatar"
+        "banner-edit"
       ],
       "output": "banner.jpg"
     }
@@ -40,32 +43,20 @@
   "visual_review": {
     "source": "delegated_ai_inspection",
     "state": "verified",
-    "notes": "Primary inspected both avatars and final mobile-safe banner. Burgundy avatar recommended. Blue alternative has a black background instead of requested ochre; retained as an optional darker direction. Final banner lettering is correct and the mascot/title/tagline fit within the central mobile safe region. First banner was too wide and remains in private work only."
+    "notes": "Primary personally inspected the renamed banner: THE GRUMPY PEASANT and existing tagline are correct, burgundy mascot preserved, complete centre group fits mobile safe region. Optional blue avatar has the previously documented black background."
   },
   "assets": [
     {
       "file": "profile-picture.jpg",
-      "dimensions": [
-        800,
-        800
-      ],
       "sha256": "3ce43b12c458c0df7ead76bfa9c0149438aa2f7323f587bcceb5f793af204f0f"
     },
     {
       "file": "profile-picture-alternative.jpg",
-      "dimensions": [
-        800,
-        800
-      ],
       "sha256": "135a9fce270949c6e19c834b6ee61f5bed0492c1bd9d321ae907d7c63df11925"
     },
     {
       "file": "banner.jpg",
-      "dimensions": [
-        2560,
-        1440
-      ],
-      "sha256": "1dcf8b1e551bd8a720689891063dcdb5b1e6ccda9fb8331e495ea0c8d3a64ff9"
+      "sha256": "a9b2c16fdb2f6672257f279536eccdd804c8d9e2d3a81a733264c9417f86f508"
     }
   ]
 }

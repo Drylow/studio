@@ -1,14 +1,14 @@
-# Medieval Misery — channel kit
+# The Grumpy Peasant — channel kit
 
-Proposed identity for the new English medieval-history channel. Prepared on 15 October 2026. The name and handle are suggestions; no YouTube account has been created or renamed, and handle availability is not confirmed.
+The channel name was confirmed by the owner on 15 October 2026. The handle remains a suggestion until saved on YouTube. The owner is configuring the channel personally; video uploads must wait for their explicit ready message.
 
 ## Copy into YouTube
 
-**Channel name:** Medieval Misery
+**Channel name:** The Grumpy Peasant
 
-**Suggested handle:** @MedievalMisery
+**Suggested handle:** @TheGrumpyPeasant
 
-**Handle fallback:** @MedievalMiseryTV
+**Handle fallback:** @TheGrumpyPeasantTV
 
 **Description:**
 
@@ -22,7 +22,7 @@ Explore the strange, uncomfortable and surprising realities of medieval life—f
 
 **Language:** English
 
-Other name directions if preferred: **Medieval Side Effects** or **Born Too Medieval**. Their availability is also unconfirmed. The prepared banner uses Medieval Misery.
+The banner uses the confirmed name **The Grumpy Peasant**. Keep the existing burgundy-hood avatar.
 
 ## Upload the artwork
 
