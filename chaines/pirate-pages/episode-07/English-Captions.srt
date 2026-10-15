@@ -1,0 +1,1847 @@
+1
+00:00:00,096 --> 00:00:01,506
+You are in charge of the
+
+2
+00:00:01,506 --> 00:00:03,254
+most frightening thing aboard.
+
+3
+00:00:03,254 --> 00:00:04,308
+Two small cannons.
+
+4
+00:00:04,308 --> 00:00:06,134
+And the whole point of your
+
+5
+00:00:06,134 --> 00:00:08,425
+job is to never have to use them.
+
+6
+00:00:08,425 --> 00:00:10,058
+So far in this series,
+
+7
+00:00:10,058 --> 00:00:12,847
+you have been Tom, the captain,
+
+8
+00:00:12,847 --> 00:00:18,285
+the quartermaster, the surgeon, the carpenter and the navigator.
+
+9
+00:00:18,285 --> 00:00:20,877
+This time, you are the man who
+
+10
+00:00:20,877 --> 00:00:23,720
+sleeps nearest the gunpowder: the gunner.
+
+11
+00:00:24,238 --> 00:00:27,542
+Imagine you are a gunner of about forty-five,
+
+12
+00:00:27,542 --> 00:00:29,382
+aboard the same modest
+
+13
+00:00:29,382 --> 00:00:31,982
+Caribbean sloop around seventeen seventeen.
+
+14
+00:00:32,681 --> 00:00:34,323
+You are short and stocky,
+
+15
+00:00:34,323 --> 00:00:37,826
+with a shaved head, a thick black beard going gray,
+
+16
+00:00:37,826 --> 00:00:40,211
+a sleeveless leather jerkin over
+
+17
+00:00:40,211 --> 00:00:43,101
+a gray shirt, a powder horn on a cord
+
+18
+00:00:43,101 --> 00:00:46,126
+and a coil of slow match at your belt.
+
+19
+00:00:46,126 --> 00:00:47,691
+You served on merchant ships
+
+20
+00:00:47,691 --> 00:00:50,220
+before this one, and you came to
+
+21
+00:00:50,220 --> 00:00:52,361
+the pirates of your own free will.
+
+22
+00:00:52,816 --> 00:00:54,768
+Years beside the guns have left you
+
+23
+00:00:54,768 --> 00:00:57,459
+hearing about half of what the crew says.
+
+24
+00:00:57,459 --> 00:00:59,407
+You consider it the better half.
+
+25
+00:00:59,878 --> 00:01:00,242
+You,
+
+26
+00:01:00,242 --> 00:01:03,452
+this crew and this voyage are imagined.
+
+27
+00:01:03,986 --> 00:01:06,106
+The problems come from trial records,
+
+28
+00:01:06,106 --> 00:01:07,678
+eyewitness accounts,
+
+29
+00:01:07,678 --> 00:01:11,934
+archaeology and historians' research on real pirate crews.
+
+30
+00:01:11,934 --> 00:01:14,446
+And remember what the job was.
+
+31
+00:01:14,981 --> 00:01:17,457
+Every gun you load exists to frighten,
+
+32
+00:01:17,457 --> 00:01:18,539
+or to hurt,
+
+33
+00:01:18,897 --> 00:01:22,166
+people who were only trying to do their work at sea.
+
+34
+00:01:22,668 --> 00:01:24,472
+The sailors aboard the ships you
+
+35
+00:01:24,472 --> 00:01:25,892
+threaten are not scenery,
+
+36
+00:01:25,892 --> 00:01:29,081
+even when our story keeps the violence off screen.
+
+37
+00:01:29,081 --> 00:01:30,896
+Pirate crews valued gunners.
+
+38
+00:01:31,350 --> 00:01:32,911
+In the articles that Captain
+
+39
+00:01:32,911 --> 00:01:36,513
+Charles Johnson printed for Bartholomew Roberts's crew,
+
+40
+00:01:36,513 --> 00:01:37,881
+the gunner received
+
+41
+00:01:37,881 --> 00:01:39,385
+one and a half shares of a prize,
+
+42
+00:01:39,385 --> 00:01:42,162
+the same as the master and the boatswain.
+
+43
+00:01:42,162 --> 00:01:43,522
+The economist Peter Leeson
+
+44
+00:01:43,522 --> 00:01:45,529
+reproduces the same clause.
+
+45
+00:01:45,529 --> 00:01:48,641
+Johnson is a pen name, and his book of
+
+46
+00:01:48,641 --> 00:01:51,005
+seventeen twenty-four mixes fact with invention,
+
+47
+00:01:51,005 --> 00:01:53,481
+but on this point the two agree.
+
+48
+00:01:53,481 --> 00:01:55,473
+Your day is mostly housekeeping.
+
+49
+00:01:55,473 --> 00:01:56,971
+You check the two guns,
+
+50
+00:01:56,971 --> 00:01:58,915
+their carriages and their ropes.
+
+51
+00:01:58,915 --> 00:02:00,499
+You keep the powder dry,
+
+52
+00:02:00,499 --> 00:02:03,162
+the shot stacked and the match coiled.
+
+53
+00:02:03,162 --> 00:02:05,548
+You inspect every pistol aboard,
+
+54
+00:02:05,548 --> 00:02:07,725
+because Roberts's articles,
+
+55
+00:02:07,725 --> 00:02:09,260
+as Johnson printed them,
+
+56
+00:02:09,260 --> 00:02:11,723
+required every man to keep his piece,
+
+57
+00:02:11,723 --> 00:02:15,141
+pistols and cutlass clean and fit for service.
+
+58
+00:02:15,756 --> 00:02:18,905
+You also run the most important rule aboard:
+
+59
+00:02:18,905 --> 00:02:20,742
+no fire near the powder.
+
+60
+00:02:20,742 --> 00:02:22,474
+John Phillips's articles,
+
+61
+00:02:22,474 --> 00:02:24,276
+which only Johnson prints,
+
+62
+00:02:24,276 --> 00:02:27,776
+banned smoking in the hold without a cap on the pipe,
+
+63
+00:02:27,776 --> 00:02:30,169
+and any candle without a lantern.
+
+64
+00:02:30,169 --> 00:02:32,842
+A wooden ship full of powder,
+
+65
+00:02:32,842 --> 00:02:35,947
+rum and tired men is not forgiving.
+
+66
+00:02:35,947 --> 00:02:37,235
+Tom asks if he can
+
+67
+00:02:37,235 --> 00:02:39,577
+light his pipe near the guns.
+
+68
+00:02:39,577 --> 00:02:41,360
+You do not answer.
+
+69
+00:02:41,360 --> 00:02:44,400
+You just look at him until he goes away.
+
+70
+00:02:44,400 --> 00:02:46,487
+That is about half of gunnery.
+
+71
+00:02:46,487 --> 00:02:47,870
+The other half is a
+
+72
+00:02:47,870 --> 00:02:49,876
+routine you could do asleep.
+
+73
+00:02:49,876 --> 00:02:51,490
+Sponge out the barrel,
+
+74
+00:02:51,490 --> 00:02:54,776
+so no spark survives from the last shot.
+
+75
+00:02:54,776 --> 00:02:56,118
+Powder charge in,
+
+76
+00:02:56,118 --> 00:02:58,207
+then a wad of old rope,
+
+77
+00:02:58,549 --> 00:03:02,273
+then the ball, then another wad to hold it.
+
+78
+00:03:02,273 --> 00:03:04,443
+Run the gun out through its port.
+
+79
+00:03:04,443 --> 00:03:07,159
+Prick the cartridge through the touch-hole,
+
+80
+00:03:07,159 --> 00:03:08,982
+prime it with fine powder,
+
+81
+00:03:08,982 --> 00:03:10,734
+stand clear of the wheels,
+
+82
+00:03:10,734 --> 00:03:13,505
+and touch it off with the glowing match.
+
+83
+00:03:14,120 --> 00:03:15,674
+Then do it all again,
+
+84
+00:03:15,674 --> 00:03:18,731
+faster, while somebody is shooting back.
+
+85
+00:03:18,731 --> 00:03:20,514
+You offer to teach Tom.
+
+86
+00:03:20,514 --> 00:03:22,797
+The crew votes against it.
+
+87
+00:03:22,797 --> 00:03:24,036
+Powder costs money,
+
+88
+00:03:24,036 --> 00:03:26,719
+practice shots hit nothing worth selling,
+
+89
+00:03:26,719 --> 00:03:28,817
+and nobody wants to explain to the
+
+90
+00:03:28,817 --> 00:03:31,139
+quartermaster where the ball went.
+
+91
+00:03:31,139 --> 00:03:33,776
+So Tom learns to sponge the barrel,
+
+92
+00:03:33,776 --> 00:03:35,471
+and is very proud of it.
+
+93
+00:03:35,471 --> 00:03:38,726
+It is, you admit, the most important step.
+
+94
+00:03:38,726 --> 00:03:40,003
+Here is the secret
+
+95
+00:03:40,003 --> 00:03:42,023
+nobody puts on the poster.
+
+96
+00:03:42,023 --> 00:03:43,403
+On a pirate sloop,
+
+97
+00:03:43,403 --> 00:03:46,303
+a good gunner almost never fires.
+
+98
+00:03:46,303 --> 00:03:49,026
+Pirates wanted prizes, not battles.
+
+99
+00:03:49,543 --> 00:03:51,506
+Leeson argues that crews promised
+
+100
+00:03:51,506 --> 00:03:53,229
+mercy to merchant ships that
+
+101
+00:03:53,229 --> 00:03:54,830
+surrendered without a fight,
+
+102
+00:03:54,830 --> 00:03:58,034
+and threatened much worse for those that resisted.
+
+103
+00:03:58,034 --> 00:04:00,425
+The legal scholar Magne Frostad
+
+104
+00:04:00,425 --> 00:04:03,116
+told ScienceNorway that pirates hoped
+
+105
+00:04:03,116 --> 00:04:04,555
+their flag alone would be
+
+106
+00:04:04,555 --> 00:04:07,370
+frightening enough to make victims surrender.
+
+107
+00:04:07,370 --> 00:04:09,222
+A fight risked wounded men,
+
+108
+00:04:09,222 --> 00:04:12,450
+a damaged ship and a damaged prize.
+
+109
+00:04:12,985 --> 00:04:15,218
+Every shot you fire into a merchant
+
+110
+00:04:15,218 --> 00:04:17,962
+ship is a hole the carpenter has to fix later,
+
+111
+00:04:17,962 --> 00:04:20,096
+in a ship you were planning to rob.
+
+112
+00:04:20,096 --> 00:04:21,863
+So when a sail appears,
+
+113
+00:04:21,863 --> 00:04:25,562
+and the chase begins, your moment is small.
+
+114
+00:04:25,562 --> 00:04:28,412
+You fire one gun, aimed well ahead of
+
+115
+00:04:28,412 --> 00:04:30,759
+the merchant's bow, to tell her to stop.
+
+116
+00:04:31,180 --> 00:04:32,739
+That was a real tactic.
+
+117
+00:04:32,739 --> 00:04:35,938
+At the Cape Coast Castle trial in seventeen twenty-two,
+
+118
+00:04:35,938 --> 00:04:38,060
+a Dutch captain said that
+
+119
+00:04:38,060 --> 00:04:40,865
+two pirate ships "fired and brought him
+
+120
+00:04:40,865 --> 00:04:43,631
+to," which means they forced him to stop.
+
+121
+00:04:43,631 --> 00:04:46,133
+For one bad moment, the merchant answers.
+
+122
+00:04:46,490 --> 00:04:48,598
+A puff of smoke from her stern,
+
+123
+00:04:48,598 --> 00:04:50,834
+a bang, and a ball skips across
+
+124
+00:04:50,834 --> 00:04:53,090
+the water well short of your bow.
+
+125
+00:04:53,090 --> 00:04:54,608
+Her captain is brave,
+
+126
+00:04:54,608 --> 00:04:56,289
+or frightened, or both.
+
+127
+00:04:56,289 --> 00:04:58,199
+The crew looks at you.
+
+128
+00:04:58,684 --> 00:05:01,071
+You keep your second gun quiet and wait,
+
+129
+00:05:01,071 --> 00:05:03,038
+because a fight is exactly what
+
+130
+00:05:03,038 --> 00:05:06,295
+nobody aboard either ship actually wants.
+
+131
+00:05:06,295 --> 00:05:08,097
+The merchant lowers her sails.
+
+132
+00:05:08,097 --> 00:05:10,200
+Nobody on either deck is hurt.
+
+133
+00:05:10,605 --> 00:05:12,025
+The crew cheers the captain.
+
+134
+00:05:12,025 --> 00:05:14,333
+You swab out the barrel and say nothing.
+
+135
+00:05:14,706 --> 00:05:16,233
+A shot that did not need a
+
+136
+00:05:16,233 --> 00:05:19,016
+second shot is the best shot there is.
+
+137
+00:05:19,016 --> 00:05:20,225
+Later, on her deck,
+
+138
+00:05:20,225 --> 00:05:23,016
+you meet the man who fired that shot:
+
+139
+00:05:23,016 --> 00:05:26,405
+the merchant's own gunner, gray-haired and shaking.
+
+140
+00:05:26,891 --> 00:05:28,327
+He tells you his owners would
+
+141
+00:05:28,327 --> 00:05:30,446
+have asked why he never fired at all.
+
+142
+00:05:30,900 --> 00:05:32,690
+You tell him it was a good shot,
+
+143
+00:05:32,690 --> 00:05:33,341
+just short,
+
+144
+00:05:33,341 --> 00:05:36,051
+and that short was the smartest place to put it.
+
+145
+00:05:36,051 --> 00:05:37,860
+If he had hit your sloop,
+
+146
+00:05:37,860 --> 00:05:39,971
+your crew would not have been so calm.
+
+147
+00:05:39,971 --> 00:05:42,105
+He looks at you as if he does
+
+148
+00:05:42,105 --> 00:05:43,847
+not know whether to thank you.
+
+149
+00:05:43,847 --> 00:05:44,747
+Neither do you.
+
+150
+00:05:44,747 --> 00:05:46,487
+Then you go down into her hold,
+
+151
+00:05:46,487 --> 00:05:47,439
+with the boarders,
+
+152
+00:05:47,439 --> 00:05:49,842
+to collect your share of the shopping list.
+
+153
+00:05:49,842 --> 00:05:51,237
+On Roberts's ships,
+
+154
+00:05:51,237 --> 00:05:55,459
+a gunner went straight for the prize's gunner's stores:
+
+155
+00:05:55,459 --> 00:05:58,801
+powder, shot, match, flints.
+
+156
+00:05:58,801 --> 00:06:01,958
+At Cape Coast, two Dutch captains told
+
+157
+00:06:01,958 --> 00:06:04,407
+the court that one of Roberts's men,
+
+158
+00:06:04,407 --> 00:06:06,631
+Thomas Sutton, had come aboard their
+
+159
+00:06:06,631 --> 00:06:09,773
+ships armed and taken their gunner's stores.
+
+160
+00:06:09,773 --> 00:06:11,094
+The court record later
+
+161
+00:06:11,094 --> 00:06:12,692
+lists Sutton as a gunner.
+
+162
+00:06:12,692 --> 00:06:15,496
+In Johnson's version of the trial,
+
+163
+00:06:15,496 --> 00:06:17,724
+one of the Dutch captains said Sutton had
+
+164
+00:06:17,724 --> 00:06:20,055
+ordered all their gunner's stores out.
+
+165
+00:06:20,055 --> 00:06:22,844
+Sutton interrupted him from the dock.
+
+166
+00:06:23,283 --> 00:06:25,125
+The man was lying, he said.
+
+167
+00:06:25,125 --> 00:06:26,938
+He had not taken half.
+
+168
+00:06:27,537 --> 00:06:29,298
+You take powder in its barrels,
+
+169
+00:06:29,298 --> 00:06:30,673
+a few bags of small shot
+
+170
+00:06:30,673 --> 00:06:32,852
+and all the flints you can find.
+
+171
+00:06:32,852 --> 00:06:35,201
+You leave the merchant one small gun and
+
+172
+00:06:35,201 --> 00:06:37,378
+enough powder to fire a warning of his own,
+
+173
+00:06:37,378 --> 00:06:39,894
+in case he meets somebody worse than you.
+
+174
+00:06:39,894 --> 00:06:42,858
+There is always somebody worse than you.
+
+175
+00:06:42,858 --> 00:06:44,079
+Gunners themselves
+
+176
+00:06:44,079 --> 00:06:46,114
+were often taken by force.
+
+177
+00:06:46,633 --> 00:06:48,631
+The court heard about one gunner taken
+
+178
+00:06:48,631 --> 00:06:50,746
+from a Liverpool ship in seventeen twenty-one,
+
+179
+00:06:50,746 --> 00:06:52,955
+whose own captain had begged the
+
+180
+00:06:52,955 --> 00:06:55,045
+pirates to let him stay,
+
+181
+00:06:55,045 --> 00:06:58,758
+"because he was his gunner, and very much wanted by him."
+
+182
+00:06:58,758 --> 00:07:00,391
+The pirates refused.
+
+183
+00:07:00,391 --> 00:07:02,546
+Witnesses said that same gunner
+
+184
+00:07:02,546 --> 00:07:04,513
+had tried to escape several times.
+
+185
+00:07:04,513 --> 00:07:06,093
+Once he slipped back aboard
+
+186
+00:07:06,093 --> 00:07:07,282
+his own ship and hid,
+
+187
+00:07:07,282 --> 00:07:09,425
+and the pirates sent for him by name.
+
+188
+00:07:09,425 --> 00:07:10,953
+The court acquitted him.
+
+189
+00:07:10,953 --> 00:07:12,970
+Another witness said the gunner of
+
+190
+00:07:12,970 --> 00:07:14,672
+the Bristol galley Mercy had been
+
+191
+00:07:14,672 --> 00:07:16,675
+forced out of his ship with Roberts
+
+192
+00:07:16,675 --> 00:07:19,366
+himself beating him aboard the pirate ship.
+
+193
+00:07:19,366 --> 00:07:21,458
+Being good with a gun was not
+
+194
+00:07:21,458 --> 00:07:23,150
+something you could hide for long.
+
+195
+00:07:23,150 --> 00:07:24,374
+Others were simply put
+
+196
+00:07:24,374 --> 00:07:25,881
+to work near the powder.
+
+197
+00:07:25,881 --> 00:07:27,776
+A witness said that one man,
+
+198
+00:07:27,776 --> 00:07:30,869
+Hugh Menzies, was forced off his ship and
+
+199
+00:07:30,869 --> 00:07:33,634
+beaten twice because he cried and begged
+
+200
+00:07:33,634 --> 00:07:36,200
+to get away, and that the pirates
+
+201
+00:07:36,200 --> 00:07:38,947
+mockingly called him "Dead Hugh Menzies."
+
+202
+00:07:39,546 --> 00:07:41,092
+In the fight with the Swallow,
+
+203
+00:07:41,092 --> 00:07:42,936
+he was stationed in the powder room,
+
+204
+00:07:42,936 --> 00:07:45,279
+and the same witness said he did much
+
+205
+00:07:45,279 --> 00:07:47,670
+to save the ship from being blown up.
+
+206
+00:07:47,670 --> 00:07:48,884
+Another prisoner,
+
+207
+00:07:48,884 --> 00:07:52,821
+a witness said, became gunner's mate only because Roberts's
+
+208
+00:07:52,821 --> 00:07:55,323
+gunner swore that he should accept it.
+
+209
+00:07:55,842 --> 00:07:56,842
+On a pirate ship,
+
+210
+00:07:56,842 --> 00:07:59,143
+even a promotion could be an order.
+
+211
+00:07:59,709 --> 00:08:00,981
+Back on your sloop,
+
+212
+00:08:00,981 --> 00:08:02,826
+the new powder needs a home.
+
+213
+00:08:02,826 --> 00:08:05,514
+You stow the barrels deep in the hold,
+
+214
+00:08:05,514 --> 00:08:06,698
+in the driest corner,
+
+215
+00:08:06,698 --> 00:08:10,102
+as far from the galley fire as a small sloop allows,
+
+216
+00:08:10,102 --> 00:08:12,038
+which is not very far.
+
+217
+00:08:12,444 --> 00:08:14,046
+You sleep on top of them.
+
+218
+00:08:14,046 --> 00:08:16,256
+The crew considers this brave.
+
+219
+00:08:16,630 --> 00:08:18,574
+You consider it supervision.
+
+220
+00:08:18,574 --> 00:08:21,946
+We know what a real pirate gunner kept loaded,
+
+221
+00:08:21,946 --> 00:08:23,062
+because Blackbeard's
+
+222
+00:08:23,062 --> 00:08:25,866
+flagship sank with her guns still aboard.
+
+223
+00:08:25,866 --> 00:08:28,406
+When the Queen Anne's Revenge ran aground
+
+224
+00:08:28,406 --> 00:08:30,143
+at Beaufort Inlet,
+
+225
+00:08:30,143 --> 00:08:35,814
+North Carolina, in June seventeen eighteen, she went down armed.
+
+226
+00:08:35,814 --> 00:08:38,344
+A nineteen ninety-nine report from the
+
+227
+00:08:38,344 --> 00:08:40,628
+North Carolina conservation laboratory
+
+228
+00:08:40,628 --> 00:08:43,785
+explains that La Concorde had carried
+
+229
+00:08:43,785 --> 00:08:47,171
+fourteen to sixteen guns as a French slave ship.
+
+230
+00:08:47,690 --> 00:08:48,744
+Blackbeard's crew
+
+231
+00:08:48,744 --> 00:08:50,957
+increased that to as many as forty.
+
+232
+00:08:51,607 --> 00:08:54,255
+Royal Museums Greenwich also says
+
+233
+00:08:54,255 --> 00:08:57,413
+Blackbeard equipped her with forty guns.
+
+234
+00:08:57,413 --> 00:08:59,819
+Archaeologists have found the guns.
+
+235
+00:09:00,194 --> 00:09:01,593
+The nineteen ninety-nine report
+
+236
+00:09:01,593 --> 00:09:05,278
+counted twenty-one cannons on the site so far.
+
+237
+00:09:05,278 --> 00:09:06,185
+By two thousand thirteen,
+
+238
+00:09:06,185 --> 00:09:09,401
+the Maritime Executive reported,
+
+239
+00:09:09,401 --> 00:09:12,161
+twenty-nine had been located and twenty raised.
+
+240
+00:09:12,551 --> 00:09:15,938
+Both describe most of them as cast-iron six-pounders,
+
+241
+00:09:15,938 --> 00:09:17,236
+about eight feet long.
+
+242
+00:09:17,236 --> 00:09:19,176
+Some were still loaded.
+
+243
+00:09:19,550 --> 00:09:20,242
+In two thousand eleven,
+
+244
+00:09:20,242 --> 00:09:22,779
+the project's chief conservator,
+
+245
+00:09:22,779 --> 00:09:25,831
+Sarah Watkins-Kenney, said that four cannons had
+
+246
+00:09:25,831 --> 00:09:27,581
+been found loaded,
+
+247
+00:09:27,581 --> 00:09:31,109
+"with cannon shot and wads in place ready to be fired."
+
+248
+00:09:31,499 --> 00:09:32,797
+The nineteen ninety-nine report
+
+249
+00:09:32,797 --> 00:09:35,124
+describes one small gun,
+
+250
+00:09:35,434 --> 00:09:38,604
+cast in Sweden and dated seventeen thirteen.
+
+251
+00:09:39,208 --> 00:09:41,477
+Inside, behind its wooden plug,
+
+252
+00:09:41,477 --> 00:09:43,915
+conservators found a wad of rope,
+
+253
+00:09:43,915 --> 00:09:45,607
+then three iron drift pins,
+
+254
+00:09:45,607 --> 00:09:49,024
+which are heavy spikes used in shipbuilding,
+
+255
+00:09:49,024 --> 00:09:52,796
+then a second wad, a solid round shot,
+
+256
+00:09:52,796 --> 00:09:56,589
+a third wad and finally the powder charge.
+
+257
+00:09:56,589 --> 00:09:58,050
+Somebody had loaded spare
+
+258
+00:09:58,050 --> 00:10:00,108
+iron along with the ball.
+
+259
+00:10:00,108 --> 00:10:01,690
+Even three centuries later,
+
+260
+00:10:01,690 --> 00:10:04,457
+the report treats that powder as live.
+
+261
+00:10:04,457 --> 00:10:06,363
+The conservators pulled the wads out
+
+262
+00:10:06,363 --> 00:10:09,156
+with a copper wire hook, made a scoop from
+
+263
+00:10:09,156 --> 00:10:12,057
+plastic pipe shaped like an old powder scoop,
+
+264
+00:10:12,057 --> 00:10:13,665
+and filled the barrel with fresh
+
+265
+00:10:13,665 --> 00:10:16,369
+water in case a metal tool struck a spark.
+
+266
+00:10:16,369 --> 00:10:18,188
+A gunner would have approved.
+
+267
+00:10:18,188 --> 00:10:20,386
+The same report describes two
+
+268
+00:10:20,386 --> 00:10:22,346
+cast-iron hand grenades from the wreck,
+
+269
+00:10:22,346 --> 00:10:24,465
+hollow spheres packed with gunpowder,
+
+270
+00:10:24,465 --> 00:10:26,052
+with a wooden fuse.
+
+271
+00:10:26,052 --> 00:10:27,501
+And in twenty eighteen,
+
+272
+00:10:27,501 --> 00:10:29,932
+conservators found sixteen scraps of paper
+
+273
+00:10:29,932 --> 00:10:31,898
+wedged inside the chamber of a
+
+274
+00:10:31,898 --> 00:10:34,182
+breech-loading cannon from the wreck.
+
+275
+00:10:34,182 --> 00:10:36,354
+The Associated Press reported that
+
+276
+00:10:36,354 --> 00:10:39,022
+the fabric and plug around them had
+
+277
+00:10:39,022 --> 00:10:41,354
+protected the paper for three hundred years.
+
+278
+00:10:41,354 --> 00:10:43,828
+Researchers identified the scraps.
+
+279
+00:10:43,828 --> 00:10:46,210
+They came from a first edition,
+
+280
+00:10:46,210 --> 00:10:47,761
+printed in seventeen twelve,
+
+281
+00:10:48,070 --> 00:10:51,563
+of Captain Edward Cooke's A Voyage to the South Sea,
+
+282
+00:10:52,065 --> 00:10:55,208
+the story of a privateering voyage around the world.
+
+283
+00:10:55,208 --> 00:10:57,245
+Cooke had sailed on that
+
+284
+00:10:57,245 --> 00:10:59,304
+voyage under Woodes Rogers.
+
+285
+00:10:59,304 --> 00:11:01,310
+Yes, that Woodes Rogers.
+
+286
+00:11:01,310 --> 00:11:04,444
+The same man who arrived at Nassau as
+
+287
+00:11:04,444 --> 00:11:06,443
+governor in seventeen eighteen,
+
+288
+00:11:06,443 --> 00:11:09,231
+with the king's pardon and warships behind him.
+
+289
+00:11:09,733 --> 00:11:11,618
+Blackbeard's gunners may have used a
+
+290
+00:11:11,618 --> 00:11:14,187
+book about his voyage to pack a cannon.
+
+291
+00:11:14,187 --> 00:11:16,159
+History has a nasty sense of humor.
+
+292
+00:11:16,159 --> 00:11:18,083
+Most pirate voyages never
+
+293
+00:11:18,083 --> 00:11:19,481
+needed those loaded guns.
+
+294
+00:11:19,481 --> 00:11:21,040
+But when a real battle came,
+
+295
+00:11:21,040 --> 00:11:23,568
+it was the gunners who decided it.
+
+296
+00:11:23,568 --> 00:11:25,226
+In November seventeen eighteen,
+
+297
+00:11:25,226 --> 00:11:26,801
+at Ocracoke Inlet,
+
+298
+00:11:26,801 --> 00:11:30,746
+Lieutenant Robert Maynard's sloops rowed toward Blackbeard's.
+
+299
+00:11:30,746 --> 00:11:32,665
+Johnson writes that Blackbeard's men
+
+300
+00:11:32,665 --> 00:11:35,237
+fired a broadside "charged with all manner
+
+301
+00:11:35,237 --> 00:11:37,561
+of small shot," and that the lieutenant's
+
+302
+00:11:37,561 --> 00:11:40,361
+sloop had twenty men killed and wounded.
+
+303
+00:11:40,361 --> 00:11:42,846
+The Smithsonian puts it at twenty-one,
+
+304
+00:11:42,846 --> 00:11:43,723
+in seconds.
+
+305
+00:11:43,723 --> 00:11:46,163
+Both accounts say Blackbeard's
+
+306
+00:11:46,163 --> 00:11:47,413
+crew then threw grenades,
+
+307
+00:11:47,413 --> 00:11:49,450
+which Johnson describes as case bottles
+
+308
+00:11:49,450 --> 00:11:51,560
+filled with powder and small shot.
+
+309
+00:11:51,560 --> 00:11:53,056
+Maynard had hidden most
+
+310
+00:11:53,056 --> 00:11:54,665
+of his remaining men below.
+
+311
+00:11:54,665 --> 00:11:56,101
+When Blackbeard boarded,
+
+312
+00:11:56,101 --> 00:11:57,306
+they came up,
+
+313
+00:11:57,306 --> 00:12:00,142
+and Blackbeard was killed in the fight that followed.
+
+314
+00:12:00,142 --> 00:12:02,855
+Johnson's book alone lists Blackbeard's gunner,
+
+315
+00:12:02,855 --> 00:12:04,121
+Philip Morton,
+
+316
+00:12:04,121 --> 00:12:06,017
+among the pirates killed that day.
+
+317
+00:12:06,017 --> 00:12:07,729
+Most of Blackbeard's surviving
+
+318
+00:12:07,729 --> 00:12:10,192
+men were later tried and hanged in Virginia,
+
+319
+00:12:10,192 --> 00:12:11,537
+as the South Carolina
+
+320
+00:12:11,537 --> 00:12:14,145
+Encyclopedia and Johnson both record.
+
+321
+00:12:14,145 --> 00:12:17,200
+The broadside had won the first minute.
+
+322
+00:12:17,200 --> 00:12:18,671
+It did not win the day.
+
+323
+00:12:18,671 --> 00:12:19,709
+Three years later,
+
+324
+00:12:19,709 --> 00:12:23,101
+off West Africa, gunnery decided another fight.
+
+325
+00:12:23,443 --> 00:12:26,053
+Royal Museums Greenwich says that on
+
+326
+00:12:26,053 --> 00:12:26,900
+the tenth of February,
+
+327
+00:12:26,900 --> 00:12:29,707
+seventeen twenty-two, a series of broadsides from Captain
+
+328
+00:12:29,707 --> 00:12:31,284
+Chaloner Ogle's ship,
+
+329
+00:12:31,284 --> 00:12:35,790
+the Swallow, left Bartholomew Roberts's ship nearly unable to move,
+
+330
+00:12:35,790 --> 00:12:38,271
+her masts and rigging shattered.
+
+331
+00:12:38,821 --> 00:12:40,365
+Grapeshot from the Swallow,
+
+332
+00:12:40,365 --> 00:12:43,055
+lead balls fired together to strike men
+
+333
+00:12:43,055 --> 00:12:45,520
+rather than wood, killed Roberts at once.
+
+334
+00:12:46,053 --> 00:12:47,969
+Johnson describes the same shot.
+
+335
+00:12:47,969 --> 00:12:50,210
+His crew fought on for a time,
+
+336
+00:12:50,210 --> 00:12:51,481
+and then surrendered.
+
+337
+00:12:51,481 --> 00:12:52,175
+That is the
+
+338
+00:12:52,175 --> 00:12:54,543
+uncomfortable math of your trade.
+
+339
+00:12:54,543 --> 00:12:56,681
+Your guns were made to win without firing.
+
+340
+00:12:56,681 --> 00:12:58,157
+When they did fire,
+
+341
+00:12:58,157 --> 00:13:01,452
+they could win the first minute and still lose the fight,
+
+342
+00:13:01,452 --> 00:13:03,299
+or meet a navy warship with
+
+343
+00:13:03,299 --> 00:13:05,250
+far more guns than any pirate sloop.
+
+344
+00:13:05,767 --> 00:13:06,662
+You think about that
+
+345
+00:13:06,662 --> 00:13:08,198
+during a quiet week of rain.
+
+346
+00:13:08,635 --> 00:13:10,376
+Rain is your real enemy.
+
+347
+00:13:10,376 --> 00:13:12,737
+Damp powder will not fire,
+
+348
+00:13:12,737 --> 00:13:15,985
+and a gun that will not fire is just a heavy bucket.
+
+349
+00:13:16,438 --> 00:13:18,889
+So you spend the whole week opening barrels,
+
+350
+00:13:18,889 --> 00:13:20,680
+spreading powder on sailcloth
+
+351
+00:13:20,680 --> 00:13:23,792
+under a tarpaulin whenever the sun comes out,
+
+352
+00:13:23,792 --> 00:13:26,021
+and covering it again when it does not.
+
+353
+00:13:26,021 --> 00:13:27,645
+The crew watches you guard
+
+354
+00:13:27,645 --> 00:13:29,643
+black dust as if it were gold.
+
+355
+00:13:29,643 --> 00:13:31,039
+In a way, it is.
+
+356
+00:13:31,477 --> 00:13:32,284
+Without it,
+
+357
+00:13:32,284 --> 00:13:34,571
+your two little guns are furniture.
+
+358
+00:13:34,571 --> 00:13:36,191
+Then, one evening,
+
+359
+00:13:36,191 --> 00:13:38,846
+a spark jumps from the galley fire and lands
+
+360
+00:13:38,846 --> 00:13:41,091
+near a loose powder bag on the deck.
+
+361
+00:13:41,091 --> 00:13:42,190
+Everyone freezes.
+
+362
+00:13:42,548 --> 00:13:44,742
+Tom, who has never moved quickly in
+
+363
+00:13:44,742 --> 00:13:47,449
+this entire series, steps on it with
+
+364
+00:13:47,449 --> 00:13:49,699
+his boot before anyone else can breathe.
+
+365
+00:13:49,699 --> 00:13:51,027
+You thank him.
+
+366
+00:13:51,027 --> 00:13:52,144
+He says he has been
+
+367
+00:13:52,144 --> 00:13:53,595
+practicing with his pipe.
+
+368
+00:13:53,595 --> 00:13:55,754
+You decide not to ask what that means.
+
+369
+00:13:55,754 --> 00:13:57,090
+The men who ran the guns
+
+370
+00:13:57,090 --> 00:13:58,669
+did not do well in court.
+
+371
+00:13:58,669 --> 00:13:59,660
+At Cape Coast,
+
+372
+00:13:59,660 --> 00:14:03,009
+Thomas Sutton, the gunner who had not taken half,
+
+373
+00:14:03,009 --> 00:14:05,662
+was sentenced to death, and he was among the
+
+374
+00:14:05,662 --> 00:14:08,288
+first six men hanged outside the castle.
+
+375
+00:14:08,288 --> 00:14:09,759
+Johnson's book alone
+
+376
+00:14:09,759 --> 00:14:11,580
+gives Sutton a last joke.
+
+377
+00:14:11,580 --> 00:14:13,785
+In irons, Sutton is said to have
+
+378
+00:14:13,785 --> 00:14:16,109
+mocked a prisoner who prayed for heaven.
+
+379
+00:14:16,482 --> 00:14:17,705
+Did he ever hear of
+
+380
+00:14:17,705 --> 00:14:19,845
+pirates going there, Sutton asked.
+
+381
+00:14:19,845 --> 00:14:22,198
+He would rather go to the other place,
+
+382
+00:14:22,198 --> 00:14:23,187
+where it was merrier,
+
+383
+00:14:23,187 --> 00:14:25,436
+and he would give Roberts a salute
+
+384
+00:14:25,436 --> 00:14:27,239
+of thirteen guns when he arrived.
+
+385
+00:14:27,239 --> 00:14:29,468
+Whether he said it or not,
+
+386
+00:14:29,468 --> 00:14:31,062
+that is a gunner's joke.
+
+387
+00:14:31,062 --> 00:14:32,688
+Even facing the gallows,
+
+388
+00:14:32,688 --> 00:14:35,110
+he was still thinking in salutes.
+
+389
+00:14:35,949 --> 00:14:37,566
+On John Phillips's crew,
+
+390
+00:14:37,566 --> 00:14:39,248
+the gunner, James Sparks,
+
+391
+00:14:39,248 --> 00:14:42,351
+did not survive the day the captives rose up
+
+392
+00:14:42,351 --> 00:14:43,656
+in April seventeen twenty-four.
+
+393
+00:14:44,126 --> 00:14:45,826
+The Boston News-Letter reported that
+
+394
+00:14:45,826 --> 00:14:47,991
+the captives fell upon the gunner,
+
+395
+00:14:47,991 --> 00:14:50,665
+and the pirates were overpowered within minutes.
+
+396
+00:14:50,665 --> 00:14:52,700
+In all, fifty-two of Roberts's men
+
+397
+00:14:52,700 --> 00:14:55,512
+were hanged after the Cape Coast trial.
+
+398
+00:14:55,512 --> 00:14:57,065
+More than seventy were acquitted,
+
+399
+00:14:57,065 --> 00:14:59,642
+most of them men who had been forced aboard.
+
+400
+00:14:59,642 --> 00:15:00,852
+The gunner from the
+
+401
+00:15:00,852 --> 00:15:03,095
+Liverpool ship walked free.
+
+402
+00:15:03,095 --> 00:15:04,676
+Thomas Sutton did not.
+
+403
+00:15:04,676 --> 00:15:07,203
+Then the dealer brings the news
+
+404
+00:15:07,203 --> 00:15:08,538
+you have heard before:
+
+405
+00:15:08,538 --> 00:15:10,391
+the king's pardon of seventeen seventeen.
+
+406
+00:15:10,843 --> 00:15:13,396
+Surrender to a governor by the fifth of September,
+
+407
+00:15:13,396 --> 00:15:14,142
+seventeen eighteen,
+
+408
+00:15:14,142 --> 00:15:18,032
+and earlier piracies would be forgiven.
+
+409
+00:15:18,032 --> 00:15:19,652
+You read the reward list.
+
+410
+00:15:19,652 --> 00:15:22,113
+As the London Gazette printed it,
+
+411
+00:15:22,113 --> 00:15:24,787
+a pirate commander was worth one hundred pounds,
+
+412
+00:15:24,787 --> 00:15:26,606
+and "every lieutenant,
+
+413
+00:15:26,606 --> 00:15:30,331
+master, boatswain, carpenter, and gunner" forty.
+
+414
+00:15:30,331 --> 00:15:31,737
+Your name is on it,
+
+415
+00:15:31,737 --> 00:15:34,423
+beside the carpenter and the navigator.
+
+416
+00:15:34,423 --> 00:15:37,074
+You came willingly, so you have a vote.
+
+417
+00:15:37,480 --> 00:15:39,207
+You look at your two little guns,
+
+418
+00:15:39,207 --> 00:15:42,331
+and at the warships the dealer says are coming.
+
+419
+00:15:42,331 --> 00:15:44,341
+You raise your hand for the pardon.
+
+420
+00:15:44,341 --> 00:15:46,046
+It wins, narrowly.
+
+421
+00:15:46,046 --> 00:15:48,484
+The captain asks whether you will fire
+
+422
+00:15:48,484 --> 00:15:51,289
+a salute as they sail in to surrender.
+
+423
+00:15:51,289 --> 00:15:51,986
+You say no.
+
+424
+00:15:51,986 --> 00:15:53,679
+You have a better idea.
+
+425
+00:15:54,261 --> 00:15:56,212
+That evening, you draw the charges
+
+426
+00:15:56,212 --> 00:15:58,015
+from both guns: the wad,
+
+427
+00:15:58,015 --> 00:16:02,164
+the shot, the powder, one careful piece at a time,
+
+428
+00:16:02,164 --> 00:16:04,294
+the way the conservators would do it three
+
+429
+00:16:04,294 --> 00:16:06,998
+hundred years later on Blackbeard's cannons.
+
+430
+00:16:06,998 --> 00:16:08,310
+You lay it all out on
+
+431
+00:16:08,310 --> 00:16:09,742
+the deck in a neat row.
+
+432
+00:16:09,742 --> 00:16:11,625
+An unloaded gun cannot
+
+433
+00:16:11,625 --> 00:16:13,322
+start anything by accident.
+
+434
+00:16:13,322 --> 00:16:15,030
+Neither, you hope, can you.
+
+435
+00:16:15,030 --> 00:16:17,156
+Tom watches the whole thing,
+
+436
+00:16:17,156 --> 00:16:20,620
+sponge in hand, and asks what happens to the guns now.
+
+437
+00:16:20,620 --> 00:16:22,385
+You tell him they will probably
+
+438
+00:16:22,385 --> 00:16:23,985
+end up on somebody else's ship,
+
+439
+00:16:23,985 --> 00:16:26,292
+aimed at somebody else's problems.
+
+440
+00:16:26,292 --> 00:16:28,242
+He asks if he can keep the sponge.
+
+441
+00:16:28,242 --> 00:16:28,967
+You let him.
+
+442
+00:16:28,967 --> 00:16:30,446
+He has earned it.
+
+443
+00:16:30,446 --> 00:16:31,740
+So why was being a pirate
+
+444
+00:16:31,740 --> 00:16:33,184
+gunner worse than you think?
+
+445
+00:16:33,184 --> 00:16:34,794
+Because your best day
+
+446
+00:16:34,794 --> 00:16:36,349
+was the day you never fired.
+
+447
+00:16:36,349 --> 00:16:37,904
+Because you slept on the one
+
+448
+00:16:37,904 --> 00:16:40,588
+cargo that could kill everyone aboard.
+
+449
+00:16:40,588 --> 00:16:42,467
+Because when a real battle came,
+
+450
+00:16:42,467 --> 00:16:44,053
+your guns could win the first
+
+451
+00:16:44,053 --> 00:16:46,438
+minute and still lose you everything.
+
+452
+00:16:46,438 --> 00:16:47,695
+And because every gun you
+
+453
+00:16:47,695 --> 00:16:49,243
+aimed was aimed at people whose
+
+454
+00:16:49,243 --> 00:16:51,011
+only crime was being in the way.
+
+455
+00:16:51,011 --> 00:16:52,274
+A court did not care
+
+456
+00:16:52,274 --> 00:16:54,287
+how good a shot you were.
+
+457
+00:16:54,287 --> 00:16:55,919
+It cared who you had aimed at.
+
+458
+00:16:55,919 --> 00:16:58,640
+If you want another life behind the legends,
+
+459
+00:16:58,640 --> 00:16:59,721
+and another job that
+
+460
+00:16:59,721 --> 00:17:02,095
+sounds better than it was, subscribe.
+
+461
+00:17:02,095 --> 00:17:03,305
+This is Pirate Pages.
+
+462
+00:17:03,305 --> 00:17:05,354
+The lives behind the legends.

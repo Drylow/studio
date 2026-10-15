@@ -1,0 +1,17 @@
+{
+  "channel": "Pirate Pages",
+  "title": "Why Being a Pirate Gunner Was Worse Than You Think",
+  "description_file": "chaines/pirate-pages/episode-07/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/A35ZlUUV",
+    "file": "final.mp4",
+    "sha256": "ae5896fb8413bc91a1fd59bbdbfe19863860c22569ba04fc5943fab8dade7548",
+    "url": "http://media.edgerunners.fr/pirate-pages--episode-07-e99eb4eeaf34d254.mp4"
+  },
+  "thumbnail": "chaines/pirate-pages/episode-07/thumbnail.jpg",
+  "captions": "chaines/pirate-pages/episode-07/English-Captions.srt",
+  "tags_file": "chaines/pirate-pages/episode-07/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-20T10:00",
+  "tubeforge_video_id": "why-being-a-pirate-gunner-was-worse-than-b297d8"
+}
