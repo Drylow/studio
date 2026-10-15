@@ -116,3 +116,8 @@ Les trois films sont termines et livres dans le dossier local `01 - Videos/Medie
 Voix **Ryan Kurk - Pleasant and Smooth**, toujours la meme. Rendus exclusivement sur le VPS, en 1920×1080 a 24 images/s : diaporama fixe et fondus de 0,25 seconde, sans zoom ni panoramique anime. Les gros plans dessines utiles restent conserves. Toutes les images sources puis les captures de chaque plan du montage final ont ete personnellement regardees par Codex. Decodage integral, durees et empreintes des transferts verifies. Ces controles sont des inspections IA explicites, pas une ecoute humaine ou un clic humain inventes.
 
 Les exports MP4 du VPS ont ete supprimes seulement APRES verification de leurs copies locales. Les voix, images, scripts, references canoniques et recus techniques restent conserves pour les reprises. Le lien de telechargement de l'ancien export sur le site n'est donc plus actif ; ne pas relancer de generation payante pour cela. Voir [le manifest de livraison](delivery-manifest.json) pour les empreintes finales. Aucune mise en ligne YouTube ni aucun envoi Discord n'a ete effectue.
+
+
+## Kit de chaine
+
+Proposition de nom : **Medieval Misery**, a confirmer par l'utilisateur. [Kit complet](channel-kit/CHANNEL_KIT.md) : avatar, variante, banniere, handle suggere et description anglaise. Aucun compte YouTube n'a ete cree ou renomme.
