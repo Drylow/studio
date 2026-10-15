@@ -1,13 +1,22 @@
-# Six narrations — suivi du 15 octobre 2026
+# Six narrations terminées — 15 octobre 2026
 
-Cinq MP3 complets récupérés et vérifiés : Force, Guilde, Paul, Silo, FROM. Tous dépassent deux heures. Voix Mellow Matt, ID `IsEXLHzSvLH9UMB6SLHj`, vitesse 0,90.
+Les six MP3 complets sont récupérés et contrôlés, voix **Mellow Matt**, ID `IsEXLHzSvLH9UMB6SLHj`, vitesse **0,90**. Chaque fichier dépasse deux heures de narration. Les textes finaux sont inchangés.
 
-La première moitié de Severance est réussie. La seconde demande a échoué définitivement chez Algrow, sans facturation : débit observé de 855 224 caractères, exactement celui des onze parties réussies. Le même texte restant a été réparti en quatre blocs plus courts, voix et réglages identiques, actuellement acceptés et en traitement. Voir les identifiants et l'audit dans `suivi.json`.
+| Épisode | Durée décodée |
+|---|---:|
+| DV-01-force | 2:59:28 |
+| DV-02-guilde | 3:06:44 |
+| DV-03-paul | 2:59:20 |
+| QP-04-silo-indices | 2:56:29 |
+| QP-05-from-victor | 2:50:19 |
+| QP-06-severance-eagan | 2:59:07 |
 
-Reprendre avec `python production/sleep_voiceovers.py monitor`, depuis la racine du dépôt. Cette commande lit les jobs existants, télécharge les résultats et assemble les MP3 ; elle ne soumet aucune génération. Ne pas repayer les demandes acceptées.
+Fichiers sur le Bureau : **Voix sleep - 15 octobre 2026**. Les 15 parties sources terminées sont conservées dans `work/sleep-voiceovers-2026-10-15/parts`. Les scripts sont découpés en parties contiguës sous la limite de 100 000 caractères du compte. L'assemblage conserve les paquets MP3, sans réencodage, silence ou répétition ajoutés.
 
-Registre privé : `work/sleep-voiceovers-2026-10-15/ledger.json`. Preuve de reprise : `recovery-audit.json` dans le même dossier. URL des médias privées, pas de Git public. Clé valide uniquement dans le `.env` local ; une ancienne variable Windows est refusée. Ne pas afficher la clé.
+Contrôles : empreinte du texte, source complète, décodage intégral sans erreur, durée réelle et comparaison des sous-titres au texte. Détails dans `suivi.json`. Les SRT automatiques sont fournis pour chaque MP3 ; leurs noms propres et autres erreurs de transcription restent à corriger avant publication. Ces vérifications ne constituent pas une écoute humaine intégrale.
 
-MP3 complets sur le Bureau dans **Voix sleep - 15 octobre 2026**. Sauvegarde autonome dans **REPRISE - Deep Void et Quiet Paradox**. Les parties contiguës conservent exactement les scripts finaux, sans réécriture. Assemblage MP3 sans silence ou répétition ajoutés, puis décodage intégral et durée réelle. Les SRT sont automatiques et leurs noms propres restent à relire.
+Solde observé : **3,409,093 → 2,474,474 caractères**, soit **934,619 débités**, sous-titres demandés compris. Ce relevé est celui du compte, pas une facture ventilée par job.
 
-Après les six MP3 vérifiés, `python production/sleep_voiceover_delivery.py` finalise le relevé et la sauvegarde, sans appel payant. Aucun montage ou upload lancé.
+Reprise : `production/sleep_voiceovers.py monitor` relit les jobs existants sans soumettre de génération. `production/sleep_voiceover_delivery.py` reconstruit le relevé et la sauvegarde sans appel payant. Le registre privé `work/sleep-voiceovers-2026-10-15/ledger.json` contient les réponses et URL des médias ; ne pas le publier. La clé valide reste exclusivement dans le `.env` privé. Une ancienne variable Windows est refusée, sans avoir été modifiée.
+
+Le premier essai intégral a été refusé pour taille, sans job ni débit. La seconde moitié de Severance a ensuite échoué définitivement sans être facturée : le solde correspondait exactement aux onze jobs réussis. Son texte a été réparti en quatre blocs plus courts, sans réécriture, avec la même voix. Les 15 parties réussies sont terminées. Aucun nouveau montage ou upload n'est lancé. Préserver les originaux et ne pas repayer ces voix.

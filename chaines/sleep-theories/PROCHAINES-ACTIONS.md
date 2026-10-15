@@ -6,10 +6,9 @@
 2. Utiliser les `script-voix.txt` finaux ou les six textes simples du dossier
    Bureau **6 scripts sleep - 15 octobre 2026**. Sources et contrôles sont dans
    le dossier canonique et la sauvegarde autonome de reprise.
-3. La narration est maintenant autorisée dans Algrow, voix Mellow Matt. Douze
-   parties acceptées ; suivre `narrations-2026-10-15/README.md` et reprendre les jobs
-   existants sans les repayer. Télécharger, réunir et vérifier au moins deux heures
-   réelles par MP3. Ne pas ajouter de silence ou de boucle.
+3. Les six voix Algrow Mellow Matt sont récupérées et contrôlées, toutes au-delà
+   de deux heures. Voir `narrations-2026-10-15/README.md` et le dossier Bureau
+   **Voix sleep - 15 octobre 2026**. Ne pas les régénérer. Le montage reste à faire.
 4. Six propositions de miniatures sont prêtes dans `miniatures-2026-10-15/`,
    avec copie simple sur le Bureau. Attendre le choix utilisateur avant de les
    déclarer approuvées. Les descriptions du nouveau lot restent à préparer.

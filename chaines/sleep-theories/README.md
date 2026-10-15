@@ -11,10 +11,9 @@ de Paul, pour maintenir deux Dune sur trois. Ne pas relancer les anciens projets
 
 ## Narrations du nouveau lot
 
-La génération Algrow Voiceover est autorisée le 15 octobre, avec la voix Mellow Matt
-`IsEXLHzSvLH9UMB6SLHj`. Les douze parties sont acceptées et en cours.
-Lire [le suivi des voix](narrations-2026-10-15/README.md) avant toute reprise : ne pas
-renvoyer les scripts déjà acceptés.
+Les six voix Algrow sont terminées, téléchargées et contrôlées, voix Mellow Matt
+`IsEXLHzSvLH9UMB6SLHj`. Toutes dépassent deux heures. Lire [le relevé des voix](narrations-2026-10-15/README.md).
+Copie sur le Bureau : **Voix sleep - 15 octobre 2026**. Ne pas régénérer les jobs terminés.
 
 ## Miniatures du nouveau lot
 

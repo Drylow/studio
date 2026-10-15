@@ -189,6 +189,7 @@ Le premier essai intégral a été refusé pour taille, sans job ni débit. La s
     write(p, text)
     p = ROOT / "REPRISE-SLEEP.md"
     text = p.read_text(encoding="utf-8")
+    text = text.replace("Commande active : écrire les six scripts du", "Lot finalisé : les six scripts du")
     a, b = text.index("Ils font chacun"), text.index("Le README du lot", text.index("Ils font chacun"))
     text = text[:a] + "Ils font chacun plus de 20 500 mots. Les six voix Algrow Mellow Matt sont téléchargées\net contrôlées, toutes au-delà de deux heures. Relevé :\n`chaines/sleep-theories/narrations-2026-10-15/README.md`.\nMP3 complets sur le Bureau : **Voix sleep - 15 octobre 2026**. Ne pas les régénérer.\nAucun nouveau montage ou upload lancé. " + text[b:]
     write(p, text)

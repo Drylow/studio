@@ -1,11 +1,22 @@
 {
   "date": "2026-10-15",
-  "state": "five_audios_verified_severance_recovery_processing",
+  "state": "six_audios_downloaded_verified",
+  "user_authorized": true,
   "voice_id": "IsEXLHzSvLH9UMB6SLHj",
   "voice_name": "Mellow Matt",
   "speed": 0.9,
-  "completed_audio_verified": 5,
   "source_characters": 778870,
+  "audio_measured": true,
+  "all_over_two_hours": true,
+  "successful_source_parts": 15,
+  "failed_attempts": [
+    {
+      "episode": "QP-06-severance-eagan",
+      "job_id": "c60fbaa4-1e36-49c5-b764-f3ef99d2528e",
+      "failure": "Async job failed: This job failed to complete. Please try again."
+    }
+  ],
+  "accepted_jobs_including_failed": 16,
   "recovery_audit": {
     "failed_job_id": "c60fbaa4-1e36-49c5-b764-f3ef99d2528e",
     "definitive_status": "failed",
@@ -17,142 +28,431 @@
     "replacement_parts": 4,
     "text_unchanged": true
   },
+  "recovery_note": "One definitive unbilled failure replaced by four shorter contiguous slices; source unchanged",
+  "balance_before": 3409093,
+  "balance_after": 2474474,
+  "observed_character_debit": 934619,
+  "debit_note": "Observed account balance change, including requested captions; other account activity may affect it",
+  "desktop_folder": "Voix sleep - 15 octobre 2026",
   "episodes": [
     {
       "id": "DV-01-force",
-      "state": "verified",
-      "parts": [
+      "title": "The Biggest Mysteries of the Force Explained to Fall Asleep To | Star Wars Theories",
+      "state": "audio_verified",
+      "script_sha256": "59408ed0a6bce3d35d1faca8f24458d56414b3edb7cccebda646c04b4d280352",
+      "source_characters": 127436,
+      "audio_file": "01-DV-01-force.mp3",
+      "audio_bytes": 172295358,
+      "audio_sha256": "131cf47a4497118840cefa143c8082eee10de4a1649a01e7217a18ea0364eab6",
+      "duration_seconds": 10768.399,
+      "duration": "2:59:28",
+      "over_two_hours": true,
+      "full_decode_passed": true,
+      "join_delta_seconds": 0.027,
+      "caption_checks": [
         {
           "id": "DV-01-force-part1",
-          "state": "verified",
-          "job_id": "1be77f29-fba6-4386-b035-12dde2446060"
+          "alignment_ratio": 0.996389,
+          "raw_alignment_ratio": 0.996389,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.338,
+          "passed": true
         },
         {
           "id": "DV-01-force-part2",
-          "state": "verified",
-          "job_id": "faf79d70-09eb-4e0c-a12a-9f2eb0b4788e"
+          "alignment_ratio": 0.996112,
+          "raw_alignment_ratio": 0.996112,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": false,
+          "audio_tail_after_srt_seconds": 0.369,
+          "passed": true
         }
       ],
-      "duration_seconds": 10768.399,
-      "audio_file": "01-DV-01-force.mp3",
-      "audio_sha256": "131cf47a4497118840cefa143c8082eee10de4a1649a01e7217a18ea0364eab6",
-      "full_decode_passed": true,
-      "over_two_hours": true
+      "parts": [
+        {
+          "id": "DV-01-force-part1",
+          "job_id": "1be77f29-fba6-4386-b035-12dde2446060",
+          "duration_seconds": 5190.922,
+          "audio_sha256": "bb69c06a56cf25d4a1ddd2bf770cecec056d0f689b5d3fa635ed4083996e454c"
+        },
+        {
+          "id": "DV-01-force-part2",
+          "job_id": "faf79d70-09eb-4e0c-a12a-9f2eb0b4788e",
+          "duration_seconds": 5577.45,
+          "audio_sha256": "851ae668b71ac27465b0868df2b5a290773942dda5e967d83fbcf78ba93a45cb"
+        }
+      ]
     },
     {
       "id": "DV-02-guilde",
-      "state": "verified",
-      "parts": [
+      "title": "The Secrets of Dune's Spacing Guild Explained to Fall Asleep To | Dune Lore",
+      "state": "audio_verified",
+      "script_sha256": "4c793266fa6804108661d8ba39fa232cb884aeaf6a66cf83c38cd956acc0aa16",
+      "source_characters": 132429,
+      "audio_file": "02-DV-02-guilde.mp3",
+      "audio_bytes": 179259805,
+      "audio_sha256": "7b2e9bf1526616d2759028b1bc22453119e6d09cc60eeed3bd87be5292f5d9c2",
+      "duration_seconds": 11203.683,
+      "duration": "3:06:44",
+      "over_two_hours": true,
+      "full_decode_passed": true,
+      "join_delta_seconds": 0.03,
+      "caption_checks": [
         {
           "id": "DV-02-guilde-part1",
-          "state": "verified",
-          "job_id": "87782602-f021-497e-8bd0-af51a6f0e9e8"
+          "alignment_ratio": 0.994251,
+          "raw_alignment_ratio": 0.994251,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.482,
+          "passed": true
         },
         {
           "id": "DV-02-guilde-part2",
-          "state": "verified",
-          "job_id": "dd98d114-3662-433c-9ab4-4535eaf7877d"
+          "alignment_ratio": 0.993562,
+          "raw_alignment_ratio": 0.993562,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.563,
+          "passed": true
         }
       ],
-      "duration_seconds": 11203.683,
-      "audio_file": "02-DV-02-guilde.mp3",
-      "audio_sha256": "7b2e9bf1526616d2759028b1bc22453119e6d09cc60eeed3bd87be5292f5d9c2",
-      "full_decode_passed": true,
-      "over_two_hours": true
+      "parts": [
+        {
+          "id": "DV-02-guilde-part1",
+          "job_id": "87782602-f021-497e-8bd0-af51a6f0e9e8",
+          "duration_seconds": 5786.719,
+          "audio_sha256": "5a138306ebc4010c90f9c11c28008354872ce9d571e5749642b21aed90e39e82"
+        },
+        {
+          "id": "DV-02-guilde-part2",
+          "job_id": "dd98d114-3662-433c-9ab4-4535eaf7877d",
+          "duration_seconds": 5416.934,
+          "audio_sha256": "064c86891776fcf7c9334c6b88684ce30628bdae949e2becca63559993a0d0c8"
+        }
+      ]
     },
     {
       "id": "DV-03-paul",
-      "state": "verified",
-      "parts": [
+      "title": "The Entire Story of Paul Atreides Explained to Fall Asleep To | Dune Lore",
+      "state": "audio_verified",
+      "script_sha256": "324399d806a72790c7de5cfa67a5b55a363ac8c45e24d94d5730b72586587a2b",
+      "source_characters": 131895,
+      "audio_file": "03-DV-03-paul.mp3",
+      "audio_bytes": 172163695,
+      "audio_sha256": "8cdf08a09239230a7fa4015be68aebb8ecb3de97b8ab51e9bd5186c23895b889",
+      "duration_seconds": 10760.176,
+      "duration": "2:59:20",
+      "over_two_hours": true,
+      "full_decode_passed": true,
+      "join_delta_seconds": 0.026,
+      "caption_checks": [
         {
           "id": "DV-03-paul-part1",
-          "state": "verified",
-          "job_id": "a99cf577-5476-46b4-99c1-b07a1086bdb6"
+          "alignment_ratio": 0.996512,
+          "raw_alignment_ratio": 0.996512,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.472,
+          "passed": true
         },
         {
           "id": "DV-03-paul-part2",
-          "state": "verified",
-          "job_id": "bcc19e62-72ba-44ef-8c09-d02723aa267e"
+          "alignment_ratio": 0.996032,
+          "raw_alignment_ratio": 0.996032,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.371,
+          "passed": true
         }
       ],
-      "duration_seconds": 10760.176,
-      "audio_file": "03-DV-03-paul.mp3",
-      "audio_sha256": "8cdf08a09239230a7fa4015be68aebb8ecb3de97b8ab51e9bd5186c23895b889",
-      "full_decode_passed": true,
-      "over_two_hours": true
+      "parts": [
+        {
+          "id": "DV-03-paul-part1",
+          "job_id": "a99cf577-5476-46b4-99c1-b07a1086bdb6",
+          "duration_seconds": 5347.892,
+          "audio_sha256": "f0249d916ed1b1a0ad076733a82415d8200c3a6fe4d32885e9b7ab8ac0ceff8b"
+        },
+        {
+          "id": "DV-03-paul-part2",
+          "job_id": "bcc19e62-72ba-44ef-8c09-d02723aa267e",
+          "duration_seconds": 5412.258,
+          "audio_sha256": "f8a4c2833ce421b9bc312ec80933332acf267b51ca2120b577c3f2cbf9c268d4"
+        }
+      ]
     },
     {
       "id": "QP-04-silo-indices",
-      "state": "verified",
-      "parts": [
+      "title": "2 Hours of Silo's Hidden Clues & Secrets to Fall Asleep To",
+      "state": "audio_verified",
+      "script_sha256": "989c1d08ba1e601ca54e632f53ea654b2bd84fc7c2c075221634b2a81b117689",
+      "source_characters": 129617,
+      "audio_file": "04-QP-04-silo-indices.mp3",
+      "audio_bytes": 169420208,
+      "audio_sha256": "7c8fc9968ebf1854ec677d1759942c7d69cca54233283d69d22616805d60975b",
+      "duration_seconds": 10588.709,
+      "duration": "2:56:29",
+      "over_two_hours": true,
+      "full_decode_passed": true,
+      "join_delta_seconds": 0.025,
+      "caption_checks": [
         {
           "id": "QP-04-silo-indices-part1",
-          "state": "verified",
-          "job_id": "4a25f19d-f9e1-4500-9461-80b41f3b1a1e"
+          "alignment_ratio": 0.981567,
+          "raw_alignment_ratio": 0.981567,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 5,
+          "first_50_words_identical": false,
+          "last_50_words_identical": false,
+          "audio_tail_after_srt_seconds": 0.484,
+          "passed": true
         },
         {
           "id": "QP-04-silo-indices-part2",
-          "state": "verified",
-          "job_id": "230b2bd4-4528-4251-80f2-70c28d8c32e2"
+          "alignment_ratio": 0.988028,
+          "raw_alignment_ratio": 0.988028,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 1,
+          "first_50_words_identical": true,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.289,
+          "passed": true
         }
       ],
-      "duration_seconds": 10588.709,
-      "audio_file": "04-QP-04-silo-indices.mp3",
-      "audio_sha256": "7c8fc9968ebf1854ec677d1759942c7d69cca54233283d69d22616805d60975b",
-      "full_decode_passed": true,
-      "over_two_hours": true
+      "parts": [
+        {
+          "id": "QP-04-silo-indices-part1",
+          "job_id": "4a25f19d-f9e1-4500-9461-80b41f3b1a1e",
+          "duration_seconds": 5279.27,
+          "audio_sha256": "f94fd1b9e92869efdc3be8b6c24c236a7510f53a2ff841db98a6857b928a09b4"
+        },
+        {
+          "id": "QP-04-silo-indices-part2",
+          "job_id": "230b2bd4-4528-4251-80f2-70c28d8c32e2",
+          "duration_seconds": 5309.414,
+          "audio_sha256": "a0f64ab4962f22e86e5c8eb940ddab7666895edf10a955a9123b087b82e9df2f"
+        }
+      ]
     },
     {
       "id": "QP-05-from-victor",
-      "state": "verified",
-      "parts": [
+      "title": "Victor's Memories Explained — FROM Theories to Fall Asleep To",
+      "state": "audio_verified",
+      "script_sha256": "b044e15e851e38e807cb2324b2a7192c81b1c84b0d08ff99c0b6d994a9cead12",
+      "source_characters": 125392,
+      "audio_file": "05-QP-05-from-victor.mp3",
+      "audio_bytes": 163498135,
+      "audio_sha256": "453265f45c2e3a3fcf9d8553a1c8d34abff8e9997109232a874d2bf869e086e6",
+      "duration_seconds": 10218.58,
+      "duration": "2:50:19",
+      "over_two_hours": true,
+      "full_decode_passed": true,
+      "join_delta_seconds": 0.026,
+      "caption_checks": [
         {
           "id": "QP-05-from-victor-part1",
-          "state": "verified",
-          "job_id": "056f7b92-cfc6-4a73-89e2-78b6ce995a42"
+          "alignment_ratio": 0.995286,
+          "raw_alignment_ratio": 0.995286,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": false,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.354,
+          "passed": true
         },
         {
           "id": "QP-05-from-victor-part2",
-          "state": "verified",
-          "job_id": "d933aaa0-afdd-4150-9c78-b09431e9166b"
+          "alignment_ratio": 0.994459,
+          "raw_alignment_ratio": 0.994459,
+          "reviewed_spelling_aliases": {},
+          "longest_nonmatching_source_span_words": 1,
+          "first_50_words_identical": false,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.42,
+          "passed": true
         }
       ],
-      "duration_seconds": 10218.58,
-      "audio_file": "05-QP-05-from-victor.mp3",
-      "audio_sha256": "453265f45c2e3a3fcf9d8553a1c8d34abff8e9997109232a874d2bf869e086e6",
-      "full_decode_passed": true,
-      "over_two_hours": true
+      "parts": [
+        {
+          "id": "QP-05-from-victor-part1",
+          "job_id": "056f7b92-cfc6-4a73-89e2-78b6ce995a42",
+          "duration_seconds": 5100.356,
+          "audio_sha256": "ca61d3b567481acb4714026cfa43aff1c700910c8501710ae2e52b1c2ac009bc"
+        },
+        {
+          "id": "QP-05-from-victor-part2",
+          "job_id": "d933aaa0-afdd-4150-9c78-b09431e9166b",
+          "duration_seconds": 5118.198,
+          "audio_sha256": "4a871c2ec1ef0e525023ff2069dc22494481fe8e412234cd98f3ff76ad713277"
+        }
+      ]
     },
     {
       "id": "QP-06-severance-eagan",
-      "state": "ready",
-      "parts": [
+      "title": "The Secrets of the Eagan Family — Severance Theories to Fall Asleep To",
+      "state": "audio_verified",
+      "script_sha256": "33620c8c582abce8b2d2639e94fd80be84f28d7e6e1adb9b56ecee06af16d813",
+      "source_characters": 132101,
+      "audio_file": "06-QP-06-severance-eagan.mp3",
+      "audio_bytes": 171951370,
+      "audio_sha256": "4308d0a401d45891590fe3401e249075ac4ad62bb791f9e38626627d8cd33d4f",
+      "duration_seconds": 10746.907,
+      "duration": "2:59:07",
+      "over_two_hours": true,
+      "full_decode_passed": true,
+      "join_delta_seconds": 0.104,
+      "caption_checks": [
         {
           "id": "QP-06-severance-eagan-part1",
-          "state": "verified",
-          "job_id": "62e2de4e-86e3-41c2-879f-9082817c050c"
+          "alignment_ratio": 0.993779,
+          "raw_alignment_ratio": 0.976821,
+          "reviewed_spelling_aliases": {
+            "lumen": "lumon",
+            "keir": "kier",
+            "egan": "eagan",
+            "egans": "eagans",
+            "coble": "cobel",
+            "kobel": "cobel",
+            "cobble": "cobel",
+            "james": "jame"
+          },
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": false,
+          "last_50_words_identical": false,
+          "audio_tail_after_srt_seconds": 0.145,
+          "passed": true
         },
         {
           "id": "QP-06-severance-eagan-part2a",
-          "state": "submitted",
-          "job_id": "797deafe-1339-4520-97e5-14a78c685b8b"
+          "alignment_ratio": 0.992179,
+          "raw_alignment_ratio": 0.982123,
+          "reviewed_spelling_aliases": {
+            "lumen": "lumon",
+            "keir": "kier",
+            "egan": "eagan",
+            "egans": "eagans",
+            "coble": "cobel",
+            "kobel": "cobel",
+            "cobble": "cobel",
+            "james": "jame"
+          },
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": false,
+          "last_50_words_identical": true,
+          "audio_tail_after_srt_seconds": 0.436,
+          "passed": true
         },
         {
           "id": "QP-06-severance-eagan-part2b",
-          "state": "submitted",
-          "job_id": "bd754572-fd22-47e5-9827-fc685192992d"
+          "alignment_ratio": 0.982675,
+          "raw_alignment_ratio": 0.971602,
+          "reviewed_spelling_aliases": {
+            "lumen": "lumon",
+            "keir": "kier",
+            "egan": "eagan",
+            "egans": "eagans",
+            "coble": "cobel",
+            "kobel": "cobel",
+            "cobble": "cobel",
+            "james": "jame"
+          },
+          "longest_nonmatching_source_span_words": 3,
+          "first_50_words_identical": false,
+          "last_50_words_identical": false,
+          "audio_tail_after_srt_seconds": 0.466,
+          "passed": true
         },
         {
           "id": "QP-06-severance-eagan-part2c",
-          "state": "submitted",
-          "job_id": "17b34770-5a33-45cf-9edc-699c4fa68dcf"
+          "alignment_ratio": 0.991953,
+          "raw_alignment_ratio": 0.980614,
+          "reviewed_spelling_aliases": {
+            "lumen": "lumon",
+            "keir": "kier",
+            "egan": "eagan",
+            "egans": "eagans",
+            "coble": "cobel",
+            "kobel": "cobel",
+            "cobble": "cobel",
+            "james": "jame"
+          },
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": false,
+          "last_50_words_identical": false,
+          "audio_tail_after_srt_seconds": 0.357,
+          "passed": true
         },
         {
           "id": "QP-06-severance-eagan-part2d",
-          "state": "submitted",
-          "job_id": "609c6ecf-bd5d-418e-9d53-605a32eab02f"
+          "alignment_ratio": 0.989015,
+          "raw_alignment_ratio": 0.976565,
+          "reviewed_spelling_aliases": {
+            "lumen": "lumon",
+            "keir": "kier",
+            "egan": "eagan",
+            "egans": "eagans",
+            "coble": "cobel",
+            "kobel": "cobel",
+            "cobble": "cobel",
+            "james": "jame"
+          },
+          "longest_nonmatching_source_span_words": 2,
+          "first_50_words_identical": true,
+          "last_50_words_identical": false,
+          "audio_tail_after_srt_seconds": 0.406,
+          "passed": true
+        }
+      ],
+      "parts": [
+        {
+          "id": "QP-06-severance-eagan-part1",
+          "job_id": "62e2de4e-86e3-41c2-879f-9082817c050c",
+          "duration_seconds": 5389.453,
+          "audio_sha256": "f113086d71114b7aee9804e8928ca058bd64d7964c36b06936783ea9f70e08e6"
+        },
+        {
+          "id": "QP-06-severance-eagan-part2a",
+          "job_id": "797deafe-1339-4520-97e5-14a78c685b8b",
+          "duration_seconds": 1331.67,
+          "audio_sha256": "8584193f1019e4774ed8cec65869eae5ccd12dda974dc10f1911662f3d42a101"
+        },
+        {
+          "id": "QP-06-severance-eagan-part2b",
+          "job_id": "bd754572-fd22-47e5-9827-fc685192992d",
+          "duration_seconds": 1363.148,
+          "audio_sha256": "665753305a983406cae10301245ade63601a7a36de548ce54023a9f1e9425ef9"
+        },
+        {
+          "id": "QP-06-severance-eagan-part2c",
+          "job_id": "17b34770-5a33-45cf-9edc-699c4fa68dcf",
+          "duration_seconds": 1325.166,
+          "audio_sha256": "d0050d021daddbb10df1e9aaa6bbd93c836be4ca5ae82c9af8f69f3095cc1bd5"
+        },
+        {
+          "id": "QP-06-severance-eagan-part2d",
+          "job_id": "609c6ecf-bd5d-418e-9d53-605a32eab02f",
+          "duration_seconds": 1337.366,
+          "audio_sha256": "d7538e893d99749155a346d67a099150a0f4b3c694d4dc03709910fb612b9afd"
         }
       ]
     }
+  ],
+  "limitations": [
+    "Full MP3 decoding and transcript comparison performed; no claim of complete human listening",
+    "Automatic captions retain transcription errors, especially names; review before publication",
+    "No music, video montage or publication performed"
   ]
 }

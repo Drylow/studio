@@ -94,3 +94,22 @@ Le dépôt principal contient d'autres travaux et modifications en cours.
 Ne pas faire de reset, de nettoyage global, de push forcé ou de commit de fichiers
 étrangers à cette reprise. En cas de branches divergentes, intégrer les changements
 de cette reprise sur la branche principale dans un checkout isolé.
+
+## Voix Algrow du 15 octobre
+
+Les six narrations ont été produites avec l'API Algrow, voix Mellow Matt
+`IsEXLHzSvLH9UMB6SLHj`, vitesse 0,90. Les parties sources sont terminées ;
+ne pas les relancer. Voir `narrations-2026-10-15/README.md` et le registre privé
+`work/sleep-voiceovers-2026-10-15/ledger.json`. MP3 complets sur le Bureau dans
+**Voix sleep - 15 octobre 2026**, et dans **VOIX-FINALES** de la sauvegarde.
+
+Cet accès API utilise `ALGROW_API_KEY` dans le `.env` privé du dépôt ; il peut
+fonctionner après un changement de compte ChatGPT sur le même PC. La connexion
+MCP de recherche reste propre au compte de l'application. Une ancienne variable
+Windows du même nom est refusée : l'exécuteur choisit la clé du `.env` uniquement
+pour son processus. Ne pas modifier Windows ni afficher la clé.
+
+Compte professionnel : 100 000 caractères maximum par génération, et sous-titres
+avec supplément. Les fichiers sont découpés sans réécriture puis réunis en MP3
+sans silence ou répétition ajoutés. Les SRT sont automatiques, noms à relire.
+L'exécuteur de reprise ne soumet pas de nouveau job en mode `monitor`.
