@@ -25,6 +25,14 @@ image or prove consistency across a whole video.
   belongs to the episode: do not copy the rust tunic into every franchise.
 - Expressions come from the small face, head tilt, shoulders and hands. Avoid
   expressionless lineups, enormous exaggerated emoji faces or permanent panic.
+- User correction, 16 October: approval of a head design does NOT approve its
+  reference expression as a permanent mood. Individual identity sheets use a
+  calm neutral resting face. Every shot specifies the emotion of EACH visible
+  named actor from the actual event: joy, amusement, confidence, concentration,
+  frustration, surprise, fear or relief as appropriate. A happy event merits a
+  visible smile; danger alone does not make every bystander wear the same face.
+  Identity references lock anatomy, proportions and wardrobe, never acting.
+  Inspect faces against the authored emotional beat, not only the cast sheet.
 - Bulky armour may add silhouette width while the visible face remains the same
   simple round white drawing. Never replace it with a realistic muscular human.
 
@@ -83,6 +91,10 @@ for the actual environment. Do not import people, props, palace architecture,
 palette or composition from the house-style image. Recognisable nonhuman aliens
 keep their own anatomy and natural colours in the same matte2D drawing technique.
 Show exactly the named actors, one of each, performing the one specified event.
+Identity sheets supply head design, body and wardrobe ONLY, never a fixed mood.
+Follow the separately authored expression and body language for EACH actor in
+this exact shot. Relaxed/happy moments must not inherit the worried expression
+of an earlier reference. Retain the simple face design while changing its acting.
 Full-frame16:9; no panels, text, watermark or blurred side borders.
 ```
 

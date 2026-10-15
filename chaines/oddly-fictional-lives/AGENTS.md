@@ -24,6 +24,10 @@ creating any future humanoid cast. The newer explicit approval includes its
 compact proportions, small expressive brows/mouth and simple white mitten hands;
 do not restore the older rigid no-eyebrow rule as if it were the latest decision.
 Episode costumes and identities change; the house drawing language does not.
+User correction, 16 October: the reference's worried face is NOT a permanent
+character feature. Use neutral identity sheets and manually author each visible
+actor's expression per shot, including smiles/confidence when justified. Check
+the generated acting against the scene, not only identity and clothing.
 Aliens such as Jabba and Covenant species preserve their recognisable anatomy
 and natural colour. New Halo/Space Marine trials still require inspection and
 are not approved merely because the Jabba style was approved.
