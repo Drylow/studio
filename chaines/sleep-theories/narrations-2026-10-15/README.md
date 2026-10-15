@@ -2,7 +2,7 @@
 
 Commande utilisateur : générer les six scripts finaux dans Algrow Voiceover avec la voix **Mellow Matt**, ID `IsEXLHzSvLH9UMB6SLHj`.
 
-Douze parties acceptées, deux par épisode, en cours côté service. Aucun MP3 final vérifié à ce stade. Voir `suivi.json` pour les identifiants acceptés ; ne pas les soumettre de nouveau.
+Douze parties acceptées, deux par épisode, en cours côté service. 1 MP3 complet vérifié et 5/12 parties récupérées au dernier relevé. Voir `suivi.json` pour les identifiants acceptés ; ne pas les soumettre de nouveau.
 
 Le compte professionnel limite chaque demande à 100 000 caractères : les scripts sont coupés à une séparation de paragraphes proche du milieu, sans réécriture. Leur concaténation textuelle reproduit exactement chaque source finale contrôlée. Vitesse 0,90, réglages standards existants, sous-titres demandés. Les crédits de sous-titrage peuvent s'ajouter à ceux du texte ; le débit sera relevé à la fin.
 

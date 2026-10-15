@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "state": "twelve_parts_accepted_processing",
+  "state": "voiceovers_processing",
   "user_authorized": true,
   "voice_id": "IsEXLHzSvLH9UMB6SLHj",
   "voice_name": "Mellow Matt",
@@ -18,14 +18,24 @@
         {
           "id": "DV-01-force-part1",
           "job_id": "1be77f29-fba6-4386-b035-12dde2446060",
-          "characters": 63914
+          "characters": 63914,
+          "state": "verified",
+          "duration_seconds": 5190.922
         },
         {
           "id": "DV-01-force-part2",
           "job_id": "faf79d70-09eb-4e0c-a12a-9f2eb0b4788e",
-          "characters": 63522
+          "characters": 63522,
+          "state": "verified",
+          "duration_seconds": 5577.45
         }
-      ]
+      ],
+      "state": "verified",
+      "duration_seconds": 10768.399,
+      "audio_file": "01-DV-01-force.mp3",
+      "audio_sha256": "131cf47a4497118840cefa143c8082eee10de4a1649a01e7217a18ea0364eab6",
+      "full_decode_passed": true,
+      "over_two_hours": true
     },
     {
       "id": "DV-02-guilde",
@@ -35,14 +45,18 @@
         {
           "id": "DV-02-guilde-part1",
           "job_id": "87782602-f021-497e-8bd0-af51a6f0e9e8",
-          "characters": 66034
+          "characters": 66034,
+          "state": "submitted"
         },
         {
           "id": "DV-02-guilde-part2",
           "job_id": "dd98d114-3662-433c-9ab4-4535eaf7877d",
-          "characters": 66395
+          "characters": 66395,
+          "state": "verified",
+          "duration_seconds": 5416.934
         }
-      ]
+      ],
+      "state": "ready"
     },
     {
       "id": "DV-03-paul",
@@ -52,14 +66,18 @@
         {
           "id": "DV-03-paul-part1",
           "job_id": "a99cf577-5476-46b4-99c1-b07a1086bdb6",
-          "characters": 65930
+          "characters": 65930,
+          "state": "verified",
+          "duration_seconds": 5347.892
         },
         {
           "id": "DV-03-paul-part2",
           "job_id": "bcc19e62-72ba-44ef-8c09-d02723aa267e",
-          "characters": 65965
+          "characters": 65965,
+          "state": "submitted"
         }
-      ]
+      ],
+      "state": "ready"
     },
     {
       "id": "QP-04-silo-indices",
@@ -69,14 +87,18 @@
         {
           "id": "QP-04-silo-indices-part1",
           "job_id": "4a25f19d-f9e1-4500-9461-80b41f3b1a1e",
-          "characters": 64732
+          "characters": 64732,
+          "state": "submitted"
         },
         {
           "id": "QP-04-silo-indices-part2",
           "job_id": "230b2bd4-4528-4251-80f2-70c28d8c32e2",
-          "characters": 64885
+          "characters": 64885,
+          "state": "verified",
+          "duration_seconds": 5309.414
         }
-      ]
+      ],
+      "state": "ready"
     },
     {
       "id": "QP-05-from-victor",
@@ -86,14 +108,17 @@
         {
           "id": "QP-05-from-victor-part1",
           "job_id": "056f7b92-cfc6-4a73-89e2-78b6ce995a42",
-          "characters": 62480
+          "characters": 62480,
+          "state": "submitted"
         },
         {
           "id": "QP-05-from-victor-part2",
           "job_id": "d933aaa0-afdd-4150-9c78-b09431e9166b",
-          "characters": 62912
+          "characters": 62912,
+          "state": "submitted"
         }
-      ]
+      ],
+      "state": "ready"
     },
     {
       "id": "QP-06-severance-eagan",
@@ -103,14 +128,19 @@
         {
           "id": "QP-06-severance-eagan-part1",
           "job_id": "62e2de4e-86e3-41c2-879f-9082817c050c",
-          "characters": 65932
+          "characters": 65932,
+          "state": "submitted"
         },
         {
           "id": "QP-06-severance-eagan-part2",
           "job_id": "c60fbaa4-1e36-49c5-b764-f3ef99d2528e",
-          "characters": 66169
+          "characters": 66169,
+          "state": "submitted"
         }
-      ]
+      ],
+      "state": "ready"
     }
-  ]
+  ],
+  "completed_audio_verified": 1,
+  "parts_verified": 5
 }
