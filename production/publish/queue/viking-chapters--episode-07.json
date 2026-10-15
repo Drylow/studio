@@ -1,0 +1,17 @@
+{
+  "channel": "Viking Chapters",
+  "title": "Why Being a Viking Child Was Worse Than You Think",
+  "description_file": "chaines/viking-chapters/episode-07/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/6yhSFJlH",
+    "file": "final.mp4",
+    "sha256": "10737ee2b584040372710427840248618540ef243f4f519b54c21bc7ecb1b171",
+    "url": "http://media.edgerunners.fr/viking-chapters--episode-07-6e10d4405969367c.mp4"
+  },
+  "thumbnail": "chaines/viking-chapters/episode-07/thumbnail.jpg",
+  "captions": "chaines/viking-chapters/episode-07/English-Captions.srt",
+  "tags_file": "chaines/viking-chapters/episode-07/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-20T10:00",
+  "tubeforge_video_id": "why-being-a-viking-child-was-worse-than-02e1ba"
+}
