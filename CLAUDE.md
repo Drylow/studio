@@ -67,7 +67,7 @@ variables disponibles. Les secrets d'une session Codex ne sont pas transférés 
   ([.claude/skills/publier/SKILL.md](.claude/skills/publier/SKILL.md)), fiches dans
   `production/publish/`. Pas de Zernio pour elles (son choix). Les autres chaînes TubeForge
   (Patch Survives, Alien Aftermath, Deep Sea Survival, Oddly Fictional Lives) sont à son collègue.
-  **16 octobre : Scene Analysis Guy = 10 min minimum par vidéo** (jamais plus court ; miniature nette, vérifiée en taille réelle). **15 octobre : Samurai Chapters retirée** (compte Google mort) : plus de vidéo ni de publication.
+  **16 octobre : Scene Analysis Guy = 10 min minimum par vidéo** (jamais plus court ; miniature dans le style de la chaîne : portraits photo HD régénérés, jamais une capture d'écran). **15 octobre : Samurai Chapters retirée** (compte Google mort) : plus de vidéo ni de publication.
 
 ## 2. Règles absolues
 

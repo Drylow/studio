@@ -11,7 +11,7 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 **Scene Analysis Guy : au moins 10 minutes par vidéo, toujours.** L'essai The Mentalist de 2 min 56 (« on peut pas se permettre de faire des vidéos aussi courtes ») est publié quand même, mais plus jamais de vidéo sous 10 minutes. Cible 10 à 15 min ; si les sources ne permettent pas 10 min, choisir un autre sujet ou plusieurs scènes, ne pas livrer court.
 
-**Miniature nette** (même jour) : images sources nettes et bien éclairées, sans gros zoom sur un extrait compressé ; regarder la miniature en taille réelle avant de livrer. Refaite : `episodes/jane-red-john-trap/Jane-Hardy-trap-YouTube-v2.jpg`.
+**Miniature = le style de la chaîne, jamais une capture d'écran** (même jour : « qualité de merde… fais les miniatures comme les autres ») : portraits photo HD face à face régénérés depuis les vrais visages (références : `thumbnails/tommy-alfie-shelby/base-without-badges.png` + photogrammes), fond brun chaud, fine ligne blanche inclinée, badges SVG d'origine via `compose-thumbnail-badges.mjs`. Exemple : `episodes/jane-red-john-trap/Jane-Hardy-v3-A.jpg`.
 
 ## Reprise actuelle — Peaky arrêté, test Hannibal livré pour contrôle privé
 

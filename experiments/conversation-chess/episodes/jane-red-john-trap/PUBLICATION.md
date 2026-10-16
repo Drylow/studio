@@ -9,6 +9,6 @@ PC (Fury) by `/publier`: private upload first, then YouTube Checks. **Stricter r
 - Title: Patrick Jane vs Red John's Trap Analyzed Like Chess | The Mentalist
 - Video: 2:55.8, SHA-256 `3cd17cae7b8f1034a04c070d335092b550919ed1248c24f61e3cfe30afbb4fe3`,
   studio server link in the queue file, GoFile backup https://gofile.io/d/zKkJdT0G
-- Thumbnail: [Jane-Hardy-trap-YouTube-v2.jpg](Jane-Hardy-trap-YouTube-v2.jpg) (16 Oct.: sharper frames, Jane in daylight; replaces the blurry v1)
+- Thumbnail: [Jane-Hardy-v3-A.jpg](Jane-Hardy-v3-A.jpg) (16 Oct.: channel style like Landa/Tommy/Hannibal: HD photographic portraits generated from real frames, warm brown background, thin slanted white line, original badges; alternative B in the same folder. v1 and raw-frame v2 rejected as blurry)
 - Description with chapters and Sneaky Snitch CC BY credit: [description.txt](description.txt)
 - Tags: [tags.txt](tags.txt) · Captions: [English-Captions.srt](English-Captions.srt)
