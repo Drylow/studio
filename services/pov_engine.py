@@ -1823,7 +1823,7 @@ def job_cast(job, pid, redetect=False, only=None, p0=0.0, p1=1.0):
 
 def _image_workers():
     try:
-        return max(1, min(16, int(os.getenv("AI_IMAGE_CONCURRENCY", "12"))))
+        return max(1, min(40, int(os.getenv("AI_IMAGE_CONCURRENCY", "12"))))  # jusqu'à 40 comptes images derrière le proxy
     except ValueError:
         return 6
 
