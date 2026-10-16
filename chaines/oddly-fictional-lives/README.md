@@ -5,6 +5,16 @@ decisions, abilities, relationships and consequences. Original narration and
 episode-specific white round-headed actors; no universal rank ladder imposed on
 every universe.
 
+## Production update — 16 October 2026
+
+- **Your Life Working for Jabba the Hutt** is completed and locally delivered:16:25,145 inspected images, Ryan Kurk voice,1080p/24fps and hard cuts. File and upload kit: `01 - Videos/Oddly Fictional Lives/05 - Your Life Working for Jabba the Hutt/`. Final VPS export removed after verified transfer. No publication from this workflow is claimed.
+- **Your Life as Every Rank in the Covenant (Halo)**: selected topic and visual test only; no episode script, narration or film prepared.
+- **Your Life as Every Rank in a Space Marine Chapter**: selected topic and visual test only; no episode script, narration or film prepared.
+- The earlier God of War, Pokémon, Sith Lord and Viltrumite productions are existing episodes, not additional new scripts awaiting production.
+- The independent **2D Stickman** drawing style is user-approved and saved as a reusable hosted preset. Portable source: [2D Stickman](../../presets/2d-stickman/README.md). Saving it does not switch this channel's default visual style or rewrite existing episodes.
+
+The15 October notes below describe the earlier stage; this update supersedes their statement that Jabba was only a feasibility test.
+
 ## Current stage â€” 15 October 2026
 
 The user requested a writing-method overhaul before further production.

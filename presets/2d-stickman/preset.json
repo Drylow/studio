@@ -1,0 +1,55 @@
+{
+  "id": "2d-stickman",
+  "name": "2D Stickman",
+  "language": "English",
+  "image_provider": "cli_proxy",
+  "prompt": "2D Stickman. Clean, simple digital explainer illustration with fine black contours, flat matte colors and generous negative space. Adult stick figures have round white faces, two small black dot eyes, a simple mouth and subtle expressive brows. Neck, torso, arms and legs are SINGLE THIN BLACK LINES, not a filled or clothed humanoid body. Small simple line fingers or simplified hands and tiny oval feet. Head about one fifth of standing height. Hair, headwear and story accessories may identify different actors; do not force the sample's teal cap, haircut or identity onto every new story. Exactly one instance of each named actor, two arms and two legs. Use neutral identity references and adapt each actor's facial expression and pose to the narrated situation: smiles, confidence, frustration, surprise or fear only when justified. Never copy one permanent worried face.\n\nENVIRONMENTAL SCENES: simple readable rooms or exteriors, fine gray construction/perspective lines, functional recognizable props, white or near-white large surfaces and muted slate blue, olive and gray with a few color accents. Objects can have one restrained darker side plane; no realistic texture or heavy shading. A verified episode-specific location master determines geometry and permanent left/right landmarks. Preserve it during continuous action, changing actions, interactions and meaningful crops rather than randomly redrawing or rotating the room. Create new locations when the story requires them; do not reuse one room for every scene. The sample shelter/maintenance room is an illustration example, not a default setting for future episodes.\n\nWHITE INSERTS: when the beat calls for an object, character explanation, comparison, diagram or cutaway on white, use an OPAQUE WHITE #FFFFFF field, visible to every edge. No inherited room, floor line, tabletop, gradients, cast shadow, transparency or black background. Use only the objects or actor specified for this beat. Sparse diagrams use few well-separated objects with thin black arrows. Keep character/prop identity references even when there is no environment. Do not attach a room master to a white insert. Do not generate written labels or numbers unless explicitly supplied and verified; add controlled typography separately when needed.\n\nLIGHTING AND CONTINUITY: night is a simple readable flat navy tint with small plain pale-yellow practical-light cones/patches, not cinematic darkness, bloom, realistic spotlight gradients or vignettes. Props keep their design and position until a narrated action moves them; document the state change. Every scene adds a new action, object, reaction, exchange or consequence. Explicitly distinguish identity, location and style-reference roles. Use a single selected drawing guide plus only the identities/places relevant to the shot; do not dump all gallery examples into every generation.\n\nAVOID: painterly brushwork, grain, photorealism, 3D gloss, anime lighting, lens effects, detailed human anatomy, decorative borders, watermarks, duplicate actors and unrequested text. Full-frame landscape16:9. Static slideshow presentation, no animated zoom.",
+  "background_direction": "Episode-specific places with simple, readable geography. Preserve the same camera axis and fixed architecture within a continuous scene using an inspected master. New places follow narration, not an arbitrary scene quota. Environmental scenes and white explanatory inserts are separate composition modes: a white insert has no borrowed room and keeps only relevant character/prop identity. Gallery scenery never supplies future story geography by default. Prepare explicit camera/light variants from a verified master before using them.",
+  "thumbnail_prompt": "Simple 2D stickman illustration in the same fine-contour, matte-color drawing language. Large readable expressive white cartoon face, thin stick body where visible, one clear story action or object, uncluttered background and strong visual separation at small size. Adapt expression to the title and situation. New composition for each subject. No extra characters, unrequested text, logos, painterly texture or realistic human anatomy. Landscape16:9.",
+  "visual_defaults": {
+    "aspect": "16:9",
+    "motion_strength": 0,
+    "captions": false,
+    "background_mode": "consistent",
+    "camera_policy": "stable",
+    "avg_scene_seconds": 6,
+    "use_character_refs": true
+  },
+  "references": [
+    {
+      "path": "refs/character-anatomy.png",
+      "label": "Neutral example of stickman anatomy; drawing style only, not a mandatory cast identity",
+      "role": "style-only",
+      "owner": "style",
+      "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6",
+      "review_state": "verified"
+    },
+    {
+      "path": "refs/environment-example.png",
+      "label": "Environmental drawing example; do not inherit its room, furnishings or mascot",
+      "role": "style-only",
+      "owner": "style",
+      "sha256": "60babc606893374bb6a0573511a26e1405f9c77fd67c57f3c0ff2b8963c8a328",
+      "review_state": "verified"
+    },
+    {
+      "path": "refs/white-object-example.png",
+      "label": "Isolated-object drawing on opaque white; example only",
+      "role": "style-only",
+      "owner": "style",
+      "sha256": "fc4f2a5a4af8fed4c54083a769d3d151c6719838403d27d529ebc7b23935d99a",
+      "review_state": "verified"
+    },
+    {
+      "path": "refs/white-diagram-example.png",
+      "label": "Sparse explanatory objects and connectors on opaque white; example only",
+      "role": "style-only",
+      "owner": "style",
+      "sha256": "ffe93ad06eef75ad09c913be431f8126a72c0a8aee5e7b7001297ec4ab509867",
+      "review_state": "verified"
+    }
+  ],
+  "drawing_reference_path": "refs/character-anatomy.png",
+  "preview": "preview.jpg",
+  "approval": "User approved the visual drawing style on16 October2026 and requested it saved as2D Stickman. Finch is an anatomy/style example, not a required permanent protagonist."
+}
