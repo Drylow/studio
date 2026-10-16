@@ -13,7 +13,7 @@
     "animated_zoom": false
   },
   "requested_publication_local": "2026-10-17T18:00:00+02:00",
-  "publication_state": "not_uploaded_or_scheduled",
+  "publication_state": "scheduled",
   "scenes": [
     {
       "id": 1,
@@ -9276,5 +9276,25 @@
     "words": 2752,
     "exact_character_alignment": true,
     "checks": "Technical full decode and supplied native character clock verified; not a claim of full human listening or independent speech recognition."
+  },
+  "render_qa": {
+    "bytes": 88820010,
+    "sha256": "834fd3e7412ca7837122e284309601ab85b7aec2fe18463b79890ce3b097932e",
+    "duration": 999.291667,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "audio_decoded_seconds": 999.294,
+    "clipped_ratio": 0.0,
+    "max_reference_mae": 3.0389294624328613,
+    "max_within_shot_mae": 0.7342129349708557,
+    "sampled_shots": 142,
+    "samples_per_shot": 3
+  },
+  "youtube": {
+    "video_id": "c5F1mxYw_7s",
+    "url": "https://youtu.be/c5F1mxYw_7s",
+    "scheduled_at": "2026-10-17T18:00:00+02:00",
+    "verified_channel_id": "UCPtMoROdHhigtpG5H_iFtIg"
   }
 }

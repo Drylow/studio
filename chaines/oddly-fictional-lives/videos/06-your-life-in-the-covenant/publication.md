@@ -14,9 +14,9 @@ the war.
 ## Upload settings
 
 Oddly Fictional Lives. English.17 October2026,18:00 Europe/Paris requested.
-This is a planned slot, not a confirmed YouTube schedule.
+Confirmed scheduled in YouTube Studio: 2026-10-17T18:00:00+02:00.
 Thumbnail: no text. Use the actual episode cast, no white human heads on aliens.
 Tags: Halo, Covenant, Grunt, Elite, Sangheili, Unggoy, Covenant ranks, Halo lore,
 your life as, animated story, Oddly Fictional Lives.
 
-Production is in progress; no finished MP4 or upload claimed.
+Finished1080p video verified and scheduled: https://youtu.be/c5F1mxYw_7s
