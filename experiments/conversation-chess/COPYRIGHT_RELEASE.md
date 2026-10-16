@@ -1,5 +1,11 @@
 # Droits et restrictions avant publication
 
+## Règle de durée — 16 octobre 2026 (l'utilisateur)
+
+**Scene Analysis Guy : au moins 10 minutes par vidéo, toujours.** L'essai The Mentalist de 2 min 56 (« on peut pas se permettre de faire des vidéos aussi courtes ») est publié quand même, mais plus jamais de vidéo sous 10 minutes. Cible 10 à 15 min ; si les sources ne permettent pas 10 min, choisir un autre sujet ou plusieurs scènes, ne pas livrer court.
+
+**Miniature nette** (même jour) : images sources nettes et bien éclairées, sans gros zoom sur un extrait compressé ; regarder la miniature en taille réelle avant de livrer. Refaite : `episodes/jane-red-john-trap/Jane-Hardy-trap-YouTube-v2.jpg`.
+
 ## Dexter / Doakes bloqué le 15 octobre 2026
 
 Le long Dexter vs Doakes (SHA256 `81f8b70c…`, 573 s de scènes Showtime sur

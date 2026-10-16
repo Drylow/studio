@@ -1,0 +1,61 @@
+{
+  "base": "/home/user/studio/experiments/conversation-chess/episodes/jane-red-john-trap/thumb-v2-base.png",
+  "base_sha256": "44e03be1ab0faf26ee9e26abc57b871af1a70dd473e8f19e6b1dc288dde647b8",
+  "layout": "/home/user/studio/experiments/conversation-chess/episodes/jane-red-john-trap/badge-layout.json",
+  "output_sha256": "b092bf91588b5b4d7083d1fa25946945aa8c712df654775666c705ed85673ea9",
+  "bytes": 322241,
+  "format": "image/jpeg",
+  "width": 1920,
+  "height": 1080,
+  "placements": [
+    {
+      "id": "brilliant",
+      "x": 28.799999999999997,
+      "y": 29.16,
+      "width": 240,
+      "height": 253.33333333333334,
+      "rotation_degrees": 0,
+      "bounds": {
+        "left": 27,
+        "top": 28,
+        "right": 270,
+        "bottom": 284
+      }
+    },
+    {
+      "id": "blunder",
+      "x": 1651.2,
+      "y": 29.16,
+      "width": 240,
+      "height": 253.33333333333334,
+      "rotation_degrees": 0,
+      "bounds": {
+        "left": 1650,
+        "top": 28,
+        "right": 1893,
+        "bottom": 284
+      }
+    }
+  ],
+  "changedOutsideBadges": 0,
+  "icons": [
+    {
+      "id": "brilliant",
+      "x": 0.015,
+      "y": 0.027,
+      "width": 0.125,
+      "rotation_degrees": 0,
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "x": 0.86,
+      "y": 0.027,
+      "width": 0.125,
+      "rotation_degrees": 0,
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ],
+  "pixel_comparison_stage": "Decoded canvas before file encoding; JPEG is lossy",
+  "visually_reviewed": false
+}
