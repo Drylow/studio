@@ -13,7 +13,7 @@
     "animated_zoom": false
   },
   "requested_publication_local": "2026-10-18T18:00:00+02:00",
-  "publication_state": "not_uploaded_or_scheduled",
+  "publication_state": "scheduled",
   "scenes": [
     {
       "id": 1,
@@ -8563,5 +8563,11 @@
     "max_within_shot_mae": 0.8076851963996887,
     "sampled_shots": 134,
     "samples_per_shot": 3
+  },
+  "youtube": {
+    "video_id": "3YtDr8Mc26g",
+    "url": "https://youtu.be/3YtDr8Mc26g",
+    "scheduled_at": "2026-10-18T18:00:00+02:00",
+    "verified_channel_id": "UCPtMoROdHhigtpG5H_iFtIg"
   }
 }
