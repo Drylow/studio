@@ -239,3 +239,37 @@ Colonne « déjà sur YouTube ? » : les recherches NexLev ont été faites sur 
 - **Durée de 21 min** : les séries 1, 2 et 3 ont une structure naturelle (30 jours, 10 rangs, les étapes d'un divorce) qui évite le remplissage.
 - **Règles de la chaîne** : vrais faits sourcés, pas de personnes réelles comme personnages, polyandrie et coutumes racontées avec respect.
 - Vérifier chaque titre précis sur NexLev juste avant de lancer : ces niches bougent vite.
+
+---
+
+## 4. Deuxième passe (16 oct., après le refus des idées ci-dessus) : « la femme qui arrive par un système »
+
+L'utilisateur garde seulement « Move to [pays] for Her » et veut plus fort.
+
+Les recherches NexLev montrent un thème qui explose partout côté **mariage arrangé / commandé / assigné** :
+
+| Vidéo | Chaîne (abonnés) | Vues | Ratio |
+|---|---|---|---|
+| He Ordered a Wife — She Arrived Determined to Be Nothing He Expected | West Narrative (4,4k) | **659k** | **31x** |
+| The Loner Rancher Waited for His Mail Order Bride — And a Woman Twice His Size Stepped Off the Wagon | The Best Wild West Stories | **761k** | — |
+| Mail-Order Bride Arrived A Day Too Late… | Wild West Love Tales | 207k | — |
+| He Prepared for a Cold, Loveless Marriage… Then His Mail-Order Bride… | Outlaw Cowboy Chronicles | 146k | — |
+| A Mail Order Bride Arrived With a Sewing Machine… | Frontier Brides (3,5k) | 115k | 5,6x |
+| State PAID ME 300 Coins to TAKE a FREE Wife?! | Silas Recap (35k) | 363k | — |
+| The Forgotten Destiny of the King's Daughters Sent by Louis XIV to Quebec | Hugo – Échos du Passé | 155k (2 mois) | — |
+
+- Des dizaines de chaînes font des histoires de « mail-order bride ».
+- Toutes sont en film ou en lecture de roman, avec des cowboys.
+- **Aucune n'est en POV animé** (recherches « POV you order a mail order bride » : 3 résultats, le plus gros à 31k ; « POV the king sends you a wife » : 0 POV).
+
+**La série proposée : « POV: You Order a [nationalité/époque] Bride »**
+
+Elle combine nos nationalités gagnantes et une prémisse forte : tu ne l'as vue qu'en photo, elle descend du bateau ou du train.
+
+- POV: You Order a Picture Bride From Japan (Hawaï, années 1910 : les « picture brides » japonaises, mariées sur photo)
+- POV: You Order a Mail-Order Bride in the Wild West (petites annonces matrimoniales des années 1870-1880)
+- POV: The King of France Ships You a Wife (les Filles du Roi, Nouvelle-France, 1663-1673)
+- POV: You Buy a Wife for 120 Pounds of Tobacco (Jamestown, 1620)
+- POV: You Order a Russian Bride Online (agences matrimoniales des années 1990-2000)
+
+Chiffres à vérifier avant chaque script (sources nommées), comme d'habitude.
