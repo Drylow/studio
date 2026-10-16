@@ -1,0 +1,259 @@
+{
+  "title": "First Night in the Shelter",
+  "purpose": "Controlled visual provider comparison",
+  "duration": 76.61,
+  "variants": {
+    "a": "cli_proxy",
+    "b": "google_flow"
+  },
+  "shared_narration": true,
+  "voice": "Ryan Kurk",
+  "fps": 24,
+  "render_size": [
+    1920,
+    1080
+  ],
+  "camera": "static",
+  "transition": "cuts",
+  "scenes": [
+    {
+      "id": 1,
+      "text": "Your first night in the shelter starts with something you didn't put on the checklist: a knock at the door.",
+      "start": 0,
+      "end": 5.421,
+      "scene_kind": "environment-day",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM, not inspiration. Insert the character from @reference_2 (image 2) into that existing drawing, preserving every wall seam, door proportion, overhead light shape, vent, shelf, table and prop design. Do not redesign anything. Drawing style already comes from that base.\nWide eye-level same-room composition. Day/neutral white room light, the ceiling lamp is on. Finch stands near the left end of workbench, body turned toward the CLOSED LEFT steel door, one small hand held beside his ear as he listens, other hand lowered. Slightly raised brows, attentive small open mouth, not generic terror. Add two small black knock marks at the door edge, no written words. Floor completely DRY. All master props remain in fixed positions, cloth still folded on tabletop, cup beside bottle. Exactly one person.\nNARRATED CONTEXT (never render text): Your first night in the shelter starts with something you didn't put on the checklist: a knock at the door.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "You reach for the radio. One voice, any voice, would help. All you get is static.",
+      "start": 5.421,
+      "end": 11.124,
+      "scene_kind": "object-white",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nImage 1 supplies the red radio's exact design only. Image 2 supplies isolated-object drawing style only.\nOne close-up of the RED RADIO from the room master, isolated on a solid OPAQUE WHITE field. Same left speaker, cream frequency window on upper right, two lower-right charcoal knobs, black handle and antenna. Do not import the room. Show just three small black jagged static lines beside the speaker. No musical note yet, no speech bubble, no words or numbers. Radio at generous scale with clear white margins. No character, hand, table, horizon, shadow, vignette, transparency or black background.\nNARRATED CONTEXT (never render text): You reach for the radio. One voice, any voice, would help. All you get is static.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "frame-006-36.50s.jpg",
+          "role": "WHITE INSERT DRAWING STYLE ONLY: outlined functional object, no reference text",
+          "sha256": "967a4d7194a8cbd8c96e5d335da98eb733a6d812b3ee9025637cd35fbadb4cea",
+          "source": "https://www.youtube.com/watch?v=RmyjNoz2pw4",
+          "seconds": 36.5,
+          "private_reference_frame": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "You turn the dial again. The same hiss. Then the ceiling light goes out.",
+      "start": 11.124,
+      "end": 16.319,
+      "scene_kind": "environment-night",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Insert Finch from @reference_2 (image 2), then change only the specified light and action. Preserve every wall seam, door proportion, overhead light shape, vent, table, shelf and prop design. Do not redesign the room.\nSame wide eye-level room and framing. Ceiling cage lamp OFF; simple uniform muted navy-blue tint over the whole scene, still very readable, no photoreal gloom or effects. Finch stands immediately LEFT of red radio and clearly pinches one LOWER RIGHT radio knob with his hand, not the speaker. Other arm down. Expression mildly frustrated at the static, lowered small brows, straight mouth, eyes on the radio. No flashlight yet. Every fixed prop stays at its master position, cloth folded on bench and gray cup by shelf bottle. Floor still dry. Exactly one Finch.\nNARRATED CONTEXT (never render text): You turn the dial again. The same hiss. Then the ceiling light goes out.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The backup battery has one green bar left. You stare at it as if disappointment might charge it.",
+      "start": 16.319,
+      "end": 22.562,
+      "scene_kind": "object-white",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nImage 1 is the BLUE PORTABLE BATTERY identity only. Image 2 is object drawing style only.\nSolid WHITE OPAQUE canvas. One large blue portable battery from the room master, black handle, charcoal controls, SINGLE small bright green charge bar and all other charge segments dark. Generous white margin, simple 3/4 object view. No words or numbers, no character, room, wires, table, floor, shadows or glow. Correct basic casing construction and thin neat outlines, flat muted blue sides. Do not add multiple green bars. White background all the way to every edge.\nNARRATED CONTEXT (never render text): The backup battery has one green bar left. You stare at it as if disappointment might charge it.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "frame-006-36.50s.jpg",
+          "role": "WHITE INSERT DRAWING STYLE ONLY: outlined functional object, no reference text",
+          "sha256": "967a4d7194a8cbd8c96e5d335da98eb733a6d812b3ee9025637cd35fbadb4cea",
+          "source": "https://www.youtube.com/watch?v=RmyjNoz2pw4",
+          "seconds": 36.5,
+          "private_reference_frame": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "That little box is keeping the lamp, the fan and the radio alive. Tonight, you can't keep all three.",
+      "start": 22.562,
+      "end": 30.328,
+      "scene_kind": "diagram-white",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nImage 1 supplies blue battery, gray work lamp, blue fan and red radio designs only; image 2 diagram drawing language only.\nOne sparse explanatory drawing on pure OPAQUE WHITE. Blue portable battery on LEFT with a SINGLE small GREEN charge bar. Three fine black arrows from it to three separated objects stacked vertically on RIGHT: gray work lamp on top, blue desk fan in middle, red radio on bottom. Exactly one of each, familiar object designs from room master. No numbers, labels, writing, extra icons, connectors crossing the objects or enclosing cards. Clear margins and large white gaps. No people or room. This is a simple pictorial dependency explanation, not an engineering wiring diagram.\nNARRATED CONTEXT (never render text): That little box is keeping the lamp, the fan and the radio alive. Tonight, you can't keep all three.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "frame-050-348.50s.jpg",
+          "role": "EXPLANATORY DRAWING STYLE ONLY: isolated flat colored objects and thin connectors on opaque white",
+          "sha256": "61e71c0b8867a0bff5fef1b2837e552f259c09c3d15a1827a57b93287b25dd74",
+          "source": "https://www.youtube.com/watch?v=RmyjNoz2pw4",
+          "seconds": 348.5,
+          "private_reference_frame": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "You switch off the work lamp and take out your flashlight. The radio stays on. You're not ready for silence.",
+      "start": 30.328,
+      "end": 37.408,
+      "scene_kind": "environment-night",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM and @reference_2 (image 2) ONLY as Finch identity. Preserve geometry, props and fine contours; change only specified action, pose and flat navy night coloring. No room redesign.\nSame wide room, no camera-angle change. Ceiling lamp OFF, gray work lamp OFF, fan STOPPED. Finch stands in front of workbench LEFT, holding a small gray flashlight firmly in his right hand. Short pale-yellow light cone points diagonally to floor in front of table. His other small hand rests on the red radio's top handle, not its speaker, intent on keeping it on. Determined eyebrows, closed purposeful mouth. Battery remains on bench center, cloth folded front-center, cup still by bottle on shelf. Room navy but readable. No radio music strokes yet. Floor still dry. Two arms, no third hand or extra flashlight.\nNARRATED CONTEXT (never render text): You switch off the work lamp and take out your flashlight. The radio stays on. You're not ready for silence.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Something cold touches your shoe. A thin trail of water is creeping under the steel door.",
+      "start": 37.408,
+      "end": 43.208,
+      "scene_kind": "environment-insert",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Crop its actual LEFT door threshold, not a newly drawn room. Preserve its door construction, seam lines and floor. Use the same drawing language, tinted flat navy for night.\nClose useful detail crop of the BOTTOM of the SAME CLOSED steel door, the door's floor threshold, and a thin shallow trail of blue-gray rainwater seeping from beneath it onto the floor toward the right. Maintain actual door/threshold geometry and same room side. One tiny outlined stickman foot near the right edge of crop, outside the water, optional lower stick leg ending at top crop. No full person or extra feet, no large puddle, flood, monster or silhouette. A small pale yellow flashlight pool lights the water. No cloth yet; no changed room or caption.\nNARRATED CONTEXT (never render text): Something cold touches your shoe. A thin trail of water is creeping under the steel door.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "You crouch beside it. Rainwater. For once, the explanation is less frightening than the noise.",
+      "start": 43.208,
+      "end": 49.606,
+      "scene_kind": "environment-night",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Insert Finch from @reference_2 (image 2), preserving exact door, light fixture, vent, shelf, table and all stated prop positions. Only pose/action and flat navy night coloring change.\nSame established camera orientation with closed steel door on LEFT, workbench center and shelf right visible in their places. Finch crouches directly beside the LEFT door threshold, looking down at a very thin rainwater trail with a small relieved mouth, raised relaxed brows. Holds one gray flashlight pointed at threshold in one hand; other empty hand rests on his own bent knee. Physically legible crouching stick anatomy, exactly two legs and two arms. The gray cloth is STILL folded on workbench front-center. Cup stays beside bottle on shelf. Navy night tint and modest flashlight patch, no ghost or extra person.\nNARRATED CONTEXT (never render text): You crouch beside it. Rainwater. For once, the explanation is less frightening than the noise.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "You pull the folded cloth off the workbench and press it against the gap. The dripping slows.",
+      "start": 49.606,
+      "end": 55.143,
+      "scene_kind": "environment-night",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Insert Finch from @reference_2 (image 2); preserve room construction and props except the cloth explicitly moving in this action. Keep exact camera orientation, tint flat navy at night.\nSame camera orientation, CLOSED LEFT door with narrow rainwater trail at threshold. Finch crouches beside the door and uses one hand to press the GRAY CLOTH against the lower gap; other hand holds gray flashlight aimed down at that exact action. Cloth has moved from workbench to door, so NO CLOTH remains on the table. Determined concentrated small face, not a smile or fear. Only a few droplets get past cloth; the floor is not flooded. Match master workbench and shelf shapes/positions behind him, cup by bottle still on shelf. Exactly one Finch, two arms, two legs.\nNARRATED CONTEXT (never render text): You pull the folded cloth off the workbench and press it against the gap. The dripping slows.\nCORRECTION CONTRACT: the gray cloth MUST TOUCH THE BOTTOM GAP OF THE CLOSED LEFT DOOR, at the actual door threshold, not a spot elsewhere on the floor. Finch's pressing hand and cloth must both be immediately at that gap. A rag at his feet away from the door FAILS this action. Cloth is OFF the workbench. Ceiling lamp OFF. Keep uniform flat readable dark navy-blue night lighting (#304665 wall family), not white daylight, no bloom, haze or vignette.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The knocking comes again. You lift the flashlight. On the shelf, a metal cup rocks against a bottle.",
+      "start": 55.143,
+      "end": 62.183,
+      "scene_kind": "environment-insert",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Crop its actual right-hand bottle shelf, preserving its object designs, orientation and construction. Apply simple flat navy night colors and the stated flashlight patch.\nTight useful crop of the shelf's BOTTLE LEVEL, consistent with same original side. The plain GRAY METAL CUP immediately LEFT of the nearest blue bottle is tilted slightly, tapping against that bottle. Exactly three blue bottles remain in the shot or its wider visible continuation, the nearest bottle upright. Two small black movement/tap strokes around cup, no letters. A small pale-yellow flashlight patch illuminates the cup and neighboring bottle; muted navy light elsewhere. No hand or person, no extra cup, no new shelving layout. Meaningful object insert, NOT an empty room.\nNARRATED CONTEXT (never render text): The knocking comes again. You lift the flashlight. On the shelf, a metal cup rocks against a bottle.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "You move the cup. Finally, quiet. Then a burst of music crackles out of the radio.",
+      "start": 62.183,
+      "end": 68.395,
+      "scene_kind": "environment-night",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Insert Finch from @reference_2 (image 2). Preserve exact room, table, vent, door and shelf; only stated prop moves, pose and flat navy night coloring change.\nSame room orientation. Finch now stands back at the workbench LEFT, smiling in relief. Holds exactly ONE GRAY METAL CUP in his left hand and one small gray flashlight in right hand, its pale light pointing to red radio. The cup has been REMOVED from shelf, so only three blue bottles remain on that shelf level. Small black curved sound strokes and ONE black musical note emerge from RED RADIO on table. Gray CLOTH remains at bottom of CLOSED LEFT door, not on workbench. Blue battery, gray work lamp and blue fan still in fixed positions, lamp/fan off. Exactly two hands holding two props, no third arm or second cup.\nNARRATED CONTEXT (never render text): You move the cup. Finally, quiet. Then a burst of music crackles out of the radio.\nLIGHT CONTINUITY CORRECTION: This is STILL THE SAME NIGHT AFTER THE POWER FAILURE. Fill all room walls and floor with the same uniform flat navy-blue night palette (#304665 wall family). The cage ceiling lamp is OFF, not a white bright room. Only a small local pale-yellow flashlight cone is permitted near the RED radio. Do not restore daylight, change the lamp shape, redesign the room or add cinematic glow. Finch smiles in relief, holding ONE gray metal cup in left hand and ONE gray flashlight in right; cup absent from shelf, cloth still touches bottom of LEFT door gap. Radio music is one small BLACK musical note, not extra text.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "You sit down, smiling. One dry corner, one working radio. For tonight, that's enough.",
+      "start": 68.395,
+      "end": 76.61,
+      "scene_kind": "environment-night",
+      "prompt": "ONE ORIGINAL 16:9 VIDEO STILL. Match the supplied frame references' simple digital explainer drawing language: fine black contours, thinner gray room seams, flat matte colors, readable object construction lines, very restrained two-tone shading, no realistic material texture, no painterly grain, no 3D gloss, no anime lighting, no lens effect, no decorative border, title, subtitles, logos, watermark or unrequested text. The references have distinct explicit roles; never copy the source video's orange-cap mascot or furnishings into this film.\nFINCH when named: exactly ONE adult stick figure, round white face, two small black dot eyes, simple situation-specific mouth and brows, short charcoal-dark hair, muted teal cap. SINGLE THIN BLACK LINE for torso, neck and every limb, not a filled human body. Two arms, two legs, small simple hands and tiny outlined oval feet. Match the neutral identity reference's head shape and proportions; that reference does NOT lock emotion or pose. NO backpack. No duplicates, reflections or ghost actors. Do not turn him into a muscular, clothed humanoid or a baby.\nROOM when present: exact room master geometry and permanent left/right: closed steel door at far LEFT, centered wall vent above gray workbench, steel shelf at far RIGHT, one overhead cage lamp. Red radio left on bench, blue portable battery center, gray work lamp back-right, blue fan far-right, gray folded cloth front-center until scene action moves it. Shelf: two olive boxes, three blue bottles and a gray metal cup just LEFT of nearest bottle until scene action moves it. No bunk bed, ladder, window, hatch or extra architecture. Keep this room in its SAME camera orientation. New actions and crops do not justify mirroring or replacing the room.\nNARRATED CONTEXT is for illustration only; never write narration or scene numbers on the image.\n\nUse @reference_1 (image 1) AS THE EXACT BASE ROOM. Insert Finch from @reference_2 (image 2). Preserve room, door, lamp fixture, vent, bench and shelf design. Only the exact stated character action, prop moves and flat navy night colors change.\nSame wide stable camera and room orientation. Finch sits comfortably on the DRY floor just LEFT of workbench, back against the pale wall, knees naturally bent, relaxed open-mouth smile. He holds gray flashlight in one small hand, softly illuminating a small dry floor area. Other hand rests on his bent knee. RED RADIO still on workbench LEFT, showing one musical note and small sound strokes. GRAY METAL CUP now stands on FRONT CENTER of workbench where the cloth used to be; NO CUP on shelf. GRAY CLOTH still blocks the CLOSED LEFT door bottom. Very thin rainwater trail remains only near door, never reaching Finch's dry seated corner. Battery and other fixtures stay in place; ceiling light/work lamp/fan remain off. Navy drawing, readable faces, exactly one Finch.\nNARRATED CONTEXT (never render text): You sit down, smiling. One dry corner, one working radio. For tonight, that's enough.\nFINAL NIGHT STYLE CORRECTION: keep the ENTIRE room evenly readable in uniform FLAT muted navy-blue color, matching the simple night drawing treatment (#304665 wall family). NO dark vignette, black corners, lens bloom, realistic spotlight gradient or glowing air. Flashlight has only a small plain pale-yellow cone and a simple flat oval on the floor. Finch sits on the dry floor LEFT of workbench, knees naturally bent, teal cap, thin stick limbs, smiling. Gray cloth TOUCHES the bottom gap of LEFT closed door, not floating on floor away from gap; water stays near that threshold. Cup on workbench front-center, absent from shelf. All fixed objects and room geometry unchanged.",
+      "ordered_references": [
+        {
+          "file": "room-master-v1.png",
+          "role": "ROOM AND PROP MASTER ONLY: exact geometry and object designs, no actors",
+          "sha256": "50307c5698af3510facc3a5c05d56326f2110fdc8b8161b6cddfaf1e0a52cb61"
+        },
+        {
+          "file": "finch-neutral-v1.png",
+          "role": "FINCH IDENTITY ONLY: exact head, hair, cap and stick anatomy; expression changes per scene",
+          "sha256": "9be7d7c07853444fa71fc982ac91bc7faf90fa6ecc8a645ff7a63f000f76f9b6"
+        }
+      ]
+    }
+  ]
+}

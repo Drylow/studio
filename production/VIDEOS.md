@@ -926,3 +926,7 @@ Content ID effectué pour cet épisode ; la validation porte sur le fichier loca
 ### Oddly Fictional Lives — episode05 delivered
 
 Your Life Working for Jabba the Hutt:145 inspected static shots, Ryan Kurk narration,16:25,1080p/24fps, hard cuts. Situation-specific acting replaces inherited worried faces. Rendered on VPS CPU; encoded-video QA and independent local SHA/size transfer passed. Delivery: `01 - Videos/Oddly Fictional Lives/05 - Your Life Working for Jabba the Hutt/`. Final VPS MP4 and obsolete frames removed after transfer; required voice/reference/authoring assets preserved. See `chaines/oddly-fictional-lives/videos/05-your-life-working-for-jabba-the-hutt/publication.md`. No YouTube upload performed.
+
+### Survival drawing style — matched-provider short-film test
+
+Delivered two full-frame versions and one synchronized comparison of the same76.61s fictional story:12 inspected shots, one Ryan Kurk narration,1080p/24fps, static camera and hard cuts. Images/render/QA on VPS only; local MP4 transfer verified by SHA-256. Residual accessory/lighting differences documented; not a new channel episode or YouTube upload. Local delivery: `03 - Creation/Bunker Survival - Comparatif video/`. Sources and observed limits: `reference/style-studies/bunker-provider-film-2026-10-16/README.md`.
