@@ -6,9 +6,8 @@ You recover a sacred relic. Your reward is enough air to carry it home.
 Experience the Covenant from a Grunt's cramped quarters to an Elite's commands,
 a shipmaster's bridge and the court deciding where everyone goes next.
 
-An original animated story set in Halo, exploring representative ranks and
-command levels through different characters. Species and specialist roles are
-not interchangeable promotions.
+An original animated story inspired by Halo, told from the Covenant's side of
+the war.
 
 #Halo #Covenant #YourLifeAs
 

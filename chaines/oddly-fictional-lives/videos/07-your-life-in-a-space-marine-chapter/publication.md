@@ -7,8 +7,8 @@ window. Survive long enough and you'll be the one deciding who goes through it.
 Follow a Scout through battles, power armour, squad command and the choices
 waiting for a Chapter Master.
 
-An original animated Warhammer40,000 story featuring the fictional Cobalt Wardens.
-This career follows the command ranks; specialist duties follow their own paths.
+An original animated Warhammer 40,000 story following Neral of the fictional
+Cobalt Wardens.
 
 #Warhammer40k #SpaceMarines #YourLifeAs
 
