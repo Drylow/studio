@@ -148,7 +148,7 @@ son marqueur (`AUDIT DONE`, `PROD DONE`, `QA DONE`, `RENDER DONE`, `ALL DONE`) :
   contredit les notes sourcées ; puis `python production/steps.py save <dossier>` et `touch <dossier>/script_ok`.
 - **Miniature** : `production/thumb.py` avec la référence de la chaîne, 2-4 variantes en planche, le choix
   de l'utilisateur va dans `<dossier>/thumb_choice.txt` (chemin absolu).
-- Durée par défaut 14 min ; **Oddly Specific Lives : 21 min depuis le 15 oct.** (l'utilisateur : « 20 minutes minimum », pour les revenus). Une vidéo prend ~1 h 30 à 2 h (images ≈ 4-5/min, rendu ≈ 25 min).
+- Durée par défaut 14 min ; **Oddly Specific Lives : 25 min depuis le 17 oct.** (l'utilisateur : « 25 minutes, toutes nos vidéos maintenant » ; avant : 21 min). Une vidéo prend ~1 h 30 à 2 h (images ≈ 4-5/min, rendu ≈ 25 min).
 
 ## 5. Vérifier avant d'envoyer (obligatoire)
 

@@ -167,7 +167,7 @@ TEMPLATES = {
                      "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
                      "understated expressions that sell the joke. Put the cultural details on screen (food, clothes, "
                      "architecture, objects, customs). Night city skylines and warm interiors for emotional beats.",
-        "default_minutes": 21, "minutes_rev": 1,  # 21 min depuis le 15 oct. 2026 (choix de l'utilisateur)
+        "default_minutes": 25, "minutes_rev": 2,  # 25 min depuis le 17 oct. 2026 (choix de l'utilisateur)
         "montage": {"pacing": 6.0, "hook_pacing": 6.0, "hook_seconds": 0, "min_scene": 3.0, "max_scene": 11.0,
                     "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "full",
