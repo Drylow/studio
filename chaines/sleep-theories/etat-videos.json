@@ -1,5 +1,5 @@
 {
-  "updated_date": "2026-10-15",
+  "updated_date": "2026-10-17",
   "timezone": "Europe/Paris",
   "deep_void_latest_user_report": {
     "date": "2026-10-12",
@@ -31,50 +31,77 @@
       "id": "deep-sith",
       "channel": "Deep Void Theories",
       "title": "The Entire History of the Sith Explained to Fall Asleep To | Star Wars Lore",
-      "status": "uploaded_draft_last_seen",
+      "status": "published_verified",
       "evidence": "YouTube Studio screenshot in chat",
       "scheduled_date": null,
       "thumbnail": "deep-void/miniatures/sith-acceptee.jpg",
-      "thumbnail_status": "user_accepted"
+      "thumbnail_status": "user_accepted",
+      "previous_status": "uploaded_draft_last_seen",
+      "published_date": "2026-10-12",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     },
     {
       "id": "deep-leto",
       "channel": "Deep Void Theories",
       "title": "The Entire Story of Leto II, God Emperor of Dune Explained to Fall Asleep To | Dune Lore",
-      "status": "published_last_seen",
+      "status": "published_verified",
       "published_date": "2026-10-10",
       "duration_seconds": 9189,
       "evidence": "YouTube Studio screenshot in chat: 2:33:09, public",
       "thumbnail": "deep-void/miniatures/leto-ii-utilisee.jpg",
-      "thumbnail_status": "matches_published_screenshot"
+      "thumbnail_status": "matches_published_screenshot",
+      "previous_status": "published_last_seen",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     },
     {
       "id": "deep-vader",
       "channel": "Deep Void Theories",
       "title": "The Tragic Life of Darth Vader Explained to Fall Asleep To | Star Wars Lore",
-      "status": "uploaded_draft_last_seen",
+      "status": "published_verified",
       "evidence": "YouTube Studio screenshot in chat",
       "scheduled_date": null,
       "thumbnail": "deep-void/miniatures/vador-acceptee.jpg",
-      "thumbnail_status": "user_accepted"
+      "thumbnail_status": "user_accepted",
+      "previous_status": "uploaded_draft_last_seen",
+      "published_date": "2026-10-16",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     },
     {
       "id": "deep-machines",
       "channel": "Deep Void Theories",
       "title": "The War Against the Thinking Machines Explained to Fall Asleep To | Dune Lore",
-      "status": "upload_announced_by_user",
+      "status": "published_verified",
       "evidence": "User: Je l'upload; later asks for copy while scheduling",
       "upload_finished": null,
       "scheduled_date": null,
       "thumbnail": "deep-void/miniatures/thinking-machines-proposition.jpg",
-      "thumbnail_status": "delivered_proposal_final_selection_unconfirmed"
+      "thumbnail_status": "delivered_proposal_final_selection_unconfirmed",
+      "previous_status": "upload_announced_by_user",
+      "published_date": "2026-10-14",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     },
     {
       "id": "quiet-silo",
       "channel": "Quiet Paradox",
       "rotation_position": 1,
       "title": "2 Hours of Silo's Biggest Mysteries & Theories to Fall Asleep To",
-      "status": "published_last_seen",
+      "status": "published_verified",
       "published_date": "2026-10-11",
       "duration_seconds": 10531,
       "views_at_screenshot": 55,
@@ -82,14 +109,20 @@
       "evidence": "YouTube Studio screenshot shared on 2026-10-12: 2:55:31, public",
       "script_words": 21321,
       "script_chapters": 22,
-      "thumbnail": "quiet-paradox/miniatures/silo-reference.jpg"
+      "thumbnail": "quiet-paradox/miniatures/silo-reference.jpg",
+      "previous_status": "published_last_seen",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     },
     {
       "id": "quiet-from",
       "channel": "Quiet Paradox",
       "rotation_position": 2,
       "title": "2 Hours of FROM's Biggest Mysteries & Theories to Fall Asleep To",
-      "status": "creation_in_progress_user_report",
+      "status": "published_verified",
       "target_duration_seconds": 9000,
       "duration_choice_confirmed": true,
       "evidence": "User confirmed 2 h 30 then creation in own tool",
@@ -99,14 +132,21 @@
       "thumbnail_status": "delivered_proposal_final_selection_unconfirmed",
       "thumbnail": "../quiet-paradox/02-from/miniature-from-1280x720.jpg",
       "description_file": "../quiet-paradox/02-from/description.txt",
-      "later_user_intent": "User planned to post FROM after Severance; completion unverified"
+      "later_user_intent": "User planned to post FROM after Severance; completion unverified",
+      "previous_status": "creation_in_progress_user_report",
+      "published_date": "2026-10-15",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     },
     {
       "id": "quiet-severance",
       "channel": "Quiet Paradox",
       "rotation_position": 3,
       "title": "2 Hours of Severance's Biggest Mysteries & Theories to Fall Asleep To",
-      "status": "upload_in_progress_user_report",
+      "status": "published_verified",
       "target_duration_seconds": 9000,
       "duration_choice_confirmed": false,
       "creation_started": null,
@@ -116,18 +156,24 @@
       "video_export": null,
       "thumbnail_status": "delivered_proposal_final_selection_unconfirmed",
       "thumbnail": "../quiet-paradox/03-severance/miniature-severance-1280x720.jpg",
-      "description_file": "../quiet-paradox/03-severance/description.txt"
+      "description_file": "../quiet-paradox/03-severance/description.txt",
+      "previous_status": "upload_in_progress_user_report",
+      "published_date": "2026-10-13",
+      "latest_verification": {
+        "date": "2026-10-17",
+        "source": "YouTube Studio content list",
+        "visibility": "Public"
+      }
     }
   ],
   "notes": [
     "Latest observed or reported states, not a live Studio synchronization",
     "No final MP4 exports are included",
-    "Do not relaunch FROM",
-    "Quiet handle and website project links need confirmation"
+    "Do not relaunch FROM"
   ],
   "next_script_batch": {
     "date": "2026-10-15",
-    "state": "six_final_scripts_and_voiceovers_verified",
+    "state": "six_videos_uploading_schedules_saved",
     "user_authorized": true,
     "deep_void_balance": {
       "Dune": 2,
@@ -138,7 +184,7 @@
       "new": "Paul Atreides"
     },
     "folder": "scripts-2026-10-15",
-    "publication_authorized": false,
+    "publication_authorized": true,
     "audio_generated": true,
     "scripts": [
       {
@@ -182,7 +228,7 @@
         "script": "DV-03-paul/script-voix.txt",
         "words": 21245,
         "minutes_at_150_wpm": 141.6,
-        "minutes_at_170_wpm": 125.0,
+        "minutes_at_170_wpm": 125,
         "two_hours_at_170_wpm": true,
         "hard_bans": 0,
         "mechanical_flags": 0,
@@ -304,5 +350,86 @@
       "report": "narrations-2026-10-15/suivi.json",
       "recovery_state": "completed"
     }
-  }
+  },
+  "publication_batch_2026_10_17": {
+    "source": "YouTube Studio observed through the two authenticated browser profiles",
+    "timezone": "Europe/Paris",
+    "local_package": "Desktop/Publications sleep - 17 octobre 2026",
+    "status": "uploading_schedules_saved",
+    "metadata_verified": true,
+    "thumbnails_visually_verified": true,
+    "all_collaborations_active": true,
+    "transfers_complete": false,
+    "checks_verified": false,
+    "private_video_links": "See local publication.json files; not copied to the public repository",
+    "videos": [
+      {
+        "id": "DV-02-guilde",
+        "channel": "Deep Void Theories",
+        "title": "The Secrets of Dune's Spacing Guild Explained to Fall Asleep To | Dune Lore",
+        "schedule_paris": "2026-10-18T20:00:00+02:00",
+        "bytes": 7443371617,
+        "duration_seconds": 11203.33,
+        "metadata_verified": true,
+        "thumbnail_verified": true,
+        "collaboration_verified": "Quiet Paradox: Active collaborator"
+      },
+      {
+        "id": "QP-04-silo-indices",
+        "channel": "Quiet Paradox",
+        "title": "2 Hours of Silo's Hidden Clues & Secrets to Fall Asleep To",
+        "schedule_paris": "2026-10-20T20:00:00+02:00",
+        "bytes": 7052614243,
+        "duration_seconds": 10588.8,
+        "metadata_verified": true,
+        "thumbnail_verified": true,
+        "collaboration_verified": "Deep Void Theories: Active collaborator"
+      },
+      {
+        "id": "DV-01-force",
+        "channel": "Deep Void Theories",
+        "title": "The Biggest Mysteries of the Force Explained to Fall Asleep To | Star Wars Theories",
+        "schedule_paris": "2026-10-22T20:00:00+02:00",
+        "bytes": 9059363046,
+        "duration_seconds": 10768.06,
+        "metadata_verified": true,
+        "thumbnail_verified": true,
+        "collaboration_verified": "Quiet Paradox: Active collaborator"
+      },
+      {
+        "id": "QP-05-from-victor",
+        "channel": "Quiet Paradox",
+        "title": "Victor's Memories Explained — FROM Theories to Fall Asleep To",
+        "schedule_paris": "2026-10-24T20:00:00+02:00",
+        "bytes": 7378082353,
+        "duration_seconds": 10218.64,
+        "metadata_verified": true,
+        "thumbnail_verified": true,
+        "collaboration_verified": "Deep Void Theories: Active collaborator"
+      },
+      {
+        "id": "DV-03-paul",
+        "channel": "Deep Void Theories",
+        "title": "The Entire Story of Paul Atreides Explained to Fall Asleep To | Dune Lore",
+        "schedule_paris": "2026-10-26T20:00:00+01:00",
+        "bytes": 7553574036,
+        "duration_seconds": 10759.79,
+        "metadata_verified": true,
+        "thumbnail_verified": true,
+        "collaboration_verified": "Quiet Paradox: Active collaborator"
+      },
+      {
+        "id": "QP-06-severance-eagan",
+        "channel": "Quiet Paradox",
+        "title": "The Secrets of the Eagan Family — Severance Theories to Fall Asleep To",
+        "schedule_paris": "2026-10-28T20:00:00+01:00",
+        "bytes": 8515900452,
+        "duration_seconds": 10746.38,
+        "metadata_verified": true,
+        "thumbnail_verified": true,
+        "collaboration_verified": "Deep Void Theories: Active collaborator"
+      }
+    ]
+  },
+  "quiet_handle_verified": "@QuietParadoxSleep"
 }

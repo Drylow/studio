@@ -1,8 +1,27 @@
 # Reprise — Deep Void Theories et Quiet Paradox
 
-État mis à jour le **15 octobre 2026**, fuseau **Europe/Paris**.
+État mis à jour le **17 octobre 2026**, fuseau **Europe/Paris**.
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
+
+## Publication du lot de six vidéos — 17 octobre
+
+L'utilisateur autorise l'envoi, les miniatures, les descriptions, la programmation
+et les collaborations croisées des six vidéos. Les MP4 terminés sont regroupés sur
+le Bureau dans **Publications sleep - 17 octobre 2026**, par chaîne et ordre de
+publication. Chaque dossier contient son MP4, sa miniature, son titre, sa description
+et `publication.json`. Les liens des vidéos et l'état du transfert restent dans
+ce paquet local ; ne pas exposer les accès de session dans le dépôt public.
+
+Les six transferts sont lancés. Les dates sont enregistrées dans Studio, les titres
+et descriptions relus, les miniatures regardées dans Studio et les six collaborations
+vérifiées « Active collaborator ». Les contrôles définitifs après traitement restent
+à terminer. Voir [le relevé du lot](publications-2026-10-17/README.md).
+
+La copie **REPRISE - documents et outils** dans le paquet du Bureau rassemble les
+scripts, recherches, miniatures et outils. Elle remplace la recherche de l'ancien
+paquet autonome, absent du Bureau le 17 octobre. Ne jamais relancer un upload
+existant sans vérifier sa progression et son identifiant local.
 
 **Commande active du 15 octobre :** les [six nouveaux scripts](scripts-2026-10-15/README.md)
 sont finalisés, relus et prêts pour la narration. Deep Void : Force, Guilde, Paul Atréides ; Quiet :
@@ -20,8 +39,8 @@ Copie sur le Bureau : **Voix sleep - 15 octobre 2026**. Ne pas régénérer les 
 Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient les six nouvelles
 propositions exportées : Force, Guilde, Paul, Silo, FROM, Severance. Force a été créée
 via le proxy API autorisé, avec deux Jedi humains originaux et des vaisseaux Star Wars.
-Les cinq autres viennent du générateur intégré. Les images sont revues visuellement,
-sans choix utilisateur ni publication. Copie simple : Miniatures sleep - 15 octobre 2026
+Les cinq autres viennent du générateur intégré. Les images ont été revues visuellement.
+Le 17 octobre, l'utilisateur demande de les appliquer aux six uploads. Copie simple : Miniatures sleep - 15 octobre 2026
 sur le Bureau.
 
 ## Lire dans cet ordre
