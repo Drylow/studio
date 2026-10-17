@@ -26,16 +26,23 @@ aveuglément le décalage d'été de Paris à une publication après le 25 octob
 
 ## État observé
 
-Les six transferts sont en cours et ont chacun un identifiant distinct.
+Les six transferts sont terminés et ont chacun un identifiant distinct.
 Les titres et descriptions sauvegardés ont été comparés aux fichiers de livraison.
 Les six miniatures personnalisées ont été regardées dans l'éditeur Studio.
 Les six collaborations ont été acceptées depuis le compte destinataire, puis
 rouvertes pour vérifier « Active collaborator ». Aucune invitation payante ou
 association publicitaire n'a été utilisée.
 
-Les contrôles définitifs de fin de transfert et des restrictions YouTube restent
-à faire. Ne pas confondre une date enregistrée pendant le transfert avec un
-traitement vidéo terminé.
+Les six dates ont été rouvertes après le transfert et correspondent au calendrier.
+Silo apparaît **Scheduled**, avec « Checks complete. No issues found. ».
+Les cinq autres vidéos affichent temporairement **Pending / Checks starting soon**
+pendant leur traitement par YouTube. Leurs dates sont sauvegardées : aucun nouvel
+envoi ni nouvelle programmation n'est nécessaire. La plateforme indique qu'elles
+deviendront publiques au créneau enregistré après traitement de la version SD.
+
+Les contrôles des cinq autres vidéos ne sont pas déclarés terminés. Vérifier leur
+état réel dans Studio avant d'affirmer l'absence de restrictions ; les fichiers
+locaux `publication.json` conservent ce dernier état observé.
 
 ## Emplacement et reprise
 
@@ -46,8 +53,8 @@ titres, descriptions, miniatures et états individuels, un calendrier et une cop
 
 Deep Void est ouvert dans AdsPower ; Quiet Paradox dans Fury. Les accès privés,
 connexions de débogage et identifiants de vidéos en attente sont conservés
-localement, hors du dépôt public. Garder les onglets d'envoi ouverts jusqu'à la
-fin des transferts. Ne pas recréer les six vidéos.
+localement, hors du dépôt public. Les profils restent ouverts pour consultation.
+Ne pas recréer les six vidéos.
 
 Les durées et flux des exports ont été inspectés. Douze images réparties dans
 chaque film ont été regardées ; cela ne constitue pas une relecture intégrale

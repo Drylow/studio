@@ -13,10 +13,12 @@ publication. Chaque dossier contient son MP4, sa miniature, son titre, sa descri
 et `publication.json`. Les liens des vidéos et l'état du transfert restent dans
 ce paquet local ; ne pas exposer les accès de session dans le dépôt public.
 
-Les six transferts sont lancés. Les dates sont enregistrées dans Studio, les titres
-et descriptions relus, les miniatures regardées dans Studio et les six collaborations
-vérifiées « Active collaborator ». Les contrôles définitifs après traitement restent
-à terminer. Voir [le relevé du lot](publications-2026-10-17/README.md).
+Les six transferts sont terminés. Les dates ont été rouvertes et vérifiées dans
+Studio, les titres et descriptions relus, les miniatures regardées dans Studio et
+les six collaborations vérifiées « Active collaborator ». Silo apparaît programmé,
+avec ses contrôles terminés sans problème. YouTube traite encore les cinq autres
+vidéos ; leurs dates sont enregistrées, avec le statut temporaire « Pending ».
+Voir [le relevé du lot](publications-2026-10-17/README.md).
 
 La copie **REPRISE - documents et outils** dans le paquet du Bureau rassemble les
 scripts, recherches, miniatures et outils. Elle remplace la recherche de l'ancien

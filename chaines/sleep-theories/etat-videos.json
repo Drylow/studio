@@ -173,7 +173,7 @@
   ],
   "next_script_batch": {
     "date": "2026-10-15",
-    "state": "six_videos_uploading_schedules_saved",
+    "state": "six_videos_uploaded_schedule_settings_verified",
     "user_authorized": true,
     "deep_void_balance": {
       "Dune": 2,
@@ -355,11 +355,11 @@
     "source": "YouTube Studio observed through the two authenticated browser profiles",
     "timezone": "Europe/Paris",
     "local_package": "Desktop/Publications sleep - 17 octobre 2026",
-    "status": "uploading_schedules_saved",
+    "status": "uploads_complete_processing_in_progress",
     "metadata_verified": true,
     "thumbnails_visually_verified": true,
     "all_collaborations_active": true,
-    "transfers_complete": false,
+    "transfers_complete": true,
     "checks_verified": false,
     "private_video_links": "See local publication.json files; not copied to the public repository",
     "videos": [
@@ -372,7 +372,11 @@
         "duration_seconds": 11203.33,
         "metadata_verified": true,
         "thumbnail_verified": true,
-        "collaboration_verified": "Quiet Paradox: Active collaborator"
+        "collaboration_verified": "Quiet Paradox: Active collaborator",
+        "upload_complete": true,
+        "studio_visibility": "Pending",
+        "notices": "Checks starting soon",
+        "checks_verified": false
       },
       {
         "id": "QP-04-silo-indices",
@@ -383,7 +387,11 @@
         "duration_seconds": 10588.8,
         "metadata_verified": true,
         "thumbnail_verified": true,
-        "collaboration_verified": "Deep Void Theories: Active collaborator"
+        "collaboration_verified": "Deep Void Theories: Active collaborator",
+        "upload_complete": true,
+        "studio_visibility": "Scheduled",
+        "notices": "—",
+        "checks_verified": true
       },
       {
         "id": "DV-01-force",
@@ -394,7 +402,11 @@
         "duration_seconds": 10768.06,
         "metadata_verified": true,
         "thumbnail_verified": true,
-        "collaboration_verified": "Quiet Paradox: Active collaborator"
+        "collaboration_verified": "Quiet Paradox: Active collaborator",
+        "upload_complete": true,
+        "studio_visibility": "Pending",
+        "notices": "Checks starting soon",
+        "checks_verified": false
       },
       {
         "id": "QP-05-from-victor",
@@ -405,7 +417,11 @@
         "duration_seconds": 10218.64,
         "metadata_verified": true,
         "thumbnail_verified": true,
-        "collaboration_verified": "Deep Void Theories: Active collaborator"
+        "collaboration_verified": "Deep Void Theories: Active collaborator",
+        "upload_complete": true,
+        "studio_visibility": "Pending",
+        "notices": "Checks starting soon",
+        "checks_verified": false
       },
       {
         "id": "DV-03-paul",
@@ -416,7 +432,11 @@
         "duration_seconds": 10759.79,
         "metadata_verified": true,
         "thumbnail_verified": true,
-        "collaboration_verified": "Quiet Paradox: Active collaborator"
+        "collaboration_verified": "Quiet Paradox: Active collaborator",
+        "upload_complete": true,
+        "studio_visibility": "Pending",
+        "notices": "Checks starting soon",
+        "checks_verified": false
       },
       {
         "id": "QP-06-severance-eagan",
@@ -427,9 +447,15 @@
         "duration_seconds": 10746.38,
         "metadata_verified": true,
         "thumbnail_verified": true,
-        "collaboration_verified": "Deep Void Theories: Active collaborator"
+        "collaboration_verified": "Deep Void Theories: Active collaborator",
+        "upload_complete": true,
+        "studio_visibility": "Pending",
+        "notices": "Checks starting soon",
+        "checks_verified": false
       }
-    ]
+    ],
+    "checks_complete_count": 1,
+    "studio_scheduled_count": 1
   },
   "quiet_handle_verified": "@QuietParadoxSleep"
 }
