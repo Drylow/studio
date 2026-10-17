@@ -5,7 +5,45 @@ decisions, abilities, relationships and consequences. Original narration and
 episode-specific white round-headed actors; no universal rank ladder imposed on
 every universe.
 
-## Production update — 16 October 2026
+## Production update — 17 October 2026
+
+The two previously selected follow-ups are finished and scheduled on the verified
+Oddly Fictional Lives channel, one per day at 18:00 Europe/Paris:
+
+| Episode | Actual duration / inspected shots | YouTube schedule |
+| --- | --- | --- |
+| [Your Life at Every Level of the Covenant (Halo)](https://youtu.be/c5F1mxYw_7s) |16:39 /142 |17 October 2026, 18:00 Paris |
+| [Your Life as Every Rank in a Space Marine Chapter](https://youtu.be/3YtDr8Mc26g) |16:24 /134 |18 October 2026, 18:00 Paris |
+
+Both were authored and revised by Codex with the saved Faceless OS editorial
+workflow, then voiced with Ryan Kurk on the production VPS before the timed
+storyboards. Every generated shot was actually inspected; 5 Halo and 27 Marine
+corrections were generated and re-viewed. The Marine drawing guide was changed
+to its inspected blue-armour identity after a civilian red tunic leaked into
+several outputs. Aliens retain their species; exposed human heads/hands retain
+the approved round-white drawing. Reference images fix identity, never emotion.
+
+Both final 1080p/24fps files use hard cuts and static framing. Full decode,
+voice clock, all shot/source matches and within-shot motion checks passed.
+No human-viewing claim or retention improvement is asserted. Custom thumbnails
+contain no text; public descriptions contain no external links or source blocks.
+YouTube showed both as scheduled and reported no issues during its checks.
+
+Delivery folders are `01 - Videos/Oddly Fictional Lives/06 - Your Life at Every
+Level of the Covenant (Halo)/` and `01 - Videos/Oddly Fictional Lives/07 - Your
+Life as Every Rank in a Space Marine Chapter/`. Each contains the film, two
+thumbnail alternatives and one combined publication file. SHA-256 and byte size
+were independently checked after transfer. The final MP4s were then deleted from
+the VPS at the owner's request; current images, voice, references and QA receipts
+remain. Private recovery/orchestration: `work/ofl-next-2026-10-17/`.
+
+The channel has five existing public fiction episodes and these two scheduled
+releases, seven in total. Three more would reach the user's ten-video target;
+no additional topics are approved by this production batch.
+
+The dated notes below are historical and are superseded by this update.
+
+## Previous production update — 16 October 2026
 
 - **Your Life Working for Jabba the Hutt** is completed and locally delivered:16:25,145 inspected images, Ryan Kurk voice,1080p/24fps and hard cuts. File and upload kit: `01 - Videos/Oddly Fictional Lives/05 - Your Life Working for Jabba the Hutt/`. Final VPS export removed after verified transfer. No publication from this workflow is claimed.
 - **Your Life as Every Rank in the Covenant (Halo)**: selected topic and visual test only; no episode script, narration or film prepared.
