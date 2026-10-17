@@ -55,6 +55,7 @@ variables disponibles. Les secrets d'une session Codex ne sont pas transférés 
   Sur une chaîne en automatique (notamment Cage Dispatch et Pitch Dispatch), l'agent choisit et publie
   dans les règles de la chaîne, sans validation à chaque vidéo. Les contrôles de faits, droits et
   qualité restent obligatoires. Voir `production/DASHBOARD_PLAN.md`.
+- **Corriger sans demander** (l'utilisateur, 17 oct. : « si c'est pas bon, tu relances sans me demander ») : images ratées, anachronismes (meubles modernes dans une vidéo historique), rendu à refaire → on corrige, on relance, on prévient après. **Vidéo historique : ajouter une consigne d'époque à chaque prompt d'image** (décor de l'époque, liste de ce qui est interdit : canapé, cadres, frigo…), sinon l'IA dessine des intérieurs modernes (Geisha 1940, Gladiator an 195).
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
   jamais que « c'est local » ou que tu « ne peux pas pousser ».
 - **7 octobre : aucun programme à installer sur son PC pour publier.** Les parcours PC sont retirés.
