@@ -1655,7 +1655,7 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
     batches = [todo[i:i + 12] for i in range(0, len(todo), 12)]
     done = 0
     results = {}
-    ex = ThreadPoolExecutor(max_workers=4)
+    ex = ThreadPoolExecutor(max_workers=min(len(batches), 12))  # 4 → 12 : ~8 min → ~3 min pour une vidéo de 25 min
     try:
         futs = [ex.submit(_prompt_batch, ch, pr, b, pr["scenes"]) for b in batches]
         for fut in as_completed(futs):
