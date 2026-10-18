@@ -270,5 +270,7 @@
   "scriptwriting_status": "twenty_manuscripts_written_and_editorially_revised",
   "scriptwriting_manifest": "../scripts-20-2026-10-18/manifest.json",
   "topics_approved_for_scriptwriting": true,
-  "thumbnail_choice": null
+  "thumbnail_choice": null,
+  "scriptwriting_benchmark": "POVrank",
+  "scriptwriting_revision": "povrank_comparison_2026-10-19"
 }

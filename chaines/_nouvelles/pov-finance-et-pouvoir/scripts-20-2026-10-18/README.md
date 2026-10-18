@@ -1,33 +1,41 @@
 # Vingt scripts — The Wealthy Nobody et Oddly Important Guy
 
-Ecriture et revision editoriale : 19 octobre 2026. **20 narrations anglaises completes, dix par chaine, 52,133 mots au total.** Les fichiers TXT ne contiennent que ce qui doit etre prononce. Ils n’incluent ni titre, ni consigne visuelle, ni notes de recherche.
+Ecriture et revision editoriale : 19 octobre 2026. **20 narrations anglaises completes, dix par chaine, 52,707 mots au total.** Les fichiers TXT ne contiennent que ce qui doit etre prononce. Ils n’incluent ni titre, ni consigne visuelle, ni notes de recherche.
 
 Les sujets sont ceux de la grille approuvee. Les vingt miniatures A, vingt B et trois C sont conservees, soit **43 images**. L’utilisateur choisira les variantes plus tard ; aucune n’a ete selectionnee ou ecrasee pour fabriquer ces scripts.
+
+## Revision avec la reference POVrank — 19 octobre 2026
+
+L’utilisateur precise que ce benchmark concerne **ces vingt scripts**, The Wealthy Nobody et Oddly Important Guy. Les vingt textes ont ete repris ; 90 paragraphes different de la version precedente. La comparaison cible les scenes vecues, les dialogues, les consequences, la continuite et les rappels de fin. Elle ne transforme pas les histoires en dix niveaux de carriere.
+
+Chaque deuxieme paragraphe fait maintenant agir le protagoniste dans une situation. Des accroches ont ete replacees au debut chronologique de la journee lorsque la version precedente promettait trop tot un incident qui arrivait beaucoup plus tard. Les changements ont fait l’objet d’une nouvelle verification de continuite et d’un nouveau passage du scanner. Les avertissements contextuels conserves sont documentes dans la revue.
+
+La reference fournit un niveau d’exigence editorial ; aucun acces a sa retention privee et aucune preuve que ces textes feront mieux apres publication. Le statut de controle integral precise plus bas reste applicable. Le manifeste et les TXT de ce dossier correspondent a la revision courante, avec empreintes et nombres de mots actualises.
 
 ## Sommaire
 
 | ID | Titre | Mots | Repere Ryan* |
 | --- | --- | ---: | ---: |
-| [W01](01-the-wealthy-nobody/W01.txt) | POV: Your Boss Offers a Raise. You Ask for Fridays Off | 2641 | 14:58 |
-| [W02](01-the-wealthy-nobody/W02.txt) | POV: You Land Your Dream Job. You Can't Afford Your Life | 2614 | 14:49 |
-| [W03](01-the-wealthy-nobody/W03.txt) | POV: You Inherit Money. Suddenly, Everyone Needs You | 2650 | 15:01 |
-| [W04](01-the-wealthy-nobody/W04.txt) | POV: You Pay Off Your House. Everyone Says You're Wrong | 2584 | 14:38 |
-| [W05](01-the-wealthy-nobody/W05.txt) | POV: Your Side Hustle Replaces Your Salary. And Your Life | 2625 | 14:52 |
-| [W06](01-the-wealthy-nobody/W06.txt) | POV: You Can Afford the Trip. Your Friends Can't | 2576 | 14:36 |
-| [W07](01-the-wealthy-nobody/W07.txt) | POV: You Finally Feel Rich. Then the Market Crashes | 2624 | 14:52 |
-| [W08](01-the-wealthy-nobody/W08.txt) | POV: Your Partner Earns Less. So Why Are They Richer? | 2588 | 14:40 |
-| [W09](01-the-wealthy-nobody/W09.txt) | POV: You Retire Early. Your Spouse Still Works | 2596 | 14:42 |
-| [W10](01-the-wealthy-nobody/W10.txt) | POV: You Can Finally Buy a House. Your Parents Need Help | 2661 | 15:04 |
-| [P01](02-oddly-important-guy/P01.txt) | Your Life Working for a Billionaire | 2650 | 15:01 |
-| [P02](02-oddly-important-guy/P02.txt) | Your Life Working Inside a Las Vegas Casino | 2657 | 15:03 |
-| [P03](02-oddly-important-guy/P03.txt) | Your Life Working on a Billionaire's Superyacht | 2571 | 14:34 |
-| [P04](02-oddly-important-guy/P04.txt) | Your Life as a Celebrity Bodyguard | 2650 | 15:01 |
-| [P05](02-oddly-important-guy/P05.txt) | Your Life as a Private Jet Pilot | 2563 | 14:31 |
-| [P06](02-oddly-important-guy/P06.txt) | Your Life as a Luxury Hotel Concierge | 2602 | 14:44 |
-| [P07](02-oddly-important-guy/P07.txt) | Your Life as a Billionaire's Lawyer | 2525 | 14:18 |
-| [P08](02-oddly-important-guy/P08.txt) | Your Life Working Inside a Royal Palace | 2582 | 14:38 |
-| [P09](02-oddly-important-guy/P09.txt) | Your Life Selling Mansions to Billionaires | 2539 | 14:23 |
-| [P10](02-oddly-important-guy/P10.txt) | Your Life as a Billionaire's Private Chef | 2635 | 14:56 |
+| [W01](01-the-wealthy-nobody/W01.txt) | POV: Your Boss Offers a Raise. You Ask for Fridays Off | 2670 | 15:08 |
+| [W02](01-the-wealthy-nobody/W02.txt) | POV: You Land Your Dream Job. You Can't Afford Your Life | 2634 | 14:55 |
+| [W03](01-the-wealthy-nobody/W03.txt) | POV: You Inherit Money. Suddenly, Everyone Needs You | 2685 | 15:13 |
+| [W04](01-the-wealthy-nobody/W04.txt) | POV: You Pay Off Your House. Everyone Says You're Wrong | 2605 | 14:45 |
+| [W05](01-the-wealthy-nobody/W05.txt) | POV: Your Side Hustle Replaces Your Salary. And Your Life | 2651 | 15:01 |
+| [W06](01-the-wealthy-nobody/W06.txt) | POV: You Can Afford the Trip. Your Friends Can't | 2597 | 14:43 |
+| [W07](01-the-wealthy-nobody/W07.txt) | POV: You Finally Feel Rich. Then the Market Crashes | 2662 | 15:05 |
+| [W08](01-the-wealthy-nobody/W08.txt) | POV: Your Partner Earns Less. So Why Are They Richer? | 2633 | 14:55 |
+| [W09](01-the-wealthy-nobody/W09.txt) | POV: You Retire Early. Your Spouse Still Works | 2651 | 15:01 |
+| [W10](01-the-wealthy-nobody/W10.txt) | POV: You Can Finally Buy a House. Your Parents Need Help | 2703 | 15:19 |
+| [P01](02-oddly-important-guy/P01.txt) | Your Life Working for a Billionaire | 2665 | 15:06 |
+| [P02](02-oddly-important-guy/P02.txt) | Your Life Working Inside a Las Vegas Casino | 2674 | 15:09 |
+| [P03](02-oddly-important-guy/P03.txt) | Your Life Working on a Billionaire's Superyacht | 2608 | 14:46 |
+| [P04](02-oddly-important-guy/P04.txt) | Your Life as a Celebrity Bodyguard | 2651 | 15:01 |
+| [P05](02-oddly-important-guy/P05.txt) | Your Life as a Private Jet Pilot | 2580 | 14:37 |
+| [P06](02-oddly-important-guy/P06.txt) | Your Life as a Luxury Hotel Concierge | 2657 | 15:03 |
+| [P07](02-oddly-important-guy/P07.txt) | Your Life as a Billionaire's Lawyer | 2553 | 14:28 |
+| [P08](02-oddly-important-guy/P08.txt) | Your Life Working Inside a Royal Palace | 2606 | 14:46 |
+| [P09](02-oddly-important-guy/P09.txt) | Your Life Selling Mansions to Billionaires | 2579 | 14:37 |
+| [P10](02-oddly-important-guy/P10.txt) | Your Life as a Billionaire's Private Chef | 2643 | 14:58 |
 
 *Le repere de duree utilise un seul ancien enregistrement Ryan : Jabba, 2 898 mots pour 16 min 25. Ce n’est ni un chronometrage de ces scripts, ni une garantie de duree. Leur vocabulaire et leurs pauses peuvent changer le resultat. Objectif autour de quinze minutes ; ajuster sur la voix reelle, puis seulement faire le decoupage et les images. Ne pas inventer des timestamps a partir des estimations.
 
@@ -312,7 +320,7 @@ Sources de cadrage : S04, S02, S06.
 
 Ouverture (62 mots), premiere phrase : « You've paid off your house, and your friend thinks you've made a mistake. »
 
-- Boucle : paragraphe 1 → 19. Resolution, debut de l’extrait : « You ask him what he would do now, using the options you actually have. He starts describing a… »
+- Boucle : paragraphe 1 → 19. Resolution, debut de l’extrait : « You ask Ben what he would do about the repair. He begins explaining where you could have put… »
 - Boucle : paragraphe 17 → 33. Resolution, debut de l’extrait : « With the repair complete, the kitchen returns to its usual state. You finally fix the dripping tap as… »
 
 ### W05 — POV: Your Side Hustle Replaces Your Salary. And Your Life
@@ -414,7 +422,7 @@ Casino Meridian invente. Revue par superviseuse, roles de securite distincts, fa
 
 Sources de cadrage : S10.
 
-Ouverture (65 mots), premiere phrase : « The customer has just lost, and he's pointing at you as though the money went into your pocket. »
+Ouverture (62 mots), premiere phrase : « You're learning to keep your hands steady while somebody accuses you of taking their money. »
 
 - Boucle : paragraphe 1 → 16. Resolution, debut de l’extrait : « The review confirms the result was handled correctly. Nora explains it. The customer accepts the explanation in the… »
 - Boucle : paragraphe 10 → 37. Resolution, debut de l’extrait : « You feel relieved, then uncomfortable about how relieved you feel. He was an unpleasant part of your shift,… »
@@ -440,7 +448,7 @@ Serena Hale inventee. Foule non diabolisee, rendez-vous d’interview reel dans 
 
 Sources de cadrage : S11.
 
-Ouverture (65 mots), premiere phrase : « The celebrity is smiling for a photograph while the people behind the rope are moving toward her. »
+Ouverture (64 mots), premiere phrase : « The publicist asks you to look happier before the celebrity has even arrived. »
 
 - Boucle : paragraphe 1 → 28. Resolution, debut de l’extrait : « Your team lead asks for the order of events. You give the arrival time, the announced change, and… »
 - Boucle : paragraphe 9 → 18. Resolution, debut de l’extrait : « That conversation doesn't erase the earlier photograph. It gives the person making the announcements information they can use… »
@@ -455,7 +463,7 @@ Sources de cadrage : S17, S18.
 
 Ouverture (54 mots), premiere phrase : « Your passenger points at his watch, and you turn the weather display toward him. »
 
-- Boucle : paragraphe 1 → 21. Resolution, debut de l’extrait : « He offers to put his request in writing. You don't ask him to sign away a responsibility you… »
+- Boucle : paragraphe 1 → 21. Resolution, debut de l’extrait : « Graham offers to put the request in writing. You ask what he expects the document to change. He… »
 - Boucle : paragraphe 4 → 18. Resolution, debut de l’extrait : « The assistant finds the confirmation beneath yesterday's catering email and winces. They acknowledge that the destination change was… »
 
 ### P06 — Your Life as a Luxury Hotel Concierge
@@ -466,9 +474,9 @@ Aster et Mrs. Calder inventes. Restaurant refuse, alternative explicite, colis e
 
 Sources de cadrage : S14.
 
-Ouverture (53 mots), premiere phrase : « The woman pressing the service bell can see you're already on the telephone. »
+Ouverture (66 mots), premiere phrase : « Your colleague hands you a note saying the hotel's most demanding guest expects a table at a restaurant that is already full. »
 
-- Boucle : paragraphe 1 → 36. Resolution, debut de l’extrait : « The man with the walking stick returns later to say the room arrangement has been handled. He asks… »
+- Boucle : paragraphe 1 → 36. Resolution, debut de l’extrait : « Mr. Morris returns later to say the new room is quiet and his wife has settled. They would… »
 - Boucle : paragraphe 9 → 23. Resolution, debut de l’extrait : « Mrs. Calder asks whether the terrace table will be quiet. You tell her what the restaurant confirmed and… »
 
 ### P07 — Your Life as a Billionaire's Lawyer
@@ -492,7 +500,7 @@ Famille royale inventee, fonctions documentees. Uniforme, objets, couvert ajoute
 
 Sources de cadrage : S15, S16, S12.
 
-Ouverture (64 mots), premiere phrase : « You're carrying a silver tray through a royal palace when the person relaxing beneath a crimson canopy holds out another empty cup. »
+Ouverture (57 mots), premiere phrase : « The tray is empty when your supervisor asks you to carry it across the royal dining room. »
 
 - Boucle : paragraphe 1 → 17. Resolution, debut de l’extrait : « Amara calls the event office. A guest has indeed been added, but the revised list reached the reception… »
 - Boucle : paragraphe 16 → 33. Resolution, debut de l’extrait : « In the service area, the team discusses what happened with the late guest. Nobody needs an elaborate accusation.… »
@@ -505,7 +513,7 @@ Everett Shaw invente. Bureau, entree, petit-dejeuner et infiltration deviennent 
 
 Sources de cadrage : S13.
 
-Ouverture (57 mots), premiere phrase : « The billionaire has found a scratch on the door handle, and the mansion viewing is apparently over. »
+Ouverture (60 mots), premiere phrase : « The billionaire cancels the viewing while you're standing at the mansion's front door. »
 
 - Boucle : paragraphe 1 → 28. Resolution, debut de l’extrait : « The inspection report identifies evidence of water ingress in the lower-ground room. Everett had barely glanced inside it.… »
 - Boucle : paragraphe 28 → 32. Resolution, debut de l’extrait : « They return with instructions for a revised proposal. You communicate it accurately and check that the response addresses… »
@@ -518,7 +526,80 @@ Oliver Wren invente. Pain, fromage et tomate concretisent la demande. Allergie t
 
 Sources de cadrage : S12.
 
-Ouverture (58 mots), premiere phrase : « The billionaire sends your carefully prepared dinner back almost untouched and asks whether you can make him a sandwich. »
+Ouverture (59 mots), premiere phrase : « Your billionaire boss approves the dinner menu while looking at his phone. »
 
 - Boucle : paragraphe 1 → 28. Resolution, debut de l’extrait : « It turns out he wants toasted cheese and tomato on the bread you have. You repeat the choice… »
 - Boucle : paragraphe 25 → 34. Resolution, debut de l’extrait : « Oliver listens better the next morning than he would have during dinner. He says the meal was good,… »
+
+## Contrat et comparaison detailles
+
+# Ecriture — The Wealthy Nobody et Oddly Important Guy
+
+Decision utilisateur du 19 octobre 2026 : prendre **POVrank** comme niveau de comparaison pour les **vingt manuscrits de ces deux chaines**. Cette demande ne concerne pas les prochains scripts Patch ou Oddly Fictional Lives. Leurs contrats restent separes.
+
+Reference : https://www.youtube.com/channel/UC3EpqIjfEUiZi1GvWKCWyuA . Le nom retourne par le catalogue est POVrank. Cette reference sert a analyser l’ecriture, pas a adopter ses sujets, son dessin, sa longueur ou un escalier de grades dans toutes nos histoires.
+
+## Ce qui a reellement ete examine
+
+Catalogue recent de 40 videos et douze populaires recuperes. Quatre transcriptions effectivement obtenues :
+
+| Video | Taille de transcription | Utilisation dans la comparaison |
+| --- | ---: | --- |
+| [Medellin Cartel](https://www.youtube.com/watch?v=QpespHTBFm0) | environ 3 665 mots | Ouverture, passage central, conclusion et forme de progression |
+| [Chinese Communist Party](https://www.youtube.com/watch?v=JtSOX2quSok) | environ 3 617 mots | Parcours, scenes individuelles, retours de personnages et conclusion |
+| [Knights Templar](https://www.youtube.com/watch?v=JDu4i45oqwE) | environ 3 459 mots | Entree dans le lieu, apprentissage, changements de responsabilite et rappel final |
+| [Pentagon](https://www.youtube.com/watch?v=C4iz3q2QoVU) | environ 3 410 mots | Ouverture, passage central et conclusion ; liens entre carriere et relations |
+
+Il s’agit d’analyse de textes et de metadonnees. Pas d’inspection integrale de ces films, de certification de leurs faits historiques, d’identification fiable de leur methode de narration ou d’acces a leur retention privee. Les transcriptions automatiques comportent des noms et passages mal reconnus. Aucun chiffre historique ou procedure illegale de ces histoires ne devient une source documentaire pour nos textes.
+
+## Ce que la reference fait utilement
+
+- **L’etape a un effet materiel.** Qui donne les ordres, quel travail le personnage fait lui-meme, ce qu’il possede, les gens qu’il peut aider et ceux qu’il ne peut plus ignorer changent au cours du recit.
+- **Les petites scenes portent les regles.** Une main levee, une petition, une ceremonie ou une conversation font comprendre le systeme avant ou pendant son explication. Exemple bref dans CCP : « You raise yours. » Le geste montre la decision, sans devenir un passage a reprendre.
+- **Les secondaires ont une memoire.** Dans Pentagon, le pere et le sergent du debut restent des points de comparaison quand le protagoniste dirige davantage de personnes. Dans CCP, des cas individuels reviennent au sommet au lieu d’etre remplaces par une simple somme de titres.
+- **Un choix rapporte quelque chose et coute autre chose.** La reussite ne supprime pas la pression. Son effet sur la prochaine situation est visible.
+- **La fin utilise ce qui a ete plante.** La question « Why are you here? » des Templars est reprise a la conclusion. Nous cherchons un effet de ce type dans une action finale propre a chaque histoire, sans copier la question ni la chute.
+
+## Ce que nous devons mieux controler
+
+Les formes de phrase de la reference ne passent pas toutes les regles Faceless OS. Ses refrains, antitheses et longues conclusions morales ne sont pas une permission d’en ajouter a nos textes. Le retour de personnages est utile ; repeter une lecon avec trois formulations successives ne l’est pas.
+
+Dans la transcription Templars, la distinction entre sergent et chevalier est qualifiee de permanente, puis le meme protagoniste devient chevalier sans resolution explicite de cette affirmation. C’est une tension interne du texte a verifier, pas une conclusion historique etablie ici. Chez nous, une condition sociale, un metier ou une specialisation ne doit pas etre transforme en promotion disponible pour tous par commodite narrative.
+
+Les invites a s’abonner et les developpements de cloture interrompent parfois le recit ou continuent apres son resultat. Nous gardons une fin qui agit sur une situation deja installee. Pas de discours general sur la vie du spectateur apres le dernier resultat de l’histoire.
+
+Les quatre videos de comparaison durent environ 23 a 26 minutes. Leurs tailles de transcript ne fixent pas nos durees. Nos voix emploient un autre debit ; conserver la cible demandee autour de quinze minutes, sans parler plus vite ou ajouter un inventaire pour atteindre un minutage.
+
+## Contrat pour chaque script
+
+Utiliser les fichiers Faceless OS effectivement ouverts : `faceless-scripts-os-master.md`, `research-and-ideation-skill.md`, `voice-anchoring-skill.md`, `variety-rotation-skill.md`, `retention-mechanics-skill.md`, `humanizer-skill.md` et `greenlight-audit-skill.md`. Une comparaison avec une grosse chaine ne remplace aucun controle. Aucun score, retention superieure ou PASS attribue a partir du nombre de mots ou du scanner.
+
+1. **Avant le texte :** sujet, angle, banque de faits verifiables, direction d’accroche et structure. Identifier le besoin concret du protagoniste et la relation qui rend sa decision difficile. Marquer les noms, foyers, entreprises, conversations et evenements inventes comme situations originales dans le guide editorial.
+2. **Ouverture :** un probleme precis, un objet ou une action lisible et une consequence. Le paragraphe suivant fait avancer la situation. Rejeter les ponts generiques du type Imagine being... suivis d’une fiche de poste. Un bref souvenir peut expliquer un choix apres un resultat local ; il ne doit pas differer la scene promise pendant la moitie du film.
+3. **Progression :** choisir des mouvements qui modifient les choix disponibles. Ce n’est pas necessairement une carriere de plusieurs annees. Une journee de service peut changer ce qu’un assistant promet, un projet peut changer ce qu’un couple peut acheter. Aucun nombre fixe de niveaux ou de promotions.
+4. **Dialogue :** chaque interlocuteur veut quelque chose de precis. Quelques repliques courtes, des gestes et une reponse imparfaite portent le conflit. Garder un narrateur naturel qui relie les actions ; ne pas transformer le script en piece a plusieurs voix ni attribuer des accents artificiels au TTS.
+5. **Consequences :** une victoire cree ou revele une contrainte suivante. L’argent, le temps, les demandes deja acceptees et les informations connues ne se reinitialisent pas pour simplifier la scene suivante. Une clarification ne doit pas etre presentee comme une victoire si rien ne change dans le recit.
+6. **Relations :** introduire peu de secondaires importants et suivre ce qu’ils savent et ce qui leur est arrive. Donner a chacun un interet propre. Un employeur riche n’est pas oblige d’etre cruel ; un proche qui demande de l’aide n’est pas oblige d’etre manipulateur.
+7. **Fin :** reprendre un objet, une relation ou un choix du debut dans un contexte transforme. Montrer le resultat concret. Varier les fins entre les episodes : pas vingt personnes qui posent leur telephone avant de diner et recitent la meme lecon sur les limites.
+8. **Sources et langage :** faits financiers ou professionnels dans leur contexte, pas de rendement, salaire ou seuil invente. Sources dans le guide de recherche ; narration claire. Un personnage peut chercher un avis sans que chaque paragraphe se termine par une consigne abstraite de conformite. Pas de longue citation d’un concurrent.
+9. **Derniere passe :** audit A–E avec preuves, comparaison d’ouvertures reelles, promesse/resolution, chronologie, continuites d’objets et de relations, redites, lecture orale de la copie, phrases d’affiche et champs restant non verifies. Les tests techniques ne remplacent pas la relecture humaine ni les informations qu’ils ne mesurent pas.
+
+### Adaptation The Wealthy Nobody
+
+Le changement doit toucher une vie identifiable : logement habitable, relation, calendrier, marge financiere ou projet. Faire vivre la decision avec ses inconvenients. Pas de recapitulatif de conseils financiers, de lecon universelle sur la frugalite ou de patrimoine ajoute pour resoudre le conflit. Ne pas accelerer artificiellement vers un enrichissement spectaculaire pour imiter une echelle de grades.
+
+### Adaptation Oddly Important Guy
+
+Donner acces a ce que le titre promet : cuisine, casino, cabine, domaine, evenement ou palais. Le metier particulier produit les contraintes. Un pilote, un avocat et un concierge n’ont ni la meme autorite ni la meme journee. La personne proche du pouvoir reste un employe avec des collegues et des responsabilites ; elle ne devient pas milliardaire par une promotion finale automatique.
+
+## Application du 19 octobre aux vingt manuscrits
+
+Les vingt ont ete repris a partir de la comparaison. Le travail a notamment change leurs ponts d’ouverture, plusieurs confrontations, des consequences et des rappels d’objets. Une deuxieme passe a corrige des effets de ces modifications : rencontre au cafe maintenant suivie dans le present, succession des visites familiales, montre retiree une seule fois, remise de courrier a la mere, chronologie de plusieurs arrivees professionnelles.
+
+Exemple propre a notre lot : le concierge ne recoit plus une demande de chambre decrite uniquement comme un arrangement a traiter correctement. Mr. Morris demande une chambre plus proche de l’ascenseur, puis precise que sa femme dort dans l’ancienne. Le porter doit attendre sa confirmation avant de monter. Un detail transmis modifie une action concrete. Le retour du client plus tard dans le recit confirme ce qui a change.
+
+Autre exemple : les questions de Maya obligent le protagoniste de W01 a trouver qui prend les appels. La negociation ne devient pas un simple discours sur l’importance du temps. La transmission est testee, une autorisation manque, la correction permet un vendredi qui existe vraiment dans la vie du personnage.
+
+[Scripts et controles](scripts-20-2026-10-18/README.md). [Manifeste](scripts-20-2026-10-18/manifest.json) : empreintes et nombres de mots courants. [Revue editoriale](scripts-20-2026-10-18/editorial-review.json) : preuves de boucles et candidats du scanner. Les points restant non certifies dans la revue ne deviennent pas PASS parce que cette nouvelle reference a ete analysee.
+
+Les 43 miniatures sont conservees pour le choix ulterieur de l’utilisateur. Cette revision ne change ni leurs titres, ni le dessin valide, ni la voix Ryan, et ne lance pas la production ou la programmation des vingt films.

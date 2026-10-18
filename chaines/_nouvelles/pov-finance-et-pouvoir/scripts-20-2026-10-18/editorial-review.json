@@ -17,7 +17,7 @@
       {
         "opens_paragraph": 10,
         "closes_paragraph": 26,
-        "opens_evidence": "On Monday, you tell your colleague Maya what you're considering. You expect encouragement. She asks who will handle Friday's customer updates. You say you've thought about that. She waits. You describe putting things in the shared folder, and she asks who will explain them when a customer calls. You recognize the problem because customers already call you to avoid opening the folder.",
+        "opens_evidence": "On Monday, you show Maya the proposal. She reads it and asks, 'Who takes the customer calls?' You tap the line about the shared folder. 'The folder doesn't answer the telephone,' she says. You laugh, then realize she is waiting. Last Friday, you took a call from someone who had the folder open in front of them. You cross out the line saying the team can cover as needed.",
         "closes_evidence": "Maya has a more concrete complaint. The handover didn't say who could approve a replacement shipment. She found the gap while the customer was waiting. You add the missing approval contact and thank her for catching it. You don't explain that you would have known the answer. The whole point is to make the answer available without making your availability permanent."
       }
     ],
@@ -31,9 +31,7 @@
       "hard_bans": [],
       "candidates": [
         "  [staccato x2/6] \"He suggests annual leave.\" | \"He's not being ridiculous.\"  << He asks why you need the time. You start listing appointments, family ...",
-        "  [staccato x2/7] \"You expect encouragement.\" | \"She waits.\"  << On Monday, you tell your colleague Maya what you're considering. You e...",
         "  [staccato x2/7] \"You ask which part.\" | \"He considers it.\"  << The next Monday, Ellis says Friday was difficult. You ask which part. ...",
-        "  [staccato x2/6] \"Neither assumption was malicious.\" | \"Neither was an agreement.\"  << At home, another surprise appears. Rowan assumed your new Friday would...",
         "  [staccato x2/5] \"One routine can move.\" | \"Another cannot.\"  << The team discusses coverage more openly as a result. One routine can m..."
       ],
       "mechanical_antithesis_floor_candidates": [
@@ -47,7 +45,21 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        10,
+        28
+      ],
+      "bridge_before": "Say you're a project coordinator at a company where being dependable has become your main professional qualification. You answer customers, organize handovers, and remember which version of a document somebody actually approved. When a delivery goes wrong, people call you before checking the shared folder. You used to enjoy being the person who could fix it.",
+      "bridge_after": "Ellis slides the salary letter closer. You move it back just enough to open your notebook beside it. Your Friday column is full of customer updates, including one about a delivery that hasn't arrived. He points at the number on the letter. You point at the column. He says that someone would still have to do those jobs. Until that moment, your proposal had contained rather more confidence than an answer.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    },
+    "mechanical_floor_adjudication": "A context-sensitive candidate remains recorded. The mechanical floor is not treated as a complete D7 count or certification."
   },
   "W02": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -92,7 +104,20 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        21,
+        28
+      ],
+      "bridge_before": "Imagine accepting a role at a prestigious firm in a city you've always wanted to live in. The offer arrives while you're eating lunch at your old job. You read it again before telling anyone, then call your mother outside because you want the conversation to feel private. She tells you she's proud. For the rest of the afternoon, you barely mind the work you're leaving.",
+      "bridge_after": "The agent opens the fridge, and the door catches the bed frame. You both look at it. She suggests moving the bed. You ask where. She pushes it sideways until the door opens far enough to reach the shelf, then asks whether you have any other questions. The briefcase beside your shoe cost more than you meant to spend. You decide not to tell her that.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W03": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -112,7 +137,7 @@
       {
         "opens_paragraph": 2,
         "closes_paragraph": 43,
-        "opens_evidence": "Imagine receiving money from a relative who lived more modestly than anyone realized. The news reaches you during a period when you're still clearing a cupboard of their belongings. You find a repair receipt, a collection of ordinary photographs, and something you'd given them years ago. The inheritance is real. So is the person whose absence made it possible.",
+        "opens_evidence": "You put the envelope in a drawer before somebody asks for a closer look. Leah stops turning the brochure. Owen takes his phone back. You say you need time to understand what you have before offering any of it. 'Of course,' Leah says, then asks how long. Behind her, one of the boxes from your relative's home is still waiting to be unpacked. You haven't decided what to do with that either.",
         "closes_evidence": "When everyone sits down, your mother asks about the photographs you found while clearing the cupboard. You bring them to the table instead of the envelope. Leah starts laughing at a picture of Owen's old haircut. He objects, takes the photograph, and begins telling his version of the day. For this dinner, nobody needs to decide what your money is for."
       }
     ],
@@ -134,7 +159,26 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        10,
+        26,
+        31
+      ],
+      "bridge_before": "Imagine receiving money from a relative who lived more modestly than anyone realized. The news reaches you during a period when you're still clearing a cupboard of their belongings. You find a repair receipt, a collection of ordinary photographs, and something you'd given them years ago. The inheritance is real. So is the person whose absence made it possible.",
+      "bridge_after": "You put the envelope in a drawer before somebody asks for a closer look. Leah stops turning the brochure. Owen takes his phone back. You say you need time to understand what you have before offering any of it. 'Of course,' Leah says, then asks how long. Behind her, one of the boxes from your relative's home is still waiting to be unpacked. You haven't decided what to do with that either.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W04": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -149,7 +193,7 @@
         "opens_paragraph": 1,
         "closes_paragraph": 19,
         "opens_evidence": "You've paid off your house, and your friend thinks you've made a mistake. He's standing on your porch with a photograph of a much bigger one, explaining what you could have done with the money. You're holding the keys to the home you already own. But a repair bill next month will give him a better argument than you want to admit.",
-        "closes_evidence": "You ask him what he would do now, using the options you actually have. He starts describing a different past decision. You tell him that may be interesting later, but the roofer needs an answer about this house. The conversation improves when it moves from proving who won a hypothetical argument to examining a current choice."
+        "closes_evidence": "You ask Ben what he would do about the repair. He begins explaining where you could have put the money years ago. 'The roofer is coming back tomorrow,' you say. 'What would you do now?' He lowers the phone. You show him the estimate, and he spots a question worth asking about the work. For the next part of the visit, you manage to discuss the house that is actually leaking."
       },
       {
         "opens_paragraph": 17,
@@ -180,7 +224,21 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        19,
+        41
+      ],
+      "bridge_before": "Imagine reaching the end of a mortgage you've been paying through years of ordinary work. You check the final paperwork carefully, because an important financial milestone still needs the actual documents to agree. You keep the confirmation somewhere you can find it again. Then you stand in the kitchen and wait for the house to feel different.",
+      "bridge_after": "You unlock the front door and offer Ben tea. He follows you into the hallway, still holding up the larger house on his phone. The cupboard near the kitchen catches when you open it. Ben looks at the cupboard, then back at the photograph. You get the cups out before he can suggest that somebody else's enormous kitchen would have solved this particular problem.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    },
+    "mechanical_floor_adjudication": "A context-sensitive candidate remains recorded. The mechanical floor is not treated as a complete D7 count or certification."
   },
   "W05": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -222,7 +280,20 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        11,
+        29
+      ],
+      "bridge_before": "Imagine starting a small business making personalized notebooks and stationery. The first orders come from people who like your designs enough to pay rather than merely tell you that you should sell them. You make the items after work, package them at the kitchen table, and feel absurdly pleased when somebody you don't know leaves a kind message about the result.",
+      "bridge_after": "You move a carton from the spare chair so Morgan can sit down. Under it is a paid order for personalized notebooks. The customer wants another batch, which should make you happy. Morgan asks whether that means you are working this weekend too. You say you'll check. They look at the plate they've already served and ask whether checking can wait until you've eaten.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W06": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -266,7 +337,26 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        13,
+        16
+      ],
+      "bridge_before": "Imagine earning more than the friends you've traveled with for years. The difference has happened gradually enough that you rarely discuss it. You still remember splitting cheap rooms, comparing coach tickets, and deciding whether another meal out would leave enough for the journey home. You assume the next trip will be the same experience with a nicer place to stay.",
+      "bridge_after": "You slide the brochure toward Sam. He leaves it where it is and asks what happens if he says no. You start offering cheaper dates, then notice that he hasn't asked for another search. You put your phone face down. The trip has been in the group chat for days. This is the first time you've made it easy for somebody to give you an answer you don't want.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W07": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -299,6 +389,7 @@
     "scanner": {
       "hard_bans": [],
       "candidates": [
+        "  [staccato x2/8] \"You move it.\" | \"They put it back.\"  << You refresh the page again. Avery sets the grocery bag down, lifts the...",
         "  [staccato x2/5] \"Then prices fall.\" | \"The explanations disagree.\"  << Then prices fall. There is no convenient single notification telling y..."
       ],
       "mechanical_antithesis_floor_candidates": [],
@@ -310,7 +401,21 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        7,
+        18,
+        20
+      ],
+      "bridge_before": "Imagine spending years building savings and investments alongside an ordinary job. You haven't become a person who casually replaces their income. You have reached the point where looking at the account makes the future seem less frightening. You begin making plans with a confidence that feels entirely earned.",
+      "bridge_after": "You refresh the page again. Avery sets the grocery bag down, lifts the bill from beneath it, and places it over the corner of your screen. You move it. They put it back. The argument you're trying to have is with the market. Avery needs an answer about the household. You stop refreshing long enough to say that this bill is covered. Then they ask about the new kitchen.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W08": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -343,7 +448,9 @@
     "manual_observation": "Pas de fortune secrete ou de moralite fondee sur le genre. Distinguer salaire, liquidites, actifs, dettes et depenses communes ; aucune surveillance permanente du partenaire.",
     "scanner": {
       "hard_bans": [],
-      "candidates": [],
+      "candidates": [
+        "  [staccato x2/6] \"You say the salaries.\" | \"Kit waits.\"  << You turn Kit's savings file toward you. They keep a hand on it and ask..."
+      ],
       "mechanical_antithesis_floor_candidates": [],
       "echo_candidates": []
     },
@@ -353,7 +460,20 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        17,
+        24
+      ],
+      "bridge_before": "Imagine living with someone called Kit. You both work, share parts of the household's spending, and believe you have a reasonable idea of how the other person manages money. Your salary is higher. That fact has gradually become part of the relationship without either of you formally agreeing what it means.",
+      "bridge_after": "You turn Kit's savings file toward you. They keep a hand on it and ask what you want to compare. You say the salaries. Kit waits. Your watch catches the edge of the page as you reach for your own records, and for a moment it becomes the only thing in the room making a noise. You let the page go and ask to start with the money each person has put toward the house.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W09": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -397,7 +517,22 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        3,
+        4,
+        12,
+        42
+      ],
+      "bridge_before": "Your last day at work came after years of planning with Alex. You checked spending, savings, uncertainties, and the income the household still expects from their job. Alex wanted to keep working and said so clearly. You heard them. Somehow, when you imagined the first week, they were still in every pleasant scene, sitting across from you in the middle of the working day.",
+      "bridge_after": "Alex reaches for the travel cup. You ask whether they could sit for a minute. They show you the time and kiss your cheek on the way past. The toast is still in the toaster when the front door closes. You take the chair opposite the empty one, put your phone beside the plate, and discover that the first person you want to tell about the quiet morning is now in a meeting.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "W10": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -429,7 +564,9 @@
     "manual_observation": "La mere garde son choix. Don borne, Jamie responsable de taches precises, Riley consulte. Achat particulier repousse selon sa situation, pas sacrifice familial recommande a tous.",
     "scanner": {
       "hard_bans": [],
-      "candidates": [],
+      "candidates": [
+        "  [narrator tease] ...transfer followed by relief. Riley asks what happens next month. You don't accuse them of caring ..."
+      ],
       "mechanical_antithesis_floor_candidates": [],
       "echo_candidates": []
     },
@@ -439,6 +576,27 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        3,
+        4,
+        17,
+        29
+      ],
+      "bridge_before": "Imagine reaching the point where buying a home has become a practical plan rather than something you discuss after looking at prices online. You've saved, checked the actual costs, and received the information needed to evaluate your position. You aren't guaranteed a smooth purchase. You do have a realistic next step and a property you can imagine living in.",
+      "bridge_after": "Your mother pushes the bill toward you with the same hand she used to point at the kitchen in the house listing. You ask when the payment was due. She turns the envelope over as though the answer might be kinder on the other side. The agent is waiting for your response about the purchase. You put your phone down before reassuring either person about money you haven't yet worked out how to divide.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    },
+    "scanner_adjudication": [
+      {
+        "candidate": "narrator tease: Riley asks what happens next month",
+        "decision": "Keep. This is a character asking about the next household payment, immediately addressed in the story; not a narrator deferring an answer for suspense."
+      }
     ]
   },
   "P01": {
@@ -483,21 +641,41 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        13,
+        33
+      ],
+      "bridge_before": "Picture your first week as the personal assistant to a fictional business owner called Adrian Vale. His house has a swimming pool you pass every morning and a staff entrance you actually use. The coffee belongs on a tray, so you put it down before taking the phone. That's your first small improvement to a job you've already imagined doing much more elegantly.",
+      "bridge_after": "You put the coffee on the nearest table before taking Adrian Vale's phone. He has a message open about another appointment. You ask which meeting it replaces. He says it doesn't replace anything. In the calendar, both are now occupying the same hour. Somewhere behind you, the coffee starts leaving a ring on a table you haven't yet learned whether you're allowed to use.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P02": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
     "hook": {
-      "first_sentence": "The customer has just lost, and he's pointing at you as though the money went into your pocket.",
-      "words": 65,
+      "first_sentence": "You're learning to keep your hands steady while somebody accuses you of taking their money.",
+      "words": 62,
       "turn_present": true
     },
     "narrative_angle": "Le croupier doit traiter une contestation sans acheter le calme en changeant le resultat.",
     "loop_evidence": [
       {
         "opens_paragraph": 1,
+        "closes_paragraph": 2,
+        "opens_evidence": "You're learning to keep your hands steady while somebody accuses you of taking their money. Your supervisor is playing the customer. In a few hours, the person across the table will mean it. You know the game, and your uniform finally fits. But neither will tell you how to finish a shift when someone decides the dealer is the reason they lost.",
+        "closes_evidence": "In the Meridian's staff room in Las Vegas, Nora repeats the accusation and waits for your answer. You start defending yourself. She stops the rehearsal. She wants the sequence, not a speech about how hard you're trying. You describe what happened and practise asking for the review. Through the staff door, you can hear the real tables. Nora tells you to take a breath before you join them.",
+        "kind": "first local action-result before context"
+      },
+      {
+        "opens_paragraph": 1,
         "closes_paragraph": 16,
-        "opens_evidence": "The customer has just lost, and he's pointing at you as though the money went into your pocket. You're wearing a waistcoat, your break is late, and there's another player waiting for the next hand. But you can't buy a quiet evening by changing the result. You're about to find out what a casino actually expects its staff to do when somebody stops having fun.",
+        "opens_evidence": "You're learning to keep your hands steady while somebody accuses you of taking their money. Your supervisor is playing the customer. In a few hours, the person across the table will mean it. You know the game, and your uniform finally fits. But neither will tell you how to finish a shift when someone decides the dealer is the reason they lost.",
         "closes_evidence": "The review confirms the result was handled correctly. Nora explains it. The customer accepts the explanation in the loosest possible sense and tells you to be more careful next time. You want a public apology equal in length to the accusation. You get permission to continue the game. You'll need to decide whether that is enough to do your job without carrying the conversation into every next interaction."
       },
       {
@@ -514,6 +692,7 @@
     "scanner": {
       "hard_bans": [],
       "candidates": [
+        "  [staccato x2/7] \"You start defending yourself.\" | \"She stops the rehearsal.\"  << In the Meridian's staff room in Las Vegas, Nora repeats the accusation...",
         "  [staccato x3/7] \"You're rushing.\" | \"You're distracting him.\" | \"You changed the rhythm.\"  << He wins and tells the person next to him he knew the table would be go...",
         "  [staccato x3/8] \"You did.\" | \"You did.\" | \"It was.\"  << During your break, you describe the exchange to an experienced dealer ...",
         "  [staccato x2/6] \"You haven't.\" | \"You take the hint.\"  << Then he asks whether you've eaten. You haven't. You were using your br..."
@@ -529,7 +708,22 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        1,
+        2,
+        14,
+        44
+      ],
+      "bridge_before": "Picture yourself dealing at a fictional Las Vegas casino called the Meridian. The name looks expensive above the entrance. Below the floor, the staff corridor has ordinary lockers, a drinks machine, and somebody looking for the lunch they left in a fridge. You arrive early because your uniform needs attention, not because the building's glamour has started working on you.",
+      "bridge_after": "In the Meridian's staff room in Las Vegas, Nora repeats the accusation and waits for your answer. You start defending yourself. She stops the rehearsal. She wants the sequence, not a speech about how hard you're trying. You describe what happened and practise asking for the review. Through the staff door, you can hear the real tables. Nora tells you to take a breath before you join them.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    },
+    "mechanical_floor_adjudication": "A context-sensitive candidate remains recorded. The mechanical floor is not treated as a complete D7 count or certification."
   },
   "P03": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -559,9 +753,7 @@
     "manual_observation": "Yacht Maribel invente. Approvisionnement, remplacement du poisson, rota et repos. Les regles britanniques sont bornees au cadre applicable ; aucun seuil de repos generalise.",
     "scanner": {
       "hard_bans": [],
-      "candidates": [
-        "  [staccato x2/7] \"You mention the departure.\" | \"She laughs at that.\"  << Marin asks what you learned today. You mention the departure. She asks..."
-      ],
+      "candidates": [],
       "mechanical_antithesis_floor_candidates": [],
       "echo_candidates": []
     },
@@ -571,13 +763,26 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        12,
+        36
+      ],
+      "bridge_before": "Imagine joining the interior crew of a fictional large yacht called the Maribel. From the dock, you see white decks, polished windows, and space that appears to exist purely for leisure. Your first walk through it ends in the crew area, where your bag fits into a compartment you're going to learn to organize very carefully.",
+      "bridge_after": "Aboard the Maribel, you set the tray down before accepting the glass. The owner keeps talking about the view while you rearrange the used ones so they won't tip into the drinks you still need to serve. Marin, the chief steward, catches your eye from the service door and points toward the kitchen. You take the tray in. A guest asks where you're going. You tell them you'll return with the drinks they haven't yet received.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P04": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
     "hook": {
-      "first_sentence": "The celebrity is smiling for a photograph while the people behind the rope are moving toward her.",
-      "words": 65,
+      "first_sentence": "The publicist asks you to look happier before the celebrity has even arrived.",
+      "words": 64,
       "turn_present": true
     },
     "narrative_angle": "Le sourire public de l’actrice et le visage ferme du garde racontent des instants differents.",
@@ -585,7 +790,7 @@
       {
         "opens_paragraph": 1,
         "closes_paragraph": 28,
-        "opens_evidence": "The celebrity is smiling for a photograph while the people behind the rope are moving toward her. You're in the photograph too, looking as though somebody has ruined your evening. Somebody has. Her publicist just promised the crowd a closer look without asking the people responsible for getting her out afterward. But the picture that causes trouble will make you look like the unreasonable one.",
+        "opens_evidence": "The publicist asks you to look happier before the celebrity has even arrived. You're on her protection team, and the venue coordinator is trying to tell you the arrival plan has changed. The publicist keeps holding up a phone for a team photograph. But the picture that will cause trouble today will catch you doing the job nobody wanted to pause this one for.",
         "closes_evidence": "Your team lead asks for the order of events. You give the arrival time, the announced change, and the point where venue staff paused it. They speak with the publicist. The photograph remains online, where a stranger has now decided you hate your job. You put your phone away before another refresh turns your break into an argument you cannot finish."
       },
       {
@@ -613,7 +818,21 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        1,
+        2,
+        19,
+        34
+      ],
+      "bridge_before": "Put yourself on the protection team for a fictional actor called Serena Hale. Your job starts before her arrival. You're at the venue with a coordinator, checking the arrangements and confirming who is responsible for each part of the visit. The actor's assistant sends a message asking whether the dressing room has the right refreshments. It joins a list that currently contains more important questions.",
+      "bridge_after": "You ask them to wait while you hear the coordinator. Serena Hale's assistant is calling at the same time about the dressing room. You let the team lead know about the changed arrival and pass the other question to the venue contact. The publicist lowers the phone. They ask whether everything needs to be so serious. You still haven't found out who agreed to the new plan.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P05": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -628,7 +847,7 @@
         "opens_paragraph": 1,
         "closes_paragraph": 21,
         "opens_evidence": "Your passenger points at his watch, and you turn the weather display toward him. He owns the aircraft. You're the pilot deciding whether this flight can safely happen. But he's about to offer you something much harder to refuse than another complaint, and the answer you give will affect more than his afternoon meeting.",
-        "closes_evidence": "He offers to put his request in writing. You don't ask him to sign away a responsibility you still hold. A written expression of passenger preference doesn't replace a professional decision. You keep the conversation about the safe available choices rather than offering him a document that would make both of you feel covered while changing none of the underlying conditions."
+        "closes_evidence": "Graham offers to put the request in writing. You ask what he expects the document to change. He says he will accept the delay risk. You explain that he can state his wishes, but the safe operation remains the crew's responsibility. He looks at the aircraft outside. His assistant opens a blank email, then closes it when neither of you gives them something useful to type."
       },
       {
         "opens_paragraph": 4,
@@ -654,13 +873,26 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        21,
+        43
+      ],
+      "bridge_before": "Imagine flying a private jet for a fictional businessman called Graham Voss. The aircraft looks impressive from the terminal window. Your morning begins with the preparation, checks, and coordination required to use it properly. The cabin can be beautifully arranged while the flight still needs decisions that no passenger sees from a leather seat.",
+      "bridge_after": "Graham Voss taps the watch again. Your fellow pilot, Anika, is waiting beside the table with the latest information. You tell Graham the departure isn't confirmed. He asks how long. You give him the next update point instead of inventing an answer. He returns to his assistant, who has already begun calling the people waiting for him. Nobody in the lounge looks impressed by the distinction yet.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P06": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
     "hook": {
-      "first_sentence": "The woman pressing the service bell can see you're already on the telephone.",
-      "words": 53,
+      "first_sentence": "Your colleague hands you a note saying the hotel's most demanding guest expects a table at a restaurant that is already full.",
+      "words": 66,
       "turn_present": true
     },
     "narrative_angle": "Une cliente bruyante monopolise le comptoir pendant qu’un autre client attend une aide utile.",
@@ -668,8 +900,8 @@
       {
         "opens_paragraph": 1,
         "closes_paragraph": 36,
-        "opens_evidence": "The woman pressing the service bell can see you're already on the telephone. She presses it again. Her luggage has its own trolley, her restaurant has no available table, and she believes both problems should embarrass you. But the guest who actually needs your help tonight is standing behind her, saying almost nothing.",
-        "closes_evidence": "The man with the walking stick returns later to say the room arrangement has been handled. He asks whether there's somewhere nearby for a simple meal. You give him options that fit what he wants, not the most expensive places you can name. He chooses one within a comfortable distance and asks you to write the directions down. It's a small request after a difficult arrival."
+        "opens_evidence": "Your colleague hands you a note saying the hotel's most demanding guest expects a table at a restaurant that is already full. You're taking over the concierge desk, and her suitcase is still downstairs. But the guest who will need your attention most tonight hasn't complained at all. You haven't met either of them yet, and one already has several reasons to ask for your manager.",
+        "closes_evidence": "Mr. Morris returns later to say the new room is quiet and his wife has settled. They would like somewhere nearby for a simple meal. You give him options within the distance he wants to walk. He picks one and asks you to write the directions down. When you finish, he folds the paper and puts it somewhere he can reach without opening his bag again."
       },
       {
         "opens_paragraph": 9,
@@ -687,9 +919,13 @@
       "candidates": [
         "  [staccato x2/5] \"Opening arrangements need checking.\" | \"Travel time can change.\"  << You begin organizing information around useful differences, not simply...",
         "  [staccato x2/7] \"Mrs.\" | \"You have.\"  << Mrs. Calder says she's sure the hotel can arrange it. You explain the ...",
+        "  [staccato x2/7] \"His name is Mr.\" | \"Mrs.\"  << Behind her stands a tired man with a walking stick. His name is Mr. Mo...",
+        "  [staccato x2/6] \"Mr.\" | \"He has stopped apologizing.\"  << The porter thanks you for catching the timing before they went upstair...",
+        "  [staccato x3/8] \"Mrs.\" | \"Morris.\" | \"She starts to interrupt.\"  << Mrs. Calder says she was here first. You tell her a colleague is handl...",
         "  [staccato x2/6] \"The duty manager arrives.\" | \"She asks Mrs.\"  << The duty manager arrives. She hears the restaurant request and the opt...",
         "  [staccato x2/5] \"They are embarrassed.\" | \"You would like Mrs.\"  << They are embarrassed. You tell them you're glad it was found and close...",
-        "  [staccato x3/6] \"Calder returns.\" | \"Dinner was pleasant.\" | \"The car worked.\"  << You're nearly ready to leave when Mrs. Calder returns. Dinner was plea..."
+        "  [staccato x3/6] \"Calder returns.\" | \"Dinner was pleasant.\" | \"The car worked.\"  << You're nearly ready to leave when Mrs. Calder returns. Dinner was plea...",
+        "  [staccato x2/8] \"Morris lifts a hand.\" | \"Idris is already there.\"  << On the way out, Mr. Morris lifts a hand. You stop, expecting another q..."
       ],
       "mechanical_antithesis_floor_candidates": [],
       "echo_candidates": []
@@ -700,7 +936,27 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        1,
+        2,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        36,
+        44
+      ],
+      "bridge_before": "Picture yourself at the concierge desk of a fictional luxury hotel called the Aster. Above you, a chandelier makes the marble shine. Below the desk, you keep a spare pair of comfortable shoes. The guests don't need to see those. They do need to see you listening, including when you're listening to a caller while someone else starts talking across the counter.",
+      "bridge_after": "You ask Idris whether the restaurant is confirmed. He points to requested in the notes. The guest has been told the desk is checking. You write the current status beside her name before answering the phone. Above the Aster's desk, the chandelier makes the marble shine. Under the counter are the comfortable shoes you hope to change into before tonight becomes tomorrow.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P07": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
@@ -745,13 +1001,26 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        2,
+        20,
+        40
+      ],
+      "bridge_before": "Imagine advising a fictional wealthy entrepreneur called Marcus Bell. You're an experienced lawyer, and your firm has assigned you to the matter. You aren't his accountant, publicist, or personal assistant, although people will occasionally send you questions intended for all three. The engagement documents define the work you're doing. They become more important when everyone starts assuming who your client must be.",
+      "bridge_after": "You put the extra folder on Marcus Bell's desk and ask which company it concerns. He says it is a small personal matter. You tell him you'll get it scoped separately, then open the acquisition draft your firm is handling today. He reaches across to show you a different page. Your lunch is beside the first page, still waiting for a decision that doesn't require a lawyer.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P08": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
     "hook": {
-      "first_sentence": "You're carrying a silver tray through a royal palace when the person relaxing beneath a crimson canopy holds out another empty cup.",
-      "words": 64,
+      "first_sentence": "The tray is empty when your supervisor asks you to carry it across the royal dining room.",
+      "words": 57,
       "turn_present": true
     },
     "narrative_angle": "L’apparat du palais masque une liste d’invites qui n’a pas atteint la cuisine.",
@@ -759,7 +1028,7 @@
       {
         "opens_paragraph": 1,
         "closes_paragraph": 17,
-        "opens_evidence": "You're carrying a silver tray through a royal palace when the person relaxing beneath a crimson canopy holds out another empty cup. Your arms are already shaking. You can see the chair you'd like to sit in, and you know perfectly well you won't be using it. But the cup isn't tonight's biggest problem. Somebody has changed the reception plan without telling the kitchen.",
+        "opens_evidence": "The tray is empty when your supervisor asks you to carry it across the royal dining room. Halfway there, she describes what the guests will put on it. You can feel your wrist adjusting before she's finished talking. But the thing that will threaten tonight's service won't be heavy. It's a name that hasn't reached the kitchen.",
         "closes_evidence": "Amara calls the event office. A guest has indeed been added, but the revised list reached the reception team without reaching the kitchen. Someone puts down a seating card while the chef asks about the new guest's requirements. You had thought the missing place could be solved by adding a chair. The chair is ready well before the people preparing dinner have the answer they need."
       },
       {
@@ -787,21 +1056,42 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        1,
+        2,
+        31,
+        42
+      ],
+      "bridge_before": "Imagine joining the service staff of a fictional royal household. The family, guests, and incidents in this story are invented. The work is built around ordinary professional responsibilities that also exist behind extraordinary rooms. On your first morning, the important door for you is the one leading to the staff area, where someone is trying to find a clean uniform in the correct size.",
+      "bridge_after": "Amara adds a cup and asks you to walk back. You watch it more carefully than you watched the paintings on arrival. At the service station, she tells you to set the tray down before accepting something else. You try it and feel the difference immediately. Then you hear a question from the kitchen about the reception list and follow her toward the people who need the answer.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P09": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
     "hook": {
-      "first_sentence": "The billionaire has found a scratch on the door handle, and the mansion viewing is apparently over.",
-      "words": 57,
+      "first_sentence": "The billionaire cancels the viewing while you're standing at the mansion's front door.",
+      "words": 60,
       "turn_present": true
     },
     "narrative_angle": "Le client se focalise sur une poignee ; l’information decisive concerne un autre bien.",
     "loop_evidence": [
       {
         "opens_paragraph": 1,
+        "closes_paragraph": 2,
+        "opens_evidence": "The billionaire cancels the viewing while you're standing at the mansion's front door. Another listing caught his eye on the way over. You've spent days preparing this visit, and the seller is waiting inside. Your fee depends on a completed sale. But first you need to persuade the buyer to come through a door he is already discussing leaving behind.",
+        "closes_evidence": "You ask Everett Shaw whether he'll at least look at the office with the entrance he requested. He tells the driver to continue to the house. You thank him, end the call, and tell the seller's representative that he is still coming. They move away from the doorway. You put the key back in its envelope instead of celebrating the successful completion of a journey your client hasn't finished yet.",
+        "kind": "first local action-result before context"
+      },
+      {
+        "opens_paragraph": 1,
         "closes_paragraph": 28,
-        "opens_evidence": "The billionaire has found a scratch on the door handle, and the mansion viewing is apparently over. You're holding plans, keys, and a folder thick enough to represent several days of unpaid preparation. He hasn't seen the room he specifically asked you to find. But the defect that could actually stop this sale is still waiting downstairs.",
+        "opens_evidence": "The billionaire cancels the viewing while you're standing at the mansion's front door. Another listing caught his eye on the way over. You've spent days preparing this visit, and the seller is waiting inside. Your fee depends on a completed sale. But first you need to persuade the buyer to come through a door he is already discussing leaving behind.",
         "closes_evidence": "The inspection report identifies evidence of water ingress in the lower-ground room. Everett had barely glanced inside it. The report calls for further specialist assessment, which you arrange through the seller's representative. You send Everett the report rather than describing the issue as minor. Your commission is getting closer, and the room you hoped nobody would worry about now needs an answer."
       },
       {
@@ -830,13 +1120,28 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        1,
+        2,
+        4,
+        7,
+        44
+      ],
+      "bridge_before": "Imagine working as a property agent for a fictional wealthy buyer called Everett Shaw. Your agreement defines the work and how you're paid. For the transaction you're pursuing, payment depends on a completed sale. A photograph outside a magnificent house may look good for your career while producing no income at all.",
+      "bridge_after": "You ask Everett Shaw whether he'll at least look at the office with the entrance he requested. He tells the driver to continue to the house. You thank him, end the call, and tell the seller's representative that he is still coming. They move away from the doorway. You put the key back in its envelope instead of celebrating the successful completion of a journey your client hasn't finished yet.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   },
   "P10": {
     "scope": "manuscript_editorial_review_not_full_production_greenlight",
     "hook": {
-      "first_sentence": "The billionaire sends your carefully prepared dinner back almost untouched and asks whether you can make him a sandwich.",
-      "words": 58,
+      "first_sentence": "Your billionaire boss approves the dinner menu while looking at his phone.",
+      "words": 59,
       "turn_present": true
     },
     "narrative_angle": "Menu approuve puis renvoye pour un sandwich dont le chef ignorait la demande.",
@@ -844,7 +1149,7 @@
       {
         "opens_paragraph": 1,
         "closes_paragraph": 28,
-        "opens_evidence": "The billionaire sends your carefully prepared dinner back almost untouched and asks whether you can make him a sandwich. You're still holding the plate when he describes the bread he wants. But the most embarrassing part is that you had his approval for tonight's menu, and you're about to discover how little either of you meant by approved.",
+        "opens_evidence": "Your billionaire boss approves the dinner menu while looking at his phone. You ask whether he heard the main course. He says it all sounds excellent and continues typing. You've cooked for Oliver Wren long enough to recognize that answer. But tonight, you're going to discover how much work can disappear between a chef's question and a distracted yes.",
         "closes_evidence": "It turns out he wants toasted cheese and tomato on the bread you have. You repeat the choice and return to the kitchen. The sandwich is less difficult than the meal you're replacing. What bothers you is being asked to discover the request after cooking something else, with the guests already seated and the colleague waiting for an answer you were expected to know."
       },
       {
@@ -870,6 +1175,20 @@
       "No claim of exhaustive top-five differentiation or facts absent from search page one.",
       "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
       "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
-    ]
+    ],
+    "benchmark_review": {
+      "reference": "POVrank",
+      "channel_id": "UC3EpqIjfEUiZi1GvWKCWyuA",
+      "scope": "Owner explicitly selected these twenty manuscripts.",
+      "changed_paragraphs": [
+        1,
+        2,
+        27,
+        43
+      ],
+      "bridge_before": "Imagine working as the private chef for a fictional household headed by Oliver Wren. The kitchen is better equipped than some professional kitchens you've used, although the equipment doesn't order ingredients, confirm guests, or tell you when someone's preferences have changed. You arrive early enough to find an assistant looking for a message they thought they'd forwarded yesterday.",
+      "bridge_after": "You wait until he looks up and repeat the menu. He agrees, then asks you to send it to his assistant. You do. In the kitchen, you put the ingredients list beside the confirmation. For a moment, tonight looks settled. The assistant is still searching for a message they thought they'd forwarded yesterday, and its guest list isn't the one on your counter.",
+      "stage": "Authored comparative revision and technical recheck; no measured retention uplift or automatic full greenlight asserted."
+    }
   }
 }

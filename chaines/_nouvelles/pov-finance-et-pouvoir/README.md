@@ -2,6 +2,12 @@
 
 ## Reprise — ecriture du 19 octobre 2026
 
+Precision utilisateur : le benchmark **POVrank** concerne ces vingt scripts.
+Lire [le contrat et la comparaison](SCRIPTWRITING.md). Les textes sont repris
+dans ce sens : entrees de scene actives, dialogues, consequences et continuite.
+Les fichiers de narration et le manifeste sont actualises ; les variantes de
+miniature restent conservees. Ce benchmark ne s’etend pas aux autres chaines.
+
 L’utilisateur approuve les vingt sujets et demande maintenant leurs scripts. Le dessin des variantes de miniature est accepte ; conserver les vingt A, vingt B et trois C, soit 43 images. Le choix individuel de variante sera fait plus tard.
 
 [Les vingt manuscrits et leur guide](scripts-20-2026-10-18/README.md) sont ecrits en anglais et revises : dix The Wealthy Nobody et dix Oddly Important Guy. Le manifeste donne titres, fichiers, nombres de mots, empreintes et estimations de duree fondees sur une ancienne voix Ryan effectivement mesuree. Ce sont des narrations completes, pas des plans ou extraits. Les briefs, sources, corrections et preuves de boucles sont conserves dans le meme dossier.
