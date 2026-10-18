@@ -199,3 +199,8 @@ Cette correction utilisateur concerne **The Wealthy Nobody ET Oddly Important Gu
 Bloc commun pour les prochains prompts, complete par le jeu precis du plan :
 
 > Reference images lock character identity, proportions and wardrobe, not facial expression. Derive each character's expression independently from the scene's action and emotional context. For an ordinary task with no stated emotion, use a relaxed neutral closed mouth without upturned corners, resting eyebrows and an attentive gaze. No automatic grin, smirk or visible teeth. Smile only when this specific beat justifies it; do not replace every smile with worry. The shot-specific acting direction overrides expressions in the references.
+
+
+## Grille de 20 titres et miniatures — 18 octobre 2026
+
+L’utilisateur vise dix nouveaux films par chaine pour le lendemain matin, avec une grille d’idees et de packaging AVANT tout script. [Selection de vingt propositions](packaging-20-2026-10-18/README.md) : dix The Wealthy Nobody et dix Oddly Important Guy, vingt miniatures au dessin approuve, titres anglais au-dessus, sans texte ajoute aux images. [Grille interactive](packaging-20-2026-10-18/GRILLE.html), deux planches, images et prompts conserves. Recherche de catalogues et demandes voisines avec les outils de niche, inspection de chaque sortie et huit corrections ciblees. Scripts, voix, films et publication non lances ; choix des propositions attendu avant ecriture Faceless OS. Le delai souhaite n’est pas declare garanti. Les kits et styles restent separes par chaine.
