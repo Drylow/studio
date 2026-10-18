@@ -31,3 +31,13 @@ the generated acting against the scene, not only identity and clothing.
 Aliens such as Jabba and Covenant species preserve their recognisable anatomy
 and natural colour. New Halo/Space Marine trials still require inspection and
 are not approved merely because the Jabba style was approved.
+
+User correction, 18 October 2026: the owner deliberately removed the Covenant /
+Halo upload because its thumbnail was unsatisfactory. Do not restore, re-upload
+or reschedule it without a new instruction. Prior release receipts are historical.
+For future Oddly Fictional Lives thumbnails, provide the owner with an authored
+prompt; the owner generates the image. Do not automatically generate, replace
+or publish thumbnails. Keep the established no-overlay-text direction unless
+the owner changes it, and vary the composition to suit the actual episode.
+The three new reference links supplied on 18 October are for channel ideation;
+they do not approve new scripts, channels, paid media generation or publication.
