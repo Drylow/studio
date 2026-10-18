@@ -1,5 +1,20 @@
 # 20 videos — selection et methode
 
+## Revision apres retour sur le message des miniatures — 18 octobre 2026
+
+La [grille principale](GRILLE.html) montre maintenant **vingt nouvelles propositions B** et **trois alternatives C** pour P06 concierge, P07 avocat et P08 palais. Les vingt images A restent disponibles par bouton et en mode comparaison ; [leur grille initiale](GRILLE-A.html) et leurs planches sont conservees. Les titres restent identiques. Toutes les nouvelles propositions retenues ont ete regardees a leur resolution native puis sur planche ; elles ne sont pas declarees approuvees par l’utilisateur ni meilleures en taux de clic mesure.
+
+Lire [la direction de miniature commune](../THUMBNAIL-DIRECTION.md). Le metier et le lieu seuls ne suffisent pas : une demande ou un dilemme, une action decisive, un rapport clair entre personnages et des reactions lisibles. Tous les acteurs detailles ont des yeux blancs cartoon avec pupilles noires ; peau blanche, dessin rond, sans texte ajoute. Ce jeu plus appuye concerne le packaging ; les videos gardent un jeu adapte aux evenements, sans colere ni sourire permanents.
+
+Les images B/C sont dans variantes/. Planches : [The Wealthy Nobody B](wealthy-nobody-variants-b.jpg), [Oddly Important Guy B](oddly-important-variants-b.jpg), [trois sujets prioritaires A/B/C](priority-abc.jpg). variants-prompts.json conserve pour chaque proposition le prompt de scene initial, le prompt effectivement retenu et l’ordre des roles de references. Une correction ciblee ne doit pas etre relancee sans son image cible ; natifs, recus, historiques et cibles de correction sont conserves dans le travail prive.
+
+Execution sur le VPS, meme fournisseur de miniatures et concurrence bornee a trois. Vingt-trois nouvelles scenes, puis dix corrections ciblees apres inspection : peau de certains acteurs, texte accidentel, differentiation d’un secondaire et deux postures. Deux corrections ont expire sans resultat ; historique du fournisseur examine avant deux relances explicites versionnees. Ces echecs restent conserves et ne sont pas annonces comme images livrees. Aucune boucle de regeneration automatique ni changement de fournisseur.
+
+Limites constatees : le defaut de poignee de P09 reste petit ; son geste de rejet et le titre portent l’angle. Le bureau de l’avocat C reste bas malgre sa posture assise corrigee ; B est plus direct comme proposition principale. Les signes de salaire, retraite ou heritage ne sont pas tous explicables sans le titre : verifier le couple, pas une image isolee. Chaque promesse devra etre tenue par le futur script. Aucun script, voix, film ou publication lance pendant cette revision.
+
+Les sections suivantes decrivent la selection editoriale et la livraison initiale A ; la presente revision remplace leur statut de miniature principale.
+
+
 Statut : ideation et propositions de packaging a juger avant tout script. 10 videos par chaine, titres anglais de moins de 60 caracteres, miniatures sans texte au dessin approuve. Les vingt films ne sont ni ecrits ni produits par cette grille. Les vingt miniatures finales de proposition ont ete inspectees ; huit premieres sorties ont ete corrigees avant cette livraison. Objectif utilisateur : 20 videos pour le lendemain matin ; delai non garanti tant que selection, qualite des scripts et capacite des fournisseurs/rendu ne sont pas verifies.
 
 ## Selection editoriale

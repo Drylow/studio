@@ -263,5 +263,8 @@
       ],
       "proof_needed": "Documenter travail de chef prive et contraintes ordinaires ; pas d’allergie ou consigne medicale inventee."
     }
-  ]
+  ],
+  "variant_count": 23,
+  "thumbnail_status": "message_and_expression_revision_awaiting_owner_choice",
+  "thumbnail_direction": "../THUMBNAIL-DIRECTION.md"
 }
