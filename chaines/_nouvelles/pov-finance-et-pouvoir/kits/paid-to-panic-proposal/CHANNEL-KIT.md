@@ -41,3 +41,7 @@ Le sujet reste une proposition, sans script, voix, production vidéo ou publicat
 ## Nom en discussion
 
 Paid to Panic signifie « payé pour paniquer » : humour sur le stress des métiers. L’utilisateur demande une explication du nom ; il ne l’a pas approuvé. Oddly Important est une autre proposition évoquée pour une identité plus large sur le pouvoir. Ne pas créer la chaîne sous un de ces noms sans décision utilisateur.
+
+## Validation visuelle — 18 octobre 2026
+
+Photo de profil approuvee explicitement par l’utilisateur et conservee comme reference d’identite. La banniere reste une proposition. Cette validation du dessin ne change pas le statut du nom de la chaine.

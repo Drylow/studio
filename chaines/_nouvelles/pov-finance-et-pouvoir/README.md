@@ -90,3 +90,8 @@ Deux kits visuels prepares avec le dessin commun approuve. Les avatars et bannie
 - [Paid to Panic — kit propose](kits/paid-to-panic-proposal/CHANNEL-KIT.md).
 
 Les handles suggeres n'ont pas ete resolus vers une chaine existante lors du controle API. Ce resultat ne garantit ni disponibilite ni reservation. Les descriptions publiques sont en anglais, sans liens externes.
+
+
+## Photos de profil approuvees — 18 octobre 2026
+
+L’utilisateur approuve explicitement les DEUX photos de profil livrees : celle de The Wealthy Nobody et celle du kit provisoire de la chaine pouvoir. Conserver ces fichiers comme identites visuelles approuvees. Cette validation ne choisit pas le nom de la deuxieme chaine et ne vaut pas approbation explicite des bannieres ni lancement des episodes.

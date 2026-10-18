@@ -37,3 +37,7 @@ Vert forêt, crème, blanc et contours noirs. Grandes têtes blanches expressive
 POV: Your Boss Offers You More Money — You Ask for Less Work
 
 Le sujet reste une proposition, sans script, voix, production vidéo ou publication lancés. Aucun compte ni profil de navigateur créé.
+
+## Validation visuelle — 18 octobre 2026
+
+Photo de profil approuvee explicitement par l’utilisateur et conservee comme reference d’identite. La banniere reste une proposition. Cette validation du dessin ne change pas le statut du nom de la chaine.
