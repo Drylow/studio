@@ -78,3 +78,15 @@ Finance : buste a tete ronde blanche, expression tranquille legerement malicieus
 Pouvoir : buste a tete ronde blanche, sourcil leve, costume sombre et cravate legerement de travers, petit badge, fond bleu uni. Le nom eventuel Paid to Panic n'impose pas une expression paniquee dans chaque image.
 
 Meme dessin approuve pour les deux, identites et codes de couleur distincts. Aucune photo de profil generee a ce stade.
+
+
+## Nom retenu et kits — 18 octobre 2026
+
+L'utilisateur retient **The Wealthy Nobody** pour la chaine finance et demande les kits. Le nom remplace les suggestions precedentes pour ce projet. La deuxieme idee reste la chaine sur les coulisses du pouvoir ; **Paid to Panic** est toujours une proposition de nom, pas une validation utilisateur.
+
+Deux kits visuels prepares avec le dessin commun approuve. Les avatars et bannieres sont de nouvelles propositions, regardees par Codex mais non encore approuvees individuellement par l'utilisateur. Cette livraison ne cree pas les chaines YouTube et ne lance pas les episodes.
+
+- [The Wealthy Nobody — kit](kits/the-wealthy-nobody/CHANNEL-KIT.md).
+- [Paid to Panic — kit propose](kits/paid-to-panic-proposal/CHANNEL-KIT.md).
+
+Les handles suggeres n'ont pas ete resolus vers une chaine existante lors du controle API. Ce resultat ne garantit ni disponibilite ni reservation. Les descriptions publiques sont en anglais, sans liens externes.
