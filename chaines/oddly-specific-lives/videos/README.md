@@ -4,6 +4,7 @@ Généré par `production/export_channels.py` (liens et état : `production/VIDE
 
 | Vidéo | Script | Recherche | Publication | Miniature |
 |---|---|---|---|---|
+| POV: You Fall in Love With a Female Pirate | [script](you-fall-in-love-with-a-female-pirate/script.md) | [notes](you-fall-in-love-with-a-female-pirate/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-female-pirate/publication.md) | [miniature.jpg](you-fall-in-love-with-a-female-pirate/miniature.jpg) |
 | POV: You Fall in Love With a Female Gladiator | [script](you-fall-in-love-with-a-female-gladiator/script.md) | [notes](you-fall-in-love-with-a-female-gladiator/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-female-gladiator/publication.md) | [miniature.jpg](you-fall-in-love-with-a-female-gladiator/miniature.jpg) |
 | POV: You Fall in Love With a Geisha | [script](you-fall-in-love-with-a-geisha/script.md) | [notes](you-fall-in-love-with-a-geisha/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-geisha/publication.md) | [miniature.jpg](you-fall-in-love-with-a-geisha/miniature.jpg) |
 | POV: Your Life as a Chinese Concubine | [script](your-life-as-a-chinese-concubine/script.md) | [notes](your-life-as-a-chinese-concubine/recherche.md) | [titre, description, tags](your-life-as-a-chinese-concubine/publication.md) | [miniature.jpg](your-life-as-a-chinese-concubine/miniature.jpg) |
