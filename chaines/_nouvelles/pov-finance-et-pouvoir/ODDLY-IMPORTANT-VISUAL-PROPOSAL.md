@@ -10,6 +10,8 @@ Lieux d’essai : terrasse d’un milliardaire, casino et yacht. Couleurs bleu n
 
 Expressions distinctes par scene : impatience polie avec le milliardaire, concentration au casino, sourire naturel sur le yacht. Ne pas recopier le sourire de la reference dans toutes les situations, ni figer la mascotte dans la panique.
 
+Correction utilisateur commune aux deux chaines apres les essais : trop de sourires. Appliquer la [direction de jeu partagee](README.md#direction-de-jeu-commune--expressions-18-octobre-2026) dans chaque prochain prompt : neutre/concentre pour une tache ordinaire, expression motivee et independante pour chaque acteur. Un poste de service n’impose pas un sourire automatique ; un sourire poli reste possible si le moment le demande. Les images d’identite ne doivent pas imposer leurs bouches souriantes a la scene.
+
 Meme costume dans les trois essais afin de comparer le dessin. Les vrais episodes adapteront le vetement au poste et aux echelons documentes. Ces images ne sont pas trois plans consecutifs d’une histoire, et aucune coherence d’un lieu sur plusieurs plans n’est affirmee.
 
 ## Methode

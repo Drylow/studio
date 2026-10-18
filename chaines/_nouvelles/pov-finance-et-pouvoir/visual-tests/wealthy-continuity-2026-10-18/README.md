@@ -4,7 +4,9 @@ Six images fixes pour verifier la mise en scene avant production de masse : troi
 
 ![Comparatif six plans](planche.jpg)
 
-CLI configure sur le VPS, prompts manuels et references choisies par Codex. La geometrie, les acteurs et les objets sont inspectes apres reception ; les trois nouvelles sorties attendent le jugement utilisateur.
+CLI configure sur le VPS, prompts manuels et references choisies par Codex. La geometrie, les acteurs et les objets sont inspectes apres reception ; la sequence est acceptee avec la correction de jeu ci-dessous.
+
+Retour utilisateur du 18 octobre 2026 apres presentation : resultat accepte (« OK, c’est parfait »), avec correction pour **les deux chaines** : les personnages sourient trop souvent. Ce comparatif est une reference de coherence et de dessin, pas une consigne de sourire sur chaque plan. Pour la suite, appliquer la [direction de jeu commune](../../README.md#direction-de-jeu-commune--expressions-18-octobre-2026), tout en conservant les prompts historiques ci-dessous sans les reecrire retroactivement.
 
 ## Plans et controle visuel
 
