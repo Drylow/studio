@@ -1,0 +1,723 @@
+{
+  "checked": "2026-10-18",
+  "method": "Métadonnées publiques Algrow et Nexlev. Vues cumulées, non corrigées de l'âge. Pas de visionnage intégral ni accès aux statistiques privées.",
+  "channels": [
+    {
+      "label": "recent_prehistoire",
+      "channel_id": "UCPlUfxXfP-Cgg4_qM-y8ivA",
+      "videos": [
+        {
+          "title": "Pangea: Life on Earth’s Lost Supercontinent (As We Understand It)",
+          "url": "https://www.youtube.com/watch?v=BAiE_LTEjGw",
+          "views": 24185,
+          "published": "2026-10-12T00:00:01Z",
+          "duration_seconds": 8847
+        },
+        {
+          "title": "The Lost Humans Still Living in Our DNA",
+          "url": "https://www.youtube.com/watch?v=bi3ft93yvhU",
+          "views": 11320,
+          "published": "2026-10-05T00:00:11Z",
+          "duration_seconds": 6901
+        },
+        {
+          "title": "The Jurassic Seas: When Monsters Ruled the Oceans | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=O1JBaI9EVSA",
+          "views": 18757,
+          "published": "2026-09-30T19:30:09Z",
+          "duration_seconds": 6622
+        },
+        {
+          "title": "When Antarctica Froze: The Oligocene Epoch (As We Understand It) | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=-Qi01izJzis",
+          "views": 11947,
+          "published": "2026-09-27T21:00:04Z",
+          "duration_seconds": 10259
+        },
+        {
+          "title": "The Strange 450 Million Year Evolution of Sharks | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=j9QysZ2T92w",
+          "views": 35759,
+          "published": "2026-09-21T21:00:40Z",
+          "duration_seconds": 10138
+        },
+        {
+          "title": "When Oxygen Almost Killed Life on Earth | The Great Oxygenation Event",
+          "url": "https://www.youtube.com/watch?v=8VYngjJD_gM",
+          "views": 16656,
+          "published": "2026-09-17T21:00:19Z",
+          "duration_seconds": 10457
+        },
+        {
+          "title": "Why Didn't Dinosaurs Build Civilizations? | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=tVruS-gueyE",
+          "views": 11530,
+          "published": "2026-09-01T00:00:30Z",
+          "duration_seconds": 10670
+        },
+        {
+          "title": "What Earth Looked Like 56 to 34 Million Years Ago | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=AL0YtzZJuNg",
+          "views": 29046,
+          "published": "2026-08-26T22:00:21Z",
+          "duration_seconds": 9349
+        },
+        {
+          "title": "What Happens If Yellowstone Erupts? | Its True History and the Worst-Case Scenario",
+          "url": "https://www.youtube.com/watch?v=Ct4D8hCbSLk",
+          "views": 33930,
+          "published": "2026-08-25T01:15:02Z",
+          "duration_seconds": 8614
+        },
+        {
+          "title": "The Prehistoric Human Migrations We Still Don’t Understand | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=ZQrExinwGcU",
+          "views": 6175,
+          "published": "2026-08-21T00:00:17Z",
+          "duration_seconds": 10002
+        },
+        {
+          "title": "All of Earth's Extinctions (As We Understand It) | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=KWBZd15IEQA",
+          "views": 28544,
+          "published": "2026-08-17T20:58:11Z",
+          "duration_seconds": 9637
+        },
+        {
+          "title": "How the Black Sea Became Noah's Flood | Documentary for Sleep",
+          "url": "https://www.youtube.com/watch?v=jtdrQ-IP4w0",
+          "views": 6246,
+          "published": "2026-08-10T20:00:30Z",
+          "duration_seconds": 7324
+        }
+      ]
+    },
+    {
+      "label": "recent_maritime",
+      "channel_id": "UC32Km2_H8Lo5Ulop6Nhzwug",
+      "videos": [
+        {
+          "title": "100 Sleepy Facts About Roman Baths | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=uoWqJUvAmww",
+          "views": 6520,
+          "published": "2026-10-17T19:00:38Z",
+          "duration_seconds": 8441
+        },
+        {
+          "title": "100 Sleepy Facts About the Greek Olympics — Fall Asleep to History — No Adverts",
+          "url": "https://www.youtube.com/watch?v=TWp0-FctbSo",
+          "views": 22485,
+          "published": "2026-10-10T19:00:01Z",
+          "duration_seconds": 8301
+        },
+        {
+          "title": "100 Sleepy Facts About The Fall of the Ottoman Empire — Fall Asleep to History — No Adverts",
+          "url": "https://www.youtube.com/watch?v=0BrsRC1PA-c",
+          "views": 34534,
+          "published": "2026-10-03T19:00:22Z",
+          "duration_seconds": 8861
+        },
+        {
+          "title": "What Was Medicine Like in Ancient Times? | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=e_p-9MVL4Xc",
+          "views": 91732,
+          "published": "2026-09-23T19:00:04Z",
+          "duration_seconds": 10681
+        },
+        {
+          "title": "How did Tudor Peasants Sleep at Night? | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=i0rtXLqcfng",
+          "views": 20427,
+          "published": "2026-09-21T19:00:10Z",
+          "duration_seconds": 10123
+        },
+        {
+          "title": "Life In The Stone Age | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=b97NRrz1Rzg",
+          "views": 212647,
+          "published": "2026-09-19T19:00:16Z",
+          "duration_seconds": 10441
+        },
+        {
+          "title": "The Viking Stories That Survived 1,000 Years | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=h78czEFOyL0",
+          "views": 55887,
+          "published": "2026-09-16T19:00:09Z",
+          "duration_seconds": 10321
+        },
+        {
+          "title": "What Was it Really Like to be an Ancient Roman? | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=cDRMQMfLKVE",
+          "views": 39617,
+          "published": "2026-09-14T19:00:21Z",
+          "duration_seconds": 8881
+        },
+        {
+          "title": "100 Sleepy Facts About War Ships — Fall Asleep to History — No Adverts",
+          "url": "https://www.youtube.com/watch?v=vbgknS0mCj0",
+          "views": 21111,
+          "published": "2026-09-12T19:00:18Z",
+          "duration_seconds": 8721
+        },
+        {
+          "title": "100 Sleepy Facts About the Ming Dynasty — Fall Asleep to History — No Adverts",
+          "url": "https://www.youtube.com/watch?v=1v6hlqKxS9I",
+          "views": 30812,
+          "published": "2026-09-09T19:00:36Z",
+          "duration_seconds": 9241
+        },
+        {
+          "title": "100 Fascinating World War II Facts to Fall Asleep To — No Adverts",
+          "url": "https://www.youtube.com/watch?v=VKErGB28YHQ",
+          "views": 22576,
+          "published": "2026-09-07T19:00:27Z",
+          "duration_seconds": 8543
+        },
+        {
+          "title": "The Strange World of Tudor London After Dark | Sleepy History",
+          "url": "https://www.youtube.com/watch?v=yshlrs3TbS0",
+          "views": 48595,
+          "published": "2026-09-05T19:00:22Z",
+          "duration_seconds": 9501
+        }
+      ]
+    },
+    {
+      "label": "recent_skyrim",
+      "channel_id": "UCAR30eKPIVcEw5zECMcXL1Q",
+      "videos": [
+        {
+          "title": "The Lore Behind Oblivion's Most Forgotten Enemies",
+          "url": "https://www.youtube.com/watch?v=LmFp9T9j9cM",
+          "views": 14065,
+          "published": "2026-09-19T23:00:20Z",
+          "duration_seconds": 11197
+        },
+        {
+          "title": "The Dark and Forgotten Facts Hidden Inside Skyrim's Windhelm",
+          "url": "https://www.youtube.com/watch?v=wRgc_AdJ_Hk",
+          "views": 7167,
+          "published": "2026-09-16T23:00:18Z",
+          "duration_seconds": 10475
+        },
+        {
+          "title": "The Heartbreaking and Tragic Story of Arthur Morgan for a Still Dark Night",
+          "url": "https://www.youtube.com/watch?v=LaSI7ur2D_k",
+          "views": 1490,
+          "published": "2026-09-12T23:00:25Z",
+          "duration_seconds": 10851
+        },
+        {
+          "title": "The Disturbing Secrets Behind Fallout 4s Most Ordinary NPCs",
+          "url": "https://www.youtube.com/watch?v=G6BylH68b48",
+          "views": 5494,
+          "published": "2026-09-09T23:00:34Z",
+          "duration_seconds": 10720
+        },
+        {
+          "title": "The Lore Behind Skyrim's Most Common Enemies Worth Losing Sleep Over",
+          "url": "https://www.youtube.com/watch?v=jeVYpgMvWds",
+          "views": 16985,
+          "published": "2026-09-05T23:00:27Z",
+          "duration_seconds": 10150
+        },
+        {
+          "title": "Who Was the White Wolf? | The Full Story of Geralt of Rivia",
+          "url": "https://www.youtube.com/watch?v=UMAgo4Ttwu8",
+          "views": 11300,
+          "published": "2026-09-01T23:45:35Z",
+          "duration_seconds": 7631
+        },
+        {
+          "title": "The Strange and Unsolved Mysteries of Red Dead Redemption 2",
+          "url": "https://www.youtube.com/watch?v=7u1ew45dRpQ",
+          "views": 5909,
+          "published": "2026-08-28T23:00:34Z",
+          "duration_seconds": 7111
+        },
+        {
+          "title": "The Dark Lives Hidden Inside Oblivion's Most Ordinary NPCs For The Nights You Cannot Sleep",
+          "url": "https://www.youtube.com/watch?v=pgC3f4s5Tug",
+          "views": 6811,
+          "published": "2026-08-25T23:00:08Z",
+          "duration_seconds": 8004
+        },
+        {
+          "title": "Ranni the Witch | The Full Story of Elden Ring's Most Mysterious Character",
+          "url": "https://www.youtube.com/watch?v=Y9upZLXUzPE",
+          "views": 1240,
+          "published": "2026-08-23T23:00:11Z",
+          "duration_seconds": 8188
+        },
+        {
+          "title": "The Haunting Facts and Stories Hidden Inside Skyrim's Morthal",
+          "url": "https://www.youtube.com/watch?v=lzexivy28EE",
+          "views": 4451,
+          "published": "2026-08-21T23:00:30Z",
+          "duration_seconds": 8106
+        },
+        {
+          "title": "Elder Scrolls Has Nine Gods and Here Is Their Full Story",
+          "url": "https://www.youtube.com/watch?v=d-uSsz77fDE",
+          "views": 6332,
+          "published": "2026-08-18T23:45:39Z",
+          "duration_seconds": 8405
+        },
+        {
+          "title": "The Hidden Easter Eggs of Bloodborne's Yharnam",
+          "url": "https://www.youtube.com/watch?v=ApQheE6q5CE",
+          "views": 2204,
+          "published": "2026-08-16T23:00:34Z",
+          "duration_seconds": 7915
+        }
+      ]
+    },
+    {
+      "label": "recent_fallout",
+      "channel_id": "UCz1bPIkRUwXxXU9cZSyH5aw",
+      "videos": [
+        {
+          "title": "Tranquility Lane: Vault 112's Virtual Hell Explained | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=7hAY6cVIPaA",
+          "views": 1209,
+          "published": "2026-10-17T21:00:15Z",
+          "duration_seconds": 10851
+        },
+        {
+          "title": "Nuka World's Evil Ending: Why You Should Never Choose It | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=PwrFF2-WKs4",
+          "views": 5686,
+          "published": "2026-10-16T21:00:12Z",
+          "duration_seconds": 10905
+        },
+        {
+          "title": "Megaton: The Complete Story of the Wasteland's Most Iconic Town | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=egW50YPoRZE",
+          "views": 5407,
+          "published": "2026-10-15T21:00:10Z",
+          "duration_seconds": 10557
+        },
+        {
+          "title": "Bitter Springs: The Massacre That Broke Boone | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=ibAOgFFUDOY",
+          "views": 2197,
+          "published": "2026-10-14T21:00:37Z",
+          "duration_seconds": 10604
+        },
+        {
+          "title": "X-01 Power Armor: The Pre-War Mystery Finally Solved | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=0g0lUrQFfaQ",
+          "views": 6000,
+          "published": "2026-10-13T21:00:19Z",
+          "duration_seconds": 11864
+        },
+        {
+          "title": "Why the Institute is Pure Evil: A Moral Breakdown | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=krp6AV2MZYc",
+          "views": 1844,
+          "published": "2026-10-12T21:00:33Z",
+          "duration_seconds": 11167
+        },
+        {
+          "title": "Arcade Gannon & The Enclave Remnants: Last of a Dead Empire | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=b9wAShdh9a4",
+          "views": 668,
+          "published": "2026-10-11T21:00:02Z",
+          "duration_seconds": 12325
+        },
+        {
+          "title": "Iguana Bits: The Cannibal Secret of Doc Morbid | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=928Xo15FGrM",
+          "views": 1382,
+          "published": "2026-10-10T21:00:35Z",
+          "duration_seconds": 12728
+        },
+        {
+          "title": "Pink Paste: The Horrifying Secret of Suffolk County Charter School | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=2p4FCuEQqpk",
+          "views": 4468,
+          "published": "2026-10-09T21:00:01Z",
+          "duration_seconds": 12934
+        },
+        {
+          "title": "Fallout 4's UFO Crash: The Alien Blaster & Hidden Beacon Explained | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=wRsK7o3HnTY",
+          "views": 1107,
+          "published": "2026-10-08T21:00:12Z",
+          "duration_seconds": 13835
+        },
+        {
+          "title": "Veronica: The Loneliest Girl in the Mojave Wasteland | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=cNG9ZWo9PcA",
+          "views": 2537,
+          "published": "2026-10-07T21:00:15Z",
+          "duration_seconds": 13318
+        },
+        {
+          "title": "The Gunners: Fallout 4's Most Ruthless Mercenary Army | Fallout Lore",
+          "url": "https://www.youtube.com/watch?v=duBFfVIbnWE",
+          "views": 4183,
+          "published": "2026-10-06T21:00:05Z",
+          "duration_seconds": 13515
+        }
+      ]
+    },
+    {
+      "label": "fr_geo_recent",
+      "channel_id": "UC3Fde1VB7ZTLzMYosCAsA2A",
+      "videos": [
+        {
+          "title": "Avant la Glace : Quand l’Antarctique Était une Jungle de Dinosaures",
+          "url": "https://www.youtube.com/watch?v=w6SaQOD2L_c",
+          "views": 12377,
+          "published": "2026-10-11T16:00:25Z",
+          "duration_seconds": 1213
+        },
+        {
+          "title": "PANGÉE : Le Supercontinent Né Après la Pire Extinction de la Terre",
+          "url": "https://www.youtube.com/watch?v=IKoA-gElUb0",
+          "views": 55669,
+          "published": "2026-10-04T17:00:20Z",
+          "duration_seconds": 1329
+        },
+        {
+          "title": "Quand les Dinosaures Ont Disparu… Quelque Chose de PIRE Est Apparu | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=_yxHG51C1EA",
+          "views": 34487,
+          "published": "2026-09-27T16:00:10Z",
+          "duration_seconds": 1229
+        },
+        {
+          "title": "La Terre GÈLE Tous les 100 000 Ans... et Personne ne Peut l’Arrêter",
+          "url": "https://www.youtube.com/watch?v=uSGAciHAnFM",
+          "views": 36714,
+          "published": "2026-09-20T17:00:35Z",
+          "duration_seconds": 1263
+        },
+        {
+          "title": "Les Premiers PRÉDATEURS Ont Failli Détruire la Vie… avant de la Sauver",
+          "url": "https://www.youtube.com/watch?v=w-ch_xVSSLs",
+          "views": 21975,
+          "published": "2026-09-13T15:00:31Z",
+          "duration_seconds": 1282
+        },
+        {
+          "title": "L’ÂGE des POISSONS qui ont fui une Mer Mortelle : Le Dévonien",
+          "url": "https://www.youtube.com/watch?v=TZjLQ6O9VQ4",
+          "views": 58506,
+          "published": "2026-09-06T15:00:13Z",
+          "duration_seconds": 1289
+        },
+        {
+          "title": "Voyage au Paléozoïque : Le Monde que Personne ne Voudrait Habiter | Documentaire Pour Dormir (+3H)",
+          "url": "https://www.youtube.com/watch?v=dEwcME6fEBI",
+          "views": 73389,
+          "published": "2026-09-01T18:00:23Z",
+          "duration_seconds": 10472
+        },
+        {
+          "title": "La Première Fois que la VIE a Conquis la TERRE : Le Silurien",
+          "url": "https://www.youtube.com/watch?v=nW0gvdcjnXc",
+          "views": 32661,
+          "published": "2026-08-30T16:00:17Z",
+          "duration_seconds": 1249
+        },
+        {
+          "title": "Il y a 6 Millions d’Années : La MÉDITERRANÉE S’est Asséchée… Puis S’est Remplie en Quelques Semaines",
+          "url": "https://www.youtube.com/watch?v=-S5sfzJsSOo",
+          "views": 4955,
+          "published": "2026-08-23T17:00:31Z",
+          "duration_seconds": 1235
+        },
+        {
+          "title": "Avant les Araignées : Les ARACHNIDES qui sont Sortis de la Mer et ont Conquis la Terre",
+          "url": "https://www.youtube.com/watch?v=dUFY5nATvxA",
+          "views": 44489,
+          "published": "2026-08-16T15:00:30Z",
+          "duration_seconds": 1264
+        },
+        {
+          "title": "Il y a 550 Millions d’Années, la PEUR a Créé le Premier CERVEAU de l’Histoire",
+          "url": "https://www.youtube.com/watch?v=HCMqUbwzVZo",
+          "views": 51140,
+          "published": "2026-08-09T13:00:33Z",
+          "duration_seconds": 1169
+        },
+        {
+          "title": "La PLUIE qui a Détruit la Planète et Ouvert la Voie aux Dinosaures",
+          "url": "https://www.youtube.com/watch?v=5C8idbQYhyQ",
+          "views": 69409,
+          "published": "2026-08-02T13:00:37Z",
+          "duration_seconds": 1257
+        }
+      ]
+    },
+    {
+      "label": "fr_mer_recent",
+      "channel_id": "UCZ8SoXFLVIpLHe-mn9tjckA",
+      "videos": [
+        {
+          "title": "Les Sumériens ont-ils vraiment disparu ? L’ADN des marais d’Irak intrigue",
+          "url": "https://www.youtube.com/watch?v=ooXl0snmF3M",
+          "views": 200,
+          "published": "2026-10-17T14:00:35Z",
+          "duration_seconds": 6319
+        },
+        {
+          "title": "Adam et Ève : ce que révèlent les tablettes mésopotamiennes | Histoire pour dormir",
+          "url": "https://www.youtube.com/watch?v=zgJjj1wHB4g",
+          "views": 14636,
+          "published": "2026-10-16T18:46:47Z",
+          "duration_seconds": 5770
+        },
+        {
+          "title": "Plus de 3 heures de mystères de l’Antiquité inexpliqués pour s’endormir",
+          "url": "https://www.youtube.com/watch?v=_rW54cfKN1w",
+          "views": 6032,
+          "published": "2026-10-15T01:18:28Z",
+          "duration_seconds": 9946
+        },
+        {
+          "title": "3 HEURES de mystères antiques étranges et toujours inexpliqués",
+          "url": "https://www.youtube.com/watch?v=4n9qLiX-OiQ",
+          "views": 3981,
+          "published": "2026-10-12T18:55:14Z",
+          "duration_seconds": 10907
+        },
+        {
+          "title": "Les Découvertes Archéologiques de 2026 qui Éclairent Notre Passé",
+          "url": "https://www.youtube.com/watch?v=_64gGtmj560",
+          "views": 11442,
+          "published": "2026-10-11T23:05:58Z",
+          "duration_seconds": 5836
+        },
+        {
+          "title": "Plus de 3 HEURES de mystères antiques que personne n’a jamais résolus",
+          "url": "https://www.youtube.com/watch?v=fsi9acFh9Ok",
+          "views": 4719,
+          "published": "2026-10-10T19:17:52Z",
+          "duration_seconds": 11431
+        },
+        {
+          "title": "Une mégastructure de 5 000 ans dont personne ne soupçonnait l’existence",
+          "url": "https://www.youtube.com/watch?v=qoa69dT5iUI",
+          "views": 9889,
+          "published": "2026-10-09T23:25:42Z",
+          "duration_seconds": 4926
+        },
+        {
+          "title": "Titanic : qu’est-il arrivé aux corps des victimes après le naufrage ?",
+          "url": "https://www.youtube.com/watch?v=ESN5oUTrU8c",
+          "views": 516,
+          "published": "2026-10-09T04:28:25Z",
+          "duration_seconds": 2503
+        },
+        {
+          "title": "La civilisation effacée de l’Histoire pendant 6 000 ans | Documentaire",
+          "url": "https://www.youtube.com/watch?v=ogxWgoAcBVk",
+          "views": 653,
+          "published": "2026-10-07T22:43:10Z",
+          "duration_seconds": 2153
+        },
+        {
+          "title": "6 sites mystérieux en Albanie | Histoire pour s’endormir",
+          "url": "https://www.youtube.com/watch?v=P1gJ8RW19ek",
+          "views": 235,
+          "published": "2026-10-06T14:51:14Z",
+          "duration_seconds": 4235
+        }
+      ]
+    },
+    {
+      "label": "fr_mer_pop",
+      "channel_id": "UCZ8SoXFLVIpLHe-mn9tjckA",
+      "videos": [
+        {
+          "title": "Le GRAND DÉLUGE d’il y a 12 000 ans : que s’est-il vraiment passé ?",
+          "url": "https://www.youtube.com/watch?v=Tim8EW3xnfI",
+          "views": 107763,
+          "published": "2026-08-28T13:00:15Z",
+          "duration_seconds": 3910
+        },
+        {
+          "title": "Les Découvertes Archéologiques les PLUS INCROYABLES de 2026 (Jusqu’à Présent)",
+          "url": "https://www.youtube.com/watch?v=Is-AFXNmIvU",
+          "views": 80239,
+          "published": "2026-08-08T18:00:33Z",
+          "duration_seconds": 5799
+        },
+        {
+          "title": "Les Mystères les Plus Troublants du Monde Ancien | 4+ HEURES de Documentaire",
+          "url": "https://www.youtube.com/watch?v=K-Vr2-KO9-Y",
+          "views": 78509,
+          "published": "2026-07-16T01:46:34Z",
+          "duration_seconds": 17361
+        },
+        {
+          "title": "4+ HEURES de Mystères Maritimes Terrifiants et Inexpliqués Pour Dormir",
+          "url": "https://www.youtube.com/watch?v=TLBjuKGt5W8",
+          "views": 73700,
+          "published": "2026-08-01T16:17:53Z",
+          "duration_seconds": 13656
+        },
+        {
+          "title": "Les Mystères Anciens les Plus ÉTRANGES et INEXPLIQUÉS de l’Histoire",
+          "url": "https://www.youtube.com/watch?v=PxDcvgEi8UI",
+          "views": 60267,
+          "published": "2026-08-31T15:00:02Z",
+          "duration_seconds": 10313
+        },
+        {
+          "title": "Pourquoi ces ruines antiques semblent-elles avoir fondu ?",
+          "url": "https://www.youtube.com/watch?v=ijN34gMePTM",
+          "views": 38304,
+          "published": "2026-09-28T16:51:12Z",
+          "duration_seconds": 1814
+        },
+        {
+          "title": "20 Découvertes Archéologiques les Plus Mystérieuses Jamais Faites",
+          "url": "https://www.youtube.com/watch?v=JXHwZbNQb5w",
+          "views": 35736,
+          "published": "2026-08-29T15:00:20Z",
+          "duration_seconds": 9782
+        },
+        {
+          "title": "Le mégalithe de 16 000 tonnes qu’aucune machine ne peut déplacer",
+          "url": "https://www.youtube.com/watch?v=nx-xo8F42og",
+          "views": 31857,
+          "published": "2026-09-14T20:42:44Z",
+          "duration_seconds": 1792
+        }
+      ]
+    },
+    {
+      "label": "skyrim_pop",
+      "channel_id": "UCAR30eKPIVcEw5zECMcXL1Q",
+      "videos": [
+        {
+          "title": "120 Minutes of Unsolved Skyrim Mysteries to Fall Asleep To",
+          "url": "https://www.youtube.com/watch?v=RQH1ww-whNk",
+          "views": 213552,
+          "published": "2026-03-14T22:00:22Z",
+          "duration_seconds": 7302
+        },
+        {
+          "title": "130 Wild Skyrim Lore Facts to Fall Asleep to",
+          "url": "https://www.youtube.com/watch?v=Y_av4jBARU4",
+          "views": 142867,
+          "published": "2026-01-14T01:25:06Z",
+          "duration_seconds": 10097
+        },
+        {
+          "title": "There Are 120 NPC Secrets Hidden Inside Skyrim's Most Ordinary Characters",
+          "url": "https://www.youtube.com/watch?v=ffrAqpQt0kU",
+          "views": 42494,
+          "published": "2025-12-23T23:01:04Z",
+          "duration_seconds": 9715
+        },
+        {
+          "title": "The Questlines You Missed on Your Skyrim Playthrough for the Nights You Can't Sleep",
+          "url": "https://www.youtube.com/watch?v=P46zlEE7DMU",
+          "views": 40903,
+          "published": "2026-03-24T22:00:24Z",
+          "duration_seconds": 9494
+        },
+        {
+          "title": "Drift Off to 165 Hidden Elden Ring Quest Secrets You Never Knew Were There the Whole Time",
+          "url": "https://www.youtube.com/watch?v=m6F2hCYrNeg",
+          "views": 36427,
+          "published": "2026-01-05T23:01:10Z",
+          "duration_seconds": 5964
+        },
+        {
+          "title": "107 Minutes of Buried Skyrim Lore for a Long Quiet Night",
+          "url": "https://www.youtube.com/watch?v=A-1JnSkxwNA",
+          "views": 29118,
+          "published": "2026-04-05T23:00:15Z",
+          "duration_seconds": 6452
+        }
+      ]
+    }
+  ],
+  "nexlev_outliers": [
+    {
+      "title": "What If Dinosaurs Never Went Extinct? | Documentary for Sleep",
+      "video_id": "2yiYRmCyfWc",
+      "views": "2800000",
+      "outlier_score": "21.1x",
+      "duration": "2:13:32"
+    },
+    {
+      "title": "Mariana Trench: Secrets of Earth’s Deepest Abyss | Documentary for Sleep",
+      "video_id": "1B_4zpIP0Io",
+      "views": "993000",
+      "outlier_score": "7.5x",
+      "duration": "2:00:48"
+    },
+    {
+      "title": "The Jurassic Period (As We Understand It) | Documentary for Sleep",
+      "video_id": "DnLGV1kZp3w",
+      "views": "866000",
+      "outlier_score": "6.5x",
+      "duration": "3:49:18"
+    },
+    {
+      "title": "Where Did Earth’s Water Come From? | Documentary for Sleep",
+      "video_id": "7Xs_cEqd-X8",
+      "views": "620000",
+      "outlier_score": "4.7x",
+      "duration": "2:10:33"
+    },
+    {
+      "title": "Forgotten Oceans of Prehistoric Earth | Documentary For Sleep",
+      "video_id": "4jsNfWBJGFQ",
+      "views": "431000",
+      "outlier_score": "3.3x",
+      "duration": "2:31:15"
+    },
+    {
+      "title": "Antarctica: Secrets Beneath the Frozen Continent | Documentary for Sleep",
+      "video_id": "bu_HMyC-gPE",
+      "views": "373000",
+      "outlier_score": "2.8x",
+      "duration": "1:07:56"
+    },
+    {
+      "title": "Why Deep Sea Creatures Get Creepier the Deeper You Go | Documentary for Sleep",
+      "video_id": "Obxmla5MRn4",
+      "views": "341000",
+      "outlier_score": "2.6x",
+      "duration": "1:53:13"
+    },
+    {
+      "title": "The Time It Rained For 2,000,000 Years | Documentary for Sleep",
+      "video_id": "QKW0ZKqtEZ4",
+      "views": "296000",
+      "outlier_score": "2.2x",
+      "duration": "2:03:34"
+    },
+    {
+      "title": "When 9 Human Species Walked the Earth | Documentary for Sleep",
+      "video_id": "mr5zEXMyARc",
+      "views": "292000",
+      "outlier_score": "2.2x",
+      "duration": "2:44:58"
+    }
+  ],
+  "profiles": [
+    {
+      "title": "Silence of the Earth",
+      "id": "UCPlUfxXfP-Cgg4_qM-y8ivA",
+      "subscribers": 61600,
+      "videos": 85,
+      "joined": "2025-02-11T07:01:28.069466+00:00"
+    },
+    {
+      "title": "Planète Géo",
+      "id": "UC3Fde1VB7ZTLzMYosCAsA2A",
+      "subscribers": 7020,
+      "videos": 23,
+      "joined": "2026-05-21T16:36:56.602436+00:00"
+    }
+  ]
+}

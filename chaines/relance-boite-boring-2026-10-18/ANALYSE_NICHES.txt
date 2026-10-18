@@ -1,0 +1,101 @@
+ANALYSE DE NOUVELLES NICHES — 18 OCTOBRE 2026
+Décision utilisateur : français et anglais selon les opportunités ; vidéos généralement de 2 heures minimum.
+Titre + script uniquement. Attendre les skills de scriptwriting promis avant rédaction longue.
+Propositions éditoriales, aucune chaîne créée et aucun calendrier supplémentaire imposé.
+
+MÉTHODE ET LIMITES
+Recherche de vidéos avec Nexlev ; vérification de catalogues récents et populaires avec Algrow.
+Comparaison de quatre familles : Terre préhistorique, maritime, lore gaming et ingénierie.
+Les résultats sont un échantillon orienté par les requêtes, pas un recensement du marché.
+Les vues sont cumulées au jour du contrôle : ne pas comparer directement une vidéo de six jours à une vidéo de neuf mois.
+Métadonnées et descriptions consultées, pas visionnage intégral des vidéos. Aucun accès au CTR, rétention ou revenus.
+Les scores Nexlev comparent à la moyenne de chaîne sans correction d'âge.
+Le navigateur web n'a pas pu charger deux pages YouTube ; leurs métadonnées viennent des connecteurs.
+Preuves structurées et liens dans niche-evidence.json.
+
+1 — TERRE DISPARUE : PREMIER CHOIX POUR UN TEST FRANÇAIS
+Concept : voyager lentement dans un monde réel disparu, avec paysages, écosystèmes et évolution.
+Croisement : documentaire scientifique + voyage immersif + écoute pour dormir.
+Nom de travail FR : Terre Endormie. Nom de travail EN : Ancient Earth After Dark.
+Disponibilité des noms non vérifiée. Ne pas créer deux versions simultanément sans premier test.
+
+Preuve française : Planète Géo, 7 020 abonnés et 23 vidéos, compte créé le 21 mai 2026.
+Voyage au Paléozoïque : 73 389 vues, publié le 1 septembre 2026, durée réelle 2 h 54 min 32 s.
+https://www.youtube.com/watch?v=dEwcME6fEBI
+Le titre annonce +3H, mais la durée réelle est inférieure : reprendre la mesure, pas la promesse.
+La plupart des autres vidéos récentes durent environ 20 minutes : ce seul exemple long est un signal, pas une série de validations sleep.
+
+Preuve anglaise : Silence of the Earth, 61 600 abonnés, 85 vidéos.
+Pangée : 24 185 vues depuis le 12 octobre, 2 h 27 min.
+https://www.youtube.com/watch?v=BAiE_LTEjGw
+Évolution des requins : 35 759 vues depuis le 21 septembre, 2 h 49 min.
+https://www.youtube.com/watch?v=j9QysZ2T92w
+Succès ancien : scénario hypothétique sur la non-extinction des dinosaures, environ 2,8 M, score Nexlev 21,1x.
+Ce succès ancien est exceptionnel ; les sorties récentes sont bien plus modestes.
+
+Titres de travail pour trois pilotes français, chacun avec au moins deux heures de récit :
+- Quand la France était sous les mers — Un voyage dans les mondes disparus pour s'endormir.
+- Avant les dinosaures : les étranges habitants de la Terre — Documentaire pour dormir.
+- Quand l'Antarctique était une forêt — Un voyage avant les glaces pour s'endormir.
+Les périmètres géologiques et affirmations doivent être sourcés avant script.
+Réservoir : mers jurassiques, Carbonifère, Pangée, Éocène, glaciations, origine des baleines, évolution des requins.
+La voix peut porter le récit ; les cartes et animaux doivent rester scientifiquement cohérents.
+Différent des chaînes historiques quotidiennes et de Deep Sea Survival, qui sont d'autres formats.
+Risque principal : recherche scientifique et précision des reconstitutions. Aucune preuve que le français serait peu concurrentiel.
+
+2 — ARCHIVES MARITIMES : SECOND TEST, FRANÇAIS D'ABORD
+Concept : expéditions, navires, ports et destins maritimes racontés calmement.
+Croisement : histoire documentée + récit d'expédition + écoute nocturne.
+Nom de travail FR : Les Archives du Large. EN : The Midnight Logbook. Disponibilité non vérifiée.
+Élargir au voyage et à la vie à bord pour disposer de sujets au-delà des naufrages.
+
+Signal français : Secrets de l'Antiquité, mystères maritimes, 73 700 vues depuis le 1 août 2026.
+Durée réelle 3 h 47 min 36 s malgré un titre annonçant 4+ heures.
+https://www.youtube.com/watch?v=TLBjuKGt5W8
+Chaîne généraliste ; ce résultat isolé ne prouve pas la régularité d'une chaîne maritime.
+Contre-exemples : La Caverne des Idées, survie en mer 3 279 vues et catastrophes maritimes 404 vues environ après un an (résultats de recherche Algrow).
+Signal anglais récent : Sleepy History Channel, War Ships, 21 111 vues depuis le 12 septembre 2026, 2 h 25 min.
+https://www.youtube.com/watch?v=vbgknS0mCj0
+Anciens signaux Nexlev : Ocean Expeditions 278 196 vues, 2 h 27 ; Shipwrecks 62 066, 2 h 18, environ sept mois.
+
+Pilotes :
+- L'expédition Franklin : deux navires, une disparition, un siècle de recherches.
+- Une traversée de l'Atlantique à l'époque des grands paquebots — Histoire pour dormir.
+- Les épaves de la mer Noire : les histoires conservées sous l'eau.
+Prévoir un périmètre documenté suffisant pour deux heures ; éviter d'étirer une seule énigme pauvre en sources.
+Séparer archives, hypothèses et légendes. Le positionnement calme est une proposition, pas un enseignement directement mesuré du CTR.
+
+3 — ARCHIVES DE TAMRIEL : OPTION ANGLAISE, PRIORITÉ INFÉRIEURE
+Concept : Elder Scrolls, villes, factions, personnages secondaires et récits oubliés.
+Croisement : jeu connu + microhistoires de personnages + récit de sommeil.
+Nom de travail : The Sleeping Archivist. Disponibilité non vérifiée.
+Commencer avec un seul univers pour donner une promesse cohérente. Hypothèse éditoriale, pas causalité démontrée.
+
+Cozy Knight, mystères Skyrim : 213 552 vues, 14 mars 2026, 2 h 01.
+https://www.youtube.com/watch?v=RQH1ww-whNk
+Mais les 12 publications récentes observées vont de 1 240 à 16 985 vues, sur plusieurs jeux et dates.
+Oblivion, ennemis oubliés : 14 065 vues depuis le 19 septembre, 3 h 06.
+https://www.youtube.com/watch?v=LmFp9T9j9cM
+The Vault Lore publie de longues vidéos Fallout régulièrement, mais plusieurs sorties d'octobre sont sous quelques milliers de vues.
+Le volume de sorties ne garantit donc pas des performances élevées.
+Pas de preuve française suffisamment précise dans cette recherche ; absence de résultat ne signifie pas marché libre.
+
+Pilotes anglais :
+- The Forgotten Lives of Skyrim's Ordinary People — Lore to Fall Asleep To.
+- The Rise and Fall of Tamriel's Lost Kingdoms — Lore for Sleep.
+- A Quiet Journey Through Skyrim's Nine Holds — Stories to Fall Asleep To.
+Exiger assez de matière canonique, identifier les jeux et distinguer les interprétations.
+Ne pas reproduire les nouvelles chaînes Star Wars/Dune ou séries mystères : Deep Void Theories et Quiet Paradox existent déjà.
+Éviter également de déplacer le cœur comics/DC de Boring Multiverse vers cette nouvelle proposition.
+
+PISTE NON RETENUE POUR LE MOMENT
+Ingénierie pour dormir : l'échantillon Sleepy Engineering montre surtout des centaines à quelques milliers de vues anciennes.
+Un sujet automobile à 28 436 vues ne suffit pas à justifier la priorité. Ce n'est pas une preuve d'absence de marché.
+
+RECOMMANDATION
+Tester Terre Endormie en français en premier, puis Les Archives du Large si la capacité de production le permet.
+Garder les archives de Tamriel en anglais comme alternative, sans lancer trois chaînes simultanément.
+Trois pilotes constituent un premier apprentissage, pas un seuil statistique de validation.
+Comparer impressions, clics et minutes regardées à âge égal si l'utilisateur partage les statistiques.
+Pas de prévision de revenus ni de promesse de faible concurrence.
+Les cadences validées concernent seulement La Boîte à Récap (hebdomadaire) et Boring Multiverse (un jour sur deux).

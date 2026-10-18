@@ -10,10 +10,10 @@ La Boîte à Récap : une nouvelle vidéo par semaine.
 Boring Multiverse : une nouvelle vidéo tous les deux jours.
 Livrables de Codex : titre et script uniquement. L'utilisateur génère la voix et la vidéo sur son site.
 L'utilisateur va fournir ses skills de scriptwriting : les appliquer avant de poursuivre les scripts longs.
-Durée à clarifier : la réponse dit « at least 2 hours and at most 1.5 hours ».
-Interprétation probable : 1 h 30 à 2 h, mais cette plage n'est pas encore confirmée.
-La cible provisoire antérieure 60–90 minutes est retirée.
-L'utilisateur mentionne aussi la création de nouvelles chaînes ; identités/niches encore à préciser.
+Durée confirmée : généralement 2 heures minimum. Aucun maximum fixé.
+Les anciennes hypothèses 60–90 minutes et 1 h 30–2 h sont retirées.
+Nouvelles chaînes : analyser les opportunités en français ET en anglais, selon les résultats.
+Les nouvelles niches et identités restent des propositions à sélectionner.
 Pas de voix, montage, upload, automatisation ou programmation à lancer dans ce périmètre.
 
 LOT 1 — SUJETS PROPOSÉS, EN ATTENTE DES SKILLS POUR ÉCRITURE LONGUE
@@ -41,7 +41,7 @@ Boring Multiverse, une vidéo tous les deux jours :
 3. Le multivers DC, Terre par Terre.
 4. La naissance et la chute de Krakoa.
 Ces quatre sujets Boring couvrent seulement quatre sorties, pas quatre semaines.
-Élargir la recherche après clarification des skills et du périmètre des nouvelles chaînes.
+Recherche de nouvelles niches consignée dans ANALYSE_NICHES.txt ; skills toujours attendus pour les scripts.
 Aucune date de lancement ni programmation YouTube définie.
 Gumball exige une sélection de chapitres avec périmètre de saisons précis.
 Multivers DC exige une cartographie identifiée (par exemple The Multiversity), pas une liste prétendue éternelle.
@@ -67,7 +67,7 @@ La recherche française du 18 octobre renvoie des résultats bruités : ne pas e
 Un brouillon partiel d'ouverture Gravity Falls a été rédigé avant la réponse de cadrage.
 Il est conservé dans gravity-falls/brouillon-partiel-fr.txt et n'est pas un script terminé.
 Pas de script Anti-Life rédigé à cette étape. Recherche et cadrage seulement.
-Attendre les skills de scriptwriting promis et la clarification de durée avant de continuer.
+Attendre les skills de scriptwriting promis avant de poursuivre les scripts ; durée minimum confirmée à 2 heures.
 
 CONTEXTE TECHNIQUE OBSERVÉ, HORS PÉRIMÈTRE DE LIVRAISON
 Recherche publique disponible ; aucun accès aux rétentions/CTR privés établi pour ces chaînes.
