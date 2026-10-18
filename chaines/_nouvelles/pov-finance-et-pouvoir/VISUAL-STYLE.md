@@ -1,6 +1,6 @@
 # Dessin video approuve — The Wealthy Nobody
 
-**Statut corrige : direction de dessin et trois scenes bureau/cuisine/exterieur approuvees UNIQUEMENT pour The Wealthy Nobody. Le style video d’Oddly Important Guy reste a proposer et a faire juger. Les deux photos de profil restent approuvees.**
+**Statut : direction de dessin et trois scenes bureau/cuisine/exterieur approuvees UNIQUEMENT pour The Wealthy Nobody. Oddly Important Guy a sa [direction validee separement](ODDLY-IMPORTANT-VISUAL-PROPOSAL.md). Les deux photos de profil restent approuvees.**
 
 Decision utilisateur du 18 octobre 2026 : abandonner les trois styles de contenu des chaines de reference. Construire notre propre style a partir de [la miniature approuvee](style-approuve.jpg).
 
@@ -33,3 +33,13 @@ Meme acteur et meme tenue dans ces trois essais pour isoler la stabilite du dess
 
 
 [Quatre sorties proposees et inspection](visual-tests/original-2026-10-18/README.md). Les essais conservent le visage et la tenue dans trois situations ; le responsable du bureau a toutefois un nez et des oreilles contre la consigne envoyee. Les trois scenes sont maintenant approuvees comme references graphiques. Cela ne transforme pas chaque lieu ou acteur secondaire en maitre reutilisable pour tout episode ; conserver les controles de coherence et adapter la narration.
+
+## Coherence et variete — extension demandee le 18 octobre 2026
+
+L’utilisateur demande la meme methode que celle validee pour Oddly Important Guy, avec l’identite propre a cette chaine. Garder le protagoniste en pull vert pour ce test ; adapter ses tenues aux futurs roles sans changer son identite. Conserver les recurrents reconnaissables, distinguer les secondaires et faire varier gestes et emotions avec l’action.
+
+Ne pas reduire un episode de quinze minutes a cinq fonds recycles. Preparer les lieux et sous-zones necessaires au script, avec une cible de travail de dix a quinze zones a ajuster, sans quota artificiel. Les portes, fenetres, meubles et accessoires fixes restent coherents dans chaque lieu. Generer les variantes de camera depuis le maitre, les inspecter et les conserver ; pas de miroir pour simuler un angle ni de changement d’axe gratuit entre interlocuteurs.
+
+Varier plans d’ensemble, plans moyens, vues laterales, champ/contrechamp et inserts utiles selon l’histoire. Chaque plan apporte une action, information ou reaction nouvelle ; un recadrage seul ne justifie pas un plan supplementaire. Suivre l’etat et les deplacements des objets mobiles. Pour un court test, les scenes approuvees peuvent servir d’ancres ; un film complet demande ses maitres de lieux et references individuelles de recurrents. Consigner chaque prompt manuel et l’ordre reel des images envoyees, puis controler visuellement les sorties avant montage.
+
+[Nouveau comparatif en six images](visual-tests/wealthy-continuity-2026-10-18/README.md) : trois ancres approuvees a gauche et trois nouvelles suites d’action a droite, bureau/cuisine/rue. Sorties inspectees, perspectives moderement variees, limites documentees. Ces nouvelles propositions attendent le jugement utilisateur ; la validation du test de l’autre chaine ne les approuve pas automatiquement. Pas de voix, film complet, publication ou preset serveur modifies.
