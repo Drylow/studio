@@ -165,3 +165,10 @@ L’API de telechargement a expire pour la premiere reference et la connexion SS
 L’utilisateur rejette les TROIS styles de contenu montres dans les references. Il demande notre propre dessin, derive du rendu de la miniature milliardaire deja approuvee. Ne pas reutiliser les visages humains a cheveux des references finance ni les humains a peau coloree de la reference hierarchies comme style video. Les captures precedentes restent des comparateurs rejetes.
 
 Lire [VISUAL-STYLE.md](VISUAL-STYLE.md). Un personnage en pied et trois scenes sans narration sont prepares par le CLI configure pour tester cette direction. Ces images sont des propositions a regarder, pas une production complete ni une garantie de coherence a l’echelle d’un episode. Le choix d’une direction ne vaut pas validation individuelle des sorties ni autorisation de publier les premiers films.
+
+
+## Style video approuve — 18 octobre 2026
+
+Apres confirmation que les trois appels ont ete envoyes au generateur image du CLI configure, l’utilisateur valide les trois scenes bureau, cuisine et exterieur et demande de conserver cette direction pour les videos des DEUX nouvelles chaines. Ces sorties sont desormais des references de dessin approuvees, en plus des deux photos de profil. Elles remplacent les propositions de style video des concurrents, qui restent rejetees.
+
+Les recus de requete, modeles demandes, entrees et controle du routage serveur sont conserves en prive. Ne pas confondre l’image de style d’origine issue du comparatif precedent avec le fournisseur utilise pour generer ces trois nouvelles scenes. Cette validation ne lance pas de scripts, voix, lot d’images, films ou publications. La fiche du corps entier reste une reference de travail derivee ; ne pas inventer une approbation individuelle de cette fiche.

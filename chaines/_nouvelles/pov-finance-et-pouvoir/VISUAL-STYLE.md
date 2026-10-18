@@ -1,5 +1,7 @@
 # Dessin original des deux nouvelles chaines POV
 
+**Statut : direction de dessin et trois scenes bureau/cuisine/exterieur approuvees par l’utilisateur le 18 octobre 2026, apres verification des appels du CLI configure. Les deux photos de profil restent approuvees.**
+
 Decision utilisateur du 18 octobre 2026 : abandonner les trois styles de contenu des chaines de reference. Construire notre propre style a partir de [la miniature approuvee](style-approuve.jpg).
 
 ## Dessin commun
@@ -30,4 +32,4 @@ Chaque test doit consigner son prompt, ses images envoyees dans leur ordre reel,
 Meme acteur et meme tenue dans ces trois essais pour isoler la stabilite du dessin. Les episodes futurs adapteront les tenues au role et a la narration. Aucune voix, aucun montage et aucune video complete lances pour ce test de style.
 
 
-[Quatre sorties proposees et inspection](visual-tests/original-2026-10-18/README.md). Les essais conservent le visage et la tenue dans trois situations ; le responsable du bureau a toutefois un nez et des oreilles contre la consigne envoyee. Attendre le jugement utilisateur avant de traiter ces fichiers comme nouveaux maitres approuves.
+[Quatre sorties proposees et inspection](visual-tests/original-2026-10-18/README.md). Les essais conservent le visage et la tenue dans trois situations ; le responsable du bureau a toutefois un nez et des oreilles contre la consigne envoyee. Les trois scenes sont maintenant approuvees comme references graphiques. Cela ne transforme pas chaque lieu ou acteur secondaire en maitre reutilisable pour tout episode ; conserver les controles de coherence et adapter la narration.
