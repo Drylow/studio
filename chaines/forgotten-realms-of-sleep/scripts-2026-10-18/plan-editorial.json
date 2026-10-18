@@ -191,7 +191,7 @@
         {
           "chapter": 29,
           "primary": "Skyrim Dragonborn: Unearthed, The Journal of Ralis Sedarys, volumes 19-23.",
-          "facts": "Ralis Sedarys asks for money to excavate Kolbjorn Barrow. Successive visits open deeper chambers, uncover artifacts and find dead workers. His journals change as Ahzidal's influence grows. The final confrontation reveals Ralis summoning the dragon priest. The player may spare or kill Ralis.",
+          "facts": "Ralis Sedarys asks for money to excavate Kolbjorn Barrow. Successive visits open deeper chambers, uncover artifacts and find dead workers. His journals change as Ahzidal's influence grows. The final confrontation reveals Ralis summoning the dragon priest. The player may spare or kill Ralis. Later excavation journals implicate Ralis in sacrificing workers for Ahzidal's return; his claimed loss of control remains distinct from that implication.",
           "boundary": "No unquestionable psychiatric or possession diagnosis beyond the quest's evidence. No invented survivor testimony. Avoid unnecessary exact body counts."
         },
         {
@@ -629,7 +629,7 @@
         {
           "chapter": 27,
           "primary": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals.",
-          "facts": "Vault 114 is reached through Park Street Station; Nick Valentine is held there by Skinny Malone's gang. Its intended experiment places wealthy residents under poor conditions and an unsuitable overseer chosen through interviews including Soup Can Harry. Vault 118 beneath the Cliff's Edge Hotel was intended to divide rich and poor, but only the wealthy section was completed and its residents became robobrains. Brain Dead investigates a later murder there.",
+          "facts": "Vault 114 is reached through Park Street Station; Nick Valentine is held there by Skinny Malone's gang. Its intended experiment places wealthy residents under poor conditions and an unsuitable overseer chosen through interviews including Soup Can Harry. Vault 118 beneath the Cliff's Edge Hotel was intended to divide rich and poor, but only the wealthy section was completed and its residents became robobrains. Brain Dead investigates a later murder there. Brain Dead reveals that Ezra killed Julianna Riggs after she discovered his embezzlement, then impersonated her and made the victim appear to be Ezra. The detective can expose him and choose how to respond.",
           "boundary": "Do not describe either original social experiment as completed exactly as planned. Do not conflate Nick with a Vault-Tec creation, or reveal an invented Vault 118 ending."
         },
         {
@@ -859,7 +859,7 @@
           "job": "Compare two unfinished or altered projects, Vault 114 and Vault 118, with separate concrete stories. Explain the wealthy residents promised facilities unlike the plan, Soup Can Harry's interview, and the later hotel robobrains and murder inquiry.",
           "facts": "Vault 114 is reached through Park Street Station; Nick Valentine is held there by Skinny Malone's gang. Its intended experiment places wealthy residents under poor conditions and an unsuitable overseer chosen through interviews including Soup Can Harry. Vault 118 beneath the Cliff's Edge Hotel was intended to divide rich and poor, but only the wealthy section was completed and its residents became robobrains. Brain Dead investigates a later murder there.",
           "boundary": "Do not describe either original social experiment as completed exactly as planned. Do not conflate Nick with a Vault-Tec creation, or reveal an invented Vault 118 ending.",
-          "primary_evidence": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals.",
+          "primary_evidence": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks.",
           "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
         },
         {
@@ -909,7 +909,7 @@
         {
           "chapter": 1,
           "primary": "Morrowind and Skyrim ruins; Morrowind disappearance dialogue and Red Mountain accounts.",
-          "facts": "The Dwemer are an Elven people, often called Dwarves by outsiders. Their abandoned cities and surviving automata appear in Morrowind and Skyrim. Their disappearance is connected by several accounts to the Battle of Red Mountain and Kagrenac's work. Its exact mechanism and destination remain unresolved.",
+          "facts": "The Dwemer are an Elven people, often called Dwarves by outsiders. Their abandoned cities and surviving automata appear in Morrowind and Skyrim. Their disappearance is connected by several accounts to the Battle of Red Mountain and Kagrenac's work. Its exact mechanism and destination remain unresolved. Early orientation identifies Anumidium, the Heart, Sunder, Keening and Wraithguard; the Nerevarine's later intervention undoes enchantments and does not restore the Dwemer. These facts are developed in the existing Heart and tools chapters.",
           "boundary": "No definitive solution, no fantasy claim that the Dwemer were tiny, no invented last night in a household."
         },
         {
@@ -1093,7 +1093,7 @@
           "job": "Open with a functioning automaton in an abandoned Dwemer city. Promise the history, physical traces and competing accounts of the disappearance, without a definitive solution. Paragraph two states Morrowind, Daggerfall, Skyrim and its expansions spoiler scope. Explain who the Dwemer were through surviving buildings and the mismatch between the word dwarf and Elven people.",
           "facts": "The Dwemer are an Elven people, often called Dwarves by outsiders. Their abandoned cities and surviving automata appear in Morrowind and Skyrim. Their disappearance is connected by several accounts to the Battle of Red Mountain and Kagrenac's work. Its exact mechanism and destination remain unresolved.",
           "boundary": "No definitive solution, no fantasy claim that the Dwemer were tiny, no invented last night in a household.",
-          "primary_evidence": "Morrowind and Skyrim ruins; Morrowind disappearance dialogue and Red Mountain accounts.",
+          "primary_evidence": "Morrowind and Skyrim ruins; Morrowind disappearance dialogue and Red Mountain accounts. Morrowind: Kagrenac's Tools and Vivec's Plan to Defeat Dagoth Ur, as used in the later Heart and tools chapters.",
           "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
         },
         {

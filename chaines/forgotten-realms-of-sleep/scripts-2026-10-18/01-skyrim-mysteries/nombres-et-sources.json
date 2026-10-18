@@ -80,12 +80,6 @@
   {
     "chapter": 12,
     "number": "one",
-    "context": "rs must be set according to the carved animal symbols around them. In one puzzle, moving a pillar also moves others, so correcting a single position can disturb work already",
-    "named_game_source": "Skyrim: Under Saarthal, Tolfdir dialogue, Good Intentions."
-  },
-  {
-    "chapter": 12,
-    "number": "one",
     "context": "al defenses still require care with spells, but the encounter becomes one the student can finish. Tolfdir's involvement is essential here. His attention to the object gives ",
     "named_game_source": "Skyrim: Under Saarthal, Tolfdir dialogue, Good Intentions."
   },
@@ -183,6 +177,12 @@
     "chapter": 17,
     "number": "one",
     "context": "at orb.  That overlap makes Saarthal feel like a place with more than one buried story. Tolfdir has brought students to examine an ancient Nordic site. Daynas's notes send t",
+    "named_game_source": "Skyrim: Forbidden Legend, Lost Legends, Daynas Valen's notes, writs of sealing."
+  },
+  {
+    "chapter": 17,
+    "number": "three",
+    "context": " writ condemning him to be forgotten. Reuniting the pieces brings all three back into the confrontation. Mikrul, Jyrik, and Sigdis resist the restoration in succession, so rec",
     "named_game_source": "Skyrim: Forbidden Legend, Lost Legends, Daynas Valen's notes, writs of sealing."
   },
   {

@@ -15,6 +15,12 @@ en detail la disparition des Dwemer. Le film Dwemer ne reprend pas les intrigues
 de Markarth comme des histoires autonomes de complot.
 
 RECHERCHE DE FORMAT
+Recontrole apres la premiere livraison : cinq videos de reference, dont deux
+ajoutees, leurs ouvertures et cinq passages du corps par video. Les trois textes
+originaux ont ete soumis integralement a cette comparaison. Voir
+RELECTURE-COMPARATIVE.txt pour les observations, corrections et limites precises.
+Cette etude ne revendique ni lecture integrale des cinq concurrents ni analyse
+de leurs donnees privees de retention.
 Examen des outliers de Cozy Knight et de transcriptions obtenues par Algrow :
 - 120 Minutes of Unsolved Skyrim Mysteries to Fall Asleep To :
   https://www.youtube.com/watch?v=RQH1ww-whNk
@@ -93,7 +99,7 @@ Chaque chapitre est conserve separement pendant le travail pour faciliter les
 corrections. La livraison donne aussi la narration assemblee sans titres ni notes.
 Les passes de relecture donnent des citations exactes et des modifications locales.
 Les verifications techniques comptent mots et caracteres, scannent les artefacts,
-comparent les sequences de douze mots aux trois transcriptions, recherchent les
+comparent les sequences de douze mots aux cinq transcriptions, recherchent les
 paragraphes dupliques et reperent le CTA. Ce sont des controles textuels, pas une
 preuve d'absence de toute ressemblance semantique ou une verification audio.
 Les signaux echo du scanner incluent les noms d'abris, les noms propres et des

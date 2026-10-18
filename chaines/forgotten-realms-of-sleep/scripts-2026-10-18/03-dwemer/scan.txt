@@ -2,13 +2,12 @@
 -- MECHANICAL SWEEP (delete on sight): 0
 -- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
 -- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
--- ECHO CHECK (H18): 27
+-- ECHO CHECK (H18): 28
   [echo H18: phrase repeated 8x] "of the first council"
+  [echo H18: phrase repeated 7x] "the heart of lorkhan"
   [echo H18: phrase repeated 6x] "the people who made"
   [echo H18: phrase repeated 6x] "the battle of red"
-  [echo H18: phrase repeated 6x] "the heart of lorkhan"
   [echo H18: phrase repeated 5x] "the disappearance of the"
-  [echo H18: phrase repeated 5x] "the heart beneath red"
   [echo H18: phrase repeated 5x] "neloth and the dragonborn"
   [echo H18: phrase repeated 5x] "nerevar at red mountain"
   [echo H18: phrase repeated 4x] "different parts of the"
@@ -16,4 +15,5 @@
   [echo H18: phrase repeated 4x] "the dragonborn has to"
   [echo H18: phrase repeated 4x] "the falmer a study"
   [echo H18: phrase repeated 4x] "helps explain why a"
-  [echo H18: phrase repeated 3x] "belong to the same"
+  [echo H18: phrase repeated 4x] "the heart beneath red"
+  [echo H18: phrase repeated 3x] "become part of the"

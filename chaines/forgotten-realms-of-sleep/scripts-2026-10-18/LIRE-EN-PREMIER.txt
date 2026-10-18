@@ -6,20 +6,22 @@ Les trois fichiers SCRIPT FINAL.txt sont les narrations anglaises a copier dans 
 Ordre conseille : Skyrim, Fallout / Vault-Tec, Dwemer. Les deux Elder Scrolls ont des angles distincts et sont separes par Fallout.
 
 2 Hours of Skyrim's Darkest Mysteries to Fall Asleep To
-27,115 mots - 168,984 caracteres avec espaces - environ 159.5 minutes a 170 mots/minute.
+26,936 mots - 168,028 caracteres avec espaces - environ 158.4 minutes a 170 mots/minute.
 Fichier : 01-skyrim-mysteries - SCRIPT FINAL.txt
 
 The Secrets of Vault-Tec Explained to Fall Asleep To | Fallout Lore
-26,417 mots - 169,465 caracteres avec espaces - environ 155.4 minutes a 170 mots/minute.
+26,057 mots - 167,090 caracteres avec espaces - environ 153.3 minutes a 170 mots/minute.
 Fichier : 02-vault-tec - SCRIPT FINAL.txt
 
 The Disappearance of the Dwemer Explained to Fall Asleep To | Elder Scrolls Lore
-25,792 mots - 166,092 caracteres avec espaces - environ 151.7 minutes a 170 mots/minute.
+25,544 mots - 164,504 caracteres avec espaces - environ 150.3 minutes a 170 mots/minute.
 Fichier : 03-dwemer - SCRIPT FINAL.txt
 
-TOTAL : 79,324 mots ; 504,541 caracteres avec espaces.
+TOTAL : 78,537 mots ; 499,622 caracteres avec espaces.
 Duree : estimation textuelle. Aucune voix n'a ete generee ou chronometree pour ce lot.
 Chaque texte contient un seul CTA discret : abonnement + endroit d'ecoute + jour ou nuit, dans le premier chapitre.
 Relecture : passages complets des textes, corrections citees et controles techniques. Les limites de verification sont conservees dans les audits. Aucune ecoute humaine ni verification en jouant a toutes les quetes n'est revendiquee.
 La voix utilisee pour les autres chaines est conservee dans leur dossier de reprise ; ce lot autorise seulement les scripts.
 Sources et passation : sous-dossier REPRISE. Les transcriptions completes des concurrents restent privees et ne sont pas incluses.
+
+Recontrole demande par l'utilisateur : FacelessOS, cinq videos de reference sur trois chaines, corrections ciblees et nouvelle relecture complete. Voir REPRISE/RELECTURE-COMPARATIVE.txt.

@@ -1,0 +1,499 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Working defenses introduce the missing Dwemer, their Heart project, surviving tools, and Yagrum's exception.",
+      "new_information": [
+        "The Dwemer were Elves whose disappearance did not remove their machinery or every individual."
+      ],
+      "local_answer": "Surviving structures, objects, and conflicting histories frame an unresolved disappearance.",
+      "open_issues": [],
+      "evidence_notes": "Matches supplied orientation evidence. Spoiler statement and single optional CTA appear in their assigned positions."
+    },
+    {
+      "number": 2,
+      "summary": "Named settlements establish the geographical reach and political diversity of Dwemer civilization.",
+      "new_information": [
+        "Dwemer communities extended across Morrowind, Skyrim, and Hammerfell without constituting one demonstrated unified administration."
+      ],
+      "local_answer": "Shared architecture connects distinct communities rather than proving a single empire.",
+      "open_issues": [],
+      "evidence_notes": "Named routes and settlements organize the explanation; political interpretation remains appropriately bounded."
+    },
+    {
+      "number": 3,
+      "summary": "Markarth combines inhabited Dwemer buildings, Calcelmo's scholarship, and dangerous underground spaces.",
+      "new_information": [
+        "Understone Keep connects contemporary government and research with the excavation leading into Nchuand-Zel."
+      ],
+      "local_answer": "Markarth's inhabitants can use Dwemer construction without understanding or controlling everything beneath it.",
+      "open_issues": [],
+      "evidence_notes": "Follows the supplied Markarth evidence without diverting into the Forsworn conspiracy."
+    },
+    {
+      "number": 4,
+      "summary": "Automata retain distinct combat functions and recoverable components without revealing their complete engineering.",
+      "new_information": [
+        "Spiders, spheres, and centurions defend ruins through different forms, weapons, and encounter behaviors."
+      ],
+      "local_answer": "Their continuing defensive behavior is observable; their complete power and control systems remain unexplained.",
+      "open_issues": [],
+      "evidence_notes": "Soul gems are not identified as Dwemer souls, and steam is not offered as a complete explanation."
+    },
+    {
+      "number": 5,
+      "summary": "Specific carried objects operate different Dwemer installations, enabling limited but consequential access.",
+      "new_information": [
+        "Attunement spheres, lexicons, control cubes, and resonance gems perform distinct local tasks."
+      ],
+      "local_answer": "Recovering an operating object grants particular capabilities rather than universal access to Dwemer technology.",
+      "open_issues": [],
+      "evidence_notes": "Keeps Septimus's objects, Nchardak's cubes, and Kagrumez's gems functionally distinct."
+    },
+    {
+      "number": 6,
+      "summary": "Tonal architecture connects working resonators with Kagrenac's specialized instruments and divine undertaking.",
+      "new_information": [
+        "Dwemer tonal craft gives deliberately produced sound an active role in mechanisms and Heart-related work."
+      ],
+      "local_answer": "Sound is a practical element of Dwemer craft, not a fully recovered universal science.",
+      "open_issues": [
+        "Two concluding comparison sentences repeat the explanation immediately preceding them."
+      ],
+      "evidence_notes": "Core explanation follows Divine Metaphysics and Arkngthamz; one small redundant passage is identified below."
+    },
+    {
+      "number": 7,
+      "summary": "The Snow Elves' refuge becomes coercion, preserved through a bilingual proclamation and Gelebor's testimony.",
+      "new_information": [
+        "Calcelmo's Stone assists translation while recording the coercive relationship between Dwemer hosts and Snow Elf refugees."
+      ],
+      "local_answer": "Dwemer protection imposed blindness and subordination, while the descendants' entire transformation remains unresolved.",
+      "open_issues": [],
+      "evidence_notes": "Correctly places Gelebor in Darkfall Cave and preserves distinctions between blinding, degeneration, and surviving Snow Elves."
+    },
+    {
+      "number": 8,
+      "summary": "Falmer rebellion precedes Dwemer disappearance and the divided occupation of surviving underground cities.",
+      "new_information": [
+        "The War of the Crag ends without a demonstrated Falmer battlefield victory over the vanished Dwemer."
+      ],
+      "local_answer": "Falmer survived their former masters and occupied spaces still threatened by Dwemer defenses.",
+      "open_issues": [],
+      "evidence_notes": "Distinguishes ancestral identity, rebellion, later settlement, and hostile automata without inventing a battle chronology."
+    },
+    {
+      "number": 9,
+      "summary": "Nerevar and Dumac establish cooperation between culturally distinct peoples after resistance to Nordic dominance.",
+      "new_information": [
+        "The First Council gave Chimer-Dwemer cooperation a political form without eliminating religious differences."
+      ],
+      "local_answer": "Shared political interests sustained cooperation despite substantial differences in worship and divine understanding.",
+      "open_issues": [],
+      "evidence_notes": "Practical advantages are identified as interpretation rather than invented treaty provisions."
+    },
+    {
+      "number": 10,
+      "summary": "Rourken migration and Volendrung traditions extend Dwemer history far beyond Red Mountain.",
+      "new_information": [
+        "The Rourken rejected the Chimer alliance and established a western history associated with Hammerfell."
+      ],
+      "local_answer": "Distant Dwemer settlement makes a purely local physical disaster insufficient by itself.",
+      "open_issues": [],
+      "evidence_notes": "Separates the migration from the hammer legend and later Daedric ownership from original religious allegiance."
+    },
+    {
+      "number": 11,
+      "summary": "Aetherium research produces intercity cooperation, a specialized forge, and conflict over its benefits.",
+      "new_information": [
+        "Northern cities cooperated over aetherium before fighting over the forge and its resources."
+      ],
+      "local_answer": "A shared technical achievement created valuable access that competing cities subsequently contested.",
+      "open_issues": [],
+      "evidence_notes": "Distinguishes participating cities from Bthalft and qualifies Taron's authorship and historical reconstruction."
+    },
+    {
+      "number": 12,
+      "summary": "Katria's notes and continuing participation carry a failed expedition through Arkngthamz to its first shard.",
+      "new_information": [
+        "Katria's journal and another visitor's notes contribute practical information for opening the tonal lock."
+      ],
+      "local_answer": "Her research remains useful after her death and enables another explorer to continue the search.",
+      "open_issues": [],
+      "evidence_notes": "Develops the researcher and her contributions rather than repeating a literal puzzle walkthrough."
+    },
+    {
+      "number": 13,
+      "summary": "Recovered shards open the forge, whose defenses and limited material culminate in one artifact and Katria's closure.",
+      "new_information": [
+        "The surviving aetherium permits one artifact choice, not restoration of the ancient production system."
+      ],
+      "local_answer": "The expedition recovers one working application and completes Katria's undertaking without reviving mass manufacture.",
+      "open_issues": [],
+      "evidence_notes": "Crown, shield, and staff receive distinct uses; the single-choice limitation remains explicit."
+    },
+    {
+      "number": 14,
+      "summary": "Blackreach combines connected Dwemer routes, competing occupants, botanical research, and the Tower of Mzark.",
+      "new_information": [
+        "Blackreach supports separate routes and investigations, including Sinderion's crimson nirnroot research."
+      ],
+      "local_answer": "The cavern is a varied inhabited environment, not one unexplained machine.",
+      "open_issues": [],
+      "evidence_notes": "Names specific approaches and lift access without connecting every Skyrim ruin or inventing dimensions."
+    },
+    {
+      "number": 15,
+      "summary": "Alftand's expedition fragments through supply problems, hostile inhabitants, personal decline, and its survivors' final confrontation.",
+      "new_information": [
+        "Sulla and Umana reach Alftand's depths but fail to preserve their partnership."
+      ],
+      "local_answer": "Physical dangers and deteriorating cooperation prevent the expedition from becoming a successful return.",
+      "open_issues": [],
+      "evidence_notes": "Handles the brothers and deaths non-graphically; gives no invented private dialogue or Dwemer lure."
+    },
+    {
+      "number": 16,
+      "summary": "Separate expedition journals reveal household research, cataloguing, commercial hopes, abandonment, and an unsuccessful flight toward defensive controls.",
+      "new_information": [
+        "Nchuand-Zel's researchers recorded distinct interests and decisions before the Dragonborn restored its automated defenses."
+      ],
+      "local_answer": "The recovered records explain the expedition's fragmentation without making reactivated machinery safe.",
+      "open_issues": [],
+      "evidence_notes": "Tracks the supplied journal-specific evidence, including Staubin's abandonment of his students and Alethius's initiating notes."
+    },
+    {
+      "number": 17,
+      "summary": "The Synod's failed expedition leaves Paratus and the Dragonborn to operate Mzulft's artifact-locating apparatus.",
+      "new_information": [
+        "The Oculory provides a Labyrinthian lead despite interference Paratus associates with the College's powerful source."
+      ],
+      "local_answer": "The apparatus yields a destination through crystal adjustment and alignment, not an explanation of Dwemer disappearance.",
+      "open_issues": [],
+      "evidence_notes": "Attributes the interference interpretation to Paratus and distinguishes the Oculory from Mzark's retrieval apparatus."
+    },
+    {
+      "number": 18,
+      "summary": "Neloth and the Dragonborn manipulate Nchardak's flooded systems to release a protected Black Book.",
+      "new_information": [
+        "Recovered control cubes restore linked pumps and boilers needed to release Epistolary Acumen."
+      ],
+      "local_answer": "Operating a limited chain of surviving systems makes the book accessible.",
+      "open_issues": [],
+      "evidence_notes": "Neloth's ancient-city descriptions remain attributed; the Black Book does not establish collective Dwemer allegiance to Mora."
+    },
+    {
+      "number": 19,
+      "summary": "Kagrumez's patterned trials contrast with Fahlbtharz's moving machinery, pressure puzzle, and component-operated barriers.",
+      "new_information": [
+        "These ruins yield distinct usable rewards, including mechanical followers and the Visage of Mzund."
+      ],
+      "local_answer": "Their mechanisms preserve different local operations rather than one universal Dwemer initiation.",
+      "open_issues": [],
+      "evidence_notes": "Comparison remains concrete and does not invent citizenship tests, shared ceremonies, or engineering measurements."
+    },
+    {
+      "number": 20,
+      "summary": "Yagrum survives in Tel Fyr after returning from an Outer Realm and unsuccessfully searching for his people.",
+      "new_information": [
+        "Yagrum combines firsthand Dwemer knowledge with post-disappearance research but cannot identify his people's ultimate fate."
+      ],
+      "local_answer": "His absence explains his exception without making him a witness to Kagrenac's final actions.",
+      "open_issues": [],
+      "evidence_notes": "Leaves the Outer Realm unidentified and uses the repaired boots to make surviving expertise tangible."
+    },
+    {
+      "number": 21,
+      "summary": "Three interpreted books satisfy Trebonius's assignment while exposing the Heart project and disagreement over its dangers.",
+      "new_information": [
+        "The guild accepts relevant books even though their contents do not establish the missing Dwemer's destination."
+      ],
+      "local_answer": "Administrative completion supplies informed research, not a definitive solution or recovery procedure.",
+      "open_issues": [
+        "The submission paragraph repeats the three books' functions immediately after their individual explanations."
+      ],
+      "evidence_notes": "Translation, technical subject, and disputed danger remain distinct; the redundant inventory can be deleted locally."
+    },
+    {
+      "number": 22,
+      "summary": "Creation traditions and later users establish the Heart as both a sacred object and an accessible source of power.",
+      "new_information": [
+        "Different creation traditions interpret Lorkhan differently while later actors demonstrably draw upon the Heart."
+      ],
+      "local_answer": "The Heart's physical efficacy does not resolve every religious account of its origin.",
+      "open_issues": [],
+      "evidence_notes": "Attributes the Altmeri creation account and avoids treating a creation myth as neutral scientific history."
+    },
+    {
+      "number": 23,
+      "summary": "The tools' separate functions, recovery routes, and dangerous handling enable the Nerevarine's specific intervention.",
+      "new_information": [
+        "Sunder, Keening, and Wraithguard divide tonal action, power manipulation, and protection within a coordinated procedure."
+      ],
+      "local_answer": "Reassembling and safely using the instruments does not reproduce Kagrenac's complete undertaking.",
+      "open_issues": [],
+      "evidence_notes": "Includes the alternative Yagrum route without damage figures or claims that Skyrim resolves Keening's changed handling."
+    },
+    {
+      "number": 24,
+      "summary": "Kagrenac's constructed god brings specialized craft, disputed conclusions, and uncertain royal knowledge into one undertaking.",
+      "new_information": [
+        "Yagrum remembers learned disagreement with Kagrenac, contradicting assumptions of unanimous Dwemer agreement."
+      ],
+      "local_answer": "Anumidium was a divine construction project whose support and disclosure were not uniform or fully documented.",
+      "open_issues": [],
+      "evidence_notes": "Keeps Dumac's knowledge unsettled and avoids attributing collective consent to transformation."
+    },
+    {
+      "number": 25,
+      "summary": "Discovery of the Heart project breaks the First Council and exposes differing accounts of Dumac's knowledge.",
+      "new_information": [
+        "The Ashlander account explicitly conceals Kagrenac's god from Dumac; Vivec's account does not give that assurance."
+      ],
+      "local_answer": "The project converts an existing alliance into war, but the accounts explain Dumac's resistance differently.",
+      "open_issues": [],
+      "evidence_notes": "Preserves the supplied concrete textual distinction without inventing negotiations, speeches, or a reconciled chronology."
+    },
+    {
+      "number": 26,
+      "summary": "Three Red Mountain traditions assign incompatible actions, alliances, and causes to the disappearance.",
+      "new_information": [
+        "Vivec's Kagrenac-led disappearance differs from the Ashlander intervention and Nordic alignments."
+      ],
+      "local_answer": "The accounts cannot establish one agreed final sequence or the Dwemer's destination.",
+      "open_issues": [],
+      "evidence_notes": "Uses the supplied conflicting-book evidence and does not automatically explain contradictions through a Dragon Break."
+    },
+    {
+      "number": 27,
+      "summary": "Later Heart users depend on renewable access until the Nerevarine breaks the enchantments sustaining their power.",
+      "new_information": [
+        "Ending Dagoth Ur's Heart connection also removes the Tribunal's source of renewal without recreating Dwemer disappearance."
+      ],
+      "local_answer": "The later intervention demonstrates consequential tool use, not the inevitable outcome of every Heart operation.",
+      "open_issues": [],
+      "evidence_notes": "Distinguishes freeing the Heart from annihilating it and gives the intervention its necessary causal steps."
+    },
+    {
+      "number": 28,
+      "summary": "Numidium's later Imperial and Iliac Bay histories introduce the Mantella, competing recipients, and temporal contradiction.",
+      "new_information": [
+        "Daggerfall's outcomes and the Warp concern a later Numidium activation powered under different conditions."
+      ],
+      "local_answer": "The later Dragon Break permits comparison but does not establish Red Mountain's mechanism.",
+      "open_issues": [],
+      "evidence_notes": "Qualifies The Arcturian Heresy and avoids imposing one mandatory Daggerfall winner."
+    },
+    {
+      "number": 29,
+      "summary": "Arniel's improvised experiment ends in disappearance and a summonable shade under conditions unlike Kagrenac's.",
+      "new_information": [
+        "Arniel vanishes using Keening and a prepared warped soul gem, leaving a summonable shade."
+      ],
+      "local_answer": "The observed result supplies an imperfect analogy, not the Dwemer's collective fate.",
+      "open_issues": [],
+      "evidence_notes": "Preserves the missing Heart and incomplete tools as material differences rather than resolving them through speculation."
+    },
+    {
+      "number": 30,
+      "summary": "Three bounded interpretations are weighed against survivors, geography, conflicting accounts, later experiments, and functioning ruins.",
+      "new_information": [
+        "The established constraints accommodate several interpretations without selecting a confirmed destination or reversal method."
+      ],
+      "local_answer": "Failure, transformation, and displacement remain possibilities rather than demonstrated solutions.",
+      "open_issues": [],
+      "evidence_notes": "Delivers the promised synthesis and ordinary closing image without a teaser, CTA, or unsupported revelation."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 6,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "The comparison gives tonal architecture a concrete starting point. Dwemer craft could require the right action in the right order, with sound included in the operation.",
+      "reason": "H18 identifies a re-mention that 'adds nothing' as an echo. The preceding sentences have already explained the concrete comparison between the lock and Kagrenac's instruments. These two sentences summarize that comparison again before the next paragraph introduces incorrect-sequence consequences. Delete this least useful repetition while retaining the comparison and the concrete closing image.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 21,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Together, the books and their interpreters make a coherent submission to Trebonius. Hanging Gardens provides a route toward translation. Divine Metaphysics concerns the construction and its divine source. The Egg of Time preserves a defense against a feared consequence.",
+      "reason": "H18 flags 'the same point restated with the wording shuffled.' Each book has just received its own explanation, followed by the interpreters' contributions. This inventory repeats those functions without advancing the investigation. The following existing sentences already explain the substantive new development: Trebonius accepts the research and closes the assignment.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        5,
+        6,
+        12
+      ],
+      "detail": "Arkngthamz's resonators recur for distinct purposes: device classification, tonal craft, and Katria's contribution. These returns are useful; only the chapter 6 restatement identified above needs removal."
+    },
+    {
+      "chapters": [
+        1,
+        22,
+        23,
+        24,
+        27,
+        30
+      ],
+      "detail": "The Heart, tools, and later intervention recur as orientation, cosmology, operating roles, project history, consequences, and final comparison. The progression supplies distinct developments rather than six interchangeable explanations."
+    },
+    {
+      "chapters": [
+        3,
+        8,
+        14,
+        16
+      ],
+      "detail": "Falmer and automata repeatedly share Dwemer spaces, but the chapters respectively develop Markarth's boundary, post-rebellion occupation, Blackreach's environment, and a documented expedition. No additional deletion is warranted."
+    }
+  ],
+  "scope_status": "Within the supplied Morrowind, Daggerfall, Skyrim, Dawnguard, and Dragonborn scope. No actionable factual contradiction with the authoritative proof bank was identified. Yagrum's exception, competing Red Mountain accounts, religious qualifications, and unresolved destination remain intact. One optional CTA occurs early in chapter one and is not repeated. The supplied assembled count is 25,544 words; the two proposed deletions total 82 words, leaving approximately 25,462 words, below the 25,500-word minimum. They are therefore prose recommendations, not a claim that the edited narration meets the length requirement; no filler or new lore should be added merely to offset them.",
+  "limitations": "Reviewed all 30 supplied chapters as text against the supplied evidence boundaries and production record. No fresh websites, episode footage, game sessions, audio measurements, or human read-aloud were performed. Reported deterministic results and reference comparisons are supplied production evidence, not checks rerun here. The proposed edits require a fresh final count and integrated review before release.",
+  "greenlight": {
+    "overall": "FIX-THEN-PASS for two minor repetitions, with word-count compliance requiring attention. No structural rewrite or new factual research is demanded by the identified narration defects.",
+    "A": {
+      "verdict": "PASS under the sleep adaptation",
+      "evidence": [
+        "Sentence one: \"A metal sphere opens inside an abandoned Dwemer city, and the machine within it moves to attack an intruder.\"",
+        "The opening paragraph contains 80 whitespace-delimited words. Its equivalent turn is \"The people who made it are gone, yet their defenses still work.\"",
+        "The promise of physical traces is delivered in chapters 2-8 and 11-19; historical relationships in chapters 9-10 and 20-25; competing accounts in chapter 26; later tests and bounded interpretation in chapters 27-30.",
+        "The supplied record describes comparison with successful gaming openings, but their verbatim text is unavailable here. A fresh A4 comparison is limited, not a narration failure."
+      ],
+      "actionable_defects": []
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "The opening question about functioning remains develops into settlement, mechanisms, occupants, named researchers, surviving scholarship, and the Heart project.",
+        "Katria's search opens in chapter 11, develops in chapter 12, and resolves through the forge and artifact in chapter 13.",
+        "The alliance introduced in chapter 9 reaches its breakdown in chapter 25 and its conflicting final accounts in chapter 26.",
+        "The tools and Heart introduced in chapter 1 receive operational and historical explanations in chapters 22-27; chapter 30 explicitly resolves the inquiry at the level the evidence permits.",
+        "Local answers close without aggressive rehooks, consistent with the sleep adaptation."
+      ],
+      "actionable_defects": [
+        "Delete the two locally quoted redundant passages in chapters 6 and 21."
+      ]
+    },
+    "C": {
+      "verdict": "PASS for structure and comprehension; length compliance needs attention",
+      "evidence": [
+        "The archaeological spine remains continuous: places and objects lead to their users, documents, disputed history, and bounded interpretation.",
+        "The expedition chapters remain differentiated: Alftand emphasizes survival and interpersonal collapse; Nchuand-Zel preserves distinct journal concerns; Mzulft yields a projected destination.",
+        "The final chapter weighs the assigned three readings and ends with an ordinary usable doorway, fulfilling the promised explanation without pretending to solve the destination.",
+        "The supplied count is only 44 words above the minimum. Recommended deletions exceed that margin."
+      ],
+      "actionable_defects": [
+        "Resolve the conflict between removing 82 redundant words and retaining the 25,500-word minimum through substantive, source-bounded revision rather than padding, then recount."
+      ]
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "Comparable explanatory script shape: \"Calling them guards describes what they do during these encounters, though their complete original duties aren't preserved alongside them.\"",
+        "No machine-banned phrase or non-ASCII narration artifact was identified in this review; the supplied deterministic report likewise records zero hard-ban and mechanical hits.",
+        "The concrete oppositions between different machines, tools, accounts, and expedition members generally explain actual differences rather than manufacturing poster-ready reframes.",
+        "The closing interpretation in chapter 7, \"A scholar can learn to read Dwemer writing from a declaration of subordination,\" is earned by the developed evidence and does not require deletion.",
+        "The significant quantities are source-bounded: four cooperating cities in chapter 11; one artifact chosen from three in chapter 13; three quest books in chapter 21; and three interpretations in chapter 30. No unsupported engineering figures, probabilities, or gameplay damage statistics are introduced."
+      ],
+      "actionable_defects": [
+        "Remove the two H18 repetitions quoted in the findings. Preserve the remaining concrete interpretation and calm orientation."
+      ]
+    },
+    "E": {
+      "verdict": "TEXT-READY WITH EXTERNAL LIMITS after local corrections",
+      "evidence": [
+        "The narration supplies editorial interpretation, numerous named in-game sources, and non-obvious connections between geographical reach, Yagrum's survival, surviving machinery, and later experiments.",
+        "The recorded production context supports independently assigned chapter purposes and source-aware revision, but explicitly does not establish a human edit or read-aloud.",
+        "The supplied five-transcript comparison reports no matching 12-word windows. This supports a limited non-copying assessment, not proof of complete semantic originality.",
+        "No video, voice, duplicate-publishing plan, or publishing batch exists in the supplied context."
+      ],
+      "actionable_defects": [],
+      "limitations": "Search-ranking originality, complete competitor-structure comparisons, video-level reuse, and platform monetization outcomes cannot be independently certified from this text. Missing human-review or production evidence is not a reason to fabricate it or add narration."
+    }
+  },
+  "input_hashes": {
+    "1": "836d50c44e96c4559ead592aa0fc4fb9df3c4e619e3dbb3f77629a8a10a38d08",
+    "2": "83794cc814a62cea78287dd399f835f9203906cadad9ab09472f92c87036d6af",
+    "3": "360590149746b7bd024d6e014fb42c6cb6bc516629c9871781f2aca36ba9924c",
+    "4": "518d827bcd00849fb2144d82578b349140884aa5ecd6b28d9e7b5d228c105ba7",
+    "5": "6c4e530402cde3ee22f5aa19794d6b4363af829771e1dd85f974978acf1cb2c0",
+    "6": "5d468f12285db61dccea4547a26e89107f3792c520ebf2a3db5f28201f520e4d",
+    "7": "5341b323e3ff49ff83eccd9d1cf653f5d0aaa652bd6f9923d515fc0030ed00c1",
+    "8": "72059c90ebf3be9999487f02504777269ac3938d6ce6bcc44590d5aa76fdfed0",
+    "9": "87afa277e8c1303b2f848603fdc310810048f5cd889888b071527a1f4bc58f46",
+    "10": "123a28ad7c8433f24a6d9d70d0732bd5432a57dfdb39703365cd1649f5ec40c2",
+    "11": "3f78950fa226462a95f5100306bc4fb35beaba5de004c76ec589189153ce1ed1",
+    "12": "2a98c8b209848a72af0da2f91499b352488445fc6e3db358583d223990b35945",
+    "13": "c334d7f8fc1dd6466c30e25283eaeb9f7e596c966c0766ffe2930396cd46fa0f",
+    "14": "ba87fe96db51bb63924353c423e4c78a902f118dfea30d1f429e0f2ed83333e2",
+    "15": "d121a6ba84bf5992a6729c0c6828a45d57fb4aecd675e43617c08284be78bb75",
+    "16": "e854bda51c457cb62818d57b0fad4f90f7505cf930a8b5bbd2dce86dd6215645",
+    "17": "6f3c17819fedc30bd759389d57f10c97af5f2893fee2eefbd4f98a3e8ba0091e",
+    "18": "a26e55042f99870d51c9002ccfb2ea27994b244b8422c0a1bd060e026ab4860a",
+    "19": "d856d2af348f15bcacc41bd03c1b31d3d1a969b0fb838604704c93d689ddd030",
+    "20": "14cc6ca82ef9b5eca7bd578062841a8717c333f0b6e979cabcf79354c13fa6c7",
+    "21": "eb18fe0e398b6cb81eded3ab743db366916133c3738801745d59e340365d2f50",
+    "22": "9cf3a7c8035f3e00888314524502a418115e3e0168e7cb290567826083fb11e9",
+    "23": "cdbecf7c2abd849ad1e1296d4835f8f0759924a5a55004ae8cb5db491bb68d13",
+    "24": "1154244185618e100c9bde9cb3ed152fefa4a51ac9a8f4a13fbd0c2964e1c612",
+    "25": "0319b0e776eee382368d729489751e9c69d003fc594c842766cdcd0028b975fc",
+    "26": "e146cc92a4e1e35f8780996356643545a51e73d9d457c96e417755035df8792e",
+    "27": "1a0f6cf699e0404698efb83472e87e207cf7e06c2f45ab5427136fd83cf085b8",
+    "28": "8b65da7a5307650df027ee98dd25a10ce1b6a474b03376c736afbeb23eb2f60e",
+    "29": "7ca147dd0350c2a053cc853daf750c356a92534e2e5e5a008b7a2ac4d5c501c8",
+    "30": "a329d780aef219e8d3df507e1b5f84dfadf68b4684c99c135c6e7112e390a084"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "final_editorial_dispositions": [
+    {
+      "round": 102,
+      "episode": "03-dwemer",
+      "chapter": 6,
+      "quote": "The comparison gives tonal architecture a concrete starting point. Dwemer craft could require the right action in the right order, with sound included in the operation.",
+      "decision": "retained_editorial",
+      "reason": "Retained as a short explanation of the unfamiliar term tonal architecture through the immediately preceding comparison. It explicitly links ordered action and sound after two different examples, before incorrect-sequence consequences. This is a novice-facing explanatory bridge, not a repeated multi-paragraph takeaway."
+    },
+    {
+      "round": 102,
+      "episode": "03-dwemer",
+      "chapter": 21,
+      "quote": "Together, the books and their interpreters make a coherent submission to Trebonius. Hanging Gardens provides a route toward translation. Divine Metaphysics concerns the construction and its divine source. The Egg of Time preserves a defense against a feared consequence.",
+      "decision": "retained_editorial",
+      "reason": "Retained as a concise side-by-side synthesis of three different books' roles in the submission to Trebonius. The individual readings precede it; here their complementary functions are assembled into the administrative answer, immediately distinguished from a real solution to the disappearance. This combined comparison is useful in long oral narration."
+    }
+  ],
+  "unresolved_narration_findings": 0,
+  "post_review_whitespace_normalization": [
+    {
+      "episode": "03-dwemer",
+      "chapter": 18,
+      "before_sha256": "25703c0230d31a7b38ba80cfd2a8dec4f87c5170fe04f550f8de1ae14d0da2a8",
+      "after_sha256": "092d91ea1194a4bbd676aafe735181207f2e77321e5e6deea23c6b5cc2bbc86b",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 19,
+      "before_sha256": "d7b19862efa936dbbf3c46148b4291e3bf0f778f67009b08980fabf5a6933e24",
+      "after_sha256": "d856d2af348f15bcacc41bd03c1b31d3d1a969b0fb838604704c93d689ddd030",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 29,
+      "before_sha256": "03dd7024d2ee95941916c10e61874511d7f9100998a8c2e32a09fe5571b52391",
+      "after_sha256": "1001e6e23c1f310bf8607f16c243709f60582d501944022039bf92ff424dba26",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    }
+  ]
+}

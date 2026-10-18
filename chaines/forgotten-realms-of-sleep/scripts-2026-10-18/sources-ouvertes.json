@@ -228,5 +228,18 @@
     "url": "https://www.gamebanshee.com/skyrim/walkthrough/wakingnightmare.php",
     "access": "opened",
     "read_date": "2026-10-18"
+  },
+  {
+    "title": "Touching the Sky Part 1 - Gelebor and Sidanyis location check",
+    "url": "https://www.gamebanshee.com/skyrim/dawnguard-walkthrough/touchingthesky-part1.php",
+    "access": "opened",
+    "read_date": "2026-10-18"
+  },
+  {
+    "title": "Original Fallout manual, RobCo PIPBoy 2000, printed page 4-21",
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/38400/manuals/Fallout_manual_English.pdf",
+    "access": "opened",
+    "read_date": "2026-10-18",
+    "qualification": "Primary manual opened as PDF; page 60 explicitly identifies the wrist-worn computer. Reject the advisory claim that the original version was necessarily handheld."
   }
 ]

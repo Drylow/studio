@@ -23,6 +23,12 @@ dans RECHERCHE-ET-REPRISE.txt : pas de relance agressive, un seul CTA discret et
 aucune conclusion promotionnelle. La structure, les faits autorises et les limites
 de chaque chapitre ont ete ecrits pour ce lot.
 
+La relecture comparative ajoute deux references a celles de la premiere version.
+Elle confronte les trois textes complets aux ouvertures et passages du corps de
+cinq videos. Les choix appliques sont dans RELECTURE-COMPARATIVE.txt.
+L'ancre de registre d'origine reste attribuee a Cozy Knight; la comparaison des
+autres references ne remplace pas les sources du canon.
+
 Les sources, les scans et la relecture textuelle ne remplacent pas une narration
 chronometree ou une ecoute humaine. Le statut final vise le texte pret pour la
 voix; il ne certifie ni les futurs visuels ni la monetisation de la chaine.
