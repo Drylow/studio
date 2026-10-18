@@ -1,0 +1,90 @@
+RELANCE — LA BOÎTE À RÉCAP / BORING MULTIVERSE
+Préparation du 18 octobre 2026. Responsable éditorial : Codex.
+
+DEMANDE
+Reprendre recherche, écriture et publication régulière sur les deux chaînes.
+Les memberships sont terminés d'après l'utilisateur ; aucune modification à faire.
+
+CADRAGE CORRIGÉ PAR L'UTILISATEUR LE 18 OCTOBRE
+La Boîte à Récap : une nouvelle vidéo par semaine.
+Boring Multiverse : une nouvelle vidéo tous les deux jours.
+Livrables de Codex : titre et script uniquement. L'utilisateur génère la voix et la vidéo sur son site.
+L'utilisateur va fournir ses skills de scriptwriting : les appliquer avant de poursuivre les scripts longs.
+Durée à clarifier : la réponse dit « at least 2 hours and at most 1.5 hours ».
+Interprétation probable : 1 h 30 à 2 h, mais cette plage n'est pas encore confirmée.
+La cible provisoire antérieure 60–90 minutes est retirée.
+L'utilisateur mentionne aussi la création de nouvelles chaînes ; identités/niches encore à préciser.
+Pas de voix, montage, upload, automatisation ou programmation à lancer dans ce périmètre.
+
+LOT 1 — SUJETS PROPOSÉS, EN ATTENTE DES SKILLS POUR ÉCRITURE LONGUE
+La Boîte à Récap : Gravity Falls, le récit principal des deux saisons.
+Titre de travail : Toute l'histoire de Gravity Falls pour s'endormir.
+Promesse : suivre l'enquête des jumeaux jusqu'au dernier été, en comprenant les deux Stan.
+Périmètre : série originale. Pas de nouvelle saison inventée, pas de théorie présentée comme canon.
+Langue : français. Récit original et commentaire ; pas de traduction d'un concurrent.
+
+Boring Multiverse : Darkseid et l'Équation d'Anti-Vie.
+Titre de travail : Fall Asleep to Darkseid's Greatest Obsession: The Anti-Life Equation.
+Promesse : comprendre ce que Darkseid veut obtenir et pourquoi la domination ne lui suffit pas.
+Périmètre : concept des comics, puis exemples identifiés par œuvre et continuité.
+Langue : anglais. Pas de mélange implicite des films, de Final Crisis et de DCeased.
+
+FILE ÉDITORIALE — ORDRE PROPOSÉ, PAS ENCORE VALIDÉ
+La Boîte à Récap, une vidéo par semaine :
+1. Gravity Falls.
+2. Les secrets de Gumball.
+3. Adventure Time, le monde avant Finn et Jake.
+4. Regular Show, du parc à la fin de l'univers.
+Boring Multiverse, une vidéo tous les deux jours :
+1. Anti-Life Equation.
+2. Batman Arkham, histoires oubliées.
+3. Le multivers DC, Terre par Terre.
+4. La naissance et la chute de Krakoa.
+Ces quatre sujets Boring couvrent seulement quatre sorties, pas quatre semaines.
+Élargir la recherche après clarification des skills et du périmètre des nouvelles chaînes.
+Aucune date de lancement ni programmation YouTube définie.
+Gumball exige une sélection de chapitres avec périmètre de saisons précis.
+Multivers DC exige une cartographie identifiée (par exemple The Multiversity), pas une liste prétendue éternelle.
+
+CHOIX FONDÉS SUR LA RECHERCHE
+Gravity Falls : Cabaña Nocturna, histoire sleep en espagnol, environ 450 549 vues,
+publication du 16 juillet 2026 ; score Nexlev 23,1x de la moyenne publique de chaîne.
+https://www.youtube.com/watch?v=Serxlmq47qA
+Roundtable Rewind, lore sleep anglais : environ 895 919 vues, vidéo de 2024.
+https://www.youtube.com/watch?v=KVWolpend7I
+Gumball Universe, compilation sleep : environ 1,7 million, score Nexlev 3,7x.
+https://www.youtube.com/watch?v=IWn0fEkY_vw
+Boring Multiverse, Darkseid : 6 717 vues, score Nexlev 9,8x.
+https://www.youtube.com/watch?v=uUDy2iQx7xA
+Boring Multiverse, X-Men : 2 651 vues, score Nexlev 3,8x.
+https://www.youtube.com/watch?v=iRm2qM6LQU4
+Les chiffres ci-dessus proviennent des appels des 17–18 octobre dans ce chat.
+Vues cumulées, pas prévisions. Scores fondés sur moyennes publiques, sans correction d'âge.
+Le succès de Darkseid justifie un essai voisin ; il ne prouve pas la demande pour Anti-Life seul.
+La recherche française du 18 octobre renvoie des résultats bruités : ne pas en conclure absence de concurrence.
+
+ÉTAT DES LIVRABLES
+Un brouillon partiel d'ouverture Gravity Falls a été rédigé avant la réponse de cadrage.
+Il est conservé dans gravity-falls/brouillon-partiel-fr.txt et n'est pas un script terminé.
+Pas de script Anti-Life rédigé à cette étape. Recherche et cadrage seulement.
+Attendre les skills de scriptwriting promis et la clarification de durée avant de continuer.
+
+CONTEXTE TECHNIQUE OBSERVÉ, HORS PÉRIMÈTRE DE LIVRAISON
+Recherche publique disponible ; aucun accès aux rétentions/CTR privés établi pour ces chaînes.
+Une ancienne entrée de calendrier Boring Multiverse existe, sans voix ni prompt de production.
+Aucun montage source de ces deux chaînes retrouvé lors de la recherche ciblée locale.
+La réponse utilisateur établit que la voix et le montage se font sur son site, à partir du script fourni.
+Il n'est pas nécessaire de configurer la production ou la publication dans le Studio pour cette demande.
+Les accès et identifiants privés restent hors de ce dossier.
+
+CONTRÔLE DU SCRIPT AVANT LIVRAISON
+Relire la continuité, le rythme et les répétitions du script ; vérifier les noms et révélations.
+Appliquer les skills de l'utilisateur, puis contrôler le nombre de mots et le rythme prévu.
+La durée de lecture sera une estimation tant que l'utilisateur n'aura pas généré la narration.
+Donner le titre et le script, sans ajouter des livrables de montage non demandés.
+
+MESURE DE REPRISE
+Comparer à 48 h puis à 7 jours les impressions, CTR, durée moyenne et temps de visionnage si disponibles.
+Séparer les performances des deux chaînes et celles des nouvelles vidéos des succès anciens.
+Garder un journal des changements de titre/miniature afin de ne pas changer plusieurs variables sans trace.
+Les contrôles à 48 h et 7 jours sont une méthode proposée ; aucun suivi automatique n'est encore créé.
