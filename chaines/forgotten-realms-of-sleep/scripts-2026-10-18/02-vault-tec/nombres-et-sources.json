@@ -661,12 +661,6 @@
   },
   {
     "chapter": 9,
-    "number": "12",
-    "context": "lives.  The door is worth considering alongside that machinery. Vault 12 contains a water system that remains useful long after the disaster, even though its entrance faile",
-    "named_game_source": "Fallout: Necropolis, Set, underground ghouls, Vault 12 water system."
-  },
-  {
-    "chapter": 9,
     "number": "13",
     "context": "n important site. Set has his own priorities, and assistance to Vault 13 isn't the purpose around which he organizes the lives of his people.  The underground ghouls give t",
     "named_game_source": "Fallout: Necropolis, Set, underground ghouls, Vault 12 water system."
@@ -912,12 +906,6 @@
     "named_game_source": "Fallout 3: Vault 106 terminals and exploration sequences."
   },
   {
-    "chapter": 14,
-    "number": "106",
-    "context": "ithin the contaminated vault.  For the exploring Lone Wanderer, Vault 106 also changes the meaning of lingering in a ruin. Reading a terminal usually helps make an abandoned",
-    "named_game_source": "Fallout 3: Vault 106 terminals and exploration sequences."
-  },
-  {
     "chapter": 15,
     "number": "108",
     "context": "The inhabitants of Vault 108 share a face and a name. As the Lone Wanderer moves through the shelter in Fallout 3, the people wh",
@@ -937,14 +925,8 @@
   },
   {
     "chapter": 15,
-    "number": "one",
-    "context": "me doesn't establish that the copies share every memory or experience one continuous consciousness. They're separate figures occupying the vault, and their numbers let the p",
-    "named_game_source": "Fallout 3: Vault 108 cloning log and overseer planning records."
-  },
-  {
-    "chapter": 15,
     "number": "108",
-    "context": "t making Gary into a single person present everywhere at once.  Vault 108 also has a separate set of problems recorded in its planning material. Its administration was arran",
+    "context": "vault encountered by the player still contains several copies.  Vault 108 also has a separate set of problems recorded in its planning material. Its administration was arran",
     "named_game_source": "Fallout 3: Vault 108 cloning log and overseer planning records."
   },
   {
@@ -992,7 +974,7 @@
   {
     "chapter": 16,
     "number": "87",
-    "context": "the Master's work connected with Mariposa in the original game. Vault 87 is a separate program with its own subjects and results. The super mutants of the Capital Wasteland",
+    "context": " The Master's army grew from FEV work associated with Mariposa. Vault 87 housed a separate program, whose consequences spread through the Capital Wasteland.  Fawkes is conf",
     "named_game_source": "Fallout 3: Finding the Garden of Eden, Vault 87 terminals, Fawkes dialogue."
   },
   {
@@ -1082,7 +1064,7 @@
   {
     "chapter": 18,
     "number": "five",
-    "context": " it.  Near the entrance, the final recording returns the story to the five survivors. Their conversation is full of despair over what the revelation means. One urges the othe",
+    "context": "lse.  Near the entrance, the final recording returns the story to the five survivors. Their conversation is full of despair over what the revelation means. One urges the othe",
     "named_game_source": "Fallout New Vegas: Vault 11 Katherine deposition, overseer order, automated response and final recording."
   },
   {
@@ -1436,7 +1418,7 @@
   {
     "chapter": 26,
     "number": "95",
-    "context": "he course of observing its response.  The Sole Survivor reaches Vault 95 long after that population has gone. Gunners occupy the facility, so reaching its surviving medical",
+    "context": "heir earlier progress any less real.  The Sole Survivor reaches Vault 95 long after that population has gone. Gunners occupy the facility, so reaching its surviving medical",
     "named_game_source": "Fallout 4: Vault 95 resident records and Vault-Tec agent log, Benign Intervention."
   },
   {
@@ -1467,55 +1449,55 @@
     "chapter": 27,
     "number": "114",
     "context": "The entrance to Vault 114 lies inside Park Street Station, beneath Boston, where a search for a missing detective leads throu",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "114",
     "context": "nded residents were quite different from its current occupants. Vault 114 was meant to receive wealthy and influential people, including members of Boston's upper class and ",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "114",
     "context": "ing. Once outside, Nick can return to his work in Diamond City. Vault 114 has brought an old social experiment into view during a search for someone who still has a home and",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "118",
     "context": "ssion elsewhere.  Beneath the Cliff's Edge Hotel on the Island, Vault 118 presents another scheme built around wealth. Its designers planned separate accommodations for rich",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "two",
     "context": "ges the whole situation. There can be no completed comparison between two resident groups when one never arrives. The surviving vault does contain privileged occupants, but ",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "one",
     "context": "There can be no completed comparison between two resident groups when one never arrives. The surviving vault does contain privileged occupants, but their long residence has ",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "118",
     "context": "till express the tastes and expectations of their former lives. Vault 118 has space for leisure and artistic pursuits, and its inhabitants continue to care about reputation,",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "114",
-    "context": "ong to a later crime among the people who actually lived here.  Vault 114 survives as unfinished construction occupied by a gang, while Vault 118 remains a home to the wealt",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "context": "r can decide how to respond to Ezra and his attempted bargain.  Vault 114 survives as unfinished construction occupied by a gang, while Vault 118 remains a home to the wealt",
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 27,
     "number": "118",
     "context": "4 survives as unfinished construction occupied by a gang, while Vault 118 remains a home to the wealthy residents who entered it. The rescue in Boston and the murder inquiry",
-    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals."
+    "named_game_source": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks."
   },
   {
     "chapter": 28,

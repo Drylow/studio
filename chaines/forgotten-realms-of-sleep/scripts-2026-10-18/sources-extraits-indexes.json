@@ -10,5 +10,33 @@
     "url": "https://fallout.fandom.com/wiki/Agatha.txt",
     "access": "search_excerpt",
     "read_date": "2026-10-18"
+  },
+  {
+    "title": "Ezra Parker game reveal dialogue - indexed primary transcript excerpt",
+    "url": "https://fallout.fandom.com/wiki/DLC03_Vault118_EzraParker.txt",
+    "access": "search_excerpt",
+    "read_date": "2026-10-18",
+    "qualification": "Indexed game-dialogue excerpt read; full page open failed. Identity confession and motive only, no cut robbery branch."
+  },
+  {
+    "title": "Far Harbor protagonist dialogue - report to Maxwell",
+    "url": "https://fallout.fandom.com/wiki/MQDadVoice.txt/FH",
+    "access": "search_excerpt",
+    "read_date": "2026-10-18",
+    "qualification": "Indexed game-dialogue excerpt read, lines 1155-1157 name Ezra as the killer of Julianna. No complete page reading claimed."
+  },
+  {
+    "title": "Hakon One-Eye - indexed ancient battle dialogue",
+    "url": "https://elderscrolls.fandom.com/wiki/Hakon_One-Eye",
+    "access": "search_excerpt",
+    "read_date": "2026-10-18",
+    "qualification": "Dialogue excerpt confirms Hakon objects initially, then asks Felldir to use the Scroll. Omitted objection from the later battle sentence to avoid timing ambiguity."
+  },
+  {
+    "title": "The Journal of Ralis Sedarys - Volume 23 - indexed game text",
+    "url": "https://skyrim.fandom.com/wiki/The_Journal_of_Ralis_Sedarys_-_Volume_23",
+    "access": "search_excerpt",
+    "read_date": "2026-10-18",
+    "qualification": "Indexed primary journal text implicates Ralis in supplying victims for Ahzidal; no graphic detail used."
   }
 ]

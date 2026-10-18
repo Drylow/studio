@@ -1,0 +1,617 @@
+{
+  "date": "2026-10-18",
+  "method": "All three original scripts reviewed in full against all five reference openings and five systematic body samples per reference; not all five full reference scripts read. Then targeted source-aware edits and fresh full A-E review.",
+  "reference_metadata_file": "benchmark-references.json",
+  "comparison_note": "RELECTURE-COMPARATIVE.txt",
+  "reference_transcripts_private_only": true,
+  "applied_changes": 20,
+  "rejected_false_location_correction": 1,
+  "word_count_correction": "Benchmark reviewer guessed two scripts were under-length. Exact counts disprove this. No padding added.",
+  "initial_words": {
+    "01-skyrim-mysteries": 27115,
+    "02-vault-tec": 26417,
+    "03-dwemer": 25792
+  },
+  "edits": [
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 12,
+      "decision": "applied",
+      "reason": "The explanation temporarily becomes a puzzle walkthrough. The amulet has already supplied the chapter's useful example of an ancient mechanism; this second mechanism explanation delays the orb without adding comparable lore.",
+      "quote": "Their route continues through Nordic burial chambers, where draugr make the practical dangers familiar even as the reason for the warning remains unclear. Saarthal contains doors and mechanisms that require attention to the ruin itself. Turning pillars must be set according to the carved animal symbols around them. In one puzzle, moving a pillar also moves others, so correcting a single position can disturb work already done. These obstacles slow the exploration into a series of small observations. The student has to look at how each mechanism behaves before continuing deeper.",
+      "replacement": "Their route continues through Nordic burial chambers, where draugr interrupt the excavation's ordinary work. Tolfdir has brought apprentices here to recover and examine enchanted objects, and now he accompanies one student into passages beyond that assignment. The other students aren't beside them for the discovery ahead. Nerien's warning also remains something Tolfdir knows through the player's account rather than his own experience. As they descend, the teacher has immediate dangers to address while his student carries a warning directed specifically at them. They reach the deeper chamber together, approaching the same discovery with different knowledge of what has already happened.",
+      "words_before": 959,
+      "words_after": 968,
+      "before_sha256": "215add063181910ce3eefaa8bf25844d03e11c85f70ecb52102b65ecbb1eebb5",
+      "after_sha256": "5a967470325bb497a25fdf8c9e981b7ecf860b5a546f28049362314d00604759"
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 14,
+      "decision": "applied",
+      "reason": "The repeated opening-and-closing instructions shift into combat coaching at the point where the chapter can instead complete the connection between the Augur's advice, Savos's expedition, and the endangered school.",
+      "quote": "Ancano's connection to the Eye protects him while its power is exposed. Direct attacks alone won't settle the fight in that condition. The player must turn the Staff on the Eye, causing its opened sections to close and interrupting the protection Ancano is using. When he opens it again, the Staff is needed again. Magical anomalies add to the danger within the hall. The encounter gives the Augur's recommendation a clear practical meaning: the artifact lets the player affect the Eye well enough to make Ancano vulnerable and defeat him.",
+      "replacement": "Ancano's connection to the Eye protects him, leaving the returning expedition with a problem ordinary attacks can't overcome. The Staff can interrupt that connection by acting on the Eye itself. The Augur's recommendation now has a visible purpose in the Hall of the Elements: an artifact recovered from Morokei allows the Dragonborn to make Ancano vulnerable. Magical anomalies add to the danger around them while Tolfdir remains unable to stop him. Savos's abandoned expedition has supplied the means of intervention, although Savos and Mirabelle aren't alive to see it used. The Dragonborn defeats Ancano in the room where the College brought its discovery for study.",
+      "words_before": 989,
+      "words_after": 1004,
+      "before_sha256": "8e2fdb418567de74f4ea0f9a4782ec3b8519f05ca2b877ab2fb811815f8c680b",
+      "after_sha256": "2ce67e8c4787f0f58801fd847ebd0ae7fc1dbfe80b3dae8edb629d16b6fd5568"
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 17,
+      "decision": "applied",
+      "reason": "The chapter has already explained Daynas's claw and several tomb approaches. Naming another sequence of locks contributes less than explaining what the reunion changes for the three brothers.",
+      "quote": "The final destination is Reachwater Rock, where a cave conceals another Nordic burial site. An emerald dragon claw opens the outer puzzle door, and Daynas's ivory claw is needed farther inside. The objects gathered along the investigation still have work to do here. Beyond the doors, the Dragonborn reaches the place where the fragments can be set down together. Their return brings the brothers forth again, requiring the player to face them in succession before the amulet can be made whole.",
+      "replacement": "The final destination is Reachwater Rock, where the fragments are brought into the same burial chamber. Until now, each brother has been encountered separately, with his own defenses and a writ condemning him to be forgotten. Reuniting the pieces brings all three back into the confrontation. Mikrul, Jyrik, and Sigdis resist the restoration in succession, so recovering their fragments hasn't ended their involvement. Daynas died before he could reach this point. The Dragonborn carries his investigation beyond the scattered tombs and into an encounter with the family together, where defeating the sons once more still doesn't immediately settle their resistance.",
+      "words_before": 917,
+      "words_after": 936,
+      "before_sha256": "9d0beaf8110acfb4913a7d2e327a62e96f078b8af640b6c21d2a871cf0b9504c",
+      "after_sha256": "dfea644b206f4930f0668fd824fa1c89199f97bca506e0cc316637bf951f1ca3"
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 23,
+      "decision": "applied",
+      "reason": "The preceding paragraph already closes with the accomplished task and the uncertainty surrounding Alduin's fate. Repeating that same distinction gives the chapter a second ending.",
+      "quote": "The Tongues' first victory left Alduin able to trouble another age. The victory in Sovngarde ends the threat the Dragonborn has pursued, frees the way through his mist, and allows the heroes to remain in the hall without that battle unfinished. Whether the World-Eater still has a place in the world's eventual ending remains unanswered.",
+      "replacement": "The three Tongues have now fought beside the person who witnessed their earlier attempt through the Scroll. Felldir's desperate intervention on the mountain removed Alduin from their battlefield; in Sovngarde, they can help finish the confrontation themselves. Gormlaith is again among her companions, and the mist no longer bars the dead from reaching the Hall of Valor. The Dragonborn's return leaves those heroes in their own realm after sharing a victory with them.",
+      "words_before": 1010,
+      "words_after": 1028,
+      "before_sha256": "96dc6acd05d60a2b28ddd4d12c9656fe9176000d0443fa15cbabae3c6c290b1c",
+      "after_sha256": "d5ddf202cf29b8d2751dc0f401e90a8b6cbcde713ea976cd0e66c93af56d467a"
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 27,
+      "decision": "rejected_false_factual_finding",
+      "reason": "Gelebor is in Darkfall Cave. Prelate Sidanyis attends the Wayshrine of Illumination in Darkfall Passage. Independently opened GameBanshee Touching the Sky Part 1 confirms both locations.",
+      "sources": [
+        "https://www.gamebanshee.com/skyrim/dawnguard-walkthrough/touchingthesky-part1.php"
+      ]
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 30,
+      "decision": "applied",
+      "reason": "The technical sequence is accurate in purpose but spends most of its space on access instructions. The chapter's more useful distinction is Neloth's concrete assistance and the limit of what that assistance can provide once the book is opened.",
+      "quote": "Nchardak requires patient work with control cubes and water levels. Chambers become accessible as the water recedes, while other passages require the machinery to be arranged again. Neloth explains the systems as the Dragonborn moves through them. The Black Book is visible before it's available, held behind a barrier in the reading room. Getting it requires restoring the steam supply that powers the release. For a while, the task concerns pumps, boilers, and routes through flooded rooms, with Neloth treating each obstruction as a problem that can be solved.",
+      "replacement": "Inside Nchardak, Neloth's confidence has something concrete behind it. He explains the control cubes and machinery, helping the Dragonborn work through flooded chambers toward the steam supply needed to release the Black Book. The book can be seen in the reading room before it can be reached. For Neloth, its barrier belongs to the ruin's working systems, and his explanations help make those systems usable. That gives the Dragonborn a knowledgeable companion through this part of the search. Releasing the book completes their work with the machinery; opening it will carry its reader somewhere Neloth's guidance through Nchardak can't accompany them.",
+      "words_before": 923,
+      "words_after": 935,
+      "before_sha256": "1572ea11a220ec5d463d841f537032c13090f36326d9f99b3895408d98bfc8fc",
+      "after_sha256": "31ce3e155d5a65b0b067202caee8cd3cdf5be0239fd1ce4e3320f713a2c63e7f"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 14,
+      "decision": "applied",
+      "reason": "This compressed chapter reaches interpretive closure after only a small amount of local development. Across the manuscript, similarly shortened chapters leave the complete narration below the required length. Restore substantive coverage within the existing plan before treating the script as delivery-ready. For this chapter, deepen the already assigned overseer instructions and actual hallucination sequences, checking specific details against the named game evidence; don't expand through additional general commentary.",
+      "quote": "For the exploring Lone Wanderer, Vault 106 also changes the meaning of lingering in a ruin.",
+      "replacement": "The overseer's instructions connect the contaminated air with the reassurance residents were supposed to receive. The same office responsible for their safety was expected to discourage concern about the exposure.",
+      "words_before": 568,
+      "words_after": 582,
+      "before_sha256": "a4317a8f4c2fd4af824fcf6d605927c2a0930d5546958eac11c7b95b9c41b6b1",
+      "after_sha256": "736256f8f388bfb7f44282aa9f939c65988f58d67956ff2d18a5578121687899"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 17,
+      "decision": "applied",
+      "reason": "The preceding paragraphs have already explained candidates, coordinated votes, bloc protection, and inherited procedure. The final paragraph repeats that mechanism in abstract terms instead of adding a distinct discovery. A shorter landing preserves the explanation and leaves room for verified material elsewhere, without prematurely revealing the refusal.",
+      "quote": "The yearly schedule also gave the residents repeated practical business to conduct. They needed candidates, votes, and a result. Posters addressed the next selection, while blocs worked within the established rules. Each of those activities treated another election as something the community had to complete. The threat from the computer remained behind the process, but residents could spend their attention on the nearer problem of who would receive the votes. That narrowing seems central to how the arrangement continued: the immediate contest occupied people who believed the larger demand couldn't safely be refused.",
+      "replacement": "The campaign material survives for the Courier to read after those elections have ended. Residents once used these appeals to direct danger toward particular neighbors, under the belief that the computer would otherwise kill them all.",
+      "words_before": 699,
+      "words_after": 642,
+      "before_sha256": "466cd91010953ae8addf5c6391dd9ccfef952220339478b71fc0c6069983bc31",
+      "after_sha256": "a292fda1ae48552d45c61ac0d94b55d8aedd172904d7cfc0a39ac4f1b98db687"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 27,
+      "decision": "applied",
+      "reason": "The chapter introduces Ezra's apparent death and a detective investigation, then withholds its actual answer despite the full-spoiler scope. This feels like an unresolved teaser inside an otherwise self-contained chapter. State the identity substitution and motive, while leaving the player's response conditional.",
+      "quote": "The investigation eventually exposes a deception involving Ezra Parker and Julianna Riggs, alongside questions about money and the vault's history. Its resolution depends on the player's decisions, including how to deal with the person responsible. Those discoveries belong to a later crime among the people who actually lived here.",
+      "replacement": "The investigation reveals that the victim was Julianna Riggs. Ezra Parker killed her and assumed her identity, making the death appear to be his own. Julianna had discovered his embezzlement of the vault's construction funds. The robobrain community's unusual bodies have allowed the killer to conceal who died as well as who remains. Once the Sole Survivor exposes him, the player can decide how to respond to Ezra and his attempted bargain.",
+      "words_before": 955,
+      "words_after": 978,
+      "before_sha256": "3d0cd9e40ffb233005e63f0b4a99ed3b2080bb6d3db569589991fdb5bb4de02f",
+      "after_sha256": "716da78e1635b73e95e7932555a923d3f2d26991f7d7dc27f5303907bffc2525"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 15,
+      "decision": "applied",
+      "reason": "The paragraph introduces a shared-consciousness theory that the narration hasn't otherwise raised, then spends several sentences rejecting it. The opening and laboratory paragraphs already explain the copies' appearance and origin. A direct account preserves the useful distinction without importing an unnecessary misconception.",
+      "quote": "The repeated face can make the Garys seem interchangeable during exploration. Each encounter begins with recognition, followed by another attack or another call of the familiar name. Still, the game doesn't establish that the copies share every memory or experience one continuous consciousness. They're separate figures occupying the vault, and their numbers let the player distinguish them. The cloning records explain their common origin and their hostility toward non-clones. That gives the Lone Wanderer a useful explanation for the encounters without making Gary into a single person present everywhere at once.",
+      "replacement": "The numbers distinguish the Gary copies even though their faces and repeated name make encounters immediately recognizable. The cloning log connects them to a common human source and records their hostility toward non-clones. That hostility has carried beyond the laboratory into the passages the Lone Wanderer explores.",
+      "words_before": 869,
+      "words_after": 825,
+      "before_sha256": "25b42d0c8424c0dab8266895f5bc857808aadbf18a632be2cd420ac45034bfdc",
+      "after_sha256": "8f819e07f7a2c3ebaabf58a6831c98c39270086b7329b7b27f01dfe463d0aad5"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 16,
+      "decision": "applied",
+      "reason": "A relevant comparison becomes a catalogue of exclusions, including ghoulification, which isn't part of the immediate encounter. Keep the Mariposa comparison because it connects to chapter five, then move directly to Fawkes.",
+      "quote": "FEV has a history elsewhere in Fallout, including the Master's work connected with Mariposa in the original game. Vault 87 is a separate program with its own subjects and results. The super mutants of the Capital Wasteland don't provide a single origin for every super mutant the games contain. Radiation exposure and ghoulification are different matters as well. Here, the transformation is tied to a virus used in an experimental facility. That distinction matters when the Lone Wanderer encounters someone whose body bears the familiar changes, yet whose conversation is unlike the threats heard elsewhere in the vault.",
+      "replacement": "The Master's army grew from FEV work associated with Mariposa. Vault 87 housed a separate program, whose consequences spread through the Capital Wasteland. Inside this facility, Fawkes gives the Lone Wanderer a different encounter with one of its transformed inhabitants: he can explain his confinement, discuss the G.E.C.K., and offer help.",
+      "words_before": 944,
+      "words_after": 900,
+      "before_sha256": "659979194b73d4323a0d1551dcaa431a872990b8692f7fae60b7b5ebf5f77417",
+      "after_sha256": "a6120fd8e287ebac2c7fe3dc3a133dbb2101c1a42e554d699fa9096c9b9fc050"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 9,
+      "decision": "applied",
+      "reason": "The opening has established the functioning water system, and the preceding paragraph has explained the failed door. This paragraph restates both through obvious general explanations, delaying Set and the underground community. Preserve the concrete connection in one sentence.",
+      "quote": "The door is worth considering alongside that machinery. Vault 12 contains a water system that remains useful long after the disaster, even though its entrance failed at the task that made an underground shelter seem safe. A vault depends on several systems working together. Purified water can't keep radiation outside, and a massive entrance offers little protection if it doesn't seal. In Necropolis, the visitor can encounter both a failed barrier and equipment that people still depend on.",
+      "replacement": "The ghouls who survived Vault 12's failed protection still depend on equipment beneath the settlement, including the purification system that contains the chip Vault 13 needs.",
+      "words_before": 775,
+      "words_after": 723,
+      "before_sha256": "0799d91926bec0d1e7cbf8f1cbc4a468b2b0ed1d64972283c9e4f61698c15b01",
+      "after_sha256": "134ce089206ba23dbdcc61993c155f3a49f3a88bd2e8e493458b70be4b7bb600"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 5,
+      "decision": "applied",
+      "reason": "Chapter 18 develops this same cube-management sequence in detail. Here it lengthens the introductory comparison without adding a separate discovery, and the final sentence repeats the script's recurring knowledge-versus-danger observation.",
+      "quote": "The cubes can be retrieved and used again as Neloth and the Dragonborn advance. That makes their handling different from placing a single object and leaving it behind. A cube committed to one pedestal may be needed for another operation, and the route requires moving between installations. Neloth helps interpret what they encounter. His presence gives the expedition a knowledgeable companion, though the work still involves reaching the controls and operating them while Dwemer defenses remain active. Understanding a pump's purpose doesn't remove the obstacles between the travelers and its pedestal.",
+      "replacement": "Nchardak's cubes can be removed and used at another pedestal. Their usefulness continues as Neloth and the Dragonborn move through the flooded complex, unlike the sphere's specific task at the entrance to Blackreach.",
+      "words_before": 786,
+      "words_after": 728,
+      "before_sha256": "93688c33b2b27b7fdbc292cc683483e041a59b0eb3ab007406159722ebf9b4ad",
+      "after_sha256": "0c61ece751ca38d39815f7d39ef3df3065f807912c0479b95ff0d77a0290b710"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 6,
+      "decision": "applied",
+      "reason": "This abstract explanation has already appeared through the sphere, lexicon and cubes. The surrounding sentences already provide a concrete comparison between Kagrenac and the tonal lock, so these sentences don't advance it.",
+      "quote": "Between those situations lies much of what makes Dwemer workmanship so difficult for later scholars to recover. The operation can remain available after the teaching has disappeared.",
+      "replacement": "",
+      "words_before": 678,
+      "words_after": 651,
+      "before_sha256": "bcb16c26373c8e40c037377ae90d0e79419c68c3d489fa2285b00fd3884ad4ee",
+      "after_sha256": "a351c41f5287227726362103eb2db104f809d87ca9a977c009c017ae493be065"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 7,
+      "decision": "applied",
+      "reason": "The preceding paragraph has already closed on the inscription's coercive contents and its translation value. This additional ending repeats the same local answer in less specific terms.",
+      "quote": "In Calcelmo's Tower, the bilingual stone preserves the Dwemer's promises of shelter beside the conditions they imposed.",
+      "replacement": "",
+      "words_before": 975,
+      "words_after": 958,
+      "before_sha256": "42fa7c8c4689d9d6c518aff85bfbba413b397d9998eb6a516f20ef6b22443fc3",
+      "after_sha256": "9504e4eea3ff715ec1aabe9cb01ff1ce4b4b73e4d4b427de18d7dba5473635a2"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 12,
+      "decision": "applied",
+      "reason": "These sentences explain the obvious requirements of an ordered lock after chapters 5 and 6 have already introduced it. Katria's partial notes and the other visitor's record are the chapter's new material and should receive the attention.",
+      "quote": "The doorway therefore presents a problem with an ordered answer. Finding the entrance and recognizing the devices won't open it on their own. Someone has to determine how the resonators belong together, then act on that understanding while standing inside a place whose defenses still function.",
+      "replacement": "Katria's journal preserves part of the required sequence, giving the Dragonborn a starting point at the locked entrance.",
+      "words_before": 782,
+      "words_after": 754,
+      "before_sha256": "5a2968b098efd24ba33586d8a7e70092082e76b2f6939308b2b3a2583572c52f",
+      "after_sha256": "424198cc56ccc38d84c9801b6690a9935c4354543b01a55d7af21cb049fdbc3c"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 15,
+      "decision": "applied",
+      "reason": "The paired statements restate an obvious distinction and briefly turn a named expedition into a generic survival lesson. The paragraph already establishes diminishing provisions and the cost of continuing.",
+      "quote": "Dwemer machinery can remain active in a chamber where a traveler has nothing to eat. Metal components and archaeological discoveries won't sustain the people carrying them.",
+      "replacement": "",
+      "words_before": 809,
+      "words_after": 783,
+      "before_sha256": "6f1e65401aca5d17decfc964a8ab23c83bff349c4fa9d386a2a57ce767a9d412",
+      "after_sha256": "3a43f42b64d679fd9c9cb300bf01ad1dd6b6d56029274af27b61bbad5ea09eb9"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 18,
+      "decision": "applied",
+      "reason": "The preceding passages have demonstrated these operations repeatedly. This returns to the same abstract operation-versus-understanding takeaway already used in chapters 5, 6 and 17 instead of moving the Nchardak expedition forward.",
+      "quote": "The route doesn't require a complete account of how the Dwemer built the city. It requires enough understanding to connect a pedestal with its effect, reach the next part of the complex, and bring the necessary cubes back to the machinery waiting below.",
+      "replacement": "The recovered cubes must return with the visitors to the machinery supplying the reading room.",
+      "words_before": 836,
+      "words_after": 808,
+      "before_sha256": "de160b9a6e4ac031a312cebd010e336206ec990e4e526c6f6047d69107e45820",
+      "after_sha256": "b538dcfb2f94c41a87865d79e94fc765fc520651e276ac33b8bdabe5379bacf6"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 24,
+      "decision": "applied",
+      "reason": "The script has already corrected simplistic Dwemer atheism in chapters 6 and 9, and chapter 22 has shown their approach to the Heart. Reopening the correction delays this chapter's distinctive material about Kagrenac and his colleagues.",
+      "quote": "This also gives a more useful picture of Dwemer religious opposition than the idea that they failed to notice gods existed.",
+      "replacement": "",
+      "words_before": 694,
+      "words_after": 673,
+      "before_sha256": "c59bc87fffca3593a3c19fa7862d18eb38694062f435458380d2e917d97f697b",
+      "after_sha256": "5dd7698c58493b3578d1a8a1038c2a87374bfe7da9ec9ee5fb9b72ae895aed97"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 29,
+      "decision": "applied",
+      "reason": "This reads as a condensed quest instruction. The relevant lore is Arniel's use of surviving Dwemer equipment to prepare a substitute power source, rather than the player's sequence of interactions.",
+      "quote": "The warped soul gem goes inside a convector, the spell is applied to the apparatus, and the gem is retrieved afterward.",
+      "replacement": "The Dragonborn uses Arniel's spell and the surviving convectors to heat the warped gem for his experiment.",
+      "words_before": 871,
+      "words_after": 867,
+      "before_sha256": "33c7a9d87a1e4d7596920d1cf5ce33dbd374e7854d8d06faa6fdbfce899ee474",
+      "after_sha256": "6ff3b84e461560cbcffe07b3d7eb50f9a8ce2a4c9a1a2eb77d73097fc4e0495e"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 30,
+      "decision": "applied",
+      "reason": "The self-correcting rhetorical flourish distracts from the concrete survivor who should anchor the final comparison. His location, remembered colleagues and unsuccessful search provide that scale without explaining the phrase.",
+      "quote": "Yagrum Bagarn gives the disappearance a human scale, even though he isn't human.",
+      "replacement": "Yagrum Bagarn remembers colleagues whose cities now stand empty.",
+      "words_before": 982,
+      "words_after": 978,
+      "before_sha256": "30d4236e6cb798954ef5e16043d45286c398fa7d53ff9e795efd4520d85170cf",
+      "after_sha256": "ae397e967c283d185dc067198dfc6b8abee98c3b6388eeedeab66cf6600566bf"
+    }
+  ],
+  "new_claim_verification": [
+    {
+      "title": "Ezra Parker game reveal dialogue - indexed primary transcript excerpt",
+      "url": "https://fallout.fandom.com/wiki/DLC03_Vault118_EzraParker.txt",
+      "access": "search_excerpt",
+      "read_date": "2026-10-18",
+      "qualification": "Indexed game-dialogue excerpt read; full page open failed. Identity confession and motive only, no cut robbery branch."
+    },
+    {
+      "title": "Far Harbor protagonist dialogue - report to Maxwell",
+      "url": "https://fallout.fandom.com/wiki/MQDadVoice.txt/FH",
+      "access": "search_excerpt",
+      "read_date": "2026-10-18",
+      "qualification": "Indexed game-dialogue excerpt read, lines 1155-1157 name Ezra as the killer of Julianna. No complete page reading claimed."
+    }
+  ],
+  "not_measured": [
+    "Private competitor retention",
+    "Recorded audio duration",
+    "Human listening"
+  ],
+  "final_review_round": 102,
+  "followup_edits": [
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 12,
+      "quote": "Their route continues through Nordic burial chambers, where draugr interrupt the excavation's ordinary work. Tolfdir has brought apprentices here to recover and examine enchanted objects, and now he accompanies one student into passages beyond that assignment. The other students aren't beside them for the discovery ahead. Nerien's warning also remains something Tolfdir knows through the player's account rather than his own experience. As they descend, the teacher has immediate dangers to address while his student carries a warning directed specifically at them. They reach the deeper chamber together, approaching the same discovery with different knowledge of what has already happened.",
+      "replacement": "Their route continues through Nordic burial chambers, where draugr interrupt the excavation's ordinary work.",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 identifies explanation repeated 'with nothing new attached.' After introducing draugr, this paragraph restates the assignment, Tolfdir's accompaniment, and the unequal knowledge of Nerien's warning already developed in the preceding paragraphs. Retaining the first sentence preserves the new obstacle and the transition.",
+      "before_sha256": "5a967470325bb497a25fdf8c9e981b7ecf860b5a546f28049362314d00604759",
+      "after_sha256": "1304bb93502a9a44af0715f182d88eda8eef1ed0b2f6141bd6213e27d21a86d5"
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 23,
+      "quote": "Felldir turns to the Elder Scroll despite Hakon's objection, using it to remove Alduin from their time.",
+      "replacement": "Felldir turns to the Elder Scroll, using it to remove Alduin from their time.",
+      "decision": "applied",
+      "editor_note": "Hakon does object earlier, then urges use of the Scroll. Omit the objection in the later battle sentence to avoid a misleading sequence. The review's assertion that Gormlaith made the initial objection is rejected.",
+      "reason": "The ancient confrontation does not give Hakon this objection: he urges Felldir to use the Scroll when the fight fails. Gormlaith voices the earlier objection. Removing the mistaken attribution preserves the supported causal sequence without adding dialogue.",
+      "before_sha256": "d5ddf202cf29b8d2751dc0f401e90a8b6cbcde713ea976cd0e66c93af56d467a",
+      "after_sha256": "0c783d14a3938dc762cdd930616ec8e93f221ee91bbe104c49bd8be3fa659755"
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 29,
+      "quote": "In the final portion of the excavation, the route leads to Ralis himself taking part in a summoning. Ahzidal is the dragon priest at the center of the disturbance, and the work has brought Ralis far enough below ground to call him forth. The accumulated trouble can no longer be explained entirely through miners breaking into chambers occupied by draugr. The man directing the dig is involved in the event the Dragonborn must stop. Defeating Ahzidal ends the immediate threat within the newly opened depths.",
+      "replacement": "The final descent finds Ralis summoning Ahzidal, the dragon priest whose influence has grown through the excavation. His later journals implicate him in killing workers for Ahzidal's return, so the deaths cannot all be attributed to awakened draugr. The Dragonborn must defeat Ahzidal before confronting Ralis about his part in what happened.",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "The assigned journals implicate Ralis in killing workers for Ahzidal's return. The chapter repeatedly identifies draugr attacks, then reduces Ralis's concrete implication to participation in the summoning. This leaves a missing causal step before the later choice to kill him 'for his part in those deaths.' Uncertainty about his awareness should remain distinct from what the journals implicate him in doing.",
+      "before_sha256": "1075fbac7209d14cc4db302f20542ad17f5a54596a29d49251b505201effd90c",
+      "after_sha256": "c37a875a9c4d1239204dfb0de7ece7a80ea3907da7c5d2c487bfd0ddcda8edc9"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 9,
+      "quote": "The ghouls who survived Vault 12's failed protection still depend on equipment beneath the settlement, including the purification system that contains the chip Vault 13 needs.",
+      "replacement": "",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The opening already establishes the working chip and the ghouls' dependence, and the preceding paragraph explains the failed protection. This standalone paragraph adds neither a consequence nor a new development.",
+      "before_sha256": "134ce089206ba23dbdcc61993c155f3a49f3a88bd2e8e493458b70be4b7bb600",
+      "after_sha256": "903f105b317c910afa0e796e5319677b1e8b136636fd1453720c92f55af47b0d"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 14,
+      "quote": "The overseer's instructions connect the contaminated air with the reassurance residents were supposed to receive. The same office responsible for their safety was expected to discourage concern about the exposure.",
+      "replacement": "",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 requires a second mention to add 'a consequence, a comparison, the next number.' The third paragraph already explains both the reassurance instructions and the contradiction of seeking help from the responsible office. The remainder of this closing paragraph adds the useful point that understanding the cause does not remove exposure; these two sentences only delay it.",
+      "before_sha256": "736256f8f388bfb7f44282aa9f939c65988f58d67956ff2d18a5578121687899",
+      "after_sha256": "0d3716f09f7a52eda4ffbb55f9a37642fd3d8c1d189dcf0c13758c17fbc98df0"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 15,
+      "quote": "The numbers distinguish the Gary copies even though their faces and repeated name make encounters immediately recognizable. The cloning log connects them to a common human source and records their hostility toward non-clones. That hostility has carried beyond the laboratory into the passages the Lone Wanderer explores.",
+      "replacement": "",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 flags narration that 'keeps re-stating it with nothing new attached.' The preceding three paragraphs already establish numbered identities, their common source, hostility toward non-clones and encounters outside the laboratory. Deleting this paragraph moves directly to the distinct leadership and resource arrangements.",
+      "before_sha256": "8f819e07f7a2c3ebaabf58a6831c98c39270086b7329b7b27f01dfe463d0aad5",
+      "after_sha256": "bd604c2e4a3b06dd069ac007f58e5669ece1477c9df08194800c5f5fc2f8f3f5"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 16,
+      "quote": "The Master's army grew from FEV work associated with Mariposa. Vault 87 housed a separate program, whose consequences spread through the Capital Wasteland. Inside this facility, Fawkes gives the Lone Wanderer a different encounter with one of its transformed inhabitants: he can explain his confinement, discuss the G.E.C.K., and offer help.",
+      "replacement": "The Master's army grew from FEV work associated with Mariposa. Vault 87 housed a separate program, whose consequences spread through the Capital Wasteland.",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 calls for removing re-mentions that add nothing. The Mariposa distinction is useful and must remain, but the last sentence previews confinement, conversation and help immediately before the next paragraph supplies those same developments concretely.",
+      "before_sha256": "a6120fd8e287ebac2c7fe3dc3a133dbb2101c1a42e554d699fa9096c9b9fc050",
+      "after_sha256": "36784b6b8748960f331a510ba0dee649c1bb432edf4485cef804bf855fb06530"
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 17,
+      "quote": "The posters make personal failings into reasons someone should receive votes.",
+      "replacement": "Rival campaigns turn accusations about a candidate's character into arguments for electing that person.",
+      "decision": "applied",
+      "editor_note": "Original statement was not false: hostile posters target rivals. Clarify whose alleged failings are invoked; do not claim residents advertise their own faults.",
+      "reason": "This reverses the campaign appeals described in the chapter's first sentence. The candidates campaign to avoid election and sacrifice; their appeals are not straightforward arguments that their own failings justify receiving votes.",
+      "before_sha256": "a292fda1ae48552d45c61ac0d94b55d8aedd172904d7cfc0a39ac4f1b98db687",
+      "after_sha256": "d9a1fbb2a3cd08709d75b42e8909700bcb075b34ef65caecc341db9c1bdf1991"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 12,
+      "quote": "Katria's journal preserves part of the required sequence, giving the Dragonborn a starting point at the locked entrance.",
+      "replacement": "",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The next paragraph immediately explains that the journal records part of the order and gives a later visitor a prepared starting point. That paragraph develops the practical consequence, making this preceding sentence the least useful occurrence.",
+      "before_sha256": "424198cc56ccc38d84c9801b6690a9935c4354543b01a55d7af21cb049fdbc3c",
+      "after_sha256": "7206d30ae47b5e4fde8a324a325dec2b8b3fa06d2037b304d4fd22c318ada4fe"
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 30,
+      "quote": "Yagrum Bagarn remembers colleagues whose cities now stand empty. In the corprusarium beneath Tel Fyr, a Dwemer can still speak about the people whose cities stand empty. He remembers colleagues and their disagreements.",
+      "replacement": "In the corprusarium beneath Tel Fyr, Yagrum Bagarn remembers his colleagues and their disagreements, though their cities now stand empty.",
+      "decision": "applied",
+      "editor_note": "Exact editor-approved local refinement.",
+      "reason": "H18 identifies repeated explanations without new development. These consecutive sentences repeat both the empty cities and remembered colleagues before reaching the useful information about Yagrum's absence and search. Combining them preserves the location, personal connection, and disagreement without repeating the setup.",
+      "before_sha256": "ae397e967c283d185dc067198dfc6b8abee98c3b6388eeedeab66cf6600566bf",
+      "after_sha256": "887e66da06b7fcd67503c9cf0d32f968178d61c552a9c76c1ede9484829619a7"
+    }
+  ],
+  "followup_edit_count": 10,
+  "post_edit_counts": [
+    {
+      "id": "01-skyrim-mysteries",
+      "words": 26936,
+      "chapters": 30,
+      "characters_including_spaces": 168027,
+      "sha256": "56b17ee85d4a4f7c82814ef5626c19ffaf53dcbb6fc8efe9bcb2296ed5690fcb"
+    },
+    {
+      "id": "02-vault-tec",
+      "words": 26057,
+      "chapters": 29,
+      "characters_including_spaces": 167090,
+      "sha256": "39145f4726fe86e213f05eb4662b842d8c59e97fbea6a5e7286532ddcd8e25ac"
+    },
+    {
+      "id": "03-dwemer",
+      "words": 25544,
+      "chapters": 30,
+      "characters_including_spaces": 164503,
+      "sha256": "5e5ffeb396fa71926ae7404ba722802f0170e2e4daea0a1d63bf020a8cc6c93a"
+    }
+  ],
+  "third_pass_edits": [
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 23,
+      "decision": "applied",
+      "quote": "The three Tongues have now fought beside the person who witnessed their earlier attempt through the Scroll. Felldir's desperate intervention on the mountain removed Alduin from their battlefield; in Sovngarde, they can help finish the confrontation themselves. Gormlaith is again among her companions, and the mist no longer bars the dead from reaching the Hall of Valor. The Dragonborn's return leaves those heroes in their own realm after sharing a victory with them.",
+      "replacement": "",
+      "reason": "H18 requires that a second mention add \"a consequence, a comparison, the next number\" and says, \"A re-mention that adds nothing gets cut.\" This paragraph repeats the already developed reunion, contrast between battles, clearing of the mist, and shared victory. Unlike a single concrete closing image, it is a multi-sentence recap after the preceding paragraph has delivered the assigned distinction between victory and uncertain ultimate fate."
+    },
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 30,
+      "decision": "applied",
+      "quote": "He can help open a route without accompanying the Dragonborn through everything beyond it. When the book takes the reader into Apocrypha, Neloth's explanations give way to a place where pages and corridors belong to Mora. The scholar remains useful, but the terms of the next exchange come from the being whose realm the Dragonborn has entered.",
+      "replacement": "",
+      "reason": "H18 says, \"A re-mention that adds nothing gets cut or replaced with the next piece of information from the research.\" The preceding paragraph already ends by explaining that opening the book carries its reader beyond Neloth's guidance. These three sentences repeat that handoff before the next paragraph actually enters Epistolary Acumen. Delete them while retaining the paragraph's first two sentences about Neloth's informed willingness to research dangerous books."
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 3,
+      "decision": "rejected_false_factual_finding",
+      "quote": "The wrist-mounted computer gives its user a way to consult information and keep track of practical concerns.",
+      "reason": "The original Fallout manual, page 4-21 (PDF page 60), explicitly describes the PipBoy 2000 as worn on the wrist. The original sentence is correct.",
+      "sources": [
+        "https://cdn.akamai.steamstatic.com/steam/apps/38400/manuals/Fallout_manual_English.pdf"
+      ]
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 18,
+      "decision": "applied",
+      "quote": "Finding it helps explain why the threat could remain convincing to people whose whole lives had been arranged around obeying it.",
+      "replacement": "The chamber shows how the vault carried out individual sacrifices, even though its threat to kill everyone for refusing was false.",
+      "reason": "The Courier's discovery establishes how sacrifices were carried out, not whether residents knew about the chamber's defenses. The sentence supplies an unsupported causal link between concealed machinery and residents' belief in collective punishment."
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 26,
+      "decision": "applied",
+      "quote": "Reading those records gives the ruin a particular sadness. The people who struggled after the cache opened were the same people who had sustained years of sobriety. Their earlier progress remains part of their history, even though the community didn't survive the disruption. The agent's assignment treated the return of temptation and its consequences as material to record. For the residents, it affected the people they knew and the home they'd built together. The experiment consumed an existing, functioning community in the course of observing its response.",
+      "replacement": "The later collapse doesn't erase the residents' years of recovery or make their earlier progress any less real.",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' The opening five paragraphs already establish successful recovery, the observer's concealed assignment, and the destruction of community stability. This paragraph repeats that explanation; its useful interpretation can survive in one sentence."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 6,
+      "decision": "applied",
+      "quote": "For Kagrenac, the craft offered a way to approach the Heart with instruments designed for that purpose. For the Dragonborn at Arkngthamz, it offers passage through an obstacle that still answers an ordered set of strikes.",
+      "replacement": "",
+      "reason": "H18 identifies 'the same point restated with the wording shuffled.' These sentences repeat the instrument-and-effect comparison already developed in the sixth paragraph and the ordered-strikes explanation immediately above. The remaining final sentence supplies a sufficient concrete closing image."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 9,
+      "decision": "applied",
+      "quote": "Cooperation offered both peoples a way to preserve their independence after the defeat of Nordic rule. For a time, Chimer and Dwemer conducted that work together, with their own communities, their differing beliefs, and leaders who had once been friends.",
+      "replacement": "",
+      "reason": "H18 flags repeated explanations without a new development. The chapter has already explained postwar independence, separate communities, religious difference, and the leaders' friendship, particularly in the seventh and eighth paragraphs. The preceding two sentences already close on the friendship before the rupture."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 21,
+      "decision": "applied",
+      "quote": "Still, the assignment has produced something worth carrying out of the ruins. Three difficult volumes have brought Kagrenac's undertaking into clearer view, and the disagreement recorded in them survives alongside his plans. Trebonius has his completed task. The scholars have texts they can continue to read.",
+      "replacement": "",
+      "reason": "H18 describes an explanation returning with 'nothing new attached.' The preceding paragraph already summarizes all three books and Trebonius's acceptance. After adding the useful distinction that no destination or return procedure is supplied, this passage repeats the submission's value and administrative completion."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 27,
+      "decision": "applied",
+      "quote": "The immediate danger has passed through a concrete act in a reachable chamber.",
+      "replacement": "",
+      "reason": "The voice-anchoring Reading-Not-Speaking test flags 'written syntax no mouth produces live.' Danger 'passing through a concrete act' is an awkward abstraction about the narration's method, following a sentence that already gives the actual outcome: the blight ends and Azura acknowledges completion."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 30,
+      "decision": "applied",
+      "quote": "In the corprusarium beneath Tel Fyr, Yagrum Bagarn remembers his colleagues and their disagreements, though their cities now stand empty.",
+      "replacement": "In the corprusarium beneath Tel Fyr, Yagrum Bagarn remembers his colleagues and their disagreements, though their cities no longer hold the Dwemer communities he knew.",
+      "reason": "The unqualified description contradicts the established occupation of Markarth and the Falmer presence throughout former Dwemer spaces. The missing original communities, rather than literally empty cities, are the relevant constraint."
+    },
+    {
+      "episode": "03-dwemer",
+      "chapter": 1,
+      "decision": "editor_authored_early_orientation",
+      "reason": "Pay off the disappearance title with the central undertaking and surviving tools earlier, before the extended ruins sequence. Same checked canon as chapters 22-24; no new theory or invented lore.",
+      "addition": "The undertaking most often associated with their disappearance was the construction of Anumidium, the brass god later known as Numidium. Kagrenac intended to power it through the Heart of Lorkhan, an object beneath Red Mountain that other peoples understood as the surviving heart of a god. He made instruments for that work: Sunder, Keening and Wraithguard. These names belong to objects that can be recovered in Morrowind, where they become part of the Nerevarine's struggle against Dagoth Ur.\n\nThat later use gives the investigation an unusual advantage. The instruments aren't known only from an old account; someone can handle them and use them upon the Heart. But the Nerevarine's task is to break enchantments already placed there. Doing that doesn't replay Kagrenac's attempt or bring the missing Dwemer back. The later quest leaves us with working tools and a visible result, while the older disappearance still requires an explanation."
+    }
+  ],
+  "total_edit_operations": 40,
+  "distinct_chapters_revised": {
+    "01-skyrim-mysteries": [
+      12,
+      14,
+      17,
+      23,
+      29,
+      30
+    ],
+    "02-vault-tec": [
+      9,
+      14,
+      15,
+      16,
+      17,
+      18,
+      26,
+      27
+    ],
+    "03-dwemer": [
+      1,
+      5,
+      6,
+      7,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27,
+      29,
+      30
+    ]
+  },
+  "public_reference_metrics_limitation": "Snapshot public views; only Cozy Knight channel-average outlier ratios checked; no recent-channel median benchmark or private audience retention supplied.",
+  "final_editorial_status": "ready_for_narration",
+  "final_minor_editorial_decisions": [
+    {
+      "round": 102,
+      "episode": "01-skyrim-mysteries",
+      "chapter": 12,
+      "quote": "Tolfdir follows into the newly accessible chambers. The excavation has reached chambers its present researchers weren't expecting to enter.",
+      "decision": "retained_editorial",
+      "reason": "Retained after reading the passage in context. The first sentence locates Tolfdir as the accompanying teacher; the second says this lies beyond the team's expected excavation. Those are distinct orientation facts. Repeating the concrete noun in two short spoken sentences is an acceptable cadence choice, not a duplicated explanation or a factual error."
+    },
+    {
+      "round": 102,
+      "episode": "01-skyrim-mysteries",
+      "chapter": 15,
+      "quote": "By the time the rings are recovered, the remaining decision concerns the being connected to the gauntlet: whether to accept what he offers for release or meet him as an enemy in the chamber.",
+      "decision": "retained_editorial",
+      "reason": "Retained as one sentence locating the optional choice after the evidence gathering. It does not assert a single canonical quest branch. The preceding passages explain the alternatives; this brief closing orientation lets a relaxed listener retain the actual decision before leaving the local story."
+    },
+    {
+      "round": 102,
+      "episode": "02-vault-tec",
+      "chapter": 2,
+      "quote": "Moving through those areas makes it easier to understand the shortage described in the records. The awake employees needed a continuing daily life in a place whose provisions imposed an approaching limit.",
+      "decision": "retained_editorial",
+      "reason": "Retained as the connection between the visible staff living areas and the shortage previously found in terminal records. One sentence links place to record, the next identifies the awake employees' different needs. This short return helps explain why the cafeteria belongs in the account rather than merely listing scenery."
+    },
+    {
+      "round": 102,
+      "episode": "02-vault-tec",
+      "chapter": 25,
+      "quote": "Curie offers the only available dose. If the Sole Survivor has also become infected, Austin's need for treatment now competes with their own.",
+      "decision": "retained_editorial",
+      "reason": "Retained as the scarce-dose dilemma before explaining its two conditional outcomes. The two-sentence setup tells the listener why infection matters; the following paragraph gives the branches. A brief setup followed by consequences is useful causal exposition, not a second developed explanation."
+    },
+    {
+      "round": 102,
+      "episode": "02-vault-tec",
+      "chapter": 28,
+      "quote": "Each repetition gives the Sole Survivor another opportunity to depart from the original proposal.",
+      "decision": "retained_editorial",
+      "reason": "The repetition in this sentence is the in-world succession of Barstow's configurable experiments, not the script's repeated presentation or its production. It identifies the continuing possibility of changing her plans during each test. H16 content-announcement is therefore not established; retain the local agency comparison."
+    },
+    {
+      "round": 102,
+      "episode": "03-dwemer",
+      "chapter": 6,
+      "quote": "The comparison gives tonal architecture a concrete starting point. Dwemer craft could require the right action in the right order, with sound included in the operation.",
+      "decision": "retained_editorial",
+      "reason": "Retained as a short explanation of the unfamiliar term tonal architecture through the immediately preceding comparison. It explicitly links ordered action and sound after two different examples, before incorrect-sequence consequences. This is a novice-facing explanatory bridge, not a repeated multi-paragraph takeaway."
+    },
+    {
+      "round": 102,
+      "episode": "03-dwemer",
+      "chapter": 21,
+      "quote": "Together, the books and their interpreters make a coherent submission to Trebonius. Hanging Gardens provides a route toward translation. Divine Metaphysics concerns the construction and its divine source. The Egg of Time preserves a defense against a feared consequence.",
+      "decision": "retained_editorial",
+      "reason": "Retained as a concise side-by-side synthesis of three different books' roles in the submission to Trebonius. The individual readings precede it; here their complementary functions are assembled into the administrative answer, immediately distinguished from a real solution to the disappearance. This combined comparison is useful in long oral narration."
+    }
+  ],
+  "unresolved_factual_or_major_findings": 0,
+  "final_review_coverage": {
+    "01-skyrim-mysteries": 30,
+    "02-vault-tec": 29,
+    "03-dwemer": 30
+  }
+}

@@ -5,10 +5,10 @@
 -- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
 -- ECHO CHECK (H18): 39
   [echo H18: phrase repeated 8x] "the vault dweller can"
-  [echo H18: phrase repeated 5x] "changes the meaning of"
   [echo H18: phrase repeated 5x] "the chosen one can"
   [echo H18: phrase repeated 5x] "the lone wanderer can"
   [echo H18: phrase repeated 5x] "the sole survivor can"
+  [echo H18: phrase repeated 4x] "changes the meaning of"
   [echo H18: phrase repeated 4x] "what happened to the"
   [echo H18: phrase repeated 3x] "the people in the"
   [echo H18: phrase repeated 3x] "the entrance and the"
