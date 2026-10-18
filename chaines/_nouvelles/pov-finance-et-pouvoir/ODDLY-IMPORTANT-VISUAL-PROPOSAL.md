@@ -32,3 +32,7 @@ Pas de voix, montage, video complete ou publication lances. L’accord porte sur
 - Au decoupage, renseigner pour chaque plan : extrait de narration, lieu et zone, reference du lieu et variante d’angle, personnages nommes, action et emotion, cote/cadrage, prompt manuel et references reellement envoyees dans leur ordre. Relire la sequence pour reperer les fonds trop repetes et les changements spatiaux incomprehensibles avant generation ; inspecter ensuite les sorties avant montage.
 
 Cette regle concerne cette nouvelle chaine et ne change pas les choix de coherence propres a Oddly Fictional Lives ou aux autres chaines du depot. Aucun preset serveur ni moteur automatique n’a ete modifie par cet enregistrement editorial.
+
+## Essai concret avant production de masse
+
+[Sequence de six plans inspectes](visual-tests/continuity-2026-10-18/README.md) : terrasse approuvee reutilisee, demande de cafe, cuisine avec une nouvelle cuisiniere, service, depart et retour sur la terrasse. Deux zones, trois acteurs, cadrages moderement varies et etats d’objets suivis. Une tasse manquante au dernier plan a ete corrigee ; les ecarts restants sont documentes. Cette demonstration attend le jugement utilisateur ; aucune production de masse ni publication lancee.
