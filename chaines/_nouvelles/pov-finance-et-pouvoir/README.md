@@ -1,5 +1,20 @@
 # Projets POV : finance et coulisses du pouvoir
 
+**Derniere decision du 19 octobre :** l'essai « scene complete d'abord » est
+rejete. Retour aux decors maitres et aux identites separes. Les vingt voix Ryan
+sont disponibles ; production et suivi en pause jusqu'a validation d'un nouveau
+comparatif de scenes de l'ancienne methode. Voir l'[etat courant](PRODUCTION-20-2026-10-19.md).
+
+## Production lancee — 19 octobre 2026
+
+L'utilisateur autorise les vingt videos avec Ryan Kurk. Les vingt projets sont
+crees et en file sur le VPS ; les voix avancent par trois. Lire l'[etat de
+production et les controles](PRODUCTION-20-2026-10-19.md). Aucune generation ou
+aucun rendu sur le PC. RunPod reste a verifier/configurer ; ne pas annoncer une
+execution qui n'a pas ete observee. Le lancement ne certifie pas les controles
+encore incomplets et ne demande pas de publication. Les sections anterieures
+ci-dessous conservent l'historique des decisions et essais.
+
 ## Reprise — ecriture du 19 octobre 2026
 
 Precision utilisateur : le benchmark **POVrank** concerne ces vingt scripts.
