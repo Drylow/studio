@@ -1,6 +1,6 @@
 # Oddly Important Guy — essai de continuite et de variete
 
-Demande utilisateur du 18 octobre 2026 : montrer un exemple avant toute production de masse. Six plans fixes, deux zones de la meme villa, trois personnages. Le premier plan reutilise la terrasse deja approuvee ; les cinq suivants sont de nouveaux essais, pas des images approuvees individuellement par l’utilisateur. CLI configure execute sur le VPS, prompts manuels et references choisies par Codex. Aucune voix, synchronisation, video complete ou publication lancee.
+Demande utilisateur du 18 octobre 2026 : montrer un exemple avant toute production de masse. Six plans fixes, deux zones de la meme villa, trois personnages. Le premier plan reutilise la terrasse deja approuvee ; les cinq suivants sont de nouveaux plans de demonstration. Apres presentation de la planche finale corrigee, l’utilisateur valide la sequence et sa consistance : « Ouais, c’est parfait. Tu geres bien la consistance, c’est propre. » Cette sequence devient une reference approuvee pour Oddly Important Guy ; les limites constatees ci-dessous restent documentees et chaque futur plan reste a inspecter. CLI configure execute sur le VPS, prompts manuels et references choisies par Codex. Aucune voix, synchronisation, video complete ou publication lancee.
 
 ![Six plans](planche.jpg)
 

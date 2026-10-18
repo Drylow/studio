@@ -180,3 +180,5 @@ Correction explicite utilisateur : les trois scenes bureau/cuisine/exterieur et 
 
 
 [Style video pour Oddly Important Guy](ODDLY-IMPORTANT-VISUAL-PROPOSAL.md) : nouvelle mascotte en costume bleu/cravate rouge, trois scenes milliardaire/casino/yacht, generees et inspectees. Direction acceptee par l’utilisateur le 18 octobre 2026. Consigne ajoutee : plus de lieux et zones utiles au script, angles varies dans une geometrie stable, personnages secondaires distincts et jeu adapte a chaque scene. Ne pas recycler cinq fonds sur tout un episode. La validation de The Wealthy Nobody reste separee ; aucun film ni publication n’est lance par cet accord.
+
+La [demonstration de six plans villa/cuisine](visual-tests/continuity-2026-10-18/README.md) est ensuite validee par l’utilisateur le 18 octobre 2026 pour sa consistance. Elle est conservee comme reference de mise en scene pour Oddly Important Guy : meme lieu reconnaissable sous plusieurs cadrages, changement de zone motive par l’action et retour au lieu initial, personnages et accessoires suivis. Cette validation ne relance pas de production ni de publication.
