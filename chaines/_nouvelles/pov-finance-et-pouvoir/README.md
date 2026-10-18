@@ -158,3 +158,10 @@ Comparatif local : `03 - Creation/References styles videos - 2026-10-18/`. Trois
 - POVrank : https://www.youtube.com/watch?v=JtSOX2quSok — humains cartoon a peau coloree, scenes collectives et decors chauds. La grosse tete blanche de sa miniature ne decrit pas le style de cet episode.
 
 L’API de telechargement a expire pour la premiere reference et la connexion SSH historique a echoue. Les images livrees viennent des apercus YouTube effectivement recuperes et regardes, pas d’une extraction HD fictive sur le VPS. Aucun montage, encodage ou rendu de film sur le PC. La comparaison porte sur le dessin visible, pas sur une inspection integrale des videos.
+
+
+## Direction originale pour les videos — 18 octobre 2026
+
+L’utilisateur rejette les TROIS styles de contenu montres dans les references. Il demande notre propre dessin, derive du rendu de la miniature milliardaire deja approuvee. Ne pas reutiliser les visages humains a cheveux des references finance ni les humains a peau coloree de la reference hierarchies comme style video. Les captures precedentes restent des comparateurs rejetes.
+
+Lire [VISUAL-STYLE.md](VISUAL-STYLE.md). Un personnage en pied et trois scenes sans narration sont prepares par le CLI configure pour tester cette direction. Ces images sont des propositions a regarder, pas une production complete ni une garantie de coherence a l’echelle d’un episode. Le choix d’une direction ne vaut pas validation individuelle des sorties ni autorisation de publier les premiers films.
