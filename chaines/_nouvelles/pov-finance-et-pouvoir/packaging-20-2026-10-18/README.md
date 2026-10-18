@@ -1,5 +1,11 @@
 # 20 videos — selection et methode
 
+## Accord et ecriture — 19 octobre 2026
+
+L’utilisateur valide les propositions et autorise l’ecriture des vingt scripts. Les 43 images A/B/C sont conservees ; aucune variante individuelle n’est encore choisie. Les remarques ci-dessous qui indiquent une attente d’accord avant script decrivent la livraison precedente.
+
+[Vingt narrations anglaises completes et revisees](../scripts-20-2026-10-18/README.md), dix par chaine, avec briefs, recherches et compte rendu de controle. Leur revue editoriale ne constitue pas un PASS complet de production ni une mesure de duree TTS. Le choix des miniatures reste separe de l’ecriture.
+
 ## Revision apres retour sur le message des miniatures — 18 octobre 2026
 
 La [grille principale](GRILLE.html) montre maintenant **vingt nouvelles propositions B** et **trois alternatives C** pour P06 concierge, P07 avocat et P08 palais. Les vingt images A restent disponibles par bouton et en mode comparaison ; [leur grille initiale](GRILLE-A.html) et leurs planches sont conservees. Les titres restent identiques. Toutes les nouvelles propositions retenues ont ete regardees a leur resolution native puis sur planche ; elles ne sont pas declarees approuvees par l’utilisateur ni meilleures en taux de clic mesure.

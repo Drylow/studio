@@ -1,0 +1,875 @@
+{
+  "W01": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your boss offers you a raise, and you ask for Fridays off.",
+      "words": 62,
+      "turn_present": true
+    },
+    "narrative_angle": "Reconnaissance professionnelle, puis demande de temps qui affecte Maya.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 39,
+        "opens_evidence": "Your boss offers you a raise, and you ask for Fridays off. He keeps his hand on the salary letter because he thinks you haven't understood the offer. You have. But another increase won't fix the part of your week you're trying to get back, and your first attempt to explain that is about to annoy the person who works beside you.",
+        "closes_evidence": "When the review comes, the outcome is modest. The reduced-hours package has a defined salary, a smaller set of recurring duties, and Friday coverage that includes another person's protected time. You check it against the budget you made with Rowan. You can manage the difference. If you couldn't, you'd need another proposal, not a motivational sentence about wanting freedom badly enough."
+      },
+      {
+        "opens_paragraph": 10,
+        "closes_paragraph": 26,
+        "opens_evidence": "On Monday, you tell your colleague Maya what you're considering. You expect encouragement. She asks who will handle Friday's customer updates. You say you've thought about that. She waits. You describe putting things in the shared folder, and she asks who will explain them when a customer calls. You recognize the problem because customers already call you to avoid opening the folder.",
+        "closes_evidence": "Maya has a more concrete complaint. The handover didn't say who could approve a replacement shipment. She found the gap while the customer was waiting. You add the missing approval contact and thank her for catching it. You don't explain that you would have known the answer. The whole point is to make the answer available without making your availability permanent."
+      }
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S09"
+    ],
+    "manual_observation": "Conserver la distinction semaine comprimee / reduction des heures et du salaire. Aucun droit universel a quatre jours. Le vendredi avec le pere concretise le choix.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/6] \"He suggests annual leave.\" | \"He's not being ridiculous.\"  << He asks why you need the time. You start listing appointments, family ...",
+        "  [staccato x2/7] \"You expect encouragement.\" | \"She waits.\"  << On Monday, you tell your colleague Maya what you're considering. You e...",
+        "  [staccato x2/7] \"You ask which part.\" | \"He considers it.\"  << The next Monday, Ellis says Friday was difficult. You ask which part. ...",
+        "  [staccato x2/6] \"Neither assumption was malicious.\" | \"Neither was an agreement.\"  << At home, another surprise appears. Rowan assumed your new Friday would...",
+        "  [staccato x2/5] \"One routine can move.\" | \"Another cannot.\"  << The team discusses coverage more openly as a result. One routine can m..."
+      ],
+      "mechanical_antithesis_floor_candidates": [
+        "  [floor: reframe: isn't X, it's Y] ... an appointment on Friday. It isn't an emergency. That's partly why you keep postponin..."
+      ],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W02": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "You get your dream job, then find yourself arguing with a letting agent about whether the bed can touch the fridge.",
+      "words": 58,
+      "turn_present": true
+    },
+    "narrative_angle": "Poste prestigieux contre logement et cout de la vie.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 30,
+        "opens_evidence": "You get your dream job, then find yourself arguing with a letting agent about whether the bed can touch the fridge. She's describing the apartment as efficient. You're still carrying the briefcase you bought to celebrate the offer. But the rent isn't the only part of this new life your excellent salary is going to struggle to cover.",
+        "closes_evidence": "Eventually, you find a shared apartment with a kitchen that can hold both food and people. It isn't the private city home you pictured when the offer arrived. The person renting the other room asks clear questions about schedules, bills, and shared space. You appreciate how practical the conversation is after weeks of hearing cramped rooms described as opportunities."
+      },
+      {
+        "opens_paragraph": 19,
+        "closes_paragraph": 24,
+        "opens_evidence": "Then your laptop fails. It's your personal machine, not equipment the employer is responsible for replacing. You need it for your own admin, and the repair quote is unpleasant. The reserve you used for the move would have helped. You can cover the repair, but it will remove money you had mentally assigned to getting ahead.",
+        "closes_evidence": "The reimbursement helps once it is processed. It doesn't turn the salary into the number you imagined. You're still left with a housing decision, and the lease terms give that decision a timeline. You stop telling yourself you'll look for a better place when work settles down. You choose a period to search properly while you can still consider options."
+      }
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S05"
+    ],
+    "manual_observation": "L’employeur clarifie les conditions et rembourse seulement les frais eligibles ; il ne regle pas magiquement le logement. Appartement partage choisi, carriere conservee.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/5] \"The salary is higher.\" | \"The office is better.\"  << The salary is higher. The office is better. The title sounds impressiv...",
+        "  [staccato x2/5] \"You laugh.\" | \"The joke isn't cruel.\"  << On a call with an old friend, you describe the job and avoid describin..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W03": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your inheritance hasn't changed your life yet, but your family has already spent it.",
+      "words": 58,
+      "turn_present": false
+    },
+    "narrative_angle": "Un heritage deja attribue par les proches avant la decision du beneficiaire.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 30,
+        "opens_evidence": "Your inheritance hasn't changed your life yet, but your family has already spent it. Your sister has a house brochure, your brother has found a car, and a cousin you barely speak to would like to discuss an opportunity. You're holding the envelope against your chest when somebody says you must be relieved you can finally help everyone.",
+        "closes_evidence": "You agree to a specific gift toward a plan she can support herself. You write down what you've agreed, including that it is a one-time contribution rather than a continuing monthly commitment. She looks embarrassed by the paperwork. You explain that you want both of you to remember the same conversation, especially if circumstances become difficult later."
+      },
+      {
+        "opens_paragraph": 2,
+        "closes_paragraph": 43,
+        "opens_evidence": "Imagine receiving money from a relative who lived more modestly than anyone realized. The news reaches you during a period when you're still clearing a cupboard of their belongings. You find a repair receipt, a collection of ordinary photographs, and something you'd given them years ago. The inheritance is real. So is the person whose absence made it possible.",
+        "closes_evidence": "When everyone sits down, your mother asks about the photographs you found while clearing the cupboard. You bring them to the table instead of the envelope. Leah starts laughing at a picture of Owen's old haircut. He objects, takes the photograph, and begins telling his version of the day. For this dinner, nobody needs to decide what your money is for."
+      }
+    ],
+    "source_ids": [
+      "S03",
+      "S07",
+      "S06"
+    ],
+    "manual_observation": "Deux demandes familiales et une proposition commerciale distinctes. Don a Leah explicite ; voiture choisie par Owen non financee ; vente d’actif et fiscalite ne sont pas confondues.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W04": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "You've paid off your house, and your friend thinks you've made a mistake.",
+      "words": 62,
+      "turn_present": true
+    },
+    "narrative_angle": "Fierte du pret solde, critique de Ben et cout du toit.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 19,
+        "opens_evidence": "You've paid off your house, and your friend thinks you've made a mistake. He's standing on your porch with a photograph of a much bigger one, explaining what you could have done with the money. You're holding the keys to the home you already own. But a repair bill next month will give him a better argument than you want to admit.",
+        "closes_evidence": "You ask him what he would do now, using the options you actually have. He starts describing a different past decision. You tell him that may be interesting later, but the roofer needs an answer about this house. The conversation improves when it moves from proving who won a hypothetical argument to examining a current choice."
+      },
+      {
+        "opens_paragraph": 17,
+        "closes_paragraph": 33,
+        "opens_evidence": "Then a brown stain appears above the hallway. You stare at it as though enough suspicion might make it an old stain. A roofer inspects the damage and sends an estimate. You read the total, sit down, and call Jules. The loan has ended just in time for the roof to introduce itself as a separate concern.",
+        "closes_evidence": "With the repair complete, the kitchen returns to its usual state. You finally fix the dripping tap as well. The amount involved is much less dramatic, and the improvement is disproportionately enjoyable. You stop hearing it every evening. You wonder how long you would have postponed that small job if you kept waiting for a larger milestone to make the house pleasant."
+      }
+    ],
+    "source_ids": [
+      "S04",
+      "S02",
+      "S06"
+    ],
+    "manual_observation": "L’avantage psychologique n’efface ni liquidite perdue, ni impots, assurance et entretien. Pas de taux de rendement ou de meilleure strategie valable pour tous.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/7] \"It's small.\" | \"The photograph is lovely.\"  << He also has opinions about the house itself. It's small. The location ..."
+      ],
+      "mechanical_antithesis_floor_candidates": [
+        "  [floor: reframe: isn't X, it's Y] ...r than pretending the expense hasn't changed anything. It's disappointing. Paying off the..."
+      ],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W05": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your side business is finally paying you as much as your old job, and your partner is eating dinner beside a stack of shipping cartons.",
+      "words": 62,
+      "turn_present": true
+    },
+    "narrative_angle": "Revenu de la petite activite contre temps et vie commune.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 23,
+        "opens_evidence": "Your side business is finally paying you as much as your old job, and your partner is eating dinner beside a stack of shipping cartons. They're asking when you're going to stop working. You tell them you're nearly finished, which is what you said before they cooked. But the order you're about to accept will make that answer much harder to defend.",
+        "closes_evidence": "You finish the large order, then discover an ordinary customer's notebook is still sitting beside the printer. It should have left yesterday. They wanted it for a birthday. You contact them, apologize for the missed promise, and discuss the delivery and remedy available under their order. The customer is still disappointed. Your exciting new sale has made an older customer less likely to come back."
+      },
+      {
+        "opens_paragraph": 19,
+        "closes_paragraph": 41,
+        "opens_evidence": "The customer sends a new logo after approving the notebook covers. The old one is already printed across the batch on your table. You photograph the work and explain the choice: keep the approved design, or agree to a replacement with a revised price and delivery date. Your finger hovers over a sentence offering to do it free. Then Morgan asks where tonight's plates should go, and you delete that sentence.",
+        "closes_evidence": "At the end of the month, you take the order records to your accountant. Together you separate the cash needed for business bills and taxes from what you can draw for yourself. The big order looks less impressive after the replacement covers and extra delivery. A repeat order with fewer changes looks much better. You know which customer you'd rather hear from when the next message arrives."
+      }
+    ],
+    "source_ids": [
+      "S08",
+      "S02",
+      "S01"
+    ],
+    "manual_observation": "Les ventes, la tresorerie et le revenu personnel restent distincts. Logo change apres impression, anniversaire rate et analyse du vrai cout donnent des consequences au succes.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W06": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "You've found the holiday everyone said they wanted, and nobody in the group chat is answering.",
+      "words": 54,
+      "turn_present": true
+    },
+    "narrative_angle": "Le voyage commun n’a pas le meme cout ni le meme sens pour chaque ami.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 22,
+        "opens_evidence": "You've found the holiday everyone said they wanted, and nobody in the group chat is answering. At the cafe, your friend opens his wallet while you're still showing him the beach. You can afford the trip. He can't justify the cost. But offering to pay for him is about to make the conversation worse.",
+        "closes_evidence": "The discussion produces a smaller common trip. You're disappointed by part of it. You had pictured warm evenings somewhere more distant, and the nearer option feels less like an escape. You're allowed to want that. You're also able to separate wanting a particular holiday from wanting to spend time with these friends, rather than requiring both wishes to use the same booking."
+      },
+      {
+        "opens_paragraph": 26,
+        "closes_paragraph": 34,
+        "opens_evidence": "The booking page asks for payment, and Sam stops you before you press the button. What happens if Elise can't come? You open the cancellation terms together. The room you chose is cheaper because the booking is less flexible. You take that information back to the group, choose an option everyone accepts, and record who is paying what before anyone starts owing a friend money.",
+        "closes_evidence": "At the accommodation, the key sticks in the lock. For a moment, you want to blame the cheaper choice. Sam tries the spare key, which works, and you report the first one to reception. Then he asks whether you want to spend the whole evening inspecting the bargain or come outside. You follow him down to the water before the light goes."
+      }
+    ],
+    "source_ids": [
+      "S03",
+      "S01",
+      "S02"
+    ],
+    "manual_observation": "Le cadeau ne donne pas le controle de l’itineraire. Limites de temps et d’argent, conditions de reservation, petit voyage commun et extension personnelle sont distingues.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/5] \"You suggest covering more.\" | \"Sam becomes quieter.\"  << You suggest covering more. Sam becomes quieter. You think he's worried..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W07": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your investments are falling while your partner is standing beside the desk with groceries and a bill that still needs paying.",
+      "words": 68,
+      "turn_present": true
+    },
+    "narrative_angle": "La baisse expose une cuisine commandee en pensee sans financement decide.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 19,
+        "opens_evidence": "Your investments are falling while your partner is standing beside the desk with groceries and a bill that still needs paying. Yesterday, the account made you feel rich. Today, you keep refreshing it as though the screen has misunderstood you. But the decision that could hurt you most won't come from the market. It will come from the purchase you promised before you checked which money was available.",
+        "closes_evidence": "You call the kitchen supplier. The design work you authorized has a fee, but the cabinet order hasn't been placed. There is still time to pause the larger purchase. You ask for that position in writing, then discuss it with Avery before replying. The fee will come from cash you can spare. The new kitchen will have to wait, including the handles you've already shown your friends."
+      },
+      {
+        "opens_paragraph": 5,
+        "closes_paragraph": 41,
+        "opens_evidence": "At the kitchen showroom, you choose cabinets and ask the supplier to prepare a design. You say you're ready to proceed once you've seen it. Avery asks which account will pay for the work. You say you have enough, then return to choosing handles. You haven't decided what will be sold, what will stay invested, or what cash must remain available afterward.",
+        "closes_evidence": "You agree to repair the drawer from the cash already assigned to household maintenance. The old worktop stays. When the drawer finally closes without a shove, Avery opens it again just to enjoy the absence of the noise. Neither of you calls it the kitchen you wanted. It is an improvement you can pay for while leaving the larger decision alone."
+      }
+    ],
+    "source_ids": [
+      "S06",
+      "S02",
+      "S01"
+    ],
+    "manual_observation": "Choix precis de cabinets et frais de conception, commande non placee. Baisse reelle avant une vente ; aucun rebond, produit ou conseil de transaction garanti.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/5] \"Then prices fall.\" | \"The explanations disagree.\"  << Then prices fall. There is no convenient single notification telling y..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W08": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your partner earns less than you and has just placed a house key beside a savings file while you're holding an empty wallet.",
+      "words": 62,
+      "turn_present": true
+    },
+    "narrative_angle": "Gros salaire et montre ne signifient pas argent disponible pour le logement.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 20,
+        "opens_evidence": "Your partner earns less than you and has just placed a house key beside a savings file while you're holding an empty wallet. You're wearing the more expensive watch. You paid for the last restaurant. But you aren't the person in this relationship who can comfortably handle the next unexpected bill, and the explanation is going to annoy you before it helps.",
+        "closes_evidence": "You put the house deposit, everyday cash, debts, and longer-term investments on separate lines. The totals you quoted over dinner weren't measuring the same things. Kit has money earmarked for the house. Some of the amount you counted includes money you still owe. Your salary remains higher after you finish the page; the spending power you thought came with it looks rather different."
+      },
+      {
+        "opens_paragraph": 11,
+        "closes_paragraph": 44,
+        "opens_evidence": "You ask whether somebody gave Kit money. They look at you for a moment, then say no. You have just tried to explain years of choices you didn't notice with an event that didn't happen. Kit opens the savings file and shows the regular transfers. You recognize several dates from evenings when you were choosing what to buy after payday.",
+        "closes_evidence": "When the next housing document arrives, you put your own contribution beside Kit's. Yours has grown through decisions that weren't especially interesting to describe to friends. Kit checks the figures with you and asks whether you're comfortable with the next step. You read it before answering, leave the watch on your wrist, and keep the money assigned to the plan where it belongs."
+      }
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S05",
+      "S06"
+    ],
+    "manual_observation": "Pas de fortune secrete ou de moralite fondee sur le genre. Distinguer salaire, liquidites, actifs, dettes et depenses communes ; aucune surveillance permanente du partenaire.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W09": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "You've retired early, made breakfast for two, and your spouse is too busy leaving for work to sit down.",
+      "words": 51,
+      "turn_present": true
+    },
+    "narrative_angle": "La retraite du protagoniste ne libere pas le calendrier d’Alex.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 43,
+        "opens_evidence": "You've retired early, made breakfast for two, and your spouse is too busy leaving for work to sit down. You're holding their coffee like an invitation they haven't accepted. You planned carefully for life without your job. But you somehow planned most of it around a person who still has one.",
+        "closes_evidence": "One morning, you prepare coffee while Alex gets ready. You ask if they want it at the table or in a travel cup. They say they have time to sit today. You put both cups down and ask about their afternoon before telling them about yours. When they leave, you clear the table, pick up the bag for your own appointment, and go out instead of waiting for the house to become interesting again."
+      },
+      {
+        "opens_paragraph": 11,
+        "closes_paragraph": 26,
+        "opens_evidence": "The washing-machine engineer is due on an afternoon when Alex has a meeting and you've booked a walk with a local group. Alex assumed you would be home. You assumed the appointment was still being discussed. Now the engineer needs an answer. Your former work calendar had been cleared together; nobody had decided who inherited the empty squares.",
+        "closes_evidence": "When the engineer later asks to change the time, your thumb goes straight to Alex's number. You stop before calling. The appointment is yours to manage this week. You ring the service desk, hear the available slots, and move your own outing. It's inconvenient. You tell Alex about the change that evening without presenting it as a favor they have spent the day failing to appreciate."
+      }
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S06"
+    ],
+    "manual_observation": "Situation deja preparee, aucune formule de retraite. Rendez-vous de reparation, activites personnelles et travail refuse ou negocie donnent du contenu au calendrier vide.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/6] \"You stop before calling.\" | \"It's inconvenient.\"  << When the engineer later asks to change the time, your thumb goes strai..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "W10": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The agent has a pen ready for your house purchase when your mother puts an unpaid bill on the table.",
+      "words": 54,
+      "turn_present": true
+    },
+    "narrative_angle": "Le projet immobilier rencontre une facture cachee et un deficit recurrent.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 28,
+        "opens_evidence": "The agent has a pen ready for your house purchase when your mother puts an unpaid bill on the table. You've finally saved enough to move forward. She has finally admitted she needs help. But the amount on the paper isn't the whole problem, and choosing quickly could leave both homes struggling next month.",
+        "closes_evidence": "The decision you make here is to postpone the particular purchase before taking on commitments you can't support, under the actual terms available. There are disappointing consequences, and some preparation may have cost money or time. You accept those facts rather than presenting the change as a clever strategy that leaves you better off in every category."
+      },
+      {
+        "opens_paragraph": 7,
+        "closes_paragraph": 38,
+        "opens_evidence": "Your mother brings the letters from a kitchen drawer. An overdue electricity bill sits on top. Beneath it are the regular statements, an insurance renewal, and notices she hasn't opened because each seemed to promise another problem. You ask her to sit with you while you sort them. The electricity payment needs attention, but catching it up won't close the gap between what comes in and what leaves every month.",
+        "closes_evidence": "At the review, the overdue bill has been dealt with and the provider has confirmed the new payments. Jamie still needs to help file the older statements. You keep that task separate from the gift, whose agreed payments are ending. Your mother puts the next bill in the folder herself. There will still be correspondence after your temporary support ends, and she is no longer hiding it in a drawer."
+      }
+    ],
+    "source_ids": [
+      "S03",
+      "S05",
+      "S02"
+    ],
+    "manual_observation": "La mere garde son choix. Don borne, Jamie responsable de taches precises, Riley consulte. Achat particulier repousse selon sa situation, pas sacrifice familial recommande a tous.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P01": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your new boss hands you his phone while you're carrying his paperwork, his coffee, and the problem he gave you before breakfast.",
+      "words": 58,
+      "turn_present": true
+    },
+    "narrative_angle": "La fortune du patron ne donne pas a l’assistant le droit de decider de tout.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 14,
+        "opens_evidence": "Your new boss hands you his phone while you're carrying his paperwork, his coffee, and the problem he gave you before breakfast. He's still in a dressing gown. He wants to know why you're looking stressed. But the difficult part of working for a billionaire is going to be deciding which of his instructions you're allowed to ignore.",
+        "closes_evidence": "He chooses the smaller one. The pause before that decision felt longer than the entire phone call. You had assumed good service meant never presenting a limit. Maya says he can't choose between options nobody tells him about. Then she gives you the next limit. The driver is already taking a guest to an appointment and cannot collect flowers at the same time."
+      },
+      {
+        "opens_paragraph": 8,
+        "closes_paragraph": 9,
+        "opens_evidence": "By lunchtime, Adrian has forgotten the extra meeting. He asks whether you found the cufflinks he mentioned in the car. You haven't been in the car. He told the driver, who told the house manager, who thought you were handling it. The house manager is now searching a guest room while a plumber waits outside a locked service gate.",
+        "closes_evidence": "You could join the search. It would make you look helpful, and it would leave the plumber standing there while the repair appointment disappears. You ask the driver where the cufflinks were last seen, give that information to the house manager, and call the employee who controls access. Three people can finish their own jobs if you stop trying to perform all of them."
+      }
+    ],
+    "source_ids": [
+      "S09"
+    ],
+    "manual_observation": "Adrian Vale est invente. Fleurs, manchettes, plombier et facture de vases rendent les demandes concretes. Pas de promotion miraculeuse ni copie du transcript de reference.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/8] \"You did.\" | \"They do.\"  << He asks whether you called. You did. He asks whether they know it's ur...",
+        "  [staccato x2/7] \"Your phone lights up.\" | \"He picks one.\"  << Your phone lights up. Adrian wants to change tomorrow's departure. You...",
+        "  [staccato x2/6] \"It sounds flattering.\" | \"They trust you.\"  << For a moment, you think you've cracked the job. Then a guest asks whet..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P02": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The customer has just lost, and he's pointing at you as though the money went into your pocket.",
+      "words": 65,
+      "turn_present": true
+    },
+    "narrative_angle": "Le croupier doit traiter une contestation sans acheter le calme en changeant le resultat.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 16,
+        "opens_evidence": "The customer has just lost, and he's pointing at you as though the money went into your pocket. You're wearing a waistcoat, your break is late, and there's another player waiting for the next hand. But you can't buy a quiet evening by changing the result. You're about to find out what a casino actually expects its staff to do when somebody stops having fun.",
+        "closes_evidence": "The review confirms the result was handled correctly. Nora explains it. The customer accepts the explanation in the loosest possible sense and tells you to be more careful next time. You want a public apology equal in length to the accusation. You get permission to continue the game. You'll need to decide whether that is enough to do your job without carrying the conversation into every next interaction."
+      },
+      {
+        "opens_paragraph": 10,
+        "closes_paragraph": 37,
+        "opens_evidence": "Then a confident man sits down and starts narrating the room. He knows how things work. He knows the manager, although he gives you a first name several employees share. He offers commentary on your dealing before you've completed a round. You keep your attention on the procedure, because arguing about whether you look experienced won't settle anything that matters.",
+        "closes_evidence": "You feel relieved, then uncomfortable about how relieved you feel. He was an unpleasant part of your shift, but he was having an unpleasant experience too. Understanding that doesn't make his accusation acceptable. It helps you keep him from becoming a cartoon villain you use to explain every difficult customer who follows him."
+      }
+    ],
+    "source_ids": [
+      "S10"
+    ],
+    "manual_observation": "Casino Meridian invente. Revue par superviseuse, roles de securite distincts, fatigue et vie personnelle. Aucun systeme pour gagner ou contournement de controle.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x3/7] \"You're rushing.\" | \"You're distracting him.\" | \"You changed the rhythm.\"  << He wins and tells the person next to him he knew the table would be go...",
+        "  [staccato x3/8] \"You did.\" | \"You did.\" | \"It was.\"  << During your break, you describe the exchange to an experienced dealer ...",
+        "  [staccato x2/6] \"You haven't.\" | \"You take the hint.\"  << Then he asks whether you've eaten. You haven't. You were using your br..."
+      ],
+      "mechanical_antithesis_floor_candidates": [
+        "  [floor: reframe: isn't X, it's Y] ...nalism. Nora notices that you didn't try to hide an uncertainty. That's a more useful impression to l..."
+      ],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P03": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The man relaxing on the yacht puts his empty glass back on your already crowded tray and asks whether you ever get tired of this view.",
+      "words": 62,
+      "turn_present": true
+    },
+    "narrative_angle": "Vue de vacances, service et depart exige avant que le travail soit pret.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 28,
+        "opens_evidence": "The man relaxing on the yacht puts his empty glass back on your already crowded tray and asks whether you ever get tired of this view. You're watching the glass because you don't want to drop it. But the request that causes trouble today won't be for another drink. He wants the yacht to leave before the people running it are ready.",
+        "closes_evidence": "The owner is irritated by the delay. He asks whether everyone realizes what the trip costs. They do. The cost hasn't changed which preparations need to be complete. The captain offers the workable timing and the consequences for the guests' itinerary. After some discussion, the owner accepts it. Your afternoon now needs a revision rather than an impossible promise."
+      },
+      {
+        "opens_paragraph": 15,
+        "closes_paragraph": 17,
+        "opens_evidence": "The delivery arrives with the bread, fruit, and mineral water, but the chef opens the chilled order and stops. The fish for the agreed dinner is missing. On the receipt, a substitute has been listed as though the change were already settled. You can carry the boxes aboard. You can't tell the chef which dinner they should now make or sign away a disagreement you haven't resolved.",
+        "closes_evidence": "The owner accepts the chef's alternative, Marin confirms the order change, and the kitchen begins revising its preparation. You carry the accepted boxes to their assigned storage. One shelf remains empty where the original order would have gone. You mention the change in the handover so Robin won't spend the evening searching for an ingredient the yacht never received."
+      }
+    ],
+    "source_ids": [
+      "S19"
+    ],
+    "manual_observation": "Yacht Maribel invente. Approvisionnement, remplacement du poisson, rota et repos. Les regles britanniques sont bornees au cadre applicable ; aucun seuil de repos generalise.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/7] \"You mention the departure.\" | \"She laughs at that.\"  << Marin asks what you learned today. You mention the departure. She asks..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P04": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The celebrity is smiling for a photograph while the people behind the rope are moving toward her.",
+      "words": 65,
+      "turn_present": true
+    },
+    "narrative_angle": "Le sourire public de l’actrice et le visage ferme du garde racontent des instants differents.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 28,
+        "opens_evidence": "The celebrity is smiling for a photograph while the people behind the rope are moving toward her. You're in the photograph too, looking as though somebody has ruined your evening. Somebody has. Her publicist just promised the crowd a closer look without asking the people responsible for getting her out afterward. But the picture that causes trouble will make you look like the unreasonable one.",
+        "closes_evidence": "Your team lead asks for the order of events. You give the arrival time, the announced change, and the point where venue staff paused it. They speak with the publicist. The photograph remains online, where a stranger has now decided you hate your job. You put your phone away before another refresh turns your break into an argument you cannot finish."
+      },
+      {
+        "opens_paragraph": 9,
+        "closes_paragraph": 18,
+        "opens_evidence": "Serena arrives late and apologizes while someone changes her shoes. She has been in a car, answering questions, and being told she is late by people who cannot make the traffic move. For a moment, you understand how annoying the schedule must feel from her side. Then she asks whether she can stop outside for a few photographs, and the publicist answers before the team can discuss the change.",
+        "closes_evidence": "That conversation doesn't erase the earlier photograph. It gives the person making the announcements information they can use before the next one. You would prefer a dramatic public correction because the unfair image still annoys you. The quieter practical improvement is more likely to help the people working the rest of this event."
+      }
+    ],
+    "source_ids": [
+      "S11"
+    ],
+    "manual_observation": "Serena Hale inventee. Foule non diabolisee, rendez-vous d’interview reel dans la fiction, photo trompeuse, compte rendu interne. Aucun detail tactique ou itineraire de protection.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x3/6] \"Then the photograph appears.\" | \"Serena is smiling.\" | \"Your face is tense.\"  << Then the photograph appears. A guest has posted the moment when you ra..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P05": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "Your passenger points at his watch, and you turn the weather display toward him.",
+      "words": 54,
+      "turn_present": true
+    },
+    "narrative_angle": "La montre du proprietaire ne remplace pas la decision du pilote.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 21,
+        "opens_evidence": "Your passenger points at his watch, and you turn the weather display toward him. He owns the aircraft. You're the pilot deciding whether this flight can safely happen. But he's about to offer you something much harder to refuse than another complaint, and the answer you give will affect more than his afternoon meeting.",
+        "closes_evidence": "He offers to put his request in writing. You don't ask him to sign away a responsibility you still hold. A written expression of passenger preference doesn't replace a professional decision. You keep the conversation about the safe available choices rather than offering him a document that would make both of you feel covered while changing none of the underlying conditions."
+      },
+      {
+        "opens_paragraph": 4,
+        "closes_paragraph": 18,
+        "opens_evidence": "The itinerary on your tablet names the destination agreed yesterday. The assistant's latest message names a different city, closer to the meeting Graham now wants to attend. Anika spots the difference while you're comparing the requests. Graham is already telling someone he'll be there. You call the assistant before two versions of the journey become a dispute about which promise the pilots broke.",
+        "closes_evidence": "The assistant finds the confirmation beneath yesterday's catering email and winces. They acknowledge that the destination change was easy to miss. You agree to use the corrected itinerary and a single contact for further changes. Graham asks whether that means you can leave now. The paperwork mistake is fixed. The reason you haven't approved departure remains."
+      }
+    ],
+    "source_ids": [
+      "S17",
+      "S18"
+    ],
+    "manual_observation": "Graham Voss invente. Villes et messages divergents, appel a distance, pression professionnelle. Ni seuil meteo, ni procedure de vol ; un depart ulterieur ne justifie pas celui refuse plus tot.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P06": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The woman pressing the service bell can see you're already on the telephone.",
+      "words": 53,
+      "turn_present": true
+    },
+    "narrative_angle": "Une cliente bruyante monopolise le comptoir pendant qu’un autre client attend une aide utile.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 36,
+        "opens_evidence": "The woman pressing the service bell can see you're already on the telephone. She presses it again. Her luggage has its own trolley, her restaurant has no available table, and she believes both problems should embarrass you. But the guest who actually needs your help tonight is standing behind her, saying almost nothing.",
+        "closes_evidence": "The man with the walking stick returns later to say the room arrangement has been handled. He asks whether there's somewhere nearby for a simple meal. You give him options that fit what he wants, not the most expensive places you can name. He chooses one within a comfortable distance and asks you to write the directions down. It's a small request after a difficult arrival."
+      },
+      {
+        "opens_paragraph": 9,
+        "closes_paragraph": 23,
+        "opens_evidence": "Then Mrs. Calder arrives at the desk. She's a fictional guest with an impressive coat, an impatient expression, and the habit of announcing requests as things already agreed. She wants a particular restaurant tonight, a car afterward, and the suitcase containing her evening clothes brought up immediately. You confirm which room and contact the appropriate team about the bags.",
+        "closes_evidence": "Mrs. Calder asks whether the terrace table will be quiet. You tell her what the restaurant confirmed and what it didn't. She looks offended that the evening still contains other diners. You show her the reservation time and car details. After another pause, she takes the card. The bell remains untouched for long enough that you can hear the telephone ring again."
+      }
+    ],
+    "source_ids": [
+      "S14"
+    ],
+    "manual_observation": "Aster et Mrs. Calder inventes. Restaurant refuse, alternative explicite, colis et chambre suivis separement. La scene validee de surcharge et d’arrogance se retrouve dans le recit.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/5] \"Opening arrangements need checking.\" | \"Travel time can change.\"  << You begin organizing information around useful differences, not simply...",
+        "  [staccato x2/7] \"Mrs.\" | \"You have.\"  << Mrs. Calder says she's sure the hotel can arrange it. You explain the ...",
+        "  [staccato x2/6] \"The duty manager arrives.\" | \"She asks Mrs.\"  << The duty manager arrives. She hears the restaurant request and the opt...",
+        "  [staccato x2/5] \"They are embarrassed.\" | \"You would like Mrs.\"  << They are embarrassed. You tell them you're glad it was found and close...",
+        "  [staccato x3/6] \"Calder returns.\" | \"Dinner was pleasant.\" | \"The car worked.\"  << You're nearly ready to leave when Mrs. Calder returns. Dinner was plea..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P07": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The billionaire adds another folder to the pile in your arms and tells you to get the agreement finished before dinner.",
+      "words": 56,
+      "turn_present": true
+    },
+    "narrative_angle": "Le client veut signer avant de diner, sans regler la consequence de sa propre demande.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 25,
+        "opens_evidence": "The billionaire adds another folder to the pile in your arms and tells you to get the agreement finished before dinner. He's holding a coffee. You haven't finished lunch. But the clause holding up his deal is one he personally requested, and explaining that may cost you the client who pays your firm to be available.",
+        "closes_evidence": "For the next call, Marcus removes the friend and adds the finance colleague who can explain the company's cash position. The colleague answers a question the lawyers couldn't settle from the draft alone. Marcus sees why the seller wants protection and proposes a narrower one. You send that for consideration. Having the right person in the conversation has changed the offer more than another confident opinion would have."
+      },
+      {
+        "opens_paragraph": 27,
+        "closes_paragraph": 30,
+        "opens_evidence": "An awkward timing issue follows. Marcus asks whether a document can be dated as though it was completed earlier. You ask what he means. There may be a legitimate way to document an agreed effective date, depending on the actual facts and applicable law, but you won't make a false statement about when something was signed or approved. The team needs to handle the distinction correctly.",
+        "closes_evidence": "He chooses to proceed with accurate documentation. That doesn't make the afternoon easy again. The change affects timing, and the other side still needs to agree the outstanding terms. You update the team without announcing a victory over the client. They need a usable instruction, not a story about how bravely you delivered it."
+      }
+    ],
+    "source_ids": [
+      "S20",
+      "S21",
+      "S22"
+    ],
+    "manual_observation": "Marcus Bell et acquisition inventes. Acces a l’entrepot demande par l’acheteur, limites a convenir avec le vendeur. Regles types ABA, pas droit universel ; aucune astuce de fausse date.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/4] \"He's holding a coffee.\" | \"You haven't finished lunch.\"  << The billionaire adds another folder to the pile in your arms and tells...",
+        "  [staccato x2/6] \"Dinner is approaching.\" | \"A response is outstanding.\"  << Dinner is approaching. Marcus asks whether everything will be finished..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P08": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "You're carrying a silver tray through a royal palace when the person relaxing beneath a crimson canopy holds out another empty cup.",
+      "words": 64,
+      "turn_present": true
+    },
+    "narrative_angle": "L’apparat du palais masque une liste d’invites qui n’a pas atteint la cuisine.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 17,
+        "opens_evidence": "You're carrying a silver tray through a royal palace when the person relaxing beneath a crimson canopy holds out another empty cup. Your arms are already shaking. You can see the chair you'd like to sit in, and you know perfectly well you won't be using it. But the cup isn't tonight's biggest problem. Somebody has changed the reception plan without telling the kitchen.",
+        "closes_evidence": "Amara calls the event office. A guest has indeed been added, but the revised list reached the reception team without reaching the kitchen. Someone puts down a seating card while the chef asks about the new guest's requirements. You had thought the missing place could be solved by adding a chair. The chair is ready well before the people preparing dinner have the answer they need."
+      },
+      {
+        "opens_paragraph": 16,
+        "closes_paragraph": 33,
+        "opens_evidence": "You discover the change through a conversation at the edge of the room. An additional guest has been invited. The person telling you assumes the office has informed everybody. You ask which version of the plan is current. They show you a message that isn't on the sheet you were given. You don't quietly add a chair and decide the matter is handled.",
+        "closes_evidence": "In the service area, the team discusses what happened with the late guest. Nobody needs an elaborate accusation. They need to identify where the updated information stopped and how future changes will be confirmed. You explain how you found it and which sheet you had. The detail matters more than saying the communication was bad and leaving everyone to agree."
+      }
+    ],
+    "source_ids": [
+      "S15",
+      "S16",
+      "S12"
+    ],
+    "manual_observation": "Famille royale inventee, fonctions documentees. Uniforme, objets, couvert ajoute et tasse manquante sont des enjeux visibles ; aucune allegation sur un vrai membre de famille royale.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P09": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The billionaire has found a scratch on the door handle, and the mansion viewing is apparently over.",
+      "words": 57,
+      "turn_present": true
+    },
+    "narrative_angle": "Le client se focalise sur une poignee ; l’information decisive concerne un autre bien.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 28,
+        "opens_evidence": "The billionaire has found a scratch on the door handle, and the mansion viewing is apparently over. You're holding plans, keys, and a folder thick enough to represent several days of unpaid preparation. He hasn't seen the room he specifically asked you to find. But the defect that could actually stop this sale is still waiting downstairs.",
+        "closes_evidence": "The inspection report identifies evidence of water ingress in the lower-ground room. Everett had barely glanced inside it. The report calls for further specialist assessment, which you arrange through the seller's representative. You send Everett the report rather than describing the issue as minor. Your commission is getting closer, and the room you hoped nobody would worry about now needs an answer."
+      },
+      {
+        "opens_paragraph": 28,
+        "closes_paragraph": 32,
+        "opens_evidence": "The inspection report identifies evidence of water ingress in the lower-ground room. Everett had barely glanced inside it. The report calls for further specialist assessment, which you arrange through the seller's representative. You send Everett the report rather than describing the issue as minor. Your commission is getting closer, and the room you hoped nobody would worry about now needs an answer.",
+        "closes_evidence": "They return with instructions for a revised proposal. You communicate it accurately and check that the response addresses the terms they authorized. Another detail comes back differently than expected. You clarify it before anyone treats the exchange as agreement. The houses in your photographs never show how much work can sit inside the word agreed."
+      }
+    ],
+    "source_ids": [
+      "S13"
+    ],
+    "manual_observation": "Everett Shaw invente. Bureau, entree, petit-dejeuner et infiltration deviennent des choix concrets. La remuneration depend de l’accord de ce personnage, pas d’un taux universel.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [
+        "  [staccato x2/5] \"You describe the visit.\" | \"You do, partly.\"  << At the office, a colleague asks whether you're enjoying working with s...",
+        "  [staccato x2/6] \"That still isn't completion.\" | \"He calls that pessimistic.\"  << The reports and negotiations eventually produce terms both sides can a..."
+      ],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  },
+  "P10": {
+    "scope": "manuscript_editorial_review_not_full_production_greenlight",
+    "hook": {
+      "first_sentence": "The billionaire sends your carefully prepared dinner back almost untouched and asks whether you can make him a sandwich.",
+      "words": 58,
+      "turn_present": true
+    },
+    "narrative_angle": "Menu approuve puis renvoye pour un sandwich dont le chef ignorait la demande.",
+    "loop_evidence": [
+      {
+        "opens_paragraph": 1,
+        "closes_paragraph": 28,
+        "opens_evidence": "The billionaire sends your carefully prepared dinner back almost untouched and asks whether you can make him a sandwich. You're still holding the plate when he describes the bread he wants. But the most embarrassing part is that you had his approval for tonight's menu, and you're about to discover how little either of you meant by approved.",
+        "closes_evidence": "It turns out he wants toasted cheese and tomato on the bread you have. You repeat the choice and return to the kitchen. The sandwich is less difficult than the meal you're replacing. What bothers you is being asked to discover the request after cooking something else, with the guests already seated and the colleague waiting for an answer you were expected to know."
+      },
+      {
+        "opens_paragraph": 25,
+        "closes_paragraph": 34,
+        "opens_evidence": "Then a plate returns. Oliver has barely touched the main dish. He wants a sandwich he remembers eating on an earlier trip. The colleague carrying the plate says he wasn't angry. That doesn't prevent your own face from getting warm. You've spent the day coordinating an approved dinner, and the person who approved it has changed his mind after you've put it in front of him.",
+        "closes_evidence": "Oliver listens better the next morning than he would have during dinner. He says the meal was good, but he was in the mood for something familiar. You say that would have been useful to know before preparation. He agrees, then asks whether you could always keep the ingredients for the sandwich available. You discuss what is reasonable rather than agreeing that every preference should permanently occupy the stores."
+      }
+    ],
+    "source_ids": [
+      "S12"
+    ],
+    "manual_observation": "Oliver Wren invente. Pain, fromage et tomate concretisent la demande. Allergie traitee serieusement sans protocole improvise ; aucun reutilisation alimentaire hasardeuse.",
+    "scanner": {
+      "hard_bans": [],
+      "candidates": [],
+      "mechanical_antithesis_floor_candidates": [],
+      "echo_candidates": []
+    },
+    "numeric_claims": [],
+    "scoring_limitations": [
+      "No buyer edit of these manuscripts yet; human-review point not awarded.",
+      "No claim of exhaustive top-five differentiation or facts absent from search page one.",
+      "Named-source density and full by-eye D7 ledger remain to resolve for an all-groups PASS.",
+      "TTS performance, timed retention, visuals and platform outcome not evaluated at manuscript stage."
+    ]
+  }
+}

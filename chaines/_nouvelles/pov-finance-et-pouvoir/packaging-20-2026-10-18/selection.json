@@ -265,6 +265,10 @@
     }
   ],
   "variant_count": 23,
-  "thumbnail_status": "message_and_expression_revision_awaiting_owner_choice",
-  "thumbnail_direction": "../THUMBNAIL-DIRECTION.md"
+  "thumbnail_status": "drawing_accepted_all_43_images_preserved_owner_selection_later",
+  "thumbnail_direction": "../THUMBNAIL-DIRECTION.md",
+  "scriptwriting_status": "twenty_manuscripts_written_and_editorially_revised",
+  "scriptwriting_manifest": "../scripts-20-2026-10-18/manifest.json",
+  "topics_approved_for_scriptwriting": true,
+  "thumbnail_choice": null
 }

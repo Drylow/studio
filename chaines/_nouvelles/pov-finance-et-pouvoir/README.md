@@ -1,5 +1,13 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Reprise — ecriture du 19 octobre 2026
+
+L’utilisateur approuve les vingt sujets et demande maintenant leurs scripts. Le dessin des variantes de miniature est accepte ; conserver les vingt A, vingt B et trois C, soit 43 images. Le choix individuel de variante sera fait plus tard.
+
+[Les vingt manuscrits et leur guide](scripts-20-2026-10-18/README.md) sont ecrits en anglais et revises : dix The Wealthy Nobody et dix Oddly Important Guy. Le manifeste donne titres, fichiers, nombres de mots, empreintes et estimations de duree fondees sur une ancienne voix Ryan effectivement mesuree. Ce sont des narrations completes, pas des plans ou extraits. Les briefs, sources, corrections et preuves de boucles sont conserves dans le meme dossier.
+
+Le compte rendu distingue la revision editoriale des preuves encore requises pour un PASS integral Faceless OS. Ne pas attribuer un feu vert de production ou une validation des manuscrits par l’utilisateur a partir de son accord sur les sujets. La prochaine etape doit completer ces controles avant la voix, puis utiliser le transcript et les timestamps reels pour les images. Aucun film, voix ou calendrier n’est lance par cette livraison de textes. Le rendu futur reste sur le VPS.
+
 ## Decision utilisateur du 18 octobre 2026
 
 Les deux concepts partagent desormais le meme langage graphique : le rendu approuve du test « Travailler pour un milliardaire », reproduit dans [style-approuve.jpg](style-approuve.jpg).
