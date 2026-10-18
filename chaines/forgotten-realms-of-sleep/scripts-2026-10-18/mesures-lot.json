@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-18",
+  "totals": {
+    "words": 79324,
+    "characters_including_spaces": 504541,
+    "characters_excluding_whitespace": 424209
+  },
+  "episodes": [
+    [
+      "01-skyrim-mysteries",
+      "2 Hours of Skyrim's Darkest Mysteries to Fall Asleep To",
+      27115,
+      168984,
+      159.5
+    ],
+    [
+      "02-vault-tec",
+      "The Secrets of Vault-Tec Explained to Fall Asleep To | Fallout Lore",
+      26417,
+      169465,
+      155.4
+    ],
+    [
+      "03-dwemer",
+      "The Disappearance of the Dwemer Explained to Fall Asleep To | Elder Scrolls Lore",
+      25792,
+      166092,
+      151.7
+    ]
+  ],
+  "audio_measured": false
+}

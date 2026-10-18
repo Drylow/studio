@@ -1,0 +1,179 @@
+01. A machine with nobody left to repair it
+Debut : mot 1. Longueur : 785 mots.
+Contenu : Open with a functioning automaton in an abandoned Dwemer city. Promise the history, physical traces and competing accounts of the disappearance, without a definitive solution. Paragraph two states Morrowind, Daggerfall, Skyrim and its expansions spoiler scope. Explain who the Dwemer were through surviving buildings and the mismatch between the word dwarf and Elven people.
+Base dans les jeux : Morrowind and Skyrim ruins; Morrowind disappearance dialogue and Red Mountain accounts.
+Limite : No definitive solution, no fantasy claim that the Dwemer were tiny, no invented last night in a household.
+
+02. The cities under the map
+Debut : mot 786. Longueur : 831 mots.
+Contenu : Describe the range of Dwemer settlement across Morrowind, Skyrim and Hammerfell. Develop the practical difference between a single empire and communities sharing engineering traditions; make travel through named ruins the organizing device.
+Base dans les jeux : Morrowind: Arkngthand and Nchuleftingth; Skyrim: Markarth; Dwemer histories in the games.
+Limite : No invented population census, continent-wide unified government or assertion a shared doorway means identical politics.
+
+03. A city inhabited by its successors
+Debut : mot 1617. Longueur : 929 mots.
+Contenu : Explore Markarth as an inherited Dwemer city still used by people with different customs. Follow Understone Keep, Calcelmo's excavation and the route into Nchuand-Zel. Distinguish adapting a ruin from understanding its builders.
+Base dans les jeux : Skyrim: Understone Keep, Calcelmo dialogue, Nchuand-Zel.
+Limite : Do not re-narrate the Forsworn conspiracy or claim all Markarth walls preserve original Dwemer functions.
+
+04. The defenses that outlived their orders
+Debut : mot 2546. Longueur : 809 mots.
+Contenu : Examine spiders, spheres and centurions through their forms and encounter behavior. Explain their continuing security role, soul gems and metal components while leaving their complete engineering unresolved.
+Base dans les jeux : Morrowind and Skyrim: Dwemer automata, recoverable components and ruin layouts.
+Limite : Do not say every machine has a Dwemer soul or that steam alone explains its power. No invented maintenance robots servicing every ruin.
+
+05. The tools that resist their owners
+Debut : mot 3355. Longueur : 786 mots.
+Contenu : Follow the experience of opening Dwemer spaces with attunement spheres, lexicons, resonators and control cubes. Use the different actual devices to explain why recovering a tool does not restore all the missing knowledge.
+Base dans les jeux : Skyrim: Elder Knowledge; Dragonborn: The Path of Knowledge and Kagrumez.
+Limite : No universal password, modern computer-network analogy stretched into fact or assertion every ruin responds to the same frequency.
+
+06. Sound as a craft
+Debut : mot 4141. Longueur : 678 mots.
+Contenu : Introduce tonal architecture through Kagrenac's title, the tools' described sacred tones and visible resonant mechanisms. Explain the fictional concept in plain terms, distinguishing it from a fully known scientific discipline.
+Base dans les jeux : Morrowind: Divine Metaphysics dialogue; Skyrim Dawnguard: Arkngthamz tonal lock.
+Limite : No real-world frequency values, theory of everything, certainty every Dwemer wall rewrites reality, or claim modern acoustic physics proves the lore.
+
+07. The bargain beneath the snow
+Debut : mot 4819. Longueur : 975 mots.
+Contenu : Develop Snow Elf refuge, Dwemer coercion and the surviving record on Calcelmo's Stone. Explain blinding and the inherited tragedy, using Gelebor's testimony as testimony and distinguishing it from all claims about the later Falmer.
+Base dans les jeux : Skyrim: Hard Answers, Calcelmo's Stone; Dawnguard: Gelebor dialogue, The Falmer: A Study.
+Limite : Do not claim fungus alone scientifically explains every change or that every Snow Elf entered Dwemer custody. No exact universal timetable.
+
+08. The war below the ground
+Debut : mot 5794. Longueur : 965 mots.
+Contenu : Continue the enslaved Falmer relationship into rebellion and the War of the Crag. Explain how Dwemer disappearance changed who occupied their cities without pretending a later inhabitant is a surviving Dwemer.
+Base dans les jeux : Skyrim: The Falmer: A Study, Gelebor dialogue and ruins.
+Limite : No complete battle chronology or claim the Falmer defeated all Dwemer in a final battle. Do not make Falmer transformed Dwemer.
+
+09. The alliance in Resdayn
+Debut : mot 6759. Longueur : 799 mots.
+Contenu : Tell the First Council through Nerevar and Dumac: shared opposition to Nordic rule, differing religious outlooks and the coalition's practical value. Establish the people before Kagrenac's conflict.
+Base dans les jeux : Morrowind: The War of the First Council, The Battle of Red Mountain, Nerevar at Red Mountain.
+Limite : Do not invent private speeches, a written treaty clause, or unanimity among either people. Avoid unsupported exact dates.
+
+10. The clan that went west
+Debut : mot 7558. Longueur : 769 mots.
+Contenu : Develop the Rourken break with the First Council and migration to Hammerfell, the Volendrung legend and Volenfell. Explain how a distant clan matters when later accounts describe a disappearance beyond one battlefield.
+Base dans les jeux : In-game Rourken histories, Volendrung artifact traditions and Volenfell lore.
+Limite : The thrown-hammer account is a legend, not a measured trajectory. No claim geographical reach proves a specific soul-network mechanism.
+
+11. The northern alliance of workshops
+Debut : mot 8327. Longueur : 963 mots.
+Contenu : Explain Skyrim's Dwemer cities through The Aetherium Wars: cooperation over a new material, shared work at a forge and fragmentation under competition. Present the book's historical claims with the exploration that later supports parts of them.
+Base dans les jeux : Skyrim Dawnguard: The Aetherium Wars, Katria's journal, Lost to the Ages.
+Limite : Do not accept Taron's authorship as uncontested original scholarship; do not claim every historical detail is directly witnessed.
+
+12. The researcher in Arkngthamz
+Debut : mot 9290. Longueur : 782 mots.
+Contenu : Stay with Katria's expedition, her death, the tonal lock and the first aetherium shard. Explain how her working notes guide a later visitor and preserve practical information despite a failed expedition.
+Base dans les jeux : Skyrim Dawnguard: Lost to the Ages, Arkngthamz, Katria's journal and dialogue.
+Limite : Do not give an invented final confession or assert Katria discovered every fact alone without earlier sources. Avoid a repeated literal puzzle-solving guide.
+
+13. The last working forge
+Debut : mot 10072. Longueur : 1019 mots.
+Contenu : Follow the other shards to the Aetherium Forge, its defenses, the Forgemaster and the single artifact choice. Explain the limits imposed by the surviving material and Katria's closure; do not retell her opening.
+Base dans les jeux : Skyrim Dawnguard: Lost to the Ages ending, Aetherium Forge, Taron Dreth encounter.
+Limite : Do not say the player restores mass aetherium production or makes all three items in one ordinary quest completion.
+
+14. Blackreach and its different inhabitants
+Debut : mot 11091. Longueur : 887 mots.
+Contenu : Explore Blackreach through its scale, light, waterways, structures and separate occupants. Explain surface connections and the route to the Tower of Mzark. Treat the cavern as a place with changing users, not a single mysterious machine.
+Base dans les jeux : Skyrim: Elder Knowledge, Blackreach, Tower of Mzark, A Return to Your Roots.
+Limite : No claim every Skyrim ruin connects to Blackreach or that its glowing structures powered Numidium. No invented map dimensions.
+
+15. The expedition at Alftand
+Debut : mot 11978. Longueur : 809 mots.
+Contenu : Tell the Alftand expedition through Sulla Trebatius's records, dwindling supplies, J'darr and J'zhar and the final confrontation with Umana. Show named people responding differently to conditions, rather than a generic warning about hubris.
+Base dans les jeux : Skyrim: Alftand expedition journals, Sulla's journal and final encounter.
+Limite : Do not invent exact private thoughts or make the Dwemer deliberately lure this much later expedition. Non-graphic handling of deaths.
+
+16. The records beneath Markarth
+Debut : mot 12787. Longueur : 848 mots.
+Contenu : Develop The Lost Expedition at Nchuand-Zel through Stromm, Staubs, Krag and Erj. Explain the journals' different reports, deactivated defenses and the consequences of restarting them. Keep it distinct from Alftand's survival story.
+Base dans les jeux : Skyrim: The Lost Expedition, four expedition journals, Calcelmo dialogue.
+Limite : Do not invent a successful surviving team member or claim reactivation makes every chamber safe.
+
+17. The projection at Mzulft
+Debut : mot 13635. Longueur : 861 mots.
+Contenu : Use Revealing the Unseen to explain a Dwemer apparatus repurposed by the Synod. Follow Mirabelle's lead, Gavros, Paratus, the crystal, alignment and projected map. Make the new information about the device's operation and the institutions that want it; distinguish it from the Mzark retrieval mechanism.
+Base dans les jeux : Skyrim: Revealing the Unseen; Mirabelle, Gavros and Paratus dialogue; Mzulft Oculory sequence.
+Limite : Paratus's interpretation is his account. Do not invent a complete technological blueprint, confirm every Synod political motive or claim the Oculory explains the disappearance.
+
+18. Nchardak beneath the water
+Debut : mot 14496. Longueur : 836 mots.
+Contenu : Travel with Neloth through Nchardak. Explain control cubes, pumps, changing water levels, access and the recovered Black Book. Focus on what can be understood by operating a surviving city without possessing its original knowledge.
+Base dans les jeux : Skyrim Dragonborn: The Path of Knowledge, Neloth dialogue, Nchardak mechanisms.
+Limite : Neloth's descriptions of the ancient city are his scholarly account. Do not claim the Black Book proves all Dwemer served Hermaeus Mora or shared Miraak's plan.
+
+19. The obstacle courses on Solstheim
+Debut : mot 15332. Longueur : 966 mots.
+Contenu : Compare Kagrumez's resonance-gem trials with Fahlbtharz's large machinery. Develop actual mechanisms, recoverable artifacts and surviving automatons, making the comparison about different local purposes rather than a universal Dwemer test.
+Base dans les jeux : Skyrim Dragonborn: Kagrumez trials, Fahlbtharz, Visage of Mzund.
+Limite : Do not invent a shared initiation ceremony or claim the player is being tested for Dwemer citizenship. No numerical steam engineering.
+
+20. The scholar in the corprusarium
+Debut : mot 16298. Longueur : 766 mots.
+Contenu : Introduce Yagrum Bagarn through Tel Fyr, Divayth Fyr and his surviving condition. Explain his absence in an Outer Realm at the time of disappearance, return to find his people gone and research afterward.
+Base dans les jeux : Morrowind: Yagrum Bagarn dialogue, Tel Fyr, Divayth Fyr.
+Limite : Outer Realm is not identified precisely. No claim he witnessed Kagrenac's final strike, deliberately escaped a known catastrophe or can restore the whole people.
+
+21. Three books and an impossible assignment
+Debut : mot 17064. Longueur : 780 mots.
+Contenu : Follow Trebonius's request and the recovery and interpretation of Hanging Gardens, Divine Metaphysics and The Egg of Time. Give Baladas and Yagrum different roles. Explain why the guild quest can be administratively complete while the larger mystery remains open.
+Base dans les jeux : Morrowind: Mystery of the Dwarves journal stages, Yagrum and Baladas dialogue, three quest books.
+Limite : Do not pretend the player receives a definitive resurrection recipe. The Egg's confidence is not proof that the danger was imaginary.
+
+22. The heart under Red Mountain
+Debut : mot 17844. Longueur : 896 mots.
+Contenu : Explain the Heart of Lorkhan through Tamriel's creation traditions and its concrete place in Morrowind. Develop the difference between a sacred origin story and the visibly powerful object later characters manipulate.
+Base dans les jeux : Morrowind: The Monomyth traditions, Vivec dialogue, Kagrenac's Tools and Red Mountain main quest.
+Limite : Do not present one creation myth as neutral scientific history or say the Heart is a normal reactor. No assertion every race tells identical cosmology.
+
+23. The three instruments
+Debut : mot 18740. Longueur : 881 mots.
+Contenu : Develop Keening, Sunder and Wraithguard as tools with distinct described roles and actual dangerous use. Explain retrieval in Morrowind and why later possession by other people does not reveal the entire Dwemer project.
+Base dans les jeux : Morrowind: Kagrenac's Tools, Vivec's plan, Yagrum dialogue, Keening and Sunder retrieval.
+Limite : Do not narrate gameplay damage numbers or equate Skyrim's changed Keening mechanics with a canon solved experiment. Wraithguard is not a weapon or the Heart itself.
+
+24. Kagrenac and the brass god
+Debut : mot 19621. Longueur : 694 mots.
+Contenu : Explain the Anumidium project as an attempt to construct a god using the Heart. Develop Kagrenac's ambition through documents and his colleagues' reservations rather than imagined villain dialogue. Introduce Dumac's uncertain knowledge without resolving it.
+Base dans les jeux : Morrowind: Divine Metaphysics discussion, Yagrum dialogue, The Battle of Red Mountain, Nerevar at Red Mountain.
+Limite : No claim every Dwemer voted for ascension or agreed to become a skin. Do not claim Dumac's exact private knowledge is settled.
+
+25. The war inside the alliance
+Debut : mot 20315. Longueur : 895 mots.
+Contenu : Return to Nerevar, Dumac and Dagoth at the moment the coalition breaks. Compare the discovery of the Heart project and the different loyalties, then take the conflict to Red Mountain without resolving the competing final accounts prematurely.
+Base dans les jeux : Morrowind: The War of the First Council, The Battle of Red Mountain, Nerevar at Red Mountain, Progress of Truth.
+Limite : No newly invented battle speech, exact army strength, reconciled timeline or assumption a partisan book is an omniscient camera.
+
+26. The stories of the Red Moment
+Debut : mot 21210. Longueur : 856 mots.
+Contenu : Compare Vivec's Battle of Red Mountain with the Ashlander account Nerevar at Red Mountain and the Nordic tradition in Five Songs of King Wulfharth. Explain their concrete disagreements over alliances, deaths and the use of the tools. Let each account be understandable before comparing.
+Base dans les jeux : Morrowind: The Battle of Red Mountain; Nerevar at Red Mountain; Five Songs of King Wulfharth.
+Limite : No final canonical reconstruction or automatic claim every discrepancy is a Dragon Break. Do not turn the chapter into an abstract lecture about unreliable narrators.
+
+27. The gods who inherited the tools
+Debut : mot 22066. Longueur : 898 mots.
+Contenu : Follow the Tribunal and Dagoth Ur after the disappearance, their relationship to the Heart and the Nerevarine's intervention. Explain what the later experiment proves about access to divine power and what it leaves unanswered about the earlier people.
+Base dans les jeux : Morrowind main quest: Vivec's plan, Dagoth Ur dialogue, Akulakhan chamber and ending.
+Limite : The Heart is freed from the enchantments rather than necessarily annihilated. Do not claim every user disappears like the Dwemer or the Nerevarine becomes a Dwemer.
+
+28. The brass giant after its makers
+Debut : mot 22964. Longueur : 976 mots.
+Contenu : Develop Numidium's later place in Tiber Septim's conquest, the Mantella and the events around Daggerfall. Distinguish the later activations and documented Warp in the West from speculation about Red Mountain.
+Base dans les jeux : Daggerfall main quest and endings; The Warp in the West; The Arcturian Heresy as a partisan account.
+Limite : Do not treat The Arcturian Heresy as uncontested biography or a later Dragon Break as proof of the earlier disappearance's mechanism. Do not invent a single mandatory Daggerfall winner.
+
+29. Arniel's smaller experiment
+Debut : mot 23940. Longueur : 871 mots.
+Contenu : Follow Arniel Gane's errands, warped soul gem, Dwemer convectors and Keening experiment at the College. Explain his disappearance and the shade summoning result as a local event, then compare its differences from Kagrenac's setup.
+Base dans les jeux : Skyrim: Arniel's Endeavor, Arniel dialogue and final experiment.
+Limite : No claim this proves all Dwemer became summonable ghosts, that the player absorbed them, or that the shade explains an entire people's destination.
+
+30. What the empty cities still keep
+Debut : mot 24811. Longueur : 982 mots.
+Contenu : Finish by weighing three bounded readings against specific already established constraints: a catastrophic failure, a transformation tied to Numidium, or displacement beyond ordinary existence. Bring Yagrum's absence, divergent Red Mountain accounts, distant clans and Arniel's imperfect analogy into the comparison. Close at an ordinary surviving door or machine, not a new teaser or recap list.
+Base dans les jeux : Comparison of the game evidence assigned above; clearly identified interpretations, not additional facts.
+Limite : No certainty about zero-summing, universal soul absorption, a secretly living civilization or future game revelations. Prefer a small number of reasoned possibilities to an exhaustive speculative list. No CTA or sequel promise.

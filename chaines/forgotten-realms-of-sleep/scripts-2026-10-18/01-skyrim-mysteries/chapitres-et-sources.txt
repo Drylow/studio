@@ -1,0 +1,179 @@
+01. A town beneath suspicion
+Debut : mot 1. Longueur : 857 mots.
+Contenu : Open at Morthal with an apparently ordinary house fire. Promise a journey through the hidden stories and unresolved questions of Skyrim. Explain the base game, Dawnguard and Dragonborn spoiler scope in paragraph two. Develop the Laid to Rest investigation from rumor to evidence and resolution, without starting with a generic greeting.
+Base dans les jeux : Skyrim: Laid to Rest, Helgi and Alva dialogue, Alva's journal.
+Limite : Do not imply that every mystery in this video stays unsolved. Keep the child's fate non-graphic. No invented original cause of vampirism.
+
+02. The lighthouse journals
+Debut : mot 858. Longueur : 839 mots.
+Contenu : Follow the separate family records at Frostflow Lighthouse. Reconstruct their move, the sounds below, the search underground and Habd's last request. Give each family member a distinct perspective and finish with the beacon, rather than horror escalation.
+Base dans les jeux : Skyrim: Frostflow Abyss, Habd's, Ramati's and Sudi's journals, Mani's letter.
+Limite : Do not describe self-harm instructions or invent the exact last conversation. No precise egg counts or dates.
+
+03. The woman at the Bannered Mare
+Debut : mot 1697. Longueur : 921 mots.
+Contenu : Examine Saadia and Kematu as two people making incompatible claims. Tell the actual encounters, the prisoner lead, Swindler's Den, the stable meeting and the choices. Explain why the quest makes a verdict possible without supplying an independent trial.
+Base dans les jeux : Skyrim: In My Time of Need, Saadia and Kematu dialogue.
+Limite : Neither account is confirmed as the whole truth. An urn appearing through NPC cleanup mechanics is not proof of an offscreen execution. Do not import a mod's letter.
+
+04. The shadows over Riften
+Debut : mot 2618. Longueur : 780 mots.
+Contenu : Explain how the skooma investigation exposes a supply chain that begins with Wujeeta and reaches outside the city. Focus on the contrast between visible guards and hidden trade through Riften Fishery, warehouse and Cragslane Cavern.
+Base dans les jeux : Skyrim: The Raid and Supply and Demand, Wujeeta dialogue, Sarthis's note.
+Limite : Do not claim this proves Maven personally runs every skooma shipment. No real-world drug preparation detail.
+
+05. The butcher and the wrong suspect
+Debut : mot 3398. Longueur : 932 mots.
+Contenu : Tell Blood on the Ice through its changing suspects and objects. Develop the graveyard, Hjerim, suspicious amulet, Viola's investigation, Wuunferth's warning and Calixto's role. Preserve player branches.
+Base dans les jeux : Skyrim: Blood on the Ice, Hjerim journals, Wuunferth and Calixto dialogue.
+Limite : Do not confuse Calixto with Wuunferth or promise the bug-prone quest always unfolds identically. No detailed mutilation.
+
+06. What Markarth conceals
+Debut : mot 4330. Longueur : 979 mots.
+Contenu : Trace the investigation from the marketplace to Eltrys, the Shrine of Talos and the guards. Give the different roles of Nepos, Thonar and Madanach and show how competing interests shape the city.
+Base dans les jeux : Skyrim: The Forsworn Conspiracy, Nepos, Thonar and Eltrys dialogue.
+Limite : The Forsworn are not a single innocent or uniformly loyal group. Do not invent a signed conspiracy linking every guard or resident.
+
+07. The king behind the mine walls
+Debut : mot 5309. Longueur : 933 mots.
+Contenu : Continue only the Cidhna Mine portion: Borkul, Madanach, Braig's testimony, the hidden escape route and the opposing possible resolutions. Explain what the escape changes for named people without retelling the marketplace.
+Base dans les jeux : Skyrim: No One Escapes Cidhna Mine, Braig, Borkul and Madanach dialogue.
+Limite : No single branch is the canon ending. Do not equate a player helping one escape with solving the whole Reach conflict.
+
+08. A voice beneath the palace
+Debut : mot 6242. Longueur : 969 mots.
+Contenu : Develop the investigation of strange sounds at Wolfskull Cave, the interrupted ritual and Falk's later message. Introduce Potema through the resurrection attempt and Solitude's vulnerability, not a full invented biography.
+Base dans les jeux : Skyrim: The Man Who Cried Wolf, The Wolf Queen Awakened, Falk and Styrr dialogue.
+Limite : Do not claim Potema is restored to normal bodily rule. No manufactured historical dates or motives beyond the books and dialogue.
+
+09. The boy who rang the bell
+Debut : mot 7211. Longueur : 851 mots.
+Contenu : Use Aventus's failed appeal and the Honorhall Orphanage to explain how Skyrim's quiet institutions can conceal danger. Follow Innocence Lost through Astrid's invitation; focus on the distinction between Aventus's wish and the organization that answers afterward.
+Base dans les jeux : Skyrim: Innocence Lost, With Friends Like These, Destroy the Dark Brotherhood.
+Limite : Avoid graphic ritual instructions. Do not state Sithis personally ordered Grelod's death or that the player must join the Brotherhood.
+
+10. The hidden listener
+Debut : mot 8062. Longueur : 1024 mots.
+Contenu : Explain the Brotherhood's internal mystery through Cicero, the Night Mother, Astrid and the Listener. Develop how access to a voice changes the sanctuary's hierarchy and why Astrid's response has consequences.
+Base dans les jeux : Skyrim: Whispers in the Dark through Death Incarnate, Astrid confession, Night Mother dialogue.
+Limite : This follows the join branch only. Do not invent secret supernatural motives for every assassination or repeat the entry quest.
+
+11. The city that fell into the sea
+Debut : mot 9086. Longueur : 980 mots.
+Contenu : Describe Winterhold's present geography, the Great Collapse, the surviving College and the town's suspicion. Compare residents' explanations with the limited record and show how this shapes the player's arrival.
+Base dans les jeux : Skyrim: Winterhold dialogue, Korir and College members; On the Great Collapse.
+Limite : Do not connect the later discovery of the Eye to the older collapse as confirmed causation. No time-loop solution or stated Augur culpability.
+
+12. The orb beneath Saarthal
+Debut : mot 10066. Longueur : 959 mots.
+Contenu : Follow Tolfdir's lesson into Saarthal, the ancient chamber, Jyrik Gauldurson and the Eye's removal. Explain the visual and magical puzzle through the people who encounter it and the uncertainties that remain.
+Base dans les jeux : Skyrim: Under Saarthal, Tolfdir dialogue, Good Intentions.
+Limite : Do not assert it contains Magnus or a time machine. Gauldur's wider family story belongs to a later chapter.
+
+13. The light in the Midden
+Debut : mot 11025. Longueur : 872 mots.
+Contenu : Explore the Augur of Dunlain as a former College member whose magical accident changed his condition. Follow the search through the Midden, the consultation and the recommendation of the Staff. Keep his history distinct from invented collapse theories.
+Base dans les jeux : Skyrim: Good Intentions, Tolfdir, Augur dialogue; Restoration Ritual Spell.
+Limite : No exact age, undocumented experiment mechanism or claim he is Magnus. Do not use his knowledge as proof he caused unrelated events.
+
+14. Savos Aren's buried expedition
+Debut : mot 11897. Longueur : 989 mots.
+Contenu : Tell the Labyrinthian expedition through its magical echoes and surviving wards. Explain Savos's earlier choice, the trapped companions and Morokei; follow the Staff back to the College and the Psijic intervention.
+Base dans les jeux : Skyrim: The Staff of Magnus, The Eye of Magnus, Labyrinthian echoes.
+Limite : Do not invent names or final words for unnamed companions. Do not claim the College learns the Eye's full purpose.
+
+15. The gauntlet and the vanished students
+Debut : mot 12886. Longueur : 709 mots.
+Contenu : Develop Forgotten Names beneath the College. Use the incident report, investigator's key and recovered rings to explain the discovery of Velehk Sain. Keep its four dead students distinct from Phinis Gestor's separate missing apprentices.
+Base dans les jeux : Skyrim: Forgotten Names, Midden Incident Report, Velehk Sain dialogue.
+Limite : Do not conflate these students with Yisra, Ilas-Tei, Borvir and Rundi. No fabricated successful rescue or additional ring puzzle.
+
+16. The missing apprentices
+Debut : mot 13595. Longueur : 445 mots.
+Contenu : Visit the remains associated with Phinis Gestor's students as separate small failed experiments. Describe only the broad visible situations, the dialogue at the College and the difference between a clue in the world and an implemented quest resolution.
+Base dans les jeux : Skyrim: Phinis Gestor dialogue and apprentice locations in the unmodded game.
+Limite : No restoration-mod quest markers, invented final dialogue or exact experimental intentions when not documented.
+
+17. The legend the records tried to lose
+Debut : mot 14040. Longueur : 917 mots.
+Contenu : Follow Forbidden Legend from a book to Daynas Valen's notes, the Gauldur brothers' separate tombs and the re-forging at Reachwater Rock. Explain how written erasure fails when physical fragments survive.
+Base dans les jeux : Skyrim: Forbidden Legend, Lost Legends, Daynas Valen's notes, writs of sealing.
+Limite : Do not invent the precise legal order erasing Gauldur or assert every detail of the legend has independent witnesses.
+
+18. The seal at Valthume
+Debut : mot 14957. Longueur : 793 mots.
+Contenu : Spend a chapter with Valdar's long vigil and Hevnoraak's attempted return. Explain the vessels, the controlled release and the cost of keeping a threat contained after the original guardians are gone.
+Base dans les jeux : Skyrim: Evil in Waiting, Valdar dialogue and Valthume.
+Limite : No invented alchemical formula, blood ritual instructions or universal theory of all dragon-priest resurrection.
+
+19. The last fortress of the dragon cult
+Debut : mot 15750. Longueur : 1007 mots.
+Contenu : Explore Forelhost through Captain Valmir's disguise, Skorm Snow-Strider's journal and the remaining dragon priest Rahgot. Explain why a modern visitor might misread an ancient ruin when a living agent controls the introduction.
+Base dans les jeux : Skyrim: Siege on the Dragon Cult, Skorm Snow-Strider's journal, Valmir's orders.
+Limite : Keep the cult's grim end non-graphic. No claim every dragon cult fortress followed the same end or that Valmir's disguise is identical in every playthrough.
+
+20. The mask without a name
+Debut : mot 16757. Longueur : 952 mots.
+Contenu : Describe Bromjunaar's sanctuary, the wooden mask's displacement, the restored busts and Konahrik. Compare the named owners of the other masks with the unnamed place without inventing a secret identity.
+Base dans les jeux : Skyrim: Bromjunaar Sanctuary, wooden mask, dragon-priest mask puzzle.
+Limite : No confirmed time-travel mechanics beyond the shown displacement. No assertion that Konahrik was Vahlok, Shalidor or the player.
+
+21. The sword beneath the trees
+Debut : mot 17709. Longueur : 709 mots.
+Contenu : Follow Eisa, Kyr and Ra'jirr through The Pale Lady. Distinguish the accusation of theft from the attempt to restore the blade. Develop the dreams, records, pursuit, grove and conditional outcomes. Compare the needed intervention with Valdar's tomb without retelling that quest.
+Base dans les jeux : Skyrim: The Pale Lady; Eisa's Journal, Kyr's Log, Ra'jirr's Note; Frostmere Depths encounter.
+Limite : Do not invent the spirit's original identity or a settled account of its binding. Treat keeping and returning the sword as alternate player choices.
+
+22. The voice that stayed in the mountain
+Debut : mot 18418. Longueur : 931 mots.
+Contenu : Develop Paarthurnax, the Greybeards and the Blades through the actual dilemma after the main story reveals his identity. Explain his past, teaching, the nature of dragon dominance and the different choices without electing a canon ending.
+Base dans les jeux : Skyrim: The Throat of the World, Paarthurnax quest, Delphine and Arngeir dialogue.
+Limite : Do not promise he can never become dangerous or assert he secretly plans to conquer Skyrim. No real-world morality lecture.
+
+23. A wound in time
+Debut : mot 19349. Longueur : 1010 mots.
+Contenu : Explain the Elder Scroll at the Time-Wound, the ancient Tongues, Dragonrend and Alduin's displacement. Follow what this changes for the present confrontation and finish with the distinction between defeating Alduin and discovering the final end of the world.
+Base dans les jeux : Skyrim: Alduin's Bane, Dragonslayer, Paarthurnax post-quest dialogue.
+Limite : Do not claim Alduin is simply Akatosh, that his soul enters the player or that a future return is confirmed.
+
+24. Dawnstar's borrowed dreams
+Debut : mot 20359. Longueur : 1010 mots.
+Contenu : Trace Waking Nightmare through Dawnstar, Erandur, Nightcaller Temple, the memory potion and the Skull of Corruption. Explain Vaermina's intervention at the choice and why the remembered past does not guarantee present betrayal.
+Base dans les jeux : Skyrim: Waking Nightmare, Erandur dialogue, Vaermina's Torpor sequence.
+Limite : Do not present Vaermina's accusation as verified. Avoid describing potion-making instructions or inventing a canon choice.
+
+25. The black soul gem and the broken star
+Debut : mot 21369. Longueur : 931 mots.
+Contenu : Explain Azura's Star, Malyn Varen, Aranea and Nelacar. Develop the failed pursuit of survival inside the artifact, the player's entry and the two possible repairs. Focus on who can help and what each repair changes.
+Base dans les jeux : Skyrim: The Black Star, Nelacar, Aranea and Malyn dialogue.
+Limite : Do not claim either artifact automatically frees all souls or that one outcome is the canon ending.
+
+26. The bargain hidden in a cure
+Debut : mot 22300. Longueur : 930 mots.
+Contenu : Follow Kesh's invitation, the afflicted at Bthardamz and Orchendor's break with Peryite. Use Spellbreaker as the reward to explain how a quest can provide a local answer while leaving a Daedric patron's priorities uncomfortable.
+Base dans les jeux : Skyrim: The Only Cure, Kesh and Peryite dialogue, Bthardamz.
+Limite : Do not assert the afflicted are simply cured at the end or generalize the disease into an unsupported world-ending plague. No detailed incense recipe.
+
+27. The snow elves who remained
+Debut : mot 23230. Longueur : 983 mots.
+Contenu : Tell the Forgotten Vale portion of Touching the Sky with Gelebor, the wayshrines, the pilgrimage and Vyrthur's revelation. Explain the living Snow Elf witness and why the vampire plot differs from the history visitors expect.
+Base dans les jeux : Skyrim Dawnguard: Touching the Sky, Gelebor, Vyrthur and Serana dialogue.
+Limite : Do not retell the whole Dwemer/Falmer history here; it belongs to the dedicated film. Do not invent how many uncorrupted Snow Elves survive elsewhere.
+
+28. The first Dragonborn's long absence
+Debut : mot 24213. Longueur : 979 mots.
+Contenu : Travel to Solstheim through the cultist attack, the people working at the stones, Frea and the Temple of Miraak. Develop Miraak's return as a local cause of lost time, then follow the struggle over dragon souls and Bend Will.
+Base dans les jeux : Skyrim Dragonborn: Dragonborn, The Temple of Miraak, The Fate of the Skaal, At the Summit of Apocrypha.
+Limite : No exact number of years in Apocrypha or assertion the player must become Mora's permanent willing servant.
+
+29. The dig that asked for more
+Debut : mot 25192. Longueur : 1001 mots.
+Contenu : Develop Unearthed as a gradual excavation at Kolbjorn Barrow. Give the changing camp, repeated funding, journals, miners and Ahzidal as distinct developments. Explain Ralis's implication and the final player choice.
+Base dans les jeux : Skyrim Dragonborn: Unearthed, The Journal of Ralis Sedarys, volumes 19-23.
+Limite : No unquestionable psychiatric or possession diagnosis beyond the quest's evidence. No invented survivor testimony. Avoid unnecessary exact body counts.
+
+30. A library that will not let go
+Debut : mot 26193. Longueur : 923 mots.
+Contenu : Finish with Neloth's practical approach to Black Books, the journey into Apocrypha and the final confrontation with Miraak. Develop Storn's sacrifice and Frea's warning without restating the earlier introduction. End on the concrete return to Solstheim and the continued existence of a closed book.
+Base dans les jeux : Skyrim Dragonborn: The Path of Knowledge, The Gardener of Men, At the Summit of Apocrypha.
+Limite : Do not declare the player finally free of every Daedric claim or forever enslaved. No recap, CTA, next-video promise or new unrelated mystery.
