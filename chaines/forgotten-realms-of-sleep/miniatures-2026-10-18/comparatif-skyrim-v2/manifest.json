@@ -8,7 +8,7 @@
     "bytes": 387318,
     "sha256": "05b98fb858d8c6c39b20bda27c8f782937833294f9c6b84fe9e4d84258902322",
     "generation": "Built-in imagegen",
-    "status": "Comparison proposal, awaiting user direction choice",
+    "status": "Selected by user on 2026-10-18; retained unchanged in direction-A set",
     "text": "SKYRIM / SECRETS / FOR SLEEP"
   },
   {
@@ -20,7 +20,7 @@
     "bytes": 299315,
     "sha256": "36a5782358a562ed3265e00101a16026b9c95496f8414080b9b0a9cdabed04f4",
     "generation": "Built-in imagegen",
-    "status": "Comparison proposal, awaiting user direction choice",
+    "status": "Not selected; comparison archive",
     "text": "SKYRIM / SECRETS / FOR SLEEP"
   }
 ]

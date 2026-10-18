@@ -1,8 +1,9 @@
-STATUT : LES TROIS PREMIERES MINIATURES ONT ETE REJETEES.
-Ne pas les utiliser pour publier.
-Voir comparatif-skyrim-v2 pour les essais A realiste et B illustration.
-Le choix utilisateur reste en attente avant de reprendre Vault-Tec et Dwemer.
+DIRECTION RETENUE : A REALISTE, PREMIERE IMAGE DU COMPARATIF SKYRIM.
+Le nouveau lot de trois fichiers est dans direction-A (DIRECTION-A sur le Bureau).
+Skyrim A est choisi; Vault-Tec et Dwemer sont les nouvelles declinaisons.
+Les trois images a la racine ci-dessous restent rejetees et archivees.
 
+HISTORIQUE DU PREMIER LOT REJETE :
 FORGOTTEN REALMS OF SLEEP - TROIS MINIATURES
 18 octobre 2026
 

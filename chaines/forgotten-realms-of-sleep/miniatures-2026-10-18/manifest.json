@@ -16,7 +16,7 @@
     "export": "JPEG quality 95; technical resize only, no creative retouch",
     "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
     "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
-    "next_step": "Choose between Skyrim comparison A and B before revising the other two thumbnails."
+    "next_step": "Direction A selected by user; use the separate direction-A set for the chosen Skyrim and new Vault-Tec/Dwemer proposals."
   },
   {
     "id": "02-vault-tec",
@@ -35,7 +35,7 @@
     "export": "JPEG quality 95; technical resize only, no creative retouch",
     "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
     "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
-    "next_step": "Choose between Skyrim comparison A and B before revising the other two thumbnails."
+    "next_step": "Direction A selected by user; use the separate direction-A set for the chosen Skyrim and new Vault-Tec/Dwemer proposals."
   },
   {
     "id": "03-dwemer",
@@ -54,6 +54,6 @@
     "export": "JPEG quality 95; technical resize only, no creative retouch",
     "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
     "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
-    "next_step": "Choose between Skyrim comparison A and B before revising the other two thumbnails."
+    "next_step": "Direction A selected by user; use the separate direction-A set for the chosen Skyrim and new Vault-Tec/Dwemer proposals."
   }
 ]

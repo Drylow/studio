@@ -1,3 +1,7 @@
+CHOIX UTILISATEUR : A, PREMIERE IMAGE, REALISTE.
+La variante B n'est pas retenue. Le nouveau lot est dans direction-A.
+Les mentions d'attente ci-dessous decrivent l'etat historique avant ce choix.
+
 COMPARATIF SKYRIM V2 - 18 OCTOBRE 2026
 
 A-cinematique-realiste.jpg : premiere image, realiste, proche de Deep Void.
