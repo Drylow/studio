@@ -1,6 +1,6 @@
 # Proposition de dessin video — Oddly Important Guy
 
-18 octobre 2026 : trois nouvelles scenes generees par le CLI configure sur le VPS et inspectees. Meme reference de dessin issue de la miniature approuvee, reference de visage issue de la seconde photo de profil approuvee, puis corps entier derive et partage par les trois appels. Les trois scenes et le corps entier restent des propositions NON approuvees par l'utilisateur. The Wealthy Nobody conserve sa propre validation separee.
+18 octobre 2026 : trois nouvelles scenes generees par le CLI configure sur le VPS et inspectees. Meme reference de dessin issue de la miniature approuvee, reference de visage issue de la seconde photo de profil approuvee, puis corps entier derive et partage par les trois appels. L’utilisateur accepte ensuite la direction visuelle des trois scenes et demande davantage de lieux, d’angles et de personnages adaptes a la narration. Le corps entier reste une reference derivee sans validation individuelle distincte. The Wealthy Nobody conserve sa propre validation separee. Lire les regles de variete dans [la fiche de style](../../ODDLY-IMPORTANT-VISUAL-PROPOSAL.md).
 
 - [Milliardaire](billionaire.jpg) : impatience polie.
 - [Casino](casino.jpg) : concentration du responsable, client contrarie et croupier distinct.
