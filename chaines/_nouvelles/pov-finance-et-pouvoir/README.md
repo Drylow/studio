@@ -95,3 +95,53 @@ Les handles suggeres n'ont pas ete resolus vers une chaine existante lors du con
 ## Photos de profil approuvees — 18 octobre 2026
 
 L’utilisateur approuve explicitement les DEUX photos de profil livrees : celle de The Wealthy Nobody et celle du kit provisoire de la chaine pouvoir. Conserver ces fichiers comme identites visuelles approuvees. Cette validation ne choisit pas le nom de la deuxieme chaine et ne vaut pas approbation explicite des bannieres ni lancement des episodes.
+
+
+## Dix premiers uploads par chaine — proposition du 18 octobre 2026
+
+L’utilisateur demande au moins dix premiers uploads pour chacune des deux chaines : vingt sujets au total. Ce tableau est une proposition d’ordre et de titres, sans scripts, generation de medias, calendrier ou publication lances.
+
+Nom finance retenu : **The Wealthy Nobody**. Dernier nom propose par l’utilisateur pour la chaine pouvoir : **Oddly Important Guy ?** Codex recommande cette version plus incarnee ; ne pas presenter la question comme une creation de chaine ou une validation de nouveaux visuels. Les anciens kits de la deuxieme chaine restent des brouillons sous leur nom historique. Les DEUX photos de profil restent approuvees.
+
+### Selection et limites de recherche
+
+Recherche complementaire Algrow par sujets et controle de la concurrence. Des resultats vides ne prouvent pas l’absence du sujet. La plupart des pistes ci-dessous sont des extensions du format, pas des sujets etablis comme inedits ou comme succes garantis. Les dossiers de preuves factuelles de chaque episode restent a completer avant le script avec Faceless OS. Les scenes et protagonistes inventes seront identifies comme fiction ; toute mecanique financiere ou fonction professionnelle reelle devra etre verifiee independamment.
+
+Signaux adjacents observes :
+- https://www.youtube.com/watch?v=ahRd86STxbE : Inside The Life Of A Billionaire Butler, environ 1,71 million de vues dans les resultats de recherche. Format different, donc interet adjacent et non validation de notre adaptation.
+- https://www.youtube.com/watch?v=OgGSddaFx9I : temoignage de garde du corps, environ 1,92 million de vues, egalement dans un autre format.
+- https://www.youtube.com/watch?v=ZJTowEKKY58 : hierarchie des family offices, environ 194 000 vues ; roles a verifier, pas un parcours automatique d’heritier a dirigeant.
+- https://www.youtube.com/watch?v=k7GvyZeSs6Y : presentation officielle Working at the Royal Household, environ 98 000 vues ; point d’entree pour les metiers du palais.
+- Les exemples finance et casino etudies precedemment restent les references de format. Ne pas reprendre leurs ouvertures, leurs personnages ou leurs sequences d’evenements.
+
+### The Wealthy Nobody
+
+| Ordre | Titre propose | Angle | Possibilite visuelle |
+| --- | --- | --- | --- |
+| 1 | POV: Your Boss Offers a Raise — You Ask for Fridays Off | Une fois une marge de securite construite, le vrai enjeu devient ton temps. La negotiation a un cout et une issue a gagner, pas un patron qui capitule sans raison. | Negociation au bureau : argent propose contre calendrier et jour libre. |
+| 2 | POV: You Get Your Dream Job — and Can’t Afford to Keep It | Le prestige du poste masque logement, trajets et obligations dans une nouvelle ville. Le dilemme est de rester, renegocier ou repartir. | Contrat attirant face a un appartement minuscule et des cartons. |
+| 3 | POV: You Inherit Money — and Everyone Has a Plan for It | Chaque proche voit un projet different dans le meme heritage. Le protagoniste doit distinguer aide, pression et ses propres objectifs. | Un beneficiaire avec une enveloppe, plusieurs mains proposant des achats. |
+| 4 | POV: You Pay Off Your House — Then Everyone Says You Made a Mistake | La tranquillite recherchee se heurte a des proches qui mesurent la reussite autrement. Montrer de vrais arbitrages, pas une strategie declaree meilleure pour tous. | Cles et courrier de pret solde face aux objections des proches. |
+| 5 | POV: Your Side Business Replaces Your Salary — and Takes Over Your Life | Le revenu supplementaire transforme toutes les soirees en travail. Le conflit devient choisir la taille de son activite et ce que liberte signifie. | Tenue confortable, commandes empilees et diner qui refroidit. |
+| 6 | POV: You Can Afford the Vacation — Your Friends Can’t | Tu peux payer le voyage, mais pas decider a la place des autres. Partage des depenses, dignite et limites se rencontrent dans un projet commun. | Groupe devant deux options de vacances et un ami discretement gene. |
+| 7 | POV: You Finally Feel Rich — Then the Market Crashes | Une fortune surtout visible sur un ecran subit sa premiere chute. Suivre obligations concretes, reactions et arbitrages sans promettre un rebond automatique. | Ecran en baisse, facture reelle et partenaire qui attend une decision. |
+| 8 | POV: Your Partner Earns Less — but Owns More Than You | Le salaire ne raconte pas tout du patrimoine. Le couple doit comprendre habitudes, dettes et objectifs sans intrigue artificielle de trahison. | Deux tenues de travail contrastees et achat important a decider ensemble. |
+| 9 | POV: You Retire With Less Than Your Friends — and Finally Have Enough | Les besoins et engagements differents produisent des choix differents. La retraite devient une vie concrete, pas un montant magique. | Personnage detendu dans une maison modeste face a une comparaison sociale. |
+| 10 | POV: Your Parents Need Help — Just as You Become Wealthy | L’argent durement construit rencontre un devoir familial. Aider sans sacrifier toute sa securite exige une decision negociee et pas un mechant stereotype. | Deux generations a la table familiale, budget et logement a reorganiser. |
+
+### Chaine pouvoir — Oddly Important Guy propose
+
+| Ordre | Titre propose | Angle | Possibilite visuelle |
+| --- | --- | --- | --- |
+| 1 | Your Life Working for a Billionaire | Le luxe est partout mais ton temps ne t’appartient presque plus. Suivre une mission precise, un imprévu et une limite que le protagoniste essaie de poser. | Assistant et milliardaire : contraste de charge de travail, pas copie de la piscine a chaque plan. |
+| 2 | Your Life Working Inside a Las Vegas Casino | Travail, clients, surveillance et hierarchie sur une soiree qui degenere. Pas de clone des videos existantes ni de promotion automatique jusqu’a proprietaire. | Croupier calme face a une table tendue et responsable de salle. |
+| 3 | Your Life Working on a Billionaire’s Superyacht | Les passagers sont en vacances ; les marins assurent service et fonctionnement. Un changement de programme met plusieurs metiers sous pression. | Employe en uniforme, pont impeccable et exigence inattendue du proprietaire. |
+| 4 | Your Life at Every Level of a Major Law Firm | L’acces aux clients et aux decisions change avec le role. Choisir une juridiction et un parcours plausible avant de documenter les echelons. | Jeune avocat charge de dossiers face a l’associe qui controle le client. |
+| 5 | Your Life as a Private Jet Pilot | Le souhait d’un client fortuné rencontre les contraintes reelles du vol. Le prestige ne supprime ni preparation ni responsabilite. | Pilote devant un jet et client impatient ; pas de procedure technique inventee. |
+| 6 | Your Life Running a Luxury Hotel | L’apparente perfection des clients depend des arbitrages invisibles du personnel. Suivre une journee autour d’une suite et d’un probleme de service. | Responsable entre client exigeant et equipe qui gere un imprevu. |
+| 7 | Your Life as a Celebrity Bodyguard | Tu accompagnes quelqu’un que tout le monde regarde et dois rester attentif pendant ses moments ordinaires. Celebrite fictive, pas d’incident reel invente. | Protection rapprochee, foule et personnage principal surveillant une situation. |
+| 8 | Your Life Managing a Billionaire’s Money | Le role donne acces a une fortune qui ne t’appartient pas. Les interets de la famille et ses demandes contradictoires deviennent le conflit. | Employe au milieu de demandes opposees d’une meme famille riche. |
+| 9 | Your Life Working Inside a Royal Palace | L’acces aux pieces n’est pas le pouvoir de decider. Choisir un contexte documente, un membre du personnel fictif et des evenements clairement originaux. | Personnel discret, table officielle et regles d’acces visibles. |
+| 10 | Your Life as a Wall Street Trader | Apres les portes du pouvoir, suivre une journee ou bonus, limites et responsabilite se contredisent. Pas de recette de trading ou enrichissement garanti. | Salle de marche et objectif professionnel sous pression, sans ecrans remplis de faux chiffres. |
+
+Premier lancement recommande : finance 01 et pouvoir 01. Tester le format et ajuster l’ordre des episodes suivants sur les resultats reels plutot que figer vingt publications. Les deux premiers films ne sont pas lances par cette ideation.
