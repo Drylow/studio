@@ -1,0 +1,26 @@
+[
+  {
+    "id": "A-cinematique-realiste",
+    "direction": "Realiste cinematographique, reference Deep Void",
+    "file": "A-cinematique-realiste.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 387318,
+    "sha256": "05b98fb858d8c6c39b20bda27c8f782937833294f9c6b84fe9e4d84258902322",
+    "generation": "Built-in imagegen",
+    "status": "Comparison proposal, awaiting user direction choice",
+    "text": "SKYRIM / SECRETS / FOR SLEEP"
+  },
+  {
+    "id": "B-illustration-sobre",
+    "direction": "Illustration sobre, surfaces plus lisses",
+    "file": "B-illustration-sobre.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 299315,
+    "sha256": "36a5782358a562ed3265e00101a16026b9c95496f8414080b9b0a9cdabed04f4",
+    "generation": "Built-in imagegen",
+    "status": "Comparison proposal, awaiting user direction choice",
+    "text": "SKYRIM / SECRETS / FOR SLEEP"
+  }
+]

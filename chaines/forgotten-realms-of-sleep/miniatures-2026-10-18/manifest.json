@@ -15,7 +15,8 @@
     "generation": "Built-in imagegen with approved logo and banner as style references",
     "export": "JPEG quality 95; technical resize only, no creative retouch",
     "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
-    "selection": "Initial proposal for user review; not published"
+    "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
+    "next_step": "Choose between Skyrim comparison A and B before revising the other two thumbnails."
   },
   {
     "id": "02-vault-tec",
@@ -33,7 +34,8 @@
     "generation": "Built-in imagegen with approved logo and banner as style references",
     "export": "JPEG quality 95; technical resize only, no creative retouch",
     "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
-    "selection": "Initial proposal for user review; not published"
+    "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
+    "next_step": "Choose between Skyrim comparison A and B before revising the other two thumbnails."
   },
   {
     "id": "03-dwemer",
@@ -51,6 +53,7 @@
     "generation": "Built-in imagegen with approved logo and banner as style references",
     "export": "JPEG quality 95; technical resize only, no creative retouch",
     "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
-    "selection": "Initial proposal for user review; not published"
+    "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
+    "next_step": "Choose between Skyrim comparison A and B before revising the other two thumbnails."
   }
 ]

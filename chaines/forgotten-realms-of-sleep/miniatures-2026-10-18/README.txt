@@ -1,3 +1,8 @@
+STATUT : LES TROIS PREMIERES MINIATURES ONT ETE REJETEES.
+Ne pas les utiliser pour publier.
+Voir comparatif-skyrim-v2 pour les essais A realiste et B illustration.
+Le choix utilisateur reste en attente avant de reprendre Vault-Tec et Dwemer.
+
 FORGOTTEN REALMS OF SLEEP - TROIS MINIATURES
 18 octobre 2026
 
