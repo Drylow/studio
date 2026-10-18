@@ -7,3 +7,5 @@ Le lot du 18 octobre est dans [scripts-2026-10-18](scripts-2026-10-18/LIRE-EN-PR
 Les logos et la banniere sont conserves sur le Bureau dans Forgotten Realms of Sleep - logo et description - 18 octobre 2026, et dans le dossier de travail prive de cette session. Aucun profil, handle ou televersement de cette chaine n'a ete valide dans cette commande.
 
 Deep Void Theories et Quiet Paradox restent en attente de resultats. Cette commande de scripts ne relance pas leur production. Ne pas regenerer leurs voix ni leurs six videos programmees.
+
+Les trois premieres propositions de miniatures sont dans [miniatures-2026-10-18](miniatures-2026-10-18/README.txt) : Skyrim, Vault-Tec et Dwemer. Meme direction que le logo et la banniere, exports JPEG 1280 x 720, prompts et controle visuel. Les originaux PNG et les deux references sont conserves dans le dossier de livraison du Bureau. Aucun upload ni choix utilisateur n'est encore declare pour ces images.
