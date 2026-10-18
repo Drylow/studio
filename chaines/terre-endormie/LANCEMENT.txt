@@ -1,4 +1,5 @@
 TERRE ENDORMIE — KIT DE LANCEMENT
+STYLE VALIDÉ : l'utilisateur apprécie explicitement la miniature 04 AVANT LES DINOS. Lire STYLE_VALIDE.txt pour les prochaines miniatures.
 MISE À JOUR : lire CONTRE_ANALYSE.txt en priorité pour le verdict et les nouveaux visuels.
 Retour utilisateur : niveau des premières miniatures insuffisant ; elles sont conservées comme essais.
 Les nouvelles propositions 04 et 05 privilégient la scène et réduisent fortement le texte.

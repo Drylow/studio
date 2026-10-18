@@ -1,0 +1,21 @@
+TERRE ENDORMIE — RÉFÉRENCE VISUELLE VALIDÉE
+Retour utilisateur du 18 octobre 2026 : « ça, c'est vraiment propre » à propos de la miniature AVANT LES DINOS jointe à son message.
+
+Référence à conserver : miniatures/04-avant-dinos-impact.png
+Prompt d'origine : entrée 04-avant-dinos-impact dans PROMPTS_IMPACT.txt.
+
+ÉLÉMENTS DU STYLE À REPRENDRE
+- Créature imposante au premier plan, regard lisible et silhouette distinctive.
+- Scène vivante : déplacement, eau, gouttes, gestes ou interaction avec le milieu.
+- Rendu naturaliste cinématographique, textures détaillées et sensation de poids.
+- Décor riche avec plusieurs plans, profondeur atmosphérique et lumière expressive.
+- Contraste entre lumière chaude et ombres naturelles ; adapter la lumière au milieu.
+- Texte court, blanc et lisible, secondaire par rapport à l'image.
+- L'image occupe toute la miniature, sans grand panneau de texte ni cartouche générique.
+
+APPLICATION
+Utiliser cette image comme référence visuelle pour les prochaines propositions.
+Varier animaux, actions, cadrages et habitats selon le sujet ; ne pas dupliquer la même scène.
+La validation concerne le style visuel de cette proposition. Elle ne valide pas automatiquement les autres images, l'anatomie scientifique, les titres ou une publication.
+Conserver l'image approuvée intacte ; toute modification éventuelle doit produire une nouvelle version.
+La miniature marine 05 reste une proposition distincte, sans validation explicite.
