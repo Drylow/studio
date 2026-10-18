@@ -145,3 +145,16 @@ Signaux adjacents observes :
 | 10 | Your Life as a Wall Street Trader | Apres les portes du pouvoir, suivre une journee ou bonus, limites et responsabilite se contredisent. Pas de recette de trading ou enrichissement garanti. | Salle de marche et objectif professionnel sous pression, sans ecrans remplis de faux chiffres. |
 
 Premier lancement recommande : finance 01 et pouvoir 01. Tester le format et ajuster l’ordre des episodes suivants sur les resultats reels plutot que figer vingt publications. Les deux premiers films ne sont pas lances par cette ideation.
+
+
+## Comparatif du style des videos — 18 octobre 2026
+
+L’utilisateur veut choisir le dessin des VIDEOS apres avoir vu le contenu des trois references, separement des miniatures deja approuvees. Les photos de profil restent approuvees. Aucun nouveau style video n’est adopte et aucun film/test genere n’est lance par cette analyse.
+
+Comparatif local : `03 - Creation/References styles videos - 2026-10-18/`. Trois planches de six apercus de contenu reels fournis par les storyboards YouTube, aux environs de 00:30, 02:00, 05:00, 09:00, 13:00 et 17:30. Resolution native 320 × 180 ou 322 × 180 ; ce ne sont pas des captures HD des MP4. Les grilles et recus restent dans le travail prive, sans redistribution publique des images sources.
+
+- POV Finance : https://www.youtube.com/watch?v=h0GcE0Me-lI — principal au visage blanc avec cheveux et traits humains ; lieux detailles, palette sourde, secondaires a peau coloree.
+- Money Life POV : https://www.youtube.com/watch?v=uDc_T2MMNGw — dessin proche, avec inserts d’objets, vues subjectives et interactions varies dans les six echantillons.
+- POVrank : https://www.youtube.com/watch?v=JtSOX2quSok — humains cartoon a peau coloree, scenes collectives et decors chauds. La grosse tete blanche de sa miniature ne decrit pas le style de cet episode.
+
+L’API de telechargement a expire pour la premiere reference et la connexion SSH historique a echoue. Les images livrees viennent des apercus YouTube effectivement recuperes et regardes, pas d’une extraction HD fictive sur le VPS. Aucun montage, encodage ou rendu de film sur le PC. La comparaison porte sur le dessin visible, pas sur une inspection integrale des videos.
