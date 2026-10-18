@@ -1,0 +1,1396 @@
+{
+  "observed": "2026-10-18",
+  "method": "Algrow catalogues récents/populaires et recherche ; Nexlev outliers. Analyse de métadonnées et inspection visuelle de six miniatures, sans visionnage intégral.",
+  "channels": [
+    {
+      "key": "geo",
+      "profile": {
+        "title": "Planète Géo",
+        "channel_id": "UC3Fde1VB7ZTLzMYosCAsA2A",
+        "subscribers": 7020,
+        "video_count": 23,
+        "joined": "2026-05-21T16:36:56.602436+00:00"
+      },
+      "popular": [
+        {
+          "title": "Il y a 500 millions d’années : Le monde que Personne n’aurait voulu habiter",
+          "views": 148302,
+          "date": "2026-07-05T17:00:19Z",
+          "duration": 1605,
+          "url": "https://www.youtube.com/watch?v=ajMtZHKhJ78",
+          "thumbnail": "https://i.ytimg.com/vi/ajMtZHKhJ78/maxresdefault.jpg"
+        },
+        {
+          "title": "Il y a 380 Millions d’Années : Les Arbres ont Failli Détruire la Vie sur Terre",
+          "views": 130821,
+          "date": "2026-06-28T16:00:01Z",
+          "duration": 1265,
+          "url": "https://www.youtube.com/watch?v=jI0RRjeuwLY",
+          "thumbnail": "https://i.ytimg.com/vi/jI0RRjeuwLY/maxresdefault.jpg"
+        },
+        {
+          "title": "Voyage au Paléozoïque : Le Monde que Personne ne Voudrait Habiter | Documentaire Pour Dormir (+3H)",
+          "views": 73416,
+          "date": "2026-09-01T18:00:23Z",
+          "duration": 10472,
+          "url": "https://www.youtube.com/watch?v=dEwcME6fEBI",
+          "thumbnail": "https://i.ytimg.com/vi/dEwcME6fEBI/maxresdefault.jpg"
+        },
+        {
+          "title": "La PLUIE qui a Détruit la Planète et Ouvert la Voie aux Dinosaures",
+          "views": 69446,
+          "date": "2026-08-02T13:00:37Z",
+          "duration": 1257,
+          "url": "https://www.youtube.com/watch?v=5C8idbQYhyQ",
+          "thumbnail": "https://i.ytimg.com/vi/5C8idbQYhyQ/maxresdefault.jpg"
+        },
+        {
+          "title": "L’ÂGE des POISSONS qui ont fui une Mer Mortelle : Le Dévonien",
+          "views": 58514,
+          "date": "2026-09-06T15:00:13Z",
+          "duration": 1289,
+          "url": "https://www.youtube.com/watch?v=TZjLQ6O9VQ4",
+          "thumbnail": "https://i.ytimg.com/vi/TZjLQ6O9VQ4/maxresdefault.jpg"
+        },
+        {
+          "title": "PANGÉE : Le Supercontinent Né Après la Pire Extinction de la Terre",
+          "views": 55692,
+          "date": "2026-10-04T17:00:20Z",
+          "duration": 1329,
+          "url": "https://www.youtube.com/watch?v=IKoA-gElUb0",
+          "thumbnail": "https://i.ytimg.com/vi/IKoA-gElUb0/maxresdefault.jpg"
+        },
+        {
+          "title": "Il y a 550 Millions d’Années, la PEUR a Créé le Premier CERVEAU de l’Histoire",
+          "views": 51142,
+          "date": "2026-08-09T13:00:33Z",
+          "duration": 1169,
+          "url": "https://www.youtube.com/watch?v=HCMqUbwzVZo",
+          "thumbnail": "https://i.ytimg.com/vi/HCMqUbwzVZo/maxresdefault.jpg"
+        },
+        {
+          "title": "Avant les Araignées : Les ARACHNIDES qui sont Sortis de la Mer et ont Conquis la Terre",
+          "views": 44492,
+          "date": "2026-08-16T15:00:30Z",
+          "duration": 1264,
+          "url": "https://www.youtube.com/watch?v=dUFY5nATvxA",
+          "thumbnail": "https://i.ytimg.com/vi/dUFY5nATvxA/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre GÈLE Tous les 100 000 Ans... et Personne ne Peut l’Arrêter",
+          "views": 36716,
+          "date": "2026-09-20T17:00:35Z",
+          "duration": 1263,
+          "url": "https://www.youtube.com/watch?v=uSGAciHAnFM",
+          "thumbnail": "https://i.ytimg.com/vi/uSGAciHAnFM/maxresdefault.jpg"
+        },
+        {
+          "title": "Quand les Dinosaures Ont Disparu… Quelque Chose de PIRE Est Apparu | Documentaire Complet",
+          "views": 34500,
+          "date": "2026-09-27T16:00:10Z",
+          "duration": 1229,
+          "url": "https://www.youtube.com/watch?v=_yxHG51C1EA",
+          "thumbnail": "https://i.ytimg.com/vi/_yxHG51C1EA/maxresdefault.jpg"
+        },
+        {
+          "title": "La Première Fois que la VIE a Conquis la TERRE : Le Silurien",
+          "views": 32669,
+          "date": "2026-08-30T16:00:17Z",
+          "duration": 1249,
+          "url": "https://www.youtube.com/watch?v=nW0gvdcjnXc",
+          "thumbnail": "https://i.ytimg.com/vi/nW0gvdcjnXc/maxresdefault.jpg"
+        },
+        {
+          "title": "PANGÉE : Le supercontinent où PERSONNE n’aurait voulu vivre",
+          "views": 26365,
+          "date": "2026-06-21T16:00:32Z",
+          "duration": 1561,
+          "url": "https://www.youtube.com/watch?v=a5OHSXYSff4",
+          "thumbnail": "https://i.ytimg.com/vi/a5OHSXYSff4/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Premiers PRÉDATEURS Ont Failli Détruire la Vie… avant de la Sauver",
+          "views": 21978,
+          "date": "2026-09-13T15:00:31Z",
+          "duration": 1282,
+          "url": "https://www.youtube.com/watch?v=w-ch_xVSSLs",
+          "thumbnail": "https://i.ytimg.com/vi/w-ch_xVSSLs/maxresdefault.jpg"
+        },
+        {
+          "title": "Avant les Arbres : un CHAMPIGNON de 8 Mètres Dominait la Terre",
+          "views": 20786,
+          "date": "2026-07-26T13:00:37Z",
+          "duration": 1266,
+          "url": "https://www.youtube.com/watch?v=tK_8G1soyds",
+          "thumbnail": "https://i.ytimg.com/vi/tK_8G1soyds/maxresdefault.jpg"
+        },
+        {
+          "title": "Quand 96 % de la Vie a Disparu | La Pire Extinction de la Terre",
+          "views": 20071,
+          "date": "2026-07-18T17:00:15Z",
+          "duration": 1257,
+          "url": "https://www.youtube.com/watch?v=N6C7gCO1c1k",
+          "thumbnail": "https://i.ytimg.com/vi/N6C7gCO1c1k/maxresdefault.jpg"
+        },
+        {
+          "title": "Quand les Insectes Étaient Plus Grands que Nous : Le Carbonifère",
+          "views": 14192,
+          "date": "2026-07-11T17:09:53Z",
+          "duration": 1466,
+          "url": "https://www.youtube.com/watch?v=Y4T_NVIs-3A",
+          "thumbnail": "https://i.ytimg.com/vi/Y4T_NVIs-3A/maxresdefault.jpg"
+        },
+        {
+          "title": "Avant la Glace : Quand l’Antarctique Était une Jungle de Dinosaures",
+          "views": 12421,
+          "date": "2026-10-11T16:00:25Z",
+          "duration": 1213,
+          "url": "https://www.youtube.com/watch?v=w6SaQOD2L_c",
+          "thumbnail": "https://i.ytimg.com/vi/w6SaQOD2L_c/maxresdefault.jpg"
+        },
+        {
+          "title": "Il y a 2 Milliards d’Années : Quand l’oxygène a failli détruire la vie",
+          "views": 8363,
+          "date": "2026-06-14T16:30:36Z",
+          "duration": 1188,
+          "url": "https://www.youtube.com/watch?v=2p5nAHp21Rc",
+          "thumbnail": "https://i.ytimg.com/vi/2p5nAHp21Rc/maxresdefault.jpg"
+        }
+      ],
+      "recent": [
+        {
+          "title": "Il y a 600 millions d'années : Le monde où PERSONNE ne mangeait PERSONNE",
+          "views": 176,
+          "date": "2026-10-18T17:00:25Z",
+          "duration": 1260,
+          "url": "https://www.youtube.com/watch?v=U3tIvV7-0AQ",
+          "thumbnail": "https://i.ytimg.com/vi/U3tIvV7-0AQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Avant la Glace : Quand l’Antarctique Était une Jungle de Dinosaures",
+          "views": 12421,
+          "date": "2026-10-11T16:00:25Z",
+          "duration": 1213,
+          "url": "https://www.youtube.com/watch?v=w6SaQOD2L_c",
+          "thumbnail": "https://i.ytimg.com/vi/w6SaQOD2L_c/maxresdefault.jpg"
+        },
+        {
+          "title": "PANGÉE : Le Supercontinent Né Après la Pire Extinction de la Terre",
+          "views": 55692,
+          "date": "2026-10-04T17:00:20Z",
+          "duration": 1329,
+          "url": "https://www.youtube.com/watch?v=IKoA-gElUb0",
+          "thumbnail": "https://i.ytimg.com/vi/IKoA-gElUb0/maxresdefault.jpg"
+        },
+        {
+          "title": "Quand les Dinosaures Ont Disparu… Quelque Chose de PIRE Est Apparu | Documentaire Complet",
+          "views": 34500,
+          "date": "2026-09-27T16:00:10Z",
+          "duration": 1229,
+          "url": "https://www.youtube.com/watch?v=_yxHG51C1EA",
+          "thumbnail": "https://i.ytimg.com/vi/_yxHG51C1EA/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre GÈLE Tous les 100 000 Ans... et Personne ne Peut l’Arrêter",
+          "views": 36716,
+          "date": "2026-09-20T17:00:35Z",
+          "duration": 1263,
+          "url": "https://www.youtube.com/watch?v=uSGAciHAnFM",
+          "thumbnail": "https://i.ytimg.com/vi/uSGAciHAnFM/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Premiers PRÉDATEURS Ont Failli Détruire la Vie… avant de la Sauver",
+          "views": 21978,
+          "date": "2026-09-13T15:00:31Z",
+          "duration": 1282,
+          "url": "https://www.youtube.com/watch?v=w-ch_xVSSLs",
+          "thumbnail": "https://i.ytimg.com/vi/w-ch_xVSSLs/maxresdefault.jpg"
+        },
+        {
+          "title": "L’ÂGE des POISSONS qui ont fui une Mer Mortelle : Le Dévonien",
+          "views": 58514,
+          "date": "2026-09-06T15:00:13Z",
+          "duration": 1289,
+          "url": "https://www.youtube.com/watch?v=TZjLQ6O9VQ4",
+          "thumbnail": "https://i.ytimg.com/vi/TZjLQ6O9VQ4/maxresdefault.jpg"
+        },
+        {
+          "title": "Voyage au Paléozoïque : Le Monde que Personne ne Voudrait Habiter | Documentaire Pour Dormir (+3H)",
+          "views": 73416,
+          "date": "2026-09-01T18:00:23Z",
+          "duration": 10472,
+          "url": "https://www.youtube.com/watch?v=dEwcME6fEBI",
+          "thumbnail": "https://i.ytimg.com/vi/dEwcME6fEBI/maxresdefault.jpg"
+        },
+        {
+          "title": "La Première Fois que la VIE a Conquis la TERRE : Le Silurien",
+          "views": 32669,
+          "date": "2026-08-30T16:00:17Z",
+          "duration": 1249,
+          "url": "https://www.youtube.com/watch?v=nW0gvdcjnXc",
+          "thumbnail": "https://i.ytimg.com/vi/nW0gvdcjnXc/maxresdefault.jpg"
+        },
+        {
+          "title": "Il y a 6 Millions d’Années : La MÉDITERRANÉE S’est Asséchée… Puis S’est Remplie en Quelques Semaines",
+          "views": 4961,
+          "date": "2026-08-23T17:00:31Z",
+          "duration": 1235,
+          "url": "https://www.youtube.com/watch?v=-S5sfzJsSOo",
+          "thumbnail": "https://i.ytimg.com/vi/-S5sfzJsSOo/maxresdefault.jpg"
+        },
+        {
+          "title": "Avant les Araignées : Les ARACHNIDES qui sont Sortis de la Mer et ont Conquis la Terre",
+          "views": 44492,
+          "date": "2026-08-16T15:00:30Z",
+          "duration": 1264,
+          "url": "https://www.youtube.com/watch?v=dUFY5nATvxA",
+          "thumbnail": "https://i.ytimg.com/vi/dUFY5nATvxA/maxresdefault.jpg"
+        },
+        {
+          "title": "Il y a 550 Millions d’Années, la PEUR a Créé le Premier CERVEAU de l’Histoire",
+          "views": 51142,
+          "date": "2026-08-09T13:00:33Z",
+          "duration": 1169,
+          "url": "https://www.youtube.com/watch?v=HCMqUbwzVZo",
+          "thumbnail": "https://i.ytimg.com/vi/HCMqUbwzVZo/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "key": "orbinea",
+      "profile": {
+        "title": "Orbinéa | Le Monde des Odyssées",
+        "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+        "subscribers": 218000,
+        "video_count": 2105,
+        "joined": "2021-09-21T19:30:22.807732+00:00"
+      },
+      "popular": [
+        {
+          "title": "Un Voyage EXCEPTIONNEL dans le SYSTÈME SOLAIRE | DOCUMENTAIRE Espace",
+          "views": 1528647,
+          "date": "2024-05-26T19:00:03Z",
+          "duration": 5363,
+          "url": "https://www.youtube.com/watch?v=8LGIUtGefeM",
+          "thumbnail": "https://i.ytimg.com/vi/8LGIUtGefeM/maxresdefault.jpg"
+        },
+        {
+          "title": "Un Voyage EXCEPTIONNEL dans le SYSTÈME SOLAIRE | DOCUMENTAIRE Espace",
+          "views": 1291440,
+          "date": "2022-05-29T16:41:19Z",
+          "duration": 7569,
+          "url": "https://www.youtube.com/watch?v=cY25s0sCdMI",
+          "thumbnail": "https://i.ytimg.com/vi/cY25s0sCdMI/maxresdefault.jpg"
+        },
+        {
+          "title": "Au-delà de l'Atome: INCROYABLE Plongée au Cœur de la Matière vers l'Infiniment Petit | Documentaire",
+          "views": 1103490,
+          "date": "2023-07-02T16:00:13Z",
+          "duration": 4880,
+          "url": "https://www.youtube.com/watch?v=NN77q9L0IRA",
+          "thumbnail": "https://i.ytimg.com/vi/NN77q9L0IRA/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Ère Oubliée: Que s'est-il Réellement Passé APRÈS l'Extinction des Dinosaures ? | Documentaire",
+          "views": 1006813,
+          "date": "2023-06-25T16:00:09Z",
+          "duration": 4875,
+          "url": "https://www.youtube.com/watch?v=EK7XBpG-E_8",
+          "thumbnail": "https://i.ytimg.com/vi/EK7XBpG-E_8/maxresdefault.jpg"
+        },
+        {
+          "title": "La Vie Extraterrestre dans l'Univers : Voyage vers le Monde des Aliens | Documentaire Espace",
+          "views": 970063,
+          "date": "2023-02-12T17:00:30Z",
+          "duration": 4789,
+          "url": "https://www.youtube.com/watch?v=V8HZszM1gm0",
+          "thumbnail": "https://i.ytimg.com/vi/V8HZszM1gm0/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Odyssée Terrestre : Quelle est l'Histoire de notre Planète ? | Documentaire Histoire de la Terre",
+          "views": 915113,
+          "date": "2022-12-11T17:00:06Z",
+          "duration": 4194,
+          "url": "https://www.youtube.com/watch?v=3FRAbXDyBjw",
+          "thumbnail": "https://i.ytimg.com/vi/3FRAbXDyBjw/maxresdefault.jpg"
+        },
+        {
+          "title": "Un INCROYABLE Voyage les plus BELLES Découvertes de l'Univers du JAMES WEBB | Documentaire Espace",
+          "views": 816564,
+          "date": "2023-03-19T17:00:39Z",
+          "duration": 4079,
+          "url": "https://www.youtube.com/watch?v=zCvRJA9R9r4",
+          "thumbnail": "https://i.ytimg.com/vi/zCvRJA9R9r4/maxresdefault.jpg"
+        },
+        {
+          "title": "Quels SECRETS Au-Delà de l'UNIVERS ? Un INCROYABLE Voyage vers l'INCONNU ! DOCUMENTAIRE ESPACE",
+          "views": 731842,
+          "date": "2024-12-01T20:00:08Z",
+          "duration": 7823,
+          "url": "https://www.youtube.com/watch?v=I80hvYoZakQ",
+          "thumbnail": "https://i.ytimg.com/vi/I80hvYoZakQ/maxresdefault.jpg"
+        },
+        {
+          "title": "La Mystérieuse Légende de l'Atlantide : L'incroyable Histoire de la Cité Engloutie | DOCUMENTAIRE",
+          "views": 682773,
+          "date": "2022-08-14T16:00:32Z",
+          "duration": 4173,
+          "url": "https://www.youtube.com/watch?v=bZDwK1hUewY",
+          "thumbnail": "https://i.ytimg.com/vi/bZDwK1hUewY/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Secrets Oubliés de la Terre: Un Voyage Époustouflant à Travers l'Âge Préhistorique, Documentaire",
+          "views": 659349,
+          "date": "2023-06-11T16:00:31Z",
+          "duration": 6920,
+          "url": "https://www.youtube.com/watch?v=Yr2sOo8K9u4",
+          "thumbnail": "https://i.ytimg.com/vi/Yr2sOo8K9u4/maxresdefault.jpg"
+        },
+        {
+          "title": "3 heures de Faits Préhistoriques pour S'endormir Rapidement : Un INCROYABLE Voyage dans le Passé !",
+          "views": 658120,
+          "date": "2024-10-09T21:00:16Z",
+          "duration": 13376,
+          "url": "https://www.youtube.com/watch?v=TR6-ZY-tMhk",
+          "thumbnail": "https://i.ytimg.com/vi/TR6-ZY-tMhk/maxresdefault.jpg"
+        },
+        {
+          "title": "A quoi ressemblait la Terre à l'Époque des Insectes Géants ? | Documentaire Histoire de la Terre",
+          "views": 640813,
+          "date": "2023-04-30T16:00:32Z",
+          "duration": 3757,
+          "url": "https://www.youtube.com/watch?v=fjQk8b-KCgI",
+          "thumbnail": "https://i.ytimg.com/vi/fjQk8b-KCgI/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Secrets de l'Origine de la Vie: Comment tout a Commencé ? | Documentaire Histoire de la Terre",
+          "views": 624275,
+          "date": "2023-07-23T16:00:02Z",
+          "duration": 6650,
+          "url": "https://www.youtube.com/watch?v=4jo6PcTuDWI",
+          "thumbnail": "https://i.ytimg.com/vi/4jo6PcTuDWI/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Ère Oubliée: Que s'est-il Réellement Passé AVANT l'Apparition des Dinosaures ? | Documentaire",
+          "views": 619759,
+          "date": "2024-04-07T20:00:08Z",
+          "duration": 5465,
+          "url": "https://www.youtube.com/watch?v=bYYiQ9rQW88",
+          "thumbnail": "https://i.ytimg.com/vi/bYYiQ9rQW88/maxresdefault.jpg"
+        },
+        {
+          "title": "A quoi ressemblait la Terre à l'époque de la Pangée ? | Documentaire Histoire de la Terre",
+          "views": 605287,
+          "date": "2022-12-25T17:00:34Z",
+          "duration": 4192,
+          "url": "https://www.youtube.com/watch?v=lwG8eQMVhV8",
+          "thumbnail": "https://i.ytimg.com/vi/lwG8eQMVhV8/maxresdefault.jpg"
+        },
+        {
+          "title": "Pourquoi la Terre AVANT les Dinosaures était-elle TERRIFIANTE ? Les Secrets les plus Étonnants",
+          "views": 591744,
+          "date": "2024-04-17T19:00:18Z",
+          "duration": 4907,
+          "url": "https://www.youtube.com/watch?v=eQzWsKyfB0k",
+          "thumbnail": "https://i.ytimg.com/vi/eQzWsKyfB0k/maxresdefault.jpg"
+        },
+        {
+          "title": "Super-Prédateur Préhistorique: Comment ces Créatures Oubliées ont BOULEVERSÉ l'Histoire de la Terre?",
+          "views": 585588,
+          "date": "2023-09-24T16:00:04Z",
+          "duration": 5208,
+          "url": "https://www.youtube.com/watch?v=4uNx2DVWEi8",
+          "thumbnail": "https://i.ytimg.com/vi/4uNx2DVWEi8/maxresdefault.jpg"
+        },
+        {
+          "title": "Dévonien: L'Époque Méconnue Où les Requins Préhistoriques Blindés Dominaient les Mers ! DOCUMENTAIRE",
+          "views": 576318,
+          "date": "2024-01-21T20:00:19Z",
+          "duration": 7319,
+          "url": "https://www.youtube.com/watch?v=zAF6mI3daBs",
+          "thumbnail": "https://i.ytimg.com/vi/zAF6mI3daBs/maxresdefault.jpg"
+        }
+      ],
+      "recent": []
+    },
+    {
+      "key": "paleontologue",
+      "profile": {
+        "title": "Le Paléontologue Somnolent",
+        "channel_id": "UC6jrvaavdxmsbCrfS5Qpa0Q",
+        "subscribers": 4080,
+        "video_count": 127,
+        "joined": "2022-10-02T12:01:14.954261+00:00"
+      },
+      "popular": [
+        {
+          "title": "Comment Les Gens Médiévaux Dormaient Dans Les Châteaux Sans Chauffage Pendant Les Hivers Glacials",
+          "views": 107595,
+          "date": "2025-12-26T17:01:05Z",
+          "duration": 7395,
+          "url": "https://www.youtube.com/watch?v=cYDiFiMTD4k",
+          "thumbnail": "https://i.ytimg.com/vi/cYDiFiMTD4k/maxresdefault.jpg"
+        },
+        {
+          "title": "Sommeil Chaud D’Humains Préhistoriques En Plein Grand Froid | Documentaire pour Dormir",
+          "views": 34966,
+          "date": "2025-10-13T16:00:58Z",
+          "duration": 9639,
+          "url": "https://www.youtube.com/watch?v=V7RLaFLMAkY",
+          "thumbnail": "https://i.ytimg.com/vi/V7RLaFLMAkY/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Gens Dormaient-ils Réellement Dans Les Châteaux Médiévaux Sans Mourir de Froid?",
+          "views": 29487,
+          "date": "2025-10-28T17:00:07Z",
+          "duration": 9603,
+          "url": "https://www.youtube.com/watch?v=4E9R2qa1U4Y",
+          "thumbnail": "https://i.ytimg.com/vi/4E9R2qa1U4Y/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Hiver Préhistorique Qui a Tué 99% de Tous les Humains | Documentaire Pour Dormir",
+          "views": 28863,
+          "date": "2025-11-12T17:00:54Z",
+          "duration": 9285,
+          "url": "https://www.youtube.com/watch?v=W2E61nEVinQ",
+          "thumbnail": "https://i.ytimg.com/vi/W2E61nEVinQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Hommes des Cavernes Avaient Les Grottes Les Plus Sûres Pendant Les Nuits Dangereuses",
+          "views": 24879,
+          "date": "2025-10-26T16:00:48Z",
+          "duration": 9290,
+          "url": "https://www.youtube.com/watch?v=QGwLp-2ny9I",
+          "thumbnail": "https://i.ytimg.com/vi/QGwLp-2ny9I/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Villageois Médiévaux Survivaient-ils aux Pires Hivers | Documentaire Pour Dormir",
+          "views": 22721,
+          "date": "2025-11-29T17:01:37Z",
+          "duration": 10016,
+          "url": "https://www.youtube.com/watch?v=wy4EoLPGTJQ",
+          "thumbnail": "https://i.ytimg.com/vi/wy4EoLPGTJQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Ce Que Faisaient Vraiment les Néandertaliens Toute la Journée Pendant la Dernière Ère Glaciaire",
+          "views": 20206,
+          "date": "2025-11-13T17:00:02Z",
+          "duration": 8860,
+          "url": "https://www.youtube.com/watch?v=07lWm74R7bs",
+          "thumbnail": "https://i.ytimg.com/vi/07lWm74R7bs/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Soldats Médiévaux Dormaient-ils Sous des Tentes Sans Mourir de Froid? | Documentaire",
+          "views": 18288,
+          "date": "2025-12-03T17:01:32Z",
+          "duration": 9930,
+          "url": "https://www.youtube.com/watch?v=l1UETUzYXA0",
+          "thumbnail": "https://i.ytimg.com/vi/l1UETUzYXA0/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Families Médiévales Dormaient-elles Dans Les Maisons de Pierre Sans Mourir de Froid?",
+          "views": 14757,
+          "date": "2025-11-08T17:00:47Z",
+          "duration": 11446,
+          "url": "https://www.youtube.com/watch?v=WasCPkiIjE8",
+          "thumbnail": "https://i.ytimg.com/vi/WasCPkiIjE8/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Néandertaliens Construisaient des Abris à l'Épreuve des Prédateurs Géants | Documentaire",
+          "views": 11989,
+          "date": "2025-11-22T18:40:45Z",
+          "duration": 8496,
+          "url": "https://www.youtube.com/watch?v=eKtIpPVXy28",
+          "thumbnail": "https://i.ytimg.com/vi/eKtIpPVXy28/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Vikings Dormaient-ils Dans les Maisons Longues Sans Mourir de Froid? | Documentaire",
+          "views": 11050,
+          "date": "2025-11-30T17:00:25Z",
+          "duration": 9577,
+          "url": "https://www.youtube.com/watch?v=GtY3momzWaw",
+          "thumbnail": "https://i.ytimg.com/vi/GtY3momzWaw/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Soldats Médiévaux Dormaient-ils Dans les Châteaux Médiévaux Sans Mourir de Froid?",
+          "views": 10949,
+          "date": "2025-12-02T17:01:05Z",
+          "duration": 8801,
+          "url": "https://www.youtube.com/watch?v=bD6xW8bV86E",
+          "thumbnail": "https://i.ytimg.com/vi/bD6xW8bV86E/maxresdefault.jpg"
+        },
+        {
+          "title": "Que Faisaient Réellement Les Hommes des Cavernes Toute La Journée Pendant La Dernière Ère Glaciaire",
+          "views": 10390,
+          "date": "2025-10-15T16:00:21Z",
+          "duration": 11545,
+          "url": "https://www.youtube.com/watch?v=DZnxWtA60Hg",
+          "thumbnail": "https://i.ytimg.com/vi/DZnxWtA60Hg/maxresdefault.jpg"
+        },
+        {
+          "title": "Où Dormaient Les Prisonniers Dans Les Châteaux Médiévaux Pendant Les Hivers Glacials | Documentaire",
+          "views": 10395,
+          "date": "2025-12-10T17:00:48Z",
+          "duration": 8134,
+          "url": "https://www.youtube.com/watch?v=SRtGau-N74c",
+          "thumbnail": "https://i.ytimg.com/vi/SRtGau-N74c/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Soldats Médiévaux Survivaient-ils aux Nuits les Plus Froides dans les Châteaux ?",
+          "views": 9450,
+          "date": "2025-12-01T17:01:34Z",
+          "duration": 9441,
+          "url": "https://www.youtube.com/watch?v=psJPHw70gm4",
+          "thumbnail": "https://i.ytimg.com/vi/psJPHw70gm4/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment les Gens Dormaient-ils Pendant les Hivers Rigoureux dans le Vieil Ouest? | Documentaire",
+          "views": 8279,
+          "date": "2025-11-17T17:00:31Z",
+          "duration": 7491,
+          "url": "https://www.youtube.com/watch?v=C5NmIIhRr9U",
+          "thumbnail": "https://i.ytimg.com/vi/C5NmIIhRr9U/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Néandertaliens Dormaient Parfaitement Pendant L'ÈRE GLACIAIRE | Documentaire Pour Dormir",
+          "views": 8191,
+          "date": "2025-10-29T17:00:26Z",
+          "duration": 8842,
+          "url": "https://www.youtube.com/watch?v=9ym1MSXxnTY",
+          "thumbnail": "https://i.ytimg.com/vi/9ym1MSXxnTY/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Hommes des Cavernes Créaient Des Abris Temporaires Lors de Leurs Voyages | Documentaire",
+          "views": 8131,
+          "date": "2025-11-03T17:00:32Z",
+          "duration": 9932,
+          "url": "https://www.youtube.com/watch?v=ETDnUr8NuiY",
+          "thumbnail": "https://i.ytimg.com/vi/ETDnUr8NuiY/maxresdefault.jpg"
+        }
+      ],
+      "recent": [
+        {
+          "title": "SEULEMENT 1 230 Restants — Qu'est-ce Qui A Tué Presque Toute L'Humanité Il Y A 900 000 Ans?",
+          "views": 2786,
+          "date": "2026-01-07T17:01:32Z",
+          "duration": 8004,
+          "url": "https://www.youtube.com/watch?v=lm7tW0jrzrQ",
+          "thumbnail": "https://i.ytimg.com/vi/lm7tW0jrzrQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Pourquoi Les Humains Ne Se Sont-ils Pas Éteints Il Y A 10 Millions d'Années? | Documentaire",
+          "views": 1132,
+          "date": "2026-01-06T17:00:21Z",
+          "duration": 8382,
+          "url": "https://www.youtube.com/watch?v=ERhxJRHBQuc",
+          "thumbnail": "https://i.ytimg.com/vi/ERhxJRHBQuc/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Hommes des Cavernes Ont Survécu De Justesse à La Dernière Ère Glaciaire | Documentaire",
+          "views": 1918,
+          "date": "2026-01-05T17:00:00Z",
+          "duration": 7964,
+          "url": "https://www.youtube.com/watch?v=a6puPxpeaHI",
+          "thumbnail": "https://i.ytimg.com/vi/a6puPxpeaHI/maxresdefault.jpg"
+        },
+        {
+          "title": "Que Faisaient Réellement Les Humains Il Y A 200 000 Ans? | Documentaire Pour Dormir",
+          "views": 3075,
+          "date": "2026-01-04T17:00:41Z",
+          "duration": 7515,
+          "url": "https://www.youtube.com/watch?v=N0aRoXxsbVw",
+          "thumbnail": "https://i.ytimg.com/vi/N0aRoXxsbVw/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Vikings Ont Survécu Sur Les Drakkars En Hiver Sans Feu | Documentaire Pour Dormir",
+          "views": 1714,
+          "date": "2026-01-03T17:01:19Z",
+          "duration": 8691,
+          "url": "https://www.youtube.com/watch?v=nGrO-hGY6YM",
+          "thumbnail": "https://i.ytimg.com/vi/nGrO-hGY6YM/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Vikings Ont-ils Survécu En Hiver Sans Mourir de Froid? | Documentaire Pour Dormir",
+          "views": 2802,
+          "date": "2026-01-02T17:00:53Z",
+          "duration": 7749,
+          "url": "https://www.youtube.com/watch?v=S2rgSvM_DZQ",
+          "thumbnail": "https://i.ytimg.com/vi/S2rgSvM_DZQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Astuces et Méthodes Vikings Pour Réchauffer Un Village Entier En Hiver | Documentaire Pour Dormir",
+          "views": 2571,
+          "date": "2026-01-01T17:00:46Z",
+          "duration": 7227,
+          "url": "https://www.youtube.com/watch?v=QLq4ou8Q8o4",
+          "thumbnail": "https://i.ytimg.com/vi/QLq4ou8Q8o4/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Néandertaliens Ont Survécu Dans Les Grottes à -30°C (-22°F) de Froid | Documentaire",
+          "views": 2720,
+          "date": "2025-12-31T17:01:31Z",
+          "duration": 8995,
+          "url": "https://www.youtube.com/watch?v=hGxFvR5dhrE",
+          "thumbnail": "https://i.ytimg.com/vi/hGxFvR5dhrE/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Soldats Romains Dormaient Sous Tentes de Cuir et Manteaux de Laine Face Aux Hivers Gelés",
+          "views": 1691,
+          "date": "2025-12-30T17:00:27Z",
+          "duration": 7512,
+          "url": "https://www.youtube.com/watch?v=GJX9a3FYrjA",
+          "thumbnail": "https://i.ytimg.com/vi/GJX9a3FYrjA/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Paysans Médiévaux Dormaient Dans Des Bunkers Souterrains En Hiver | Documentaire",
+          "views": 3586,
+          "date": "2025-12-29T17:01:17Z",
+          "duration": 8853,
+          "url": "https://www.youtube.com/watch?v=oYE3OAjMWGc",
+          "thumbnail": "https://i.ytimg.com/vi/oYE3OAjMWGc/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Troupes de La Seconde Guerre Mondiale Ont-elles Survécu à L'Hiver Sans Bon Équipement?",
+          "views": 1145,
+          "date": "2025-12-28T17:00:54Z",
+          "duration": 7682,
+          "url": "https://www.youtube.com/watch?v=YOZAQW0XmXM",
+          "thumbnail": "https://i.ytimg.com/vi/YOZAQW0XmXM/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment Les Pirates Dormaient Sur Les Navires Pendant Les Hivers Glacials Sans Feu | Documentaire",
+          "views": 2778,
+          "date": "2025-12-27T17:00:31Z",
+          "duration": 9072,
+          "url": "https://www.youtube.com/watch?v=DFTFuQolN4U",
+          "thumbnail": "https://i.ytimg.com/vi/DFTFuQolN4U/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "key": "contes",
+      "profile": {
+        "title": "Contes d’Histoire Ennuyeux",
+        "channel_id": "UCHsG86HjCCkklpE8f8bhf7g",
+        "subscribers": 2990,
+        "video_count": 53,
+        "joined": "2025-05-24T16:56:21.509998+00:00"
+      },
+      "popular": [
+        {
+          "title": "(sans pub) Le mystère des civilisations que la Terre a pu effacer | Documentaire pour dormir",
+          "views": 50382,
+          "date": "2025-12-14T20:00:15Z",
+          "duration": 10772,
+          "url": "https://www.youtube.com/watch?v=IlIWTAqtlss",
+          "thumbnail": "https://i.ytimg.com/vi/IlIWTAqtlss/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub)Le vide temporel préhistorique que la science ne peut expliquer | Documentaire pour dormir",
+          "views": 10512,
+          "date": "2025-12-19T20:00:29Z",
+          "duration": 9188,
+          "url": "https://www.youtube.com/watch?v=MkI8m4VihMs",
+          "thumbnail": "https://i.ytimg.com/vi/MkI8m4VihMs/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) La vraie puissance des Néandertaliens révélée | Documentaire pour dormir",
+          "views": 9360,
+          "date": "2025-11-30T20:00:00Z",
+          "duration": 7209,
+          "url": "https://www.youtube.com/watch?v=-HPfpw1K_F4",
+          "thumbnail": "https://i.ytimg.com/vi/-HPfpw1K_F4/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Pourquoi l’humanité est née en Afrique | Documentaire pour dormir",
+          "views": 8820,
+          "date": "2025-12-05T20:00:17Z",
+          "duration": 7213,
+          "url": "https://www.youtube.com/watch?v=A0C0BiC2rx8",
+          "thumbnail": "https://i.ytimg.com/vi/A0C0BiC2rx8/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment l’humanité a survécu à l’ère glaciaire | Documentaire pour dormir",
+          "views": 8817,
+          "date": "2025-12-24T20:00:19Z",
+          "duration": 9888,
+          "url": "https://www.youtube.com/watch?v=Ay3zM-7D6Fs",
+          "thumbnail": "https://i.ytimg.com/vi/Ay3zM-7D6Fs/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment vivaient vraiment nos ancêtres chasseurs-cueilleurs | Documentaire pour dormir",
+          "views": 8156,
+          "date": "2026-01-01T20:00:04Z",
+          "duration": 8473,
+          "url": "https://www.youtube.com/watch?v=3agMTrEPdV0",
+          "thumbnail": "https://i.ytimg.com/vi/3agMTrEPdV0/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment des humains préhistoriques ont conquis les océans | Documentaire pour dormir",
+          "views": 8107,
+          "date": "2026-01-03T20:00:02Z",
+          "duration": 10238,
+          "url": "https://www.youtube.com/watch?v=3cloSg4xS4s",
+          "thumbnail": "https://i.ytimg.com/vi/3cloSg4xS4s/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Les siècles perdus de l’humanité et les civilisations oubliées | Documentaire pour dormir",
+          "views": 6836,
+          "date": "2025-12-22T20:00:55Z",
+          "duration": 10424,
+          "url": "https://www.youtube.com/watch?v=yYkqRQJcRBo",
+          "thumbnail": "https://i.ytimg.com/vi/yYkqRQJcRBo/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment les Néandertaliens ont survécu à l’Ère Glaciaire | Documentaire pour dormir",
+          "views": 5913,
+          "date": "2025-12-07T20:00:02Z",
+          "duration": 9772,
+          "url": "https://www.youtube.com/watch?v=306nGBmyjwM",
+          "thumbnail": "https://i.ytimg.com/vi/306nGBmyjwM/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Le supervolcan qui a presque causé l’extinction humaine | Documentaire pour dormir",
+          "views": 5480,
+          "date": "2025-12-26T20:00:29Z",
+          "duration": 9702,
+          "url": "https://www.youtube.com/watch?v=mMh-IeiaiT0",
+          "thumbnail": "https://i.ytimg.com/vi/mMh-IeiaiT0/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) La naissance des dinosaures l’histoire que personne ne raconte | Documentaire pour dormir",
+          "views": 5280,
+          "date": "2025-12-13T20:00:14Z",
+          "duration": 7330,
+          "url": "https://www.youtube.com/watch?v=IYfPnPOPeOs",
+          "thumbnail": "https://i.ytimg.com/vi/IYfPnPOPeOs/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment les premiers humains sont vraiment apparus | Documentaire pour dormir",
+          "views": 4991,
+          "date": "2025-12-11T20:00:32Z",
+          "duration": 7385,
+          "url": "https://www.youtube.com/watch?v=KWFUxXuDL9Y",
+          "thumbnail": "https://i.ytimg.com/vi/KWFUxXuDL9Y/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) La catastrophe préhistorique qui a effacé presque toute la vie | Documentaire pour dormir",
+          "views": 4916,
+          "date": "2025-12-31T20:00:48Z",
+          "duration": 11137,
+          "url": "https://www.youtube.com/watch?v=l3bKxOUzjOE",
+          "thumbnail": "https://i.ytimg.com/vi/l3bKxOUzjOE/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub)Que s’est-il vraiment passé à Çatalhöyük, la ville impossible ? | Documentaire pour dormir",
+          "views": 4841,
+          "date": "2026-01-08T20:00:28Z",
+          "duration": 10995,
+          "url": "https://www.youtube.com/watch?v=Vr3D5R0vJd4",
+          "thumbnail": "https://i.ytimg.com/vi/Vr3D5R0vJd4/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) La dernière nuit des dinosaures, avant la fin du monde | Documentaire pour dormir",
+          "views": 4779,
+          "date": "2025-12-17T20:00:19Z",
+          "duration": 11869,
+          "url": "https://www.youtube.com/watch?v=MC3NhJ0HnoU",
+          "thumbnail": "https://i.ytimg.com/vi/MC3NhJ0HnoU/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment l’humanité a survécu à quatre apocalypses | Documentaire pour dormir",
+          "views": 4742,
+          "date": "2025-12-10T20:00:41Z",
+          "duration": 7201,
+          "url": "https://www.youtube.com/watch?v=fHNHgjWN2vk",
+          "thumbnail": "https://i.ytimg.com/vi/fHNHgjWN2vk/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Le Grand Déluge qui a Englouti le Monde il y a 12 000 Ans | Documentaire pour dormir",
+          "views": 4424,
+          "date": "2026-01-05T20:00:20Z",
+          "duration": 10076,
+          "url": "https://www.youtube.com/watch?v=Kttza6TUT0I",
+          "thumbnail": "https://i.ytimg.com/vi/Kttza6TUT0I/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment vivaient vraiment nos ancêtres préhistoriques | Documentaire pour dormir",
+          "views": 4387,
+          "date": "2025-12-01T20:00:11Z",
+          "duration": 7209,
+          "url": "https://www.youtube.com/watch?v=7HOnL_T-JPo",
+          "thumbnail": "https://i.ytimg.com/vi/7HOnL_T-JPo/maxresdefault.jpg"
+        }
+      ],
+      "recent": [
+        {
+          "title": "(sans pub)Le grand déluge du golfe Persique : une civilisation oubliée sous l’eau | Docu pour dormir",
+          "views": 1419,
+          "date": "2026-04-02T20:00:01Z",
+          "duration": 9453,
+          "url": "https://www.youtube.com/watch?v=0UIyHirhQKQ",
+          "thumbnail": "https://i.ytimg.com/vi/0UIyHirhQKQ/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment des couches de terre ont-elles recouvert des villes entières ? | Docu pour dormir",
+          "views": 2461,
+          "date": "2026-03-21T20:00:24Z",
+          "duration": 8663,
+          "url": "https://www.youtube.com/watch?v=PnqqBI14ZJU",
+          "thumbnail": "https://i.ytimg.com/vi/PnqqBI14ZJU/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) À quoi ressemblait l’enfance durant l’âge glaciaire ? | Docu pour dormir",
+          "views": 2699,
+          "date": "2026-03-17T20:00:36Z",
+          "duration": 10480,
+          "url": "https://www.youtube.com/watch?v=gFt8OVDHRPY",
+          "thumbnail": "https://i.ytimg.com/vi/gFt8OVDHRPY/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment le langage est-il né chez les humains préhistoriques ? | Docu pour dormir",
+          "views": 2459,
+          "date": "2026-03-15T20:00:40Z",
+          "duration": 9902,
+          "url": "https://www.youtube.com/watch?v=oQKQilK_W9w",
+          "thumbnail": "https://i.ytimg.com/vi/oQKQilK_W9w/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub)Comment les inondations côtières ont anéanti des civilisations anciennes il y a 11 600 ans",
+          "views": 1826,
+          "date": "2026-01-09T10:00:23Z",
+          "duration": 11316,
+          "url": "https://www.youtube.com/watch?v=HK_0ykTjzyY",
+          "thumbnail": "https://i.ytimg.com/vi/HK_0ykTjzyY/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub)Que s’est-il vraiment passé à Çatalhöyük, la ville impossible ? | Documentaire pour dormir",
+          "views": 4841,
+          "date": "2026-01-08T20:00:28Z",
+          "duration": 10995,
+          "url": "https://www.youtube.com/watch?v=Vr3D5R0vJd4",
+          "thumbnail": "https://i.ytimg.com/vi/Vr3D5R0vJd4/maxresdefault.jpg"
+        },
+        {
+          "title": "sans pub) Comment le langage est-il né dans le cerveau humain ? | Documentaire pour dormir",
+          "views": 3360,
+          "date": "2026-01-07T20:00:53Z",
+          "duration": 9930,
+          "url": "https://www.youtube.com/watch?v=r-DTSbLHpDU",
+          "thumbnail": "https://i.ytimg.com/vi/r-DTSbLHpDU/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Quand l’évolution humaine s’est figée il y a 100 000 ans | Documentaire pour dormir",
+          "views": 2003,
+          "date": "2026-01-06T20:00:19Z",
+          "duration": 9402,
+          "url": "https://www.youtube.com/watch?v=PHEM9qeBjcw",
+          "thumbnail": "https://i.ytimg.com/vi/PHEM9qeBjcw/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Le Grand Déluge qui a Englouti le Monde il y a 12 000 Ans | Documentaire pour dormir",
+          "views": 4424,
+          "date": "2026-01-05T20:00:20Z",
+          "duration": 10076,
+          "url": "https://www.youtube.com/watch?v=Kttza6TUT0I",
+          "thumbnail": "https://i.ytimg.com/vi/Kttza6TUT0I/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Le déluge qui a englouti le monde il y a 11 600 ans | Documentaire pour dormir",
+          "views": 2699,
+          "date": "2026-01-04T20:00:27Z",
+          "duration": 9461,
+          "url": "https://www.youtube.com/watch?v=fS9uMiFCkJc",
+          "thumbnail": "https://i.ytimg.com/vi/fS9uMiFCkJc/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Comment des humains préhistoriques ont conquis les océans | Documentaire pour dormir",
+          "views": 8108,
+          "date": "2026-01-03T20:00:02Z",
+          "duration": 10238,
+          "url": "https://www.youtube.com/watch?v=3cloSg4xS4s",
+          "thumbnail": "https://i.ytimg.com/vi/3cloSg4xS4s/maxresdefault.jpg"
+        },
+        {
+          "title": "(sans pub) Il y a 252 millions d’années, 90 % des espèces ont disparu | Documentaire pour dormir",
+          "views": 2412,
+          "date": "2026-01-02T20:00:18Z",
+          "duration": 9215,
+          "url": "https://www.youtube.com/watch?v=Vq5wBgh2j4o",
+          "thumbnail": "https://i.ytimg.com/vi/Vq5wBgh2j4o/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "key": "monde",
+      "profile": {
+        "title": "Monde Préhistorique",
+        "channel_id": "UCnOXp82yui67yXtlH1PvkRQ",
+        "subscribers": 53,
+        "video_count": 4,
+        "joined": "2009-01-28T21:47:21+00:00"
+      },
+      "popular": [
+        {
+          "title": "4+ HEURES de Faits Surprenants sur les Dinosaures Préhistoriques | Documentaire Pour Dormir",
+          "views": 2200,
+          "date": "2025-10-08T12:01:37Z",
+          "duration": 15942,
+          "url": "https://www.youtube.com/watch?v=pCUnT0uDs2c",
+          "thumbnail": "https://i.ytimg.com/vi/pCUnT0uDs2c/maxresdefault.jpg"
+        },
+        {
+          "title": "À Quoi Ressemblait la Terre à l’Époque de la Pangée ? | Documentaire Pour Dormir",
+          "views": 1377,
+          "date": "2025-10-07T12:00:18Z",
+          "duration": 18561,
+          "url": "https://www.youtube.com/watch?v=8SYXPLrJ-OQ",
+          "thumbnail": "https://i.ytimg.com/vi/8SYXPLrJ-OQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Que s’est-il Réellement Passé APRÈS l’Extinction des Dinosaures ? | Documentaire Pour Dormir",
+          "views": 819,
+          "date": "2025-10-10T15:00:34Z",
+          "duration": 22710,
+          "url": "https://www.youtube.com/watch?v=GcRyLqAD84o",
+          "thumbnail": "https://i.ytimg.com/vi/GcRyLqAD84o/maxresdefault.jpg"
+        },
+        {
+          "title": "Warum War Die Erde SCHRECKEN ERREGEND VOR Den DINOSAURIERN? | Documentaire Pour Le Sommeil",
+          "views": 93,
+          "date": "2025-10-06T12:00:20Z",
+          "duration": 13806,
+          "url": "https://www.youtube.com/watch?v=ER_pEfnFL-g",
+          "thumbnail": "https://i.ytimg.com/vi/ER_pEfnFL-g/maxresdefault.jpg"
+        }
+      ],
+      "recent": [
+        {
+          "title": "Que s’est-il Réellement Passé APRÈS l’Extinction des Dinosaures ? | Documentaire Pour Dormir",
+          "views": 819,
+          "date": "2025-10-10T15:00:34Z",
+          "duration": 22710,
+          "url": "https://www.youtube.com/watch?v=GcRyLqAD84o",
+          "thumbnail": "https://i.ytimg.com/vi/GcRyLqAD84o/maxresdefault.jpg"
+        },
+        {
+          "title": "4+ HEURES de Faits Surprenants sur les Dinosaures Préhistoriques | Documentaire Pour Dormir",
+          "views": 2200,
+          "date": "2025-10-08T12:01:37Z",
+          "duration": 15942,
+          "url": "https://www.youtube.com/watch?v=pCUnT0uDs2c",
+          "thumbnail": "https://i.ytimg.com/vi/pCUnT0uDs2c/maxresdefault.jpg"
+        },
+        {
+          "title": "À Quoi Ressemblait la Terre à l’Époque de la Pangée ? | Documentaire Pour Dormir",
+          "views": 1377,
+          "date": "2025-10-07T12:00:18Z",
+          "duration": 18561,
+          "url": "https://www.youtube.com/watch?v=8SYXPLrJ-OQ",
+          "thumbnail": "https://i.ytimg.com/vi/8SYXPLrJ-OQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Warum War Die Erde SCHRECKEN ERREGEND VOR Den DINOSAURIERN? | Documentaire Pour Le Sommeil",
+          "views": 93,
+          "date": "2025-10-06T12:00:20Z",
+          "duration": 13806,
+          "url": "https://www.youtube.com/watch?v=ER_pEfnFL-g",
+          "thumbnail": "https://i.ytimg.com/vi/ER_pEfnFL-g/maxresdefault.jpg"
+        }
+      ]
+    }
+  ],
+  "searches": [
+    {
+      "query": "orbinea_fresh",
+      "data": {
+        "count": 15,
+        "estimated_results": 30,
+        "has_more": true,
+        "limit": 15,
+        "query": "Orbinéa préhistoire Terre",
+        "results": [
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 11906,
+            "published_text": "3 weeks ago",
+            "title": "Les créatures géantes qui régnaient sur la Terre avant nous - Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "qavrAskGB3Q",
+            "view_count": 23692,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 11275,
+            "published_text": "4 months ago",
+            "title": "Les Espèces qui dominaient la Terre avant l'humanité -  Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "jMc_DLXG3nU",
+            "view_count": 36474,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 9632,
+            "published_text": "10 months ago",
+            "title": "Voici à quoi ressemblait la Terre à l’âge des mégafaunes ! Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "CppX6tuvk3Y",
+            "view_count": 9535,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 12060,
+            "published_text": "4 months ago",
+            "title": "Les périodes les plus dangereuses de l’histoire de la planète - Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "3CS7DzaalQQ",
+            "view_count": 36428,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 5406,
+            "published_text": "3 months ago",
+            "title": "The Lost Worlds of Prehistory: Discoveries No One Talks About! - SPACE DOCUMENTARY",
+            "type": "video",
+            "video_id": "Ssg0-pXhGvY",
+            "view_count": 4436,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 10446,
+            "published_text": "4 months ago",
+            "title": "Les océans préhistoriques remplis de monstres étranges et inconnus ... Documentaire Histoire",
+            "type": "video",
+            "video_id": "YbkBjbJw88g",
+            "view_count": 16157,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 11028,
+            "published_text": "2 weeks ago",
+            "title": "Elle a dominé la Terre pendant 3 milliards d'années… mais personne n'en parle - Documentaire",
+            "type": "video",
+            "video_id": "aStre3-8w-E",
+            "view_count": 18388,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 8275,
+            "published_text": "11 months ago",
+            "title": "Avant les Dinosaures : L'Ère Oubliée des Champignons Géants ! Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "rObs1DXSn9w",
+            "view_count": 20011,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 5679,
+            "published_text": "3 months ago",
+            "title": "Quand les océans étaient plus dangereux que l’espace - Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "YtZ4n8cSQfI",
+            "view_count": 4982,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 10858,
+            "published_text": "10 months ago",
+            "title": "Avant les dinosaures : les secrets perdus des trilobites ! Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "_Z87JDbsTk4",
+            "view_count": 7078,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 11058,
+            "published_text": "1 month ago",
+            "title": "L’Explosion cambrienne — en 20 millions d’années, la vie a tout inventé - Documentaire Histoire",
+            "type": "video",
+            "video_id": "Jar2H_V5f1o",
+            "view_count": 10704,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 10089,
+            "published_text": "10 months ago",
+            "title": "Le Monde ALIEN Qui Existait Avant l'Édiacarien et le Cambrien ! Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "vMa9BriR650",
+            "view_count": 6107,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCQ9js5KiBCszH1zyX_NpCrw",
+            "channel_name": "DinoDécouverte",
+            "description_snippet": null,
+            "duration_seconds": 6479,
+            "published_text": "11 months ago",
+            "title": "La Terre préhistorique : à quoi elle ressemblait de 500 à 66 millions d’années",
+            "type": "video",
+            "video_id": "hYOevsfobSE",
+            "view_count": 545,
+            "channel_handle": "@dinodecouverte"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 10272,
+            "published_text": "11 months ago",
+            "title": "Les méga-tsunamis qui ont changé la planète à jamais ! -  Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "llzAwzI5dmU",
+            "view_count": 19224,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCQ9js5KiBCszH1zyX_NpCrw",
+            "channel_name": "DinoDécouverte",
+            "description_snippet": null,
+            "duration_seconds": 7428,
+            "published_text": "10 months ago",
+            "title": "Prédateurs du Trias: l’aube des dinosaures | Documentaire pour s'endormir",
+            "type": "video",
+            "video_id": "CunfLprztxE",
+            "view_count": 886,
+            "channel_handle": "@dinodecouverte"
+          }
+        ]
+      }
+    },
+    {
+      "query": "ocean_fr",
+      "data": {
+        "count": 12,
+        "estimated_results": 517,
+        "has_more": true,
+        "limit": 12,
+        "query": "océans préhistoriques documentaire pour dormir",
+        "results": [
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 9206,
+            "published_text": "1 year ago",
+            "title": "Un INCROYABLE Voyage vers les MERS Préhistoriques de la Terre | Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "nHrPan2dgiY",
+            "view_count": 138222,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCHsG86HjCCkklpE8f8bhf7g",
+            "channel_name": "Contes d’Histoire Ennuyeux",
+            "description_snippet": null,
+            "duration_seconds": 10238,
+            "published_text": "9 months ago",
+            "title": "(sans pub) Comment des humains préhistoriques ont conquis les océans | Documentaire pour dormir",
+            "type": "video",
+            "video_id": "3cloSg4xS4s",
+            "view_count": 8108,
+            "channel_handle": "@ContesdHistoireEnnuyeux"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 4509,
+            "published_text": "3 years ago",
+            "title": "Un INCROYABLE Voyage vers les Océans Préhistoriques de la Terre | Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "KedDeiLcYvA",
+            "view_count": 365058,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCwjT3zid_28tzp1VfLq2JYQ",
+            "channel_name": "Monde mystérieux",
+            "description_snippet": null,
+            "duration_seconds": 10252,
+            "published_text": "8 months ago",
+            "title": "Océans Oubliés de la Terre Préhistorique | Documentaire pour Dormir",
+            "type": "video",
+            "video_id": "QafOwzbu_NQ",
+            "view_count": 212,
+            "channel_handle": "@Mondemyst%C3%A9rieux-p5n"
+          },
+          {
+            "channel_id": "UCXV7LUI7G1MaKRN18yQ5y7Q",
+            "channel_name": "ARTE Évasion",
+            "description_snippet": null,
+            "duration_seconds": 2605,
+            "published_text": "2 years ago",
+            "title": "L'odyssée des baleines à bosse | ARTE Évasion",
+            "type": "video",
+            "video_id": "a4b3W28XRxw",
+            "view_count": 1431283,
+            "channel_handle": "@arte%C3%A9vasion"
+          },
+          {
+            "channel_id": "UCwI-JbGNsojunnHbFAc0M4Q",
+            "channel_name": "ARTE",
+            "description_snippet": null,
+            "duration_seconds": 2619,
+            "published_text": "1 year ago",
+            "title": "Les épaves, des oasis pour la nature | Documentaire | ARTE",
+            "type": "video",
+            "video_id": "UKDJ3QaVRvM",
+            "view_count": 745213,
+            "channel_handle": "@arte"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 5679,
+            "published_text": "3 months ago",
+            "title": "Quand les océans étaient plus dangereux que l’espace - Documentaire Histoire de la Terre",
+            "type": "video",
+            "video_id": "YtZ4n8cSQfI",
+            "view_count": 4982,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCJ9tHJbCa8ZoMbapfJLy0ZQ",
+            "channel_name": "imineo Documentaires",
+            "description_snippet": null,
+            "duration_seconds": 3116,
+            "published_text": "3 years ago",
+            "title": "Les Mondes Perdus : l'Aube des Mammifères | Documentaire",
+            "type": "video",
+            "video_id": "-q3jxEqhUGA",
+            "view_count": 11946176,
+            "channel_handle": "@imineoDocumentaires"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 10446,
+            "published_text": "4 months ago",
+            "title": "Les océans préhistoriques remplis de monstres étranges et inconnus ... Documentaire Histoire",
+            "type": "video",
+            "video_id": "YbkBjbJw88g",
+            "view_count": 16155,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 12682,
+            "published_text": "1 year ago",
+            "title": "3 heures de Faits Préhistoriques pour S'endormir Rapidement : Un INCROYABLE Voyage dans le Passé !",
+            "type": "video",
+            "video_id": "rM2KCCCwOGI",
+            "view_count": 314702,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 9135,
+            "published_text": "1 year ago",
+            "title": "Au Cœur des Abysses: Découvre les Créatures les Plus Étranges de notre Planète | DOCUMENTAIRE",
+            "type": "video",
+            "video_id": "fW4Tuk1uaxI",
+            "view_count": 399357,
+            "channel_handle": "@orbinea"
+          },
+          {
+            "channel_id": "UCkD13z3Ovpgl6fvezRUMbFA",
+            "channel_name": "Orbinéa | Le Monde des Odyssées",
+            "description_snippet": null,
+            "duration_seconds": 16287,
+            "published_text": "2 years ago",
+            "title": "4 heures de Faits Préhistoriques pour S'endormir Rapidement : Un INCROYABLE voyage dans le Passé !",
+            "type": "video",
+            "video_id": "UWZ1GzRp6HQ",
+            "view_count": 67112,
+            "channel_handle": "@orbinea"
+          }
+        ]
+      }
+    },
+    {
+      "query": "pangee_fr",
+      "data": {
+        "count": 0,
+        "estimated_results": null,
+        "has_more": false,
+        "limit": 10,
+        "query": "Pangée documentaire pour dormir",
+        "results": []
+      }
+    }
+  ],
+  "outliers": [
+    {
+      "title": "500 Million Years Ago: The World No One Would Have Wanted to Live In",
+      "id": "ajMtZHKhJ78",
+      "views": "148000",
+      "score": "3.9x"
+    },
+    {
+      "title": "380 Million Years Ago: Trees Almost Destroyed Life on Earth",
+      "id": "jI0RRjeuwLY",
+      "views": "130000",
+      "score": "3.4x"
+    },
+    {
+      "title": "Voyage au Paléozoïque : Le Monde que Personne ne Voudrait Habiter | Documentaire Pour Dormir (+3H)",
+      "id": "dEwcME6fEBI",
+      "views": "73000",
+      "score": "1.9x"
+    },
+    {
+      "title": "The RAIN That Destroyed the Planet and Paved the Way for the Dinosaurs",
+      "id": "5C8idbQYhyQ",
+      "views": "69000",
+      "score": "1.8x"
+    },
+    {
+      "title": "VIDEO 2 FRENCH 001 SUB",
+      "id": "TZjLQ6O9VQ4",
+      "views": "58000",
+      "score": "1.5x"
+    }
+  ]
+}
