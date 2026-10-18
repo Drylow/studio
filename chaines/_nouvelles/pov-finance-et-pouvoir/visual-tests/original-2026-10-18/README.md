@@ -14,4 +14,7 @@ Inspection : acteur reconnaissable et tenue preservee sur ces trois images. Le r
 
 ## Validation utilisateur
 
-Les trois scenes sont approuvees le 18 octobre 2026 et deviennent la reference de dessin des videos pour les deux nouvelles chaines. Les ecarts observes ci-dessus restent documentes ; une approbation artistique ne prouve pas une conformite parfaite au prompt ou une coherence de long metrage. Aucune nouvelle generation ou publication lancee lors de cet enregistrement.
+Les trois scenes sont approuvees le 18 octobre 2026 et deviennent la reference de dessin des videos UNIQUEMENT pour The Wealthy Nobody. Les ecarts observes ci-dessus restent documentes ; une approbation artistique ne prouve pas une conformite parfaite au prompt ou une coherence de long metrage. Aucune nouvelle generation ou publication lancee lors de cet enregistrement.
+
+
+Correction de portee : ces scenes ne valident pas le dessin video d’Oddly Important Guy. Cette deuxieme chaine recevra ses propres essais.

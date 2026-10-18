@@ -172,3 +172,11 @@ Lire [VISUAL-STYLE.md](VISUAL-STYLE.md). Un personnage en pied et trois scenes s
 Apres confirmation que les trois appels ont ete envoyes au generateur image du CLI configure, l’utilisateur valide les trois scenes bureau, cuisine et exterieur et demande de conserver cette direction pour les videos des DEUX nouvelles chaines. Ces sorties sont desormais des references de dessin approuvees, en plus des deux photos de profil. Elles remplacent les propositions de style video des concurrents, qui restent rejetees.
 
 Les recus de requete, modeles demandes, entrees et controle du routage serveur sont conserves en prive. Ne pas confondre l’image de style d’origine issue du comparatif precedent avec le fournisseur utilise pour generer ces trois nouvelles scenes. Cette validation ne lance pas de scripts, voix, lot d’images, films ou publications. La fiche du corps entier reste une reference de travail derivee ; ne pas inventer une approbation individuelle de cette fiche.
+
+
+## Correction de portee du style valide — 18 octobre 2026
+
+Correction explicite utilisateur : les trois scenes bureau/cuisine/exterieur et leur style video sont approuves **UNIQUEMENT pour The Wealthy Nobody**. La phrase precedente qui etendait cette validation aux deux chaines est remplacee par cette decision. Les deux photos de profil restent approuvees. La deuxieme chaine, Oddly Important Guy, demande maintenant ses propres exemples ; ceux-ci seront des propositions, pas un style video deja approuve.
+
+
+[Proposition de style video pour Oddly Important Guy](ODDLY-IMPORTANT-VISUAL-PROPOSAL.md) : nouvelle mascotte en costume bleu/cravate rouge, trois scenes milliardaire/casino/yacht, generees et inspectees. Elles attendent le jugement de l’utilisateur et ne changent pas la validation reservee a The Wealthy Nobody.

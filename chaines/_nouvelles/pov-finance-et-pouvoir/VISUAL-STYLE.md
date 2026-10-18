@@ -1,10 +1,10 @@
-# Dessin original des deux nouvelles chaines POV
+# Dessin video approuve — The Wealthy Nobody
 
-**Statut : direction de dessin et trois scenes bureau/cuisine/exterieur approuvees par l’utilisateur le 18 octobre 2026, apres verification des appels du CLI configure. Les deux photos de profil restent approuvees.**
+**Statut corrige : direction de dessin et trois scenes bureau/cuisine/exterieur approuvees UNIQUEMENT pour The Wealthy Nobody. Le style video d’Oddly Important Guy reste a proposer et a faire juger. Les deux photos de profil restent approuvees.**
 
 Decision utilisateur du 18 octobre 2026 : abandonner les trois styles de contenu des chaines de reference. Construire notre propre style a partir de [la miniature approuvee](style-approuve.jpg).
 
-## Dessin commun
+## Dessin de The Wealthy Nobody
 
 - Grandes tetes rondes blanches, expressions franches et lisibles, sourcils noirs simples, contours noirs nets.
 - Visages, cous et mains blancs ; mains simples, sans anatomie realiste. Corps adultes compacts, entierement habilles ; ni stickmen ni silhouettes allongees.
