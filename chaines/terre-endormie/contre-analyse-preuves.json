@@ -1,0 +1,627 @@
+{
+  "observed": "2026-10-18",
+  "channels": [
+    {
+      "name": "temps",
+      "about": {
+        "title": "Le Temps Profond",
+        "id": "UCeuz7mzX00LG9S12ZqqmgZw",
+        "subscribers": 123,
+        "video_count": 73,
+        "joined": "2020-08-10T02:49:44.754009+00:00"
+      },
+      "recent": [
+        {
+          "title": "Le Supercontinent Pangée : Quel Aspect Avait la Terre 335 Millions d’Années Plus Tôt ? [4K]",
+          "url": "https://www.youtube.com/watch?v=MKSaoByJlLo",
+          "date": "2026-10-18T16:30:34Z",
+          "views": 3,
+          "duration": 10329,
+          "thumbnail": "https://i.ytimg.com/vi/MKSaoByJlLo/maxresdefault.jpg"
+        },
+        {
+          "title": "L’Ère des Insectes Géants : Comment Était la Terre il y a 320 Millions d’Années ? | Doc. 4K",
+          "url": "https://www.youtube.com/watch?v=dT2qUeb8YH8",
+          "date": "2026-10-17T16:30:13Z",
+          "views": 213,
+          "duration": 10440,
+          "thumbnail": "https://i.ytimg.com/vi/dT2qUeb8YH8/maxresdefault.jpg"
+        },
+        {
+          "title": "L’Histoire Complète du Jurassique | Comment Vivaient les Dinosaures ? | Docu Préhistorique [4K]",
+          "url": "https://www.youtube.com/watch?v=VIM6TXaPCp8",
+          "date": "2026-10-16T16:30:16Z",
+          "views": 1414,
+          "duration": 10250,
+          "thumbnail": "https://i.ytimg.com/vi/VIM6TXaPCp8/maxresdefault.jpg"
+        },
+        {
+          "title": "L’Histoire Intégrale des Mers Préhistoriques | Documentaire sur les Océans Anciens [4K]",
+          "url": "https://www.youtube.com/watch?v=5vTEczfytgw",
+          "date": "2026-10-15T16:30:39Z",
+          "views": 488,
+          "duration": 10657,
+          "thumbnail": "https://i.ytimg.com/vi/5vTEczfytgw/maxresdefault.jpg"
+        },
+        {
+          "title": "Mégalodon : Le Requin Préhistorique Qui Régnait sur les Mers | Documentaire Intégral [4K]",
+          "url": "https://www.youtube.com/watch?v=7XZa1sDbrTo",
+          "date": "2026-10-14T16:30:20Z",
+          "views": 651,
+          "duration": 11493,
+          "thumbnail": "https://i.ytimg.com/vi/7XZa1sDbrTo/maxresdefault.jpg"
+        },
+        {
+          "title": "Le Récit Intégral du Tyrannosaurus Rex (selon Nos Connaissances) | Documentaire Préhistorique [4K]",
+          "url": "https://www.youtube.com/watch?v=f_Fq2Mswif0",
+          "date": "2026-10-13T16:30:39Z",
+          "views": 1587,
+          "duration": 10398,
+          "thumbnail": "https://i.ytimg.com/vi/f_Fq2Mswif0/maxresdefault.jpg"
+        },
+        {
+          "title": "Et si l’Ère Préhistorique ne s’Achevait Jamais | Documentaire sur la Préhistoire pour Dormir [4K]",
+          "url": "https://www.youtube.com/watch?v=8OxcTY7hglY",
+          "date": "2026-10-12T16:30:35Z",
+          "views": 798,
+          "duration": 10496,
+          "thumbnail": "https://i.ytimg.com/vi/8OxcTY7hglY/maxresdefault.jpg"
+        },
+        {
+          "title": "L’Intégralité de la Période Carbonifère (Comme Nous la Connaissons) | Docu Préhistorique [4K]",
+          "url": "https://www.youtube.com/watch?v=wHkM0zYZqIE",
+          "date": "2026-10-11T16:30:09Z",
+          "views": 1322,
+          "duration": 10507,
+          "thumbnail": "https://i.ytimg.com/vi/wHkM0zYZqIE/maxresdefault.jpg"
+        },
+        {
+          "title": "Le Permien dans Toute son Ampleur (Tel qu’on le Connaît) | Documentaire Préhistorique [4K]",
+          "url": "https://www.youtube.com/watch?v=IjZF9s8AUig",
+          "date": "2026-10-10T16:30:09Z",
+          "views": 3715,
+          "duration": 10276,
+          "thumbnail": "https://i.ytimg.com/vi/IjZF9s8AUig/maxresdefault.jpg"
+        },
+        {
+          "title": "Titanoboa : Le Prédateur Éteint Qui Dominait la Terre | Documentaire Préhistorique",
+          "url": "https://www.youtube.com/watch?v=21p3VjrK_nA",
+          "date": "2026-10-09T16:30:13Z",
+          "views": 826,
+          "duration": 10486,
+          "thumbnail": "https://i.ytimg.com/vi/21p3VjrK_nA/maxresdefault.jpg"
+        },
+        {
+          "title": "L’Évolution Complète des Dinosaures (Selon les Connaissances Actuelles) | Documentaire Préhistorique",
+          "url": "https://www.youtube.com/watch?v=jIo_N1f3GAI",
+          "date": "2026-10-08T16:30:28Z",
+          "views": 1238,
+          "duration": 10571,
+          "thumbnail": "https://i.ytimg.com/vi/jIo_N1f3GAI/maxresdefault.jpg"
+        },
+        {
+          "title": "Le Dévonien au Complet (Tel que Nous le Connaissons) | Documentaire sur la Terre Préhistorique",
+          "url": "https://www.youtube.com/watch?v=Cg76QXVLwCQ",
+          "date": "2026-10-07T16:30:12Z",
+          "views": 351,
+          "duration": 10664,
+          "thumbnail": "https://i.ytimg.com/vi/Cg76QXVLwCQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Dinosaures les Plus Colossaux Jamais Connus (à notre Connaissance) | Docu Préhistorique",
+          "url": "https://www.youtube.com/watch?v=fD9IYRqyiXU",
+          "date": "2026-10-06T16:30:19Z",
+          "views": 2426,
+          "duration": 10154,
+          "thumbnail": "https://i.ytimg.com/vi/fD9IYRqyiXU/maxresdefault.jpg"
+        },
+        {
+          "title": "Spinosaurus : Le Dinosaure le Plus Redoutable de l’Ère Préhistorique | Documentaire Intégral",
+          "url": "https://www.youtube.com/watch?v=kJFtDVjTQSs",
+          "date": "2026-10-05T16:30:22Z",
+          "views": 390,
+          "duration": 10401,
+          "thumbnail": "https://i.ytimg.com/vi/kJFtDVjTQSs/maxresdefault.jpg"
+        },
+        {
+          "title": "Spinosaurus : Le Dinosaure le Plus Redoutable de l'Ère Préhistorique | Documentaire Intégral",
+          "url": "https://www.youtube.com/watch?v=76plOZnW7pU",
+          "date": "2026-10-04T16:30:06Z",
+          "views": 130,
+          "duration": 7889,
+          "thumbnail": "https://i.ytimg.com/vi/76plOZnW7pU/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Plus Colossaux Dinosaures Ayant Jamais Vécu (Connus à Ce Jour) | Documentaire Préhistorique",
+          "url": "https://www.youtube.com/watch?v=prHyLcwleo4",
+          "date": "2026-10-03T16:30:37Z",
+          "views": 1030,
+          "duration": 7990,
+          "thumbnail": "https://i.ytimg.com/vi/prHyLcwleo4/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "name": "asterion",
+      "about": {
+        "title": "Asterion",
+        "id": "UCHWpF70Q3tDMjPUV-orx65Q",
+        "subscribers": 144,
+        "video_count": 35,
+        "joined": "2026-08-01T14:05:27.450121+00:00"
+      },
+      "recent": [
+        {
+          "title": "Le Carbonifère: quand des insectes géants dominaient la Terre [4K]",
+          "url": "https://www.youtube.com/watch?v=408_iFa8Af4",
+          "date": "2026-10-16T15:00:23Z",
+          "views": 450,
+          "duration": 7689,
+          "thumbnail": "https://i.ytimg.com/vi/408_iFa8Af4/maxresdefault.jpg"
+        },
+        {
+          "title": "Monde préhistorique: la Terre à l'époque des dinosaures – Documentaire [4K]",
+          "url": "https://www.youtube.com/watch?v=npd6jeHIecQ",
+          "date": "2026-10-14T19:30:22Z",
+          "views": 1223,
+          "duration": 8133,
+          "thumbnail": "https://i.ytimg.com/vi/npd6jeHIecQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Néandertaliens: comment les premiers hommes ont bâti les premiers villages [4K]",
+          "url": "https://www.youtube.com/watch?v=jF8YpB8AaHs",
+          "date": "2026-10-12T14:00:29Z",
+          "views": 634,
+          "duration": 8334,
+          "thumbnail": "https://i.ytimg.com/vi/jF8YpB8AaHs/maxresdefault.jpg"
+        },
+        {
+          "title": "Le Carbonifère: quand les insectes géants régnaient sur Terre – Documentaire [4K]",
+          "url": "https://www.youtube.com/watch?v=8IoYY2GgRMM",
+          "date": "2026-10-09T20:30:02Z",
+          "views": 1004,
+          "duration": 7607,
+          "thumbnail": "https://i.ytimg.com/vi/8IoYY2GgRMM/maxresdefault.jpg"
+        },
+        {
+          "title": "Terre préhistorique: voyage jusqu'à la Pangée, le supercontinent [4K]",
+          "url": "https://www.youtube.com/watch?v=CsNkqiiao88",
+          "date": "2026-10-04T20:00:07Z",
+          "views": 134,
+          "duration": 7564,
+          "thumbnail": "https://i.ytimg.com/vi/CsNkqiiao88/maxresdefault.jpg"
+        },
+        {
+          "title": "Paléogène: le monde terrifiant après l'extinction des dinosaures [4K]",
+          "url": "https://www.youtube.com/watch?v=JPEcQYbZt88",
+          "date": "2026-09-30T17:00:29Z",
+          "views": 4884,
+          "duration": 9972,
+          "thumbnail": "https://i.ytimg.com/vi/JPEcQYbZt88/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre préhistorique: son visage il y a 400 millions d'années [4K]",
+          "url": "https://www.youtube.com/watch?v=Dm4GWD_lwik",
+          "date": "2026-09-28T16:00:06Z",
+          "views": 673,
+          "duration": 2788,
+          "thumbnail": "https://i.ytimg.com/vi/Dm4GWD_lwik/maxresdefault.jpg"
+        },
+        {
+          "title": "Terre oubliée: quand les dinosaures régnaient sur le monde – Documentaire [4K]",
+          "url": "https://www.youtube.com/watch?v=Nv1NKIYdHOo",
+          "date": "2026-09-26T17:00:27Z",
+          "views": 440,
+          "duration": 9473,
+          "thumbnail": "https://i.ytimg.com/vi/Nv1NKIYdHOo/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre préhistorique: son visage il y a 400 millions d'années [4K]",
+          "url": "https://www.youtube.com/watch?v=ZrkCxuLEdj8",
+          "date": "2026-09-24T18:00:27Z",
+          "views": 443,
+          "duration": 9005,
+          "thumbnail": "https://i.ytimg.com/vi/ZrkCxuLEdj8/maxresdefault.jpg"
+        },
+        {
+          "title": "Le dernier jour des dinosaures: que s'est-il passé 24 heures avant l'extinction? [4K]",
+          "url": "https://www.youtube.com/watch?v=OWaaW_14r2E",
+          "date": "2026-09-20T17:30:02Z",
+          "views": 3533,
+          "duration": 8621,
+          "thumbnail": "https://i.ytimg.com/vi/OWaaW_14r2E/maxresdefault.jpg"
+        },
+        {
+          "title": "Giganotosaurus: le plus grand carnivore ayant jamais existé – Documentaire 4K",
+          "url": "https://www.youtube.com/watch?v=qKJADuYyXzc",
+          "date": "2026-09-19T22:21:24Z",
+          "views": 64,
+          "duration": 9579,
+          "thumbnail": "https://i.ytimg.com/vi/qKJADuYyXzc/maxresdefault.jpg"
+        },
+        {
+          "title": "La Pangée : la Terre que vous ne RECONNAÎTRIEZ pas | Documentaire",
+          "url": "https://www.youtube.com/watch?v=zxwI5-MUsII",
+          "date": "2026-09-18T21:11:43Z",
+          "views": 737,
+          "duration": 3096,
+          "thumbnail": "https://i.ytimg.com/vi/zxwI5-MUsII/maxresdefault.jpg"
+        },
+        {
+          "title": "L'homme dans l'Arctique glacé: comment les Inuits ont survécu à la toundra",
+          "url": "https://www.youtube.com/watch?v=rZjqBijWxe8",
+          "date": "2026-09-15T17:00:17Z",
+          "views": 492,
+          "duration": 5820,
+          "thumbnail": "https://i.ytimg.com/vi/rZjqBijWxe8/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre il y a 20 000 ans: comment l'ère glaciaire a façonné l'humanité",
+          "url": "https://www.youtube.com/watch?v=4l7EMiAyA2w",
+          "date": "2026-09-14T16:30:09Z",
+          "views": 1310,
+          "duration": 5186,
+          "thumbnail": "https://i.ytimg.com/vi/4l7EMiAyA2w/maxresdefault.jpg"
+        },
+        {
+          "title": "Des indices anciens suggèrent que nous ne sommes pas la première grande civilisation",
+          "url": "https://www.youtube.com/watch?v=qozcWsIgVIo",
+          "date": "2026-09-10T20:30:03Z",
+          "views": 47,
+          "duration": 5846,
+          "thumbnail": "https://i.ytimg.com/vi/qozcWsIgVIo/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Dinosaures Préhistoriques: Ces Prédateurs Terrifiants Qui Ont Dominé la Terre – Documentair...",
+          "url": "https://www.youtube.com/watch?v=NWvH1jZtdIA",
+          "date": "2026-09-05T20:30:23Z",
+          "views": 7277,
+          "duration": 2454,
+          "thumbnail": "https://i.ytimg.com/vi/NWvH1jZtdIA/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "name": "geants",
+      "about": {
+        "title": "Géants Disparus",
+        "id": "UCrpL_ksNaxYfui2DUF3qnJw",
+        "subscribers": 23,
+        "video_count": 20,
+        "joined": "2022-09-20T12:14:38.301591+00:00"
+      },
+      "recent": [
+        {
+          "title": "Les Premiers Humains: Comment Homo Habilis a Survécu ? | Documentaire Préhistorique",
+          "url": "https://www.youtube.com/watch?v=u1FCfOUVnvc",
+          "date": "2026-10-18T15:00:15Z",
+          "views": 0,
+          "duration": 5702,
+          "thumbnail": "https://i.ytimg.com/vi/u1FCfOUVnvc/maxresdefault.jpg"
+        },
+        {
+          "title": "La Période Jurassique : L'Âge des Géants de la Terre | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=6vruYJHrS9g",
+          "date": "2026-10-17T15:00:36Z",
+          "views": 99,
+          "duration": 6089,
+          "thumbnail": "https://i.ytimg.com/vi/6vruYJHrS9g/maxresdefault.jpg"
+        },
+        {
+          "title": "Terre préhistorique : quand le climat a bouleversé toute la planète | Documentaire complet",
+          "url": "https://www.youtube.com/watch?v=uVUT9kEy6dI",
+          "date": "2026-10-15T15:00:13Z",
+          "views": 110,
+          "duration": 6573,
+          "thumbnail": "https://i.ytimg.com/vi/uVUT9kEy6dI/maxresdefault.jpg"
+        },
+        {
+          "title": "Göbekli Tepe : Pourquoi bâtir un sanctuaire avant les villes ? | Documentaire complet",
+          "url": "https://www.youtube.com/watch?v=WRaJkT8VTBI",
+          "date": "2026-10-14T15:00:02Z",
+          "views": 248,
+          "duration": 8090,
+          "thumbnail": "https://i.ytimg.com/vi/WRaJkT8VTBI/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Astéroïde A-t-Il Vraiment Décimé les Dinosaures ? Indices Inédits de Chicxulub | Film Complet",
+          "url": "https://www.youtube.com/watch?v=_biCgGVbFT0",
+          "date": "2026-10-13T15:00:36Z",
+          "views": 96,
+          "duration": 7946,
+          "thumbnail": "https://i.ytimg.com/vi/_biCgGVbFT0/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Vikings Avant les Vikings ? Comment Ils Ont Transformé le Monde | Documentaire",
+          "url": "https://www.youtube.com/watch?v=zHTPcBLCgo8",
+          "date": "2026-10-12T15:00:04Z",
+          "views": 148,
+          "duration": 7962,
+          "thumbnail": "https://i.ytimg.com/vi/zHTPcBLCgo8/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Âge des Mammifères : Le Monde Disparu après les Dinosaures | Documentaire",
+          "url": "https://www.youtube.com/watch?v=_lpOuJEi8-I",
+          "date": "2026-10-11T18:00:34Z",
+          "views": 212,
+          "duration": 6610,
+          "thumbnail": "https://i.ytimg.com/vi/_lpOuJEi8-I/maxresdefault.jpg"
+        },
+        {
+          "title": "Indices Antiques : Nous Ne Serions Pas la Première Grande Civilisation | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=OHC_IRtmQJc",
+          "date": "2026-10-10T15:30:28Z",
+          "views": 188,
+          "duration": 7305,
+          "thumbnail": "https://i.ytimg.com/vi/OHC_IRtmQJc/maxresdefault.jpg"
+        },
+        {
+          "title": "La Civilisation Est-Elle Apparue à Karahan Tepe ? Le Monde Perdu Avant Göbekli Tepe | Documentaire",
+          "url": "https://www.youtube.com/watch?v=vlPMRDHiLK0",
+          "date": "2026-10-09T15:00:18Z",
+          "views": 721,
+          "duration": 8144,
+          "thumbnail": "https://i.ytimg.com/vi/vlPMRDHiLK0/maxresdefault.jpg"
+        },
+        {
+          "title": "Fosse des Mariannes : Ce Qu'ils Ont Découvert au Plus Profond de la Planète | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=YAtXZ2rKN40",
+          "date": "2026-10-08T15:00:30Z",
+          "views": 1700,
+          "duration": 7069,
+          "thumbnail": "https://i.ytimg.com/vi/YAtXZ2rKN40/maxresdefault.jpg"
+        },
+        {
+          "title": "Paléogène : Le Monde Étrange Après L'Extinction des Dinosaures | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=JB5ni0m5Vew",
+          "date": "2026-10-06T15:00:31Z",
+          "views": 96,
+          "duration": 6959,
+          "thumbnail": "https://i.ytimg.com/vi/JB5ni0m5Vew/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre Préhistorique : La Vie de 600 à 66 Millions d'Années | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=sd5eW3UwNfE",
+          "date": "2026-10-05T15:00:20Z",
+          "views": 371,
+          "duration": 6348,
+          "thumbnail": "https://i.ytimg.com/vi/sd5eW3UwNfE/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre Préhistorique : Son Apparence il y a 500 Millions d'Années | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=UQykJrq7zDk",
+          "date": "2026-10-04T15:00:10Z",
+          "views": 284,
+          "duration": 6096,
+          "thumbnail": "https://i.ytimg.com/vi/UQykJrq7zDk/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Australie Préhistorique Était le Cauchemar Absolu de la Terre | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=_c2Sprvn-ik",
+          "date": "2026-10-03T15:00:11Z",
+          "views": 748,
+          "duration": 6479,
+          "thumbnail": "https://i.ytimg.com/vi/_c2Sprvn-ik/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Holocène : Comment la Civilisation a Émergé il y a 11 700 Ans | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=fPv3MhylNRo",
+          "date": "2026-10-02T15:00:27Z",
+          "views": 2427,
+          "duration": 6840,
+          "thumbnail": "https://i.ytimg.com/vi/fPv3MhylNRo/maxresdefault.jpg"
+        },
+        {
+          "title": "La Terre Préhistorique : Voyage aux Temps de Pangée, le Supercontinent Oublié | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=qWoNP4L0iYM",
+          "date": "2026-10-01T15:00:14Z",
+          "views": 476,
+          "duration": 5969,
+          "thumbnail": "https://i.ytimg.com/vi/qWoNP4L0iYM/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "name": "extinct",
+      "about": {
+        "title": "Extinct Primal Français",
+        "id": "UCirbQ9jpuNTDUAbPMkregvQ",
+        "subscribers": 3340,
+        "video_count": 65,
+        "joined": "2021-03-16T08:29:00.703090+00:00"
+      },
+      "recent": [
+        {
+          "title": "LE CROISEMENT DE RACES entre Néandertaliens et Homo sapiens : LE SECRET OBSCUR",
+          "url": "https://www.youtube.com/watch?v=jcT5OmjB0yQ",
+          "date": "2026-07-16T17:00:31Z",
+          "views": 832,
+          "duration": 3055,
+          "thumbnail": "https://i.ytimg.com/vi/jcT5OmjB0yQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Les 20 Morts de Dinosaures les Plus Brutales Jamais Découvertes",
+          "url": "https://www.youtube.com/watch?v=kG6A8J2MQF0",
+          "date": "2026-07-10T16:00:39Z",
+          "views": 18431,
+          "duration": 4772,
+          "thumbnail": "https://i.ytimg.com/vi/kG6A8J2MQF0/maxresdefault.jpg"
+        },
+        {
+          "title": "L'Évolution Inédite des Dinosaures (200 Millions d'Années) | Documentaire",
+          "url": "https://www.youtube.com/watch?v=5a3-fvHfnOI",
+          "date": "2026-06-19T15:00:19Z",
+          "views": 6844,
+          "duration": 5722,
+          "thumbnail": "https://i.ytimg.com/vi/5a3-fvHfnOI/maxresdefault.jpg"
+        },
+        {
+          "title": "Toute la Période du CRÉTACÉ : La dernière ère de MONSTRES sur Terre",
+          "url": "https://www.youtube.com/watch?v=LrH2xjXj6v8",
+          "date": "2026-06-16T15:00:16Z",
+          "views": 3678,
+          "duration": 5748,
+          "thumbnail": "https://i.ytimg.com/vi/LrH2xjXj6v8/maxresdefault.jpg"
+        },
+        {
+          "title": "Le Monde Étrange et SECRET des DINOSAURES | Un voyage épique sur la Terre la plus sauvage",
+          "url": "https://www.youtube.com/watch?v=9Mnk2qO6D2Q",
+          "date": "2026-06-13T16:00:36Z",
+          "views": 3418,
+          "duration": 5179,
+          "thumbnail": "https://i.ytimg.com/vi/9Mnk2qO6D2Q/maxresdefault.jpg"
+        },
+        {
+          "title": "Et Si les DINOSAURES N'AVAIENT Jamais DISPARU ?",
+          "url": "https://www.youtube.com/watch?v=Zern0VaKrA4",
+          "date": "2026-06-10T16:00:14Z",
+          "views": 2504,
+          "duration": 3865,
+          "thumbnail": "https://i.ytimg.com/vi/Zern0VaKrA4/maxresdefault.jpg"
+        },
+        {
+          "title": "Pourquoi la Terre était-elle TERRIFIANTE à l'ère des DINOSAURES ? | DOCUMENTAIRE",
+          "url": "https://www.youtube.com/watch?v=U3Q7PAID1NI",
+          "date": "2026-06-07T16:00:36Z",
+          "views": 10618,
+          "duration": 5685,
+          "thumbnail": "https://i.ytimg.com/vi/U3Q7PAID1NI/maxresdefault.jpg"
+        },
+        {
+          "title": "TOUTE l'Évolution des Humains : Qui Sommes-Nous Vraiment ? | Documentaire Complet",
+          "url": "https://www.youtube.com/watch?v=fQry-YYXqg8",
+          "date": "2026-06-04T16:00:32Z",
+          "views": 3011,
+          "duration": 4946,
+          "thumbnail": "https://i.ytimg.com/vi/fQry-YYXqg8/maxresdefault.jpg"
+        },
+        {
+          "title": "Comment et Quand le Dernier Mammouth est-il Mort ? - La Fin Tragique de l'Espèce",
+          "url": "https://www.youtube.com/watch?v=uLIKkVriRW4",
+          "date": "2026-06-01T16:00:14Z",
+          "views": 2104,
+          "duration": 7443,
+          "thumbnail": "https://i.ytimg.com/vi/uLIKkVriRW4/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Océans les Plus Talassophobes Ayant Jamais Existé | Océans Préhistoriques",
+          "url": "https://www.youtube.com/watch?v=NAhQtPjHUPY",
+          "date": "2026-05-28T17:30:10Z",
+          "views": 1291,
+          "duration": 5592,
+          "thumbnail": "https://i.ytimg.com/vi/NAhQtPjHUPY/maxresdefault.jpg"
+        }
+      ],
+      "popular": [
+        {
+          "title": "L’Océan Préhistorique | Là Où la Thalassophobie Atteignit des Proportions Monstrueuses",
+          "url": "https://www.youtube.com/watch?v=YousGw4Mgys",
+          "date": "2026-01-02T15:00:57Z",
+          "views": 140010,
+          "duration": 5095,
+          "thumbnail": "https://i.ytimg.com/vi/YousGw4Mgys/maxresdefault.jpg"
+        },
+        {
+          "title": "Voici 24 heures au Crétacé | La vie quotidienne d’un dinosaure",
+          "url": "https://www.youtube.com/watch?v=-N1m1JhJqDk",
+          "date": "2025-12-05T16:00:01Z",
+          "views": 82672,
+          "duration": 5197,
+          "thumbnail": "https://i.ytimg.com/vi/-N1m1JhJqDk/maxresdefault.jpg"
+        },
+        {
+          "title": "L’Histoire Complète des Dinosaures | Du Premier Jour jusqu’au Dernier",
+          "url": "https://www.youtube.com/watch?v=oS9ThcipUYQ",
+          "date": "2025-12-02T12:39:19Z",
+          "views": 77061,
+          "duration": 5245,
+          "thumbnail": "https://i.ytimg.com/vi/oS9ThcipUYQ/maxresdefault.jpg"
+        },
+        {
+          "title": "Pourquoi ce fossile vieux de 100 millions d’années a-t-il terrifié les paléontologues ?",
+          "url": "https://www.youtube.com/watch?v=j0xLokwY1q8",
+          "date": "2025-12-29T22:23:57Z",
+          "views": 68192,
+          "duration": 4953,
+          "thumbnail": "https://i.ytimg.com/vi/j0xLokwY1q8/maxresdefault.jpg"
+        },
+        {
+          "title": "Les 20 Dinosaures les Plus Dangereux Dont on est Heureux qu’ils Aient Disparu",
+          "url": "https://www.youtube.com/watch?v=Oay8c8mJ1Cc",
+          "date": "2025-12-15T15:00:43Z",
+          "views": 65100,
+          "duration": 4672,
+          "thumbnail": "https://i.ytimg.com/vi/Oay8c8mJ1Cc/maxresdefault.jpg"
+        },
+        {
+          "title": "Les Dinosaures Qui Ont Provoqué Des Cauchemars Au T-Rex | Documentaire Préhistorique",
+          "url": "https://www.youtube.com/watch?v=WbA1lqxRvBA",
+          "date": "2026-04-14T16:01:02Z",
+          "views": 38919,
+          "duration": 5207,
+          "thumbnail": "https://i.ytimg.com/vi/WbA1lqxRvBA/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "name": "anciennes",
+      "about": {
+        "title": "Terres Anciennes",
+        "id": "UCe0U3k14XHYDyViM21YsbsQ",
+        "subscribers": 3030,
+        "video_count": 30,
+        "joined": "2025-12-13T21:55:58.562876+00:00"
+      },
+      "popular": [
+        {
+          "title": "SPINOSAURE – Le prédateur ULTIME et Tout Terrain ? (Documentaire)",
+          "url": "https://www.youtube.com/watch?v=qEnTiJMBPII",
+          "date": "2025-12-27T21:49:35Z",
+          "views": 41188,
+          "duration": 901,
+          "thumbnail": "https://i.ytimg.com/vi/qEnTiJMBPII/maxresdefault.jpg"
+        },
+        {
+          "title": "TYRANNOSAURUS REX – Le dernier Roi des Dinosaures (Documentaire)",
+          "url": "https://www.youtube.com/watch?v=nhuWH-9jTfg",
+          "date": "2025-12-21T22:40:12Z",
+          "views": 17766,
+          "duration": 881,
+          "thumbnail": "https://i.ytimg.com/vi/nhuWH-9jTfg/maxresdefault.jpg"
+        },
+        {
+          "title": "GIGANOTOSAURUS – Le Prédateur Oublié, Plus Terrifiant Que le T-Rex ?",
+          "url": "https://www.youtube.com/watch?v=DYyIHme2O3k",
+          "date": "2026-01-28T16:45:01Z",
+          "views": 3450,
+          "duration": 915,
+          "thumbnail": "https://i.ytimg.com/vi/DYyIHme2O3k/maxresdefault.jpg"
+        },
+        {
+          "title": "VELOCIRAPTOR : Plus Intelligent, Plus Dangereux qu’on ne le Pense (Documentaire)",
+          "url": "https://www.youtube.com/watch?v=HiKSDgKnuF4",
+          "date": "2026-01-04T01:20:22Z",
+          "views": 3050,
+          "duration": 1630,
+          "thumbnail": "https://i.ytimg.com/vi/HiKSDgKnuF4/maxresdefault.jpg"
+        },
+        {
+          "title": "🦖 Allosaurus : Pourquoi ce prédateur dominait vraiment le Jurassique",
+          "url": "https://www.youtube.com/watch?v=z6BZBDB9Bok",
+          "date": "2026-05-10T14:39:27Z",
+          "views": 2203,
+          "duration": 888,
+          "thumbnail": "https://i.ytimg.com/vi/z6BZBDB9Bok/maxresdefault.jpg"
+        },
+        {
+          "title": "L’ANKYLOSAURUS : LE DINOSAURE Que Même Le T-REX Évitait",
+          "url": "https://www.youtube.com/watch?v=3NL8fQ0hBys",
+          "date": "2026-01-11T17:31:36Z",
+          "views": 1907,
+          "duration": 1209,
+          "thumbnail": "https://i.ytimg.com/vi/3NL8fQ0hBys/maxresdefault.jpg"
+        }
+      ]
+    }
+  ]
+}
