@@ -1,5 +1,18 @@
 # Oddly Fictional Lives
 
+## Recherche de la suite — 19 octobre 2026
+
+Le catalogue public releve comprend six videos : Halo/Covenant reste retire par
+l’utilisateur. Le dernier Marine totalise 441 vues et Viltrumite 450 au releve ;
+ces petits volumes et des ages differents ne prouvent pas un effet de retention
+ou de miniature. Quatre uploads supplementaires porteraient ce catalogue a dix.
+
+Lire [les observations et huit pistes Patch / Oddly](../_recherche/patch-et-oddly-fictional-2026-10-19.md).
+Dreadnought, Chaos Marine, Homelander et Custodes sont des propositions de sujet,
+pas des episodes approuves, produits ou programmes. L’utilisateur souhaite
+reprendre les experiences qui commencent a attirer des vues. Aucun retour de
+Halo, changement de dessin ou lancement automatique de miniature n’en decoule.
+
 English immersive fiction: experience a recognisable fictional identity through
 decisions, abilities, relationships and consequences. Original narration and
 episode-specific white round-headed actors; no universal rank ladder imposed on
