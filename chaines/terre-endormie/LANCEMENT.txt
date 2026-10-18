@@ -1,5 +1,7 @@
 TERRE ENDORMIE — KIT DE LANCEMENT
 STYLE VALIDÉ : l'utilisateur apprécie explicitement la miniature 04 AVANT LES DINOS. Lire STYLE_VALIDE.txt pour les prochaines miniatures.
+CORRECTION ULTÉRIEURE : texte obligatoire sur toutes les miniatures, y compris les propositions océans.
+ÉCRITURE : Faceless Scripts OS v5 trouvé dans skills/facelessos/faceless-scripts-os-master.md, avec ses modules de recherche, structure, voix et audit. Pack disponible localement, à lire intégralement avec les modules pertinents lors de la rédaction ; aucune installation nécessaire. La version évoquée précédemment comme « à fournir » n'est donc pas un blocage technique à la préparation. Aucun script complet n'a encore été rédigé pour Terre Endormie.
 MISE À JOUR : lire CONTRE_ANALYSE.txt en priorité pour le verdict et les nouveaux visuels.
 Retour utilisateur : niveau des premières miniatures insuffisant ; elles sont conservées comme essais.
 Les nouvelles propositions 04 et 05 privilégient la scène et réduisent fortement le texte.
