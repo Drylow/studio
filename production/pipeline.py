@@ -53,11 +53,35 @@ def wait_file(name, why):
         time.sleep(30)
 
 
+def short_by():
+    """Minutes manquantes sous la durée minimum de la chaîne (0 si OK) : voix si elle existe, sinon script."""
+    os.environ.setdefault("POV_DATA_DIR", os.path.join(WORK, "prod"))
+    from services import pov_store as st
+    from services import pov_script as S
+    pr = st.get_project(pid_of(D))
+    ch = st.get_channel(pr["channel_id"]) or {}
+    need = float(ch.get("min_minutes") or 0)
+    v = pr.get("voice") or {}
+    have = (v["duration"] / 60.0 if v.get("duration")
+            else S.word_count(S.narration(pr.get("script") or "")) / float(ch.get("wpm") or 150))
+    log(f"durée : {have:.1f} min (minimum {need:g})")
+    return max(0.0, need - have)
+
+
 step("script", "script.log", "AUDIT DONE", 3)
-if "--gate" in FLAGS:
-    wait_file("script_ok", "script à relire (script.txt), puis : production/steps.py save + touch script_ok")
+while True:
+    if "--gate" in FLAGS:
+        wait_file("script_ok", "script à relire (script.txt), puis : production/steps.py save + touch script_ok")
+    miss = short_by()
+    if not miss or "--gate" not in FLAGS:
+        break
+    # 25 min minimum, c'est minimum (l'utilisateur, 18 oct.) : pas de prod sur un script trop court
+    os.remove(os.path.join(D, "script_ok"))
+    log(f"SCRIPT TROP COURT : il manque {miss:.1f} min → ajouter des scènes, steps.py save, puis touch script_ok")
 log("script ok")
 step("prod", "prod.log", "PROD DONE")
+if short_by():
+    raise SystemExit("VOIX TROP COURTE : allonger le script et refaire la voix avant le rendu")
 step("qa", "qa.log", "QA DONE", 3)
 if "--replan" in FLAGS:
     step("replan", "replan.log", "REPLAN DONE", 3)

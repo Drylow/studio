@@ -167,7 +167,8 @@ TEMPLATES = {
                      "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
                      "understated expressions that sell the joke. Put the cultural details on screen (food, clothes, "
                      "architecture, objects, customs). Night city skylines and warm interiors for emotional beats.",
-        "default_minutes": 25, "minutes_rev": 2,  # 25 min depuis le 17 oct. 2026 (choix de l'utilisateur)
+        "default_minutes": 27, "min_minutes": 25, "minutes_rev": 3,  # 25 min MINIMUM (l'utilisateur, 17-18 oct. 2026) :
+        # on vise 27 pour ne jamais finir en dessous (Gladiator 24:22 et Pirate 23:27 visaient 25 pile)
         "montage": {"pacing": 6.0, "hook_pacing": 6.0, "hook_seconds": 0, "min_scene": 3.0, "max_scene": 11.0,
                     "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "full",
@@ -551,6 +552,7 @@ def new_channel(data=None, template=None):
         "montage": _merge(DEFAULT_MONTAGE, t.get("montage") or {}),
         "board": _merge(board.DEFAULT_BOARD, dict(t.get("board") or {}, mascot=t.get("mascot", ""))),
         "default_minutes": t.get("default_minutes", 10),
+        "min_minutes": t.get("min_minutes", 0),
     }
     if t.get("character"):
         name, desc = t["character"]
@@ -631,6 +633,7 @@ def _refresh_from_template(c, template):
     if (c.get("minutes_rev") or 0) < t.get("minutes_rev", 0):
         # nouvelle durée par défaut décidée pour la chaîne : appliquée aux vidéos créées ensuite
         c["default_minutes"], c["minutes_rev"] = t["default_minutes"], t["minutes_rev"]
+        c["min_minutes"] = t.get("min_minutes", 0)
         changed = True
     refs = lambda: ((c.get("style") or {}).get("ref"), c.get("thumb_ref"), (c.get("board") or {}).get("presenter"),
                     (c.get("board") or {}).get("poses"))
