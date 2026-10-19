@@ -1,9 +1,11 @@
 # Projets POV : finance et coulisses du pouvoir
 
-**Derniere decision du 19 octobre :** l'essai « scene complete d'abord » est
-rejete. Retour aux decors maitres et aux identites separes. Les vingt voix Ryan
-sont disponibles ; production et suivi en pause jusqu'a validation d'un nouveau
-comparatif de scenes de l'ancienne methode. Voir l'[etat courant](PRODUCTION-20-2026-10-19.md).
+**Derniere decision du 19 octobre :** reprise autorisee jusqu'aux vingt MP4
+complets et verifies. L'essai « scene complete d'abord » reste rejete : decors
+maitres et identites separes. Les vingt voix Ryan sont disponibles. W01 a ses
+86 images inspectees apres dix corrections ; le controle de la voix et le rendu
+restent des etapes distinctes. W02 a son decoupage complet et W03 est en
+preparation. Voir l'[etat courant](PRODUCTION-20-2026-10-19.md).
 
 ## Production lancee — 19 octobre 2026
 

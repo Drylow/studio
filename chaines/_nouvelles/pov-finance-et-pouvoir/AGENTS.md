@@ -1,16 +1,21 @@
 # The Wealthy Nobody et Oddly Important Guy
 
-DERNIERE DECISION du 19 octobre : test « scene complete d'abord » REJETE.
-Revenir aux decors maitres et identites separes. Comparatif demo-previous-method
-a montrer avant toute reprise des vingt videos. Les vingt voix sont disponibles,
-la file et le suivi sont en pause. Attendre la validation explicite des images.
+DERNIERE DECISION du 19 octobre : l'utilisateur a demande de poursuivre jusqu'aux
+vingt MP4 complets et verifies. La reprise est AUTORISEE. Test « scene complete
+d'abord » REJETE : decors maitres et identites separes. Le plan de bureau 1B du
+comparatif avait une jambe traversant le bureau : REJETE, ne pas le reutiliser.
+Verifier chaque sortie : yeux/pupilles, bras/mains, jambes sous les tables,
+surfaces opaques, objets soutenus, acteur qui accomplit vraiment l'action.
 Ne pas relancer les essais demo-scene-first ni les utiliser comme references.
 
 Production autorisee le 19 octobre : lire PRODUCTION-20-2026-10-19.md. Vingt
 projets sont en file distante, Ryan Kurk, automatic_plans=false. Aucun rendu,
 TTS, generation ou conversion media sur le PC : VPS/RunPod exclusivement.
-Codex redige les plans/prompts et inspecte les images effectives. W01 n'a que
-trois plans de controle installes, pas un film complet. L'ancienne reference
+Codex redige les plans/prompts et inspecte les images effectives. W01 a maintenant
+86 plans couvrant sa voix complete ; les 86 images et dix corrections ciblees
+ont ete inspectees. W02 a 88 plans, 14 lieux et un controle de premiere scene
+en cours ; W03 a son decoupage auteur et ses references en preparation. Aucun
+de ces etats ne signifie vingt MP4 termines. L'ancienne reference
 Ellis a deux pupilles dans un oeil : rejetee ; seule sa correction inspectee
 peut etre reutilisee. Aucune publication n'est demandee pour ce lot.
 
