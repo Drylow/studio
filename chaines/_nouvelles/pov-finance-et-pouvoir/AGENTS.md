@@ -1,5 +1,8 @@
 # The Wealthy Nobody et Oddly Important Guy
 
+ETAT DE REPRISE ACTUALISE : quinze MP4 complets revus et transferes avec empreinte verifiee. W01-W10 et P01-P05 termines. P03 yacht : 15 min 13, P04 garde du corps : 15 min 44, P05 pilote prive : 15 min 43. P06 concierge : 88 images produites, inspection en cours. P07 avocat : 84 plans installes, corrections des trois apercus en cours. P08 palais : 84 actions ecrites, 25 references en generation. P09/P10 : decoupages visuels a ecrire. Calculs media exclusivement sur VPS, jamais sur PC. Audit visuel IA et technique, sans pretendre a un visionnage humain integral. Aucune publication demandee. Ce paragraphe actualise remplace les comptes anterieurs ci-dessous.
+
+
 DERNIERE DECISION du 19 octobre : l'utilisateur a demande de poursuivre jusqu'aux
 vingt MP4 complets et verifies. La reprise est AUTORISEE. Test « scene complete
 d'abord » REJETE : decors maitres et identites separes. Le plan de bureau 1B du
