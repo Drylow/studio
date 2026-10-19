@@ -2,12 +2,13 @@
 
 **Derniere decision du 19 octobre :** reprise autorisee jusqu'aux vingt MP4
 complets et verifies. L'essai « scene complete d'abord » reste rejete : decors
-maitres et identites separes. Les vingt voix Ryan sont disponibles. **Neuf MP4
-complets (W01 a W09) sont revus et transferes**, avec empreintes verifiees,
-dans `01 - Videos/The Wealthy Nobody/`. W10 : 88 images generees, trois premieres
-regardees ; controle des 85 autres encore requis. P01 : 88 actions ecrites,
-treize lieux et huit identites en generation. Neuf autres decoupages visuels
-restent a ecrire. Voir l'[etat courant](PRODUCTION-20-2026-10-19.md).
+maitres et identites separes. Les vingt voix Ryan sont disponibles. **Dix MP4
+complets (W01 a W10) sont revus et transferes**, avec empreintes verifiees,
+dans `01 - Videos/The Wealthy Nobody/`. P01 : 88 images regardees, 18 corrections
+ciblees generees et inspectees ; quatre reprises de placement encore en cours.
+P02 : references et trois premieres images inspectees, suite des 88 plans lancee.
+P03 : 84 actions ecrites, douze lieux et neuf identites en generation distante.
+Sept autres decoupages visuels restent a ecrire. Voir l'[etat courant](PRODUCTION-20-2026-10-19.md).
 
 ## Production lancee — 19 octobre 2026
 
