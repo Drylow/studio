@@ -11,15 +11,15 @@ Ne pas relancer les essais demo-scene-first ni les utiliser comme references.
 Production autorisee le 19 octobre : lire PRODUCTION-20-2026-10-19.md. Vingt
 projets sont en file distante, Ryan Kurk, automatic_plans=false. Aucun rendu,
 TTS, generation ou conversion media sur le PC : VPS/RunPod exclusivement.
-Codex redige les plans/prompts et inspecte les images effectives. W01 a W07
+Codex redige les plans/prompts et inspecte les images effectives. W01 a W09
 sont maintenant des MP4 complets, revus et transferes avec empreinte verifiee
-dans `01 - Videos/The Wealthy Nobody/` (episodes 01 a 07). Les 606 images et
+dans `01 - Videos/The Wealthy Nobody/` (episodes 01 a 09). Les 780 images et
 leurs corrections ont ete regardees, les voix controlees independamment, puis
-les fichiers encodes controles sur le VPS. W08 : 88 images regardees, huit
-corrections ciblees en cours apres correction du premier plan ; aucun rendu
-avant inspection des nouvelles sorties. W09 : 86 actions ecrites, quinze maitres,
-cinq identites et huit variantes inspectes ; quatorze lieux utilises, trois
-premiers plans lances. Onze autres decoupages visuels restent a ecrire. Aucun
+les fichiers encodes controles sur le VPS. W10 : 88 images generees, trois
+premieres inspectees ; les 85 autres restent a regarder avant toute revue
+globale ou rendu. P01 : 88 actions ecrites, treize lieux et huit identites en
+generation distante, pas encore inspectes. Neuf autres decoupages visuels
+restent a ecrire. Aucun
 de ces etats ne signifie vingt MP4 termines. L'ancienne reference
 Ellis a deux pupilles dans un oeil : rejetee ; seule sa correction inspectee
 peut etre reutilisee. Aucune publication n'est demandee pour ce lot.
