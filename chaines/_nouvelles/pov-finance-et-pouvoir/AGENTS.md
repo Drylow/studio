@@ -1,11 +1,11 @@
 # The Wealthy Nobody et Oddly Important Guy
 
-ETAT DE REPRISE ACTUALISE : dix-sept MP4 complets revus et transferes avec empreinte verifiee. W01-W10 et P01-P07 termines. P06 concierge : 15 min 18 ; P07 avocat : 15 min 39. P08 palais : 84 images effectivement regardees, treize corrections ciblees en cours. P09 immobilier : 88 images produites, inspection restante a faire ; premier apercu corrige regarde. P10 chef prive : 88 actions ecrites, toutes les references et trois apercus effectivement regardes, 85 autres images en generation. Calculs media exclusivement sur VPS, jamais sur PC. Audit visuel IA et technique, sans pretendre a un visionnage humain integral. Aucune publication demandee. Ce paragraphe actualise remplace les comptes anterieurs ci-dessous.
+ETAT DE REPRISE ACTUALISE : vingt MP4 complets revus et transferes avec empreinte verifiee. W01-W10 The Wealthy Nobody et P01-P10 Oddly Important Guy termines. 1732 images courantes effectivement regardees, corrections ciblees comprises ; voix et MP4 controles techniquement. Sorties 1920 x 1080, 24 images/s, voix Ryan, plans fixes et coupes franches. Tous les calculs media ont eu lieu sur le VPS, jamais sur le PC. Deux dossiers de livraison dans 01 - Videos/, chacun avec UPLOAD.md (titres et descriptions reunis) et les miniatures A/B, plus trois variantes C conservees. Aucune publication ni programmation effectuee. Audit visuel IA et technique, sans pretendre a un visionnage humain integral ou a un PASS editorial formel complet. Ce paragraphe remplace les comptes historiques ci-dessous.
 
 
 DERNIERE DECISION du 19 octobre : l'utilisateur a demande de poursuivre jusqu'aux
-vingt MP4 complets et verifies. La reprise est AUTORISEE. Test « scene complete
-d'abord » REJETE : decors maitres et identites separes. Le plan de bureau 1B du
+vingt MP4 complets et verifies. La reprise est AUTORISEE. Test Â« scene complete
+d'abord Â» REJETE : decors maitres et identites separes. Le plan de bureau 1B du
 comparatif avait une jambe traversant le bureau : REJETE, ne pas le reutiliser.
 Verifier chaque sortie : yeux/pupilles, bras/mains, jambes sous les tables,
 surfaces opaques, objets soutenus, acteur qui accomplit vraiment l'action.
@@ -31,7 +31,7 @@ L'ancienne reference
 Ellis a deux pupilles dans un oeil : rejetee ; seule sa correction inspectee
 peut etre reutilisee. Aucune publication n'est demandee pour ce lot.
 
-Lire README.md et SCRIPTWRITING.md avant d’ecrire, reviser ou preparer une video
+Lire README.md et SCRIPTWRITING.md avant dâ€™ecrire, reviser ou preparer une video
 de ces deux chaines. Le benchmark POVrank du 19 octobre concerne les vingt
 scripts de ce dossier ; il ne change pas la methode des autres chaines.
 
@@ -41,17 +41,17 @@ une autre intrigue. Appliquer Faceless OS avec les preuves disponibles, sans
 fabriquer de score ni transformer le scanner en validation de retention.
 
 Les sujets et styles sont approuves. Conserver les 43 miniatures A/B/C pour le
-choix ulterieur de l’utilisateur. Les scripts courants et leurs empreintes sont
-dans scripts-20-2026-10-18/manifest.json. L’etat des controles est dans la revue
+choix ulterieur de lâ€™utilisateur. Les scripts courants et leurs empreintes sont
+dans scripts-20-2026-10-18/manifest.json. Lâ€™etat des controles est dans la revue
 editoriale et le guide associes. Une revision comparative ne vaut pas a elle
 seule PASS complet de production ou approbation des manuscrits par le lecteur.
 
 Garder la narration anglaise et la voix Ryan. Ecrire des decisions et consequences
 propres a chaque metier ou situation ; pas de remplacement par un parcours de
 grades universel. Les styles video des deux chaines restent distincts. Expressions
-adaptees a l’action, identites stables, lieux varies qui gardent leur geometrie.
+adaptees a lâ€™action, identites stables, lieux varies qui gardent leur geometrie.
 
 Pour une production autorisee : voix avant transcript et decoupage reel, medias
 et rendu sur le VPS. Ne pas lancer le montage sur le PC. Respecter les demandes
 de suppression distante apres transfert verifie et ne pas toucher aux donnees
-d’autres travaux. Aucun secret ni transcription complete d’un concurrent en Git.
+dâ€™autres travaux. Aucun secret ni transcription complete dâ€™un concurrent en Git.
