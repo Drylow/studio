@@ -17,11 +17,14 @@ dans `01 - Videos/The Wealthy Nobody/` (episodes 01 a 10). Les 868 images et
 leurs corrections ont ete regardees ; les voix et fichiers encodes ont eu
 des controles techniques independants sur le VPS. Ce n'est pas une attestation
 de visionnage humain integral ou de validation editoriale formelle complete.
-P01 : 88 images regardees, 18 corrections inspectees, quatre reprises de placement
-en cours. P02 : references et trois premiers plans inspectes, suite des 88 images
-lancee. P03 : 84 actions, douze lieux et neuf identites en generation distante.
-Sept autres decoupages restent a ecrire. Ne pas presenter ce lot comme vingt
-MP4 termines. L'ancienne reference
+P01 et P02 sont aussi des MP4 complets, controles et transferes avec empreinte
+verifiee : 16 min 18 et 15 min 15. Le lot comporte donc douze MP4, pas vingt.
+P03 : 84 images et dix corrections regardees, rendu distant en controle.
+P04 : 86 images regardees ; corrections des plans 51 (photo hors style) et 83
+(troisieme main) en cours, apres le plan 2 corrige et inspecte.
+P05 : 86 actions, quinze lieux et six identites inspectes ; dix derives lances.
+Cinq autres decoupages restent a ecrire. Ne pas presenter le lot comme termine.
+L'ancienne reference
 Ellis a deux pupilles dans un oeil : rejetee ; seule sa correction inspectee
 peut etre reutilisee. Aucune publication n'est demandee pour ce lot.
 
