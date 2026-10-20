@@ -1,5 +1,13 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Montage des prochaines videos — decision du 20 octobre
+
+Nouvelle consigne explicite du proprietaire pour les prochaines videos des deux chaines : fondu enchaine (mix/crossfade) de 3 secondes entre chaque image, puis fondu progressif de l'image vers le noir sur les 5 dernieres secondes du film. Cette decision remplace les coupes franches pour les futures productions uniquement. Garder les plans fixes, sans zoom anime. Ne pas changer la voix Ryan, son rythme ou les points d'ancrage de narration, ni ajouter cinq secondes de silence ou de noir apres la fin. Les fondus se placent autour des frontieres existantes ; le fondu final atteint le noir a la fin du film. La voix reste intacte.
+
+Attention technique pour le prochain montage : le moteur actuellement conserve plafonne les fondus selon la longueur des plans et ne gere pas encore le fondu final demande. Ne pas pretendre que poser simplement `transition_seconds=3` suffit ; adapter/verifier l'execution sur VPS avant la prochaine livraison. Les plans doivent etre assez longs pour permettre les transitions demandees sans chevauchement excessif. Controler visuellement les melanges et la sortie vers le noir, en plus de la duree et de l'audio. Aucun rendu sur le PC.
+
+Il s'agit d'une preference de montage pour la suite, pas d'une autorisation de relancer le lot avant validation du style du film complet P01. Le MP4 deja livre reste conserve dans sa version a coupes franches ; aucune nouvelle generation ou aucun rendu n'est lance par cette mise a jour.
+
 ## Remake complet du 20 octobre — avis du proprietaire attendu
 
 Le proprietaire approuve le dessin du nouvel extrait et autorise UNE video complete avant de decider la suite du lot. P01, Your Life Working for a Billionaire, est refait en entier : 16 min 18, 91 images, voix Ryan existante, 1920 x 1080 a 24 images/s, plans fixes et coupes franches. Livraison dans `01 - Videos/Oddly Important Guy/01 - Working for a Billionaire/Version 2 - A valider/VIDEO.mp4`. L'ancien MP4 et les miniatures restent conserves dans le dossier parent.
