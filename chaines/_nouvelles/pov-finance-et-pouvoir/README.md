@@ -1,5 +1,13 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Montage livre le 21 octobre — fondus appliques a P01
+
+Le proprietaire valide le style du premier film complet, puis demande de refaire aussi son montage. P01 Your Life Working for a Billionaire, pour Oddly Important Guy, est livre dans `01 - Videos/Oddly Important Guy/01 - Working for a Billionaire/Version 3 - Fondus/VIDEO.mp4` : memes 91 images et meme voix Ryan, 16 min 18, 1920 x 1080 a 24 images/s. Les 90 transitions durent chacune 3 secondes ; la sortie de l'image vers le noir dure les 5 dernieres secondes, avec une derniere image noire. Plans fixes, aucun zoom anime ni modification de la narration.
+
+Le moteur conserve maintenant les fondus longs autour des frontieres de narration et accepte `outro_fade_seconds`. Le mode strict refuse de raccourcir silencieusement un fondu. Les intermediaires temporaires sont sans perte et effaces apres encodage. Les tests reels sur VPS couvrent ancien contrat, 72 images par fondu, 120 images de sortie, fin noire et horloge de narration. Les 23473 images du film ont ete comparees techniquement au melange attendu ; les 90 milieux de transition et cinq etapes de sortie ont ete regardes. La voix et les images sources ont les memes empreintes que la version validee. Aucun nouvel appel de generation d'image, TTS ou publication.
+
+Transfert local verifie par empreinte, puis suppression de cette seule copie MP4 finale du VPS suivant la consigne du proprietaire. Les sources et preuves sont conservees ; les anciennes versions locales restent disponibles. Le rendu et tous les calculs media restent sur VPS uniquement. La validation esthetique du proprietaire sur le dessin du premier film est maintenant acquise et remplace les attentes historiques ci-dessous. La presente intervention ne relance pas les autres films du lot : elle termine uniquement le nouveau montage demande pour P01. Garder les fondus de 3 secondes et la sortie noire de 5 secondes pour les prochaines videos des deux chaines.
+
 ## Montage des prochaines videos — decision du 20 octobre
 
 Nouvelle consigne explicite du proprietaire pour les prochaines videos des deux chaines : fondu enchaine (mix/crossfade) de 3 secondes entre chaque image, puis fondu progressif de l'image vers le noir sur les 5 dernieres secondes du film. Cette decision remplace les coupes franches pour les futures productions uniquement. Garder les plans fixes, sans zoom anime. Ne pas changer la voix Ryan, son rythme ou les points d'ancrage de narration, ni ajouter cinq secondes de silence ou de noir apres la fin. Les fondus se placent autour des frontieres existantes ; le fondu final atteint le noir a la fin du film. La voix reste intacte.
