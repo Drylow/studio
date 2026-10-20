@@ -98,6 +98,46 @@ def main():
                           'checks': ['static holds', 'complete framing/corners', 'centered six-frame fades', 'narration duration']}))
 
 
+def check_intro_without_audio_delay():
+    """Opening and ending fades affect pixels, never the narration clock."""
+    with tempfile.TemporaryDirectory(prefix='slideshow-intro-check-') as folder:
+        root = Path(folder)
+        color = (210, 170, 90)
+        Image.new('RGB', (160, 90), color).save(root / 'still.png')
+        with wave.open(str(root / 'voice.wav'), 'wb') as wav:
+            wav.setparams((1, 2, 8000, 0, 'NONE', 'not compressed'))
+            # An immediate non-silent signal exposes an accidental audio fade/delay.
+            import math
+            import struct
+            wav.writeframes(b''.join(struct.pack('<h', round(5000 * math.sin(i * .21)))
+                                     for i in range(8000 * 6)))
+        result = render({'voice': str(root / 'voice.wav'), 'out': str(root / 'out.mp4'),
+                         'duration': 6, 'width': 160, 'height': 90, 'fps': 24,
+                         'intro_fade_seconds': 1, 'outro_fade_seconds': 2,
+                         'scenes': [{'image': str(root / 'still.png'), 'start': 0, 'end': 6}]})
+        raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(root / 'out.mp4'),
+                              '-threads', '1', '-pix_fmt', 'rgb24', '-f', 'rawvideo', '-'],
+                             capture_output=True, check=True).stdout
+        stride = 160 * 90 * 3
+        assert len(raw) == stride * 144
+        for n in range(144):
+            gain = min(1, n / 23) * (max(0, 1 - (n - 96) / 47) if n >= 96 else 1)
+            offset = n * stride + (45 * 160 + 80) * 3
+            assert max(abs(a - b * gain) for a, b in zip(raw[offset:offset + 3], color)) < 9
+        signal = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(root / 'out.mp4'),
+                                 '-vn', '-ac', '1', '-ar', '8000', '-f', 's16le', '-'],
+                                capture_output=True, check=True).stdout
+        values = struct.unpack('<' + 'h' * (len(signal) // 2), signal)
+        expected = [round(5000 * math.sin(i * .21)) for i in range(8000)]
+        error = sum(abs(a - b) for a, b in zip(values[:8000], expected)) / 8000
+        assert error < 500, error
+        assert result['intro_fade_frames'] == 24 and result['outro_fade_frames'] == 48
+        assert result['frames'] == 144
+        print(json.dumps({'intro_and_outro_passed': True, 'frames_checked': 144,
+                          'intro_frames': 24, 'outro_frames': 48, 'audio_start_error': error}))
+
+
 if __name__ == '__main__':
     main()
     check_long_dissolves_and_outro()
+    check_intro_without_audio_delay()

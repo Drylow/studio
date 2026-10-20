@@ -1,6 +1,14 @@
 # The Wealthy Nobody et Oddly Important Guy
 
-## PAUSE du 21 octobre — essais de raccord uniquement
+## P01 — nouvel extrait uniquement, voix conservee et ouverture depuis le noir
+
+Le 21 octobre, le proprietaire trouve le test de raccord de decor satisfaisant et demande un remake de P01, d'abord limite a la premiere minute pour juger avant le reste. Il corrige ensuite son signalement de voix defectueuse : c'etait l'audio de ses ecouteurs/PC. Garder la voix Ryan existante, sans nouvel appel de synthese. Conserver l'ancien film complet.
+
+Preparer environ 65 secondes (fin de phrase), avec un ancrage de scene occupe verifie, puis les gestes, reactions et inserts rediges par Codex. Fixer materiaux et disposition physique de cette scene, permettre les recadrages/occultations coherents, sans changer la piece a chaque angle. Le proprietaire demande aussi un fondu depuis le noir a l'ouverture ; valeur de test 1 seconde vers la premiere image. Garder les fondus inter-images de 0,5 seconde et la sortie noire de 5 secondes. Dans le film complet, cette sortie reste a la fin du film, pas a la fin de chaque minute.
+
+Ne pas relancer les 19 remakes, le suivi automatique ou la suite du film avant le retour sur cet extrait. Dossier prive `work/P01-voice-scene-preview-2026-10-21/`. Les presets globaux et anciennes livraisons restent intacts. Rendu, images et tout traitement media sur VPS uniquement, aucun calcul media sur PC. Le moteur permet un fondu d'entree optionnel sans modifier le son ni l'horloge de narration.
+
+## PAUSE du 21 octobre â€” essais de raccord uniquement
 
 Le proprietaire a demande STOP : les dix-neuf remakes et leur suivi automatique sont suspendus. Ne pas relancer la file, envoyer SIGCONT, rendre ou publier sur la base des autorisations historiques ci-dessous. Etat au point observe : un nouveau film termine, casino avec 62 images sur 88 et des demandes deja soumises a reconcilier ; dix-huit autres remakes d'images pas encore lances. Scripts et voix restent prets. Instructions privees de reprise dans `work/nineteen-redraw-2026-10-21/README-PRIVATE.md`.
 
@@ -8,7 +16,7 @@ La demande suivante autorise uniquement des essais d'une continuite legere par s
 
 Il s'agit d'essais, pas d'une adoption globale ni d'une garantie de reconstruction 3D. Le contrat reste propre a une courte scene ; un autre lieu peut avoir un autre ancrage. Chaque nouvelle image doit etre regardee pour le decor, la perspective, les materiaux, l'action et les personnages. Aucune validation automatique au seul succes de la requete. Les presets et le plan du lot restent inchanges ; calculs media sur VPS uniquement. Preuves privees : `work/light-background-test-2026-10-21/` et `work/scene-geometry-test-2026-10-21/`.
 
-## Nouvelle reprise autorisee le 21 octobre — dix-neuf remakes et mesure des limites
+## Nouvelle reprise autorisee le 21 octobre â€” dix-neuf remakes et mesure des limites
 
 Le proprietaire trouve les transitions de trois secondes trop lentes. Nouvelle valeur de travail : fondu enchaine de 0,5 seconde ; fondu final vers le noir de cinq secondes conserve, sans zoom anime et sans changer la voix Ryan. Le montage du premier film est aussi repris avec ce reglage. Cette consigne remplace les trois secondes de l'historique ci-dessous.
 
@@ -20,7 +28,7 @@ La production utile sert aussi a mesurer les limites du fournisseur : journal pe
 
 Tous les calculs media restent sur VPS exclusivement. Aucun rendu ou traitement d'image sur le PC ; seulement pilotage, lecture, verifications textuelles, copie des octets et empreintes. Apres transfert verifie de chaque MP4, supprimer sa seule copie finale distante suivant la consigne existante ; conserver les sources et preuves.
 
-## Montage livre le 21 octobre — fondus appliques a P01
+## Montage livre le 21 octobre â€” fondus appliques a P01
 
 Le proprietaire valide le style du premier film complet, puis demande de refaire aussi son montage. P01 Your Life Working for a Billionaire, pour Oddly Important Guy, est livre dans `01 - Videos/Oddly Important Guy/01 - Working for a Billionaire/Version 3 - Fondus/VIDEO.mp4` : memes 91 images et meme voix Ryan, 16 min 18, 1920 x 1080 a 24 images/s. Les 90 transitions durent chacune 3 secondes ; la sortie de l'image vers le noir dure les 5 dernieres secondes, avec une derniere image noire. Plans fixes, aucun zoom anime ni modification de la narration.
 
@@ -28,7 +36,7 @@ Le moteur conserve maintenant les fondus longs autour des frontieres de narratio
 
 Transfert local verifie par empreinte, puis suppression de cette seule copie MP4 finale du VPS suivant la consigne du proprietaire. Les sources et preuves sont conservees ; les anciennes versions locales restent disponibles. Le rendu et tous les calculs media restent sur VPS uniquement. La validation esthetique du proprietaire sur le dessin du premier film est maintenant acquise et remplace les attentes historiques ci-dessous. La presente intervention ne relance pas les autres films du lot : elle termine uniquement le nouveau montage demande pour P01. Garder les fondus de 3 secondes et la sortie noire de 5 secondes pour les prochaines videos des deux chaines.
 
-## Montage des prochaines videos — decision du 20 octobre
+## Montage des prochaines videos â€” decision du 20 octobre
 
 Nouvelle consigne explicite du proprietaire pour les prochaines videos des deux chaines : fondu enchaine (mix/crossfade) de 3 secondes entre chaque image, puis fondu progressif de l'image vers le noir sur les 5 dernieres secondes du film. Cette decision remplace les coupes franches pour les futures productions uniquement. Garder les plans fixes, sans zoom anime. Ne pas changer la voix Ryan, son rythme ou les points d'ancrage de narration, ni ajouter cinq secondes de silence ou de noir apres la fin. Les fondus se placent autour des frontieres existantes ; le fondu final atteint le noir a la fin du film. La voix reste intacte.
 
@@ -36,7 +44,7 @@ Attention technique pour le prochain montage : le moteur actuellement conserve p
 
 Il s'agit d'une preference de montage pour la suite, pas d'une autorisation de relancer le lot avant validation du style du film complet P01. Le MP4 deja livre reste conserve dans sa version a coupes franches ; aucune nouvelle generation ou aucun rendu n'est lance par cette mise a jour.
 
-## Remake complet du 20 octobre — avis du proprietaire attendu
+## Remake complet du 20 octobre â€” avis du proprietaire attendu
 
 Le proprietaire approuve le dessin du nouvel extrait et autorise UNE video complete avant de decider la suite du lot. P01, Your Life Working for a Billionaire, est refait en entier : 16 min 18, 91 images, voix Ryan existante, 1920 x 1080 a 24 images/s, plans fixes et coupes franches. Livraison dans `01 - Videos/Oddly Important Guy/01 - Working for a Billionaire/Version 2 - A valider/VIDEO.mp4`. L'ancien MP4 et les miniatures restent conserves dans le dossier parent.
 
@@ -46,7 +54,7 @@ Le fournisseur principal reste celui choisi dans la configuration privee. Un pla
 
 Tous les calculs media sont faits sur le VPS ; le PC recoit seulement les fichiers. Apres transfert du nouveau MP4 et comparaison des empreintes, seule sa copie finale distante est supprimee suivant la consigne du proprietaire. Les images, voix et references restent sur le serveur. Le projet natif P01 contient maintenant le decoupage revise et la trace du transfert. Aucun autre projet du lot n'est modifie et aucune publication ni programmation n'est effectuee. ATTENDRE le retour du proprietaire sur cette version complete avant de relancer le reste du lot ; ne pas deduire cette autorisation de l'ancien accord sur les vingt videos.
 
-## Nouvel essai du 20 octobre — fournisseur remplace
+## Nouvel essai du 20 octobre â€” fournisseur remplace
 
 Le proprietaire rejette aussi les derniers essais de dessin et demande explicitement de remplacer le fournisseur des images. Les deux presets distants utilisent desormais le fournisseur et le modele choisis dans la configuration privee. Le defaut partage des autres chaines reste conserve. Les projets existants ne sont pas migres. Les references des personnages et du dessin restent disponibles, les decors restent libres et la continuite de lieu reste desactivee.
 
@@ -54,7 +62,7 @@ Un extrait de 65,25 secondes est termine dans `output/videos/character-only-minu
 
 Le catalogue du site accepte maintenant les modeles configures par style en plus du defaut partage ; trois tests de contrat passent et la presence du choix dans le catalogue HTTP vivant a ete verifiee. Les vingt films restent en attente : pas de nouvelle production massive ni de publication avant le retour du proprietaire sur cet extrait. La reussite technique de l'essai n'est pas une approbation esthetique du proprietaire.
 
-## Decision visuelle du 20 octobre — personnages coherents, decors libres
+## Decision visuelle du 20 octobre â€” personnages coherents, decors libres
 
 Le proprietaire rejette la qualite visuelle du lot et abandonne la coherence des backgrounds. Les vingt MP4 livres restent conserves ; leur verification technique ne vaut pas approbation esthetique. Ne pas les publier ni relancer les vingt films automatiquement.
 
@@ -68,8 +76,8 @@ ETAT DE REPRISE ACTUALISE : vingt MP4 complets revus et transferes avec empreint
 
 
 DERNIERE DECISION du 19 octobre : l'utilisateur a demande de poursuivre jusqu'aux
-vingt MP4 complets et verifies. La reprise est AUTORISEE. Test « scene complete
-d'abord » REJETE : decors maitres et identites separes. Le plan de bureau 1B du
+vingt MP4 complets et verifies. La reprise est AUTORISEE. Test Â« scene complete
+d'abord Â» REJETE : decors maitres et identites separes. Le plan de bureau 1B du
 comparatif avait une jambe traversant le bureau : REJETE, ne pas le reutiliser.
 Verifier chaque sortie : yeux/pupilles, bras/mains, jambes sous les tables,
 surfaces opaques, objets soutenus, acteur qui accomplit vraiment l'action.
@@ -95,7 +103,7 @@ L'ancienne reference
 Ellis a deux pupilles dans un oeil : rejetee ; seule sa correction inspectee
 peut etre reutilisee. Aucune publication n'est demandee pour ce lot.
 
-Lire README.md et SCRIPTWRITING.md avant d’ecrire, reviser ou preparer une video
+Lire README.md et SCRIPTWRITING.md avant dâ€™ecrire, reviser ou preparer une video
 de ces deux chaines. Le benchmark POVrank du 19 octobre concerne les vingt
 scripts de ce dossier ; il ne change pas la methode des autres chaines.
 
@@ -105,17 +113,17 @@ une autre intrigue. Appliquer Faceless OS avec les preuves disponibles, sans
 fabriquer de score ni transformer le scanner en validation de retention.
 
 Les sujets et styles sont approuves. Conserver les 43 miniatures A/B/C pour le
-choix ulterieur de l’utilisateur. Les scripts courants et leurs empreintes sont
-dans scripts-20-2026-10-18/manifest.json. L’etat des controles est dans la revue
+choix ulterieur de lâ€™utilisateur. Les scripts courants et leurs empreintes sont
+dans scripts-20-2026-10-18/manifest.json. Lâ€™etat des controles est dans la revue
 editoriale et le guide associes. Une revision comparative ne vaut pas a elle
 seule PASS complet de production ou approbation des manuscrits par le lecteur.
 
 Garder la narration anglaise et la voix Ryan. Ecrire des decisions et consequences
 propres a chaque metier ou situation ; pas de remplacement par un parcours de
 grades universel. Les styles video des deux chaines restent distincts. Expressions
-adaptees a l’action, identites stables, lieux varies qui gardent leur geometrie.
+adaptees a lâ€™action, identites stables, lieux varies qui gardent leur geometrie.
 
 Pour une production autorisee : voix avant transcript et decoupage reel, medias
 et rendu sur le VPS. Ne pas lancer le montage sur le PC. Respecter les demandes
 de suppression distante apres transfert verifie et ne pas toucher aux donnees
-d’autres travaux. Aucun secret ni transcription complete d’un concurrent en Git.
+dâ€™autres travaux. Aucun secret ni transcription complete dâ€™un concurrent en Git.

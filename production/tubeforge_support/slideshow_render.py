@@ -54,8 +54,13 @@ def render(job):
     if job.get('strict_transition_seconds') and any(
             n != round(float(job.get('transition_seconds', .25)) * fps) for n in transitions):
         raise ValueError('A shot is too short for the requested dissolve')
+    intro_frames = min(sum(counts), max(0, round(float(job.get('intro_fade_seconds', 0)) * fps)))
     outro_frames = min(sum(counts), max(0, round(float(job.get('outro_fade_seconds', 0)) * fps)))
     filters = [f'fps={fps}', 'format=yuv420p']
+    if intro_frames:
+        # Picture only: the narration keeps its original start and duration.
+        filters.append(f'fade=t=in:start_frame=0:'
+                       f'nb_frames={max(1, intro_frames - 1)}:color=black')
     if outro_frames:
         # Finish at full black on the last encoded frame; do not extend audio.
         filters.append(f'fade=t=out:start_frame={sum(counts) - outro_frames}:'
@@ -133,6 +138,8 @@ def render(job):
             'transition': 'crossfade' if any(transitions) else 'cuts',
             'transition_seconds': float(job.get('transition_seconds', .25)),
             'transition_frame_counts': transitions,
+            'intro_fade_frames': intro_frames,
+            'intro_fade_seconds': intro_frames / fps,
             'outro_fade_frames': outro_frames,
             'outro_fade_seconds': outro_frames / fps,
             'bytes': output.stat().st_size,
