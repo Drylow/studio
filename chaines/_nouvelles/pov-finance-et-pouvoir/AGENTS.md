@@ -1,5 +1,13 @@
 # The Wealthy Nobody et Oddly Important Guy
 
+## PAUSE du 21 octobre — essais de raccord uniquement
+
+Le proprietaire a demande STOP : les dix-neuf remakes et leur suivi automatique sont suspendus. Ne pas relancer la file, envoyer SIGCONT, rendre ou publier sur la base des autorisations historiques ci-dessous. Etat au point observe : un nouveau film termine, casino avec 62 images sur 88 et des demandes deja soumises a reconcilier ; dix-huit autres remakes d'images pas encore lances. Scripts et voix restent prets. Instructions privees de reprise dans `work/nineteen-redraw-2026-10-21/README-PRIVATE.md`.
+
+La demande suivante autorise uniquement des essais d'une continuite legere par scene. Premier essai : deux images issues d'un meme ancrage occupe, personnages et dessin references separement ; table et principaux reperes stables, cadrage trop proche et petites derives de cartes. Deuxieme essai cible : garder un contrat de piece en coordonnees physiques (materiaux, sol, meubles, portes), puis decrire la projection et les occultations dues a un vrai changement de camera. Un changement d'angle ne doit pas inventer une fenetre, un nouveau revetement ou deplacer le mobilier. Les surfaces nouvellement visibles restent simples avec les materiaux connus. Une partie invisible ne peut pas etre declaree connue ; reduire l'angle ou etablir une vue supplementaire explicitement controlee si necessaire.
+
+Il s'agit d'essais, pas d'une adoption globale ni d'une garantie de reconstruction 3D. Le contrat reste propre a une courte scene ; un autre lieu peut avoir un autre ancrage. Chaque nouvelle image doit etre regardee pour le decor, la perspective, les materiaux, l'action et les personnages. Aucune validation automatique au seul succes de la requete. Les presets et le plan du lot restent inchanges ; calculs media sur VPS uniquement. Preuves privees : `work/light-background-test-2026-10-21/` et `work/scene-geometry-test-2026-10-21/`.
+
 ## Nouvelle reprise autorisee le 21 octobre — dix-neuf remakes et mesure des limites
 
 Le proprietaire trouve les transitions de trois secondes trop lentes. Nouvelle valeur de travail : fondu enchaine de 0,5 seconde ; fondu final vers le noir de cinq secondes conserve, sans zoom anime et sans changer la voix Ryan. Le montage du premier film est aussi repris avec ce reglage. Cette consigne remplace les trois secondes de l'historique ci-dessous.
