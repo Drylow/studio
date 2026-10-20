@@ -1,5 +1,13 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Nouvel essai du 20 octobre — fournisseur remplace
+
+Le proprietaire rejette aussi les derniers essais de dessin et demande explicitement de remplacer le fournisseur des images. Les deux presets distants utilisent desormais le fournisseur et le modele choisis dans la configuration privee. Le defaut partage des autres chaines reste conserve. Les projets existants ne sont pas migres. Les references des personnages et du dessin restent disponibles, les decors restent libres et la continuite de lieu reste desactivee.
+
+Un extrait de 65,25 secondes est termine dans `output/videos/character-only-minute-2026-10-20/DEMO.mp4` : neuf images nouvelles, voix Ryan existante, 1920 x 1080, 24 images/s, plans fixes et coupes franches. Le redacteur a regarde les neuf images originales puis quatre extraits de pixels du MP4 encode. Les 1566 images du flux et la correspondance audio ont aussi ete controlees techniquement sur le VPS. Le transfert a ete compare a l'empreinte distante ; seule la copie finale de cet essai a ensuite ete supprimee du VPS, ses sources et preuves restent conservees. Aucun calcul media sur le PC.
+
+Le catalogue du site accepte maintenant les modeles configures par style en plus du defaut partage ; trois tests de contrat passent et la presence du choix dans le catalogue HTTP vivant a ete verifiee. Les vingt films restent en attente : pas de nouvelle production massive ni de publication avant le retour du proprietaire sur cet extrait. La reussite technique de l'essai n'est pas une approbation esthetique du proprietaire.
+
 ## Decision visuelle du 20 octobre — personnages coherents, decors libres
 
 Le proprietaire rejette la qualite visuelle du lot et abandonne la coherence des backgrounds. Les vingt MP4 livres restent conserves ; leur verification technique ne vaut pas approbation esthetique. Ne pas les publier ni relancer les vingt films automatiquement.
