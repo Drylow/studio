@@ -1,5 +1,15 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Remake complet du 20 octobre — avis du proprietaire attendu
+
+Le proprietaire approuve le dessin du nouvel extrait et autorise UNE video complete avant de decider la suite du lot. P01, Your Life Working for a Billionaire, est refait en entier : 16 min 18, 91 images, voix Ryan existante, 1920 x 1080 a 24 images/s, plans fixes et coupes franches. Livraison dans `01 - Videos/Oddly Important Guy/01 - Working for a Billionaire/Version 2 - A valider/VIDEO.mp4`. L'ancien MP4 et les miniatures restent conserves dans le dossier parent.
+
+Les neuf plans de l'extrait approuve sont reutilises. Les 82 plans suivants sont redessines avec guide de dessin et identites uniquement, sans reference de decor ou image precedente. Chaque image selectionnee a ete regardee ; une image a trois mains et une arrivee de nuit ont ete remplacees par des corrections inspectees. Les pixels de chacun des 91 plans encodes ont ensuite ete regardes. Le flux video entier et la correspondance de l'audio ont aussi ete verifies techniquement sur le VPS. Cela ne constitue pas un visionnage humain integral ni une approbation esthetique du film complet par le proprietaire.
+
+Le fournisseur principal reste celui choisi dans la configuration privee. Un plan utilisant les credits studio existants et une vraie correction par le secours API demande sont integres apres verification visuelle, avec les memes references. Les recus, empreintes, prompts exacts, listes ordonnees de references et controles sont conserves dans le dossier de travail prive `work/P01-redraw-2026-10-20/` et dans les preuves de production distantes. Les comptes de credits studio et de caracteres de voix sont distincts.
+
+Tous les calculs media sont faits sur le VPS ; le PC recoit seulement les fichiers. Apres transfert du nouveau MP4 et comparaison des empreintes, seule sa copie finale distante est supprimee suivant la consigne du proprietaire. Les images, voix et references restent sur le serveur. Le projet natif P01 contient maintenant le decoupage revise et la trace du transfert. Aucun autre projet du lot n'est modifie et aucune publication ni programmation n'est effectuee. ATTENDRE le retour du proprietaire sur cette version complete avant de relancer le reste du lot ; ne pas deduire cette autorisation de l'ancien accord sur les vingt videos.
+
 ## Nouvel essai du 20 octobre — fournisseur remplace
 
 Le proprietaire rejette aussi les derniers essais de dessin et demande explicitement de remplacer le fournisseur des images. Les deux presets distants utilisent desormais le fournisseur et le modele choisis dans la configuration privee. Le defaut partage des autres chaines reste conserve. Les projets existants ne sont pas migres. Les references des personnages et du dessin restent disponibles, les decors restent libres et la continuite de lieu reste desactivee.
