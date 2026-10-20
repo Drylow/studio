@@ -1,5 +1,17 @@
 # The Wealthy Nobody et Oddly Important Guy
 
+## Nouvelle reprise autorisee le 21 octobre — dix-neuf remakes et mesure des limites
+
+Le proprietaire trouve les transitions de trois secondes trop lentes. Nouvelle valeur de travail : fondu enchaine de 0,5 seconde ; fondu final vers le noir de cinq secondes conserve, sans zoom anime et sans changer la voix Ryan. Le montage du premier film est aussi repris avec ce reglage. Cette consigne remplace les trois secondes de l'historique ci-dessous.
+
+Le proprietaire autorise maintenant les neuf autres Oddly Important Guy (P02-P10), puis les dix The Wealthy Nobody (W01-W10), avec le nouveau dessin valide sur P01. Le lot compte 1 644 images a redessiner : 776 puis 868, hors corrections. Les anciennes livraisons restent archivees. Scripts et voix existants sont reutilises. Referencements : dessin et identites uniquement ; aucun decor maitre, vue de lieu ou image precedente. Les actions deja redigees par Codex sont conservees ; les vieilles coordonnees de piece ne sont plus des contrats de continuite. Aucun autre canal ni aucune publication n'est relance.
+
+Le controle d'execution est dans `work/nineteen-redraw-2026-10-21/`, prive et ignore. La file persistante du serveur est `data/production-assets/nineteen-character-only-20261021/`. Ne jamais rejouer un lancement existant avant lecture des marqueurs et recus. Les trois premieres images du casino ont ete effectivement regardees ; le rendu de chaque film attend sa revue complete des sources, puis le transfert attend la revue des apercus encodes. Les sorties d'image ne sont jamais automatiquement declarees bonnes parce que la requete a reussi.
+
+La production utile sert aussi a mesurer les limites du fournisseur : journal persistant par compte pseudonymise, modele et jour de reference. Compter demandes de generation, images effectivement retournees, imports de references et refus separement. Distinguer plafond quotidien, quota de compte, ralentissement temporaire, probleme captcha et issue reseau inconnue. Respecter les delais fournis ; lire les recus et jobs connus avant toute reprise d'une issue incertaine. Ne pas changer de modele pour masquer un refus ni presenter un nombre observe comme un quota officiel. Un historique de quinze minutes ne permet pas de deduire tout un quota quotidien ; l'usage anterieur ou externe peut manquer.
+
+Tous les calculs media restent sur VPS exclusivement. Aucun rendu ou traitement d'image sur le PC ; seulement pilotage, lecture, verifications textuelles, copie des octets et empreintes. Apres transfert verifie de chaque MP4, supprimer sa seule copie finale distante suivant la consigne existante ; conserver les sources et preuves.
+
 ## Montage livre le 21 octobre — fondus appliques a P01
 
 Le proprietaire valide le style du premier film complet, puis demande de refaire aussi son montage. P01 Your Life Working for a Billionaire, pour Oddly Important Guy, est livre dans `01 - Videos/Oddly Important Guy/01 - Working for a Billionaire/Version 3 - Fondus/VIDEO.mp4` : memes 91 images et meme voix Ryan, 16 min 18, 1920 x 1080 a 24 images/s. Les 90 transitions durent chacune 3 secondes ; la sortie de l'image vers le noir dure les 5 dernieres secondes, avec une derniere image noire. Plans fixes, aucun zoom anime ni modification de la narration.
