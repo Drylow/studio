@@ -10,6 +10,53 @@ from PIL import Image, ImageDraw
 from slideshow_render import render
 
 
+def check_long_dissolves_and_outro():
+    """The full requested mix must survive without shortening narration."""
+    with tempfile.TemporaryDirectory(prefix='slideshow-long-check-') as folder:
+        root = Path(folder)
+        colors = [(224, 32, 32), (32, 32, 224), (32, 224, 32)]
+        for i, color in enumerate(colors):
+            Image.new('RGB', (160, 90), color).save(root / f'{i}.png')
+        with wave.open(str(root / 'voice.wav'), 'wb') as wav:
+            wav.setparams((1, 2, 8000, 0, 'NONE', 'not compressed'))
+            wav.writeframes(b'\0\0' * 8000 * 18)
+        result = render({'voice': str(root / 'voice.wav'), 'out': str(root / 'out.mp4'),
+                         'duration': 18, 'width': 160, 'height': 90, 'fps': 24,
+                         'transition_seconds': 3, 'strict_transition_seconds': True,
+                         'outro_fade_seconds': 5,
+                         'scenes': [{'image': str(root / f'{i}.png'), 'start': i * 6,
+                                     'end': (i + 1) * 6} for i in range(3)]})
+        raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(root / 'out.mp4'),
+                              '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-threads', '1', '-'],
+                             capture_output=True, check=True).stdout
+        stride = 160 * 90 * 3
+        assert len(raw) == stride * 432
+        for frame in range(432):
+            if frame < 108:
+                expected = colors[0]
+            elif frame < 180:
+                alpha = (frame - 108 + 1) / 73
+                expected = [a * (1 - alpha) + b * alpha for a, b in zip(colors[0], colors[1])]
+            elif frame < 252:
+                expected = colors[1]
+            elif frame < 324:
+                alpha = (frame - 252 + 1) / 73
+                expected = [a * (1 - alpha) + b * alpha for a, b in zip(colors[1], colors[2])]
+            else:
+                expected = colors[2]
+            if frame >= 312:
+                expected = [c * max(0, 1 - (frame - 312) / 119) for c in expected]
+            offset = frame * stride + (45 * 160 + 80) * 3
+            actual = raw[offset:offset + 3]
+            assert max(abs(a - b) for a, b in zip(actual, expected)) < 9, (frame, actual, expected)
+        assert max(actual) < 3
+        assert result['transition_frame_counts'] == [72, 72]
+        assert result['outro_fade_frames'] == 120 and result['frames'] == 432
+        print(json.dumps({'long_fades_passed': True, 'frames_checked': 432,
+                          'transition_frames': [72, 72], 'outro_frames': 120,
+                          'final_frame_black': True, 'duration': 18}))
+
+
 def main():
     with tempfile.TemporaryDirectory(prefix='slideshow-check-') as folder:
         root = Path(folder)
@@ -53,3 +100,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    check_long_dissolves_and_outro()
