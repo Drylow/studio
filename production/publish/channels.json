@@ -1,5 +1,5 @@
 {
-  "_note": "Chaînes YouTube de l'utilisateur publiées depuis son PC (choix du 14 oct. 2026). Le nom du profil = le nom de la chaîne. Les identifiants internes des profils restent dans work/publish/profiles.json (ignoré par git). Samurai Chapters retirée le 15 oct. 2026 (compte Google mort, demande de l'utilisateur).",
+  "_note": "Chaînes YouTube de l'utilisateur publiées depuis son PC (choix du 14 oct. 2026). Le nom du profil = le nom de la chaîne. Les identifiants internes des profils restent dans work/publish/profiles.json (ignoré par git). Samurai Chapters retirée le 15 oct. 2026 (compte Google mort, demande de l'utilisateur). 21 oct. 2026 : Viking Chapters, Pirate Pages et One Stick Left supprimées par l'utilisateur (plus de vidéo ni de publication) ; Última Puerta Segura (espagnol) ajoutée, profil AdsPower du même nom, publication immédiate.",
   "channels": [
     {
       "name": "Last Safe Door",
@@ -10,37 +10,13 @@
       "tubeforge_channel_id": "channel-e26fb87b6f07"
     },
     {
-      "name": "One Stick Left",
-      "app": "fury",
-      "profile": "One Stick Left",
-      "youtube_channel_id": "UCItgDwf_e3GIvqlH-OtxsbQ",
-      "published_thumbnail": "production/publish/published-thumbnails/osl.jpg",
-      "tubeforge_channel_id": "channel-94fb9d3c1def"
-    },
-    {
       "name": "Scene Analysis Guy",
       "app": "fury",
       "profile": "Scene Analysis Guy"
     },
     {
-      "name": "Viking Chapters",
-      "app": "adspower",
-      "profile": "Viking Chapters",
-      "youtube_channel_id": "UCUqIXYHY6pdv3IO5J4_hr5w",
-      "published_thumbnail": "production/publish/published-thumbnails/viking.jpg",
-      "tubeforge_channel_id": "channel-5001437ebc14"
-    },
-    {
-      "name": "Pirate Pages",
-      "app": "adspower",
-      "profile": "Pirate Pages",
-      "youtube_channel_id": "UCh_jI9tSDMZTD_GLM7XkGVA",
-      "published_thumbnail": "production/publish/published-thumbnails/pirate.jpg",
-      "tubeforge_channel_id": "channel-71bce3373faf"
-    },
-    {
       "name": "Última Puerta Segura",
-      "app": "fury",
+      "app": "adspower",
       "profile": "Última Puerta Segura",
       "tubeforge_channel_id": "channel-3827e1c1c08b",
       "language": "es"

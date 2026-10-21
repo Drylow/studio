@@ -1,13 +1,13 @@
 ---
 name: publier
-description: Sur le PC de l'utilisateur (Windows), publie les vidéos de ses 5 chaînes YouTube (Last Safe Door, One Stick Left, Scene Analysis Guy, Viking Chapters, Pirate Pages) depuis leurs profils Fury ou AdsPower. À lancer quand l'utilisateur tape /publier ou demande de publier, programmer ou automatiser ces chaînes.
+description: Sur le PC de l'utilisateur (Windows), publie les vidéos de ses chaînes YouTube (Last Safe Door, Scene Analysis Guy, Última Puerta Segura) depuis leurs profils Fury ou AdsPower. À lancer quand l'utilisateur tape /publier ou demande de publier, programmer ou automatiser ces chaînes.
 ---
 
 # Publier sur les chaînes de l'utilisateur depuis Fury et AdsPower
 
 Décision de l'utilisateur du 14 octobre 2026 : ses chaînes se publient depuis les profils de
 navigateur où sont ses comptes, **Fury** et **AdsPower**, sur ce PC. Pas de Zernio ni d'API YouTube
-pour ces 5 chaînes. Samurai Chapters est retirée (compte Google mort, 15 oct.) : ne rien publier dessus. Cage Dispatch, Pitch Dispatch (serveur) et Octave Histoire (Zernio) ne changent pas.
+pour ces 5 chaînes. Samurai Chapters est retirée (compte Google mort, 15 oct.) : ne rien publier dessus. **21 oct. : Viking Chapters, Pirate Pages et One Stick Left sont supprimées** (décision de l'utilisateur) : ne plus rien publier dessus, leurs fiches sont dans `production/publish/retired/`. Cage Dispatch, Pitch Dispatch (serveur) et Octave Histoire (Zernio) ne changent pas.
 
 Parle-lui en français simple et court (CLAUDE.md §1). Il ne veut rien faire à la main : installe toi-même
 ce qui manque, il clique seulement « Autoriser ». Les chaînes du collègue (Patch Survives, Alien Aftermath,
@@ -16,8 +16,8 @@ Deep Sea Survival, Oddly Fictional Lives…) ne te concernent pas.
 ## Les chaînes et leurs profils
 
 `production/publish/channels.json` : le **nom du profil = le nom de la chaîne**.
-- AdsPower : **Viking Chapters**, **Pirate Pages**.
-- Fury : **Last Safe Door**, **One Stick Left**, **Scene Analysis Guy**.
+- AdsPower : **Última Puerta Segura** (chaîne espagnole, 21 oct. ; profil renommé par l'utilisateur ; fiches `ltima-puerta-segura--*.json`, `visibility: public` = publier tout de suite, dans l'ordre des épisodes 1 → 4).
+- Fury : **Last Safe Door**, **Scene Analysis Guy**.
 
 ## Étape 1 : le PC et ses outils (en place depuis le 14 oct.)
 
