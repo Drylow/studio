@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 241 to Day 270",
+  "description_file": "chaines/last-safe-door/episode-09-day-241-270/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/ZXqrA3Co",
+    "file": "final.mp4",
+    "sha256": "bf206f3b668d0f7ec0685fdabcb810ad09d96bf10f14e5ce09691f6d02f6ff56",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-09-day-241-270-c29f41612e53c8f9.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-09-day-241-270/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-09-day-241-270/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-09-day-241-270/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-22T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-241-to-day-27-ee0e52"
+}
