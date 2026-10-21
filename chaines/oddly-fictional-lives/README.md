@@ -9,23 +9,20 @@ final MP4 was removed afterward, as requested; source images, voice and evidence
 remain on the production host. No upload or new publication date was set.
 See [production record](videos/08-your-life-as-every-marine-rank-in-one-piece/production.md).
 
-Next is **Your Life on the Wall (Game of Thrones)**: narration and real word
-timestamps are complete,159 image actions and67 physical-set contracts are
-manually authored. All eleven identity sheets have been inspected.158 of159
-selected source images have passed actual visual inspection; one final corrected
-source is still awaiting review. The owner flagged soft-looking shots, so the
-softest identified frames are being restored at higher native resolution while
-preserving their approved staging and character design. Only inspected
-replacements will be selected. The unsupported guard was rejected and replaced
-with a guard standing behind the actual walkway rail. No complete Wall film
-exists yet; final encoding and its inspection remain outstanding.
+**Your Life on the Wall (Game of Thrones)** is also complete:15:52,
+159 inspected source images, including16 restored at higher native resolution.
+All29 encoded review sheets were inspected, the entire22,856-frame stream was
+compared with its intended images/fades, and the original voice was verified.
+The1080p film was transferred with a matching SHA-256; only its remote final MP4
+was removed afterward. Its corrected guard stands on the actual walkway.
+See [production record](videos/09-your-life-on-the-wall-game-of-thrones/production.md).
 
-This active batch is **1/11 delivered**: these two fictional-universe films,
-then P02–P10 for Oddly Important Guy. Do not resume the unrelated paused
-Wealthy Nobody or old combined19-video batch. Keep existing voices and thumbnail
-alternatives for those nine follow-ons. All media generation/rendering stays on
-the remote production host. This checkpoint supersedes conflicting older planning
-status below; historical release receipts are not new completed films.
+The active batch is now **2/11 delivered**. Next are P02–P10 for Oddly Important
+Guy, reusing their existing voices and thumbnail alternatives. Do not resume
+the unrelated Wealthy Nobody or old combined19-video worker. All generation
+and media processing stays on the remote host; no new upload or publication
+date has been set for these two films. This checkpoint supersedes older planning
+status below.
 
 ---
 
