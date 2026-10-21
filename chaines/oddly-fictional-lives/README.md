@@ -2,6 +2,23 @@
 
 ## Production instructions — 21 October 2026
 
+Current verified progress: the two original scripts and their complete editorial
+reviews are saved under [One Piece](videos/08-your-life-as-every-marine-rank-in-one-piece/editorial-review.md)
+and [the Wall](videos/09-your-life-on-the-wall-game-of-thrones/editorial-review.md).
+Both configured voiceovers were synthesised on the hosted server: One Piece
+968.72 seconds / 2,794 aligned words; the Wall 952.34 seconds / 2,774 aligned words.
+Mechanical timing proposals contain 162 and 159 intervals, longest 6.604 and
+6.639 seconds. These are not completed films or visual approvals. One Piece's
+nine initial identity originals were actually viewed; officer variants and final
+scenes still require inspection. The voice-only route imports the native service
+result while preserving the authored-project guard against automatic planning.
+
+The owner's persistent production goal now continues AFTER these two completed
+films with the nine remaining Oddly Important Guy workplace films (earlier name
+Paid to Panic), using their existing thumbnail alternatives. It does not restart
+The Wealthy Nobody batch. Private receipts and exact current handles are under
+`work/ofl-one-piece-got-2026-10-21/`; no completion or scheduling is implied here.
+
 The owner selected **Your Life as Every Marine Rank in One Piece**, followed by
 **Your Life on the Wall (Game of Thrones)**. These are authorised for production,
 not yet delivered or scheduled. Keep the configured Ryan voice and the exclusively
