@@ -1,3 +1,29 @@
+## Current production checkpoint —21 October2026
+
+The Marine episode, **Your Life as Every Marine Rank in One Piece**, is complete:
+16:09,162 primary-inspected images and a1920×1080 final film. The finished
+encode was inspected through all162 shot samples plus transition/opening/ending
+samples, and its entire video stream and original voice were checked technically.
+The completed file was transferred with a matching SHA-256. Only its remote
+final MP4 was removed afterward, as requested; source images, voice and evidence
+remain on the production host. No upload or new publication date was set.
+See [production record](videos/08-your-life-as-every-marine-rank-in-one-piece/production.md).
+
+Next is **Your Life on the Wall (Game of Thrones)**: narration and its real word
+timestamps are complete,159 image actions and67 physical-set contracts are
+manually authored. Its ten original identity sheets were inspected; an additional
+recurring rescued steward is being given a separate identity before scene work.
+No complete Wall film exists yet.
+
+This active batch is **1/11 delivered**: these two fictional-universe films,
+then P02–P10 for Oddly Important Guy. Do not resume the unrelated paused
+Wealthy Nobody or old combined19-video batch. Keep existing voices and thumbnail
+alternatives for those nine follow-ons. All media generation/rendering stays on
+the remote production host. This checkpoint supersedes conflicting older planning
+status below; historical release receipts are not new completed films.
+
+---
+
 # Oddly Fictional Lives
 
 ## Production instructions — 21 October 2026
