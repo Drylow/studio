@@ -1,0 +1,1341 @@
+{
+  "date": "2026-10-18",
+  "episodes": [
+    {
+      "id": "01-skyrim-mysteries",
+      "channel": "Forgotten Realms of Sleep",
+      "title": "2 Hours of Skyrim's Darkest Mysteries to Fall Asleep To",
+      "angle": "A calm journey from local investigations to buried histories and Daedric bargains; some mysteries are solved by their quests, others remain genuinely open.",
+      "scope": "The Elder Scrolls V: Skyrim base game, Dawnguard and Dragonborn. Full spoilers. No mods or Creation Club material. Do not develop the Dwemer disappearance: that has its own film.",
+      "minimum_words": 25500,
+      "planned_runtime": "At least 150 minutes at 170 words per minute; estimate only.",
+      "forbidden": [
+        "Original English narration only; no copied dialogue or competitor wording.",
+        "No invented journals, props, motives, dates, numerical probabilities or developer intent.",
+        "No mods, fan fiction, cut quests presented as playable canon, or unofficial endings.",
+        "No graphic violence or described self-harm methods; discuss consequences gently.",
+        "Only one optional subscribe plus listening location/day-or-night CTA in chapter one.",
+        "No trailers, repeated bedtime instructions, philosophical filler, repeated disclaimers or recaps.",
+        "All assigned chapters belong to one continuous narration. Resolve their local questions.",
+        "No claim the entire catalogue is unsolved. No wholesale plot retelling of the Dwemer film."
+      ],
+      "proof": [
+        {
+          "chapter": 1,
+          "primary": "Skyrim: Laid to Rest, Helgi and Alva dialogue, Alva's journal.",
+          "facts": "Hroggar survives the fire that kills his family and moves in with Alva. Helgi appears as a ghost. Laelette is a vampire. Alva's journal connects her to Movarth. The town can confront the threat in Movarth's Lair. The quest supplies an answer, although the townspeople begin with an incomplete explanation.",
+          "boundary": "Do not imply that every mystery in this video stays unsolved. Keep the child's fate non-graphic. No invented original cause of vampirism."
+        },
+        {
+          "chapter": 2,
+          "primary": "Skyrim: Frostflow Abyss, Habd's, Ramati's and Sudi's journals, Mani's letter.",
+          "facts": "Habd and Ramati live at Frostflow with Sudi and Mani. The family journals record disagreement over the move and noises beneath the home. A passage leads to Falmer and chaurus below. Habd's remains can be recovered and placed at the lighthouse beacon, granting Sailor's Repose.",
+          "boundary": "Do not describe self-harm instructions or invent the exact last conversation. No precise egg counts or dates."
+        },
+        {
+          "chapter": 3,
+          "primary": "Skyrim: In My Time of Need, Saadia and Kematu dialogue.",
+          "facts": "Saadia works at the Bannered Mare and identifies herself as Iman, a noblewoman from Hammerfell. She says the Alik'r pursue her for opposing the Dominion. Kematu says she betrayed Taneth and is wanted for judgment in Hammerfell. Kematu can paralyze her at the stables if the player cooperates. The player can instead kill him and protect her.",
+          "boundary": "Neither account is confirmed as the whole truth. An urn appearing through NPC cleanup mechanics is not proof of an offscreen execution. Do not import a mod's letter."
+        },
+        {
+          "chapter": 4,
+          "primary": "Skyrim: The Raid and Supply and Demand, Wujeeta dialogue, Sarthis's note.",
+          "facts": "Wujeeta's addiction can be treated with a healing potion. She identifies Sarthis Idren as her supplier. The jarl authorizes investigation of Riften Warehouse. Sarthis and Orini Dral are encountered there; a note points to Cragslane Cavern and its operation. Disrupting the operation can help the player become thane.",
+          "boundary": "Do not claim this proves Maven personally runs every skooma shipment. No real-world drug preparation detail."
+        },
+        {
+          "chapter": 5,
+          "primary": "Skyrim: Blood on the Ice, Hjerim journals, Wuunferth and Calixto dialogue.",
+          "facts": "Windhelm has a series of murders. Hjerim contains incriminating material and a strange amulet. Calixto presents himself as an expert. Wuunferth can be wrongly accused; speaking with him can instead lead to an intervention at night. Calixto is revealed as the killer.",
+          "boundary": "Do not confuse Calixto with Wuunferth or promise the bug-prone quest always unfolds identically. No detailed mutilation."
+        },
+        {
+          "chapter": 6,
+          "primary": "Skyrim: The Forsworn Conspiracy, Nepos, Thonar and Eltrys dialogue.",
+          "facts": "A marketplace attack begins The Forsworn Conspiracy. Eltrys asks the player to investigate. Nepos admits serving Madanach. Thonar Silver-Blood has used imprisoned Forsworn for his purposes. The investigation leads to the player's arrest and Cidhna Mine.",
+          "boundary": "The Forsworn are not a single innocent or uniformly loyal group. Do not invent a signed conspiracy linking every guard or resident."
+        },
+        {
+          "chapter": 7,
+          "primary": "Skyrim: No One Escapes Cidhna Mine, Braig, Borkul and Madanach dialogue.",
+          "facts": "Madanach leads followers while imprisoned. Borkul guards access to him. Braig recounts his family's suffering. Madanach proposes an escape through a hidden route. The player can cooperate or oppose him, producing different outcomes and rewards involving Thonar.",
+          "boundary": "No single branch is the canon ending. Do not equate a player helping one escape with solving the whole Reach conflict."
+        },
+        {
+          "chapter": 8,
+          "primary": "Skyrim: The Man Who Cried Wolf, The Wolf Queen Awakened, Falk and Styrr dialogue.",
+          "facts": "Falk Firebeard sends the player to Wolfskull Cave in The Man Who Cried Wolf. Necromancers attempt to summon and bind Potema. A later quest, The Wolf Queen Awakened, takes the player below Solitude. Styrr explains the danger and the remains must be consecrated.",
+          "boundary": "Do not claim Potema is restored to normal bodily rule. No manufactured historical dates or motives beyond the books and dialogue."
+        },
+        {
+          "chapter": 9,
+          "primary": "Skyrim: Innocence Lost, With Friends Like These, Destroy the Dark Brotherhood.",
+          "facts": "Aventus Aretino performs the Black Sacrament after fleeing Honorhall. Grelod mistreats the children. The player can fulfill Aventus's request. A later encounter with Astrid initiates With Friends Like These; the player can join or destroy the Dark Brotherhood.",
+          "boundary": "Avoid graphic ritual instructions. Do not state Sithis personally ordered Grelod's death or that the player must join the Brotherhood."
+        },
+        {
+          "chapter": 10,
+          "primary": "Skyrim: Whispers in the Dark through Death Incarnate, Astrid confession, Night Mother dialogue.",
+          "facts": "Cicero brings the Night Mother to the Falkreath sanctuary. The Night Mother speaks to the player, identifying a Listener. Astrid's authority conflicts with the old structure. Her betrayal helps bring disaster to the sanctuary. The player can later move the surviving organization to Dawnstar.",
+          "boundary": "This follows the join branch only. Do not invent secret supernatural motives for every assassination or repeat the entry quest."
+        },
+        {
+          "chapter": 11,
+          "primary": "Skyrim: Winterhold dialogue, Korir and College members; On the Great Collapse.",
+          "facts": "Much of Winterhold fell into the Sea of Ghosts during the Great Collapse in 4E 122. The College survived while much of the city did not. Jarl Korir distrusts the College; the mages deny causing the collapse. The exact cause is unresolved in Skyrim.",
+          "boundary": "Do not connect the later discovery of the Eye to the older collapse as confirmed causation. No time-loop solution or stated Augur culpability."
+        },
+        {
+          "chapter": 12,
+          "primary": "Skyrim: Under Saarthal, Tolfdir dialogue, Good Intentions.",
+          "facts": "Students visit Saarthal with Tolfdir. A Psijic warning appears. A large magical orb lies behind Jyrik Gauldurson. The College moves it to the Hall of the Elements. Tolfdir cannot identify its markings. It is called the Eye of Magnus, but its full origin is not explained.",
+          "boundary": "Do not assert it contains Magnus or a time machine. Gauldur's wider family story belongs to a later chapter."
+        },
+        {
+          "chapter": 13,
+          "primary": "Skyrim: Good Intentions, Tolfdir, Augur dialogue; Restoration Ritual Spell.",
+          "facts": "The Augur is encountered as a luminous magical presence beneath the College. Tolfdir remembers his talent and ambition. The Augur directs the player toward the Staff of Magnus to address the danger posed by the Eye. He also appears in the Restoration Ritual Spell quest.",
+          "boundary": "No exact age, undocumented experiment mechanism or claim he is Magnus. Do not use his knowledge as proof he caused unrelated events."
+        },
+        {
+          "chapter": 14,
+          "primary": "Skyrim: The Staff of Magnus, The Eye of Magnus, Labyrinthian echoes.",
+          "facts": "Echoes show the earlier College expedition losing members in Labyrinthian. Savos left companions sustaining the containment of Morokei. The player breaks the magical hold, defeats Morokei and retrieves the Staff. Ancano uses the Eye; the Staff helps make him vulnerable. The Psijics remove the Eye.",
+          "boundary": "Do not invent names or final words for unnamed companions. Do not claim the College learns the Eye's full purpose."
+        },
+        {
+          "chapter": 15,
+          "primary": "Skyrim: Forgotten Names, Midden Incident Report, Velehk Sain dialogue.",
+          "facts": "The Midden Dark contains a gauntlet marked with the Oblivion symbol. A report and key lead to rings kept in the Arcanaeum. Placing the rings summons Velehk Sain, a Dremora pirate. The player can release him for a treasure map or oppose him.",
+          "boundary": "Do not conflate these students with Yisra, Ilas-Tei, Borvir and Rundi. No fabricated successful rescue or additional ring puzzle."
+        },
+        {
+          "chapter": 16,
+          "primary": "Skyrim: Phinis Gestor dialogue and apprentice locations in the unmodded game.",
+          "facts": "Phinis names Yisra, Ilas-Tei, Borvir and Rundi as missing apprentices. Their remains can be found around Skyrim in settings associated with failed magical work. The base game does not implement a normal completed investigation and report-back quest for them.",
+          "boundary": "No restoration-mod quest markers, invented final dialogue or exact experimental intentions when not documented."
+        },
+        {
+          "chapter": 17,
+          "primary": "Skyrim: Forbidden Legend, Lost Legends, Daynas Valen's notes, writs of sealing.",
+          "facts": "Lost Legends introduces Gauldur. Daynas Valen investigates the suppressed story. Mikrul, Jyrik and Sigdis hold fragments at Folgunthur, Saarthal and Geirmund's Hall. Their fragments can be reunited at Reachwater Rock, where Gauldur's presence ends the confrontation.",
+          "boundary": "Do not invent the precise legal order erasing Gauldur or assert every detail of the legend has independent witnesses."
+        },
+        {
+          "chapter": 18,
+          "primary": "Skyrim: Evil in Waiting, Valdar dialogue and Valthume.",
+          "facts": "Valdar's ghost guards Hevnoraak in Valthume. He asks the player to recover three vessels. The recovered vessels permit a confrontation in which the player can defeat the dragon priest. Valdar's task can finally end.",
+          "boundary": "No invented alchemical formula, blood ritual instructions or universal theory of all dragon-priest resurrection."
+        },
+        {
+          "chapter": 19,
+          "primary": "Skyrim: Siege on the Dragon Cult, Skorm Snow-Strider's journal, Valmir's orders.",
+          "facts": "Valmir sends the player into Forelhost and wears an allegiance-dependent uniform. The ruin contains Skorm Snow-Strider's journal and traces of the besieged dragon cult. Rahgot remains within. A note exposes Valmir's connection to the Thalmor.",
+          "boundary": "Keep the cult's grim end non-graphic. No claim every dragon cult fortress followed the same end or that Valmir's disguise is identical in every playthrough."
+        },
+        {
+          "chapter": 20,
+          "primary": "Skyrim: Bromjunaar Sanctuary, wooden mask, dragon-priest mask puzzle.",
+          "facts": "A wooden mask found at the ruined sanctuary near Labyrinthian transports the wearer to an intact version. Eight named masks can be placed on busts, revealing Konahrik. Removing the wooden mask returns the player. Konahrik's original bearer is not identified by this puzzle.",
+          "boundary": "No confirmed time-travel mechanics beyond the shown displacement. No assertion that Konahrik was Vahlok, Shalidor or the player."
+        },
+        {
+          "chapter": 21,
+          "primary": "Skyrim: The Pale Lady; Eisa's Journal, Kyr's Log, Ra'jirr's Note; Frostmere Depths encounter.",
+          "facts": "Eisa is attacked outside Frostmere Crypt. Kyr has claimed a blade found by the gang. Ra'jirr is troubled by the Pale Lady in dreams and steals it to return it. Eisa's journal, Kyr's log and Ra'jirr's note explain the conflict. Kyr is dying inside; Ra'jirr confronts the spirit. The blade can be placed back at its monument to banish the Pale Lady, or the spirit can be defeated and the Pale Blade retained.",
+          "boundary": "Do not invent the spirit's original identity or a settled account of its binding. Treat keeping and returning the sword as alternate player choices."
+        },
+        {
+          "chapter": 22,
+          "primary": "Skyrim: The Throat of the World, Paarthurnax quest, Delphine and Arngeir dialogue.",
+          "facts": "Paarthurnax once served Alduin and later helped mortals learn the Voice. He teaches the Dragonborn at the Throat of the World. The Blades demand his death for his past. The Greybeards oppose killing him. The player may refuse or comply.",
+          "boundary": "Do not promise he can never become dangerous or assert he secretly plans to conquer Skyrim. No real-world morality lecture."
+        },
+        {
+          "chapter": 23,
+          "primary": "Skyrim: Alduin's Bane, Dragonslayer, Paarthurnax post-quest dialogue.",
+          "facts": "An Elder Scroll lets the Dragonborn witness the ancient confrontation at the Time-Wound. The Tongues use Dragonrend and the Scroll to cast Alduin forward in time. The Dragonborn later defeats him in Sovngarde. Alduin's soul is not absorbed in the usual dragon fashion; his ultimate cosmic role is left open.",
+          "boundary": "Do not claim Alduin is simply Akatosh, that his soul enters the player or that a future return is confirmed."
+        },
+        {
+          "chapter": 24,
+          "primary": "Skyrim: Waking Nightmare, Erandur dialogue, Vaermina's Torpor sequence.",
+          "facts": "Dawnstar suffers shared nightmares. Erandur leads the player into Nightcaller Temple and reveals his former identity as Casimir. Vaermina's Torpor permits a dream journey into a past incident. At the Skull, Vaermina urges the player to kill Erandur; he can instead complete the destruction ritual.",
+          "boundary": "Do not present Vaermina's accusation as verified. Avoid describing potion-making instructions or inventing a canon choice."
+        },
+        {
+          "chapter": 25,
+          "primary": "Skyrim: The Black Star, Nelacar, Aranea and Malyn dialogue.",
+          "facts": "Aranea sends the player to find Azura's Star. Nelacar explains Malyn Varen's work at Ilinalta's Deep. Malyn persists within the damaged artifact. The player enters it to defeat him. Aranea's path restores Azura's Star, while Nelacar's path produces the Black Star.",
+          "boundary": "Do not claim either artifact automatically frees all souls or that one outcome is the canon ending."
+        },
+        {
+          "chapter": 26,
+          "primary": "Skyrim: The Only Cure, Kesh and Peryite dialogue, Bthardamz.",
+          "facts": "Kesh leads the player to an audience with Peryite. Peryite sends the player after Orchendor, who has abandoned his intended role. Orchendor and the afflicted occupy Bthardamz. The player can receive Spellbreaker after defeating him.",
+          "boundary": "Do not assert the afflicted are simply cured at the end or generalize the disease into an unsupported world-ending plague. No detailed incense recipe."
+        },
+        {
+          "chapter": 27,
+          "primary": "Skyrim Dawnguard: Touching the Sky, Gelebor, Vyrthur and Serana dialogue.",
+          "facts": "Gelebor is a surviving Snow Elf knight-paladin in the Forgotten Vale. A pilgrimage through wayshrines leads to Auriel's Bow. Vyrthur is a vampire and reveals his role in creating the prophecy pursued by Harkon. Serana confronts him. Gelebor speaks about the Falmer with grief and caution.",
+          "boundary": "Do not retell the whole Dwemer/Falmer history here; it belongs to the dedicated film. Do not invent how many uncorrupted Snow Elves survive elsewhere."
+        },
+        {
+          "chapter": 28,
+          "primary": "Skyrim Dragonborn: Dragonborn, The Temple of Miraak, The Fate of the Skaal, At the Summit of Apocrypha.",
+          "facts": "Miraak's cultists target the Dragonborn. People on Solstheim work at All-Maker Stones under compulsion. Frea resists and accompanies the player. Black Books lead to Apocrypha. Miraak seeks escape from Hermaeus Mora and can steal dragon souls the player has earned.",
+          "boundary": "No exact number of years in Apocrypha or assertion the player must become Mora's permanent willing servant."
+        },
+        {
+          "chapter": 29,
+          "primary": "Skyrim Dragonborn: Unearthed, The Journal of Ralis Sedarys, volumes 19-23.",
+          "facts": "Ralis Sedarys asks for money to excavate Kolbjorn Barrow. Successive visits open deeper chambers, uncover artifacts and find dead workers. His journals change as Ahzidal's influence grows. The final confrontation reveals Ralis summoning the dragon priest. The player may spare or kill Ralis. Later excavation journals implicate Ralis in sacrificing workers for Ahzidal's return; his claimed loss of control remains distinct from that implication.",
+          "boundary": "No unquestionable psychiatric or possession diagnosis beyond the quest's evidence. No invented survivor testimony. Avoid unnecessary exact body counts."
+        },
+        {
+          "chapter": 30,
+          "primary": "Skyrim Dragonborn: The Path of Knowledge, The Gardener of Men, At the Summit of Apocrypha.",
+          "facts": "Neloth studies the Black Books and helps locate one at Nchardak. Hermaeus Mora demands the Skaal's secrets; Storn agrees and dies during the transfer. The Dragonborn learns the final Bend Will word and confronts Miraak. Mora kills Miraak after his defeat. Frea warns the player to remain alert to Mora's influence.",
+          "boundary": "Do not declare the player finally free of every Daedric claim or forever enslaved. No recap, CTA, next-video promise or new unrelated mystery."
+        }
+      ],
+      "chapters": [
+        {
+          "title": "A town beneath suspicion",
+          "job": "Open at Morthal with an apparently ordinary house fire. Promise a journey through the hidden stories and unresolved questions of Skyrim. Explain the base game, Dawnguard and Dragonborn spoiler scope in paragraph two. Develop the Laid to Rest investigation from rumor to evidence and resolution, without starting with a generic greeting.",
+          "facts": "Hroggar survives the fire that kills his family and moves in with Alva. Helgi appears as a ghost. Laelette is a vampire. Alva's journal connects her to Movarth. The town can confront the threat in Movarth's Lair. The quest supplies an answer, although the townspeople begin with an incomplete explanation.",
+          "boundary": "Do not imply that every mystery in this video stays unsolved. Keep the child's fate non-graphic. No invented original cause of vampirism.",
+          "primary_evidence": "Skyrim: Laid to Rest, Helgi and Alva dialogue, Alva's journal.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The lighthouse journals",
+          "job": "Follow the separate family records at Frostflow Lighthouse. Reconstruct their move, the sounds below, the search underground and Habd's last request. Give each family member a distinct perspective and finish with the beacon, rather than horror escalation.",
+          "facts": "Habd and Ramati live at Frostflow with Sudi and Mani. The family journals record disagreement over the move and noises beneath the home. A passage leads to Falmer and chaurus below. Habd's remains can be recovered and placed at the lighthouse beacon, granting Sailor's Repose.",
+          "boundary": "Do not describe self-harm instructions or invent the exact last conversation. No precise egg counts or dates.",
+          "primary_evidence": "Skyrim: Frostflow Abyss, Habd's, Ramati's and Sudi's journals, Mani's letter.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The woman at the Bannered Mare",
+          "job": "Examine Saadia and Kematu as two people making incompatible claims. Tell the actual encounters, the prisoner lead, Swindler's Den, the stable meeting and the choices. Explain why the quest makes a verdict possible without supplying an independent trial.",
+          "facts": "Saadia works at the Bannered Mare and identifies herself as Iman, a noblewoman from Hammerfell. She says the Alik'r pursue her for opposing the Dominion. Kematu says she betrayed Taneth and is wanted for judgment in Hammerfell. Kematu can paralyze her at the stables if the player cooperates. The player can instead kill him and protect her.",
+          "boundary": "Neither account is confirmed as the whole truth. An urn appearing through NPC cleanup mechanics is not proof of an offscreen execution. Do not import a mod's letter.",
+          "primary_evidence": "Skyrim: In My Time of Need, Saadia and Kematu dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The shadows over Riften",
+          "job": "Explain how the skooma investigation exposes a supply chain that begins with Wujeeta and reaches outside the city. Focus on the contrast between visible guards and hidden trade through Riften Fishery, warehouse and Cragslane Cavern.",
+          "facts": "Wujeeta's addiction can be treated with a healing potion. She identifies Sarthis Idren as her supplier. The jarl authorizes investigation of Riften Warehouse. Sarthis and Orini Dral are encountered there; a note points to Cragslane Cavern and its operation. Disrupting the operation can help the player become thane.",
+          "boundary": "Do not claim this proves Maven personally runs every skooma shipment. No real-world drug preparation detail.",
+          "primary_evidence": "Skyrim: The Raid and Supply and Demand, Wujeeta dialogue, Sarthis's note.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The butcher and the wrong suspect",
+          "job": "Tell Blood on the Ice through its changing suspects and objects. Develop the graveyard, Hjerim, suspicious amulet, Viola's investigation, Wuunferth's warning and Calixto's role. Preserve player branches.",
+          "facts": "Windhelm has a series of murders. Hjerim contains incriminating material and a strange amulet. Calixto presents himself as an expert. Wuunferth can be wrongly accused; speaking with him can instead lead to an intervention at night. Calixto is revealed as the killer.",
+          "boundary": "Do not confuse Calixto with Wuunferth or promise the bug-prone quest always unfolds identically. No detailed mutilation.",
+          "primary_evidence": "Skyrim: Blood on the Ice, Hjerim journals, Wuunferth and Calixto dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "What Markarth conceals",
+          "job": "Trace the investigation from the marketplace to Eltrys, the Shrine of Talos and the guards. Give the different roles of Nepos, Thonar and Madanach and show how competing interests shape the city.",
+          "facts": "A marketplace attack begins The Forsworn Conspiracy. Eltrys asks the player to investigate. Nepos admits serving Madanach. Thonar Silver-Blood has used imprisoned Forsworn for his purposes. The investigation leads to the player's arrest and Cidhna Mine.",
+          "boundary": "The Forsworn are not a single innocent or uniformly loyal group. Do not invent a signed conspiracy linking every guard or resident.",
+          "primary_evidence": "Skyrim: The Forsworn Conspiracy, Nepos, Thonar and Eltrys dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The king behind the mine walls",
+          "job": "Continue only the Cidhna Mine portion: Borkul, Madanach, Braig's testimony, the hidden escape route and the opposing possible resolutions. Explain what the escape changes for named people without retelling the marketplace.",
+          "facts": "Madanach leads followers while imprisoned. Borkul guards access to him. Braig recounts his family's suffering. Madanach proposes an escape through a hidden route. The player can cooperate or oppose him, producing different outcomes and rewards involving Thonar.",
+          "boundary": "No single branch is the canon ending. Do not equate a player helping one escape with solving the whole Reach conflict.",
+          "primary_evidence": "Skyrim: No One Escapes Cidhna Mine, Braig, Borkul and Madanach dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "A voice beneath the palace",
+          "job": "Develop the investigation of strange sounds at Wolfskull Cave, the interrupted ritual and Falk's later message. Introduce Potema through the resurrection attempt and Solitude's vulnerability, not a full invented biography.",
+          "facts": "Falk Firebeard sends the player to Wolfskull Cave in The Man Who Cried Wolf. Necromancers attempt to summon and bind Potema. A later quest, The Wolf Queen Awakened, takes the player below Solitude. Styrr explains the danger and the remains must be consecrated.",
+          "boundary": "Do not claim Potema is restored to normal bodily rule. No manufactured historical dates or motives beyond the books and dialogue.",
+          "primary_evidence": "Skyrim: The Man Who Cried Wolf, The Wolf Queen Awakened, Falk and Styrr dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The boy who rang the bell",
+          "job": "Use Aventus's failed appeal and the Honorhall Orphanage to explain how Skyrim's quiet institutions can conceal danger. Follow Innocence Lost through Astrid's invitation; focus on the distinction between Aventus's wish and the organization that answers afterward.",
+          "facts": "Aventus Aretino performs the Black Sacrament after fleeing Honorhall. Grelod mistreats the children. The player can fulfill Aventus's request. A later encounter with Astrid initiates With Friends Like These; the player can join or destroy the Dark Brotherhood.",
+          "boundary": "Avoid graphic ritual instructions. Do not state Sithis personally ordered Grelod's death or that the player must join the Brotherhood.",
+          "primary_evidence": "Skyrim: Innocence Lost, With Friends Like These, Destroy the Dark Brotherhood.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The hidden listener",
+          "job": "Explain the Brotherhood's internal mystery through Cicero, the Night Mother, Astrid and the Listener. Develop how access to a voice changes the sanctuary's hierarchy and why Astrid's response has consequences.",
+          "facts": "Cicero brings the Night Mother to the Falkreath sanctuary. The Night Mother speaks to the player, identifying a Listener. Astrid's authority conflicts with the old structure. Her betrayal helps bring disaster to the sanctuary. The player can later move the surviving organization to Dawnstar.",
+          "boundary": "This follows the join branch only. Do not invent secret supernatural motives for every assassination or repeat the entry quest.",
+          "primary_evidence": "Skyrim: Whispers in the Dark through Death Incarnate, Astrid confession, Night Mother dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The city that fell into the sea",
+          "job": "Describe Winterhold's present geography, the Great Collapse, the surviving College and the town's suspicion. Compare residents' explanations with the limited record and show how this shapes the player's arrival.",
+          "facts": "Much of Winterhold fell into the Sea of Ghosts during the Great Collapse in 4E 122. The College survived while much of the city did not. Jarl Korir distrusts the College; the mages deny causing the collapse. The exact cause is unresolved in Skyrim.",
+          "boundary": "Do not connect the later discovery of the Eye to the older collapse as confirmed causation. No time-loop solution or stated Augur culpability.",
+          "primary_evidence": "Skyrim: Winterhold dialogue, Korir and College members; On the Great Collapse.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The orb beneath Saarthal",
+          "job": "Follow Tolfdir's lesson into Saarthal, the ancient chamber, Jyrik Gauldurson and the Eye's removal. Explain the visual and magical puzzle through the people who encounter it and the uncertainties that remain.",
+          "facts": "Students visit Saarthal with Tolfdir. A Psijic warning appears. A large magical orb lies behind Jyrik Gauldurson. The College moves it to the Hall of the Elements. Tolfdir cannot identify its markings. It is called the Eye of Magnus, but its full origin is not explained.",
+          "boundary": "Do not assert it contains Magnus or a time machine. Gauldur's wider family story belongs to a later chapter.",
+          "primary_evidence": "Skyrim: Under Saarthal, Tolfdir dialogue, Good Intentions.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The light in the Midden",
+          "job": "Explore the Augur of Dunlain as a former College member whose magical accident changed his condition. Follow the search through the Midden, the consultation and the recommendation of the Staff. Keep his history distinct from invented collapse theories.",
+          "facts": "The Augur is encountered as a luminous magical presence beneath the College. Tolfdir remembers his talent and ambition. The Augur directs the player toward the Staff of Magnus to address the danger posed by the Eye. He also appears in the Restoration Ritual Spell quest.",
+          "boundary": "No exact age, undocumented experiment mechanism or claim he is Magnus. Do not use his knowledge as proof he caused unrelated events.",
+          "primary_evidence": "Skyrim: Good Intentions, Tolfdir, Augur dialogue; Restoration Ritual Spell.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Savos Aren's buried expedition",
+          "job": "Tell the Labyrinthian expedition through its magical echoes and surviving wards. Explain Savos's earlier choice, the trapped companions and Morokei; follow the Staff back to the College and the Psijic intervention.",
+          "facts": "Echoes show the earlier College expedition losing members in Labyrinthian. Savos left companions sustaining the containment of Morokei. The player breaks the magical hold, defeats Morokei and retrieves the Staff. Ancano uses the Eye; the Staff helps make him vulnerable. The Psijics remove the Eye.",
+          "boundary": "Do not invent names or final words for unnamed companions. Do not claim the College learns the Eye's full purpose.",
+          "primary_evidence": "Skyrim: The Staff of Magnus, The Eye of Magnus, Labyrinthian echoes.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The gauntlet and the vanished students",
+          "job": "Develop Forgotten Names beneath the College. Use the incident report, investigator's key and recovered rings to explain the discovery of Velehk Sain. Keep its four dead students distinct from Phinis Gestor's separate missing apprentices.",
+          "facts": "The Midden Dark contains a gauntlet marked with the Oblivion symbol. A report and key lead to rings kept in the Arcanaeum. Placing the rings summons Velehk Sain, a Dremora pirate. The player can release him for a treasure map or oppose him.",
+          "boundary": "Do not conflate these students with Yisra, Ilas-Tei, Borvir and Rundi. No fabricated successful rescue or additional ring puzzle.",
+          "primary_evidence": "Skyrim: Forgotten Names, Midden Incident Report, Velehk Sain dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The missing apprentices",
+          "job": "Visit the remains associated with Phinis Gestor's students as separate small failed experiments. Describe only the broad visible situations, the dialogue at the College and the difference between a clue in the world and an implemented quest resolution.",
+          "facts": "Phinis names Yisra, Ilas-Tei, Borvir and Rundi as missing apprentices. Their remains can be found around Skyrim in settings associated with failed magical work. The base game does not implement a normal completed investigation and report-back quest for them.",
+          "boundary": "No restoration-mod quest markers, invented final dialogue or exact experimental intentions when not documented.",
+          "primary_evidence": "Skyrim: Phinis Gestor dialogue and apprentice locations in the unmodded game.",
+          "length": "500-700 words. Deliberately shorter allocation for four small sites; never stretch the limited clues into repeated explanations. Whole-episode minimum remains 25,500 words."
+        },
+        {
+          "title": "The legend the records tried to lose",
+          "job": "Follow Forbidden Legend from a book to Daynas Valen's notes, the Gauldur brothers' separate tombs and the re-forging at Reachwater Rock. Explain how written erasure fails when physical fragments survive.",
+          "facts": "Lost Legends introduces Gauldur. Daynas Valen investigates the suppressed story. Mikrul, Jyrik and Sigdis hold fragments at Folgunthur, Saarthal and Geirmund's Hall. Their fragments can be reunited at Reachwater Rock, where Gauldur's presence ends the confrontation.",
+          "boundary": "Do not invent the precise legal order erasing Gauldur or assert every detail of the legend has independent witnesses.",
+          "primary_evidence": "Skyrim: Forbidden Legend, Lost Legends, Daynas Valen's notes, writs of sealing.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The seal at Valthume",
+          "job": "Spend a chapter with Valdar's long vigil and Hevnoraak's attempted return. Explain the vessels, the controlled release and the cost of keeping a threat contained after the original guardians are gone.",
+          "facts": "Valdar's ghost guards Hevnoraak in Valthume. He asks the player to recover three vessels. The recovered vessels permit a confrontation in which the player can defeat the dragon priest. Valdar's task can finally end.",
+          "boundary": "No invented alchemical formula, blood ritual instructions or universal theory of all dragon-priest resurrection.",
+          "primary_evidence": "Skyrim: Evil in Waiting, Valdar dialogue and Valthume.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The last fortress of the dragon cult",
+          "job": "Explore Forelhost through Captain Valmir's disguise, Skorm Snow-Strider's journal and the remaining dragon priest Rahgot. Explain why a modern visitor might misread an ancient ruin when a living agent controls the introduction.",
+          "facts": "Valmir sends the player into Forelhost and wears an allegiance-dependent uniform. The ruin contains Skorm Snow-Strider's journal and traces of the besieged dragon cult. Rahgot remains within. A note exposes Valmir's connection to the Thalmor.",
+          "boundary": "Keep the cult's grim end non-graphic. No claim every dragon cult fortress followed the same end or that Valmir's disguise is identical in every playthrough.",
+          "primary_evidence": "Skyrim: Siege on the Dragon Cult, Skorm Snow-Strider's journal, Valmir's orders.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The mask without a name",
+          "job": "Describe Bromjunaar's sanctuary, the wooden mask's displacement, the restored busts and Konahrik. Compare the named owners of the other masks with the unnamed place without inventing a secret identity.",
+          "facts": "A wooden mask found at the ruined sanctuary near Labyrinthian transports the wearer to an intact version. Eight named masks can be placed on busts, revealing Konahrik. Removing the wooden mask returns the player. Konahrik's original bearer is not identified by this puzzle.",
+          "boundary": "No confirmed time-travel mechanics beyond the shown displacement. No assertion that Konahrik was Vahlok, Shalidor or the player.",
+          "primary_evidence": "Skyrim: Bromjunaar Sanctuary, wooden mask, dragon-priest mask puzzle.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The sword beneath the trees",
+          "job": "Follow Eisa, Kyr and Ra'jirr through The Pale Lady. Distinguish the accusation of theft from the attempt to restore the blade. Develop the dreams, records, pursuit, grove and conditional outcomes. Compare the needed intervention with Valdar's tomb without retelling that quest.",
+          "facts": "Eisa is attacked outside Frostmere Crypt. Kyr has claimed a blade found by the gang. Ra'jirr is troubled by the Pale Lady in dreams and steals it to return it. Eisa's journal, Kyr's log and Ra'jirr's note explain the conflict. Kyr is dying inside; Ra'jirr confronts the spirit. The blade can be placed back at its monument to banish the Pale Lady, or the spirit can be defeated and the Pale Blade retained.",
+          "boundary": "Do not invent the spirit's original identity or a settled account of its binding. Treat keeping and returning the sword as alternate player choices.",
+          "primary_evidence": "Skyrim: The Pale Lady; Eisa's Journal, Kyr's Log, Ra'jirr's Note; Frostmere Depths encounter.",
+          "length": "750-950 substantive words; no repetitive conclusion."
+        },
+        {
+          "title": "The voice that stayed in the mountain",
+          "job": "Develop Paarthurnax, the Greybeards and the Blades through the actual dilemma after the main story reveals his identity. Explain his past, teaching, the nature of dragon dominance and the different choices without electing a canon ending.",
+          "facts": "Paarthurnax once served Alduin and later helped mortals learn the Voice. He teaches the Dragonborn at the Throat of the World. The Blades demand his death for his past. The Greybeards oppose killing him. The player may refuse or comply.",
+          "boundary": "Do not promise he can never become dangerous or assert he secretly plans to conquer Skyrim. No real-world morality lecture.",
+          "primary_evidence": "Skyrim: The Throat of the World, Paarthurnax quest, Delphine and Arngeir dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "A wound in time",
+          "job": "Explain the Elder Scroll at the Time-Wound, the ancient Tongues, Dragonrend and Alduin's displacement. Follow what this changes for the present confrontation and finish with the distinction between defeating Alduin and discovering the final end of the world.",
+          "facts": "An Elder Scroll lets the Dragonborn witness the ancient confrontation at the Time-Wound. The Tongues use Dragonrend and the Scroll to cast Alduin forward in time. The Dragonborn later defeats him in Sovngarde. Alduin's soul is not absorbed in the usual dragon fashion; his ultimate cosmic role is left open.",
+          "boundary": "Do not claim Alduin is simply Akatosh, that his soul enters the player or that a future return is confirmed.",
+          "primary_evidence": "Skyrim: Alduin's Bane, Dragonslayer, Paarthurnax post-quest dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Dawnstar's borrowed dreams",
+          "job": "Trace Waking Nightmare through Dawnstar, Erandur, Nightcaller Temple, the memory potion and the Skull of Corruption. Explain Vaermina's intervention at the choice and why the remembered past does not guarantee present betrayal.",
+          "facts": "Dawnstar suffers shared nightmares. Erandur leads the player into Nightcaller Temple and reveals his former identity as Casimir. Vaermina's Torpor permits a dream journey into a past incident. At the Skull, Vaermina urges the player to kill Erandur; he can instead complete the destruction ritual.",
+          "boundary": "Do not present Vaermina's accusation as verified. Avoid describing potion-making instructions or inventing a canon choice.",
+          "primary_evidence": "Skyrim: Waking Nightmare, Erandur dialogue, Vaermina's Torpor sequence.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The black soul gem and the broken star",
+          "job": "Explain Azura's Star, Malyn Varen, Aranea and Nelacar. Develop the failed pursuit of survival inside the artifact, the player's entry and the two possible repairs. Focus on who can help and what each repair changes.",
+          "facts": "Aranea sends the player to find Azura's Star. Nelacar explains Malyn Varen's work at Ilinalta's Deep. Malyn persists within the damaged artifact. The player enters it to defeat him. Aranea's path restores Azura's Star, while Nelacar's path produces the Black Star.",
+          "boundary": "Do not claim either artifact automatically frees all souls or that one outcome is the canon ending.",
+          "primary_evidence": "Skyrim: The Black Star, Nelacar, Aranea and Malyn dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The bargain hidden in a cure",
+          "job": "Follow Kesh's invitation, the afflicted at Bthardamz and Orchendor's break with Peryite. Use Spellbreaker as the reward to explain how a quest can provide a local answer while leaving a Daedric patron's priorities uncomfortable.",
+          "facts": "Kesh leads the player to an audience with Peryite. Peryite sends the player after Orchendor, who has abandoned his intended role. Orchendor and the afflicted occupy Bthardamz. The player can receive Spellbreaker after defeating him.",
+          "boundary": "Do not assert the afflicted are simply cured at the end or generalize the disease into an unsupported world-ending plague. No detailed incense recipe.",
+          "primary_evidence": "Skyrim: The Only Cure, Kesh and Peryite dialogue, Bthardamz.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The snow elves who remained",
+          "job": "Tell the Forgotten Vale portion of Touching the Sky with Gelebor, the wayshrines, the pilgrimage and Vyrthur's revelation. Explain the living Snow Elf witness and why the vampire plot differs from the history visitors expect.",
+          "facts": "Gelebor is a surviving Snow Elf knight-paladin in the Forgotten Vale. A pilgrimage through wayshrines leads to Auriel's Bow. Vyrthur is a vampire and reveals his role in creating the prophecy pursued by Harkon. Serana confronts him. Gelebor speaks about the Falmer with grief and caution.",
+          "boundary": "Do not retell the whole Dwemer/Falmer history here; it belongs to the dedicated film. Do not invent how many uncorrupted Snow Elves survive elsewhere.",
+          "primary_evidence": "Skyrim Dawnguard: Touching the Sky, Gelebor, Vyrthur and Serana dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The first Dragonborn's long absence",
+          "job": "Travel to Solstheim through the cultist attack, the people working at the stones, Frea and the Temple of Miraak. Develop Miraak's return as a local cause of lost time, then follow the struggle over dragon souls and Bend Will.",
+          "facts": "Miraak's cultists target the Dragonborn. People on Solstheim work at All-Maker Stones under compulsion. Frea resists and accompanies the player. Black Books lead to Apocrypha. Miraak seeks escape from Hermaeus Mora and can steal dragon souls the player has earned.",
+          "boundary": "No exact number of years in Apocrypha or assertion the player must become Mora's permanent willing servant.",
+          "primary_evidence": "Skyrim Dragonborn: Dragonborn, The Temple of Miraak, The Fate of the Skaal, At the Summit of Apocrypha.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The dig that asked for more",
+          "job": "Develop Unearthed as a gradual excavation at Kolbjorn Barrow. Give the changing camp, repeated funding, journals, miners and Ahzidal as distinct developments. Explain Ralis's implication and the final player choice.",
+          "facts": "Ralis Sedarys asks for money to excavate Kolbjorn Barrow. Successive visits open deeper chambers, uncover artifacts and find dead workers. His journals change as Ahzidal's influence grows. The final confrontation reveals Ralis summoning the dragon priest. The player may spare or kill Ralis.",
+          "boundary": "No unquestionable psychiatric or possession diagnosis beyond the quest's evidence. No invented survivor testimony. Avoid unnecessary exact body counts.",
+          "primary_evidence": "Skyrim Dragonborn: Unearthed, The Journal of Ralis Sedarys, volumes 19-23.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "A library that will not let go",
+          "job": "Finish with Neloth's practical approach to Black Books, the journey into Apocrypha and the final confrontation with Miraak. Develop Storn's sacrifice and Frea's warning without restating the earlier introduction. End on the concrete return to Solstheim and the continued existence of a closed book.",
+          "facts": "Neloth studies the Black Books and helps locate one at Nchardak. Hermaeus Mora demands the Skaal's secrets; Storn agrees and dies during the transfer. The Dragonborn learns the final Bend Will word and confronts Miraak. Mora kills Miraak after his defeat. Frea warns the player to remain alert to Mora's influence.",
+          "boundary": "Do not declare the player finally free of every Daedric claim or forever enslaved. No recap, CTA, next-video promise or new unrelated mystery.",
+          "primary_evidence": "Skyrim Dragonborn: The Path of Knowledge, The Gardener of Men, At the Summit of Apocrypha.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        }
+      ],
+      "research_brief": {
+        "TOPIC": "2 Hours of Skyrim's Darkest Mysteries to Fall Asleep To",
+        "ANGLE": "A calm journey from local investigations to buried histories and Daedric bargains; some mysteries are solved by their quests, others remain genuinely open.",
+        "PROOF_BANK": "Chapter-linked game evidence and access-qualified research index.",
+        "HOOK_DIRECTION": "Open at Morthal with an apparently ordinary house fire. Promise a journey through the hidden stories and unresolved questions of Skyrim. Explain the base game, Dawnguard and Dragonborn spoiler scope in paragraph two. Develop the Laid to Rest investigation from rumor to evidence and resolution, without starting with a generic greeting.",
+        "STRUCTURE_HINT": "30 distinct developments in one calm continuous journey; no repeated hooks."
+      }
+    },
+    {
+      "id": "02-vault-tec",
+      "channel": "Forgotten Realms of Sleep",
+      "title": "The Secrets of Vault-Tec Explained to Fall Asleep To | Fallout Lore",
+      "angle": "Follow the practical promise of shelter, the experiments hidden from residents, resistance by individuals and the communities that survive beyond the vaults.",
+      "scope": "Games only: Fallout, Fallout 2, Fallout 3, Fallout New Vegas and its Honest Hearts expansion, Fallout 4 with Far Harbor and Vault-Tec Workshop, plus the original Vault 76 overseer and Reclamation story. Full spoilers. Exclude the TV series, Fallout Bible-only claims and later live-service additions.",
+      "minimum_words": 25500,
+      "planned_runtime": "At least 150 minutes at 170 words per minute; estimate only.",
+      "forbidden": [
+        "Original English narration only; no copied dialogue or competitor wording.",
+        "No invented journals, props, motives, dates, numerical probabilities or developer intent.",
+        "No mods, fan fiction, cut quests presented as playable canon, or unofficial endings.",
+        "No graphic violence or described self-harm methods; discuss consequences gently.",
+        "Only one optional subscribe plus listening location/day-or-night CTA in chapter one.",
+        "No trailers, repeated bedtime instructions, philosophical filler, repeated disclaimers or recaps.",
+        "All assigned chapters belong to one continuous narration. Resolve their local questions.",
+        "Do not state Vault-Tec definitively started the nuclear war. No TV vaults 31/32/33 or characters. No universal space-colony explanation. No claim every vault was an experiment, every experiment failed identically, or Vault-Tec was omniscient."
+      ],
+      "proof": [
+        {
+          "chapter": 1,
+          "primary": "Fallout 4: Out of Time, Vault 111 terminal entries and opening sequence.",
+          "facts": "In Fallout 4 the player's family enters Vault 111 as bombs fall. Residents are placed in cryogenic pods under the pretense of decontamination. The Sole Survivor later witnesses Shaun's abduction and eventually wakes to an abandoned vault. Staff knew about a long-term cryogenic observation experiment that residents did not.",
+          "boundary": "Do not claim Vault-Tec itself ordered Kellogg's kidnapping; that is an Institute operation. No exact runtime promise."
+        },
+        {
+          "chapter": 2,
+          "primary": "Fallout 4: Vault 111 security, overseer and monitoring terminals.",
+          "facts": "Vault 111 staff monitor frozen residents. Security and scientists receive different responsibilities and access. The all-clear signal fails to arrive; food shortages create conflict with the overseer and a mutiny. Later pod failures and Institute interference belong to another phase of the vault's history.",
+          "boundary": "Do not make every pod death an immediate result of the staff mutiny or pretend the overseer planned the Institute's actions."
+        },
+        {
+          "chapter": 3,
+          "primary": "Fallout 4 opening, Vault-Tec representative; Fallout 1 Vault Dweller's Survival Guide; in-game vault interiors.",
+          "facts": "Vault-Tec markets underground shelters before the Great War. Vaults contain living quarters, life-support machinery, medical facilities and governance under overseers. Fallout 4 shows a representative registering the family. Vault-Tec branding remains in manuals, posters, terminals and training material after the war.",
+          "boundary": "Do not say every Vault-Tec employee knew every experiment, or that no vault saved anyone. No unsupported total count or per-vault price."
+        },
+        {
+          "chapter": 4,
+          "primary": "Fallout: Vault 13 overseer dialogue, water-chip quest, Necropolis.",
+          "facts": "Fallout begins with Vault 13's water purification chip failing. The Vault Dweller is sent outside to find a replacement. Vault 15 cannot solve the problem; the journey eventually leads to a replacement in Necropolis. The outside contains settlements and trading networks despite the vault's isolation.",
+          "boundary": "No claim the chip was deliberately sabotaged; Fallout does not establish that. Do not prescribe one player route as mandatory."
+        },
+        {
+          "chapter": 5,
+          "primary": "Fallout ending, Fallout 2 opening and President Richardson dialogue.",
+          "facts": "The Vault Dweller can defeat the Master and the super mutant threat. The overseer then exiles the protagonist, fearing others will follow the example and leave. The Vault Dweller's descendants establish Arroyo. In Fallout 2, President Richardson describes the vault program as an experiment and Vault 13 as a source of untainted test subjects.",
+          "boundary": "Do not call the Fallout Bible's 200-year isolation plan definitive game canon. Do not assert the overseer knows Richardson's later plan."
+        },
+        {
+          "chapter": 6,
+          "primary": "Fallout 2: Arroyo, Vault City and Vault 13; Fallout 3: Finding the Garden of Eden.",
+          "facts": "The Garden of Eden Creation Kit is a vault-associated rebuilding resource. The Chosen One seeks one for Arroyo in Fallout 2. Vault City used a G.E.C.K. to develop its settlement. A G.E.C.K. is sought for Project Purity in Fallout 3 and retrieved from Vault 87.",
+          "boundary": "Different games depict or describe its capabilities differently. Do not invent one universal engineering mechanism, limitless transformation radius or instant city construction."
+        },
+        {
+          "chapter": 7,
+          "primary": "Fallout 2: Vault City, Vault 8, First Citizen Lynette and citizenship dialogue.",
+          "facts": "Vault 8 becomes the foundation of Vault City. Its people use a G.E.C.K. and retain advanced technology, medical capability and a power structure distinguishing citizens from outsiders and servants. The old vault remains part of the settlement rather than an unexplored death trap.",
+          "boundary": "Do not equate control vault with moral utopia or repeat an unverified official opening date. No claim every resident supports every policy."
+        },
+        {
+          "chapter": 8,
+          "primary": "Fallout: Vault 15 and Shady Sands; Fallout 2: Vault 15, Darion and the squatters.",
+          "facts": "Vault 15 is an unsuccessful early destination in Fallout. Its former inhabitants contribute to Shady Sands and groups including the Khans. Fallout 2 returns to the site, where Darion's New Khans and displaced squatters complicate the NCR's interest in the vault and its computer.",
+          "boundary": "Do not treat every later conflict as proof each resident was personally selected to become a raider. Avoid the non-game experimental demographics as established dialogue."
+        },
+        {
+          "chapter": 9,
+          "primary": "Fallout: Necropolis, Set, underground ghouls, Vault 12 water system.",
+          "facts": "Necropolis contains ghouls, Vault 12 and the working chip needed by Vault 13. Removing the chip threatens their water supply unless another solution is arranged. Set and the underground ghoul community have different relationships with the visitor. Vault 12's failed sealing exposes its residents to radiation.",
+          "boundary": "Do not turn every detail of Fallout Bible design notes into a spoken proven experiment order. Ghoulification is not a guaranteed universal outcome of radiation."
+        },
+        {
+          "chapter": 10,
+          "primary": "Fallout 3: Growing Up Fast, Future Imperfect, Escape!, James dialogue and Vault 101 records.",
+          "facts": "Fallout 3's protagonist grows up in Vault 101 under an overseer. James leaves and the vault erupts in crisis. The player later learns James and the infant protagonist were admitted from outside. Vault 101's story of absolute isolation is therefore incomplete.",
+          "boundary": "Do not claim the protagonist was born inside Vault 101 or that every resident knew James's earlier life."
+        },
+        {
+          "chapter": 11,
+          "primary": "Fallout 3: Trouble on the Homefront, Amata, overseer and resident dialogue.",
+          "facts": "A distress signal can bring the Lone Wanderer back to Vault 101. Amata and others want change. The player can negotiate, enforce isolation or cause destructive outcomes depending on choices. Even a peaceful opening does not necessarily mean the protagonist can simply resume childhood there.",
+          "boundary": "No single canon political result. Do not describe the quest as inevitably available after any ending or every prior choice."
+        },
+        {
+          "chapter": 12,
+          "primary": "Fallout 3: Tranquility Lane, Braun and Dithers dialogue, abandoned house terminal.",
+          "facts": "Stanislaus Braun maintains residents inside a virtual reality system at Vault 112. In Tranquility Lane he appears as Betty. James is trapped in the simulation. Old Lady Dithers recognizes that the neighborhood is artificial and points toward the failsafe. The player can activate it instead of following Braun's cruel tasks.",
+          "boundary": "No step-by-step graphic violence; no assertion a simulation is harmless or that Braun can be simply killed in the same manner as its residents."
+        },
+        {
+          "chapter": 13,
+          "primary": "Fallout 3: Agatha's Song, Vault 92 terminals and Zoe Hammerstein recordings.",
+          "facts": "Vault 92 recruits skilled musicians. A white-noise project introduces subliminal conditioning and produces dangerous psychological effects. Researcher records and Zoe Hammerstein's recordings reveal the decline. Agatha asks the player to recover the Soil Stradivarius violin from the vault. Agatha's inherited family letters concern Hilda, the ancestor connected with the Soil Stradivarius and Vault 92. Zoe Hammerstein is a separate recorded resident, not Agatha's ancestor. Agatha's dialogue describes Hilda's violin and entry into the vault.",
+          "boundary": "Do not invent real scientific efficacy for subliminal control. No exact percentages or body counts. Music is not itself the cause of the catastrophe."
+        },
+        {
+          "chapter": 14,
+          "primary": "Fallout 3: Vault 106 terminals and exploration sequences.",
+          "facts": "Vault 106's population is exposed to psychoactive chemicals through its ventilation system. The exploring Lone Wanderer experiences hallucinations, including figures associated with Vault 101. Hostile survivors remain in the vault. The environmental danger continues after the original experiment begins.",
+          "boundary": "No invented chemical formula, precise modern pharmacology or confident biography for each attacker. Hallucinated James is not actual evidence he visited the vault."
+        },
+        {
+          "chapter": 15,
+          "primary": "Fallout 3: Vault 108 cloning log and overseer planning records.",
+          "facts": "Vault 108 contains hostile clones named Gary. Research records document cloning and mounting difficulty handling the copies. Vault planning also creates unstable leadership and resource conditions. The result encountered by the player is a damaged vault populated by copies rather than a functioning community.",
+          "boundary": "Do not assert every clone has identical memories, that Gary is an immortal single mind or that a fully known final revolt explains every corpse."
+        },
+        {
+          "chapter": 16,
+          "primary": "Fallout 3: Finding the Garden of Eden, Vault 87 terminals, Fawkes dialogue.",
+          "facts": "Vault 87 houses FEV experiments and becomes a source of Capital Wasteland super mutants. Fawkes is imprisoned but retains unusual intelligence and can help retrieve the G.E.C.K. The player's route through Little Lamplight leads into the facility; the surface entrance is heavily irradiated.",
+          "boundary": "Not every super mutant in the franchise originates at Vault 87. Do not equate all FEV strains, ghoulification and radiation mutations."
+        },
+        {
+          "chapter": 17,
+          "primary": "Fallout New Vegas: Vault 11 posters, election records and Gus Olson's speech.",
+          "facts": "Vault 11's residents are told they must provide one sacrifice each year or the population will die. They choose the overseer as that sacrifice after punishing the initial overseer. Voting blocs emerge; candidates campaign to avoid being elected. The Justice Bloc gains substantial influence.",
+          "boundary": "Do not reveal the final refusal twice or claim the residents originally consented to sacrifice before entering. Avoid quoting the election posters."
+        },
+        {
+          "chapter": 18,
+          "primary": "Fallout New Vegas: Vault 11 Katherine deposition, overseer order, automated response and final recording.",
+          "facts": "Katherine Stone opposes the Justice Bloc after its coercion and betrayal. As overseer she changes the sacrifice selection system. Conflict devastates the vault. The final survivors refuse another sacrifice and the computer reveals the supposed collective death threat was a test. A recording and remains at the entrance show the survivors' despair; one walks away.",
+          "boundary": "Do not assert the survivor is a named New Vegas character. No detailed sexual violence or self-harm method. The computer's congratulation does not undo what happened."
+        },
+        {
+          "chapter": 19,
+          "primary": "Fallout New Vegas: There Stands the Grass, Vault 22 records, Hildern and Keely dialogue.",
+          "facts": "Dr. Hildern at the NCR's Camp McCarran seeks agricultural research from Vault 22. Keely has entered before the Courier. Plant research is associated with a dangerous spore infection and spore carriers. Keely wants the data destroyed; the Courier has different options.",
+          "boundary": "Do not claim every plant in the Mojave is infected. No real-world pathogen cultivation or ignition instructions. The data's usefulness does not mean its methods were safe."
+        },
+        {
+          "chapter": 20,
+          "primary": "Fallout New Vegas Honest Hearts: Randall Clark's terminal records, Vault 22 dwellers' note, Sorrows dialogue.",
+          "facts": "Randall Clark's terminals in Zion record encounters with refugees from Vault 22. They carry the spore-associated danger and attack others in the canyon. Clark opposes them. His later help to a different group of children becomes part of the Sorrows' inherited Father in the Caves tradition.",
+          "boundary": "Do not conflate the Vault 22 refugees with the children Clark later helps or make the Sorrows direct biological descendants of those infected aggressors."
+        },
+        {
+          "chapter": 21,
+          "primary": "Fallout New Vegas: Hard Luck Blues, Vault 34 terminals, sharecropper dialogue.",
+          "facts": "Vault 34 has an extensive armory and suffers internal conflict and reactor trouble. Radiation affects the NCR sharecropper farms. A distress message indicates survivors remain trapped. At the control terminal the Courier chooses whether to divert power to help them or shut down the reactor to address the contamination.",
+          "boundary": "No assertion a clever third option safely saves everyone. Do not declare one branch canon or invent survivors seen when the chosen branch does not show them."
+        },
+        {
+          "chapter": 22,
+          "primary": "Fallout New Vegas: Nellis, Pearl, Pete, Loyal, Volare!",
+          "facts": "The Boomers descend from people who left Vault 34 with weapons and established themselves at Nellis Air Force Base. Pearl leads them. Pete presents their history. They are protective of their isolation and can enlist the Courier in raising a bomber from Lake Mead.",
+          "boundary": "Do not claim every Vault 34 resident left with them or that their history resolves the later reactor disaster. No real weapons operating guide."
+        },
+        {
+          "chapter": 23,
+          "primary": "Fallout New Vegas: Vault 21, Sarah Weintraub and Michael Angelo dialogue.",
+          "facts": "Vault 21 resolves disputes through gambling. Mr. House wins control through a wager accepted by its residents. Much of the vault is filled with concrete, while an accessible section becomes a hotel managed by Sarah Weintraub. Some former residents establish lives elsewhere on the Strip.",
+          "boundary": "Do not invent a secret army in the sealed sections or claim the wager had informed consent from every person. No exact concrete quantity."
+        },
+        {
+          "chapter": 24,
+          "primary": "Fallout 4: Vault 81 original overseer's terminal, research communication terminal.",
+          "facts": "Overseer Dr. Olivette opposes the planned use of residents as disease subjects. Only a small research team reaches the hidden section; she prevents the intended experiment on the population. The public vault develops into a functioning community while the separated researchers continue work with limited resources.",
+          "boundary": "Her correct name is Olivette, not Olivia, and she is distinct from current overseer Gwen McNamara. Vault 81 was not designed as a control vault."
+        },
+        {
+          "chapter": 25,
+          "primary": "Fallout 4: Hole in the Wall, Curie dialogue, research laboratory records.",
+          "facts": "Austin falls ill after a mole-rat bite. The Sole Survivor explores the hidden lab and finds Curie, who has developed a cure. A single available dose creates a choice if the protagonist was infected. Curie can leave the vault and later pursue a new form and research with the player.",
+          "boundary": "Do not imply the treatment immediately cures every disease or that Curie herself initiated Olivette's sabotage. No claim the protagonist always becomes infected."
+        },
+        {
+          "chapter": 26,
+          "primary": "Fallout 4: Vault 95 resident records and Vault-Tec agent log, Benign Intervention.",
+          "facts": "Vault 95 gathers people recovering from addiction and supports a period of sobriety. A concealed Vault-Tec agent opens a hidden supply of addictive substances after five years, provoking the planned crisis. Long afterward, Cait can seek treatment with the Sole Survivor at its surviving detox facility.",
+          "boundary": "Do not say the treatment guarantees an uncomplicated lifelong recovery. No drug recipes, modern medical advice or invented relapse rates."
+        },
+        {
+          "chapter": 27,
+          "primary": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals.",
+          "facts": "Vault 114 is reached through Park Street Station; Nick Valentine is held there by Skinny Malone's gang. Its intended experiment places wealthy residents under poor conditions and an unsuitable overseer chosen through interviews including Soup Can Harry. Vault 118 beneath the Cliff's Edge Hotel was intended to divide rich and poor, but only the wealthy section was completed and its residents became robobrains. Brain Dead investigates a later murder there. Brain Dead reveals that Ezra killed Julianna Riggs after she discovered his embezzlement, then impersonated her and made the victim appear to be Ezra. The detective can expose him and choose how to respond.",
+          "boundary": "Do not describe either original social experiment as completed exactly as planned. Do not conflate Nick with a Vault-Tec creation, or reveal an invented Vault 118 ending."
+        },
+        {
+          "chapter": 28,
+          "primary": "Fallout 4 Vault-Tec Workshop: Vault 88, Barstow, Clem and experiment configuration choices.",
+          "facts": "Overseer Barstow survives as a ghoul in unfinished Vault 88. The Sole Survivor can build a settlement and assist her experiments with Clem and other volunteers. The experiments have different selectable parameters, including less harmful options. The player can oppose Barstow or continue along her preferred direction.",
+          "boundary": "No one ending is compulsory. Do not list the most harmful device settings as a how-to or claim a voluntary building task gives residents full knowledge of every hidden parameter."
+        },
+        {
+          "chapter": 29,
+          "primary": "Fallout 76: Vault 76 terminal entries, overseer's mission and original journey holotapes.",
+          "facts": "Vault 76 is a control vault with a population chosen to rebuild. Its residents leave on Reclamation Day. The overseer is separately ordered to secure nuclear silos Alpha, Bravo and Charlie for Vault-Tec, disregarding competing claims. Her recordings follow her discovery of devastated Appalachia and growing doubts about the organization's judgment.",
+          "boundary": "Use the original Fallout 76 vault and overseer story, not current live-service developments. Do not assert Vault-Tec launched the first bombs, a confirmed space-colony master plan, or that every vault was intended to kill everyone. No recap catalogue or CTA."
+        }
+      ],
+      "chapters": [
+        {
+          "title": "The door that did its job",
+          "job": "Open with the ordinary family being rushed into Vault 111 and the false decontamination procedure. Promise to follow the gap between shelter and experiment across the games. Give the games-only spoiler boundary in paragraph two. Explain the entrance, freezing and waking experience without recounting the entire main quest.",
+          "facts": "In Fallout 4 the player's family enters Vault 111 as bombs fall. Residents are placed in cryogenic pods under the pretense of decontamination. The Sole Survivor later witnesses Shaun's abduction and eventually wakes to an abandoned vault. Staff knew about a long-term cryogenic observation experiment that residents did not.",
+          "boundary": "Do not claim Vault-Tec itself ordered Kellogg's kidnapping; that is an Institute operation. No exact runtime promise.",
+          "primary_evidence": "Fallout 4: Out of Time, Vault 111 terminal entries and opening sequence.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The staff on the other side",
+          "job": "Stay in Vault 111 but switch to the observing staff, their restricted supplies, expected all-clear and conflict. Explain why the staff's collapse is distinct from the much later Institute interference.",
+          "facts": "Vault 111 staff monitor frozen residents. Security and scientists receive different responsibilities and access. The all-clear signal fails to arrive; food shortages create conflict with the overseer and a mutiny. Later pod failures and Institute interference belong to another phase of the vault's history.",
+          "boundary": "Do not make every pod death an immediate result of the staff mutiny or pretend the overseer planned the Institute's actions.",
+          "primary_evidence": "Fallout 4: Vault 111 security, overseer and monitoring terminals.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The public promise",
+          "job": "Explain the publicly sold promise through the Vault-Tec representative, vault advertisements, assigned jumpsuits, Pip-Boy and overseer office. Give practical shelter systems and why people reasonably sought them. Contrast marketing with actual unequal information, using only already named examples briefly.",
+          "facts": "Vault-Tec markets underground shelters before the Great War. Vaults contain living quarters, life-support machinery, medical facilities and governance under overseers. Fallout 4 shows a representative registering the family. Vault-Tec branding remains in manuals, posters, terminals and training material after the war.",
+          "boundary": "Do not say every Vault-Tec employee knew every experiment, or that no vault saved anyone. No unsupported total count or per-vault price.",
+          "primary_evidence": "Fallout 4 opening, Vault-Tec representative; Fallout 1 Vault Dweller's Survival Guide; in-game vault interiors.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "A water chip and an open door",
+          "job": "Follow Vault 13 in the original Fallout: the failed chip, the chosen errand, Junktown and the Hub as evidence of a living outside world, and the return. Explain why one technical failure changes a resident's relationship to the shelter.",
+          "facts": "Fallout begins with Vault 13's water purification chip failing. The Vault Dweller is sent outside to find a replacement. Vault 15 cannot solve the problem; the journey eventually leads to a replacement in Necropolis. The outside contains settlements and trading networks despite the vault's isolation.",
+          "boundary": "No claim the chip was deliberately sabotaged; Fallout does not establish that. Do not prescribe one player route as mandatory.",
+          "primary_evidence": "Fallout: Vault 13 overseer dialogue, water-chip quest, Necropolis.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The price of coming home",
+          "job": "Continue Vault 13 through the defeat of the Master, the overseer's refusal to readmit the hero and the founding of Arroyo. Explain the later Enclave revelation through Richardson's words, carefully separating a villain's account from Fallout Bible cut background.",
+          "facts": "The Vault Dweller can defeat the Master and the super mutant threat. The overseer then exiles the protagonist, fearing others will follow the example and leave. The Vault Dweller's descendants establish Arroyo. In Fallout 2, President Richardson describes the vault program as an experiment and Vault 13 as a source of untainted test subjects.",
+          "boundary": "Do not call the Fallout Bible's 200-year isolation plan definitive game canon. Do not assert the overseer knows Richardson's later plan.",
+          "primary_evidence": "Fallout ending, Fallout 2 opening and President Richardson dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The garden in a suitcase",
+          "job": "Explain the G.E.C.K. across its actual uses: Arroyo's search, Vault City's flourishing ground and Fallout 3's purifier. Develop the promise of rebuilding with people who need water and workable land, rather than an all-powerful magic box.",
+          "facts": "The Garden of Eden Creation Kit is a vault-associated rebuilding resource. The Chosen One seeks one for Arroyo in Fallout 2. Vault City used a G.E.C.K. to develop its settlement. A G.E.C.K. is sought for Project Purity in Fallout 3 and retrieved from Vault 87.",
+          "boundary": "Different games depict or describe its capabilities differently. Do not invent one universal engineering mechanism, limitless transformation radius or instant city construction.",
+          "primary_evidence": "Fallout 2: Arroyo, Vault City and Vault 13; Fallout 3: Finding the Garden of Eden.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The vault that became a city",
+          "job": "Explore Vault City as the productive inheritance of a working shelter and a harsh social order. Show the transition to surface settlement, citizenship, outsider treatment and dependency on systems and labor.",
+          "facts": "Vault 8 becomes the foundation of Vault City. Its people use a G.E.C.K. and retain advanced technology, medical capability and a power structure distinguishing citizens from outsiders and servants. The old vault remains part of the settlement rather than an unexplored death trap.",
+          "boundary": "Do not equate control vault with moral utopia or repeat an unverified official opening date. No claim every resident supports every policy.",
+          "primary_evidence": "Fallout 2: Vault City, Vault 8, First Citizen Lynette and citizenship dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The people who left Vault 15",
+          "job": "Develop Vault 15 through the ruined destination in Fallout and the communities connected to its former population. Explain Shady Sands and the later confrontation with the squatters and Darion's Khans in Fallout 2.",
+          "facts": "Vault 15 is an unsuccessful early destination in Fallout. Its former inhabitants contribute to Shady Sands and groups including the Khans. Fallout 2 returns to the site, where Darion's New Khans and displaced squatters complicate the NCR's interest in the vault and its computer.",
+          "boundary": "Do not treat every later conflict as proof each resident was personally selected to become a raider. Avoid the non-game experimental demographics as established dialogue.",
+          "primary_evidence": "Fallout: Vault 15 and Shady Sands; Fallout 2: Vault 15, Darion and the squatters.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The door at Necropolis",
+          "job": "Explain Vault 12 and the ghoul community at Necropolis through the water system, Set and the underground ghouls. Discuss the defective protective barrier and the player's choice about taking the chip while respecting version-specific background.",
+          "facts": "Necropolis contains ghouls, Vault 12 and the working chip needed by Vault 13. Removing the chip threatens their water supply unless another solution is arranged. Set and the underground ghoul community have different relationships with the visitor. Vault 12's failed sealing exposes its residents to radiation.",
+          "boundary": "Do not turn every detail of Fallout Bible design notes into a spoken proven experiment order. Ghoulification is not a guaranteed universal outcome of radiation.",
+          "primary_evidence": "Fallout: Necropolis, Set, underground ghouls, Vault 12 water system.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The vault that never opens",
+          "job": "Follow Vault 101 through the Lone Wanderer's childhood, the G.O.A.T., James's departure and the security response. Explain how an account of permanent isolation is maintained as a household truth despite contact with the surface.",
+          "facts": "Fallout 3's protagonist grows up in Vault 101 under an overseer. James leaves and the vault erupts in crisis. The player later learns James and the infant protagonist were admitted from outside. Vault 101's story of absolute isolation is therefore incomplete.",
+          "boundary": "Do not claim the protagonist was born inside Vault 101 or that every resident knew James's earlier life.",
+          "primary_evidence": "Fallout 3: Growing Up Fast, Future Imperfect, Escape!, James dialogue and Vault 101 records.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Trouble at home",
+          "job": "Return only for Trouble on the Homefront. Develop Amata's request, the arguments over opening, the overseer alternatives and the changed relationship between parent generation and children. Present branches fairly and leave their outcome conditional.",
+          "facts": "A distress signal can bring the Lone Wanderer back to Vault 101. Amata and others want change. The player can negotiate, enforce isolation or cause destructive outcomes depending on choices. Even a peaceful opening does not necessarily mean the protagonist can simply resume childhood there.",
+          "boundary": "No single canon political result. Do not describe the quest as inevitably available after any ending or every prior choice.",
+          "primary_evidence": "Fallout 3: Trouble on the Homefront, Amata, overseer and resident dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The town inside a machine",
+          "job": "Explore Vault 112 as the contrast between preserved bodies and simulated lives. Follow James into Tranquility Lane, Betty, Old Lady Dithers and the failsafe. Explain the available release without dwelling on the tasks of cruelty.",
+          "facts": "Stanislaus Braun maintains residents inside a virtual reality system at Vault 112. In Tranquility Lane he appears as Betty. James is trapped in the simulation. Old Lady Dithers recognizes that the neighborhood is artificial and points toward the failsafe. The player can activate it instead of following Braun's cruel tasks.",
+          "boundary": "No step-by-step graphic violence; no assertion a simulation is harmless or that Braun can be simply killed in the same manner as its residents.",
+          "primary_evidence": "Fallout 3: Tranquility Lane, Braun and Dithers dialogue, abandoned house terminal.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The musicians of Vault 92",
+          "job": "Develop the recruitment of musicians, white-noise experiment, disagreement among staff and Agatha's search for a violin. Show the difference between a preserved instrument and the failed community it outlives.",
+          "facts": "Vault 92 recruits skilled musicians. A white-noise project introduces subliminal conditioning and produces dangerous psychological effects. Researcher records and Zoe Hammerstein's recordings reveal the decline. Agatha asks the player to recover the Soil Stradivarius violin from the vault. Agatha's inherited family letters concern Hilda, the ancestor connected with the Soil Stradivarius and Vault 92. Zoe Hammerstein is a separate recorded resident, not Agatha's ancestor. Agatha's dialogue describes Hilda's violin and entry into the vault.",
+          "boundary": "Do not invent real scientific efficacy for subliminal control. No exact percentages or body counts. Music is not itself the cause of the catastrophe.",
+          "primary_evidence": "Fallout 3: Agatha's Song, Vault 92 terminals and Zoe Hammerstein recordings.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The air of Vault 106",
+          "job": "Trace the player's altered perceptions through Vault 106 and compare visible attackers with hallucinated familiar figures. Explain the air experiment and the limitation it places on reading this particular ruin.",
+          "facts": "Vault 106's population is exposed to psychoactive chemicals through its ventilation system. The exploring Lone Wanderer experiences hallucinations, including figures associated with Vault 101. Hostile survivors remain in the vault. The environmental danger continues after the original experiment begins.",
+          "boundary": "No invented chemical formula, precise modern pharmacology or confident biography for each attacker. Hallucinated James is not actual evidence he visited the vault.",
+          "primary_evidence": "Fallout 3: Vault 106 terminals and exploration sequences.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The name repeated in Vault 108",
+          "job": "Develop the clones and laboratory at Vault 108, then the leadership experiment and planned weaknesses in the vault. Explain what the presence of Gary copies shows without inventing a complete chronological rebellion.",
+          "facts": "Vault 108 contains hostile clones named Gary. Research records document cloning and mounting difficulty handling the copies. Vault planning also creates unstable leadership and resource conditions. The result encountered by the player is a damaged vault populated by copies rather than a functioning community.",
+          "boundary": "Do not assert every clone has identical memories, that Gary is an immortal single mind or that a fully known final revolt explains every corpse.",
+          "primary_evidence": "Fallout 3: Vault 108 cloning log and overseer planning records.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "What Fawkes remembers",
+          "job": "Explain Vault 87 through its FEV work, surviving research remains, Fawkes's confinement and the G.E.C.K. retrieval. Keep its local mutant origin distinct from other games' FEV programs.",
+          "facts": "Vault 87 houses FEV experiments and becomes a source of Capital Wasteland super mutants. Fawkes is imprisoned but retains unusual intelligence and can help retrieve the G.E.C.K. The player's route through Little Lamplight leads into the facility; the surface entrance is heavily irradiated.",
+          "boundary": "Not every super mutant in the franchise originates at Vault 87. Do not equate all FEV strains, ghoulification and radiation mutations.",
+          "primary_evidence": "Fallout 3: Finding the Garden of Eden, Vault 87 terminals, Fawkes dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The election nobody wanted",
+          "job": "Introduce Vault 11 through campaign posters and the annual sacrifice demand. Follow the inversion of normal overseer ambition, voting blocs and the way residents normalize the imposed rule. Reserve Katherine's final intervention and the experiment's conclusion for the next chapter.",
+          "facts": "Vault 11's residents are told they must provide one sacrifice each year or the population will die. They choose the overseer as that sacrifice after punishing the initial overseer. Voting blocs emerge; candidates campaign to avoid being elected. The Justice Bloc gains substantial influence.",
+          "boundary": "Do not reveal the final refusal twice or claim the residents originally consented to sacrifice before entering. Avoid quoting the election posters.",
+          "primary_evidence": "Fallout New Vegas: Vault 11 posters, election records and Gus Olson's speech.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "When Vault 11 finally refused",
+          "job": "Continue with Katherine Stone's resistance, the change in selection, violent backlash and the final refusal. Treat coercion non-graphically. Explain the automated congratulatory response and the records near the exit with the uncertainty of the last person's identity.",
+          "facts": "Katherine Stone opposes the Justice Bloc after its coercion and betrayal. As overseer she changes the sacrifice selection system. Conflict devastates the vault. The final survivors refuse another sacrifice and the computer reveals the supposed collective death threat was a test. A recording and remains at the entrance show the survivors' despair; one walks away.",
+          "boundary": "Do not assert the survivor is a named New Vegas character. No detailed sexual violence or self-harm method. The computer's congratulation does not undo what happened.",
+          "primary_evidence": "Fallout New Vegas: Vault 11 Katherine deposition, overseer order, automated response and final recording.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The gardens of Vault 22",
+          "job": "Follow the player's research assignment, Keely's investigation and the overgrown vault. Explain the spore problem, the attraction of agricultural data and the choice over its survival.",
+          "facts": "Dr. Hildern at the NCR's Camp McCarran seeks agricultural research from Vault 22. Keely has entered before the Courier. Plant research is associated with a dangerous spore infection and spore carriers. Keely wants the data destroyed; the Courier has different options.",
+          "boundary": "Do not claim every plant in the Mojave is infected. No real-world pathogen cultivation or ignition instructions. The data's usefulness does not mean its methods were safe.",
+          "primary_evidence": "Fallout New Vegas: There Stands the Grass, Vault 22 records, Hildern and Keely dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "A memory carried to Zion",
+          "job": "Use Honest Hearts to follow Vault 22 beyond its walls. Explain the historical refugees in Zion through Randall Clark's records, their disease and predation, and the distinction between those refugees and Zion's later tribes.",
+          "facts": "Randall Clark's terminals in Zion record encounters with refugees from Vault 22. They carry the spore-associated danger and attack others in the canyon. Clark opposes them. His later help to a different group of children becomes part of the Sorrows' inherited Father in the Caves tradition.",
+          "boundary": "Do not conflate the Vault 22 refugees with the children Clark later helps or make the Sorrows direct biological descendants of those infected aggressors.",
+          "primary_evidence": "Fallout New Vegas Honest Hearts: Randall Clark's terminal records, Vault 22 dwellers' note, Sorrows dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The reactor beneath the farms",
+          "job": "Explore Vault 34 through its armory, reactor leak and trapped survivors. Follow Hard Luck Blues from the NCR sharecroppers to the terminal choice. Explain the immediate human cost of prioritizing either group.",
+          "facts": "Vault 34 has an extensive armory and suffers internal conflict and reactor trouble. Radiation affects the NCR sharecropper farms. A distress message indicates survivors remain trapped. At the control terminal the Courier chooses whether to divert power to help them or shut down the reactor to address the contamination.",
+          "boundary": "No assertion a clever third option safely saves everyone. Do not declare one branch canon or invent survivors seen when the chosen branch does not show them.",
+          "primary_evidence": "Fallout New Vegas: Hard Luck Blues, Vault 34 terminals, sharecropper dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The people who became the Boomers",
+          "job": "Develop the Vault 34 emigrants who settle at Nellis separately from the reactor choice. Show how Pearl's community remembers its origin, why outsiders fear the artillery and how the Lady in the Water quest changes their isolation.",
+          "facts": "The Boomers descend from people who left Vault 34 with weapons and established themselves at Nellis Air Force Base. Pearl leads them. Pete presents their history. They are protective of their isolation and can enlist the Courier in raising a bomber from Lake Mead.",
+          "boundary": "Do not claim every Vault 34 resident left with them or that their history resolves the later reactor disaster. No real weapons operating guide.",
+          "primary_evidence": "Fallout New Vegas: Nellis, Pearl, Pete, Loyal, Volare!",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The vault under the Strip",
+          "job": "Explore Vault 21's use of gambling to settle disputes and its later transformation under House. Develop Sarah Weintraub's hotel and the sealed sections as a case of adaptation instead of simple total collapse.",
+          "facts": "Vault 21 resolves disputes through gambling. Mr. House wins control through a wager accepted by its residents. Much of the vault is filled with concrete, while an accessible section becomes a hotel managed by Sarah Weintraub. Some former residents establish lives elsewhere on the Strip.",
+          "boundary": "Do not invent a secret army in the sealed sections or claim the wager had informed consent from every person. No exact concrete quantity.",
+          "primary_evidence": "Fallout New Vegas: Vault 21, Sarah Weintraub and Michael Angelo dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The overseer who would not comply",
+          "job": "Introduce Vault 81 through its living public community and original overseer's sabotage of the secret medical experiment. Follow the missed scientist notifications, sealed research section and growing disconnection.",
+          "facts": "Overseer Dr. Olivette opposes the planned use of residents as disease subjects. Only a small research team reaches the hidden section; she prevents the intended experiment on the population. The public vault develops into a functioning community while the separated researchers continue work with limited resources.",
+          "boundary": "Her correct name is Olivette, not Olivia, and she is distinct from current overseer Gwen McNamara. Vault 81 was not designed as a control vault.",
+          "primary_evidence": "Fallout 4: Vault 81 original overseer's terminal, research communication terminal.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Curie and the last dose",
+          "job": "Continue Vault 81 through the child Austin, the mole-rat outbreak, the sealed lab, Curie and the cure choice. Develop Curie's work after her human colleagues and the everyday community outside.",
+          "facts": "Austin falls ill after a mole-rat bite. The Sole Survivor explores the hidden lab and finds Curie, who has developed a cure. A single available dose creates a choice if the protagonist was infected. Curie can leave the vault and later pursue a new form and research with the player.",
+          "boundary": "Do not imply the treatment immediately cures every disease or that Curie herself initiated Olivette's sabotage. No claim the protagonist always becomes infected.",
+          "primary_evidence": "Fallout 4: Hole in the Wall, Curie dialogue, research laboratory records.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Five years of recovery",
+          "job": "Develop Vault 95 through successful rehabilitation, residents' routines and the hidden cache released by an infiltrating employee. Follow Cait's later visit as a separate use of a surviving medical resource.",
+          "facts": "Vault 95 gathers people recovering from addiction and supports a period of sobriety. A concealed Vault-Tec agent opens a hidden supply of addictive substances after five years, provoking the planned crisis. Long afterward, Cait can seek treatment with the Sole Survivor at its surviving detox facility.",
+          "boundary": "Do not say the treatment guarantees an uncomplicated lifelong recovery. No drug recipes, modern medical advice or invented relapse rates.",
+          "primary_evidence": "Fallout 4: Vault 95 resident records and Vault-Tec agent log, Benign Intervention.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The experiments that never began as planned",
+          "job": "Compare two unfinished or altered projects, Vault 114 and Vault 118, with separate concrete stories. Explain the wealthy residents promised facilities unlike the plan, Soup Can Harry's interview, and the later hotel robobrains and murder inquiry.",
+          "facts": "Vault 114 is reached through Park Street Station; Nick Valentine is held there by Skinny Malone's gang. Its intended experiment places wealthy residents under poor conditions and an unsuitable overseer chosen through interviews including Soup Can Harry. Vault 118 beneath the Cliff's Edge Hotel was intended to divide rich and poor, but only the wealthy section was completed and its residents became robobrains. Brain Dead investigates a later murder there.",
+          "boundary": "Do not describe either original social experiment as completed exactly as planned. Do not conflate Nick with a Vault-Tec creation, or reveal an invented Vault 118 ending.",
+          "primary_evidence": "Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The unfinished vault and the willing overseer",
+          "job": "Develop Vault 88 as the player's opportunity to operate, soften or reject experiments after the war. Follow Barstow, Clem and configurable devices through the Workshop story. Explain that technical survival leaves a decision with the new overseer.",
+          "facts": "Overseer Barstow survives as a ghoul in unfinished Vault 88. The Sole Survivor can build a settlement and assist her experiments with Clem and other volunteers. The experiments have different selectable parameters, including less harmful options. The player can oppose Barstow or continue along her preferred direction.",
+          "boundary": "No one ending is compulsory. Do not list the most harmful device settings as a how-to or claim a voluntary building task gives residents full knowledge of every hidden parameter.",
+          "primary_evidence": "Fallout 4 Vault-Tec Workshop: Vault 88, Barstow, Clem and experiment configuration choices.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Reclamation after the promise",
+          "job": "Finish at Vault 76 and its overseer's recordings. Explain a vault that functions as a shelter, Reclamation Day, the hidden order to secure silos and the survivors' responsibility to people outside. Briefly distinguish questions left open by the games from a total conspiracy answer, then end on rebuilding in Appalachia.",
+          "facts": "Vault 76 is a control vault with a population chosen to rebuild. Its residents leave on Reclamation Day. The overseer is separately ordered to secure nuclear silos Alpha, Bravo and Charlie for Vault-Tec, disregarding competing claims. Her recordings follow her discovery of devastated Appalachia and growing doubts about the organization's judgment.",
+          "boundary": "Use the original Fallout 76 vault and overseer story, not current live-service developments. Do not assert Vault-Tec launched the first bombs, a confirmed space-colony master plan, or that every vault was intended to kill everyone. No recap catalogue or CTA.",
+          "primary_evidence": "Fallout 76: Vault 76 terminal entries, overseer's mission and original journey holotapes.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        }
+      ],
+      "research_brief": {
+        "TOPIC": "The Secrets of Vault-Tec Explained to Fall Asleep To | Fallout Lore",
+        "ANGLE": "Follow the practical promise of shelter, the experiments hidden from residents, resistance by individuals and the communities that survive beyond the vaults.",
+        "PROOF_BANK": "Chapter-linked game evidence and access-qualified research index.",
+        "HOOK_DIRECTION": "Open with the ordinary family being rushed into Vault 111 and the false decontamination procedure. Promise to follow the gap between shelter and experiment across the games. Give the games-only spoiler boundary in paragraph two. Explain the entrance, freezing and waking experience without recounting the entire main quest.",
+        "STRUCTURE_HINT": "29 self-contained developments joined into one calm continuous journey; no repeated hooks."
+      }
+    },
+    {
+      "id": "03-dwemer",
+      "channel": "Forgotten Realms of Sleep",
+      "title": "The Disappearance of the Dwemer Explained to Fall Asleep To | Elder Scrolls Lore",
+      "angle": "An archaeological history: surviving cities and devices, the people and books around Kagrenac, contradictory accounts of Red Mountain, and theories held to what the games actually show.",
+      "scope": "TES III Morrowind, TES II Daggerfall and TES V Skyrim with Dawnguard and Dragonborn, including their in-game books and dialogue. Full spoilers. No mods, Creation Club, developer forum fiction or ESO-specific new revelations.",
+      "minimum_words": 25500,
+      "planned_runtime": "At least 150 minutes at 170 words per minute; estimate only.",
+      "forbidden": [
+        "Original English narration only; no copied dialogue or competitor wording.",
+        "No invented journals, props, motives, dates, numerical probabilities or developer intent.",
+        "No mods, fan fiction, cut quests presented as playable canon, or unofficial endings.",
+        "No graphic violence or described self-harm methods; discuss consequences gently.",
+        "Only one optional subscribe plus listening location/day-or-night CTA in chapter one.",
+        "No trailers, repeated bedtime instructions, philosophical filler, repeated disclaimers or recaps.",
+        "All assigned chapters belong to one continuous narration. Resolve their local questions.",
+        "Do not state all Dwemer vanished without exception; Yagrum survives. No confirmed solution or definite last day reconstruction. Gods are present in the setting; describe Dwemer opposition to worship and attempts to understand divine power, not simplistic disbelief that any gods exist."
+      ],
+      "proof": [
+        {
+          "chapter": 1,
+          "primary": "Morrowind and Skyrim ruins; Morrowind disappearance dialogue and Red Mountain accounts.",
+          "facts": "The Dwemer are an Elven people, often called Dwarves by outsiders. Their abandoned cities and surviving automata appear in Morrowind and Skyrim. Their disappearance is connected by several accounts to the Battle of Red Mountain and Kagrenac's work. Its exact mechanism and destination remain unresolved. Early orientation identifies Anumidium, the Heart, Sunder, Keening and Wraithguard; the Nerevarine's later intervention undoes enchantments and does not restore the Dwemer. These facts are developed in the existing Heart and tools chapters.",
+          "boundary": "No definitive solution, no fantasy claim that the Dwemer were tiny, no invented last night in a household."
+        },
+        {
+          "chapter": 2,
+          "primary": "Morrowind: Arkngthand and Nchuleftingth; Skyrim: Markarth; Dwemer histories in the games.",
+          "facts": "Dwemer sites exist in Morrowind, Skyrim and Hammerfell. Vvardenfell includes ruins such as Arkngthand and Nchuleftingth; Skyrim contains Markarth's inherited structures and numerous buried cities. Rourken's western migration is remembered in Hammerfell's lore. The Dwemer had different clans and city-states.",
+          "boundary": "No invented population census, continent-wide unified government or assertion a shared doorway means identical politics."
+        },
+        {
+          "chapter": 3,
+          "primary": "Skyrim: Understone Keep, Calcelmo dialogue, Nchuand-Zel.",
+          "facts": "Markarth uses Dwemer stone and metal buildings. Understone Keep contains Calcelmo's research, museum and excavation. A route leads into Nchuand-Zel, where automata and Falmer occupy spaces beneath the living city. Calcelmo studies material most residents use without deciphering.",
+          "boundary": "Do not re-narrate the Forsworn conspiracy or claim all Markarth walls preserve original Dwemer functions."
+        },
+        {
+          "chapter": 4,
+          "primary": "Morrowind and Skyrim: Dwemer automata, recoverable components and ruin layouts.",
+          "facts": "Dwemer spiders, spheres and centurions remain active in abandoned ruins. They have distinct forms and weapons, and often guard passages and machinery. They can contain soul gems and Dwemer metal components. Their survival is visible, but no complete technical blueprint is supplied to the player.",
+          "boundary": "Do not say every machine has a Dwemer soul or that steam alone explains its power. No invented maintenance robots servicing every ruin."
+        },
+        {
+          "chapter": 5,
+          "primary": "Skyrim: Elder Knowledge; Dragonborn: The Path of Knowledge and Kagrumez.",
+          "facts": "Septimus provides an attunement sphere and blank lexicon for the Skyrim Elder Scroll journey. A Dwemer mechanism accepts the sphere to permit entry into Blackreach. Nchardak uses control cubes for its systems; Kagrumez uses resonance gems. The tools are specific to their mechanisms.",
+          "boundary": "No universal password, modern computer-network analogy stretched into fact or assertion every ruin responds to the same frequency."
+        },
+        {
+          "chapter": 6,
+          "primary": "Morrowind: Divine Metaphysics dialogue; Skyrim Dawnguard: Arkngthamz tonal lock.",
+          "facts": "Kagrenac is a chief tonal architect. Morrowind's Divine Metaphysics discussion connects his tools, sacred tones and Anumidium. Skyrim includes resonator mechanisms and a tonal lock at Arkngthamz. Sound and crafted resonance are part of Dwemer work.",
+          "boundary": "No real-world frequency values, theory of everything, certainty every Dwemer wall rewrites reality, or claim modern acoustic physics proves the lore."
+        },
+        {
+          "chapter": 7,
+          "primary": "Skyrim: Hard Answers, Calcelmo's Stone; Dawnguard: Gelebor dialogue, The Falmer: A Study.",
+          "facts": "Snow Elves seek refuge with the Dwemer after defeat by the Nords. The Dwemer impose harmful terms associated with the loss of sight and enslavement. Calcelmo's Stone preserves a bilingual proclamation concerning this relationship. Gelebor describes the later Falmer and questions aspects of their degeneration. In Hard Answers, Gallus's journal is written in Falmer. Enthir uses Calcelmo's bilingual inscription to translate it.",
+          "boundary": "Do not claim fungus alone scientifically explains every change or that every Snow Elf entered Dwemer custody. No exact universal timetable."
+        },
+        {
+          "chapter": 8,
+          "primary": "Skyrim: The Falmer: A Study, Gelebor dialogue and ruins.",
+          "facts": "Accounts of the Falmer describe rebellion against Dwemer masters and prolonged underground conflict. When the Dwemer disappear, Falmer remain and inhabit parts of their former cities. Skyrim ruins show Falmer, chaurus and automata in overlapping territories.",
+          "boundary": "No complete battle chronology or claim the Falmer defeated all Dwemer in a final battle. Do not make Falmer transformed Dwemer."
+        },
+        {
+          "chapter": 9,
+          "primary": "Morrowind: The War of the First Council, The Battle of Red Mountain, Nerevar at Red Mountain.",
+          "facts": "Chimer leader Indoril Nerevar and Dwemer king Dumac are associated with the First Council and the overthrow of Nordic dominance in Resdayn. The groups coexist despite major cultural and religious differences. The alliance later breaks down around Red Mountain and the Heart.",
+          "boundary": "Do not invent private speeches, a written treaty clause, or unanimity among either people. Avoid unsupported exact dates."
+        },
+        {
+          "chapter": 10,
+          "primary": "In-game Rourken histories, Volendrung artifact traditions and Volenfell lore.",
+          "facts": "The Rourken reject the alliance with the Chimer and migrate west. A tradition says their leader throws Volendrung and follows it to the future homeland. Dwemer sites remain in Hammerfell. Their geographical separation complicates an explanation confined to the destruction of one fortress.",
+          "boundary": "The thrown-hammer account is a legend, not a measured trajectory. No claim geographical reach proves a specific soul-network mechanism."
+        },
+        {
+          "chapter": 11,
+          "primary": "Skyrim Dawnguard: The Aetherium Wars, Katria's journal, Lost to the Ages.",
+          "facts": "The Aetherium Wars describes aetherium research and cooperation among Skyrim Dwemer cities, followed by fighting over access to the forge and material. The book is attributed to Taron Dreth. Lost to the Ages reveals Katria's work and the surviving Aetherium Forge. Bthalft is the shared forge destination, not the fourth member of the alliance. Distinguish the cooperating cities from the forge location.",
+          "boundary": "Do not accept Taron's authorship as uncontested original scholarship; do not claim every historical detail is directly witnessed."
+        },
+        {
+          "chapter": 12,
+          "primary": "Skyrim Dawnguard: Lost to the Ages, Arkngthamz, Katria's journal and dialogue.",
+          "facts": "Katria's ghost meets the Dragonborn in Arkngthamz. Her journal records her search and notes on the tonal lock. The player can recover an aetherium shard and continue to other marked sites. Katria remains involved in the search.",
+          "boundary": "Do not give an invented final confession or assert Katria discovered every fact alone without earlier sources. Avoid a repeated literal puzzle-solving guide."
+        },
+        {
+          "chapter": 13,
+          "primary": "Skyrim Dawnguard: Lost to the Ages ending, Aetherium Forge, Taron Dreth encounter.",
+          "facts": "The recovered shards form a key to the Aetherium Forge. The player and Katria overcome the defenses including the Forgemaster. Limited aetherium permits one of three artifacts: crown, shield or staff. Katria's task is resolved, while Taron can later be confronted over the stolen research.",
+          "boundary": "Do not say the player restores mass aetherium production or makes all three items in one ordinary quest completion."
+        },
+        {
+          "chapter": 14,
+          "primary": "Skyrim: Elder Knowledge, Blackreach, Tower of Mzark, A Return to Your Roots.",
+          "facts": "Blackreach is a vast cavern reached through Dwemer mechanisms beneath Skyrim. Great Lifts connect it to the surface after unlocking. Falmer and automata occupy parts of it. The Tower of Mzark contains the mechanism used for the Elder Scroll. Crimson nirnroot grows in the cavern.",
+          "boundary": "No claim every Skyrim ruin connects to Blackreach or that its glowing structures powered Numidium. No invented map dimensions."
+        },
+        {
+          "chapter": 15,
+          "primary": "Skyrim: Alftand expedition journals, Sulla's journal and final encounter.",
+          "facts": "An expedition enters Alftand and becomes trapped in hostile conditions. Journals and bodies trace its fragmentation. J'darr and J'zhar are encountered after the group's decline. Sulla and Umana survive to the deeper chambers but turn against one another. Dwemer defenses and Falmer compound the danger.",
+          "boundary": "Do not invent exact private thoughts or make the Dwemer deliberately lure this much later expedition. Non-graphic handling of deaths."
+        },
+        {
+          "chapter": 16,
+          "primary": "Skyrim: The Lost Expedition, four expedition journals, Calcelmo dialogue.",
+          "facts": "The player recovers journals of Stromm, Staubs, Krag and Erj in Nchuand-Zel. The expedition encounters Falmer and the city's dangerous defenses. The quest includes reactivating automated defenses and reporting to Calcelmo. The records preserve a failed attempt to exploit or understand the buried complex. Stromm stays with a guard, studies the tree and possible two family quarters, then faces returning Falmer. Krag misses his desk, wants to catalogue finds, leaves Erj at the armory and sets runes at camp. Erj names private buyers known to Krag and expects treasure. Staubin records inactive guardians, the tree and locked armory, abandons students as a diversion during the Falmer attack, and fails to reach the defense control. Alethius's notes initiate the quest.",
+          "boundary": "Do not invent a successful surviving team member or claim reactivation makes every chamber safe."
+        },
+        {
+          "chapter": 17,
+          "primary": "Skyrim: Revealing the Unseen; Mirabelle, Gavros and Paratus dialogue; Mzulft Oculory sequence.",
+          "facts": "The Synod investigates Mzulft while seeking powerful artifacts. Mirabelle directs the Dragonborn there during the Staff search. Gavros is dying at the entrance. Paratus survives near the Oculory. A recovered focusing crystal, heat/cold spells and alignment make the machine operate. Paratus identifies powerful interference at the College associated with the Eye, while the map supplies Labyrinthian as a lead for the Staff.",
+          "boundary": "Paratus's interpretation is his account. Do not invent a complete technological blueprint, confirm every Synod political motive or claim the Oculory explains the disappearance."
+        },
+        {
+          "chapter": 18,
+          "primary": "Skyrim Dragonborn: The Path of Knowledge, Neloth dialogue, Nchardak mechanisms.",
+          "facts": "Neloth and the Dragonborn enter Nchardak during The Path of Knowledge. Control cubes operate doors and pumps, changing water levels and enabling access. Dwemer defenses remain. The object sought is a Black Book needed in the struggle with Miraak.",
+          "boundary": "Neloth's descriptions of the ancient city are his scholarly account. Do not claim the Black Book proves all Dwemer served Hermaeus Mora or shared Miraak's plan."
+        },
+        {
+          "chapter": 19,
+          "primary": "Skyrim Dragonborn: Kagrumez trials, Fahlbtharz, Visage of Mzund.",
+          "facts": "Kagrumez uses resonance gems to open trials with hostile automata and can yield mechanical followers. Fahlbtharz contains large moving machinery and a boilery puzzle; the Visage of Mzund is found there. Both places preserve functioning systems with no living original operators.",
+          "boundary": "Do not invent a shared initiation ceremony or claim the player is being tested for Dwemer citizenship. No numerical steam engineering."
+        },
+        {
+          "chapter": 20,
+          "primary": "Morrowind: Yagrum Bagarn dialogue, Tel Fyr, Divayth Fyr.",
+          "facts": "Yagrum Bagarn is encountered in Morrowind at Divayth Fyr's corprusarium. He is a surviving Dwemer afflicted by corprus and uses a mechanical support apparatus. He says he was in an Outer Realm when his people disappeared. He returned to search for them and does not know their ultimate fate.",
+          "boundary": "Outer Realm is not identified precisely. No claim he witnessed Kagrenac's final strike, deliberately escaped a known catastrophe or can restore the whole people."
+        },
+        {
+          "chapter": 21,
+          "primary": "Morrowind: Mystery of the Dwarves journal stages, Yagrum and Baladas dialogue, three quest books.",
+          "facts": "Trebonius asks the player to discover what happened to the Dwarves. Hanging Gardens provides a route to translation. Divine Metaphysics concerns making Anumidium through the Heart and tools. The Egg of Time argues against a feared danger of linking to a divine source. Yagrum and Baladas help interpret. Trebonius accepts the books as sufficient.",
+          "boundary": "Do not pretend the player receives a definitive resurrection recipe. The Egg's confidence is not proof that the danger was imaginary."
+        },
+        {
+          "chapter": 22,
+          "primary": "Morrowind: The Monomyth traditions, Vivec dialogue, Kagrenac's Tools and Red Mountain main quest.",
+          "facts": "The Heart lies beneath Red Mountain. Religious accounts connect it to Lorkhan and the creation of the mortal world. Dwemer research, the Tribunal and Dagoth Ur all rely on its power in different ways. The Nerevarine reaches it during Morrowind's climax.",
+          "boundary": "Do not present one creation myth as neutral scientific history or say the Heart is a normal reactor. No assertion every race tells identical cosmology."
+        },
+        {
+          "chapter": 23,
+          "primary": "Morrowind: Kagrenac's Tools, Vivec's plan, Yagrum dialogue, Keening and Sunder retrieval.",
+          "facts": "Keening is a blade, Sunder a hammer and Wraithguard a protective gauntlet. They were made to work on the Heart's power. In Morrowind Vivec and Yagrum can be involved in obtaining or activating protection depending on the route. The Nerevarine uses the tools against the Heart's enchantments.",
+          "boundary": "Do not narrate gameplay damage numbers or equate Skyrim's changed Keening mechanics with a canon solved experiment. Wraithguard is not a weapon or the Heart itself."
+        },
+        {
+          "chapter": 24,
+          "primary": "Morrowind: Divine Metaphysics discussion, Yagrum dialogue, The Battle of Red Mountain, Nerevar at Red Mountain.",
+          "facts": "Kagrenac develops Anumidium, also called Numidium, in connection with the Heart of Lorkhan. He creates the tools and works with tonal methods. Surviving accounts disagree over who knew what and how the project was revealed. Yagrum reports that colleagues disputed Kagrenac's conclusions.",
+          "boundary": "No claim every Dwemer voted for ascension or agreed to become a skin. Do not claim Dumac's exact private knowledge is settled."
+        },
+        {
+          "chapter": 25,
+          "primary": "Morrowind: The War of the First Council, The Battle of Red Mountain, Nerevar at Red Mountain, Progress of Truth.",
+          "facts": "Accounts link the First Council's collapse to discovery of Kagrenac's work. Nerevar opposes the threat he sees in it. Dagoth reports or is involved in the discovery in surviving accounts. Chimer and Dwemer go to war. Their leaders and the Heart chamber become central to later narratives. Nerevar at Red Mountain explicitly says Kagrenac's new god was hidden from Dumac. Vivec's The Battle of Red Mountain describes Dumac's anger at interference without the same explicit assurance of ignorance. This is a concrete difference in the pre-battle accounts, not a settled fact about Dumac's mind.",
+          "boundary": "No newly invented battle speech, exact army strength, reconciled timeline or assumption a partisan book is an omniscient camera."
+        },
+        {
+          "chapter": 26,
+          "primary": "Morrowind: The Battle of Red Mountain; Nerevar at Red Mountain; Five Songs of King Wulfharth.",
+          "facts": "Vivec's account ties the disappearance to Kagrenac using the tools under pressure. Nerevar at Red Mountain describes Dagoth killing Kagrenac and an Azura-guided use of the tools that strips the Dwemer's borrowed immortality. Nordic accounts assign different alignments and roles. They cannot all be read as one straightforward eyewitness sequence.",
+          "boundary": "No final canonical reconstruction or automatic claim every discrepancy is a Dragon Break. Do not turn the chapter into an abstract lecture about unreliable narrators."
+        },
+        {
+          "chapter": 27,
+          "primary": "Morrowind main quest: Vivec's plan, Dagoth Ur dialogue, Akulakhan chamber and ending.",
+          "facts": "Vivec, Almalexia and Sotha Sil draw divine power from the Heart. Dagoth Ur also draws on it and pursues Akulakhan, another giant construction. The Nerevarine uses Kagrenac's tools to break the Heart's enchantments, ending Dagoth Ur's dependence and cutting off the Tribunal's source.",
+          "boundary": "The Heart is freed from the enchantments rather than necessarily annihilated. Do not claim every user disappears like the Dwemer or the Nerevarine becomes a Dwemer."
+        },
+        {
+          "chapter": 28,
+          "primary": "Daggerfall main quest and endings; The Warp in the West; The Arcturian Heresy as a partisan account.",
+          "facts": "Numidium later appears in accounts of Tiber Septim's conquests, associated with a different power source, the Mantella. Daggerfall's main quest revolves around the Totem and Mantella and leads to competing outcomes later reflected in the Warp in the West. Those later events involve temporal contradiction.",
+          "boundary": "Do not treat The Arcturian Heresy as uncontested biography or a later Dragon Break as proof of the earlier disappearance's mechanism. Do not invent a single mandatory Daggerfall winner."
+        },
+        {
+          "chapter": 29,
+          "primary": "Skyrim: Arniel's Endeavor, Arniel dialogue and final experiment.",
+          "facts": "Arniel investigates the Dwemer disappearance. He asks for Dwemer cogs, a warped soul gem heated at convectors and Keening. In the final experiment he strikes the gem and vanishes. The player gains the ability to summon Arniel's Shade. He did not use the Heart of Lorkhan or the full original set of tools.",
+          "boundary": "No claim this proves all Dwemer became summonable ghosts, that the player absorbed them, or that the shade explains an entire people's destination."
+        },
+        {
+          "chapter": 30,
+          "primary": "Comparison of the game evidence assigned above; clearly identified interpretations, not additional facts.",
+          "facts": "The disappearance's timing, Kagrenac's Heart project, Yagrum's survival during absence and functioning ruins are important constraints. A catastrophic failure and Numidium-related transformation are interpretations, not shown outcomes. The widely circulated skin-of-Numidium interpretation is not a confirmed game revelation. No surviving quest supplies a final destination or complete means of reversing it.",
+          "boundary": "No certainty about zero-summing, universal soul absorption, a secretly living civilization or future game revelations. Prefer a small number of reasoned possibilities to an exhaustive speculative list. No CTA or sequel promise."
+        }
+      ],
+      "chapters": [
+        {
+          "title": "A machine with nobody left to repair it",
+          "job": "Open with a functioning automaton in an abandoned Dwemer city. Promise the history, physical traces and competing accounts of the disappearance, without a definitive solution. Paragraph two states Morrowind, Daggerfall, Skyrim and its expansions spoiler scope. Explain who the Dwemer were through surviving buildings and the mismatch between the word dwarf and Elven people.",
+          "facts": "The Dwemer are an Elven people, often called Dwarves by outsiders. Their abandoned cities and surviving automata appear in Morrowind and Skyrim. Their disappearance is connected by several accounts to the Battle of Red Mountain and Kagrenac's work. Its exact mechanism and destination remain unresolved.",
+          "boundary": "No definitive solution, no fantasy claim that the Dwemer were tiny, no invented last night in a household.",
+          "primary_evidence": "Morrowind and Skyrim ruins; Morrowind disappearance dialogue and Red Mountain accounts. Morrowind: Kagrenac's Tools and Vivec's Plan to Defeat Dagoth Ur, as used in the later Heart and tools chapters.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The cities under the map",
+          "job": "Describe the range of Dwemer settlement across Morrowind, Skyrim and Hammerfell. Develop the practical difference between a single empire and communities sharing engineering traditions; make travel through named ruins the organizing device.",
+          "facts": "Dwemer sites exist in Morrowind, Skyrim and Hammerfell. Vvardenfell includes ruins such as Arkngthand and Nchuleftingth; Skyrim contains Markarth's inherited structures and numerous buried cities. Rourken's western migration is remembered in Hammerfell's lore. The Dwemer had different clans and city-states.",
+          "boundary": "No invented population census, continent-wide unified government or assertion a shared doorway means identical politics.",
+          "primary_evidence": "Morrowind: Arkngthand and Nchuleftingth; Skyrim: Markarth; Dwemer histories in the games.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "A city inhabited by its successors",
+          "job": "Explore Markarth as an inherited Dwemer city still used by people with different customs. Follow Understone Keep, Calcelmo's excavation and the route into Nchuand-Zel. Distinguish adapting a ruin from understanding its builders.",
+          "facts": "Markarth uses Dwemer stone and metal buildings. Understone Keep contains Calcelmo's research, museum and excavation. A route leads into Nchuand-Zel, where automata and Falmer occupy spaces beneath the living city. Calcelmo studies material most residents use without deciphering.",
+          "boundary": "Do not re-narrate the Forsworn conspiracy or claim all Markarth walls preserve original Dwemer functions.",
+          "primary_evidence": "Skyrim: Understone Keep, Calcelmo dialogue, Nchuand-Zel.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The defenses that outlived their orders",
+          "job": "Examine spiders, spheres and centurions through their forms and encounter behavior. Explain their continuing security role, soul gems and metal components while leaving their complete engineering unresolved.",
+          "facts": "Dwemer spiders, spheres and centurions remain active in abandoned ruins. They have distinct forms and weapons, and often guard passages and machinery. They can contain soul gems and Dwemer metal components. Their survival is visible, but no complete technical blueprint is supplied to the player.",
+          "boundary": "Do not say every machine has a Dwemer soul or that steam alone explains its power. No invented maintenance robots servicing every ruin.",
+          "primary_evidence": "Morrowind and Skyrim: Dwemer automata, recoverable components and ruin layouts.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The tools that resist their owners",
+          "job": "Follow the experience of opening Dwemer spaces with attunement spheres, lexicons, resonators and control cubes. Use the different actual devices to explain why recovering a tool does not restore all the missing knowledge.",
+          "facts": "Septimus provides an attunement sphere and blank lexicon for the Skyrim Elder Scroll journey. A Dwemer mechanism accepts the sphere to permit entry into Blackreach. Nchardak uses control cubes for its systems; Kagrumez uses resonance gems. The tools are specific to their mechanisms.",
+          "boundary": "No universal password, modern computer-network analogy stretched into fact or assertion every ruin responds to the same frequency.",
+          "primary_evidence": "Skyrim: Elder Knowledge; Dragonborn: The Path of Knowledge and Kagrumez.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Sound as a craft",
+          "job": "Introduce tonal architecture through Kagrenac's title, the tools' described sacred tones and visible resonant mechanisms. Explain the fictional concept in plain terms, distinguishing it from a fully known scientific discipline.",
+          "facts": "Kagrenac is a chief tonal architect. Morrowind's Divine Metaphysics discussion connects his tools, sacred tones and Anumidium. Skyrim includes resonator mechanisms and a tonal lock at Arkngthamz. Sound and crafted resonance are part of Dwemer work.",
+          "boundary": "No real-world frequency values, theory of everything, certainty every Dwemer wall rewrites reality, or claim modern acoustic physics proves the lore.",
+          "primary_evidence": "Morrowind: Divine Metaphysics dialogue; Skyrim Dawnguard: Arkngthamz tonal lock.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The bargain beneath the snow",
+          "job": "Develop Snow Elf refuge, Dwemer coercion and the surviving record on Calcelmo's Stone. Explain blinding and the inherited tragedy, using Gelebor's testimony as testimony and distinguishing it from all claims about the later Falmer.",
+          "facts": "Snow Elves seek refuge with the Dwemer after defeat by the Nords. The Dwemer impose harmful terms associated with the loss of sight and enslavement. Calcelmo's Stone preserves a bilingual proclamation concerning this relationship. Gelebor describes the later Falmer and questions aspects of their degeneration. In Hard Answers, Gallus's journal is written in Falmer. Enthir uses Calcelmo's bilingual inscription to translate it.",
+          "boundary": "Do not claim fungus alone scientifically explains every change or that every Snow Elf entered Dwemer custody. No exact universal timetable.",
+          "primary_evidence": "Skyrim: Hard Answers, Calcelmo's Stone; Dawnguard: Gelebor dialogue, The Falmer: A Study.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The war below the ground",
+          "job": "Continue the enslaved Falmer relationship into rebellion and the War of the Crag. Explain how Dwemer disappearance changed who occupied their cities without pretending a later inhabitant is a surviving Dwemer.",
+          "facts": "Accounts of the Falmer describe rebellion against Dwemer masters and prolonged underground conflict. When the Dwemer disappear, Falmer remain and inhabit parts of their former cities. Skyrim ruins show Falmer, chaurus and automata in overlapping territories.",
+          "boundary": "No complete battle chronology or claim the Falmer defeated all Dwemer in a final battle. Do not make Falmer transformed Dwemer.",
+          "primary_evidence": "Skyrim: The Falmer: A Study, Gelebor dialogue and ruins.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The alliance in Resdayn",
+          "job": "Tell the First Council through Nerevar and Dumac: shared opposition to Nordic rule, differing religious outlooks and the coalition's practical value. Establish the people before Kagrenac's conflict.",
+          "facts": "Chimer leader Indoril Nerevar and Dwemer king Dumac are associated with the First Council and the overthrow of Nordic dominance in Resdayn. The groups coexist despite major cultural and religious differences. The alliance later breaks down around Red Mountain and the Heart.",
+          "boundary": "Do not invent private speeches, a written treaty clause, or unanimity among either people. Avoid unsupported exact dates.",
+          "primary_evidence": "Morrowind: The War of the First Council, The Battle of Red Mountain, Nerevar at Red Mountain.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The clan that went west",
+          "job": "Develop the Rourken break with the First Council and migration to Hammerfell, the Volendrung legend and Volenfell. Explain how a distant clan matters when later accounts describe a disappearance beyond one battlefield.",
+          "facts": "The Rourken reject the alliance with the Chimer and migrate west. A tradition says their leader throws Volendrung and follows it to the future homeland. Dwemer sites remain in Hammerfell. Their geographical separation complicates an explanation confined to the destruction of one fortress.",
+          "boundary": "The thrown-hammer account is a legend, not a measured trajectory. No claim geographical reach proves a specific soul-network mechanism.",
+          "primary_evidence": "In-game Rourken histories, Volendrung artifact traditions and Volenfell lore.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The northern alliance of workshops",
+          "job": "Explain Skyrim's Dwemer cities through The Aetherium Wars: cooperation over a new material, shared work at a forge and fragmentation under competition. Present the book's historical claims with the exploration that later supports parts of them.",
+          "facts": "The Aetherium Wars describes aetherium research and cooperation among Skyrim Dwemer cities, followed by fighting over access to the forge and material. The book is attributed to Taron Dreth. Lost to the Ages reveals Katria's work and the surviving Aetherium Forge. Bthalft is the shared forge destination, not the fourth member of the alliance. Distinguish the cooperating cities from the forge location.",
+          "boundary": "Do not accept Taron's authorship as uncontested original scholarship; do not claim every historical detail is directly witnessed.",
+          "primary_evidence": "Skyrim Dawnguard: The Aetherium Wars, Katria's journal, Lost to the Ages.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The researcher in Arkngthamz",
+          "job": "Stay with Katria's expedition, her death, the tonal lock and the first aetherium shard. Explain how her working notes guide a later visitor and preserve practical information despite a failed expedition.",
+          "facts": "Katria's ghost meets the Dragonborn in Arkngthamz. Her journal records her search and notes on the tonal lock. The player can recover an aetherium shard and continue to other marked sites. Katria remains involved in the search.",
+          "boundary": "Do not give an invented final confession or assert Katria discovered every fact alone without earlier sources. Avoid a repeated literal puzzle-solving guide.",
+          "primary_evidence": "Skyrim Dawnguard: Lost to the Ages, Arkngthamz, Katria's journal and dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The last working forge",
+          "job": "Follow the other shards to the Aetherium Forge, its defenses, the Forgemaster and the single artifact choice. Explain the limits imposed by the surviving material and Katria's closure; do not retell her opening.",
+          "facts": "The recovered shards form a key to the Aetherium Forge. The player and Katria overcome the defenses including the Forgemaster. Limited aetherium permits one of three artifacts: crown, shield or staff. Katria's task is resolved, while Taron can later be confronted over the stolen research.",
+          "boundary": "Do not say the player restores mass aetherium production or makes all three items in one ordinary quest completion.",
+          "primary_evidence": "Skyrim Dawnguard: Lost to the Ages ending, Aetherium Forge, Taron Dreth encounter.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Blackreach and its different inhabitants",
+          "job": "Explore Blackreach through its scale, light, waterways, structures and separate occupants. Explain surface connections and the route to the Tower of Mzark. Treat the cavern as a place with changing users, not a single mysterious machine.",
+          "facts": "Blackreach is a vast cavern reached through Dwemer mechanisms beneath Skyrim. Great Lifts connect it to the surface after unlocking. Falmer and automata occupy parts of it. The Tower of Mzark contains the mechanism used for the Elder Scroll. Crimson nirnroot grows in the cavern.",
+          "boundary": "No claim every Skyrim ruin connects to Blackreach or that its glowing structures powered Numidium. No invented map dimensions.",
+          "primary_evidence": "Skyrim: Elder Knowledge, Blackreach, Tower of Mzark, A Return to Your Roots.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The expedition at Alftand",
+          "job": "Tell the Alftand expedition through Sulla Trebatius's records, dwindling supplies, J'darr and J'zhar and the final confrontation with Umana. Show named people responding differently to conditions, rather than a generic warning about hubris.",
+          "facts": "An expedition enters Alftand and becomes trapped in hostile conditions. Journals and bodies trace its fragmentation. J'darr and J'zhar are encountered after the group's decline. Sulla and Umana survive to the deeper chambers but turn against one another. Dwemer defenses and Falmer compound the danger.",
+          "boundary": "Do not invent exact private thoughts or make the Dwemer deliberately lure this much later expedition. Non-graphic handling of deaths.",
+          "primary_evidence": "Skyrim: Alftand expedition journals, Sulla's journal and final encounter.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The records beneath Markarth",
+          "job": "Develop The Lost Expedition at Nchuand-Zel through Stromm, Staubs, Krag and Erj. Explain the journals' different reports, deactivated defenses and the consequences of restarting them. Keep it distinct from Alftand's survival story.",
+          "facts": "The player recovers journals of Stromm, Staubs, Krag and Erj in Nchuand-Zel. The expedition encounters Falmer and the city's dangerous defenses. The quest includes reactivating automated defenses and reporting to Calcelmo. The records preserve a failed attempt to exploit or understand the buried complex. Stromm stays with a guard, studies the tree and possible two family quarters, then faces returning Falmer. Krag misses his desk, wants to catalogue finds, leaves Erj at the armory and sets runes at camp. Erj names private buyers known to Krag and expects treasure. Staubin records inactive guardians, the tree and locked armory, abandons students as a diversion during the Falmer attack, and fails to reach the defense control. Alethius's notes initiate the quest.",
+          "boundary": "Do not invent a successful surviving team member or claim reactivation makes every chamber safe.",
+          "primary_evidence": "Skyrim: The Lost Expedition, four expedition journals, Calcelmo dialogue.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The projection at Mzulft",
+          "job": "Use Revealing the Unseen to explain a Dwemer apparatus repurposed by the Synod. Follow Mirabelle's lead, Gavros, Paratus, the crystal, alignment and projected map. Make the new information about the device's operation and the institutions that want it; distinguish it from the Mzark retrieval mechanism.",
+          "facts": "The Synod investigates Mzulft while seeking powerful artifacts. Mirabelle directs the Dragonborn there during the Staff search. Gavros is dying at the entrance. Paratus survives near the Oculory. A recovered focusing crystal, heat/cold spells and alignment make the machine operate. Paratus identifies powerful interference at the College associated with the Eye, while the map supplies Labyrinthian as a lead for the Staff.",
+          "boundary": "Paratus's interpretation is his account. Do not invent a complete technological blueprint, confirm every Synod political motive or claim the Oculory explains the disappearance.",
+          "primary_evidence": "Skyrim: Revealing the Unseen; Mirabelle, Gavros and Paratus dialogue; Mzulft Oculory sequence.",
+          "length": "900-1100 substantive words; no repeated operation-versus-understanding lecture."
+        },
+        {
+          "title": "Nchardak beneath the water",
+          "job": "Travel with Neloth through Nchardak. Explain control cubes, pumps, changing water levels, access and the recovered Black Book. Focus on what can be understood by operating a surviving city without possessing its original knowledge.",
+          "facts": "Neloth and the Dragonborn enter Nchardak during The Path of Knowledge. Control cubes operate doors and pumps, changing water levels and enabling access. Dwemer defenses remain. The object sought is a Black Book needed in the struggle with Miraak.",
+          "boundary": "Neloth's descriptions of the ancient city are his scholarly account. Do not claim the Black Book proves all Dwemer served Hermaeus Mora or shared Miraak's plan.",
+          "primary_evidence": "Skyrim Dragonborn: The Path of Knowledge, Neloth dialogue, Nchardak mechanisms.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The obstacle courses on Solstheim",
+          "job": "Compare Kagrumez's resonance-gem trials with Fahlbtharz's large machinery. Develop actual mechanisms, recoverable artifacts and surviving automatons, making the comparison about different local purposes rather than a universal Dwemer test.",
+          "facts": "Kagrumez uses resonance gems to open trials with hostile automata and can yield mechanical followers. Fahlbtharz contains large moving machinery and a boilery puzzle; the Visage of Mzund is found there. Both places preserve functioning systems with no living original operators.",
+          "boundary": "Do not invent a shared initiation ceremony or claim the player is being tested for Dwemer citizenship. No numerical steam engineering.",
+          "primary_evidence": "Skyrim Dragonborn: Kagrumez trials, Fahlbtharz, Visage of Mzund.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The scholar in the corprusarium",
+          "job": "Introduce Yagrum Bagarn through Tel Fyr, Divayth Fyr and his surviving condition. Explain his absence in an Outer Realm at the time of disappearance, return to find his people gone and research afterward.",
+          "facts": "Yagrum Bagarn is encountered in Morrowind at Divayth Fyr's corprusarium. He is a surviving Dwemer afflicted by corprus and uses a mechanical support apparatus. He says he was in an Outer Realm when his people disappeared. He returned to search for them and does not know their ultimate fate.",
+          "boundary": "Outer Realm is not identified precisely. No claim he witnessed Kagrenac's final strike, deliberately escaped a known catastrophe or can restore the whole people.",
+          "primary_evidence": "Morrowind: Yagrum Bagarn dialogue, Tel Fyr, Divayth Fyr.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Three books and an impossible assignment",
+          "job": "Follow Trebonius's request and the recovery and interpretation of Hanging Gardens, Divine Metaphysics and The Egg of Time. Give Baladas and Yagrum different roles. Explain why the guild quest can be administratively complete while the larger mystery remains open.",
+          "facts": "Trebonius asks the player to discover what happened to the Dwarves. Hanging Gardens provides a route to translation. Divine Metaphysics concerns making Anumidium through the Heart and tools. The Egg of Time argues against a feared danger of linking to a divine source. Yagrum and Baladas help interpret. Trebonius accepts the books as sufficient.",
+          "boundary": "Do not pretend the player receives a definitive resurrection recipe. The Egg's confidence is not proof that the danger was imaginary.",
+          "primary_evidence": "Morrowind: Mystery of the Dwarves journal stages, Yagrum and Baladas dialogue, three quest books.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The heart under Red Mountain",
+          "job": "Explain the Heart of Lorkhan through Tamriel's creation traditions and its concrete place in Morrowind. Develop the difference between a sacred origin story and the visibly powerful object later characters manipulate.",
+          "facts": "The Heart lies beneath Red Mountain. Religious accounts connect it to Lorkhan and the creation of the mortal world. Dwemer research, the Tribunal and Dagoth Ur all rely on its power in different ways. The Nerevarine reaches it during Morrowind's climax.",
+          "boundary": "Do not present one creation myth as neutral scientific history or say the Heart is a normal reactor. No assertion every race tells identical cosmology.",
+          "primary_evidence": "Morrowind: The Monomyth traditions, Vivec dialogue, Kagrenac's Tools and Red Mountain main quest.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The three instruments",
+          "job": "Develop Keening, Sunder and Wraithguard as tools with distinct described roles and actual dangerous use. Explain retrieval in Morrowind and why later possession by other people does not reveal the entire Dwemer project.",
+          "facts": "Keening is a blade, Sunder a hammer and Wraithguard a protective gauntlet. They were made to work on the Heart's power. In Morrowind Vivec and Yagrum can be involved in obtaining or activating protection depending on the route. The Nerevarine uses the tools against the Heart's enchantments.",
+          "boundary": "Do not narrate gameplay damage numbers or equate Skyrim's changed Keening mechanics with a canon solved experiment. Wraithguard is not a weapon or the Heart itself.",
+          "primary_evidence": "Morrowind: Kagrenac's Tools, Vivec's plan, Yagrum dialogue, Keening and Sunder retrieval.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Kagrenac and the brass god",
+          "job": "Explain the Anumidium project as an attempt to construct a god using the Heart. Develop Kagrenac's ambition through documents and his colleagues' reservations rather than imagined villain dialogue. Introduce Dumac's uncertain knowledge without resolving it.",
+          "facts": "Kagrenac develops Anumidium, also called Numidium, in connection with the Heart of Lorkhan. He creates the tools and works with tonal methods. Surviving accounts disagree over who knew what and how the project was revealed. Yagrum reports that colleagues disputed Kagrenac's conclusions.",
+          "boundary": "No claim every Dwemer voted for ascension or agreed to become a skin. Do not claim Dumac's exact private knowledge is settled.",
+          "primary_evidence": "Morrowind: Divine Metaphysics discussion, Yagrum dialogue, The Battle of Red Mountain, Nerevar at Red Mountain.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The war inside the alliance",
+          "job": "Return to Nerevar, Dumac and Dagoth at the moment the coalition breaks. Compare the discovery of the Heart project and the different loyalties, then take the conflict to Red Mountain without resolving the competing final accounts prematurely.",
+          "facts": "Accounts link the First Council's collapse to discovery of Kagrenac's work. Nerevar opposes the threat he sees in it. Dagoth reports or is involved in the discovery in surviving accounts. Chimer and Dwemer go to war. Their leaders and the Heart chamber become central to later narratives. Nerevar at Red Mountain explicitly says Kagrenac's new god was hidden from Dumac. Vivec's The Battle of Red Mountain describes Dumac's anger at interference without the same explicit assurance of ignorance. This is a concrete difference in the pre-battle accounts, not a settled fact about Dumac's mind.",
+          "boundary": "No newly invented battle speech, exact army strength, reconciled timeline or assumption a partisan book is an omniscient camera.",
+          "primary_evidence": "Morrowind: The War of the First Council, The Battle of Red Mountain, Nerevar at Red Mountain, Progress of Truth.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The stories of the Red Moment",
+          "job": "Compare Vivec's Battle of Red Mountain with the Ashlander account Nerevar at Red Mountain and the Nordic tradition in Five Songs of King Wulfharth. Explain their concrete disagreements over alliances, deaths and the use of the tools. Let each account be understandable before comparing.",
+          "facts": "Vivec's account ties the disappearance to Kagrenac using the tools under pressure. Nerevar at Red Mountain describes Dagoth killing Kagrenac and an Azura-guided use of the tools that strips the Dwemer's borrowed immortality. Nordic accounts assign different alignments and roles. They cannot all be read as one straightforward eyewitness sequence.",
+          "boundary": "No final canonical reconstruction or automatic claim every discrepancy is a Dragon Break. Do not turn the chapter into an abstract lecture about unreliable narrators.",
+          "primary_evidence": "Morrowind: The Battle of Red Mountain; Nerevar at Red Mountain; Five Songs of King Wulfharth.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The gods who inherited the tools",
+          "job": "Follow the Tribunal and Dagoth Ur after the disappearance, their relationship to the Heart and the Nerevarine's intervention. Explain what the later experiment proves about access to divine power and what it leaves unanswered about the earlier people.",
+          "facts": "Vivec, Almalexia and Sotha Sil draw divine power from the Heart. Dagoth Ur also draws on it and pursues Akulakhan, another giant construction. The Nerevarine uses Kagrenac's tools to break the Heart's enchantments, ending Dagoth Ur's dependence and cutting off the Tribunal's source.",
+          "boundary": "The Heart is freed from the enchantments rather than necessarily annihilated. Do not claim every user disappears like the Dwemer or the Nerevarine becomes a Dwemer.",
+          "primary_evidence": "Morrowind main quest: Vivec's plan, Dagoth Ur dialogue, Akulakhan chamber and ending.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "The brass giant after its makers",
+          "job": "Develop Numidium's later place in Tiber Septim's conquest, the Mantella and the events around Daggerfall. Distinguish the later activations and documented Warp in the West from speculation about Red Mountain.",
+          "facts": "Numidium later appears in accounts of Tiber Septim's conquests, associated with a different power source, the Mantella. Daggerfall's main quest revolves around the Totem and Mantella and leads to competing outcomes later reflected in the Warp in the West. Those later events involve temporal contradiction.",
+          "boundary": "Do not treat The Arcturian Heresy as uncontested biography or a later Dragon Break as proof of the earlier disappearance's mechanism. Do not invent a single mandatory Daggerfall winner.",
+          "primary_evidence": "Daggerfall main quest and endings; The Warp in the West; The Arcturian Heresy as a partisan account.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "Arniel's smaller experiment",
+          "job": "Follow Arniel Gane's errands, warped soul gem, Dwemer convectors and Keening experiment at the College. Explain his disappearance and the shade summoning result as a local event, then compare its differences from Kagrenac's setup.",
+          "facts": "Arniel investigates the Dwemer disappearance. He asks for Dwemer cogs, a warped soul gem heated at convectors and Keening. In the final experiment he strikes the gem and vanishes. The player gains the ability to summon Arniel's Shade. He did not use the Heart of Lorkhan or the full original set of tools.",
+          "boundary": "No claim this proves all Dwemer became summonable ghosts, that the player absorbed them, or that the shade explains an entire people's destination.",
+          "primary_evidence": "Skyrim: Arniel's Endeavor, Arniel dialogue and final experiment.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        },
+        {
+          "title": "What the empty cities still keep",
+          "job": "Finish by weighing three bounded readings against specific already established constraints: a catastrophic failure, a transformation tied to Numidium, or displacement beyond ordinary existence. Bring Yagrum's absence, divergent Red Mountain accounts, distant clans and Arniel's imperfect analogy into the comparison. Close at an ordinary surviving door or machine, not a new teaser or recap list.",
+          "facts": "The disappearance's timing, Kagrenac's Heart project, Yagrum's survival during absence and functioning ruins are important constraints. A catastrophic failure and Numidium-related transformation are interpretations, not shown outcomes. The widely circulated skin-of-Numidium interpretation is not a confirmed game revelation. No surviving quest supplies a final destination or complete means of reversing it.",
+          "boundary": "No certainty about zero-summing, universal soul absorption, a secretly living civilization or future game revelations. Prefer a small number of reasoned possibilities to an exhaustive speculative list. No CTA or sequel promise.",
+          "primary_evidence": "Comparison of the game evidence assigned above; clearly identified interpretations, not additional facts.",
+          "length": "950-1100 substantive words; use the factual developments assigned here, never padding."
+        }
+      ],
+      "research_brief": {
+        "TOPIC": "The Disappearance of the Dwemer Explained to Fall Asleep To | Elder Scrolls Lore",
+        "ANGLE": "An archaeological history: surviving cities and devices, the people and books around Kagrenac, contradictory accounts of Red Mountain, and theories held to what the games actually show.",
+        "PROOF_BANK": "Chapter-linked game evidence and access-qualified research index.",
+        "HOOK_DIRECTION": "Open with a functioning automaton in an abandoned Dwemer city. Promise the history, physical traces and competing accounts of the disappearance, without a definitive solution. Paragraph two states Morrowind, Daggerfall, Skyrim and its expansions spoiler scope. Explain who the Dwemer were through surviving buildings and the mismatch between the word dwarf and Elven people.",
+        "STRUCTURE_HINT": "30 distinct developments in one calm continuous journey; no repeated hooks."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 1
+  [narrator tease] ...e residents lose any opportunity to ask what happens next. Across Fallout's vaults, we'll follow ...
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
+-- ECHO CHECK (H18): 39
+  [echo H18: phrase repeated 8x] "the vault dweller can"
+  [echo H18: phrase repeated 5x] "the chosen one can"
+  [echo H18: phrase repeated 5x] "the lone wanderer can"
+  [echo H18: phrase repeated 5x] "the sole survivor can"
+  [echo H18: phrase repeated 4x] "changes the meaning of"
+  [echo H18: phrase repeated 4x] "what happened to the"
+  [echo H18: phrase repeated 3x] "the people in the"
+  [echo H18: phrase repeated 3x] "the entrance and the"
+  [echo H18: phrase repeated 3x] "part of the vault"
+  [echo H18: phrase repeated 3x] "part of everyday life"
+  [echo H18: phrase repeated 3x] "the entrance to vault"
+  [echo H18: phrase repeated 3x] "in the capital wasteland"
+  [echo H18: phrase repeated 3x] "the people living there"
+  [echo H18: phrase repeated 3x] "the player can also"

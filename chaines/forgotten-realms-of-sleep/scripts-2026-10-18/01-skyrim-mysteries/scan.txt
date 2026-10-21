@@ -1,0 +1,19 @@
+-- HARD-BAN (fix on sight, no adjudication): 0
+-- MECHANICAL SWEEP (delete on sight): 0
+-- SHAPE FLAGS (judge each by the D1 shape test against the anchor): 0
+-- ANTITHESIS/REFRAME FLOOR (the D7 ledger must list at least this many): 0
+-- ECHO CHECK (H18): 25
+  [echo H18: phrase repeated 6x] "hall of the elements"
+  [echo H18: phrase repeated 5x] "gives the player a"
+  [echo H18: phrase repeated 5x] "asks the player to"
+  [echo H18: phrase repeated 5x] "and the player can"
+  [echo H18: phrase repeated 4x] "the consequences of the"
+  [echo H18: phrase repeated 4x] "a different character from"
+  [echo H18: phrase repeated 4x] "directs the player toward"
+  [echo H18: phrase repeated 4x] "the player has already"
+  [echo H18: phrase repeated 3x] "the sea of ghosts"
+  [echo H18: phrase repeated 3x] "can be recovered from"
+  [echo H18: phrase repeated 3x] "player a reason to"
+  [echo H18: phrase repeated 3x] "when the player speaks"
+  [echo H18: phrase repeated 3x] "provides access to the"
+  [echo H18: phrase repeated 3x] "brings the investigation to"

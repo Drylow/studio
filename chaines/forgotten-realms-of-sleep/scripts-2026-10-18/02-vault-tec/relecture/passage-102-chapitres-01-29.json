@@ -1,0 +1,541 @@
+{
+  "chapters": [
+    {
+      "number": 1,
+      "summary": "Vault 111 saves a family from the blast but secretly freezes its residents before the Institute's later intrusion.",
+      "new_information": [
+        "False decontamination conceals cryogenic observation; the Institute later abducts Shaun."
+      ],
+      "local_answer": "The entrance provides protection, but admission conceals an experiment.",
+      "open_issues": [],
+      "evidence_notes": "Matches the opening sequence and supplied terminals; correctly separates Institute actions from Vault-Tec."
+    },
+    {
+      "number": 2,
+      "summary": "Vault 111's awake staff exhaust their provisions while an absent all-clear and the overseer's refusal provoke mutiny.",
+      "new_information": [
+        "Restricted staff roles and dwindling provisions explain the original administration's collapse."
+      ],
+      "local_answer": "The staff crisis precedes, and does not explain, the later Institute interference.",
+      "open_issues": [
+        "The cafeteria paragraph repeats the already established food-supply explanation."
+      ],
+      "evidence_notes": "Preserves the supplied distinction between mutiny, continued cryogenic operation, and later interference."
+    },
+    {
+      "number": 3,
+      "summary": "Vault-Tec's registration, equipment, branding, and infrastructure make its shelter promise credible despite unequal access to information.",
+      "new_information": [
+        "The representative sells admission without securing his own place in the vault."
+      ],
+      "local_answer": "People reasonably sought functioning shelter without knowing its concealed instructions.",
+      "open_issues": [],
+      "evidence_notes": "Uses the representative, manual, and interiors without claiming universal employee knowledge or universal failure."
+    },
+    {
+      "number": 4,
+      "summary": "Vault 13's failed chip sends its resident into settlements and trade networks that make repairing the shelter possible.",
+      "new_information": [
+        "Surface commerce and Necropolis supply help that another vault cannot provide."
+      ],
+      "local_answer": "A technical failure makes Vault 13 dependent on the inhabited outside world.",
+      "open_issues": [],
+      "evidence_notes": "Routes remain optional; no sabotage claim; the Necropolis water consequence is acknowledged."
+    },
+    {
+      "number": 5,
+      "summary": "The Vault Dweller's exile leads toward Arroyo, while Richardson later reveals the Enclave's exploitation of sheltered populations.",
+      "new_information": [
+        "The overseer fears emigration; Richardson later values Vault 13's inhabitants as test subjects."
+      ],
+      "local_answer": "Saving the vault does not secure readmission or protect its residents from later exploitation.",
+      "open_issues": [],
+      "evidence_notes": "Separates the overseer's stated motive from Richardson's later plans and excludes Bible-only isolation specifications."
+    },
+    {
+      "number": 6,
+      "summary": "The G.E.C.K. supports settlement rebuilding in Fallout 2 and becomes a component of Fallout 3's Project Purity.",
+      "new_information": [
+        "The recovered kit helps unite displaced Arroyo and Vault 13 residents in a new settlement."
+      ],
+      "local_answer": "The kit supports rebuilding without supplying one universal engineering explanation.",
+      "open_issues": [],
+      "evidence_notes": "Different portrayals remain distinct; no unlimited radius or instant-city mechanism is invented."
+    },
+    {
+      "number": 7,
+      "summary": "Vault City preserves technological advantages while restricting citizenship, medical access, labor freedom, and cooperation with outsiders.",
+      "new_information": [
+        "McClure's cooperation offers an alternative to Lynette's hostility toward Gecko."
+      ],
+      "local_answer": "A successful shelter can sustain an unequal society dependent on outsiders.",
+      "open_issues": [],
+      "evidence_notes": "Concrete residents and institutions support the interpretation; the government is not presented as unanimous."
+    },
+    {
+      "number": 8,
+      "summary": "Vault 15's former population develops divergent communities, while its surviving computer draws the NCR into later local conflicts.",
+      "new_information": [
+        "Helping Chrissy and confronting Darion can enable an agreement between squatters and the NCR."
+      ],
+      "local_answer": "Shared vault origins do not produce a shared political future.",
+      "open_issues": [],
+      "evidence_notes": "Avoids experimental-demographics claims and keeps the negotiated outcome conditional."
+    },
+    {
+      "number": 9,
+      "summary": "Necropolis's surviving water system makes recovering Vault 13's chip a decision affecting another living community.",
+      "new_information": [
+        "Repairing the pump lets the ghouls retain water after the chip is removed."
+      ],
+      "local_answer": "The chip can help both communities only if the alternative supply is repaired.",
+      "open_issues": [],
+      "evidence_notes": "Failed sealing, distinct ghoul factions, and optional approaches follow the supplied evidence."
+    },
+    {
+      "number": 10,
+      "summary": "The Lone Wanderer's sheltered childhood ends in crisis, exposing Vault 101's incomplete account of permanent isolation.",
+      "new_information": [
+        "James and his infant child entered from outside despite the vault's isolation narrative."
+      ],
+      "local_answer": "Vault 101 protects a childhood while concealing the family's outside origins.",
+      "open_issues": [],
+      "evidence_notes": "Does not claim a vault birth or universal resident knowledge; childhood and escape remain concrete."
+    },
+    {
+      "number": 11,
+      "summary": "Returning to Vault 101 exposes competing political futures and the limits of recovering a childhood home.",
+      "new_information": [
+        "Earlier choices affect the overseer, negotiations, and Amata's possible request that the protagonist leave."
+      ],
+      "local_answer": "The return can change the vault without restoring the protagonist's former place.",
+      "open_issues": [],
+      "evidence_notes": "Availability and outcomes remain conditional; no single political result is declared canonical."
+    },
+    {
+      "number": 12,
+      "summary": "Braun's simulation preserves captivity, while Dithers directs the Lone Wanderer toward a failsafe that frees James.",
+      "new_information": [
+        "The failsafe ends the permanent residents' lives but leaves Braun confined."
+      ],
+      "local_answer": "Preserving bodies does not make simulated lives safe or voluntary.",
+      "open_issues": [],
+      "evidence_notes": "Explains the grave outcome without graphic tasks or a false claim that all residents escape alive."
+    },
+    {
+      "number": 13,
+      "summary": "Vault 92's concealed conditioning destroys its musical community, while Agatha gives a recovered violin a renewed public purpose.",
+      "new_information": [
+        "Agatha's ancestor Hilda is distinct from recorded resident Zoe Hammerstein."
+      ],
+      "local_answer": "The instrument survives for music, although the community recruited to preserve it does not.",
+      "open_issues": [],
+      "evidence_notes": "Correctly separates Hilda and Zoe and does not blame music itself or assert real scientific efficacy."
+    },
+    {
+      "number": 14,
+      "summary": "Vault 106's ventilation experiment continues to disrupt visitors' perceptions amid physically dangerous surviving inhabitants.",
+      "new_information": [
+        "Instructions concealed chemical exposure by reassuring residents who complained about the air."
+      ],
+      "local_answer": "Hallucinations reveal exposure, not evidence that familiar people visited the vault.",
+      "open_issues": [],
+      "evidence_notes": "Keeps hallucinated James separate from physical survivors and avoids invented chemistry or attacker biographies."
+    },
+    {
+      "number": 15,
+      "summary": "Vault 108 combines increasingly hostile cloning results with deliberately unstable leadership and inadequate future resources.",
+      "new_information": [
+        "The planned succession and power weaknesses compound the cloning laboratory's documented handling problems."
+      ],
+      "local_answer": "The records establish several pressures, not a complete final rebellion.",
+      "open_issues": [],
+      "evidence_notes": "Retains uncertainty about the final collapse without repeatedly lecturing about evidence."
+    },
+    {
+      "number": 16,
+      "summary": "Vault 87's FEV program continues threatening outsiders, while imprisoned Fawkes can help recover the G.E.C.K.",
+      "new_information": [
+        "Fawkes's intelligence and radiation resistance enable a practical exchange with the Lone Wanderer."
+      ],
+      "local_answer": "A survivor of the experiment can help move rebuilding technology beyond its destructive facility.",
+      "open_issues": [],
+      "evidence_notes": "Distinguishes Vault 87 from Mariposa and keeps Fawkes's assistance optional."
+    },
+    {
+      "number": 17,
+      "summary": "Vault 11 turns overseer elections into annual sacrifice selection, allowing organized voting blocs to dominate residents.",
+      "new_information": [
+        "Punishing the informed original overseer becomes a recurring procedure imposed on later officeholders."
+      ],
+      "local_answer": "The supposed collective threat makes political organization a means of directing danger toward neighbors.",
+      "open_issues": [],
+      "evidence_notes": "Resolves the election mechanism while reserving Katherine's intervention and final refusal for the next chapter."
+    },
+    {
+      "number": 18,
+      "summary": "Katherine challenges Vault 11's selection system, conflict devastates the population, and final refusal exposes the computer's false threat.",
+      "new_information": [
+        "The computer rewards refusal only after five survivors remain; one later walks away."
+      ],
+      "local_answer": "Refusal exposes the test but cannot undo the community's losses.",
+      "open_issues": [],
+      "evidence_notes": "Treats coercion and deaths non-graphically; leaves the departing survivor unidentified."
+    },
+    {
+      "number": 19,
+      "summary": "Vault 22's agricultural research attracts Hildern, while Keely sees its surviving data as a risk of renewed catastrophe.",
+      "new_information": [
+        "Williams prioritizes finding Keely, whose demand to erase the research creates a separate decision."
+      ],
+      "local_answer": "Agricultural promise does not settle whether dangerous research should be preserved.",
+      "open_issues": [],
+      "evidence_notes": "Conditional data outcomes are clear; no pathogen procedures or universal Mojave infection claim appears."
+    },
+    {
+      "number": 20,
+      "summary": "Vault 22 refugees bring violence and infection to Zion, while Clark's later assistance inspires a separate community's tradition.",
+      "new_information": [
+        "The Sorrows' Father in the Caves tradition derives from children Clark helped after the refugees."
+      ],
+      "local_answer": "The infected refugees and the children behind the later tradition are different groups.",
+      "open_issues": [],
+      "evidence_notes": "Uses complementary records and keeps the historical groups distinct without inventing biological descent."
+    },
+    {
+      "number": 21,
+      "summary": "Vault 34's leaking reactor forces a choice between contaminated farmland and trapped inhabitants needing power to escape.",
+      "new_information": [
+        "The rescue branch can lead to meeting survivors at Aerotech Office Park."
+      ],
+      "local_answer": "The available controls cannot safely satisfy both groups' needs.",
+      "open_issues": [],
+      "evidence_notes": "Preserves the supplied binary choice and makes later survivor contact branch-dependent."
+    },
+    {
+      "number": 22,
+      "summary": "The Boomers preserve an isolationist history at Nellis but can cooperate with the Courier to recover their bomber.",
+      "new_information": [
+        "Practical assistance and aircraft recovery can turn a dangerous approach into an outward alliance."
+      ],
+      "local_answer": "Cooperation expands the Boomers' possibilities without requiring an entirely open settlement.",
+      "open_issues": [],
+      "evidence_notes": "Separates emigrants from Vault 34's remaining population and avoids weapons-operating instructions."
+    },
+    {
+      "number": 23,
+      "summary": "House acquires Vault 21 through gambling, while Sarah and Michael adapt differently to their community's displacement.",
+      "new_information": [
+        "Sarah preserves a hotel underground while Michael works on Strip signs despite restricted movement."
+      ],
+      "local_answer": "Vault 21 becomes a reduced commercial home rather than a wholly abandoned ruin.",
+      "open_issues": [],
+      "evidence_notes": "No hidden army, concrete quantity, or unanimous informed-consent claim is added."
+    },
+    {
+      "number": 24,
+      "summary": "Olivette obstructs Vault 81's medical experiment, allowing its public community to survive beside an isolated research section.",
+      "new_information": [
+        "Withheld notifications reduce the research team, while blocked exposure prevents the intended population experiment."
+      ],
+      "local_answer": "Vault 81's survival reflects resistance to its design, not control-vault status.",
+      "open_issues": [],
+      "evidence_notes": "Correctly distinguishes Olivette from McNamara and supplies the causal steps of the intervention."
+    },
+    {
+      "number": 25,
+      "summary": "Austin's illness leads to Curie's isolated laboratory, a scarce cure, and the possibility of Curie's wider development.",
+      "new_information": [
+        "Avoiding infection changes whether giving Austin the sole dose entails a personal medical cost."
+      ],
+      "local_answer": "Curie's research can save Austin, while her own work can continue outside.",
+      "open_issues": [
+        "Two adjacent paragraphs repeat the infected-protagonist dilemma before advancing it."
+      ],
+      "evidence_notes": "Infection and treatment outcomes remain conditional; the cure is not presented as universally effective."
+    },
+    {
+      "number": 26,
+      "summary": "Vault 95 deliberately disrupts established recovery, while Cait later seeks a separate treatment using its surviving equipment.",
+      "new_information": [
+        "The hidden agent opens the cache after five years; Cait later receives an immediate treatment benefit."
+      ],
+      "local_answer": "Later relapse does not erase earlier recovery, and Cait's treatment is a separate encounter.",
+      "open_issues": [],
+      "evidence_notes": "Does not promise lifelong recovery or provide recipes, relapse figures, or medical advice."
+    },
+    {
+      "number": 27,
+      "summary": "Vaults 114 and 118 depart from their intended class experiments and become settings for rescue and murder investigation.",
+      "new_information": [
+        "Ezra kills Julianna after discovery of his embezzlement, then impersonates her to conceal the murder."
+      ],
+      "local_answer": "Neither encountered community demonstrates its original experiment completed as planned.",
+      "open_issues": [],
+      "evidence_notes": "The murder solution follows the supplied corrected evidence; Nick remains distinct from Vault-Tec's creations."
+    },
+    {
+      "number": 28,
+      "summary": "Vault 88 lets the Sole Survivor build a settlement while supporting, softening, or refusing Barstow's experiments.",
+      "new_information": [
+        "Configurable everyday devices place responsibility for experimental conditions directly with the player."
+      ],
+      "local_answer": "Surviving plans still require cooperation, and the new overseer can refuse them.",
+      "open_issues": [
+        "One sentence announces repetition instead of developing the phoropter example."
+      ],
+      "evidence_notes": "Keeps outcomes optional and distinguishes willingness to participate from knowledge of hidden parameters."
+    },
+    {
+      "number": 29,
+      "summary": "Vault 76 succeeds as shelter, but its overseer's silo orders complicate reclamation amid Appalachia's inherited losses and knowledge.",
+      "new_information": [
+        "The overseer's private nuclear assignment conflicts with the residents' public rebuilding mission."
+      ],
+      "local_answer": "Reclamation requires learning from surface survivors and choosing how to use inherited power.",
+      "open_issues": [],
+      "evidence_notes": "Stays within the original story, excludes universal conspiracy answers, and ends on concrete rebuilding."
+    }
+  ],
+  "findings": [
+    {
+      "chapter": 2,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Moving through those areas makes it easier to understand the shortage described in the records. The awake employees needed a continuing daily life in a place whose provisions imposed an approaching limit.",
+      "reason": "H18 identifies \"the same point restated with the wording shuffled.\" The earlier supply paragraph already explains the awake staff's daily consumption and finite provisions, and the following paragraphs develop the resulting refusal and mutiny. These sentences repeat that explanation after the cafeteria details without adding a consequence.",
+      "replacement": "",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 25,
+      "kind": "repetition",
+      "severity": "minor",
+      "quote": "Curie offers the only available dose. If the Sole Survivor has also become infected, Austin's need for treatment now competes with their own.",
+      "reason": "H18 requires a repeated explanation to add something. The immediately following paragraph fully explains both infection branches and their consequences, making the second sentence an unnecessary advance restatement. Retaining the dose establishes the scarcity before that explanation.",
+      "replacement": "Curie offers the only available dose.",
+      "rewrite_required": false
+    },
+    {
+      "chapter": 28,
+      "kind": "voice",
+      "severity": "minor",
+      "quote": "Each repetition gives the Sole Survivor another opportunity to depart from the original proposal.",
+      "reason": "H16 describes \"Announcing the content instead of delivering it.\" This sentence comments on the repeated presentation of configurable tests after the paragraph has already established player control; it adds no phoropter-specific development. The bicycle and fountain paragraphs have also already explained the opportunity to depart from Barstow's preferences.",
+      "replacement": "",
+      "rewrite_required": false
+    }
+  ],
+  "cross_chapter_repetition": [
+    {
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "detail": "Vault 111 recurs with distinct purposes: resident experience, staff collapse, and credible public presentation. The short admission callback in chapter 3 connects those purposes rather than repeating the complete explanation."
+    },
+    {
+      "chapters": [
+        4,
+        8,
+        9
+      ],
+      "detail": "The water-chip journey provides shared orientation, but the later chapters add Vault 15's political descendants and Necropolis's repair decision. These developments justify the return visits."
+    },
+    {
+      "chapters": [
+        5,
+        10,
+        11
+      ],
+      "detail": "Exile and restricted homecoming recur as a deliberate comparison. Chapter 11 explicitly distinguishes Amata's possible decision from Vault 13's motive, so the comparison advances the interpretation."
+    },
+    {
+      "chapters": [
+        6,
+        16
+      ],
+      "detail": "The G.E.C.K. first explains rebuilding across games, then supplies the practical reason to encounter Fawkes. The second treatment adds confinement, negotiation, and retrieval rather than repeating the kit's general history."
+    },
+    {
+      "chapters": [
+        17,
+        18
+      ],
+      "detail": "The sacrifice rule bridges the chapters, but the final refusal and computer revelation occur only in chapter 18. The split preserves two distinct local answers."
+    },
+    {
+      "chapters": [
+        19,
+        20
+      ],
+      "detail": "Vault 22's infection returns with a new causal development: refugees carry its consequences into Zion. Clark's later children remain clearly separate."
+    },
+    {
+      "chapters": [
+        24,
+        25
+      ],
+      "detail": "The hidden research section connects the chapters, but the second moves from Olivette's founding intervention to Austin, scarce treatment, and Curie's future."
+    }
+  ],
+  "scope_status": "Games-only scope is maintained across all 29 chapters. Full spoilers are used without TV material, Bible-only specifications, later Fallout 76 developments, a definitive first-bomb claim, or a universal space-colony explanation. Player-dependent outcomes generally remain conditional. The single optional subscribe and listening-location/day-or-night request occurs early in chapter 1 and is not repeated. No final CTA is needed. The supplied current total of 26,057 words exceeds the 25,500-word minimum; at the stated 170 words per minute it implies approximately 153 minutes, not a measured runtime.",
+  "limitations": "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+  "greenlight": {
+    "overall_verdict": "FIX-THEN-PASS",
+    "text_ready_status": "Three minor local edits remain. No structural rewrite or new research is required by the established findings.",
+    "A": {
+      "verdict": "PASS under the sleep adaptation; competitive hook ranking limited",
+      "evidence": [
+        "Sentence one is: \"The door of Vault 111 closes in time to save a family from the bombs.\"",
+        "The opening paragraph contains 85 words and turns from successful shelter to concealed freezing through \"Then the pods seal\".",
+        "The promise to follow the gap between needed shelter and undisclosed experiments is fulfilled across the game-specific cases, resistance stories, and surviving communities.",
+        "Paragraph two supplies the requested games-only spoiler boundary."
+      ],
+      "actionable_defects": [],
+      "limitations": "The recorded comparative review supports prior reference work, but verbatim gaming comparison hooks are not supplied here for a fresh A4 ranking."
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "All assigned local questions receive answers; optional quest branches are not left as artificial suspense.",
+        "Vault 111 moves from admission to staff conditions; Vault 13 moves from repair to exile; Vault 11 moves from election machinery to refusal.",
+        "Vault 22's Zion continuation and Vault 81's cure quest add consequences rather than restart their preceding explanations.",
+        "The final chapter closes on usable resources and rebuilding, without a recap catalogue or CTA."
+      ],
+      "actionable_defects": [
+        "Delete the redundant supply explanation identified in chapter 2.",
+        "Remove the advance repetition of the infection dilemma identified in chapter 25."
+      ],
+      "limitations": "No aggressive rehook cadence, compulsory replacement loop, or measured audio pacing is imposed on sleep narration."
+    },
+    "C": {
+      "verdict": "PASS",
+      "evidence": [
+        "The continuous spine moves from practical shelter through concealed experiments to resistance and life beyond the vaults.",
+        "Concrete institutions, named residents, machinery, quests, and conditional choices keep the interpretation grounded.",
+        "The assigned two-part cases have distinct jobs, and chapter 27 gives both unfinished projects their own concrete story.",
+        "The closing Appalachia material pays off the rebuilding aspect of the opening promise."
+      ],
+      "actionable_defects": [],
+      "limitations": "Spoken comprehensibility was assessed from text, not a claimed human read-aloud."
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "Comparable script shape: \"The guards, meanwhile, were asking to leave a facility that could no longer support them as expected.\" The sentence ties a concrete group to a practical cause without trailer compression.",
+        "No machine-banned phrase or non-ASCII narration artifact was found in the supplied text review.",
+        "The numerical claims principally concern vault identifiers, established ages, the five-year Vault 95 interval, Vault 81's three researchers, and Vault 11's final five survivors; these have named game evidence in the supplied materials."
+      ],
+      "actionable_defects": [
+        "Apply the two local repetition fixes.",
+        "Delete the chapter 28 sentence that announces the repeated testing pattern instead of developing it."
+      ],
+      "limitations": "The supplied floor count of zero is not treated as proof that all semantic contrasts or echoes are absent. Ordinary factual comparisons and concrete closing images were not classified as aphoristic defects merely for recurring."
+    },
+    "E": {
+      "verdict": "No actionable authenticity defect established; platform outcome unverified",
+      "evidence": [
+        "The narration contains sustained original interpretation connecting shelter infrastructure, unequal information, resistance, and rebuilding.",
+        "Numerous named game quests, records, and characters support specific sourcing rather than anonymous authority.",
+        "The production record reports privately compared competitor transcripts and no remaining 12-word matches; this is supplied evidence rather than a new comparison performed here.",
+        "The recorded publishing context contains no video, voice, duplicate-publishing plan, or bulk batch."
+      ],
+      "actionable_defects": [],
+      "limitations": "A defensible fresh seven-signal score cannot be completed from the supplied excerpts alone: page-one research comparisons and full reference-angle evidence are unavailable here. AI editorial review is not credited as human review. No platform monetization guarantee is inferred."
+    }
+  },
+  "input_hashes": {
+    "1": "f31a5be4f90f50b8422fb4c228d45e32b380e9f0ed0fb73b637c79222c1f7558",
+    "2": "60bef9c9f7f81eb85a0b309a1efb9dd4852d4f3ce2cb5a7ef11a2c0983ecf87c",
+    "3": "ef6a4baec05cc78da0af7d4f9db4bb357495d4c7f72f4ab9d624753f2c0e2da5",
+    "4": "ccb216cebce5bc058e534ea6fd24dcb4677cb0fecfe143ef39f892467d31342c",
+    "5": "68c51d7885c1a6c715ce1abc1987e03e6392550d3ce16173afb84f907b39bbdf",
+    "6": "ed82d63c43cf44d641f9a5754c4426a1259e5ff99ae5322f29aca61c4b9f5239",
+    "7": "8227f80d183adb10b0b684b6e073821c81ebe10fa49b4dc457d1032475516dba",
+    "8": "1c74f510a25079980de23ad9777f5618aa1f1f385320df30dd58feb8224da3cc",
+    "9": "1f9260fb835bf9f1c1eeff09b01311c7e562a49ca7f7db62be838ca677dada06",
+    "10": "d418fbf43b8e4b328b55944d0c492ed04a58b1b0cb8dd7b9266c0b0d9a647aa4",
+    "11": "e6934e57c865088d23bf698d547a4e0815e0720dcd695d5550d643ceb95d00fc",
+    "12": "a37ed3ac0cc8bc19d9bd115aee2bbc02a2d78e474d14b64a39a75de9449c5371",
+    "13": "2e8b717856f3253df1a0cce8e8444edb8a40c864c517af052b7dea075ddc8afb",
+    "14": "cf643a421cc7ef4c1748202aed4e6b099ee156f13eb2b6b547400a50cdb8eb6d",
+    "15": "d470c8fdac8c7c13eda10892665f428d1b7911a9eca4e825c0b0a0fd44d7f01e",
+    "16": "4d4bb8ba2f007b520ecb5db44013c6e96f4a02992434d80001ec6513585928ac",
+    "17": "93497a06771efae7b34e7f1ac98df3401f327a9408e328d803d83b6d7f0e3f66",
+    "18": "cd54a05bea4a727033225b92c854b8dd84e24bdb41b9ef4a8299a2680fbbc667",
+    "19": "00a0ecd78edd96cea622f4ee49fb2f09874d97b94b3215fad13e5ca3654114b6",
+    "20": "91c2fb4a284cecc9a97073dc60d1132e3b002a0a3e23c30ce62cbc5c6ad720fb",
+    "21": "cea3d0543640c30e6f224357dd4d565b7676d5af6eca14fa23408da210a2dc02",
+    "22": "9b53ef56495abaaf2224428477815c39af62b1135fbb24e307b0cf5150e5d48d",
+    "23": "df47e6c299f939d80118591d208c134c392664e59867f823775248fe861c1e4d",
+    "24": "23c96b9e95399f9037be37583678de82723e383afa6c324228fb5641d3cc3dd6",
+    "25": "b3ac208470c6635380a43baad4226e1fb46da22bff52fc09255150a638d6d795",
+    "26": "58eb1222866579994ae3bb9c70202f4c5475edb464fc40e882b045a79aec3969",
+    "27": "18fa8b47b270bcc1402bfb557c0316e44792295400d09c32d895d2cd705f37b2",
+    "28": "ebc9b87465733b3841fe92903029a40ec2349a48f5dd7d5d2d2345b096d1b411",
+    "29": "eb85f29fb0b2e33de6314603e56009e173a1bcdfed6c6e1ec2555243c676c644"
+  },
+  "review_method": "Configured text review against editor-authored scope, source spine, full chapter text and FacelessOS; not independent viewing or audio measurement.",
+  "final_editorial_dispositions": [
+    {
+      "round": 102,
+      "episode": "02-vault-tec",
+      "chapter": 2,
+      "quote": "Moving through those areas makes it easier to understand the shortage described in the records. The awake employees needed a continuing daily life in a place whose provisions imposed an approaching limit.",
+      "decision": "retained_editorial",
+      "reason": "Retained as the connection between the visible staff living areas and the shortage previously found in terminal records. One sentence links place to record, the next identifies the awake employees' different needs. This short return helps explain why the cafeteria belongs in the account rather than merely listing scenery."
+    },
+    {
+      "round": 102,
+      "episode": "02-vault-tec",
+      "chapter": 25,
+      "quote": "Curie offers the only available dose. If the Sole Survivor has also become infected, Austin's need for treatment now competes with their own.",
+      "decision": "retained_editorial",
+      "reason": "Retained as the scarce-dose dilemma before explaining its two conditional outcomes. The two-sentence setup tells the listener why infection matters; the following paragraph gives the branches. A brief setup followed by consequences is useful causal exposition, not a second developed explanation."
+    },
+    {
+      "round": 102,
+      "episode": "02-vault-tec",
+      "chapter": 28,
+      "quote": "Each repetition gives the Sole Survivor another opportunity to depart from the original proposal.",
+      "decision": "retained_editorial",
+      "reason": "The repetition in this sentence is the in-world succession of Barstow's configurable experiments, not the script's repeated presentation or its production. It identifies the continuing possibility of changing her plans during each test. H16 content-announcement is therefore not established; retain the local agency comparison."
+    }
+  ],
+  "unresolved_narration_findings": 0,
+  "post_review_whitespace_normalization": [
+    {
+      "episode": "02-vault-tec",
+      "chapter": 2,
+      "before_sha256": "501afd747a494734f64776cf3f4cf14e115e0ced023222e017051f17b5c8b168",
+      "after_sha256": "60bef9c9f7f81eb85a0b309a1efb9dd4852d4f3ce2cb5a7ef11a2c0983ecf87c",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 19,
+      "before_sha256": "1f7e7a65d4bb9c1a534df12c13e0981ec254ec99e0c08613f85eb3995a9f9d62",
+      "after_sha256": "00a0ecd78edd96cea622f4ee49fb2f09874d97b94b3215fad13e5ca3654114b6",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 27,
+      "before_sha256": "6ead262071a342b3abbe7509845394e760d1ae85b891506b84270c9456e9ee30",
+      "after_sha256": "4d6e4f07945aa6135b9040e6e347c76b8ae24fdba20c021b134a25fe03a1afa0",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    },
+    {
+      "episode": "02-vault-tec",
+      "chapter": 29,
+      "before_sha256": "f8f399e6f6b678fa7005e4073e60143560e65443a5e4e3c2673ee1b012c5422e",
+      "after_sha256": "eb85f29fb0b2e33de6314603e56009e173a1bcdfed6c6e1ec2555243c676c644",
+      "change": "Trailing spaces only; all narrative tokens and punctuation unchanged."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+RELECTURE FACELESSOS ET REFERENCES - 18 OCTOBRE 2026
+
+METHODE REELLEMENT UTILISEE
+FacelessOS etait deja utilise pour l'ecriture initiale : recherche, ancrage sur
+une transcription reelle, humanisation, variation, scan et audit A-E.
+La premiere livraison comparait trois transcriptions. La demande utilisateur
+de recontrole a conduit a ajouter deux references et a relire integralement les
+trois textes originaux avec une comparaison structurelle plus precise.
+Les transcriptions completes restent dans work/fros-scripts-2026-10-18/references.
+Pour chacune des cinq references, l'etude de structure utilise l'ouverture
+(330 mots) et cinq passages de 250 mots aux positions 18, 38, 58, 78 et 94 %
+du texte. Ce sont des positions en mots, pas des horodatages. Il ne s'agit pas
+d'une lecture integrale des cinq transcriptions concurrentes.
+
+REFERENCES ET SIGNAUX DE DEMANDE
+Cozy Knight - 120 Minutes of Unsolved Skyrim Mysteries to Fall Asleep To
+https://www.youtube.com/watch?v=RQH1ww-whNk
+213 583 vues au controle public Nexlev; environ 22,7 fois la moyenne de chaine
+selon l'outil outliers. Ce multiple n'est PAS une mediane recente calculee ici.
+
+Cozy Knight - The Wild Conspiracy Theories of Skyrim for the Nights You Cannot Sleep
+https://www.youtube.com/watch?v=7RVw07PiUw4
+27 931 vues; environ 2,9 fois la moyenne selon le meme outil.
+
+Syrric - 3 Hours of Skyrim Facts to Fall Asleep to
+https://www.youtube.com/watch?v=OravbhprQR4
+258 113 vues.
+
+Syrric - 4 Hours of Fallout New Vegas Facts to Fall Asleep to
+https://www.youtube.com/watch?v=azOJx-9irxE
+123 914 vues.
+
+Gaming Slumber - 5 Hours of Fallout Facts to Help You Get To Sleep
+https://www.youtube.com/watch?v=jUynzC9jjQM
+117 119 vues.
+
+Ces cinq videos sont des exemples selectionnes, pas un classement exhaustif
+des cinq meilleurs outliers de toute la niche. Les vues prouvent une audience
+publique; elles ne donnent ni retention privee ni causalite entre phrase et succes.
+Les petits ecarts entre recherche YouTube, details et outliers viennent des
+instantanes et arrondis differents. Le fichier benchmark-references.json garde
+l'instantane de details utilise ici.
+
+CE QUE NOUS RETENONS POUR NOS TEXTES
+Cozy Knight : entrer par un lieu, un personnage ou une anomalie identifiable;
+laisser chaque petite histoire donner sa propre reponse; changer de lieu pour
+qu'une personne distraite puisse reprendre facilement le fil.
+Syrric : expliquer un detail concret a travers des personnes, des objets et
+leurs consequences; varier entre institutions, histoire, artefacts et situations.
+Gaming Slumber : donner rapidement une situation ou une contrainte materielle
+qui rend un sujet general facile a suivre.
+Ces observations sur les textes sont des interpretations editoriales.
+
+APPLICATION AUX TROIS FILMS
+Skyrim conserve ses enquetes developpees. Les mecanismes de Saarthal, le combat
+contre Ancano, les serrures de Reachwater et les commandes de Nchardak ont ete
+reformules autour des personnages et de ce que la decouverte change. La fin du
+chapitre Alduin ne repete plus simplement la reponse deja donnee.
+Vault-Tec conserve sa progression entre abris. Les rappels generiques sur la
+porte de l'Abri 12, les elections et une conscience collective Gary non introduite
+ont ete resserres. L'enquete Brain Dead donne maintenant sa reponse locale :
+Ezra a tue Julianna, puis pris sa place pour cacher le detournement de fonds.
+Dwemer conserve son parcours archeologique : chaque objet et chaque expedition
+eclaire une partie differente de la disparition. Les explications repetees selon
+lesquelles utiliser une machine ne restitue pas tout le savoir de ses constructeurs
+ont ete reduites, ainsi que certains rappels du fonctionnement des cubes et verrous.
+Les donnees sur Kagrenac, Red Mountain et Yagrum sont annoncees des le debut et
+developpees ensuite; aucune revelation unique n'est promise a la fin.
+
+Vingt remplacements precis ont ete appliques, puis dix affinages lors de la
+relecture suivante. Les operations peuvent toucher deux fois le meme passage;
+ce n'est pas un nombre de trente chapitres differents. Une copie privee des
+textes precedents est conservee. Le plan reste propre a nos videos. Les formulations,
+salutations, plans et theories des concurrents ne sont pas recopies.
+Le controle d'originalite compare les sequences exactes de douze mots avec les
+cinq transcriptions completes. Il ne certifie pas l'absence de toute proximite
+semantique et ne constitue pas une garantie de monetisation.
+
+DECISIONS DE RELECTURE
+Le relecteur a suppose a tort que Vault-Tec et Dwemer etaient trop courts.
+Les comptes reels AVANT correction etaient 26 417 et 25 792 mots. Aucun ajout
+de remplissage n'a ete fait pour satisfaire cette estimation erronee.
+Le statut de reorganisation propose pour Dwemer reposait principalement sur ce
+suppose manque de longueur. Le meme rapport reconnaissait l'entree immediate dans
+le sujet et recommandait de conserver l'ordre. Les repetitions locales ont ete
+corrigees; la reorganisation generale n'etait pas justifiee.
+Une autre proposition placait Gelebor dans Darkfall Passage et a ete rejetee.
+La source ouverte GameBanshee le situe dans Darkfall Cave; le prelat Sidanyis
+est celui de la Wayshrine of Illumination dans Darkfall Passage.
+https://www.gamebanshee.com/skyrim/dawnguard-walkthrough/touchingthesky-part1.php
+
+La resolution de Brain Dead est contre-verifiee par les extraits indexes des
+dialogues du jeu : Ezra reconnait son identite, et le rapport au robot Maxwell
+nomme le meurtrier et la victime. Les pages completes suivantes etaient bloquees;
+aucune lecture integrale de ces pages n'est revendiquee.
+https://fallout.fandom.com/wiki/DLC03_Vault118_EzraParker.txt
+https://fallout.fandom.com/wiki/MQDadVoice.txt/FH
+La fiche Abri 118 des Archives de Vault-Tec a aussi ete ouverte pour le
+financement et la construction. Le dialogue d'une branche coupee concernant
+Spencer Lords et le vol des coffres n'est pas utilise.
+https://fallout-wiki.com/Abri_118
+
+La passe suivante explicite aussi le role de Ralis dans les morts du chantier
+de Kolbjorn, d'apres ses journaux et la quete Unearthed. Elle resserre les reprises
+immediates sur les Gary et les verrous. La phrase sur l'objection de Hakon est
+retiree du moment final du combat : il s'oppose d'abord au parchemin, puis demande
+a Felldir de l'utiliser. L'attribution de l'objection initiale a Gormlaith par
+le relecteur est erronee et n'est pas reprise.
+La campagne de l'Abri 11 attaque des rivaux pour les faire elire; la phrase est
+clarifiee sans pretendre que les candidats vantent leurs propres defauts.
+Une derniere passe resserre d'autres reprises et clarifie l'occupation actuelle
+des villes Dwemer : les anciennes communautes ont disparu, mais les lieux ne
+sont pas tous litteralement vides. Un bref passage ecrit par l'editeur explique
+plus tot Anumidium, le Coeur et les outils, pour entrer dans le sujet central
+avant la longue visite des ruines. Il utilise les memes sources que les chapitres
+du Coeur et des outils; aucune theorie supplementaire n'est ajoutee.
+La proposition selon laquelle le Pip-Boy des premiers jeux devait etre porte a
+la main a ete rejetee : le manuel original le decrit explicitement au poignet,
+page imprimee 4-21. La narration conserve cette description correcte.
+https://cdn.akamai.steamstatic.com/steam/apps/38400/manuals/Fallout_manual_English.pdf
+
+CONTROLE APRES CORRECTION
+Les mesures definitives figurent dans mesures-lot.json et les audits par film.
+Le passage complet suivant porte sur les trois textes modifies et tous les
+groupes A-E. Un seul CTA discret reste au premier chapitre de chaque film :
+abonnement, lieu d'ecoute et jour ou nuit. Pas de CTA final.
+La duree reste estimee a partir des mots. Aucune voix ni ecoute audio n'a ete
+realisee. La narration reste en anglais, prete a copier dans l'outil de voix.
+Le dernier passage complet est le 102 : 30, 29 et 30 chapitres relus. Sept
+remarques stylistiques mineures ont ete tranchees par l'editeur en faveur de
+brefs rappels utiles a l'ecoute et de comparaisons assemblees. Ce n'est pas une
+declaration que le relecteur automatique n'a rien signale. Les citations et
+justifications figurent dans audit-final.json et benchmark-validation.json.
+Aucun signalement factuel ou majeur ne reste non traite. Les rapports de passages
+anterieurs sont historiques; le fichier audit-final.json indique la version a suivre.
+

@@ -633,3 +633,30 @@ def test_project_summaries_accept_historical_thumbnail_formats(workspace):
         assert response.status_code==200
         summary=next(r for r in response.json()['projects'] if r['id']==p['id'])
         assert summary['thumb']==('thumbnail.jpg' if selected else None)
+
+def test_style_specific_flow_model_keeps_shared_default_and_old_project(workspace, monkeypatch):
+    client, _, values, _ = workspace
+    existing = create(client)
+    values.update(USEAPI_API_KEY="private-flow-key", USEAPI_IMAGE_MODEL="fixture-shared-flow")
+    monkeypatch.setattr(api.google_flow, "status", AsyncMock(return_value={
+        "configured": True, "available": True, "error": None, "accounts": []}))
+    style = store.get_style("pov-history")
+    style["workspace_image_provider"] = "google_flow"
+    style["visuals"]["image_model"] = "fixture-channel-flow"
+    store.save_style(style)
+    catalog = client.get("/api/workspace/models").json()
+    flow_ids = [m["id"] for m in catalog["models"] if m["provider"] == "google_flow"]
+    assert set(flow_ids) == {"fixture-shared-flow", "fixture-channel-flow"}
+    assert len(flow_ids) == 2
+    new = create(client)
+    assert new["model_snapshot"]["image_model"] == "fixture-channel-flow"
+    assert new["model_snapshot"]["image_provider"] == "google_flow"
+    assert values["USEAPI_IMAGE_MODEL"] == "fixture-shared-flow"
+    assert store.get_project(existing["id"])["model_snapshot"]["image_provider"] == "cli_proxy"
+    style["visuals"]["image_model"] = "fixture-shared-flow"
+    store.save_style(style)
+    catalog = client.get("/api/workspace/models").json()
+    assert sum(m["provider"] == "google_flow" for m in catalog["models"]) == 1
+    monkeypatch.setattr(api.google_flow, "status", AsyncMock(return_value={
+        "configured": True, "available": False, "error": "Offline", "accounts": []}))
+    assert not any(m["provider"] == "google_flow" for m in client.get("/api/workspace/models").json()["models"])

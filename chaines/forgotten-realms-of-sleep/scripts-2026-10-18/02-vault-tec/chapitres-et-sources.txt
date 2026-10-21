@@ -1,0 +1,173 @@
+01. The door that did its job
+Debut : mot 1. Longueur : 1081 mots.
+Contenu : Open with the ordinary family being rushed into Vault 111 and the false decontamination procedure. Promise to follow the gap between shelter and experiment across the games. Give the games-only spoiler boundary in paragraph two. Explain the entrance, freezing and waking experience without recounting the entire main quest.
+Base dans les jeux : Fallout 4: Out of Time, Vault 111 terminal entries and opening sequence.
+Limite : Do not claim Vault-Tec itself ordered Kellogg's kidnapping; that is an Institute operation. No exact runtime promise.
+
+02. The staff on the other side
+Debut : mot 1082. Longueur : 847 mots.
+Contenu : Stay in Vault 111 but switch to the observing staff, their restricted supplies, expected all-clear and conflict. Explain why the staff's collapse is distinct from the much later Institute interference.
+Base dans les jeux : Fallout 4: Vault 111 security, overseer and monitoring terminals.
+Limite : Do not make every pod death an immediate result of the staff mutiny or pretend the overseer planned the Institute's actions.
+
+03. The public promise
+Debut : mot 1929. Longueur : 812 mots.
+Contenu : Explain the publicly sold promise through the Vault-Tec representative, vault advertisements, assigned jumpsuits, Pip-Boy and overseer office. Give practical shelter systems and why people reasonably sought them. Contrast marketing with actual unequal information, using only already named examples briefly.
+Base dans les jeux : Fallout 4 opening, Vault-Tec representative; Fallout 1 Vault Dweller's Survival Guide; in-game vault interiors.
+Limite : Do not say every Vault-Tec employee knew every experiment, or that no vault saved anyone. No unsupported total count or per-vault price.
+
+04. A water chip and an open door
+Debut : mot 2741. Longueur : 1004 mots.
+Contenu : Follow Vault 13 in the original Fallout: the failed chip, the chosen errand, Junktown and the Hub as evidence of a living outside world, and the return. Explain why one technical failure changes a resident's relationship to the shelter.
+Base dans les jeux : Fallout: Vault 13 overseer dialogue, water-chip quest, Necropolis.
+Limite : No claim the chip was deliberately sabotaged; Fallout does not establish that. Do not prescribe one player route as mandatory.
+
+05. The price of coming home
+Debut : mot 3745. Longueur : 939 mots.
+Contenu : Continue Vault 13 through the defeat of the Master, the overseer's refusal to readmit the hero and the founding of Arroyo. Explain the later Enclave revelation through Richardson's words, carefully separating a villain's account from Fallout Bible cut background.
+Base dans les jeux : Fallout ending, Fallout 2 opening and President Richardson dialogue.
+Limite : Do not call the Fallout Bible's 200-year isolation plan definitive game canon. Do not assert the overseer knows Richardson's later plan.
+
+06. The garden in a suitcase
+Debut : mot 4684. Longueur : 1012 mots.
+Contenu : Explain the G.E.C.K. across its actual uses: Arroyo's search, Vault City's flourishing ground and Fallout 3's purifier. Develop the promise of rebuilding with people who need water and workable land, rather than an all-powerful magic box.
+Base dans les jeux : Fallout 2: Arroyo, Vault City and Vault 13; Fallout 3: Finding the Garden of Eden.
+Limite : Different games depict or describe its capabilities differently. Do not invent one universal engineering mechanism, limitless transformation radius or instant city construction.
+
+07. The vault that became a city
+Debut : mot 5696. Longueur : 1071 mots.
+Contenu : Explore Vault City as the productive inheritance of a working shelter and a harsh social order. Show the transition to surface settlement, citizenship, outsider treatment and dependency on systems and labor.
+Base dans les jeux : Fallout 2: Vault City, Vault 8, First Citizen Lynette and citizenship dialogue.
+Limite : Do not equate control vault with moral utopia or repeat an unverified official opening date. No claim every resident supports every policy.
+
+08. The people who left Vault 15
+Debut : mot 6767. Longueur : 971 mots.
+Contenu : Develop Vault 15 through the ruined destination in Fallout and the communities connected to its former population. Explain Shady Sands and the later confrontation with the squatters and Darion's Khans in Fallout 2.
+Base dans les jeux : Fallout: Vault 15 and Shady Sands; Fallout 2: Vault 15, Darion and the squatters.
+Limite : Do not treat every later conflict as proof each resident was personally selected to become a raider. Avoid the non-game experimental demographics as established dialogue.
+
+09. The door at Necropolis
+Debut : mot 7738. Longueur : 697 mots.
+Contenu : Explain Vault 12 and the ghoul community at Necropolis through the water system, Set and the underground ghouls. Discuss the defective protective barrier and the player's choice about taking the chip while respecting version-specific background.
+Base dans les jeux : Fallout: Necropolis, Set, underground ghouls, Vault 12 water system.
+Limite : Do not turn every detail of Fallout Bible design notes into a spoken proven experiment order. Ghoulification is not a guaranteed universal outcome of radiation.
+
+10. The vault that never opens
+Debut : mot 8435. Longueur : 1026 mots.
+Contenu : Follow Vault 101 through the Lone Wanderer's childhood, the G.O.A.T., James's departure and the security response. Explain how an account of permanent isolation is maintained as a household truth despite contact with the surface.
+Base dans les jeux : Fallout 3: Growing Up Fast, Future Imperfect, Escape!, James dialogue and Vault 101 records.
+Limite : Do not claim the protagonist was born inside Vault 101 or that every resident knew James's earlier life.
+
+11. Trouble at home
+Debut : mot 9461. Longueur : 1010 mots.
+Contenu : Return only for Trouble on the Homefront. Develop Amata's request, the arguments over opening, the overseer alternatives and the changed relationship between parent generation and children. Present branches fairly and leave their outcome conditional.
+Base dans les jeux : Fallout 3: Trouble on the Homefront, Amata, overseer and resident dialogue.
+Limite : No single canon political result. Do not describe the quest as inevitably available after any ending or every prior choice.
+
+12. The town inside a machine
+Debut : mot 10471. Longueur : 922 mots.
+Contenu : Explore Vault 112 as the contrast between preserved bodies and simulated lives. Follow James into Tranquility Lane, Betty, Old Lady Dithers and the failsafe. Explain the available release without dwelling on the tasks of cruelty.
+Base dans les jeux : Fallout 3: Tranquility Lane, Braun and Dithers dialogue, abandoned house terminal.
+Limite : No step-by-step graphic violence; no assertion a simulation is harmless or that Braun can be simply killed in the same manner as its residents.
+
+13. The musicians of Vault 92
+Debut : mot 11393. Longueur : 862 mots.
+Contenu : Develop the recruitment of musicians, white-noise experiment, disagreement among staff and Agatha's search for a violin. Show the difference between a preserved instrument and the failed community it outlives.
+Base dans les jeux : Fallout 3: Agatha's Song, Vault 92 terminals and Zoe Hammerstein recordings.
+Limite : Do not invent real scientific efficacy for subliminal control. No exact percentages or body counts. Music is not itself the cause of the catastrophe.
+
+14. The air of Vault 106
+Debut : mot 12255. Longueur : 552 mots.
+Contenu : Trace the player's altered perceptions through Vault 106 and compare visible attackers with hallucinated familiar figures. Explain the air experiment and the limitation it places on reading this particular ruin.
+Base dans les jeux : Fallout 3: Vault 106 terminals and exploration sequences.
+Limite : No invented chemical formula, precise modern pharmacology or confident biography for each attacker. Hallucinated James is not actual evidence he visited the vault.
+
+15. The name repeated in Vault 108
+Debut : mot 12807. Longueur : 778 mots.
+Contenu : Develop the clones and laboratory at Vault 108, then the leadership experiment and planned weaknesses in the vault. Explain what the presence of Gary copies shows without inventing a complete chronological rebellion.
+Base dans les jeux : Fallout 3: Vault 108 cloning log and overseer planning records.
+Limite : Do not assert every clone has identical memories, that Gary is an immortal single mind or that a fully known final revolt explains every corpse.
+
+16. What Fawkes remembers
+Debut : mot 13585. Longueur : 869 mots.
+Contenu : Explain Vault 87 through its FEV work, surviving research remains, Fawkes's confinement and the G.E.C.K. retrieval. Keep its local mutant origin distinct from other games' FEV programs.
+Base dans les jeux : Fallout 3: Finding the Garden of Eden, Vault 87 terminals, Fawkes dialogue.
+Limite : Not every super mutant in the franchise originates at Vault 87. Do not equate all FEV strains, ghoulification and radiation mutations.
+
+17. The election nobody wanted
+Debut : mot 14454. Longueur : 645 mots.
+Contenu : Introduce Vault 11 through campaign posters and the annual sacrifice demand. Follow the inversion of normal overseer ambition, voting blocs and the way residents normalize the imposed rule. Reserve Katherine's final intervention and the experiment's conclusion for the next chapter.
+Base dans les jeux : Fallout New Vegas: Vault 11 posters, election records and Gus Olson's speech.
+Limite : Do not reveal the final refusal twice or claim the residents originally consented to sacrifice before entering. Avoid quoting the election posters.
+
+18. When Vault 11 finally refused
+Debut : mot 15099. Longueur : 927 mots.
+Contenu : Continue with Katherine Stone's resistance, the change in selection, violent backlash and the final refusal. Treat coercion non-graphically. Explain the automated congratulatory response and the records near the exit with the uncertainty of the last person's identity.
+Base dans les jeux : Fallout New Vegas: Vault 11 Katherine deposition, overseer order, automated response and final recording.
+Limite : Do not assert the survivor is a named New Vegas character. No detailed sexual violence or self-harm method. The computer's congratulation does not undo what happened.
+
+19. The gardens of Vault 22
+Debut : mot 16026. Longueur : 968 mots.
+Contenu : Follow the player's research assignment, Keely's investigation and the overgrown vault. Explain the spore problem, the attraction of agricultural data and the choice over its survival.
+Base dans les jeux : Fallout New Vegas: There Stands the Grass, Vault 22 records, Hildern and Keely dialogue.
+Limite : Do not claim every plant in the Mojave is infected. No real-world pathogen cultivation or ignition instructions. The data's usefulness does not mean its methods were safe.
+
+20. A memory carried to Zion
+Debut : mot 16994. Longueur : 933 mots.
+Contenu : Use Honest Hearts to follow Vault 22 beyond its walls. Explain the historical refugees in Zion through Randall Clark's records, their disease and predation, and the distinction between those refugees and Zion's later tribes.
+Base dans les jeux : Fallout New Vegas Honest Hearts: Randall Clark's terminal records, Vault 22 dwellers' note, Sorrows dialogue.
+Limite : Do not conflate the Vault 22 refugees with the children Clark later helps or make the Sorrows direct biological descendants of those infected aggressors.
+
+21. The reactor beneath the farms
+Debut : mot 17927. Longueur : 834 mots.
+Contenu : Explore Vault 34 through its armory, reactor leak and trapped survivors. Follow Hard Luck Blues from the NCR sharecroppers to the terminal choice. Explain the immediate human cost of prioritizing either group.
+Base dans les jeux : Fallout New Vegas: Hard Luck Blues, Vault 34 terminals, sharecropper dialogue.
+Limite : No assertion a clever third option safely saves everyone. Do not declare one branch canon or invent survivors seen when the chosen branch does not show them.
+
+22. The people who became the Boomers
+Debut : mot 18761. Longueur : 1043 mots.
+Contenu : Develop the Vault 34 emigrants who settle at Nellis separately from the reactor choice. Show how Pearl's community remembers its origin, why outsiders fear the artillery and how the Lady in the Water quest changes their isolation.
+Base dans les jeux : Fallout New Vegas: Nellis, Pearl, Pete, Loyal, Volare!
+Limite : Do not claim every Vault 34 resident left with them or that their history resolves the later reactor disaster. No real weapons operating guide.
+
+23. The vault under the Strip
+Debut : mot 19804. Longueur : 875 mots.
+Contenu : Explore Vault 21's use of gambling to settle disputes and its later transformation under House. Develop Sarah Weintraub's hotel and the sealed sections as a case of adaptation instead of simple total collapse.
+Base dans les jeux : Fallout New Vegas: Vault 21, Sarah Weintraub and Michael Angelo dialogue.
+Limite : Do not invent a secret army in the sealed sections or claim the wager had informed consent from every person. No exact concrete quantity.
+
+24. The overseer who would not comply
+Debut : mot 20679. Longueur : 784 mots.
+Contenu : Introduce Vault 81 through its living public community and original overseer's sabotage of the secret medical experiment. Follow the missed scientist notifications, sealed research section and growing disconnection.
+Base dans les jeux : Fallout 4: Vault 81 original overseer's terminal, research communication terminal.
+Limite : Her correct name is Olivette, not Olivia, and she is distinct from current overseer Gwen McNamara. Vault 81 was not designed as a control vault.
+
+25. Curie and the last dose
+Debut : mot 21463. Longueur : 901 mots.
+Contenu : Continue Vault 81 through the child Austin, the mole-rat outbreak, the sealed lab, Curie and the cure choice. Develop Curie's work after her human colleagues and the everyday community outside.
+Base dans les jeux : Fallout 4: Hole in the Wall, Curie dialogue, research laboratory records.
+Limite : Do not imply the treatment immediately cures every disease or that Curie herself initiated Olivette's sabotage. No claim the protagonist always becomes infected.
+
+26. Five years of recovery
+Debut : mot 22364. Longueur : 893 mots.
+Contenu : Develop Vault 95 through successful rehabilitation, residents' routines and the hidden cache released by an infiltrating employee. Follow Cait's later visit as a separate use of a surviving medical resource.
+Base dans les jeux : Fallout 4: Vault 95 resident records and Vault-Tec agent log, Benign Intervention.
+Limite : Do not say the treatment guarantees an uncomplicated lifelong recovery. No drug recipes, modern medical advice or invented relapse rates.
+
+27. The experiments that never began as planned
+Debut : mot 23257. Longueur : 978 mots.
+Contenu : Compare two unfinished or altered projects, Vault 114 and Vault 118, with separate concrete stories. Explain the wealthy residents promised facilities unlike the plan, Soup Can Harry's interview, and the later hotel robobrains and murder inquiry.
+Base dans les jeux : Fallout 4: Unlikely Valentine, Vault 114 interviews; Far Harbor: Brain Dead, Vault 118 terminals. Brain Dead, Ezra Parker reveal dialogue and player report to Maxwell; access-qualified sources recorded in benchmark source checks.
+Limite : Do not describe either original social experiment as completed exactly as planned. Do not conflate Nick with a Vault-Tec creation, or reveal an invented Vault 118 ending.
+
+28. The unfinished vault and the willing overseer
+Debut : mot 24235. Longueur : 859 mots.
+Contenu : Develop Vault 88 as the player's opportunity to operate, soften or reject experiments after the war. Follow Barstow, Clem and configurable devices through the Workshop story. Explain that technical survival leaves a decision with the new overseer.
+Base dans les jeux : Fallout 4 Vault-Tec Workshop: Vault 88, Barstow, Clem and experiment configuration choices.
+Limite : No one ending is compulsory. Do not list the most harmful device settings as a how-to or claim a voluntary building task gives residents full knowledge of every hidden parameter.
+
+29. Reclamation after the promise
+Debut : mot 25094. Longueur : 964 mots.
+Contenu : Finish at Vault 76 and its overseer's recordings. Explain a vault that functions as a shelter, Reclamation Day, the hidden order to secure silos and the survivors' responsibility to people outside. Briefly distinguish questions left open by the games from a total conspiracy answer, then end on rebuilding in Appalachia.
+Base dans les jeux : Fallout 76: Vault 76 terminal entries, overseer's mission and original journey holotapes.
+Limite : Use the original Fallout 76 vault and overseer story, not current live-service developments. Do not assert Vault-Tec launched the first bombs, a confirmed space-colony master plan, or that every vault was intended to kill everyone. No recap catalogue or CTA.

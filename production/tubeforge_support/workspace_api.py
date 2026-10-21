@@ -265,11 +265,16 @@ async def _catalog():
     result["image_provider_policy"] = _visual_policy().get("image_provider")
     result["providers"] = {"cli_proxy": {"available": proxy_available, "error": result["error"]},
                            "google_flow": flow}
-    model = google_flow.setting("USEAPI_IMAGE_MODEL")
-    if flow["available"] and isinstance(model, str) and re.fullmatch(r"[A-Za-z0-9_.+-]{1,100}", model):
-        result["models"].append({"id": model, "provider": "google_flow", "label": "Google Flow · " + model,
-                                "capabilities": {"text": False, "image": True}, "suggested_role": "image",
-                                "suggested_role_source": "configured_provider", "capability_verified": True})
+    models = [google_flow.setting("USEAPI_IMAGE_MODEL")]
+    models.extend(s.get("image_model") for s in _styles() if s.get("image_provider") == "google_flow")
+    seen_flow = set()
+    for model in models:
+        if (flow["available"] and isinstance(model, str)
+                and re.fullmatch(r"[A-Za-z0-9_.+-]{1,100}", model) and model not in seen_flow):
+            seen_flow.add(model)
+            result["models"].append({"id": model, "provider": "google_flow", "label": "Google Flow · " + model,
+                                    "capabilities": {"text": False, "image": True}, "suggested_role": "image",
+                                    "suggested_role_source": "configured_provider", "capability_verified": True})
     result["available"] = bool(result["models"]) or proxy_available
     if result["available"]:
         result["error"] = None

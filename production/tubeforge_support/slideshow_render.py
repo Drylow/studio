@@ -36,9 +36,9 @@ def shot_frames(scenes, duration, fps):
 
 def dissolve_widths(counts, fps, seconds):
     requested = max(0, round(seconds * fps))
-    # Boundaries can use at most a quarter of either adjacent shot. Very short
-    # shots consequently cannot be swallowed by two transitions.
-    return [min(requested, counts[i] // 4, counts[i + 1] // 4)
+    # A centered dissolve uses only half its width in each adjacent shot.
+    # Leave at least one hold frame, including between two long dissolves.
+    return [min(requested, max(0, counts[i] - 1), max(0, counts[i + 1] - 1))
             for i in range(len(counts) - 1)]
 
 
@@ -51,6 +51,20 @@ def render(job):
     scenes = job['scenes']
     counts = shot_frames(scenes, duration, fps)
     transitions = dissolve_widths(counts, fps, float(job.get('transition_seconds', .25)))
+    if job.get('strict_transition_seconds') and any(
+            n != round(float(job.get('transition_seconds', .25)) * fps) for n in transitions):
+        raise ValueError('A shot is too short for the requested dissolve')
+    intro_frames = min(sum(counts), max(0, round(float(job.get('intro_fade_seconds', 0)) * fps)))
+    outro_frames = min(sum(counts), max(0, round(float(job.get('outro_fade_seconds', 0)) * fps)))
+    filters = [f'fps={fps}', 'format=yuv420p']
+    if intro_frames:
+        # Picture only: the narration keeps its original start and duration.
+        filters.append(f'fade=t=in:start_frame=0:'
+                       f'nb_frames={max(1, intro_frames - 1)}:color=black')
+    if outro_frames:
+        # Finish at full black on the last encoded frame; do not extend audio.
+        filters.append(f'fade=t=out:start_frame={sum(counts) - outro_frames}:'
+                       f'nb_frames={max(1, outro_frames - 1)}:color=black')
     output = Path(job['out']).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
     voice = Path(job['voice']).resolve()
@@ -68,8 +82,8 @@ def render(job):
                 # subpixel aspect discrepancy, never a camera/zoom margin.
                 picture = ImageOps.fit(original.convert('RGB'), (width, height),
                                        method=Image.Resampling.LANCZOS)
-            target = temp / f'still-{i:04d}.png'
-            picture.save(target, compress_level=1)
+            target = temp / f'still-{i:04d}.ppm'
+            picture.save(target)
             frames.append(target)
         timeline = []
         for i, count in enumerate(counts):
@@ -83,8 +97,11 @@ def render(job):
                 with Image.open(frames[i]) as a, Image.open(frames[i + 1]) as b:
                     for k in range(n):
                         mixed = Image.blend(a, b, (k + 1) / (n + 1))
-                        target = temp / f'fade-{i:04d}-{k:02d}.png'
-                        mixed.save(target, compress_level=1)
+                        # Transient raw frames avoid thousands of costly PNG
+                        # compressions for long mixes. TemporaryDirectory removes
+                        # them after encoding; source images stay untouched.
+                        target = temp / f'fade-{i:04d}-{k:02d}.ppm'
+                        mixed.save(target)
                         timeline.append((target, 1))
         assert sum(n for _, n in timeline) == sum(counts)
         lines = ['ffconcat version 1.0']
@@ -99,7 +116,7 @@ def render(job):
         cmd = [job.get('ffmpeg', 'ffmpeg'), '-nostdin', '-v', 'error', '-y',
                '-threads', '1', '-filter_threads', '1', '-f', 'concat', '-safe', '0',
                '-i', str(sequence), '-i', str(voice), '-map', '0:v:0', '-map', '1:a:0',
-               '-vf', f'fps={fps},format=yuv420p', '-frames:v', str(sum(counts)),
+               '-vf', ','.join(filters), '-frames:v', str(sum(counts)),
                '-t', f'{sum(counts) / fps:.12f}', '-c:v', 'libx264', '-preset', 'veryfast',
                '-crf', str(job.get('crf', 18)), '-threads', str(max(1, min(4, int(job.get('threads', 2))))),
                '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', str(candidate)]
@@ -118,8 +135,13 @@ def render(job):
         candidate.replace(output)
     return {'file': str(output), 'duration': sum(counts) / fps, 'frames': sum(counts),
             'width': width, 'height': height, 'fps': fps, 'camera': 'static',
-            'transition': 'crossfade', 'transition_seconds': float(job.get('transition_seconds', .25)),
+            'transition': 'crossfade' if any(transitions) else 'cuts',
+            'transition_seconds': float(job.get('transition_seconds', .25)),
             'transition_frame_counts': transitions,
+            'intro_fade_frames': intro_frames,
+            'intro_fade_seconds': intro_frames / fps,
+            'outro_fade_frames': outro_frames,
+            'outro_fade_seconds': outro_frames / fps,
             'bytes': output.stat().st_size,
             'sha256': hashlib.sha256(output.read_bytes()).hexdigest()}
 

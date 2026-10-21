@@ -1,4 +1,81 @@
+## Current production checkpoint —21 October2026
+
+The Marine episode, **Your Life as Every Marine Rank in One Piece**, is complete:
+16:09,162 primary-inspected images and a1920×1080 final film. The finished
+encode was inspected through all162 shot samples plus transition/opening/ending
+samples, and its entire video stream and original voice were checked technically.
+The completed file was transferred with a matching SHA-256. Only its remote
+final MP4 was removed afterward, as requested; source images, voice and evidence
+remain on the production host. No upload or new publication date was set.
+See [production record](videos/08-your-life-as-every-marine-rank-in-one-piece/production.md).
+
+**Your Life on the Wall (Game of Thrones)** is also complete:15:52,
+159 inspected source images, including16 restored at higher native resolution.
+All29 encoded review sheets were inspected, the entire22,856-frame stream was
+compared with its intended images/fades, and the original voice was verified.
+The1080p film was transferred with a matching SHA-256; only its remote final MP4
+was removed afterward. Its corrected guard stands on the actual walkway.
+See [production record](videos/09-your-life-on-the-wall-game-of-thrones/production.md).
+
+The active batch is now **2/11 delivered**. Next are P02–P10 for Oddly Important
+Guy, reusing their existing voices and thumbnail alternatives. Do not resume
+the unrelated Wealthy Nobody or old combined19-video worker. All generation
+and media processing stays on the remote host; no new upload or publication
+date has been set for these two films. This checkpoint supersedes older planning
+status below.
+
+---
+
 # Oddly Fictional Lives
+
+## Production instructions — 21 October 2026
+
+Current verified progress: the two original scripts and their complete editorial
+reviews are saved under [One Piece](videos/08-your-life-as-every-marine-rank-in-one-piece/editorial-review.md)
+and [the Wall](videos/09-your-life-on-the-wall-game-of-thrones/editorial-review.md).
+Both configured voiceovers were synthesised on the hosted server: One Piece
+968.72 seconds / 2,794 aligned words; the Wall 952.34 seconds / 2,774 aligned words.
+Mechanical timing proposals contain 162 and 159 intervals, longest 6.604 and
+6.639 seconds. These are not completed films or visual approvals. One Piece's
+nine initial identity originals were actually viewed; officer variants and final
+scenes still require inspection. The voice-only route imports the native service
+result while preserving the authored-project guard against automatic planning.
+
+The owner's persistent production goal now continues AFTER these two completed
+films with the nine remaining Oddly Important Guy workplace films (earlier name
+Paid to Panic), using their existing thumbnail alternatives. It does not restart
+The Wealthy Nobody batch. Private receipts and exact current handles are under
+`work/ofl-one-piece-got-2026-10-21/`; no completion or scheduling is implied here.
+
+The owner selected **Your Life as Every Marine Rank in One Piece**, followed by
+**Your Life on the Wall (Game of Thrones)**. These are authorised for production,
+not yet delivered or scheduled. Keep the configured Ryan voice and the exclusively
+selected image provider in private production settings. Voice first, actual
+word timings next, then authored images and hosted rendering; no local rendering.
+
+The owner explicitly requires **full visual checks for this channel**. Inspect
+every reference and final shot here, then the encoded montage; proxy-assisted
+triage does not replace these inspections. Record exact reviewed files and hashes,
+and inspect corrections again. The lighter policy for the two workplace channels
+does not apply. See [the current production rules](AGENTS.md).
+
+For these new episodes, target six seconds per image and never exceed seven.
+Keep static framing, short crossfades, the entry from black and final fade to
+black. Existing episode durations and their historical release schedules below
+do not define the new productions' duration, status or publication date.
+
+## Recherche de la suite — 19 octobre 2026
+
+Le catalogue public releve comprend six videos : Halo/Covenant reste retire par
+l’utilisateur. Le dernier Marine totalise 441 vues et Viltrumite 450 au releve ;
+ces petits volumes et des ages differents ne prouvent pas un effet de retention
+ou de miniature. Quatre uploads supplementaires porteraient ce catalogue a dix.
+
+Lire [les observations et huit pistes Patch / Oddly](../_recherche/patch-et-oddly-fictional-2026-10-19.md).
+Dreadnought, Chaos Marine, Homelander et Custodes sont des propositions de sujet,
+pas des episodes approuves, produits ou programmes. L’utilisateur souhaite
+reprendre les experiences qui commencent a attirer des vues. Aucun retour de
+Halo, changement de dessin ou lancement automatique de miniature n’en decoule.
 
 English immersive fiction: experience a recognisable fictional identity through
 decisions, abilities, relationships and consequences. Original narration and

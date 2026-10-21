@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01-skyrim",
+    "file": "01-skyrim.jpg",
+    "video_title": "2 Hours of Skyrim's Darkest Mysteries to Fall Asleep To",
+    "text": "SKYRIM / SECRETS / FOR SLEEP",
+    "direction": "A - cinematic photorealism",
+    "generation": "Built-in imagegen",
+    "status": "Selected by user, exact comparison A image retained",
+    "width": 1280,
+    "height": 720,
+    "bytes": 387318,
+    "sha256": "05b98fb858d8c6c39b20bda27c8f782937833294f9c6b84fe9e4d84258902322",
+    "published": false
+  },
+  {
+    "id": "02-vault-tec",
+    "file": "02-vault-tec.jpg",
+    "video_title": "The Secrets of Vault-Tec Explained to Fall Asleep To | Fallout Lore",
+    "text": "VAULT-TEC / SECRETS / FOR SLEEP",
+    "direction": "A - cinematic photorealism",
+    "generation": "Built-in imagegen",
+    "status": "New proposal in selected direction A; individual image not yet explicitly approved",
+    "width": 1280,
+    "height": 720,
+    "bytes": 383003,
+    "sha256": "2a54e56d110e902828456f6041634a49b9c066b3adbf7aa1b83072475e1fde9d",
+    "published": false
+  },
+  {
+    "id": "03-dwemer",
+    "file": "03-dwemer.jpg",
+    "video_title": "The Disappearance of the Dwemer Explained to Fall Asleep To | Elder Scrolls Lore",
+    "text": "DWEMER / MYSTERY / FOR SLEEP",
+    "direction": "A - cinematic photorealism",
+    "generation": "Built-in imagegen",
+    "status": "New proposal in selected direction A; individual image not yet explicitly approved",
+    "width": 1280,
+    "height": 720,
+    "bytes": 414507,
+    "sha256": "a36cef1464170fce5949176de3d29a74e1e34d26692f682328700933bc3ba737",
+    "published": false
+  }
+]

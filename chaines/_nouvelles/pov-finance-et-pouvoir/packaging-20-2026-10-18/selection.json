@@ -1,0 +1,276 @@
+{
+  "status": "packaging_proposals_awaiting_owner_choice",
+  "scripts_written": 0,
+  "videos_produced": 0,
+  "items": [
+    {
+      "id": "W01",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: Your Boss Offers a Raise. You Ask for Fridays Off",
+      "angle": "Tu negocies du temps plutot qu’une nouvelle hausse de revenu. Il faut une vraie concession et une issue gagnee, sans patron qui cede par magie.",
+      "promise": "Montrer une negociation credible, ses contraintes et l’usage reel du temps gagne.",
+      "signal": "Adjacent : independance financiere et pouvoir de dire non ; notre negociation concrete est une adaptation.",
+      "refs": [
+        "DDLBhndYpfg",
+        "YpNFNg4zJzw"
+      ],
+      "proof_needed": "Documenter temps de travail, avantages et negociations du contexte choisi ; aucune promesse universelle."
+    },
+    {
+      "id": "W02",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Land Your Dream Job. You Can't Afford Your Life",
+      "angle": "Le poste prestigieux impose une ville chere et des obligations qui absorbent la marge.",
+      "promise": "Faire sentir le prestige puis suivre logement, trajet et choix de rester ou repartir.",
+      "signal": "Extension du cout cache du statut ; titre distinct des copies salaire-double.",
+      "refs": [
+        "Nxhir9WT3jQ",
+        "mXgqpiyCtOM"
+      ],
+      "proof_needed": "Verifier les depenses et les contraintes du lieu choisi avant tout chiffre."
+    },
+    {
+      "id": "W03",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Inherit Money. Suddenly, Everyone Needs You",
+      "angle": "Chaque proche a un usage different pour un heritage qui n’est pas encore organise.",
+      "promise": "Faire progresser trois demandes distinctes vers une decision personnelle et des limites.",
+      "signal": "Adjacent : argent et relations familiales ; origine heritage et limites donnent l’angle.",
+      "refs": [
+        "6T-IPOC4uiA",
+        "Bh13NQLk5uo"
+      ],
+      "proof_needed": "Verifier fonctionnement de la succession dans une juridiction ; pas de montant ni de droit invente."
+    },
+    {
+      "id": "W04",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Pay Off Your House. Everyone Says You're Wrong",
+      "angle": "Ta tranquillite ne correspond pas a la definition de reussite de tes amis.",
+      "promise": "Exposer les vrais arbitrages et la pression sociale, sans declarer le remboursement optimal pour tous.",
+      "signal": "Sujet adjacent directement observe : remboursement du logement ; notre angle porte sur le jugement social.",
+      "refs": [
+        "BiXUk28HSDw",
+        "Je8hjgrKvmc"
+      ],
+      "proof_needed": "Verifier les arbitrages contractuels et financiers sans conseil personnalise ni taux invente."
+    },
+    {
+      "id": "W05",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: Your Side Hustle Replaces Your Salary. And Your Life",
+      "angle": "Les commandes remplacent le patron, puis envahissent toutes les soirees.",
+      "promise": "Suivre la croissance, la saturation et un choix sur la taille de l’activite.",
+      "signal": "Adjacent : deuxieme revenu ; retournement sur le temps plutot que promotion d’un revenu passif.",
+      "refs": [
+        "wbGyFWte0S8",
+        "vEIltb6C1hs"
+      ],
+      "proof_needed": "Documenter le fonctionnement credible de la petite activite retenue ; pas de promesse de revenus."
+    },
+    {
+      "id": "W06",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Can Afford the Trip. Your Friends Can't",
+      "angle": "Tu peux financer un voyage mais tu ne peux pas acheter l’accord et la dignite du groupe.",
+      "promise": "Aller au-dela d’une addition : proposition, malaise, renegociation et decision commune.",
+      "signal": "Adjacent : ami devenu riche et relations ; angle concret des vacances.",
+      "refs": [
+        "Bh13NQLk5uo",
+        "wIXKOgTchPo"
+      ],
+      "proof_needed": "Documenter seulement les mecanismes de partage de depenses utiles ; aucune etiquette morale simpliste."
+    },
+    {
+      "id": "W07",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Finally Feel Rich. Then the Market Crashes",
+      "angle": "Le chiffre du patrimoine chute alors que les obligations de la vie continuent.",
+      "promise": "Montrer reactions, priorites et decisions sans rebond garanti ni recette de placement.",
+      "signal": "Test adjacent plus risque : pression du patrimoine et choc financier, sans chiffre-choc invente.",
+      "refs": [
+        "3huR7BI-6Pc",
+        "cR6AO-ZGpZw"
+      ],
+      "proof_needed": "Documenter le choc choisi et distinguer actifs, liquidites et obligations ; aucune prediction."
+    },
+    {
+      "id": "W08",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: Your Partner Earns Less. So Why Are They Richer?",
+      "angle": "Le couple decouvre que revenu visible, depenses et patrimoine racontent des choses differentes.",
+      "promise": "Demontrer un ecart comprehensible puis une conversation utile ; pas de trahison artificielle.",
+      "signal": "Extension couple/patrimoine du contraste apparence-richesse ; test original non valide comme succes.",
+      "refs": [
+        "nYgCcX-WiWU",
+        "Nxhir9WT3jQ"
+      ],
+      "proof_needed": "Verifier les notions de patrimoine et dette ; tout montant futur devra etre source ou explicitement illustratif."
+    },
+    {
+      "id": "W09",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Retire Early. Your Spouse Still Works",
+      "angle": "La retraite libere une personne, pas automatiquement le calendrier du couple.",
+      "promise": "Explorer une journee vide, des attentes differentes et un nouvel equilibre negocie.",
+      "signal": "Pivot du motif retraite deja prouve vers une consequence relationnelle peu reprise dans les catalogues controles.",
+      "refs": [
+        "h0GcE0Me-lI",
+        "xxJnPq8gBZ4"
+      ],
+      "proof_needed": "Documenter contraintes de retraite et travail sans imposer d’age, pension ou resultat garanti."
+    },
+    {
+      "id": "W10",
+      "channel": "The Wealthy Nobody",
+      "title": "POV: You Can Finally Buy a House. Your Parents Need Help",
+      "angle": "Ton projet de logement rencontre un besoin familial au moment precis ou il devient possible.",
+      "promise": "Construire une decision d’aide avec limites et consequences pour tous, sans parents caricatures.",
+      "signal": "Extension de la richesse familiale et du logement ; enjeu distinct des demandes d’heritage de W03.",
+      "refs": [
+        "qz4d3zpzsRM",
+        "FO-I7p1FLdc"
+      ],
+      "proof_needed": "Verifier les mecanismes d’aide et de logement retenus ; pas de cas medical ou fiscal invente."
+    },
+    {
+      "id": "P01",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life Working for a Billionaire",
+      "angle": "Tu as acces au luxe mais les demandes du patron prennent possession de ta journee.",
+      "promise": "Une mission precise, plusieurs imprevus et une limite a poser ; pas seulement une liste de privileges.",
+      "signal": "Demande adjacente observee sur personnel de milliardaires ; notre format anime reste un test.",
+      "refs": [
+        "ahRd86STxbE",
+        "e2GcYzl9EDw"
+      ],
+      "proof_needed": "Documenter les fonctions d’assistant prive ; patron fictif, aucun secret pretendument reel."
+    },
+    {
+      "id": "P02",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life Working Inside a Las Vegas Casino",
+      "angle": "L’argent appartient aux clients ; toi tu dois tenir une table et une soiree sous pression.",
+      "promise": "Montrer plusieurs fonctions et un incident de service credible, sans recette de triche.",
+      "signal": "Demande directement voisine observee pour croupier et proprietaire ; differencier l’histoire.",
+      "refs": [
+        "AD1qBIwqoEM",
+        "9zLJHTsmtk0"
+      ],
+      "proof_needed": "Documenter les roles et regles generales de jeu ; aucune explication de fraude ou promesse de gain."
+    },
+    {
+      "id": "P03",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life Working on a Billionaire's Superyacht",
+      "angle": "Les passagers improvisent leurs vacances ; l’equipage doit refaire son programme.",
+      "promise": "Relier service, fonctionnement du bateau et changement de programme en une histoire continue.",
+      "signal": "Demande adjacente forte dans temoignages et vues de travail d’equipage.",
+      "refs": [
+        "n-9krjQaD_8",
+        "LXnOCee_DaM"
+      ],
+      "proof_needed": "Documenter metiers, conditions et geographie du bateau ; pas de yacht traite comme villa terrestre."
+    },
+    {
+      "id": "P04",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life as a Celebrity Bodyguard",
+      "angle": "Tu es present a tous les moments visibles mais ton attention ne peut jamais decrocher.",
+      "promise": "Montrer anticipation, quotidien et arbitrage de securite sans violence gratuite ni tactiques exploitables.",
+      "signal": "Demande adjacente observee via temoignages de protection rapprochee.",
+      "refs": [
+        "OgGSddaFx9I",
+        "pO8s6ou_9OY"
+      ],
+      "proof_needed": "Documenter responsabilites generales ; celebrite et incident fictifs, aucune personne reelle representee."
+    },
+    {
+      "id": "P05",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life as a Private Jet Pilot",
+      "angle": "Le client peut payer le vol mais ne peut pas supprimer ses contraintes.",
+      "promise": "Preparation, changement de demande, decision responsable ; jamais une procedure de pilotage inventee.",
+      "signal": "Demande adjacente observee chez des pilotes publiant leur quotidien.",
+      "refs": [
+        "eiM0sauF43s",
+        "XKvd7QlUVf8"
+      ],
+      "proof_needed": "Documenter fonctions et limites operationnelles generales sans chiffres ni techniques non verifies."
+    },
+    {
+      "id": "P06",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life as a Luxury Hotel Concierge",
+      "angle": "Tu dois rendre invisibles les problemes que les demandes des clients rendent inevitables.",
+      "promise": "Une suite, une demande difficile et des arbitrages entre client et equipe.",
+      "signal": "Demande adjacente observee autour des demandes de conciergerie et travail hotelier.",
+      "refs": [
+        "F1xyDWkfcYc",
+        "Xt0KOB2DFdA"
+      ],
+      "proof_needed": "Documenter conciergerie et organisation d’un hotel ; pas d’affirmation de pratiques propres a un vrai etablissement."
+    },
+    {
+      "id": "P07",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life as a Billionaire's Lawyer",
+      "angle": "Ton client achete ton temps, pas le pouvoir de changer les regles a sa convenance.",
+      "promise": "Faire progresser un dossier et une demande impossible vers un choix professionnel credible.",
+      "signal": "Test adjacent du format institutions/pouvoir ; pas de succes equivalent affirme.",
+      "refs": [
+        "JtSOX2quSok",
+        "e2GcYzl9EDw"
+      ],
+      "proof_needed": "Choisir juridiction et type de dossier, verifier roles et obligations ; pas de conseil legal personnalise."
+    },
+    {
+      "id": "P08",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life Working Inside a Royal Palace",
+      "angle": "Tu as acces a des pieces extraordinaires mais pas le droit d’en improviser les regles.",
+      "promise": "Suivre un membre du personnel, une preparation et un imprévu de service sans inventer la vie privee de vrais royaux.",
+      "signal": "Contexte documentable par source officielle et demande adjacente sur les metiers du palais.",
+      "refs": [
+        "k7GvyZeSs6Y",
+        "q0BvH3p08vg"
+      ],
+      "proof_needed": "Documenter roles et etiquette effectivement utiles, distinguer palais inspire et faits reels."
+    },
+    {
+      "id": "P09",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life Selling Mansions to Billionaires",
+      "angle": "Les maisons sont enormes, mais rien n’est acquis tant que le client n’a pas choisi.",
+      "promise": "Visite, objections et negociation plausibles, sans commission miraculeuse ou garantie.",
+      "signal": "Test adjacent documentable via quotidien d’agents haut de gamme ; resultats de recherche contrastes.",
+      "refs": [
+        "b53u2vM7m1w",
+        "B-cBSBTxOWY"
+      ],
+      "proof_needed": "Verifier roles et processus immobilier du pays choisi ; ne pas inventer regles ou commissions."
+    },
+    {
+      "id": "P10",
+      "channel": "Oddly Important Guy",
+      "title": "Your Life as a Billionaire's Private Chef",
+      "angle": "Le budget semble illimite, mais les gouts et le timing du client dictent tout.",
+      "promise": "Preparation, nouvelle contrainte et service final, sans liste de plats extravagants sans histoire.",
+      "signal": "Piste adjacente des coulisses culinaires du luxe ; essai de role, pas promesse de succes prouve.",
+      "refs": [
+        "NgDe0FnVVzQ",
+        "n-9krjQaD_8"
+      ],
+      "proof_needed": "Documenter travail de chef prive et contraintes ordinaires ; pas d’allergie ou consigne medicale inventee."
+    }
+  ],
+  "variant_count": 23,
+  "thumbnail_status": "drawing_accepted_all_43_images_preserved_owner_selection_later",
+  "thumbnail_direction": "../THUMBNAIL-DIRECTION.md",
+  "scriptwriting_status": "twenty_manuscripts_written_and_editorially_revised",
+  "scriptwriting_manifest": "../scripts-20-2026-10-18/manifest.json",
+  "topics_approved_for_scriptwriting": true,
+  "thumbnail_choice": null,
+  "scriptwriting_benchmark": "POVrank",
+  "scriptwriting_revision": "povrank_comparison_2026-10-19"
+}

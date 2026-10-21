@@ -1,0 +1,133 @@
+FORGOTTEN REALMS OF SLEEP - RECHERCHE ET REPRISE
+18 octobre 2026
+
+Commande : trois scripts anglais longs pour la troisieme chaine. L'angle est
+le lore des jeux video raconte calmement pour le sommeil. Objectif technique :
+au moins 25 500 mots par texte, soit 150 minutes a 170 mots/minute. Le temps
+reel dependra de la voix et n'est pas mesure dans cette commande.
+
+ORDRE EDITORIAL
+1. Skyrim : des enquetes locales vers les anciennes histoires et les pactes.
+2. Fallout : la promesse de protection, les experiences et les survivants.
+3. Dwemer : les vestiges, les peuples, les livres et les versions de Red Mountain.
+L'alternance separe les deux sujets Elder Scrolls. Le film Skyrim ne raconte pas
+en detail la disparition des Dwemer. Le film Dwemer ne reprend pas les intrigues
+de Markarth comme des histoires autonomes de complot.
+
+RECHERCHE DE FORMAT
+Recontrole apres la premiere livraison : cinq videos de reference, dont deux
+ajoutees, leurs ouvertures et cinq passages du corps par video. Les trois textes
+originaux ont ete soumis integralement a cette comparaison. Voir
+RELECTURE-COMPARATIVE.txt pour les observations, corrections et limites precises.
+Cette etude ne revendique ni lecture integrale des cinq concurrents ni analyse
+de leurs donnees privees de retention.
+Examen des outliers de Cozy Knight et de transcriptions obtenues par Algrow :
+- 120 Minutes of Unsolved Skyrim Mysteries to Fall Asleep To :
+  https://www.youtube.com/watch?v=RQH1ww-whNk
+  Releve Nexlev : environ 213 000 vues, ratio 22,7 fois la MOYENNE de la chaine.
+  Le denominateur du relevement est la moyenne, pas une mediane.
+- 3 Hours of Skyrim Facts to Fall Asleep to :
+  https://www.youtube.com/watch?v=OravbhprQR4
+- 4 Hours of Fallout New Vegas Facts to Fall Asleep to :
+  https://www.youtube.com/watch?v=azOJx-9irxE
+Les transcriptions servent a etudier le registre et comparer les formulations,
+jamais a etablir le canon, copier un plan ou reprendre un passage.
+Des erreurs de reconnaissance de noms et des affirmations discutables y existent.
+Le format mene a choisir Skyrim et Fallout; il ne garantit aucun resultat futur
+et ne suffit pas a mesurer la demande specifique du film Dwemer.
+
+REGISTRE ET STRUCTURE
+Le plan editorial a ete ecrit pour ces trois sujets, chapitre par chapitre.
+FacelessOS applique : ancrage de voix, humanisation, variation et audit final A-E.
+Adaptation sommeil : pas de relances agressives, aucune promesse obligeant a rester
+eveille, pas de reveil promotionnel en fin de film. Les petites enquetes obtiennent
+leur reponse dans leur section; un mystere reellement ouvert reste ouvert.
+Un seul CTA optionnel dans le premier chapitre : abonnement et commentaire sur le
+lieu d'ecoute et le fait qu'il y fasse jour ou nuit. Aucun sponsor ou lien a lire.
+
+La source exacte de l'ancre et deux exemples courts sont conserves dans
+ANCRE-ET-METHODE.txt. La transcription complete reste privee.
+
+LIMITES DE CANON
+Skyrim : jeu de base, Dawnguard, Dragonborn. Aucun mod ni Creation Club.
+Fallout : Fallout, Fallout 2, Fallout 3, New Vegas et Honest Hearts, Fallout 4
+avec Far Harbor et Vault-Tec Workshop, histoire initiale de Vault 76.
+Pas de serie televisee, pas de revelateur de saison recente, pas de Bible-only
+affirmee comme canon, pas de lore de mises a jour plus recentes de Fallout 76.
+Dwemer : Morrowind, Daggerfall, Skyrim et ses deux extensions citees. Pas de
+fiction de forums/developpeurs, ni de revelations ESO ajoutees pour donner une
+solution. Les titres des livres et les dialogues primaires sont identifies dans
+le plan. Les auteurs en univers peuvent se contredire.
+
+POINTS QUI DEMANDENT UNE PRUDENCE PARTICULIERE
+- La premiere superviseure de Vault 81 est Dr. Olivette, pas Olivia; Gwen
+  McNamara est une autre superviseure, a une autre periode.
+- Les jeux utilises ne prouvent pas que Vault-Tec a tire la premiere bombe.
+- Les abris ne sont pas tous identiques, ni tous concus pour une meme experience.
+- La mutation de Vault 87 n'explique pas tous les super mutants de la franchise.
+- Les incidents de l'equipe de Vault 111 et l'intervention tardive de l'Institut
+  sont deux episodes distincts. Kellogg n'agit pas pour l'ancien superviseur.
+- La disparition des Dwemer a une exception connue : Yagrum Bagarn. Son absence
+  dans un Outer Realm n'est pas une vision directe de la scene de Kagrenac.
+- Les versions de Vivec, des traditions ashlanders et des chants nordiques ne
+  donnent pas une scene unique et prouvee. Aucune probabilite inventee n'est assignee.
+- Le Numidium et ses activations ulterieures ne prouvent pas que tous les Dwemer
+  sont devenus sa peau. Arniel n'utilise ni le vrai Coeur ni tous les outils.
+- Le Coeur est libere de ses enchantements dans Morrowind; ne pas affirmer que
+  le joueur detruit necessairement ce fragment divin lui-meme.
+- Un choix dans une quete est explique conditionnellement; aucune fin optionnelle
+  n'est annoncee comme la seule fin officielle.
+
+ACCES AUX SOURCES
+Les sources-ouvertes.json donnent les pages effectivement ouvertes par l'outil.
+Les transcriptions de livres en allemand du Tamriel-Almanach permettent de lire
+les comptes divergents de Red Mountain et Kagrenac's Tools. Les guides Gamepressure
+et les Archives de Vault-Tec servent aux contre-verifications de quetes.
+Certains extraits de recherche Fandom sont lisibles dans l'index de recherche,
+mais leurs pages completes ainsi que plusieurs pages UESP et Imperial Library
+etaient bloquees (403 ou 402). Aucun contournement n'a ete effectue. Ne pas
+transformer un extrait indexe en affirmation de lecture integrale de la page.
+L'ancienne fiche allemande generale de Yagrum porte un avertissement d'erreurs et
+situe incorrectement son absence dans Tamriel; cette formulation n'est pas retenue.
+La fiche francaise de Vault 76 mentionne un ancien delai d'ouverture de vingt ans;
+ne pas utiliser ce chiffre pour remplacer le recit du jeu. Le script ne s'y fie pas.
+La bibliographie couvre les verifications importantes; elle ne pretend pas que
+tous les dialogues de toutes les quetes ont ete relus en jouant aux jeux.
+
+CONTROLES
+Chaque chapitre est conserve separement pendant le travail pour faciliter les
+corrections. La livraison donne aussi la narration assemblee sans titres ni notes.
+Les passes de relecture donnent des citations exactes et des modifications locales.
+Les verifications techniques comptent mots et caracteres, scannent les artefacts,
+comparent les sequences de douze mots aux cinq transcriptions, recherchent les
+paragraphes dupliques et reperent le CTA. Ce sont des controles textuels, pas une
+preuve d'absence de toute ressemblance semantique ou une verification audio.
+Les signaux echo du scanner incluent les noms d'abris, les noms propres et des
+groupes de quatre mots ordinaires. Leur nombre n'est pas un compteur d'erreurs
+restantes : les passages sont juges en contexte pendant la relecture complete.
+La seule alerte de forme restante dans Fallout concerne les mots what happens
+next : ce sont les residents congeles qui ne peuvent plus poser la question,
+pas une promesse de revelation faite au spectateur. Elle est conservee.
+Le dernier audit porte sur l'integralite du texte assemble et sur les groupes A-E.
+Les corrections sont controlees apres application. Aucun examen de video ni
+ecoute humaine n'est revendique.
+Les remarques de relecture sont des propositions, pas une autorite superieure
+aux jeux. L'audit final consigne les decisions motivees. En particulier, une
+remarque proposait a tort de remplacer Casimir par Veren dans le Dreamstride
+de Waking Nightmare : les sources concordantes confirment Casimir. Cette fausse
+correction n'a pas ete appliquee. Ne pas l'appliquer lors d'une reprise.
+Des conclusions ou rappels utiles ont aussi ete conserves par decision editoriale;
+ce ne sont pas des erreurs factuelles non resolues. Lire audit-final.json avant
+de se servir des rapports historiques.
+
+OUTILS ET CONFIDENTIALITE
+Execution technique : production/sleep_script_batch.py, sleep_script_review.py,
+services/ai.py et services/facelessos.py. Les choix editoriaux restent dans le plan.
+Le proxy deja configure est conserve; aucun autre fournisseur n'est substitue.
+Le reglage d'ecriture de l'environnement local etait obsolete et a ete remplace
+uniquement dans le processus de ce lot par une option disponible du meme proxy.
+Les acces restent dans le .env prive; aucun secret n'est dans le paquet ou Git.
+Ne pas publier les transcriptions concurrentes completes ou l'ancre privee.
+Travail detaille, brouillons et corrections historiques : work/fros-scripts-2026-10-18/.
+Ne pas regenerer les voix, les images, les profils ou les videos sans demande.
+Deep Void Theories et Quiet Paradox restent en attente de resultats utilisateur.

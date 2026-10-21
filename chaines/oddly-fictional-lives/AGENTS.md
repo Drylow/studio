@@ -1,5 +1,24 @@
 # Oddly Fictional Lives
 
+## Owner correction — 21 October 2026: full visual review
+
+Do not apply the lighter review policy used for the two new workplace channels
+to Oddly Fictional Lives. This channel requires primary-agent inspection of EVERY
+generated cast reference, location reference and final shot before montage, plus
+inspection of the encoded final video. Proxy vision may assist triage, but its
+PASS result never substitutes for viewing an image here or verifies it by itself.
+Record the actual inspected file and hash. Any replacement or changed file loses
+the earlier approval and must be viewed again. Do not assemble unreviewed shots.
+Inspect scene geography, desk/chair/hand placement, consistent drawing, eyes,
+costumes, acting, narration alignment and each actor's identity.
+
+Current authorised order: One Piece Marine ranks, then life defending the Wall
+in Game of Thrones. Voice precedes timed images; use the owner's selected image
+provider exclusively. All generation, media processing and rendering stay on the
+hosted VPS/render service. Target six-second shots with a seven-second maximum;
+static framing, short crossfades and the approved final fade to black. This order
+does not resume other paused video batches or authorise a new publication date.
+
 Before suggesting, outlining, writing or reviewing an episode, read `SCRIPTWRITING.md`
 and its required Faceless OS files. This channel uses the complete research →
 structure → write → audit workflow, not a generic title-to-script prompt.
@@ -31,3 +50,13 @@ the generated acting against the scene, not only identity and clothing.
 Aliens such as Jabba and Covenant species preserve their recognisable anatomy
 and natural colour. New Halo/Space Marine trials still require inspection and
 are not approved merely because the Jabba style was approved.
+
+User correction, 18 October 2026: the owner deliberately removed the Covenant /
+Halo upload because its thumbnail was unsatisfactory. Do not restore, re-upload
+or reschedule it without a new instruction. Prior release receipts are historical.
+For future Oddly Fictional Lives thumbnails, provide the owner with an authored
+prompt; the owner generates the image. Do not automatically generate, replace
+or publish thumbnails. Keep the established no-overlay-text direction unless
+the owner changes it, and vary the composition to suit the actual episode.
+The three new reference links supplied on 18 October are for channel ideation;
+they do not approve new scripts, channels, paid media generation or publication.

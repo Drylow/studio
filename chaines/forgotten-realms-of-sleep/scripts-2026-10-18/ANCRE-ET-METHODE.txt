@@ -1,0 +1,34 @@
+ANCRE DE REGISTRE - NOTE COMMUNE AUX TROIS SCRIPTS
+
+Source reelle : Cozy Knight, 120 Minutes of Unsolved Skyrim Mysteries to Fall
+Asleep To, https://www.youtube.com/watch?v=RQH1ww-whNk.
+La transcription complete reste dans le dossier de travail prive.
+
+Deux formes courtes relevees dans la transcription :
+"To understand their disappearance, you first have to understand what the Dwemer believed."
+"They intended to use it."
+
+La premiere introduit une explication causale dans une phrase parlee, la seconde
+enonce une action simplement. Ces exemples servent au registre. Les affirmations
+du concurrent ne sont pas utilisees comme preuves de canon. Les textes livrees
+ne reprennent ni ces phrases, ni son introduction, ni son plan.
+
+Exemples de lignes originales correspondant a une explication concrete :
+- Skyrim : "The route through the cellar leads to a breach and the caverns beyond."
+- Fallout : "The door of Vault 111 closes in time to save a family from the bombs."
+- Dwemer : "The map nevertheless supplies a useful lead."
+
+Les audits utilisent le systeme FacelessOS avec l'adaptation sommeil documentee
+dans RECHERCHE-ET-REPRISE.txt : pas de relance agressive, un seul CTA discret et
+aucune conclusion promotionnelle. La structure, les faits autorises et les limites
+de chaque chapitre ont ete ecrits pour ce lot.
+
+La relecture comparative ajoute deux references a celles de la premiere version.
+Elle confronte les trois textes complets aux ouvertures et passages du corps de
+cinq videos. Les choix appliques sont dans RELECTURE-COMPARATIVE.txt.
+L'ancre de registre d'origine reste attribuee a Cozy Knight; la comparaison des
+autres references ne remplace pas les sources du canon.
+
+Les sources, les scans et la relecture textuelle ne remplacent pas une narration
+chronometree ou une ecoute humaine. Le statut final vise le texte pret pour la
+voix; il ne certifie ni les futurs visuels ni la monetisation de la chaine.

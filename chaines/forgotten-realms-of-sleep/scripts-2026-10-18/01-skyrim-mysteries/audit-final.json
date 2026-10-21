@@ -1,0 +1,396 @@
+{
+  "editorial_status": "ready_for_narration",
+  "review_round": 102,
+  "review_file": "passage-102-chapitres-01-30.json",
+  "review_method": "Complete configured editorial text review plus source-linked editor revisions and deterministic checks. No human read-aloud, recorded audio or playing-through verification claimed.",
+  "words": 26936,
+  "characters_including_spaces_lf": 168027,
+  "narration_sha256_lf": "56b17ee85d4a4f7c82814ef5626c19ffaf53dcbb6fc8efe9bcb2296ed5690fcb",
+  "file_sha256": "b4a80e7cd8874e09cea0162c0430411bc5ff62752d4a47bd8b561c5eb3920d1b",
+  "chapter_count": 30,
+  "all_chapters_reviewed": true,
+  "fresh_review_findings": 2,
+  "unresolved_narration_findings": 0,
+  "editorial_adjudications": [
+    {
+      "round": 102,
+      "episode": "01-skyrim-mysteries",
+      "chapter": 12,
+      "quote": "Tolfdir follows into the newly accessible chambers. The excavation has reached chambers its present researchers weren't expecting to enter.",
+      "decision": "retained_editorial",
+      "reason": "Retained after reading the passage in context. The first sentence locates Tolfdir as the accompanying teacher; the second says this lies beyond the team's expected excavation. Those are distinct orientation facts. Repeating the concrete noun in two short spoken sentences is an acceptable cadence choice, not a duplicated explanation or a factual error."
+    },
+    {
+      "round": 102,
+      "episode": "01-skyrim-mysteries",
+      "chapter": 15,
+      "quote": "By the time the rings are recovered, the remaining decision concerns the being connected to the gauntlet: whether to accept what he offers for release or meet him as an enemy in the chamber.",
+      "decision": "retained_editorial",
+      "reason": "Retained as one sentence locating the optional choice after the evidence gathering. It does not assert a single canonical quest branch. The preceding passages explain the alternatives; this brief closing orientation lets a relaxed listener retain the actual decision before leaving the local story."
+    }
+  ],
+  "editorial_verdict": "Text ready after source-aware editorial adjudication. The automated reviewer is advisory and is not an authority over the game sources.",
+  "post_review_whitespace_normalization": [
+    {
+      "episode": "01-skyrim-mysteries",
+      "chapter": 30,
+      "before_sha256": "29788cd3ac55295a59c617f35b5349e75659804de2a1504d5ae836f6391606f0",
+      "after_sha256": "2e188049616f2f22122a9b8ed4905bdf769765a391bd4e8c51e31b16f0b090b2",
+      "change": "Trailing spaces only after review 102; all narrative tokens and punctuation unchanged."
+    }
+  ],
+  "hook": {
+    "first_sentence": "A house burns down in Morthal, and the man who survives moves in with another woman while the town is still asking what happened to his family.",
+    "paragraph_words": 79
+  },
+  "promise_map": [
+    {
+      "chapter": 1,
+      "summary": "Helgi's testimony and Alva's journal expose the vampire conspiracy behind Morthal's fatal house fire.",
+      "new_information": [
+        "Hroggar's apparent indifference reflects enthrallment, while Alva's journal identifies the wider threat."
+      ],
+      "local_answer": "Laelette caused the fire; Alva's connection to Movarth explains the conspiracy."
+    },
+    {
+      "chapter": 2,
+      "summary": "Frostflow's family records lead underground, where the player discovers the attackers and recovers Habd's remains.",
+      "new_information": [
+        "Returning Habd's remains to the beacon honors his recorded wish and grants Sailor's Repose."
+      ],
+      "local_answer": "Falmer and chaurus reached the household through the caverns beneath it."
+    },
+    {
+      "chapter": 3,
+      "summary": "Saadia and Kematu offer incompatible explanations for her flight, leaving the player to choose without independent adjudication.",
+      "new_information": [
+        "The prisoner lead reaches Kematu, whose proposed capture can be carried out at Whiterun's stables."
+      ],
+      "local_answer": "The pursuit can end, but Saadia's alleged betrayal remains unproven."
+    },
+    {
+      "chapter": 4,
+      "summary": "Helping Wujeeta exposes a skooma route from Riften Warehouse to Cragslane Cavern.",
+      "new_information": [
+        "Sarthis's note connects the waterfront supplier to an operation outside Riften."
+      ],
+      "local_answer": "The player disrupts the identified supply chain and reports success to the jarl."
+    },
+    {
+      "chapter": 5,
+      "summary": "Windhelm's murder investigation reveals Calixto's manipulation of evidence and clears the wrongly suspected Wuunferth.",
+      "new_information": [
+        "Calixto uses his apparent expertise about the amulet to redirect suspicion toward the court wizard."
+      ],
+      "local_answer": "Calixto is the Butcher; Wuunferth's warning enables intervention."
+    },
+    {
+      "chapter": 6,
+      "summary": "Eltrys's investigation exposes competing Forsworn and Silver-Blood interests before corrupt guards imprison the player.",
+      "new_information": [
+        "Thonar's use of Madanach permits influence beyond the prison that he cannot reliably control."
+      ],
+      "local_answer": "Nepos relays Madanach's orders, while Thonar exploits the imprisoned leader for business."
+    },
+    {
+      "chapter": 7,
+      "summary": "Cidhna Mine presents Madanach's escape plan alongside testimony of injustice and his own coercive demands.",
+      "new_information": [
+        "Madanach demands Grisvar's death before cooperation leads to the prepared escape route."
+      ],
+      "local_answer": "The player escapes by helping Madanach or killing him, with different rewards and consequences."
+    },
+    {
+      "chapter": 8,
+      "summary": "Interrupting Potema's summoning leads to a second investigation beneath Solitude and the consecration of her remains.",
+      "new_information": [
+        "Stopping the binding leaves Potema's released spirit requiring a separate intervention beneath the city."
+      ],
+      "local_answer": "Potema is defeated, and her skull is delivered to Styrr for consecration."
+    },
+    {
+      "chapter": 9,
+      "summary": "Aventus's request exposes Honorhall's mistreatment, while Astrid subsequently turns the player's intervention into a recruitment test.",
+      "new_information": [
+        "Helping Aventus does not require joining the Brotherhood; Astrid can instead be opposed."
+      ],
+      "local_answer": "Grelod's death fulfills Aventus's request, but Astrid's later demand creates a separate choice."
+    },
+    {
+      "chapter": 10,
+      "summary": "The Night Mother's selection of a Listener challenges Astrid's leadership, contributing to betrayal and the sanctuary's destruction.",
+      "new_information": [
+        "Astrid admits arranging the Listener's betrayal in an unsuccessful attempt to preserve her sanctuary."
+      ],
+      "local_answer": "The Night Mother chooses the player; Astrid's confession identifies the internal betrayal."
+    },
+    {
+      "chapter": 11,
+      "summary": "Winterhold's surviving town and College sustain incompatible interpretations of the unresolved Great Collapse.",
+      "new_information": [
+        "The College's survival shapes Korir's distrust and the town's diminished civic identity."
+      ],
+      "local_answer": "Skyrim establishes the catastrophe and its consequences, but not its exact cause."
+    },
+    {
+      "chapter": 12,
+      "summary": "A student excavation uncovers the Eye of Magnus, whose dangerous capabilities exceed the College's understanding.",
+      "new_information": [
+        "Tolfdir disrupts Jyrik's protection before the College transfers the unidentified orb into its teaching hall."
+      ],
+      "local_answer": "The Eye is recovered and studied, but its origin and full purpose remain unknown."
+    },
+    {
+      "chapter": 13,
+      "summary": "The transformed Augur directs the search toward the Staff and later tests advanced Restoration students.",
+      "new_information": [
+        "The Augur remains an instructor despite his altered existence beneath the College."
+      ],
+      "local_answer": "The Augur recommends the Staff of Magnus as the necessary response to the Eye."
+    },
+    {
+      "chapter": 14,
+      "summary": "Labyrinthian reveals Savos's abandoned companions and supplies the Staff needed to stop Ancano.",
+      "new_information": [
+        "Savos's surviving companions sustain Morokei's containment until the returning expedition breaks their hold."
+      ],
+      "local_answer": "The Staff enables Ancano's defeat; the Psijics then remove the Eye."
+    },
+    {
+      "chapter": 15,
+      "summary": "An incident report and confiscated rings let the player summon Velehk Sain and decide his release.",
+      "new_information": [
+        "Restoring the rings reverses the investigator's precaution and produces Velehk's offer of treasure."
+      ],
+      "local_answer": "The gauntlet summons Velehk, who can be released for a map or opposed."
+    },
+    {
+      "chapter": 16,
+      "summary": "Four apprentice sites provide identifiable remains and limited clues without a completed College investigation.",
+      "new_information": [
+        "Ilas-Tei's recoverable ring does not unlock a normal report-back resolution with Phinis."
+      ],
+      "local_answer": "The apprentices can be found, but their discoveries do not complete an implemented investigation."
+    },
+    {
+      "chapter": 17,
+      "summary": "Books, notes and surviving fragments lead through the Gauldur brothers' tombs to their father's final intervention.",
+      "new_information": [
+        "The writs preserve the names they condemn, allowing material evidence to outlast attempted suppression."
+      ],
+      "local_answer": "Gauldur ends his sons' resistance, and the fragments become the restored amulet."
+    },
+    {
+      "chapter": 18,
+      "summary": "Valdar recruits the player to replace failing containment with a prepared confrontation against Hevnoraak.",
+      "new_information": [
+        "Recovering three vessels allows Valdar to draw Hevnoraak forth before his full restoration."
+      ],
+      "local_answer": "Hevnoraak is defeated, allowing Valdar's long vigil to end."
+    },
+    {
+      "chapter": 19,
+      "summary": "Forelhost's siege records complicate Valmir's military introduction before his orders expose his Thalmor allegiance.",
+      "new_information": [
+        "Valmir's adaptable uniform disguises a mask-recovery mission serving a different employer."
+      ],
+      "local_answer": "Valmir is a Thalmor agent using military appearances to obtain Rahgot's mask."
+    },
+    {
+      "chapter": 20,
+      "summary": "The wooden mask grants access to an intact sanctuary where eight priest masks reveal Konahrik.",
+      "new_information": [
+        "Completing the display yields Konahrik without identifying its original bearer."
+      ],
+      "local_answer": "The puzzle explains how to obtain Konahrik, not who originally wore it."
+    },
+    {
+      "chapter": 21,
+      "summary": "Frostmere's records distinguish a stolen sword from Ra'jirr's attempt to restore it and quiet the Pale Lady.",
+      "new_information": [
+        "Returning the blade can banish the spirit, while defeating her permits keeping it."
+      ],
+      "local_answer": "The disturbance can end through returning the blade or defeating the Pale Lady."
+    },
+    {
+      "chapter": 22,
+      "summary": "Paarthurnax's teaching and admitted past place the Dragonborn between the Greybeards and the Blades.",
+      "new_information": [
+        "Paarthurnax describes restraint as continuing effort against an innate urge to dominate."
+      ],
+      "local_answer": "The player may kill Paarthurnax or leave the Blades' demand unmet."
+    },
+    {
+      "chapter": 23,
+      "summary": "The Elder Scroll reveals Alduin's displacement, teaches Dragonrend and connects the ancient struggle with his defeat in Sovngarde.",
+      "new_information": [
+        "Alduin's defeat lacks ordinary soul absorption, leaving his ultimate cosmic fate unsettled."
+      ],
+      "local_answer": "Alduin is defeated, but his ultimate fate and possible remaining role are not settled."
+    },
+    {
+      "chapter": 24,
+      "summary": "Erandur's return to Nightcaller Temple exposes his former allegiance before Vaermina challenges the player's trust.",
+      "new_information": [
+        "The remembered desertion explains Erandur's past without proving Vaermina's accusation of present betrayal."
+      ],
+      "local_answer": "Sparing Erandur allows him to destroy the Skull and end Dawnstar's nightmares."
+    },
+    {
+      "chapter": 25,
+      "summary": "Malyn's survival inside the damaged Star requires an internal confrontation before either helper can complete a repair.",
+      "new_information": [
+        "Choosing Aranea or Nelacar determines the restored artifact's form and soul-capturing use."
+      ],
+      "local_answer": "Defeating Malyn permits restoration as Azura's Star or alteration into the Black Star."
+    },
+    {
+      "chapter": 26,
+      "summary": "Peryite sends the Dragonborn against Orchendor, rewarding obedience without resolving the Afflicted's illness.",
+      "new_information": [
+        "Spellbreaker rewards Orchendor's removal, not a demonstrated cure for the people occupying Bthardamz."
+      ],
+      "local_answer": "Orchendor's death fulfills Peryite's order; the quest does not establish a general cure."
+    },
+    {
+      "chapter": 27,
+      "summary": "The Chantry pilgrimage reaches Vyrthur, whose vampirism and manufactured prophecy explain Harkon's pursuit of Auriel's Bow.",
+      "new_information": [
+        "Vyrthur created the prophecy as retaliation against Auriel after becoming a vampire."
+      ],
+      "local_answer": "Vyrthur's revelation explains the prophecy, and his defeat permits recovery of Auriel's Bow."
+    },
+    {
+      "chapter": 28,
+      "summary": "Miraak's distant influence explains Solstheim's compelled labor, while Bend Will begins releasing the affected communities.",
+      "new_information": [
+        "Miraak can take dragon souls, obstructing the player's acquisition of usable Shout knowledge."
+      ],
+      "local_answer": "Miraak compels the workers from Apocrypha; Bend Will breaks the stones' enchantment."
+    },
+    {
+      "chapter": 29,
+      "summary": "Successive excavation stages expose Ahzidal's influence and evidence implicating Ralis in the workers' deaths.",
+      "new_information": [
+        "Later journals implicate Ralis directly, beyond the earlier explanation of draugr attacks."
+      ],
+      "local_answer": "Ahzidal is defeated; the player judges Ralis without certainty about his retained control."
+    },
+    {
+      "chapter": 30,
+      "summary": "Mora trades the final word for Skaal knowledge, kills defeated Miraak and leaves the returning Dragonborn with Frea's warning.",
+      "new_information": [
+        "Storn's fatal bargain supplies the final Bend Will word required to reach and challenge Miraak."
+      ],
+      "local_answer": "Miraak's threat ends, but Mora's claim does not conclusively determine the Dragonborn's future."
+    }
+  ],
+  "groups": {
+    "overall_verdict": "FIX-THEN-PASS: two minor local repetition trims; otherwise text-ready on the supplied evidence. A fresh check of the edited text remains necessary before calling the revised version fully clear.",
+    "A": {
+      "verdict": "PASS for the sleep-adapted opening; comparative winner grading unavailable.",
+      "evidence": [
+        "Sentence one: \"A house burns down in Morthal, and the man who survives moves in with another woman while the town is still asking what happened to his family.\"",
+        "The opening paragraph is 79 whitespace-delimited words and contains the explicit turn \"But\".",
+        "The promise concerns hidden stories with differing degrees of resolution. Chapters 1-10 develop local investigations, chapters 11-23 develop buried histories and larger uncertainties, and chapters 24-30 develop Daedric encounters and bargains.",
+        "Paragraph two supplies the requested spoiler scope. Chapter one contains the only subscribe and listening-location/day-or-night request."
+      ],
+      "actionable_defects": [],
+      "limitations": "A4 is BLOCKED as a new comparative check: the session records prior comparison work but supplies no verbatim gaming comparison openings to grade here."
+    },
+    "B": {
+      "verdict": "FIX-THEN-PASS",
+      "evidence": [
+        "Every chapter delivers the local answer recorded above; genuinely unresolved matters are identified rather than artificially prolonged.",
+        "The investigation-to-prison transition opens at chapter 6's arrest and closes through chapter 7's alternative escapes.",
+        "The Eye sequence opens with chapter 12's discovery, advances through chapter 13's Staff recommendation, and closes its immediate danger in chapter 14.",
+        "Miraak's influence receives a local answer in chapter 28; the larger confrontation closes in chapter 30 after the intervening excavation.",
+        "The final chapter ends on return to Solstheim and possession of the closed book, without a new promotional loop."
+      ],
+      "actionable_defects": [
+        "Chapter 12 repeats the newly reached chambers in consecutive sentences.",
+        "Chapter 15 restates Velehk's release-or-fight decision after both alternatives have been explained."
+      ],
+      "limitations": "Aggressive rehook timing and mandatory unresolved loops are inapplicable under the sleep adaptation; no audio pacing claim is made."
+    },
+    "C": {
+      "verdict": "PASS",
+      "evidence": [
+        "The narration follows its assigned progression from local investigations through College and ancient-history cases to Daedric bargains.",
+        "Objects consistently carry causal work: Alva's journal identifies the threat, the Staff enables intervention, and the final Bend Will word enables the approach to Miraak.",
+        "The Nchardak addition explains control cubes, flooded chambers and the steam supply before the book becomes accessible.",
+        "Alternative player outcomes remain conditional, and unresolved historical questions are not substituted for completed quest answers."
+      ],
+      "actionable_defects": [],
+      "limitations": "Clarity was assessed from text, not through a claimed human read-aloud."
+    },
+    "D": {
+      "verdict": "FIX-THEN-PASS for the two quoted repetition defects; otherwise consistent with the requested register.",
+      "evidence": [
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt.",
+        "Comparable explanatory apposition in chapter 25: \"He's a former College mage, living away from the institution where the trouble began.\"",
+        "Comparable concrete scene-to-information movement in chapter 15: \"A black gauntlet stands upright on a pedestal in the Midden Dark, beneath the College of Winterhold.\"",
+        "No machine-banned phrase, narration label, URL, em dash or repeated bedtime instruction was identified in the supplied chapter text.",
+        "Narrative quantities have identifiable quest referents: four students or apprentices in chapters 15-16, three brothers in chapter 17, three vessels in chapter 18, eight required masks in chapter 20, and three Tongues in chapter 23. The historical date 4E 122 comes from the supplied Collapse evidence.",
+        "The supplied mechanical antithesis floor is zero. Concrete comparisons between witnesses, branches and objects are not automatically treated as aphorisms or trailer constructions."
+      ],
+      "actionable_defects": [
+        "Apply the two exact local repetition edits in findings."
+      ],
+      "limitations": "No executable scanner was run in this response. Supplied scan counts are prior recorded results, not a fresh software execution. No unsupported quantitative claim about all rhetorical antitheses is made."
+    },
+    "E": {
+      "verdict": "No actionable authenticity defect established from the available text and production record.",
+      "evidence": [
+        "The supplied record documents source-linked research, manually authored scope boundaries and comparative editorial work.",
+        "The narration includes sustained original interpretation, including conflicting interests in Cidhna Mine and the funding incentives in Unearthed.",
+        "Recorded 12-word comparison checks found no reference matches; this is supporting evidence rather than proof of exhaustive originality.",
+        "No duplicate publishing, bulk publishing plan or generated video exists in the supplied production context.",
+        "The attributed private register sample and short public examples are documented in ANCRE-ET-METHODE.txt."
+      ],
+      "actionable_defects": [],
+      "limitations": "No new top-five comparison, independent plagiarism search or platform-policy determination was performed. AI editorial review is not represented as human review. Video-generation checks are not applicable to an unproduced narration."
+    }
+  },
+  "anchor_evidence_file": "../ANCRE-ET-METHODE.txt",
+  "numbers_ledger_file": "nombres-et-sources.json",
+  "comparative_review_file": "../RELECTURE-COMPARATIVE.txt",
+  "comparative_reference_count": 5,
+  "scanner": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 0,
+    "echo": 25,
+    "mech": 0
+  },
+  "shape_adjudication": [],
+  "antithesis_mechanical_floor": 0,
+  "originality_check": {
+    "full_private_reference_transcripts": 5,
+    "exact_12_word_matches": 0,
+    "duplicate_whole_paragraphs": 0,
+    "semantic_or_platform_guarantee": false
+  },
+  "cta": {
+    "count": 1,
+    "chapter": 1,
+    "request": "Optional subscribe plus listening location and day-or-night."
+  },
+  "limits": [
+    "Audio timing and a human read-aloud are not performed.",
+    "Research is access-qualified; not every game dialogue is independently verified from a full primary recording.",
+    "A full top-five competitive originality study and platform monetization certification are outside this text delivery."
+  ],
+  "scope": "The Elder Scrolls V: Skyrim base game, Dawnguard and Dragonborn. Full spoilers. No mods or Creation Club material. Do not develop the Dwemer disappearance: that has its own film.",
+  "files_applied": [
+    "faceless-scripts-os-master.md",
+    "research-and-ideation-skill.md",
+    "voice-anchoring-skill.md",
+    "humanizer-skill.md",
+    "variety-rotation-skill.md",
+    "greenlight-audit-skill.md",
+    "trailer-voice-scan.py"
+  ]
+}

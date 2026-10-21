@@ -1,0 +1,59 @@
+[
+  {
+    "id": "01-skyrim-mysteries",
+    "video_title": "2 Hours of Skyrim's Darkest Mysteries to Fall Asleep To",
+    "thumbnail_text": "SKYRIM / MYSTERIES / FOR SLEEP",
+    "file": "01-skyrim-mysteries.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 383802,
+    "sha256": "5b362767281beb3cb93300e54ab92493f78d5d4bbbc80bd56a98eb137cd2ff6b",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "generation": "Built-in imagegen with approved logo and banner as style references",
+    "export": "JPEG quality 95; technical resize only, no creative retouch",
+    "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
+    "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
+    "next_step": "Direction A selected by user; use the separate direction-A set for the chosen Skyrim and new Vault-Tec/Dwemer proposals."
+  },
+  {
+    "id": "02-vault-tec",
+    "video_title": "The Secrets of Vault-Tec Explained to Fall Asleep To | Fallout Lore",
+    "thumbnail_text": "VAULT-TEC / SECRETS / FOR SLEEP",
+    "file": "02-vault-tec.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 355458,
+    "sha256": "647b879474a3ffd50782915b14e5cf9b42647c3ff55a826af7937b7d0be0003d",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "generation": "Built-in imagegen with approved logo and banner as style references",
+    "export": "JPEG quality 95; technical resize only, no creative retouch",
+    "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
+    "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
+    "next_step": "Direction A selected by user; use the separate direction-A set for the chosen Skyrim and new Vault-Tec/Dwemer proposals."
+  },
+  {
+    "id": "03-dwemer",
+    "video_title": "The Disappearance of the Dwemer Explained to Fall Asleep To | Elder Scrolls Lore",
+    "thumbnail_text": "DWEMER / MYSTERY / FOR SLEEP",
+    "file": "03-dwemer.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 358096,
+    "sha256": "2fb9970faae05bf92a6eb103dadfa3c43fa7d9df5a9245f548d873b1a0947ef1",
+    "source_dimensions": [
+      1672,
+      941
+    ],
+    "generation": "Built-in imagegen with approved logo and banner as style references",
+    "export": "JPEG quality 95; technical resize only, no creative retouch",
+    "visual_review": "Text spelling, series palette, recognizable subject, framing, and 320x180 readability inspected",
+    "selection": "Rejected by user on 2026-10-18; retained as archive; do not publish",
+    "next_step": "Direction A selected by user; use the separate direction-A set for the chosen Skyrim and new Vault-Tec/Dwemer proposals."
+  }
+]

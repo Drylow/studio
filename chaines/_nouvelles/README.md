@@ -79,3 +79,8 @@ Pris : Cage Report, Cage Wire, Cage Brief, Cage Desk, Fight Dispatch (« Fight D
 Ring Scoop, Ring Rundown. « Octagon » évité : marque déposée de l'UFC.
 Vérifier juste avant de créer la chaîne : `curl -o /dev/null -w '%{http_code}' https://www.youtube.com/@Nom`
 (404 = libre) + recherche NexLev `youtube_search` type channel sur le nom exact.
+
+
+## Projets POV finance et pouvoir — 18 octobre 2026
+
+[Decision et reference visuelle commune approuvee](pov-finance-et-pouvoir/README.md). Deux concepts en preparation ; ancien style financier rejete.
