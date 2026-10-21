@@ -4,6 +4,7 @@ Généré par `production/export_channels.py` (liens et état : `production/VIDE
 
 | Vidéo | Script | Recherche | Publication | Miniature |
 |---|---|---|---|---|
+| POV: You Fall in Love With a Spartan Woman | [script](you-fall-in-love-with-a-spartan-woman/script.md) | [notes](you-fall-in-love-with-a-spartan-woman/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-spartan-woman/publication.md) | [miniature.jpg](you-fall-in-love-with-a-spartan-woman/miniature.jpg) |
 | POV: You Fall in Love With a Female Knight | [script](you-fall-in-love-with-a-female-knight/script.md) | [notes](you-fall-in-love-with-a-female-knight/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-female-knight/publication.md) | [miniature.jpg](you-fall-in-love-with-a-female-knight/miniature.jpg) |
 | POV: You Fall in Love With a Female Ninja | [script](you-fall-in-love-with-a-female-ninja/script.md) | [notes](you-fall-in-love-with-a-female-ninja/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-female-ninja/publication.md) | [miniature.jpg](you-fall-in-love-with-a-female-ninja/miniature.jpg) |
 | POV: You Fall in Love With a Spanish Woman | [script](you-fall-in-love-with-a-spanish-woman/script.md) | [notes](you-fall-in-love-with-a-spanish-woman/recherche.md) | [titre, description, tags](you-fall-in-love-with-a-spanish-woman/publication.md) | [miniature.jpg](you-fall-in-love-with-a-spanish-woman/miniature.jpg) |
