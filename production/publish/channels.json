@@ -37,6 +37,13 @@
       "youtube_channel_id": "UCh_jI9tSDMZTD_GLM7XkGVA",
       "published_thumbnail": "production/publish/published-thumbnails/pirate.jpg",
       "tubeforge_channel_id": "channel-71bce3373faf"
+    },
+    {
+      "name": "Última Puerta Segura",
+      "app": "fury",
+      "profile": "Última Puerta Segura",
+      "tubeforge_channel_id": "channel-3827e1c1c08b",
+      "language": "es"
     }
   ],
   "_thumbnails": "Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature garde EXACTEMENT le style visuel de la miniature publiée de la chaîne (dessin, couleurs, police, couleur et place du texte) mais montre une scène NOUVELLE tirée de l'épisode ; jamais la même image avec un autre texte. production/daily/thumbs.py --adapt --ref <published_thumbnail> ..."
