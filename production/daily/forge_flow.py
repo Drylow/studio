@@ -74,7 +74,7 @@ def summary(s):
 
 def wait(video_id, every=10, limit=4 * 3600):
     start, last = time.time(), ""
-    time.sleep(5)
+    time.sleep(20)  # le VPS peut afficher encore l'ancien état « interrupted » quelques secondes après le lancement
     while time.time() - start < limit:
         try:
             s = status(video_id)
