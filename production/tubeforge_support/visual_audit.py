@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import sys
 
-REVISION = "visual-audit-2026-10-21-v5"
+REVISION = "visual-audit-2026-10-21-v6"
 CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action", "background_cast")
 SEVERITIES = {"none", "minor", "major", "uncertain"}
 PRIMARY_RISKS = {"desk_camera_change", "owner_flagged"}
@@ -24,12 +24,17 @@ drawing_style: same drawn finish, no flattened/chibi redesign or unintended
 flesh-tone faces when the reference characters have pure-white cartoon skin.
 identity: named cast, wardrobe, no duplicated or missing actor required by action.
 anatomy: exactly one pupil per visible eye, attached arms/hands, supported props.
-furniture_geometry: seated pelvis/back supported by chair behind the body,
-legs under an opaque table, operator at the desk working edge, chest facing the
-keyboard and screen. Keyboard nearest operator, display beyond keyboard; hands
+furniture_geometry: seated pelvis/back supported by chair behind the body.
+For writing or typing ON a table, legs fit under the actual working edge and
+the operator's chest faces the keyboard and screen. Keyboard nearest operator,
+display beyond keyboard; hands
 reach from the operator side. Flag sideways perching and a rotated actor pasted
 onto a frontal desk/room. Profile/over-shoulder is fine only with coherent desk
-projection. A standing visitor beside a desk is legitimate. If spatial alignment
+projection. A standing visitor beside a desk is legitimate. A seated person
+reading a document held in their lap or turning to talk may also sit beside a
+table: do not invent a keyboard-operator requirement for that different task.
+This does not excuse a sideways body actually typing or writing on a worktop.
+If spatial alignment
 cannot be established confidently, use uncertain rather than invent a rationale.
 scene_action: plausible staging for the narration, motivated expression, consistent
 scene materials/landmarks where a scene anchor is provided. A purposeful object
