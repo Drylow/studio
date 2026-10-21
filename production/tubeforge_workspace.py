@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'forge_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_locations.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py', 'slideshow_render.py'):
+    for name in ('workspace_api.py', 'forge_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_locations.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py', 'slideshow_render.py', 'visual_audit.py'):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
     shutil.copytree(support / 'forge_docs', root / 'app/forge_docs', dirs_exist_ok=True)

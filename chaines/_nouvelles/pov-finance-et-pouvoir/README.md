@@ -1,5 +1,12 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Cadence et controle visuel — nouvelle consigne du 21 octobre
+
+Pour les prochaines videos des deux chaines : cible de six secondes par nouvelle image, sept secondes maximum par plan, pas seulement une moyenne. Decouper la narration avec ses vrais timestamps apres la voix ; chaque image ajoute une action, reaction ou information utile, pas une duplication artificielle pour atteindre le compte. Garder les fondus de 0,5 seconde et la sortie noire de cinq secondes. Ne pas refaire P01 ni relancer les dix-neuf remakes suspendus sur la seule base de cette preference future.
+
+Le proprietaire demande de reduire l'usage du chat en deportant l'inspection visuelle vers le CLI Proxy. Outil disponible : production/tubeforge_support/visual_audit.py, execution exclusivement VPS, references de dessin/identite/scene separees, trois demandes simultanees maximum, recus avec empreintes et cache, aucune regeneration ni reecriture automatique. Les verdicts proxy_reviewed restent attribues au proxy, jamais a une inspection effective par l'agent principal. Examiner ici les alertes/incertitudes et les changements d'angle au bureau marques desk_camera_change, meme si le proxy dit PASS. Le test connu detecte les deux derives de dessin mais manque le mauvais placement au bureau ; les trois versions corrigees passent. Cette limite motive le controle cible et interdit de pretendre a une validation autonome parfaite. Les controles techniques du montage restent sur VPS. Ne pas reprendre l'ancien modele texte sans verifier sa presence au catalogue. Aucun lancement du reste du lot n'est autorise par cette modification de methode.
+
+
 ## P01 complet livre le 21 octobre — 91 plans revus et trois corrections
 
 Le remake complet de « Your Life Working for a Billionaire » est termine : 16 min 18, 1920 x 1080 a 24 images/s, 91 plans fixes avec raccords par courte scene. Trente-huit sources conservees, cinquante-trois variantes nouvelles et trois corrections ciblees. Le plan 36 au bureau a ete refait avec fauteuil, corps et ordinateur alignes ; les plans 54 et 76 ont ete refaits pour supprimer la derive de dessin. Les candidats rejetes sont exclus du montage et leurs remplacements effectivement regardes.

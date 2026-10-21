@@ -20,11 +20,57 @@ Pour un nouveau PC ou le collegue qui produit des aliens, commencer par [README_
 | `google_flow.py` | Transport Google Flow/useapi et comptes, distinct du chemin CLI Proxy |
 | `studio_bridge.py` | Pont avec les services du depot |
 | `slideshow_render.py` | Rendu technique d'images fixes inspectees, fondus centres sur les coupes et horloge voix conservee ; accepte un job JSON explicite, sans generation ni redaction |
+| `visual_audit.py` | Inspection visuelle en lecture seule via CLI Proxy, recus avec empreintes et signalement des anomalies ; aucune reecriture ni regeneration automatique |
 | `workspace_seed.py` | Initialisation/migration des donnees ; ne pas reseeder un workspace existant pour une reprise |
 | `main.py`, `__init__.py`, `import_review.py`, `benchmark.py` | Outils additionnels et point d'entree, egalement conserves dans la base distribuable |
 | `*_tests.py`, `workspace_ui_tests.cjs`, `requirements.lock` | Verification ciblee et dependances de l'installation |
 
 Le script `../tubeforge_workspace.py` copie les modules maintenus dans `work/TubeForge/app/` et le frontend dans `app/web/`, puis applique les points d'integration. Il ne constitue pas une installation complete a lui seul.
+
+## Inspection visuelle via le proxy
+
+Depuis la racine de l'installation sur le VPS uniquement :
+
+```bash
+python -m app.visual_audit --manifest /chemin/prive/manifest.json --output /chemin/prive/audit --model IDENTIFIANT_DU_CATALOGUE
+```
+
+Choisir explicitement un modele de vision disponible dans le catalogue du proxy.
+Une ancienne valeur de configuration texte peut ne plus y exister. Le manifeste
+contient `items`, chaque entree avec `id`, `path` absolu de l'image candidate,
+`narration`, `characters` et `references` (chemins absolus, roles `drawing-only`,
+`identity` ou `scene-anchor`). Le module envoie les vrais pixels et distingue ces
+roles ; il ne peut pas se contenter du prompt pour valider une image.
+
+L'auteur declare aussi `risk_flags: ["desk_camera_change"]` pour les changements
+de camera d'un personnage travaillant a un bureau, ou `owner_flagged` pour une
+image signalee par le proprietaire. Ces images restent a inspecter par l'agent
+principal meme si le proxy donne PASS ; le verdict du modele est conserve tel
+quel et le routage supplementaire est trace separement.
+
+Trois analyses simultanees au maximum, un appel sans requete jumelle ni retry
+automatique par image. Les recus sont caches par empreinte de l'image, des
+references, de la narration, du modele et de la grille de controle. Une issue
+incertaine ou une erreur ne devient jamais un PASS ni une nouvelle requete
+silencieuse. Les recus, reponses et identifiants de modele sont des donnees de
+travail privees, pas des fichiers a committer.
+
+Le rapport distingue `pass`, `needs_review` et `reject` et attribue la revue a
+`cli_proxy_vision` / `proxy_reviewed`. Cela ne signifie jamais que l'agent
+principal a regarde cette image. Il ne modifie aucun projet, prompt, image,
+calendrier ou rendu. Les anomalies et doutes restent a inspecter ; calibrer le
+verificateur sur des erreurs connues et des images correctes avant de l'utiliser
+comme filtre. Il ne garantit pas l'absence de defauts. Les controles techniques
+de fichiers, son, horloge et MP4 restent distincts.
+
+Calibration du 21 octobre : sur trois erreurs connues et leurs trois corrections,
+le controle retenu signale les deux derives de dessin et accepte les trois images
+corrigees, mais laisse passer le mauvais placement au bureau. D'ou le controle
+cible obligatoire des angles de bureau ; ne pas presenter ce test comme six
+jugements corrects ou comme une validation d'un montage entier sans revue.
+
+Tests de contrat sans API ni traitement d'image :
+`python production/tubeforge_support/visual_audit_tests.py` depuis le depot.
 
 ## Commandes de maintenance
 
