@@ -1,5 +1,27 @@
 # Approved house illustration style
 
+## Owner direction — 21 October 2026
+
+Use the newly selected image provider to improve execution of the approved house
+drawing: richer readable scene-specific settings, natural poses and attached
+hands, purposeful lighting, clear action, motivated expressions and stronger
+composition. This is not approval to change the round-white-head identity, make
+humans realistic, stretch proportions or vary rendering between shots. Keep the
+same outlines, eye design, matte shading and relative detail in every location.
+
+For the next Marine episode, establish recognisable sailing warships, marine
+uniforms, island ports and nautical equipment in the approved cartoon language.
+Wardrobe evolves with the authored career; a rank change does not redesign the
+actor's face. For the following Wall episode, create its separate cold stone,
+ice, timber and black-cloak palette in that same drawing language. Do not import
+the preceding episode's actors, props or scenery.
+
+The chosen provider is an execution choice, never proof of visual quality.
+The owner explicitly retained complete primary visual review for this channel:
+actually inspect every reference and shot, then the encoded film. Proxy triage
+does not replace it. Preserve useful scene continuity without freezing all
+actions into one composition or inventing new rooms when a camera changes sides.
+
 User decision, 15 October 2026: the Jabba palace test is approved, especially the
 human employee on the right. Use that actual image as the primary drawing-style
 anchor for every new white round-headed cast on Oddly Fictional Lives.

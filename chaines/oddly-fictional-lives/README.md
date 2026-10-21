@@ -1,5 +1,24 @@
 # Oddly Fictional Lives
 
+## Production instructions — 21 October 2026
+
+The owner selected **Your Life as Every Marine Rank in One Piece**, followed by
+**Your Life on the Wall (Game of Thrones)**. These are authorised for production,
+not yet delivered or scheduled. Keep the configured Ryan voice and the exclusively
+selected image provider in private production settings. Voice first, actual
+word timings next, then authored images and hosted rendering; no local rendering.
+
+The owner explicitly requires **full visual checks for this channel**. Inspect
+every reference and final shot here, then the encoded montage; proxy-assisted
+triage does not replace these inspections. Record exact reviewed files and hashes,
+and inspect corrections again. The lighter policy for the two workplace channels
+does not apply. See [the current production rules](AGENTS.md).
+
+For these new episodes, target six seconds per image and never exceed seven.
+Keep static framing, short crossfades, the entry from black and final fade to
+black. Existing episode durations and their historical release schedules below
+do not define the new productions' duration, status or publication date.
+
 ## Recherche de la suite — 19 octobre 2026
 
 Le catalogue public releve comprend six videos : Halo/Covenant reste retire par
