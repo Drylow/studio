@@ -10,7 +10,7 @@ Les lieux commencent par des scenes occupees. Un plan suivant reprend la disposi
 
 Le proprietaire a signale des figurants blancs mais encore dessines avec des visages humains. Ce defaut avait echappe au controle precedent : la couleur blanche seule ne suffit pas. Tous les personnages doivent suivre le dessin des tetes rondes, y compris les petits clients et passants au fond. Le controle visuel comporte desormais une categorie distincte pour ces figurants, obligatoire meme lorsque le heros est correct. Les differences legitimes de coiffure, vetements, expression et profil restent permises.
 
-La nouvelle revue des 149 versions initialement retenues est terminee. Toutes les alertes ont ete regardees, puis les corrections ont ete liees a leurs empreintes. Les 153 sources finales passent le controle des figurants : 111 sont attribuees a une inspection directe et 42 a une revue par proxy. Les anciens candidats rejetes restent conserves, exclus du montage. Une tete blanche vue de dos peut naturellement masquer les yeux ; les visages visibles suivent le dessin cartoon.
+La nouvelle revue des 149 versions initialement retenues est terminee. Toutes les alertes ont ete regardees, puis les corrections ont ete liees a leurs empreintes. Lors de cette premiere livraison, les 153 sources avaient ete retenues : 111 par inspection directe et 42 par revue par proxy. La reprise du 22 octobre ci-dessous remplace cette validation pour les profils de figurants. Les anciens candidats rejetes restent conserves, exclus du montage. Une tete blanche vue de dos peut naturellement masquer les yeux ; les visages visibles suivent le dessin cartoon.
 
 Pour les plans courants, le controle visuel assiste passe par le proxy configure, avec empreintes et verdicts attribues a cet outil. Les alertes, incertitudes et changements d'angle au bureau restent soumis a inspection directe. Une generation reussie ne vaut pas validation visuelle. Les scenes utilisees comme ancrages sont regardees avant reutilisation.
 
@@ -33,3 +33,12 @@ Le pilote prive suivant a ses six identites et quatorze premiers lieux occupes i
 Une nouvelle inspection du plan casino signale par le proprietaire montre encore des nez et contours humains sur certains petits personnages de profil, meme apres la premiere correction. Ce candidat est de nouveau ecarte ; une correction etroite conserve la foule, les costumes, la mise en scene et le decor, en reprenant la construction circulaire des tetes. Le controle distingue maintenant explicitement la silhouette du visage de sa seule couleur blanche. Une vue de profil peut masquer un oeil, mais ne justifie pas de remplacer le cercle par un nez humain, une oreille ou une machoire anguleuse. Cette exigence couvre aussi les personnages representes sur les ecrans, photos, peintures et reflets.
 
 Le MP4 precedemment livre reste conserve pendant cette correction. Sa mise a jour attend la nouvelle inspection de la source et du film encode, puis un transfert integral verifie ; aucune correction seulement programmee n'est presentee comme deja livree.
+
+
+## Reprise du 22 octobre : silhouettes des tetes dans tout le film
+
+Le premier plan signale est corrige et inspecte : les sept figurants sont conserves avec des contours ronds blancs, des yeux cartoon termines et leurs tenues distinctes. Le rendu qui ne corrigeait que ce plan est retenu hors livraison : l inspection du film encode a montre le meme defaut sur des plans voisins.
+
+Les 153 sources ont donc fait l objet d une nouvelle revue. Les 88 images signalees ont toutes ete regardees sur des planches liees aux empreintes des sources ; vingt alertes ne justifiaient pas de regeneration. Les quatre plans voisins et 65 autres images necessitent une correction ciblee. Leurs retouches sont redigees et en file sur le serveur, en gardant chaque decor, action, coiffure et tenue. Les figurants utiles restent presents. Les chaises vides et formes architecturales ne doivent pas devenir des personnes.
+
+Le verrou de montage exige maintenant cette nouvelle preuve de controle pour chaque empreinte. Il reste ferme : 84 sources sont retenues, 69 corrections attendent leur inspection. Le MP4 local de la livraison precedente reste conserve. Ni une retouche en file, ni le seul fait qu un rendu soit termine ne valent livraison de cette revision.
