@@ -1,4 +1,4 @@
-# Casino â€” remake en cours, 21 octobre
+# Casino — remake en cours, 21 octobre
 
 Titre conserve : **Your Life Working Inside a Las Vegas Casino**. Chaine : Oddly Important Guy.
 
@@ -42,3 +42,10 @@ Le premier plan signale est corrige et inspecte : les sept figurants sont conser
 Les 153 sources ont donc fait l objet d une nouvelle revue. Les 88 images signalees ont toutes ete regardees sur des planches liees aux empreintes des sources ; vingt alertes ne justifiaient pas de regeneration. Les quatre plans voisins et 65 autres images necessitent une correction ciblee. Leurs retouches sont redigees et en file sur le serveur, en gardant chaque decor, action, coiffure et tenue. Les figurants utiles restent presents. Les chaises vides et formes architecturales ne doivent pas devenir des personnes.
 
 Le verrou de montage exige maintenant cette nouvelle preuve de controle pour chaque empreinte. Il reste ferme : 84 sources sont retenues, 69 corrections attendent leur inspection. Le MP4 local de la livraison precedente reste conserve. Ni une retouche en file, ni le seul fait qu un rendu soit termine ne valent livraison de cette revision.
+
+
+### Reference de foule isolee
+
+Une reference contenant une scene complete a provoque la copie de sa composition dans une retouche. Ce resultat est rejete. Les lots non demarres ont ete remplaces avant tout appel image ; les requetes actives ont ete laissees jusqu a une issue connue. Un guide compose uniquement de quatre tetes approuvees, de face et de profil, remplace cette seconde scene. Le premier essai regarde conserve le decor et termine les petits visages sans copier une autre mise en scene. La regle sur les figurants, les profils et les humains representes dans les images est aussi enregistree dans le style partage de la chaine ; les requetes deja figees gardent leurs references documentees.
+
+Les retouches progressent, avec 99 sources retenues sur 153 a cette verification. Les sources rejetees restent exclues et le rendu de cette revision reste ferme. Une expression animee, un regard vers son interlocuteur ou une vue de dos legitime ne sont pas rejetes automatiquement pour ne pas reproduire chaque mot du prompt a la lettre ; le controle porte sur la comprehension, la construction des personnages et la coherence physique.
