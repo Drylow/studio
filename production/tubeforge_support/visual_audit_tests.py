@@ -79,6 +79,25 @@ class VisualAuditTests(unittest.TestCase):
 
 
 class ReceiptTests(unittest.IsolatedAsyncioTestCase):
+    async def test_authored_beat_reaches_reviewer_and_changes_cached_context(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "fixture.txt"
+            source.write_bytes(b"fixture")
+            item = {"id": "one", "path": str(source), "references": [],
+                    "characters": ["Captain", "Owner"],
+                    "authored_action": "Captain explains; seated owner listens."}
+            chat = AsyncMock(return_value=json.dumps(response()))
+            with patch.object(audit.sys, "platform", "linux"), patch.object(audit, "image_part", return_value={"type": "text", "text": "mock pixels"}):
+                first = await audit.review(item, "fixture-model", root / "receipts", chat)
+                sent = chat.await_args.args[0][0]["content"][0]["text"]
+                self.assertIn("Primary-authored beat: Captain explains; seated owner listens.", sent)
+                self.assertIn('Cast: ["Captain", "Owner"]', sent)
+                changed = dict(item, authored_action="Owner asks; captain listens.")
+                second = await audit.review(changed, "fixture-model", root / "receipts", chat)
+                self.assertNotEqual(first["cache_key"], second["cache_key"])
+                self.assertEqual(chat.await_count, 2)
+
     async def test_identical_input_reuses_receipt_and_changed_source_invalidates_it(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
