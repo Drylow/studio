@@ -26,6 +26,15 @@ class VisualAuditTests(unittest.TestCase):
         data["checks"][3]["severity"] = "major"
         self.assertEqual(audit.validate(data)["decision"], "reject")
 
+    def test_background_cast_cannot_be_omitted_or_hidden_by_correct_hero(self):
+        data = response()
+        background = next(c for c in data["checks"] if c["category"] == "background_cast")
+        background.update(severity="major", reason="Rear patron has a long human face and flesh skin despite the round white reference.")
+        self.assertEqual(audit.validate(data)["decision"], "reject")
+        data["checks"].remove(background)
+        with self.assertRaises(ValueError):
+            audit.validate(data)
+
     def test_uncertainty_minor_and_low_confidence_require_review(self):
         for level in ("uncertain", "minor"):
             data = response()

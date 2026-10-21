@@ -10,8 +10,8 @@ import json
 from pathlib import Path
 import sys
 
-REVISION = "visual-audit-2026-10-21-v2"
-CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action")
+REVISION = "visual-audit-2026-10-21-v3"
+CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action", "background_cast")
 SEVERITIES = {"none", "minor", "major", "uncertain"}
 PRIMARY_RISKS = {"desk_camera_change", "owner_flagged"}
 RUBRIC = """Inspect the actual attached pixels, not just the prompt. This is a
@@ -19,7 +19,7 @@ cartoon narrative frame. References have separate explicit roles: drawing-only
 fixes linework, adult proportions, face/eye design, cel shadows and finish;
 identity fixes actor/wardrobe, never a permanent expression; scene-anchor fixes
 room/materials, not the camera. The final image is the CANDIDATE to evaluate.
-Check all five categories:
+Check all six categories:
 drawing_style: same drawn finish, no flattened/chibi redesign or unintended
 flesh-tone faces when the reference characters have pure-white cartoon skin.
 identity: named cast, wardrobe, no duplicated or missing actor required by action.
@@ -35,9 +35,21 @@ scene_action: plausible staging for the narration, motivated expression, consist
 scene materials/landmarks where a scene anchor is provided. A purposeful object
 insert does not require a whole person. Do not demand text legibility or identical
 framing. Do not invent invisible anatomy or a room behind the camera.
+background_cast: inspect EVERY visible bystander, patron and side character,
+including small people behind the main action. When the drawing and identity
+references use round white cartoon heads, ALL humans follow that construction,
+with white exposed skin and the same eye language. Merely painting a realistic
+human face white is insufficient: long human jaws, realistic noses, facial age
+creases, flesh or gray skin and naked gray silhouettes are real defects. Preserve
+distinct hair/clothes and motivated expressions; do not require bald clones.
+Inventory visible extras by position, or state that none are present. Rear or
+occluded faces may legitimately hide eyes. A front-facing blank disc is not a
+finished face. Follow the reference eye design rather than impose a different
+channel's eyes. A tiny stylized profile feature alone does not make an otherwise
+round cartoon head a realistic human face; judge the actual construction.
 Return JSON only: {"confidence":0.0,"checks":[{"category":"drawing_style",
 "severity":"none|minor|major|uncertain","reason":"specific visible evidence"},
-...one entry for EACH of the five categories...],"summary":"short diagnosis"}.
+...one entry for EACH of the six categories...],"summary":"short diagnosis"}.
 Report uncertainty honestly. A successful API request is not visual approval.
 
 Severity calibration: none means no actual visible defect, not an obligation to
