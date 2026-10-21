@@ -1,0 +1,16 @@
+{
+  "channel": "Última Puerta Segura",
+  "title": "Supervivencia Zombie: Sobreviví 30 Días en una Planta de Agua Rodeada de Zombies",
+  "description_file": "chaines/ultima-puerta/episodio-01-dia-01-30/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/sLE3ZiPU",
+    "file": "final.mp4",
+    "sha256": "5475e5b17da0dba45157adbd6c0af13540ba2c8f60990f23154fb77eec3407d7",
+    "url": "http://media.edgerunners.fr/ltima-puerta-segura--episodio-01-dia-01-30-696a0f7743fec96a.mp4"
+  },
+  "thumbnail": "chaines/ultima-puerta/episodio-01-dia-01-30/thumbnail.jpg",
+  "captions": "chaines/ultima-puerta/episodio-01-dia-01-30/English-Captions.srt",
+  "tags_file": "chaines/ultima-puerta/episodio-01-dia-01-30/tags.txt",
+  "visibility": "public",
+  "tubeforge_video_id": "supervivencia-zombie-sobrevivi-30-dias-e-afb914"
+}
