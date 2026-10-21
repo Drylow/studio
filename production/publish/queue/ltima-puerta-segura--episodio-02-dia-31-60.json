@@ -1,0 +1,16 @@
+{
+  "channel": "Última Puerta Segura",
+  "title": "Supervivencia Zombie: Sobreviví 60 Días Cuando Alguien Cerró el Río",
+  "description_file": "chaines/ultima-puerta/episodio-02-dia-31-60/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/4VzYgjWN",
+    "file": "final.mp4",
+    "sha256": "58075f38fd4eb553b2f56a1c052e9c63345d6d586bf883961956d25d4b82ce1a",
+    "url": "http://media.edgerunners.fr/ltima-puerta-segura--episodio-02-dia-31-60-c3c13d31e30e5b83.mp4"
+  },
+  "thumbnail": "chaines/ultima-puerta/episodio-02-dia-31-60/thumbnail.jpg",
+  "captions": "chaines/ultima-puerta/episodio-02-dia-31-60/English-Captions.srt",
+  "tags_file": "chaines/ultima-puerta/episodio-02-dia-31-60/tags.txt",
+  "visibility": "public",
+  "tubeforge_video_id": "supervivencia-zombie-sobrevivi-60-dias-c-8029aa"
+}
