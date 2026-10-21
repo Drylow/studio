@@ -62,8 +62,9 @@ def short_by():
     ch = st.get_channel(pr["channel_id"]) or {}
     need = float(ch.get("min_minutes") or 0)
     v = pr.get("voice") or {}
+    # sur le script seul, marge d'1 min : la voix sort parfois plus vite que prévu (Spartan : 26,7 estimées → 24,9)
     have = (v["duration"] / 60.0 if v.get("duration")
-            else S.word_count(S.narration(pr.get("script") or "")) / float(ch.get("wpm") or 150))
+            else S.word_count(S.narration(pr.get("script") or "")) / float(ch.get("wpm") or 150) - 1.0)
     log(f"durée : {have:.1f} min (minimum {need:g})")
     return max(0.0, need - have)
 
