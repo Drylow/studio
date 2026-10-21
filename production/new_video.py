@@ -32,6 +32,9 @@ if fmt:
     store.update_project(pr["id"], lambda x: x.__setitem__("format", fmt))
 if a.object:
     store.update_project(pr["id"], lambda x: x.__setitem__("object_noun", a.object))
+era = next((ln.split(":", 1)[1].strip() for ln in notes.splitlines() if ln.startswith("ERA LOCK:")), "")
+if era:  # ligne « ERA LOCK: … » des notes → ajoutée à chaque prompt d'image (vidéo historique)
+    store.update_project(pr["id"], lambda x: x.__setitem__("era_lock", era))
 open(os.path.join(d, "pid.txt"), "w").write(pr["id"])
 json.dump({"template": a.template, "title": a.title, "pid": pr["id"]}, open(os.path.join(d, "video.json"), "w"), indent=1)
 print(pr["id"], ch["name"], pr["minutes"], "min", fmt or ch.get("format"))

@@ -1674,6 +1674,9 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
                 prm, chars = results.get(s["i"], ("", []))
                 s["prompt"] = prm or f"Illustration of: {s['text'][:200]}"
                 s["chars"] = chars
+            if x.get("era_lock") and "ERA LOCK" not in s["prompt"]:
+                # vidéo historique : décor d'époque imposé à chaque image (sinon cuisines modernes, canapés, frigos…)
+                s["prompt"] += " ERA LOCK: " + x["era_lock"]
     store.update_project(pid, save)
 
 
