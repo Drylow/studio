@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import sys
 
-REVISION = "visual-audit-2026-10-21-v4"
+REVISION = "visual-audit-2026-10-21-v5"
 CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action", "background_cast")
 SEVERITIES = {"none", "minor", "major", "uncertain"}
 PRIMARY_RISKS = {"desk_camera_change", "owner_flagged"}
@@ -49,8 +49,11 @@ distinct hair/clothes and motivated expressions; do not require bald clones.
 Inventory visible extras by position, or state that none are present. Rear or
 occluded faces may legitimately hide eyes. A front-facing blank disc is not a
 finished face. Follow the reference eye design rather than impose a different
-channel's eyes. A tiny stylized profile feature alone does not make an otherwise
-round cartoon head a realistic human face; judge the actual construction.
+channel's eyes. Inspect the OUTER head contour as well as the skin colour: a
+human-shaped nose, ear or angular jaw projecting from a background profile does
+not match a simple circular-head reference. Hair may wrap the circle and profile
+views may hide one eye; they do not excuse changing the underlying head anatomy.
+Apply this also to depicted people inside photos, screens, paintings and mirrors.
 Return JSON only: {"confidence":0.0,"checks":[{"category":"drawing_style",
 "severity":"none|minor|major|uncertain","reason":"specific visible evidence"},
 ...one entry for EACH of the six categories...],"summary":"short diagnosis"}.
