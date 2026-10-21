@@ -1,5 +1,10 @@
 # Projets POV : finance et coulisses du pouvoir
 
+## Correction des bureaux demandee le 21 octobre
+
+Le proprietaire rejette le plan 36 de P01 : acteur perche sur le cote du bureau, fauteuil et ordinateur sans axe de travail coherent. Ancien candidat conserve comme rejet, retire de la revue et du rendu. Le remplacement doit montrer la chaise derriere le bassin et le dos, les jambes sous le plateau opaque et le clavier devant le torse, avec une vraie camera oblique qui reprojette aussi le meuble et la piece. Ne pas simplement tourner la tete ou le corps sur le decor frontal. Une conversation debout a cote du bureau reste possible ; une action de saisie exige une position de travail plausible. Inspecter ce point sur toutes les sources de bureau, pas seulement les yeux et les mains. Les corrections restent controlees sur les pixels puis liees a leur prompt, leurs references ordonnees et leur empreinte. Un prompt plus strict ne garantit pas seul la geometrie.
+
+
 ## P01 complet autorise le 21 octobre — les dix-neuf autres restent suspendus
 
 Le proprietaire vient de valider l'extrait et demande explicitement le film complet « Your Life Working for a Billionaire » au plus vite. Cette autorisation concerne P01 uniquement ; les demandes d'attendre sur cet extrait ci-dessous sont historiques. Ne pas relancer les dix-neuf remakes ni leur suivi automatique.
