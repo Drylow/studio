@@ -1,0 +1,16 @@
+{
+  "channel": "Última Puerta Segura",
+  "title": "Supervivencia Zombie: Sobreviví 90 Días y Abrí el Portón a 19 Desconocidos",
+  "description_file": "chaines/ultima-puerta/episodio-03-dia-61-90/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/j5unK19X",
+    "file": "final.mp4",
+    "sha256": "065a8a395e61abbe9aface83bd686679a765b295743ecaf66c536ea9682ef127",
+    "url": "http://media.edgerunners.fr/ltima-puerta-segura--episodio-03-dia-61-90-223ddf8389fc2530.mp4"
+  },
+  "thumbnail": "chaines/ultima-puerta/episodio-03-dia-61-90/thumbnail.jpg",
+  "captions": "chaines/ultima-puerta/episodio-03-dia-61-90/English-Captions.srt",
+  "tags_file": "chaines/ultima-puerta/episodio-03-dia-61-90/tags.txt",
+  "visibility": "public",
+  "tubeforge_video_id": "supervivencia-zombie-sobrevivi-90-dias-y-1d8ced"
+}
