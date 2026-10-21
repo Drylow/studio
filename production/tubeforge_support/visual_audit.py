@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import sys
 
-REVISION = "visual-audit-2026-10-21-v3"
+REVISION = "visual-audit-2026-10-21-v4"
 CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action", "background_cast")
 SEVERITIES = {"none", "minor", "major", "uncertain"}
 PRIMARY_RISKS = {"desk_camera_change", "owner_flagged"}
@@ -35,6 +35,10 @@ scene_action: plausible staging for the narration, motivated expression, consist
 scene materials/landmarks where a scene anchor is provided. A purposeful object
 insert does not require a whole person. Do not demand text legibility or identical
 framing. Do not invent invisible anatomy or a room behind the camera.
+When provided, the primary-authored beat identifies the particular instant being
+illustrated. Compare it with the named cast and actual pixels. Do not invent an
+additional required actor from a different narration clause. The authored beat
+does not excuse a concrete visible defect or a contradiction with the story.
 background_cast: inspect EVERY visible bystander, patron and side character,
 including small people behind the main action. When the drawing and identity
 references use round white cartoon heads, ALL humans follow that construction,
@@ -145,7 +149,10 @@ async def review(item, model, output, client_chat=None):
         # Errors and ambiguous outcomes require an explicit retry decision.
         return dict(previous, decision=previous.get("decision") or "needs_review", cache_hit=True)
     evidence["cache_hit"] = False
-    content = [{"type": "text", "text": RUBRIC + "\nNarration: " + item.get("narration", "") + "\nCast: " + json.dumps(item.get("characters", []))}]
+    context = ("\nNarration: " + item.get("narration", "")
+               + "\nCast: " + json.dumps(item.get("characters", []))
+               + "\nPrimary-authored beat: " + item.get("authored_action", ""))
+    content = [{"type": "text", "text": RUBRIC + context}]
     for ref, path in zip(refs, paths):
         content.extend([{"type": "text", "text": "REFERENCE role=" + ref["role"]}, image_part(path)])
     content.extend([{"type": "text", "text": "CANDIDATE — inspect this image"}, image_part(paths[-1])])
