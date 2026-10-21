@@ -87,8 +87,10 @@ def wait(video_id, every=10, limit=4 * 3600):
         if line != last:
             print(time.strftime("%H:%M:%S"), line, flush=True)
             last = line
-        if not s.get("running") and s.get("state") != "running":
+        steps_busy = any((v or {}).get("state") == "running" for v in (s.get("steps") or {}).values())
+        if not s.get("running") and s.get("state") != "running" and not steps_busy:
             return s
+        # « interrupted » alors qu'une étape tourne encore (images qui avancent) : le travail continue, on attend
         time.sleep(every)
     raise SystemExit("délai dépassé : relire `status` avant toute relance")
 
