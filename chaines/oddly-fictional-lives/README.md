@@ -9,11 +9,16 @@ final MP4 was removed afterward, as requested; source images, voice and evidence
 remain on the production host. No upload or new publication date was set.
 See [production record](videos/08-your-life-as-every-marine-rank-in-one-piece/production.md).
 
-Next is **Your Life on the Wall (Game of Thrones)**: narration and its real word
+Next is **Your Life on the Wall (Game of Thrones)**: narration and real word
 timestamps are complete,159 image actions and67 physical-set contracts are
-manually authored. Its ten original identity sheets were inspected; an additional
-recurring rescued steward is being given a separate identity before scene work.
-No complete Wall film exists yet.
+manually authored. All eleven identity sheets have been inspected.158 of159
+selected source images have passed actual visual inspection; one final corrected
+source is still awaiting review. The owner flagged soft-looking shots, so the
+softest identified frames are being restored at higher native resolution while
+preserving their approved staging and character design. Only inspected
+replacements will be selected. The unsupported guard was rejected and replaced
+with a guard standing behind the actual walkway rail. No complete Wall film
+exists yet; final encoding and its inspection remain outstanding.
 
 This active batch is **1/11 delivered**: these two fictional-universe films,
 then P02–P10 for Oddly Important Guy. Do not resume the unrelated paused
