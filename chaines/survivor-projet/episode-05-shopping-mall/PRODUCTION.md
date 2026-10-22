@@ -15,8 +15,8 @@ uneasy teamwork and a way out that keeps slipping out of reach.
 
 A fictional survival story. #ZombieSurvival #ZombieOutbreak #SurvivalStory
 
-No external links or sources in the public description. No publication or
-scheduled date claimed. Completed film runtime: **13 minutes 18 seconds**.
+No external links or sources in the public description. Published on
+**22 October 2026**. Completed film runtime: **13 minutes 18 seconds**.
 
 Thumbnail A: Patch large in the foreground of an upper mall walkway, alarmed
 eyes toward a small group of pale-green infected blocking the route; recognizable
@@ -181,7 +181,19 @@ The final is delivered as `VIDEO.mp4` in
 110,907,574 bytes; its size and SHA-256 match the encoded original. Delivery is
 installed in the episode record. Only the exact remote final MP4 was removed
 after the verified transfer; narration, source images and inspection evidence
-are retained. No YouTube upload, publication or scheduling has been performed.
+are retained. The upload and publication completed after this verified delivery,
+as recorded below.
 
 Delivered SHA-256:
 `76694448a4a92f9dfdfef16c80afa5ab811e28629834e703e89825787ca0f11b`.
+
+## Published — 22 October 2026
+
+The owner requested immediate publication. YouTube Studio confirmed **Video
+published** on 22 October 2026 with Public visibility, HD processing ready and
+checks reporting no issues. The published title matches the upload package above;
+Thumbnail A retains the orange “30 DAYS” lettering with its black outline.
+
+Channel: **Patch Survives**, `UCflNGnsoMzQFl3uEk9bt5gA`.
+
+Published video: [Zombie Outbreak: 30 Days Trapped in a Shopping Mall](https://youtu.be/0aXLQvx2SXo).
