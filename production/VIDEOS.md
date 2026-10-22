@@ -567,3 +567,20 @@ Livraison : `01 - Videos/Oddly Important Guy/02 - Working Inside a Las Vegas Cas
 Copie locale verifiee, ancienne livraison archivee, projet natif mis a jour puis
 seul MP4 final distant supprime ; sources et voix conservees. Aucune nouvelle
 synthese vocale, publication ou programmation. Six films livres sur onze.
+
+
+### 22 octobre 2026 - Oddly Important Guy : pilote livre
+
+Your Life as a Private Jet Pilot : 15 min 43, 1920 x 1080 / 24 fps.
+158 plans : 69 inspections directes et 89 revues assistees attribuees avant
+montage. Les 29 planches du film encode ont ete regardees ; les 22 639 images
+passent les controles techniques, avec la narration originale conservee sans
+nouvel appel vocal. Plans fixes, fondus de 0,5 seconde, ouverture depuis le noir
+en une seconde et fermeture vers le noir de cinq secondes.
+
+Rendu uniquement sur le serveur. Copie locale verifiee par empreinte, ancienne
+livraison archivee, projet natif mis a jour puis seul MP4 final distant supprime ;
+sources et voix conservees. Livraison :
+`01 - Videos/Oddly Important Guy/05 - Private Jet Pilot/VIDEO.mp4`.
+134 148 229 octets ; empreinte `1385beecc13ff8bfe70b693be28675423216f6789c7436babe9243cef8f6a13a`.
+Aucune publication ni programmation effectuee. Sept films livres sur onze.
