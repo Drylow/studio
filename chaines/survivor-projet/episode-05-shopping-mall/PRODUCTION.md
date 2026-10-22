@@ -16,7 +16,7 @@ uneasy teamwork and a way out that keeps slipping out of reach.
 A fictional survival story. #ZombieSurvival #ZombieOutbreak #SurvivalStory
 
 No external links or sources in the public description. No publication or
-scheduled date claimed. Exact runtime follows the completed narration.
+scheduled date claimed. Completed film runtime: **13 minutes 18 seconds**.
 
 Thumbnail A: Patch large in the foreground of an upper mall walkway, alarmed
 eyes toward a small group of pale-green infected blocking the route; recognizable
@@ -27,7 +27,10 @@ Orange bandage unmistakable; orange school backpack grounded beside him.
 Thumbnail B: close rescue dilemma at a glass staff door: Patch reaches for Nia
 while his abandoned food bag is dragged away in the atrium. Show one dominant
 rescue action, readable opposing directions and a recognizable shopping mall.
-Use the established Patch drawing reference. No text in either variant.
+Use the established Patch drawing reference. A uses the large orange “30 DAYS”
+caption from the established supermarket packaging; B is text-free. The user
+selected **A** on 22 October 2026 and reaffirmed orange lettering with a black outline.
+Narration is complete: **13 minutes 18 seconds**.
 
 ## Five-field editorial brief
 
@@ -136,3 +139,49 @@ VERDICT: Ready for voice synthesis after the final recorded scanner pass.
 - No per-shot MP4 clips or ZIP; combined upload metadata in this file.
 - Verified final transfer precedes removal of the exact final MP4 on VPS; retain
   narration, authored prompts, references and inspection receipts.
+
+## Corrected visual selection — 22 October
+
+The earlier batch made through an unapproved provider is excluded and archived.
+The replacement uses the exact owner-selected provider with no fallback; the
+private project and base style both retain that lock. Script and Ryan narration
+are unchanged. The replacement has 133 selected shots with actual per-image
+inspection and source hashes, mapped to the completed narration timestamps.
+
+The review covers thin stick bodies, white hands and feet, single character
+markers, grounded feet and separate schoolbags. Spatial and inventory corrections
+keep the blocked goods route separate from the pharmacy, the abandoned trolley
+upstairs, the van outside the loading-yard fence, and the abandoned orange/brown
+bags outside the final collection yard. Casting references establish identity;
+they do not override a scene's explicit inventory or add another character marker.
+
+Every future resume must use the current selected-image ledger and its visual
+passes. A rejected image or old provider output cannot re-enter the film because
+its shot number matches. The renderer verifies source and voice hashes before
+encoding. Final delivery is recorded only after encoded review and verified copy.
+
+## Completed film and verified delivery — 22 October
+
+The complete film is encoded and its visual review has passed: **133 shots,
+13 minutes 18 seconds, 1920 × 1080 at 24 fps**. The original approved narration
+is retained. Static framing uses half-second mixes between images, a one-second
+opening from black and a five-second ending to black; there are no animated zooms.
+
+Every selected source was inspected, and the primary agent has now viewed all
+25 contact sheets extracted from the encoded film, including the transitions
+and both fades. The encoded-frame comparison and original-audio checks passed.
+This records the agent's actual visual inspection, not a claim of human review.
+
+The selected packaging is **Thumbnail A**, with large **orange “30 DAYS” lettering
+outlined in black**, matching the first thumbnail. The title and description
+remain together in the upload package above.
+
+The final is delivered as `VIDEO.mp4` in
+`01 - Videos/Patch Survives/05 - Shopping Mall/`. The copied file is
+110,907,574 bytes; its size and SHA-256 match the encoded original. Delivery is
+installed in the episode record. Only the exact remote final MP4 was removed
+after the verified transfer; narration, source images and inspection evidence
+are retained. No YouTube upload, publication or scheduling has been performed.
+
+Delivered SHA-256:
+`76694448a4a92f9dfdfef16c80afa5ab811e28629834e703e89825787ca0f11b`.
