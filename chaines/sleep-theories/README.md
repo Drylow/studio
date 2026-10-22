@@ -4,6 +4,14 @@
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
 
+## Quinze miniatures — 22 octobre
+
+Les [quinze nouvelles miniatures](miniatures-2026-10-22/README.md) sont générées et
+vérifiées visuellement : cinq par chaîne, avec exports JPG 1280 × 720 sous 2 Mo,
+originaux, titres, prompts et aperçu. Copie sur le Bureau : **Miniatures sleep - 15 videos - 22 octobre 2026**.
+Les deux Star Wars utilisent des personnages originaux représentatifs après refus des
+premiers essais nommés. Ce sont des propositions, pas une validation utilisateur ni une publication.
+
 ## Quinze nouveaux scripts — 22 octobre
 
 Les [quinze scripts du nouveau lot](scripts-2026-10-22/README.md) sont complets et

@@ -1,0 +1,289 @@
+[
+  {
+    "id": "DV-08-bene-gesserit",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished landscape 16:9 YouTube thumbnail for \"The Secrets of the Bene Gesserit Explained to Fall Asleep To | Dune Lore\". Image 1 is the channel STYLE AND LAYOUT reference only, not the subjects to repeat. Keep its two enormous photorealistic portraits left and right, crisp cinematic face texture, midnight navy and near-black grading, subtle cool rim light, calm grave mood, deep black negative space for CENTRAL typography, distant iconic setting above the text.\nReplace left portrait with Lady Jessica from Dune, adult woman with refined angular features, pale green eyes, wearing a dark hooded Bene Gesserit robe and subtle gauze veil. Replace right portrait with elderly Reverend Mother Gaius Helen Mohiam, deeply lined face and ornate black Bene Gesserit headdress and translucent veil. Both faces clearly different, serious and composed, not smiling. Original editorial illustration of fictional characters. No Paul or worm-human.\nBackground upper middle: a shadowy monumental Bene Gesserit stone hall opening onto distant Arrakis dunes under a pale moon. Subordinate, uncluttered. Match the supplied reference's editorial realism and framing.\nExact text in THREE central stacked lines only, huge elegant high contrast serif: \"LORE\" bright cobalt blue with restrained blue bloom; \"FOR\" smaller pure white; \"SLEEP\" large pure white. Text crisp and perfectly spelled, not obscured by faces. Portraits each occupy roughly outer 30%, central 40% reserved for text. Keep all text safely inside frame, no badges, no full video title, no logos or watermark, no border, no collage panels. Wide 16:9.",
+    "ordered_references": [
+      {
+        "file": "deep-dune.jpg",
+        "sha256": "a2ac03685d8e88947b48e4543ddad1f248168baf53eb8c605033e0d88cfea680",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "DV-09-jedi-order",
+    "mode": "built-in image generation",
+    "prompt": "Create a landscape 16:9 cinematic photoreal YouTube thumbnail for an editorial video about the rise and fall of the Jedi Order in Star Wars. Use the provided image ONLY for its composition, midnight navy lighting, oversized portraits and central serif typography. Invent two adult human Jedi characters rather than depicting an existing actor or named character. Left: an aged East Asian male Jedi archivist with greying close beard and simple textured brown hood, thoughtful realistic face. Right: an adult Black female Jedi Knight with close cropped hair and calm determined face, layered cream tunic and brown robe. These are explicitly original representative characters, not Yoda, Luke or Obi-Wan. The instantly recognizable Star Wars setting in upper center is the Coruscant Jedi Temple with five spires, futuristic city lights and a small Jedi starfighter with pointed delta wings far above. Nighttime, subdued cold light, no battle, no weapons crossing the image, no Dune motifs. The two close-up faces occupy outer thirds, giving central dark breathing room. Exact three lines of huge classic serif text centered: \"LORE\" electric cobalt blue; \"FOR\" smaller white; \"SLEEP\" very large white. Perfect spelling, no other words or badges. Same calm premium photographic mood as style reference. No collage borders or watermark.",
+    "ordered_references": [
+      {
+        "file": "deep-dune.jpg",
+        "sha256": "a2ac03685d8e88947b48e4543ddad1f248168baf53eb8c605033e0d88cfea680",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "DV-10-fremen",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished 16:9 YouTube sleep-lore thumbnail, original cinematic editorial illustration. Input image is a STYLE/LAYOUT reference, do not repeat its subjects. Match two enormous close-up portraits anchored to left and right edges, deep near-black and midnight navy shadows, realistic skin and fabric, subtle blue rim light, composed contemplative faces, small recognizable universe setting in upper center, central black breathing space. Exact central text on three lines, high-contrast classic serif: \"LORE\" electric cobalt blue, \"FOR\" smaller white, \"SLEEP\" very large white. Crisp readable lettering, all inside safe margin. Faces never cover text. No badges, full video title, extra lettering, watermark, panels, decorative border. Topic: The Entire History of the Fremen, Dune. Left portrait: Stilgar, weathered middle-aged Fremen leader, deep-set blue-within-blue eyes, dark beard and black headscarf, practical stillsuit with small nasal moisture tube. Right portrait: adult Chani, curly dark hair partly tucked under dusty headwrap, natural freckles, blue-within-blue eyes, practical stillsuit, steady composed expression. Preserve human realism, not neon eye beams. Between them upper-center: vast Arrakis dunes, rocky sietch cave entrance and a tiny distant sandworm ridge under cold moonlight. Monumental yet still, unmistakably Dune. No palace, no worm-human, no combat pose. Fine dust on stillsuit materials.",
+    "ordered_references": [
+      {
+        "file": "deep-dune.jpg",
+        "sha256": "a2ac03685d8e88947b48e4543ddad1f248168baf53eb8c605033e0d88cfea680",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "DV-11-old-republic",
+    "mode": "built-in image generation",
+    "prompt": "Create ONE finished 16:9 cinematic realistic YouTube thumbnail for an editorial sleep-lore video about the Old Republic era of Star Wars Legends. Style image is ONLY a layout and color reference, replace all subjects and scenery. Left enormous portrait: an original adult female Jedi historian with olive skin and black hair tied back, weathered ochre robes, dignified quiet expression. Right enormous portrait: an original ancient Republic armored guardian with a practical full-faced brushed silver helmet, dark narrow visor and muted burgundy markings, hood draped behind helmet; clearly a different, original design rather than Revan's mask. Upper center: the lush Dantooine Jedi enclave with ancient rounded stone arches, a small low-profile asymmetric Old Republic freighter in orbit against two pale moons. The spaceship and temple should feel unmistakably from Star Wars' ancient era, not medieval fantasy. No Imperial Star Destroyers, TIE fighters, Death Star or Skywalker-era characters. Midnight navy, black shadows, silver-blue highlights, cinematic photo texture, tranquil grandeur. Two huge portraits flank dark central area. Exact huge central serif text on three lines: \"LORE\" cobalt blue; \"FOR\" white smaller; \"SLEEP\" white very large. Text fully readable with safe margins, no extra labels, badges, watermarks or borders. Original characters are representative editorial artwork, no claim of a specific canonical scene.",
+    "ordered_references": [
+      {
+        "file": "deep-dune.jpg",
+        "sha256": "a2ac03685d8e88947b48e4543ddad1f248168baf53eb8c605033e0d88cfea680",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "DV-12-great-houses",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished 16:9 YouTube sleep-lore thumbnail, original cinematic editorial illustration. Input image is a STYLE/LAYOUT reference, do not repeat its subjects. Match two enormous close-up portraits anchored to left and right edges, deep near-black and midnight navy shadows, realistic skin and fabric, subtle blue rim light, composed contemplative faces, small recognizable universe setting in upper center, central black breathing space. Exact central text on three lines, high-contrast classic serif: \"LORE\" electric cobalt blue, \"FOR\" smaller white, \"SLEEP\" very large white. Crisp readable lettering, all inside safe margin. Faces never cover text. No badges, full video title, extra lettering, watermark, panels, decorative border. Topic: The Great Houses of Dune. Left: Duke Leto Atreides I, mature bearded man with dark hair touched with grey, aristocratic calm, dark formal Atreides military tunic. Right: Baron Vladimir Harkonnen, bald pale heavy-set older man, cold composed expression, black high-collared robes, no medical gore. Portraits sharply recognizable as political opposites. Upper middle background: vast monumental Landsraad-like imperial audience hall with restrained vertical hanging banners and small distant noble silhouettes, cold blue shadows and minimal warm light. Original symbolic editorial composition, no claim of a literal scene from a film. No stillsuits or blue glowing eyes, no worm-human, no battle. Distinct from Fremen desert composition.",
+    "ordered_references": [
+      {
+        "file": "deep-dune.jpg",
+        "sha256": "a2ac03685d8e88947b48e4543ddad1f248168baf53eb8c605033e0d88cfea680",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "QP-07-silo-builders",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished landscape 16:9 YouTube thumbnail for Quiet Paradox's calm long-form TV theories. Image 1 is the CHANNEL STYLE/LAYOUT reference. Match two huge photorealistic portraits at far left and right, rich brown/near-black shadows, soft amber rim light, natural skin texture, calm mysterious mood, recognizable environment visible in upper center, clear central dark space for words. Text in four centered stacked lines using the reference's classic elegant serif, cream series-name with spaced capitals, very large bronze-gold \"THEORIES\", smaller cream \"FOR\", very large cream \"SLEEP\". Text completely inside safe margins, no overlap with faces. No badges, duration, arrows, watermark, extra labels or border. Do not transfer existing subjects unless specified. Supporting photos are IDENTITY references only: keep likeness but recompose and relight. Never copy their backgrounds, watermarks or printed text. Original editorial illustration, not a claim of a literal episode still. Subject: Who Built the Silos — and Why? Left portrait is Bernard Holland, older white male with grey hair and glasses, from RIGHT side of image1. Right portrait is Lukas Kyle from image2, adult South Asian man, short dark hair and beard, blue work shirt under dark jacket. Both thoughtful and investigating, no suggestion these men built the silos themselves. Upper center: enormous cylindrical silo shaft, curving metal stairs and amber lit landings; a single worn technical blueprint pinned on a nearby metal wall visible just above the lettering, schematic lines only with no readable invented writing. Keep gritty industrial detail restrained. Different layout from previous Juliette/Bernard image: Bernard now left, Lukas right. Exact text: \"SILO\" / \"THEORIES\" / \"FOR\" / \"SLEEP\".",
+    "ordered_references": [
+      {
+        "file": "quiet-silo.jpg",
+        "sha256": "d811ce9182bb5e29ee8bf573558b16e7fa06c8102ac9443c0f2998321688c6e0",
+        "role": "style/layout"
+      },
+      {
+        "file": "lukas.jpg",
+        "sha256": "9b026f2f76729935e63d8d66f60117df342dbc4532646bfefa3fc489a507684a",
+        "role": "identity"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "QP-08-from-rules",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished landscape 16:9 YouTube thumbnail for Quiet Paradox's calm long-form TV theories. Image 1 is the CHANNEL STYLE/LAYOUT reference. Match two huge photorealistic portraits at far left and right, rich brown/near-black shadows, soft amber rim light, natural skin texture, calm mysterious mood, recognizable environment visible in upper center, clear central dark space for words. Text in four centered stacked lines using the reference's classic elegant serif, cream series-name with spaced capitals, very large bronze-gold \"THEORIES\", smaller cream \"FOR\", very large cream \"SLEEP\". Text completely inside safe margins, no overlap with faces. No badges, duration, arrows, watermark, extra labels or border. Do not transfer existing subjects unless specified. Supporting photos are IDENTITY references only: keep likeness but recompose and relight. Never copy their backgrounds, watermarks or printed text. Original editorial illustration, not a claim of a literal episode still. Subject: Monsters, Talismans and Rules of FROM. Left portrait Boyd Stevens, same middle-aged Black sheriff on left of style image, neatly cropped curly hair and graying beard, worn sheriff jacket. Right portrait Smiley from supporting image2: adult pale man with short light-brown hair, recognizable broad restrained unnatural human smile, collared retro clothing; retain HUMAN face with normal skin, no fangs, no wounds. Ignore interview banner in photo. Upper center: nighttime wooden farmhouse doorway lit by one dim amber lamp. A small rough oval carved stone talisman hangs beside the door, recognizably rough shallow rune marks, NO glowing magical stone and no giant floating object. Town forest recedes into darkness. Calm eerie mystery rather than jump-scare. Exact central text: \"FROM\" / \"THEORIES\" / \"FOR\" / \"SLEEP\".",
+    "ordered_references": [
+      {
+        "file": "quiet-from.jpg",
+        "sha256": "1643d47f63d405406bb474604ef6af5330a7b8708a7b05293e01e646e5953c9b",
+        "role": "style/layout"
+      },
+      {
+        "file": "smiley-human-episode.jpg",
+        "sha256": "e070500d5f25dc2573dbae42cbf51be33bf176610d5b24847f36d675f2033703",
+        "role": "identity"
+      }
+    ],
+    "edits": [
+      {
+        "prompt": "Edit image1 with a targeted factual correction to the small talisman and doorway background only. Preserve EXACTLY both large portraits (Boyd left, human Smiley right), their identities, faces and expressions, the text \"FROM / THEORIES / FOR / SLEEP\", its size and position, rich brown/amber palette, and 16:9 framing. Image2 is a real FROM talisman prop-design reference. Use the RIGHT-HAND clearly visible stone in image2 to correct the small stone in image1: rough oblong stone, worn shallow carving of TWO OPPOSING sticklike human figures joined at a central diamond, half-circle sun/moon-like side marks and repeated branching marks around perimeter; attached with wrapped twine, no magical glow. Remove the simplistic two invented runes. The stone must hang on the INSIDE wooden jamb beside a CLOSED wooden farmhouse door, protected interior side rather than on an external porch. Alter just the upper background doorway location so we are looking at the warm inside face of the closed door and talisman; keep some dark town view only at far left background, as editorial montage. Do not copy cave scenery, add characters, cover the text or redesign the thumbnail. Stay realistic and quiet, no gore.",
+        "inputs": [
+          {
+            "file": "exec-aa828318-e545-4585-9663-d4c6be0823d9.png",
+            "sha256": "a95a0bb5028385eac48d784b048425fd6d839cb9ebf43d6a0c3e9fffa6aee6d4"
+          },
+          {
+            "file": "talisman-cave-episode108.jpg",
+            "sha256": "7d90c1f2cac8175219605ff568ddc795a55dc2ea646bfa1ed5088db07003f1a7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "QP-09-lumon-building",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished landscape 16:9 YouTube thumbnail for Quiet Paradox's calm long-form TV theories. Image 1 is the CHANNEL STYLE/LAYOUT reference. Match two huge photorealistic portraits at far left and right, rich brown/near-black shadows, soft amber rim light, natural skin texture, calm mysterious mood, recognizable environment visible in upper center, clear central dark space for words. Text in four centered stacked lines using the reference's classic elegant serif, cream series-name with spaced capitals, very large bronze-gold \"THEORIES\", smaller cream \"FOR\", very large cream \"SLEEP\". Text completely inside safe margins, no overlap with faces. No badges, duration, arrows, watermark, extra labels or border. Do not transfer existing subjects unless specified. Supporting photos are IDENTITY references only: keep likeness but recompose and relight. Never copy their backgrounds, watermarks or printed text. Original editorial illustration, not a claim of a literal episode still. Subject: What Is Lumon Really Building? Left portrait Mark Scout from LEFT side of style image, black side-parted hair, realistic tired eyes, navy office suit, white shirt, tie. Right portrait Gemma/Ms Casey from image2: adult woman with straight short black bob and distinctive facial features, high-neck muted burgundy outfit, composed serene expression; this is NOT red-haired Helly from style image. Upper middle background: symmetrical sterile Lumon testing-floor corridor with repeated geometric light panels and a distant open door to a plain test room. Inside that far room, a small partially disassembled wooden crib, not a baby, unobtrusive. Apply warm brown/amber photographic grading while preserving pale clinical materials. No clones, giant brain, vats or resurrection imagery. Exact central text: \"SEVERANCE\" / \"THEORIES\" / \"FOR\" / \"SLEEP\".",
+    "ordered_references": [
+      {
+        "file": "quiet-severance.jpg",
+        "sha256": "b7b3bf27b9f20102c539dd8687238c8a8fd1225403f9a3e4d02923a398fca044",
+        "role": "style/layout"
+      },
+      {
+        "file": "gemma-casey-episode04.jpg",
+        "sha256": "5292a69b8a64e98463e9ee06c00c327626ff778bf16a16fb4b9e9f7c34328d92",
+        "role": "identity"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "QP-10-silo-outside",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished landscape 16:9 YouTube thumbnail for Quiet Paradox's calm long-form TV theories. Image 1 is the CHANNEL STYLE/LAYOUT reference. Match two huge photorealistic portraits at far left and right, rich brown/near-black shadows, soft amber rim light, natural skin texture, calm mysterious mood, recognizable environment visible in upper center, clear central dark space for words. Text in four centered stacked lines using the reference's classic elegant serif, cream series-name with spaced capitals, very large bronze-gold \"THEORIES\", smaller cream \"FOR\", very large cream \"SLEEP\". Text completely inside safe margins, no overlap with faces. No badges, duration, arrows, watermark, extra labels or border. Do not transfer existing subjects unless specified. Supporting photos are IDENTITY references only: keep likeness but recompose and relight. Never copy their backgrounds, watermarks or printed text. Original editorial illustration, not a claim of a literal episode still. Subject: The World Outside the Silos. Left portrait Juliette Nichols from LEFT of image1, blonde loosely tied hair, worn practical environmental suit collar below a fully visible face, no helmet over face. Right portrait Solo from image2: older man with long brown-grey hair, full long beard, tired thoughtful face and worn industrial clothing. Brighten face enough to recognize him. Upper center: framed open industrial airlock with view of a barren ochre surface, dry dead twisted tree in distance, abandoned concrete silo rim and dark dusty sky. No lush green paradise, no vertical stairwell repeating previous Silo composition, no literal claim that Solo went outside. Symbolic editorial composition of two separate portraits and outside landscape. Exact central text: \"SILO\" / \"THEORIES\" / \"FOR\" / \"SLEEP\".",
+    "ordered_references": [
+      {
+        "file": "quiet-silo.jpg",
+        "sha256": "d811ce9182bb5e29ee8bf573558b16e7fa06c8102ac9443c0f2998321688c6e0",
+        "role": "style/layout"
+      },
+      {
+        "file": "solo-episode09.jpg",
+        "sha256": "690e2c75c2c2f1be558b8e8a5a996b027de066150ec146be2e2a449f51ce8fd9",
+        "role": "identity"
+      }
+    ],
+    "edits": [
+      {
+        "prompt": "Make ONE surgical background correction to this existing thumbnail. Keep every foreground element exactly: both Juliette and Solo portraits, colors, clothing, faces, framing, industrial airlock frame, central text \"SILO / THEORIES / FOR / SLEEP\", and size 16:9. ONLY REMOVE the tall cylindrical above-ground grain-silo-like tower in the upper-right part of the distant exterior seen through the doorway. The silos in this story are underground, so replace that tower with uninterrupted low barren hills and dusty desolate ground beneath the same cloudy amber sky. Preserve the dead tree, horizon light, rocky terrain and doorway geometry. Do not add buildings, vegetation or a new object. Nothing else changes.",
+        "inputs": [
+          {
+            "file": "exec-6a85eeb4-a31f-41a1-96f7-244b79df3ca4.png",
+            "sha256": "93b179709eebc3635617c621de718a15ac1277edde0487bd44fb9ac0d192de8b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "QP-11-from-cycles",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE finished landscape 16:9 YouTube thumbnail for Quiet Paradox's calm long-form TV theories. Image 1 is the CHANNEL STYLE/LAYOUT reference. Match two huge photorealistic portraits at far left and right, rich brown/near-black shadows, soft amber rim light, natural skin texture, calm mysterious mood, recognizable environment visible in upper center, clear central dark space for words. Text in four centered stacked lines using the reference's classic elegant serif, cream series-name with spaced capitals, very large bronze-gold \"THEORIES\", smaller cream \"FOR\", very large cream \"SLEEP\". Text completely inside safe margins, no overlap with faces. No badges, duration, arrows, watermark, extra labels or border. Do not transfer existing subjects unless specified. Supporting photos are IDENTITY references only: keep likeness but recompose and relight. Never copy their backgrounds, watermarks or printed text. Original editorial illustration, not a claim of a literal episode still. Subject: The Children, the Trees and the Cycles of FROM. Left portrait Tabitha Matthews from image2, adult Latina woman, long brown hair, expressive thoughtful eyes, practical muted jacket, calm serious face. Ignore blurry Victor behind her. Right portrait Jade Herrera from image3, adult man with wavy dark hair and full beard, grey cardigan and burgundy shirt, expression thoughtful rather than startled. Upper center: a recognizable old forest bottle tree with glass bottles hanging from thin cords in several branches, dense dark woods and warm low mist. Three tiny distant child silhouettes in pale clothing at the foot of the tree, indistinct non-graphic and not threatening, no injuries or scary closeups. Do not transfer Boyd or Victor from the style image. Exact central text: \"FROM\" / \"THEORIES\" / \"FOR\" / \"SLEEP\".",
+    "ordered_references": [
+      {
+        "file": "quiet-from.jpg",
+        "sha256": "1643d47f63d405406bb474604ef6af5330a7b8708a7b05293e01e646e5953c9b",
+        "role": "style/layout"
+      },
+      {
+        "file": "tabitha-episode201.jpg",
+        "sha256": "02f019dbd23715448950b8868dc853b3afee3a2b56a25258739a7f34e5655304",
+        "role": "identity"
+      },
+      {
+        "file": "jade-episode201.jpg",
+        "sha256": "b9ac4afda3719548a4a880f205104c25cfeea992fdcca2594c8561ba7513dc6f",
+        "role": "identity"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "FR-04-daedric-princes",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE landscape 16:9 finished YouTube sleep-lore thumbnail for Forgotten Realms of Sleep. Match provided STYLE/LAYOUT reference: cinematic photorealism, realistic materials and skin, two enormous close-up subjects at far left and far right, important iconic environment visible in upper central third, clean dark negative space behind huge classic serif words. Natural highlights, charcoal and muted pine-green shadows, restrained warm amber practical lights. Not a painted/engraved poster, not a global yellow or green filter. No watermark, badges, small captions, border, logos, decorative stars. Keep all lettering clear and centered safely, no important detail in lower right duration area. Reference subjects and existing words must be replaced by the new topic. Subject: The Daedric Princes of The Elder Scrolls. Left portrait: Sheogorath as he appears in Skyrim, older male figure with brushed-back white hair, neat white beard, yellow-gold irises, calm subtly knowing expression, ornate muted amber/purple brocade coat. Right: monumental dark stone statue face of Azura, serene elven feminine features, graceful sculpted headdress, her raised hand holding a crescent moon visible near upper right edge. Clearly carved statue with stone pores, not a second living human. Upper center: isolated Daedric mountain shrine, distant pines, moonlit mist, small amber braziers. Avoid a cluttered pantheon or screaming monsters. Exact text on three stacked lines: \"DAEDRIC\" ivory, \"PRINCES\" amber gold, \"FOR SLEEP\" ivory. Match typography weight and scale of style reference.",
+    "ordered_references": [
+      {
+        "file": "01-skyrim.png",
+        "sha256": "11ac01e659b9cd978f581b5af7a72af8cb19b9d8c17a10d0e70080698b4c0caa",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "FR-05-brotherhood",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE landscape 16:9 finished YouTube sleep-lore thumbnail for Forgotten Realms of Sleep. Match provided STYLE/LAYOUT reference: cinematic photorealism, realistic materials and skin, two enormous close-up subjects at far left and far right, important iconic environment visible in upper central third, clean dark negative space behind huge classic serif words. Natural highlights, charcoal and muted pine-green shadows, restrained warm amber practical lights. Not a painted/engraved poster, not a global yellow or green filter. No watermark, badges, small captions, border, logos, decorative stars. Keep all lettering clear and centered safely, no important detail in lower right duration area. Reference subjects and existing words must be replaced by the new topic. Subject: history of Fallout Brotherhood of Steel. Left: iconic T-60 power armor helmet and one shoulder filling outer left 30%, recognizable twin dark eye lenses and mechanical respirator, heavy weathered dull steel, realistic wear. Right: an original older adult Brotherhood scribe, thoughtful lined face, short grey hair, brown/red scribe robes, calm expression, no weapon raised. This is representative editorial art, not a new canon named character. Upper center: the Prydwen airship clearly silhouetted over a derelict airfield at dusk, tiny amber running lights. No Vault-Tec vault door, no woman in blue jumpsuit, no horned fantasy helmets. Exact central serif text on three lines: \"BROTHERHOOD\" ivory, \"OF STEEL\" amber gold, \"FOR SLEEP\" ivory. Long top line remains completely inside center area; allow slightly smaller top line but keep readable and crisp. Two sides should frame lettering not cover it.",
+    "ordered_references": [
+      {
+        "file": "02-vault-tec.png",
+        "sha256": "683baca98ee301c58f0ff8511b6640d22859f243e24a36a43455e999818d9b29",
+        "role": "style/layout"
+      }
+    ],
+    "edits": [
+      {
+        "prompt": "Edit image 1 with one localized subject correction. Image 1 is the thumbnail to retain. Image 2 is a factual Fallout T-60 armor design reference showing front and back. Replace ONLY the LEFT helmet and necessary neck fittings with the actual T-60 helmet shape shown in the FRONT view of image2: structured silver forehead, small angular eye openings beneath heavy brow, compact circular radial central respirator, short side tubes and T-60 cheek architecture. It must look like T-60 power armor, not the existing gas mask with large vertical grille. Keep the thumbnail's cinematic realistic weathered metal finish and warm highlights, framing and huge scale. Preserve exactly everything else: right older scribe face/clothing, Prydwen airship and airfield background, exact centered text \"BROTHERHOOD / OF STEEL / FOR SLEEP\", text size/color/location, 16:9 composition and overall color. No added words, no new symbols, no other reimagining.",
+        "inputs": [
+          {
+            "file": "exec-755d2862-eb9c-4ec1-bc7f-745db64f4a44.png",
+            "sha256": "2290f722161fe6abf27c9d4df61a435ef1e64be513b2779ebbe0054f8f200251"
+          },
+          {
+            "file": "fallout-t60-game-render.png",
+            "sha256": "bcc21f3ec0541c0b22efbb2b5bdcd1aadc72b28f7bd60f0bf6b95f21aeb14c51"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "FR-06-elden-ring",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE landscape 16:9 finished YouTube sleep-lore thumbnail for Forgotten Realms of Sleep. Match provided STYLE/LAYOUT reference: cinematic photorealism, realistic materials and skin, two enormous close-up subjects at far left and far right, important iconic environment visible in upper central third, clean dark negative space behind huge classic serif words. Natural highlights, charcoal and muted pine-green shadows, restrained warm amber practical lights. Not a painted/engraved poster, not a global yellow or green filter. No watermark, badges, small captions, border, logos, decorative stars. Keep all lettering clear and centered safely, no important detail in lower right duration area. Reference subjects and existing words must be replaced by the new topic. Subject: story of Elden Ring. Left portrait: Malenia, recognizable ornate winged golden helmet covering eyes, long flowing red hair, pale lower face serene, dark cloak; no blood or decay close-up. Right: Ranni the Witch, pale-blue skin, one eye closed, long silvery hair and large soft white witch hat; face crisp and serene, subtle small spectral second face just beside hers, coherent not a disfigured face. Keep hat mostly to right, never across center text. Upper-center background: the immense golden Erdtree with branching luminous canopy over distant Leyndell-like skyline and misty valley, dark pine-green shadows. No modern objects, no aggressive combat. Exact central three-line text: \"ELDEN RING\" ivory, \"LORE\" amber gold, \"FOR SLEEP\" ivory. Huge elegant serif, uncluttered.",
+    "ordered_references": [
+      {
+        "file": "01-skyrim.png",
+        "sha256": "11ac01e659b9cd978f581b5af7a72af8cb19b9d8c17a10d0e70080698b4c0caa",
+        "role": "style/layout"
+      }
+    ],
+    "edits": []
+  },
+  {
+    "id": "FR-07-oblivion-crisis",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE landscape 16:9 finished YouTube sleep-lore thumbnail for Forgotten Realms of Sleep. Match provided STYLE/LAYOUT reference: cinematic photorealism, realistic materials and skin, two enormous close-up subjects at far left and far right, important iconic environment visible in upper central third, clean dark negative space behind huge classic serif words. Natural highlights, charcoal and muted pine-green shadows, restrained warm amber practical lights. Not a painted/engraved poster, not a global yellow or green filter. No watermark, badges, small captions, border, logos, decorative stars. Keep all lettering clear and centered safely, no important detail in lower right duration area. Reference subjects and existing words must be replaced by the new topic. Subject: The Oblivion Crisis in The Elder Scrolls IV. Left portrait: Martin Septim, adult human priest, short brown hair, a lightly lined kind but determined face, simple deep burgundy and brown priest robes, grounded realism. Right portrait: a Dremora warrior with dark red/charcoal skin, two short backward horns and black Daedric armor, stern dignified closed mouth; avoid gore or snarling. Upper-center background: one unmistakable oval fiery Oblivion gate with black claw-like stone spires near ruined Kvatch city walls; distant smoke limited to background. Keep portal glow restrained crimson/amber, not a bright fire covering the picture. No dragon priest mask, no Dragonborn helmet, no Skyrim frost cavern. Exact central serif lettering in three lines: \"OBLIVION\" ivory, \"CRISIS\" amber gold, \"FOR SLEEP\" ivory.",
+    "ordered_references": [
+      {
+        "file": "01-skyrim.png",
+        "sha256": "11ac01e659b9cd978f581b5af7a72af8cb19b9d8c17a10d0e70080698b4c0caa",
+        "role": "style/layout"
+      }
+    ],
+    "edits": [
+      {
+        "prompt": "Refine this existing thumbnail with limited changes for a calmer sleep-lore mood. Keep both portraits, their identities, exact framing, the beautiful ivory/amber typography \"OBLIVION / CRISIS / FOR SLEEP\" and its size and position unchanged. In the BACKGROUND ONLY remove nearly all ground fires and burning buildings, leaving dark stone Kvatch ruins, gentle smoke and a SINGLE glowing oval Oblivion gate in the upper center. Reduce gate's light intensity moderately; it should remain clearly identifiable. Make Dremora's eyes dark ember red rather than brightly glowing. On Martin's chest REMOVE the inaccurate large sun-shaped pendant; close the robe modestly over that area with normal burgundy fabric. Do not invent a replacement amulet. Keep photoreal finish and warm light edges but deeper charcoal/pine shadows, no overall yellow filter. No other changes, no additional text, keep 16:9.",
+        "inputs": [
+          {
+            "file": "exec-1e3c40ff-7be1-44c3-af65-0e73b7ce9989.png",
+            "sha256": "9eb30535fbf4428784f037869d2af71a238bc5b383e0283c84f253c0992543fb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "FR-08-new-vegas",
+    "mode": "built-in image generation",
+    "prompt": "Use case: ads-marketing. Create ONE landscape 16:9 finished YouTube sleep-lore thumbnail for Forgotten Realms of Sleep. Match provided STYLE/LAYOUT reference: cinematic photorealism, realistic materials and skin, two enormous close-up subjects at far left and far right, important iconic environment visible in upper central third, clean dark negative space behind huge classic serif words. Natural highlights, charcoal and muted pine-green shadows, restrained warm amber practical lights. Not a painted/engraved poster, not a global yellow or green filter. No watermark, badges, small captions, border, logos, decorative stars. Keep all lettering clear and centered safely, no important detail in lower right duration area. Reference subjects and existing words must be replaced by the new topic. Subject: The War for New Vegas, Fallout New Vegas. Left portrait: iconic NCR Veteran Ranger helmet, black breathing mask, pair of muted red eye lenses, weathered desert duster collar and metal helmet, unmistakable design. Right portrait: Caesar, older bald male with furrowed brow and calm severe expression, muted brick-red tunic and worn leather shoulder armor, no crown. Upper-center background: Hoover Dam's broad curved concrete face and intake towers in desert at blue hour, very small warm lamps. No Las Vegas skyscrapers directly adjacent to the dam, no victory flags or scene claiming one ending won. No Vault-Tec door or vault-dweller woman. Exact centered serif text on three lines: \"NEW VEGAS\" ivory, \"WAR\" amber gold, \"FOR SLEEP\" ivory. Quiet monumental mood.",
+    "ordered_references": [
+      {
+        "file": "02-vault-tec.png",
+        "sha256": "683baca98ee301c58f0ff8511b6640d22859f243e24a36a43455e999818d9b29",
+        "role": "style/layout"
+      }
+    ],
+    "edits": [
+      {
+        "prompt": "Edit image1 ONLY to correct the LEFT NCR Veteran Ranger helmet. Use image2 as the exact design reference for the helmet/mask: compact military olive dome, narrow two red eye lenses, stepped chevron face mask, small round vent low in center, a single visible lateral filter and compact fittings. REMOVE image1's bulky power-armor head, enormous tall vertical grille and big paired breathing hoses. Preserve old dark brown duster collar but make left shoulder look like duster cloth not metal power armor. Render corrected Ranger helmet with cinematic photoreal materials, dark olive finish, subtle red lenses, same close-up position and calm framing. Keep the RIGHT Caesar portrait, Hoover Dam background, amber lamps, composition and exact text \"NEW VEGAS / WAR / FOR SLEEP\" completely unchanged. No additional text or badges. 16:9. This corrects one fictional equipment design, not a redesign of the thumbnail.",
+        "inputs": [
+          {
+            "file": "exec-37569fb5-1b9f-47a6-b71c-378408cf64e8.png",
+            "sha256": "5ba64395401a91e9e65e2f65ee1df22b446d5353512232d00d34c83161213730"
+          },
+          {
+            "file": "fallout-ncr-ranger-helmet.png",
+            "sha256": "8b00ba19052ef60d5cdd72bb44cae5bc88d2b247dcd776efabcd8cdcf6524e17"
+          }
+        ]
+      }
+    ]
+  }
+]
