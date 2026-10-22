@@ -1,0 +1,61 @@
+Audit éditorial du 22 octobre 2026.
+Commande : deuxième histoire originale française pour la reprise des Murmures de Sherlock Holmes. Sujet imposé : le testament signé après la mort. Narration calme, au moins deux heures, titre et miniature.
+
+Application de Faceless OS : structure d'enquête, continuité, ancrage dans la voix française de la chaîne, contrôle de progression, humanisation, scanner et relecture. La commande de fiction pour dormir prime sur les prescriptions génériques de relances agressives, d'interpellation du spectateur, de CTA, de fin abrupte et de suppression des accents. Les événements inventés ne sont pas présentés comme des faits historiques sourcés. Aucun score artificiel de recherche documentaire ou de monétisation n'est attribué.
+
+Processus : bible fixée avant rédaction ; quatre actes rédigés en seize segments, avec aide de trois sous-agents pour les actes II à IV ; relecture de l'intégralité par l'assistant principal ; contrelecture des raccords I/IV ; corrections puis assemblage. Aucune réécriture automatique par la pipeline de production.
+
+A. ACCROCHE ET PROMESSE
+Premier paragraphe : 62 mots. Ouverture exacte : « Le testament portait la date du vingt-trois novembre. L'homme qui l'avait signé était mort le dix-huit, et je savais qu'on l'avait enterré le vingt. »
+La contradiction est immédiate. Les deux témoins et la signature reconnaissable établissent ce qui devra être expliqué. La dernière phrase sur la place de la lampe annonce une enquête d'observation, reprise en 04-05. Pas de préambule de chaîne ni d'appel à l'abonnement.
+Titre : Sherlock Holmes et le testament signé après la mort | Histoire pour dormir.
+Miniature : SIGNÉ APRÈS SA MORT. L'image évoque le papier contesté, sans montrer le mécanisme de la fraude. Il s'agit du mystère allégué par le document ; la résolution établit que la signature n'a pas réellement été apposée après le décès.
+
+B. QUESTIONS OUVERTES ET RÉSOLUES
+- Date impossible : 01 ; réalité du décès confirmée avec délicatesse en 02 ; identité du comédien en 09-10 ; explication et motif de la date en 13-14.
+- Signature reconnue : 01 ; traces d'un usage ancien et formule générale en 05 ; registre d'envoi et retour en 07 ; épreuve de juillet et correspondance en 11-12 ; association frauduleuse en 14.
+- Certitude des témoins : 04 ; places, lampe et visibilité en 05 ; confirmation séparée en 12 ; explication aux témoins en 15.
+- Main gauche : geste de Pike en 04, habitude droite de Julian en 05, Rowe gaucher en 10 ; valeur limitée de l'indice explicitée en 16.
+- « La lampe est suffisante » : Cole en 04, consigne écrite de Rowe en 10, confrontation en 13.
+- Dettes d'Edward : 03 ; compte des difficultés et alibi indépendant en 06 ; suites concrètes en 15-16.
+- Institut : 03 ; différence avec la collection de livres et initiative de March en 07 ; motif de contrôle et pression sur la famille en 14 ; projet de prêt modestement poursuivi en 15-16.
+- Pardessus et facture : 07-08 ; numéro d'inventaire, commande, paiement et rôle Henry Brooke en 09 ; récit de Rowe en 10.
+- Pourquoi choisir une date postérieure aux funérailles : question explicite en 14. March espérait obtenir un arrangement en provoquant une contestation ; le récit montre un calcul défectueux, sans donner au faux une efficacité juridique automatique.
+Le repos, les trajets et les conséquences familiales servent ici le format sommeil. Ils sont assumés comme tels, sans prétendre respecter une relance toutes les quatre-vingt-dix secondes ni une fin au premier dénouement.
+
+C. CONTINUITÉ
+Chronologie : décès le 18 novembre 1897 ; funérailles le 20 ; tableau du bureau le 23 ; arrivée et témoins le 24 ; Edward le 25 ; registre, Institut et vêtement le 26 ; théâtre, imprimerie et confrontation le 27 ; départ le 28 ; nouvelles au début de l'hiver.
+Témoins interrogés séparément. Cole reste au seuil ; March porte et pose la housse. Pike arrive plus tard avec le bois. Cole seule entend la phrase de la lampe. Julian écrivait de la droite ; Rowe utilise la gauche, sans que cet indice seul prouve quoi que ce soit.
+Henry Brooke est un personnage de la représentation. Basil Rowe ne signe ni Julian Alderwick ni le testament contesté. La signature réelle est portée par un feuillet antérieur, identifié par sa provenance documentaire. Les marques matérielles ne permettent aucune datation miraculeuse de l'encre.
+Bennett demeure au domaine pendant le théâtre et l'imprimerie. Il sécurise les pièces et assure les démarches professionnelles. Holmes ne rend pas un jugement successoral.
+Corrections effectuées : retour prévu d'Edward harmonisé ; aide supplémentaire distinguée de l'ancien prêt ; progression du matin du 26 précisée ; trajet de la housse harmonisé ; Pike maintenu dans la salle d'attente pendant la confrontation ; phrase de Cole au singulier ; question initiale recentrée sur l'emplacement de la lampe ; doute de Marianne replacé sur la surveillance de la maison ; une répétition explicative de l'épilogue raccourcie ; civilités développées pour la voix.
+
+D. VOIX ET CONTRÔLE DE LANGUE
+Ancrages réels déjà consultés pour la reprise de la chaîne : transcriptions Nexlev de « Le Portrait qui vieillit » (https://www.youtube.com/watch?v=BObFCVvQq6Y) et « Le Poison de minuit » (https://www.youtube.com/watch?v=Cpl8xpJ2CzU).
+Forme narrative du Portrait : « La lettre arriva à Baker Street par un matin de novembre ».
+Forme domestique du Poison : « Le feu brûlait doucement dans la cheminée, chassant la fraîcheur matinale qui persistait malgré le soleil. »
+Lignes nouvelles comparées : « La pluie cessa lorsque notre train quitta les dernières rangées de maisons. » ; « Le thé répandait une chaleur légère au-dessus des tasses. » ; « La lampe éclairait les feuilles dessinées et leurs longues tiges fines. » Même registre de récit au passé et de détails sensoriels ordinaires ; intrigue et formulations nouvelles.
+
+D3. Scanner exécuté sur le texte assemblé avant et après corrections. Résultat final conservé dans SCAN_VOIX.txt : aucun HARD-BAN, zéro tiret cadratin, trois candidats de phrases courtes. Le scanner est principalement anglophone ; son zéro mécanique ne remplace pas la relecture française.
+Arbitrage des candidats :
+- 06, « Bennett examina le reçu » et « Edward acquiesça » : gestes intégrés à un entretien, non cascade de slogans.
+- 13, « La pluie avait cessé » et « Edward s'y trouvait aussi » : météo et localisation, au milieu de phrases de longueur variée.
+- 14, « March regarda les papiers » et « March acquiesça » : réactions concrètes à la question de la date, séparées par une explication longue.
+Échos : trente-deux groupes signalés, principalement noms, attribution de parole et date du vingt-trois novembre. Le texte conserve ces repères utiles à une écoute longue. Zéro paragraphe dupliqué dans le script ; zéro paragraphe identique au précédent épisode.
+
+D5. Registre des nombres narratifs significatifs, source interne de fiction : BIBLE.txt puis textes harmonisés. Année 1897 ; 18/20/23/24 novembre et trois jours entre enterrement et scène ; juillet pour le patronage ; Julian 76 ans ; Marianne 38 ans ; Pike 55 ans ; Rowe 63 ans ; quatre ans de service de March ; deux témoins entendus séparément ; deux amis au dîner d'Ellis ; trois volumes pratiques cités ; deux exemplaires du livre final. Les quantités domestiques et les durées approximatives sont des éléments de mise en scène, pas des statistiques historiques. Aucune donnée commerciale ou promesse juridique réelle dans la narration. Les chiffres de longueur proviennent du fichier final, dans CONTROLE_LONGUEUR.json.
+
+D6/D7. Relevé manuel des contrastes construits retenus dans la famille large :
+1. 06 : « disputés sur la façon de tenir les comptes, jamais sur le choix du travail » ; précision sur une relation familiale.
+2. 13 : « pas été invité à deviner un visage [...] devait répondre sur les rendez-vous » ; recadrage d'une question.
+3. 14 : « ne permettait pas de dater une encre [...] permettait de retrouver une feuille » ; limite explicite de l'examen matériel.
+Trois contrastes retenus sur l'ensemble, dont un seul recadrage explicatif direct de type ce n'est pas X/c'est Y (14). Aucun empilement de conclusions aphoristiques en fin de paragraphe. Aucun appel au spectateur, slogan de bande-annonce, ligne de chatbot ou formule de clôture commerciale. La cadence finale décroît volontairement pour le sommeil.
+
+E. ORIGINALITÉ ET LIMITES DU CONTRÔLE
+Nouvelle fiction : enquête sur une scène jouée et la provenance d'une signature. Aucun texte concurrent traduit. Aucun mur, pièce secrète ou document retrouvé dans une couture repris du premier épisode. Les personnages secondaires, les observations et les scènes sont propres à cette commande. Les éléments Sherlock/Watson et l'ambiance victorienne sont la continuité demandée.
+L'audit ne constitue ni une certification de monétisation ni une validation du futur montage. Aucune lecture audio complète n'a été produite ou écoutée ; contrôle éditorial du texte et de sa longueur uniquement. La durée sera à confirmer sur le son généré.
+
+LIVRAISON
+18 904 mots ; 230 paragraphes ; environ 135 minutes à 140 mots/minute, 151 minutes à 125. Version texte prête à la voix off dans le cadre fiction/sommeil. Le dossier de travail conserve le scanner, le contrôle de longueur, le prompt et l'image source. Miniature générée par l'outil intégré puis inspectée visuellement : texte exact, accentuation correcte, hiérarchie lisible, export JPEG sous deux mégaoctets.
+
+Modules consultés : faceless-scripts-os-master.md, research-and-ideation-skill.md, voice-anchoring-skill.md, script-structures-skill.md, humanizer-skill.md, greenlight-audit-skill.md, trailer-voice-scan.py ; skill imagegen pour la miniature. Les adaptations au sommeil sont propres à cette commande, pas une revendication de conformité littérale à chaque règle générique.

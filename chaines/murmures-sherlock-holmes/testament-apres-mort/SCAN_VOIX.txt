@@ -1,0 +1,17 @@
+====================================================================================================
+chaines\murmures-sherlock-holmes\testament-apres-mort\SCRIPT.txt
+  [staccato x2/7] "Bennett examina le reçu." | "Edward acquiesça."  << Bennett examina le reçu. Il portait la signature d'Ellis et une date, ...
+  [staccato x2/7] "La pluie avait cessé." | "Edward s'y trouvait aussi."  << La pluie avait cessé. À travers les vitres, je distinguais encore les ...
+  [staccato x2/11] "March regarda les papiers." | "March acquiesça."  << Holmes lui demanda pourquoi il avait choisi une date postérieure aux f...
+  -- ECHO CHECK (H18): 32 hit(s)
+  [echo H18: phrase repeated 7x] "holmes lui demanda de"
+  [echo H18: phrase repeated 6x] "le secr taire avait"
+  [echo H18: phrase repeated 6x] "je lui demandai si"
+  [echo H18: phrase repeated 5x] "lui avait demand de"
+  [echo H18: phrase repeated 5x] "s de la porte"
+  [echo H18: phrase repeated 4x] "du vingt trois novembre"
+  [echo H18: phrase repeated 4x] "avait pr f r"
+  [echo H18: phrase repeated 4x] "r pondit que nous"
+
+3 candidate flags across 1 files. Judge each flag by the shape test in voice-anchoring-skill.md: have you ever actually said a sentence with this shape? Enumerations are real speech, leave them alone.
+Antithesis/reframe floor: 0 mechanical hit(s). This is the MINIMUM for the greenlight D7 ledger: a ledger listing fewer instances than the floor is wrong. A floor of 0 clears nothing; most of the family is machine-invisible, so the audit still scans by eye.
