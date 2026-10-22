@@ -1,0 +1,14 @@
+TITRE
+Sherlock Holmes et la chambre qui n’existait pas | Histoire pour dormir
+
+SCRIPT.txt contient exclusivement la narration française complète, prête à copier dans l'outil de voix off. Ne pas lire ce fichier de consignes, le titre, le brief ou l'audit.
+
+Lecture conseillée : voix masculine posée, chaleureuse, sans effets de personnages excessifs ; débit effectif de 115 à 125 mots par minute. Conserver les paragraphes pour les respirations naturelles. Ne pas lire les dialogues plus fort que la narration. Pas de cris, de suspense sonore brutal ou d'accélération finale.
+
+La durée annoncée est une estimation à partir du nombre de mots, pas un audio déjà mesuré. À 125 mots par minute, le récit dépasse deux heures dix. À 130 mots par minute, il dépasse encore deux heures. Vérifier le fichier audio après synthèse. Un réglage « vitesse 0,9 » ne correspond pas à un débit universel : mesurer un extrait avec la voix réellement choisie.
+
+MINIATURE_YOUTUBE.jpg : miniature finale, mêmes pixels que l'image générée, encodage JPEG pour un fichier léger. MINIATURE.png : original conservé. Texte : UNE CHAMBRE DE TROP.
+
+Récit original autour de Sherlock Holmes et Watson, distinct des aventures écrites par Conan Doyle. Ne pas présenter cette histoire comme un texte retrouvé ou une œuvre authentique de Conan Doyle.
+
+Livraison : titre, script et miniature. Aucune voix, vidéo ou publication n'a été générée ou programmée.

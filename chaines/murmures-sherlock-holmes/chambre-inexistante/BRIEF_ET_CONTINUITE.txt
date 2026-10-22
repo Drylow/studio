@@ -1,0 +1,24 @@
+Fiction originale commandée par l'utilisateur. Narration française de Watson, calme pour dormir. Minimum deux heures. Texte voix off seul dans SCRIPT.txt, titre séparé. Pas de balises, chapitres à lire, indications sonores ou liens dans la narration. Accents français conservés.
+
+Faceless OS v5 appliqué avec adaptation explicite au sommeil : progression et indices concrets, sans relances agressives, appels à l'action ou rythme publicitaire. Les personnages et événements inventés sont ceux d'une fiction originale autorisée, pas des affirmations documentaires.
+
+TOPIC: Sherlock Holmes et la chambre qui n'existait pas.
+ANGLE: Treize fenêtres, douze chambres accessibles. Une pièce effacée des plans conserve la preuve d'une injustice familiale.
+PROOF BANK: recherche éditoriale, pas preuves de l'intrigue fictive.
+Le portrait qui vieillit, 610 vues : https://www.youtube.com/watch?v=BObFCVvQq6Y
+Le poison de minuit, 561 vues : https://www.youtube.com/watch?v=Cpl8xpJ2CzU
+Le dernier vol du funambule, 549 vues : https://www.youtube.com/watch?v=QE_Zup9ygzI
+L'apothicaire de Covent Garden, 424 vues : https://www.youtube.com/watch?v=TxVJ0gLZgO8
+La cartographie de l'impossible, 398 vues : https://www.youtube.com/watch?v=GGm4p4eiKqE
+Catalogue Algrow et Nexlev consulté le 22 octobre 2026 : 30 récits, médiane 228 vues. Historique de visibilité inconnu.
+HOOK DIRECTION: Watson compte une fenêtre éclairée sans chambre accessible. Il vérifie avant de croire au surnaturel.
+STRUCTURE HINT: enquête originale à deux résolutions liées. D'abord retrouver la pièce et expliquer sa lumière, ensuite identifier pourquoi elle fut condamnée et réparer l'accusation ancienne.
+
+Ancres de voix : transcriptions réelles Nexlev des deux premières vidéos. Le portrait, 01:01-01:30 : « La lettre arriva à Baker Street par un matin de novembre » ; Le poison : « Le feu brûlait doucement dans la cheminée, chassant la fraîcheur matinale qui persistait malgré le soleil. » Syntaxe narrative continue, gestes concrets, ton bas. Ne pas recopier les intrigues.
+Débit approximatif sur dix minutes de sous-titres : portrait 139 mots/min ; poison 129. Mesure indicative des segments, pas mesure d'un audio nouvellement rendu. Prévoir une lecture plus posée à 115-125 mots/min pour ce récit ; vérifier sa durée réelle après synthèse.
+
+Continuité : automne 1895, domaine fictif d'Ormecombe en Angleterre. Edmund Ashcombe, propriétaire, 44 ans. Sa mère Eleanor morte en 1865, son père Ambrose mort ensuite. Clara, nièce adulte d'Edmund, dessine les bâtiments. Mrs Bell, gouvernante, 60 ans, était jeune employée d'Eleanor. Samuel Reed, menuisier de 40 ans, fils de Rose Reed, blanchisseuse accusée à tort en 1865. Philip Harcourt, intendant actuel, fils de l'ancien régisseur responsable du détournement. Philip n'est pas l'auteur du vol ancien mais a soustrait un document pour protéger la réputation paternelle.
+Géométrie : treize baies à l'étage sur façade sud. Douze pièces accessibles, une par baie hors pièce cachée centrale au-dessus du porche. Ancienne porte vers galerie murée, panneaux uniformes. Accès de service conservé depuis ancienne lingerie au rez-de-chaussée, escalier étroit vers la pièce centrale. Largeur manquante mesurable. Aucun espace magique, passage d'un bâtiment voisin ou changement de plan.
+Lumière : Bell consulte la pièce depuis longtemps, volet intérieur abritait sa lampe. Une réparation récente du volet l'a laissé démonté, rendant la lumière visible depuis jardin. Visites du soir dues à ses tâches de journée. Elle cherche justificatif innocentant Rose avant travaux projetés.
+Intrigue passée : argent confié à ancien régisseur pour salle de lecture du village ; fausse quittance attribuée à Rose. Eleanor soupçonnait erreur. Sa mort interrompt vérifications. Ambrose condamne la pièce par deuil, croit alors Rose coupable. Double de compte et lettre dans portefeuille à soufflet dans atelier de couture. Vérification indépendante par archives de l'entreprise et reçu authentique de Rose. Pas de testament magique ni de culpabilité déduite d'une seule trace.
+Fin : aveu de Philip, documents confiés à un professionnel, rectification publique proportionnée, réparation du manoir et salle de lecture financée progressivement. Réouverture de porte, thé dans pièce, retour Baker Street, repos. Pas de meurtre, poursuite ou menace finale.
