@@ -1,0 +1,46 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This isolated sentence restates the already described result and anticipates chapter 25 without adding an event or inference.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase nomme le critere auquel Lumon interprete le resultat, distinction entre observation et lecture institutionnelle utile des l ouverture."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 25,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The Helly comparison re-teaches chapters 3 and 4; the preceding paragraph has already established why Gemma must retain practical ability for this test.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison distingue savoir-faire preserve et biographie inaccessible dans le test du berceau. Helly sert de point de comparaison sans rejouer son arrivee."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This standalone announcement is supplied again by the immediately following discussion of Gabby's childbirth experience.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La courte transition distingue une utilisation de confort de la routine de travail, avant d examiner qui en porte le cout."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The second sentence repeats the contrast already established by the preceding gala and retreat account; retain its useful distinction between recurring work and childbirth.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel identifie clairement les deux positions a comparer, en evitant les deux prenoms arbitrairement assignes a chaque self. Ce choix de clarte vaut la seconde phrase."
+    }
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "A crib without the memory attached",
+    "start_character": 0,
+    "end_character": 5015,
+    "words": 822,
+    "sha256": "1168364451e1dc73bb5f6487fd894bb943fe24f9f0e261a97c24d55ceb619b12"
+  },
+  {
+    "number": 2,
+    "title": "The division a worker agrees to",
+    "start_character": 5018,
+    "end_character": 10340,
+    "words": 889,
+    "sha256": "441b9946428923a4406c4a5946da4adde00420a9b5d1a114853f9b765187b764"
+  },
+  {
+    "number": 3,
+    "title": "A consciousness begins at the conference table",
+    "start_character": 10343,
+    "end_character": 16345,
+    "words": 972,
+    "sha256": "f94defda687c1421f13d34e9d34e5f72367cf42f638853ee3acf4577f2d2f20e"
+  },
+  {
+    "number": 4,
+    "title": "Memory can be absent while ability remains",
+    "start_character": 16348,
+    "end_character": 21996,
+    "words": 886,
+    "sha256": "72627ede4f376fc4c664f1caa3a2e95c24350f199500c043151aaabd0ba978fb"
+  },
+  {
+    "number": 5,
+    "title": "The machine is planted in a person",
+    "start_character": 21999,
+    "end_character": 27055,
+    "words": 802,
+    "sha256": "80d84c2dedd9e1e778b7e00c395874929cfbba0fd341513d46e3728591008147"
+  },
+  {
+    "number": 6,
+    "title": "The floor teaches a worldview",
+    "start_character": 27058,
+    "end_character": 33839,
+    "words": 1067,
+    "sha256": "d0b32ffccc1ddf198f4fed7c75b8f36413c71eaa97b054c2a64803346b7380a5"
+  },
+  {
+    "number": 7,
+    "title": "Numbers that produce a feeling",
+    "start_character": 33842,
+    "end_character": 40013,
+    "words": 995,
+    "sha256": "b7a7ef7e1f0dec53050149b717f59f1c76f0720b1d23c4e4fc4bed9a1e137b5b"
+  },
+  {
+    "number": 8,
+    "title": "An uneven kind of expertise",
+    "start_character": 40016,
+    "end_character": 46211,
+    "words": 983,
+    "sha256": "0dc9e375f2695608edaf368f285ce99e0931a55ac08760a5fb45dde1b7929281"
+  },
+  {
+    "number": 9,
+    "title": "Departments that do not compare notes",
+    "start_character": 46214,
+    "end_character": 53015,
+    "words": 1085,
+    "sha256": "2fd5907c7fca7bd743f318536554f8c609f5a2e14f1bfe5c9800a0969c13fcc1"
+  },
+  {
+    "number": 10,
+    "title": "The Break Room changes behavior",
+    "start_character": 53018,
+    "end_character": 59563,
+    "words": 1033,
+    "sha256": "e951c8d5491a9f616cb9d0a3f28d4d570ed4c42dea5dff1039db15af23ebc216"
+  },
+  {
+    "number": 11,
+    "title": "Wellness without informed consent",
+    "start_character": 59566,
+    "end_character": 66170,
+    "words": 1055,
+    "sha256": "3aa5255815476f2114faefeb04d5ab9f8a69ab767c8da9333b0eb0c1a1e4ebaf"
+  },
+  {
+    "number": 12,
+    "title": "Cobel keeps testing a boundary",
+    "start_character": 66173,
+    "end_character": 72584,
+    "words": 1032,
+    "sha256": "9fc5a0ac30b78284a09ba9f8f0d2f4e0114f3daa2fa356a4655ca6ed3bbf75ad"
+  },
+  {
+    "number": 13,
+    "title": "The Overtime Contingency",
+    "start_character": 72587,
+    "end_character": 78783,
+    "words": 997,
+    "sha256": "4d9cdb58dd2d4d278268887d59bdcfe0b8038f6f0dba6f79308d16d8e1dd9e24"
+  },
+  {
+    "number": 14,
+    "title": "The public product at the gala",
+    "start_character": 78786,
+    "end_character": 85399,
+    "words": 1039,
+    "sha256": "0c2eecb0fcbbdfce43f499c2547223243b8a2a692f206b147e59ecd3e6debcf7"
+  },
+  {
+    "number": 15,
+    "title": "The technology used away from an office",
+    "start_character": 85402,
+    "end_character": 92072,
+    "words": 1034,
+    "sha256": "4fc89e678b750ad3e96fa8f05df51331e7dad2a77d24ad55d5858179bdba7f41"
+  },
+  {
+    "number": 16,
+    "title": "Petey crosses the boundary and suffers",
+    "start_character": 92075,
+    "end_character": 98413,
+    "words": 1004,
+    "sha256": "2d07a31cd017d4513d3fdbc422af232dad7e3fd86b7ad816160dd231f12e3f1d"
+  },
+  {
+    "number": 17,
+    "title": "Mark attempts reintegration",
+    "start_character": 98416,
+    "end_character": 104742,
+    "words": 1017,
+    "sha256": "1aa61b5d5cf201b0a17967e14fd252ecbbf00bc24e53b6e8ef3ec5465af51863"
+  },
+  {
+    "number": 18,
+    "title": "A return staged by management",
+    "start_character": 104745,
+    "end_character": 111457,
+    "words": 1048,
+    "sha256": "b10af5ef1cabda46b0515118ca5f444a5dd802c986da3860ac02d83121ed9c04"
+  },
+  {
+    "number": 19,
+    "title": "Helena plays the part of Helly",
+    "start_character": 111460,
+    "end_character": 117864,
+    "words": 1009,
+    "sha256": "340bfde6974d827826383afdf95707a8e6009c794ca21434b8ba423818c84f4d"
+  },
+  {
+    "number": 20,
+    "title": "Dylan's visiting room",
+    "start_character": 117867,
+    "end_character": 124117,
+    "words": 1007,
+    "sha256": "4ec481210fb861718142583b5e2de80e91b460f44d2822119021359a96fe87be"
+  },
+  {
+    "number": 21,
+    "title": "The road to the testing floor",
+    "start_character": 124120,
+    "end_character": 130490,
+    "words": 1019,
+    "sha256": "9ccb95e46791f43eefd59b2f20782912d030aabded7827db04ba75c835bae43a"
+  },
+  {
+    "number": 22,
+    "title": "Gemma lives among test rooms",
+    "start_character": 130493,
+    "end_character": 136902,
+    "words": 1034,
+    "sha256": "d9e7c529188a442356e626588d7e00c137393a204acd6d41711c011514234765"
+  },
+  {
+    "number": 23,
+    "title": "Fear and the experimental setting",
+    "start_character": 136905,
+    "end_character": 138464,
+    "words": 234,
+    "sha256": "eefcacf19a1c9ccd7966be3d1ff8de54162ac4737176fe148f060e39c0722e38"
+  },
+  {
+    "number": 24,
+    "title": "Mark's work and Gemma's partitions",
+    "start_character": 138467,
+    "end_character": 144845,
+    "words": 1006,
+    "sha256": "ac7d6be76c1c542ba241d59f21df6cdf82557c5a2004342d90b4e0bdda2e7215"
+  },
+  {
+    "number": 25,
+    "title": "The crib test succeeds on its own terms",
+    "start_character": 144848,
+    "end_character": 150542,
+    "words": 946,
+    "sha256": "8b23cd9080615fa2855295e1e7d35c42741b2104b21db296e3a33eef3847e3e5"
+  },
+  {
+    "number": 26,
+    "title": "Cobel's notebooks change the ownership story",
+    "start_character": 150545,
+    "end_character": 156679,
+    "words": 968,
+    "sha256": "d4ab54ad2e862b5865344c34c3bc71d1f2517aa7d2b13043fa1cc16ab700780e"
+  },
+  {
+    "number": 27,
+    "title": "Theory one: an expandable compartment",
+    "start_character": 156682,
+    "end_character": 163556,
+    "words": 1052,
+    "sha256": "38e5d0e8cea83cc372404e9d9e1e662d7f90eeecba5fb806feceb87ee242b6dd"
+  },
+  {
+    "number": 28,
+    "title": "Theory two: a way around emotional suffering",
+    "start_character": 163559,
+    "end_character": 168959,
+    "words": 867,
+    "sha256": "a4041ae43e8b83fdfea7f0c516b6b9d47c618a7736aea6157dbc9be5cb45bd36"
+  },
+  {
+    "number": 29,
+    "title": "Theory three: a durable Eagan future",
+    "start_character": 168962,
+    "end_character": 175553,
+    "words": 1035,
+    "sha256": "fd32f654938998dafa1236beadbdc7c1e16834d80ea3fe17dfa302f2866fe6be"
+  },
+  {
+    "number": 30,
+    "title": "The person the experiment cannot contain",
+    "start_character": 175556,
+    "end_character": 181541,
+    "words": 1005,
+    "sha256": "df2d0712a7e2767c6df0c05407be1a4abd53a39677530ce4417a452f57364ca1"
+  }
+]

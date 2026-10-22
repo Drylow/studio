@@ -1,0 +1,42 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Elder Scrolls mainline games Morrowind, Oblivion with Shivering Isles, Skyrim with Dawnguard and Dragonborn; full spoilers. A brief separately labeled ESO Gold Road/Ithelia coda only. In-world books and testimony can disagree. Do not assert a fixed exhaustive number across all eras, conflate Daedra with all evil, or diagnose mental illness through a Prince.
+
+Banque de faits et oeuvres de reference :
+{"id": "T1", "fact": "Azura, Boethiah and Mephala occupy distinct Dunmer religious roles; Tribunal traditions and later Reclamations change their public status.", "work": "Morrowind: religious books, Azura main-quest ending; Skyrim Dragonborn: Raven Rock temple."}
+{"id": "T2", "fact": "Princes intervene through different quests and artifacts; a shrine account is not an omniscient origin record.", "work": "Oblivion Daedric shrine quests; Skyrim Daedric quests."}
+{"id": "T3", "fact": "Shivering Isles reveals Sheogorath and Jyggalag within the Greymarch; player mantling is this expansion outcome, not an identical rule for all Princes.", "work": "Shivering Isles main quest."}
+{"id": "T4", "fact": "Gold Road introduces the returning Prince Ithelia; this is ESO context beyond the mainline-game scope.", "work": "ESO Gold Road", "url": "https://bethesda.net/en-EU/news/the-elder-scrolls-online-gold-road-and-update-42", "opened": "2026-10-22"}
+
+Reperes par section (sans minutages audio) :
+01. A traveler stops at a shrine — Oblivion: Azura shrine quest.
+02. Creation as Tamriel remembers it — The Monomyth; Aedra and Daedra in-game books.
+03. Spheres are not moral teams — Varieties of Faith; Morrowind and Oblivion shrine contexts.
+04. Azura and a promise remembered — Morrowind main quest; Oblivion Azura quest.
+05. Boethiah and the challenge of allegiance — Oblivion Boethia; Skyrim Boethiah's Calling; Dunmer faith texts.
+06. Mephala's hidden connections — Morrowind Morag Tong; Skyrim The Whispering Door.
+07. The Reclamations after the Tribunal — Morrowind religious texts; Dragonborn temple and Elder Othreloth dialogue.
+08. Mehrunes Dagon at the border of a world — Oblivion main quest and Mysterium Xarxes.
+09. Molag Bal and imposed ownership — Skyrim House of Horrors; Dawnguard dialogue.
+10. Meridia's light has conditions — Skyrim The Break of Dawn; Oblivion Meridia shrine.
+11. Hircine and the changing position of hunter — Morrowind Bloodmoon; Skyrim Ill Met by Moonlight.
+12. Clavicus Vile and the wish that divides — Skyrim A Daedra's Best Friend; Oblivion Umbra shrine quest.
+13. Sanguine makes an evening into an obligation — Skyrim A Night to Remember.
+14. Vaermina in sleeping lives — Skyrim Waking Nightmare; Oblivion Vaermina quest.
+15. Namira and people pushed from sight — Oblivion Namira shrine; Skyrim Taste of Death.
+16. Peryite's order of a different kind — Skyrim The Only Cure; Oblivion Peryite quest.
+17. Malacath and a chief who fails — Skyrim The Cursed Tribe; The True Nature of Orcs.
+18. Nocturnal and a contract beyond a theft — Skyrim Thieves Guild final quests; Oblivion Nocturnal shrine.
+19. Hermaeus Mora collects more than books — Skyrim Discerning the Transmundane; Dragonborn.
+20. Miraak as a long-serving prisoner — Dragonborn main quest.
+21. Sheogorath enters the ordinary city — Skyrim Mind of Madness; Oblivion Sheogorath shrine.
+22. The Shivering Isles have institutions — Shivering Isles opening through imperial court.
+23. Jyggalag and the Greymarch — Shivering Isles main quest ending.
+24. Artifacts carry a patron into another place — Oblivion and Skyrim named artifact quests.
+25. Realms and doors are not interchangeable — Oblivion main quest; Shivering Isles; Dragonborn.
+26. Summoning requires a local relationship — Oblivion Daedric shrine quests.
+27. The mortal can sometimes refuse — Skyrim Waking Nightmare; A Daedra's Best Friend; Ill Met by Moonlight.
+28. The Prince absent from an older list — ESO Gold Road official premise and Ithelia story.
+29. Why mortal accounts disagree — Dunmer traditions; shrine claims; Shivering Isles explanation.
+30. Leaving the shrine with a decision — Skyrim Nightingale resolution; Waking Nightmare conditional ending.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

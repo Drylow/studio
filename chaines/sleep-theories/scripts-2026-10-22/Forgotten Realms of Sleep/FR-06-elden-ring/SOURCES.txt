@@ -1,0 +1,45 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Elden Ring base game and Shadow of the Erdtree released content only, full spoilers. No Nightreign parallel continuity, datamined cut scenes, movie story or newly invented creator confirmation. Item descriptions and dialogue identified naturally when interpretations conflict. Distinguish explicit revelations, character claims and uncertain chronological motives. Conditional player endings.
+
+Banque de faits et oeuvres de reference :
+{"id": "ER1", "fact": "The shattering of the Elden Ring leads demigods to war and the Tarnished return toward becoming Elden Lord.", "work": "Base game opening; Roundtable Hold.", "url": "https://en.bandainamcoent.eu/elden-ring/news/elden-ring-story-summary-explained", "opened": "2026-10-22"}
+{"id": "ER2", "fact": "Ranni organized the stolen Rune of Death plot; Godwyn's soul dies while her flesh dies, as narrated and described in the game.", "work": "Ranni quest, Black Knifeprint, Cursemark of Death."}
+{"id": "ER3", "fact": "Radagon is Marika, revealed by the statue and endgame; this does not settle every earlier chronology of their identity.", "work": "Law of Regression statue revelation; final boss scene."}
+{"id": "ER4", "fact": "The expansion follows Miquella into the Land of Shadow, where he abandons flesh and lineage; Messmer's crusade and Marika's past expand the history.", "work": "Shadow of the Erdtree opening, crosses and locations.", "url": "https://www.youtube.com/watch?v=qLZenOn7WUo", "opened": "2026-10-22"}
+{"id": "ER5", "fact": "Ansbach explains the use of Mohg's body; the final encounter features Radahn and Miquella. The exact prior willingness of Radahn is disputed, not fully shown.", "work": "Ansbach dialogue, Secret Rite Scroll, final boss and memory."}
+{"id": "ER6", "fact": "Metyr's remembrance says she was the first shooting star and daughter of the Greater Will; Ymir's defective-fingers account is his theory, not a confirmed claim the Greater Will never existed.", "work": "Remembrance of the Mother of Fingers; Count Ymir dialogue."}
+{"id": "ADD-Ansbach-armor", "fact": "Ansbach explicitly says Miquella used Mohg to gain entrance to the Land of Shadow, before the later use of his corpse. Fire Knight Armor describes noble knights shunned and driven from homes after allegiance to Messmer; do not assert loss of golden guidance.", "work": "In-game Ansbach dialogue 11610 and Fire Knight Armor item description", "urls": ["https://eldenring.wiki.gg/wiki/Sir_Ansbach", "https://eldenring.fandom.com/wiki/Sir_Ansbach/dialogue", "https://www.gamerguides.com/elden-ring-shadow-of-the-erdtree/database/armor/body/fire-knight-armor-altered"], "opened": "2026-10-22"}
+
+Reperes par section (sans minutages audio) :
+01. A Tarnished returns to an unfinished world — Elden Ring opening and first grace.
+02. The Elden Ring is an order of life — Base game opening; Enia and Golden Order descriptions.
+03. Life before the Golden Order's certainty — Remembrance of the Dragonlord; Crucible item descriptions.
+04. Marika, Godfrey and conquest — Melina church echoes; giant-war equipment and location history.
+05. The Tarnished are sent away — Melina echoes; opening Tarnished return.
+06. Radagon at war and in marriage — Miriel dialogue; Rennala and demigod descriptions.
+07. The children carry different claims — Remembrances, Enia and family-related item descriptions.
+08. Death is removed from ordinary rule — Enia; Maliketh remembrance; Black Blade descriptions.
+09. The Night of the Black Knives — Ranni confession; Cursemark of Death; Black Knifeprint.
+10. Godwyn's body continues beneath the roots — Rogier, D and Fia quests; deathroot descriptions.
+11. Marika shatters and Radagon repairs — Opening imagery; Marika's Hammer; statue revelation.
+12. The Shattering leaves no victor — Opening; sword monuments; Shattering-related items.
+13. Caelid after the bloom — Radahn festival; Malenia and Radahn descriptions.
+14. Stormveil and a borrowed inheritance — Stormveil; Godrick and Nepheli dialogue.
+15. Raya Lucaria keeps a broken queen — Rennala encounter; Miriel; academy item descriptions.
+16. Roundtable Hold gathers other ambitions — Roundtable dialogue and character quests.
+17. Ranni chooses a different succession — Ranni quest; Nokron; Blaidd and Iji.
+18. Volcano Manor's revolt consumes its followers — Volcano Manor; Rykard remembrance.
+19. Morgott defends what rejects him — Margit/Morgott encounters; Remembrance of the Omen King.
+20. The Erdtree refuses entry — Morgott ending; Melina and Enia dialogue.
+21. Flame and Destined Death change the route — Forge; Farum Azula; Maliketh.
+22. An order can be mended in several ways — Endgame encounters and ending options.
+23. Miquella leaves a tree and a body behind — Haligtree; Mohgwyn Palace; Ansbach expansion dialogue.
+24. Entering a concealed land — Shadow of the Erdtree opening and crosses.
+25. Marika's village and the hornsent — Minor Erdtree; Golden Braid; Tooth Whip; Bonny Village.
+26. Messmer's crusade and a mother's distance — Shadow Keep; Messmer encounter and remembrance.
+27. The Fingers have a troubled messenger — Ymir quest; Metyr remembrance and Staff of the Great Beyond.
+28. The charm breaks among the followers — Expansion Great Rune break; follower quests; St. Trina.
+29. The promised lord and the borrowed body — Ansbach; Secret Rite Scroll; final encounter and memory.
+30. An age of compassion still asks obedience — Miquella memory; St. Trina; Circlet of Light; base ending possibilities.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

@@ -1,0 +1,53 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+FROM television through S4E10 If a Tree Falls in the Forest..., aired June 28 2026. Full season-one through four spoilers; no season-five leaks or invented endings. Calm, non-graphic account of danger; no practical self-harm detail. Separate observed rules, character claims and original theories.
+
+Banque de faits et oeuvres de reference :
+{"id": "V1", "fact": "Victor's childhood survival, drawings, cached possessions and his relationship with Ethan form a persistent record, but the series shows gaps and corrections.", "work": "FROM S1-S3", "url": "https://en.wikipedia.org/wiki/List_of_From_episodes", "opened": "2026-10-15"}
+{"id": "V2", "fact": "Victor initially attributes Christopher's conversation to Jasper; S3E8 corrects this to the Boy in White. Sara helps him recall it.", "work": "S3E8 Thresholds", "url": "https://en.wikipedia.org/wiki/List_of_From_episodes", "opened": "2026-10-15"}
+{"id": "V3", "fact": "Victor remembers Eloise and Miranda; the reunion with Henry introduces an independent person from his former home, without resolving every missing-family question.", "work": "S2E8-10; S3 father-son reunion", "url": "https://freshpairofiis.com/2024/10/21/interview-from-scott-mccord-victor-meeting-his-dad/", "opened": "2026-10-15"}
+{"id": "V4", "fact": "The S3 finale reveals Tabitha and Jade's relation to Miranda and Christopher and the earlier attempts to save the children; Victor's personal history intersects that longer pattern.", "work": "S3E10; S4E7", "url": "https://en.wikipedia.org/wiki/List_of_From_episodes", "opened": "2026-10-15"}
+{"id": "V5", "fact": "S4 Victor recalls the Man in Yellow as a former apparent resident and the later treatment of Miranda's body; at the car he fears Ethan may repeat his childhood isolation.", "work": "S4E4 and S4E7", "url": "https://en.wikipedia.org/wiki/List_of_From_episodes", "opened": "2026-10-15"}
+{"id": "V6", "fact": "Henry's visions offer a life with another Victor and demand he remove the real Victor. The actors discuss the manipulation and strain; these visions are not verified escape instructions.", "work": "S4E6-9", "url": "https://www.tvinsider.com/1270854/from-scott-mccord-robert-joy-season-4-episode-9-recap-victor-henry-interview/", "opened": "2026-10-15"}
+{"id": "V7", "fact": "The Boy in White warns against uprooting the bottle tree; Boyd restrains Victor, the plan goes ahead, and the finale's protections fail amid a new crisis.", "work": "S4E9-10", "url": "https://readysteadycut.com/2026/06/28/from-season-4-sophia-boy-in-white/", "opened": "2026-10-15"}
+{"id": "V8", "fact": "Henry attempts to shoot Victor; Ethan interrupts and Victor disarms his father. Both survive this scene. The actors describe a reversal toward Victor caring for Henry.", "work": "S4E10", "url": "https://www.tvinsider.com/1271846/", "opened": "2026-10-15", "corroboration": "https://tvbrittanyf.com/2026/07/07/from-season-4-scott-mccord-robert-joy-interview/"}
+{"id": "V9", "fact": "In S4E7 Boyd tells Henry and Victor about Tabitha/Miranda. Henry reacts with distress; Victor asks Tabitha about being his mother and seeks her help in investigating the Man in Yellow. Current family relationships remain distinct. Boyd tells Henry and Victor about Miranda and Tabitha. In S4E7 Victor asks Tabitha in the graveyard whether she is his mother, seeks her help, and takes her and Ethan to the Man in Yellow's car. Tabitha and Ethan tell Julie. Henry struggles with the revelation and Sophia's manipulation.", "work": "S4E7 Best Laid Plans, supported by cast interview and episode recap", "url": "https://www.horrorgeeklife.com/2026/06/08/from-season-4-scott-mccord-robert-joy-interview/", "opened": "2026-10-15", "corroboration": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/"}
+{"id": "ADD-trees", "fact": "S1E3 Victor measures by steps from house corner to nearby trees. Initially dismisses Ethan, becomes interested when Ethan asks about boy in forest. Says checking whether trees move. Julie comes out to scold Ethan for being outside. No established tree speed, cause, teleportation or compass survey.", "url": "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/3/", "work": "S1E3", "opened": "2026-10-15"}
+{"id": "ADD-tunnels", "fact": "S1E10 and S2E1 Boy in White sends Victor underground; he meets Tabitha after excavation, guides her among sleeping creatures, warns quiet. They exit to forest and cargo truck. Boyd, Tabitha, Victor, Elgin survive and return town S2E2. Victor has hidden supplies/drawings. No control over creatures/portals.", "url": "https://www.whattowatch.com/features/from-season-2-episode-1-recap-welcome-to-the-nightmare", "work": "S1E10; S2E1-2", "opened": "2026-10-15"}
+{"id": "ADD-lunchbox", "fact": "Victor gives Tabitha lunchbox for tower journey S2 end. Wakes outside in Camden, finds address on lunchbox and visits Henry. Henry recognizes missing sons lunchbox but doubts her story; missing-family news helps discussion. Distinguish address from supernatural exit directions. Victor predicting result unconfirmed.", "url": "https://www.dexerto.com/tv-movies/from-season-3-episode-2-recap-2914406/", "work": "S2E10; S3E1-2", "opened": "2026-10-15"}
+{"id": "F-NEW1", "fact": "Sophia is the Man in Yellow in another appearance, as revealed to the audience in the S4 premiere. Do not continue treating their identity link as an unconfirmed fan guess.", "work": "S4E1", "url": "https://readysteadycut.com/2026/04/19/from-season-4-episode-1-recap/", "opened": "2026-10-22"}
+{"id": "F-NEW2", "fact": "S4 finale: Jade and Tabitha retrieve children bones; uprooting bottle tree coincides with destabilization and dark sky. Sophia sabotages escape, steals talismans with Clara and disposes them into a faraway tree. Fatima shows creature transformation and stays behind during rescue; do not declare her permanently dead. Marielle and Elgin die; Victor and Henry survive. Smiley gets into clinic after talisman is dislodged, not through a proven immunity to stones.", "work": "S4E10", "url": "https://readysteadycut.com/2026/06/28/from-season-4-ending-explained/", "opened": "2026-10-22"}
+{"id": "F-NEW3", "fact": "S4E7: Kenny tries a totem spear against a night creature and it fails; a revived Roger is stopped with one, so Roger and night creatures should not be conflated. Fatima sees through Smiley and distracts him. Boyd and Jade share reincarnation/bones theory publicly, not proof of every proposed escape mechanism.", "work": "S4E7", "url": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/", "opened": "2026-10-22"}
+
+Reperes par section (sans minutages audio) :
+01. The song that carries a memory — S3E10.
+02. A place that chooses new arrivals — S1E1; S3E3-4.
+03. Ethan understands through a story — S1 Ethan and Victor; S3 Julie discussions.
+04. Victor records what he cannot explain — S1-S3 Victor drawings.
+05. Miranda's paintings before arrival — S3 Camden and Henry.
+06. A sister missing from the old account — S2E8-10; S3 family memory.
+07. The conversation that was misremembered — S3E8.
+08. Christopher and the recurring symbol — S1 Jade investigation; S3 Christopher revelations.
+09. Tabitha meets the children underground — S2 Tabitha child visions and tunnel context.
+10. The stones in Jade's vision — S2E10 Jade underground vision.
+11. Roots turn a sign into a place — S2 finale and later explanation.
+12. The bottle tree stores a different kind of number — S1E9; S2 lighthouse; S3 bottle-tree work.
+13. Jade changes the method — S3E10 music solution.
+14. Anghkooey and remembering — S3E10.
+15. The child they once tried to save — S3E10; S4E7.
+16. A promise of immortality — S3E10.
+17. A route through a tree is not a road — S1E7 Julie; S1E10 Boyd.
+18. The lighthouse and the push — S2E10; S3E1.
+19. An address survives the crossing — S3E1-2.
+20. Dale attempts to repeat the journey — S3E5.
+21. Julie enters a story already in progress — S3E8 and earlier Boyd shaft.
+22. Trying to save Jim — S3E10; S4E1.
+23. The Man in Yellow changes appearance — S4E1; Victor S4 memories.
+24. The current families learn the older connection — S4E7.
+25. The hidden chamber becomes a shared objective — S4E6-7; E9-10 chamber.
+26. The Boy in White warns about the tree — S4E9.
+27. Removing the tree changes the setting — S4E10.
+28. The bones leave the cavern — S4E10.
+29. Two long-lived opponents assess the result — S4E10 final exchange.
+30. A cycle with something different inside it — S3E10 memory; S4E10 recovery.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

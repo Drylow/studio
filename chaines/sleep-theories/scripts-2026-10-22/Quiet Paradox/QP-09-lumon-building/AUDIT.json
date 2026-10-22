@@ -1,0 +1,71 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "4d93363921468881a48ca19d35b528e9eae2940725efcc2dbb6c5a249aa7229d",
+  "full_review_file": "passage-34-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "1168364451e1dc73bb5f6487fd894bb943fe24f9f0e261a97c24d55ceb619b12",
+    "2": "441b9946428923a4406c4a5946da4adde00420a9b5d1a114853f9b765187b764",
+    "3": "f94defda687c1421f13d34e9d34e5f72367cf42f638853ee3acf4577f2d2f20e",
+    "4": "72627ede4f376fc4c664f1caa3a2e95c24350f199500c043151aaabd0ba978fb",
+    "5": "80d84c2dedd9e1e778b7e00c395874929cfbba0fd341513d46e3728591008147",
+    "6": "d0b32ffccc1ddf198f4fed7c75b8f36413c71eaa97b054c2a64803346b7380a5",
+    "7": "b7a7ef7e1f0dec53050149b717f59f1c76f0720b1d23c4e4fc4bed9a1e137b5b",
+    "8": "0dc9e375f2695608edaf368f285ce99e0931a55ac08760a5fb45dde1b7929281",
+    "9": "2fd5907c7fca7bd743f318536554f8c609f5a2e14f1bfe5c9800a0969c13fcc1",
+    "10": "e951c8d5491a9f616cb9d0a3f28d4d570ed4c42dea5dff1039db15af23ebc216",
+    "11": "3aa5255815476f2114faefeb04d5ab9f8a69ab767c8da9333b0eb0c1a1e4ebaf",
+    "12": "9fc5a0ac30b78284a09ba9f8f0d2f4e0114f3daa2fa356a4655ca6ed3bbf75ad",
+    "13": "4d9cdb58dd2d4d278268887d59bdcfe0b8038f6f0dba6f79308d16d8e1dd9e24",
+    "14": "0c2eecb0fcbbdfce43f499c2547223243b8a2a692f206b147e59ecd3e6debcf7",
+    "15": "4fc89e678b750ad3e96fa8f05df51331e7dad2a77d24ad55d5858179bdba7f41",
+    "16": "2d07a31cd017d4513d3fdbc422af232dad7e3fd86b7ad816160dd231f12e3f1d",
+    "17": "1aa61b5d5cf201b0a17967e14fd252ecbbf00bc24e53b6e8ef3ec5465af51863",
+    "18": "b10af5ef1cabda46b0515118ca5f444a5dd802c986da3860ac02d83121ed9c04",
+    "19": "340bfde6974d827826383afdf95707a8e6009c794ca21434b8ba423818c84f4d",
+    "20": "4ec481210fb861718142583b5e2de80e91b460f44d2822119021359a96fe87be",
+    "21": "9ccb95e46791f43eefd59b2f20782912d030aabded7827db04ba75c835bae43a",
+    "22": "d9e7c529188a442356e626588d7e00c137393a204acd6d41711c011514234765",
+    "23": "eefcacf19a1c9ccd7966be3d1ff8de54162ac4737176fe148f060e39c0722e38",
+    "24": "ac7d6be76c1c542ba241d59f21df6cdf82557c5a2004342d90b4e0bdda2e7215",
+    "25": "8b23cd9080615fa2855295e1e7d35c42741b2104b21db296e3a33eef3847e3e5",
+    "26": "d4ab54ad2e862b5865344c34c3bc71d1f2517aa7d2b13043fa1cc16ab700780e",
+    "27": "38e5d0e8cea83cc372404e9d9e1e662d7f90eeecba5fb806feceb87ee242b6dd",
+    "28": "a4041ae43e8b83fdfea7f0c516b6b9d47c618a7736aea6157dbc9be5cb45bd36",
+    "29": "fd32f654938998dafa1236beadbdc7c1e16834d80ea3fe17dfa302f2866fe6be",
+    "30": "df2d0712a7e2767c6df0c05407be1a4abd53a39677530ce4417a452f57364ca1"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase nomme le critere auquel Lumon interprete le resultat, distinction entre observation et lecture institutionnelle utile des l ouverture."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison distingue savoir-faire preserve et biographie inaccessible dans le test du berceau. Helly sert de point de comparaison sans rejouer son arrivee."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "La courte transition distingue une utilisation de confort de la routine de travail, avant d examiner qui en porte le cout."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel identifie clairement les deux positions a comparer, en evitant les deux prenoms arbitrairement assignes a chaque self. Ce choix de clarte vaut la seconde phrase."
+    }
+  },
+  "scope_status": "The reviewed narration stays within television through S2E10. It distinguishes the three proposed uses from confirmed research results and does not assert later-season events, cloning or literal Eagan immortality. The supplied complete-script measurement is 28,942 words before these edits, above the 25,500-word whole-script minimum; a new post-edit count is still required.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass for sleep format",
+    "B": "local fixes",
+    "C": "pass with identified repetition fixes",
+    "D": "local fixes; full quantitative ledger not established",
+    "E": "publication checks not established"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

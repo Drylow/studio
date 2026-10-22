@@ -1,0 +1,67 @@
+{
+  "id": "FR-05-brotherhood",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 27243,
+  "characters_including_spaces": 180024,
+  "characters_excluding_whitespace": 152436,
+  "estimated_minutes": {
+    "140": 194.6,
+    "150": 181.6,
+    "160": 170.3,
+    "170": 160.3
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 712,
+    "2": 720,
+    "3": 875,
+    "4": 917,
+    "5": 938,
+    "6": 682,
+    "7": 736,
+    "8": 961,
+    "9": 903,
+    "10": 876,
+    "11": 781,
+    "12": 1019,
+    "13": 858,
+    "14": 916,
+    "15": 1023,
+    "16": 956,
+    "17": 868,
+    "18": 939,
+    "19": 979,
+    "20": 1002,
+    "21": 880,
+    "22": 878,
+    "23": 1035,
+    "24": 926,
+    "25": 1024,
+    "26": 1038,
+    "27": 1048,
+    "28": 1075,
+    "29": 994,
+    "30": 684
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 1,
+    "floor": 0,
+    "echo": 20,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "Mariposa places soldiers and researchers within the same guarded facility, but their responsibilities give them very different access to what's happening there. Maxson's men provide security for a project whose human cost becomes clear to them only after they're already involved in protecting it. That arrangement matters. The soldiers haven't arrived to investigate a hostile laboratory. They discover the experiments inside their own chain of command, among people working under government authority. Forgotten Realms of Sleep is here for more long visits to these worlds, if you'd like to subscribe. You can also tell us below where this story has found you, and whether you're listening in the day or late at night.",
+      "word_offset": 161
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "a662c7d74d2f0463b9c9ceabdab4610ccd784459c34d517e2bdaaeffa0aad9dc"
+}

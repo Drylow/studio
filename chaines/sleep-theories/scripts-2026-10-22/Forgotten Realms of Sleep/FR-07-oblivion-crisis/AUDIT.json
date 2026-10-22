@@ -1,0 +1,87 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "d454b8604b6a362863b505ec0e8f26bac32c447be869784fcfc30d75862c7136",
+  "full_review_file": "passage-27-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "b7ff55bf52ed267c5b83d621e512581dc68d14801a2553b6d13f05046cb98a33",
+    "2": "2fee373fcc645a106211b912fcdc70b0490c4bf70c7f02a9ccbcca2c326b5222",
+    "3": "d52c6da6028ef7175dba0fec0a44473ede0d41d8f8e35e11c00d267c4b448144",
+    "4": "b7f993a8524318239953220d19904ffeff8abcf1ee83782b29a45401f7bf99d6",
+    "5": "44a454cf16b6191208b69f0c9193cb3154eaf260b58385317590b356dfbb7964",
+    "6": "a9580ec47d185e20e1859a8d45be941093b8ac9e13881cf7f9235b3817e399c2",
+    "7": "3eb55fa82d2140ddfe764b105203060f459addc8ea14a63ef8fb204aee55f174",
+    "8": "1cd5a9e5147fb5ca2f5e15b9f5d915f8ec98c368426450a392d1ae1e72a659c6",
+    "9": "13c3e61e2c077c3296acbefdfd9fcee97de94ee42295d6686fe8239847739354",
+    "10": "1a0ef2e9f1a7cb41ab6605f0a10db64d5e69764d77d712bf422da51b0ed8f073",
+    "11": "6fa71d88a032b1c0d50a1b9e70ea8536dc00cfc62e82ef73c40c5eea92b76ef6",
+    "12": "d31c3a32333f8f716fca3d6f0b02cf3b388f38d535ce75dc45a152f0b9c5aaca",
+    "13": "6ffdab5e1d4a6de2cab56f6f568223e61e585b6b6d5e0aff2fbb7cf225a587d1",
+    "14": "35a7e18abe01dcafb9951098e49eb839232a52a978e06a644bff13eb3da328d7",
+    "15": "e471e4267079426c8af69cea8c18f8a83985d86d916a26bb17739938c09af4b4",
+    "16": "3d2e4462c27c02c92c648d77c8e06f20bd9bbaf304b01e71e7f77b162acdde38",
+    "17": "b4a4072c789471455ed0e07fe89a0c4d1e5a1584e950bbab263af1e31a92f3f1",
+    "18": "79f00d2910c4a7f4b23892c187b1b3f5c19e1bedd9abe204138d9e21e8c319d1",
+    "19": "38bfde5984472d5eb0ec357409b7ac07c38a022c4506686baf3d1865def86b90",
+    "20": "26797a68a0ef20d974ac75ac147371f4b529ea6c9ebbe946220e59c1c6d0d886",
+    "21": "345dfe9c70eb06358451a22371aae8a1da636eeaacd69a71f0c33096de7d0012",
+    "22": "ca804b96f9fee0312ee2a9dee0c2c663f4f10688bd9c59f10e60b74a2a6becf0",
+    "23": "1ebed15213df186a9a3d2a2ee57c894046e3639150f219f6c723a51641653969",
+    "24": "b33f49cfb37c32421ae4cb0fa0d66aebed9d20b266412818faaa82bb79fbf479",
+    "25": "5f379733c262893cc49ed51798b8fb8289528133fec75ec9470dec0d278b0b2d",
+    "26": "1db199b3823133e593a8d42d6265a8aba53268ada8ae5dad2fca5e784ff42c81",
+    "27": "bd1cc18a45ed68ede1ea8d32a2cd109c9f32a8d983c94ce794b80bd7700cb907",
+    "28": "5e0fe7b0e610df2144e7c9b844522e5b659cb7b2ad4f6895e0790d8e6fe0e600",
+    "29": "9ca06b9177372449a62a72d1c94a363b59ba32935f7fd867fe13008b60d95c36",
+    "30": "463ec994b8b6a50ca7b4b44b1baed655b452a9a5074044c7371ba4d29ca70aba"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase decrit le fait ordinaire d un prisonnier place dans une cellule que les gardes attendaient vide ; elle ne lui attribue ni conspirateur nomme ni intention secrete."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Deux phrases rattachent clairement l objet confie au destinataire du nouveau trajet. Ce rappel causal bref permet d enchainer vers Jauffre sans rejouer l assassinat."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Le passage explique pourquoi une collection de livres constitue une filiere de recrutement, consequence utile de l invitation de Gwinas."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La fin ferme l enigme de l acrostiche en donnant la destination utilisable ; cette resolution locale est appropriee au rythme sleep."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "La condition variable de l artefact est repetee pour eviter de fixer Azura comme choix canonique. L exemple du cout reste bref et directement lie au rituel."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison porte sur deux reactions opposees des morts a la prise d un objet, ce qui explique le danger particulier de Miscarcand sans nouvelle visite de Sancre Tor."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "Cette seule phrase est la consequence pedagogique pour Burd, distincte de la description technique de la fermeture."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison etablit la pression du siege actif sur cette traversee, plutot que de donner une nouvelle liste de lieux ou des instructions de combat."
+    }
+  },
+  "scope_status": "The assembled arc follows the main quest from the occupied cell through Martin's sacrifice. Optional quests and player-dependent outcomes are generally marked conditional; Mankar's doctrine is attributed. The single requested CTA appears early in chapter 1, with no final CTA. The supplied measurement places this draft at 26,904 words before edits, above the 25,500-word whole-script minimum; no post-edit count is available.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_with_minor_edit",
+    "B": "pass_with_local_tightening",
+    "C": "pass_with_local_tightening",
+    "D": "pass_with_local_tightening",
+    "E": "limited_review"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

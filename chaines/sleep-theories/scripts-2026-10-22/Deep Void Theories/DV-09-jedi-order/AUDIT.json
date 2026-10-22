@@ -1,0 +1,91 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "424d7321f008380e789923128bad1019e1e226f0a011fdc5830d2d953ce2e491",
+  "full_review_file": "passage-30-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "6b0ba829bb5957054294d63d3ca28d513e527ac9f1dbbaa952843c67a760e231",
+    "2": "a2ff2c7bf3b7b35dfcc90c1423d82fd696732d23ede01ea4fd170b07b493d1ca",
+    "3": "098b045f78ae3798a7076c516df2ea4c95f67f7231c0f87027bb7373047ff1b8",
+    "4": "01be6ce6d3432608bcccd78a5a2f0d44c01f175f8d18724c51be0a168eb0a16b",
+    "5": "fb2d32e29ab81fe2ddc1e9b196889f24ee301b7daf2418fc38d6cb54af4d0e2b",
+    "6": "9e076e80dc3dab69bd55150922b0f0f7f5a5c69df9a98b676082d609f1743bf4",
+    "7": "6fcba5fcaa4396b3fd10c7441fbc420f94758cb7e79b626c1f7a694511982fce",
+    "8": "3b3ab0748191f1c8f20136e0060cea96d23f048587077f5bf294d005c8f117b7",
+    "9": "6541a2f72d8ee3e9ce4c58f0d773aea0d454d3d655b0ca7aa577812c25ef7459",
+    "10": "5c94788190532b14c9c2163a29f99792dafbfcc68f0374bbcd1254dfee5a7e66",
+    "11": "c089f862bb8c197e70b6adbb3fd9cb73958c82febc737b185a0888148b0fbaef",
+    "12": "0a58ac228fdbf31fdb7c4d77acfac31a579d4fe2c1cb5490ea5389871b87394c",
+    "13": "2350e88aac08c1a00c1efaf2ecc429229ca95b56df0c4c68919122f618360161",
+    "14": "fd430cbf8ca77ae5765c291923e7397cfb12d4af7449dcd24d111a2cb347baaf",
+    "15": "5ab59157d43764e445e0072645302b0532756c5cda15aa71d1da0ee772e1ea29",
+    "16": "418178c6fe6ea90d1995cae434b092c99ce391ef75c6ecb1f59e2f3499002864",
+    "17": "593bc6fa7f0d1acf8321c6d5dbc644428a01a61f610682421fb732a9b284b04b",
+    "18": "a0c807943d1559fc003e9725a4915c4f458eb03e2276a91bcd0d3196017e7c32",
+    "19": "df1dae0c3ae7dde1ba2775320ae1f5fd0901de43fdc5d27981ed61f386b3146b",
+    "20": "a997640515d1910268d02ddf6e684ab192fb9d63de484c21d676949a37dd683b",
+    "21": "4f554a2404b319d3af1dbbef239facaf090ffbef3098d04a977cc223b2605613",
+    "22": "cf594eba37ff077c0747ffd18d8c07aaa3d2b5d6b606a0cdba0eeca6a730f020",
+    "23": "caa4135e496a07852377601eb3858959b3bdd71a78be3d0e45957a9a9a748066",
+    "24": "74ac553ebdde71a8c79210641312b612486a9bebcae4ee1ef30278446f0a6ba9",
+    "25": "701e8915bbe9196e903f2070730e8a873cecaf93ae30f01dda8647092bcb2220",
+    "26": "c1ecc05bf7e4c5a44b9d8ff5a1088f02bff4f88a81d55d819eebb19bb3c54c4f",
+    "27": "83c24023e494f7b9e012387de633c8b941e9c00fc90aad85319303e883f826d6",
+    "28": "510062ddedb8582c4fb16efc538f98f2a724ff63427f29be59cc8d849f8bc1d0",
+    "29": "f5f04d4231b0831e5dae0f86044f51a4662a1d98d9f023408085905ca17a61d4",
+    "30": "654528423b6435e4010f1d27e87043a855760efed607afc08512d6dc972a963f"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "Le lien entre les exercices du Temple et ceux de Luke est le nouvel apport de ce retour : une methode traverse la destruction de l institution."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Le passage montre que l education continue apres l apprentissage. Les archives servent ici a cet argument, au-dela de l enseignement des seuls enfants."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "La transition relie un principe deja defini a son premier exemple ; elle reste breve et intelligible en narration calme."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "Cette remarque depend d une substitution precedente qui n a pas ete appliquee. Le fait de l invasion n est donc pas double dans le texte actuel."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "Zett est bien un enfant et un jeune Jedi. La phrase precedente donne deja son role ; le mot enfant ne constitue pas une erreur factuelle."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel de deux phrases a une fonction distincte : montrer la faible duree de transmission avant la mort d Obi-Wan, plutot que reexpliquer l exercice."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison de Yoda avec une communaute enseignante est le sujet propre de l heritage incomplet ; elle justifie le bref retour a Dagobah."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "La sequence explique comment la sortie prematuree de formation conduit a affronter Vader. Elle ne repete pas la longue demonstration de l X-wing retiree plus tot."
+    },
+    "9": {
+      "status": "retained_after_editor_review",
+      "reason": "La revelation de la paternite invalide le recit recu d Obi-Wan, consequence essentielle dans le chapitre consacre a la transmission familiale."
+    }
+  },
+  "scope_status": "The reviewed narration stays in the supplied current-canon scope, keeps Legends material out, gives the optional CTA only in chapter 1, and does not claim that Rey has restored an institution. Supplied measurements put the unedited assembly at 28,792 words, above the 25,500-word whole-script minimum; a post-edit total has not been measured.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_with_sleep_adaptation",
+    "B": "local_fixes",
+    "C": "pass_with_local_fixes",
+    "D": "local_fixes",
+    "E": "limited_assessment"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

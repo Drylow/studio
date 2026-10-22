@@ -1,0 +1,44 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Frank Herbert original six Dune novels only: Dune, Dune Messiah, Children of Dune, God Emperor of Dune, Heretics of Dune, Chapterhouse: Dune. Full spoilers. Do not import expanded novels, Dune Encyclopedia genealogy or film-only changes. Original institutional explanation, not exhaustive scene-by-scene adaptation.
+
+Banque de faits et oeuvres de reference :
+{"id": "D1", "fact": "Bene Gesserit training, Jessica choosing a son, the breeding program, Missionaria Protectiva and Paul disrupting the intended plan belong to Dune.", "work": "Dune: Caladan test; Jessica training; Arrakis and Sietch Tabr."}
+{"id": "D2", "fact": "Irulan participates in the conspiracy while Chani bears twins; Paul refuses the offered ghola bargain.", "work": "Dune Messiah."}
+{"id": "D3", "fact": "Alia is pre-born; ancestral possession and the twins confront inherited identities and imperial rule.", "work": "Children of Dune."}
+{"id": "D4", "fact": "Leto II controls spice; Siona has the no-prescience characteristic; the Museum Fremen perform a remnant culture.", "work": "God Emperor of Dune."}
+{"id": "D5", "fact": "Taraza, Odrade, Lucilla, Sheeana, Teg and the Duncan ghola act amid returning Scattering populations; Rakis is destroyed.", "work": "Heretics of Dune."}
+{"id": "D6", "fact": "Chapterhouse transforms into desert; Murbella joins Bene Gesserit and Honored Matres positions, while Duncan and Sheeana escape; original final novel leaves open questions.", "work": "Chapterhouse: Dune.", "check_url": "https://dunenovels.com/chapterhouse-dune/"}
+
+Reperes par section (sans minutages audio) :
+01. A duke who still needs transport — Dune: Atreides transfer and Guild setting.
+02. What makes a House Great — Dune: political terminology and appendices.
+03. The throne and its counterweights — Dune: political explanations.
+04. CHOAM and the flow of profit — Dune: CHOAM and directorship discussions.
+05. Fiefs that can be reassigned — Dune: opening imperial arrangements.
+06. Caladan and Atreides obligations — Dune: Atreides household and Caladan departure.
+07. Giedi Prime and Harkonnen extraction — Dune: Baron, Rabban and Feyd.
+08. Salusa Secundus behind imperial prestige — Dune: Sardaukar and Salusa Secundus.
+09. A throne without a son — Dune: Shaddam, Irulan and succession.
+10. The marriage a duke avoids — Dune: Jessica and Leto.
+11. Children planned across enemy Houses — Dune: breeding-plan revelations.
+12. A Mentat's place in a household — Dune: Hawat and Piter roles.
+13. The physician whose conditioning breaks — Dune: Yueh and Leto's capture.
+14. Swordmasters and personal allegiance — Dune: Duncan defense and Gurney among smugglers.
+15. Kanly and controlled forms of war — Dune: kanly and Great Convention.
+16. A dinner maps competing interests — Dune: Arrakeen dinner.
+17. Smugglers at the edge of legal power — Dune: smugglers and Gurney reunion.
+18. The Guild's narrow but decisive veto — Dune: transport and final Guild confrontation.
+19. The trap closes on the Atreides — Dune: fall of Arrakeen.
+20. Two Harkonnen heirs and an audience — Dune: Harkonnen succession and arena.
+21. Fenring's proximity to the throne — Dune: Fenring court role and final refusal.
+22. A new army outside the Houses — Dune: final Arrakeen confrontation.
+23. A marriage that settles a conquest — Dune ending; Dune Messiah household.
+24. The imperial household under pressure — Dune Messiah: succession pressure.
+25. House Corrino in exile — Children of Dune: Salusa Secundus and Wensicia.
+26. Jessica teaches an heir from another House — Children of Dune ending; God Emperor historical Harq al-Ada context.
+27. Leto reduces the old aristocratic freedom — God Emperor of Dune.
+28. The Ixian approach to a distant ruler — God Emperor of Dune: Hwi and Ix.
+29. After the Scattering, other forms of power — Heretics of Dune; Chapterhouse: Dune.
+30. What a name can carry — Heretics of Dune: Odrade and Sietch Tabr; original-series later institutions.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

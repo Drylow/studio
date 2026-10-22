@@ -1,0 +1,43 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+The Elder Scrolls IV: Oblivion main quest and later Skyrim references to the Hero only at the final optional continuity note. Full main-story spoilers; no modded Mythic Dawn ending, invented canon guild memberships or claim player automatically completes every side quest. Lore from Mysterium Xarxes is attributed as cult doctrine.
+
+Banque de faits et oeuvres de reference :
+{"id": "OB1", "fact": "Uriel Septim is assassinated during escape; he entrusts the Amulet of Kings to the prisoner and directs them to Jauffre.", "work": "Oblivion opening quest."}
+{"id": "OB2", "fact": "Martin survives at Kvatch; the player closes its gate and escorts the heir; Weynon Priory is attacked and the Amulet stolen.", "work": "Find the Heir; Breaking the Siege of Kvatch; Weynon Priory."}
+{"id": "OB3", "fact": "Baurus and Tar-Meena help follow Mythic Dawn commentaries to the shrine; the player obtains Mysterium Xarxes, not the Amulet there.", "work": "The Path of Dawn; Dagon Shrine."}
+{"id": "OB4", "fact": "Martin deciphers the Xarxes and needs a Daedric artifact, divine blood, Great Welkynd Stone and Great Sigil Stone to open the Paradise portal.", "work": "Blood of the Daedra; Blood of the Divines; Miscarcand; Defense of Bruma."}
+{"id": "OB5", "fact": "The hero defeats Mankar in Paradise and retrieves the Amulet; Martin shatters it, becomes an avatar of Akatosh and defeats Dagon, ending the Septim line.", "work": "Paradise; Light the Dragonfires."}
+
+Reperes par section (sans minutages audio) :
+01. A prisoner meets the Emperor — Oblivion opening prison escape.
+02. An empire protected by an old covenant — Jauffre dialogue; Amulet and Dragonfires lore.
+03. The route through the sewers — Tutorial and assassination.
+04. The Amulet becomes a delivery — Tutorial ending and Deliver the Amulet.
+05. Jauffre knows of another heir — Deliver the Amulet; Find the Heir.
+06. The road reaches a refugee camp — Find the Heir; Kvatch camp.
+07. The first gate is a physical crossing — Breaking the Siege of Kvatch.
+08. The Sigil Stone holds the passage — Kvatch gate quest.
+09. Martin stays with the people who need him — Find the Heir: chapel conversation.
+10. Kvatch is more than its rescued heir — Battle for Castle Kvatch.
+11. Weynon Priory has been attacked — Weynon Priory quest.
+12. Cloud Ruler Temple receives a possible Emperor — Weynon Priory ending; Cloud Ruler Temple.
+13. Baurus follows a watcher — The Path of Dawn beginning.
+14. Tar-Meena reads a dangerous tradition — The Path of Dawn: Arcane University.
+15. A collector's purchase opens a lead — The Path of Dawn: First Edition.
+16. The meeting beneath the city — The Path of Dawn: sewer meeting.
+17. Words arranged as a hidden address — The Path of Dawn: tomb clue.
+18. Inside the Mythic Dawn shrine — Dagon Shrine.
+19. Mankar leaves with the Amulet — Dagon Shrine conclusion.
+20. Martin studies an enemy's book — Martin dialogue following Dagon Shrine.
+21. Spies find Bruma's refuge — Spies: Jearl, Saveri Faram and Bruma inquiry.
+22. A Daedric artifact becomes a cost — Blood of the Daedra.
+23. Sancre Tor keeps an older service — Blood of the Divines.
+24. The Great Welkynd Stone at Miscarcand — Miscarcand.
+25. Burd trains at an open gate — Bruma Gate.
+26. Asking other cities for help — Allies for Bruma optional quest.
+27. The battle must allow a Great Gate — Defense of Bruma.
+28. The siege engine and the last component — Great Gate.
+29. Paradise keeps its worshipers trapped — Paradise.
+30. Martin's last decision in the Imperial City — Light the Dragonfires ending; Imperial Dragon Armor epilogue.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

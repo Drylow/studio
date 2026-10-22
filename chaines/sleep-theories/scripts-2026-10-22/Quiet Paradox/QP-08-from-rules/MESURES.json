@@ -1,0 +1,67 @@
+{
+  "id": "QP-08-from-rules",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 25516,
+  "characters_including_spaces": 156452,
+  "characters_excluding_whitespace": 130608,
+  "estimated_minutes": {
+    "140": 182.3,
+    "150": 170.1,
+    "160": 159.5,
+    "170": 150.1
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 868,
+    "2": 796,
+    "3": 889,
+    "4": 479,
+    "5": 890,
+    "6": 1035,
+    "7": 925,
+    "8": 612,
+    "9": 780,
+    "10": 968,
+    "11": 975,
+    "12": 1068,
+    "13": 977,
+    "14": 885,
+    "15": 1035,
+    "16": 969,
+    "17": 966,
+    "18": 973,
+    "19": 1011,
+    "20": 1010,
+    "21": 905,
+    "22": 1083,
+    "23": 934,
+    "24": 214,
+    "25": 222,
+    "26": 924,
+    "27": 718,
+    "28": 732,
+    "29": 904,
+    "30": 769
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 1,
+    "floor": 0,
+    "echo": 23,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "You're welcome to subscribe to Quiet Paradox for more of these slower explorations. If you have a moment to comment, I'd like to know what part of the world you're in, and whether daylight or darkness is outside your window.",
+      "word_offset": 247
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "ea63963e5c9a17864002c536ab86e7e5536052cf5ce7423f1c0512d87d200950"
+}

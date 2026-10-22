@@ -1,0 +1,90 @@
+[
+  {
+    "number": 1,
+    "chapter": 10,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph has already explained that Jade sees the children's vulnerability without witnessing the acts that placed them there. Keep the later sacrifice connection, but remove the second extended caveat.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La distinction separe la vision initiale du savoir acquis ensuite. Ce bornage temporel evite de donner a Jade la connaissance complete du sacrifice des sa premiere descente."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 11,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "After several concrete paragraphs establishing the root-tree connection, this paragraph repeats both the connection and its evidentiary limit. Its worldwide-network caution answers a claim the narration has not advanced.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La limite du reseau de racines est pertinente dans une video de theories : une connexion observee ne confirme pas un mecanisme mondial."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 13,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening has already described Jim's suggestion and the strained collaboration, while the following paragraphs develop what Jade does with it. This miniature conclusion adds no new step.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Ces deux phrases assurent le passage du dechiffrage a la performance collective, sans nouveau recit de la decouverte des nombres."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 17,
+    "kind": "artifact",
+    "severity": "minor",
+    "reviewer_reason": "The doubled space is a mechanical narration artifact.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace est typographique et sans contenu prononce ; ce n est pas une instruction ou un artefact de narration. Le texte reste propre a lire."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 19,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening already establishes that the address gives Tabitha a specific house to visit, and the next paragraph begins the difficult meeting with Henry. This intervening paragraph repeats the navigation point rather than moving her there.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe distingue une adresse ordinaire des signes surnaturels et prepare la difficulte humaine de la rencontre avec Henry."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 22,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Two adjacent sentences make the radio-voice connection, with the second repeating the same evidence. The chapter need not assert the speakers are identical to explain why Jim recalls the earlier intrusion.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La formulation garde explicitement la connexion radio comme suggestion. La repetition breve est preferable au remplacement qui affaiblirait la qualification."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 25,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "The Kenny and Roger distinction is accurately drawn from F-NEW3, but this paragraph leaves the assigned chamber-and-bones objective for a separate weapon test. The proposed analogy does not add a causal step to this plan.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison borne une hypothese de remede universel avant le projet de recuperer les os. Les cibles sont explicitement distinguees, sans nouveau mecanisme affirme."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 30,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This late paragraph recaps chapters 4, 7 and 28 and restates this chapter's opening comparison. Removing it lets the final paragraph land the changed circumstance without another tour of prior chapters.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion compare les tentatives individuelles anterieures et l action collective actuelle. C est une synthese de resultat dans le chapitre de cloture, pas une nouvelle scene."
+    }
+  }
+]

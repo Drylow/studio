@@ -1,0 +1,67 @@
+{
+  "id": "DV-10-fremen",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 27049,
+  "characters_including_spaces": 172822,
+  "characters_excluding_whitespace": 145426,
+  "estimated_minutes": {
+    "140": 193.2,
+    "150": 180.3,
+    "160": 169.1,
+    "170": 159.1
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 759,
+    "2": 948,
+    "3": 974,
+    "4": 846,
+    "5": 928,
+    "6": 837,
+    "7": 817,
+    "8": 965,
+    "9": 875,
+    "10": 934,
+    "11": 977,
+    "12": 920,
+    "13": 1055,
+    "14": 984,
+    "15": 977,
+    "16": 815,
+    "17": 253,
+    "18": 877,
+    "19": 713,
+    "20": 941,
+    "21": 1033,
+    "22": 900,
+    "23": 947,
+    "24": 1030,
+    "25": 1012,
+    "26": 972,
+    "27": 978,
+    "28": 883,
+    "29": 1041,
+    "30": 858
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 0,
+    "echo": 9,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "If this is the kind of story you like settling into, you can subscribe to Deep Void Theories for more. You're also welcome to share your city or country below, along with whether it's daytime or night where you are. Here, the small amount of water Stilgar offers gives us a useful place to settle into the story. He's willing to spend something his people work to preserve. Leto's response matters because accepting the gift requires him to set aside his household's first reaction and listen to someone who knows the custom.",
+      "word_offset": 169
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "b4bb21476743892adfc74e8b972d5e552448febe590a4574e735d39ddea73b3e"
+}

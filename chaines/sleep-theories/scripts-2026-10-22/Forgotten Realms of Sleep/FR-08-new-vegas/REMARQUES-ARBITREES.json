@@ -1,0 +1,57 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening already promises the four possible outcomes; this separate notice delays the story to repeat that scope.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La limite spoilers et la distinction des fins conditionnelles sont volontaires. Elles restent dans l ouverture pour orienter l auditeur."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 15,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "This isolated paragraph announces the employment offer that the following paragraphs explain more concretely.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le bref paragraphe assure le passage de la premiere audience a l offre de travail ; son isolement ne rend pas son sens defectueux."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 17,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 16 already explains Caesar's inability to verify the bunker result, and this ending adds no consequence specific to the invitation.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion porte sur la limite de verification de Caesar, consequence propre a l invitation et au retour du Courier."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 26,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 8 already establishes Julie's shortages and the Kings' neighborhood role; this opening postpones chapter 26's distinct question about their futures under different rulers.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "L ouverture donne le contraste institutionnel necessaire avant de comparer les lendemains politiques des Kings et Followers. Elle n invente pas de nouvelles penuries."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 30,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph already explains the appeal to Lanius's concern about overextension; the standalone restatement delays the next outcome.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel de l interet strategique de Lanius distingue le retrait d une sympathie pour NCR. Il maintient le point de vue de l adversaire dans le denouement."
+    }
+  }
+]

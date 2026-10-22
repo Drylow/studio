@@ -1,0 +1,67 @@
+{
+  "id": "DV-12-great-houses",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 27810,
+  "characters_including_spaces": 177776,
+  "characters_excluding_whitespace": 149608,
+  "estimated_minutes": {
+    "140": 198.6,
+    "150": 185.4,
+    "160": 173.8,
+    "170": 163.6
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 852,
+    "2": 925,
+    "3": 990,
+    "4": 941,
+    "5": 942,
+    "6": 865,
+    "7": 894,
+    "8": 922,
+    "9": 812,
+    "10": 955,
+    "11": 940,
+    "12": 915,
+    "13": 1026,
+    "14": 920,
+    "15": 1003,
+    "16": 1028,
+    "17": 851,
+    "18": 627,
+    "19": 909,
+    "20": 707,
+    "21": 931,
+    "22": 956,
+    "23": 901,
+    "24": 979,
+    "25": 968,
+    "26": 999,
+    "27": 979,
+    "28": 1043,
+    "29": 1008,
+    "30": 1022
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 0,
+    "echo": 19,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "Deep Void Theories has more quiet lore journeys if you'd like to subscribe. And before you settle further into this one, you're welcome to tell us which country you're listening in and whether it's a day or a night listen.",
+      "word_offset": 237
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "98b108ca5c29d979fa0555212d3b867363764cae8c4fb9eb3743a738b253cc9c"
+}

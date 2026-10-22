@@ -1,0 +1,83 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "98b108ca5c29d979fa0555212d3b867363764cae8c4fb9eb3743a738b253cc9c",
+  "full_review_file": "passage-30-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "a2213187563d7549420636949ebe6019e800a971b6f22f2289d944a11f89e057",
+    "2": "b4b75f891ab10a93701355d03b9ec1cfbf6e844c0435c91d9d88b7351b0c5195",
+    "3": "05288248138ab4d8c4672b1a1df47e74a1bcef3c1a36e463a351184fac611665",
+    "4": "ebc3ebd103a77e4ce66f12e34a36c3c5e2bbac83331f21ef11b5c5b9f30aea02",
+    "5": "b8257ec1790775eb024df51eb12d5c1edd289c2499e1fbb6e40587197cdb096a",
+    "6": "8e20ebc16ae1fa3811519649f30030b7c9ce17f442e2eaa84c6c9ae474e33c18",
+    "7": "4904f28f3ce0e8d935a644e10d248afed8e9d5db06dadc6c79992bede3a9bb42",
+    "8": "d3e5b802839bb9bd9b33ab84f12112ec3d1dd91410a0bd8d314572ed3a856732",
+    "9": "9a61b1bd31343d6981d1f5318b522ac075bf90f80d42154acffbe725e1ed04bd",
+    "10": "fbd114c735c9a15960cbe81a6cc77a91a5d756dbc5b16d70a1d77e83e3a61a4e",
+    "11": "7a68a4bf6a220fe73fec1bd987c746da887a73f0be48748a3b185738e70a389a",
+    "12": "87aaba3e80316b52a0f62e3a0bb6e6eb4d2fb63bf0e9cbd7b20c33fd9fc5741e",
+    "13": "6296bead22dc7ba54518bfd4fc23309e007ef54f7d16b8af23b2395674412dad",
+    "14": "116d1f2b5df39f7488248c9e0020f27e34e44cdbbd36f7e3220a5ce7944a2928",
+    "15": "040411a2c8dfaf2e8e422fb6815b02cc631a454d924739e75f4ac530b8df97e6",
+    "16": "9b8cae2d6ff3e184b949c857581631a68482bd97b98e92c7e57bfee22b359569",
+    "17": "83e0165c2ffb8bf981f58236ce82a403fdaa837b7601cabf35a919ecface3252",
+    "18": "941b27c845750e1d55e6b136bd42889c7cb6de42fdf8f11f7c3a418f3c415e0e",
+    "19": "06797956b92299235ba6f62218d3e03a238394134f60f4f163e710d2012f0578",
+    "20": "f7d35abf3050d2dfb5a44c08cdc1c275269e5af6ecc0763012647fb04fb6c59e",
+    "21": "f2927d6c400ecea45c686da41af84af616a909396b13f69032a36fe11422b082",
+    "22": "76fb639f97df4e22ebbee59c19e312c870d37b55ebb23ed51d7375e4a8af8291",
+    "23": "f5ac1fa6d38702461312bb34eb63f5911ae26afae65f8d3dbe51ef7762cfb513",
+    "24": "78058f4273219ee1b950d6e19880dfe8001fb3ec5755ef91bf65bbdf85a0fb3a",
+    "25": "d74a23441afa78fbe18a3972c8246d3bbc67031658b0500fa436c4b86ae280eb",
+    "26": "b1a4dd69d0d988cf2c2a9a1ab7090ac86a0cb1ffa3f7ea4f68adda4e4f283455",
+    "27": "f6dd02b281ac62cc9c5b9b287f145c6566f3d21b272079e0d19eb1f2ddf7f1a1",
+    "28": "1076e2f05c0690594b91b085ce497dc9f09981178fc76d5faa37fef92e5740cc",
+    "29": "9b4a0b19a86fe9f277265961805f593efd2b261bdb8bb5328f8fa22aebf738be",
+    "30": "dc7cad1a0db3cf8f7f016ea40e9b495785074c693c9a6661f111d3cda5f884c0"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "Beneath exprime la dependance de leurs vaisseaux au systeme des transporteurs. Les phrases immediatement suivantes indiquent explicitement qu ils sont a bord, sans trajet physique sous le heighliner."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion separe la livraison spatiale de l installation du gouvernement. Ce passage bref ferme le probleme logistique de l ouverture."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel rassemble les signes de vulnerabilite qui rendent possible l attaque coordonnee. Il sert la causalite de l assaut, et non un nouveau recit du hunter-seeker."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "Le developpement distingue l espoir d alliance de la force reellement disponible au moment de l attaque, consequence necessaire pour comprendre la chute."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison oppose le role attribue a chacun des deux heritiers et ferme le chapitre du spectacle. Elle ne donne pas une seconde scene d arene."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel explique pourquoi les Grandes Maisons ne renversent pas la victoire fremen dans le chapitre de la prise de pouvoir. Il a un role causal local."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison entre les deux generations de couples eclaire la place de Chani et Jessica ; la speculation sur ce que Paul comprend a deja ete retiree."
+    }
+  },
+  "scope_status": "The reviewed narration stays within the original six Frank Herbert novels and uses full spoilers as permitted. Its single optional subscribe and listening-location request appears early in chapter one and is not repeated. The identified defects are local; none requires a structural rewrite.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "The 77-word opening paragraph begins with Leto's inability to transport his soldiers without the Guild. Its turn is the contrast between ducal command and dependence; its promise of practical House power maps to institutions in chapters 2-5, households and marriage in 6-14, warfare and transport in 15-22, and succession and later forms of power in 23-30. No aggressive scroll-stop pattern is required for this sleep narration.",
+    "B": "The chapters generally close their assigned local questions: Guild passage in 1, House rank in 2, the coordinated fall in 19, and post-Scattering power in 29. Chapters 19 and 22 contain the clearest repeated setup or payoff, identified above. There is no need to impose cliffhangers, timed rehooks or a final CTA.",
+    "C": "The connecting thread is what a House name permits, requires and eventually cannot secure. Concrete developments move from fiefs and household service to the fall of Leto's government, Paul's succession, Leto II's constrained aristocracy and Odrade's different inheritance. The assigned questions are answered without a missing chapter-scale section.",
+    "D": "The opening's spoken contrast, \"The passage still belongs to someone else,\" matches the supplied sample's practice of explaining a limit after a concrete fact; \"The Guild yields, and the fleets are to leave\" is similarly direct. The supplied deterministic scan reports zero hard bans and zero mechanical text artifacts for this script. Its echo count is a review prompt, not proof that every recurrence is defective. The six-novel scope supplies the relevant number and title identifiers; no unsupported external statistic is apparent. No full hand-extracted antithesis ledger or human read-aloud is claimed.",
+    "E": "The House-institutions angle, editorial comparisons and distinct chapter questions show original analytical work in the text. Supplied comparison samples are register references, not canon evidence; the supplied match measurements report no 12-word reference matches. No human-review point, audience-retention result or platform-policy approval is awarded."
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

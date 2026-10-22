@@ -1,0 +1,67 @@
+{
+  "id": "QP-10-silo-outside",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 26999,
+  "characters_including_spaces": 167251,
+  "characters_excluding_whitespace": 139912,
+  "estimated_minutes": {
+    "140": 192.8,
+    "150": 180.0,
+    "160": 168.7,
+    "170": 158.8
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 831,
+    "2": 886,
+    "3": 861,
+    "4": 845,
+    "5": 1000,
+    "6": 1016,
+    "7": 1054,
+    "8": 1016,
+    "9": 1045,
+    "10": 1096,
+    "11": 1028,
+    "12": 938,
+    "13": 1077,
+    "14": 1039,
+    "15": 1040,
+    "16": 1044,
+    "17": 898,
+    "18": 925,
+    "19": 990,
+    "20": 902,
+    "21": 999,
+    "22": 927,
+    "23": 942,
+    "24": 1054,
+    "25": 213,
+    "26": 249,
+    "27": 947,
+    "28": 894,
+    "29": 1010,
+    "30": 233
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 1,
+    "floor": 0,
+    "echo": 30,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "A subscription to Quiet Paradox is one way to find our next quiet exploration. If you'd like to say hello below, tell us where you're listening from and whether this story is accompanying your day or your night. Here, the cafeteria's familiar view gives us a useful place to begin. Its edges matter because the residents have to live with them. Beyond the ridge, the ground continues somewhere. The screen gives them no way to follow it, and their daily routines carry on underground without that part of the map.",
+      "word_offset": 246
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "2b59eeb8cc0d1dbe43a5207d28a5cf6c387c3573344df795edaca753d9085d8e"
+}

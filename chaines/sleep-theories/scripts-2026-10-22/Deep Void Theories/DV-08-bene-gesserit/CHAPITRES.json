@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "The test on Caladan",
+    "start_character": 0,
+    "end_character": 5957,
+    "words": 979,
+    "sha256": "4b0a77aabddc6a415938cb6f18dd63a35f30e45f9067978f5b82778811eaa77a"
+  },
+  {
+    "number": 2,
+    "title": "Training a body's responses",
+    "start_character": 5960,
+    "end_character": 11941,
+    "words": 947,
+    "sha256": "f0caafc1332f2d2f35864699c041351c6e580a24ac91367af9b698d0ad4ab9b7"
+  },
+  {
+    "number": 3,
+    "title": "A voice fitted to a listener",
+    "start_character": 11944,
+    "end_character": 16034,
+    "words": 660,
+    "sha256": "4fe7f753ea807fe095bddbeb9a025331fe65f1d0e42667380bca2f5794775c33"
+  },
+  {
+    "number": 4,
+    "title": "What a Truthsayer actually hears",
+    "start_character": 16037,
+    "end_character": 21243,
+    "words": 803,
+    "sha256": "0076966bda264c8666b55fe82d5084478dc24fb68a6f8be4ca998a03d8c80c0c"
+  },
+  {
+    "number": 5,
+    "title": "Advisers in noble households",
+    "start_character": 21246,
+    "end_character": 27454,
+    "words": 966,
+    "sha256": "bd2d2a33bea499f49bd0b6d397378da50805d947506abdd07ab2bb1e188850d8"
+  },
+  {
+    "number": 6,
+    "title": "The breeding project",
+    "start_character": 27457,
+    "end_character": 31899,
+    "words": 705,
+    "sha256": "6e85ea7df8f031ea8ac0d5ff5d24b3f2c69852bcb711c8e378dc9405f02e04ae"
+  },
+  {
+    "number": 7,
+    "title": "Jessica's choice",
+    "start_character": 31902,
+    "end_character": 36299,
+    "words": 707,
+    "sha256": "ff4736b36a6585a7aef2f782cb5281bafd4237637a0e7bddaf21efc3b9cf7681"
+  },
+  {
+    "number": 8,
+    "title": "The Harkonnen inheritance",
+    "start_character": 36302,
+    "end_character": 41122,
+    "words": 761,
+    "sha256": "afd00b8ea561151e0b0c71741494e28fd2f5058ba42ecc18de8fc2dd632c5dae"
+  },
+  {
+    "number": 9,
+    "title": "Preparing religions before arrival",
+    "start_character": 41125,
+    "end_character": 47090,
+    "words": 906,
+    "sha256": "c72134973b74a6e4e6b8032b61209869fdb8115d1656e04a406766009d16814f"
+  },
+  {
+    "number": 10,
+    "title": "The cost of a successful prophecy",
+    "start_character": 47093,
+    "end_character": 53741,
+    "words": 1055,
+    "sha256": "1a24b7fd71e8bca2504f2961c8444881cae6fa6a3aaa357a8c19efb7fdebabc7"
+  },
+  {
+    "number": 11,
+    "title": "Changing the Water of Life",
+    "start_character": 53744,
+    "end_character": 59051,
+    "words": 835,
+    "sha256": "73ad8aa86ce4dd23e3d6c14a5ffce84617e7a617b4f52fc218be08b0562bef18"
+  },
+  {
+    "number": 12,
+    "title": "Alia before birth",
+    "start_character": 59054,
+    "end_character": 64842,
+    "words": 907,
+    "sha256": "a074e3c66d3eda4174e43a3a711079d6c54c7493d00e15c8ed205e068bb436fc"
+  },
+  {
+    "number": 13,
+    "title": "The boundary in Other Memory",
+    "start_character": 64845,
+    "end_character": 69670,
+    "words": 753,
+    "sha256": "0065b79cff94fd70d624a5bccdda982c31c825e39044dc110630df07d130708f"
+  },
+  {
+    "number": 14,
+    "title": "An awakening outside their timetable",
+    "start_character": 69673,
+    "end_character": 75537,
+    "words": 928,
+    "sha256": "ecd22eafdde33d1d5567cb26e34eba1e5a4ecebf9d98c5b64422617e34497aae"
+  },
+  {
+    "number": 15,
+    "title": "Margot Fenring's assignment",
+    "start_character": 75540,
+    "end_character": 82165,
+    "words": 1026,
+    "sha256": "3cdb32ad4cf1fbade5410d06f96033d2993f2a3503aa7d72f2ed46998061982b"
+  },
+  {
+    "number": 16,
+    "title": "When a Sister cannot command",
+    "start_character": 82168,
+    "end_character": 86554,
+    "words": 705,
+    "sha256": "ecb6b807471be62272ac5f87e10267da9e62b7144395b2bdddf42fb76907fbc5"
+  },
+  {
+    "number": 17,
+    "title": "Irulan inside an imperial marriage",
+    "start_character": 86557,
+    "end_character": 92853,
+    "words": 1007,
+    "sha256": "3c1ab89025c73e369850aa55b1ae02bb20ff987d8571064aa17b8991f4ee652f"
+  },
+  {
+    "number": 18,
+    "title": "The conspiracy around an heir",
+    "start_character": 92856,
+    "end_character": 98953,
+    "words": 952,
+    "sha256": "eaabd75f42efab86f0515d29619931d90d3d1c7d06e72281ef8d162a5089c1cb"
+  },
+  {
+    "number": 19,
+    "title": "The children Irulan chooses to protect",
+    "start_character": 98956,
+    "end_character": 104579,
+    "words": 894,
+    "sha256": "1f945abf4cf877bc7323c0b8f8d664ae91404042f1f5d607c7ffa500fd624102"
+  },
+  {
+    "number": 20,
+    "title": "Jessica returns to a changed Arrakis",
+    "start_character": 104582,
+    "end_character": 110124,
+    "words": 862,
+    "sha256": "2ebc3a2f542596e89d08bd97c14f05fbe7026a760a3c3d44ff6735061ba88501"
+  },
+  {
+    "number": 21,
+    "title": "Alia and the inherited Baron",
+    "start_character": 110127,
+    "end_character": 116462,
+    "words": 1002,
+    "sha256": "6c54d535cc64e334c9aba6222ec5fec6997cf170fb9a135829aceae6752b106b"
+  },
+  {
+    "number": 22,
+    "title": "A ruler who already knows their methods",
+    "start_character": 116465,
+    "end_character": 122972,
+    "words": 983,
+    "sha256": "c7f075da77af2a87021218ac41367d0f0d75c9177ef312fa396501de8cc51cec"
+  },
+  {
+    "number": 23,
+    "title": "The long shadow of the Golden Path",
+    "start_character": 122975,
+    "end_character": 129401,
+    "words": 977,
+    "sha256": "267fdecb74389eb8dad81274798e954e40024dec18c1e5dc37e612fde9a3d849"
+  },
+  {
+    "number": 24,
+    "title": "Taraza's dangerous strategy",
+    "start_character": 129404,
+    "end_character": 135738,
+    "words": 984,
+    "sha256": "eebb2ec08d033e13b1afef6a8e15b88c40c58dff26ca3be88f2a531f2eae6feb"
+  },
+  {
+    "number": 25,
+    "title": "Odrade reads the warning at Sietch Tabr",
+    "start_character": 135741,
+    "end_character": 141356,
+    "words": 871,
+    "sha256": "c8980c1d81edb76bfadc839b3b6b84deca1dcf4cc96a7355ad03409aa1733031"
+  },
+  {
+    "number": 26,
+    "title": "Sheeana and the worms",
+    "start_character": 141359,
+    "end_character": 146645,
+    "words": 847,
+    "sha256": "6309b90d0791262260116450d15f5f31a1705c78ceb51c90bfb89fde0ff4a5a9"
+  },
+  {
+    "number": 27,
+    "title": "Lucilla and the Duncan ghola",
+    "start_character": 146648,
+    "end_character": 153271,
+    "words": 1027,
+    "sha256": "c59f6fc814b16400ac2da5c4292feafccea498ef6ab1d959edb91b71633f0855"
+  },
+  {
+    "number": 28,
+    "title": "Honored Matres and Murbella",
+    "start_character": 153274,
+    "end_character": 160352,
+    "words": 1072,
+    "sha256": "f60ad977a74a2aa8dbe46cd0ffecdd5f451d84c8476fcea75ac44dc93fd3cfca"
+  },
+  {
+    "number": 29,
+    "title": "Preserving memories when a world falls",
+    "start_character": 160355,
+    "end_character": 166129,
+    "words": 880,
+    "sha256": "97e17090b93c62ff48013e1739220d05a89f0dd9512136c009ac247cfd525048"
+  },
+  {
+    "number": 30,
+    "title": "Chapterhouse after the old certainty",
+    "start_character": 166132,
+    "end_character": 170209,
+    "words": 631,
+    "sha256": "c5b0fdbbb7631449e2b060d425ab399e9f633dbaeddbb6f64642fe02bdde111a"
+  }
+]

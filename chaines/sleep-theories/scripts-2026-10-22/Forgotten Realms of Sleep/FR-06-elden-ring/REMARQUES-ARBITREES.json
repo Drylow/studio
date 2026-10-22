@@ -1,0 +1,68 @@
+[
+  {
+    "number": 1,
+    "chapter": 12,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The next Godrick paragraph supplies the same two encounters and their consequences more fully; this is the less useful repeat.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte oppose explicitement eviter Radahn et etre vaincu par Malenia. Ce rappel bref empeche de reproduire la fausse attribution du monument corrigee dans les passes anterieures."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 15,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter six establishes both developments, and this chapter has already contrasted her past authority with her present library confinement.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La transition relie la perte d autorite de Rennala au lieu ou le Tarnished la rencontre ; elle ne rejoue pas le mariage et le depart de Radagon."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 16,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter ten gives the opposition and conditional death in detail; the surrounding Roundtable material already establishes incompatible aims.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "L opposition Fia/D sert ici a evaluer ce que le refuge du Hold peut garantir. Le chapitre10 traite la condition des morts ; la fonction de ce retour est differente."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 20,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The route and lift have already been given with Melina's medallion; this isolated sentence adds no further consequence or encounter.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase situe simplement le passage du refus de l Erdtree vers le voyage au nord. Elle ne prescrit ni equipement ni suite de commandes de jeu."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 25,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding three paragraphs have already explained the gaols, whip and makers' religious rationale with greater specificity.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La synthese rejoint les indices materiels a leur cout humain dans le village. L attribution erronee au seul cookbook a ete retiree."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 27,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "His later confrontation and professed wish to become a mother develop the same point with evidence; this standalone advance conclusion is less useful.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "L enjeu personnel de Ymir est pose avant son discours pour que sa theorie ne soit pas recue comme une voix omnisciente. Les actes ulterieurs developpent cet enjeu."
+    }
+  }
+]

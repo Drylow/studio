@@ -459,7 +459,7 @@
           "facts": "Qui-Gon trusts his immediate perceptions and intervenes for Anakin; the Council doubts the boy's age and fear. Qui-Gon's independence sits within his Jedi identity rather than proving all rules useless.",
           "primary_evidence": "The Phantom Menace.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed concrete immediate judgments: Jar Jar, Boss Nass, Watto, Anakin. Council admission and departure belong to other chapters."
         },
         {
           "title": "The return the Council could not see",
@@ -832,7 +832,7 @@
           "facts": "Leto's conduct during the harvester rescue and Duncan's contact create an opening for alliance. Kynes and Stilgar make judgments rather than simply accepting an outsider's title.",
           "primary_evidence": "Dune: harvester rescue; Duncan and Stilgar.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Brief comparison of intermediaries and distinct aims, without replaying greeting or harvester rescue."
         },
         {
           "title": "Two refugees in the desert",
@@ -1027,6 +1027,16 @@
             "https://www.swtor.com/eternal-throne/valkorion",
             "https://www.swtor.com/onslaught",
             "https://www.swtor.com/patchnotes/03022021/game-update-6.2.1"
+          ],
+          "opened": "2026-10-22"
+        },
+        {
+          "id": "ADD-moons",
+          "fact": "Verified against Dawn of the Jedi accounts: a dark-leaning Je'daii is sent to Bogan and meditates on Ashla; a light-leaning one goes to Ashla and contemplates Bogan. Do NOT reverse destination and object of meditation as a prior reviewer did.",
+          "work": "Dawn of the Jedi 0; Xesh and Daegen Lok on Bogan",
+          "urls": [
+            "https://starwars.fandom.com/wiki/Je%27daii_Order",
+            "https://starwars.fandom.com/wiki/Bogan"
           ],
           "opened": "2026-10-22"
         }
@@ -1763,6 +1773,25 @@
           "url": "https://readysteadycut.com/2026/07/24/silo-season-3-episode-4-recap/",
           "corroboration": "https://www.thereviewgeek.com/silo-s3e4review/",
           "opened": "2026-10-22"
+        },
+        {
+          "id": "ADD-route",
+          "fact": "S3E5 Sam identifies Stenson on Nimitz during retaliation. Vehicle taken over. S3E6 Helen plan to get authorities attention fails as police escort to airfield, Thurman greets. S3E7 Charlotte present seeking memories, NDAs, Helen receives five-year publication assurance, Stenson threat, unicorn anecdote attributed to him, flight to Georgia, Daniel sees giant drill. No unsupported technical takeover method.",
+          "work": "S3E5-7",
+          "urls": [
+            "https://winteriscoming.net/silo-season-3-episode-5-review-recap",
+            "https://readysteadycut.com/2026/08/07/silo-season-3-episode-6-recap/",
+            "https://tvobsessive.com/2026/08/14/silo-s3e7-recap-radio-it-has-to-start-somewhere-it-has-to-start-sometime/",
+            "https://www.thenationalnews.com/arts-culture/film-tv/2026/08/14/silo-season-3-review-episode-7-recap-apple-tv/"
+          ],
+          "opened": "2026-10-22"
+        },
+        {
+          "id": "ADD-Pact",
+          "fact": "S3E9 Daniel asks Victor about Pact. Victor says largely AI-written, edited by him and Anna; trauma expertise offered as rationale for preparing community after catastrophe. Attribute his account, no claim he authored every later clause.",
+          "work": "S3E9",
+          "url": "https://tvobsessive.com/2026/08/28/silo-s3e9-recap-farewell-cruel-world-im-off-to-join-the-circus/",
+          "opened": "2026-10-22"
         }
       ],
       "chapters": [
@@ -1855,6 +1884,19 @@
           "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
+          "title": "An investigation is brought to the construction site",
+          "job": "Trace the concrete E5-7 route from Sam lead through vehicle takeover, escort, airfield, family contact, secrecy agreement and Georgia drill. New events, no repeated seed-bank pitch.",
+          "facts": "S3E5 Sam identifies Stenson on Nimitz during retaliation. Vehicle taken over. S3E6 Helen plan to get authorities attention fails as police escort to airfield, Thurman greets. S3E7 Charlotte present seeking memories, NDAs, Helen receives five-year publication assurance, Stenson threat, unicorn anecdote attributed to him, flight to Georgia, Daniel sees giant drill. No unsupported technical takeover method.",
+          "primary_evidence": [
+            "https://winteriscoming.net/silo-season-3-episode-5-review-recap",
+            "https://readysteadycut.com/2026/08/07/silo-season-3-episode-6-recap/",
+            "https://tvobsessive.com/2026/08/14/silo-s3e7-recap-radio-it-has-to-start-somewhere-it-has-to-start-sometime/",
+            "https://www.thenationalnews.com/arts-culture/film-tv/2026/08/14/silo-season-3-review-episode-7-recap-apple-tv/"
+          ],
+          "boundary": "TV only, stated motives and claims attributed, no novel spoilers or future claims.",
+          "length": "Concrete multi-event chapter, no recap inventory."
+        },
+        {
           "title": "Thurman and Stenson's proposal",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
           "facts": "The project is presented through Senator Thurman and Per Stenson; a seed-bank analogy treats people as a population to preserve. This is their stated rationale, not proof all later decisions follow inevitably.",
@@ -1879,12 +1921,12 @@
           "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
-          "title": "Secrecy before the doors close",
+          "title": "The Pact has living editors",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "The project recruits and manages outsiders before underground life begins. Examine how Helen and Daniel's access changes their choices; distinguish protection of a facility from consent to later social control.",
-          "primary_evidence": "S3 Before Times through E8.",
+          "facts": "S3E9 Daniel asks Victor about Pact. Victor says largely AI-written, edited by him and Anna; trauma expertise offered as rationale for preparing community after catastrophe. Attribute his account, no claim he authored every later clause.",
+          "primary_evidence": "S3E9 Farewell, Daniel and Victor at unveiling.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed supported authorship encounter and its implications."
         },
         {
           "title": "An unveiling becomes a separation",
@@ -1956,7 +1998,7 @@
           "facts": "Troy asks about remembered Helen; Victor has seen this question before and stores the notes. Recurrence reveals incomplete erasure and administrative containment, not proof a full past identity is restored.",
           "primary_evidence": "S3E10 cryosleep ending.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Brief concrete recordkeeping scene; do not expand the same recurrence."
         },
         {
           "title": "The original goal and the later institution",
@@ -2229,6 +2271,17 @@
           "work": "S4E7",
           "url": "https://readysteadycut.com/2026/06/07/from-season-4-episode-7-recap/",
           "opened": "2026-10-22"
+        },
+        {
+          "id": "ADD-Sara",
+          "fact": "S1E1-2 Sara kills Tobey, leaves clinic open, creatures kill Bing-Qian and Gina. Sara tells Nathan voices required apparent creature attack. S1E4-5 arm message targets boy, Kristi hypothetical, barn Ethan attempt, Nathan intervenes and dies in struggle. S1E6 Khatri hides Sara believing connection useful; voices give him accurate private information. Identity and honesty of voices not established; do not equate with night creatures or children. Non-graphic.",
+          "work": "FROM S1E1-2,4-6",
+          "urls": [
+            "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/2/",
+            "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/5/",
+            "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/6/"
+          ],
+          "opened": "2026-10-22"
         }
       ],
       "chapters": [
@@ -2287,6 +2340,19 @@
           "primary_evidence": "S1 opening and Colony House; later Boyd encounters.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
           "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+        },
+        {
+          "title": "A private instruction opens the clinic",
+          "job": "Trace Sara's early obedience, the clinic breach, Ethan threat, Nathan intervention and Khatri concealment. New grounded material, not padding.",
+          "facts": "S1E1-2 Sara kills Tobey, leaves clinic open, creatures kill Bing-Qian and Gina. Sara tells Nathan voices required apparent creature attack. S1E4-5 arm message targets boy, Kristi hypothetical, barn Ethan attempt, Nathan intervenes and dies in struggle. S1E6 Khatri hides Sara believing connection useful; voices give him accurate private information. Identity and honesty of voices not established; do not equate with night creatures or children. Non-graphic.",
+          "primary_evidence": [
+            "FROM S1E1-2, S1E4-6 released episodes",
+            "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/2/",
+            "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/5/",
+            "https://warcraft.blizzplanet.com/from-tv-series-spoilers-season-1-recap/6/"
+          ],
+          "boundary": "No exact copied dialogue, no unconfirmed source identification, no promise of an escape that is not shown.",
+          "length": "About 650 words of original grounded narration."
         },
         {
           "title": "Walking slowly is a choice of presentation",
@@ -2395,18 +2461,10 @@
         {
           "title": "The Man in Yellow steps into the day",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "The Man in Yellow kills Jim outside the creatures' familiar nighttime presentation. The audience learns his connection to Sophia in S4E1; he is not just another member of an established identical species.",
+          "facts": "The Man in Yellow kills Jim outside the creatures' familiar nighttime presentation. The audience learns his connection to Sophia in S4E1; he is not just another member of an established identical species. Sophia arrival with apparent priest is a brief transition within this reveal chapter, not a separate expanded infiltration narrative.",
           "primary_evidence": "S3E10; S4E1.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
           "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
-        },
-        {
-          "title": "Sophia enters through ordinary trust",
-          "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "The changed appearance and apparent vulnerability let Sophia join the community. Her methods work through attention, relationships and false help rather than simply smashing talismans at every doorway.",
-          "primary_evidence": "S4E1 and Sophia infiltration.",
-          "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Henry is offered a false escape",
@@ -2422,7 +2480,7 @@
           "facts": "The totem spear fails against a night creature when Kenny tries it, while a revived Roger is vulnerable. Explain why conflating Roger with the regular nightwalkers produces a false rule.",
           "primary_evidence": "S4E7.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed to the actual distinct events and a bounded interpretation; no repeated explanation."
         },
         {
           "title": "Fatima can see through Smiley",
@@ -2430,7 +2488,7 @@
           "facts": "Fatima's connection lets her perceive and distract Smiley while Kenny is in danger. This is a particular link with an established creature, not proof she controls the entire town or every monster.",
           "primary_evidence": "S4E7 onward.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed to the actual distinct events and a bounded interpretation; no repeated explanation."
         },
         {
           "title": "When daytime stops being dependable",
@@ -3312,7 +3370,7 @@
           "facts": "Compare short-term passage in protective equipment with long-term life outside. Juliette's trip demonstrates one; it does not establish a surface settlement's food, water and sustained habitability.",
           "primary_evidence": "S1E10; S2 survival and return.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Brief passage-versus-habitation comparison, no replay of tape/pump/food chronology."
         },
         {
           "title": "Theory one: a managed exclusion zone",
@@ -4629,6 +4687,17 @@
           "id": "ER6",
           "fact": "Metyr's remembrance says she was the first shooting star and daughter of the Greater Will; Ymir's defective-fingers account is his theory, not a confirmed claim the Greater Will never existed.",
           "work": "Remembrance of the Mother of Fingers; Count Ymir dialogue."
+        },
+        {
+          "id": "ADD-Ansbach-armor",
+          "fact": "Ansbach explicitly says Miquella used Mohg to gain entrance to the Land of Shadow, before the later use of his corpse. Fire Knight Armor describes noble knights shunned and driven from homes after allegiance to Messmer; do not assert loss of golden guidance.",
+          "work": "In-game Ansbach dialogue 11610 and Fire Knight Armor item description",
+          "urls": [
+            "https://eldenring.wiki.gg/wiki/Sir_Ansbach",
+            "https://eldenring.fandom.com/wiki/Sir_Ansbach/dialogue",
+            "https://www.gamerguides.com/elden-ring-shadow-of-the-erdtree/database/armor/body/fire-knight-armor-altered"
+          ],
+          "opened": "2026-10-22"
         }
       ],
       "chapters": [

@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "One open window changes a house",
+    "start_character": 0,
+    "end_character": 5327,
+    "words": 868,
+    "sha256": "fcf8d80031d8e391fa9f159d7afcbbee939dae07ecf04e51a10c572077e587fe"
+  },
+  {
+    "number": 2,
+    "title": "The road that refuses an exit",
+    "start_character": 5330,
+    "end_character": 10235,
+    "words": 796,
+    "sha256": "e0c5c311896f63081249569c08d6fe0b5652cfd729edc801be7581e911689eaa"
+  },
+  {
+    "number": 3,
+    "title": "Night before the stones",
+    "start_character": 10238,
+    "end_character": 15754,
+    "words": 889,
+    "sha256": "cb786f283c8c315785822dd68e7edb9337d55d1bbb15af2621088d27525a8d14"
+  },
+  {
+    "number": 4,
+    "title": "Boyd's discovery in the hollow",
+    "start_character": 15757,
+    "end_character": 18660,
+    "words": 479,
+    "sha256": "d2e33085dfeb50238f8a386c4c3fc2b8fddcb0c18218c7b695e93d881dd500d9"
+  },
+  {
+    "number": 5,
+    "title": "Making a protected enclosure",
+    "start_character": 18663,
+    "end_character": 23872,
+    "words": 890,
+    "sha256": "dfc37c41aca7eec514dc43183657ab34a653952964c21060a8e0e0b2548181b3"
+  },
+  {
+    "number": 6,
+    "title": "The invitation that can be withdrawn by someone else",
+    "start_character": 23875,
+    "end_character": 30133,
+    "words": 1035,
+    "sha256": "4237febb71a2692f3ef81dcb032336b80f6ea98184a9fd48a44ab5eab3ea6ba5"
+  },
+  {
+    "number": 7,
+    "title": "Voices shaped to be trusted",
+    "start_character": 30136,
+    "end_character": 35982,
+    "words": 925,
+    "sha256": "1f57ceaacca736e434a3d223304a3c9f66530d6532f893d92b3e11fef5189899"
+  },
+  {
+    "number": 8,
+    "title": "A private instruction opens the clinic",
+    "start_character": 35985,
+    "end_character": 39711,
+    "words": 612,
+    "sha256": "96fde0c9f35095a625e5a2fb25f5da0f079deabf1074a1da86eb1baba213d6ca"
+  },
+  {
+    "number": 9,
+    "title": "Walking slowly is a choice of presentation",
+    "start_character": 39714,
+    "end_character": 44558,
+    "words": 780,
+    "sha256": "03b0ae73c6cb86746459c6594998881079483dc251eed9a38503abde36041707"
+  },
+  {
+    "number": 10,
+    "title": "Where the creatures rest",
+    "start_character": 44561,
+    "end_character": 50547,
+    "words": 968,
+    "sha256": "012324510317674a997e12b4ac638fdf890f4a848152104d0dd56beaa54f494c"
+  },
+  {
+    "number": 11,
+    "title": "Guns do not solve the night",
+    "start_character": 50550,
+    "end_character": 56414,
+    "words": 975,
+    "sha256": "9cce6b400f3bff504d6beee108abb906cace2cb1ac1ae24446e61b184b999411"
+  },
+  {
+    "number": 12,
+    "title": "Boyd returns carrying something else",
+    "start_character": 56417,
+    "end_character": 62602,
+    "words": 1068,
+    "sha256": "657e53d449441bb01f627ac6fcb610e50cd09802d245723340beef1fe6c53689"
+  },
+  {
+    "number": 13,
+    "title": "Smiley's apparent death",
+    "start_character": 62605,
+    "end_character": 68515,
+    "words": 977,
+    "sha256": "009fa696bd117aeb2593eb76aa27f1215d39a5a60aba2355df14510eaeaf12e2"
+  },
+  {
+    "number": 14,
+    "title": "The examination and the bile",
+    "start_character": 68518,
+    "end_character": 73911,
+    "words": 885,
+    "sha256": "467adfb1d1cb1bc2268299f3f8bddaebd98b0466e22dbceb9685956b985577cf"
+  },
+  {
+    "number": 15,
+    "title": "A music box reaches beyond locked doors",
+    "start_character": 73914,
+    "end_character": 80336,
+    "words": 1035,
+    "sha256": "c2eb9838e9dc638bbee73a16a3783567c985ec9074f15b13b7e2dd1f26895f75"
+  },
+  {
+    "number": 16,
+    "title": "Three people in the ruined place",
+    "start_character": 80339,
+    "end_character": 86195,
+    "words": 969,
+    "sha256": "f8dfadafcf323c959dfd96e2da821fe58e21791caacf63a8d6c12fca31811826"
+  },
+  {
+    "number": 17,
+    "title": "The barn is a deliberate trap",
+    "start_character": 86198,
+    "end_character": 92045,
+    "words": 966,
+    "sha256": "8d66849504c19336bf8a1b0391de92dd104c77428c485bdb89e0294b2c1b5e26"
+  },
+  {
+    "number": 18,
+    "title": "The bargain at the ambulance",
+    "start_character": 92048,
+    "end_character": 98043,
+    "words": 973,
+    "sha256": "700497b3171172bb4051493d7b603997b8391dac52e7189ea10435352a6211b9"
+  },
+  {
+    "number": 19,
+    "title": "The pregnancy that does not fit",
+    "start_character": 98046,
+    "end_character": 104278,
+    "words": 1011,
+    "sha256": "e4617492ba5a42e2153df02a57d642faef30679697a643db032ff2913a555ed0"
+  },
+  {
+    "number": 20,
+    "title": "Smiley returns",
+    "start_character": 104281,
+    "end_character": 110487,
+    "words": 1010,
+    "sha256": "39b670848349c26683b4bdc7b47d0b00efa29c53827fc240ffa1a26c51ceff62"
+  },
+  {
+    "number": 21,
+    "title": "A reported bargain behind the creatures",
+    "start_character": 110490,
+    "end_character": 116245,
+    "words": 905,
+    "sha256": "9c6b1df9d42d1409b4edf6d9c1feec923d7739f0660a3069c061d23ef86d27b3"
+  },
+  {
+    "number": 22,
+    "title": "The Man in Yellow steps into the day",
+    "start_character": 116248,
+    "end_character": 122768,
+    "words": 1083,
+    "sha256": "82265ddf8fc87b3f7ee7166d0fe5280d9d249c8b182a9655c6fe59f3404252a4"
+  },
+  {
+    "number": 23,
+    "title": "Henry is offered a false escape",
+    "start_character": 122771,
+    "end_character": 128549,
+    "words": 934,
+    "sha256": "3b12e3d3c25375932e1a600d32b9000a682eddfe98bcfb010d9f56a15f790a80"
+  },
+  {
+    "number": 24,
+    "title": "A spear works differently on different threats",
+    "start_character": 128552,
+    "end_character": 129908,
+    "words": 214,
+    "sha256": "8c155f2eb2355e8a53f4e9658a282ebb75aa4eb14b14b29320e78515df83a77d"
+  },
+  {
+    "number": 25,
+    "title": "Fatima can see through Smiley",
+    "start_character": 129911,
+    "end_character": 131316,
+    "words": 222,
+    "sha256": "c605ed7c724b2c4bae29f2c776b5baa8d07d9ac7da786305cfe489c9d6c0b9fd"
+  },
+  {
+    "number": 26,
+    "title": "When daytime stops being dependable",
+    "start_character": 131319,
+    "end_character": 137023,
+    "words": 924,
+    "sha256": "f74e927edcc8123618b894608de7b2a34e1843b2a51f4b3c638a18e42789f3a2"
+  },
+  {
+    "number": 27,
+    "title": "The clinic's boundary is physically broken",
+    "start_character": 137026,
+    "end_character": 141586,
+    "words": 718,
+    "sha256": "c6b9265ba5b14a6c813371229645b178fcbd4c4b8478a30630cce651bad92654"
+  },
+  {
+    "number": 28,
+    "title": "A rescue with a changing ally",
+    "start_character": 141589,
+    "end_character": 146024,
+    "words": 732,
+    "sha256": "a0864a076d02df3177047770bde0a01c1a46ddbfc69796500cd5f4719185f271"
+  },
+  {
+    "number": 29,
+    "title": "The stones are deliberately removed",
+    "start_character": 146027,
+    "end_character": 151644,
+    "words": 904,
+    "sha256": "b721f01e7d6e8b53fea82e7b3278ba34f54931d4945fdb69d6de24355ddcd530"
+  },
+  {
+    "number": 30,
+    "title": "The rules people can still use",
+    "start_character": 151647,
+    "end_character": 156451,
+    "words": 769,
+    "sha256": "5b974dc44e1b310dc5557d8199ffa40c2ba9993e6a135e557c6dd521132e4aa3"
+  }
+]

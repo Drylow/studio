@@ -1,0 +1,112 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph has already established both Meagan's doubt and the need for adult precautions; this post-CTA restatement delays Lauren's arrival.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Apres separation du CTA, les deux phrases reviennent a la responsabilite des adultes avant le mouvement de Lauren. Ce retour bref garde la scene humaine, sans nouvelle regle surnaturelle."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 7,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters one and six have already developed these two approaches and Kevin's response; the paragraph adds no encounter or new inference needed before Boyd's different encounter.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rapprochement distingue deux leviers affectifs, famille et solitude romantique. Cette comparaison est le sujet propre du chapitre sur les voix de confiance."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 8,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph already contrasts Sara's specific intention with Kristi's understanding; the last two sentences imply a further effect of Kristi's response that the account does not demonstrate.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "L effet est presente comme une possibilite a travers can, et comme analyse du risque de demander un jugement en cachant la situation. Aucun nouvel ordre ou dialogue des voix n est invente."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 11,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The paragraph states the human-versus-creature distinction twice and revisits Abby's death already told in chapter four.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le contraste explique le probleme de police de Boyd : l arme reste dangereuse pour les humains sans resoudre la menace nocturne. Le rappel est pertinent dans le chapitre sur les armes."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 25,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters nineteen and twenty have supplied the pregnancy and return, while this chapter's opening has already established the continuing connection through Fatima's intervention.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Ce court paragraphe rattache la perception de Smiley a la grossesse sans pretendre expliquer le mecanisme. Il donne le contexte de l aide nouvelle a Kenny."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 26,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening already identifies the lost daytime interval; chapters three through five establish Boyd's earlier changes. This paragraph delays Victor's specific warning.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel du travail diurne explique ce que la perte de cette plage permettait de faire ; la consequence sociale est distincte de l acquisition initiale des talismans."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 27,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter nineteen has already developed the examination, and the preceding paragraph gives Fatima's current condition and its uncertainty. The recap interrupts the clinic breach.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La limite des examens medicaux est opposee a une transformation observee dans la clinique. Cette opposition ne declare ni nouveau diagnostic ni mort definitive."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This repeats the opening's rescue outcome and separation, then states Fatima's remaining behind twice within the paragraph.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte distingue explicitement ce qui est montre et ce qui reste inconnu. Le rappel final souligne la separation d Ellis et Fatima, consequence de l aide qu elle apporte."
+    }
+  },
+  {
+    "number": 9,
+    "chapter": 29,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters five and thirty cover placement and enclosure; the chapter opening already states that Sophia has removed the protections. Only the consequence for someone returning adds to this chapter.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe porte sur la fausse assurance d un habitant retrouvant un lieu familier, consequence de la disparition des pierres plutot que nouvelle explication de leur origine."
+    }
+  },
+  {
+    "number": 10,
+    "chapter": 30,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter five gives the RV example, while this chapter's opening and closing already establish the fresh consequence of missing stones.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion transfere le resultat du RV a la condition actuelle : une regle ne protege pas un abri prive de sa pierre. Ce bref rappel assure la cloture pratique."
+    }
+  }
+]

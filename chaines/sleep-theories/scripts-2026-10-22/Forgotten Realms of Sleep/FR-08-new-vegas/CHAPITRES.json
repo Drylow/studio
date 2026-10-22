@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "A delivery that changes a war",
+    "start_character": 0,
+    "end_character": 5721,
+    "words": 923,
+    "sha256": "7b83cc125345ac5e4de9ffb50f259b1d0b7d537b80fdc86a8dbda1d4637597fb"
+  },
+  {
+    "number": 2,
+    "title": "The Strip survived differently",
+    "start_character": 5724,
+    "end_character": 12363,
+    "words": 1026,
+    "sha256": "7fc695410b468f8e7de04b1eb5acbfd6de38af19edc3fdd17d029e076f32fe8b"
+  },
+  {
+    "number": 3,
+    "title": "The NCR moves toward the Colorado",
+    "start_character": 12366,
+    "end_character": 19070,
+    "words": 1037,
+    "sha256": "ba5a2f700b89e034b1bb591f829c44f7786214e4626daca323ac6f3b88df9b33"
+  },
+  {
+    "number": 4,
+    "title": "Caesar organizes another kind of state",
+    "start_character": 19073,
+    "end_character": 25647,
+    "words": 1010,
+    "sha256": "2ae8adf5c78734f55768d022352c68625190902e69fb98e942471ccfb6f2c850"
+  },
+  {
+    "number": 5,
+    "title": "The Dam is water and electricity",
+    "start_character": 25650,
+    "end_character": 31574,
+    "words": 926,
+    "sha256": "10f62274db8a663c8a4201f7dc632c6af53f45621b62743b3b933a25f64ef2ef"
+  },
+  {
+    "number": 6,
+    "title": "The first battle leaves a warning",
+    "start_character": 31577,
+    "end_character": 37421,
+    "words": 912,
+    "sha256": "9d1ca732743107517ef3a45fa9b8c6b335fcc5478ba6458b4bd2983bd5fe769d"
+  },
+  {
+    "number": 7,
+    "title": "The Three Families become a government",
+    "start_character": 37424,
+    "end_character": 43687,
+    "words": 972,
+    "sha256": "c70b607dce51f2709a1a1b43497b153e422b8f579696fa25d8bb3e4cf1797fe8"
+  },
+  {
+    "number": 8,
+    "title": "Freeside outside the bright boundary",
+    "start_character": 43690,
+    "end_character": 49945,
+    "words": 996,
+    "sha256": "e6f0887b70c391b298c05458d796fedd6ac359ea87cc181af10721a7af3309dd"
+  },
+  {
+    "number": 9,
+    "title": "Goodsprings introduces local choice",
+    "start_character": 49948,
+    "end_character": 55984,
+    "words": 948,
+    "sha256": "bcf659740de41fec204f657b829348d2da50ba690c1efa3bbf56107024e49e28"
+  },
+  {
+    "number": 10,
+    "title": "Primm and an absent sheriff",
+    "start_character": 55987,
+    "end_character": 62403,
+    "words": 1014,
+    "sha256": "5ee8c4ddef8c55521e19e4e0ccf898a82abcf11f7b4da723287c7325e48f16aa"
+  },
+  {
+    "number": 11,
+    "title": "Nipton demonstrates a threat",
+    "start_character": 62406,
+    "end_character": 68592,
+    "words": 1001,
+    "sha256": "f00247076998bfb8edef242543a78735f9686675bfb23b8c0ff6619f9d025996"
+  },
+  {
+    "number": 12,
+    "title": "Novac sits beside old supply routes",
+    "start_character": 68595,
+    "end_character": 75122,
+    "words": 1052,
+    "sha256": "643029b65bb256e085e70a0386d850f13d71b22ddcf00903897254071244dead"
+  },
+  {
+    "number": 13,
+    "title": "Boulder City retains unfinished grievances",
+    "start_character": 75125,
+    "end_character": 80730,
+    "words": 901,
+    "sha256": "b3e1141b6367aba0c551e7e8709d28e2d639c1d8733ab85b14856a252cd0e998"
+  },
+  {
+    "number": 14,
+    "title": "Benny's plan reaches the Tops",
+    "start_character": 80733,
+    "end_character": 87208,
+    "words": 1046,
+    "sha256": "2e839bd773578400800eb17fee16f99574abd3330f1943a3b86361627b3e4db0"
+  },
+  {
+    "number": 15,
+    "title": "The Lucky 38 opens for one outsider",
+    "start_character": 87211,
+    "end_character": 93012,
+    "words": 908,
+    "sha256": "b1d5d5a20357f33934982616bc068258ccec8fb1ec68e412bd933576c6fcdf35"
+  },
+  {
+    "number": 16,
+    "title": "What the Platinum Chip actually unlocks",
+    "start_character": 93015,
+    "end_character": 98529,
+    "words": 873,
+    "sha256": "9eb4d54cedc206ecd550900719b7026f5853698d56b6661b424193559103a59e"
+  },
+  {
+    "number": 17,
+    "title": "An invitation crosses the river",
+    "start_character": 98532,
+    "end_character": 102279,
+    "words": 596,
+    "sha256": "bd423d4a344407767d3f407cfedfd6fc0637c522f136ca3fad159e05c0e2afed"
+  },
+  {
+    "number": 18,
+    "title": "McCarran bears a stretched occupation",
+    "start_character": 102282,
+    "end_character": 108395,
+    "words": 954,
+    "sha256": "cc74ef9c5e6a79b599f0c9cc2111d52495a24df3aa55610663e0ae580eed1fbd"
+  },
+  {
+    "number": 19,
+    "title": "Camp Forlorn Hope and Nelson",
+    "start_character": 108398,
+    "end_character": 114859,
+    "words": 1022,
+    "sha256": "28e8d317a737e96818489098e50b1eb39da2d52373b0fcb83e23851ff19fbfe6"
+  },
+  {
+    "number": 20,
+    "title": "Hanlon and the reports that mislead",
+    "start_character": 114862,
+    "end_character": 120709,
+    "words": 915,
+    "sha256": "37170d657b6815bbd8d116f2330089784ea52f43004f7b92a0d8e942bee6c4b5"
+  },
+  {
+    "number": 21,
+    "title": "The Great Khans consider their promised future",
+    "start_character": 120712,
+    "end_character": 126946,
+    "words": 1006,
+    "sha256": "8707954cd87264e3ccd4d7b978841ef568e49b114fa455cc1067799ced7675bf"
+  },
+  {
+    "number": 22,
+    "title": "The Boomers make distance into protection",
+    "start_character": 126949,
+    "end_character": 133089,
+    "words": 978,
+    "sha256": "341770b779346df49599d4b57797646c169f5f5c1b43d746239c7f1bd51ce284"
+  },
+  {
+    "number": 23,
+    "title": "The Brotherhood hides below the war",
+    "start_character": 133092,
+    "end_character": 139827,
+    "words": 1030,
+    "sha256": "0272632f3b7b3fb8824ab5bc1e80b635485b5e90484f52ee261425d2de40a260"
+  },
+  {
+    "number": 24,
+    "title": "Power from HELIOS One can go elsewhere",
+    "start_character": 139830,
+    "end_character": 146680,
+    "words": 1053,
+    "sha256": "0a2a9705e6cca4ac41a6f7788f263592b4b257d745c80a6fce3398038d135f27"
+  },
+  {
+    "number": 25,
+    "title": "The casinos can fracture from within",
+    "start_character": 146683,
+    "end_character": 153126,
+    "words": 1020,
+    "sha256": "f6bf37b55d14fe79c1c0b5cc527efd41c4b5432270a27dc312ff9183b05cd11c"
+  },
+  {
+    "number": 26,
+    "title": "The Followers and Kings ask different questions",
+    "start_character": 153129,
+    "end_character": 155999,
+    "words": 458,
+    "sha256": "13605017b9631bf8d653d25d46b948adc80be29a26f57b9580e52633b796bf47"
+  },
+  {
+    "number": 27,
+    "title": "The NCR route requires compromises",
+    "start_character": 156002,
+    "end_character": 162287,
+    "words": 992,
+    "sha256": "1bdb15d5ea99f017ab86d4f753ff948ae4de85ea8a30b05f0e0c129059d5c7f5"
+  },
+  {
+    "number": 28,
+    "title": "The Legion route and a fragile succession",
+    "start_character": 162290,
+    "end_character": 168033,
+    "words": 902,
+    "sha256": "f6aeb2f345851d4950f1eba1444381b01c8b68512d5d27c5800f9c8ec444a4a9"
+  },
+  {
+    "number": 29,
+    "title": "House and an independent Strip diverge",
+    "start_character": 168036,
+    "end_character": 174273,
+    "words": 984,
+    "sha256": "1569a7746e01569180a6a5a14fe923d69468100bcb01dc7cc6740bea334dee49"
+  },
+  {
+    "number": 30,
+    "title": "The second battle leaves more than a winner",
+    "start_character": 174276,
+    "end_character": 179025,
+    "words": 737,
+    "sha256": "4fcc332691b852c66d99514017343050cf9adfce63238eec8ad66e17714906f3"
+  }
+]

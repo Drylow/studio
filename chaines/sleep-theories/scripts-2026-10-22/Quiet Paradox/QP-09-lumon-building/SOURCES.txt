@@ -1,0 +1,48 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Severance television through S2E10 Cold Harbor, released March 2025. No season-three plot, future episodes, leaks or actual confirmation of cloning, Kier resurrection, pregnancy, immortality or global hive mind. Contemporary production news is not lore. Explain a particular research hypothesis without pretending its ultimate commercial purpose is confirmed.
+
+Banque de faits et oeuvres de reference :
+{"id": "E1", "fact": "The Perpetuity Wing presents Kier and succeeding Eagan CEOs through a curated company history; the severed floor treats his words as authority.", "work": "S1E3 In Perpetuity", "url": "https://en.wikipedia.org/wiki/In_Perpetuity", "opened": "2026-10-15"}
+{"id": "E2", "fact": "The first-season finale reveals Helly's outie is Helena Eagan, Jame's daughter, participating in a public severance promotion; Jame mentions his revolving.", "work": "S1E9 The We We Are", "url": "https://en.wikipedia.org/wiki/Severance_(TV_series)", "opened": "2026-10-15"}
+{"id": "E3", "fact": "Woe's Hollow uses Kier's Fourth Appendix and Dieter's story; Irving exposes Helena's impersonation, and Milchick restores Helly.", "work": "S2E4 Woe's Hollow", "url": "https://readysteadycut.com/2025/02/07/severance-season-2-episode-4-recap/", "opened": "2026-10-15"}
+{"id": "E4", "fact": "Cobel's return to Salt's Neck reveals her original severance work and Jame's appropriation of credit, challenging the family's invention story.", "work": "S2E8 Sweet Vitriol", "url": "https://www.cultofmac.com/reviews/severance-season-2-episode-8-recap", "opened": "2026-10-15"}
+{"id": "E5", "fact": "Jame's conversations with Helly/Helena distinguish his daughter's compliant role from the spirit he says he recognizes in her innie.", "work": "S2E9-10", "url": "https://en.wikipedia.org/wiki/Cold_Harbor_(Severance)", "opened": "2026-10-15"}
+{"id": "E6", "fact": "Cold Harbor tests Gemma with dismantling a crib without emotional spillover; its ultimate corporate purpose is intentionally still partly withheld by the creator.", "work": "S2E10 Cold Harbor", "url": "https://www.thewrap.com/severance-season-2-finale-dan-erickson-interview/", "opened": "2026-10-15"}
+{"id": "E7", "fact": "Mark and Gemma escape the testing rooms; innie Mark ultimately chooses to return toward Helly instead of leaving with Gemma. This is an identity conflict, not simply a love-triangle puzzle.", "work": "S2E10", "url": "https://www.tvguide.com/news/severance-dichen-lachman-season-2-finale-interview-gemma-cold-harbor/", "opened": "2026-10-15"}
+{"id": "E8", "fact": "Apple renewed the series after season two; no third-season plot is included in this script.", "work": "Production scope only", "url": "https://www.apple.com/uk/tv-pr/news/2025/03/praise-kier-apples-global-hit-emmy-and-peabody-award-winning-workplace-thriller-severance-lands-season-three-renewal/", "opened": "2026-10-15"}
+{"id": "ADD-portraits", "fact": "S2E3 Natalie presents whole Kier cycle reimagined as Black to promoted Milchick, says received same promotion gift and found loving. He politely awkward. S2E5 asks her about paintings, describes complicated feelings. Tillman interview describes discomfort. Corporate reinterpretation, not literal history.", "url": "https://www.tvline.com/interviews/severance-milchick-paintings-explained-lumon-founder-blackface-episode-3-1235404526/", "work": "S2E3 and S2E5", "opened": "2026-10-15"}
+{"id": "ADD-book", "fact": "S1 Ricken leaves The You You Are for Mark; Cobel takes from doorstep into Lumon; Milchick inspects and leaves it in conference room, Mark and Dylan read and find encouragement for autonomy. S2E3 Natalie approaches Ricken; S2E5 he drafts Lumon edition, Devon criticizes corporate direction and reversal. This is drafting/co-option attempt, success unconfirmed.", "url": "https://www.tvline.com/recaps/severance-recap-season-2-episode-5-helly-irving-1235408645/", "work": "S1 book arc; S2E3-5", "opened": "2026-10-15", "corroboration": "https://en.wikipedia.org/wiki/Severance_(TV_series)"}
+
+Reperes par section (sans minutages audio) :
+01. A crib without the memory attached — S2E10 Cold Harbor.
+02. The division a worker agrees to — S1E1 onboarding and elevator.
+03. A consciousness begins at the conference table — S1 Helly onboarding and video exchange.
+04. Memory can be absent while ability remains — S1 questionnaire and MDR work.
+05. The machine is planted in a person — S1 procedure and elevator; S2 research.
+06. The floor teaches a worldview — S1 MDR and Perpetuity Wing.
+07. Numbers that produce a feeling — S1 MDR training; S2 files.
+08. An uneven kind of expertise — S1 Mark and MDR; S2 Gemma connection.
+09. Departments that do not compare notes — S1 O&D contact and paintings.
+10. The Break Room changes behavior — S1 Break Room.
+11. Wellness without informed consent — S1 wellness and Cobel.
+12. Cobel keeps testing a boundary — S1 Cobel/Selvig; S2 continuation.
+13. The Overtime Contingency — S1 Dylan at home; S1E8-9.
+14. The public product at the gala — S1E9 gala.
+15. The technology used away from an office — S1 Gabby and Devon.
+16. Petey crosses the boundary and suffers — S1 Petey; S2 Reghabi.
+17. Mark attempts reintegration — S2 Mark reintegration arc.
+18. A return staged by management — S2E1-3 return to MDR.
+19. Helena plays the part of Helly — S2E4.
+20. Dylan's visiting room — S2 Dylan and Gretchen visits.
+21. The road to the testing floor — S1 Irving paintings; S2 Irving investigation.
+22. Gemma lives among test rooms — S2E7 Chikhai Bardo.
+23. Fear and the experimental setting — S2E7 testing floor.
+24. Mark's work and Gemma's partitions — S2E7; S2E9-10.
+25. The crib test succeeds on its own terms — S2E10.
+26. Cobel's notebooks change the ownership story — S2E8 Sweet Vitriol.
+27. Theory one: an expandable compartment — S1 Gabby and Overtime; S2 testing floor.
+28. Theory two: a way around emotional suffering — S1 Mark/Gabby; S2 Gemma.
+29. Theory three: a durable Eagan future — S1 Jame at gala; S2 Jame and Helly; testing evidence.
+30. The person the experiment cannot contain — S2E10 ending.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

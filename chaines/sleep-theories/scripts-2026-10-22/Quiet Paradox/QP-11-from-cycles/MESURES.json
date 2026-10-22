@@ -1,0 +1,67 @@
+{
+  "id": "QP-11-from-cycles",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 27463,
+  "characters_including_spaces": 168131,
+  "characters_excluding_whitespace": 140326,
+  "estimated_minutes": {
+    "140": 196.2,
+    "150": 183.1,
+    "160": 171.6,
+    "170": 161.5
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 951,
+    "2": 899,
+    "3": 907,
+    "4": 757,
+    "5": 872,
+    "6": 1063,
+    "7": 996,
+    "8": 1009,
+    "9": 1029,
+    "10": 875,
+    "11": 1039,
+    "12": 862,
+    "13": 637,
+    "14": 841,
+    "15": 638,
+    "16": 1065,
+    "17": 1039,
+    "18": 1005,
+    "19": 1051,
+    "20": 993,
+    "21": 1055,
+    "22": 906,
+    "23": 1017,
+    "24": 1054,
+    "25": 928,
+    "26": 896,
+    "27": 874,
+    "28": 758,
+    "29": 715,
+    "30": 732
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 1,
+    "floor": 1,
+    "echo": 39,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "You can join us for more stories like this by subscribing to Quiet Paradox. And if you feel like sharing, leave a comment with your corner of the world and a little detail: is it daytime there, or has night arrived?",
+      "word_offset": 246
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "ad6518d429496a66796441a03b9706035c87f9037046103684d9c9383e7cd12d"
+}

@@ -4,6 +4,18 @@
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
 
+## Quinze nouveaux scripts — 22 octobre
+
+Les [quinze scripts du nouveau lot](scripts-2026-10-22/README.md) sont complets et
+relus : cinq pour Deep Void Theories, cinq pour Quiet Paradox et cinq pour
+Forgotten Realms of Sleep. Chaque dossier contient le texte propre pour la voix,
+le titre, les sources, les mesures et les arbitrages de relecture. Total :
+411 708 mots ; minimum 25 516 mots par script. Les durées restent estimées.
+
+Copie autonome sur le Bureau : **Scripts sleep - 15 nouvelles videos - 22 octobre 2026**.
+Cette commande a produit les textes seulement. Aucune nouvelle voix, miniature,
+vidéo ou programmation n'est lancée ; ne pas relancer les anciens lots.
+
 ## Publication du lot de six vidéos — 17 octobre
 
 L'utilisateur autorise l'envoi, les miniatures, les descriptions, la programmation

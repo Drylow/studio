@@ -1,0 +1,79 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "957a2c98dd81a4228c5f13007621bceb9e4b616ae0d637aa66b3ba3d03581a43",
+  "full_review_file": "passage-33-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "c7a6be67bbe138d08de2b20fbf8d3d107f361ddb58dd45af1807b51bdf084da5",
+    "2": "a02318872d1647500a8175d86457f7905482869216ffc231ae589e9d5e3f3c3c",
+    "3": "59c4038843e22261541fdd831ef50e90524c3bda113370efbf210347a0ed55f1",
+    "4": "9599c96bd413c36cca29b115520251e4364babbc95a10b96acbb5f5cfe711755",
+    "5": "449f31324b220b57fbbcc5e4e85819c6a3f6872bdfc4ba88b5f8dcb3f39949b0",
+    "6": "e79b0df58b3ecb59e2a4b51c05a2e4689f74fda555a399a21f403a7c025cac04",
+    "7": "d8a1c96d18182ce0aac0511bab03035a6e4cf585608ae14905bcf89c9bbee62b",
+    "8": "ef4fe21cd2b480ed9d49be43236f1c4622aee7cb2d9b9188eb014145a4ed3dca",
+    "9": "58f4ab3ac1c164e1f0c0d5681d9f98122e58987616b8cf55166c70384c7391fe",
+    "10": "b8ea04034a65dd30de563417e6ffdb23f7e838ff344cedfb90554d8097d3e90d",
+    "11": "8169b6fca8b5b2e9d9bd09f2c6128a4d71b8b88983cea5a04293aa096f9c50b3",
+    "12": "27dae01ea309e1c7c55d7aad345cadf51d13df62021d178dd575496196d46f64",
+    "13": "38d88a616b1494360d243dedc8a19ff2f10cd89380886ca8ae16881bcdcd82c2",
+    "14": "45cc166a8f4f32ae49630b61538030c7743069818f34ad13ec567a9dc642928a",
+    "15": "e179293669cd07be10b6af08074f9254698c1abde662ed73bd643357922f34b9",
+    "16": "cc30382e63dc12fa5c487dcaa21e61046dd6e33c4ab8b9024b5d7f8d3d263e38",
+    "17": "c7634e5a3e7b247bf449e264a3a368a9d6330ae333c8e28a52c263e8046cbf45",
+    "18": "4917167ddf445a23c13d3a959f707d53cafeb01a444f60340d0809383450b043",
+    "19": "a883c5e6d61e230aa1951716aea4b29b1ecb10814401b6ef9f8fc7129482a0e3",
+    "20": "837e398cd15f40429c744280a1015d7196f9c16f1042f520c724a66c554f0d78",
+    "21": "5c5e5b0d88373f710a1cb00dad1e2f1811f234f375bb36ce20ffd127d4bb4bf3",
+    "22": "15ea7a6d943e94300c541c5fe0af73b08967c37f1e0743b5c8949789349f9f26",
+    "23": "abc8970497d4947237af3e7697e373fe9aed7f219fba9890435dfbade6d591bb",
+    "24": "1d26fc6252aba434eebe3f418753761ac4a077af7e5227b740832974f9c585b9",
+    "25": "16819816cb6ef6b59d120025e3b3dc5349bea2405193f4a29a2bff1d1def2508",
+    "26": "daae16505f552c4889c23a4eb06a454bae7ddae026745dc654ee6c4e8da36a94",
+    "27": "a86a558a881fbebcabac1122b9fbbf64c3bffdc2b295fe5a55e63079f57e5233",
+    "28": "62e1d0df427e0c1ca3ff4aece45a882828bcc61a2e90f7f2f3197cbc67c679e3",
+    "29": "f7d1569df44ee0b620a2a01a4fd175b749b264376c3633285d39904bccb0f681",
+    "30": "4d605188962460912faf4966861497f0c482bb8dd95421ea9b5c87424722a65a"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte oppose explicitement eviter Radahn et etre vaincu par Malenia. Ce rappel bref empeche de reproduire la fausse attribution du monument corrigee dans les passes anterieures."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "La transition relie la perte d autorite de Rennala au lieu ou le Tarnished la rencontre ; elle ne rejoue pas le mariage et le depart de Radagon."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "L opposition Fia/D sert ici a evaluer ce que le refuge du Hold peut garantir. Le chapitre10 traite la condition des morts ; la fonction de ce retour est differente."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase situe simplement le passage du refus de l Erdtree vers le voyage au nord. Elle ne prescrit ni equipement ni suite de commandes de jeu."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "La synthese rejoint les indices materiels a leur cout humain dans le village. L attribution erronee au seul cookbook a ete retiree."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "L enjeu personnel de Ymir est pose avant son discours pour que sa theorie ne soit pas recue comme une voix omnisciente. Les actes ulterieurs developpent cet enjeu."
+    }
+  },
+  "scope_status": "All 30 chapters remain within the base-game and released Shadow of the Erdtree scope. Optional outcomes are generally conditional; the narration neither selects a canonical ending nor treats Radahn's earlier consent as established. The requested CTA appears once, early in chapter one. The six suggested deletions remove repetition without requiring replacement facts.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_for_sleep_format",
+    "B": "minor_fixes",
+    "C": "pass_with_minor_fixes",
+    "D": "minor_fixes",
+    "E": "evidence_limited"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

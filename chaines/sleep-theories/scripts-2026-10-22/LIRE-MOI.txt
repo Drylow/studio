@@ -1,0 +1,3 @@
+Quinze scripts complets classes par chaine. Ouvrir README.md pour les titres, mots et durees.
+Dans chaque dossier video, copier SCRIPT.txt pour la voix. Les autres fichiers sont des notes de production.
+Aucune voix ni video produite dans cette livraison.

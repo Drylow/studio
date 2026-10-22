@@ -1,0 +1,104 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "69d6ec4e5d0f735048746f113e8bcc10ab00f051db99f4a17fe405f8f61fef97",
+  "full_review_file": "passage-33-chapitres-01-31.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "50875a31a098ab3c12f7b35f78cec85113a4c7f263221c3f6b7d107d6b1de314",
+    "2": "b793803f763d4dfd58cb81b1ac23214937ddc0e17f1eadb18639d8d1677088fd",
+    "3": "09247e5565fd28b23668af00e9ebdfb23f4997839a376e6d1df00b3b1be600d6",
+    "4": "dcfe6575031367570effb18b0b4d2a2da96c8a950f2c6e0bd04754426269e278",
+    "5": "8dc2fc89e5cbef6d8d027c8eb1d0f0b5a0032f50e7da9f9a705c920f0d9e6bad",
+    "6": "22387d30a311d89ee07176ba3e565d4528fd101d010b562af194782fa3698bc4",
+    "7": "0ade9339f645ae314b235121f5cd4c7f588f8c922b1e29ee200015a52fb728bc",
+    "8": "96120e2493183cb3bf2766b8377bac5c21ebb77122f60378e986b6f64bae2e61",
+    "9": "cae01f98175a36532b8b7944f4376bd8eccdfdea9d775023cdbf3f5725cc1483",
+    "10": "fb1e90de7884e271e8265c86be0cd1aa47d70f22ac013547fc23aa0293003ebe",
+    "11": "5467c571255f97a07f16166a554ccb2d39c74e47b4a394378c62ee7ed73fcdf7",
+    "12": "c060e00307973bdf3167f6b8cbc96a08fb3d670abaec8c716844e1d2b3198a3f",
+    "13": "98b2014e9e7f130a9945885dd429f1df467a9f7dd491241b3dbe7b1bdcf77c0b",
+    "14": "776abea4fdfba8c3574721e349c339dc2c03d155165f2f0abdb83d1f4cbba6e1",
+    "15": "0acf54ccff1b79a83001ba800fb7c4aa0dd4b1f049efbb2f8da888972c8a9d83",
+    "16": "e098221ef06ac97f2bc6196b4fb1367dd912d02d3909345046ef78d0ce1e812e",
+    "17": "ebe49b9a8abed31c48dbf43a1427d40795eb9d521e64e4c9e9b9d3da870b9d05",
+    "18": "7aa1beddf4baf67e8293a62fa7d4710316dbca60f24d391dabede3575e973d84",
+    "19": "f0afc96a48fda9230d07b2d8a389670a5fda8312283ffb1a5ae6a2ebbfed023e",
+    "20": "3ecde00381a68da45fa0321fafefb7cc101178292aff163440912bf85df01d13",
+    "21": "db3bdb73ae353168281bcc7ac1bf22fb08f88364fe8c25732132ab6fa72223b0",
+    "22": "e9ed20080cdc0417a657d0d1784ea555a73070acf4d06c08caa588184cb35997",
+    "23": "5f25c522717c50390b5f998d8cb39e45df934ac84a72ddf1de6e675351e56798",
+    "24": "a516ccdccb2f24c06ae40075e8bd52b185ff0693c48842e33d0ba5cb4fe649c9",
+    "25": "875a2b09c9ca79b746c0ce69d060a9682c7b6a1a2ba5f8b931ae54b2e43282d4",
+    "26": "173470bce90b99427c9c141546de21d6233fa600830d0d0574bd6837c7ef714d",
+    "27": "e3439efbe765d4c0731887cccd0417e5d96533bd2e35426dace60b8404003400",
+    "28": "9aaf5cc8e1fd7119b77c477bc33b0aeb73c695dcca37aa4a0fd156485c552a32",
+    "29": "4b0d86e4c2f043dced42745ea7229117ee2ef859a3ba1f4c22d53c2bcde282cc",
+    "30": "d4e67b27b75e99698aee60195d765b64d1ea99797f33d537fdf35800df66205e",
+    "31": "e089cbd66c29a250734d6dc6b70c4faf547a22f6cec1789f791dfacedf2eb033"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase explique pourquoi la piste inferieure reste ouverte quand l intrigue remonte avec le disque. Le chapitre9 donne ensuite la route propre de Lukas ; aucun raccord causal faux ne subsiste."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Le bref rappel formule le contenu de l avertissement et la position des auditeurs avant la catastrophe. La remarque de methode Gray Goo a deja ete retiree."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Le detail est corrobore par S3E2 et la restauration partielle evoquee en S3E7 ; le recap E5 rapproche explicitement l explication de Crnkovich et l evitement des objets personnels. Voir https://winteriscoming.net/silo-season-3-episode-5-review-recap et la discussion de Charlotte en S3E7. Il ne s agit pas d une intention clinique inventee."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison porte sur deux origines de l ignorance : transmission historique coupee et experience personnelle interrompue. C est la question propre de Daniel/Troy, pas une nouvelle histoire de Juliette."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison avec Pete distingue filiation connue et filiation devenue inaccessible, ce qui explique la portee personnelle de la dispute entre Susan et Troy."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le changement de role de Lukas sert a mesurer la hierarchie des acces jusqu a Silo1. La comparaison ne lui attribue ni omniscience ni nouveau pouvoir."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "Le passage explique le lien entre circulation physique et circulation des connaissances dans la Directive. Il qualifie le sens possible de la separation sans affirmer un but cache unique."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "Le refus de retour force est la consequence politique de la cible proposee. La discussion garde clairement que Susan envisage encore un meurtre, sans la transformer en solution moralement neutre."
+    },
+    "9": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison oppose l aide individualisee de Juliette au ciblage collectif du groupe. C est le nouvel enjeu de responsabilite examine ici, au-dela du mecanisme des drones."
+    },
+    "10": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour a Susan sert cette fois a tester la notion de preservation conditionnelle, distincte de l analyse du desaccord dans la salle de commande."
+    },
+    "11": {
+      "status": "retained_after_editor_review",
+      "reason": "Les trois reputations de Juliette expliquent les publics auxquels la fausse image peut parler. Ce sont des memoires sociales differentes, pas une nouvelle version de la video de nettoyage."
+    },
+    "12": {
+      "status": "retained_after_editor_review",
+      "reason": "Le dernier chapitre est volontairement une comparaison entre la responsabilite de maintenir les vivants et la responsabilite de Troy dans l operation. Le retour a la reparation donne une situation concrete a cette opposition ; il ne se presente pas comme une nouvelle scene ou une preuve de l intention originelle des fondateurs. La preference pour une cloture plus courte est rejetee pour ce format sleep long."
+    }
+  },
+  "scope_status": "All 31 chapters stay within the supplied television-through-S3E10 boundary; no novel or season-four answer is required. The stated minimum is 25,500 words for the edited whole, while the supplied current measurement is 25,626. The proposed cuts would put it below that minimum unless supported, genuinely new material is added elsewhere. Do not restore repeated prose merely to reach the target.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass for the sleep format",
+    "B": "revise for repetition, not rehook cadence",
+    "C": "revise closing structure",
+    "D": "local fixes required",
+    "E": "provisional; publication checks not applicable"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}
