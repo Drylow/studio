@@ -1,0 +1,41 @@
+{
+  "words_whitespace": 18904,
+  "duration_minutes": {
+    "120": 157.53,
+    "125": 151.23,
+    "130": 145.42,
+    "135": 140.03,
+    "140": 135.03,
+    "145": 130.37,
+    "150": 126.03
+  },
+  "max_average_wpm_for_120min": 157.53,
+  "paragraphs": 230,
+  "counts_by_file": {
+    "01.txt": 1222,
+    "02.txt": 1136,
+    "03.txt": 1214,
+    "04.txt": 1265,
+    "05.txt": 1193,
+    "06.txt": 1147,
+    "07.txt": 1140,
+    "08.txt": 1171,
+    "09.txt": 1138,
+    "10.txt": 1126,
+    "11.txt": 1195,
+    "12.txt": 1220,
+    "13.txt": 1172,
+    "14.txt": 1300,
+    "15.txt": 1152,
+    "16.txt": 1113
+  },
+  "opening_words": 62,
+  "duplicate_paragraphs": [],
+  "em_dashes": 0,
+  "URLs": 0,
+  "brackets": 0,
+  "headings": 0,
+  "digits_in_spoken_copy": 0,
+  "script_sha256": "e18e0ae2f583eba5a2b9df6040ca78cf63edba17fd5cf6d1cdfc4ac23bea6154",
+  "audio_rendered": false
+}

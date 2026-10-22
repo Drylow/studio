@@ -1,0 +1,22 @@
+LES MURMURES DE SHERLOCK HOLMES
+Le testament signé après la mort
+
+SCRIPT.txt contient la narration française complète, prête à copier dans le générateur de voix. Le titre est dans TITRE.txt et ne fait pas partie du texte à lire.
+
+Longueur vérifiée : 18 904 mots, comptés par séparation sur les espaces. Le texte comporte 230 paragraphes, sans titres de chapitres, balises de mise en scène, URL, chiffres à interpréter ou consignes techniques. Les abréviations de civilité ont été développées.
+
+Débit conseillé : 125 à 140 mots par minute, voix posée, volume stable, dialogues aussi calmes que le récit. Conserver de petites respirations naturelles entre les paragraphes. Ne pas accélérer les scènes de découverte. La ponctuation suffit : aucune pause technique n'est écrite dans SCRIPT.txt.
+
+Durée estimée de la narration seule :
+- À 125 mots/minute : environ 2 h 31.
+- À 130 mots/minute : environ 2 h 25.
+- À 140 mots/minute : environ 2 h 15.
+- Même à 150 mots/minute : environ 2 h 06.
+
+Il s'agit d'estimations à partir du texte, pas d'une durée audio mesurée. Pour conserver au moins deux heures, le débit moyen réel doit rester inférieur à environ 157 mots par minute. Vérifier la durée du fichier sonore après génération. Aucun fond musical ni silence prolongé n'a été compté pour atteindre la longueur demandée.
+
+Récit original de fiction avec Sherlock Holmes et Watson. Narration à la première personne par Watson. Le titre n'attribue pas cette histoire à Arthur Conan Doyle. Les personnages secondaires, le domaine et l'affaire sont inventés.
+
+Miniature finale : MINIATURE_YOUTUBE.jpg, format paysage, environ 427 ko, texte « SIGNÉ APRÈS SA MORT ». Une version PNG est conservée dans le dossier de production. Création par l'outil de génération d'images intégré ; direction et prompt dans PROMPT_MINIATURE.txt. Référence visuelle : miniature du précédent épisode, pour la continuité du détective et de l'ambiance.
+
+Faceless OS appliqué à la construction, l'ancrage de voix, la progression et la relecture, avec adaptations explicites au format fiction/sommeil. L'audit de travail et le relevé de longueur sont conservés séparément de la narration.
