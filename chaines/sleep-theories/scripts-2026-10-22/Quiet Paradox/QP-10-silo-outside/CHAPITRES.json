@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "A horizon confined to a screen",
+    "start_character": 0,
+    "end_character": 4943,
+    "words": 831,
+    "sha256": "92f6050179e7c0971b42449b64366524a5bb2b4618d77c03ac666a54ab520408"
+  },
+  {
+    "number": 2,
+    "title": "Allison's recording does not fit",
+    "start_character": 4946,
+    "end_character": 10444,
+    "words": 886,
+    "sha256": "3093b36c7fec33c0f91eee60f6a8d5c3669d37a373b103e7909f765b94aec30c"
+  },
+  {
+    "number": 3,
+    "title": "Holston removes his helmet",
+    "start_character": 10447,
+    "end_character": 15590,
+    "words": 861,
+    "sha256": "eb36dbe9f8bdb19766ccbca31373cd8e913ee893328d6e4d8f2c47c0b626c6cd"
+  },
+  {
+    "number": 4,
+    "title": "The landscape is two different images",
+    "start_character": 15593,
+    "end_character": 20818,
+    "words": 845,
+    "sha256": "95291c327a5a583734b7e9207ce7a4ab2f47f12416a06a36369fd4461b4aeab3"
+  },
+  {
+    "number": 5,
+    "title": "Supply tape and an engineering intervention",
+    "start_character": 20821,
+    "end_character": 27000,
+    "words": 1000,
+    "sha256": "14363fe89db39c37100674ea622d86ad71d4c51ef2956ce5cc7a069c846efdfd"
+  },
+  {
+    "number": 6,
+    "title": "Past the visible ridge",
+    "start_character": 27003,
+    "end_character": 33183,
+    "words": 1016,
+    "sha256": "315f7b54d95e043a805c873553546ef1089f258e5322c5df911a4098cf65bd4b"
+  },
+  {
+    "number": 7,
+    "title": "An airlock on the other side",
+    "start_character": 33186,
+    "end_character": 39690,
+    "words": 1054,
+    "sha256": "f31e964e3523bd1ff3dc477b6545e243c34dde5bbae6653dce90857dfa36b71f"
+  },
+  {
+    "number": 8,
+    "title": "The failed exit of another community",
+    "start_character": 39693,
+    "end_character": 46006,
+    "words": 1016,
+    "sha256": "1c266833c88ed376ae3715549a53f75252fe16ab5a9e3d30586c422c8903bf74"
+  },
+  {
+    "number": 9,
+    "title": "A building emptied of routine",
+    "start_character": 46009,
+    "end_character": 52279,
+    "words": 1045,
+    "sha256": "44540b8b0cb370440a8d921436a74094c3c7a90465d0d0c1053191b325e864fb"
+  },
+  {
+    "number": 10,
+    "title": "Water changes the accessible map",
+    "start_character": 52282,
+    "end_character": 58788,
+    "words": 1096,
+    "sha256": "963eaa27c1bab2585798ab4f4087fe37f80465ba87f6693719e029bb4f554fa9"
+  },
+  {
+    "number": 11,
+    "title": "Jimmy's survival behind the vault",
+    "start_character": 58791,
+    "end_character": 65055,
+    "words": 1028,
+    "sha256": "b9b89d1bd7f1f83197e88380c307c7ca3809ad6cf68b2967e7fcc6d29d71a4db"
+  },
+  {
+    "number": 12,
+    "title": "The suit needed for a return",
+    "start_character": 65058,
+    "end_character": 70705,
+    "words": 938,
+    "sha256": "9060bce0f2b51fd515379e8b7a7bf664cd99584b6b893027babfb47cb10dcd69"
+  },
+  {
+    "number": 13,
+    "title": "Maps inside a restricted archive",
+    "start_character": 70708,
+    "end_character": 77288,
+    "words": 1077,
+    "sha256": "5f7300c79b9e37c1f7f90ebd6f32b2a5d5dd5a10234e3a4ad15c7f5be73f13b1"
+  },
+  {
+    "number": 14,
+    "title": "Lukas looks at the stars",
+    "start_character": 77291,
+    "end_character": 83647,
+    "words": 1039,
+    "sha256": "2ac792742fffe60b20cddd6327c33226972c1129eca7b32a0a1f453b65d005d2"
+  },
+  {
+    "number": 15,
+    "title": "The lower passage offers another route",
+    "start_character": 83650,
+    "end_character": 90206,
+    "words": 1040,
+    "sha256": "a7caa1fb2e6c00f6a53b872cc0a02c2494656f7e91748cbf02e797ac68d31fe7"
+  },
+  {
+    "number": 16,
+    "title": "A warning at the waterline",
+    "start_character": 90209,
+    "end_character": 96668,
+    "words": 1044,
+    "sha256": "cf5d5aaa721fd769ea7ccfe2a724bff012ac673291aa79cd4917ffd4649cabdc"
+  },
+  {
+    "number": 17,
+    "title": "Why a disabled Safeguard did not save the crowd",
+    "start_character": 96671,
+    "end_character": 102467,
+    "words": 898,
+    "sha256": "44ae2467ff1395a081f36771667c75e6638df153e20b7aaea43ff53198bc9155"
+  },
+  {
+    "number": 18,
+    "title": "The surface has observers",
+    "start_character": 102470,
+    "end_character": 108211,
+    "words": 925,
+    "sha256": "513f3ad844910ff812a2ab9b012816cf03f2904404ad7bfb04603a797c5ef0bd"
+  },
+  {
+    "number": 19,
+    "title": "Drones change the meaning of the wasteland",
+    "start_character": 108214,
+    "end_character": 114287,
+    "words": 990,
+    "sha256": "93e0401518025f32a11929a29449e370c661e66e97086dcf381f21be74239b9b"
+  },
+  {
+    "number": 20,
+    "title": "Susan proposes retreat rather than extermination",
+    "start_character": 114290,
+    "end_character": 119857,
+    "words": 902,
+    "sha256": "c2495d68c78525462daedb7042cb56daa0fcc62fcd1961a807742f37ddb9bb6b"
+  },
+  {
+    "number": 21,
+    "title": "A city before its ruined horizon",
+    "start_character": 119860,
+    "end_character": 126029,
+    "words": 999,
+    "sha256": "76714860b46c3682ac939394ac7d2e0924ffbafaee5393336864afd6beffca8b"
+  },
+  {
+    "number": 22,
+    "title": "Catastrophe as the founders describe it",
+    "start_character": 126032,
+    "end_character": 132072,
+    "words": 927,
+    "sha256": "a1a960d3b98d0f47887b04787f3dcddd21bf0d793f3698f61510e96a3cf5b389"
+  },
+  {
+    "number": 23,
+    "title": "The final event we are not shown in full",
+    "start_character": 132075,
+    "end_character": 138075,
+    "words": 942,
+    "sha256": "49531cd2e6a29289e8bb1c03db89c5d5b4defa04fd25dfd2e88336b8944cae6e"
+  },
+  {
+    "number": 24,
+    "title": "Bernard steps outside without a suit",
+    "start_character": 138078,
+    "end_character": 144677,
+    "words": 1054,
+    "sha256": "48ee44bf40a67abc4fe7ff3c087686c9a9298392400237c0972baba8c0ae25d4"
+  },
+  {
+    "number": 25,
+    "title": "Radio as a fragile bridge",
+    "start_character": 144680,
+    "end_character": 146038,
+    "words": 213,
+    "sha256": "53c7aa12a9a72b5f8bcf5e147317dfb88a3f65686fb446d529433e52ca68a79b"
+  },
+  {
+    "number": 26,
+    "title": "Two different meanings of safe",
+    "start_character": 146041,
+    "end_character": 147581,
+    "words": 249,
+    "sha256": "9655594b29089ed53a87b84607840bf73505e51e5996bb25c847bd71aeabe2ff"
+  },
+  {
+    "number": 27,
+    "title": "Theory one: a managed exclusion zone",
+    "start_character": 147584,
+    "end_character": 153718,
+    "words": 947,
+    "sha256": "660d2f1134f6ab67120460e193b81e066604be56e2fe1a2b0356081dd568b08a"
+  },
+  {
+    "number": 28,
+    "title": "Theory two: refuge inside a wider catastrophe",
+    "start_character": 153721,
+    "end_character": 159480,
+    "words": 894,
+    "sha256": "4c0c24f410c738459e389ba2a3617398935d40c76e927f78f178ffbc1095dbd3"
+  },
+  {
+    "number": 29,
+    "title": "What a real expedition would still need",
+    "start_character": 159483,
+    "end_character": 165831,
+    "words": 1010,
+    "sha256": "82c2db78831f2fd9010d77e9c076179a3b43006340a55e89cdf36f999dccc74c"
+  },
+  {
+    "number": 30,
+    "title": "The camera frame becomes smaller",
+    "start_character": 165834,
+    "end_character": 167250,
+    "words": 233,
+    "sha256": "a8c0f90445b045f58d9dc0e653ef435d3b910fa3ab262da2a71b73accd38e090"
+  }
+]

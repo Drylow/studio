@@ -1,0 +1,67 @@
+{
+  "id": "DV-09-jedi-order",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 28782,
+  "characters_including_spaces": 179155,
+  "characters_excluding_whitespace": 150008,
+  "estimated_minutes": {
+    "140": 205.6,
+    "150": 191.9,
+    "160": 179.9,
+    "170": 169.3
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 995,
+    "2": 900,
+    "3": 972,
+    "4": 1055,
+    "5": 1009,
+    "6": 969,
+    "7": 927,
+    "8": 505,
+    "9": 944,
+    "10": 1036,
+    "11": 474,
+    "12": 953,
+    "13": 1040,
+    "14": 939,
+    "15": 1016,
+    "16": 996,
+    "17": 996,
+    "18": 1038,
+    "19": 1006,
+    "20": 975,
+    "21": 912,
+    "22": 1023,
+    "23": 1058,
+    "24": 1030,
+    "25": 1027,
+    "26": 1047,
+    "27": 1027,
+    "28": 927,
+    "29": 1006,
+    "30": 980
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 2,
+    "floor": 0,
+    "echo": 21,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "Obi-Wan has already tried the archives, where the planet he's seeking doesn't appear. When he presents the puzzle to Yoda and the younglings, a child suggests that someone erased it. Yoda welcomes the answer. A senior Jedi's investigation has reached a difficulty that a young pupil can help him resolve. The moment gives the Temple a lived purpose: its youngest members are already learning to take part in the work around them. You can subscribe to Deep Void Theories for more of these quiet journeys. I'd also be glad to read where this one finds you, and whether the sun is up or it's nighttime there, if you'd like to leave a comment.",
+      "word_offset": 180
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "424d7321f008380e789923128bad1019e1e226f0a011fdc5830d2d953ce2e491"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "number": 1,
+    "chapter": 5,
+    "kind": "artifact",
+    "severity": "minor",
+    "reviewer_reason": "The leading space is a mechanical artifact; the sentence also restates the inheritance point after the chapter's concrete examples.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "L espace initial est typographique, sans effet TTS. La phrase rattache les exemples a la transmission entre soldats fondateurs et nouveaux membres."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 7,
+    "kind": "artifact",
+    "severity": "minor",
+    "reviewer_reason": "A doubled space remains in spoken copy.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace n ajoute aucun contenu prononce et ne justifie pas de traiter une narration correcte comme instruction ou artefact audible."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 8,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 9 develops the same supply demands and Responder resentment with named groups and circumstances; removing this earlier general account keeps chapter 8 on Fort Defiance and the failed campaign.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Ce rappel oriente la campagne de Fort Defiance vers les contraintes de ravitaillement, avant que le chapitre9 precise les relations avec les fournisseurs."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 8,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "All three traces have been explained earlier in the chapter; this closing list repeats them without a new consequence.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La fin ferme la recherche par traces dans un quartier general vide. Cette synthese est courte et n introduit pas une nouvelle histoire."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 14,
+    "kind": "artifact",
+    "severity": "minor",
+    "reviewer_reason": "The space after the period is a mechanical artifact at the paragraph break.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La coupure typographique conservee appartient a une phrase qui continue sur le retour avec le disque ; ce n est pas un titre a lire."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 22,
+    "kind": "artifact",
+    "severity": "minor",
+    "reviewer_reason": "A doubled space interrupts an otherwise useful statement of the destruction's human consequence.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace est sans effet sur la voix. Le sens humain de la destruction du bunker reste une consequence utile des choix precedents."
+    }
+  }
+]

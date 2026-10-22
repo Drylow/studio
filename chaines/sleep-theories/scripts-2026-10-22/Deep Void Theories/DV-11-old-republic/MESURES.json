@@ -1,0 +1,68 @@
+{
+  "id": "DV-11-old-republic",
+  "complete": true,
+  "chapters": 31,
+  "missing": [],
+  "words": 29903,
+  "characters_including_spaces": 190498,
+  "characters_excluding_whitespace": 160209,
+  "estimated_minutes": {
+    "140": 213.6,
+    "150": 199.4,
+    "160": 186.9,
+    "170": 175.9
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 826,
+    "2": 1017,
+    "3": 872,
+    "4": 859,
+    "5": 865,
+    "6": 924,
+    "7": 1003,
+    "8": 920,
+    "9": 950,
+    "10": 1005,
+    "11": 887,
+    "12": 1015,
+    "13": 980,
+    "14": 826,
+    "15": 986,
+    "16": 994,
+    "17": 1009,
+    "18": 1032,
+    "19": 1003,
+    "20": 1030,
+    "21": 996,
+    "22": 968,
+    "23": 955,
+    "24": 1073,
+    "25": 843,
+    "26": 987,
+    "27": 1000,
+    "28": 1040,
+    "29": 979,
+    "30": 1030,
+    "31": 1029
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 1,
+    "echo": 23,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": " For another long visit to this galaxy, you can subscribe to Deep Void Theories whenever you like. If you leave us a comment, let it be a little postcard: where are you, and is it light or dark outside?",
+      "word_offset": 167
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "eb7e12dc930114e589a9ecd4ec985106e3198b1031e2718019c8acdf5761c353"
+}

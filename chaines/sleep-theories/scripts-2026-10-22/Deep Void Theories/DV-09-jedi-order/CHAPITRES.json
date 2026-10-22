@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "The Temple before its fall",
+    "start_character": 0,
+    "end_character": 6210,
+    "words": 995,
+    "sha256": "6b0ba829bb5957054294d63d3ca28d513e527ac9f1dbbaa952843c67a760e231"
+  },
+  {
+    "number": 2,
+    "title": "The Force and the purpose of service",
+    "start_character": 6213,
+    "end_character": 11686,
+    "words": 900,
+    "sha256": "a2ff2c7bf3b7b35dfcc90c1423d82fd696732d23ede01ea4fd170b07b493d1ca"
+  },
+  {
+    "number": 3,
+    "title": "The earliest horizon we can safely name",
+    "start_character": 11689,
+    "end_character": 17615,
+    "words": 972,
+    "sha256": "098b045f78ae3798a7076c516df2ea4c95f67f7231c0f87027bb7373047ff1b8"
+  },
+  {
+    "number": 4,
+    "title": "The High Republic's wider reach",
+    "start_character": 17618,
+    "end_character": 24457,
+    "words": 1055,
+    "sha256": "01be6ce6d3432608bcccd78a5a2f0d44c01f175f8d18724c51be0a168eb0a16b"
+  },
+  {
+    "number": 5,
+    "title": "A threat built around disruption",
+    "start_character": 24460,
+    "end_character": 30990,
+    "words": 1009,
+    "sha256": "fb2d32e29ab81fe2ddc1e9b196889f24ee301b7daf2418fc38d6cb54af4d0e2b"
+  },
+  {
+    "number": 6,
+    "title": "Brendok and a hidden failure",
+    "start_character": 30993,
+    "end_character": 36902,
+    "words": 969,
+    "sha256": "9e076e80dc3dab69bd55150922b0f0f7f5a5c69df9a98b676082d609f1743bf4"
+  },
+  {
+    "number": 7,
+    "title": "Dooku's disappointment",
+    "start_character": 36905,
+    "end_character": 42763,
+    "words": 927,
+    "sha256": "6fcba5fcaa4396b3fd10c7441fbc420f94758cb7e79b626c1f7a694511982fce"
+  },
+  {
+    "number": 8,
+    "title": "Learning inside the Temple",
+    "start_character": 42766,
+    "end_character": 45998,
+    "words": 505,
+    "sha256": "3b3ab0748191f1c8f20136e0060cea96d23f048587077f5bf294d005c8f117b7"
+  },
+  {
+    "number": 9,
+    "title": "A crystal and a first lightsaber",
+    "start_character": 46001,
+    "end_character": 51936,
+    "words": 944,
+    "sha256": "6541a2f72d8ee3e9ce4c58f0d773aea0d454d3d655b0ca7aa577812c25ef7459"
+  },
+  {
+    "number": 10,
+    "title": "The bond of master and apprentice",
+    "start_character": 51939,
+    "end_character": 58646,
+    "words": 1036,
+    "sha256": "5c94788190532b14c9c2163a29f99792dafbfcc68f0374bbcd1254dfee5a7e66"
+  },
+  {
+    "number": 11,
+    "title": "The Living Force at Naboo",
+    "start_character": 58649,
+    "end_character": 61596,
+    "words": 474,
+    "sha256": "c089f862bb8c197e70b6adbb3fd9cb73958c82febc737b185a0888148b0fbaef"
+  },
+  {
+    "number": 12,
+    "title": "The return the Council could not see",
+    "start_character": 61599,
+    "end_character": 67562,
+    "words": 953,
+    "sha256": "0a58ac228fdbf31fdb7c4d77acfac31a579d4fe2c1cb5490ea5389871b87394c"
+  },
+  {
+    "number": 13,
+    "title": "Guardians and a Senate in trouble",
+    "start_character": 67565,
+    "end_character": 74186,
+    "words": 1040,
+    "sha256": "2350e88aac08c1a00c1efaf2ecc429229ca95b56df0c4c68919122f618360161"
+  },
+  {
+    "number": 14,
+    "title": "Attachment in an unusual childhood",
+    "start_character": 74189,
+    "end_character": 79928,
+    "words": 939,
+    "sha256": "fd430cbf8ca77ae5765c291923e7397cfb12d4af7449dcd24d111a2cb347baaf"
+  },
+  {
+    "number": 15,
+    "title": "The missing army in the archive",
+    "start_character": 79931,
+    "end_character": 86458,
+    "words": 1016,
+    "sha256": "5ab59157d43764e445e0072645302b0532756c5cda15aa71d1da0ee772e1ea29"
+  },
+  {
+    "number": 16,
+    "title": "The choice at Geonosis",
+    "start_character": 86461,
+    "end_character": 92734,
+    "words": 996,
+    "sha256": "418178c6fe6ea90d1995cae434b092c99ce391ef75c6ecb1f59e2f3499002864"
+  },
+  {
+    "number": 17,
+    "title": "Commanding people bred for war",
+    "start_character": 92737,
+    "end_character": 99085,
+    "words": 996,
+    "sha256": "593bc6fa7f0d1acf8321c6d5dbc644428a01a61f610682421fb732a9b284b04b"
+  },
+  {
+    "number": 18,
+    "title": "What the war asks of an apprentice",
+    "start_character": 99088,
+    "end_character": 105558,
+    "words": 1038,
+    "sha256": "a0c807943d1559fc003e9725a4915c4f458eb03e2276a91bcd0d3196017e7c32"
+  },
+  {
+    "number": 19,
+    "title": "The bombing and the wrong verdict",
+    "start_character": 105561,
+    "end_character": 111757,
+    "words": 1006,
+    "sha256": "df1dae0c3ae7dde1ba2775320ae1f5fd0901de43fdc5d27981ed61f386b3146b"
+  },
+  {
+    "number": 20,
+    "title": "The warning carried by Fives",
+    "start_character": 111760,
+    "end_character": 117847,
+    "words": 975,
+    "sha256": "a997640515d1910268d02ddf6e684ab192fb9d63de484c21d676949a37dd683b"
+  },
+  {
+    "number": 21,
+    "title": "A Chancellor inside the circle",
+    "start_character": 117850,
+    "end_character": 123731,
+    "words": 912,
+    "sha256": "4f554a2404b319d3af1dbbef239facaf090ffbef3098d04a977cc223b2605613"
+  },
+  {
+    "number": 22,
+    "title": "The arrest that becomes a coup",
+    "start_character": 123734,
+    "end_character": 130135,
+    "words": 1023,
+    "sha256": "cf594eba37ff077c0747ffd18d8c07aaa3d2b5d6b606a0cdba0eeca6a730f020"
+  },
+  {
+    "number": 23,
+    "title": "Order Sixty-Six",
+    "start_character": 130138,
+    "end_character": 136715,
+    "words": 1058,
+    "sha256": "caa4135e496a07852377601eb3858959b3bdd71a78be3d0e45957a9a9a748066"
+  },
+  {
+    "number": 24,
+    "title": "Ahsoka and Rex aboard the cruiser",
+    "start_character": 136718,
+    "end_character": 142784,
+    "words": 1030,
+    "sha256": "74ac553ebdde71a8c79210641312b612486a9bebcae4ee1ef30278446f0a6ba9"
+  },
+  {
+    "number": 25,
+    "title": "Obi-Wan and Yoda after the Temple",
+    "start_character": 142787,
+    "end_character": 148951,
+    "words": 1027,
+    "sha256": "701e8915bbe9196e903f2070730e8a873cecaf93ae30f01dda8647092bcb2220"
+  },
+  {
+    "number": 26,
+    "title": "The Empire hunts the remaining teachers",
+    "start_character": 148954,
+    "end_character": 155344,
+    "words": 1047,
+    "sha256": "c1ecc05bf7e4c5a44b9d8ff5a1088f02bff4f88a81d55d819eebb19bb3c54c4f"
+  },
+  {
+    "number": 27,
+    "title": "Kanan's small classroom",
+    "start_character": 155347,
+    "end_character": 161730,
+    "words": 1027,
+    "sha256": "83c24023e494f7b9e012387de633c8b941e9c00fc90aad85319303e883f826d6"
+  },
+  {
+    "number": 28,
+    "title": "Luke receives an incomplete inheritance",
+    "start_character": 161733,
+    "end_character": 167305,
+    "words": 927,
+    "sha256": "510062ddedb8582c4fb16efc538f98f2a724ff63427f29be59cc8d849f8bc1d0"
+  },
+  {
+    "number": 29,
+    "title": "The failure of a new school",
+    "start_character": 167308,
+    "end_character": 173292,
+    "words": 1006,
+    "sha256": "f5f04d4231b0831e5dae0f86044f51a4662a1d98d9f023408085905ca17a61d4"
+  },
+  {
+    "number": 30,
+    "title": "What survives a destroyed institution",
+    "start_character": 173295,
+    "end_character": 179154,
+    "words": 980,
+    "sha256": "654528423b6435e4010f1d27e87043a855760efed607afc08512d6dc972a963f"
+  }
+]

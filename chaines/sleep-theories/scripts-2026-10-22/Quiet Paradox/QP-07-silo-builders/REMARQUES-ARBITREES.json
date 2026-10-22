@@ -1,0 +1,134 @@
+[
+  {
+    "number": 1,
+    "chapter": 4,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "This isolated paragraph interrupts the lower-site sequence without preparing the move to Lukas.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase explique pourquoi la piste inferieure reste ouverte quand l intrigue remonte avec le disque. Le chapitre9 donne ensuite la route propre de Lukas ; aucun raccord causal faux ne subsiste."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 14,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The adjacent paragraphs have already made both points; this paragraph adds no event or inference.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le bref rappel formule le contenu de l avertissement et la position des auditeurs avant la catastrophe. La remarque de methode Gray Goo a deja ete retiree."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 16,
+    "kind": "factual",
+    "severity": "minor",
+    "reviewer_reason": "The supplied evidence supports Charlotte seeking lost memories and Victor's professional role, but does not establish this precise account of treatment and restriction.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le detail est corrobore par S3E2 et la restauration partielle evoquee en S3E7 ; le recap E5 rapproche explicitement l explication de Crnkovich et l evitement des objets personnels. Voir https://winteriscoming.net/silo-season-3-episode-5-review-recap et la discussion de Charlotte en S3E7. Il ne s agit pas d une intention clinique inventee."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 18,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Earlier paragraphs have already contrasted Daniel's personal memory loss with Juliette's inherited lack of history.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison porte sur deux origines de l ignorance : transmission historique coupee et experience personnelle interrompue. C est la question propre de Daniel/Troy, pas une nouvelle histoire de Juliette."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 19,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The chapter has already explained the siblings' unequal access to shared history; the Pete comparison adds a separate relationship without advancing Susan's decision.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison avec Pete distingue filiation connue et filiation devenue inaccessible, ce qui explique la portee personnelle de la dispute entre Susan et Troy."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 20,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters 8 and 9 establish Lukas's new access, while this chapter has already established Bernard's limited access and the higher Silo 1 level.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le changement de role de Lukas sert a mesurer la hierarchie des acces jusqu a Silo1. La comparaison ne lui attribue ni omniscience ni nouveau pouvoir."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 21,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph already explains the exchange of Silo 17 and Silo 18 accounts, and the opening establishes why departure triggers enforcement.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le passage explique le lien entre circulation physique et circulation des connaissances dans la Directive. Il qualifie le sens possible de la separation sans affirmer un but cache unique."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 23,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening already states Susan's proposed target, intended retreat, and violent means; this paragraph adds no change in the disagreement.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le refus de retour force est la consequence politique de la cible proposee. La discussion garde clairement que Susan envisage encore un meurtre, sans la transformer en solution moralement neutre."
+    }
+  },
+  {
+    "number": 9,
+    "chapter": 24,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The pump and settlement have already been explained; the final distinction between individual histories and a collective target can be kept briefly.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison oppose l aide individualisee de Juliette au ciblage collectif du groupe. C est le nouvel enjeu de responsabilite examine ici, au-dela du mecanisme des drones."
+    }
+  },
+  {
+    "number": 10,
+    "chapter": 26,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 23 has examined the proposal at length; only its bearing on conditional preservation is new here.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour a Susan sert cette fois a tester la notion de preservation conditionnelle, distincte de l analyse du desaccord dans la salle de commande."
+    }
+  },
+  {
+    "number": 11,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening and preceding short paragraph already establish that familiarity gives false footage credibility; the jobs can be retained without repeating the inference.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Les trois reputations de Juliette expliquent les publics auxquels la fausse image peut parler. Ce sont des memoires sociales differentes, pas une nouvelle version de la video de nettoyage."
+    }
+  },
+  {
+    "number": 12,
+    "chapter": 31,
+    "kind": "structure",
+    "severity": "major",
+    "reviewer_reason": "The close spends several paragraphs replaying the repair already covered in chapters 3 and 27 before reaching its distinct comparison with Troy. Reshape that opening stretch around maintenance's moral difficulty and the contrasting responsibilities; removing this one paragraph alone will not resolve the repeated sequence.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le dernier chapitre est volontairement une comparaison entre la responsabilite de maintenir les vivants et la responsabilite de Troy dans l operation. Le retour a la reparation donne une situation concrete a cette opposition ; il ne se presente pas comme une nouvelle scene ou une preuve de l intention originelle des fondateurs. La preference pour une cloture plus courte est rejetee pour ce format sleep long."
+    }
+  }
+]

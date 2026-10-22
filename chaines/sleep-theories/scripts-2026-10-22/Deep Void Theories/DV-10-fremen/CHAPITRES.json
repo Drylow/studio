@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "The water offered at a first meeting",
+    "start_character": 0,
+    "end_character": 4740,
+    "words": 759,
+    "sha256": "751e852f432ae39f38c73004dd84f1a38effdcbd0a5921df4bd9f69f6b9d05da"
+  },
+  {
+    "number": 2,
+    "title": "Before Arrakis",
+    "start_character": 4743,
+    "end_character": 11114,
+    "words": 948,
+    "sha256": "9643b088e191e005aa0bf0989afe2ec7b2ede4c9cc45283154215f5b66160ca3"
+  },
+  {
+    "number": 3,
+    "title": "The planet that reshapes a people",
+    "start_character": 11117,
+    "end_character": 17391,
+    "words": 974,
+    "sha256": "3c5b14da0aac32d43e375160e0e718dc55b56eb734ab43d6ac6d46fbdd67992b"
+  },
+  {
+    "number": 4,
+    "title": "The stillsuit as everyday infrastructure",
+    "start_character": 17394,
+    "end_character": 22697,
+    "words": 846,
+    "sha256": "6590fc2eca6355391bd8cc158629c45bf0a91435e564f0c5623e9cf4203f5938"
+  },
+  {
+    "number": 5,
+    "title": "Living in a sietch",
+    "start_character": 22700,
+    "end_character": 28737,
+    "words": 928,
+    "sha256": "c75af8f9d842963a6401a3ac92181be8c985f1f9a22147aeab2dff3a864f0f53"
+  },
+  {
+    "number": 6,
+    "title": "Water rings and communal wealth",
+    "start_character": 28740,
+    "end_character": 33880,
+    "words": 837,
+    "sha256": "187d3064420d94ac7dcbf7d9f481a2832fefa8784edae52d22aaac3ca3c49265"
+  },
+  {
+    "number": 7,
+    "title": "Walking where worms listen",
+    "start_character": 33883,
+    "end_character": 38814,
+    "words": 817,
+    "sha256": "b0575ca0f9d4c4ee8c99e52e5c3dcc4711e077ab117fea092c18db7f6318a3d9"
+  },
+  {
+    "number": 8,
+    "title": "The worm and the maker hooks",
+    "start_character": 38817,
+    "end_character": 44564,
+    "words": 965,
+    "sha256": "6cc3ede2e8fa899c2362b8bd1a3355b9da5c87f4b892aad204d7dddd12f9155d"
+  },
+  {
+    "number": 9,
+    "title": "The crysknife's social boundary",
+    "start_character": 44567,
+    "end_character": 50154,
+    "words": 875,
+    "sha256": "9ff21e63235151af207e2ad40a4e4f1f8bd36e7863a92aaf7f50db4d37793d28"
+  },
+  {
+    "number": 10,
+    "title": "How a naib leads",
+    "start_character": 50157,
+    "end_character": 56052,
+    "words": 934,
+    "sha256": "04555f59862ff4eaffde043e70463301714e7b379f53b57a4d0a7abfdc44f457"
+  },
+  {
+    "number": 11,
+    "title": "Women, kinship and obligations",
+    "start_character": 56055,
+    "end_character": 62218,
+    "words": 977,
+    "sha256": "922c208dbcc643366486a0c12379dcedca6e7bc53d58a20f0e826fb284845e37"
+  },
+  {
+    "number": 12,
+    "title": "The shared remembrance of a community",
+    "start_character": 62221,
+    "end_character": 68124,
+    "words": 920,
+    "sha256": "cada9d913635885da03a898753c80c20f54011c38fbb76a4d80b57c1613359eb"
+  },
+  {
+    "number": 13,
+    "title": "Pardot Kynes imagines change",
+    "start_character": 68127,
+    "end_character": 74991,
+    "words": 1055,
+    "sha256": "6cc3f63a9e94983e0a27d1514d08af58abaa2c5de8a171cab337064070ecf7c8"
+  },
+  {
+    "number": 14,
+    "title": "Liet Kynes between offices",
+    "start_character": 74994,
+    "end_character": 81279,
+    "words": 984,
+    "sha256": "8a5cf9f8ba25b56b7a2bbf5eacdca4696d655c4a471cb76884f6a1579c17acab"
+  },
+  {
+    "number": 15,
+    "title": "The hidden southern population",
+    "start_character": 81282,
+    "end_character": 87773,
+    "words": 977,
+    "sha256": "c58df404bc1da94c6f6651837f078bd239347333a53726faeb35a80369bd8a48"
+  },
+  {
+    "number": 16,
+    "title": "Imperial extraction and local resistance",
+    "start_character": 87776,
+    "end_character": 93012,
+    "words": 815,
+    "sha256": "e63c1bf9409efa07c228086d054ab85e8152ce24860619e9c99a0b5397676d4e"
+  },
+  {
+    "number": 17,
+    "title": "The Atreides become possible allies",
+    "start_character": 93015,
+    "end_character": 94688,
+    "words": 253,
+    "sha256": "e36b90eb2a994194c7d5454d88e0ea35b30b525648e67d4ceba36c8cdf35719d"
+  },
+  {
+    "number": 18,
+    "title": "Two refugees in the desert",
+    "start_character": 94691,
+    "end_character": 100135,
+    "words": 877,
+    "sha256": "d63665e47c6c31020608509e5802eac1bca1ce54876141ba7559221c21f7c55f"
+  },
+  {
+    "number": 19,
+    "title": "A prophecy takes local form",
+    "start_character": 100138,
+    "end_character": 104934,
+    "words": 713,
+    "sha256": "48d4d2725e009a6b48b4f574d00631b238c0ad7a3e46260a7eaee7f9cc03186c"
+  },
+  {
+    "number": 20,
+    "title": "Training moves in both directions",
+    "start_character": 104937,
+    "end_character": 111208,
+    "words": 941,
+    "sha256": "3291d2443c50675af7bfdae27c7c4914cb1b60f596a499b7b0b767d67f494b61"
+  },
+  {
+    "number": 21,
+    "title": "Winning the battle of Arrakeen",
+    "start_character": 111211,
+    "end_character": 117707,
+    "words": 1033,
+    "sha256": "8df3e87e134d558fee5d19c53421b62693d43cf652238b109a126132a72e6494"
+  },
+  {
+    "number": 22,
+    "title": "The jihad leaves Arrakis",
+    "start_character": 117710,
+    "end_character": 123519,
+    "words": 900,
+    "sha256": "3cf9562477f1d1f5ab8d0876db468f38cb0a2000a28aa625e53fb2704724214c"
+  },
+  {
+    "number": 23,
+    "title": "A veteran remembers a sea",
+    "start_character": 123522,
+    "end_character": 129431,
+    "words": 947,
+    "sha256": "87e0e1836eb9b26888935506bd9f917a2864cef251a68b2e0bec6c89eb4b190d"
+  },
+  {
+    "number": 24,
+    "title": "Chani within imperial life",
+    "start_character": 129434,
+    "end_character": 135917,
+    "words": 1030,
+    "sha256": "85ca3836faf89795f4e2c0a27f7dfc0f980ede43d500d7ee7b06803dba24b14e"
+  },
+  {
+    "number": 25,
+    "title": "Greening Arrakis changes the bargain",
+    "start_character": 135920,
+    "end_character": 142364,
+    "words": 1012,
+    "sha256": "9406270170a1d7d66a1ee5de1e39b9fdc7b7fd5bdac1d7f8ec061f0b8c21d0d7"
+  },
+  {
+    "number": 26,
+    "title": "The regency and the older customs",
+    "start_character": 142367,
+    "end_character": 148595,
+    "words": 972,
+    "sha256": "7af2a3dec67a0c33ab3082efd7fe75a3fc48994fd6786ab277e550746950c881"
+  },
+  {
+    "number": 27,
+    "title": "Leto's desert becomes a reserve",
+    "start_character": 148598,
+    "end_character": 154767,
+    "words": 978,
+    "sha256": "0665fae305246a99fa6c31df3fe42e7cd1d671e6109040d569b8f8a9475a09c2"
+  },
+  {
+    "number": 28,
+    "title": "The Museum Fremen",
+    "start_character": 154770,
+    "end_character": 160629,
+    "words": 883,
+    "sha256": "49c9b43842c109cdee3b498cb5c6080ee3ec26f0bf60e5705b68d3e713a07786"
+  },
+  {
+    "number": 29,
+    "title": "Rakis, priests and Sheeana",
+    "start_character": 160632,
+    "end_character": 167275,
+    "words": 1041,
+    "sha256": "4eae7fe12f82bdb98fb6e619af4bb4e10112b4c53a55e5d359b55b7a3be7701f"
+  },
+  {
+    "number": 30,
+    "title": "What travels after Rakis is lost",
+    "start_character": 167278,
+    "end_character": 172821,
+    "words": 858,
+    "sha256": "b5cdf0077377b88223238d56e6d6a470da18cc7d3374093ea623978dfe8f0a5d"
+  }
+]

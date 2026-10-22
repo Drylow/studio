@@ -1,0 +1,46 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Star Wars LEGENDS explicitly in the opening scope. Dawn of the Jedi, Tales of the Jedi, Knights of the Old Republic I and II, The Old Republic core era plus a broad historical bridge through Zakuul, the Alliance, Onslaught and Echoes of Oblivion, then the much later New Sith Wars, Darth Bane and Ruusan reform. Full spoilers. Not an exhaustive quest walkthrough or an invented ending to the ongoing MMO. Distinguish player choices from the later Legends Revan convention. No current-canon High Republic history.
+
+Banque de faits et oeuvres de reference :
+{"id": "OR1", "fact": "Gnost-Dural holonet history presents an in-universe account of Republic and Sith wars; it is a record by a Jedi historian rather than omniscient narration.", "work": "SWTOR Galactic History", "check_url": "https://www.swtor.com/holonet/galactic-history"}
+{"id": "OR2", "fact": "Revan and Malak join the Mandalorian Wars, later attack the Republic; Bastila and a reconditioned Revan seek the Star Forge.", "work": "Knights of the Old Republic I."}
+{"id": "OR3", "fact": "The Jedi Exile, Kreia and the Sith triumvirate confront the aftermath of the earlier wars.", "work": "Knights of the Old Republic II released game, not restored-content mod as official fact."}
+{"id": "OR4", "fact": "The Treaty of Coruscant follows the sacking; Republic and Empire endure a cold war before renewed conflict.", "work": "The Old Republic core setting."}
+{"id": "OR5", "fact": "Bane survives Ruusan, rejects the Brotherhood and institutes a master-and-apprentice Sith line; Republic reform follows the war.", "work": "Darth Bane: Path of Destruction; Rule of Two."}
+{"id": "OR6", "fact": "The original class-story confrontation is not the final disappearance of the Emperor. In later SWTOR expansions he is revealed as Valkorion, ruler of the Eternal Empire on Zakuul. Arcann, Thexan and Vaylin are his children with Senya. The Eternal Fleet subdues Republic and Sith Empire; the player becomes the Outlander, imprisoned in carbonite and freed with Lana Beniko's help. An Alliance based on Odessen unites former enemies against Arcann; later Vaylin takes the throne. Arcann's ultimate survival depends on player choices, so state this conditionally or omit his fate. Valkorion tries to take the Outlander's body and is defeated in the Eternal Throne confrontation. The Alliance's dominance does not permanently replace the two older states: Onslaught resumes Republic-Empire war. Echoes of Oblivion later confronts an Emperor remnant in Satele and her students with help from figures of his past. Do not invent a completed final ending to the still-developing MMO story. Keep the large subsequent chronological jump toward the New Sith Wars explicit without fabricating a continuous chain of battles.", "work": "SWTOR major later expansions", "urls": ["https://www.swtor.com/eternal-throne/valkorion", "https://www.swtor.com/onslaught", "https://www.swtor.com/patchnotes/03022021/game-update-6.2.1"], "opened": "2026-10-22"}
+{"id": "ADD-moons", "fact": "Verified against Dawn of the Jedi accounts: a dark-leaning Je'daii is sent to Bogan and meditates on Ashla; a light-leaning one goes to Ashla and contemplates Bogan. Do NOT reverse destination and object of meditation as a prior reviewer did.", "work": "Dawn of the Jedi 0; Xesh and Daegen Lok on Bogan", "urls": ["https://starwars.fandom.com/wiki/Je%27daii_Order", "https://starwars.fandom.com/wiki/Bogan"], "opened": "2026-10-22"}
+
+Reperes par section (sans minutages audio) :
+01. A capital that has survived other wars — The Old Republic: Deceived setting and Treaty of Coruscant.
+02. Tython before the familiar Jedi — Dawn of the Jedi comics.
+03. The Rakatan reach — KOTOR Rakata and Lehon; Dawn of the Jedi context.
+04. Worlds connect through hyperspace — Legends Republic history; KOTOR and SWTOR historical records.
+05. The Jedi become Republic protectors — Tales of the Jedi and Legends Jedi histories.
+06. A schism leaves the Republic behind — Tales of the Jedi background; Golden Age of the Sith.
+07. Naga Sadow and the first great invasion — Tales of the Jedi: Golden Age of the Sith; Fall of the Sith Empire.
+08. Survivors beyond the known frontier — SWTOR historical timeline; Revan novel broad background.
+09. Freedon Nadd's shadow on Onderon — Tales of the Jedi: Knights of the Old Republic; Freedon Nadd Uprising.
+10. Exar Kun searches for forbidden teachers — Tales of the Jedi: Dark Lords of the Sith.
+11. Ulic Qel-Droma enters a dangerous plan — Tales of the Jedi: Dark Lords of the Sith; Sith War.
+12. The Great Sith War and its cost — Tales of the Jedi: The Sith War.
+13. Recovery is uneven — Tales of the Jedi: Redemption.
+14. The Mandalorians test the frontier — KOTOR I and II Mandalorian War accounts.
+15. Revan's intervention divides the Jedi — KOTOR I and II accounts of Revan's movement.
+16. Malachor ends one war — KOTOR II: Malachor and Bao-Dur accounts.
+17. The victors become the next invaders — KOTOR I main historical setup.
+18. Bastila and the captured commander — KOTOR I: opening, Leviathan revelation and Council.
+19. Following the Star Maps — KOTOR I: Jedi training and Star Map journey.
+20. The Star Forge and chosen outcomes — KOTOR I ending; later Legends Revan references.
+21. The Republic left after victory — KOTOR II: Citadel Station, Nar Shaddaa and Atris.
+22. The Exile's unusual bond — KOTOR II: Peragus, Telos and companion revelations.
+23. Three Sith pursue different hungers — KOTOR II released story.
+24. The hidden Empire returns — SWTOR Galactic History.
+25. Coruscant falls into a treaty — SWTOR Deceived cinematic; Galactic History.
+26. Two societies during a cold war — SWTOR original planetary and class-story setting.
+27. The war seen through other professions — SWTOR original class stories.
+28. An Emperor challenged from within — SWTOR original Jedi Knight and Sith stories.
+29. The Eternal Empire interrupts the older war — ['SWTOR Knights of the Fallen Empire and Knights of the Eternal Throne released story', 'https://www.swtor.com/eternal-throne/valkorion', 'https://www.swtor.com/onslaught', 'https://www.swtor.com/patchnotes/03022021/game-update-6.2.1']
+30. Later wars wear down both orders — Legends New Sith Wars; Darth Bane: Path of Destruction.
+31. Ruusan and a quieter enemy — Darth Bane: Path of Destruction; Rule of Two; Ruusan Reformation Legends context.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

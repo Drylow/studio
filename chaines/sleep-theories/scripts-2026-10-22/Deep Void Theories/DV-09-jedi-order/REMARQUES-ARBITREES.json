@@ -1,0 +1,101 @@
+[
+  {
+    "number": 1,
+    "chapter": 8,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 1 has introduced Yoda's class, and chapter 2 has explained Luke's remote exercise. The second paragraph repeats the exercise before chapter 8 reaches its distinct subject, learning together.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le lien entre les exercices du Temple et ceux de Luke est le nouvel apport de ce retour : une methode traverse la destruction de l institution."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 8,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters 1 and 15 cover this consultation, and chapter 8 adds no new incident or inference about children's instruction through it.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le passage montre que l education continue apres l apprentissage. Les archives servent ici a cet argument, au-dela de l enseignement des seuls enfants."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 11,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "The chapter has already announced his attention to immediate lives and circumstances; this transition delays the first example.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La transition relie un principe deja defini a son premier exemple ; elle reste breve et intelligible en narration calme."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 11,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "The proposed edit to the preceding sentence incorporates this event; retaining both sentences would introduce an immediate duplicate.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Cette remarque depend d une substitution precedente qui n a pas ete appliquee. Le fait de l invasion n est donc pas double dans le texte actuel."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 23,
+    "kind": "factual",
+    "severity": "minor",
+    "reviewer_reason": "The preceding sentence identifies Zett Jukassa as a young Jedi; calling him a child is unnecessarily imprecise for this encounter.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Zett est bien un enfant et un jeune Jedi. La phrase precedente donne deja son role ; le mot enfant ne constitue pas une erreur factuelle."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 2 narrates the exercise and its meaning in detail. Here, the useful new point is how little instruction Luke receives before losing Obi-Wan.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel de deux phrases a une fonction distincte : montrer la faible duree de transmission avant la mort d Obi-Wan, plutot que reexpliquer l exercice."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 2 has already developed Yoda's introduction and Luke's impatience. Chapter 28 needs the change in Luke's inheritance: another teacher, but no surviving school.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison de Yoda avec une communaute enseignante est le sujet propre de l heritage incomplet ; elle justifie le bref retour a Dagobah."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 2 recounts both the cave and Luke's decision to leave. This passage can keep the consequence for his incomplete education without replaying both scenes.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La sequence explique comment la sortie prematuree de formation conduit a affronter Vader. Elle ne repete pas la longue demonstration de l X-wing retiree plus tot."
+    }
+  },
+  {
+    "number": 9,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 2 has already covered Luke's defeat and rescue. Vader's revelation and its effect on Obi-Wan's account are the distinct developments needed here.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La revelation de la paternite invalide le recit recu d Obi-Wan, consequence essentielle dans le chapitre consacre a la transmission familiale."
+    }
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "id": "FR-07-oblivion-crisis",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 26904,
+  "characters_including_spaces": 164533,
+  "characters_excluding_whitespace": 137277,
+  "estimated_minutes": {
+    "140": 192.2,
+    "150": 179.4,
+    "160": 168.2,
+    "170": 158.3
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 854,
+    "2": 812,
+    "3": 874,
+    "4": 873,
+    "5": 795,
+    "6": 848,
+    "7": 927,
+    "8": 886,
+    "9": 840,
+    "10": 984,
+    "11": 877,
+    "12": 950,
+    "13": 884,
+    "14": 916,
+    "15": 837,
+    "16": 1015,
+    "17": 866,
+    "18": 1018,
+    "19": 715,
+    "20": 918,
+    "21": 951,
+    "22": 775,
+    "23": 867,
+    "24": 880,
+    "25": 781,
+    "26": 977,
+    "27": 981,
+    "28": 795,
+    "29": 1116,
+    "30": 1092
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 3,
+    "echo": 41,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "For more quiet stories from familiar games, you can subscribe to Forgotten Realms of Sleep. You're welcome to leave us a small note below as well: your city or country, and whether this is a daytime or nighttime listen. The first encounter with Uriel is worth taking slowly, because his attention settles on someone his guards regard as an obstacle. They're trying to move him through an escape route. He pauses to recognize the prisoner.",
+      "word_offset": 258
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "d454b8604b6a362863b505ec0e8f26bac32c447be869784fcfc30d75862c7136"
+}

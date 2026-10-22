@@ -1,0 +1,67 @@
+{
+  "id": "FR-06-elden-ring",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 28630,
+  "characters_including_spaces": 179035,
+  "characters_excluding_whitespace": 150041,
+  "estimated_minutes": {
+    "140": 204.5,
+    "150": 190.9,
+    "160": 178.9,
+    "170": 168.4
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 1021,
+    "2": 985,
+    "3": 983,
+    "4": 1024,
+    "5": 972,
+    "6": 1013,
+    "7": 963,
+    "8": 998,
+    "9": 799,
+    "10": 947,
+    "11": 1047,
+    "12": 810,
+    "13": 1016,
+    "14": 1009,
+    "15": 973,
+    "16": 953,
+    "17": 978,
+    "18": 1001,
+    "19": 1016,
+    "20": 815,
+    "21": 728,
+    "22": 955,
+    "23": 940,
+    "24": 919,
+    "25": 972,
+    "26": 998,
+    "27": 888,
+    "28": 1006,
+    "29": 969,
+    "30": 932
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 1,
+    "echo": 40,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "If a slow journey through game lore is your kind of company, you can subscribe to Forgotten Realms of Sleep. And if you'd like to leave a comment, share your part of the world and whether the day is still with you or night has come.",
+      "word_offset": 261
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "957a2c98dd81a4228c5f13007621bceb9e4b616ae0d637aa66b3ba3d03581a43"
+}

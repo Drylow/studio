@@ -1,0 +1,167 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "The interior travel detour restates the fixed-camera limit without adding outside geography; the surrounding paragraphs already establish that contrast.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La descente de Jahns est une comparaison concrete entre une geographie habitee que l on peut parcourir et le cadre immobile du dehors. Elle donne une mesure humaine de la restriction."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 7,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This closing paragraph repeats the crossing, bodies, helmet removal and absent routine already developed in the chapter.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion ferme l entree dans Silo17 par son resultat immediat : retirer le casque, mais perdre ses reperes sociaux. Ce n est pas un nouveau trajet."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 9,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Earlier paragraphs already explain the missing repair crew and the need to inspect damage alone; this adds no distinct obstacle.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le silence est traite comme perte d information professionnelle pour une mecanicienne, et pas seulement comme ambiance de ruine. Cette consequence a une fonction locale."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 10,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "The assigned distinction is useful, but the paragraph repeatedly tells listeners what need not be explained after the pump's effects are already clear.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La distinction ecarte une hypothese geographique non montree et maintient le probleme sur le niveau d eau et le pompage observes. Aucune cause complete de l inondation n est inventee."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 13,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This previews chapter 14's assigned observations and repeats the chapter's distinction between historical knowledge and a current route.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison oppose observation directe et archives historiques, distinction utile avant de tester des hypotheses sur le monde actuel."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 17,
+    "kind": "factual",
+    "severity": "minor",
+    "reviewer_reason": "Immediately after crediting his mother's intervention, this sequence risks presenting that intervention as the established cause of Jimmy's and the other survivors' continued lives; their separate shelter and food access are also material.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte ne presente pas l intervention maternelle comme cause unique. Il nomme aussi explicitement la nourriture et les espaces habitables, donc les autres conditions de survie restent visibles."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 19,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 17 has already answered this exact internal-versus-external question; this chapter's distinct subject is drone deployment.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel empeche de confondre la protection interne neutralisee et la violence externe deployee par les drones. Les mecanismes ont des acteurs et des lieux differents."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 20,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "The mirrored removal of the sheriff and Susan is a strained parallel, and the paragraph repeats the proposal and arrest without clarifying the decision.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le parallele porte sur les consequences d une exclusion du groupe, sans assimiler les deux moyens ni excuser Susan. Les differences sont dites explicitement."
+    }
+  },
+  {
+    "number": 9,
+    "chapter": 23,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph already delivers the concrete notes, Helen's persistence and the contrast with Troy's operation.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour aux notes place l attachement persistant a cote de la responsabilite operationnelle de Troy. Ce lien personnel/institutionnel appartient a la question de sa transition."
+    }
+  },
+  {
+    "number": 10,
+    "chapter": 24,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The Legacy inventory belongs to chapter 13 and delays this chapter's concrete comparison between suited and unprotected departures.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le privilege documentaire est compare a une exposition physique sans protection. Cela explique pourquoi le savoir de Bernard ne rend pas sa sortie survivable."
+    }
+  },
+  {
+    "number": 11,
+    "chapter": 26,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraphs have already separated passage from sustained habitation and named the needs at the destination.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe de cloture formule les questions d accueil et de cooperation au prochain abri, consequence du passage compare a l habitation durable."
+    }
+  },
+  {
+    "number": 12,
+    "chapter": 27,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 17 has already explained this separation fully; the perimeter theory can proceed from the observed external response.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La distinction entre mecanismes est appliquee ici au modele d exclusion geree, au-dela de la simple chronologie de l attaque."
+    }
+  },
+  {
+    "number": 13,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This is another full recap of chapter 17; the wider-catastrophe theory already has distinct evidence in the ruins, suits and founders' account.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La meme distinction est testee contre le modele de catastrophe plus large. Elle ne presente ni le modele comme prouve ni un nouveau evenement."
+    }
+  },
+  {
+    "number": 14,
+    "chapter": 29,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The previous paragraph already establishes that reaching an entrance is not enough when interior access is damaged; this replays chapter 9.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Les dommages de l interieur sont appliques aux reserves et au temps d une future expedition. Le passage evite de reduire le voyage a la seule marche au dehors."
+    }
+  },
+  {
+    "number": 15,
+    "chapter": 30,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This restates chapters 26-29 between the closing chapter's two stronger camera-and-control-room images.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Cette breve synthese rassemble obstacles materiels et intervention des operateurs avant l image finale des deux ecrans. C est la conclusion du raisonnement, sans nouveau recap chronologique."
+    }
+  }
+]

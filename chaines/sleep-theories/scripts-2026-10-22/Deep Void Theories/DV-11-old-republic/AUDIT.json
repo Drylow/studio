@@ -1,0 +1,80 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "eb7e12dc930114e589a9ecd4ec985106e3198b1031e2718019c8acdf5761c353",
+  "full_review_file": "passage-30-chapitres-01-31.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "07911d776836685693214b9dd6be8608942b78d72f68d8fb0b4a390a4fe9986b",
+    "2": "28a296906408ad69af6ff334a53df3ea042d36cdad0dead8dc61a0ed8ccadaaf",
+    "3": "660be69268ee304909eb51070bdd5e4fa230b1d2f06e6719488c6d520f406e49",
+    "4": "74ba123400deed235d5bbc0daa81fb8c7ad3143adb8391bee32dae56f4dea167",
+    "5": "7ba70c7b02c2213a51a0d80f13e9dd174b52dc3234d0db7162fe57ab8f6f24c3",
+    "6": "84fb013d6cdf49c9f2b7ce3ad04a9bc41b99dd8629daa048e6d535d91bbf27b9",
+    "7": "fdfec5da4ad0efb038682ea753b543d15800d51eeec19f72221da8bd3addc5ed",
+    "8": "7f0c3fd48f976cea0760296971b48ecf02e6ef20606abd5a039dc7da964e6f6d",
+    "9": "1db8366c3f9f6c5e5bbd63d0b23e08583d8d09d7ef778e21b881d87172c2ca69",
+    "10": "4baf4c971dea699a6cd25a29cad4c4fe7426123c01f7ad32bb51a762662b7d87",
+    "11": "89ff72b8106b1ce1da23a9a99dede2a511390340f8f1d945b592dc0d33cf6bce",
+    "12": "ef333ac47269d25558c02bb4fd5fd931fc4b90212d4a5eb3e5eeb253683c9190",
+    "13": "ea3c4b1611a67e0b365c486db82fd0504032615895074a5928cee4a402c37b70",
+    "14": "96e6e479350365ff284432543a35af6c9ba7070f132fe47927b5b431073cb201",
+    "15": "ededd886b805597c66cd3188368eb9d43159509d43838b36a699cd4e59a2e52f",
+    "16": "032c8fb7a1c9afe89cb46f91955161fd87319652d19b03f7ad9971a296dca6d6",
+    "17": "4ec0d8576d853f2023d1681b4101df878be7906a3b1fba2ec9888461130e34b5",
+    "18": "2cc5dcf5cb686bfaa7a89e49820451f1e0359b18c262ce04ef8d62a3a0444575",
+    "19": "1ca17382fedef1ffbb4d5f13ee8b404673a721a05fa73598e5de32be31f13df7",
+    "20": "3867120e7074290407982d5b85b5757bdf4d0d0a94ae3b5eee9b0c4e26e54cf6",
+    "21": "cfbc1d29d15cbaff2dd708690e2296534404b4e3e69a1358d9323fa5ae13ae64",
+    "22": "c071f32cbc21b1b1d9bc39465ff85a9414cab23f2c79cdce569c17230cf1c55b",
+    "23": "12a27234b807003365613f3c6816408b34c8acb8494cd12a817310956050bdc3",
+    "24": "2580442a8cd3b5ab30ace2a9ec538fd2061fefefb8bc2a02b29d20b31f2b4bf4",
+    "25": "d13a38b0aa4bf094888e95e222eac1d3ac1c80ff0445510fdbbfe56f9de8bb3b",
+    "26": "446caf4f666b8352474b0658be789853a93758c9f42cf6a48eaa1f070f1d0b42",
+    "27": "644395231adfb389428e0fd428113256fe4b7a286f7e9da9a1e0182fd97ce921",
+    "28": "31a140b8e12750c5a4f661004a5e0e666b9657ce38e13d44e99a100bfff93e17",
+    "29": "409d83bf8ff9e04b566cbbde5ce330979a2ee176ea902f73a0ca6f6b25c20522",
+    "30": "4bc39ed74beef153c97f6bfa9bf960cc788213557b3ab0dc19666e2ccda69b81",
+    "31": "a45567bc1f64857f5d8c42054fec0778bbc2ed29efa92b658b2c00e1ca85d8f0"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "L ouverture relie les origines decrites ensuite a la cooperation visible au debut du film, donnant un cadre historique au trajet."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "La destination indiquee est correcte. Le texte explique le retour a l equilibre sans affirmer que l objet de meditation soit la lune ou se trouve l exile ; ce detail supplementaire n est pas necessaire."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion distingue une association construite par le travail d un acte fondateur unique ; elle ne rajoute pas une date ou un traite suppose."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La difference entre Vima et Sylvar empeche que l enseignement d Ulic soit presente comme reparation universelle de son passe. Cette limite a une fonction distincte."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "Voss est un repere bref au sein d un survol explicitement historique de la campagne, sans scene ni resultat inventes."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte ne fixe ni noms ni composition du groupe familial. La confrontation fait intervenir des membres de la famille dans des formes variables ; le contexte general garde les choix conditionnels."
+    }
+  },
+  "scope_status": "The assembled arc stays within the stated Legends and spoiler scope. It distinguishes selectable game outcomes from the later Revan convention, treats Gnost-Dural as an in-universe historian, includes the supplied SWTOR expansion bridge, and marks the jump to the New Sith Wars. The supplied pre-edit total is 29,893 words; the proposed deletions do not threaten the 25,500-word whole-script minimum.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass with one local repetition edit",
+    "B": "pass for sleep narration",
+    "C": "pass with local tightening",
+    "D": "local fixes needed",
+    "E": "publication checks not established"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

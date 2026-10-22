@@ -1,0 +1,43 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Fallout New Vegas base game, relevant established Old World Blues/Dead Money/Lonesome Road past only when explicitly used. Focus Mojave factions and Hoover Dam. All four major endings treated conditionally; no postgame canon, TV show verdict, fixed Courier identity or claims player choices universally occur.
+
+Banque de faits et oeuvres de reference :
+{"id": "NV1", "fact": "NCR expansion and Caesar's Legion converge on Hoover Dam; the first battle ends in a Legion defeat and Boulder City trap.", "work": "New Vegas: opening; Chief Hanlon and Boulder City accounts."}
+{"id": "NV2", "fact": "House hires couriers for the Platinum Chip; Benny intercepts its carrier, and Yes Man supplies an independent route.", "work": "Ain't That a Kick in the Head; Ring-a-Ding-Ding; Yes Man dialogue."}
+{"id": "NV3", "fact": "NCR, Legion, House and independent routes offer incompatible political outcomes.", "work": "For the Republic Part 2; Render Unto Caesar; House Always Wins; Wild Card."}
+{"id": "NV4", "fact": "Boomers, Brotherhood, Khans, Followers, Kings and casino families have their own choices; they are not all guaranteed allies of one ending.", "work": "Volare; Still in the Dark; Oh My Papa; G.I. Blues; Beyond the Beef; How Little We Know."}
+{"id": "NV5", "fact": "The Securitron bunker, power grid and dam make infrastructure central to the final conflict; activating or destroying resources differs by branch.", "work": "The Fort bunker; HELIOS One; final Hoover Dam quests."}
+
+Reperes par section (sans minutages audio) :
+01. A delivery that changes a war — New Vegas opening and Goodsprings recovery.
+02. The Strip survived differently — House's historical account and Lucky 38.
+03. The NCR moves toward the Colorado — NCR ambassadors, officers and Mojave accounts.
+04. Caesar organizes another kind of state — Caesar dialogue; Legion origins.
+05. The Dam is water and electricity — House, NCR and Dam briefings.
+06. The first battle leaves a warning — Chief Hanlon; Boulder City memorial; Legion accounts.
+07. The Three Families become a government — House and casino-family dialogue.
+08. Freeside outside the bright boundary — G.I. Blues; Old Mormon Fort.
+09. Goodsprings introduces local choice — Ghost Town Gunfight; Run Goodsprings Run.
+10. Primm and an absent sheriff — My Kind of Town.
+11. Nipton demonstrates a threat — Keep Your Eyes on the Prize; Nipton encounter.
+12. Novac sits beside old supply routes — Novac; One for My Baby; Come Fly with Me context.
+13. Boulder City retains unfinished grievances — Boulder City Showdown.
+14. Benny's plan reaches the Tops — Ring-a-Ding-Ding; Yes Man dialogue.
+15. The Lucky 38 opens for one outsider — The House Always Wins I; House dialogue.
+16. What the Platinum Chip actually unlocks — The House Always Wins II; Render Unto Caesar bunker.
+17. An invitation crosses the river — Render Unto Caesar; Fort bunker.
+18. McCarran bears a stretched occupation — I Put a Spell on You; Camp McCarran accounts.
+19. Camp Forlorn Hope and Nelson — Restoring Hope; Back in Your Own Backyard.
+20. Hanlon and the reports that mislead — Return to Sender.
+21. The Great Khans consider their promised future — Oh My Papa.
+22. The Boomers make distance into protection — Volare.
+23. The Brotherhood hides below the war — Still in the Dark; faction endgame orders.
+24. Power from HELIOS One can go elsewhere — That Lucky Old Sun.
+25. The casinos can fracture from within — How Little We Know; Beyond the Beef.
+26. The Followers and Kings ask different questions — G.I. Blues; Julie Farkas; end-slide conditions.
+27. The NCR route requires compromises — For the Republic Part 2; NCR ending.
+28. The Legion route and a fragile succession — Et Tumor, Brute?; Render Unto Caesar; Legion ending.
+29. House and an independent Strip diverge — House Always Wins; Wild Card; House and Yes Man endings.
+30. The second battle leaves more than a winner — Hoover Dam finale; ending slides.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

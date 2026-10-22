@@ -1,0 +1,222 @@
+[
+  {
+    "inventory": "sources-fallout.json",
+    "data": {
+      "date": "2026-10-22",
+      "purpose": "Visual equipment references for local editorial thumbnail corrections FR05 and FR08. Original reference files downloaded unchanged, not generated.",
+      "references": [
+        {
+          "file": "fallout-t60-game-render.png",
+          "subject": "T-60 power armor, Fallout 4 game render, front and back",
+          "source_page": "https://fallout.wiki/wiki/T-60_Power_Armor_(Fallout_4)",
+          "image_url": "https://images.fallout.wiki/c/c5/FO4_T-60_Power_Armor.png",
+          "identity_check": "Viewed locally. T-60 helmet has narrow angular lenses, central circular radial respirator, two lateral short hoses, headlamp and large shoulder lifting holes. Matches source page identity. Full suit render, not a close helmet photograph. Use helmet geometry; do not inherit tan rust coloration.",
+          "dimensions": [
+            1920,
+            1570
+          ],
+          "sha256": "bcc21f3ec0541c0b22efbb2b5bdcd1aadc72b28f7bd60f0bf6b95f21aeb14c51",
+          "downloaded_bytes": 3630567,
+          "visually_verified": true
+        },
+        {
+          "file": "fallout-ncr-ranger-helmet.png",
+          "subject": "NCR Ranger Helmet, Fallout New Vegas game render",
+          "source_page": "https://fallout.wiki/wiki/NCR_Ranger_Helmet",
+          "image_url": "https://images.fallout.wiki/6/65/Ranger_helmet.png",
+          "identity_check": "Viewed locally. Compact olive military dome, angular dark red lenses, chevron-shaped dark face mask, lower central circular vent, one prominent side filter, small side lamp. No paired large power-armor hoses and no large vertical grille. This is the game helmet, not Desert Ranger or elite riot gear.",
+          "dimensions": [
+            661,
+            723
+          ],
+          "sha256": "8b00ba19052ef60d5cdd72bb44cae5bc88d2b247dcd776efabcd8cdcf6524e17",
+          "downloaded_bytes": 573644,
+          "visually_verified": true
+        }
+      ]
+    }
+  },
+  {
+    "inventory": "sources-identites.json",
+    "data": {
+      "date": "2026-10-22",
+      "purpose": "Private visual identity references for original Quiet Paradox thumbnails. No new spoiler research. Do not reuse source image layouts, text, badges or editorial banners.",
+      "official_gallery_data": [
+        "https://www.apple.com/tv-pr/originals/silo.images.json",
+        "https://www.apple.com/tv-pr/originals/severance.images.json"
+      ],
+      "fallback_note": "FROM wiki and wiki CDN images returned 403. Official production stills reproduced by a credited cast guide and an actor interview were used instead.",
+      "images": [
+        {
+          "character": "Solo / Jimmy Conroy",
+          "performer": "Steve Zahn",
+          "file": "solo-episode09.jpg",
+          "selected": true,
+          "page_url": "https://www.apple.com/tv-pr/originals/silo/episodes-images/",
+          "image_url": "https://www.apple.com/tv-pr/shows-and-films/s/silo/images/season-02/unit-photos/episode-09/photo-020905/Silo_Photo_020905.jpg",
+          "source_type": "Official Apple TV press episode still",
+          "visual_review": "Viewed. Solo alone, long brown-gray hair and thick long beard, worried face; S2E9 official caption identifies Steve Zahn. Face visible, low warm light. Identity reference only, improve face illumination in original composition.",
+          "sha256": "690e2c75c2c2f1be558b8e8a5a996b027de066150ec146be2e2a449f51ce8fd9",
+          "dimensions": [
+            832,
+            468
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Gemma / Ms Casey",
+          "performer": "Dichen Lachman",
+          "file": "gemma-casey-episode04.jpg",
+          "selected": true,
+          "page_url": "https://www.apple.com/tv-pr/originals/severance/episodes-images/",
+          "image_url": "https://www.apple.com/tv-pr/shows-and-films/s/severance/images/season-01/unit-photos/episode-04/photo-010406/ATV_Severance_Photo_010406.jpg",
+          "source_type": "Official Apple TV press episode still",
+          "visual_review": "Viewed. Ms Casey alone in doorway, short black bob, burgundy high-neck top. Clear recognizable Dichen Lachman face. Use for identity and hairstyle, not scene layout.",
+          "sha256": "5292a69b8a64e98463e9ee06c00c327626ff778bf16a16fb4b9e9f7c34328d92",
+          "dimensions": [
+            832,
+            468
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Jade Herrera",
+          "performer": "David Alpay",
+          "file": "jade-episode201.jpg",
+          "selected": true,
+          "page_url": "https://www.radiotimes.com/tv/sci-fi/from-sky-sci-fi-cast/",
+          "image_url": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/FROM20101257R-a0a284e.jpg?quality=90&fit=1400,932",
+          "source_type": "MGM+ episode 201 press still reproduced and credited by Radio Times cast guide",
+          "visual_review": "Viewed. Jade alone, dark curly hair and full beard, dark cardigan, looking to upper right. Clear face. Source page alt names David Alpay and title names FROM Season 2 Episode 201.",
+          "sha256": "b9ac4afda3719548a4a880f205104c25cfeea992fdcca2594c8561ba7513dc6f",
+          "dimensions": [
+            1400,
+            931
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Tabitha Matthews",
+          "performer": "Catalina Sandino Moreno",
+          "file": "tabitha-episode201.jpg",
+          "selected": true,
+          "page_url": "https://www.radiotimes.com/tv/sci-fi/from-sky-sci-fi-cast/",
+          "image_url": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/FROM20100951R-303eb04.jpg?quality=90&fit=1400,932",
+          "source_type": "MGM+ episode 201 press still reproduced and credited by Radio Times cast guide",
+          "visual_review": "Viewed. Tabitha foreground, long brown hair, blue clothing, alert face. Victor blurred behind her is NOT the identity to transfer. Source alt identifies Tabitha/Catalina; source title identifies S2E201.",
+          "sha256": "02f019dbd23715448950b8868dc853b3afee3a2b56a25258739a7f34e5655304",
+          "dimensions": [
+            1398,
+            932
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Smiley Creature, human appearance",
+          "performer": "Jamie McGuire",
+          "file": "smiley-human-episode.jpg",
+          "selected": true,
+          "page_url": "https://www.imdb.com/news/ni64109409/",
+          "image_url": "https://m.media-amazon.com/images/M/MV5BYzYyMmM0OTYtNmVmOC00MjYyLTg2OTMtNzdkMmNlMmYyN2UwXkEyXkFqcGc%40._V1_.jpg",
+          "source_type": "Episode still on ScreenRant interview syndicated by IMDb",
+          "visual_review": "Viewed. Smiley alone leaning over wooden staircase rail, swept short brown hair, broad fixed grin, dark jacket. Recognizable human form without gore. Lower editorial SR+ INTERVIEWS banner must not be transferred. Identity only; thumbnail should use human face with restrained grin, not monster transformation.",
+          "sha256": "e070500d5f25dc2573dbae42cbf51be33bf176610d5b24847f36d675f2033703",
+          "dimensions": [
+            1400,
+            700
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Solo",
+          "performer": "Steve Zahn",
+          "file": "solo-episode03.jpg",
+          "selected": false,
+          "page_url": "https://www.apple.com/tv-pr/originals/silo/episodes-images/",
+          "image_url": "https://www.apple.com/tv-pr/shows-and-films/s/silo/images/season-02/unit-photos/episode-03/photo-020309/Silo_Photo_020309.jpg",
+          "visual_review": "Viewed alternate identity. Solo alone, both eyes and full beard, finger pointing up; less close than selected portrait.",
+          "sha256": "d6f9b610bcfcd1ae1ed6bdb9587b8c96a95658677aa2e960eb5f73695bf65a30",
+          "dimensions": [
+            832,
+            468
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Ms Casey",
+          "performer": "Dichen Lachman",
+          "file": "gemma-casey-episode05.jpg",
+          "selected": false,
+          "page_url": "https://www.apple.com/tv-pr/originals/severance/episodes-images/",
+          "image_url": "https://www.apple.com/tv-pr/shows-and-films/s/severance/images/season-01/unit-photos/episode-05/photo-010502/ATV_Severance_Photos_010502.jpg",
+          "visual_review": "Viewed alternate. Ms Casey in dark sweater white collar, full upper body; small reference, prefer selected episode04 close image.",
+          "sha256": "0853c08b6a75e50c2e0280bc70e795948617add197a4b0db8d468a16f9c0c6f7",
+          "dimensions": [
+            416,
+            234
+          ],
+          "visually_inspected": true
+        },
+        {
+          "character": "Smiley with Boyd",
+          "performer": "Jamie McGuire / Harold Perrineau",
+          "file": "smiley-epix.jpg",
+          "selected": false,
+          "page_url": "https://freshpairofiis.com/2023/06/12/interview-froms-jamie-mcguire-talks-fans-naming-his-character-smiley-how-he-does-his-scary-smile-horror/",
+          "image_url": "https://assets.epix.com/f93607cc24271d9b6c9b73bf51fdc487.jpg",
+          "source_type": "Official Epix promotional asset linked by actor interview",
+          "visual_review": "Viewed. Boyd dominates left; Smiley behind frosted pane at right. Not selected because two identities and large FROM title; may supplement face identification only.",
+          "sha256": "2e304366c3a15cca53702556e0ab43800258ad4d16a4a9ba94f46f272f65d1c1",
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "visually_inspected": true
+        },
+        {
+          "object": "FROM talisman",
+          "file": "talisman-cave-episode108.jpg",
+          "selected": true,
+          "page_url": "https://www.imdb.com/title/tt15505832/",
+          "image_url": "https://m.media-amazon.com/images/M/MV5BNDRkNTZiZGItYzFiNS00MGVkLTkzOWMtZDI3N2RmYjFkZjlmXkEyXkFqcGc%40._V1_.jpg",
+          "source_type": "Episode screenshot: Broken Windows, Open Doors, S1E8, on IMDb",
+          "visual_review": "Viewed. Real talisman in cave at right. Two opposed figure forms joined by diamond, lateral semicircle motifs, branching perimeter marks, natural slate and twine. Dark but carving readable. Reference for symbol only. For thumbnail locate talisman INSIDE room beside a CLOSED door; no luminous magical aura.",
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "sha256": "7d90c1f2cac8175219605ff568ddc795a55dc2ea646bfa1ed5088db07003f1a7",
+          "visually_inspected": true
+        },
+        {
+          "object": "FROM talisman, secondary oblique shot",
+          "file": "talisman-episode.png",
+          "selected": false,
+          "page_url": "https://fandomwire.com/all-known-talisman-locations-in-from-explained/",
+          "image_url": "https://fwmedia.fandomwire.com/wp-content/uploads/2026/05/11083446/from-talisman.png",
+          "visual_review": "Viewed. Real episode object in hand, too oblique and soft to reproduce carving; not selected.",
+          "dimensions": [
+            1080,
+            534
+          ],
+          "sha256": "07013f2748eb2cc91444ed019b2816b467131dc91bbce8369a65df33a0127803",
+          "visually_inspected": true
+        },
+        {
+          "object": "Featurette poster, not useful talisman reference",
+          "file": "talisman-official-featurette.jpg",
+          "selected": false,
+          "page_url": "https://watch.plex.tv/en-GB/show/from/season/1",
+          "image_url": "https://metadata-static.plex.tv/extras/iva/840644/57a1b79e7800d3c875864557551545b7.jpg",
+          "visual_review": "Viewed. Poster for Inside Look at the Talisman depicts Fatima actor interview, NO visible talisman. Do not use.",
+          "dimensions": [
+            1362,
+            766
+          ],
+          "sha256": "fd075967e2b2e2ac89260b0708d07b8f3ee8b5e9f15aa91a3964458f65f96527",
+          "visually_inspected": true
+        }
+      ]
+    }
+  }
+]

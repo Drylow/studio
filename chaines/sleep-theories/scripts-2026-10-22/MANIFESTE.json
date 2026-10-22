@@ -1,0 +1,552 @@
+[
+  {
+    "path": "benchmark-public.json",
+    "bytes": 15793,
+    "sha256_file": "50399c273a2ca3e0391d962808d489bc8bb26cb0afd33bbae13a1aa10b8845fc"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/AUDIT.json",
+    "bytes": 6345,
+    "sha256_file": "c34a469b23ad260b9df02e3669b1e2613c06dd2b7aa14c720c9b79462255cd2b"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/CHAPITRES.json",
+    "bytes": 7167,
+    "sha256_file": "337d3693b3c1e7601a6317f8554cfee5aeb03ae7597e094f09c85fa4bc1746ec"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/MESURES.json",
+    "bytes": 1480,
+    "sha256_file": "39b9c67f3266ee8bfd01237c68d73f1b209a6b4b4fec321e52c50f03c1b9f87b"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/REMARQUES-ARBITREES.json",
+    "bytes": 6041,
+    "sha256_file": "6edf53a48e1c14c1ea5004cd33b1f8016be32221c0d480752b7fd0e74e59d84f"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/SCRIPT.txt",
+    "bytes": 170846,
+    "sha256_file": "eb66f1c44f6e51db18f3f118d17df8d5657d1a7e1e1e1f47acc2022aade23f00"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/SOURCES.txt",
+    "bytes": 4362,
+    "sha256_file": "12265047260241adc7f796913fda8c66d14691312f15ff8e77cb6339668cd88c"
+  },
+  {
+    "path": "Deep Void Theories/DV-08-bene-gesserit/TITRE.txt",
+    "bytes": 74,
+    "sha256_file": "2510dc430c491633d5d1cf25df8f742b6871262f8b0d73a39923ab9608db09ee"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/AUDIT.json",
+    "bytes": 6130,
+    "sha256_file": "0a1954822a803952e0f1a5fa910d0fe2f4801891809efcbb8109e628626f8d6e"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/CHAPITRES.json",
+    "bytes": 7216,
+    "sha256_file": "057c01a78d677cb2c83a11b655c8e638074661107b4d88f77fd9bb47c5cf3fbe"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/MESURES.json",
+    "bytes": 1917,
+    "sha256_file": "ba7623d70d6fdce9a1e0942c6661a92bbb7dac59d02f8766f183da479a68e018"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/REMARQUES-ARBITREES.json",
+    "bytes": 4720,
+    "sha256_file": "bc67b375df30e16fed43f59f1a3e3b8c3c4ebc19dc96e7017b3a73803fe12a73"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/SCRIPT.txt",
+    "bytes": 179851,
+    "sha256_file": "45eb8791791bbe20f77190fff77714af6b684c0a8128b0593cdbc41e4b0a15cb"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/SOURCES.txt",
+    "bytes": 4230,
+    "sha256_file": "0ae8cf8f793ca46f036ea42dfca02f8f86362a6e2d3199434dfb07510a23b8cd"
+  },
+  {
+    "path": "Deep Void Theories/DV-09-jedi-order/TITRE.txt",
+    "bytes": 82,
+    "sha256_file": "b0a8580e8b22f68e306433aa27b1135c918b8c21fa3f91bab7278950846728e2"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/AUDIT.json",
+    "bytes": 6049,
+    "sha256_file": "0dd3e950a7ef0965b76f41958001f95596bf2a24c7cc821123e8d756105b7892"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/CHAPITRES.json",
+    "bytes": 7155,
+    "sha256_file": "3f535c7fcaaf85f95762a63534d7a4bd83a8ffa7e43db75ecc52c937bce7e5bd"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/MESURES.json",
+    "bytes": 1789,
+    "sha256_file": "c872aee986199b292971e146b42d3c072a98d181369992eb5e3c94ef42dd535c"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/REMARQUES-ARBITREES.json",
+    "bytes": 4427,
+    "sha256_file": "8fc6ec0bbf3fa1d29e125397436f37a6f4b26757e6a2b27020a250818d314e6b"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/SCRIPT.txt",
+    "bytes": 173482,
+    "sha256_file": "1854ff05919606134a3c0089f34562ff525b3db8d1d13c33d1fd5089e709f51f"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/SOURCES.txt",
+    "bytes": 4094,
+    "sha256_file": "800fdd1c221221c32e8b1330045a60b6873e7678c85d132cf96644fe1ac137d1"
+  },
+  {
+    "path": "Deep Void Theories/DV-10-fremen/TITRE.txt",
+    "bytes": 74,
+    "sha256_file": "292cf6c522987c6a6fb6ad28eecdd57782afca79a63153bc86976ad998025414"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/AUDIT.json",
+    "bytes": 5713,
+    "sha256_file": "efc13d3451b26f0e7decbdef44bdd3ed5e0c8c76c2986ceea4350f78651558d7"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/CHAPITRES.json",
+    "bytes": 7499,
+    "sha256_file": "7811791353ce6df27c90549bc4d453abd4e51851fccfb34f00ce7e3b141fb6b5"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/MESURES.json",
+    "bytes": 1497,
+    "sha256_file": "838124c02d390ab4cb19fdad75aa49ef15faf0e8d0a134d6f633f382893bcc6c"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/REMARQUES-ARBITREES.json",
+    "bytes": 3098,
+    "sha256_file": "c80ff9519862f06a95bd459e3fe3e59efb3c997288042d06e1cbafdfe0f8f075"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/SCRIPT.txt",
+    "bytes": 191231,
+    "sha256_file": "432420e44f39bf5464f429b087adc868a7de04b78069fd8de308172707791260"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/SOURCES.txt",
+    "bytes": 6761,
+    "sha256_file": "8069086cd7a87005e76afc67c0f59dccfcfc6e2aea2e22a1b09226fa306d6a10"
+  },
+  {
+    "path": "Deep Void Theories/DV-11-old-republic/TITRE.txt",
+    "bytes": 78,
+    "sha256_file": "13c5dc84c619dcbe4f422740485431ab7829b69ca04fb5a656f9ecc6c5faad49"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/AUDIT.json",
+    "bytes": 7687,
+    "sha256_file": "6b7333a2ebb61ae88791ac03ea801924d6ad6889af3ff481f41eec0a8dea40bb"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/CHAPITRES.json",
+    "bytes": 7278,
+    "sha256_file": "9254b8fd98c64e5229a358c7ad64cda667492e250322c0e774dc628c4c6efe4d"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/MESURES.json",
+    "bytes": 1494,
+    "sha256_file": "4a24d11bc329a2bd4cb59c6bde5cf91d68a870cfae48b716f38fbb1cff5b8e87"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/REMARQUES-ARBITREES.json",
+    "bytes": 3676,
+    "sha256_file": "307d5b32a5aa2b71cc11f512a6d7cc47d27ba8324f6c6b64625fb25d7969d299"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/SCRIPT.txt",
+    "bytes": 178452,
+    "sha256_file": "042f669672026ce360b27cf16b24469353eafdac66f617fd0697e7f1a05021cc"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/SOURCES.txt",
+    "bytes": 4345,
+    "sha256_file": "d0ac4d5a0bff4f78d64becb3dd4b1acdb14a2f99aa85d4ac2fc01036a913f0a4"
+  },
+  {
+    "path": "Deep Void Theories/DV-12-great-houses/TITRE.txt",
+    "bytes": 66,
+    "sha256_file": "bb48df0b00c74a86df8ffa668177cb47ba906dad4ac3df1cd2e566ab958dcf7d"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/AUDIT.json",
+    "bytes": 6371,
+    "sha256_file": "7acf5d66e28875fe541ec089053c07532f8e25b3092c3909c1e15827c8a55e0d"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/CHAPITRES.json",
+    "bytes": 7329,
+    "sha256_file": "f0b6f5ba4da6dab1e18f7597117d065cc2131050ac67adc1e7a68f96e8311345"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/MESURES.json",
+    "bytes": 1486,
+    "sha256_file": "660cf2eaafbde3fe8e5370794be21e65c6f81d68f787d488eb23386c6e1f7ba5"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/REMARQUES-ARBITREES.json",
+    "bytes": 4551,
+    "sha256_file": "cb7c16e6a28a4a7d167d93ba6baea318f110f239e1c0077ca47b08aece1de3f8"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/SCRIPT.txt",
+    "bytes": 166113,
+    "sha256_file": "35e6ed4608272a443594d5b503e684715475e69d1d7d3e61accddfec277709fc"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/SOURCES.txt",
+    "bytes": 4527,
+    "sha256_file": "71a4d16695e6f13fa5dfd4dec8d21ece2d771957bd701f2c7e31cbfaf6559574"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-04-daedric-princes/TITRE.txt",
+    "bytes": 70,
+    "sha256_file": "e2b35a65442a3bc5d66c1eb9cb2d193a4891562792914bd576ba8f95e7547975"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/AUDIT.json",
+    "bytes": 5459,
+    "sha256_file": "739f93be925812bda1bc89f9e8bc092057f28766423e94959b3819d8a12ee03c"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/CHAPITRES.json",
+    "bytes": 7355,
+    "sha256_file": "3026e4c1c7260e8277ca708f9ba7ad6abd4ab9559db71b8c401d072f4ceac648"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/MESURES.json",
+    "bytes": 1993,
+    "sha256_file": "d379ad93812198002278e80dea3007c0057fb8a55ce2c46df61f1c5c1d93fd85"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/REMARQUES-ARBITREES.json",
+    "bytes": 2889,
+    "sha256_file": "839dde659b2693036e2a2b7f6686d9cbed1b62575096ce06899e5373379ac8fa"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/SCRIPT.txt",
+    "bytes": 180676,
+    "sha256_file": "2a33fbbd1335ddef76592089f8d3e3bf7a7d8c1170524e08769a56b139a1f04d"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/SOURCES.txt",
+    "bytes": 4858,
+    "sha256_file": "ab9509f7b8eca310df7f0c0c8dfffa7b00b5874749deb3331d43e51db7cca302"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-05-brotherhood/TITRE.txt",
+    "bytes": 81,
+    "sha256_file": "c8cc9700df0294b92fb98e51bbd3bd062a7135f04e468698a6a5a3583bab1138"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/AUDIT.json",
+    "bytes": 5517,
+    "sha256_file": "1eb58d14749f898d3db6a69c62079b3e7685d2e52ea9654b86ff92d067af4f2c"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/CHAPITRES.json",
+    "bytes": 7342,
+    "sha256_file": "13b8a35d471e854ab0bf319de877eebe22bfcd2cc114ed2abde77035203eb191"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/MESURES.json",
+    "bytes": 1505,
+    "sha256_file": "e6e1bcaf204789610b57742fe063034d078caeae777d2cc16fa8eb49153c5b6c"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/REMARQUES-ARBITREES.json",
+    "bytes": 3137,
+    "sha256_file": "ae77eee9a338737fbc03ddebdd72c2311e872b0a66ccd1667083ad4c22fd5e63"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/SCRIPT.txt",
+    "bytes": 179731,
+    "sha256_file": "a98f03bc0e10df0b714fe1db5d6fe4dfd6104786688108a31875cb12198ef0f5"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/SOURCES.txt",
+    "bytes": 5857,
+    "sha256_file": "99fedc979f583c5e2cee24dca750588db0057a5f739e4a98187a186bdc643384"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-06-elden-ring/TITRE.txt",
+    "bytes": 53,
+    "sha256_file": "5a942aea7d7552de9aaf58a01579d74bc9c8506a7594693dd99c96e86a90ce9e"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/AUDIT.json",
+    "bytes": 6054,
+    "sha256_file": "5cd4910465ac83ee0a65841ea8bb8a5782d6889a40a7e25adca42e0337684fb0"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/CHAPITRES.json",
+    "bytes": 7276,
+    "sha256_file": "bd88323591a049fef75d046b3d99dd92ea3937b84e65244f1bd2d50fc333700d"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/MESURES.json",
+    "bytes": 1711,
+    "sha256_file": "d44ca65d11709d14e13d28c629198adbc815d7bd6b9ef572df409fa5d36827d1"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/REMARQUES-ARBITREES.json",
+    "bytes": 4289,
+    "sha256_file": "ac0b61f67b07bcb4f4b1b51c341705a8211448ecda360c8168a54d9b9b825f2e"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/SCRIPT.txt",
+    "bytes": 165187,
+    "sha256_file": "0e1c7396fc3e4ffc179e09e5be048fb64b464dc1ff59326c22dd97f480fad1ae"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/SOURCES.txt",
+    "bytes": 3974,
+    "sha256_file": "5610e5333df5843c7f689c1218d224750324c1c5c3fb72273a23bf5dcc2628ba"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/TITRE.txt",
+    "bytes": 70,
+    "sha256_file": "76c2dcf49626dbca089eb9cd5c7ffb9238397ef12a63699ae1e26354cf50ea6c"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/AUDIT.json",
+    "bytes": 6213,
+    "sha256_file": "bc13c3d9e1a53fc9d7ee1993824558e9bb64a24e5f11c99abf331c30d6a9d90f"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/CHAPITRES.json",
+    "bytes": 7368,
+    "sha256_file": "568829fc9e5ae51d80092bf41d5380eb292c0f3c0c2b1b75071ae3bce74a4ebd"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/MESURES.json",
+    "bytes": 1506,
+    "sha256_file": "1f0077bc424f253dc20b365b3fa8f57ecb0e5dbbe23ace1e3e05850d871a735b"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/REMARQUES-ARBITREES.json",
+    "bytes": 2557,
+    "sha256_file": "81bb2f18beedd15df1a37a5ceb5c65bc7c0d6268a4d473a6708f62fcaedd66df"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/SCRIPT.txt",
+    "bytes": 179696,
+    "sha256_file": "f27e55223b53426eb65fabe8a3fbc925c365ab523adafcae6b4eeae4cecc3bee"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/SOURCES.txt",
+    "bytes": 4325,
+    "sha256_file": "aa289ee402c04f9d768c855a8250730cfd5a82890f8268ffe6423c37ec350539"
+  },
+  {
+    "path": "Forgotten Realms of Sleep/FR-08-new-vegas/TITRE.txt",
+    "bytes": 66,
+    "sha256_file": "2040281433d7fc8fb84d455f239c0ebe92b069b927b1372921b5b98b1e78e1e9"
+  },
+  {
+    "path": "LIRE-MOI.txt",
+    "bytes": 258,
+    "sha256_file": "65ccb26c85045d8ef83b746e76280c2ebae65932039d0163576ea740d92a8c11"
+  },
+  {
+    "path": "MESURES-LOT.json",
+    "bytes": 28827,
+    "sha256_file": "3f560479abce74ea1b64fbd2cb634e7c706e0bd4ab3a5946b6b9dc5f1568b6b7"
+  },
+  {
+    "path": "plan-editorial.json",
+    "bytes": 517778,
+    "sha256_file": "27900f9e32bf60fe1660bd1e87c263958bad71496967b7e9a0b66ebe6ce4938d"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/AUDIT.json",
+    "bytes": 7815,
+    "sha256_file": "bbcce9670b53d48a055aa324d02e13d0d5f39fdbe7310600c1531442e2f10220"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/CHAPITRES.json",
+    "bytes": 7487,
+    "sha256_file": "065d4913b62cada2682b1e49a6171cb1a8a1a6d7c3cf29e809a0e098c1d523ed"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/MESURES.json",
+    "bytes": 1516,
+    "sha256_file": "a36fdfdd99a2bec7da56ba00c732ddc1f36ac3139d602338e6ca2f94522cb0e0"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/REMARQUES-ARBITREES.json",
+    "bytes": 7107,
+    "sha256_file": "32bef6495a8e9e6774f1b933db6f1a492e7a4a5088561ccbc7662c5db7a04155"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/SCRIPT.txt",
+    "bytes": 163347,
+    "sha256_file": "af780062059726837ef65168f5c706564685e89cf3c493c60caf75b96c31f6cc"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/SOURCES.txt",
+    "bytes": 10550,
+    "sha256_file": "24be0a9e1f1aa98790d4a1149d17c5d0072e8713bb4bc039562f090cc63789e2"
+  },
+  {
+    "path": "Quiet Paradox/QP-07-silo-builders/TITRE.txt",
+    "bytes": 68,
+    "sha256_file": "67a04eee213e504f359e0aac82b9da6586a1c185237e2fa36186fa430e7a772a"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/AUDIT.json",
+    "bytes": 6838,
+    "sha256_file": "7081605f0549c202dabf8c7d4a800f611443b8f67068ef63419f8eb829be0adc"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/CHAPITRES.json",
+    "bytes": 7252,
+    "sha256_file": "e99895588bab1dd5fb713b56d8442dd08f25ea6f73a2e147bb29b6f5e2ad1fcc"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/MESURES.json",
+    "bytes": 1494,
+    "sha256_file": "0b98ba98627b35f6da40668b0ea92c88eb57df44c03b12f665c1c66e305cb52a"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/REMARQUES-ARBITREES.json",
+    "bytes": 5664,
+    "sha256_file": "1f262c687d706a00501791190216f8af1b0e9a3083d35b7bf395268a633a51d2"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/SCRIPT.txt",
+    "bytes": 157076,
+    "sha256_file": "fce25458f4da583f1b2ad148a6a7919c459d32749b0a4f66fc82accb98b71e77"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/SOURCES.txt",
+    "bytes": 9974,
+    "sha256_file": "bcce32057e1ffcfa7bf8e7086b95a11c9a1bbe8b954b4ac0cbdde66ca86d36ce"
+  },
+  {
+    "path": "Quiet Paradox/QP-08-from-rules/TITRE.txt",
+    "bytes": 69,
+    "sha256_file": "9d400b27fd3b67e0467f716c977befcbc0d9c0d5ec7c7b51e636a4e97d35cebb"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/AUDIT.json",
+    "bytes": 5092,
+    "sha256_file": "5f9b1d9b64274e6165cb28d36e504d260016b6d0bd1befe5bd07a4a20efe0113"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/CHAPITRES.json",
+    "bytes": 7311,
+    "sha256_file": "d8c2c5f0edec36827674c53980fddad34b58b81332c558eff82b32dfe67a4a46"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/MESURES.json",
+    "bytes": 1915,
+    "sha256_file": "538005f365aa4537f3b168f9f4a658e52803db94775e8a4fea4fc7c9d503f18e"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/REMARQUES-ARBITREES.json",
+    "bytes": 2097,
+    "sha256_file": "e712bbba5767874719a5b7f24d8f0e8326b3ec4cd5ccafe5d2bb8e447f9269c9"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/SCRIPT.txt",
+    "bytes": 182234,
+    "sha256_file": "0367671f604ce46140aed8c5d0b3035be7d9da74d7d323b0e93c5e51e379208a"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/SOURCES.txt",
+    "bytes": 6453,
+    "sha256_file": "d087bf11e3930aaeb2008d4f51290f760fbd27171e60040591597239276779bb"
+  },
+  {
+    "path": "Quiet Paradox/QP-09-lumon-building/TITRE.txt",
+    "bytes": 71,
+    "sha256_file": "d2a49617c68738e182b77d8237dfb847a0da8cb6110245839876f36c066f630f"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/AUDIT.json",
+    "bytes": 7937,
+    "sha256_file": "69ef0573a0926086a7c6088b8b5749a810826e16c44cd361e97d2d15806e8372"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/CHAPITRES.json",
+    "bytes": 7312,
+    "sha256_file": "2d181f2ed4d463f6aef3f160836c249dcccad0f316394ec401362621706cf7ba"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/MESURES.json",
+    "bytes": 1792,
+    "sha256_file": "dcc07ab8449012adeca1cc9086db34939e76f97ffc9ac06fb7746b43d4254c95"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/REMARQUES-ARBITREES.json",
+    "bytes": 8006,
+    "sha256_file": "7bcf35a4982f81211885b879e64ae1bceaa99aa696478cdd524cda67c9532e59"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/SCRIPT.txt",
+    "bytes": 167905,
+    "sha256_file": "a806f48ced7b67e0c28c10c82781c343d6730c0ccfa10c7dcb8c9f35748e10bb"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/SOURCES.txt",
+    "bytes": 8172,
+    "sha256_file": "3e11ade56ff0883b40a5c2c284e4c39b74018e00c18bd35a9bebf500a58aa2f6"
+  },
+  {
+    "path": "Quiet Paradox/QP-10-silo-outside/TITRE.txt",
+    "bytes": 70,
+    "sha256_file": "43e3958593aac1688bbf7ca20819d44c9f7fbac75971974aae1bb1134af1dc3c"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/AUDIT.json",
+    "bytes": 5902,
+    "sha256_file": "0ceb000f94c4a9dbf7150a3c69dbaf1d301f8f2c88854ab5d548b9c868f11a56"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/CHAPITRES.json",
+    "bytes": 7324,
+    "sha256_file": "08f29b0461719f305b9bb5091e47f171fa001a615e77a723a9792671b555b1ed"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/MESURES.json",
+    "bytes": 1491,
+    "sha256_file": "2445008c4db2782892df003a300a937384e23de842f3be79500f6d15729705f1"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/REMARQUES-ARBITREES.json",
+    "bytes": 4621,
+    "sha256_file": "0835d0002cf01b5bc107c388f6e8cfabe7d0d62a5885065ee5518e6876557ddf"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/SCRIPT.txt",
+    "bytes": 168785,
+    "sha256_file": "356bec9ebdf3f3a27c56a0c633a324c956ec64db6b625807af39e849a6afe727"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/SOURCES.txt",
+    "bytes": 8904,
+    "sha256_file": "12650b2a99504185f6138a2bfdfaea66f25627064d9669cf69c1292b12f93d53"
+  },
+  {
+    "path": "Quiet Paradox/QP-11-from-cycles/TITRE.txt",
+    "bytes": 75,
+    "sha256_file": "1630718dc2e087544d139684719389225345eb52578446f2e68c12da48aae436"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5459,
+    "sha256_file": "9e27d3fb813b79bc4b3ec7e701bd197ddc89a3bfce90a1566c2e77c9801365cb"
+  }
+]

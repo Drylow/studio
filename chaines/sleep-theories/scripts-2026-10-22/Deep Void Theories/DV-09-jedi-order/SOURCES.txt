@@ -1,0 +1,43 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Current Star Wars canon only; films Episodes I-IX, The Clone Wars, Rebels, Tales of the Jedi, The High Republic established broad setting, The Acolyte and Jedi games only where named. Do not insert Legends founders, Je-daii, Rakatan history or Luke Legends academy. Ancient origins remain lightly sketched.
+
+Banque de faits et oeuvres de reference :
+{"id": "J1", "fact": "The Order protects peace and justice in the Republic; the Coruscant Temple houses teaching, archives and Council.", "work": "Prequel films", "check_url": "https://www.starwars.com/databank/Jedi-Order"}
+{"id": "J2", "fact": "The High Republic is an earlier era of expansion, Jedi service and Nihil conflict; do not identify this era with the Legends Old Republic.", "work": "The High Republic", "check_url": "https://www.starwars.com/news/what-is-star-wars-the-high-republic"}
+{"id": "J3", "fact": "Ahsoka leaves after wrongful prosecution, later survives Order 66 with Rex.", "work": "The Clone Wars S5 finale; S7 finale", "check_url": "https://www.starwars.com/databank/ahsoka-tano"}
+{"id": "J4", "fact": "Palpatine transforms the Republic into Empire; the Jedi are attacked by clone forces and hunted. Surviving teachers and pupils continue in different ways.", "work": "Revenge of the Sith; Rebels; original trilogy."}
+{"id": "J5", "fact": "Luke builds a later training community that collapses; Rey receives his legacy rather than a confirmed restored institution onscreen.", "work": "The Last Jedi; The Rise of Skywalker."}
+
+Reperes par section (sans minutages audio) :
+01. The Temple before its fall — Attack of the Clones; Revenge of the Sith.
+02. The Force and the purpose of service — A New Hope; The Empire Strikes Back.
+03. The earliest horizon we can safely name — The Last Jedi.
+04. The High Republic's wider reach — The High Republic: Light of the Jedi.
+05. A threat built around disruption — Light of the Jedi; The Rising Storm; The Fallen Star.
+06. Brendok and a hidden failure — The Acolyte season one.
+07. Dooku's disappointment — Tales of the Jedi: Justice, Choices, The Sith Lord.
+08. Learning inside the Temple — Attack of the Clones; The Clone Wars youngling arc.
+09. A crystal and a first lightsaber — The Clone Wars S5 youngling arc.
+10. The bond of master and apprentice — The Phantom Menace; Attack of the Clones; The Clone Wars film.
+11. The Living Force at Naboo — The Phantom Menace.
+12. The return the Council could not see — The Phantom Menace ending.
+13. Guardians and a Senate in trouble — The Phantom Menace: blockade and Senate.
+14. Attachment in an unusual childhood — The Phantom Menace; Attack of the Clones.
+15. The missing army in the archive — Attack of the Clones.
+16. The choice at Geonosis — Attack of the Clones finale.
+17. Commanding people bred for war — The Clone Wars: Rex, Cody, Plo Koon rescue arc.
+18. What the war asks of an apprentice — The Clone Wars: Storm Over Ryloth and Ahsoka command.
+19. The bombing and the wrong verdict — The Clone Wars S5 final four episodes.
+20. The warning carried by Fives — The Clone Wars S6 inhibitor-chip arc.
+21. A Chancellor inside the circle — Revenge of the Sith.
+22. The arrest that becomes a coup — Revenge of the Sith: office confrontation.
+23. Order Sixty-Six — Revenge of the Sith.
+24. Ahsoka and Rex aboard the cruiser — The Clone Wars: Shattered; Victory and Death.
+25. Obi-Wan and Yoda after the Temple — Revenge of the Sith ending.
+26. The Empire hunts the remaining teachers — Jedi: Fallen Order; Obi-Wan Kenobi series broad Path context.
+27. Kanan's small classroom — Rebels seasons one through four.
+28. Luke receives an incomplete inheritance — A New Hope; Empire Strikes Back; Return of the Jedi.
+29. The failure of a new school — The Force Awakens; The Last Jedi.
+30. What survives a destroyed institution — The Last Jedi; The Rise of Skywalker.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

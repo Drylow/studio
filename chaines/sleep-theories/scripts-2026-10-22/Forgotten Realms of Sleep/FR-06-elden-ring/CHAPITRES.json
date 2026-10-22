@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "A Tarnished returns to an unfinished world",
+    "start_character": 0,
+    "end_character": 6260,
+    "words": 1021,
+    "sha256": "c7a6be67bbe138d08de2b20fbf8d3d107f361ddb58dd45af1807b51bdf084da5"
+  },
+  {
+    "number": 2,
+    "title": "The Elden Ring is an order of life",
+    "start_character": 6263,
+    "end_character": 12560,
+    "words": 985,
+    "sha256": "a02318872d1647500a8175d86457f7905482869216ffc231ae589e9d5e3f3c3c"
+  },
+  {
+    "number": 3,
+    "title": "Life before the Golden Order's certainty",
+    "start_character": 12563,
+    "end_character": 18861,
+    "words": 983,
+    "sha256": "59c4038843e22261541fdd831ef50e90524c3bda113370efbf210347a0ed55f1"
+  },
+  {
+    "number": 4,
+    "title": "Marika, Godfrey and conquest",
+    "start_character": 18864,
+    "end_character": 25253,
+    "words": 1024,
+    "sha256": "9599c96bd413c36cca29b115520251e4364babbc95a10b96acbb5f5cfe711755"
+  },
+  {
+    "number": 5,
+    "title": "The Tarnished are sent away",
+    "start_character": 25256,
+    "end_character": 31230,
+    "words": 972,
+    "sha256": "449f31324b220b57fbbcc5e4e85819c6a3f6872bdfc4ba88b5f8dcb3f39949b0"
+  },
+  {
+    "number": 6,
+    "title": "Radagon at war and in marriage",
+    "start_character": 31233,
+    "end_character": 37638,
+    "words": 1013,
+    "sha256": "e79b0df58b3ecb59e2a4b51c05a2e4689f74fda555a399a21f403a7c025cac04"
+  },
+  {
+    "number": 7,
+    "title": "The children carry different claims",
+    "start_character": 37641,
+    "end_character": 43879,
+    "words": 963,
+    "sha256": "d8a1c96d18182ce0aac0511bab03035a6e4cf585608ae14905bcf89c9bbee62b"
+  },
+  {
+    "number": 8,
+    "title": "Death is removed from ordinary rule",
+    "start_character": 43882,
+    "end_character": 50013,
+    "words": 998,
+    "sha256": "ef4fe21cd2b480ed9d49be43236f1c4622aee7cb2d9b9188eb014145a4ed3dca"
+  },
+  {
+    "number": 9,
+    "title": "The Night of the Black Knives",
+    "start_character": 50016,
+    "end_character": 54892,
+    "words": 799,
+    "sha256": "58f4ab3ac1c164e1f0c0d5681d9f98122e58987616b8cf55166c70384c7391fe"
+  },
+  {
+    "number": 10,
+    "title": "Godwyn's body continues beneath the roots",
+    "start_character": 54895,
+    "end_character": 60813,
+    "words": 947,
+    "sha256": "b8ea04034a65dd30de563417e6ffdb23f7e838ff344cedfb90554d8097d3e90d"
+  },
+  {
+    "number": 11,
+    "title": "Marika shatters and Radagon repairs",
+    "start_character": 60816,
+    "end_character": 67272,
+    "words": 1047,
+    "sha256": "8169b6fca8b5b2e9d9bd09f2c6128a4d71b8b88983cea5a04293aa096f9c50b3"
+  },
+  {
+    "number": 12,
+    "title": "The Shattering leaves no victor",
+    "start_character": 67275,
+    "end_character": 72568,
+    "words": 810,
+    "sha256": "27dae01ea309e1c7c55d7aad345cadf51d13df62021d178dd575496196d46f64"
+  },
+  {
+    "number": 13,
+    "title": "Caelid after the bloom",
+    "start_character": 72571,
+    "end_character": 78878,
+    "words": 1016,
+    "sha256": "38d88a616b1494360d243dedc8a19ff2f10cd89380886ca8ae16881bcdcd82c2"
+  },
+  {
+    "number": 14,
+    "title": "Stormveil and a borrowed inheritance",
+    "start_character": 78881,
+    "end_character": 85058,
+    "words": 1009,
+    "sha256": "45cc166a8f4f32ae49630b61538030c7743069818f34ad13ec567a9dc642928a"
+  },
+  {
+    "number": 15,
+    "title": "Raya Lucaria keeps a broken queen",
+    "start_character": 85061,
+    "end_character": 91153,
+    "words": 973,
+    "sha256": "e179293669cd07be10b6af08074f9254698c1abde662ed73bd643357922f34b9"
+  },
+  {
+    "number": 16,
+    "title": "Roundtable Hold gathers other ambitions",
+    "start_character": 91156,
+    "end_character": 97215,
+    "words": 953,
+    "sha256": "cc30382e63dc12fa5c487dcaa21e61046dd6e33c4ab8b9024b5d7f8d3d263e38"
+  },
+  {
+    "number": 17,
+    "title": "Ranni chooses a different succession",
+    "start_character": 97218,
+    "end_character": 103185,
+    "words": 978,
+    "sha256": "c7634e5a3e7b247bf449e264a3a368a9d6330ae333c8e28a52c263e8046cbf45"
+  },
+  {
+    "number": 18,
+    "title": "Volcano Manor's revolt consumes its followers",
+    "start_character": 103188,
+    "end_character": 109432,
+    "words": 1001,
+    "sha256": "4917167ddf445a23c13d3a959f707d53cafeb01a444f60340d0809383450b043"
+  },
+  {
+    "number": 19,
+    "title": "Morgott defends what rejects him",
+    "start_character": 109435,
+    "end_character": 115881,
+    "words": 1016,
+    "sha256": "a883c5e6d61e230aa1951716aea4b29b1ecb10814401b6ef9f8fc7129482a0e3"
+  },
+  {
+    "number": 20,
+    "title": "The Erdtree refuses entry",
+    "start_character": 115884,
+    "end_character": 120961,
+    "words": 815,
+    "sha256": "837e398cd15f40429c744280a1015d7196f9c16f1042f520c724a66c554f0d78"
+  },
+  {
+    "number": 21,
+    "title": "Flame and Destined Death change the route",
+    "start_character": 120964,
+    "end_character": 125510,
+    "words": 728,
+    "sha256": "5c5e5b0d88373f710a1cb00dad1e2f1811f234f375bb36ce20ffd127d4bb4bf3"
+  },
+  {
+    "number": 22,
+    "title": "An order can be mended in several ways",
+    "start_character": 125513,
+    "end_character": 131289,
+    "words": 955,
+    "sha256": "15ea7a6d943e94300c541c5fe0af73b08967c37f1e0743b5c8949789349f9f26"
+  },
+  {
+    "number": 23,
+    "title": "Miquella leaves a tree and a body behind",
+    "start_character": 131292,
+    "end_character": 137239,
+    "words": 940,
+    "sha256": "abc8970497d4947237af3e7697e373fe9aed7f219fba9890435dfbade6d591bb"
+  },
+  {
+    "number": 24,
+    "title": "Entering a concealed land",
+    "start_character": 137242,
+    "end_character": 143129,
+    "words": 919,
+    "sha256": "1d26fc6252aba434eebe3f418753761ac4a077af7e5227b740832974f9c585b9"
+  },
+  {
+    "number": 25,
+    "title": "Marika's village and the hornsent",
+    "start_character": 143132,
+    "end_character": 149195,
+    "words": 972,
+    "sha256": "16819816cb6ef6b59d120025e3b3dc5349bea2405193f4a29a2bff1d1def2508"
+  },
+  {
+    "number": 26,
+    "title": "Messmer's crusade and a mother's distance",
+    "start_character": 149198,
+    "end_character": 155367,
+    "words": 998,
+    "sha256": "daae16505f552c4889c23a4eb06a454bae7ddae026745dc654ee6c4e8da36a94"
+  },
+  {
+    "number": 27,
+    "title": "The Fingers have a troubled messenger",
+    "start_character": 155370,
+    "end_character": 160985,
+    "words": 888,
+    "sha256": "a86a558a881fbebcabac1122b9fbbf64c3bffdc2b295fe5a55e63079f57e5233"
+  },
+  {
+    "number": 28,
+    "title": "The charm breaks among the followers",
+    "start_character": 160988,
+    "end_character": 167338,
+    "words": 1006,
+    "sha256": "62e1d0df427e0c1ca3ff4aece45a882828bcc61a2e90f7f2f3197cbc67c679e3"
+  },
+  {
+    "number": 29,
+    "title": "The promised lord and the borrowed body",
+    "start_character": 167341,
+    "end_character": 173326,
+    "words": 969,
+    "sha256": "f7d1569df44ee0b620a2a01a4fd175b749b264376c3633285d39904bccb0f681"
+  },
+  {
+    "number": 30,
+    "title": "An age of compassion still asks obedience",
+    "start_character": 173329,
+    "end_character": 179034,
+    "words": 932,
+    "sha256": "4d605188962460912faf4966861497f0c482bb8dd95421ea9b5c87424722a65a"
+  }
+]

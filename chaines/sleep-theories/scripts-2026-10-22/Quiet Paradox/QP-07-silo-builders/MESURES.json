@@ -1,0 +1,68 @@
+{
+  "id": "QP-07-silo-builders",
+  "complete": true,
+  "chapters": 31,
+  "missing": [],
+  "words": 25626,
+  "characters_including_spaces": 162712,
+  "characters_excluding_whitespace": 136754,
+  "estimated_minutes": {
+    "140": 183.0,
+    "150": 170.8,
+    "160": 160.2,
+    "170": 150.7
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 868,
+    "2": 841,
+    "3": 901,
+    "4": 979,
+    "5": 1020,
+    "6": 1043,
+    "7": 1060,
+    "8": 1026,
+    "9": 1067,
+    "10": 893,
+    "11": 231,
+    "12": 770,
+    "13": 987,
+    "14": 928,
+    "15": 169,
+    "16": 461,
+    "17": 226,
+    "18": 821,
+    "19": 912,
+    "20": 1076,
+    "21": 1055,
+    "22": 1048,
+    "23": 879,
+    "24": 1015,
+    "25": 178,
+    "26": 1016,
+    "27": 899,
+    "28": 990,
+    "29": 309,
+    "30": 1090,
+    "31": 868
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 5,
+    "floor": 1,
+    "echo": 29,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "If you'd like to come back for more quiet mysteries, you can subscribe to Quiet Paradox. A comment telling us where you are and whether you're listening during the day or at night is welcome too, whenever you feel like it.",
+      "word_offset": 265
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "69d6ec4e5d0f735048746f113e8bcc10ab00f051db99f4a17fe405f8f61fef97"
+}

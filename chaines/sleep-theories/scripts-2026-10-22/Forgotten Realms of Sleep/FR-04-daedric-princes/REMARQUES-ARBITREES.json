@@ -1,0 +1,79 @@
+[
+  {
+    "number": 1,
+    "chapter": 4,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The paragraph returns to chapter one's completed shrine encounter instead of advancing this chapter's answer about the Nerevarine.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La note de Ghola ajoute le point de vue des fideles au contraste avec le Nerevarine. Le bref retour explique comment une protection declaree peut imposer un acte douloureux."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 10,
+    "kind": "factual",
+    "severity": "minor",
+    "reviewer_reason": "The supplied quest evidence supports guiding Meridia's light through Kilkreath, but does not establish that the light itself creates hazards for its bearer.",
+    "editor_decision": {
+      "status": "false_factual_finding",
+      "reason": "Le correctif propose est factuellement inutile : les faisceaux de Kilkreath peuvent blesser le joueur. Le texte ne donne aucun chiffre ou conseil de combat. Corroboration https://consolepulse.com/multiplatform/the-elder-scrolls/guides/skyrim-the-break-of-dawn-quest-walkthrough ; le guide officiel Prima signale aussi le danger du rayon."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 20,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "The double space is a mechanical artifact; the adjacent sentences also restate the dependence rather than adding a development.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace est sans effet sur la voix. Le texte distingue la survie grace a Mora de la dependance prolongee en Apocrypha ; la reformulation proposee risquerait de situer la defaite initiale dans le mauvais lieu."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 21,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "The double space is a mechanical artifact, and the first sentence repeats what the concrete confidence-and-anger example already conveys.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase conserve le caractere explicitement fantastique du tableau de Pelagius. Elle ne decrit ni ne conseille un traitement medical reel ; le double espace n est pas un contenu a prononcer."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 26,
+    "kind": "factual",
+    "severity": "minor",
+    "reviewer_reason": "The narration presents progress through the main crisis as a prerequisite for this invitation; the supplied evidence does not establish that extra requirement.",
+    "editor_decision": {
+      "status": "false_factual_finding",
+      "reason": "La progression dans la quete principale est bien requise : avoir atteint Blood of the Daedra fait partie des conditions de la visite de Casta. Correctif rejete apres verification : https://www.gamebanshee.com/oblivion/walkthrough/hermaeusmora.php et https://tesguides.com/tes4/walkthru/blood_daedra.htm ."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 27,
+    "kind": "structure",
+    "severity": "major",
+    "reviewer_reason": "This begins a condensed repetition of three already resolved quests. The chapter's distinct insight, that each refusal needs a different available action, arrives only after the recaps; replacing one paragraph would leave the structural problem intact.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le chapitre a deja ete reconstruit en 292 mots. Sa premiere phrase organise la comparaison des effets du refus, puis chaque exemple donne une action differente : laisser finir un rite, imposer une reunion, aider une proie. Ce ne sont pas trois nouveaux recits de quete. La conclusion borne les dettes non concernees. La demande de restructurer encore est donc rejetee comme preference editoriale."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 29,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters 22 and 23 already establish Haskill's duties, succession and the inhabitants' stakes. This is the least useful repeat in a chapter meant to compare conflicting accounts.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Haskill apporte une categorie de temoignage differente : le savoir de gestion d un participant, compare aux classifications de lecteurs exterieurs. Le passage ne repete pas la scene de succession."
+    }
+  }
+]

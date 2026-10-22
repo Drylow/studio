@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-22",
+  "notes": [
+    "Texte exact et complet vérifié sur chaque image.",
+    "Images individuelles vues par agent principal puis seconde lecture par chaîne.",
+    "DV09 et DV11 : personnages originaux, ne pas les identifier à des héros nommés.",
+    "FR05 et FR08 : forme des casques corrigée depuis références T-60 et NCR ; détails métalliques interprétés.",
+    "FR07 : pendentif incorrect retiré, incendies hors portail réduits.",
+    "QP08 : talisman corrigé, gravure interprétée ; porte fermée côté intérieur.",
+    "QP10 : tour hors sol supprimée, paysage aride. Composition symbolique, pas une sortie de Solo revendiquée.",
+    "Aperçu final 15 images regardé à 480 × 270 par miniature : texte, ordre, couleurs et distinction des sujets confirmés visuellement."
+  ],
+  "items": [
+    {
+      "id": "DV-08-bene-gesserit",
+      "channel": "Deep Void Theories",
+      "order": 1,
+      "title": "The Secrets of the Bene Gesserit Explained to Fall Asleep To | Dune Lore",
+      "jpg": "Deep Void Theories/DV-08-bene-gesserit/MINIATURE.jpg",
+      "original": "Deep Void Theories/DV-08-bene-gesserit/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 471545,
+      "sha256": "9135aae7d6eaccd925922032f0733510ebd710c90b18ce2a466ef83145603bf6",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "DV-09-jedi-order",
+      "channel": "Deep Void Theories",
+      "order": 2,
+      "title": "The Rise and Fall of the Jedi Order Explained to Fall Asleep To | Star Wars Lore",
+      "jpg": "Deep Void Theories/DV-09-jedi-order/MINIATURE.jpg",
+      "original": "Deep Void Theories/DV-09-jedi-order/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 489836,
+      "sha256": "efeb0de532559559dc697622635a0eec4e09d05eeb3b9e23bacfd150efd76ca7",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "DV-10-fremen",
+      "channel": "Deep Void Theories",
+      "order": 3,
+      "title": "The Entire History of the Fremen Explained to Fall Asleep To | Dune Lore",
+      "jpg": "Deep Void Theories/DV-10-fremen/MINIATURE.jpg",
+      "original": "Deep Void Theories/DV-10-fremen/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 528632,
+      "sha256": "ef3ee3fe6ecdd6b150b5765898f3323205cce8694042e361aeaefe6a0a4be1f4",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "DV-11-old-republic",
+      "channel": "Deep Void Theories",
+      "order": 4,
+      "title": "The Entire History of the Old Republic to Fall Asleep To | Star Wars Legends",
+      "jpg": "Deep Void Theories/DV-11-old-republic/MINIATURE.jpg",
+      "original": "Deep Void Theories/DV-11-old-republic/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 562733,
+      "sha256": "ebc30eae0a8b720133b409abd0ef4b272af2f1302e48c36e5f47c49d0e589574",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "DV-12-great-houses",
+      "channel": "Deep Void Theories",
+      "order": 5,
+      "title": "The Great Houses of Dune Explained to Fall Asleep To | Dune Lore",
+      "jpg": "Deep Void Theories/DV-12-great-houses/MINIATURE.jpg",
+      "original": "Deep Void Theories/DV-12-great-houses/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 468901,
+      "sha256": "891db528173fdcfa7eb2100afc05e9fe8f8fff5bca32612dc32745c0ca7f5f47",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "QP-07-silo-builders",
+      "channel": "Quiet Paradox",
+      "order": 1,
+      "title": "Who Built the Silos — and Why? | Silo Theories to Fall Asleep To",
+      "jpg": "Quiet Paradox/QP-07-silo-builders/MINIATURE.jpg",
+      "original": "Quiet Paradox/QP-07-silo-builders/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 432778,
+      "sha256": "86eaab63ab9687cc0274a016716ce7673b9765a383ae55eea031ca507ea494c6",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "QP-08-from-rules",
+      "channel": "Quiet Paradox",
+      "order": 2,
+      "title": "The Monsters, Talismans & Rules of FROM Explained to Fall Asleep To",
+      "jpg": "Quiet Paradox/QP-08-from-rules/MINIATURE.jpg",
+      "original": "Quiet Paradox/QP-08-from-rules/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 458108,
+      "sha256": "8c1cba9442768a64a324d8735b6d82feab32df0be5d2b92b4e4deab57aa726be",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": true
+    },
+    {
+      "id": "QP-09-lumon-building",
+      "channel": "Quiet Paradox",
+      "order": 3,
+      "title": "What Is Lumon Really Building? | Severance Theories to Fall Asleep To",
+      "jpg": "Quiet Paradox/QP-09-lumon-building/MINIATURE.jpg",
+      "original": "Quiet Paradox/QP-09-lumon-building/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 360758,
+      "sha256": "c1726898708bfebf84c2cc93aa3191f5ba5e3ee1a3d785bf4739d343283f197d",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "QP-10-silo-outside",
+      "channel": "Quiet Paradox",
+      "order": 4,
+      "title": "The World Outside the Silos | Mysteries & Theories to Fall Asleep To",
+      "jpg": "Quiet Paradox/QP-10-silo-outside/MINIATURE.jpg",
+      "original": "Quiet Paradox/QP-10-silo-outside/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 466742,
+      "sha256": "ec94c45427e1fcdf08e747e48ab36db63b41d94b0de35d271c6eef5d57b0ad4b",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": true
+    },
+    {
+      "id": "QP-11-from-cycles",
+      "channel": "Quiet Paradox",
+      "order": 5,
+      "title": "The Children, the Trees & the Cycles of FROM | Theories to Fall Asleep To",
+      "jpg": "Quiet Paradox/QP-11-from-cycles/MINIATURE.jpg",
+      "original": "Quiet Paradox/QP-11-from-cycles/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 523611,
+      "sha256": "59a8e6029007293b6b84a506a851bfb924ae0c452340bba1c1128a2e2c922c5f",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "FR-04-daedric-princes",
+      "channel": "Forgotten Realms of Sleep",
+      "order": 1,
+      "title": "The Daedric Princes Explained to Fall Asleep To | Elder Scrolls Lore",
+      "jpg": "Forgotten Realms of Sleep/FR-04-daedric-princes/MINIATURE.jpg",
+      "original": "Forgotten Realms of Sleep/FR-04-daedric-princes/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 569747,
+      "sha256": "ec746756c0106dc73e3e8a9a8f22f7e9e74d9124901b7c427a3f5118bbba81fe",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "FR-05-brotherhood",
+      "channel": "Forgotten Realms of Sleep",
+      "order": 2,
+      "title": "The Entire History of the Brotherhood of Steel to Fall Asleep To | Fallout Lore",
+      "jpg": "Forgotten Realms of Sleep/FR-05-brotherhood/MINIATURE.jpg",
+      "original": "Forgotten Realms of Sleep/FR-05-brotherhood/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 581192,
+      "sha256": "c3d1c104c12edb61e26ea53853d77355cdbb096402230042ab1471956355a0a3",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": true
+    },
+    {
+      "id": "FR-06-elden-ring",
+      "channel": "Forgotten Realms of Sleep",
+      "order": 3,
+      "title": "The Story of Elden Ring Explained to Fall Asleep To",
+      "jpg": "Forgotten Realms of Sleep/FR-06-elden-ring/MINIATURE.jpg",
+      "original": "Forgotten Realms of Sleep/FR-06-elden-ring/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 601723,
+      "sha256": "85d3dff10a9f79391aac3c444c2e37c35c165f46150bc467e4047f654d90bff4",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": false
+    },
+    {
+      "id": "FR-07-oblivion-crisis",
+      "channel": "Forgotten Realms of Sleep",
+      "order": 4,
+      "title": "The Oblivion Crisis Explained to Fall Asleep To | Elder Scrolls Lore",
+      "jpg": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/MINIATURE.jpg",
+      "original": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 538929,
+      "sha256": "90a7624c71235081654310050d62b0e5ff8a76d250482d6bebda6b3f5687cdf9",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": true
+    },
+    {
+      "id": "FR-08-new-vegas",
+      "channel": "Forgotten Realms of Sleep",
+      "order": 5,
+      "title": "The War for New Vegas Explained to Fall Asleep To | Fallout Lore",
+      "jpg": "Forgotten Realms of Sleep/FR-08-new-vegas/MINIATURE.jpg",
+      "original": "Forgotten Realms of Sleep/FR-08-new-vegas/ORIGINAL.png",
+      "original_size": [
+        1672,
+        941
+      ],
+      "export_size": [
+        1280,
+        720
+      ],
+      "export_bytes": 513786,
+      "sha256": "90af21ead7be62f21f0a697b610283bc7286aa2403ae80ffbc6dde371c19a301",
+      "status": "visually_reviewed_proposal",
+      "user_approved": false,
+      "uploaded": false,
+      "retouched": true
+    }
+  ],
+  "contact_sheet_reviewed": true
+}

@@ -1,0 +1,87 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "9c6282d64739b4382fb6a6bcdfa5599dec9024a95dee87b16ad6604d2f304044",
+  "full_review_file": "passage-26-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "4b0a77aabddc6a415938cb6f18dd63a35f30e45f9067978f5b82778811eaa77a",
+    "2": "f0caafc1332f2d2f35864699c041351c6e580a24ac91367af9b698d0ad4ab9b7",
+    "3": "4fe7f753ea807fe095bddbeb9a025331fe65f1d0e42667380bca2f5794775c33",
+    "4": "0076966bda264c8666b55fe82d5084478dc24fb68a6f8be4ca998a03d8c80c0c",
+    "5": "bd2d2a33bea499f49bd0b6d397378da50805d947506abdd07ab2bb1e188850d8",
+    "6": "6e85ea7df8f031ea8ac0d5ff5d24b3f2c69852bcb711c8e378dc9405f02e04ae",
+    "7": "ff4736b36a6585a7aef2f782cb5281bafd4237637a0e7bddaf21efc3b9cf7681",
+    "8": "afd00b8ea561151e0b0c71741494e28fd2f5058ba42ecc18de8fc2dd632c5dae",
+    "9": "c72134973b74a6e4e6b8032b61209869fdb8115d1656e04a406766009d16814f",
+    "10": "1a24b7fd71e8bca2504f2961c8444881cae6fa6a3aaa357a8c19efb7fdebabc7",
+    "11": "73ad8aa86ce4dd23e3d6c14a5ffce84617e7a617b4f52fc218be08b0562bef18",
+    "12": "a074e3c66d3eda4174e43a3a711079d6c54c7493d00e15c8ed205e068bb436fc",
+    "13": "0065b79cff94fd70d624a5bccdda982c31c825e39044dc110630df07d130708f",
+    "14": "ecd22eafdde33d1d5567cb26e34eba1e5a4ecebf9d98c5b64422617e34497aae",
+    "15": "3cdb32ad4cf1fbade5410d06f96033d2993f2a3503aa7d72f2ed46998061982b",
+    "16": "ecb6b807471be62272ac5f87e10267da9e62b7144395b2bdddf42fb76907fbc5",
+    "17": "3c1ab89025c73e369850aa55b1ae02bb20ff987d8571064aa17b8991f4ee652f",
+    "18": "eaabd75f42efab86f0515d29619931d90d3d1c7d06e72281ef8d162a5089c1cb",
+    "19": "1f945abf4cf877bc7323c0b8f8d664ae91404042f1f5d607c7ffa500fd624102",
+    "20": "2ebc3a2f542596e89d08bd97c14f05fbe7026a760a3c3d44ff6735061ba88501",
+    "21": "6c54d535cc64e334c9aba6222ec5fec6997cf170fb9a135829aceae6752b106b",
+    "22": "c7f075da77af2a87021218ac41367d0f0d75c9177ef312fa396501de8cc51cec",
+    "23": "267fdecb74389eb8dad81274798e954e40024dec18c1e5dc37e612fde9a3d849",
+    "24": "eebb2ec08d033e13b1afef6a8e15b88c40c58dff26ca3be88f2a531f2eae6feb",
+    "25": "c8980c1d81edb76bfadc839b3b6b84deca1dcf4cc96a7355ad03409aa1733031",
+    "26": "6309b90d0791262260116450d15f5f31a1705c78ceb51c90bfb89fde0ff4a5a9",
+    "27": "c59f6fc814b16400ac2da5c4292feafccea498ef6ab1d959edb91b71633f0855",
+    "28": "f60ad977a74a2aa8dbe46cd0ffecdd5f451d84c8476fcea75ac44dc93fd3cfca",
+    "29": "97e17090b93c62ff48013e1739220d05a89f0dd9512136c009ac247cfd525048",
+    "30": "c5b0fdbbb7631449e2b060d425ab399e9f633dbaeddbb6f64642fe02bdde111a"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "Le stilltent montre la limite pratique de la discipline de Jessica devant une transformation imprevue ; cette limite termine le developpement sur ses capacites physiques."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour au test sert ici a localiser la juridiction de la Sisterhood jusque dans une maison noble, plutot qu a raconter de nouveau le deroulement du test."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Le mariage fournit la consequence concrete du programme genealogique devenu negociation politique avec Paul ; le chapitre16 developpe ensuite les termes de la confrontation."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison preserve explicitement la difference entre ascendance et conduite personnelle, necessaire dans le chapitre qui revele la filiation Harkonnen."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "Les pratiques deja expliquees sont rassemblees pour leur consequence collective : les croyants poursuivent le mouvement au-dela des intentions de Paul."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour aux appartenances de Paul explique pourquoi une capacite preparee par l institution ne fixe pas l usage qu il en fait ; ce lien est dans le perimetre du chapitre."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe distingue la conservation d une branche genetique du controle du vainqueur. La mort de Feyd seule ne porterait pas cette distinction."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison Paul/petits-enfants montre l apprentissage et la nouvelle limite de Jessica ; il s agit d un jugement intergenerationnel, sans seconde narration des scenes."
+    }
+  },
+  "scope_status": "The supplied narration stays within Frank Herbert's original six novels and the authorized full-spoiler scope. No concrete expanded-novel, Encyclopedia, or film-only import was identified. Character explanations and the larger interpretations of Leto's and Taraza's purposes are generally attributed locally. The single optional subscribe and listening-location/day-or-night request appears only in chapter one. The supplied complete-script measurement is 26,632 words, above the 25,500-word minimum before these proposed edits; a fresh deterministic count is still required after insertion.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "PASS under the sleep adaptation",
+    "B": "FIX",
+    "C": "PASS with local tightening",
+    "D": "FIX",
+    "E": "LIMITED by available authenticity evidence; no demonstrated copying defect"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "b4bb21476743892adfc74e8b972d5e552448febe590a4574e735d39ddea73b3e",
+  "full_review_file": "passage-30-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "751e852f432ae39f38c73004dd84f1a38effdcbd0a5921df4bd9f69f6b9d05da",
+    "2": "9643b088e191e005aa0bf0989afe2ec7b2ede4c9cc45283154215f5b66160ca3",
+    "3": "3c5b14da0aac32d43e375160e0e718dc55b56eb734ab43d6ac6d46fbdd67992b",
+    "4": "6590fc2eca6355391bd8cc158629c45bf0a91435e564f0c5623e9cf4203f5938",
+    "5": "c75af8f9d842963a6401a3ac92181be8c985f1f9a22147aeab2dff3a864f0f53",
+    "6": "187d3064420d94ac7dcbf7d9f481a2832fefa8784edae52d22aaac3ca3c49265",
+    "7": "b0575ca0f9d4c4ee8c99e52e5c3dcc4711e077ab117fea092c18db7f6318a3d9",
+    "8": "6cc3ede2e8fa899c2362b8bd1a3355b9da5c87f4b892aad204d7dddd12f9155d",
+    "9": "9ff21e63235151af207e2ad40a4e4f1f8bd36e7863a92aaf7f50db4d37793d28",
+    "10": "04555f59862ff4eaffde043e70463301714e7b379f53b57a4d0a7abfdc44f457",
+    "11": "922c208dbcc643366486a0c12379dcedca6e7bc53d58a20f0e826fb284845e37",
+    "12": "cada9d913635885da03a898753c80c20f54011c38fbb76a4d80b57c1613359eb",
+    "13": "6cc3f63a9e94983e0a27d1514d08af58abaa2c5de8a171cab337064070ecf7c8",
+    "14": "8a5cf9f8ba25b56b7a2bbf5eacdca4696d655c4a471cb76884f6a1579c17acab",
+    "15": "c58df404bc1da94c6f6651837f078bd239347333a53726faeb35a80369bd8a48",
+    "16": "e63c1bf9409efa07c228086d054ab85e8152ce24860619e9c99a0b5397676d4e",
+    "17": "e36b90eb2a994194c7d5454d88e0ea35b30b525648e67d4ceba36c8cdf35719d",
+    "18": "d63665e47c6c31020608509e5802eac1bca1ce54876141ba7559221c21f7c55f",
+    "19": "48d4d2725e009a6b48b4f574d00631b238c0ad7a3e46260a7eaee7f9cc03186c",
+    "20": "3291d2443c50675af7bfdae27c7c4914cb1b60f596a499b7b0b767d67f494b61",
+    "21": "8df3e87e134d558fee5d19c53421b62693d43cf652238b109a126132a72e6494",
+    "22": "3cf9562477f1d1f5ab8d0876db468f38cb0a2000a28aa625e53fb2704724214c",
+    "23": "87e0e1836eb9b26888935506bd9f917a2864cef251a68b2e0bec6c89eb4b190d",
+    "24": "85ca3836faf89795f4e2c0a27f7dfc0f980ede43d500d7ee7b06803dba24b14e",
+    "25": "9406270170a1d7d66a1ee5de1e39b9fdc7b7fd5bdac1d7f8ec061f0b8c21d0d7",
+    "26": "7af2a3dec67a0c33ab3082efd7fe75a3fc48994fd6786ab277e550746950c881",
+    "27": "0665fae305246a99fa6c31df3fe42e7cd1d671e6109040d569b8f8a9475a09c2",
+    "28": "49c9b43842c109cdee3b498cb5c6080ee3ec26f0bf60e5705b68d3e713a07786",
+    "29": "4eae7fe12f82bdb98fb6e619af4bb4e10112b4c53a55e5d359b55b7a3be7701f",
+    "30": "b5cdf0077377b88223238d56e6d6a470da18cc7d3374093ea623978dfe8f0a5d"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "Ce rappel tres bref donne la raison politique d ecouter Duncan dans la scene d accueil ; le chapitre17 traite ensuite le fonctionnement des intermediaires."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "La scene sert ici a materialiser la contrainte ecologique du deplacement. Le chapitre14 en fait une preuve du jugement politique de Kynes, fonction differente."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Un double espace ne change pas la narration prononcee. Aucun contenu editorial ni indication a lire ne se trouve dans ce blanc."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La mort de Jamis et la mauvaise lecture du combat expliquent les conditions d admission de refugies. Les chapitres techniques precedents ne remplacent pas cette consequence sociale."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel de Mapes porte sur la participation du croyant a l interpretation du signe, theme propre a cette section sur la force politique des attentes."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour au ver est applique a l echange des savoirs entre Paul et la communaute ; le chapitre8 explique la pratique elle-meme."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "La fin compare une pratique vivante de Sheeana a la societe de Stilgar et aux institutions de Rakis. Cette situation nouvelle justifie la synthese locale."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour au cycle ecologique est l image de cloture demandee : un autre monde devient desert. Il ne lance pas de nouveau recit ni de CTA."
+    }
+  },
+  "scope_status": "All thirty chapters stay within the six original Frank Herbert novels as presented. Full spoilers are permitted. No supplied claim requires a film or expanded-novel explanation, and no serious factual or structural defect requiring a rewrite was identified. The proposed cuts are local; the supplied original whole-script count is 27,215 words, but the post-edit count has not been measured.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass for sleep adaptation",
+    "B": "local edits",
+    "C": "pass with local tightening",
+    "D": "local edits; no certified full read-aloud",
+    "E": "partly assessable; no publication verdict"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

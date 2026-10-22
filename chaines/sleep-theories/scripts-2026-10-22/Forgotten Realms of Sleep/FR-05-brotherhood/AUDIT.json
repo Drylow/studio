@@ -1,0 +1,79 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "a662c7d74d2f0463b9c9ceabdab4610ccd784459c34d517e2bdaaeffa0aad9dc",
+  "full_review_file": "passage-29-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "06e00692edbb8afc2e07c914558e2f4eb362060ddf40a063f968fecfc77dc95c",
+    "2": "2c9a5ba0cef8b4a2f4b5fc83ca13b890e6d5bfbf68891dd74c82d1955d15da1b",
+    "3": "ac11acb458dca82865c9178accf878f36f6dce28c0f0af58bd36a0581bc2170d",
+    "4": "38beb41d2884a956ee8dbdb82a865616a8ff598a3629c0441d87600faa9eaba5",
+    "5": "eb04ce418d51b032c1f82f5755159db60fb94472dc02a8bcfdf7067a00fb0cd8",
+    "6": "30ca064113d3b086fdd753117af834fb7d07dbb9e73119fe2e9940e3501166a9",
+    "7": "92d947f617cc02a2fac88947a976a7e13704834bad7cd7534234d0dc2a093857",
+    "8": "0c27edd86c9a9c942b2a8c150a76fd0f1e5befe69970b22312e88bd5b4add228",
+    "9": "c3b05748e78d38f12c9ded05da7f746891e9df6176a184dfce19a85cc7693eba",
+    "10": "ddeeccce65c0c0e276d8ef05faac39a1a9da0f829a318280a38c2c7a8bfc2bf9",
+    "11": "d5e00f7c7bc0706315508d32b888f781847ea3ac8b6c0a9536b28705e8eb1b2b",
+    "12": "1c33ab85d6b03ac35fdb0f2776df821b4028077c6ba1d3b0d807c5f2dde23938",
+    "13": "53b38c63f0b22c6a2c84cca406c2a244cb691a0e2f026f33e01042f90938f435",
+    "14": "890725f72d1e5f2082bdbd210cff7758eed53f8e879f64f7e976bd1e7adc4d77",
+    "15": "5a61275ae8e658ee727177d8aeb30a32947f495dfee7e89dd3c343fc62279397",
+    "16": "fac53b2caae05fbe189fa68529fd923ee70ed8a627be0729b635b826b8d1f564",
+    "17": "dd9b6c27f13254923a618a0e7b136915630014787c2a34f22d83622ef2df6d74",
+    "18": "e0e44ecf7c4d4f23435be0fe8e649049a93acb408aff4ce08942b2ffb2cae2b0",
+    "19": "7c1f1eccf3e454ff29fcfd418d1034b3937f1e6b5485e910575f3a57be98fb73",
+    "20": "125696265734f4e1addda745763bf06dfca274d651f56f33bbb22fa0c492b5d9",
+    "21": "9dfa27cf175e44651ee315b4dc8dcb27a6e40ef74051ea61d867c52877157085",
+    "22": "bcbc143de7f9f7760958d95788dd4469ea1822c480403a44f0df272c26fa693f",
+    "23": "51c15d42418808115d6ba1cd855cabeef49a63fca473e1e3e698e48ae6c72f7b",
+    "24": "01a294cae07f80dcd0c1ed4ca162ba52dc041c59b748e07abfc0b4cf848b088f",
+    "25": "a425ffe76531188aa321d230321dbc2b8f81d51207dfbdd44611dab73da5989c",
+    "26": "3d75e3c56531935c3450d88acae75c10520ca87fb68931f6ff053163009fb8a5",
+    "27": "378b3bdd11534e65721aa70816e3114b45e94b3620dce92ea1d91954d99d80d1",
+    "28": "91e0b73fc4b99b4663e5237ea18ca7d58dd99e33f1e8fb9c443ef1fda231b905",
+    "29": "232acf372eac01e3210c0bc5c4575c148622b114d3ad3b9e33a5304a5a426db9",
+    "30": "32779b4e53e4b2f02e1dfe56b681d407c231782d5733ce78c5296e408058bba9"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "L espace initial est typographique, sans effet TTS. La phrase rattache les exemples a la transmission entre soldats fondateurs et nouveaux membres."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace n ajoute aucun contenu prononce et ne justifie pas de traiter une narration correcte comme instruction ou artefact audible."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Ce rappel oriente la campagne de Fort Defiance vers les contraintes de ravitaillement, avant que le chapitre9 precise les relations avec les fournisseurs."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La fin ferme la recherche par traces dans un quartier general vide. Cette synthese est courte et n introduit pas une nouvelle histoire."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "La coupure typographique conservee appartient a une phrase qui continue sur le retour avec le disque ; ce n est pas un titre a lire."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace est sans effet sur la voix. Le sens humain de la destruction du bunker reste une consequence utile des choix precedents."
+    }
+  },
+  "scope_status": "The narration stays within the specified released games and expansions, uses full game spoilers, excludes the television series as continuity evidence, and keeps consequential player endings conditional. All 30 chapters are present. The supplied pre-edit measurement is 27,243 words; the listed deletions and replacements do not by themselves threaten the 25,500-word whole-script minimum.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_for_sleep_format",
+    "B": "minor_fixes",
+    "C": "pass_with_minor_fixes",
+    "D": "minor_fixes",
+    "E": "limited_assessment"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

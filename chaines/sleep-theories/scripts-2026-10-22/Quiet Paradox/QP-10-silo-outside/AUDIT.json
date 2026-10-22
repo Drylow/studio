@@ -1,0 +1,115 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "2b59eeb8cc0d1dbe43a5207d28a5cf6c387c3573344df795edaca753d9085d8e",
+  "full_review_file": "passage-31-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "92f6050179e7c0971b42449b64366524a5bb2b4618d77c03ac666a54ab520408",
+    "2": "3093b36c7fec33c0f91eee60f6a8d5c3669d37a373b103e7909f765b94aec30c",
+    "3": "eb36dbe9f8bdb19766ccbca31373cd8e913ee893328d6e4d8f2c47c0b626c6cd",
+    "4": "95291c327a5a583734b7e9207ce7a4ab2f47f12416a06a36369fd4461b4aeab3",
+    "5": "14363fe89db39c37100674ea622d86ad71d4c51ef2956ce5cc7a069c846efdfd",
+    "6": "315f7b54d95e043a805c873553546ef1089f258e5322c5df911a4098cf65bd4b",
+    "7": "f31e964e3523bd1ff3dc477b6545e243c34dde5bbae6653dce90857dfa36b71f",
+    "8": "1c266833c88ed376ae3715549a53f75252fe16ab5a9e3d30586c422c8903bf74",
+    "9": "44540b8b0cb370440a8d921436a74094c3c7a90465d0d0c1053191b325e864fb",
+    "10": "963eaa27c1bab2585798ab4f4087fe37f80465ba87f6693719e029bb4f554fa9",
+    "11": "b9b89d1bd7f1f83197e88380c307c7ca3809ad6cf68b2967e7fcc6d29d71a4db",
+    "12": "9060bce0f2b51fd515379e8b7a7bf664cd99584b6b893027babfb47cb10dcd69",
+    "13": "5f7300c79b9e37c1f7f90ebd6f32b2a5d5dd5a10234e3a4ad15c7f5be73f13b1",
+    "14": "2ac792742fffe60b20cddd6327c33226972c1129eca7b32a0a1f453b65d005d2",
+    "15": "a7caa1fb2e6c00f6a53b872cc0a02c2494656f7e91748cbf02e797ac68d31fe7",
+    "16": "cf5d5aaa721fd769ea7ccfe2a724bff012ac673291aa79cd4917ffd4649cabdc",
+    "17": "44ae2467ff1395a081f36771667c75e6638df153e20b7aaea43ff53198bc9155",
+    "18": "513f3ad844910ff812a2ab9b012816cf03f2904404ad7bfb04603a797c5ef0bd",
+    "19": "93e0401518025f32a11929a29449e370c661e66e97086dcf381f21be74239b9b",
+    "20": "c2495d68c78525462daedb7042cb56daa0fcc62fcd1961a807742f37ddb9bb6b",
+    "21": "76714860b46c3682ac939394ac7d2e0924ffbafaee5393336864afd6beffca8b",
+    "22": "a1a960d3b98d0f47887b04787f3dcddd21bf0d793f3698f61510e96a3cf5b389",
+    "23": "49531cd2e6a29289e8bb1c03db89c5d5b4defa04fd25dfd2e88336b8944cae6e",
+    "24": "48ee44bf40a67abc4fe7ff3c087686c9a9298392400237c0972baba8c0ae25d4",
+    "25": "53c7aa12a9a72b5f8bcf5e147317dfb88a3f65686fb446d529433e52ca68a79b",
+    "26": "9655594b29089ed53a87b84607840bf73505e51e5996bb25c847bd71aeabe2ff",
+    "27": "660d2f1134f6ab67120460e193b81e066604be56e2fe1a2b0356081dd568b08a",
+    "28": "4c0c24f410c738459e389ba2a3617398935d40c76e927f78f178ffbc1095dbd3",
+    "29": "82c2db78831f2fd9010d77e9c076179a3b43006340a55e89cdf36f999dccc74c",
+    "30": "a8c0f90445b045f58d9dc0e653ef435d3b910fa3ab262da2a71b73accd38e090"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "La descente de Jahns est une comparaison concrete entre une geographie habitee que l on peut parcourir et le cadre immobile du dehors. Elle donne une mesure humaine de la restriction."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion ferme l entree dans Silo17 par son resultat immediat : retirer le casque, mais perdre ses reperes sociaux. Ce n est pas un nouveau trajet."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Le silence est traite comme perte d information professionnelle pour une mecanicienne, et pas seulement comme ambiance de ruine. Cette consequence a une fonction locale."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La distinction ecarte une hypothese geographique non montree et maintient le probleme sur le niveau d eau et le pompage observes. Aucune cause complete de l inondation n est inventee."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison oppose observation directe et archives historiques, distinction utile avant de tester des hypotheses sur le monde actuel."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte ne presente pas l intervention maternelle comme cause unique. Il nomme aussi explicitement la nourriture et les espaces habitables, donc les autres conditions de survie restent visibles."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel empeche de confondre la protection interne neutralisee et la violence externe deployee par les drones. Les mecanismes ont des acteurs et des lieux differents."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "Le parallele porte sur les consequences d une exclusion du groupe, sans assimiler les deux moyens ni excuser Susan. Les differences sont dites explicitement."
+    },
+    "9": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour aux notes place l attachement persistant a cote de la responsabilite operationnelle de Troy. Ce lien personnel/institutionnel appartient a la question de sa transition."
+    },
+    "10": {
+      "status": "retained_after_editor_review",
+      "reason": "Le privilege documentaire est compare a une exposition physique sans protection. Cela explique pourquoi le savoir de Bernard ne rend pas sa sortie survivable."
+    },
+    "11": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe de cloture formule les questions d accueil et de cooperation au prochain abri, consequence du passage compare a l habitation durable."
+    },
+    "12": {
+      "status": "retained_after_editor_review",
+      "reason": "La distinction entre mecanismes est appliquee ici au modele d exclusion geree, au-dela de la simple chronologie de l attaque."
+    },
+    "13": {
+      "status": "retained_after_editor_review",
+      "reason": "La meme distinction est testee contre le modele de catastrophe plus large. Elle ne presente ni le modele comme prouve ni un nouveau evenement."
+    },
+    "14": {
+      "status": "retained_after_editor_review",
+      "reason": "Les dommages de l interieur sont appliques aux reserves et au temps d une future expedition. Le passage evite de reduire le voyage a la seule marche au dehors."
+    },
+    "15": {
+      "status": "retained_after_editor_review",
+      "reason": "Cette breve synthese rassemble obstacles materiels et intervention des operateurs avant l image finale des deux ecrans. C est la conclusion du raisonnement, sans nouveau recap chronologique."
+    }
+  },
+  "scope_status": "All 30 chapters remain within the supplied television-through-S3E10 scope. The narration uses the released Troy, Susan, Algorithm and Silo 17 revelations; it does not import the novels or a future-season answer. One optional subscribe and listening-location/day-or-night request appears in chapter 1 only. Supplied measurement: 27,660 words before edits, leaving room above the 25,500-word whole-script minimum for the proposed cuts.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_for_sleep_scope",
+    "B": "pass_with_local_repetition_edits",
+    "C": "pass_with_local_tightening",
+    "D": "local_edits_needed",
+    "E": "text_review_only"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

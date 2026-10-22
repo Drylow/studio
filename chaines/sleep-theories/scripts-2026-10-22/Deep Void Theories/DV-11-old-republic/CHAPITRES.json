@@ -1,0 +1,250 @@
+[
+  {
+    "number": 1,
+    "title": "A capital that has survived other wars",
+    "start_character": 0,
+    "end_character": 5123,
+    "words": 826,
+    "sha256": "07911d776836685693214b9dd6be8608942b78d72f68d8fb0b4a390a4fe9986b"
+  },
+  {
+    "number": 2,
+    "title": "Tython before the familiar Jedi",
+    "start_character": 5126,
+    "end_character": 11510,
+    "words": 1017,
+    "sha256": "28a296906408ad69af6ff334a53df3ea042d36cdad0dead8dc61a0ed8ccadaaf"
+  },
+  {
+    "number": 3,
+    "title": "The Rakatan reach",
+    "start_character": 11513,
+    "end_character": 17143,
+    "words": 872,
+    "sha256": "660be69268ee304909eb51070bdd5e4fa230b1d2f06e6719488c6d520f406e49"
+  },
+  {
+    "number": 4,
+    "title": "Worlds connect through hyperspace",
+    "start_character": 17146,
+    "end_character": 22951,
+    "words": 859,
+    "sha256": "74ba123400deed235d5bbc0daa81fb8c7ad3143adb8391bee32dae56f4dea167"
+  },
+  {
+    "number": 5,
+    "title": "The Jedi become Republic protectors",
+    "start_character": 22954,
+    "end_character": 28645,
+    "words": 865,
+    "sha256": "7ba70c7b02c2213a51a0d80f13e9dd174b52dc3234d0db7162fe57ab8f6f24c3"
+  },
+  {
+    "number": 6,
+    "title": "A schism leaves the Republic behind",
+    "start_character": 28648,
+    "end_character": 34488,
+    "words": 924,
+    "sha256": "84fb013d6cdf49c9f2b7ce3ad04a9bc41b99dd8629daa048e6d535d91bbf27b9"
+  },
+  {
+    "number": 7,
+    "title": "Naga Sadow and the first great invasion",
+    "start_character": 34491,
+    "end_character": 40816,
+    "words": 1003,
+    "sha256": "fdfec5da4ad0efb038682ea753b543d15800d51eeec19f72221da8bd3addc5ed"
+  },
+  {
+    "number": 8,
+    "title": "Survivors beyond the known frontier",
+    "start_character": 40819,
+    "end_character": 46767,
+    "words": 920,
+    "sha256": "7f0c3fd48f976cea0760296971b48ecf02e6ef20606abd5a039dc7da964e6f6d"
+  },
+  {
+    "number": 9,
+    "title": "Freedon Nadd's shadow on Onderon",
+    "start_character": 46770,
+    "end_character": 52635,
+    "words": 950,
+    "sha256": "1db8366c3f9f6c5e5bbd63d0b23e08583d8d09d7ef778e21b881d87172c2ca69"
+  },
+  {
+    "number": 10,
+    "title": "Exar Kun searches for forbidden teachers",
+    "start_character": 52638,
+    "end_character": 58751,
+    "words": 1005,
+    "sha256": "4baf4c971dea699a6cd25a29cad4c4fe7426123c01f7ad32bb51a762662b7d87"
+  },
+  {
+    "number": 11,
+    "title": "Ulic Qel-Droma enters a dangerous plan",
+    "start_character": 58754,
+    "end_character": 64118,
+    "words": 887,
+    "sha256": "89ff72b8106b1ce1da23a9a99dede2a511390340f8f1d945b592dc0d33cf6bce"
+  },
+  {
+    "number": 12,
+    "title": "The Great Sith War and its cost",
+    "start_character": 64121,
+    "end_character": 70365,
+    "words": 1015,
+    "sha256": "ef333ac47269d25558c02bb4fd5fd931fc4b90212d4a5eb3e5eeb253683c9190"
+  },
+  {
+    "number": 13,
+    "title": "Recovery is uneven",
+    "start_character": 70368,
+    "end_character": 76220,
+    "words": 980,
+    "sha256": "ea3c4b1611a67e0b365c486db82fd0504032615895074a5928cee4a402c37b70"
+  },
+  {
+    "number": 14,
+    "title": "The Mandalorians test the frontier",
+    "start_character": 76223,
+    "end_character": 81650,
+    "words": 826,
+    "sha256": "96e6e479350365ff284432543a35af6c9ba7070f132fe47927b5b431073cb201"
+  },
+  {
+    "number": 15,
+    "title": "Revan's intervention divides the Jedi",
+    "start_character": 81653,
+    "end_character": 88058,
+    "words": 986,
+    "sha256": "ededd886b805597c66cd3188368eb9d43159509d43838b36a699cd4e59a2e52f"
+  },
+  {
+    "number": 16,
+    "title": "Malachor ends one war",
+    "start_character": 88061,
+    "end_character": 94333,
+    "words": 994,
+    "sha256": "032c8fb7a1c9afe89cb46f91955161fd87319652d19b03f7ad9971a296dca6d6"
+  },
+  {
+    "number": 17,
+    "title": "The victors become the next invaders",
+    "start_character": 94336,
+    "end_character": 100915,
+    "words": 1009,
+    "sha256": "4ec0d8576d853f2023d1681b4101df878be7906a3b1fba2ec9888461130e34b5"
+  },
+  {
+    "number": 18,
+    "title": "Bastila and the captured commander",
+    "start_character": 100918,
+    "end_character": 107374,
+    "words": 1032,
+    "sha256": "2cc5dcf5cb686bfaa7a89e49820451f1e0359b18c262ce04ef8d62a3a0444575"
+  },
+  {
+    "number": 19,
+    "title": "Following the Star Maps",
+    "start_character": 107377,
+    "end_character": 113700,
+    "words": 1003,
+    "sha256": "1ca17382fedef1ffbb4d5f13ee8b404673a721a05fa73598e5de32be31f13df7"
+  },
+  {
+    "number": 20,
+    "title": "The Star Forge and chosen outcomes",
+    "start_character": 113703,
+    "end_character": 120101,
+    "words": 1030,
+    "sha256": "3867120e7074290407982d5b85b5757bdf4d0d0a94ae3b5eee9b0c4e26e54cf6"
+  },
+  {
+    "number": 21,
+    "title": "The Republic left after victory",
+    "start_character": 120104,
+    "end_character": 126727,
+    "words": 996,
+    "sha256": "cfbc1d29d15cbaff2dd708690e2296534404b4e3e69a1358d9323fa5ae13ae64"
+  },
+  {
+    "number": 22,
+    "title": "The Exile's unusual bond",
+    "start_character": 126730,
+    "end_character": 133006,
+    "words": 968,
+    "sha256": "c071f32cbc21b1b1d9bc39465ff85a9414cab23f2c79cdce569c17230cf1c55b"
+  },
+  {
+    "number": 23,
+    "title": "Three Sith pursue different hungers",
+    "start_character": 133009,
+    "end_character": 138999,
+    "words": 955,
+    "sha256": "12a27234b807003365613f3c6816408b34c8acb8494cd12a817310956050bdc3"
+  },
+  {
+    "number": 24,
+    "title": "The hidden Empire returns",
+    "start_character": 139002,
+    "end_character": 146085,
+    "words": 1073,
+    "sha256": "2580442a8cd3b5ab30ace2a9ec538fd2061fefefb8bc2a02b29d20b31f2b4bf4"
+  },
+  {
+    "number": 25,
+    "title": "Coruscant falls into a treaty",
+    "start_character": 146088,
+    "end_character": 151516,
+    "words": 843,
+    "sha256": "d13a38b0aa4bf094888e95e222eac1d3ac1c80ff0445510fdbbfe56f9de8bb3b"
+  },
+  {
+    "number": 26,
+    "title": "Two societies during a cold war",
+    "start_character": 151519,
+    "end_character": 157963,
+    "words": 987,
+    "sha256": "446caf4f666b8352474b0658be789853a93758c9f42cf6a48eaa1f070f1d0b42"
+  },
+  {
+    "number": 27,
+    "title": "The war seen through other professions",
+    "start_character": 157966,
+    "end_character": 164632,
+    "words": 1000,
+    "sha256": "644395231adfb389428e0fd428113256fe4b7a286f7e9da9a1e0182fd97ce921"
+  },
+  {
+    "number": 28,
+    "title": "An Emperor challenged from within",
+    "start_character": 164635,
+    "end_character": 171189,
+    "words": 1040,
+    "sha256": "31a140b8e12750c5a4f661004a5e0e666b9657ce38e13d44e99a100bfff93e17"
+  },
+  {
+    "number": 29,
+    "title": "The Eternal Empire interrupts the older war",
+    "start_character": 171192,
+    "end_character": 177576,
+    "words": 979,
+    "sha256": "409d83bf8ff9e04b566cbbde5ce330979a2ee176ea902f73a0ca6f6b25c20522"
+  },
+  {
+    "number": 30,
+    "title": "Later wars wear down both orders",
+    "start_character": 177579,
+    "end_character": 184148,
+    "words": 1030,
+    "sha256": "4bc39ed74beef153c97f6bfa9bf960cc788213557b3ab0dc19666e2ccda69b81"
+  },
+  {
+    "number": 31,
+    "title": "Ruusan and a quieter enemy",
+    "start_character": 184151,
+    "end_character": 190497,
+    "words": 1029,
+    "sha256": "a45567bc1f64857f5d8c42054fec0778bbc2ed29efa92b658b2c00e1ca85d8f0"
+  }
+]

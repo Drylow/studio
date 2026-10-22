@@ -1,0 +1,83 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "61eb73c8fcc79a0e24670b78d942d687970267558444d9036b7846877dcb0f96",
+  "full_review_file": "passage-33-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "b7dc5af08018d53e91ba6e50411410eb5b5a3a3d72ef77a18a28df3e81206e20",
+    "2": "6df8eb5c3fa34f525646f9230380df80689ef752df38d67e0a2a208167566b1e",
+    "3": "70e872d179f7bd593ce53fb5ffcf88bb05f767a8d692c5f07ad3c0b3864531c6",
+    "4": "aedd2cc04807f90dcb0128b70bbdd50eb27a402223dfade42cf7acbf148ff015",
+    "5": "3c6982bce1b672f5b69ccf59c48be7f376e500c6a4e7a07e41610f724f0dc513",
+    "6": "0357c6dce3ea3aac7f5496bc804f2d169783752f1a0e5abdd307a0a3678115e9",
+    "7": "b4f658ad290b4e91734c87393c10b3680e99427c4c11bfb37e24ec6cd4e794b7",
+    "8": "2b081236a80c1f8f780998775c5d1c90fdb881c933d79ec4071636206b0d947d",
+    "9": "273952b5390df7a2ea324fa1f5dbcf9ad5b38aa3086e830988fa7faadeea5f90",
+    "10": "d96a5f6848b543ec38dd3323e993135e1640985f7a3457b112d519ef991ffdca",
+    "11": "5e1d9246d6cd0347a43ec632289333685658906279529fef5bb441764128899b",
+    "12": "272be528234de394852bd8a853bb9a084e309e0cc472d805f18b0c64fdad0055",
+    "13": "47900a53e1785d46156780de03c5665648399bfd99832cb0b7664480dc5ca079",
+    "14": "2f00392eaec8b3f5d4efbbb45c3b098f8600c27e1a3e3e5c40a9380e81696576",
+    "15": "bf9767922b38ad129324df06fbc86cb84da2529a724be7701ca884bca4f07f45",
+    "16": "ba94369ee16ae1756c7de628c79e98935e6ba491665da6a069099c383e884e8d",
+    "17": "d54418a44780d39b3881f8dc182404d987c988747ff84f5e2af4ccfbab452cc9",
+    "18": "2671a27b06bd6f1b5b79da01fe313ce9d39588672ecb7158f50aa37a5f8f38ed",
+    "19": "8d2c2fa5357d6c235ffc43298596e841e81d9819017a914739f68ee9e7b8ca52",
+    "20": "81ceaf39540b1872b04bb00feb8d718d20e208b10fef1e9b8e2fc15fede59fe4",
+    "21": "56e80553276f3c37e0033f299bb08ce4e8d9cec1eee077fe3a202545531706e4",
+    "22": "d24333574cbcaf7c3e31751bcbb78f85c04dfa48628138523039f8d784f11510",
+    "23": "325bfe48a6d71ca0aae0a1939b42c0b8127f5012f277a21d0812d620e3fee3ef",
+    "24": "a0c3f9590693cb085e56d8b17e56b3f59b94c2b1417c984ebf6559ad1b77a9fe",
+    "25": "61365e4e58f1f42de50cfb3ac1bdf3f055023bb3cee06bcce709aab63e5708de",
+    "26": "6935835df9c504f227799aa3a22832c8167a0067d735e3106bc07e75612b0653",
+    "27": "2a2258dba0597184ecb4f3922507370fbd5d82d68808094a5c7db8ba8821758a",
+    "28": "b8dc150a0f278f9695916a1748bfdd124bcf78e3d36e9249ee2f589a0968f212",
+    "29": "2546a49f310d0ac2860685e9f634856d330e4dfdd6c55f095ca86f5ba161144a",
+    "30": "6d3d511e20add0d897dc0b4271cf4b6f76377be5f7aea21f3b73a9eff45d11a9"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "La note de Ghola ajoute le point de vue des fideles au contraste avec le Nerevarine. Le bref retour explique comment une protection declaree peut imposer un acte douloureux."
+    },
+    "2": {
+      "status": "false_factual_finding",
+      "reason": "Le correctif propose est factuellement inutile : les faisceaux de Kilkreath peuvent blesser le joueur. Le texte ne donne aucun chiffre ou conseil de combat. Corroboration https://consolepulse.com/multiplatform/the-elder-scrolls/guides/skyrim-the-break-of-dawn-quest-walkthrough ; le guide officiel Prima signale aussi le danger du rayon."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "Le double espace est sans effet sur la voix. Le texte distingue la survie grace a Mora de la dependance prolongee en Apocrypha ; la reformulation proposee risquerait de situer la defaite initiale dans le mauvais lieu."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase conserve le caractere explicitement fantastique du tableau de Pelagius. Elle ne decrit ni ne conseille un traitement medical reel ; le double espace n est pas un contenu a prononcer."
+    },
+    "5": {
+      "status": "false_factual_finding",
+      "reason": "La progression dans la quete principale est bien requise : avoir atteint Blood of the Daedra fait partie des conditions de la visite de Casta. Correctif rejete apres verification : https://www.gamebanshee.com/oblivion/walkthrough/hermaeusmora.php et https://tesguides.com/tes4/walkthru/blood_daedra.htm ."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le chapitre a deja ete reconstruit en 292 mots. Sa premiere phrase organise la comparaison des effets du refus, puis chaque exemple donne une action differente : laisser finir un rite, imposer une reunion, aider une proie. Ce ne sont pas trois nouveaux recits de quete. La conclusion borne les dettes non concernees. La demande de restructurer encore est donc rejetee comme preference editoriale."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "Haskill apporte une categorie de temoignage differente : le savoir de gestion d un participant, compare aux classifications de lecteurs exterieurs. Le passage ne repete pas la scene de succession."
+    }
+  },
+  "scope_status": "The reviewed narration stays within the named mainline games and separately marks the ESO Gold Road coda. Player branches are generally conditional. No repeated CTA or prohibited final CTA appears. Chapter 27 needs structural revision before a clean editorial pass.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_with_scope_limitations",
+    "B": "revise",
+    "C": "revise",
+    "D": "revise",
+    "E": "limited_editorial_assessment"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "number": 1,
+    "chapter": 2,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "This paragraph moves away from bodily discipline into the limits of Jessica's guidance, developed concretely in chapters seven, eight, thirteen, and fourteen. It repeats observation and incomplete explanation without a distinct physical-training development. H18 identifies a script that 'keeps re-stating it with nothing new attached.' Deleting it also removes the internal repetition between its last two sentences.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le stilltent montre la limite pratique de la discipline de Jessica devant une transformation imprevue ; cette limite termine le developpement sur ses capacites physiques."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 5,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter one already establishes Mohiam's access, Jessica's accountability, her waiting, and the threatened loss of Paul; chapter seven supplies their consequence for Jessica's disobedience. This repeat adds no comparably specific household function alongside the stronger staffing, education, and warning examples. H18 requires a second mention to add 'a consequence, a comparison, the next number.'",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour au test sert ici a localiser la juridiction de la Sisterhood jusque dans une maison noble, plutot qu a raconter de nouveau le deroulement du test."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 6,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph already answers the chapter's question through Paul's autonomous claim to the intended capacity. This additional miniature conclusion previews the marriage settlement developed in chapter sixteen and returns to the same preparation-versus-authority conclusion. H18 warns against 'the same point restated with the wording shuffled.'",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le mariage fournit la consequence concrete du programme genealogique devenu negociation politique avec Paul ; le chapitre16 developpe ensuite les termes de la confrontation."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 8,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph establishes that ancestry does not replace upbringing or allegiance, and the earlier paragraph beginning 'Jessica hasn't concealed this particular secret' already establishes her choices. This passage restates that distinction through another list of actions covered in chapters two and seven. H18 says a repeated framing without a new consequence should be cut; the following attempted disposal provides the stronger concrete consequence.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison preserve explicitement la difference entre ascendance et conduite personnelle, necessaire dans le chapitre qui revele la filiation Harkonnen."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 10,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This recapitulates the funeral, military teaching, water project, and feared future after the preceding paragraph has already delivered the imperial victory and the movement's independent momentum. The interpretation is useful earlier, but this second ending supplies no further event or inference. H18 identifies 'repetition disguised as emphasis.'",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Les pratiques deja expliquees sont rassemblees pour leur consequence collective : les croyants poursuivent le mouvement au-dela des intentions de Paul."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 13,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The chapter has already explained the crossing and distinguished ancestral memory from prescience. This ending returns to the loyalties and limits of maternal guidance established in chapters seven and eight and developed again in chapter fourteen. H18 calls for the repeated observation to have 'one home paragraph' rather than closing multiple sections.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour aux appartenances de Paul explique pourquoi une capacite preparee par l institution ne fixe pas l usage qu il en fait ; ce lien est dans le perimetre du chapitre."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 15,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph already explains the pregnancy's success and why Feyd's survival is no longer necessary. The intervening return to Paul's independence repeats chapters six and fourteen. H18 requires added information on a repeated mention; only Feyd's actual death needs retaining here.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe distingue la conservation d une branche genetique du controle du vainqueur. La mort de Feyd seule ne porterait pas cette distinction."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 20,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The comparison with Paul is useful, but the rest repeats the chapter's already-demonstrated mutual examination and undisclosed plans. H18 warns against sections 'looping back to the same observation.' Preserve the comparison without another full conclusion.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison Paul/petits-enfants montre l apprentissage et la nouvelle limite de Jessica ; il s agit d un jugement intergenerationnel, sans seconde narration des scenes."
+    }
+  }
+]

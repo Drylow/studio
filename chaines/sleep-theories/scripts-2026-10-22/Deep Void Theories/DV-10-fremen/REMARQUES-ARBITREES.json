@@ -1,0 +1,90 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The neighboring paragraphs already establish Leto's interest, while chapter 17 develops Duncan's intermediary work; this detached paragraph adds no new event or inference.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Ce rappel tres bref donne la raison politique d ecouter Duncan dans la scene d accueil ; le chapitre17 traite ensuite le fonctionnement des intermediaires."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 3,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The harvester rescue receives its consequential account in chapter 14. These paragraphs spend a full scene and a second explanation on the same ecological point; chapter 3 needs only the travel constraint.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La scene sert ici a materialiser la contrainte ecologique du deplacement. Le chapitre14 en fait une preuve du jugement politique de Kynes, fonction differente."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 8,
+    "kind": "artifact",
+    "severity": "minor",
+    "reviewer_reason": "The doubled space is a mechanical prose artifact.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Un double espace ne change pas la narration prononcee. Aucun contenu editorial ni indication a lire ne se trouve dans ce blanc."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 18,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapters 9 and 10 have already explained the shield habit, its misreading and the challenge's rules. Keep the distinction between training and reluctance, then return to this chapter's admission story.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La mort de Jamis et la mauvaise lecture du combat expliquent les conditions d admission de refugies. Les chapitres techniques precedents ne remplacent pas cette consequence sociale."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 19,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 9 already develops precisely this exchange and inference. The next example of Kynes and Paul advances the prophecy question without this miniature recap.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel de Mapes porte sur la participation du croyant a l interpretation du signe, theme propre a cette section sur la force politique des attentes."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 20,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 8 has already delivered the instruction, trial, standing and transport consequence. Removing this paragraph lets the training account proceed to its new campaign application.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour au ver est applique a l echange des savoirs entre Paul et la communaute ; le chapitre8 explique la pratique elle-meme."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 29,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The chapter has already established Sheeana's response to worms, both institutions' interest and the difference from Stilgar's society. The preceding paragraph closes more concretely on Odrade's discovery at the sietch.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La fin compare une pratique vivante de Sheeana a la societe de Stilgar et aux institutions de Rakis. Cette situation nouvelle justifie la synthese locale."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 30,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening has already explained the transported worm, sandtrout, existing cultivation and necessary drying. Preserve the requested closing image without explaining the cycle a second time.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le retour au cycle ecologique est l image de cloture demandee : un autre monde devient desert. Il ne lance pas de nouveau recit ni de CTA."
+    }
+  }
+]

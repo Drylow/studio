@@ -1,0 +1,44 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Released Fallout games 1, 2, 3 with Broken Steel, New Vegas, 4 and 76 through Steel Dawn/Steel Reign. No Fallout TV show, Fallout Tactics or Brotherhood of Steel spinoff as settled continuity; no invented post-ending New Vegas/4 canon. Chronological overview with full spoilers; game branches explicit.
+
+Banque de faits et oeuvres de reference :
+{"id": "B1", "fact": "Roger Maxson breaks with the Army after discovering FEV human experiments at Mariposa and the survivors later establish Lost Hills.", "work": "Fallout: Maxson diary, Captain Maxson log and Brotherhood history."}
+{"id": "B2", "fact": "Taggerdy receives Maxson radio contact in Appalachia; a later expedition is led by Rahmani with Shin and Valdez.", "work": "Fallout 76 base Brotherhood logs; Steel Dawn.", "url": "https://bethesda.net/en-US/news/fallout-76-steel-dawn-update-notes-november-24-2020", "opened": "2026-10-22"}
+{"id": "B3", "fact": "Rahmani and Shin disagree over the chapter's duties and accountability; Steel Reign requires choosing its direction.", "work": "Fallout 76 Steel Reign", "url": "https://fallout.bethesda.net/en/steelreign", "opened": "2026-10-22"}
+{"id": "B4", "fact": "Lyons prioritizes helping Capital Wasteland residents; Outcasts reject his departure from the technology mission.", "work": "Fallout 3: Citadel and Outcast dialogue."}
+{"id": "B5", "fact": "Mojave chapter withdraws to Hidden Valley after HELIOS One; McNamara and Hardin offer different policy directions.", "work": "Fallout New Vegas: Still in the Dark; Veronica and Elijah accounts."}
+{"id": "B6", "fact": "Arthur Maxson leads the Prydwen force in Fallout 4, with possible different endings; Danse's identity produces Blind Betrayal.", "work": "Fallout 4: Brotherhood main quests."}
+
+Reperes par section (sans minutages audio) :
+01. An order born inside a military base — Fallout: Roger Maxson diary and base history.
+02. The experiments that break allegiance — Fallout: Mariposa logs and Maxson diary.
+03. The bombs fall after the break — Fallout: Maxson history and Exodus.
+04. The march to Lost Hills — Fallout: Exodus accounts and Lost Hills.
+05. Knights, scribes and a new inheritance — Fallout Lost Hills; later Brotherhood dialogue.
+06. Why names from another age matter — Fallout 76: Maxson and Taggerdy holotapes.
+07. A second beginning in Appalachia — Fallout 76: Taggerdy's Thunder and early Brotherhood recordings.
+08. Fort Defiance and the Scorched — Fallout 76 base main quest Brotherhood arc.
+09. Thunder Mountain and local dependency — Fallout 76: Fort Defiance and Thunder Mountain records.
+10. Rahmani's expedition reaches the east — Fallout 76 Steel Dawn.
+11. The transmitter and a broken link — Steel Dawn: Over and Out.
+12. Steel Reign asks who should decide — Fallout 76 Steel Reign.
+13. Lost Hills meets the Vault Dweller — Fallout: Lost Hills admission and Glow.
+14. The Glow keeps the old danger visible — Fallout: Ancient Brotherhood disk and West Tek records.
+15. The Master's army changes the calculation — Fallout: Brotherhood council and mutant conflict.
+16. A more powerful neighbor rises — Fallout 2: Brotherhood outposts and Enclave context.
+17. Matthew's assignment in San Francisco — Fallout 2 San Francisco Brotherhood and Navarro plans.
+18. A dispute over the NCR's future — New Vegas: Brotherhood-NCR war accounts; Fallout 3 western references.
+19. HELIOS One ends an exposed position — New Vegas: Veronica, McNamara and HELIOS One testimony.
+20. Hidden Valley under McNamara — New Vegas: Still in the Dark.
+21. Hardin and Veronica want different changes — New Vegas: Still in the Dark; I Could Make You Care.
+22. A conditional place in the Mojave war — New Vegas: For the Republic Part 2; House and Legion demands.
+23. Lyons reaches the Capital Wasteland — Fallout 3: Citadel history and Lyons dialogue.
+24. The Outcasts preserve another mission — Fallout 3: Outcasts and Citadel accounts.
+25. Project Purity creates a public duty — Fallout 3 main quest; Broken Steel.
+26. The young Maxson inherits a name — Fallout 3 Arthur; Fallout 4 Prydwen historical terminals.
+27. The Prydwen brings a larger institution — Fallout 4: Brotherhood arrival and Prydwen.
+28. Danse and the line drawn around humanity — Fallout 4: Danse recruitment and Blind Betrayal.
+29. The Commonwealth chooses between incompatible forces — Fallout 4 faction endgames.
+30. The argument carried into each new bunker — Fallout 76 Valdez; New Vegas Veronica; Fallout 4 scribes.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

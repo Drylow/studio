@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "A prisoner meets the Emperor",
+    "start_character": 0,
+    "end_character": 5178,
+    "words": 854,
+    "sha256": "b7ff55bf52ed267c5b83d621e512581dc68d14801a2553b6d13f05046cb98a33"
+  },
+  {
+    "number": 2,
+    "title": "An empire protected by an old covenant",
+    "start_character": 5181,
+    "end_character": 10226,
+    "words": 812,
+    "sha256": "2fee373fcc645a106211b912fcdc70b0490c4bf70c7f02a9ccbcca2c326b5222"
+  },
+  {
+    "number": 3,
+    "title": "The route through the sewers",
+    "start_character": 10229,
+    "end_character": 15633,
+    "words": 874,
+    "sha256": "d52c6da6028ef7175dba0fec0a44473ede0d41d8f8e35e11c00d267c4b448144"
+  },
+  {
+    "number": 4,
+    "title": "The Amulet becomes a delivery",
+    "start_character": 15636,
+    "end_character": 20985,
+    "words": 873,
+    "sha256": "b7f993a8524318239953220d19904ffeff8abcf1ee83782b29a45401f7bf99d6"
+  },
+  {
+    "number": 5,
+    "title": "Jauffre knows of another heir",
+    "start_character": 20988,
+    "end_character": 25855,
+    "words": 795,
+    "sha256": "44a454cf16b6191208b69f0c9193cb3154eaf260b58385317590b356dfbb7964"
+  },
+  {
+    "number": 6,
+    "title": "The road reaches a refugee camp",
+    "start_character": 25858,
+    "end_character": 31096,
+    "words": 848,
+    "sha256": "a9580ec47d185e20e1859a8d45be941093b8ac9e13881cf7f9235b3817e399c2"
+  },
+  {
+    "number": 7,
+    "title": "The first gate is a physical crossing",
+    "start_character": 31099,
+    "end_character": 36816,
+    "words": 927,
+    "sha256": "3eb55fa82d2140ddfe764b105203060f459addc8ea14a63ef8fb204aee55f174"
+  },
+  {
+    "number": 8,
+    "title": "The Sigil Stone holds the passage",
+    "start_character": 36819,
+    "end_character": 42174,
+    "words": 886,
+    "sha256": "1cd5a9e5147fb5ca2f5e15b9f5d915f8ec98c368426450a392d1ae1e72a659c6"
+  },
+  {
+    "number": 9,
+    "title": "Martin stays with the people who need him",
+    "start_character": 42177,
+    "end_character": 47234,
+    "words": 840,
+    "sha256": "13c3e61e2c077c3296acbefdfd9fcee97de94ee42295d6686fe8239847739354"
+  },
+  {
+    "number": 10,
+    "title": "Kvatch is more than its rescued heir",
+    "start_character": 47237,
+    "end_character": 53199,
+    "words": 984,
+    "sha256": "1a0ef2e9f1a7cb41ab6605f0a10db64d5e69764d77d712bf422da51b0ed8f073"
+  },
+  {
+    "number": 11,
+    "title": "Weynon Priory has been attacked",
+    "start_character": 53202,
+    "end_character": 58501,
+    "words": 877,
+    "sha256": "6fa71d88a032b1c0d50a1b9e70ea8536dc00cfc62e82ef73c40c5eea92b76ef6"
+  },
+  {
+    "number": 12,
+    "title": "Cloud Ruler Temple receives a possible Emperor",
+    "start_character": 58504,
+    "end_character": 64427,
+    "words": 950,
+    "sha256": "d31c3a32333f8f716fca3d6f0b02cf3b388f38d535ce75dc45a152f0b9c5aaca"
+  },
+  {
+    "number": 13,
+    "title": "Baurus follows a watcher",
+    "start_character": 64430,
+    "end_character": 69808,
+    "words": 884,
+    "sha256": "6ffdab5e1d4a6de2cab56f6f568223e61e585b6b6d5e0aff2fbb7cf225a587d1"
+  },
+  {
+    "number": 14,
+    "title": "Tar-Meena reads a dangerous tradition",
+    "start_character": 69811,
+    "end_character": 75499,
+    "words": 916,
+    "sha256": "35a7e18abe01dcafb9951098e49eb839232a52a978e06a644bff13eb3da328d7"
+  },
+  {
+    "number": 15,
+    "title": "A collector's purchase opens a lead",
+    "start_character": 75502,
+    "end_character": 80646,
+    "words": 837,
+    "sha256": "e471e4267079426c8af69cea8c18f8a83985d86d916a26bb17739938c09af4b4"
+  },
+  {
+    "number": 16,
+    "title": "The meeting beneath the city",
+    "start_character": 80649,
+    "end_character": 86827,
+    "words": 1015,
+    "sha256": "3d2e4462c27c02c92c648d77c8e06f20bd9bbaf304b01e71e7f77b162acdde38"
+  },
+  {
+    "number": 17,
+    "title": "Words arranged as a hidden address",
+    "start_character": 86830,
+    "end_character": 92134,
+    "words": 866,
+    "sha256": "b4a4072c789471455ed0e07fe89a0c4d1e5a1584e950bbab263af1e31a92f3f1"
+  },
+  {
+    "number": 18,
+    "title": "Inside the Mythic Dawn shrine",
+    "start_character": 92137,
+    "end_character": 98475,
+    "words": 1018,
+    "sha256": "79f00d2910c4a7f4b23892c187b1b3f5c19e1bedd9abe204138d9e21e8c319d1"
+  },
+  {
+    "number": 19,
+    "title": "Mankar leaves with the Amulet",
+    "start_character": 98478,
+    "end_character": 102825,
+    "words": 715,
+    "sha256": "38bfde5984472d5eb0ec357409b7ac07c38a022c4506686baf3d1865def86b90"
+  },
+  {
+    "number": 20,
+    "title": "Martin studies an enemy's book",
+    "start_character": 102828,
+    "end_character": 108353,
+    "words": 918,
+    "sha256": "26797a68a0ef20d974ac75ac147371f4b529ea6c9ebbe946220e59c1c6d0d886"
+  },
+  {
+    "number": 21,
+    "title": "Spies find Bruma's refuge",
+    "start_character": 108356,
+    "end_character": 114264,
+    "words": 951,
+    "sha256": "345dfe9c70eb06358451a22371aae8a1da636eeaacd69a71f0c33096de7d0012"
+  },
+  {
+    "number": 22,
+    "title": "A Daedric artifact becomes a cost",
+    "start_character": 114267,
+    "end_character": 118960,
+    "words": 775,
+    "sha256": "ca804b96f9fee0312ee2a9dee0c2c663f4f10688bd9c59f10e60b74a2a6becf0"
+  },
+  {
+    "number": 23,
+    "title": "Sancre Tor keeps an older service",
+    "start_character": 118963,
+    "end_character": 124095,
+    "words": 867,
+    "sha256": "1ebed15213df186a9a3d2a2ee57c894046e3639150f219f6c723a51641653969"
+  },
+  {
+    "number": 24,
+    "title": "The Great Welkynd Stone at Miscarcand",
+    "start_character": 124098,
+    "end_character": 129571,
+    "words": 880,
+    "sha256": "b33f49cfb37c32421ae4cb0fa0d66aebed9d20b266412818faaa82bb79fbf479"
+  },
+  {
+    "number": 25,
+    "title": "Burd trains at an open gate",
+    "start_character": 129574,
+    "end_character": 134262,
+    "words": 781,
+    "sha256": "5f379733c262893cc49ed51798b8fb8289528133fec75ec9470dec0d278b0b2d"
+  },
+  {
+    "number": 26,
+    "title": "Asking other cities for help",
+    "start_character": 134265,
+    "end_character": 140392,
+    "words": 977,
+    "sha256": "1db199b3823133e593a8d42d6265a8aba53268ada8ae5dad2fca5e784ff42c81"
+  },
+  {
+    "number": 27,
+    "title": "The battle must allow a Great Gate",
+    "start_character": 140395,
+    "end_character": 146363,
+    "words": 981,
+    "sha256": "bd1cc18a45ed68ede1ea8d32a2cd109c9f32a8d983c94ce794b80bd7700cb907"
+  },
+  {
+    "number": 28,
+    "title": "The siege engine and the last component",
+    "start_character": 146366,
+    "end_character": 151152,
+    "words": 795,
+    "sha256": "5e0fe7b0e610df2144e7c9b844522e5b659cb7b2ad4f6895e0790d8e6fe0e600"
+  },
+  {
+    "number": 29,
+    "title": "Paradise keeps its worshipers trapped",
+    "start_character": 151155,
+    "end_character": 158012,
+    "words": 1116,
+    "sha256": "9ca06b9177372449a62a72d1c94a363b59ba32935f7fd867fe13008b60d95c36"
+  },
+  {
+    "number": 30,
+    "title": "Martin's last decision in the Imperial City",
+    "start_character": 158015,
+    "end_character": 164532,
+    "words": 1092,
+    "sha256": "463ec994b8b6a50ca7b4b44b1baed655b452a9a5074044c7371ba4d29ca70aba"
+  }
+]

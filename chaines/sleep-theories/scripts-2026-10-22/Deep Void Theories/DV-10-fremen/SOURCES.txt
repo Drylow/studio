@@ -1,0 +1,44 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Frank Herbert original six Dune novels only: Dune, Dune Messiah, Children of Dune, God Emperor of Dune, Heretics of Dune, Chapterhouse: Dune. Full spoilers. Do not import expanded novels, Dune Encyclopedia genealogy or film-only changes. Original institutional explanation, not exhaustive scene-by-scene adaptation.
+
+Banque de faits et oeuvres de reference :
+{"id": "D1", "fact": "Bene Gesserit training, Jessica choosing a son, the breeding program, Missionaria Protectiva and Paul disrupting the intended plan belong to Dune.", "work": "Dune: Caladan test; Jessica training; Arrakis and Sietch Tabr."}
+{"id": "D2", "fact": "Irulan participates in the conspiracy while Chani bears twins; Paul refuses the offered ghola bargain.", "work": "Dune Messiah."}
+{"id": "D3", "fact": "Alia is pre-born; ancestral possession and the twins confront inherited identities and imperial rule.", "work": "Children of Dune."}
+{"id": "D4", "fact": "Leto II controls spice; Siona has the no-prescience characteristic; the Museum Fremen perform a remnant culture.", "work": "God Emperor of Dune."}
+{"id": "D5", "fact": "Taraza, Odrade, Lucilla, Sheeana, Teg and the Duncan ghola act amid returning Scattering populations; Rakis is destroyed.", "work": "Heretics of Dune."}
+{"id": "D6", "fact": "Chapterhouse transforms into desert; Murbella joins Bene Gesserit and Honored Matres positions, while Duncan and Sheeana escape; original final novel leaves open questions.", "work": "Chapterhouse: Dune.", "check_url": "https://dunenovels.com/chapterhouse-dune/"}
+
+Reperes par section (sans minutages audio) :
+01. The water offered at a first meeting — Dune: Stilgar and Atreides meeting.
+02. Before Arrakis — Dune: appendices and Fremen oral history.
+03. The planet that reshapes a people — Dune: Arrakis ecology.
+04. The stillsuit as everyday infrastructure — Dune: Kynes and stillsuits.
+05. Living in a sietch — Dune: entry into Sietch Tabr.
+06. Water rings and communal wealth — Dune: Jamis funeral and water customs.
+07. Walking where worms listen — Dune: Paul and Jessica's desert crossing.
+08. The worm and the maker hooks — Dune: first worm ride.
+09. The crysknife's social boundary — Dune: Mapes; Fremen customs.
+10. How a naib leads — Dune: Stilgar, Jamis and sietch leadership.
+11. Women, kinship and obligations — Dune: Harah, Chani and Jamis's family.
+12. The shared remembrance of a community — Dune: Water of Life ceremony.
+13. Pardot Kynes imagines change — Dune Appendix I: Ecology of Dune.
+14. Liet Kynes between offices — Dune: Liet Kynes arc.
+15. The hidden southern population — Dune: southern settlements and Guild arrangement.
+16. Imperial extraction and local resistance — Dune: Harkonnen rule and Fremen resistance.
+17. The Atreides become possible allies — Dune: harvester rescue; Duncan and Stilgar.
+18. Two refugees in the desert — Dune: refuge and Jamis.
+19. A prophecy takes local form — Dune: Paul's Fremen emergence.
+20. Training moves in both directions — Dune: training and campaign.
+21. Winning the battle of Arrakeen — Dune: final campaign.
+22. The jihad leaves Arrakis — Dune Messiah: jihad aftermath; Korba.
+23. A veteran remembers a sea — Dune Messiah: Farok and Scytale.
+24. Chani within imperial life — Dune Messiah: Chani.
+25. Greening Arrakis changes the bargain — Children of Dune: changed Arrakis.
+26. The regency and the older customs — Children of Dune: Stilgar and twins.
+27. Leto's desert becomes a reserve — God Emperor of Dune: Sareer and imperial ecology.
+28. The Museum Fremen — God Emperor of Dune: Museum Fremen.
+29. Rakis, priests and Sheeana — Heretics of Dune: Rakis.
+30. What travels after Rakis is lost — Heretics of Dune ending; Chapterhouse: Dune.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.

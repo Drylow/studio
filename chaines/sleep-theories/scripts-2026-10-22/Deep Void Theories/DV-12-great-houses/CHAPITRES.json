@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "A duke who still needs transport",
+    "start_character": 0,
+    "end_character": 5349,
+    "words": 852,
+    "sha256": "a2213187563d7549420636949ebe6019e800a971b6f22f2289d944a11f89e057"
+  },
+  {
+    "number": 2,
+    "title": "What makes a House Great",
+    "start_character": 5352,
+    "end_character": 11259,
+    "words": 925,
+    "sha256": "b4b75f891ab10a93701355d03b9ec1cfbf6e844c0435c91d9d88b7351b0c5195"
+  },
+  {
+    "number": 3,
+    "title": "The throne and its counterweights",
+    "start_character": 11262,
+    "end_character": 17653,
+    "words": 990,
+    "sha256": "05288248138ab4d8c4672b1a1df47e74a1bcef3c1a36e463a351184fac611665"
+  },
+  {
+    "number": 4,
+    "title": "CHOAM and the flow of profit",
+    "start_character": 17656,
+    "end_character": 23827,
+    "words": 941,
+    "sha256": "ebc3ebd103a77e4ce66f12e34a36c3c5e2bbac83331f21ef11b5c5b9f30aea02"
+  },
+  {
+    "number": 5,
+    "title": "Fiefs that can be reassigned",
+    "start_character": 23830,
+    "end_character": 29986,
+    "words": 942,
+    "sha256": "b8257ec1790775eb024df51eb12d5c1edd289c2499e1fbb6e40587197cdb096a"
+  },
+  {
+    "number": 6,
+    "title": "Caladan and Atreides obligations",
+    "start_character": 29989,
+    "end_character": 35422,
+    "words": 865,
+    "sha256": "8e20ebc16ae1fa3811519649f30030b7c9ce17f442e2eaa84c6c9ae474e33c18"
+  },
+  {
+    "number": 7,
+    "title": "Giedi Prime and Harkonnen extraction",
+    "start_character": 35425,
+    "end_character": 41103,
+    "words": 894,
+    "sha256": "4904f28f3ce0e8d935a644e10d248afed8e9d5db06dadc6c79992bede3a9bb42"
+  },
+  {
+    "number": 8,
+    "title": "Salusa Secundus behind imperial prestige",
+    "start_character": 41106,
+    "end_character": 47153,
+    "words": 922,
+    "sha256": "d3e5b802839bb9bd9b33ab84f12112ec3d1dd91410a0bd8d314572ed3a856732"
+  },
+  {
+    "number": 9,
+    "title": "A throne without a son",
+    "start_character": 47156,
+    "end_character": 52312,
+    "words": 812,
+    "sha256": "9a61b1bd31343d6981d1f5318b522ac075bf90f80d42154acffbe725e1ed04bd"
+  },
+  {
+    "number": 10,
+    "title": "The marriage a duke avoids",
+    "start_character": 52315,
+    "end_character": 58267,
+    "words": 955,
+    "sha256": "fbd114c735c9a15960cbe81a6cc77a91a5d756dbc5b16d70a1d77e83e3a61a4e"
+  },
+  {
+    "number": 11,
+    "title": "Children planned across enemy Houses",
+    "start_character": 58270,
+    "end_character": 64232,
+    "words": 940,
+    "sha256": "7a68a4bf6a220fe73fec1bd987c746da887a73f0be48748a3b185738e70a389a"
+  },
+  {
+    "number": 12,
+    "title": "A Mentat's place in a household",
+    "start_character": 64235,
+    "end_character": 70099,
+    "words": 915,
+    "sha256": "87aaba3e80316b52a0f62e3a0bb6e6eb4d2fb63bf0e9cbd7b20c33fd9fc5741e"
+  },
+  {
+    "number": 13,
+    "title": "The physician whose conditioning breaks",
+    "start_character": 70102,
+    "end_character": 76369,
+    "words": 1026,
+    "sha256": "6296bead22dc7ba54518bfd4fc23309e007ef54f7d16b8af23b2395674412dad"
+  },
+  {
+    "number": 14,
+    "title": "Swordmasters and personal allegiance",
+    "start_character": 76372,
+    "end_character": 82063,
+    "words": 920,
+    "sha256": "116d1f2b5df39f7488248c9e0020f27e34e44cdbbd36f7e3220a5ce7944a2928"
+  },
+  {
+    "number": 15,
+    "title": "Kanly and controlled forms of war",
+    "start_character": 82066,
+    "end_character": 88490,
+    "words": 1003,
+    "sha256": "040411a2c8dfaf2e8e422fb6815b02cc631a454d924739e75f4ac530b8df97e6"
+  },
+  {
+    "number": 16,
+    "title": "A dinner maps competing interests",
+    "start_character": 88493,
+    "end_character": 95027,
+    "words": 1028,
+    "sha256": "9b8cae2d6ff3e184b949c857581631a68482bd97b98e92c7e57bfee22b359569"
+  },
+  {
+    "number": 17,
+    "title": "Smugglers at the edge of legal power",
+    "start_character": 95030,
+    "end_character": 100595,
+    "words": 851,
+    "sha256": "83e0165c2ffb8bf981f58236ce82a403fdaa837b7601cabf35a919ecface3252"
+  },
+  {
+    "number": 18,
+    "title": "The Guild's narrow but decisive veto",
+    "start_character": 100598,
+    "end_character": 104496,
+    "words": 627,
+    "sha256": "941b27c845750e1d55e6b136bd42889c7cb6de42fdf8f11f7c3a418f3c415e0e"
+  },
+  {
+    "number": 19,
+    "title": "The trap closes on the Atreides",
+    "start_character": 104499,
+    "end_character": 110299,
+    "words": 909,
+    "sha256": "06797956b92299235ba6f62218d3e03a238394134f60f4f163e710d2012f0578"
+  },
+  {
+    "number": 20,
+    "title": "Two Harkonnen heirs and an audience",
+    "start_character": 110302,
+    "end_character": 114877,
+    "words": 707,
+    "sha256": "f7d35abf3050d2dfb5a44c08cdc1c275269e5af6ecc0763012647fb04fb6c59e"
+  },
+  {
+    "number": 21,
+    "title": "Fenring's proximity to the throne",
+    "start_character": 114880,
+    "end_character": 120865,
+    "words": 931,
+    "sha256": "f2927d6c400ecea45c686da41af84af616a909396b13f69032a36fe11422b082"
+  },
+  {
+    "number": 22,
+    "title": "A new army outside the Houses",
+    "start_character": 120868,
+    "end_character": 127092,
+    "words": 956,
+    "sha256": "76fb639f97df4e22ebbee59c19e312c870d37b55ebb23ed51d7375e4a8af8291"
+  },
+  {
+    "number": 23,
+    "title": "A marriage that settles a conquest",
+    "start_character": 127095,
+    "end_character": 132772,
+    "words": 901,
+    "sha256": "f5ac1fa6d38702461312bb34eb63f5911ae26afae65f8d3dbe51ef7762cfb513"
+  },
+  {
+    "number": 24,
+    "title": "The imperial household under pressure",
+    "start_character": 132775,
+    "end_character": 139057,
+    "words": 979,
+    "sha256": "78058f4273219ee1b950d6e19880dfe8001fb3ec5755ef91bf65bbdf85a0fb3a"
+  },
+  {
+    "number": 25,
+    "title": "House Corrino in exile",
+    "start_character": 139060,
+    "end_character": 145282,
+    "words": 968,
+    "sha256": "d74a23441afa78fbe18a3972c8246d3bbc67031658b0500fa436c4b86ae280eb"
+  },
+  {
+    "number": 26,
+    "title": "Jessica teaches an heir from another House",
+    "start_character": 145285,
+    "end_character": 151733,
+    "words": 999,
+    "sha256": "b1a4dd69d0d988cf2c2a9a1ab7090ac86a0cb1ffa3f7ea4f68adda4e4f283455"
+  },
+  {
+    "number": 27,
+    "title": "Leto reduces the old aristocratic freedom",
+    "start_character": 151736,
+    "end_character": 158001,
+    "words": 979,
+    "sha256": "f6dd02b281ac62cc9c5b9b287f145c6566f3d21b272079e0d19eb1f2ddf7f1a1"
+  },
+  {
+    "number": 28,
+    "title": "The Ixian approach to a distant ruler",
+    "start_character": 158004,
+    "end_character": 164678,
+    "words": 1043,
+    "sha256": "1076e2f05c0690594b91b085ce497dc9f09981178fc76d5faa37fef92e5740cc"
+  },
+  {
+    "number": 29,
+    "title": "After the Scattering, other forms of power",
+    "start_character": 164681,
+    "end_character": 171331,
+    "words": 1008,
+    "sha256": "9b4a0b19a86fe9f277265961805f593efd2b261bdb8bb5328f8fa22aebf738be"
+  },
+  {
+    "number": 30,
+    "title": "What a name can carry",
+    "start_character": 171334,
+    "end_character": 177775,
+    "words": 1022,
+    "sha256": "dc7cad1a0db3cf8f7f016ea40e9b495785074c693c9a6661f111d3cda5f884c0"
+  }
+]

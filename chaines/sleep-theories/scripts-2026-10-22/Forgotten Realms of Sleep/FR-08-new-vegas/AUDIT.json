@@ -1,0 +1,75 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "93cacf47be23b261f0f7025019de67b29c1a2271f14a952b5c0672f5703424a4",
+  "full_review_file": "passage-29-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "7b83cc125345ac5e4de9ffb50f259b1d0b7d537b80fdc86a8dbda1d4637597fb",
+    "2": "7fc695410b468f8e7de04b1eb5acbfd6de38af19edc3fdd17d029e076f32fe8b",
+    "3": "ba5a2f700b89e034b1bb591f829c44f7786214e4626daca323ac6f3b88df9b33",
+    "4": "2ae8adf5c78734f55768d022352c68625190902e69fb98e942471ccfb6f2c850",
+    "5": "10f62274db8a663c8a4201f7dc632c6af53f45621b62743b3b933a25f64ef2ef",
+    "6": "9d1ca732743107517ef3a45fa9b8c6b335fcc5478ba6458b4bd2983bd5fe769d",
+    "7": "c70b607dce51f2709a1a1b43497b153e422b8f579696fa25d8bb3e4cf1797fe8",
+    "8": "e6f0887b70c391b298c05458d796fedd6ac359ea87cc181af10721a7af3309dd",
+    "9": "bcf659740de41fec204f657b829348d2da50ba690c1efa3bbf56107024e49e28",
+    "10": "5ee8c4ddef8c55521e19e4e0ccf898a82abcf11f7b4da723287c7325e48f16aa",
+    "11": "f00247076998bfb8edef242543a78735f9686675bfb23b8c0ff6619f9d025996",
+    "12": "643029b65bb256e085e70a0386d850f13d71b22ddcf00903897254071244dead",
+    "13": "b3e1141b6367aba0c551e7e8709d28e2d639c1d8733ab85b14856a252cd0e998",
+    "14": "2e839bd773578400800eb17fee16f99574abd3330f1943a3b86361627b3e4db0",
+    "15": "b1d5d5a20357f33934982616bc068258ccec8fb1ec68e412bd933576c6fcdf35",
+    "16": "9eb4d54cedc206ecd550900719b7026f5853698d56b6661b424193559103a59e",
+    "17": "bd423d4a344407767d3f407cfedfd6fc0637c522f136ca3fad159e05c0e2afed",
+    "18": "cc74ef9c5e6a79b599f0c9cc2111d52495a24df3aa55610663e0ae580eed1fbd",
+    "19": "28e8d317a737e96818489098e50b1eb39da2d52373b0fcb83e23851ff19fbfe6",
+    "20": "37170d657b6815bbd8d116f2330089784ea52f43004f7b92a0d8e942bee6c4b5",
+    "21": "8707954cd87264e3ccd4d7b978841ef568e49b114fa455cc1067799ced7675bf",
+    "22": "341770b779346df49599d4b57797646c169f5f5c1b43d746239c7f1bd51ce284",
+    "23": "0272632f3b7b3fb8824ab5bc1e80b635485b5e90484f52ee261425d2de40a260",
+    "24": "0a2a9705e6cca4ac41a6f7788f263592b4b257d745c80a6fce3398038d135f27",
+    "25": "f6bf37b55d14fe79c1c0b5cc527efd41c4b5432270a27dc312ff9183b05cd11c",
+    "26": "13605017b9631bf8d653d25d46b948adc80be29a26f57b9580e52633b796bf47",
+    "27": "1bdb15d5ea99f017ab86d4f753ff948ae4de85ea8a30b05f0e0c129059d5c7f5",
+    "28": "f6aeb2f345851d4950f1eba1444381b01c8b68512d5d27c5800f9c8ec444a4a9",
+    "29": "1569a7746e01569180a6a5a14fe923d69468100bcb01dc7cc6740bea334dee49",
+    "30": "4fcc332691b852c66d99514017343050cf9adfce63238eec8ad66e17714906f3"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "La limite spoilers et la distinction des fins conditionnelles sont volontaires. Elles restent dans l ouverture pour orienter l auditeur."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Le bref paragraphe assure le passage de la premiere audience a l offre de travail ; son isolement ne rend pas son sens defectueux."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion porte sur la limite de verification de Caesar, consequence propre a l invitation et au retour du Courier."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "L ouverture donne le contraste institutionnel necessaire avant de comparer les lendemains politiques des Kings et Followers. Elle n invente pas de nouvelles penuries."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel de l interet strategique de Lanius distingue le retrait d une sympathie pour NCR. Il maintient le point de vue de l adversaire dans le denouement."
+    }
+  },
+  "scope_status": "The assembled narration stays within the base-game Mojave conflict and permitted earlier background. Its four major outcomes, optional faction work and Courier identity remain conditional. No supplied proof is contradicted by a clear factual error identified here. Greenlight A: pass for the sleep adaptation; chapter 1's quoted first sentence gives a concrete event, and its 63-word opening promises the conflict and four outcomes paid in chapters 2-30. B: local questions close chapter by chapter; no urgent rehooks, unresolved loops or ending CTA are needed. The listed repeated passages are the actionable progression defects. C: pass with those local cuts; roads, settlements, faction authority and the Dam trace to one spine. D: local edits advised. The narration's concrete-to-causal spoken shape appears in \"Ringo is hiding in Goodsprings' abandoned gas station because Joe Cobb wants him dead.\" No machine-tier hit or mechanical artifact is reported in the supplied measurements. Numbers in the narration are chiefly game identifiers, ranks or small counts; this review found no invented statistic. The supplied scan reports an antithesis floor of one, not a complete by-eye antithesis ledger. E: originality cannot be certified from prose alone; the supplied comparison reports no 12-word reference matches, while human review, publication practices and platform judgment remain unverified.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "Non fourni",
+    "B": "Non fourni",
+    "C": "Non fourni",
+    "D": "Non fourni",
+    "E": "Non fourni"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

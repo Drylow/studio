@@ -1,0 +1,90 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "scope",
+    "severity": "minor",
+    "reviewer_reason": "Someone has left a prisoner there implies an unestablished actor or intention; the assigned opening needs only the occupied cell and concealed passage.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La phrase decrit le fait ordinaire d un prisonnier place dans une cellule que les gardes attendaient vide ; elle ne lui attribue ni conspirateur nomme ni intention secrete."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 4,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter 3 has just narrated the handoff and named Jauffre; chapter 4 can begin with the delivery's destination rather than replaying the moment.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Deux phrases rattachent clairement l objet confie au destinataire du nouveau trajet. Ce rappel causal bref permet d enchainer vers Jauffre sans rejouer l assassinat."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 15,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraphs have established the missing fourth volume, sponsor meeting and recruitment connection; this paragraph circles those points without advancing the encounter.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le passage explique pourquoi une collection de livres constitue une filiere de recrutement, consequence utile de l invitation de Gwinas."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 17,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Lake Arrius Caverns, the map and the books' completed function have already been stated; this closing recap adds no consequence.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La fin ferme l enigme de l acrostiche en donnant la destination utilisable ; cette resolution locale est appropriee au rythme sleep."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 22,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening already explains consumption and Azura as one possible choice; after the Star's distinctive reusable property, only the choice itself needs restating.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La condition variable de l artefact est repetee pour eviter de fixer Azura comme choix canonique. L exemple du cout reste bref et directement lie au rituel."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 24,
+    "kind": "structure",
+    "severity": "minor",
+    "reviewer_reason": "The backward comparison interrupts Miscarcand immediately after the king's opposition has been made concrete; its final sentence only abstracts that difference.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison porte sur deux reactions opposees des morts a la prise d un objet, ce qui explique le danger particulier de Miscarcand sans nouvelle visite de Sancre Tor."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 25,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The preceding paragraph has just explained Burd witnessing the stone's removal and the resulting closure; this isolated sentence repeats the lesson.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Cette seule phrase est la consequence pedagogique pour Burd, distincte de la description technique de la fermeture."
+    }
+  },
+  {
+    "number": 8,
+    "chapter": 28,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The engine's advance, deadline and objective have all been established in the first three paragraphs; this is the least useful second explanation of the same pressure.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison etablit la pression du siege actif sur cette traversee, plutot que de donner une nouvelle liste de lieux ou des instructions de combat."
+    }
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "number": 1,
+    "title": "An order born inside a military base",
+    "start_character": 0,
+    "end_character": 4652,
+    "words": 712,
+    "sha256": "06e00692edbb8afc2e07c914558e2f4eb362060ddf40a063f968fecfc77dc95c"
+  },
+  {
+    "number": 2,
+    "title": "The experiments that break allegiance",
+    "start_character": 4655,
+    "end_character": 9355,
+    "words": 720,
+    "sha256": "2c9a5ba0cef8b4a2f4b5fc83ca13b890e6d5bfbf68891dd74c82d1955d15da1b"
+  },
+  {
+    "number": 3,
+    "title": "The bombs fall after the break",
+    "start_character": 9358,
+    "end_character": 15115,
+    "words": 875,
+    "sha256": "ac11acb458dca82865c9178accf878f36f6dce28c0f0af58bd36a0581bc2170d"
+  },
+  {
+    "number": 4,
+    "title": "The march to Lost Hills",
+    "start_character": 15118,
+    "end_character": 20899,
+    "words": 917,
+    "sha256": "38beb41d2884a956ee8dbdb82a865616a8ff598a3629c0441d87600faa9eaba5"
+  },
+  {
+    "number": 5,
+    "title": "Knights, scribes and a new inheritance",
+    "start_character": 20902,
+    "end_character": 26915,
+    "words": 938,
+    "sha256": "eb04ce418d51b032c1f82f5755159db60fb94472dc02a8bcfdf7067a00fb0cd8"
+  },
+  {
+    "number": 6,
+    "title": "Why names from another age matter",
+    "start_character": 26918,
+    "end_character": 31306,
+    "words": 682,
+    "sha256": "30ca064113d3b086fdd753117af834fb7d07dbb9e73119fe2e9940e3501166a9"
+  },
+  {
+    "number": 7,
+    "title": "A second beginning in Appalachia",
+    "start_character": 31309,
+    "end_character": 36078,
+    "words": 736,
+    "sha256": "92d947f617cc02a2fac88947a976a7e13704834bad7cd7534234d0dc2a093857"
+  },
+  {
+    "number": 8,
+    "title": "Fort Defiance and the Scorched",
+    "start_character": 36081,
+    "end_character": 42558,
+    "words": 961,
+    "sha256": "0c27edd86c9a9c942b2a8c150a76fd0f1e5befe69970b22312e88bd5b4add228"
+  },
+  {
+    "number": 9,
+    "title": "Thunder Mountain and local dependency",
+    "start_character": 42561,
+    "end_character": 48749,
+    "words": 903,
+    "sha256": "c3b05748e78d38f12c9ded05da7f746891e9df6176a184dfce19a85cc7693eba"
+  },
+  {
+    "number": 10,
+    "title": "Rahmani's expedition reaches the east",
+    "start_character": 48752,
+    "end_character": 54637,
+    "words": 876,
+    "sha256": "ddeeccce65c0c0e276d8ef05faac39a1a9da0f829a318280a38c2c7a8bfc2bf9"
+  },
+  {
+    "number": 11,
+    "title": "The transmitter and a broken link",
+    "start_character": 54640,
+    "end_character": 59876,
+    "words": 781,
+    "sha256": "d5e00f7c7bc0706315508d32b888f781847ea3ac8b6c0a9536b28705e8eb1b2b"
+  },
+  {
+    "number": 12,
+    "title": "Steel Reign asks who should decide",
+    "start_character": 59879,
+    "end_character": 66597,
+    "words": 1019,
+    "sha256": "1c33ab85d6b03ac35fdb0f2776df821b4028077c6ba1d3b0d807c5f2dde23938"
+  },
+  {
+    "number": 13,
+    "title": "Lost Hills meets the Vault Dweller",
+    "start_character": 66600,
+    "end_character": 72287,
+    "words": 858,
+    "sha256": "53b38c63f0b22c6a2c84cca406c2a244cb691a0e2f026f33e01042f90938f435"
+  },
+  {
+    "number": 14,
+    "title": "The Glow keeps the old danger visible",
+    "start_character": 72290,
+    "end_character": 78300,
+    "words": 916,
+    "sha256": "890725f72d1e5f2082bdbd210cff7758eed53f8e879f64f7e976bd1e7adc4d77"
+  },
+  {
+    "number": 15,
+    "title": "The Master's army changes the calculation",
+    "start_character": 78303,
+    "end_character": 84922,
+    "words": 1023,
+    "sha256": "5a61275ae8e658ee727177d8aeb30a32947f495dfee7e89dd3c343fc62279397"
+  },
+  {
+    "number": 16,
+    "title": "A more powerful neighbor rises",
+    "start_character": 84925,
+    "end_character": 91458,
+    "words": 956,
+    "sha256": "fac53b2caae05fbe189fa68529fd923ee70ed8a627be0729b635b826b8d1f564"
+  },
+  {
+    "number": 17,
+    "title": "Matthew's assignment in San Francisco",
+    "start_character": 91461,
+    "end_character": 97142,
+    "words": 868,
+    "sha256": "dd9b6c27f13254923a618a0e7b136915630014787c2a34f22d83622ef2df6d74"
+  },
+  {
+    "number": 18,
+    "title": "A dispute over the NCR's future",
+    "start_character": 97145,
+    "end_character": 103543,
+    "words": 939,
+    "sha256": "e0e44ecf7c4d4f23435be0fe8e649049a93acb408aff4ce08942b2ffb2cae2b0"
+  },
+  {
+    "number": 19,
+    "title": "HELIOS One ends an exposed position",
+    "start_character": 103546,
+    "end_character": 109874,
+    "words": 979,
+    "sha256": "7c1f1eccf3e454ff29fcfd418d1034b3937f1e6b5485e910575f3a57be98fb73"
+  },
+  {
+    "number": 20,
+    "title": "Hidden Valley under McNamara",
+    "start_character": 109877,
+    "end_character": 116628,
+    "words": 1002,
+    "sha256": "125696265734f4e1addda745763bf06dfca274d651f56f33bbb22fa0c492b5d9"
+  },
+  {
+    "number": 21,
+    "title": "Hardin and Veronica want different changes",
+    "start_character": 116631,
+    "end_character": 122502,
+    "words": 880,
+    "sha256": "9dfa27cf175e44651ee315b4dc8dcb27a6e40ef74051ea61d867c52877157085"
+  },
+  {
+    "number": 22,
+    "title": "A conditional place in the Mojave war",
+    "start_character": 122505,
+    "end_character": 128160,
+    "words": 878,
+    "sha256": "bcbc143de7f9f7760958d95788dd4469ea1822c480403a44f0df272c26fa693f"
+  },
+  {
+    "number": 23,
+    "title": "Lyons reaches the Capital Wasteland",
+    "start_character": 128163,
+    "end_character": 135064,
+    "words": 1035,
+    "sha256": "51c15d42418808115d6ba1cd855cabeef49a63fca473e1e3e698e48ae6c72f7b"
+  },
+  {
+    "number": 24,
+    "title": "The Outcasts preserve another mission",
+    "start_character": 135067,
+    "end_character": 141390,
+    "words": 926,
+    "sha256": "01a294cae07f80dcd0c1ed4ca162ba52dc041c59b748e07abfc0b4cf848b088f"
+  },
+  {
+    "number": 25,
+    "title": "Project Purity creates a public duty",
+    "start_character": 141393,
+    "end_character": 148106,
+    "words": 1024,
+    "sha256": "a425ffe76531188aa321d230321dbc2b8f81d51207dfbdd44611dab73da5989c"
+  },
+  {
+    "number": 26,
+    "title": "The young Maxson inherits a name",
+    "start_character": 148109,
+    "end_character": 154923,
+    "words": 1038,
+    "sha256": "3d75e3c56531935c3450d88acae75c10520ca87fb68931f6ff053163009fb8a5"
+  },
+  {
+    "number": 27,
+    "title": "The Prydwen brings a larger institution",
+    "start_character": 154926,
+    "end_character": 162017,
+    "words": 1048,
+    "sha256": "378b3bdd11534e65721aa70816e3114b45e94b3620dce92ea1d91954d99d80d1"
+  },
+  {
+    "number": 28,
+    "title": "Danse and the line drawn around humanity",
+    "start_character": 162020,
+    "end_character": 168862,
+    "words": 1075,
+    "sha256": "91e0b73fc4b99b4663e5237ea18ca7d58dd99e33f1e8fb9c443ef1fda231b905"
+  },
+  {
+    "number": 29,
+    "title": "The Commonwealth chooses between incompatible forces",
+    "start_character": 168865,
+    "end_character": 175524,
+    "words": 994,
+    "sha256": "232acf372eac01e3210c0bc5c4575c148622b114d3ad3b9e33a5304a5a426db9"
+  },
+  {
+    "number": 30,
+    "title": "The argument carried into each new bunker",
+    "start_character": 175527,
+    "end_character": 180023,
+    "words": 684,
+    "sha256": "32779b4e53e4b2f02e1dfe56b681d407c231782d5733ce78c5296e408058bba9"
+  }
+]

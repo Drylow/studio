@@ -1,0 +1,337 @@
+[
+  {
+    "file": "APERCU-15-MINIATURES.jpg",
+    "bytes": 1436048,
+    "sha256": "0bca088c0da1a872ca3d4607cd49956d5ea079dcba280f320ae6aa9dbb36e602"
+  },
+  {
+    "file": "APERCU.html",
+    "bytes": 6487,
+    "sha256": "d1298875d7ae8d12a1ada84284cb4557f30df0c26189654e80b9c49ce7f1e971"
+  },
+  {
+    "file": "Deep Void Theories/DV-08-bene-gesserit/MINIATURE.jpg",
+    "bytes": 471545,
+    "sha256": "9135aae7d6eaccd925922032f0733510ebd710c90b18ce2a466ef83145603bf6"
+  },
+  {
+    "file": "Deep Void Theories/DV-08-bene-gesserit/ORIGINAL.png",
+    "bytes": 2661251,
+    "sha256": "eb414c53ff39c4daaa6c09f8cbe43a613f59654283d4a70700f531c0abfbd154"
+  },
+  {
+    "file": "Deep Void Theories/DV-08-bene-gesserit/PROMPT.txt",
+    "bytes": 1640,
+    "sha256": "4c10bac26c94d335bb43ea9e7d19207f7ac7a0e8edf55b151ca96a0f09ea3aea"
+  },
+  {
+    "file": "Deep Void Theories/DV-08-bene-gesserit/TITRE.txt",
+    "bytes": 74,
+    "sha256": "2510dc430c491633d5d1cf25df8f742b6871262f8b0d73a39923ab9608db09ee"
+  },
+  {
+    "file": "Deep Void Theories/DV-09-jedi-order/MINIATURE.jpg",
+    "bytes": 489836,
+    "sha256": "efeb0de532559559dc697622635a0eec4e09d05eeb3b9e23bacfd150efd76ca7"
+  },
+  {
+    "file": "Deep Void Theories/DV-09-jedi-order/ORIGINAL.png",
+    "bytes": 2757266,
+    "sha256": "532738609a5910a4825e6d549451b34381ec1b02a10c1bd4983aaf4b787cb0b2"
+  },
+  {
+    "file": "Deep Void Theories/DV-09-jedi-order/PROMPT.txt",
+    "bytes": 1333,
+    "sha256": "d54d4ac81646a4b996d668bb7b4ce72f12220e9c589826904a5c91320e406965"
+  },
+  {
+    "file": "Deep Void Theories/DV-09-jedi-order/TITRE.txt",
+    "bytes": 82,
+    "sha256": "b0a8580e8b22f68e306433aa27b1135c918b8c21fa3f91bab7278950846728e2"
+  },
+  {
+    "file": "Deep Void Theories/DV-10-fremen/MINIATURE.jpg",
+    "bytes": 528632,
+    "sha256": "ef3ee3fe6ecdd6b150b5765898f3323205cce8694042e361aeaefe6a0a4be1f4"
+  },
+  {
+    "file": "Deep Void Theories/DV-10-fremen/ORIGINAL.png",
+    "bytes": 2872627,
+    "sha256": "ae30312fa8933a0f1ba84da49d6dd6aa46e147e2f53dbe3ae741b924fcb3108b"
+  },
+  {
+    "file": "Deep Void Theories/DV-10-fremen/PROMPT.txt",
+    "bytes": 1456,
+    "sha256": "c37cdf53c52f7694f66d17ced0e15354561e43e0f4d5b2e0ec9d45999658c141"
+  },
+  {
+    "file": "Deep Void Theories/DV-10-fremen/TITRE.txt",
+    "bytes": 74,
+    "sha256": "292cf6c522987c6a6fb6ad28eecdd57782afca79a63153bc86976ad998025414"
+  },
+  {
+    "file": "Deep Void Theories/DV-11-old-republic/MINIATURE.jpg",
+    "bytes": 562733,
+    "sha256": "ebc30eae0a8b720133b409abd0ef4b272af2f1302e48c36e5f47c49d0e589574"
+  },
+  {
+    "file": "Deep Void Theories/DV-11-old-republic/ORIGINAL.png",
+    "bytes": 3058282,
+    "sha256": "1be2c86db9da6e7299185e80a15a4d7a98fed3ce5d084e8551edc0ce7708e22a"
+  },
+  {
+    "file": "Deep Void Theories/DV-11-old-republic/PROMPT.txt",
+    "bytes": 1439,
+    "sha256": "f897fae0f6ed46033cf5270f153561612387c9555a34b9d475ad3ebfcb4d1aab"
+  },
+  {
+    "file": "Deep Void Theories/DV-11-old-republic/TITRE.txt",
+    "bytes": 78,
+    "sha256": "13c5dc84c619dcbe4f422740485431ab7829b69ca04fb5a656f9ecc6c5faad49"
+  },
+  {
+    "file": "Deep Void Theories/DV-12-great-houses/MINIATURE.jpg",
+    "bytes": 468901,
+    "sha256": "891db528173fdcfa7eb2100afc05e9fe8f8fff5bca32612dc32745c0ca7f5f47"
+  },
+  {
+    "file": "Deep Void Theories/DV-12-great-houses/ORIGINAL.png",
+    "bytes": 2599353,
+    "sha256": "302758098bd7703dd4b9cfcc76d3411736aab30b983a65938aea0d546b7af31b"
+  },
+  {
+    "file": "Deep Void Theories/DV-12-great-houses/PROMPT.txt",
+    "bytes": 1513,
+    "sha256": "09e62c56fd6b02f30ca9a6698ed60c8e217e15c30c849e195b05f951a91a1bdd"
+  },
+  {
+    "file": "Deep Void Theories/DV-12-great-houses/TITRE.txt",
+    "bytes": 66,
+    "sha256": "bb48df0b00c74a86df8ffa668177cb47ba906dad4ac3df1cd2e566ab958dcf7d"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-04-daedric-princes/MINIATURE.jpg",
+    "bytes": 569747,
+    "sha256": "ec746756c0106dc73e3e8a9a8f22f7e9e74d9124901b7c427a3f5118bbba81fe"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-04-daedric-princes/ORIGINAL.png",
+    "bytes": 3003529,
+    "sha256": "03d81fd94186ac00d9aa245a0dcdbfba9640a72df9ce340f16ff00004a604a91"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-04-daedric-princes/PROMPT.txt",
+    "bytes": 1605,
+    "sha256": "3f4935d19dbfaa438690a87c768a282c24e628ee4d8d6f5ae1da4ae5d63ba6b3"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-04-daedric-princes/TITRE.txt",
+    "bytes": 70,
+    "sha256": "e2b35a65442a3bc5d66c1eb9cb2d193a4891562792914bd576ba8f95e7547975"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-05-brotherhood/MINIATURE.jpg",
+    "bytes": 581192,
+    "sha256": "c3d1c104c12edb61e26ea53853d77355cdbb096402230042ab1471956355a0a3"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-05-brotherhood/ORIGINAL.png",
+    "bytes": 2703568,
+    "sha256": "deb5b98cade68447fc2f61ccb26a55a053fdb26e5827c4cb9da091194eb93a65"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-05-brotherhood/PROMPT.txt",
+    "bytes": 2669,
+    "sha256": "e1d1c920e607eeafbd742608605f8423027d726be220288b1680db7a791da498"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-05-brotherhood/TITRE.txt",
+    "bytes": 81,
+    "sha256": "c8cc9700df0294b92fb98e51bbd3bd062a7135f04e468698a6a5a3583bab1138"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-06-elden-ring/MINIATURE.jpg",
+    "bytes": 601723,
+    "sha256": "85d3dff10a9f79391aac3c444c2e37c35c165f46150bc467e4047f654d90bff4"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-06-elden-ring/ORIGINAL.png",
+    "bytes": 2982876,
+    "sha256": "c5e92d8c362e95617d78d7719f4bb97e3b51b9e77b781a212eb21112eddfab4a"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-06-elden-ring/PROMPT.txt",
+    "bytes": 1585,
+    "sha256": "451c87ebddd276fb4070407478fe232d03b58d6b5651862001f39190a35b3a02"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-06-elden-ring/TITRE.txt",
+    "bytes": 53,
+    "sha256": "5a942aea7d7552de9aaf58a01579d74bc9c8506a7594693dd99c96e86a90ce9e"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/MINIATURE.jpg",
+    "bytes": 538929,
+    "sha256": "90a7624c71235081654310050d62b0e5ff8a76d250482d6bebda6b3f5687cdf9"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/ORIGINAL.png",
+    "bytes": 2589207,
+    "sha256": "2d151a41f292176b3303cdfcc397dff499a4912dec40185335ce998994174765"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/PROMPT.txt",
+    "bytes": 2527,
+    "sha256": "3e5bdb4b6ca0653435037aad76286e3b79addd56bb4a5766794b4df9e2ebcda5"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-07-oblivion-crisis/TITRE.txt",
+    "bytes": 70,
+    "sha256": "76c2dcf49626dbca089eb9cd5c7ffb9238397ef12a63699ae1e26354cf50ea6c"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-08-new-vegas/MINIATURE.jpg",
+    "bytes": 513786,
+    "sha256": "90af21ead7be62f21f0a697b610283bc7286aa2403ae80ffbc6dde371c19a301"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-08-new-vegas/ORIGINAL.png",
+    "bytes": 2462981,
+    "sha256": "70d0bd402629ec0c6ce1532adafb236f5e8ee9a231207f73323dd2af7d6bf104"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-08-new-vegas/PROMPT.txt",
+    "bytes": 2499,
+    "sha256": "bb9a1f27d70b2d4ad677aa337688cea85becbe316ca62c8f5d7a23a01e1d282f"
+  },
+  {
+    "file": "Forgotten Realms of Sleep/FR-08-new-vegas/TITRE.txt",
+    "bytes": 66,
+    "sha256": "2040281433d7fc8fb84d455f239c0ebe92b069b927b1372921b5b98b1e78e1e9"
+  },
+  {
+    "file": "LIRE-MOI.txt",
+    "bytes": 330,
+    "sha256": "8d088d4ff81c5798f010d3569e1630c74450f3ee852a191d06906cb6df9f794d"
+  },
+  {
+    "file": "prompts.json",
+    "bytes": 37293,
+    "sha256": "8eeaef784806b76b309ab9d4f77a7c39f9ff7658739677c73a7cb0cdf3f6fb81"
+  },
+  {
+    "file": "Quiet Paradox/QP-07-silo-builders/MINIATURE.jpg",
+    "bytes": 432778,
+    "sha256": "86eaab63ab9687cc0274a016716ce7673b9765a383ae55eea031ca507ea494c6"
+  },
+  {
+    "file": "Quiet Paradox/QP-07-silo-builders/ORIGINAL.png",
+    "bytes": 2311457,
+    "sha256": "400f4c7e4b54ee21b240924d68095bd7ddbb7b8d08ed9bf57bcf7d99d920bf21"
+  },
+  {
+    "file": "Quiet Paradox/QP-07-silo-builders/PROMPT.txt",
+    "bytes": 1806,
+    "sha256": "bd6bbe84b0843d5c149bac1547b852a0cc8a23d4a4e8a7258afec4c010227944"
+  },
+  {
+    "file": "Quiet Paradox/QP-07-silo-builders/TITRE.txt",
+    "bytes": 68,
+    "sha256": "67a04eee213e504f359e0aac82b9da6586a1c185237e2fa36186fa430e7a772a"
+  },
+  {
+    "file": "Quiet Paradox/QP-08-from-rules/MINIATURE.jpg",
+    "bytes": 458108,
+    "sha256": "8c1cba9442768a64a324d8735b6d82feab32df0be5d2b92b4e4deab57aa726be"
+  },
+  {
+    "file": "Quiet Paradox/QP-08-from-rules/ORIGINAL.png",
+    "bytes": 2274051,
+    "sha256": "d0d8e2bfb5605b6674fc3aae9cbca0ba7ec9f5be83b8f8df51a7ac0bd98b4565"
+  },
+  {
+    "file": "Quiet Paradox/QP-08-from-rules/PROMPT.txt",
+    "bytes": 3067,
+    "sha256": "37158e95bc334706e74c48c4e6ed754491921332b732780beb64f9419c7a55d2"
+  },
+  {
+    "file": "Quiet Paradox/QP-08-from-rules/TITRE.txt",
+    "bytes": 69,
+    "sha256": "9d400b27fd3b67e0467f716c977befcbc0d9c0d5ec7c7b51e636a4e97d35cebb"
+  },
+  {
+    "file": "Quiet Paradox/QP-09-lumon-building/MINIATURE.jpg",
+    "bytes": 360758,
+    "sha256": "c1726898708bfebf84c2cc93aa3191f5ba5e3ee1a3d785bf4739d343283f197d"
+  },
+  {
+    "file": "Quiet Paradox/QP-09-lumon-building/ORIGINAL.png",
+    "bytes": 2150657,
+    "sha256": "3f4b29fbc7d1b1bd9ed43a0038e4bc1eced24c86ae0cbb46f6f4117f7e4de396"
+  },
+  {
+    "file": "Quiet Paradox/QP-09-lumon-building/PROMPT.txt",
+    "bytes": 1875,
+    "sha256": "e7ff42a5d69037dc0f9f977c17634fddd459348ac4bfc40b0616d533e9b72bab"
+  },
+  {
+    "file": "Quiet Paradox/QP-09-lumon-building/TITRE.txt",
+    "bytes": 71,
+    "sha256": "d2a49617c68738e182b77d8237dfb847a0da8cb6110245839876f36c066f630f"
+  },
+  {
+    "file": "Quiet Paradox/QP-10-silo-outside/MINIATURE.jpg",
+    "bytes": 466742,
+    "sha256": "ec94c45427e1fcdf08e747e48ab36db63b41d94b0de35d271c6eef5d57b0ad4b"
+  },
+  {
+    "file": "Quiet Paradox/QP-10-silo-outside/ORIGINAL.png",
+    "bytes": 2359985,
+    "sha256": "2d4c2440d49de50452efa5640ffbf0bf2f58f92b99a56922bca70d4d97d2f71c"
+  },
+  {
+    "file": "Quiet Paradox/QP-10-silo-outside/PROMPT.txt",
+    "bytes": 2557,
+    "sha256": "f258c061081fbb97922c2d9114ba8a904d1b44b973fb1ed8594c415e2dfcf210"
+  },
+  {
+    "file": "Quiet Paradox/QP-10-silo-outside/TITRE.txt",
+    "bytes": 70,
+    "sha256": "43e3958593aac1688bbf7ca20819d44c9f7fbac75971974aae1bb1134af1dc3c"
+  },
+  {
+    "file": "Quiet Paradox/QP-11-from-cycles/MINIATURE.jpg",
+    "bytes": 523611,
+    "sha256": "59a8e6029007293b6b84a506a851bfb924ae0c452340bba1c1128a2e2c922c5f"
+  },
+  {
+    "file": "Quiet Paradox/QP-11-from-cycles/ORIGINAL.png",
+    "bytes": 2571978,
+    "sha256": "e9b7e15b65862e3c46ba4f5877bc6df758eb3b4d966e0cc2ace400c7a16f6ee4"
+  },
+  {
+    "file": "Quiet Paradox/QP-11-from-cycles/PROMPT.txt",
+    "bytes": 1844,
+    "sha256": "1de9e486dbf5d0d18dcafd81b4b8a4f2f4257aa6e01e4824c6121421be055b4d"
+  },
+  {
+    "file": "Quiet Paradox/QP-11-from-cycles/TITRE.txt",
+    "bytes": 75,
+    "sha256": "1630718dc2e087544d139684719389225345eb52578446f2e68c12da48aae436"
+  },
+  {
+    "file": "README.md",
+    "bytes": 4089,
+    "sha256": "e0470f42fd95d4190707f41fe0548481b3ae292e954ea0ae4bc5b5956af1c4c4"
+  },
+  {
+    "file": "review.json",
+    "bytes": 11579,
+    "sha256": "68be97fe8b1fcbcbdf48207f811a6349cfc7ca966c843a6e670e579db801ce01"
+  },
+  {
+    "file": "sources-references.json",
+    "bytes": 12430,
+    "sha256": "45d7e8fb62f66c353fc96aedb97901e64af556b5673bffbb8cea38e80050367a"
+  }
+]

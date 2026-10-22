@@ -1,0 +1,67 @@
+{
+  "id": "DV-08-bene-gesserit",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 26632,
+  "characters_including_spaces": 170210,
+  "characters_excluding_whitespace": 143245,
+  "estimated_minutes": {
+    "140": 190.2,
+    "150": 177.5,
+    "160": 166.4,
+    "170": 156.7
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 979,
+    "2": 947,
+    "3": 660,
+    "4": 803,
+    "5": 966,
+    "6": 705,
+    "7": 707,
+    "8": 761,
+    "9": 906,
+    "10": 1055,
+    "11": 835,
+    "12": 907,
+    "13": 753,
+    "14": 928,
+    "15": 1026,
+    "16": 705,
+    "17": 1007,
+    "18": 952,
+    "19": 894,
+    "20": 862,
+    "21": 1002,
+    "22": 983,
+    "23": 977,
+    "24": 984,
+    "25": 871,
+    "26": 847,
+    "27": 1027,
+    "28": 1072,
+    "29": 880,
+    "30": 631
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 0,
+    "echo": 21,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "If you'd enjoy more evenings with Dune, you can subscribe to Deep Void Theories. And if you feel like leaving a comment, tell us your part of the world and whether you're listening in daylight or after dark.",
+      "word_offset": 259
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "9c6282d64739b4382fb6a6bcdfa5599dec9024a95dee87b16ad6604d2f304044"
+}

@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import sys
 
-REVISION = "visual-audit-2026-10-21-v4"
+REVISION = "visual-audit-2026-10-22-v7"
 CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action", "background_cast")
 SEVERITIES = {"none", "minor", "major", "uncertain"}
 PRIMARY_RISKS = {"desk_camera_change", "owner_flagged"}
@@ -24,12 +24,17 @@ drawing_style: same drawn finish, no flattened/chibi redesign or unintended
 flesh-tone faces when the reference characters have pure-white cartoon skin.
 identity: named cast, wardrobe, no duplicated or missing actor required by action.
 anatomy: exactly one pupil per visible eye, attached arms/hands, supported props.
-furniture_geometry: seated pelvis/back supported by chair behind the body,
-legs under an opaque table, operator at the desk working edge, chest facing the
-keyboard and screen. Keyboard nearest operator, display beyond keyboard; hands
+furniture_geometry: seated pelvis/back supported by chair behind the body.
+For writing or typing ON a table, legs fit under the actual working edge and
+the operator's chest faces the keyboard and screen. Keyboard nearest operator,
+display beyond keyboard; hands
 reach from the operator side. Flag sideways perching and a rotated actor pasted
 onto a frontal desk/room. Profile/over-shoulder is fine only with coherent desk
-projection. A standing visitor beside a desk is legitimate. If spatial alignment
+projection. A standing visitor beside a desk is legitimate. A seated person
+reading a document held in their lap or turning to talk may also sit beside a
+table: do not invent a keyboard-operator requirement for that different task.
+This does not excuse a sideways body actually typing or writing on a worktop.
+If spatial alignment
 cannot be established confidently, use uncertain rather than invent a rationale.
 scene_action: plausible staging for the narration, motivated expression, consistent
 scene materials/landmarks where a scene anchor is provided. A purposeful object
@@ -49,8 +54,11 @@ distinct hair/clothes and motivated expressions; do not require bald clones.
 Inventory visible extras by position, or state that none are present. Rear or
 occluded faces may legitimately hide eyes. A front-facing blank disc is not a
 finished face. Follow the reference eye design rather than impose a different
-channel's eyes. A tiny stylized profile feature alone does not make an otherwise
-round cartoon head a realistic human face; judge the actual construction.
+channel's eyes. Inspect the OUTER head contour as well as the skin colour: a
+human-shaped nose, ear or angular jaw projecting from a background profile does
+not match a simple circular-head reference. Hair may wrap the circle and profile
+views may hide one eye; they do not excuse changing the underlying head anatomy.
+Apply this also to depicted people inside photos, screens, paintings and mirrors.
 Return JSON only: {"confidence":0.0,"checks":[{"category":"drawing_style",
 "severity":"none|minor|major|uncertain","reason":"specific visible evidence"},
 ...one entry for EACH of the six categories...],"summary":"short diagnosis"}.
@@ -70,6 +78,16 @@ redesign, or a workstation with actor and keyboard facing different axes are
 real defects. Inspect desk/chair/body alignment even when two hands touch keys;
 attached limbs alone do not establish a plausible operator position. Compare the
 drawing's detail/shadows/proportions as well as its broad cartoon category.
+
+Do not turn a harmless illustrative variation into a repair request. A supported
+notebook instead of a folder, a still expression instead of a literal moving nod,
+or a pointing gesture toward an adjacent record is severity none UNLESS it makes
+the narrated event materially wrong or physically impossible. Abstract interface
+row counts are not errors when the narration specifies no count and the relevant
+states remain distinguishable. A place or group merely mentioned in dialogue
+need not be physically present in the current location. Preserve genuine flaws:
+wrong head construction, duplicated pupils/actors, broken limbs, unsupported
+bodies, contradictory actions and materially changed room geometry still fail.
 """
 
 
@@ -109,7 +127,7 @@ def route_primary(result, item):
                 requires_primary_review=bool(risks) or result.get("decision") != "pass")
 
 
-def image_part(path, side=1024):
+def image_part(path, side=2048):
     import base64
     import io
     from PIL import Image

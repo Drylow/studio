@@ -1,0 +1,250 @@
+[
+  {
+    "number": 1,
+    "title": "A building whose builders are missing",
+    "start_character": 0,
+    "end_character": 5324,
+    "words": 868,
+    "sha256": "50875a31a098ab3c12f7b35f78cec85113a4c7f263221c3f6b7d107d6b1de314"
+  },
+  {
+    "number": 2,
+    "title": "What the Pact preserves",
+    "start_character": 5327,
+    "end_character": 10643,
+    "words": 841,
+    "sha256": "b793803f763d4dfd58cb81b1ac23214937ddc0e17f1eadb18639d8d1677088fd"
+  },
+  {
+    "number": 3,
+    "title": "An engineer encounters older machinery",
+    "start_character": 10646,
+    "end_character": 16332,
+    "words": 901,
+    "sha256": "09247e5565fd28b23668af00e9ebdfb23f4997839a376e6d1df00b3b1be600d6"
+  },
+  {
+    "number": 4,
+    "title": "The dig below the accepted floor",
+    "start_character": 16335,
+    "end_character": 22393,
+    "words": 979,
+    "sha256": "dcfe6575031367570effb18b0b4d2a2da96c8a950f2c6e0bd04754426269e278"
+  },
+  {
+    "number": 5,
+    "title": "Relics and erased context",
+    "start_character": 22396,
+    "end_character": 28768,
+    "words": 1020,
+    "sha256": "8dc2fc89e5cbef6d8d027c8eb1d0f0b5a0032f50e7da9f9a705c920f0d9e6bad"
+  },
+  {
+    "number": 6,
+    "title": "Who is permitted to remember",
+    "start_character": 28771,
+    "end_character": 35397,
+    "words": 1043,
+    "sha256": "22387d30a311d89ee07176ba3e565d4528fd101d010b562af194782fa3698bc4"
+  },
+  {
+    "number": 7,
+    "title": "Two manuals for two populations",
+    "start_character": 35400,
+    "end_character": 42091,
+    "words": 1060,
+    "sha256": "0ade9339f645ae314b235121f5cd4c7f588f8c922b1e29ee200015a52fb728bc"
+  },
+  {
+    "number": 8,
+    "title": "A vault that feels like the past",
+    "start_character": 42094,
+    "end_character": 48306,
+    "words": 1026,
+    "sha256": "96120e2493183cb3bf2766b8377bac5c21ebb77122f60378e986b6f64bae2e61"
+  },
+  {
+    "number": 9,
+    "title": "Quinn's damaged inheritance",
+    "start_character": 48309,
+    "end_character": 54825,
+    "words": 1067,
+    "sha256": "cae01f98175a36532b8b7944f4376bd8eccdfdea9d775023cdbf3f5725cc1483"
+  },
+  {
+    "number": 10,
+    "title": "Before Times in an ordinary city",
+    "start_character": 54828,
+    "end_character": 60514,
+    "words": 893,
+    "sha256": "fb1e90de7884e271e8265c86be0cd1aa47d70f22ac013547fc23aa0293003ebe"
+  },
+  {
+    "number": 11,
+    "title": "The inquiry becomes dangerous",
+    "start_character": 60517,
+    "end_character": 62033,
+    "words": 231,
+    "sha256": "5467c571255f97a07f16166a554ccb2d39c74e47b4a394378c62ee7ed73fcdf7"
+  },
+  {
+    "number": 12,
+    "title": "An investigation is brought to the construction site",
+    "start_character": 62036,
+    "end_character": 66772,
+    "words": 770,
+    "sha256": "c060e00307973bdf3167f6b8cbc96a08fb3d670abaec8c716844e1d2b3198a3f"
+  },
+  {
+    "number": 13,
+    "title": "Thurman and Stenson's proposal",
+    "start_character": 66775,
+    "end_character": 73113,
+    "words": 987,
+    "sha256": "98b2014e9e7f130a9945885dd429f1df467a9f7dd491241b3dbe7b1bdcf77c0b"
+  },
+  {
+    "number": 14,
+    "title": "The kind of catastrophe they describe",
+    "start_character": 73116,
+    "end_character": 79110,
+    "words": 928,
+    "sha256": "776abea4fdfba8c3574721e349c339dc2c03d155165f2f0abdb83d1f4cbba6e1"
+  },
+  {
+    "number": 15,
+    "title": "Charlotte hears a different cost",
+    "start_character": 79113,
+    "end_character": 80250,
+    "words": 169,
+    "sha256": "0acf54ccff1b79a83001ba800fb7c4aa0dd4b1f049efbb2f8da888972c8a9d83"
+  },
+  {
+    "number": 16,
+    "title": "The Pact has living editors",
+    "start_character": 80253,
+    "end_character": 83239,
+    "words": 461,
+    "sha256": "e098221ef06ac97f2bc6196b4fb1367dd912d02d3909345046ef78d0ce1e812e"
+  },
+  {
+    "number": 17,
+    "title": "An unveiling becomes a separation",
+    "start_character": 83242,
+    "end_character": 84591,
+    "words": 226,
+    "sha256": "ebe49b9a8abed31c48dbf43a1427d40795eb9d521e64e4c9e9b9d3da870b9d05"
+  },
+  {
+    "number": 18,
+    "title": "Daniel wakes as Troy",
+    "start_character": 84594,
+    "end_character": 89793,
+    "words": 821,
+    "sha256": "7aa1beddf4baf67e8293a62fa7d4710316dbca60f24d391dabede3575e973d84"
+  },
+  {
+    "number": 19,
+    "title": "Charlotte becomes Susan",
+    "start_character": 89796,
+    "end_character": 95560,
+    "words": 912,
+    "sha256": "f0afc96a48fda9230d07b2d8a389670a5fda8312283ffb1a5ae6a2ebbfed023e"
+  },
+  {
+    "number": 20,
+    "title": "The people behind the Algorithm",
+    "start_character": 95563,
+    "end_character": 102561,
+    "words": 1076,
+    "sha256": "3ecde00381a68da45fa0321fafefb7cc101178292aff163440912bf85df01d13"
+  },
+  {
+    "number": 21,
+    "title": "The Directive of separation",
+    "start_character": 102564,
+    "end_character": 109612,
+    "words": 1055,
+    "sha256": "db3bdb73ae353168281bcc7ac1bf22fb08f88364fe8c25732132ab6fa72223b0"
+  },
+  {
+    "number": 22,
+    "title": "Safeguard inside a silo",
+    "start_character": 109615,
+    "end_character": 116253,
+    "words": 1048,
+    "sha256": "e9ed20080cdc0417a657d0d1784ea555a73070acf4d06c08caa588184cb35997"
+  },
+  {
+    "number": 23,
+    "title": "Susan proposes another response",
+    "start_character": 116256,
+    "end_character": 121712,
+    "words": 879,
+    "sha256": "5f25c522717c50390b5f998d8cb39e45df934ac84a72ddf1de6e675351e56798"
+  },
+  {
+    "number": 24,
+    "title": "The order that Troy carries out",
+    "start_character": 121715,
+    "end_character": 128187,
+    "words": 1015,
+    "sha256": "a516ccdccb2f24c06ae40075e8bd52b185ff0693c48842e33d0ba5cb4fe649c9"
+  },
+  {
+    "number": 25,
+    "title": "The note Victor files away",
+    "start_character": 128190,
+    "end_character": 129285,
+    "words": 178,
+    "sha256": "875a2b09c9ca79b746c0ce69d060a9682c7b6a1a2ba5f8b931ae54b2e43282d4"
+  },
+  {
+    "number": 26,
+    "title": "The original goal and the later institution",
+    "start_character": 129288,
+    "end_character": 135834,
+    "words": 1016,
+    "sha256": "173470bce90b99427c9c141546de21d6233fa600830d0d0574bd6837c7ef714d"
+  },
+  {
+    "number": 27,
+    "title": "Why the engineer still matters",
+    "start_character": 135837,
+    "end_character": 141486,
+    "words": 899,
+    "sha256": "e3439efbe765d4c0731887cccd0417e5d96533bd2e35426dace60b8404003400"
+  },
+  {
+    "number": 28,
+    "title": "When the public hero is managed",
+    "start_character": 141489,
+    "end_character": 147922,
+    "words": 990,
+    "sha256": "9aaf5cc8e1fd7119b77c477bc33b0aeb73c695dcca37aa4a0fd156485c552a32"
+  },
+  {
+    "number": 29,
+    "title": "The distance between different rulers",
+    "start_character": 147925,
+    "end_character": 149973,
+    "words": 309,
+    "sha256": "4b0d86e4c2f043dced42745ea7229117ee2ef859a3ba1f4c22d53c2bcde282cc"
+  },
+  {
+    "number": 30,
+    "title": "Two defensible explanations of the project",
+    "start_character": 149976,
+    "end_character": 157169,
+    "words": 1090,
+    "sha256": "d4e67b27b75e99698aee60195d765b64d1ea99797f33d537fdf35800df66205e"
+  },
+  {
+    "number": 31,
+    "title": "Builders, maintainers and people born inside",
+    "start_character": 157172,
+    "end_character": 162711,
+    "words": 868,
+    "sha256": "e089cbd66c29a250734d6dc6b70c4faf547a22f6cec1789f791dfacedf2eb033"
+  }
+]

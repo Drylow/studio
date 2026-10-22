@@ -1,0 +1,67 @@
+{
+  "id": "FR-08-new-vegas",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 28192,
+  "characters_including_spaces": 179026,
+  "characters_excluding_whitespace": 150482,
+  "estimated_minutes": {
+    "140": 201.4,
+    "150": 187.9,
+    "160": 176.2,
+    "170": 165.8
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 923,
+    "2": 1026,
+    "3": 1037,
+    "4": 1010,
+    "5": 926,
+    "6": 912,
+    "7": 972,
+    "8": 996,
+    "9": 948,
+    "10": 1014,
+    "11": 1001,
+    "12": 1052,
+    "13": 901,
+    "14": 1046,
+    "15": 908,
+    "16": 873,
+    "17": 596,
+    "18": 954,
+    "19": 1022,
+    "20": 915,
+    "21": 1006,
+    "22": 978,
+    "23": 1030,
+    "24": 1053,
+    "25": 1020,
+    "26": 458,
+    "27": 992,
+    "28": 902,
+    "29": 984,
+    "30": 737
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 1,
+    "echo": 28,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "You can subscribe to Forgotten Realms of Sleep if you'd like another long story for a quiet moment. And if you're inclined to comment, let us know your location in the world and whether you're spending the day or the night with us.",
+      "word_offset": 213
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "93cacf47be23b261f0f7025019de67b29c1a2271f14a952b5c0672f5703424a4"
+}

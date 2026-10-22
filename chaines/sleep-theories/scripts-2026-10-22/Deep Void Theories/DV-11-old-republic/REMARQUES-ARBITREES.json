@@ -1,0 +1,68 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This restates the opening promise and previews chapters 2-5 without adding an event or a new inference.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "L ouverture relie les origines decrites ensuite a la cooperation visible au debut du film, donnant un cadre historique au trajet."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 2,
+    "kind": "factual",
+    "severity": "minor",
+    "reviewer_reason": "The supplied correction distinguishes the moon of exile from what the Je'daii meditates upon; the current explanation gives only the destination.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La destination indiquee est correcte. Le texte explique le retour a l equilibre sans affirmer que l objet de meditation soit la lune ou se trouve l exile ; ce detail supplementaire n est pas necessaire."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 5,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The opening, teachers' examples and preceding comparison have already established both points; this adds no development.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion distingue une association construite par le travail d un acte fondateur unique ; elle ne rajoute pas une date ou un traite suppose."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 13,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The previous paragraph establishes Sylvar's loss and the next shows her confrontation; this intervening paragraph repeatedly states their contrast.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La difference entre Vima et Sylvar empeche que l enseignement d Ulic soit presente comme reparation universelle de son passe. Cette limite a une fonction distincte."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 28,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "This vague stop in a campaign summary supplies no identifiable action or consequence, unlike the adjacent Belsavis and Corellia examples.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Voss est un repere bref au sein d un survol explicitement historique de la campagne, sans scene ni resultat inventes."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 29,
+    "kind": "scope",
+    "severity": "minor",
+    "reviewer_reason": "The family members involved can depend on player choices; the broad fixed outcome need not imply a fixed group.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte ne fixe ni noms ni composition du groupe familial. La confrontation fait intervenir des membres de la famille dans des formes variables ; le contexte general garde les choix conditionnels."
+    }
+  }
+]

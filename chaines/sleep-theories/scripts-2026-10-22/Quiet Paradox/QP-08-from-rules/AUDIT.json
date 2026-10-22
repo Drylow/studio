@@ -1,0 +1,95 @@
+{
+  "status": "Texte relu, corrections arbitrees, pret pour narration",
+  "script_sha256_normalized_LF": "ea63963e5c9a17864002c536ab86e7e5536052cf5ce7423f1c0512d87d200950",
+  "full_review_file": "passage-33-chapitres-01-30.json",
+  "full_review_covers_all_chapters": true,
+  "review_input_hashes": {
+    "1": "fcf8d80031d8e391fa9f159d7afcbbee939dae07ecf04e51a10c572077e587fe",
+    "2": "e0c5c311896f63081249569c08d6fe0b5652cfd729edc801be7581e911689eaa",
+    "3": "cb786f283c8c315785822dd68e7edb9337d55d1bbb15af2621088d27525a8d14",
+    "4": "d2e33085dfeb50238f8a386c4c3fc2b8fddcb0c18218c7b695e93d881dd500d9",
+    "5": "dfc37c41aca7eec514dc43183657ab34a653952964c21060a8e0e0b2548181b3",
+    "6": "4237febb71a2692f3ef81dcb032336b80f6ea98184a9fd48a44ab5eab3ea6ba5",
+    "7": "1f57ceaacca736e434a3d223304a3c9f66530d6532f893d92b3e11fef5189899",
+    "8": "96fde0c9f35095a625e5a2fb25f5da0f079deabf1074a1da86eb1baba213d6ca",
+    "9": "03b0ae73c6cb86746459c6594998881079483dc251eed9a38503abde36041707",
+    "10": "012324510317674a997e12b4ac638fdf890f4a848152104d0dd56beaa54f494c",
+    "11": "9cce6b400f3bff504d6beee108abb906cace2cb1ac1ae24446e61b184b999411",
+    "12": "657e53d449441bb01f627ac6fcb610e50cd09802d245723340beef1fe6c53689",
+    "13": "009fa696bd117aeb2593eb76aa27f1215d39a5a60aba2355df14510eaeaf12e2",
+    "14": "467adfb1d1cb1bc2268299f3f8bddaebd98b0466e22dbceb9685956b985577cf",
+    "15": "c2eb9838e9dc638bbee73a16a3783567c985ec9074f15b13b7e2dd1f26895f75",
+    "16": "f8dfadafcf323c959dfd96e2da821fe58e21791caacf63a8d6c12fca31811826",
+    "17": "8d66849504c19336bf8a1b0391de92dd104c77428c485bdb89e0294b2c1b5e26",
+    "18": "700497b3171172bb4051493d7b603997b8391dac52e7189ea10435352a6211b9",
+    "19": "e4617492ba5a42e2153df02a57d642faef30679697a643db032ff2913a555ed0",
+    "20": "39b670848349c26683b4bdc7b47d0b00efa29c53827fc240ffa1a26c51ceff62",
+    "21": "9c6b1df9d42d1409b4edf6d9c1feec923d7739f0660a3069c061d23ef86d27b3",
+    "22": "82265ddf8fc87b3f7ee7166d0fe5280d9d249c8b182a9655c6fe59f3404252a4",
+    "23": "3b12e3d3c25375932e1a600d32b9000a682eddfe98bcfb010d9f56a15f790a80",
+    "24": "8c155f2eb2355e8a53f4e9658a282ebb75aa4eb14b14b29320e78515df83a77d",
+    "25": "c605ed7c724b2c4bae29f2c776b5baa8d07d9ac7da786305cfe489c9d6c0b9fd",
+    "26": "f74e927edcc8123618b894608de7b2a34e1843b2a51f4b3c638a18e42789f3a2",
+    "27": "c6b9265ba5b14a6c813371229645b178fcbd4c4b8478a30630cce651bad92654",
+    "28": "a0864a076d02df3177047770bde0a01c1a46ddbfc69796500cd5f4719185f271",
+    "29": "b721f01e7d6e8b53fea82e7b3278ba34f54931d4945fdb69d6de24355ddcd530",
+    "30": "5b974dc44e1b310dc5557d8199ffa40c2ba9993e6a135e557c6dd521132e4aa3"
+  },
+  "editor_dispositions": {
+    "1": {
+      "status": "retained_after_editor_review",
+      "reason": "Apres separation du CTA, les deux phrases reviennent a la responsabilite des adultes avant le mouvement de Lauren. Ce retour bref garde la scene humaine, sans nouvelle regle surnaturelle."
+    },
+    "2": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rapprochement distingue deux leviers affectifs, famille et solitude romantique. Cette comparaison est le sujet propre du chapitre sur les voix de confiance."
+    },
+    "3": {
+      "status": "retained_after_editor_review",
+      "reason": "L effet est presente comme une possibilite a travers can, et comme analyse du risque de demander un jugement en cachant la situation. Aucun nouvel ordre ou dialogue des voix n est invente."
+    },
+    "4": {
+      "status": "retained_after_editor_review",
+      "reason": "Le contraste explique le probleme de police de Boyd : l arme reste dangereuse pour les humains sans resoudre la menace nocturne. Le rappel est pertinent dans le chapitre sur les armes."
+    },
+    "5": {
+      "status": "retained_after_editor_review",
+      "reason": "Ce court paragraphe rattache la perception de Smiley a la grossesse sans pretendre expliquer le mecanisme. Il donne le contexte de l aide nouvelle a Kenny."
+    },
+    "6": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel du travail diurne explique ce que la perte de cette plage permettait de faire ; la consequence sociale est distincte de l acquisition initiale des talismans."
+    },
+    "7": {
+      "status": "retained_after_editor_review",
+      "reason": "La limite des examens medicaux est opposee a une transformation observee dans la clinique. Cette opposition ne declare ni nouveau diagnostic ni mort definitive."
+    },
+    "8": {
+      "status": "retained_after_editor_review",
+      "reason": "Le texte distingue explicitement ce qui est montre et ce qui reste inconnu. Le rappel final souligne la separation d Ellis et Fatima, consequence de l aide qu elle apporte."
+    },
+    "9": {
+      "status": "retained_after_editor_review",
+      "reason": "Le paragraphe porte sur la fausse assurance d un habitant retrouvant un lieu familier, consequence de la disparition des pierres plutot que nouvelle explication de leur origine."
+    },
+    "10": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion transfere le resultat du RV a la condition actuelle : une regle ne protege pas un abri prive de sa pierre. Ce bref rappel assure la cloture pratique."
+    }
+  },
+  "scope_status": "All 30 chapters are present and remain within the supplied season-four endpoint. No season-five outcome, invented talisman immunity, permanent Fatima death, or conflation of Roger with the night creatures was identified. The requested chapter-one CTA occurs once. The measured original is 25,516 words, only 16 above the whole-script minimum; the recommended deletions would put a revised script below 25,500. That production constraint needs substantive new material supported by the supplied evidence, not retention of repetition or invented detail.",
+  "reviewer_verdicts_before_editor_adjudication": {
+    "A": "pass_with_scope_limit",
+    "B": "minor_edits",
+    "C": "pass_with_minor_edits",
+    "D": "minor_edits",
+    "E": "provisional"
+  },
+  "scan_adjudication": "Hard/mechanical zero. Les alertes de forme et echos sont interpretees : abreviation Ms., noms propres, lieux et rappels de faits ne sont pas automatiquement des fautes. Des rappels thematiques utiles au format long sont conserves avec arbitrage ; aucune absence absolue de repetition n est revendiquee.",
+  "limitations": {
+    "review": "Relecture editoriale assistee et arbitrage ; aucune lecture humaine a voix haute revendiquee.",
+    "comparisons": "Transcriptions et extraits reels, pas cinq videos integralement comparees pour chaque sujet.",
+    "audio": "Aucune voix generee ou mesuree ; durees calculees selon le debit.",
+    "platform": "Aucune certification de monetisation ni garantie de performance."
+  }
+}

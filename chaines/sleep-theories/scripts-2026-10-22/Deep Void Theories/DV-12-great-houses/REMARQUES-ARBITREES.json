@@ -1,0 +1,79 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "kind": "voice",
+    "severity": "minor",
+    "reviewer_reason": "\"Beneath\" makes the vessels sound as though they travel underneath the carriers; the next sentences establish that they travel inside them.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Beneath exprime la dependance de leurs vaisseaux au systeme des transporteurs. Les phrases immediatement suivantes indiquent explicitement qu ils sont a bord, sans trajet physique sous le heighliner."
+    }
+  },
+  {
+    "number": 2,
+    "chapter": 1,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The closing restates the opening dependency and several intervening developments. Its useful final distinction can be made once.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La conclusion separe la livraison spatiale de l installation du gouvernement. Ce passage bref ferme le probleme logistique de l ouverture."
+    }
+  },
+  {
+    "number": 3,
+    "chapter": 19,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "This paragraph recaps the assignment, damaged equipment and hunter-seeker already explained in chapters five and fifteen; it delays this chapter's coordinated attack.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel rassemble les signes de vulnerabilite qui rendent possible l attaque coordonnee. Il sert la causalite de l assaut, et non un nouveau recit du hunter-seeker."
+    }
+  },
+  {
+    "number": 4,
+    "chapter": 19,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Most of the Fremen-contact account has been delivered; the new causal point is simply that the attack comes before an alliance can defend Arrakeen.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le developpement distingue l espoir d alliance de la force reellement disponible au moment de l attaque, consequence necessaire pour comprendre la chute."
+    }
+  },
+  {
+    "number": 5,
+    "chapter": 20,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "The paragraph repeats the opening and earlier arena interpretation without adding an outcome after the Baron's response.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison oppose le role attribue a chacun des deux heritiers et ferme le chapitre du spectacle. Elle ne donne pas une seconde scene d arene."
+    }
+  },
+  {
+    "number": 6,
+    "chapter": 22,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter eighteen has already given the Guild confrontation and its causal explanation. Here it stalls the distinct account of the Fremen victory.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "Le rappel explique pourquoi les Grandes Maisons ne renversent pas la victoire fremen dans le chapitre de la prise de pouvoir. Il a un role causal local."
+    }
+  },
+  {
+    "number": 7,
+    "chapter": 23,
+    "kind": "repetition",
+    "severity": "minor",
+    "reviewer_reason": "Chapter ten has explained Jessica's position at length; only the comparison with Chani is needed here.",
+    "editor_decision": {
+      "status": "retained_after_editor_review",
+      "reason": "La comparaison entre les deux generations de couples eclaire la place de Chani et Jessica ; la speculation sur ce que Paul comprend a deja ete retiree."
+    }
+  }
+]

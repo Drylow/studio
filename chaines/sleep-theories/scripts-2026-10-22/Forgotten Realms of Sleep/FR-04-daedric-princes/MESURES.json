@@ -1,0 +1,67 @@
+{
+  "id": "FR-04-daedric-princes",
+  "complete": true,
+  "chapters": 30,
+  "missing": [],
+  "words": 26017,
+  "characters_including_spaces": 165471,
+  "characters_excluding_whitespace": 139117,
+  "estimated_minutes": {
+    "140": 185.8,
+    "150": 173.4,
+    "160": 162.6,
+    "170": 153.0
+  },
+  "audio_measured": false,
+  "minimum_words_pass": true,
+  "chapter_words": {
+    "1": 897,
+    "2": 1049,
+    "3": 891,
+    "4": 763,
+    "5": 987,
+    "6": 1048,
+    "7": 973,
+    "8": 942,
+    "9": 999,
+    "10": 1000,
+    "11": 1005,
+    "12": 1027,
+    "13": 905,
+    "14": 1038,
+    "15": 1015,
+    "16": 1019,
+    "17": 984,
+    "18": 992,
+    "19": 1022,
+    "20": 953,
+    "21": 1023,
+    "22": 1058,
+    "23": 981,
+    "24": 736,
+    "25": 944,
+    "26": 272,
+    "27": 292,
+    "28": 176,
+    "29": 763,
+    "30": 263
+  },
+  "scan_counts": {
+    "hard": 0,
+    "flags": 0,
+    "floor": 1,
+    "echo": 18,
+    "mech": 0
+  },
+  "reference_12_word_matches": [],
+  "previous_script_20_word_matches": [],
+  "cta_candidates": [
+    {
+      "chapter": 1,
+      "text": "If you'd enjoy returning to Tamriel with us, you're welcome to subscribe to Forgotten Realms of Sleep. A comment with your country or city, and whether it's light or dark there, would be lovely to read too.",
+      "word_offset": 253
+    }
+  ],
+  "text_artifacts": [],
+  "sha256": "61eb73c8fcc79a0e24670b78d942d687970267558444d9036b7846877dcb0f96"
+}

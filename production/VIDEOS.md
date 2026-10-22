@@ -1,374 +1,4 @@
-## Livraisons et reprise du 14 octobre 2026
-
-Lire [la passation complète](../README_HANDOFF.md) et
-[le registre des chaînes](handoff/CHANNELS.md) avant d'interpréter les anciens
-états ci-dessous. Le jardin sleep a depuis été abandonné par l'utilisateur ;
-ne pas reprendre son export long.
-
-| Chaîne | Film livré | Sources Git / publication |
-| --- | --- | --- |
-| Samurai Chapters | Why Being a Samurai Was Worse Than You Think — 19:39 | `chaines/samurai-chapters/` ; [GoFile](https://gofile.io/d/M9RLsD1P). Miniature C PAID IN RICE choisie. Publication rapportée par l'utilisateur. |
-| Viking Chapters | Why Being a Viking Was Worse Than You Think — 19:26 | `chaines/viking-chapters/` ; [GoFile](https://gofile.io/d/Zd5AhFJi), sept fichiers vérifiés. Aucun nouvel upload YouTube effectué par l'agent. |
-| Pirate Pages | Why Being a Pirate Was Worse Than You Think — 19:45 | `chaines/pirate-pages/` ; [GoFile](https://gofile.io/d/e2AjnCyr), sept fichiers vérifiés. Aucun nouvel upload YouTube effectué par l'agent. |
-| One Stick Left | Alien Outbreak Survival: Day 1 to Day 30 — 19:05 | `chaines/alien-outbreak-survival/` : récupération vérifiée du premier film et de sa narration pour la suite J31–J60 ; fichier auteur original non retrouvé. |
-
-Le push de cette passation sauvegarde les sources ; il ne déploie pas le site,
-ne lance pas d'autre génération et ne configure pas le posting automatique.
-
-## Historique — Silent Little Worlds, jardin des lanternes
-
-## Pause demandée — validation de l’animation attendue
-
-L’utilisateur a rappelé qu’il avait choisi l’image, mais pas validé cette
-animation. Le rendu long est suspendu et ne doit pas reprendre sans son avis.
-Un aperçu animé de 16 s en 1080p, avec voix, pluie, bassin, vapeur et forme
-centrale, est préparé pour cette validation. Le MP4 long partiel ne doit pas
-être livré. `cozy-garden/episode-01/HOLD.json` bloque nouvel export et livraison.
-Les processus suspendus sont consignés dans le résultat privé
-`garden-production/long-render-paused.json` ; ne pas les relancer automatiquement.
-
-
-Le 11 octobre 2026, l’utilisateur confirme avoir renommé sa chaîne
-**Silent Little Worlds**, après l’indisponibilité de l’ancien identifiant
-Quiet Little Worlds. La mise à jour du nom et du @ est rapportée par lui ;
-aucune vérification indépendante du compte ou du nouvel identifiant n’est
-consignée ici. Ne plus présenter Quiet Little Worlds comme le nom public actif.
-
-**Premier épisode actif : le jardin A**, avec pergola, banc, chat roux Pip,
-lanterne, serre éclairée à gauche et bassin à droite. Dossier de reprise :
-`experiments/nature-sleep/cozy-garden/README.md`.
-Le master `A-lantern-garden.png` est choisi ; `assets/garden-clean.png`
-conserve sa composition sans pluie figée pour recevoir l’animation.
-Les anciennes directions marines, botaniques et pixel art restent des archives.
-
-### Production jardin en cours
-
-- **Textes figés et relus : 9 fichiers, 14 541 mots**, accueil compris,
-  huit histoires originales anglaises dans le même jardin et ses dépendances.
-  Voir `episode-01/CONTENT_REVIEW.md` et `script-review.json` : chaque texte
-  est approuvé pour narration uniquement avec son SHA-256 exact.
-- **41 prises AI33 complètes**, accueil compris, **80 245 caractères normalisés**.
-  Les sources totalisent **6 520,007 s** ; timeline vocale de **7 200 s** achevée,
-  pause de paragraphe calculée à **2,6008 s**, sans répétition de l’histoire.
-- **Boucle visuelle terminée et contrôlée** : source 60 s, raccord final
-  **59 s / 1 770 images / 1080p30**, fondu d’une seconde encodé sans perte par
-  `close_loop.py`. Huit planches revues et raccord comparé aux images voisines.
-  Pluie animée, impacts/cercles, vapeur, reflets, feuillage et chat sont présents.
-- **Petite forme centrale liée à la voix demandée par l’utilisateur** prête
-  pour le long. Le test court du mux final est validé : 16 s, 480 images,
-  neuf chapitres et audio copié identique. L’export complet est lancé ;
-  contrôle du fichier final et livraison restent à faire.
-  Le détail de la forme chez Stephen Dalton n’a pas été vérifié par lecture
-  de sa vidéo : `cozy-garden/REFERENCE_VISUALIZER.md` distingue les observations
-  réelles de la description donnée par l’utilisateur.
-- **Son** : pluie/eau du jardin et musique originale discrète sous la voix.
-  Les stems et leur provenance sont dans `episode-01/AMBIENCE.md`.
-  Aucun audio du créateur de référence n’est employé.
-- **Mix terminé**, mesure **−19,01 LUFS / −4,98 dBTP**.
-- **SRT anglais activable : 1 322 cues contrôlés**, les 14 541 mots présents
-  dans l’ordre, alignement sur les timings fournis, aucun chevauchement.
-  Les 26 cues brefs sont maintenant d’au moins une seconde et six fins ont
-  été corrigées pour conserver le dernier mot. Rapport privé
-  `output/nature-sleep/garden-production/qa/captions-review.json`.
-  Aucun sous-titre incrusté, aucune nouvelle écoute ni import CC revendiqués.
-
-La timeline vocale est mesurée à **2:00:00**, mais **aucun film jardin de deux
-heures terminé, aucun GoFile final, aucun envoi Discord ni publication YouTube
-à ce stade**. Le MP4 avec visualiseur doit encore être exporté et contrôlé.
-Les validations de texte, de timings ou de niveaux ne constituent pas une
-écoute du mix ni une revue du film complet.
-
-**AI33 est confirmé par l’utilisateur**, avec un budget annoncé de **3 millions
-de caractères**. À 80 245 caractères normalisés par épisode, cela représente
-un ordre de grandeur de **37 films avant retouches**, essais et autres usages ;
-ce n’est pas un solde vérifié ni une promesse de facturation exacte.
-**Kokoro reste une recherche future**, sans installation ni remplacement de
-la voix active. Ne pas relancer ou changer de fournisseur pour ce film.
-
-Résultats privés : `output/nature-sleep/garden-production/`.
-Le helper `cozy-garden/episode-01/deliver.py` est prêt pour le film
-`Silent-Little-Worlds-The-Lantern-Garden-2-Hours.mp4`, trois titres, description,
-miniature, histoire et SRT. La timeline réelle est désormais présente.
-`cozy-garden/episode-01/build.py package` appelle maintenant le visualiseur
-complet avec gardes SHA du fond, puis extrait la miniature finale. L’ancien
-export sans orbe n’est plus la fonction de cette commande. Terminer par
-`build.py verify` sur le MP4 réel. Ne pas lancer un second rendu en parallèle
-du root. Les gardes SHA, reçus et verrous de livraison sont conservés.
-
-Le salon existant reste lié à **DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS** ; le
-renommage public ne change pas ce binding privé. Ne jamais publier sa valeur.
-Le premier kit nom/bio/avatar fougère-lune avait été reçu sous l’ancien nom,
-confirmation utilisateur conservée dans `experiments/nature-sleep/BRANDING_DELIVERY.json`.
-La nouvelle bio est prête dans `cozy-garden/channel-bio-en.txt` ; aucun nouvel
-envoi du branding n’a été fait. Ne pas créer de doublon.
-
-### Recherche de référence
-
-`cozy-garden/reference-stats.json` conserve 670 uploads récupérés de Stephen
-Dalton, dont 560 vidéos d’au moins trente minutes analysées. Ce sont des vues
-cumulées publiques et des comparaisons de cohortes, pas des statistiques privées
-sur 48 heures ni une prévision des performances de notre chaîne. La recherche
-ne permet pas de prétendre avoir visionné une vidéo ou entendu son mix.
-
-### Archive récente — train long en réserve
-
-Le train A avait d’abord été choisi, son aperçu de 24 s livré, puis un épisode
-de deux heures produit et contrôlé techniquement. L’utilisateur a ensuite
-choisi le jardin pour la première vidéo. `night-train/episode-01/HOLD.json`
-bloque l’upload et l’envoi de ce long : **jamais livré sur GoFile ou Discord**.
-Le MP4 dérivé de deux heures a été supprimé pour libérer de l’espace ; les
-sources, la boucle, les voix, le mix audio et la reconstruction sont conservés.
-Ne pas effacer ces matériaux et ne pas livrer le train à la place du jardin.
-L’aperçu historique reste documenté dans `night-train/DELIVERY.json` ; il ne
-constitue pas une livraison du long. Voir `night-train/README.md`.
-
-### Chess — recherche Inglourious Basterds terminée, montage non lancé
-
-Le film est protégé et figure au catalogue officiel Universal Clips, fiche
-13373. L’usage de la scène du strudel Landa/Shosanna reste à faire autoriser
-pour le montage envisagé : **aucune licence, gratuité ou absence de claim
-n’est acquise**. Rapport sourcé :
-`experiments/conversation-chess/BASTERDS_RIGHTS_RESEARCH.md`.
-Aucun extrait téléchargé, demande de licence envoyée, achat, montage ou test
-YouTube n’a été effectué. Ne pas présenter cette piste comme un remède vérifié
-aux blocages de Peaky ou aux revendications des Sopranos.
-
-Peaky Tommy/Alfie avait été livré, publié puis supprimé par l’utilisateur après
-une réclamation audiovisuelle bloquant certains pays. Le demandeur exact et
-les timecodes ne sont pas connus. La QA du MP4 ne certifiait pas ses droits.
-Si une future production chess est retenue, appliquer
-`experiments/conversation-chess/COPYRIGHT_RELEASE.md` au fichier exact.
-Les titres doivent contenir **Analyzed Like Chess**. La présence d’un concurrent
-en ligne ne prouve pas sa licence, ses revenus ou l’absence de réclamation.
-
-## Archive — remplacement provisoire par des vidéos marines réelles
-
-Le 11 octobre 2026, l’utilisateur rejette explicitement le fond corrigé livré sur
-`qsIDnkvK` et demande d’arrêter cette direction. **Aucun nouveau rendu, code
-visuel ou génération d’images marines.** Les MP4 et preuves `FORWARD_*` restent
-des archives rejetées ; leur PASS technique n’est pas une validation artistique.
-La nouvelle recherche vise de vraies prises de vues sous-marines sombres et
-immersives, domaine public ou licence gratuite permettant YouTube monétisé,
-avec droits de chaque clip vérifiés. Montrer une sélection avant tout montage.
-Trois pistes réelles ont été montrées : requin NOAA, grotte Pexels et méduses
-Pixabay. L’utilisateur aime le requin et la grotte, écarte le bleu aquarium
-et demande des vrais abysses plus profonds ainsi qu’une recherche des
-chaînes comparables et de leurs sources. Aucun montage lancé ; voir
-`experiments/deep-sea-procedural/MARINE_STOCK_RESEARCH.md` et son manifest.
-Aucun script, voix off ou film de deux heures lancé.
-Nom Depths After Dark, avatar et bio conservés. **Peaky continue séparément** :
-le montage Tommy/Alfie est toujours autorisé et en export natif.
-
-## Archive technique — boucle rejetée ensuite, export Tommy en cours
-
-**Sleep** : l’aperçu corrigé avec caméra en avancée est livré :
-https://gofile.io/d/qsIDnkvK —24s,1080p30,720images,34 172 536octets.
-SHA-256 `38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84`.
-Décodage A/V entier et captures effectivement contrôlés. Illustration2.5D,
-assets originaux réutilisés ; pas de nouvel appel de génération. La boucle
-complète de cinq minutes corrigée est maintenant livrée dans le même dossier :
-`Depths-After-Dark-Camera-Forward-5min.mp4`,300s,1080p30,9000images,
-462311725octets, SHA `37699678ea847830c6992e160064adc8592d4760b2508fa4153b39ae42a8c459`.
-Un décodage A/V complet, audio PCM et249trames distinctes échantillonnées ont été
-contrôlés ; upload confirmé par taille/MD5. Pas de visionnage/écoute humaine continue. L’ancienne `95IFNFjM` reste une archive à corriger.
-Aucun récit, voix ou long de deux heures produit ; avis visuel utilisateur attendu.
-Voir les preuves `FORWARD_*` et le README de l’expérience.
-
-**Chess** : le pion Tommy frontal (septième proposition) est explicitement
-validé. PNG `de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04`.
-Le nouvel export Peaky doit remplacer l’analyste dans l’intro,32analyses et
-bilan ; montage, dialogues anglais, SFX et comptes conservés. Production
-native Kdenlive/MLT reprise dans un nouveau dossier. L’ancien export Tony
-15:27,900 reste une archive privée ; ne pas le livrer. L’utilisateur demande
-le film fini et contrôlé sur le Discord dédié Scene Analysis Guy avec
-GoFile, titre/description/crédits et miniature adaptée exactement de Sopranos A
-(Tommy gauche, Alfie droite, séparation blanche, mêmes SVG Brilliant/Blunder).
-Les trois bases d’autres styles sont abandonnées. Aucun
-nouveau film envoyé ou publication YouTube prétendus à cette étape.
-Garder l’avatar Tony de la chaîne. Voir `SHELBY_ANALYST_README.md` et
-`TOMMY_ALFIE_PRODUCTION.md` dans `experiments/conversation-chess/`.
-
-## État antérieur — boucle Sleep livrée pour avis, Chess en export parallèle
-
-Depths After Dark : nom et avatar validés, bio donnée. Nouveau fond illustré
-animé Canvas2D ; les directions 3D précédentes restent des archives abandonnées.
-**Boucle complète livrée pour avis : https://gofile.io/d/95IFNFjM**.
-Fichier `Depths-After-Dark-Boucle-5min.mp4` : 300 s, 1920×1080/30 fps,
-9 000 images, 393 133 259 octets, export en 1 819,46 s. SHA-256 :
-`bec3996016d93c4e994b72a15ef88b4d1ce531cfd7a5e12b79216e703c4389fa`.
-Lecteur HTML autonome ZIP (4 645 976 octets) et extrait 24 s dans le même dossier.
-MP4/ZIP uploads vérifiés taille/MD5 ; décor source original 1672×941,
-export 1080p, mouvement optique et animaux 2D codés. Deux générations
-uniques d’assets, aucun Algrow ni génération vidéo.
-
-Décodage A/V complet, 9 000 images comptées, raccord image/son contrôlé,
-aucune saturation. Revue de 60 captures générales, 208 mouvements/raccord,
-11 natives, avec revue indépendante. Pas de lecture/écoute humaine continue.
-Pixels source 0/300 s identiques ; pixels encodés différents, sans saut
-évident de composition dans les captures examinées. Avis utilisateur requis
-avant voix off et texte central pour deux heures. Aucune publication.
-Preuves : `ILLUSTRATED_RENDER_CHECK.json`, `ILLUSTRATED_VISUAL_REVIEW.md`,
-`ILLUSTRATED_DELIVERY.json` dans `experiments/deep-sea-procedural/`.
-
-Chess Tommy/Alfie : master source contrôlé, export Kdenlive/MLT en cours,
-32 analyses/~15 min 28 s, sans voix off. QA final à effectuer après le rendu,
-aucun fichier partiel livré. Sources et timeline poussées, travail privé
-autonome en parallèle ; Sleep doit être publiée avant Chess.
-
 # Journal des vidéos
-
-## Archive — étude 3D abandonnée après rejet de la boucle
-
-L'utilisateur rejette le GoFile `ixBAzbR6` : trop vide et laid. Il abandonne
-la reproduction de DREDGE et demande une nouvelle direction artistique belle,
-vivante et inquiétante pour deux heures de narration. Nouveau build entièrement
-codé : `sleep-cinematic-scene.mjs`, décor et animaux remplacés, lumière diffuse,
-312 poissons / 12 bancs, trois requins et trois méduses translucides. Nombre
-total uniquement ; la présence effective dans le cadre est contrôlée séparément.
-Construction et contrôles en cours, aucune nouvelle livraison ou approbation.
-Recherche de nom demandée en parallèle ; vérifier noms et @ avant proposition,
-profil/bio après choix. Aucun long, voix, Discord ou YouTube lancé.
-
-## Fonds marins — boucle sleep de cinq minutes livrée pour validation
-
-Livraison historique, visuel rejeté : https://gofile.io/d/ixBAzbR6 —
-`Les-Profondeurs-Boucle-Sleep-5min.mp4` et `Les-Profondeurs-Boucle-5min-HTML.zip`.
-300 s, 1920×1080 natif/30 fps, 9 000 images, 155 052 684 octets ;
-export complet en 3 080,867 s sur cette machine sans GPU. ZIP : 206 228 octets,
-lecteur autonome silencieux, extraire puis ouvrir `index.html`, sans installation.
-Taille/MD5 des deux uploads confirmés.
-
-Décor et animaux 3D entièrement codés, relief et surfaces procédurales,
-sept groupes animés, flore benthique, particules et ambiance originale.
-Raccord de 300 secondes sans fondu final ; seconde raie relevée de 3,5 unités
-pour séparer les passages. Source contrôlée sur 9 001 poses à 30 Hz : aucun
-recouvrement avec les obstacles retenus, caméra et sol contrôlés. Ces contrôles
-échantillonnés ne prouvent pas une simulation physique continue.
-Décodage A/V du MP4 intégral sans erreur, raccord image/audio vérifié et
-aucune saturation. Revue des images finales : 60 générales, 208 de mouvements
-et raccord, 11 natives, avec contribution indépendante. Pas de lecture continue
-ni d'écoute humaine complète prétendue. Rapports : `SLEEP_SCENE_CHECK.json`
-et `SLEEP_RENDER_CHECK.json`, dans `experiments/deep-sea-procedural/`.
-
-Tous les futurs épisodes visent deux heures (24 boucles), après validation
-visuelle utilisateur. Aucun long, narration, publication ou changement des
-automatismes existants. Zéro appel de génération payante. Outil fframes proposé
-et étudié : gratuit en local, utile aux habillages ; pas d'import direct de cette
-scène Three.js ni d'accélération 3D mesurée ici. Voir `FFRAMES_REVIEW.md`.
-
-## Fonds marins — V4, passages libres et piste sleep — 10 octobre 2026
-
-Livraison : https://gofile.io/d/nrriY6iM — `Les-Profondeurs-V4-Passages-Libres-24s.mp4`
-et `Exploration-3D-V4-HTML.zip`. 24 s, natif 1080p30, 720 images, 9 438 720 octets,
-export 218,418 s. Modèles/nage V3 gardés ; passages préparés depuis les géométries
-entières animées, 26 rochers déplacés sur 122. Aucun recouvrement sur 1 441 poses
-indépendantes à 60 poses/s, marges minimales : 0,433 aux rochers et 0,832 au sol réel. Caméra aussi contrôlée,
-banc continue hors champ, seek reproductible, MSAA actif, 0 erreur navigateur.
-Décodage A/V complet, aucune saturation ; 12 captures générales, 40 images poisson,
-16 images méduse et quatre vues natives du MP4 final revues, sans lecture/écoute continue
-prétendue. Deux uploads confirmés taille/MD5, zéro génération payante.
-Direction confirmée : récits vrais, ambiance inquiétante. Piste sleep ensuite
-envisagée par utilisateur : deux heures de récits avec boucle calme de cinq
-minutes et collaboration avec une chaîne sleep existante. Recherche/sources
-et limites dans `experiments/deep-sea-procedural/DIRECTION.md`. Le présent
-aperçu n'est pas une boucle sleep ; aucun long, script, voix ou collab lancés.
-
-## Fonds marins — V3, silhouettes sobres et nage vivante — 10 octobre 2026
-
-Livraison : https://gofile.io/d/6pQee3FV — `Les-Profondeurs-V3-Nage-24s.mp4`
-et `Exploration-3D-V3-HTML.zip`. 24 s, 1920×1080 natif/30fps, 720 images,
-9 840 323 octets. Export complet 257,221 s, anticrénelage WebGL actif.
-Retour V2 : immersion améliorée mais poissons « goofy », baudroie trop rigide.
-Modèles refaits, yeux sombres, corps/queue réellement déformés, nageoires et
-leurre décalés, respiration, banc souple et méduse pulsante. Passage courbe
-avec orientation/roulis, caméra/torche attentive, roches/palette cohérentes.
-Étude officielle DREDGE documentée dans `STYLE_DREDGE.md`, aucun fichier
-du jeu repris, aucune génération payante, voix off ou script documentaire.
-Décodage A/V complet sans erreur, pic −18,51 dBFS, aucune saturation ;
-12 images réparties, 40 images poisson, 16 images méduse et quatre vues
-natives du MP4 final revues. Seconde revue indépendante des planches/deux
-vues natives. Pas de lecture continue ni d'écoute complète prétendue.
-Uploads vérifiés par taille/MD5, déformations déterministes et finies contrôlées.
-Retour utilisateur : « pas trop mal » mais traversées de rochers, corrigées en V4. Aucun long lancé ni envoi YouTube/Discord.
-Sources et recette : `experiments/deep-sea-procedural/README.md`.
-
-## Fonds marins — V2 immersive, créatures en 3D — 10 octobre 2026
-
-Premier essai rejeté comme trop statique et trop peu 3D. Nouvelle version livrée :
-https://gofile.io/d/hiTXjUn2 — `Les-Profondeurs-Immersion-3D-24s.mp4`,
-24 s, 1920×1080 natif/30fps, 720 images, 11 410 969 octets ; lecteur HTML
-autonome en ZIP. Caméra subjective traversant un canyon, 17 poissons,
-baudroie et méduse en vrais volumes 3D, couleurs mates, brume et lampe mobile.
-Aucun animal Canvas superposé, aucune génération payante, voix ou extrait du jeu.
-Export complet en 180,586 s ; environ 2,2 fois plus rapide par image que la V1.
-Décodage A/V intégral sans erreur, aucune saturation audio, 12 captures et
-trois images natives du MP4 final revues ; uploads vérifiés par taille et MD5.
-Retour reçu : plus immersif, mais modèles « goofy » et baudroie rigide ;
-direction à corriger, voir V3 ci-dessus. Aucun long lancé.
-Aucun envoi YouTube ou Discord ; sources dans `experiments/deep-sea-procedural/`.
-
-## Fonds marins — aperçu codé de 30 secondes — 10 octobre 2026
-
-Peaky arrêté explicitement ; nouveau projet indépendant, vrais fonds marins
-avec ambiance inquiétante inspirée de DREDGE. Aperçu livré :
-https://gofile.io/d/VDW9Jtf8 — MP4 natif 1920×1080/30fps, 30 s, 900 images,
-7 558 921 octets, et lecteur HTML autonome en ZIP. Relief/véhicule Three.js,
-animaux Canvas originaux, ambiance synthétisée localement. Aucun Algrow,
-générateur d'images, voix off ou extrait du jeu utilisé.
-Décodage vidéo/audio intégral sans erreur, aucune saturation audio, 15 captures
-réparties et deux images natives du MP4 final revues ; intégrité GoFile vérifiée.
-Le style attend l'avis utilisateur. Ne pas lancer le long de 15–20 minutes,
-script ou voix avant ce retour. Aucun envoi YouTube ou Discord.
-Sources et recette : `experiments/deep-sea-procedural/README.md`.
-
-## Scene Analysis Guy — clarification des voyants verts — 10 octobre 2026
-
-L'utilisateur envisage finalement de publier le premier long si ses revenus
-restent possibles. Les deux verts de la première capture concernent portée
-et chaîne/pas de strike ; ils ne montrent pas qui reçoit les revenus.
-Politique de monétisation de la réclamation toujours inconnue. Texte exact
-demandé dans Studio ; aucune publication, contestation ni nouvelle production
-effectuée. Ne pas confondre monétisation par le titulaire et par l'utilisateur.
-
-## Scene Analysis Guy — second test YouTube réclamé — 10 octobre 2026
-
-L'utilisateur signale `The Sopranos S02E03`, audiovisuel, dix passages entre
-00:16 et 05:29 dans le court de 9 min 27. Environ 244 s d'après la capture.
-Politique/titulaire non visibles ; statut E6 inconnu. Publication suspendue
-pour son exigence d'absence de réclamation. Aucun nouveau rendu lancé.
-Le format reste validé ; les sources doivent être autorisées ou remplacées
-par du contenu avec licence commerciale établie. Les deux films sont conservés
-comme archives et ne sont pas déclarés libres de réclamation.
-Voir `experiments/conversation-chess/COPYRIGHT_REVIEW.md`.
-
-## Scene Analysis Guy — trois miniatures et cinq titres — 10 octobre 2026
-
-Miniature initiale du court Tony/Richie rejetée. Trois styles A/B/C : duel
-sobre, confrontation `THE BOSS?`, détourages `BAD GAMBIT`. SVG originaux
-Brilliant/Blunder, empreintes et proportions contrôlées ; visages/textes vus
-à pleine taille et à 320 px. JPEG 1672×941, moins de 353 Ko chacun.
-Cinq titres avec `Richie Aprile vs Tony Soprano`, recommandé : n° 1,
-`The Respect Gambit Backfires`. Choix utilisateur encore en attente.
-Message Discord dédié `1558242590078279681` confirmé : trois images et
-`Titres.txt`, aucun nouvel envoi du film. Film/kit/reçus initiaux inchangés.
-Recette et propositions : `experiments/conversation-chess/thumbnails/tony-richie-no-e8/`.
-
-## Scene Analysis Guy — nouvelle coupe sans épisode 8 — 9 octobre 2026
-
-Après son import du long, l'utilisateur signale une réclamation HBO audiovisuelle
-S02E08. Il demande de supprimer tout cet épisode et accepte une version plus
-courte. Nouvelle version **livrée** : https://gofile.io/d/b9gC1Nrk,
-9 min 27, 27 analyses, E3/E6 seulement, bilan recalculé et miniature sans veste.
-17 018 images, 361 833 622 octets, Kdenlive natif medium CRF17/AAC192,
-décodage complet sans erreur, 57 segments audio/27 bruitages/27 pauses contrôlés,
-157 captures finales revues avec limites de taille documentées. Neuf fichiers
-GoFile vérifiés et Discord dédié confirmé avec kit, crédits et miniature.
-**Résultat du test connu le 10 octobre : réclamation S02E03**, voir entrée
-ci-dessus ; le premier statut de test est dépassé.
-Les extraits conservés ne sont pas licenciés pour
-republication et peuvent encore être réclamés. Le premier long ci-dessous
-est une archive. Preuves : `experiments/conversation-chess/TONY_RICHIE_NO_E8_DELIVERY.md`
-et `COPYRIGHT_REVIEW.md` dans le même dossier.
 
 ## Historical Daily - OVNI integration, 9 October 2026
 
@@ -383,35 +13,6 @@ pass including real GPU blend/colour/audio/cache/cancellation. The original
 headband continuity caution remains and no listening review is claimed.
 This is still only an excerpt. All five full films remain unfinished; no upload
 or publication. See `production/OVNI.md` for installation, measurements and QA.
-
-## Scene Analysis Guy — Tony contre Richie / The Jacket — 9 octobre 2026
-
-**Premier long terminé et livré : https://gofile.io/d/mdNDwQQ4**.
-15 min 11, neuf extraits/sept chapitres, 40 commentaires anglais sans voix off,
-17 accents comiques. Richie ouvre Blanc, Tony Noir. Sources Naka natives 720p,
-maximum proposé au compte, sans sous-titres intégrés ; graphismes/export 1080p30.
-Kdenlive/MLT natif, 27 326 images, medium CRF17/AAC192, 600 210 017 octets.
-Décodage complet sans erreur, 83 segments audio à 0 ms de décalage, 40 évaluations
-et silences vérifiés ; images finales des analyses/frontières/guides/bilan revues.
-Inspection fixe et contrôles techniques, pas d'écoute humaine complète prétendue.
-
-Huit fichiers GoFile vérifiés par taille/MD5/SHA ; Discord dédié confirme kit,
-crédits et miniature THE JACKET. Titre/miniature proposés, publication YouTube
-manuelle et aucune vérification ContentID. Les crédits musicaux restent dans
-la description, sans footer à l'écran. Preuves, empreinte et reprise dans
-`experiments/conversation-chess/TONY_RICHIE_DELIVERY.md`. Aucun changement au
-site ou aux automatismes Cage/Pitch/TikTok.
-
-## Sopranos — aperçu intro/outro/SFX, après le testHD — 9 octobre2026
-
-**À valider avant le film10–15min :** https://gofile.io/d/5xFSD5af .
-Tony/Janice, anglais, sans voix off ; intro musicale16s, même scène et analyses,
-outro12s avec bilan des dix catégoriesChess.com. Pions identiques recolorés,
-clic redondant retiré et accents comiques ciblés. Kdenlive natif, six pistes,
-137,514s/4125frames en1080p30 (source720p), décodage intégral et22images revues.
-Fichier54 600 498octets, MD5 confirmé parGoFile. CréditsCCBY4.0 des deux musiques
-dans le bilan et `experiments/conversation-chess/assets/music/LICENSES.md`.
-Publication manuelle ultérieure ; ce fichier reste un aperçu privé.
 
 ## Crazy Chef 3D — pack de chaîne et livraison mobile — 8 octobre 2026
 
@@ -923,10 +524,63 @@ Timeline, reçus et reprise : `experiments/conversation-chess/ATTACK_ON_TITAN.md
 Sources et contrôles détaillés privés dans `work/`. Aucun upload ou contrôle
 Content ID effectué pour cet épisode ; la validation porte sur le fichier local.
 
+
 ### Oddly Fictional Lives — episode05 delivered
 
 Your Life Working for Jabba the Hutt:145 inspected static shots, Ryan Kurk narration,16:25,1080p/24fps, hard cuts. Situation-specific acting replaces inherited worried faces. Rendered on VPS CPU; encoded-video QA and independent local SHA/size transfer passed. Delivery: `01 - Videos/Oddly Fictional Lives/05 - Your Life Working for Jabba the Hutt/`. Final VPS MP4 and obsolete frames removed after transfer; required voice/reference/authoring assets preserved. See `chaines/oddly-fictional-lives/videos/05-your-life-working-for-jabba-the-hutt/publication.md`. No YouTube upload performed.
 
+
 ### Survival drawing style — matched-provider short-film test
 
 Delivered two full-frame versions and one synchronized comparison of the same76.61s fictional story:12 inspected shots, one Ryan Kurk narration,1080p/24fps, static camera and hard cuts. Images/render/QA on VPS only; local MP4 transfer verified by SHA-256. Residual accessory/lighting differences documented; not a new channel episode or YouTube upload. Local delivery: `03 - Creation/Bunker Survival - Comparatif video/`. Sources and observed limits: `reference/style-studies/bunker-provider-film-2026-10-16/README.md`.
+
+
+### 22 octobre 2026 - Oddly Important Guy : avocat livre
+
+Your Life as a Billionaire's Lawyer : 15 min 39, 1920 x 1080 / 24 fps,
+157 plans fixes alignes sur la narration originale, aucun nouvel appel vocal.
+Les sources finales sont attribuees a 70 inspections directes et 87 revues
+assistees ; les alertes de bureau, doublons et termes visibles sont corrigees
+avant montage. Les 29 planches du film encode ont ete regardees ; les 22 526
+images passent la comparaison technique avec les fondus attendus et le son
+conserve la narration originale. Ouverture depuis le noir en une seconde,
+transitions de 0,5 seconde, fermeture vers le noir de cinq secondes.
+
+Rendu uniquement sur le serveur. Copie locale complete verifiee par empreinte,
+ancienne video archivee, projet natif mis a jour puis seul MP4 final distant
+supprime ; sources et voix conservees. Livraison :
+`01 - Videos/Oddly Important Guy/07 - Billionaires Lawyer/VIDEO.mp4`.
+Empreinte : `08acbebbe0afa10ec42ca1361d7b95b17f1c6877c8311e9726773c6d59921d77`.
+Aucune publication ni programmation effectuee.
+
+### 22 octobre 2026 - Casino : revision complete des figurants livree
+
+153 sources finales : 124 inspections directes et 29 revues assistees attribuees.
+Les tetes des figurants suivent le contour rond blanc, y compris les profils et
+les personnes representees dans une image. Les 150 versions rejetees restent
+conservees et exclues du montage. Les 28 planches du nouveau film encode ont
+ete regardees ; les 21 955 images, les fondus et le son original passent les
+controles techniques. Rendu sur le serveur seulement : 15 min 15, 1080p/24 fps.
+
+Livraison : `01 - Videos/Oddly Important Guy/02 - Working Inside a Las Vegas Casino/VIDEO.mp4`.
+143 020 299 octets ; empreinte `f4bb7f8008e6fe9a4ac913f7855ef17847c23984f4effe2558642417751b9fa0`.
+Copie locale verifiee, ancienne livraison archivee, projet natif mis a jour puis
+seul MP4 final distant supprime ; sources et voix conservees. Aucune nouvelle
+synthese vocale, publication ou programmation. Six films livres sur onze.
+
+
+### 22 octobre 2026 - Oddly Important Guy : pilote livre
+
+Your Life as a Private Jet Pilot : 15 min 43, 1920 x 1080 / 24 fps.
+158 plans : 69 inspections directes et 89 revues assistees attribuees avant
+montage. Les 29 planches du film encode ont ete regardees ; les 22 639 images
+passent les controles techniques, avec la narration originale conservee sans
+nouvel appel vocal. Plans fixes, fondus de 0,5 seconde, ouverture depuis le noir
+en une seconde et fermeture vers le noir de cinq secondes.
+
+Rendu uniquement sur le serveur. Copie locale verifiee par empreinte, ancienne
+livraison archivee, projet natif mis a jour puis seul MP4 final distant supprime ;
+sources et voix conservees. Livraison :
+`01 - Videos/Oddly Important Guy/05 - Private Jet Pilot/VIDEO.mp4`.
+134 148 229 octets ; empreinte `1385beecc13ff8bfe70b693be28675423216f6789c7436babe9243cef8f6a13a`.
+Aucune publication ni programmation effectuee. Sept films livres sur onze.

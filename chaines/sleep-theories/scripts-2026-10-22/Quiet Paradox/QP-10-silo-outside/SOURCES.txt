@@ -1,0 +1,51 @@
+PERIMETRE ET SOURCES — documents de travail, hors narration
+Silo television through S3E10 Troy, aired September 4 2026. Full released episode spoilers, absolutely NO novels, future season-four answers or expanded book ancestry. Treat Before Times people and Silo 1 revelations as shown updates, not still-unknown season-two theories.
+
+Banque de faits et oeuvres de reference :
+{"id": "S1", "fact": "The third season ran July 3 to September 4, 2026 and follows Juliette's memory loss alongside Helen and Daniel in the Before Times.", "work": "Official scope and S3E1", "url": "https://www.apple.com/tv-pr/news/2026/04/apples-globally-acclaimed-drama-silo-starring-and-executive-produced-by-rebecca-ferguson-returns-for-season-three-on-july-3-2026/", "opened": "2026-10-15"}
+{"id": "S2", "fact": "The finale of season one connects better tape, Supply and repeating visor birds with Juliette's survival and recognition of a display.", "work": "S1E10", "url": "https://www.tvline.com/recaps/silo-recap-season-1-finale-episode-10-juliette-outside-wasteland-rebecca-ferguson-1235007079/", "opened": "2026-10-15"}
+{"id": "S3", "fact": "Hanna's magnifying device, the Flamekeepers, reproductive suppression and mirror cameras show several distinct ways of limiting inquiry.", "work": "S1E7", "url": "https://readysteadycut.com/2023/06/09/silo-season-1-episode-7-recap/", "opened": "2026-10-15", "note": "Refreshed with original episode-source file; keep testimony attributed."}
+{"id": "S4", "fact": "The Pez toy in the earlier investigation is linked to Daniel's gift to Helen by the season-two final Before Times scene.", "work": "S2E10", "url": "https://time.com/7206478/silo-season-2-finale-explained/", "opened": "2026-10-15"}
+{"id": "S5", "fact": "Camille uses false footage and suppressants while Juliette has memory loss; restored public hero imagery is managed.", "work": "S3E1", "url": "https://readysteadycut.com/2026/07/03/silo-season-3-episode-1-recap/", "opened": "2026-10-15"}
+{"id": "S6", "fact": "The founders describe a human seed-bank plan; Jimmy's mother disabled the Safeguard. Billings learns Ed Harwood built an illegal elevator used to steal from Critical Supply. This is unauthorized infrastructure, not proof of an official privilege for rulers. Billings investigates Orla Kent's death and discovers Ed's elevator. Ed attributes his theft to preserving lightbulbs during the rebellion. Orla's boyfriend Mike is identified as her killer; Ed's supply theft is a separate offense.", "work": "S3E8", "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/", "opened": "2026-10-15"}
+{"id": "S7", "fact": "Pregnant Helen and Daniel are separated into S18 and S1, with an explosion at the unveiling in the Before Times story.", "work": "S3E9", "url": "https://tvobsessive.com/2026/08/28/silo-s3e9-recap-farewell-cruel-world-im-off-to-join-the-circus/", "opened": "2026-10-15"}
+{"id": "S8", "fact": "Daniel is Troy; Charlotte is Susan; Silo 1 people operate the Algorithm. Failed internal Safeguard and external action against S17 are different mechanisms. Memories of Helen persist. Victor wakes and handles Troy, whose ordered response to S17 residents leaving is an external drone operation. Susan proposes targeting the sheriff so others retreat; she refuses Troy, is arrested, and Troy leads the operation. Victor watches it and later files Troy's repeated notes about Helen.", "work": "S3E10", "url": "https://www.thewrap.com/creative-content/tv-shows/silo-season-3-ending-explained-season-4/", "opened": "2026-10-15", "corroboration": "https://tvobsessive.com/2026/09/04/silo-s3e10-recap-troy-who-are-we-freed-from-the-past/"}
+{"id": "S9", "fact": "The drive George and Allison investigate carries the identifier eighteen; Bernard searches for it in S1E9. Its full origin is not thereby solved.", "work": "S1E1 and S1E9", "url": "https://cartermatt.com/598431/silo-season-1-episode-9-what-is-hard-drive-18/", "opened": "2026-10-15"}
+{"id": "ADD-legacy", "fact": "S2E6-7 Bernard swears Lukas as shadow. Vault has living quarters, food, Order, old books, relics, servers/tablet with history. Bernard reports 352-year age; purpose/origins absent. Tasks Lukas with Quinn letter; book cipher; suggests Meadows Wizard of Oz. No omniscient AI.", "url": "https://tvobsessive.com/2024/12/27/silo-s2e7-recap-the-dive-turns-on-the-fountain-of-information/", "work": "S2E6-7", "opened": "2026-10-15"}
+{"id": "ADD-quinn", "fact": "S2E8-9 Lukas unsuccessfully tries Meadows books then seeks Quinn descendants Penbrook family. They distrust him and disavow ancestor because rebellion story. Bernard says Quinn destroyed past records to prevent recurring rebellions; attribute account. Family says Meadows visited and received Quinn Pact copy. Lukas decodes letter and goes hidden tunnel. Do not resolve fifty/fifty-one ambiguity.", "url": "https://tvobsessive.com/2025/01/03/silo-s2e8-recap-the-book-of-quinn-has-some-blank-pages-to-fill/", "work": "S2E8-9", "opened": "2026-10-15"}
+{"id": "ADD-jimmy", "fact": "S2E7-10 Juliette needs suit to leave; Solo needs pump repaired as rising water threatens IT. After dive he is missing/injured. Audrey, Rick, Hope and children need food behind vault. Solo is Jimmy, child at collapse sheltered by father. Juliette brokers peace; learns poison pipe/Safeguard. S3E8 says his mother disabled Safeguard. No invented ages or dive measurements.", "url": "https://tvobsessive.com/2025/01/17/silo-s2e10-recap-throw-all-the-theories-into-the-fire/", "work": "S2E7-10; S3E8", "opened": "2026-10-15"}
+{"id": "S-NEW", "fact": "Before Times: Stenson and Thurman describe underground preservation of humans and nanoweapon danger. This stated rationale does not make all subsequent coercion necessary or prove a fully known original master plan.", "work": "S3E8 Gray Goo", "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/", "opened": "2026-10-22"}
+
+Reperes par section (sans minutages audio) :
+01. A horizon confined to a screen — S1 cafeteria screen.
+02. Allison's recording does not fit — S1E1.
+03. Holston removes his helmet — S1E2.
+04. The landscape is two different images — S1E10.
+05. Supply tape and an engineering intervention — S1E9-10.
+06. Past the visible ridge — S1E10 final view.
+07. An airlock on the other side — S2E1.
+08. The failed exit of another community — S2E1; S3E10 retrospective.
+09. A building emptied of routine — S2 early Silo 17 exploration.
+10. Water changes the accessible map — S2E7-9 pump and dive.
+11. Jimmy's survival behind the vault — S2E9-10.
+12. The suit needed for a return — S2 Juliette and Jimmy negotiations.
+13. Maps inside a restricted archive — S2 Lukas in legacy.
+14. Lukas looks at the stars — S1 Lukas observations; S2 continuation.
+15. The lower passage offers another route — S1 lower door; S2E9-10 tunnel.
+16. A warning at the waterline — S2E10.
+17. Why a disabled Safeguard did not save the crowd — S3E8 and E10.
+18. The surface has observers — S3E10 control room.
+19. Drones change the meaning of the wasteland — S3E10.
+20. Susan proposes retreat rather than extermination — S3E10.
+21. A city before its ruined horizon — S2E10; S3 Before Times.
+22. Catastrophe as the founders describe it — S3E8.
+23. The final event we are not shown in full — S3E9-10.
+24. Bernard steps outside without a suit — S3E9.
+25. Radio as a fragile bridge — S3E7 Radio and subsequent events.
+26. Two different meanings of safe — S1E10; S2 survival and return.
+27. Theory one: a managed exclusion zone — S3E10 and limited camera geography.
+28. Theory two: refuge inside a wider catastrophe — S1E10; S3E8-10.
+29. What a real expedition would still need — S2 Juliette's demonstrated constraints.
+30. The camera frame becomes smaller — S1E10; S2E1 concrete journey.
+
+Les oeuvres nommees sont la base du recit. Les references concurrentes servent au registre et a la structure ; elles ne font pas autorite sur le lore. Aucune relecture ne constitue une verification independante exhaustive de chaque detail.
