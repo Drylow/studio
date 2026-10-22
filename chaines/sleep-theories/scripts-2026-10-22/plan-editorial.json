@@ -984,7 +984,7 @@
       "channel": "Deep Void Theories",
       "title": "The Entire History of the Old Republic to Fall Asleep To | Star Wars Legends",
       "angle": "A connected history of the Republic, its routes, institutions and recurring wars, told through the older Legends continuity.",
-      "scope": "Star Wars LEGENDS explicitly in second paragraph. Dawn of the Jedi, Tales of the Jedi, Knights of the Old Republic I and II, The Old Republic released core history and class-story era, Darth Bane trilogy and Ruusan reform. Selected mainline game outcomes are narrative conventions; note KOTOR player choices locally. Do not import High Republic or current-canon origins. Avoid post-class-story expansion retellings and uncertain exact dates.",
+      "scope": "Star Wars LEGENDS explicitly in the opening scope. Dawn of the Jedi, Tales of the Jedi, Knights of the Old Republic I and II, The Old Republic core era plus a broad historical bridge through Zakuul, the Alliance, Onslaught and Echoes of Oblivion, then the much later New Sith Wars, Darth Bane and Ruusan reform. Full spoilers. Not an exhaustive quest walkthrough or an invented ending to the ongoing MMO. Distinguish player choices from the later Legends Revan convention. No current-canon High Republic history.",
       "forbidden": [
         "Original English clean spoken narration, no headings or citations in narration.",
         "One quiet optional subscribe and listening location/day-or-night CTA in chapter one only.",
@@ -1018,6 +1018,17 @@
           "id": "OR5",
           "fact": "Bane survives Ruusan, rejects the Brotherhood and institutes a master-and-apprentice Sith line; Republic reform follows the war.",
           "work": "Darth Bane: Path of Destruction; Rule of Two."
+        },
+        {
+          "id": "OR6",
+          "fact": "The original class-story confrontation is not the final disappearance of the Emperor. In later SWTOR expansions he is revealed as Valkorion, ruler of the Eternal Empire on Zakuul. Arcann, Thexan and Vaylin are his children with Senya. The Eternal Fleet subdues Republic and Sith Empire; the player becomes the Outlander, imprisoned in carbonite and freed with Lana Beniko's help. An Alliance based on Odessen unites former enemies against Arcann; later Vaylin takes the throne. Arcann's ultimate survival depends on player choices, so state this conditionally or omit his fate. Valkorion tries to take the Outlander's body and is defeated in the Eternal Throne confrontation. The Alliance's dominance does not permanently replace the two older states: Onslaught resumes Republic-Empire war. Echoes of Oblivion later confronts an Emperor remnant in Satele and her students with help from figures of his past. Do not invent a completed final ending to the still-developing MMO story. Keep the large subsequent chronological jump toward the New Sith Wars explicit without fabricating a continuous chain of battles.",
+          "work": "SWTOR major later expansions",
+          "urls": [
+            "https://www.swtor.com/eternal-throne/valkorion",
+            "https://www.swtor.com/onslaught",
+            "https://www.swtor.com/patchnotes/03022021/game-update-6.2.1"
+          ],
+          "opened": "2026-10-22"
         }
       ],
       "chapters": [
@@ -1244,6 +1255,19 @@
           "primary_evidence": "SWTOR original Jedi Knight and Sith stories.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
           "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+        },
+        {
+          "title": "The Eternal Empire interrupts the older war",
+          "job": "Write a historical bridge AFTER the original class-story Emperor confrontation and BEFORE the explicitly much-later New Sith Wars. Follow the sequence through a third empire, a coalition and renewed Republic-Sith conflict. Give new events and their institutional consequences; do not retell early Sith history or the original Knight climax.",
+          "facts": "The original class-story confrontation is not the final disappearance of the Emperor. In later SWTOR expansions he is revealed as Valkorion, ruler of the Eternal Empire on Zakuul. Arcann, Thexan and Vaylin are his children with Senya. The Eternal Fleet subdues Republic and Sith Empire; the player becomes the Outlander, imprisoned in carbonite and freed with Lana Beniko's help. An Alliance based on Odessen unites former enemies against Arcann; later Vaylin takes the throne. Arcann's ultimate survival depends on player choices, so state this conditionally or omit his fate. Valkorion tries to take the Outlander's body and is defeated in the Eternal Throne confrontation. The Alliance's dominance does not permanently replace the two older states: Onslaught resumes Republic-Empire war. Echoes of Oblivion later confronts an Emperor remnant in Satele and her students with help from figures of his past. Do not invent a completed final ending to the still-developing MMO story. Keep the large subsequent chronological jump toward the New Sith Wars explicit without fabricating a continuous chain of battles.",
+          "primary_evidence": [
+            "SWTOR Knights of the Fallen Empire and Knights of the Eternal Throne released story",
+            "https://www.swtor.com/eternal-throne/valkorion",
+            "https://www.swtor.com/onslaught",
+            "https://www.swtor.com/patchnotes/03022021/game-update-6.2.1"
+          ],
+          "boundary": "Star Wars Legends only; broad history, no exhaustive quest walkthrough. No exact unverified time measurements, casualty statistics, cut material or future MMO conclusion. No invented motives. No greeting, spoiler disclaimer, CTA or final-video close.",
+          "length": "1000-1150 substantive original words."
         },
         {
           "title": "Later wars wear down both orders",
@@ -1731,6 +1755,14 @@
           "work": "S3E8 Gray Goo",
           "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/",
           "opened": "2026-10-22"
+        },
+        {
+          "id": "ADD-inquiry",
+          "fact": "Price missing, chess-account lead, Palmer apartment, Pentagon Sam Ramsey reluctance and later secure call, Henry offers newspaper job and medical funding leverage. Do not replace these events with generic claims of consequence.",
+          "work": "S3E4",
+          "url": "https://readysteadycut.com/2026/07/24/silo-season-3-episode-4-recap/",
+          "corroboration": "https://www.thereviewgeek.com/silo-s3e4review/",
+          "opened": "2026-10-22"
         }
       ],
       "chapters": [
@@ -1817,10 +1849,10 @@
         {
           "title": "The inquiry becomes dangerous",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "Helen's investigation carries consequences and Daniel seeks help as their contact with the project deepens. Focus on their demonstrated choices; omit unsupported specific surveillance scenes or newly invented names.",
+          "facts": "Price missing, chess-account lead, Palmer apartment, Pentagon Sam Ramsey reluctance and later secure call, Henry offers newspaper job and medical funding leverage. Do not replace these events with generic claims of consequence.",
           "primary_evidence": "S3E2-6 Helen and Daniel.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Thurman and Stenson's proposal",
@@ -1841,10 +1873,10 @@
         {
           "title": "Charlotte hears a different cost",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "Charlotte's military experience and the discussion of the squad's exposure give the project an immediate human dimension. Avoid claiming a complete truth about every earlier mission or a particular unseen orders document.",
+          "facts": "Charlotte squad attack identified as nanoweapon; Helen recognizes mission tested capabilities; discussion triggers Charlotte trauma. Attribute the explanation, not omniscient complete mission history.",
           "primary_evidence": "S3E8 Charlotte and project proposal.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Secrecy before the doors close",
@@ -1857,10 +1889,10 @@
         {
           "title": "An unveiling becomes a separation",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "Helen and Daniel attend the event while expecting a child; their allocation separates Helen in Silo 18 and Daniel in Silo 1, and an explosion occurs. Do not fill the unshown immediate aftermath with novel events.",
+          "facts": "Helen tours S18 while Daniel is elsewhere at unveiling; he suspects Charlotte text is false. Blast occurs while couple on phone; announcement directs people to nearest silo. Helen ends S18 and Daniel S1. No invented immediate aftermath or claim of a jointly accepted permanent allocation.",
           "primary_evidence": "S3E9 Farewell.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Daniel wakes as Troy",
@@ -1956,7 +1988,7 @@
           "facts": "Compare Bernard's dependence on restricted instructions, Camille's political maneuvers and Silo 1's monitoring roles. Avoid claiming these people share identical knowledge or motives.",
           "primary_evidence": "S2 Bernard; S3 Camille and Silo 1.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Two defensible explanations of the project",
@@ -2227,10 +2259,10 @@
         {
           "title": "Boyd's discovery in the hollow",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "Boyd takes shelter where talismans are hanging and survives. Describe the actual discovery and the later adoption of stones without inventing their maker or a definitive carving translation.",
+          "facts": "Boyd takes shelter where talismans are hanging and survives. Describe the actual discovery and the later adoption of stones without inventing their maker or a definitive carving translation. On returning, Boyd finds Abby shooting residents in the belief that killing wakes them from a dream; he kills her to save Ellis. Keep the event brief and non-graphic, distinct from chapter three's earlier withdrawal.",
           "primary_evidence": "S1E8 talisman discovery.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "450-650 words deliberately condensed: the discovery is one scene, not a 1000-word repeated explanation."
         },
         {
           "title": "Making a protected enclosure",
@@ -2374,7 +2406,7 @@
           "facts": "The changed appearance and apparent vulnerability let Sophia join the community. Her methods work through attention, relationships and false help rather than simply smashing talismans at every doorway.",
           "primary_evidence": "S4E1 and Sophia infiltration.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Henry is offered a false escape",
@@ -2826,7 +2858,7 @@
           "facts": "The testing rooms place Gemma in different aversive situations. Their design tests separation under specific pressure; no claim the series has explained a complete experimental protocol or every room.",
           "primary_evidence": "S2E7 testing floor.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Deliberately condensed to its supported developments; no quota padding."
         },
         {
           "title": "Mark's work and Gemma's partitions",
@@ -3269,10 +3301,10 @@
         {
           "title": "Radio as a fragile bridge",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "Juliette's mission involving Lukas and Kennedy and efforts to communicate challenge isolation. Use only shown contact and obstacles, not an invented working network with every silo.",
+          "facts": "Lukas and Kennedy survive attack, reach S17. Wounded Lukas, damaged radio. Jimmy repairs with book, coded Juliette contact. Juliette encourages Jimmy cooperation with Kennedy on mother/Safeguard; funeral enables inspection; report relayed. No imagined universal inter-silo radio network.",
           "primary_evidence": "S3E7 Radio and subsequent events.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed around distinct developments, no repeated full quest or journey."
         },
         {
           "title": "Two different meanings of safe",
@@ -3312,7 +3344,7 @@
           "facts": "Finish on Juliette crossing the ridge: one physical act reveals that the cafeteria image covers only a fraction of the world. The larger map remains a practical question for people who now know another doorway exists.",
           "primary_evidence": "S1E10; S2E1 concrete journey.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed around distinct developments, no repeated full quest or journey."
         }
       ],
       "research_brief": {
@@ -4045,7 +4077,7 @@
         {
           "title": "Vaermina in sleeping lives",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "Nightcaller Temple and Erandur's past connect dreams, memory and Skull of Corruption. The player chooses whether to trust Erandur; Vaermina's warning is not proof he intends betrayal.",
+          "facts": "Nightcaller Temple and Erandur's past connect dreams, memory and Skull of Corruption. The player chooses whether to trust Erandur; Vaermina's warning is not proof he intends betrayal. The Dreamstride memory is experienced as Brother Casimir, Erandur's former identity, not as Veren Duleri. Erandur admits abandoning the other priests. The accusation of betrayal at the end comes from Vaermina and is not independently confirmed as his present intention.",
           "primary_evidence": "Skyrim Waking Nightmare; Oblivion Vaermina quest.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
           "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
@@ -4152,7 +4184,7 @@
           "facts": "Erandur, Barbas and Sinding provide choices that leave different immediate people alive or alter rewards. Explain their conditional outcomes; no claim refusing one patron automatically releases every other debt.",
           "primary_evidence": "Skyrim Waking Nightmare; A Daedra's Best Friend; Ill Met by Moonlight.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Condensed around distinct developments, no repeated full quest or journey."
         },
         {
           "title": "The Prince absent from an older list",
@@ -4160,7 +4192,7 @@
           "facts": "Briefly label ESO Gold Road as a separate earlier-era game context: Ithelia is a returning Daedric Prince associated with paths and possibilities, whose erasure from remembered history disrupts an assumed complete roster. Avoid expanding unsourced quest minutiae.",
           "primary_evidence": "ESO Gold Road official premise and Ithelia story.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Brief coda, 160-220 words"
         },
         {
           "title": "Why mortal accounts disagree",
@@ -4176,7 +4208,7 @@
           "facts": "Close on the actual choice to return the Skeleton Key or let Erandur complete his rite, showing the mortal action and its consequence. No ranking of the strongest Prince, no recap of all names or new CTA.",
           "primary_evidence": "Skyrim Nightingale resolution; Waking Nightmare conditional ending.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
-          "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
+          "length": "Concrete closing scene, 250-330 words; do not repeat the full quest"
         }
       ],
       "research_brief": {
@@ -4675,7 +4707,7 @@
         {
           "title": "Godwyn's body continues beneath the roots",
           "job": "Develop this specific subject through the named events, their causal order, relevant worldbuilding and consequences for named people. Answer its local question. Do not retell other chapters. ",
-          "facts": "The Prince of Death and spreading deathroot connect to Those Who Live in Death. Rogier, D and Fia approach the condition differently; do not claim Godwyn remains an ordinary conscious hidden ruler.",
+          "facts": "The Prince of Death and spreading deathroot connect to Those Who Live in Death. Rogier, D and Fia approach the condition differently; do not claim Godwyn remains an ordinary conscious hidden ruler. Godwyn is dead in soul while his body persists; Ranni's body died instead. Fia pursues a mending rune and a place for Those Who Live in Death, not a confirmed ordinary restoration of Godwyn as a living king.",
           "primary_evidence": "Rogier, D and Fia quests; deathroot descriptions.",
           "boundary": "Stay inside this assignment and the episode scope. Omit uncertain minutiae. Never expand by restating an abstract lesson.",
           "length": "950-1050 substantive words, with several distinct grounded developments; no padding."
