@@ -551,5 +551,19 @@ ancienne video archivee, projet natif mis a jour puis seul MP4 final distant
 supprime ; sources et voix conservees. Livraison :
 `01 - Videos/Oddly Important Guy/07 - Billionaires Lawyer/VIDEO.mp4`.
 Empreinte : `08acbebbe0afa10ec42ca1361d7b95b17f1c6877c8311e9726773c6d59921d77`.
-Aucune publication ni programmation effectuee. La revision des figurants du
-casino reste en cours ; cette livraison ne la declare pas terminee.
+Aucune publication ni programmation effectuee.
+
+### 22 octobre 2026 - Casino : revision complete des figurants livree
+
+153 sources finales : 124 inspections directes et 29 revues assistees attribuees.
+Les tetes des figurants suivent le contour rond blanc, y compris les profils et
+les personnes representees dans une image. Les 150 versions rejetees restent
+conservees et exclues du montage. Les 28 planches du nouveau film encode ont
+ete regardees ; les 21 955 images, les fondus et le son original passent les
+controles techniques. Rendu sur le serveur seulement : 15 min 15, 1080p/24 fps.
+
+Livraison : `01 - Videos/Oddly Important Guy/02 - Working Inside a Las Vegas Casino/VIDEO.mp4`.
+143 020 299 octets ; empreinte `f4bb7f8008e6fe9a4ac913f7855ef17847c23984f4effe2558642417751b9fa0`.
+Copie locale verifiee, ancienne livraison archivee, projet natif mis a jour puis
+seul MP4 final distant supprime ; sources et voix conservees. Aucune nouvelle
+synthese vocale, publication ou programmation. Six films livres sur onze.
