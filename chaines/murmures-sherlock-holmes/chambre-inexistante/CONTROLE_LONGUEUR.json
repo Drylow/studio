@@ -1,0 +1,19 @@
+{
+  "words": 16442,
+  "paragraphs": 293,
+  "hook_words": 59,
+  "minutes_by_wpm": {
+    "115": 142.97,
+    "120": 137.02,
+    "125": 131.54,
+    "130": 126.48,
+    "140": 117.44
+  },
+  "max_wpm_for_120_min": 137.02,
+  "emdashes": 0,
+  "urls": 0,
+  "bracket_instructions": 0,
+  "duplicate_paragraphs": 0,
+  "jpeg_bytes": 495731,
+  "audio_rendered": false
+}

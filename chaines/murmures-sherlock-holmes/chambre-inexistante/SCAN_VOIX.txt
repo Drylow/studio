@@ -1,0 +1,19 @@
+====================================================================================================
+chaines\murmures-sherlock-holmes\chambre-inexistante\SCRIPT.txt
+  [staccato x2/6] "Lingerie." | "Elle était fermée."  << Au bout du passage, une porte portait une ancienne étiquette. Lingerie...
+  [staccato x2/6] "Elle l'avait toujours connu." | "Elle baissa les yeux."  << Elle expliqua qu'il y avait un escalier de service, derrière l'ancienn...
+  [staccato x2/5] "Clara regarda les rayonnages." | "Holmes acquiesça."  << Clara regarda les rayonnages. Elle proposa que nous cherchions ensembl...
+  [staccato x2/4] "Holmes approuva." | "C'était possible."  << Harcourt répondit que Rose avait peut-être signé lentement dans les de...
+  [staccato x2/6] "Le thé avait refroidi." | "Clara l'accompagna."  << Le thé avait refroidi. La gouvernante proposa d'en préparer d'autre, m...
+  -- ECHO CHECK (H18): 25 hit(s)
+  [echo H18: phrase repeated 6x] "son p re avait"
+  [echo H18: phrase repeated 6x] "sa m re avait"
+  [echo H18: phrase repeated 5x] "s de la porte"
+  [echo H18: phrase repeated 5x] "de la biblioth que"
+  [echo H18: phrase repeated 5x] "il r pondit qu'il"
+  [echo H18: phrase repeated 5x] "holmes lui r pondit"
+  [echo H18: phrase repeated 5x] "cent quatre vingts livres"
+  [echo H18: phrase repeated 4x] "la salle de lecture"
+
+5 candidate flags across 1 files. Judge each flag by the shape test in voice-anchoring-skill.md: have you ever actually said a sentence with this shape? Enumerations are real speech, leave them alone.
+Antithesis/reframe floor: 0 mechanical hit(s). This is the MINIMUM for the greenlight D7 ledger: a ledger listing fewer instances than the floor is wrong. A floor of 0 clears nothing; most of the family is machine-invisible, so the audit still scans by eye.

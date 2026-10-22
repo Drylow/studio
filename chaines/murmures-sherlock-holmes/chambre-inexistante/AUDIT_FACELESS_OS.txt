@@ -1,0 +1,33 @@
+Audit éditorial du 22 octobre 2026.
+Cadre : fiction originale expressément commandée. Faceless OS adapté au récit français pour dormir. Les règles de relance rapide, CTA, vérification documentaire des événements inventés, suppression des accents français et fin abrupte ne sont pas pertinentes pour cette commande et ne sont pas appliquées. Le contrôle ci-dessous n'est ni une certification de monétisation, ni un contrôle d'audio rendu.
+
+Premier passage : intrigue complète rédigée en seize segments. Cinq candidats de phrases brèves et des répétitions de groupes usuels signalés par le scanner. Zéro expression machine interdite, zéro tiret cadratin, zéro antithèse détectée par le scanner anglophone.
+Corrections : référent ambigu « sa mère » remplacé par « Rose » dans le segment 09. Âges harmonisés dans la bible. Ajout dans 08 et 14 du transfert documenté du reçu au régisseur puis de sa restitution à Rose, pour établir l'accès au modèle de la signature. Réassemblage du script après corrections.
+
+A. Accroche : « J'avais compté treize fenêtres à l'étage du manoir, et nous n'avions trouvé que douze chambres. » Premier paragraphe de moins de cent mots, contradiction concrète entre lumière et plan. La suite vérifie la lumière, sans préambule explicatif. Comparaisons d'accroches issues des transcriptions réellement consultées : Portrait, « Ce soir, nous voyageons jusqu'aux terres sauvages du Conomara irlandais où dans un cottage isolé battu par les vents de l'Atlantique, un portrait de famille semble changer imperceptiblement au fil des nuits. » Poison, « une chambre verrouillée de l'intérieur, un poison qui frappe avec une précision d'horlogerie ». Le texte nouveau utilise une observation directe de Watson, sans reprendre ces événements.
+
+B. Progression et fermeture des questions :
+- Treize fenêtres/douze pièces, ouverture 01 ; mesures 03 ; chambre retrouvée 06.
+- Accès malgré porte condamnée, indice du seuil 04 ; témoignage Reed 05 ; escalier 06.
+- Lumière récente, observation 01 ; volet déposé et date 05 ; routine de Bell 06 ; synthèse 14.
+- Pouce bandé, indice 02 ; blessure du volet expliquée 06.
+- Plan mensonger, question 03 ; mise en doute 09 ; aveu et original 12.
+- Ce que Bell cherche, ouverture 05 ; accusation 07 ; papier retrouvé 10 ; confrontation 14.
+- Authenticité de la quittance : reçu 08, comparaison 09-10, confirmation extérieure 13, examen final rapporté 16.
+- Accès du faussaire au modèle : restitution documentée 08 ; lien explicite 14.
+- Réparation : retrait d'accusation 14, choix laissés à Samuel 15, documents et porte restaurée 16.
+- Destination exacte de tout l'argent : limite explicitement énoncée dans 16, pas de preuve inventée en dernière minute.
+Chaque séquence ajoute un lieu d'enquête, une pièce, un témoignage, une vérification ou une conséquence. Les temps de repos font partie du format sleep demandé ; aucun remplissage en répétition automatique ni musique fictivement comptée dans la durée.
+
+C. Promesse : titre = chambre apparemment inexistante, découverte physique et histoire de sa condamnation. Géométrie stable : pièce au centre de façade au-dessus du porche, porte galerie murée, accès de service depuis lingerie. Aucun passage surnaturel. Les documents sont inventoriés, les conclusions distinguent constat et hypothèse. Point de vue Watson constant, hors courte invitation initiale à s'installer. Chronologie : arrivée, mesures, dîner ; lendemain Reed et village, papiers et première confrontation ; jour suivant bureau et courrier ; vérification fournisseur puis réunion ; départ et retour quelques semaines plus tard.
+
+D. Voix : ancrage réel, transcriptions Nexlev de BObFCVvQq6Y et Cpl8xpJ2CzU. Formes observées : « La lettre arriva à Baker Street par un matin de novembre » ; « Le feu brûlait doucement dans la cheminée, chassant la fraîcheur matinale qui persistait malgré le soleil. » Formes nouvelles comparées : « Le jardin sentait les feuilles mouillées. Au loin, un chariot descendait l'allée avec un bruit de roues assourdi par la terre. » Narration continue, temps du récit, détails domestiques, interlocuteurs identifiés dans la prose. Les accents et apostrophes françaises sont conservés volontairement.
+D3 : scanner exécuté avant et après corrections. Sa couverture linguistique est surtout anglaise ; compléter par relecture française. Candidats staccato jugés acceptables : inscription « Lingerie » et état de porte dans une scène ; gestes « Elle baissa les yeux », « Clara regarda les rayonnages », « Holmes acquiesça » au milieu de paragraphes de dialogue ; accord bref « C'était possible » ; thé refroidi et mouvement de Clara. Ces phrases font avancer une action ou un échange, sans cascade de slogans.
+D5 : nombres narratifs fictifs maintenus dans la continuité : treize fenêtres, douze pièces, six baies par aile, trente ans depuis décès, cent quatre-vingts livres alléguées contre dix-huit shillings réels. Les chiffres de performance appartiennent uniquement au brief. Durée estimée séparément à partir du nombre de mots du fichier final.
+D7 : zéro occurrence mécanique de l'antithèse anglaise ; pas de série de conclusions aphoristiques françaises. Les nuances probatoires de Holmes ne sont pas des slogans. Répétitions signalées comme « cent quatre-vingts livres » apportent successivement l'allégation, la comparaison et la contestation ; noms de lieux et parentés servent à suivre une narration longue.
+
+E. Originalité : intrigue, personnages secondaires, architecture, documents, progression et formulation écrits pour cette commande. Aucune traduction de concurrent. Les critères documentaires « trois sources dans le récit » et « recherche originale hors première page » sont sans objet pour une fiction ; pas de score 5/7 artificiellement attribué. Aucune garantie de monétisation. Relecture humaine par le propriétaire non réalisée. Relecture éditoriale par l'assistant effectuée, sans prétendre à une écoute intégrale d'un audio inexistant.
+
+VERDICT : prêt à la voix off dans le cadre fiction/sommeil, avec débit et contrôle de durée indiqués dans LIRE_AVANT_VOIX.txt. Les vérifications d'écoute, de montage et de publication restent postérieures à cette livraison de texte.
+
+Fichiers consultés : faceless-scripts-os-master.md ; research-and-ideation-skill.md ; voice-anchoring-skill.md ; script-structures-skill.md (structure documentaire/enquête) ; humanizer-skill.md ; greenlight-audit-skill.md ; trailer-voice-scan.py. Skill imagegen pour la miniature. Aucune délégation d'écriture.
