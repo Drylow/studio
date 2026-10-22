@@ -27,6 +27,7 @@ def deploy(root, seed=True):
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
     shutil.copytree(support / 'forge_docs', root / 'app/forge_docs', dirs_exist_ok=True)
     shutil.copy2(support / 'forge_queue.py', root / 'app/forge_queue.py')
+    shutil.copy2(support / 'production_watch.py', root / 'app/production_watch.py')
     web = root / 'app/web'
     legacy = web / 'legacy.html'
     if not legacy.exists():

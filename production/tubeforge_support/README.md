@@ -72,6 +72,14 @@ jugements corrects ou comme une validation d'un montage entier sans revue.
 Tests de contrat sans API ni traitement d'image :
 `python production/tubeforge_support/visual_audit_tests.py` depuis le depot.
 
+## Supervision continue des lots autorises
+
+Le module `production_watch.py` fait avancer les controles au fil des images
+recues sur le serveur, reutilise les preuves exactes et lance les rendus autorises
+apres validation complete. Les scenes de reference, risques et alertes restent
+soumis a revue directe. Il ne genere aucune image ou voix et ne publie rien.
+Voir [le fonctionnement et les limites](forge_docs/production-throughput.md).
+
 ## Commandes de maintenance
 
 Depuis la racine du depot, PowerShell :

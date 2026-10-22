@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import sys
 
-REVISION = "visual-audit-2026-10-21-v6"
+REVISION = "visual-audit-2026-10-22-v7"
 CATEGORIES = ("drawing_style", "identity", "anatomy", "furniture_geometry", "scene_action", "background_cast")
 SEVERITIES = {"none", "minor", "major", "uncertain"}
 PRIMARY_RISKS = {"desk_camera_change", "owner_flagged"}
@@ -78,6 +78,16 @@ redesign, or a workstation with actor and keyboard facing different axes are
 real defects. Inspect desk/chair/body alignment even when two hands touch keys;
 attached limbs alone do not establish a plausible operator position. Compare the
 drawing's detail/shadows/proportions as well as its broad cartoon category.
+
+Do not turn a harmless illustrative variation into a repair request. A supported
+notebook instead of a folder, a still expression instead of a literal moving nod,
+or a pointing gesture toward an adjacent record is severity none UNLESS it makes
+the narrated event materially wrong or physically impossible. Abstract interface
+row counts are not errors when the narration specifies no count and the relevant
+states remain distinguishable. A place or group merely mentioned in dialogue
+need not be physically present in the current location. Preserve genuine flaws:
+wrong head construction, duplicated pupils/actors, broken limbs, unsupported
+bodies, contradictory actions and materially changed room geometry still fail.
 """
 
 
@@ -117,7 +127,7 @@ def route_primary(result, item):
                 requires_primary_review=bool(risks) or result.get("decision") != "pass")
 
 
-def image_part(path, side=1024):
+def image_part(path, side=2048):
     import base64
     import io
     from PIL import Image
