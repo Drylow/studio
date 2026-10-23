@@ -16,7 +16,7 @@ Identité :
 - nom **Urban Rings** (libre sur YouTube au 23 oct. ; CityRise Timelapse, Brick by Year, Timelapse Brick
   Studio sont déjà pris) — l'idée : les cernes d'un arbre, une ville grandit par anneaux ;
 - nom à confirmer (23 oct., l'utilisateur doute d'« Urban Rings ») : propositions Keystone Timelapse, Capstone Timelapse, Bedrock Timelapse ;
-- pas de bannière (l'utilisateur) ; logo « très très similaire » à celui de Cornerstone : `brand/logo_1.jpg` (recommandé), `brand/logo_2.jpg` — le nom sera gravé sur le socle une fois choisi ;
+- pas de bannière (l'utilisateur) ; logo dans le même thème que Cornerstone mais pas une copie (l utilisateur : « pas un copier-coller ») : `brand/logo_sablier.jpg` (recommandé), `brand/logo_escalier.jpg` ;
 - `description.txt`.
 
 Outil : `timelapse_engine/` (voir son README). Première vidéo : Tel-Aviv (1909 → aujourd'hui), titre avec
