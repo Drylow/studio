@@ -14,7 +14,7 @@ Format de la référence (analysé le 23 oct.) :
 
 Identité :
 - nom **Keystone Timelapse** (choisi par l'utilisateur le 23 oct. ; libre sur YouTube ce jour-là) ;
-- pas de bannière (l'utilisateur) ; logo : maquette isométrique d'une ville qui grandit des maisons aux tours, 4 couleurs `brand/logo_1..4.jpg`, son choix à noter ici ;
+- pas de bannière (l'utilisateur) ; logo : maquette isométrique d'une ville qui grandit des maisons aux tours, 4 couleurs `brand/logo_1..4.jpg` ; choisi : n° 1 (bleu nuit, tours dorées), recentré → `brand/photo_profil_800.jpg` ;
 - `description.txt`.
 
 Outil : `timelapse_engine/` (voir son README). Première vidéo : Tel-Aviv (1909 → aujourd'hui), titre avec

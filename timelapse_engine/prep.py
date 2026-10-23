@@ -178,7 +178,8 @@ def main(cfg_path, folder):
             continue
         for p in polys_of(g):
             ring = _simplify([xy(a, b) for a, b in p.exterior.coords[:-1]], 1.5)
-            if len(ring) >= 3:
+            # petites surfaces « water » = piscines, bassins : elles apparaîtraient en 1909
+            if len(ring) >= 3 and (cls in ("river", "stream", "canal") or Polygon(ring).area > 5000):
                 water.append([cls, ring])
     for sub, cls, g in q("land", "select subtype,class,wkt from T"):
         if not g:
