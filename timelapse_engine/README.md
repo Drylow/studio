@@ -1,4 +1,4 @@
-# Timelapse 3D de villes (chaîne Urban Rings)
+# Timelapse 3D de villes (chaîne Keystone Timelapse)
 
 Rendu WebGL (three.js) dans le Chromium de la machine, image par image, puis ffmpeg. Aucune IA, aucun coût.
 
