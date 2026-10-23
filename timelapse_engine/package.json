@@ -1,0 +1,1 @@
+{"name":"timelapse-engine","private":true,"type":"module","dependencies":{"@fontsource/montserrat":"^5.1.0","@fontsource/playfair-display":"^5.1.0","playwright-core":"1.48.2","three":"0.169.0"}}
