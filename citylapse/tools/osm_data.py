@@ -5,6 +5,7 @@
 Writes `export const DATA = {...}`:
   B  buildings, 9 ints each: x, z (dm), w, d (dm), angle (mrad), height (dm), year (x100), kind, colour
      (each real footprint becomes its minimum rotated rectangle)
+  BR the real footprints, in B's order: vertex count, then dx, dz (dm from B's centre) per vertex
   R  road segments, 6 numbers each: ax, az, bx, bz (m), width (m), year
   T  trees: year, x, z, scale
   L  labels / towers from scene.json
@@ -30,7 +31,7 @@ EXT = (-7000.0, -5600.0, 5000.0, 5600.0)   # x0, z0, x1, z1 of the land/sea grid
 
 def main(src, dst):
     sc = json.load(open(os.path.join(src, "scene.json")))
-    B = []
+    B, BR = [], []
     for year, h, kind, ci, ring in sc["buildings"]:
         p = Polygon(ring)
         if not p.is_valid:
@@ -46,6 +47,12 @@ def main(src, dst):
         ang = -math.atan2(e1[1], e1[0])
         cx, cz = r.centroid.x, r.centroid.y
         B += [round(cx * 10), round(cz * 10), round(w * k * 10), round(d * k * 10), round(ang * 1000), round(h * 10), round(year * 100), kind, ci]
+        # the real footprint too (counter-clockwise seen from above, dm offsets from the rectangle centre)
+        q = shapely.geometry.polygon.orient(p if p.geom_type == "Polygon" else max(p.geoms, key=lambda g: g.area), 1.0)
+        ring = list(q.exterior.coords)[:-1]
+        BR.append(len(ring))
+        for px, pz in ring:
+            BR += [round((px - cx) * 10), round((pz - cz) * 10)]
     R = []
     for year, w, pts in sc["roads"]:
         for (ax, az), (bx, bz) in zip(pts, pts[1:]):
@@ -94,7 +101,7 @@ def main(src, dst):
             dr.polygon(pts, fill=int(max(1, min(65535, round((year - 1800) * 100)))))
     pk = np.array(img, dtype=np.uint32).astype(np.uint16)
     P = base64.b64encode(pk.tobytes()).decode()
-    out = {"B": B, "R": R, "T": T, "towers": sc.get("towers", []), "labels": sc.get("labels", []),
+    out = {"B": B, "BR": BR, "R": R, "T": T, "towers": sc.get("towers", []), "labels": sc.get("labels", []),
            "P": {"x0": PX0, "z0": PZ0, "ext": PEXT, "n": PN, "b64": P}, "S": {"x0": EXT[0], "z0": EXT[1], "nx": nx, "nz": nz, "g": GRID, "b64": S}}
     os.makedirs(dst, exist_ok=True)
     with open(os.path.join(dst, "data.js"), "w") as f:

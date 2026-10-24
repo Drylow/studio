@@ -58,10 +58,13 @@ function growMaterial(base, mode, facade = 0) {
     shader.uniforms.uTime = U.uTime;
     const charV = depth ? "" : "vChar = aT.z < 9000.0 ? clamp((uTime - aT.z) / max(0.1, aT.y - aT.z), 0.0, 1.0) : 0.0;";
     shader.vertexShader = shader.vertexShader
-      .replace("#include <common>", `#include <common>\n${GROW}\n${mode === "house" ? "attribute vec2 aH;" : ""}\n${depth ? "" : "varying float vChar; varying vec3 vLoc; varying vec3 vLn;"}`)
+      .replace("#include <common>", `#include <common>\n${GROW}\n${mode === "house" ? "attribute vec2 aH;" : mode === "prism" ? "attribute vec2 aH; attribute vec3 aC; attribute float aU;" : ""}\n${depth ? "" : "varying float vChar; varying vec3 vLoc; varying vec3 vLn;"}`)
       .replace("#include <begin_vertex>", mode === "house"
         ? `float g = aliveK(); float s = g > 0.001 ? 0.45 + 0.55 * min(g, 1.0) : 0.0;
            vec3 transformed = vec3(position.x * s, (aH.x + position.y * aH.y) * g, position.z * s); ${charV} ${depth ? "" : "vLn = normal; vLoc = vec3(position.x * length(instanceMatrix[0].xyz), aH.x + position.y * aH.y, position.z * length(instanceMatrix[2].xyz));"}`
+        : mode === "prism"
+        ? `float g = aliveK(); float s = g > 0.001 ? 0.45 + 0.55 * min(g, 1.0) : 0.0;
+           vec3 transformed = vec3(aC.x + (position.x - aC.x) * s, aC.y + (aH.x + position.y * aH.y) * g, aC.z + (position.z - aC.z) * s); ${charV} ${depth ? "" : "vLn = normal; vLoc = vec3(aU, aH.x + position.y * aH.y, aU);"}`
         : `float g = aliveK(); vec3 transformed = position * g; ${charV} ${depth ? "" : "vLn = normal; vLoc = position;"}`);
     if (!depth) shader.fragmentShader = shader.fragmentShader
       .replace("#include <common>", "#include <common>\nvarying float vChar; varying vec3 vLoc; varying vec3 vLn;")
@@ -101,6 +104,44 @@ export function growMesh(geo, mat, mode, recs, { shadow = true, receive = true, 
   recs.forEach((r, i) => { mesh.setMatrixAt(i, r.m); if (r.c) mesh.setColorAt(i, r.c); });
   mesh.customDepthMaterial = depth;
   mesh.castShadow = shadow; mesh.receiveShadow = receive; mesh.frustumCulled = false;
+  return mesh;
+}
+
+// real footprints extruded into one merged mesh (mode "prism"): walls + flat roof per polygon, same grow / die as "house".
+// polys: {ring: [[x, z], ...] counter-clockwise in (x, z), y0, h: [base, height], c: wall Color, rc: roof Color, t: [birth, death, ign, seed]}
+export function growPrisms(polys, mat, { shadow = true, receive = true, facade = 0 } = {}) {
+  let nv = 0; const tris = [];
+  for (const p of polys) {
+    const n = p.ring.length; nv += n * 6;
+    const tr = THREE.ShapeUtils.triangulateShape(p.ring.map(([x, z]) => new THREE.Vector2(x, -z)), []); tris.push(tr); nv += tr.length * 3;
+  }
+  const P = new Float32Array(nv * 3), N = new Float32Array(nv * 3), C = new Float32Array(nv * 3), T = new Float32Array(nv * 4), Hh = new Float32Array(nv * 2), Cc = new Float32Array(nv * 3), Uu = new Float32Array(nv);
+  let k = 0;
+  const put = (p, x, y, z, nx, ny, nz, col, u, cx, cz) => {
+    P.set([x, y, z], k * 3); N.set([nx, ny, nz], k * 3); C.set([col.r, col.g, col.b], k * 3); T.set(p.t, k * 4); Hh.set(p.h, k * 2); Cc.set([cx, p.y0, cz], k * 3); Uu[k] = u; k++;
+  };
+  polys.forEach((p, pi) => {
+    const r = p.ring, n = r.length; let cx = 0, cz = 0; for (const [x, z] of r) { cx += x; cz += z; } cx /= n; cz /= n;
+    let u = 0;
+    for (let i = 0; i < n; i++) {
+      const [ax, az] = r[i], [bx, bz] = r[(i + 1) % n], L = Math.hypot(bx - ax, bz - az) || 1;
+      const nx = (bz - az) / L, nz = -(bx - ax) / L;            // outward for a counter-clockwise ring (x east, z south)
+      put(p, ax, 0, az, nx, 0, nz, p.c, u, cx, cz); put(p, bx, 1, bz, nx, 0, nz, p.c, u + L, cx, cz); put(p, bx, 0, bz, nx, 0, nz, p.c, u + L, cx, cz);
+      put(p, ax, 0, az, nx, 0, nz, p.c, u, cx, cz); put(p, ax, 1, az, nx, 0, nz, p.c, u, cx, cz); put(p, bx, 1, bz, nx, 0, nz, p.c, u + L, cx, cz);
+      u += L;
+    }
+    for (const [a, b, c] of tris[pi]) {                         // roof triangles facing up (counter-clockwise in east / north)
+      const ar = (r[b][0] - r[a][0]) * (r[a][1] - r[c][1]) - (r[c][0] - r[a][0]) * (r[a][1] - r[b][1]);
+      for (const j of ar > 0 ? [a, b, c] : [a, c, b]) put(p, r[j][0], 1, r[j][1], 0, 1, 0, p.rc, 0, cx, cz);
+    }
+  });
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(P, 3)); g.setAttribute("normal", new THREE.BufferAttribute(N, 3)); g.setAttribute("color", new THREE.BufferAttribute(C, 3));
+  g.setAttribute("aT", new THREE.BufferAttribute(T, 4)); g.setAttribute("aH", new THREE.BufferAttribute(Hh, 2)); g.setAttribute("aC", new THREE.BufferAttribute(Cc, 3)); g.setAttribute("aU", new THREE.BufferAttribute(Uu, 1));
+  mat.vertexColors = true;
+  const { mat: m, depth } = growMaterial(mat, "prism", facade);
+  const mesh = new THREE.Mesh(g, m);
+  mesh.customDepthMaterial = depth; mesh.castShadow = shadow; mesh.receiveShadow = receive; mesh.frustumCulled = false;
   return mesh;
 }
 

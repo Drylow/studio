@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import {
   clamp, lerp, ramp, sm, V, mulberry32, hash2, fbm, pw, pl, inv, M4, NEVER, U, STD, growMesh, unitBox, hipRoof, facet,
-  createStage, rasterGround, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs,
+  createStage, rasterGround, growPrisms, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs,
 } from "./engine.js";
 import { DATA } from "./data.js";
 
@@ -124,7 +124,7 @@ const popAt = (t) => { const y = yearF(t); return y < 1915 ? 0 : pl(POP, y); };
 
 // ---------------- build ----------------
 export function buildVideo(canvas, hud) {
-  const st = createStage(canvas, { W, H, SS, fog: "#cfe0ec", skyTop: "#5c9bd6", sunColor: "#fff1d6", sunDir: [-0.5, 0.7, 0.5], hemiSky: "#d6e9fb", hemiGround: "#9c8f6e", hemiI: 1.2, sunI: 3.3, saturation: 0.14, contrast: 0.12, tilt: 0.15, bloom: 0.3 });
+  const st = createStage(canvas, { W, H, SS, fog: "#cfe0ec", skyTop: "#5c9bd6", sunColor: "#fff1d6", sunDir: [-0.5, 0.7, 0.5], hemiSky: "#d6e9fb", hemiGround: "#9c8f6e", hemiI: 1.2, sunI: 3.3, saturation: 0.2, contrast: 0.15, tilt: 0.15, bloom: 0.3 });
   const { scene } = st;
   const { box, grow, update: updateLM } = landmarks();
   const rnd = mulberry32(1909);
@@ -145,26 +145,35 @@ export function buildVideo(canvas, hud) {
   // plaster in many tones (white, cream, sand, ochre, pale stone, salmon): the "White City" is far from uniform
   const WHITE = ["#f1ebdf", "#e9dcc2", "#e3cfa8", "#f3e6cc", "#dcc6a0", "#efe1c9", "#e8d2b4", "#f2d9c4", "#e6e0d2", "#d9c09a", "#f0e4b8", "#e2c7ae"];
   const MID = ["#d8cfc0", "#cbbfae", "#e0d2bb", "#c9b79c", "#d5cbbd", "#bfb5a6", "#e2d6c2", "#cdbb9f", "#b9ad9b", "#d7c2a2", "#c4b8a8", "#e5d8c0"];
-  const GLASS = ["#b9d0de", "#a9c4d6", "#c6d8e2", "#9fbdd0", "#cfdde6", "#8fb3c8"];
+  const GLASS = ["#b9d0de", "#a9c4d6", "#c6d8e2", "#9fbdd0", "#cfdde6", "#8fb3c8", "#5f86a3", "#3f5d74", "#7fa7a4", "#9ab0bd", "#4d6b80", "#6b8f9e"];
+  // the later city mixes concrete greys, sand, ochre, salmon and a little brick with the white plaster
+  const ACCENT = ["#cfd3d6", "#b8bcbf", "#a9a59c", "#d9b99b", "#e8c9a0", "#c98f6b", "#b5704f", "#d7a98c", "#c4cfd6", "#e6dba0", "#9aa3a8", "#8e7f6e", "#d2c4b2", "#bfa58a"];
+  const ROOFS = ["#a8a49c", "#9b978f", "#b7b2a8", "#8f8b84", "#c2bdb2", "#7d7a74"];
+  const BR = DATA.BR, rings = [];
+  for (let i = 0; i < BR.length;) { const n = BR[i++], r = []; for (let q = 0; q < n; q++, i += 2) r.push([BR[i] / 10, BR[i + 1] / 10]); rings.push(r); }
+  const inRing = (r, px, pz) => { let c = false; for (let a = 0, b = r.length - 1; a < r.length; b = a++) if ((r[a][1] > pz) !== (r[b][1] > pz) && px < ((r[b][0] - r[a][0]) * (pz - r[a][1])) / (r[b][1] - r[a][1]) + r[a][0]) c = !c; return c; };
+  const prismR = [], prismB = [], prismG = [];
   const SOLAR = [], solarDark = new THREE.Color("#3a4a5a"), solarTank = new THREE.Color("#e8e8e4");
   const wallR = [], wallB = [], roofR = [], hipR = [], glassR = [], capR = [];
   const cW = new THREE.Color();
   const B = DATA.B;
-  const houseAt = new Map(), HCS = 16;
+  const houseAt = new Map(), HCS = 16, [portX, portZ] = LL(32.0975, 34.774), bBirth = new Float32Array(B.length / 9).fill(NEVER);
   for (let i = 0; i < B.length; i += 9) {
-    const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10, ang = B[i + 4] / 1000, h = Math.max(3.5, B[i + 5] / 10), y = B[i + 6] / 100, kind = B[i + 7], ci = B[i + 8];
+    const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10, ang = B[i + 4] / 1000, h = Math.max(3.5, B[i + 5] / 10), kind = B[i + 7], ci = B[i + 8];
     if (isWet(x, z)) continue;
+    let y = B[i + 6] / 100;
+    // the port's hangars and sheds went up in 1936-38 (most still stand, restored): date the low port buildings so
+    if (y > 1938 && h < 20 && Math.hypot(x - portX, z - portZ) < 330) y = 1936.3 + hash2(i, 12) * 2.4;
     const r1 = hash2(i, 1), r2 = hash2(i, 2);
-    const b = Math.max(0.2, tOf(y) + r1 * 0.6);
+    const b = Math.max(0.2, tOf(y) + r1 * 0.6); bBirth[i / 9] = b;
     const y0 = heightAt(x, z) - 0.8, t = [b, NEVER, NEVER, r2];
     const k = Math.floor(x / HCS) * 100003 + Math.floor(z / HCS); const v = houseAt.get(k); if (v === undefined || v > b) houseAt.set(k, b);
-    if (kind === 2 || h >= 45) {                    // towers: glass shafts, a lighter crown
-      cW.set(GLASS[(ci + Math.floor(r1 * 6)) % 6]);
-      // podium, shaft and a set-back crown, like real towers
+    const ring = rings[i / 9].map(([dx, dz]) => [x + dx, z + dz]);
+    if (kind === 2 || h >= 45) {                    // towers: glass shafts on their real footprint, a set-back crown
+      cW.set(GLASS[(ci * 2 + Math.floor(r1 * 12)) % 12]);
       const top = r2 < 0.55 ? h * (0.84 + r1 * 0.08) : h;
-      glassR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, top] });
+      prismG.push({ ring, y0, c: cW.clone(), rc: cW.clone().multiplyScalar(0.75), t, h: [0, top] });
       if (top < h) glassR.push({ m: M4(x, y0, z, ang, w * 0.78, 1, d * 0.78), c: cW.clone().multiplyScalar(1.05), t: [b + 0.3, NEVER, NEVER, r2], h: [top, h - top] });
-      if (w > 18 && d > 18 && r1 < 0.6) wallR.push({ m: M4(x, y0, z, ang, w * 1.35, 1, d * 1.35), c: new THREE.Color(MID[Math.floor(r2 * 11.99)]), t, h: [0, 10 + r1 * 6] });
       capR.push({ m: M4(x, y0, z, ang, w * 0.86, 1, d * 0.86), c: new THREE.Color("#dfe6ea"), t: [b + 0.4, NEVER, NEVER, r2], h: [h, 2.5] });
       continue;
     }
@@ -178,20 +187,25 @@ export function buildVideo(canvas, hud) {
       t[0] = rb + 0.6;
     }
     const old = h < 14 && (y < 1912 || (y < 1925 && r1 < 0.3));
-    const pick = Math.floor(hash2(i, 5) * 12);
-    cW.set(old && y < 1906 ? OLD[ci % 6] : kind === 1 ? MID[pick] : WHITE[pick]);
+    const pick = Math.floor(hash2(i, 5) * 12), mx = hash2(i, 6);
+    cW.set(old && y < 1906 ? OLD[ci % 6] : mx < (y > 1960 ? 0.55 : y > 1935 ? 0.3 : 0.12) ? ACCENT[Math.floor(hash2(i, 4) * ACCENT.length)] : kind === 1 ? MID[pick] : WHITE[pick]);
     // 1930s-60s plaster blocks: often the Bauhaus look (ribbon windows, long balconies); the rest: punched windows
     const bau = !old && y > 1929 && y < 1970 && h < 30 && hash2(i, 9) < 0.55;
-    (bau ? wallB : wallR).push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
-    if (old && w < 30 && d < 30) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(w, d) * 0.32, d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [t[0] + 0.15, NEVER, NEVER, r2] });
+    const hip = old && w < 30 && d < 30;
+    if (hip) wallR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
     else {
-      roofR.push({ m: M4(x, y0, z, ang, Math.max(1, w - 1), 1, Math.max(1, d - 1)), c: cW.clone().multiplyScalar(0.86), t, h: [h + 0.75, 0.25] });
+      const rc = new THREE.Color(ROOFS[Math.floor(hash2(i, 3) * 5.99)]).lerp(cW, 0.3);
+      (bau ? prismB : prismR).push({ ring, y0, c: cW.clone(), rc, t, h: [0, h + 0.8] });
+    }
+    if (hip) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(w, d) * 0.32, d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [t[0] + 0.15, NEVER, NEVER, r2] });
+    else {
       // rooftop solar water heaters, a Tel Aviv signature (panel + white tank), from the 1950s on
       if (y > 1950 && h < 40 && w > 7 && d > 7 && r2 < 0.75) {
         const n = 1 + Math.floor(r1 * 3), ca = Math.cos(ang), sa = Math.sin(ang);
         for (let q = 0; q < n; q++) {
           const ox = (hash2(i, 20 + q) - 0.5) * (w - 4), oz = (hash2(i, 30 + q) - 0.5) * (d - 4);
           const px = x + ox * ca + oz * sa, pz = z - ox * sa + oz * ca;
+          if (!inRing(ring, px, pz) || !inRing(ring, px, pz + 1.6)) continue;
           SOLAR.push({ m: M4(px, y0, pz, ang, 2.2, 1, 1.4), c: solarDark, t: [t[0] + 0.5, NEVER, NEVER, r2], h: [h + 1.0, 0.5] });
           SOLAR.push({ m: M4(px, y0, pz + 1.2, ang, 2.0, 1, 0.8), c: solarTank, t: [t[0] + 0.5, NEVER, NEVER, r2], h: [h + 1.0, 1.0] });
         }
@@ -205,6 +219,9 @@ export function buildVideo(canvas, hud) {
   scene.add(growMesh(facet(hipRoof()), STD({ roughness: 0.9, flatShading: true }), "uniform", hipR));
   scene.add(growMesh(unitBox(), STD({ roughness: 0.28, metalness: 0.08 }), "house", glassR, { facade: 2 }));
   scene.add(growMesh(unitBox(), STD({ roughness: 0.6 }), "house", capR, { shadow: false }));
+  scene.add(growPrisms(prismR, STD({ roughness: 0.92 }), { facade: 1 }));
+  scene.add(growPrisms(prismB, STD({ roughness: 0.9 }), { facade: 3 }));
+  scene.add(growPrisms(prismG, STD({ roughness: 0.28, metalness: 0.08 }), { facade: 2 }));
 
   // ---------- trees: parks, boulevards (cleared nowhere: they come with the streets) ----------
   const trunkR = [], crownR = [];
@@ -232,6 +249,41 @@ export function buildVideo(canvas, hud) {
       trunkR.push({ m: M4(x, gy, z, r1 * 6, 0.4, hgt, 0.4), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
       crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.4 * s, 3.0 * s, 3.4 * s), c: new THREE.Color(GREENS[Math.floor(r1 * 5.99)]), t: [b, NEVER, NEVER, r1] });
     }
+  }
+  // garden trees: Tel Aviv's yards and courtyards are full of ficus, jacaranda and palms. An occupancy grid (2 m) keeps
+  // them off every building and street; they fill the gaps a few years after the houses around them
+  const OX = -3400, OZ = -4200, OC = 2, ON = 3900, occ = new Uint8Array(ON * ON);
+  const mark = (cx, cz, hx, hz, a) => {                  // a rotated rectangle (half sizes) into the grid
+    const ca = Math.cos(a), sa = Math.sin(a), R = Math.hypot(hx, hz);
+    for (let gz = Math.max(0, Math.floor((cz - R - OZ) / OC)); gz <= Math.min(ON - 1, Math.floor((cz + R - OZ) / OC)); gz++)
+      for (let gx = Math.max(0, Math.floor((cx - R - OX) / OC)); gx <= Math.min(ON - 1, Math.floor((cx + R - OX) / OC)); gx++) {
+        const px = OX + (gx + 0.5) * OC - cx, pz = OZ + (gz + 0.5) * OC - cz;
+        if (Math.abs(px * ca - pz * sa) <= hx && Math.abs(px * sa + pz * ca) <= hz) occ[gz * ON + gx] = 1;
+      }
+  };
+  for (let i = 0; i < B.length; i += 9) mark(B[i] / 10, B[i + 1] / 10, B[i + 2] / 20 * 1.15 + 1.5, B[i + 3] / 20 * 1.15 + 1.5, B[i + 4] / 1000);
+  for (const sg of segs) { const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L > 0.5) mark((sg.ax + sg.bx) / 2, (sg.az + sg.bz) / 2, L / 2 + 1, sg.w / 2 + 1.5, -Math.atan2(sg.bz - sg.az, sg.bx - sg.ax)); }
+  const free = (x, z) => { const gx = Math.floor((x - OX) / OC), gz = Math.floor((z - OZ) / OC); if (gx < 1 || gz < 1 || gx >= ON - 1 || gz >= ON - 1) return false;
+    for (let dz = -1; dz <= 1; dz++) for (let dx = -1; dx <= 1; dx++) if (occ[(gz + dz) * ON + gx + dx]) return false; return true; };
+  const DEEP = ["#3f7a2e", "#356b28", "#4a8834", "#2f6326"];
+  let nGarden = 0;
+  for (let gx = -380; gx <= 420; gx++) for (let gz = -420; gz <= 360; gz++) {
+    const x = gx * 9.5 + (hash2(gx, gz) - 0.5) * 7, z = gz * 9.5 + (hash2(gz, gx + 7) - 0.5) * 7, r1 = hash2(gx * 3 + 1, gz * 5 + 2);
+    if (r1 < 0.32 + 0.3 * fbm(x * 0.004 - 11, z * 0.004 + 5) - 0.15) continue;
+    let hb = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) hb = Math.min(hb, v); }
+    if (hb >= NEVER || !free(x, z) || shoreDist(x, z) < 25) continue;
+    const b = Math.max(hb + 1.5 + r1 * 4, tOf(1911)), gy = heightAt(x, z) - 0.3, q = hash2(gx * 7, gz * 11);
+    if (b > MDUR) continue;
+    if (q < 0.12 && yearF(Math.min(MDUR, b)) > 1925) {           // a Washingtonia palm: tall bare trunk, a flat star of fronds
+      const ph = 8 + q * 40;
+      trunkR.push({ m: M4(x, gy, z, 0, 0.3, ph, 0.3), c: new THREE.Color("#8a7458"), t: [b, NEVER, NEVER, r1] });
+      crownR.push({ m: M4(x, gy + ph, z, q * 60, 3.0, 1.0, 3.0), c: new THREE.Color("#4e7f33"), t: [b, NEVER, NEVER, r1] });
+    } else {
+      const sc = 0.7 + q * 0.75, hgt = (3.2 + q * 2.5) * sc;
+      trunkR.push({ m: M4(x, gy, z, q * 6, 0.42, hgt, 0.42), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
+      crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.6 * sc, 3.1 * sc, 3.6 * sc), c: new THREE.Color(q < 0.55 ? GREENS[Math.floor(r1 * 5.99)] : DEEP[Math.floor(r1 * 3.99)]), t: [b, NEVER, NEVER, r1] });
+    }
+    nGarden++;
   }
   // orchards round Jaffa and Sarona before the city (the land of the citrus groves), cleared as houses arrive
   const clearAt = (x, z) => { let t = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) t = Math.min(t, v - 0.4); } return t; };
@@ -273,9 +325,17 @@ export function buildVideo(canvas, hud) {
   // ---------- ground texture: streets (with birth times) and the built-up paving round houses ----------
   const GX = { X0: -3400, Z0: -4200, EXT: 7800, TEX: 4096 };
   const groundTex = rasterGround(GX, segs, [], []);
-  const paving = [];
-  for (let i = 0; i < B.length; i += 9) { const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10; paving.push({ x, z, rx: w / 2 + 13, rz: d / 2 + 13, ry: -B[i + 4] / 1000, b: Math.max(0, tOf(B[i + 6] / 100) - 0.5) }); }
-  const urbanTex = rasterGround(GX, [], paving, []);
+  // paving: a narrow apron round each building plus the pavements along every street; gardens: lawns between the houses
+  const paving = [], gardens = [];
+  for (let i = 0; i < B.length; i += 9) {
+    const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10 * 1.12, d = B[i + 3] / 10 * 1.12, ry = -B[i + 4] / 1000, b = Math.max(0, bBirth[i / 9] - 0.8);
+    if (b >= NEVER - 1) continue;
+    paving.push({ x, z, rx: w / 2 + 1.2, rz: d / 2 + 1.2, ry, b });
+    gardens.push({ x, z, rx: w / 2 + 17, rz: d / 2 + 17, ry, b: b + 1.2 });
+  }
+  const walks = segs.map((sg) => ({ ...sg, w: sg.w + 3.5 }));
+  const urbanTex = rasterGround(GX, walks, paving, []);
+  const gardenTex = rasterGround({ X0: -3400, Z0: -4200, EXT: 7800, TEX: 2048 }, [], gardens, []);
   const PK = DATA.P, pkRaw = Uint8Array.from(atob(PK.b64), (c) => c.charCodeAt(0));
   const parkTex = new THREE.DataTexture(pkRaw, PK.n, PK.n, THREE.RGFormat); parkTex.flipY = false; parkTex.needsUpdate = true;
 
@@ -285,14 +345,14 @@ export function buildVideo(canvas, hud) {
   const tp = tGeo.attributes.position;
   for (let i = 0; i < tp.count; i++) tp.setY(i, heightAt(tp.getX(i), tp.getZ(i)));
   tGeo.computeVertexNormals();
-  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 }, uPark: { value: parkTex }, uPorig: { value: new THREE.Vector4(PK.x0, PK.z0, PK.ext, PK.n) }, uYear: { value: 1880 }, uGreen: { value: 0 }, uGrove: { value: groveTex } };
+  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 }, uPark: { value: parkTex }, uPorig: { value: new THREE.Vector4(PK.x0, PK.z0, PK.ext, PK.n) }, uYear: { value: 1880 }, uGreen: { value: 0 }, uGrove: { value: groveTex }, uGarden: { value: gardenTex } };
   const tMat = STD({ color: "#ffffff", roughness: 1 });
   tMat.onBeforeCompile = (s) => {
     Object.assign(s.uniforms, UT, { uTime: U.uTime });
     s.vertexShader = s.vertexShader.replace("#include <common>", "#include <common>\nvarying vec3 vW;")
       .replace("#include <worldpos_vertex>", "#include <worldpos_vertex>\nvW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
     s.fragmentShader = s.fragmentShader.replace("#include <common>", `#include <common>
-      varying vec3 vW; uniform sampler2D uGround, uUrban, uPark, uGrove; uniform vec4 uOrig, uPorig; uniform float uTime, uPave, uYear, uGreen;
+      varying vec3 vW; uniform sampler2D uGround, uUrban, uPark, uGrove, uGarden; uniform vec4 uOrig, uPorig; uniform float uTime, uPave, uYear, uGreen;
       ${GROUND_GLSL}`)
       .replace("#include <color_fragment>", /* glsl */ `#include <color_fragment>
       {
@@ -302,8 +362,16 @@ export function buildVideo(canvas, hud) {
         vec3 scrub = mix(Ls(vec3(0.66, 0.66, 0.44)), Ls(vec3(0.58, 0.60, 0.38)), nf);
         vec3 col = mix(sand, scrub, smoothstep(0.55, 0.8, n21(vW.xz * 0.0016 + 4.0)) * 0.55);
         // the land greens up as the city grows (gardens, orchards, parks, lawns): sand stays on the coastal strip
-        vec3 grass = mix(Ls(vec3(0.40, 0.62, 0.25)), Ls(vec3(0.52, 0.70, 0.31)), nz) * mix(0.9, 1.06, nf);
-        float inland = smoothstep(2.0, 3.2, vW.y);
+        // open country: a patchwork of fields (wheat, stubble, ploughed earth, vegetables, fallow) on a tilted grid
+        vec2 fr = mat2(0.993, -0.12, 0.12, 0.993) * vW.xz, fc = floor(fr / vec2(110.0, 75.0)), fl = fract(fr / vec2(110.0, 75.0));
+        float fh = h21(fc + 31.0), fh2 = h21(fc * 1.7 - 5.0);
+        vec3 field = fh < 0.22 ? Ls(vec3(0.45, 0.58, 0.25)) : fh < 0.4 ? Ls(vec3(0.62, 0.64, 0.33)) : fh < 0.55 ? Ls(vec3(0.74, 0.68, 0.42))
+                   : fh < 0.68 ? Ls(vec3(0.56, 0.46, 0.32)) : fh < 0.84 ? Ls(vec3(0.38, 0.52, 0.22)) : Ls(vec3(0.53, 0.60, 0.30));
+        field *= mix(0.94, 1.04, step(0.5, fract((fh2 < 0.5 ? fr.x : fr.y) / 5.0)));          // furrows
+        float edge = min(min(fl.x, 1.0 - fl.x) * 110.0, min(fl.y, 1.0 - fl.y) * 75.0);
+        field = mix(Ls(vec3(0.34, 0.44, 0.20)), field, smoothstep(1.0, 3.0, edge));          // hedgerows and tracks
+        vec3 grass = mix(field, mix(Ls(vec3(0.40, 0.58, 0.24)), Ls(vec3(0.48, 0.64, 0.28)), nz), smoothstep(0.62, 0.78, n21(vW.xz * 0.0009 - 2.0)) * 0.7);
+        float inland = smoothstep(1.75, 2.0, vW.y);           // the land is 2 m up at 120 m from the shore (the clamp of the shore grid)
         col = mix(col, grass, uGreen * inland * (0.8 + 0.2 * smoothstep(0.3, 0.6, n21(vW.xz * 0.0011 + 9.0))));
         col = mix(col, Ls(vec3(0.95, 0.90, 0.78)), smoothstep(1.6, 0.5, vW.y) * 0.8);             // the beach
         vec2 uv = (vW.xz - uOrig.xy) / uOrig.z;
@@ -313,14 +381,26 @@ export function buildVideo(canvas, hud) {
           float gd = (gvn.g * 255.0 * 256.0 + gvn.b * 255.0) / 100.0;
           vec3 earth = mix(Ls(vec3(0.47, 0.42, 0.28)), Ls(vec3(0.40, 0.47, 0.25)), nf);
           col = mix(col, earth, gv.r * (1.0 - smoothstep(gd - 0.4, gd + 0.4, uTime)) * 0.9);
+          // lawns and gardens between the houses: bright mown grass with darker and drier patches
+          vec4 gw = texture2D(uGarden, uv); vec4 gwn = texelFetch(uGarden, ivec2(uv * 2048.0), 0);
+          float gb = (gwn.g * 255.0 * 256.0 + gwn.b * 255.0) / 100.0;
+          float pt = n21(vW.xz * 0.05), pt2 = n21(vW.xz * 0.013 + 3.0);
+          vec3 lawn = mix(Ls(vec3(0.46, 0.66, 0.24)), Ls(vec3(0.56, 0.74, 0.30)), pt);
+          lawn = mix(lawn, Ls(vec3(0.36, 0.55, 0.20)), smoothstep(0.55, 0.8, pt2) * 0.6);
+          lawn = mix(lawn, Ls(vec3(0.66, 0.65, 0.42)), smoothstep(0.75, 0.95, n21(vW.xz * 0.021 - 7.0)) * 0.5);
+          // where the city will grow, the land before it is dune scrub (sand with low bushes), not fields
+          vec3 dune = mix(sand, Ls(vec3(0.60, 0.62, 0.40)), smoothstep(0.45, 0.75, n21(vW.xz * 0.07)) * 0.45);
+          dune = mix(dune, Ls(vec3(0.50, 0.58, 0.33)), smoothstep(0.6, 0.85, n21(vW.xz * 0.018 + 1.0)) * 0.35);
+          col = mix(col, dune, smoothstep(0.0, 0.5, gw.r) * (1.0 - smoothstep(gb - 1.0, gb, uTime)) * inland * uGreen);
+          col = mix(col, lawn, gw.r * smoothstep(gb, gb + 1.0, uTime) * inland);
           vec4 ur = texture2D(uUrban, uv); vec4 un = texelFetch(uUrban, ivec2(uv * uOrig.w), 0);
           float ub = (un.g * 255.0 * 256.0 + un.b * 255.0) / 100.0;
-          vec3 lot = mix(Ls(vec3(0.80, 0.75, 0.64)), Ls(vec3(0.66, 0.66, 0.64)), uPave);
-          col = mix(col, lot * mix(0.95, 1.05, nf), ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.85);
+          vec3 lot = mix(Ls(vec3(0.80, 0.75, 0.64)), Ls(vec3(0.76, 0.75, 0.72)), uPave);
+          col = mix(col, lot * mix(0.95, 1.05, nf), ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.92);
           vec4 g = texture2D(uGround, uv); vec4 gn = texelFetch(uGround, ivec2(uv * uOrig.w), 0);
           float birth = (gn.g * 255.0 * 256.0 + gn.b * 255.0) / 100.0;
           float road = g.r * smoothstep(birth, birth + 0.6, uTime);
-          vec3 dirt = Ls(vec3(0.76, 0.66, 0.50)), asph = mix(Ls(vec3(0.33, 0.34, 0.36)), Ls(vec3(0.39, 0.40, 0.42)), nf);
+          vec3 dirt = Ls(vec3(0.76, 0.66, 0.50)), asph = mix(Ls(vec3(0.30, 0.31, 0.33)), Ls(vec3(0.36, 0.37, 0.39)), nf);
           col = mix(col, mix(dirt, asph, uPave), road * 0.95);
         }
         vec2 pv = (vW.xz - uPorig.xy) / uPorig.z;
@@ -344,7 +424,7 @@ export function buildVideo(canvas, hud) {
   const ringG = new THREE.RingGeometry(9000, 60000, 192, 1).rotateX(-Math.PI / 2), rp = ringG.attributes.position, rc = new Float32Array(rp.count * 3);
   for (let i = 0; i < rp.count; i++) {                  // the far ring: the Mediterranean to the west, land to the east
     const ax = rp.getX(i), az = rp.getZ(i), a = Math.atan2(az, ax), sea = sm(clamp((Math.cos(a) * -1 - 0.05) / 0.25));
-    const c = new THREE.Color("#b9c2a4").lerp(new THREE.Color("#4f8fb4"), sea); rc[i * 3] = c.r; rc[i * 3 + 1] = c.g; rc[i * 3 + 2] = c.b;
+    const c = new THREE.Color("#8f9e66").lerp(new THREE.Color("#4f8fb4"), sea); rc[i * 3] = c.r; rc[i * 3 + 1] = c.g; rc[i * 3 + 2] = c.b;
   }
   ringG.setAttribute("color", new THREE.BufferAttribute(rc, 3));
   const farGround = new THREE.Mesh(ringG, STD({ vertexColors: true, roughness: 0.8 }));
@@ -484,7 +564,7 @@ export function buildVideo(canvas, hud) {
     const mainT = intro ? (time < 2.5 ? 500 : time < 8 ? 500 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
     const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
-    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1915, 1965));
+    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1905, 1950));
     updateLM(t); updDust(t); updateLife(t);
     let { pos, tgt } = cam(t);
     if (intro) { const k = sm(ramp(time, 5.5, 9)); pos = introPose.pos.clone().lerp(pos, k); tgt = introPose.tgt.clone().lerp(tgt, k); }
