@@ -26,10 +26,13 @@ def main():
     patch = Path(sys.argv[1]).resolve()
     if not patch.is_relative_to(Path('/opt/tubeforge/api-patches')):
         raise SystemExit('Patch must be staged under /opt/tubeforge/api-patches')
-    names = {'app/forge_api.py', 'app/forge_migrations.py', 'app/workspace_generation.py', 'app/forge_docs/LLM.txt'}
+    allowed = {'app/forge_api.py', 'app/forge_migrations.py', 'app/workspace_generation.py',
+               'app/workspace_api.py', 'app/forge_docs/LLM.txt', 'app/forge_production.py',
+               'app/forge_runpod.py', 'app/forge_runpod_worker.py', 'app/slideshow_render.py'}
+    names = {p.relative_to(patch).as_posix() for p in (patch/'app').rglob('*') if p.is_file()}
+    assert names and names <= allowed
     expected = json.loads((patch / 'expected-files.json').read_text())
-    assert set(expected) == names - {'app/forge_migrations.py'}
-    assert {p.relative_to(patch).as_posix() for p in (patch/'app').rglob('*') if p.is_file()} == names
+    assert set(expected) <= names
     info = json.loads(run(['docker', 'inspect', 'drylow-tubeforge']))[0]
     compose_files = info['Config']['Labels']['com.docker.compose.project.config_files'].split(',')
     project = info['Config']['Labels']['com.docker.compose.project']
@@ -39,6 +42,7 @@ def main():
     release = Path('/opt/tubeforge/api-releases') / ('model-migration-' + stamp)
     release.mkdir(parents=True, exist_ok=False)
     run(['docker', 'cp', 'drylow-tubeforge:/opt/studio/work/TubeForge/app', str(release/'app')])
+    assert {n for n in names if (release/n).exists()} == set(expected), 'Every replaced source needs a hash'
     for name, value in expected.items():
         assert digest(release/name) == value, 'Live source changed: ' + name
     shutil.make_archive(str(release/'app-before'), 'tar', root_dir=release, base_dir='app')

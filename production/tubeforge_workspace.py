@@ -26,6 +26,8 @@ def deploy(root, seed=True):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
     shutil.copy2(support / 'forge_migrations.py', root / 'app/forge_migrations.py')
+    for name in ('forge_production.py', 'forge_runpod.py', 'forge_runpod_worker.py', 'slideshow_render.py'):
+        shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'forge_docs', root / 'app/forge_docs', dirs_exist_ok=True)
     shutil.copy2(support / 'forge_queue.py', root / 'app/forge_queue.py')
     web = root / 'app/web'

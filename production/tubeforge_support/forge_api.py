@@ -10,7 +10,7 @@ import io
 import re
 from urllib.parse import quote
 
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request, Query
 from fastapi.responses import FileResponse, PlainTextResponse
 from fastapi.openapi.utils import get_openapi
 
@@ -109,6 +109,8 @@ def install(app):
     router = APIRouter(prefix=PREFIX, tags=["Forge production API"])
     from . import forge_migrations
     forge_migrations.install(router)
+    from . import forge_production
+    forge_production.install(router)
 
     @router.get("/health")
     async def health():
@@ -162,7 +164,10 @@ def install(app):
             return status(p) | {"reused": False}
 
     @router.get("/videos/{pid}")
-    async def project(pid: str):
+    async def project(pid: str, fields: str | None = None, offset: int = Query(0, ge=0),
+                      limit: int = Query(10, ge=1, le=25)):
+        if fields is not None:
+            return forge_production.prompt_view(api._project(pid), fields, offset, limit)
         return external_urls(api._ui_project(api._full(api._project(pid))))
 
     @router.get("/videos/{pid}/status")

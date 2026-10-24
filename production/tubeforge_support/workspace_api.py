@@ -66,6 +66,9 @@ def _project(pid, writable=False):
     if not p or not p.get("codex_directed"):
         raise HTTPException(404, "Codex-led project not found")
     if writable:
+        external = p.get('workspace_external_execution') or {}
+        if external.get('backend') == 'runpod' and external.get('state') in ('queued', 'running', 'cleanup_required'):
+            raise HTTPException(409, 'A RunPod render is reserved; finish or reconcile its job before editing')
         from . import workspace_generation as generation
         if (pipeline.is_running(pid) or generation.batch_running(pid)
                 or pid in generation._active_projects):

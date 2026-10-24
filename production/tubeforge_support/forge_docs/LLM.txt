@@ -20,6 +20,34 @@ Review state values are exactly: verified, correct, unreviewed. AI review source
 is delegated_ai_inspection. Never mark uninspected images verified.
 This migration endpoint does NOT install or expose a RunPod render endpoint.
 
+COMPACT PROMPTS AND RUNPOD RENDERING
+GET /videos/ID?fields=id,start,end,prompt&offset=0&limit=10 returns only a page of
+shots, prompt_sha256 per row, prompts_sha256 and next_offset. Follow next_offset
+until null. Equivalent: GET /videos/ID/scenes/prompts. Limit 1..25.
+PATCH /videos/ID/scenes/prompts accepts {"idempotency_key":"edit-001","scenes":[
+{"id":22,"expected_prompt_sha256":"HASH_FROM_GET","prompt":"Complete new prompt"}]}.
+Optional expected_prompts_sha256 guards the whole list. Up to 25 edits per call;
+unknown fields/IDs, duplicate IDs or stale hashes reject the entire call. Same key
+and exact payload replay safely. Backups precede edits. Only changed prompts are
+replaced: voice, timings, references, existing images/receipts are preserved;
+changed shots require regeneration and fresh review. No image call is started.
+GET /videos/ID/render/runpod returns configured, ready, blockers and input_sha256.
+POST /videos/ID/render/runpod accepts {"idempotency_key":"render-001",
+"expected_input_sha256":"HASH_FROM_PREFLIGHT","transition_seconds":0.25,
+"intro_fade_seconds":1,"outro_fade_seconds":5}. Returns 202 with job_id,status_url.
+Requires verified voice/images, complete timings and no pending regeneration.
+Defaults: 1920x1080, 24fps, static camera. RunPod CPU pod, 32 vCPU; never PC/VPS
+media processing. Calls create billable RunPod infrastructure. Server credential
+is used; do not send provider keys in the body. One pod at a time for this API.
+GET /videos/ID/render/runpod/JOB_ID polls durable state. On complete, download_url
+is the authenticated MP4 download. Compare video_sha256 and bytes. Pod deletion
+is confirmed before completion. Final visual review and publication are separate.
+Reconnect with the same key and identical request; do not start duplicate jobs.
+POST /videos/ID/render/runpod/JOB_ID/reconcile handles an interrupted controller:
+refuses a live controller, deletes its exact pod, marks failure without rerendering.
+A new idempotency key is required for an intentional retry after reconciliation.
+Generic /actions/render still uses the legacy CPU backend; use /render/runpod.
+
 Website: https://tools.kanye.studio/2d
 Simple API: https://tools.kanye.studio/api/forge/v1
 Native API: https://tools.kanye.studio/api/2d (append the complete native path,
