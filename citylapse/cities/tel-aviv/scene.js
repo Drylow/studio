@@ -97,7 +97,7 @@ const popAt = (t) => { const y = yearF(t); return y < 1915 ? 0 : pl(POP, y); };
 
 // ---------------- build ----------------
 export function buildVideo(canvas, hud) {
-  const st = createStage(canvas, { W, H, SS, fog: "#d6dde0", sunColor: "#fff2db", sunDir: [-0.55, 0.62, 0.55], hemiSky: "#d4e6f7", hemiGround: "#a08d6a", hemiI: 1.15, sunI: 3.1, saturation: -0.03 });
+  const st = createStage(canvas, { W, H, SS, fog: "#dbe8f0", skyTop: "#6fa8dc", sunColor: "#fff1d6", sunDir: [-0.5, 0.7, 0.5], hemiSky: "#d6e9fb", hemiGround: "#9c8f6e", hemiI: 1.2, sunI: 3.3, saturation: 0.14, contrast: 0.12, tilt: 0.4, bloom: 0.35 });
   const { scene } = st;
   const { box, grow, update: updateLM } = landmarks();
   const rnd = mulberry32(1909);
@@ -115,9 +115,11 @@ export function buildVideo(canvas, hud) {
   // ---------- buildings ----------
   const OLD = ["#d9c29a", "#cfb48a", "#e2cda6", "#c8ad83", "#d6c29e", "#c2a67c"];           // Jaffa sandstone
   const ROOF = ["#c0603d", "#b25a3a", "#cc6d48", "#a9553a"];                                  // tile roofs
-  const WHITE = ["#f2ede3", "#ebe4d6", "#f6f2ea", "#e6dccb", "#efe8dc", "#e2d9c8"];          // plaster, the White City
-  const MID = ["#e4ddd1", "#d6cfc3", "#cdc4b5", "#ddd3c3", "#c7c0b6", "#ece5da"];
-  const GLASS = ["#7f9fb8", "#8daabd", "#6f8fab", "#9cb3c2", "#64849f", "#a8bcc8"];
+  // plaster in many tones (white, cream, sand, ochre, pale stone, salmon): the "White City" is far from uniform
+  const WHITE = ["#f1ebdf", "#e9dcc2", "#e3cfa8", "#f3e6cc", "#dcc6a0", "#efe1c9", "#e8d2b4", "#f2d9c4", "#e6e0d2", "#d9c09a", "#f0e4b8", "#e2c7ae"];
+  const MID = ["#d8cfc0", "#cbbfae", "#e0d2bb", "#c9b79c", "#d5cbbd", "#bfb5a6", "#e2d6c2", "#cdbb9f", "#b9ad9b", "#d7c2a2", "#c4b8a8", "#e5d8c0"];
+  const GLASS = ["#b9d0de", "#a9c4d6", "#c6d8e2", "#9fbdd0", "#cfdde6", "#8fb3c8"];
+  const SOLAR = [], solarDark = new THREE.Color("#3a4a5a"), solarTank = new THREE.Color("#e8e8e4");
   const wallR = [], roofR = [], hipR = [], glassR = [], capR = [];
   const cW = new THREE.Color();
   const B = DATA.B;
@@ -130,32 +132,63 @@ export function buildVideo(canvas, hud) {
     const y0 = heightAt(x, z) - 0.8, t = [b, NEVER, NEVER, r2];
     const k = Math.floor(x / HCS) * 100003 + Math.floor(z / HCS); const v = houseAt.get(k); if (v === undefined || v > b) houseAt.set(k, b);
     if (kind === 2 || h >= 45) {                    // towers: glass shafts, a lighter crown
-      cW.set(GLASS[ci % 6]);
+      cW.set(GLASS[(ci + Math.floor(r1 * 6)) % 6]);
       glassR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h] });
       capR.push({ m: M4(x, y0, z, ang, w * 0.86, 1, d * 0.86), c: new THREE.Color("#dfe6ea"), t: [b + 0.4, NEVER, NEVER, r2], h: [h, 2.5] });
       continue;
     }
     const old = h < 14 && (y < 1912 || (y < 1925 && r1 < 0.3));
-    cW.set(old && y < 1906 ? OLD[ci % 6] : kind === 1 ? MID[ci % 6] : WHITE[ci % 6]);
+    const pick = Math.floor(hash2(i, 5) * 12);
+    cW.set(old && y < 1906 ? OLD[ci % 6] : kind === 1 ? MID[pick] : WHITE[pick]);
     wallR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
     if (old && w < 30 && d < 30) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(w, d) * 0.32, d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [b + 0.15, NEVER, NEVER, r2] });
-    else roofR.push({ m: M4(x, y0, z, ang, Math.max(1, w - 1), 1, Math.max(1, d - 1)), c: cW.clone().multiplyScalar(0.92), t, h: [h + 0.75, 0.25] });
+    else {
+      roofR.push({ m: M4(x, y0, z, ang, Math.max(1, w - 1), 1, Math.max(1, d - 1)), c: cW.clone().multiplyScalar(0.86), t, h: [h + 0.75, 0.25] });
+      // rooftop solar water heaters, a Tel Aviv signature (panel + white tank), from the 1950s on
+      if (y > 1950 && h < 40 && w > 7 && d > 7 && r2 < 0.75) {
+        const n = 1 + Math.floor(r1 * 3), ca = Math.cos(ang), sa = Math.sin(ang);
+        for (let q = 0; q < n; q++) {
+          const ox = (hash2(i, 20 + q) - 0.5) * (w - 4), oz = (hash2(i, 30 + q) - 0.5) * (d - 4);
+          const px = x + ox * ca + oz * sa, pz = z - ox * sa + oz * ca;
+          SOLAR.push({ m: M4(px, y0, pz, ang, 2.2, 1, 1.4), c: solarDark, t: [b + 0.5, NEVER, NEVER, r2], h: [h + 1.0, 0.5] });
+          SOLAR.push({ m: M4(px, y0, pz + 1.2, ang, 2.0, 1, 0.8), c: solarTank, t: [b + 0.5, NEVER, NEVER, r2], h: [h + 1.0, 1.0] });
+        }
+      }
+    }
   }
-  scene.add(growMesh(unitBox(), STD({ roughness: 0.92 }), "house", wallR));
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.92 }), "house", wallR, { facade: 1 }));
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.6 }), "house", SOLAR, { shadow: false }));
   scene.add(growMesh(unitBox(), STD({ roughness: 1 }), "house", roofR, { shadow: false }));
   scene.add(growMesh(facet(hipRoof()), STD({ roughness: 0.9, flatShading: true }), "uniform", hipR));
-  scene.add(growMesh(unitBox(), STD({ roughness: 0.35, metalness: 0.25 }), "house", glassR));
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.28, metalness: 0.08 }), "house", glassR, { facade: 2 }));
   scene.add(growMesh(unitBox(), STD({ roughness: 0.6 }), "house", capR, { shadow: false }));
 
   // ---------- trees: parks, boulevards (cleared nowhere: they come with the streets) ----------
   const trunkR = [], crownR = [];
+  const GREENS = ["#5a9a3c", "#4f8f36", "#68a844", "#43822f", "#72b04a", "#5f9e3f"];
   for (let i = 0; i < DATA.T.length; i += 4) {
     const [y, x, z, s] = DATA.T.slice(i, i + 4);
     if (isWet(x, z)) continue;
     const r1 = hash2(i, 7), r2 = hash2(i, 8), b = tOf(y) + 0.5 + r1;
     const gy = heightAt(x, z) - 0.3, hgt = (4.5 + r1 * 3) * s;
     trunkR.push({ m: M4(x, gy, z, r2 * 6, 0.45, hgt, 0.45), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
-    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.6 * s, 3.2 * s, 3.6 * s), c: new THREE.Color(["#4f7a37", "#5c8540", "#466f31", "#62893f"][Math.floor(r2 * 3.99)]), t: [b, NEVER, NEVER, r1] });
+    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.8 * s, 3.4 * s, 3.8 * s), c: new THREE.Color(GREENS[Math.floor(r2 * 5.99)]), t: [b, NEVER, NEVER, r1] });
+  }
+  // street trees on every street (Tel Aviv's ficus and plane trees), planted a few years after the street
+  for (const sg of segs) {
+    if (sg.w < 4.5) continue;
+    const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L < 6) continue;
+    const ux = (sg.bx - sg.ax) / L, uz = (sg.bz - sg.az) / L, off = sg.w / 2 + 2.2;
+    for (let d0 = 4; d0 < L; d0 += 11) for (const sgn of [-1, 1]) {
+      const x = sg.ax + ux * d0 - uz * off * sgn, z = sg.az + uz * d0 + ux * off * sgn, r1 = hash2(Math.round(x * 3), Math.round(z * 3));
+      if (r1 < 0.18 || isWet(x, z)) continue;
+      let hb = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) hb = Math.min(hb, v); }
+      if (hb >= NEVER) continue;                      // no houses on this street yet: no street trees either
+      const b = Math.max(sg.ba + 4, hb + 1.5) + r1 * 3, gy = heightAt(x, z) - 0.3, s = 0.75 + r1 * 0.4, hgt = 4.2 * s;
+      if (yearF(Math.min(DUR, b)) < 1915) continue;
+      trunkR.push({ m: M4(x, gy, z, r1 * 6, 0.4, hgt, 0.4), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
+      crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.4 * s, 3.0 * s, 3.4 * s), c: new THREE.Color(GREENS[Math.floor(r1 * 5.99)]), t: [b, NEVER, NEVER, r1] });
+    }
   }
   // orchards round Jaffa and Sarona before the city (the land of the citrus groves), cleared as houses arrive
   const clearAt = (x, z) => { let t = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) t = Math.min(t, v - 0.4); } return t; };
@@ -177,8 +210,10 @@ export function buildVideo(canvas, hud) {
   const GX = { X0: -3400, Z0: -4200, EXT: 7800, TEX: 4096 };
   const groundTex = rasterGround(GX, segs, [], []);
   const paving = [];
-  for (let i = 0; i < B.length; i += 9) { const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10; paving.push({ x, z, rx: w / 2 + 8, rz: d / 2 + 8, ry: -B[i + 4] / 1000, b: Math.max(0, tOf(B[i + 6] / 100) - 0.5) }); }
+  for (let i = 0; i < B.length; i += 9) { const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10; paving.push({ x, z, rx: w / 2 + 13, rz: d / 2 + 13, ry: -B[i + 4] / 1000, b: Math.max(0, tOf(B[i + 6] / 100) - 0.5) }); }
   const urbanTex = rasterGround(GX, [], paving, []);
+  const PK = DATA.P, pkRaw = Uint8Array.from(atob(PK.b64), (c) => c.charCodeAt(0));
+  const parkTex = new THREE.DataTexture(pkRaw, PK.n, PK.n, THREE.RGFormat); parkTex.flipY = false; parkTex.needsUpdate = true;
 
   // ---------- terrain ----------
   const TWD = 13000, TN = 1000;
@@ -186,14 +221,14 @@ export function buildVideo(canvas, hud) {
   const tp = tGeo.attributes.position;
   for (let i = 0; i < tp.count; i++) tp.setY(i, heightAt(tp.getX(i), tp.getZ(i)));
   tGeo.computeVertexNormals();
-  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 } };
+  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 }, uPark: { value: parkTex }, uPorig: { value: new THREE.Vector4(PK.x0, PK.z0, PK.ext, PK.n) }, uYear: { value: 1880 } };
   const tMat = STD({ color: "#ffffff", roughness: 1 });
   tMat.onBeforeCompile = (s) => {
     Object.assign(s.uniforms, UT, { uTime: U.uTime });
     s.vertexShader = s.vertexShader.replace("#include <common>", "#include <common>\nvarying vec3 vW;")
       .replace("#include <worldpos_vertex>", "#include <worldpos_vertex>\nvW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
     s.fragmentShader = s.fragmentShader.replace("#include <common>", `#include <common>
-      varying vec3 vW; uniform sampler2D uGround, uUrban; uniform vec4 uOrig; uniform float uTime, uPave;
+      varying vec3 vW; uniform sampler2D uGround, uUrban, uPark; uniform vec4 uOrig, uPorig; uniform float uTime, uPave, uYear;
       ${GROUND_GLSL}`)
       .replace("#include <color_fragment>", /* glsl */ `#include <color_fragment>
       {
@@ -207,19 +242,34 @@ export function buildVideo(canvas, hud) {
         if (uv.x > 0.0 && uv.y > 0.0 && uv.x < 1.0 && uv.y < 1.0) {
           vec4 ur = texture2D(uUrban, uv); vec4 un = texelFetch(uUrban, ivec2(uv * uOrig.w), 0);
           float ub = (un.g * 255.0 * 256.0 + un.b * 255.0) / 100.0;
-          vec3 lot = mix(Ls(vec3(0.80, 0.76, 0.66)), Ls(vec3(0.72, 0.71, 0.68)), uPave);
+          vec3 lot = mix(Ls(vec3(0.80, 0.75, 0.64)), Ls(vec3(0.70, 0.69, 0.66)), uPave);
           col = mix(col, lot * mix(0.95, 1.05, nf), ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.85);
           vec4 g = texture2D(uGround, uv); vec4 gn = texelFetch(uGround, ivec2(uv * uOrig.w), 0);
           float birth = (gn.g * 255.0 * 256.0 + gn.b * 255.0) / 100.0;
           float road = g.r * smoothstep(birth, birth + 0.6, uTime);
-          vec3 dirt = Ls(vec3(0.78, 0.68, 0.52)), asph = mix(Ls(vec3(0.44, 0.45, 0.47)), Ls(vec3(0.50, 0.51, 0.52)), nf);
-          col = mix(col, mix(dirt, asph, uPave), road * 0.92);
+          vec3 dirt = Ls(vec3(0.76, 0.66, 0.50)), asph = mix(Ls(vec3(0.33, 0.34, 0.36)), Ls(vec3(0.39, 0.40, 0.42)), nf);
+          col = mix(col, mix(dirt, asph, uPave), road * 0.95);
+        }
+        vec2 pv = (vW.xz - uPorig.xy) / uPorig.z;
+        if (pv.x > 0.0 && pv.y > 0.0 && pv.x < 1.0 && pv.y < 1.0) {
+          vec2 pk = texelFetch(uPark, ivec2(pv * uPorig.w), 0).rg;
+          float py = (pk.r * 255.0 + pk.g * 255.0 * 256.0) / 100.0 + 1800.0;
+          if (py > 1800.5) {
+            vec3 grass = mix(Ls(vec3(0.42, 0.66, 0.26)), Ls(vec3(0.50, 0.72, 0.30)), nf) * mix(0.92, 1.06, nz);
+            col = mix(col, grass, smoothstep(py, py + 1.5, uYear) * 0.95);
+          }
         }
         diffuseColor.rgb = col;
       }`);
   };
   const terrain = new THREE.Mesh(tGeo, tMat); terrain.receiveShadow = true; scene.add(terrain);
-  const farGround = new THREE.Mesh(new THREE.RingGeometry(9000, 60000, 96, 1).rotateX(-Math.PI / 2), STD({ color: "#cdb98f", roughness: 1 }));
+  const ringG = new THREE.RingGeometry(9000, 60000, 192, 1).rotateX(-Math.PI / 2), rp = ringG.attributes.position, rc = new Float32Array(rp.count * 3);
+  for (let i = 0; i < rp.count; i++) {                  // the far ring: the Mediterranean to the west, land to the east
+    const ax = rp.getX(i), az = rp.getZ(i), a = Math.atan2(az, ax), sea = sm(clamp((Math.cos(a) * -1 - 0.05) / 0.25));
+    const c = new THREE.Color("#c9b98e").lerp(new THREE.Color("#1f6f9a"), sea); rc[i * 3] = c.r; rc[i * 3 + 1] = c.g; rc[i * 3 + 2] = c.b;
+  }
+  ringG.setAttribute("color", new THREE.BufferAttribute(rc, 3));
+  const farGround = new THREE.Mesh(ringG, STD({ vertexColors: true, roughness: 0.8 }));
   farGround.position.set(-1000, 1, 0); scene.add(farGround);
 
   // ---------- the sea and the Yarkon: two tones, foam at the shore ----------
@@ -314,11 +364,11 @@ export function buildVideo(canvas, hud) {
   function renderAt(time) {
     const t = clamp(time, 0, DUR);
     U.uTime.value = t;
-    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960));
+    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t);
     updateLM(t); updDust(t);
     const { pos, tgt } = cam(t);
     st.frame(pos, tgt);
-    const wide = sm(ramp(t, 500, 530)); st.scene.fog.near *= lerp(0.7, 0.45, wide); st.scene.fog.far *= lerp(0.65, 0.4, wide);
+    const wide = sm(ramp(t, 500, 530)); st.scene.fog.near *= lerp(1.3, 1.0, wide); st.scene.fog.far *= lerp(1.4, 1.1, wide);
     drawHud(t);
     st.render();
   }

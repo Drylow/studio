@@ -53,37 +53,47 @@ float aliveK() {
 }
 `;
 // mode "house": local geometry in y∈[0,1], attribute aH = (base, height) in metres; mode "uniform": whole object scales
-function growMaterial(base, mode) {
+function growMaterial(base, mode, facade = 0) {
   const vtx = (shader, depth) => {
     shader.uniforms.uTime = U.uTime;
     const charV = depth ? "" : "vChar = aT.z < 9000.0 ? clamp((uTime - aT.z) / max(0.1, aT.y - aT.z), 0.0, 1.0) : 0.0;";
     shader.vertexShader = shader.vertexShader
-      .replace("#include <common>", `#include <common>\n${GROW}\n${mode === "house" ? "attribute vec2 aH;" : ""}\n${depth ? "" : "varying float vChar;"}`)
+      .replace("#include <common>", `#include <common>\n${GROW}\n${mode === "house" ? "attribute vec2 aH;" : ""}\n${depth ? "" : "varying float vChar; varying vec3 vLoc; varying vec3 vLn;"}`)
       .replace("#include <begin_vertex>", mode === "house"
         ? `float g = aliveK(); float s = g > 0.001 ? 0.45 + 0.55 * min(g, 1.0) : 0.0;
-           vec3 transformed = vec3(position.x * s, (aH.x + position.y * aH.y) * g, position.z * s); ${charV}`
-        : `float g = aliveK(); vec3 transformed = position * g; ${charV}`);
+           vec3 transformed = vec3(position.x * s, (aH.x + position.y * aH.y) * g, position.z * s); ${charV} ${depth ? "" : "vLn = normal; vLoc = vec3(position.x * length(instanceMatrix[0].xyz), aH.x + position.y * aH.y, position.z * length(instanceMatrix[2].xyz));"}`
+        : `float g = aliveK(); vec3 transformed = position * g; ${charV} ${depth ? "" : "vLn = normal; vLoc = position;"}`);
     if (!depth) shader.fragmentShader = shader.fragmentShader
-      .replace("#include <common>", "#include <common>\nvarying float vChar;")
-      .replace("#include <color_fragment>", "#include <color_fragment>\n diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.07, 0.05, 0.04), vChar * 0.9);");
+      .replace("#include <common>", "#include <common>\nvarying float vChar; varying vec3 vLoc; varying vec3 vLn;")
+      .replace("#include <color_fragment>", "#include <color_fragment>\n diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.07, 0.05, 0.04), vChar * 0.9);" + (facade ? FACADE(facade) : ""));
   };
   base.onBeforeCompile = (s) => vtx(s, false);
-  base.customProgramCacheKey = () => "grow-" + mode;
+  base.customProgramCacheKey = () => "grow-" + mode + facade;
   const depth = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking });
   depth.onBeforeCompile = (s) => vtx(s, true);
   depth.customProgramCacheKey = () => "growd-" + mode;
   return { mat: base, depth };
 }
+// facade: 1 = plaster (rows of windows and floor lines), 2 = glass tower (floor bands + vertical mullions)
+const FACADE = (k) => `
+ if (abs(vLn.y) < 0.5 && vLoc.y > 1.2) {
+   float fl = fract(vLoc.y / 3.2);
+   float along = abs(vLn.x) > 0.5 ? vLoc.z : vLoc.x;
+   float col = fract(along / ${k === 2 ? "2.4" : "3.6"});
+   ${k === 2
+     ? "float m = smoothstep(0.0, 0.06, col) * (1.0 - smoothstep(0.94, 1.0, col)); float b = smoothstep(0.80, 0.86, fl); diffuseColor.rgb *= mix(0.78, 1.0, m) * (1.0 - b * 0.35); diffuseColor.rgb += vec3(0.05, 0.07, 0.09) * (1.0 - fl);"
+     : "float win = step(0.28, fl) * step(fl, 0.72) * step(0.3, col) * step(col, 0.7); diffuseColor.rgb = mix(diffuseColor.rgb, diffuseColor.rgb * vec3(0.42, 0.46, 0.52), win * 0.85); diffuseColor.rgb *= 1.0 - smoothstep(0.93, 1.0, fl) * 0.12;"}
+ }`;
 export const STD = (opts = {}) => new THREE.MeshStandardMaterial({ roughness: 0.9, metalness: 0, ...opts });
 
 // recs: {m: Matrix4, c?: Color, t: [birth, death, ign, seed], h?: [base, height]}
-export function growMesh(geo, mat, mode, recs, { shadow = true, receive = true } = {}) {
+export function growMesh(geo, mat, mode, recs, { shadow = true, receive = true, facade = 0 } = {}) {
   const g = geo.clone(), n = recs.length;
   const aT = new Float32Array(Math.max(1, n) * 4), aH = new Float32Array(Math.max(1, n) * 2);
   recs.forEach((r, i) => { aT.set(r.t, i * 4); if (r.h) aH.set(r.h, i * 2); });
   g.setAttribute("aT", new THREE.InstancedBufferAttribute(aT, 4));
   if (mode === "house") g.setAttribute("aH", new THREE.InstancedBufferAttribute(aH, 2));
-  const { mat: m, depth } = growMaterial(mat, mode);
+  const { mat: m, depth } = growMaterial(mat, mode, facade);
   const mesh = new THREE.InstancedMesh(g, m, Math.max(1, n));
   mesh.count = n;
   recs.forEach((r, i) => { mesh.setMatrixAt(i, r.m); if (r.c) mesh.setColorAt(i, r.c); });
@@ -105,13 +115,18 @@ export function hipRoof() {
 export function facet(g) { const n = g.toNonIndexed(); n.computeVertexNormals(); return n; }
 
 // ---------------- renderer + post ----------------
-export function createStage(canvas, { W, H, SS, fog = "#c9d2d4", sunColor = "#fff0d6", sunDir = [-0.62, 0.62, -0.48], hemiSky = "#cfe3ff", hemiGround = "#7a7a5a", hemiI = 1.1, sunI = 3.1, saturation = -0.06 }) {
+export function createStage(canvas, { W, H, SS, fog = "#c9d2d4", sunColor = "#fff0d6", sunDir = [-0.62, 0.62, -0.48], hemiSky = "#cfe3ff", hemiGround = "#7a7a5a", hemiI = 1.1, sunI = 3.1, saturation = -0.06, tilt = 1, skyTop = null, contrast = 0.06, bloom = 0.55 }) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, stencil: false, depth: false, preserveDrawingBuffer: true, powerPreference: "high-performance" });
   renderer.setPixelRatio(SS); renderer.setSize(W, H, false); renderer.toneMapping = THREE.NoToneMapping;
   renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   const scene = new THREE.Scene();
   const FOG = new THREE.Color(fog);
   scene.background = FOG; scene.fog = new THREE.Fog(FOG, 2000, 9000);
+  if (skyTop) {                                    // vertical sky gradient behind the haze
+    const c = document.createElement("canvas"); c.width = 4; c.height = 512; const g = c.getContext("2d"), gr = g.createLinearGradient(0, 0, 0, 512);
+    gr.addColorStop(0, skyTop); gr.addColorStop(0.62, fog); gr.addColorStop(1, fog); g.fillStyle = gr; g.fillRect(0, 0, 4, 512);
+    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; scene.background = tx;
+  }
   const camera = new THREE.PerspectiveCamera(36, W / H, 2, 20000);
   const hemi = new THREE.HemisphereLight(hemiSky, hemiGround, hemiI); scene.add(hemi);
   const sun = new THREE.DirectionalLight(sunColor, sunI); sun.castShadow = true;
@@ -126,7 +141,7 @@ export function createStage(canvas, { W, H, SS, fog = "#c9d2d4", sunColor = "#ff
   composer.addPass(ao);
   // tilt-shift: a two-pass blur whose radius grows away from a horizontal focus band (the miniature look)
   const tiltMat = (dir) => new THREE.ShaderMaterial({
-    uniforms: { inputBuffer: { value: null }, uRes: { value: new THREE.Vector2(W * SS, H * SS) }, uDir: { value: dir }, uFocus: { value: 0.52 }, uBand: { value: 0.14 }, uMax: { value: 12 * SS }, uMaxTop: { value: 8 * SS } },
+    uniforms: { inputBuffer: { value: null }, uRes: { value: new THREE.Vector2(W * SS, H * SS) }, uDir: { value: dir }, uFocus: { value: 0.52 }, uBand: { value: 0.14 }, uMax: { value: 12 * SS * tilt }, uMaxTop: { value: 8 * SS * tilt } },
     vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }",
     fragmentShader: /* glsl */ `
       uniform sampler2D inputBuffer; uniform vec2 uRes; uniform vec2 uDir; uniform float uFocus, uBand, uMax, uMaxTop; varying vec2 vUv;
@@ -146,8 +161,8 @@ export function createStage(canvas, { W, H, SS, fog = "#c9d2d4", sunColor = "#ff
   });
   composer.addPass(new ShaderPass(tiltMat(new THREE.Vector2(1, 0)), "inputBuffer"));
   composer.addPass(new ShaderPass(tiltMat(new THREE.Vector2(0, 1)), "inputBuffer"));
-  composer.addPass(new EffectPass(camera, new BloomEffect({ intensity: 0.55, luminanceThreshold: 0.92, luminanceSmoothing: 0.1, mipmapBlur: true }), new ToneMappingEffect({ mode: ToneMappingMode.ACES_FILMIC }),
-    new BrightnessContrastEffect({ brightness: 0.0, contrast: 0.06 }), new HueSaturationEffect({ saturation }), new VignetteEffect({ darkness: 0.38, offset: 0.32 })));
+  composer.addPass(new EffectPass(camera, new BloomEffect({ intensity: bloom, luminanceThreshold: 0.92, luminanceSmoothing: 0.1, mipmapBlur: true }), new ToneMappingEffect({ mode: ToneMappingMode.ACES_FILMIC }),
+    new BrightnessContrastEffect({ brightness: 0.0, contrast }), new HueSaturationEffect({ saturation }), new VignetteEffect({ darkness: 0.38, offset: 0.32 })));
   composer.addPass(new EffectPass(camera, new SMAAEffect({ preset: SMAAPreset.HIGH })));
 
   // place the camera; fit fog, clip planes, AO radius and the sun's shadow frustum to what we see
