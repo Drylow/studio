@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 301 to Day 330",
+  "description_file": "chaines/last-safe-door/episode-11-day-301-330/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/Oosoilkb",
+    "file": "final.mp4",
+    "sha256": "bde8e4965c3d9c913efc1d48f9c3aea2cbb1b34347ae3d2da0982324c9a5e6a7",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-11-day-301-330-b246961712e86855.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-11-day-301-330/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-11-day-301-330/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-11-day-301-330/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-24T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-301-to-day-33-3cc42c"
+}

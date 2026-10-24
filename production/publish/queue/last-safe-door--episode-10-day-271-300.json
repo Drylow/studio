@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 271 to Day 300",
+  "description_file": "chaines/last-safe-door/episode-10-day-271-300/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/dh6T9z9I",
+    "file": "final.mp4",
+    "sha256": "98f17a12f62664feee95fbc8e9ef1b262520985fd47b808a6864ea0c881d3b5b",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-10-day-271-300-ea5c8f06b21d3220.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-10-day-271-300/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-10-day-271-300/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-10-day-271-300/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-23T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-271-to-day-30-fd0214"
+}

@@ -1,0 +1,7 @@
+node_modules/
+renders/
+snaps/
+.hyperframes/
+*.wav
+.env
+cities/babylon/assets/music.m4a

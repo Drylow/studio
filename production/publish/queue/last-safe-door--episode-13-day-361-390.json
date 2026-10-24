@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 361 to Day 390",
+  "description_file": "chaines/last-safe-door/episode-13-day-361-390/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/pTw0r2hJ",
+    "file": "final.mp4",
+    "sha256": "b9d3e1e0db64ee3a5a7d50f840ea025f71bd6d69676594e9b221c8b81fc997ca",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-13-day-361-390-6a79be6e9e9f2c2f.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-13-day-361-390/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-13-day-361-390/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-13-day-361-390/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-26T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-361-to-day-39-f3e7a8"
+}

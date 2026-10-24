@@ -1,0 +1,440 @@
+{
+  "city": "Tel Aviv",
+  "title": "EVOLUTION OF TEL AVIV | 3D CITY TIMELAPSE (1909–NOW)",
+  "bbox": [
+    34.745,
+    32.035,
+    34.815,
+    32.105
+  ],
+  "center": [
+    34.775,
+    32.07
+  ],
+  "start_year": 1909,
+  "ghsl": "work/timelapse/israel/ghsl/israel_built.npz",
+  "now_year": 2026,
+  "pre_existing_before": 1909,
+  "zones_note": "Dates de construction approximatives par quartier (fondation documentée de chaque quartier) ; les tours ont leur vraie année (liste Wikipedia des plus hauts immeubles de Tel-Aviv).",
+  "zones": [
+    {
+      "name": "Old Jaffa",
+      "lat": 32.0535,
+      "lon": 34.7525,
+      "r": 520,
+      "from": 1700,
+      "to": 1890
+    },
+    {
+      "name": "Jaffa port quarter",
+      "lat": 32.0555,
+      "lon": 34.756,
+      "r": 420,
+      "from": 1800,
+      "to": 1905
+    },
+    {
+      "name": "Ajami",
+      "lat": 32.048,
+      "lon": 34.7535,
+      "r": 520,
+      "from": 1880,
+      "to": 1935
+    },
+    {
+      "name": "Manshiyya",
+      "lat": 32.06,
+      "lon": 34.7605,
+      "r": 300,
+      "from": 1880,
+      "to": 1910
+    },
+    {
+      "name": "Neve Tzedek",
+      "lat": 32.0607,
+      "lon": 34.7655,
+      "r": 380,
+      "from": 1887,
+      "to": 1906
+    },
+    {
+      "name": "Sarona",
+      "lat": 32.0718,
+      "lon": 34.7865,
+      "r": 230,
+      "from": 1871,
+      "to": 1900
+    },
+    {
+      "name": "Ahuzat Bayit",
+      "lat": 32.0636,
+      "lon": 34.7718,
+      "r": 330,
+      "from": 1909.4,
+      "to": 1913
+    },
+    {
+      "name": "Lev HaIr",
+      "lat": 32.068,
+      "lon": 34.7745,
+      "r": 760,
+      "from": 1912,
+      "to": 1930
+    },
+    {
+      "name": "Florentin",
+      "lat": 32.0563,
+      "lon": 34.77,
+      "r": 480,
+      "from": 1924,
+      "to": 1940
+    },
+    {
+      "name": "Kerem HaTeimanim",
+      "lat": 32.0672,
+      "lon": 34.7665,
+      "r": 260,
+      "from": 1905,
+      "to": 1925
+    },
+    {
+      "name": "Old North south",
+      "lat": 32.079,
+      "lon": 34.776,
+      "r": 800,
+      "from": 1930,
+      "to": 1944
+    },
+    {
+      "name": "Old North north",
+      "lat": 32.0895,
+      "lon": 34.779,
+      "r": 800,
+      "from": 1936,
+      "to": 1955
+    },
+    {
+      "name": "Port",
+      "lat": 32.0975,
+      "lon": 34.774,
+      "r": 350,
+      "from": 1936,
+      "to": 1950
+    },
+    {
+      "name": "HaTikva",
+      "lat": 32.0505,
+      "lon": 34.79,
+      "r": 650,
+      "from": 1935,
+      "to": 1965
+    },
+    {
+      "name": "Yad Eliyahu",
+      "lat": 32.0585,
+      "lon": 34.796,
+      "r": 900,
+      "from": 1950,
+      "to": 1972
+    },
+    {
+      "name": "Kiryat Shalom",
+      "lat": 32.041,
+      "lon": 34.78,
+      "r": 900,
+      "from": 1950,
+      "to": 1975
+    },
+    {
+      "name": "Jaffa south",
+      "lat": 32.04,
+      "lon": 34.76,
+      "r": 1000,
+      "from": 1952,
+      "to": 1990
+    },
+    {
+      "name": "Bavli",
+      "lat": 32.0975,
+      "lon": 34.796,
+      "r": 550,
+      "from": 1958,
+      "to": 1985
+    },
+    {
+      "name": "Kirya",
+      "lat": 32.0745,
+      "lon": 34.79,
+      "r": 450,
+      "from": 1948,
+      "to": 1975
+    },
+    {
+      "name": "Montefiore",
+      "lat": 32.065,
+      "lon": 34.786,
+      "r": 400,
+      "from": 1930,
+      "to": 1960
+    }
+  ],
+  "fallback": {
+    "core_lat": 32.0636,
+    "core_lon": 34.7718,
+    "base": 1925,
+    "per_km": 9,
+    "max": 2020
+  },
+  "towers": [
+    {
+      "match": "שלום מאיר",
+      "label": "Shalom Meir Tower",
+      "year": 1965
+    },
+    {
+      "match": "עזריאלי עגול",
+      "label": "Azrieli Circular Tower",
+      "year": 1999
+    },
+    {
+      "match": "עזריאלי משולש",
+      "label": "Azrieli Triangular Tower",
+      "year": 1999
+    },
+    {
+      "match": "עזריאלי מרובע",
+      "label": "Azrieli Square Tower",
+      "year": 2007
+    },
+    {
+      "match": "אלקטרה",
+      "label": "Electra Tower",
+      "year": 2011
+    },
+    {
+      "match": "מגדל W",
+      "label": "W-Tower",
+      "year": 2010
+    },
+    {
+      "match": "W Prime",
+      "label": "W-Prime Tower",
+      "year": 2016
+    },
+    {
+      "match": "מאייר ברוטשילד",
+      "label": "Meier on Rothschild",
+      "year": 2015
+    },
+    {
+      "match": "מגדלי הארבעה",
+      "label": "HaArba'a Towers",
+      "year": 2017
+    },
+    {
+      "match": "מידטאון",
+      "label": "Midtown",
+      "year": 2018
+    },
+    {
+      "match": "רום תל אביב",
+      "label": "Rom Tel Aviv",
+      "year": 2021
+    },
+    {
+      "match": "ToHa 2",
+      "label": "ToHA 2",
+      "year": 2026
+    },
+    {
+      "match": "Beyond",
+      "label": "Beyond Tower",
+      "year": 2025
+    },
+    {
+      "match": "מגדלי תל אביב",
+      "label": "Tel Aviv Towers",
+      "year": 2000
+    },
+    {
+      "match": "מגדל נווה צדק",
+      "label": "Neve Tzedek Tower",
+      "year": 2007
+    },
+    {
+      "match": "Yoo",
+      "label": "YOO Towers",
+      "year": 2007
+    },
+    {
+      "match": "לוינשטיין",
+      "label": "Levinstein Tower",
+      "year": 2000
+    },
+    {
+      "match": "מגדלי TOU",
+      "label": "TOU Towers",
+      "year": 2021
+    },
+    {
+      "match": "פארק בבלי",
+      "label": "Park Bavli",
+      "year": 2018
+    },
+    {
+      "match": "בבלי בראשית",
+      "label": "Bavli Beresheet",
+      "year": 2022
+    },
+    {
+      "match": "עזריאלי Town",
+      "label": "Azrieli Town",
+      "year": 2021
+    },
+    {
+      "match_h": 235.0,
+      "label": "Azrieli Sarona Tower",
+      "year": 2017
+    }
+  ],
+  "exclude_names": [
+    "Spiral Tower"
+  ],
+  "population": [
+    [
+      1915,
+      2679
+    ],
+    [
+      1922,
+      15185
+    ],
+    [
+      1925,
+      34000
+    ],
+    [
+      1931,
+      46101
+    ],
+    [
+      1939,
+      160000
+    ],
+    [
+      1945,
+      166660
+    ]
+  ],
+  "labels": [
+    {
+      "text": "Old Jaffa",
+      "lat": 32.054,
+      "lon": 34.752,
+      "from": 1909,
+      "to": 1918
+    },
+    {
+      "text": "Neve Tzedek (1887)",
+      "lat": 32.0607,
+      "lon": 34.7655,
+      "from": 1909,
+      "to": 1916
+    },
+    {
+      "text": "Sarona (1871)",
+      "lat": 32.0718,
+      "lon": 34.7865,
+      "from": 1910,
+      "to": 1916
+    },
+    {
+      "text": "Ahuzat Bayit (1909)",
+      "lat": 32.0636,
+      "lon": 34.7718,
+      "from": 1909.4,
+      "to": 1914
+    },
+    {
+      "text": "Rothschild Boulevard",
+      "lat": 32.0668,
+      "lon": 34.776,
+      "from": 1914,
+      "to": 1920
+    },
+    {
+      "text": "Florentin",
+      "lat": 32.0563,
+      "lon": 34.77,
+      "from": 1926,
+      "to": 1931
+    },
+    {
+      "text": "Dizengoff Square",
+      "lat": 32.0779,
+      "lon": 34.7741,
+      "from": 1934,
+      "to": 1940
+    }
+  ],
+  "eras": [
+    {
+      "year": 1909,
+      "title": "THE SAND DUNES"
+    },
+    {
+      "year": 1914,
+      "title": "WAR AND EXILE"
+    },
+    {
+      "year": 1921,
+      "title": "THE GARDEN TOWN"
+    },
+    {
+      "year": 1925,
+      "title": "THE GEDDES PLAN"
+    },
+    {
+      "year": 1931,
+      "title": "THE WHITE CITY"
+    }
+  ],
+  "events": [
+    {
+      "year": 1909.28,
+      "text": "11 April 1909 - 66 families draw lots for plots in the dunes north of Jaffa."
+    },
+    {
+      "year": 1909.57,
+      "text": "28 July 1909 - The cornerstone of the Herzliya Hebrew Gymnasium is laid."
+    },
+    {
+      "year": 1910.39,
+      "text": "21 May 1910 - The new neighbourhood takes the name Tel Aviv."
+    },
+    {
+      "year": 1917.3,
+      "text": "1917 - Ottoman authorities expel the residents of Tel Aviv and Jaffa."
+    },
+    {
+      "year": 1921.4,
+      "text": "1921 - Tel Aviv becomes a township within the Jaffa municipality."
+    },
+    {
+      "year": 1922.6,
+      "text": "1922 - The British census counts 15,185 residents."
+    },
+    {
+      "year": 1925.5,
+      "text": "1925 - Patrick Geddes draws up the master plan for the city."
+    },
+    {
+      "year": 1931.5,
+      "text": "1931 - The census counts 46,101 residents."
+    },
+    {
+      "year": 1934.3,
+      "text": "1934 - Tel Aviv becomes an independent municipality."
+    }
+  ]
+}

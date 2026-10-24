@@ -1,0 +1,271 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Playfair; font-weight: 700; src: url(/node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2); }
+@font-face { font-family: Playfair; font-weight: 500; src: url(/node_modules/@fontsource/playfair-display/files/playfair-display-latin-500-normal.woff2); }
+@font-face { font-family: Mont; font-weight: 600; src: url(/node_modules/@fontsource/montserrat/files/montserrat-latin-600-normal.woff2); }
+@font-face { font-family: Mont; font-weight: 800; src: url(/node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2); }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+canvas { position: absolute; inset: 0; }
+#ui { position: absolute; inset: 0; pointer-events: none; color: #fff; }
+.sh { text-shadow: 0 2px 6px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.6); }
+#year { position: absolute; top: 34px; width: 100%; text-align: center; font: 700 78px Playfair, serif; letter-spacing: 2px; }
+#era { position: absolute; top: 132px; width: 100%; text-align: center; font: 600 23px Mont, sans-serif; letter-spacing: 6px; transition: none; }
+#pop { position: absolute; top: 40px; right: 56px; text-align: right; }
+#pop .k { font: 600 15px Mont, sans-serif; letter-spacing: 4px; opacity: .9; }
+#pop .v { font: 700 40px Playfair, serif; font-variant-numeric: tabular-nums; }
+#shade { position: absolute; left: 0; right: 0; bottom: 0; height: 230px; background: linear-gradient(to top, rgba(10,18,30,.55), rgba(10,18,30,0)); }
+#event { position: absolute; bottom: 70px; width: 100%; text-align: center; font: 500 30px Playfair, serif; padding: 0 200px; box-sizing: border-box; }
+.lab { position: absolute; transform: translate(-50%, -100%); white-space: nowrap; text-align: center; }
+.lab span { font: 600 19px Mont, sans-serif; letter-spacing: 1px; padding: 5px 12px; background: rgba(20,28,38,.62); border-radius: 4px; display: inline-block; }
+.lab i { display: block; width: 2px; height: 34px; background: rgba(255,255,255,.85); margin: 0 auto; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+#credits { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 14px; font: 500 26px Playfair, serif; text-align: center; }
+</style></head>
+<body>
+<div id="ui">
+  <div id="year" class="sh"></div><div id="era" class="sh"></div>
+  <div id="pop" class="sh"><div class="k">POPULATION</div><div class="v"></div></div>
+  <div id="labels"></div>
+  <div id="shade"></div><div id="event" class="sh"></div>
+  <div id="fade"></div>
+  <div id="credits"></div>
+</div>
+<script type="importmap">{ "imports": { "three": "/node_modules/three/build/three.module.js" } }</script>
+<script type="module">
+import * as THREE from 'three';
+
+const P = new URLSearchParams(location.search);
+const scene = await (await fetch(P.get('scene'))).json();
+const plan = await (await fetch(P.get('plan'))).json();
+
+const W = 1920, H = 1080;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(W, H); renderer.setPixelRatio(1);
+renderer.shadowMap.enabled = !P.get('noshadow'); renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+document.body.prepend(renderer.domElement);
+
+const S = new THREE.Scene();
+S.background = new THREE.Color(0xa9cdeb);
+S.fog = new THREE.Fog(0xc4dcee, 5000, 16000);
+const cam = new THREE.PerspectiveCamera(32, W / H, 40, 26000);
+
+const hemi = new THREE.HemisphereLight(0xdfefff, 0xb59f7a, 1.35); S.add(hemi);
+const sun = new THREE.DirectionalLight(0xfff1dc, 2.4);
+sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.6;
+S.add(sun); S.add(sun.target);
+
+const U = { uYear: { value: 1900 } };
+// apparition : 0 -> 1 avec un petit rebond, puis invisible avant la naissance
+const GROW = `
+float grow(float birth){ float t = clamp((uYear - birth) / 0.9, 0.0, 1.0);
+  if (t <= 0.0) return 0.0; float c1 = 1.9; float c3 = c1 + 1.0; float u = t - 1.0;
+  return 1.0 + c3 * u*u*u + c1 * u*u; }
+`;
+function depthFor(vertex) {
+  const d = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking }); patch(d, vertex); return d;
+}
+function patch(mat, vertex, frag) {
+  mat.onBeforeCompile = sh => {
+    sh.uniforms.uYear = U.uYear;
+    sh.vertexShader = 'uniform float uYear;\nattribute float birth;\nvarying float vWorldY; varying float vKind; varying vec3 vN;\n' + (vertex.decl || '') + GROW + sh.vertexShader
+      .replace('#include <begin_vertex>', '#include <begin_vertex>\n' + vertex.body);
+    if (frag) sh.fragmentShader = 'uniform float uYear;\nvarying float vWorldY; varying float vKind; varying vec3 vN;\n' + sh.fragmentShader
+      .replace('#include <color_fragment>', '#include <color_fragment>\n' + frag);
+  };
+  mat.customProgramCacheKey = () => vertex.body + (frag || '');
+}
+
+// ---------- sol, mer, plages
+const [[x0, z0], [x1, z1]] = scene.bounds;
+const groundMat = new THREE.MeshLambertMaterial({ color: 0xe2d3ad, polygonOffset: true, polygonOffsetFactor: 4, polygonOffsetUnits: 4 });
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(40000, 40000), groundMat);
+ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; S.add(ground);
+
+function flatMesh(rings, y, color, births) {
+  const pos = [], bir = [];
+  rings.forEach((ring, k) => {
+    const v = ring.map(([x, z]) => new THREE.Vector2(x, z));
+    if (THREE.ShapeUtils.isClockWise(v)) v.reverse();
+    const tris = THREE.ShapeUtils.triangulateShape(v, []);
+    for (const t of tris) for (const i of t) { pos.push(v[i].x, y, v[i].y); bir.push(births ? births[k] : -1e4); }
+  });
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('birth', new THREE.Float32BufferAttribute(bir, 1));
+  g.computeVertexNormals();
+  return g;
+}
+const seaMat = new THREE.MeshPhongMaterial({ color: 0x2f9fc2, shininess: 70, specular: 0x6688aa });
+{
+  const pos = []; for (const t of scene.sea_tris) for (const [x, z] of [t[0], t[2], t[1]]) pos.push(x, 1.0, z);
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.computeVertexNormals();
+  const m = new THREE.Mesh(g, new THREE.MeshPhongMaterial({ color: 0x2f9fc2, shininess: 70, specular: 0x6688aa, side: THREE.DoubleSide }));
+  m.receiveShadow = true; S.add(m);
+  let mx = 1e9; for (const t of scene.sea_tris) for (const [x] of t) mx = Math.min(mx, x);
+  // au-delà des données : la mer continue vers l'ouest
+  const far = new THREE.Mesh(new THREE.PlaneGeometry(40000, 60000), seaMat); far.rotation.x = -Math.PI / 2;
+  far.position.set(mx + 400 - 20000, 0.99, 0); S.add(far);
+}
+const inland = scene.water.filter(w => w[0] !== 'sea' && w[0] !== 'ocean').map(w => w[1]);
+S.add(new THREE.Mesh(flatMesh(inland, 0.5, 0), seaMat));
+const beachMat = new THREE.MeshLambertMaterial({ color: 0xf0e0b4 });
+S.add(new THREE.Mesh(flatMesh(scene.beach, 0.3, 0), beachMat));
+
+// ---------- parcs
+const parkMat = new THREE.MeshLambertMaterial({ color: 0x7cb84a });
+patch(parkMat, { body: 'transformed.y -= (grow(birth) > 0.5 ? 0.0 : 80.0);' });
+const parks = new THREE.Mesh(flatMesh(scene.parks.map(p => p[1]), 0.6, 0, scene.parks.map(p => p[0])), parkMat);
+parks.receiveShadow = true; S.add(parks);
+
+// ---------- routes (terre battue au début, bitume ensuite)
+{
+  const pos = [], bir = [], wid = [];
+  for (const [b, w, pts] of scene.roads) {
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [ax, az] = pts[i], [bx, bz] = pts[i + 1];
+      const dx = bx - ax, dz = bz - az, L = Math.hypot(dx, dz) || 1;
+      const nx = -dz / L * w / 2, nz = dx / L * w / 2;
+      const ex = dx / L * w * 0.35, ez = dz / L * w * 0.35; // léger recouvrement aux angles
+      const q = [[ax - nx - ex, az - nz - ez], [ax + nx - ex, az + nz - ez], [bx + nx + ex, bz + nz + ez], [bx - nx + ex, bz - nz + ez]];
+      for (const k of [0, 1, 2, 0, 2, 3]) { pos.push(q[k][0], 0.8 + w * 0.01, q[k][1]); bir.push(b); }
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('birth', new THREE.Float32BufferAttribute(bir, 1));
+  g.computeVertexNormals();
+  const m = new THREE.MeshLambertMaterial({ color: 0xffffff, side: THREE.DoubleSide });
+  patch(m, { body: 'transformed.y -= (grow(birth) > 0.3 ? 0.0 : 80.0);' },
+    'float asph = smoothstep(1922.0, 1950.0, uYear); diffuseColor.rgb = mix(vec3(0.80,0.70,0.52), vec3(0.47,0.48,0.50), asph);');
+  const roads = new THREE.Mesh(g, m); roads.receiveShadow = true; S.add(roads);
+}
+
+// ---------- bâtiments (une seule géométrie, hauteur animée dans le shader)
+const PALETTE = [
+  [0xf4efe4, 0xe9e2d2, 0xf7f3ea, 0xe8dcc4, 0xd9cdb5, 0xefe6d6],   // plâtre blanc / crème (ville blanche)
+  [0xe9e4da, 0xd8d2c6, 0xcfc6b6, 0xe2d8c8, 0xc9c3ba, 0xf0ebe2],   // immeubles
+  [0x8fb3cf, 0x9db8c9, 0x7fa2bf, 0xa9bfcc, 0x6f93b3, 0xb7c7d1],   // tours de verre
+];
+const OLD = [0xd8bf92, 0xcfb487, 0xe0c9a0, 0xc9ab7c, 0xd6c29b, 0xbfa278]; // pierre de Jaffa
+const ROOF_OLD = [0xb5563a, 0xa9533b, 0xc0674a];
+{
+  let nv = 0;
+  for (const b of scene.buildings) nv += b[4].length * 6 + (b[4].length - 2) * 3;
+  const pos = new Float32Array(nv * 3), nor = new Float32Array(nv * 3), col = new Float32Array(nv * 3), bir = new Float32Array(nv), kin = new Float32Array(nv);
+  let o = 0; const c = new THREE.Color(), cr = new THREE.Color();
+  const put = (x, y, z, nx, ny, nz, cc, b, k) => {
+    pos[o * 3] = x; pos[o * 3 + 1] = y; pos[o * 3 + 2] = z; nor[o * 3] = nx; nor[o * 3 + 1] = ny; nor[o * 3 + 2] = nz;
+    col[o * 3] = cc.r; col[o * 3 + 1] = cc.g; col[o * 3 + 2] = cc.b; bir[o] = b; kin[o] = k; o++;
+  };
+  for (const [b, h, kind, ci, ring] of scene.buildings) {
+    let v = ring.map(([x, z]) => new THREE.Vector2(x, z));
+    if (!THREE.ShapeUtils.isClockWise(v)) v.reverse();
+    const old = b < 1905;
+    c.setHex(old ? OLD[ci] : PALETTE[kind][ci]);
+    cr.copy(c).multiplyScalar(kind === 2 ? 1.08 : 0.93);
+    if (old && ci < 3) cr.setHex(ROOF_OLD[ci]);
+    for (let i = 0; i < v.length; i++) {
+      const a = v[i], d = v[(i + 1) % v.length];
+      let nx = d.y - a.y, nz = -(d.x - a.x); const L = Math.hypot(nx, nz) || 1; nx /= L; nz /= L;
+      for (const [p, y] of [[a, 0], [d, 0], [d, h], [a, 0], [d, h], [a, h]]) put(p.x, y, p.y, nx, 0, nz, c, b, kind);
+    }
+    const tris = THREE.ShapeUtils.triangulateShape(v, []);
+    for (const t of tris) for (const i of [t[0], t[2], t[1]]) put(v[i].x, h, v[i].y, 0, 1, 0, cr, b, kind);
+    for (let k = tris.length * 3; k < (v.length - 2) * 3; k++) put(0, -5, 0, 0, 1, 0, cr, 9999, 0);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  g.setAttribute('normal', new THREE.BufferAttribute(nor, 3));
+  g.setAttribute('color', new THREE.BufferAttribute(col, 3));
+  g.setAttribute('birth', new THREE.BufferAttribute(bir, 1));
+  g.setAttribute('kind', new THREE.BufferAttribute(kin, 1));
+  const m = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.82, metalness: 0.0 });
+  patch(m, { decl: 'attribute float kind;\n', body: 'float gg = grow(birth); transformed.y = transformed.y * gg - (gg <= 0.0 ? 80.0 : 0.0); vWorldY = position.y; vKind = kind; vN = normal;' },
+    // bandes d'étages / fenêtres sur les façades
+    `if (abs(vN.y) < 0.5 && vWorldY > 2.0) { float f = fract(vWorldY / 3.3);
+       float band = vKind > 1.5 ? smoothstep(0.55, 0.62, f) * 0.22 : (vKind > 0.5 ? smoothstep(0.62, 0.7, f) * smoothstep(0.95, 0.88, f) * 0.18 : 0.0);
+       diffuseColor.rgb *= 1.0 - band; }`);
+  const mesh = new THREE.Mesh(g, m); mesh.customDepthMaterial = depthFor({ decl: 'attribute float kind;\n', body: 'float gg = grow(birth); transformed.y = transformed.y * gg - (gg <= 0.0 ? 80.0 : 0.0);' }); mesh.castShadow = true; mesh.receiveShadow = true; S.add(mesh);
+}
+
+// ---------- arbres (instances)
+{
+  const tg = new THREE.IcosahedronGeometry(4.2, 0); tg.translate(0, 4.6, 0);
+  const tm = new THREE.MeshLambertMaterial({ color: 0xffffff });
+  const n = scene.trees.length;
+  const inst = new THREE.InstancedMesh(tg, tm, n);
+  const birth = new Float32Array(n); const M = new THREE.Matrix4(); const col = new THREE.Color();
+  scene.trees.forEach(([b, x, z, s], i) => {
+    M.makeScale(s, s * 1.1, s); M.setPosition(x, 0, z); inst.setMatrixAt(i, M); birth[i] = b;
+    col.setHSL(0.25 + (i % 7) * 0.01, 0.5, 0.42 + (i % 5) * 0.03); inst.setColorAt(i, col);
+  });
+  tg.setAttribute('birth', new THREE.InstancedBufferAttribute(birth, 1));
+  patch(tm, { body: 'transformed *= grow(birth); transformed.y -= (grow(birth) <= 0.0 ? 80.0 : 0.0);' });
+  inst.customDepthMaterial = depthFor({ body: 'transformed *= grow(birth); transformed.y -= (grow(birth) <= 0.0 ? 80.0 : 0.0);' });
+  inst.castShadow = true; inst.receiveShadow = true; S.add(inst);
+}
+
+// ---------- étiquettes, textes
+const labelsEl = document.getElementById('labels');
+const allLabels = [...scene.labels, ...(plan.labels || [])];
+const labelEls = allLabels.map(l => { const d = document.createElement('div'); d.className = 'lab sh'; d.innerHTML = `<span>${l.text}</span><i></i>`; labelsEl.appendChild(d); return d; });
+
+const lerp = (a, b, t) => a + (b - a) * t;
+const ease = t => t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t);
+function at(keys, t, f) { // interpolation entre images clés {t, ...}
+  if (t <= keys[0].t) return f(keys[0], keys[0], 0);
+  for (let i = 0; i < keys.length - 1; i++) if (t <= keys[i + 1].t) return f(keys[i], keys[i + 1], (t - keys[i].t) / (keys[i + 1].t - keys[i].t));
+  const k = keys[keys.length - 1]; return f(k, k, 0);
+}
+function popAt(y) {
+  const p = plan.population; if (!p || y < p[0][0]) return null;
+  for (let i = 0; i < p.length - 1; i++) if (y <= p[i + 1][0]) {
+    const t = (y - p[i][0]) / (p[i + 1][0] - p[i][0]); return Math.round(Math.exp(lerp(Math.log(p[i][1]), Math.log(p[i + 1][1]), t)));
+  }
+  return p[p.length - 1][1];
+}
+const $ = id => document.getElementById(id);
+const v3 = new THREE.Vector3();
+
+window.renderAt = function (t) {
+  const year = at(plan.years, t, (a, b, u) => lerp(a.year, b.year, b.ease === false ? u : ease(u)));
+  U.uYear.value = year;
+  const c = at(plan.camera, t, (a, b, u) => { const e = ease(u); return { x: lerp(a.x, b.x, e), z: lerp(a.z, b.z, e), dist: Math.exp(lerp(Math.log(a.dist), Math.log(b.dist), e)), pitch: lerp(a.pitch, b.pitch, e), yaw: lerp(a.yaw, b.yaw, e) }; });
+  const pr = THREE.MathUtils.degToRad(c.pitch), yr = THREE.MathUtils.degToRad(c.yaw);
+  cam.position.set(c.x + Math.sin(yr) * Math.cos(pr) * c.dist, Math.sin(pr) * c.dist, c.z + Math.cos(yr) * Math.cos(pr) * c.dist);
+  cam.lookAt(c.x, 0, c.z);
+  // ombres centrées sur ce que voit la caméra
+  const span = Math.min(4500, c.dist * 1.1);
+  sun.position.set(c.x - 900, 1400, c.z + 600); sun.target.position.set(c.x, 0, c.z);
+  Object.assign(sun.shadow.camera, { left: -span, right: span, top: span, bottom: -span, near: 10, far: 6000 });
+  sun.shadow.camera.updateProjectionMatrix();
+  // sable des dunes -> sol de ville
+  { const k = ease((year - 1925) / 45); groundMat.color.setRGB(lerp(0.93, 0.80, k), lerp(0.80, 0.79, k), lerp(0.56, 0.70, k)); }
+  renderer.render(S, cam);
+
+  const yi = Math.floor(year);
+  $('year').textContent = plan.yearText ? plan.yearText(t) : (year >= plan.now_year ? 'NOW' : yi);
+  const quiet = (plan.uiHide || []).some(([a, b]) => t >= a && t < b); // pendant le rembobinage : pas d'époque, d'événement ni d'étiquette
+  let era = ''; if (!quiet) for (const e of plan.eras) if (year >= e.year) era = e.title; $('era').textContent = era;
+  const p = popAt(year); const hid = (plan.popHide || []).some(([a, b]) => t >= a && t < b); $('pop').style.opacity = p && !hid ? 1 : 0; if (p) $('pop').querySelector('.v').textContent = p.toLocaleString('en-US');
+  let ev = ''; if (!quiet) for (const e of plan.events) if (year >= e.year && year < e.year + (e.dur || 1.4)) ev = e.text; $('event').textContent = ev; $('shade').style.opacity = ev ? 1 : 0;
+  allLabels.forEach((l, i) => {
+    const on = !quiet && year >= l.from && year < l.to; const el = labelEls[i];
+    if (!on) { el.style.display = 'none'; return; }
+    v3.set(l.x, l.y || 25, l.z).project(cam);
+    if (v3.z > 1 || Math.abs(v3.x) > 0.95 || Math.abs(v3.y) > 0.9) { el.style.display = 'none'; return; }
+    el.style.display = 'block'; el.style.left = ((v3.x + 1) / 2 * W) + 'px'; el.style.top = ((1 - v3.y) / 2 * H) + 'px';
+    el.style.opacity = Math.min(1, (year - l.from) * 3, (l.to - year) * 3);
+  });
+  const f = plan.fade ? at(plan.fade, t, (a, b, u) => lerp(a.v, b.v, u)) : 0; $('fade').style.opacity = f;
+  return year;
+};
+window.births = function (y0, y1) { // nombre de bâtiments qui apparaissent entre deux années (bruitages)
+  let n = 0; for (const b of scene.buildings) if (b[0] > y0 && b[0] <= y1) n++; return n;
+};
+window.ready = true;
+</script>
+</body></html>

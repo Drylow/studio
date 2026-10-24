@@ -1,0 +1,5 @@
+Every city has growth rings.
+
+Urban Rings rebuilds the world's cities in 3D and lets you watch them grow, year by year: from the first houses to the modern skyline. Every building comes from real map data, every date and event on screen is checked against historical sources.
+
+New city timelapse every week. Which city should we build next? Tell us in the comments.

@@ -83,3 +83,4 @@ output/conversation-chess/
 # Private nature-sleep renders and delivery credentials
 output/nature-sleep/
 output/rights-research/
+timelapse_engine/node_modules/

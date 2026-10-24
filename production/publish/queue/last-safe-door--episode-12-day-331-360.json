@@ -1,0 +1,17 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 331 to Day 360",
+  "description_file": "chaines/last-safe-door/episode-12-day-331-360/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/LACOcV9r",
+    "file": "final.mp4",
+    "sha256": "6c62ff5e79ca8730d761752b79f4dc408710d802d63666b2bba8832482117246",
+    "url": "http://media.edgerunners.fr/last-safe-door--episode-12-day-331-360-c1eba099e22eba37.mp4"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-12-day-331-360/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-12-day-331-360/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-12-day-331-360/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-25T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-331-to-day-36-bbbce2"
+}
