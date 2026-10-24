@@ -1,0 +1,11 @@
+{
+  "name": "citylapse-kit",
+  "private": true,
+  "type": "module",
+  "description": "3D city time-lapse videos made 100% in code (HyperFrames + Three.js)",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "new": "node tools/new-city.mjs",
+    "render": "node tools/render.mjs"
+  }
+}

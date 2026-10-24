@@ -89,7 +89,7 @@ def main(cfg_path, folder):
             height = h or (nf * 3.3 + 1.5 if nf else None)
             label, year = None, None
             for t in towers:
-                if name and t["match"] in name:
+                if (name and t.get("match") and t["match"] in name) or (t.get("match_h") and h and abs(h - t["match_h"]) < 0.5):
                     label, year = t["label"], t["year"]
                     break
             if height is None:

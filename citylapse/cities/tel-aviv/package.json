@@ -1,0 +1,9 @@
+{
+  "name": "tel-aviv",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.162 preview",
+    "check": "npx --yes hyperframes@0.8.162 check"
+  }
+}
