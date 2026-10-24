@@ -80,7 +80,9 @@ const FACADE = (k) => `
    float fl = fract(vLoc.y / 3.2);
    float along = abs(vLn.x) > 0.5 ? vLoc.z : vLoc.x;
    float col = fract(along / ${k === 2 ? "2.4" : "3.6"});
-   ${k === 2
+   ${k === 3
+     ? "float band = step(0.22, fl) * step(fl, 0.58); float rail = step(0.62, fl) * step(fl, 0.70); float gap = step(0.18, col) * step(col, 0.82); diffuseColor.rgb = mix(diffuseColor.rgb, diffuseColor.rgb * vec3(0.38, 0.42, 0.48), band * gap * 0.9); diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.97, 0.96, 0.93), rail * 0.8); diffuseColor.rgb *= 1.0 - smoothstep(0.72, 0.78, fl) * (1.0 - smoothstep(0.80, 0.86, fl)) * 0.35;"
+     : k === 2
      ? "float m = smoothstep(0.0, 0.06, col) * (1.0 - smoothstep(0.94, 1.0, col)); float b = smoothstep(0.80, 0.86, fl); diffuseColor.rgb *= mix(0.78, 1.0, m) * (1.0 - b * 0.35); diffuseColor.rgb += vec3(0.05, 0.07, 0.09) * (1.0 - fl);"
      : "float win = step(0.28, fl) * step(fl, 0.72) * step(0.3, col) * step(col, 0.7); diffuseColor.rgb = mix(diffuseColor.rgb, diffuseColor.rgb * vec3(0.42, 0.46, 0.52), win * 0.85); diffuseColor.rgb *= 1.0 - smoothstep(0.93, 1.0, fl) * 0.12;"}
  }`;
