@@ -1,6 +1,10 @@
 #!/bin/sh
 # Build an immutable Git release, back up private state, then replace only TubeForge.
 set -eu
+if [ "${1:-}" = "--api-overlay" ]; then
+    test "$#" -eq 2 || { printf 'Usage: update.sh --api-overlay /opt/tubeforge/api-patches/NAME\n' >&2; exit 1; }
+    exec python3 "$(dirname "$0")/api_overlay.py" "$2"
+fi
 home="${TUBEFORGE_HOME:-/opt/tubeforge}"
 test "$home" = /opt/tubeforge || { printf 'Set up and review a different host path explicitly.\n' >&2; exit 1; }
 repo="$home/repository"

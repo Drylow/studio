@@ -25,6 +25,7 @@ def deploy(root, seed=True):
     for name in ('workspace_api.py', 'forge_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_locations.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
+    shutil.copy2(support / 'forge_migrations.py', root / 'app/forge_migrations.py')
     shutil.copytree(support / 'forge_docs', root / 'app/forge_docs', dirs_exist_ok=True)
     shutil.copy2(support / 'forge_queue.py', root / 'app/forge_queue.py')
     web = root / 'app/web'

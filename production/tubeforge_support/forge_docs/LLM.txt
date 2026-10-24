@@ -1,5 +1,25 @@
 TUBEFORGE PRODUCTION API — VERSION 1
 
+PROJECT IMAGE MODEL MIGRATION (no generation or render is started)
+GET /videos/ID/model-migration returns model_snapshot, snapshot_sha256 and
+project_provider_exceptions. Changing settings.visuals alone does NOT change
+the generation model. Use POST /videos/ID/model-migration with:
+{"idempotency_key":"unique-migration-key","expected_snapshot_sha256":"HASH_FROM_GET",
+"image_model":"EXACT_CATALOG_ID","image_provider":"cli_proxy",
+"acknowledge_untested_model":true}.
+The server requires an idle project, validates the current catalog and provider
+policy, creates and SHA256-verifies a backup of the full project and media, then
+synchronizes model_snapshot and settings.visuals. Existing images and generation
+receipts remain unchanged; shots are flagged for regeneration, old reviews become
+stale, and an existing render is retained in history. A repeat with the same key
+and payload reuses the migration. Conflicting keys or snapshots return 409.
+The response contains backup_url for an authenticated ZIP download and its hash.
+Provider exceptions are server-configured per project; do not change global policy.
+A catalog entry is not a generation test. Generate and inspect ONE shot first.
+Review state values are exactly: verified, correct, unreviewed. AI review source
+is delegated_ai_inspection. Never mark uninspected images verified.
+This migration endpoint does NOT install or expose a RunPod render endpoint.
+
 Website: https://tools.kanye.studio/2d
 Simple API: https://tools.kanye.studio/api/forge/v1
 Native API: https://tools.kanye.studio/api/2d (append the complete native path,

@@ -107,6 +107,8 @@ def install(app):
     if getattr(app.state, "forge_api_installed", False):
         return
     router = APIRouter(prefix=PREFIX, tags=["Forge production API"])
+    from . import forge_migrations
+    forge_migrations.install(router)
 
     @router.get("/health")
     async def health():

@@ -120,7 +120,8 @@ def _prepare(p, s, body):
     provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
     if body.get("image_provider", provider) != provider:
         raise HTTPException(409, "The confirmed provider does not match the project's provider")
-    api._check_image_provider(provider, p.get("style_id"))
+    from .forge_migrations import check_provider
+    check_provider(p, provider)
     api._validate_drawing_reference(p, s)
     if provider == "google_flow" and not google_flow.configured():
         raise HTTPException(503, "Google Flow is not configured")
