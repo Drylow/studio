@@ -28,7 +28,8 @@ def main():
         raise SystemExit('Patch must be staged under /opt/tubeforge/api-patches')
     allowed = {'app/forge_api.py', 'app/forge_migrations.py', 'app/workspace_generation.py',
                'app/workspace_api.py', 'app/forge_docs/LLM.txt', 'app/forge_production.py',
-               'app/forge_runpod.py', 'app/forge_runpod_worker.py', 'app/slideshow_render.py'}
+               'app/forge_runpod.py', 'app/forge_runpod_worker.py', 'app/slideshow_render.py',
+               'app/web/workspace.js'}
     names = {p.relative_to(patch).as_posix() for p in (patch/'app').rglob('*') if p.is_file()}
     assert names and names <= allowed
     expected = json.loads((patch / 'expected-files.json').read_text())
@@ -64,7 +65,15 @@ for f in Path('data/projects').glob('*/project.json'):
  if any(s.get('state') in ('running','queued') for s in p.get('steps',{}).values()) or any((p.get(k)or{}).get('state')in('running','queued','stopping') for k in ('workspace_batch','workspace_external_execution','workspace_generation')):busy.append(p['id'])
 if busy:sys.exit('Active project jobs; deployment deferred')
 """
-    run(['docker','exec','-i','-w','/opt/studio/work/TubeForge','drylow-tubeforge','python','-'], input=busy_code)
+    idle_deadline=time.monotonic()+60
+    while True:
+        try:
+            run(['docker','exec','-i','-w','/opt/studio/work/TubeForge','drylow-tubeforge','python','-'], input=busy_code)
+            break
+        except subprocess.CalledProcessError as exc:
+            if 'Active project jobs' not in (exc.stderr or '') or time.monotonic() >= idle_deadline:
+                raise RuntimeError((exc.stderr or 'Could not verify idle worker').strip()) from exc
+            time.sleep(0.5)
     current = run(['docker','exec','-i','-w','/opt/studio/work/TubeForge','drylow-tubeforge','python','-'],input="import hashlib,json\nfrom pathlib import Path\nprint(json.dumps({n:hashlib.sha256(Path(n).read_bytes()).hexdigest() for n in "+repr(list(expected))+"}))\n")
     assert json.loads(current)==expected, 'Source changed during build'
     env_path=Path('/opt/tubeforge/compose.env')
@@ -74,9 +83,18 @@ if busy:sys.exit('Active project jobs; deployment deferred')
     env_path.write_text(new)
     compose=['docker','compose','--project-name',project,'--env-file',str(env_path)]
     for f in compose_files:compose.extend(['-f',f])
-    command=compose+['up','-d','--no-deps','tubeforge']
+    # Task ownership lives in this web process. Image concurrency is asynchronous,
+    # not provided by extra Uvicorn workers. Override historical Compose drift too.
+    web_command=['python','-m','uvicorn','app.server:app','--host','0.0.0.0',
+                 '--port','8766','--workers','1','--proxy-headers','--forwarded-allow-ips','*']
+    worker_override=release/'compose-worker.json'
+    worker_override.write_text(json.dumps({'services':{'tubeforge':{'command':web_command}}}))
+    rollback_command=compose+['up','-d','--no-deps','tubeforge']
+    command=compose+['-f',str(worker_override),'up','-d','--no-deps','tubeforge']
     try:
         run(command)
+        deployed=json.loads(run(['docker','inspect','drylow-tubeforge']))[0]
+        assert deployed['Config']['Cmd']==web_command, 'Task tracking requires one web worker'
         ok=False
         for _ in range(12):
             try:
@@ -85,7 +103,7 @@ if busy:sys.exit('Active project jobs; deployment deferred')
             except subprocess.CalledProcessError:time.sleep(3)
         if not ok:raise RuntimeError('New API did not become healthy')
     except Exception:
-        env_path.write_text(old);run(command)
+        env_path.write_text(old);run(rollback_command)
         raise
     result={'state':'deployed','image':tag,'previous_image':info['Config']['Image'],
             'release':str(release),'files':{n:digest(release/n)for n in names},

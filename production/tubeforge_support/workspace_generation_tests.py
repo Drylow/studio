@@ -33,6 +33,90 @@ def prepared_plan(workspace):
     return client, p
 
 
+def test_orphaned_single_image_recovers_without_touching_assets(workspace):
+    client, p = prepared_plan(workspace)
+    p['scenes'][0].update(status='running', generation_id='lost-call')
+    p['steps']['visuals']['state'] = 'running'
+    p['workspace_generation'] = {'id': 'lost-call', 'scene_id': 1, 'state': 'running',
+                                 'provider_job_id': 'keep-this'}
+    store.save_project(p)
+    fixed = api._project(p['id'], writable=True)
+    assert fixed['scenes'][0]['image'] == 'previous.png'
+    assert fixed['scenes'][0]['prompt'] == p['scenes'][0]['prompt']
+    assert fixed['scenes'][0]['status'] == 'error'
+    assert fixed['workspace_generation']['state'] == 'interrupted'
+    assert fixed['workspace_generation']['provider_job_id'] == 'keep-this'
+    assert not generation.operation_status(fixed)['running']
+    recovered = fixed['workspace_lock_recovery']
+    assert api._project(p['id'])['workspace_lock_recovery'] == recovered
+    assert asyncio.run(generation.request_stop(p['id']))['unlocked']
+
+
+def test_external_reservation_never_auto_unlocked(workspace):
+    _, p = prepared_plan(workspace)
+    p['workspace_external_execution'] = {'backend': 'runpod', 'state': 'cleanup_required'}
+    p['steps']['render']['state'] = 'running'
+    store.save_project(p)
+    assert api._project(p['id'])['steps']['render']['state'] == 'running'
+    with pytest.raises(HTTPException) as failure:
+        asyncio.run(generation.request_stop(p['id']))
+    assert failure.value.status_code == 409
+    assert store.get_project(p['id'])['workspace_external_execution']['state'] == 'cleanup_required'
+
+
+def test_parallel_single_shots_duplicate_guard_and_stop_drain(workspace, monkeypatch):
+    _, p = prepared_plan(workspace)
+    for sid in (2, 3):
+        p['scenes'].append(dict(copy.deepcopy(p['scenes'][0]), id=sid))
+    store.save_project(p)
+    monkeypatch.setattr(generation, 'batch_concurrency', lambda *args: 3)
+    stream = io.BytesIO(); Image.new('RGB', (32, 18), 'blue').save(stream, format='PNG')
+    async def run():
+        release = asyncio.Event(); entered = asyncio.Event(); count = 0
+        async def image_request(*args, **kwargs):
+            nonlocal count
+            count += 1
+            if count == 2: entered.set()
+            await release.wait()
+            return stream.getvalue()
+        monkeypatch.setattr(llm, 'generate_image', image_request)
+        body = {'confirm_prompt': p['scenes'][0]['prompt'], 'image_model': p['model_snapshot']['image_model']}
+        first = asyncio.create_task(generation.generate(p['id'], 1, body))
+        second = asyncio.create_task(generation.generate(p['id'], 2, body))
+        await asyncio.wait_for(entered.wait(), 3)
+        active = api._full(api._project(p['id']))
+        assert active['running'] and len(active['execution']['operations']) == 2
+        with pytest.raises(HTTPException) as duplicate:
+            await generation.generate(p['id'], 1, body)
+        assert duplicate.value.status_code == 409
+        with pytest.raises(HTTPException): api._project(p['id'], writable=True)
+        stopped = await generation.request_stop(p['id'])
+        assert not stopped['unlocked'] and stopped['stopping']
+        with pytest.raises(HTTPException): await generation.generate(p['id'], 3, body)
+        release.set()
+        await asyncio.gather(first, second)
+        result = await generation.request_stop(p['id'])
+        assert result['unlocked'] and not result['running'] and count == 2
+        saved = store.get_project(p['id'])
+        assert all(s['status'] == 'done' for s in saved['scenes'][:2])
+        assert saved['scenes'][2]['image'] == 'previous.png'
+    asyncio.run(run())
+
+
+def test_timeout_keeps_previous_image_and_releases_task(workspace, monkeypatch):
+    _, p = prepared_plan(workspace)
+    async def timed_out(*args, **kwargs): raise asyncio.TimeoutError()
+    monkeypatch.setattr(llm, 'generate_image', timed_out)
+    body = {'confirm_prompt': p['scenes'][0]['prompt'], 'image_model': p['model_snapshot']['image_model']}
+    with pytest.raises(HTTPException) as error:
+        asyncio.run(generation.generate(p['id'], 1, body))
+    assert error.value.status_code == 504
+    saved = api._project(p['id'], writable=True)
+    assert saved['scenes'][0]['image'] == 'previous.png'
+    assert saved['workspace_generation_history'][-1]['state'] == 'failed_unselected'
+    assert not generation.operation_status(saved)['running']
+
+
 def test_reference_encoding_reuses_only_the_same_path_and_source_bytes(tmp_path, monkeypatch):
     monkeypatch.setattr(generation, '_reference_payloads', type(generation._reference_payloads)())
     monkeypatch.setattr(generation, '_reference_payload_bytes', 0)
@@ -100,6 +184,7 @@ def test_unsafe_generation_rejected_without_request(workspace, monkeypatch, chan
         p["scenes"][0]["prompt_author"] = "automatic"
     else:
         p["scenes"][0]["status"] = "running"
+        monkeypatch.setattr(generation, '_active_generations', {(p['id'], 1): {'id': 'live', 'scene_id': 1}})
     store.save_project(p)
     response = client.post(f"/api/workspace/projects/{p['id']}/scenes/1/generate", json=body)
     assert response.status_code in (409, 422)
@@ -875,7 +960,7 @@ def test_stop_endpoint_finishes_current_request_without_starting_another(workspa
     request = AsyncMock(side_effect=image)
     monkeypatch.setattr(llm, "generate_image", request)
     url = f"/api/workspace/projects/{p['id']}"
-    assert client.post(url + "/images/stop").status_code == 409
+    assert client.post(url + "/images/stop").status_code == 200  # idempotent unlock when already idle
     assert client.post(url + "/images/generate", json=batch_body(p)).status_code == 202
     response = client.post(url + "/images/stop")
     assert response.status_code == 200 and response.json()["workspace_batch"]["stop_requested"]

@@ -18,6 +18,7 @@ _active_projects = set()
 _active_generations = {}
 _batch_permits = {}
 _batch_tasks = {}
+_stop_requested = set()
 _reference_payloads = OrderedDict()
 _reference_payload_bytes = 0
 _REFERENCE_PAYLOAD_LIMIT = 64 * 1024 * 1024
@@ -54,6 +55,86 @@ def batch_concurrency(provider, phase):
 def batch_running(pid):
     task = _batch_tasks.get(pid)
     return bool(task and not task.done())
+
+
+def reconcile(p):
+    """Recover orphaned local state, never expire a live owner by its age alone.
+
+    The worker runs one web process. External render reservations have their own
+    reconciliation protocol and must never be cleared by this local recovery.
+    """
+    pid = p['id']
+    for key, record in list(_active_generations.items()):
+        task = record.get('task')
+        if key[0] == pid and task is not None and task.done():
+            _active_generations.pop(key, None)
+    if pid in _active_projects and not _other_generations(pid):
+        _active_projects.discard(pid)
+    external = p.get('workspace_external_execution') or {}
+    if (pipeline.is_running(pid) or batch_running(pid) or _other_generations(pid)
+            or external.get('state') in ('queued', 'running', 'stopping', 'cleanup_required')):
+        return p
+    _stop_requested.discard(pid)
+    changed = False
+    message = 'Previous task is no longer running. Existing files are kept; inspect before retrying.'
+    for scene in p.get('scenes', []):
+        if scene.get('status') in ('queued', 'running'):
+            scene.update(status='error', error=message)
+            changed = True
+    for step in p.get('steps', {}).values():
+        if step.get('state') in ('queued', 'running'):
+            step.update(state='error', msg=message)
+            changed = True
+    records = list((p.get('workspace_generations') or {}).values())
+    records += [p.get('workspace_generation') or {}, p.get('workspace_batch') or {}]
+    for record in records:
+        if record.get('state') in ('queued', 'running', 'stopping'):
+            record.update(state='interrupted', error=message, finished_at=now())
+            changed = True
+    if changed:
+        p['workspace_lock_recovery'] = {'at': now(), 'message': message}
+        store.save_project(p)
+    return p
+
+
+def operation_status(p):
+    pid = p['id']
+    external = p.get('workspace_external_execution') or {}
+    active = [{'id': r['id'], 'kind': 'image', 'scene_id': r['scene_id'],
+               'started_at': r.get('started_at'), 'timeout_seconds': r.get('timeout_seconds')}
+              for r in _other_generations(pid)]
+    if batch_running(pid):
+        active.append({'id': (p.get('workspace_batch') or {}).get('id'), 'kind': 'image_batch'})
+    if pipeline.is_running(pid):
+        active.append({'kind': 'pipeline'})
+    if external.get('state') in ('queued', 'running', 'stopping', 'cleanup_required'):
+        active.append({'id': external.get('job_id'), 'kind': 'runpod', 'state': external['state']})
+    return {'running': bool(active), 'operations': active, 'stopping': pid in _stop_requested,
+            'recovery': p.get('workspace_lock_recovery'),
+            'can_unlock': not any(r['kind'] == 'runpod' for r in active)}
+
+
+async def request_stop(pid):
+    p = api._project(pid)
+    external = p.get('workspace_external_execution') or {}
+    if external.get('state') in ('queued', 'running', 'stopping', 'cleanup_required'):
+        raise HTTPException(409, 'Reconcile the RunPod job first; its reservation was not removed')
+    if batch_running(pid):
+        p['workspace_batch'].update(stop_requested=True, state='stopping')
+        store.save_project(p)
+    images = bool(_other_generations(pid))
+    if images or batch_running(pid):
+        _stop_requested.add(pid)
+    cancelled = pipeline.stop(pid)
+    if cancelled:
+        # Yield to its finally block; do not release a task that has not exited.
+        await asyncio.sleep(0)
+    p = api._project(pid)
+    state = operation_status(p)
+    return state | {'unlocked': not state['running'], 'task_cancel_requested': cancelled,
+                    'batch_draining': images or batch_running(pid),
+                    'note': ('Stopping: submitted image requests are finishing; no new shots will start.'
+                             if state['running'] else 'Unlocked. Existing files and prompts are unchanged.')}
 
 
 def batch_status(p):
@@ -172,11 +253,16 @@ async def generate(pid, sid, body, *, batch_id=None):
                         and (p.get("workspace_batch") or {}).get("id") == batch_id
                         and _batch_permits.get((pid, sid)) == batch_id)
     other = _other_generations(pid, sid)
-    limit = (p.get('workspace_batch') or {}).get('concurrency', 1) if authorized_batch else 1
-    if (pipeline.is_running(pid) or (pid, sid) in _active_generations
-            or not authorized_batch and (pid in _active_projects or batch_running(pid)
-                or any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
-                or any(step.get("state") == "running" for step in p.get("steps", {}).values()))
+    provider = (p.get('model_snapshot') or {}).get('image_provider', 'cli_proxy')
+    limit = (p.get('workspace_batch') or {}).get('concurrency', 1) if authorized_batch else batch_concurrency(provider, 'remaining')
+    external = p.get('workspace_external_execution') or {}
+    if (pipeline.is_running(pid) or (pid, sid) in _active_generations or pid in _stop_requested
+            or external.get('state') in ('queued', 'running', 'stopping', 'cleanup_required')
+            or not authorized_batch and (batch_running(pid) or len(other) >= limit
+                or any(r.get('batch_id') for r in other)
+                or any(s.get("status") in ("running", "queued") and (pid, s['id']) not in _active_generations
+                       for s in p.get("scenes", []))
+                or any(step.get("state") == "running" for key, step in p.get("steps", {}).items() if key != 'visuals'))
             or authorized_batch and (len(other) >= limit or any(r.get("batch_id") != batch_id for r in other)
                 or pid in _active_projects and not other
                 or any(step.get("state") == "running" for key, step in p.get("steps", {}).items() if key != "visuals")
@@ -202,7 +288,12 @@ async def generate(pid, sid, body, *, batch_id=None):
                "endpoint": "/v1/google-flow/images" if provider == "google_flow" else "/images/edits",
                "started_at": now(), "state": "running", "previous_image": previous_image}
     _active_projects.add(pid)
-    _active_generations[(pid, sid)] = {"id": job_id, "scene_id": sid, "batch_id": batch_id}
+    try:
+        timeout = max(60, min(3600, int(config.get('WORKSPACE_IMAGE_TIMEOUT_SECONDS') or 900)))
+    except (TypeError, ValueError):
+        timeout = 900
+    _active_generations[(pid, sid)] = {"id": job_id, "scene_id": sid, "batch_id": batch_id,
+                                     "task": asyncio.current_task(), "started_at": now(), "timeout_seconds": timeout}
     succeeded = False
     try:
         s.update(status="running", generation_id=job_id, error=None)
@@ -213,8 +304,8 @@ async def generate(pid, sid, body, *, batch_id=None):
         store.save_project(p)
         # Nonempty refs route this existing helper to /images/edits. No composition or rewrite.
         extra = {"provider": provider, "receipt": receipt.setdefault("provider_receipt", {})} if provider == "google_flow" else {}
-        data = await llm.generate_image(prompt, model=model, aspect=aspect, refs=payloads,
-                                        attempts=1, label=f"Directed shot {sid}", **extra)
+        data = await asyncio.wait_for(llm.generate_image(prompt, model=model, aspect=aspect, refs=payloads,
+                                        attempts=1, label=f"Directed shot {sid}", **extra), timeout=timeout)
         with Image.open(io.BytesIO(data)) as image:
             extension = {"PNG": ".png", "JPEG": ".jpg", "WEBP": ".webp"}.get(image.format)
             image.verify()
@@ -262,6 +353,8 @@ async def generate(pid, sid, body, *, batch_id=None):
         raise
     except asyncio.CancelledError:
         raise
+    except asyncio.TimeoutError:
+        raise HTTPException(504, 'Image request timed out. Existing image and receipts are kept; inspect the provider outcome before retrying.') from None
     except google_flow.FlowError as error:
         safe = HTTPException(502, str(error))
         safe.workspace_safe_detail = True  # FlowError is already sanitized by our transport.
@@ -273,6 +366,8 @@ async def generate(pid, sid, body, *, batch_id=None):
         _active_generations.pop((pid, sid), None)
         if not _other_generations(pid):
             _active_projects.discard(pid)
+            if not batch_running(pid):
+                _stop_requested.discard(pid)
         if not succeeded:
             current = store.get_project(pid)
             if current:
@@ -514,6 +609,7 @@ async def _run_batch(pid, job_id, signature, sources):
                 if key[0] == pid and permit == job_id:
                     _batch_permits.pop(key, None)
             _batch_tasks.pop(pid, None)
+            _stop_requested.discard(pid)
 
 
 def install(app):
@@ -531,12 +627,12 @@ def install(app):
 
     @router.post("/projects/{pid}/images/stop")
     async def stop_images(pid: str):
-        p = api._project(pid)
-        if not batch_running(pid):
-            raise HTTPException(409, "No generation batch is in progress")
-        p["workspace_batch"].update(stop_requested=True, state="stopping")
-        store.save_project(p)
-        return api._full(p)
+        await request_stop(pid)
+        return api._full(api._project(pid))
+
+    @router.post('/projects/{pid}/unlock')
+    async def unlock_project(pid: str):
+        return await request_stop(pid)
 
     @router.post("/projects/{pid}/render", status_code=202)
     async def render_project(pid: str):

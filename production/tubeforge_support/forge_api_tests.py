@@ -81,6 +81,20 @@ def test_poll_is_lightweight_and_honest_after_interruption(client, monkeypatch):
     assert result.json()["state"] == "interrupted" and not result.json()["running"]
 
 
+def test_unlock_pauses_only_this_projects_queue_and_is_idempotent(client):
+    import importlib
+    queue = importlib.import_module(forge.__package__ + '.forge_queue')
+    pid = create(client).json()['id']
+    queue.save({'jobs': [{'id': 'ours', 'project_id': pid, 'state': 'queued'},
+                         {'id': 'theirs', 'project_id': 'other', 'state': 'queued'}]})
+    for _ in range(2):
+        response = client.post(BASE + f'/videos/{pid}/unlock', json={})
+        assert response.status_code == 200 and response.json()['unlocked']
+    jobs = queue.load()['jobs']
+    assert jobs[0]['state'] == 'cancelled' and jobs[1]['state'] == 'queued'
+    assert not client.get(BASE + f'/videos/{pid}/operations').json()['running']
+
+
 def test_guards_remain_enforced_and_no_fake_review(client):
     pid = create(client).json()["id"]
     for name in ("render", "preview", "prepare", "write-script"):

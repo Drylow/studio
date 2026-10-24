@@ -188,6 +188,36 @@ Check active jobs before restarting; preserve data/config/style/project referenc
 Do not modify the runtime application alone; maintain patches in source and deploy.
 The owner's SSH ZIP is supplied separately. No SSH private keys are in this kit.
 
+DELIVERY RETENTION: follow export-retention.md. After a verified transfer to the
+owner's local episode folder, delete the final MP4 and obsolete owned production
+files from the VPS. Compare local and server SHA-256 and size before deletion;
+preserve presets, references, voices, transcripts, timings and compact receipts.
+No blanket volume purge and no deletion of undelivered or active projects.
+
+
+Task recovery and stopping (25 October 2026)
+-------------------------------------------
+GET /videos/{pid}/operations returns running, operations, stopping, recovery and can_unlock.
+Status and project responses also include this execution summary, including individual
+shot IDs. Orphaned local states are automatically marked interrupted when no live
+owner remains. Files, prompts, reviews and provider receipts are preserved. This never
+starts a paid retry or clears an external RunPod reservation.
+
+POST /videos/{pid}/unlock with {} stops new queued work for this project and requests
+an orderly stop. It is safe to repeat. unlocked:true means no local task remains;
+unlocked:false means drain in progress. Poll operations before retrying. Submitted
+image requests finish or hit the execution deadline (default 900 seconds, configurable
+by WORKSPACE_IMAGE_TIMEOUT_SECONDS, 60-3600). Provider work may outlive a timeout:
+inspect recorded outcomes before deliberately requesting another paid image.
+The existing /stop and workspace /images/stop also handle single-image requests.
+RunPod running/cleanup_required reservations must use their RunPod reconciliation route.
+
+Different individual shots may run concurrently within the configured provider limit.
+The same shot cannot run twice. Structural project edits and rendering still wait for
+active image calls. A batch owns its target set until its active calls have drained.
+
+Deployment requirement: run exactly one Uvicorn web worker. Task ownership is in-process; extra web workers cannot safely reconcile each other's tasks. Images still run concurrently through the asynchronous provider queue. The scoped update.sh API deployment pins this setting even when an older Compose override specified multiple workers.
+
 INITIAL COMPLETE ENDPOINT INVENTORY
 POST /api/2d/api/batch [legacy]
 GET /api/2d/api/batches [legacy]

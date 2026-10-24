@@ -65,6 +65,8 @@ def _project(pid, writable=False):
     p = store.get_project(_identifier(pid))
     if not p or not p.get("codex_directed"):
         raise HTTPException(404, "Codex-led project not found")
+    from . import workspace_generation as generation
+    p = generation.reconcile(copy.deepcopy(p))
     if writable:
         external = p.get('workspace_external_execution') or {}
         if external.get('backend') == 'runpod' and external.get('state') in ('queued', 'running', 'cleanup_required'):
@@ -269,7 +271,7 @@ async def _catalog():
                            "google_flow": flow}
     model = google_flow.setting("USEAPI_IMAGE_MODEL")
     if flow["available"] and isinstance(model, str) and re.fullmatch(r"[A-Za-z0-9_.+-]{1,100}", model):
-        result["models"].append({"id": model, "provider": "google_flow", "label": "Google Flow · " + model,
+        result["models"].append({"id": model, "provider": "google_flow", "label": "Google Flow Â· " + model,
                                 "capabilities": {"text": False, "image": True}, "suggested_role": "image",
                                 "suggested_role_source": "configured_provider", "capability_verified": True})
     result["available"] = bool(result["models"]) or proxy_available
@@ -623,7 +625,8 @@ def _full(p):
     out["workspace_batch"] = workspace_generation.batch_status(p)
     out["generation_confirmation"] = _generation_confirmation(p)
     out["script_hash"] = _hash(p.get("script") or "")
-    out["running"] = pipeline.is_running(p["id"]) or workspace_generation.batch_running(p["id"])
+    out['execution'] = workspace_generation.operation_status(p)
+    out["running"] = out['execution']['running']
     if out["running"]:
         state = "running"
     elif p.get("error"):

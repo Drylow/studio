@@ -626,6 +626,17 @@
     const verification = project.review_state?.state || (typeof project.review_state === 'string' ? project.review_state : 'unreviewed');
     main.innerHTML = `<div class="breadcrumbs"><a href="#/videos">Videos</a><span>/</span><a href="#/channels/${encode(project.profile_id || project.channel_id || '')}">${esc(profileName(project.profile_id || project.channel_id))}</a></div>${header(project.title || "Untitled", `${esc(durationLabel(project.duration_info))} · ${profileName(project.profile_id || project.channel_id)}`, `${badge(status.state, status.label)}<button class="icon-button" id="refresh-project" title="Actualiser ce projet" aria-label="Actualiser ce projet">${icon('refresh')}</button>`)}${project.error ? `<div class="banner error">${esc(project.error)}</div>` : ''}<nav class="steps" aria-label="Video steps">${STEPS.map(([key, name, step], index) => `<a href="#/video/${encode(project.id)}/${key}" ${key === selected ? 'aria-current="step"' : ''}><span class="step-name"><span class="step-number">${index + 1}</span>${name}</span>${badge(key === 'verification' ? verification : stepState(project, step))}</a>`).join('')}</nav><div id="step-content"></div>${advanced([[`p/${encode(project.id)}/script`, "Advanced text"], [`p/${encode(project.id)}/voice`, "Advanced voice"], [`p/${encode(project.id)}/visuals`, "Advanced images"], [`p/${encode(project.id)}/render`, 'Montage'], [`p/${encode(project.id)}/thumbs`, "Thumbnails"]])}`;
     $('#refresh-project').onclick = (event) => action(event.currentTarget, () => route());
+    const execution = project.execution;
+    if (execution?.running || execution?.recovery) {
+      const operations = (execution.operations || []).map(op => op.kind === 'image' ? `Shot ${op.scene_id}` : op.kind.replaceAll('_', ' ')).join(', ');
+      $('#step-content').insertAdjacentHTML('beforebegin', `<section class="banner" role="status"><strong>${execution.stopping ? 'Stopping after active requests' : execution.running ? 'Active tasks' : 'Previous task unlocked automatically'}</strong><p>${esc(operations || execution.recovery?.message || '')}</p>${execution.running && execution.can_unlock ? `<button id="unlock-project" ${execution.stopping ? 'disabled' : ''}>Stop and unlock</button><p class="small muted">Stops new work. Submitted image requests finish or time out before unlocking; existing files are kept.</p>` : ''}</section>`);
+      const unlock = $('#unlock-project');
+      if (unlock) unlock.onclick = event => action(event.currentTarget, async () => {
+        const result = await api(`/api/forge/v1/videos/${encode(project.id)}/unlock`, {method: 'POST', body: {}});
+        notify(result.note);
+        await route();
+      });
+    }
     if (project.style_name) $('.page-head p').textContent += ` · ${project.style_name}`;
     $('#refresh-project').insertAdjacentHTML('beforebegin', `<button id="rename-video" class="icon-button" title="Edit title" aria-label="Edit title">${icon('edit')}</button>`);
     $('#rename-video').onclick = openRename;
@@ -1311,7 +1322,7 @@
   }, 1000);
   setInterval(async () => {
     const parts = routeParts();
-    if (batchPolling || document.hidden || submitting || parts[0] !== 'video' || !['images', 'verification'].includes(parts[2]) || !(project?.running && project?.can_prepare_images && !project?.scenes?.length || ['queued', 'running', 'stopping'].includes(project?.workspace_batch?.state))) return;
+    if (batchPolling || document.hidden || submitting || dirty || parts[0] !== 'video' || !['images', 'verification'].includes(parts[2]) || !project?.running) return;
     batchPolling = true;
     const id = project.id;
     try {

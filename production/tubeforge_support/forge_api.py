@@ -57,15 +57,19 @@ async def invoke(app, path, method="POST", **kwargs):
 def status(p):
     """No file hashing, catalog/provider request or entire shot payload on polls."""
     pid = p["id"]
-    active = pipeline.is_running(pid) or generation.batch_running(pid) or pid in generation._active_projects
+    p = generation.reconcile(copy.deepcopy(p))
+    execution = generation.operation_status(p)
+    active = execution['running']
     scenes = p.get("scenes") or []
     batch = p.get("workspace_batch") or {}
-    stale = not active and (batch.get("state") in ("running", "queued", "stopping") or any(
-        s.get("state") == "running" for s in (p.get("steps") or {}).values()))
+    stale = not active and (batch.get("state") in ("running", "queued", "stopping", "interrupted") or any(
+        s.get("state") == "running" or (s.get('state') == 'error' and s.get('msg') and
+        s.get('msg') == (p.get('workspace_lock_recovery') or {}).get('message'))
+        for s in (p.get("steps") or {}).values()))
     state = "running" if active else "interrupted" if stale else "failed" if p.get("error") else "idle"
     return {"id": pid, "title": p.get("title"), "channel_id": p.get("channel_id"),
             "owner_id": p.get("owner_id"), "state": state, "running": bool(active),
-            "error": p.get("error"), "steps": p.get("steps") or {},
+            "error": p.get("error"), "steps": p.get("steps") or {}, "execution": execution,
             "images": {"total": len(scenes), "done": sum(bool(s.get("image")) for s in scenes),
                        "failed": sum(s.get("status") == "error" for s in scenes)},
             "batch": {k: batch.get(k) for k in ("id", "state", "phase", "done", "total", "processed", "failed_scene_ids")},
@@ -217,13 +221,25 @@ def install(app):
 
     @router.post("/videos/{pid}/stop")
     async def stop(pid: str):
-        p = api._project(pid)
-        batch = generation.batch_running(pid)
-        if batch:
-            p["workspace_batch"].update(stop_requested=True, state="stopping")
-            store.save_project(p)
-        return {"batch_draining": bool(batch), "task_cancel_requested": pipeline.stop(pid),
-                "note": "Already submitted provider requests may finish; inspect status before retrying"}
+        return await generation.request_stop(pid)
+
+    @router.get('/videos/{pid}/operations')
+    async def operations(pid: str):
+        return generation.operation_status(api._project(pid))
+
+    @router.post('/videos/{pid}/unlock')
+    async def unlock(pid: str):
+        # Pause queued work too, otherwise the scheduler could immediately reacquire it.
+        from . import forge_queue
+        api._project(pid)
+        async with forge_queue._lock:
+            data = forge_queue.load()
+            for job in data['jobs']:
+                if job['project_id'] == pid and job['state'] not in ('done', 'cancelled'):
+                    job.update(state='cancelled', message='Stopped and unlocked by request')
+            result = await generation.request_stop(pid)
+            forge_queue.save(data)
+        return result
 
     @router.post("/videos/{pid}/review")
     async def review(pid: str, body: dict):

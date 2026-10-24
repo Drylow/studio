@@ -128,6 +128,7 @@ def test_project_writes_blocked_during_image_execution(workspace, monkeypatch, b
     p = create(client, custom_script='Original supplied script.')
     monkeypatch.setattr(generation, 'batch_running', lambda pid: busy == 'batch' and pid == p['id'])
     monkeypatch.setattr(generation, '_active_projects', {p['id']} if busy == 'scene' else set())
+    monkeypatch.setattr(generation, '_active_generations', {(p['id'], 1): {'id': 'live', 'scene_id': 1}} if busy == 'scene' else {})
     with pytest.raises(Exception) as rejected:
         api._project(p['id'], writable=True)
     assert rejected.value.status_code == 409
