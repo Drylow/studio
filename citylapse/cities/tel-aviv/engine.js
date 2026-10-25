@@ -44,7 +44,8 @@ float growK(float t0) {
   float u = clamp((uTime - t0) / 0.6, 0.0, 1.0);
   if (u <= 0.0) return 0.0;
   float c1 = 0.9, c3 = c1 + 1.0;
-  return 1.0 + c3 * pow(u - 1.0, 3.0) + c1 * pow(u - 1.0, 2.0);
+  float v = u - 1.0;                     // no pow() here: pow of a negative number is undefined in GLSL
+  return 1.0 + c3 * v * v * v + c1 * v * v;
 }
 float aliveK() {
   float g = growK(aT.x);

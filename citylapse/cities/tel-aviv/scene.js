@@ -124,7 +124,7 @@ const popAt = (t) => { const y = yearF(t); return y < 1915 ? 0 : pl(POP, y); };
 
 // ---------------- build ----------------
 export function buildVideo(canvas, hud) {
-  const st = createStage(canvas, { W, H, SS, fog: "#cfe0ec", skyTop: "#5c9bd6", sunColor: "#fff1d6", sunDir: [-0.5, 0.7, 0.5], hemiSky: "#d6e9fb", hemiGround: "#9c8f6e", hemiI: 1.2, sunI: 3.3, saturation: 0.2, contrast: 0.15, tilt: 0.15, bloom: 0.3 });
+  const st = createStage(canvas, { W, H, SS, fog: "#cfe0ec", skyTop: "#5c9bd6", sunColor: "#fff1d6", sunDir: [-0.5, 0.7, 0.5], hemiSky: "#d6e9fb", hemiGround: "#9c8f6e", hemiI: 1.2, sunI: 3.3, saturation: 0.12, contrast: 0.15, tilt: 0.15, bloom: 0.3 });
   const { scene } = st;
   const { box, grow, update: updateLM } = landmarks();
   const rnd = mulberry32(1909);
@@ -157,7 +157,7 @@ export function buildVideo(canvas, hud) {
   const wallR = [], wallB = [], roofR = [], hipR = [], glassR = [], capR = [];
   const cW = new THREE.Color();
   const B = DATA.B;
-  const houseAt = new Map(), HCS = 16, [portX, portZ] = LL(32.0975, 34.774), bBirth = new Float32Array(B.length / 9).fill(NEVER);
+  const houseAt = new Map(), HCS = 16, [portX, portZ] = LL(32.0975, 34.774), [ahX, ahZ] = LL(32.0633, 34.7714), bBirth = new Float32Array(B.length / 9).fill(NEVER);
   for (let i = 0; i < B.length; i += 9) {
     const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10, ang = B[i + 4] / 1000, h = Math.max(3.5, B[i + 5] / 10), kind = B[i + 7], ci = B[i + 8];
     if (isWet(x, z)) continue;
@@ -169,6 +169,14 @@ export function buildVideo(canvas, hud) {
     const y0 = heightAt(x, z) - 0.8, t = [b, NEVER, NEVER, r2];
     const k = Math.floor(x / HCS) * 100003 + Math.floor(z / HCS); const v = houseAt.get(k); if (v === undefined || v > b) houseAt.set(k, b);
     const ring = rings[i / 9].map(([dx, dz]) => [x + dx, z + dz]);
+    // Ahuzat Bayit: the 60-odd one- and two-storey houses of 1909-10 were almost all replaced later; put one back on
+    // about every other lot, standing until today's building takes its place
+    if (y > 1911 && kind !== 2 && Math.hypot(x - ahX, z - ahZ) < 260 && hash2(i, 13) < 0.6) {
+      const eb = tOf(1909.35 + hash2(i, 14) * 1.1), hs = 4.5 + r1 * 3, sw = Math.min(w, 13), sd = Math.min(d, 11);
+      wallR.push({ m: M4(x, y0, z, ang, sw, 1, sd), c: new THREE.Color(WHITE[Math.floor(hash2(i, 15) * 12)]), t: [eb, b - 0.3, NEVER, r2], h: [0, hs] });
+      hipR.push({ m: M4(x, y0 + hs, z, ang, sw + 0.6, Math.min(4, Math.min(sw, sd) * 0.34), sd + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [eb + 0.15, b - 0.3, NEVER, r2] });
+      if (eb < houseAt.get(k)) houseAt.set(k, eb);
+    }
     if (kind === 2 || h >= 45) {                    // towers: glass shafts on their real footprint, a set-back crown
       cW.set(GLASS[(ci * 2 + Math.floor(r1 * 12)) % 12]);
       const top = r2 < 0.55 ? h * (0.84 + r1 * 0.08) : h;
@@ -178,11 +186,11 @@ export function buildVideo(canvas, hud) {
       continue;
     }
     // a building dated before 1930 but taller than 3 floors is a later rebuild: first a small house, then today's block
-    if (y < 1930 && h > 12) {
-      const rb = tOf(1950 + hash2(i, 11) * 45), hs = 5 + r1 * 4, sw = Math.min(w, 16), sd = Math.min(d, 14);
+    if (y < 1930 && (h > 12 || w * d > 450)) {
+      const rb = tOf(1950 + hash2(i, 11) * 45), hs = 5 + r1 * 4, sw = Math.min(w, 12), sd = Math.min(d, 11);
       cW.set(y < 1906 ? OLD[ci % 6] : WHITE[Math.floor(hash2(i, 5) * 12)]);
       wallR.push({ m: M4(x, y0, z, ang, sw, 1, sd), c: cW.clone(), t: [b, rb, NEVER, r2], h: [0, hs] });
-      if (y < 1925) hipR.push({ m: M4(x, y0 + hs, z, ang, sw + 0.6, Math.min(sw, sd) * 0.32, sd + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [b + 0.15, rb, NEVER, r2] });
+      if (y < 1925) hipR.push({ m: M4(x, y0 + hs, z, ang, sw + 0.6, Math.min(4, Math.min(sw, sd) * 0.32), sd + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [b + 0.15, rb, NEVER, r2] });
       else roofR.push({ m: M4(x, y0, z, ang, sw - 1, 1, sd - 1), c: cW.clone().multiplyScalar(0.86), t: [b, rb, NEVER, r2], h: [hs - 0.05, 0.25] });
       t[0] = rb + 0.6;
     }
@@ -191,13 +199,13 @@ export function buildVideo(canvas, hud) {
     cW.set(old && y < 1906 ? OLD[ci % 6] : mx < (y > 1960 ? 0.55 : y > 1935 ? 0.3 : 0.12) ? ACCENT[Math.floor(hash2(i, 4) * ACCENT.length)] : kind === 1 ? MID[pick] : WHITE[pick]);
     // 1930s-60s plaster blocks: often the Bauhaus look (ribbon windows, long balconies); the rest: punched windows
     const bau = !old && y > 1929 && y < 1970 && h < 30 && hash2(i, 9) < 0.55;
-    const hip = old && w < 30 && d < 30;
+    const hip = old && w < 14 && d < 14;             // bigger old buildings (khans, warehouses) have flat roofs
     if (hip) wallR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
     else {
       const rc = new THREE.Color(ROOFS[Math.floor(hash2(i, 3) * 5.99)]).lerp(cW, 0.3);
       (bau ? prismB : prismR).push({ ring, y0, c: cW.clone(), rc, t, h: [0, h + 0.8] });
     }
-    if (hip) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(w, d) * 0.32, d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [t[0] + 0.15, NEVER, NEVER, r2] });
+    if (hip) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(4, Math.min(w, d) * 0.32), d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [t[0] + 0.15, NEVER, NEVER, r2] });
     else {
       // rooftop solar water heaters, a Tel Aviv signature (panel + white tank), from the 1950s on
       if (y > 1950 && h < 40 && w > 7 && d > 7 && r2 < 0.75) {
@@ -211,6 +219,13 @@ export function buildVideo(canvas, hud) {
         }
       }
     }
+  }
+  // a street is laid out when the houses along it go up, not years before across empty land
+  for (const sg of segs) {
+    let hb = NEVER;
+    for (const [qx, qz] of [[sg.ax, sg.az], [(sg.ax + sg.bx) / 2, (sg.az + sg.bz) / 2], [sg.bx, sg.bz]])
+      for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(qx / HCS) + dx) * 100003 + Math.floor(qz / HCS) + dz); if (v !== undefined) hb = Math.min(hb, v); }
+    if (hb < NEVER) sg.ba = sg.bb = Math.max(sg.ba, hb - 1.0);
   }
   scene.add(growMesh(unitBox(), STD({ roughness: 0.92 }), "house", wallR, { facade: 1 }));
   scene.add(growMesh(unitBox(), STD({ roughness: 0.9 }), "house", wallB, { facade: 3 }));
@@ -285,6 +300,14 @@ export function buildVideo(canvas, hud) {
     }
     nGarden++;
   }
+  // lone trees across the open land (carob, sycamore, eucalyptus windbreaks) as it greens up; they stay in the gaps later
+  for (let gx = -160; gx <= 180; gx++) for (let gz = -175; gz <= 150; gz++) {
+    const x = gx * 24 + (hash2(gx + 5, gz) - 0.5) * 18, z = gz * 24 + (hash2(gz, gx - 5) - 0.5) * 18, r1 = hash2(gx * 13, gz * 17);
+    if (r1 > 0.12 + 0.22 * fbm(x * 0.002 + 3, z * 0.002 - 8) || shoreDist(x, z) < 60 || !free(x, z)) continue;
+    const b = tOf(1914 + hash2(gx, gz * 3) * 30), gy = heightAt(x, z) - 0.3, q = hash2(gx * 5, gz * 7), sc = 0.8 + q * 0.7, hgt = (3.4 + q * 2.4) * sc;
+    trunkR.push({ m: M4(x, gy, z, q * 6, 0.45, hgt, 0.45), c: new THREE.Color("#6e5a40"), t: [b, NEVER, NEVER, r1] });
+    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.8 * sc, 3.2 * sc, 3.8 * sc), c: new THREE.Color(DEEP[Math.floor(q * 3.99)]), t: [b, NEVER, NEVER, r1] });
+  }
   // orchards round Jaffa and Sarona before the city (the land of the citrus groves), cleared as houses arrive
   const clearAt = (x, z) => { let t = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) t = Math.min(t, v - 0.4); } return t; };
   // each grove (pardes) is a walled rectangular plot with its trees in rows and a cactus hedge round it
@@ -325,17 +348,22 @@ export function buildVideo(canvas, hud) {
   // ---------- ground texture: streets (with birth times) and the built-up paving round houses ----------
   const GX = { X0: -3400, Z0: -4200, EXT: 7800, TEX: 4096 };
   const groundTex = rasterGround(GX, segs, [], []);
-  // paving: a narrow apron round each building plus the pavements along every street; gardens: lawns between the houses
-  const paving = [], gardens = [];
+  // paving: a narrow apron round each building plus the pavements along every street
+  const paving = [];
   for (let i = 0; i < B.length; i += 9) {
     const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10 * 1.12, d = B[i + 3] / 10 * 1.12, ry = -B[i + 4] / 1000, b = Math.max(0, bBirth[i / 9] - 0.8);
     if (b >= NEVER - 1) continue;
     paving.push({ x, z, rx: w / 2 + 1.2, rz: d / 2 + 1.2, ry, b });
-    gardens.push({ x, z, rx: w / 2 + 17, rz: d / 2 + 17, ry, b: b + 1.2 });
   }
   const walks = segs.map((sg) => ({ ...sg, w: sg.w + 3.5 }));
   const urbanTex = rasterGround(GX, walks, paving, []);
-  const gardenTex = rasterGround({ X0: -3400, Z0: -4200, EXT: 7800, TEX: 2048 }, [], gardens, []);
+  // the city's final footprint, blurred (about 150 m): open fields only start well outside it, with a soft edge
+  const cm = document.createElement("canvas"); cm.width = cm.height = 512;
+  const c0 = document.createElement("canvas"); c0.width = c0.height = 512;
+  const g0 = c0.getContext("2d"); g0.fillStyle = "#000"; g0.fillRect(0, 0, 512, 512); g0.fillStyle = "#fff";
+  for (let i = 0; i < B.length; i += 9) { const px = (B[i] / 10 - GX.X0) / GX.EXT * 512, pz = (B[i + 1] / 10 - GX.Z0) / GX.EXT * 512; g0.fillRect(px - 1.5, pz - 1.5, 3, 3); }
+  const cg = cm.getContext("2d"); cg.filter = "blur(10px)"; cg.drawImage(c0, 0, 0);
+  const cityTex = new THREE.CanvasTexture(cm); cityTex.flipY = false;
   const PK = DATA.P, pkRaw = Uint8Array.from(atob(PK.b64), (c) => c.charCodeAt(0));
   const parkTex = new THREE.DataTexture(pkRaw, PK.n, PK.n, THREE.RGFormat); parkTex.flipY = false; parkTex.needsUpdate = true;
 
@@ -345,58 +373,51 @@ export function buildVideo(canvas, hud) {
   const tp = tGeo.attributes.position;
   for (let i = 0; i < tp.count; i++) tp.setY(i, heightAt(tp.getX(i), tp.getZ(i)));
   tGeo.computeVertexNormals();
-  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 }, uPark: { value: parkTex }, uPorig: { value: new THREE.Vector4(PK.x0, PK.z0, PK.ext, PK.n) }, uYear: { value: 1880 }, uGreen: { value: 0 }, uGrove: { value: groveTex }, uGarden: { value: gardenTex } };
+  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 }, uPark: { value: parkTex }, uPorig: { value: new THREE.Vector4(PK.x0, PK.z0, PK.ext, PK.n) }, uYear: { value: 1880 }, uGreen: { value: 0 }, uGrove: { value: groveTex }, uCity: { value: cityTex } };
   const tMat = STD({ color: "#ffffff", roughness: 1 });
   tMat.onBeforeCompile = (s) => {
     Object.assign(s.uniforms, UT, { uTime: U.uTime });
     s.vertexShader = s.vertexShader.replace("#include <common>", "#include <common>\nvarying vec3 vW;")
       .replace("#include <worldpos_vertex>", "#include <worldpos_vertex>\nvW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
     s.fragmentShader = s.fragmentShader.replace("#include <common>", `#include <common>
-      varying vec3 vW; uniform sampler2D uGround, uUrban, uPark, uGrove, uGarden; uniform vec4 uOrig, uPorig; uniform float uTime, uPave, uYear, uGreen;
+      varying vec3 vW; uniform sampler2D uGround, uUrban, uPark, uGrove, uCity; uniform vec4 uOrig, uPorig; uniform float uTime, uPave, uYear, uGreen;
       ${GROUND_GLSL}`)
       .replace("#include <color_fragment>", /* glsl */ `#include <color_fragment>
       {
         float nz = n21(vW.xz * 0.004), nf = n21(vW.xz * 0.03);
-        vec3 sand = mix(Ls(vec3(0.89, 0.80, 0.62)), Ls(vec3(0.84, 0.74, 0.56)), nz);
-        sand = mix(sand, Ls(vec3(0.93, 0.86, 0.70)), nf * 0.35);
-        vec3 scrub = mix(Ls(vec3(0.66, 0.66, 0.44)), Ls(vec3(0.58, 0.60, 0.38)), nf);
-        vec3 col = mix(sand, scrub, smoothstep(0.55, 0.8, n21(vW.xz * 0.0016 + 4.0)) * 0.55);
+        // smooth, even ground (no speckle): broad tone changes only, like a painted model
+        vec3 sand = mix(Ls(vec3(0.89, 0.81, 0.63)), Ls(vec3(0.86, 0.77, 0.59)), nz);
+        vec3 col = mix(sand, Ls(vec3(0.70, 0.69, 0.47)), smoothstep(0.5, 0.85, n21(vW.xz * 0.0012 + 4.0)) * 0.35);
         // the land greens up as the city grows (gardens, orchards, parks, lawns): sand stays on the coastal strip
         // open country: a patchwork of fields (wheat, stubble, ploughed earth, vegetables, fallow) on a tilted grid
-        vec2 fr = mat2(0.993, -0.12, 0.12, 0.993) * vW.xz, fc = floor(fr / vec2(110.0, 75.0)), fl = fract(fr / vec2(110.0, 75.0));
+        vec2 fr = mat2(0.993, -0.12, 0.12, 0.993) * vW.xz, fc = floor(fr / vec2(150.0, 100.0)), fl = fract(fr / vec2(150.0, 100.0));
+        float sp = 0.3 + 0.4 * h21(fc - 9.0), sx = h21(fc + 2.0), hf = sx < 0.5 ? step(sp, fl.x) : 2.0 + step(sp, fl.y);   // split each plot in two
+        fl = sx < 0.5 ? vec2(fl.x < sp ? fl.x / sp : (fl.x - sp) / (1.0 - sp), fl.y) : vec2(fl.x, fl.y < sp ? fl.y / sp : (fl.y - sp) / (1.0 - sp));
+        fc = fc * 4.0 + hf;
         float fh = h21(fc + 31.0), fh2 = h21(fc * 1.7 - 5.0);
-        vec3 field = fh < 0.22 ? Ls(vec3(0.45, 0.58, 0.25)) : fh < 0.4 ? Ls(vec3(0.62, 0.64, 0.33)) : fh < 0.55 ? Ls(vec3(0.74, 0.68, 0.42))
-                   : fh < 0.68 ? Ls(vec3(0.56, 0.46, 0.32)) : fh < 0.84 ? Ls(vec3(0.38, 0.52, 0.22)) : Ls(vec3(0.53, 0.60, 0.30));
+        vec3 field = fh < 0.3 ? Ls(vec3(0.40, 0.56, 0.22)) : fh < 0.45 ? Ls(vec3(0.52, 0.60, 0.28)) : fh < 0.56 ? Ls(vec3(0.66, 0.64, 0.38))
+                   : fh < 0.64 ? Ls(vec3(0.55, 0.49, 0.34)) : fh < 0.85 ? Ls(vec3(0.35, 0.51, 0.20)) : Ls(vec3(0.46, 0.58, 0.26));
         field *= mix(0.94, 1.04, step(0.5, fract((fh2 < 0.5 ? fr.x : fr.y) / 5.0)));          // furrows
-        float edge = min(min(fl.x, 1.0 - fl.x) * 110.0, min(fl.y, 1.0 - fl.y) * 75.0);
-        field = mix(Ls(vec3(0.34, 0.44, 0.20)), field, smoothstep(1.0, 3.0, edge));          // hedgerows and tracks
-        vec3 grass = mix(field, mix(Ls(vec3(0.40, 0.58, 0.24)), Ls(vec3(0.48, 0.64, 0.28)), nz), smoothstep(0.62, 0.78, n21(vW.xz * 0.0009 - 2.0)) * 0.7);
+        float edge = min(min(fl.x, 1.0 - fl.x) * 70.0, min(fl.y, 1.0 - fl.y) * 50.0);
+        field = mix(Ls(vec3(0.33, 0.45, 0.19)), field, smoothstep(0.8, 2.2, edge));          // hedgerows and tracks
+        vec3 grass = mix(Ls(vec3(0.41, 0.57, 0.24)), Ls(vec3(0.45, 0.60, 0.26)), n21(vW.xz * 0.0011 + 9.0)) * mix(0.96, 1.03, n21(vW.xz * 0.006 - 4.0));
+        vec2 cu = (vW.xz - uOrig.xy) / uOrig.z;
+        float city = (cu.x > 0.0 && cu.y > 0.0 && cu.x < 1.0 && cu.y < 1.0) ? texture2D(uCity, cu).r : 0.0;
+        grass = mix(grass, field, smoothstep(0.12, 0.02, city) * 0.75);
         float inland = smoothstep(1.75, 2.0, vW.y);           // the land is 2 m up at 120 m from the shore (the clamp of the shore grid)
-        col = mix(col, grass, uGreen * inland * (0.8 + 0.2 * smoothstep(0.3, 0.6, n21(vW.xz * 0.0011 + 9.0))));
+        col = mix(col, grass, uGreen * inland);
         col = mix(col, Ls(vec3(0.95, 0.90, 0.78)), smoothstep(1.6, 0.5, vW.y) * 0.8);             // the beach
         vec2 uv = (vW.xz - uOrig.xy) / uOrig.z;
         if (uv.x > 0.0 && uv.y > 0.0 && uv.x < 1.0 && uv.y < 1.0) {
           // the citrus groves: dark irrigated earth under the rows, gone when the plot is cleared
           vec4 gv = texture2D(uGrove, uv); vec4 gvn = texelFetch(uGrove, ivec2(uv * 2048.0), 0);
           float gd = (gvn.g * 255.0 * 256.0 + gvn.b * 255.0) / 100.0;
-          vec3 earth = mix(Ls(vec3(0.47, 0.42, 0.28)), Ls(vec3(0.40, 0.47, 0.25)), nf);
+          vec3 earth = Ls(vec3(0.43, 0.45, 0.27));
           col = mix(col, earth, gv.r * (1.0 - smoothstep(gd - 0.4, gd + 0.4, uTime)) * 0.9);
-          // lawns and gardens between the houses: bright mown grass with darker and drier patches
-          vec4 gw = texture2D(uGarden, uv); vec4 gwn = texelFetch(uGarden, ivec2(uv * 2048.0), 0);
-          float gb = (gwn.g * 255.0 * 256.0 + gwn.b * 255.0) / 100.0;
-          float pt = n21(vW.xz * 0.05), pt2 = n21(vW.xz * 0.013 + 3.0);
-          vec3 lawn = mix(Ls(vec3(0.46, 0.66, 0.24)), Ls(vec3(0.56, 0.74, 0.30)), pt);
-          lawn = mix(lawn, Ls(vec3(0.36, 0.55, 0.20)), smoothstep(0.55, 0.8, pt2) * 0.6);
-          lawn = mix(lawn, Ls(vec3(0.66, 0.65, 0.42)), smoothstep(0.75, 0.95, n21(vW.xz * 0.021 - 7.0)) * 0.5);
-          // where the city will grow, the land before it is dune scrub (sand with low bushes), not fields
-          vec3 dune = mix(sand, Ls(vec3(0.60, 0.62, 0.40)), smoothstep(0.45, 0.75, n21(vW.xz * 0.07)) * 0.45);
-          dune = mix(dune, Ls(vec3(0.50, 0.58, 0.33)), smoothstep(0.6, 0.85, n21(vW.xz * 0.018 + 1.0)) * 0.35);
-          col = mix(col, dune, smoothstep(0.0, 0.5, gw.r) * (1.0 - smoothstep(gb - 1.0, gb, uTime)) * inland * uGreen);
-          col = mix(col, lawn, gw.r * smoothstep(gb, gb + 1.0, uTime) * inland);
           vec4 ur = texture2D(uUrban, uv); vec4 un = texelFetch(uUrban, ivec2(uv * uOrig.w), 0);
           float ub = (un.g * 255.0 * 256.0 + un.b * 255.0) / 100.0;
           vec3 lot = mix(Ls(vec3(0.80, 0.75, 0.64)), Ls(vec3(0.76, 0.75, 0.72)), uPave);
-          col = mix(col, lot * mix(0.95, 1.05, nf), ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.92);
+          col = mix(col, lot, ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.92);
           vec4 g = texture2D(uGround, uv); vec4 gn = texelFetch(uGround, ivec2(uv * uOrig.w), 0);
           float birth = (gn.g * 255.0 * 256.0 + gn.b * 255.0) / 100.0;
           float road = g.r * smoothstep(birth, birth + 0.6, uTime);
@@ -414,21 +435,22 @@ export function buildVideo(canvas, hud) {
             on[k] = pk.r + pk.g > 0.0 ? smoothstep(py, py + 1.5, uYear) : 0.0;
           }
           float pm = smoothstep(0.35, 0.65, mix(mix(on[0], on[1], pf.x), mix(on[2], on[3], pf.x), pf.y));
-          vec3 grass = mix(Ls(vec3(0.42, 0.66, 0.26)), Ls(vec3(0.50, 0.72, 0.30)), nf) * mix(0.92, 1.06, nz);
+          vec3 grass = Ls(vec3(0.37, 0.56, 0.21)) * mix(0.97, 1.03, nz);
           col = mix(col, grass, pm * 0.95);
         }
         diffuseColor.rgb = col;
       }`);
   };
   const terrain = new THREE.Mesh(tGeo, tMat); terrain.receiveShadow = true; scene.add(terrain);
-  const ringG = new THREE.RingGeometry(9000, 60000, 192, 1).rotateX(-Math.PI / 2), rp = ringG.attributes.position, rc = new Float32Array(rp.count * 3);
+  const ringG = new THREE.RingGeometry(6300, 60000, 192, 1).rotateX(-Math.PI / 2), rp = ringG.attributes.position, rc = new Float32Array(rp.count * 3);
   for (let i = 0; i < rp.count; i++) {                  // the far ring: the Mediterranean to the west, land to the east
     const ax = rp.getX(i), az = rp.getZ(i), a = Math.atan2(az, ax), sea = sm(clamp((Math.cos(a) * -1 - 0.05) / 0.25));
-    const c = new THREE.Color("#8f9e66").lerp(new THREE.Color("#4f8fb4"), sea); rc[i * 3] = c.r; rc[i * 3 + 1] = c.g; rc[i * 3 + 2] = c.b;
+    const c = new THREE.Color("#7f9455").lerp(new THREE.Color("#4f8fb4"), sea); rc[i * 3] = c.r; rc[i * 3 + 1] = c.g; rc[i * 3 + 2] = c.b;
+    rp.setY(i, lerp(-0.4, -1.6, sea));                  // just under the land (and under the water level at sea)
   }
   ringG.setAttribute("color", new THREE.BufferAttribute(rc, 3));
   const farGround = new THREE.Mesh(ringG, STD({ vertexColors: true, roughness: 0.8 }));
-  farGround.position.set(-1000, 1, 0); scene.add(farGround);
+  farGround.position.set(-1000, 0, 0); scene.add(farGround);
 
   // ---------- the sea and the Yarkon: two tones, foam at the shore ----------
   const wGeo = new THREE.PlaneGeometry(TWD, TWD, 500, 500); wGeo.rotateX(-Math.PI / 2); wGeo.translate(-1000, 0, 0);
@@ -534,7 +556,7 @@ export function buildVideo(canvas, hud) {
     [118, [bx - 1300, 850, bz + 700], [bx + 250, 0, bz - 350]],
     [140, [wx - 1100, 700, wz + 1300], [wx + 60, 0, wz + 600]],
     [160, [wx - 640, 400, wz + 800], [wx + 40, 0, wz + 280]],
-    [177, [px - 620, 380, pz + 520], [px + 40, 0, pz + 80]],
+    [177, [wx - 650, 950, wz + 1250], [px + 120, 0, pz + 850]],
     [190, [wx - 1900, 1300, wz + 1600], [wx + 200, 0, wz - 200]],
     [204, [ix - 330, 180, iz + 260], [ix, 8, iz]],
     [224, [ax - 700, 420, az + 520], [ax + 100, 0, az - 100]],
@@ -564,7 +586,7 @@ export function buildVideo(canvas, hud) {
     const mainT = intro ? (time < 2.5 ? 500 : time < 8 ? 500 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
     const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
-    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1905, 1950));
+    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1906, 1928));
     updateLM(t); updDust(t); updateLife(t);
     let { pos, tgt } = cam(t);
     if (intro) { const k = sm(ramp(time, 5.5, 9)); pos = introPose.pos.clone().lerp(pos, k); tgt = introPose.tgt.clone().lerp(tgt, k); }
