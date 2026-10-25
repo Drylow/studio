@@ -156,6 +156,19 @@ export function buildVideo(canvas, hud) {
   // the later city mixes concrete greys, sand, ochre, salmon and a little brick with the white plaster
   const ACCENT = ["#cfd3d6", "#b8bcbf", "#a9a59c", "#d9b99b", "#e8c9a0", "#c98f6b", "#b5704f", "#d7a98c", "#c4cfd6", "#e6dba0", "#9aa3a8", "#8e7f6e", "#d2c4b2", "#bfa58a"];
   const ROOFS = ["#a8a49c", "#9b978f", "#b7b2a8", "#8f8b84", "#c2bdb2", "#7d7a74"];
+  // one plaster colour per building, from a wide but soft range: white and cream stay common, then sand, ochre,
+  // pale yellow, peach, salmon, terracotta, brick, pink, blue-grey, pale blue, sage and greys
+  const FACADES = [
+    ["#f2ede4", 5], ["#ebdfc6", 4], ["#f3e3c0", 3], ["#eccf98", 3], ["#e2b886", 3], ["#f0c9a4", 3], ["#e9b6a0", 3],
+    ["#d98f72", 2], ["#c47a5c", 2], ["#b9694f", 1], ["#e8c6c0", 2], ["#d9b4b4", 1], ["#cdd6da", 2], ["#b7c9d5", 2],
+    ["#9fb5c4", 1], ["#cdd9c2", 2], ["#aec2a6", 1], ["#d7d1c8", 3], ["#bdb7ae", 2], ["#9c968e", 1], ["#efdc92", 1],
+  ];
+  const FW = FACADES.reduce((a, f) => a + f[1], 0);
+  const facadeAt = (h) => { let u = h * FW; for (const [c, w] of FACADES) { if ((u -= w) < 0) return c; } return FACADES[0][0]; };
+  // flat roofs seen from above: grey and white bitumen, tan gravel, some red tile, a few rooftop gardens
+  const ROOFTOP = [["#b4b0a8", 4], ["#9a968f", 3], ["#d9d6cf", 3], ["#7f7b75", 2], ["#c2ab8c", 2], ["#b8644a", 1], ["#6f8c55", 1], ["#e9e6df", 2]];
+  const RW = ROOFTOP.reduce((a, f) => a + f[1], 0);
+  const roofAt = (h) => { let u = h * RW; for (const [c, w] of ROOFTOP) { if ((u -= w) < 0) return c; } return ROOFTOP[0][0]; };
   const BR = DATA.BR, rings = [];
   for (let i = 0; i < BR.length;) { const n = BR[i++], r = []; for (let q = 0; q < n; q++, i += 2) r.push([BR[i] / 10, BR[i + 1] / 10]); rings.push(r); }
   const inRing = (r, px, pz) => { let c = false; for (let a = 0, b = r.length - 1; a < r.length; b = a++) if ((r[a][1] > pz) !== (r[b][1] > pz) && px < ((r[b][0] - r[a][0]) * (pz - r[a][1])) / (r[b][1] - r[a][1]) + r[a][0]) c = !c; return c; };
@@ -208,13 +221,13 @@ export function buildVideo(canvas, hud) {
     paving.push({ x, z, rx: w * 0.56 + 1.2, rz: d * 0.56 + 1.2, ry: -ang, b: t[0] - 0.5 }); cityPts.push(x, z, b);
     const old = h < 14 && (y < 1912 || (y < 1925 && r1 < 0.3));
     const pick = Math.floor(hash2(i, 5) * 12), mx = hash2(i, 6);
-    cW.set(old && y < 1906 ? OLD[ci % 6] : mx < (y > 1960 ? 0.55 : y > 1935 ? 0.3 : 0.12) ? ACCENT[Math.floor(hash2(i, 4) * ACCENT.length)] : kind === 1 ? MID[pick] : WHITE[pick]);
+    cW.set(old && y < 1906 ? OLD[ci % 6] : facadeAt(hash2(i, 4))).multiplyScalar(0.94 + 0.1 * mx);
     // 1930s-60s plaster blocks: often the Bauhaus look (ribbon windows, long balconies); the rest: punched windows
     const bau = !old && y > 1929 && y < 1970 && h < 30 && hash2(i, 9) < 0.55;
     const hip = old && w < 14 && d < 14;             // bigger old buildings (khans, warehouses) have flat roofs
     if (hip) wallR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
     else {
-      const rc = new THREE.Color(ROOFS[Math.floor(hash2(i, 3) * 5.99)]).lerp(cW, 0.3);
+      const rc = new THREE.Color(roofAt(hash2(i, 3))).lerp(cW, 0.15);
       (bau ? prismB : prismR).push({ ring, y0, c: cW.clone(), rc, t, h: [0, h + 0.8] });
     }
     if (hip) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(4, Math.min(w, d) * 0.32), d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [t[0] + 0.15, NEVER, NEVER, r2] });
