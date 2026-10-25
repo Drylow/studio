@@ -1,8 +1,16 @@
 # Reprise — Deep Void Theories et Quiet Paradox
 
-État mis à jour le **17 octobre 2026**, fuseau **Europe/Paris**.
+État mis à jour le **25 octobre 2026**, fuseau **Europe/Paris**.
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
+
+## Dix narrations livrees — 25 octobre
+
+Les [dix narrations du lot du 22 octobre](narrations-2026-10-24/README.md) sont
+recuperees et controlees : cinq Deep Void et cinq Quiet Paradox, voix Mellow Matt.
+La fin tronquee de Silo a ete remplacee et les raccords verifies. Les MP3 sont
+sur le Bureau dans **Voix sleep - 24 octobre 2026**. Aucune voix Forgotten Realms
+ni nouvelle publication YouTube n est lancee. Ne pas repayer ces generations.
 
 ## Quinze miniatures — 22 octobre
 

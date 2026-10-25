@@ -1,44 +1,35 @@
-# Dix narrations lancees — 24 octobre 2026
+# Dix narrations livrees et controlees — 25 octobre 2026
 
-Les cinq nouveaux scripts Deep Void Theories et les cinq Quiet Paradox sont soumis a Algrow. Les vingt parties ont chacune un identifiant confirme. Forgotten Realms ne fait pas partie de ce lot.
+Les **10 MP3 complets** sont recuperes : **5 Deep Void Theories + 5 Quiet Paradox**. La fin manquante de Silo est corrigee dans le fichier final. Voix **Mellow Matt**, ID `IsEXLHzSvLH9UMB6SLHj`, vitesse **0,90**. Forgotten Realms ne fait pas partie de ce lot.
 
-Voix : **Mellow Matt**, ID `IsEXLHzSvLH9UMB6SLHj`, vitesse **0,90**. Offre standard habituelle, sans sous-titres payants. Les textes approuves du 22 octobre sont inchanges.
+Dossier de livraison : `C:/Users/ytbyt/Desktop/Voix sleep - 24 octobre 2026`. Le detail des empreintes, tailles et durees est dans `suivi.json` et dans `CONTROLES.json` sur le Bureau.
 
-Volume du texte : **1 726 549 caracteres**, espaces et retours inclus. Solde releve avant/apres soumission : **5 093 599 → 3 367 081** (difference de **1 726 518**). Le compteur du fournisseur differe de 31 caracteres du texte local. Il ne s'agit pas d'un devis pour une nouvelle generation.
+| Episode | Duree | Fichier |
+|---|---:|---|
+| DV-08-bene-gesserit | 4:10:25 | 01-DV-08-bene-gesserit.mp3 |
+| DV-09-jedi-order | 4:23:30 | 02-DV-09-jedi-order.mp3 |
+| DV-10-fremen | 3:40:47 | 03-DV-10-fremen.mp3 |
+| DV-11-old-republic | 4:08:11 | 04-DV-11-old-republic.mp3 |
+| DV-12-great-houses | 4:10:51 | 05-DV-12-great-houses.mp3 |
+| QP-07-silo-builders | 3:56:26 | 06-QP-07-silo-builders.mp3 |
+| QP-08-from-rules | 3:48:15 | 07-QP-08-from-rules.mp3 |
+| QP-09-lumon-building | 4:25:39 | 08-QP-09-lumon-building.mp3 |
+| QP-10-silo-outside | 4:04:36 | 09-QP-10-silo-outside.mp3 |
+| QP-11-from-cycles | 4:03:20 | 10-QP-11-from-cycles.mp3 |
 
-## Episodes
+## Controles et limites
 
-| Episode | Chaine | Caracteres |
-|---|---|---:|
-| DV-08-bene-gesserit | Deep Void Theories | 170,210 |
-| DV-09-jedi-order | Deep Void Theories | 179,155 |
-| DV-10-fremen | Deep Void Theories | 172,822 |
-| DV-11-old-republic | Deep Void Theories | 190,498 |
-| DV-12-great-houses | Deep Void Theories | 177,776 |
-| QP-07-silo-builders | Quiet Paradox | 162,712 |
-| QP-08-from-rules | Quiet Paradox | 156,452 |
-| QP-09-lumon-building | Quiet Paradox | 181,542 |
-| QP-10-silo-outside | Quiet Paradox | 167,251 |
-| QP-11-from-cycles | Quiet Paradox | 168,131 |
+Les dix fichiers finaux et leurs 25 blocs sources ont des empreintes conformes. Le decodage integral des MP3 est valide. Les decoupages couvrent les textes approuves sans trou ni chevauchement. Les debuts et fins de chaque bloc ont ete confrontes au script par reconnaissance vocale locale ; les deux raccords de la correction Silo ont ete controles dans le MP3 assemble. Aucun blocage reste ouvert.
 
-## Recuperation et reprise
+Ces controles portent sur les fichiers et des passages cibles. Ils ne constituent pas une transcription mot a mot ni une ecoute humaine de toutes les narrations. Les rapports detailles restent prives dans `work/sleep-voiceovers-2026-10-24/`.
 
-Le suivi en arriere-plan recupere les vingt blocs, controle le decodage audio et assemble un MP3 par episode sans ajout de silence. Les fichiers complets arrivent dans `C:/Users/ytbyt/Desktop/Voix sleep - 24 octobre 2026`. Au moment du lancement, la generation etait encore en cours : ne pas confondre soumission et livraison terminee.
+## Corrections terminees
 
-Commande de lecture du statut, depuis la racine du depot :
+- DV-12 Great Houses : le deuxieme gros bloc avait echoue. Il a ete remplace par quatre blocs contigus, tous recuperes et verifies.
+- QP-10 Silo Outside : un job marque termine avait pourtant coupe avant la fin. La reprise utilise exactement les **29 377 derniers caracteres**, depuis le debut de la phrase interrompue. L ancien second bloc a ete coupe dans un silence a 4 750,490 secondes, puis les deux nouvelles parties ont ete ajoutees. Le fichier corrige dure **4:04:36**. Les premiers fichiers et le registre precedent sont conserves en archives privees.
 
-```powershell
-python production/sleep_voiceovers_oct24.py status
-```
+## Reprise
 
-Si le PC ou le processus s'arrete, reprendre avec cette commande (lecture, telechargement et assemblage seulement, aucun nouvel appel payant) :
+Aucune nouvelle generation necessaire. Ne pas relancer `submit`. L executeur `production/sleep_silo_repair.py` conserve les etapes plan, submit, monitor, assemble et finalize ; la finalisation exige le rapport independant de raccord et une empreinte conforme. Les identifiants des jobs et les URL restent dans les registres prives, jamais dans Git. La cle reste dans le `.env` prive.
 
-```powershell
-python production/sleep_voiceovers_oct24.py monitor
-```
-
-Ne pas lancer un second moniteur pendant que le premier tourne. Le verrou de processus empeche deux executeurs concurrents. Le PID et les journaux sont dans `work/sleep-voiceovers-2026-10-24/`. Le registre prive `ledger.json` contient les identifiants, empreintes, limites de decoupe et URL des medias. Ne pas publier ce registre ni la cle du `.env`.
-
-Ne pas repayer les jobs soumis. Une reponse de soumission incertaine doit etre reconciliee avant toute nouvelle tentative. La commande `submit` ne relance jamais automatiquement une partie deja soumise.
-
-Les controles de fichier et de duree ne constituent pas une ecoute humaine integrale. Aucune video ni publication YouTube n'est lancee par cet executeur.
+Les dix voix seules sont livrees : aucune nouvelle video, publication ou programmation YouTube n a ete lancee. La surveillance de fin est arretee apres cette livraison.
