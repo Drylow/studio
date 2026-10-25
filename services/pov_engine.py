@@ -203,6 +203,31 @@ TEMPLATES = {
                            "the premise's key prop, with a thick white sticker outline around them; behind them the "
                            "most iconic setting of this life at golden hour or night, with a few small background "
                            "people. Warm saturated colors, clean bold outlines, nothing suggestive, no text.",
+        },
+            "pov_survive": {
+            "niche": "Second-person POV survival stories: an ordinary guy has to survive a zombie apocalypse day by day "
+                     "in one oddly specific place, moves from room to room and escapes at the end",
+            "rules": "Follow the days chronologically, from the first morning to the escape and the quiet scene in "
+                     "safety. Concrete, realistic survival logic (water, food, light, noise, doors, keys). Strictly "
+                     "non-graphic: no blood, no gore, no bites shown.",
+            "bible_note": "derived from the channel's reference video, a POV love story: follow its narration "
+                          "register, hook mechanics, rhythm, dialogue density and ending shape; its romance beats "
+                          "do not apply",
+            "direction": "Show the story like a continuous comic strip: You (and at most one companion) moving through "
+                         "the real places of the setting, the same rooms reused with the same layout, objects moved or "
+                         "broken staying that way. Wide shots to show each new place, medium shots for actions, close "
+                         "shots for details (a key, a note, a radio). Infected people are adults drawn in the same "
+                         "character design with sickly grey-green heads, dark eye rings and torn clothes, every one "
+                         "with exactly two arms and two hands; danger shown through doors, shadows and windows. No "
+                         "blood, no gore, no wounds, no red marks.",
+            "characters": [("You", "the protagonist ('you'): an ordinary ADULT man in his late twenties, a simple "
+                                   "cartoon figure with a large perfectly round plain white head, small black dot eyes, "
+                                   "short messy brown hair, adult proportions; outfit follows the story (a hospital gown "
+                                   "at the start); same look in every image")],
+            "thumb_style": "Split DAY 1 / DAY 30 before-and-after thumbnail in the channel's simple cartoon style: same "
+                           "place and same camera angle in both halves, calm and bright on DAY 1, wrecked and at night "
+                           "on DAY 30 with clean grey-green zombies (adults, two arms each, no blood); one single "
+                           "coherent view through any window; no text (DAY 1 / DAY 30 is added afterwards).",
         }},
         "variant_default": "pov_life",
         "variant_match": r"(?i)\b(marr(y|ies|ied|iage)|wife|husband|fall(s|ing)?\s+in\s+love|date|dating|"
@@ -2312,7 +2337,9 @@ def chapter_card(scene):
     title = m.group(3).upper()
     if len(title) > 32:  # coupé sur un mot entier (avant : « THE PRESSER AND THE WASTE PILE B »)
         title = title[:33].rsplit(" ", 1)[0].rstrip(" ,;:-")
-    return {"type": "chapter", "kicker": f"{m.group(1).upper()} #{m.group(2)}", "title": title}
+    word = m.group(1).upper()
+    kicker = f"{word} {m.group(2)}" if word in ("DAY", "WEEK", "HOUR", "MONTH") else f"{word} #{m.group(2)}"  # DAY 1
+    return {"type": "chapter", "kicker": kicker, "title": title}
 
 
 def montage_enabled(pr):

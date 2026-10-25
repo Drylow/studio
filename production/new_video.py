@@ -18,6 +18,7 @@ ap.add_argument("title")
 ap.add_argument("--minutes", type=float, default=None)
 ap.add_argument("--notes", default=None, help="fichier de notes (sinon <folder>/notes.txt)")
 ap.add_argument("--object", default=None, help="objet dessiné quand le titre ne le nomme pas (« the air fryer »)")
+ap.add_argument("--format", default=None, help="format imposé (variante du modèle : pov_survive…)")
 a = ap.parse_args()
 d = os.path.abspath(a.folder)
 os.makedirs(d, exist_ok=True)
@@ -27,9 +28,11 @@ if a.notes and os.path.abspath(a.notes) != os.path.join(d, "notes.txt"):
 notes = open(notes_path).read() if os.path.isfile(notes_path) else ""
 ch = E.studio_channel(a.template)
 pr = E.new_project(ch, a.title, minutes=a.minutes, notes=notes)
-fmt = E.pick_format(ch, a.title)
+fmt = E.pick_format(ch, a.title, a.format)
 if fmt:
     store.update_project(pr["id"], lambda x: x.__setitem__("format", fmt))
+if fmt == "pov_survive":  # cartes DAY N à l'écran (titres « Day N: … »)
+    store.update_project(pr["id"], lambda x: x.setdefault("montage", {}).__setitem__("chapter_cards", True))
 if a.object:
     store.update_project(pr["id"], lambda x: x.__setitem__("object_noun", a.object))
 era = next((ln.split(":", 1)[1].strip() for ln in notes.splitlines() if ln.startswith("ERA LOCK:")), "")

@@ -117,6 +117,23 @@ FORMATS = {
 - Honest, human, dry understatement: never glamorize, never moralize. Sensitive lives stay non-graphic: imply, cut away, show the consequences.
 - ENDING: a small, quiet scene with 2-4 lines of dialogue, then a last physical image. Never summarize the video.""",
     },
+    "pov_survive": {
+        "name": "POV: You Have to Survive… (survie zombie, jour par jour)",
+        "desc": "« POV: You Have to Survive a Zombie Apocalypse (Locked in a Hospital) » — un mec lambda survit jour après "
+                "jour, d'un lieu à l'autre, et s'échappe à la fin (façon Oddly Specific Lives).",
+        "heading": "Day N: <what this stretch is about> (shown on screen as a DAY N card, never spoken; e.g. \"Day 1: "
+                   "The empty ward\", \"Day 6: The pharmacy\", \"Day 30: The roof\")",
+        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological, day by day. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it.
+- "YOU": an unnamed, ordinary guy (a specific everyday reason to be where he is: a broken ankle, an appendix, a night shift), out of his depth, practical, honest. He speaks little; his lines are short. At most ONE companion met along the way, never a love story.
+- DAY HEADINGS: every section heading is "Day N: <short label>", days in increasing order from Day 1 to the last day of the premise; the jumps get bigger in the middle ("Day 3", "Day 6", "Day 11"...), smaller near the end.
+- MOVEMENT: never stay in one room. The story travels through 8-12 distinct, concrete places of the setting (for a hospital: the ward, a corridor, the nurses' station, the pharmacy, the cafeteria, the stairwell, the laundry or basement, the parking garage, the roof...). Each place is described once with a fixed layout (what is on the left, the right, the door, the window) and reused consistently when you come back.
+- CONTINUITY: things you move, break, barricade, take or lose stay that way; injuries and the items you carry (a backpack, a fire extinguisher, a radio, keys) persist until a scene changes them. Say it when they change.
+- SURVIVAL LOGIC: water, food, light, noise, doors, keys, batteries, radio news, the generator, the sounds of the infected. Each day solves one concrete problem and creates the next. Realistic, ordinary solutions; no superpowers, no guns-blazing action hero.
+- THE INFECTED: slow or fast as fixed by the first sighting, never changing; drawn to noise and light. Danger is shown through sound, shadows, doors and close calls. Strictly non-graphic: no blood, no gore, no bites shown; imply and cut away.
+- Scenes, not summaries: a time of day, the light, one telling physical detail, then short loaded dialogue (radio, a note, the companion).
+- Plant 2-3 physical motifs early (a get-well card, a juice box, the window view, a wristband) and pay them off; the window view of the city is checked again at several moments to show the world changing.
+- ENDING: the escape works on the last day (helicopter, boat, convoy, a gap in the fence...), then a short quiet scene in safety with 2-4 lines of dialogue and a last physical image that returns to the opening image.""",
+    },
     "business_explained": {
         "name": "How X Actually Makes Money (business expliqué)",
         "desc": "« How Pawn Shops Actually Make Money », « The Economics of Money Laundering » — le vrai modèle économique caché d'un business (façon Marcus Explains).",
