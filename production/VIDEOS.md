@@ -191,7 +191,7 @@ Idées suivantes : diamond, $100 bill…
 | POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature refaite (femme différente de l'UFC, plus sexy) : tresses, maillot blanc et turquoise n° 23 sans logo, renvoyée sur Discord | **4 oct.** |
 | POV: You Marry a Female Assassin | **livrée** (vérifiée image par image, Discord, 3 oct. 17:41 UTC) — https://gofile.io/d/sbzA4FiZ ; 15 min 43 ; Londres, Mara + Biscuit, faits réels (étude Birmingham City University 2014) ; 3 images refaites avant envoi (mariage avec un autre couple, appareil photo après « no photos ») ; miniature : planque, mur de cibles, fusil démonté dans la mallette, pistolet à silencieux levé (sans drapeau ni ville) | à caler |
 | POV: You Marry a Singaporean Woman | **livrée** (vérifiée image par image, Discord, 25 oct. 21:05 Belgique) — https://gofile.io/d/wAs0lg8v ; ~27 min ; HDB/BTO, hawker centres (UNESCO 2020), chope, lo hei, tea ceremony, ROM ; miniature B : hawker centre, chicken rice + paquet de mouchoirs | à caler |
-| POV: You Marry a Canadian Woman | rendu v2 en cours (25 oct.) : 2 plans de voiture refaits (volant à droite → à gauche) ; Winnipeg, Claire ambulancière, block heater, cabane à sucre, Thanksgiving 1957, poutine, Tim Hortons ; miniature A : Québec, crosse de hockey | à caler |
+| POV: You Marry a Canadian Woman | **livrée** (vérifiée image par image, Discord, 25 oct. 21:32 Belgique) — https://gofile.io/d/5DudSn5G ; 26 min 28 ; Winnipeg, Claire ambulancière, block heater, cabane à sucre, Thanksgiving 1957, poutine, Tim Hortons ; 2 plans de voiture refaits avant envoi (volant à droite → à gauche) ; miniature A : Québec, crosse de hockey | à caler |
 
 Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
