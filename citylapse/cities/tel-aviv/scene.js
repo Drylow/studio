@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import {
-  clamp, lerp, ramp, sm, V, mulberry32, hash2, fbm, pw, pl, inv, M4, NEVER, U, STD, growMesh, unitBox, hipRoof, facet,
+  clamp, lerp, ramp, sm, V, mulberry32, hash2, vnoise, fbm, pw, pl, inv, M4, NEVER, U, STD, growMesh, unitBox, hipRoof, facet,
   createStage, rasterGround, growPrisms, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs,
 } from "./engine.js";
 import { DATA } from "./data.js";
@@ -274,10 +274,47 @@ export function buildVideo(canvas, hud) {
   };
   for (let i = 0; i < B.length; i += 9) mark(B[i] / 10, B[i + 1] / 10, B[i + 2] / 20 * 1.15 + 1.5, B[i + 3] / 20 * 1.15 + 1.5, B[i + 4] / 1000);
   // exact road surfaces, so a street tree never lands on another carriageway or in a junction
-  const roadOcc = new Uint8Array(ON * ON), occSave = occ.slice();
-  for (const sg of segs) { const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L > 0.5) mark((sg.ax + sg.bx) / 2, (sg.az + sg.bz) / 2, L / 2 + 0.5, sg.w / 2 + 0.3, -Math.atan2(sg.bz - sg.az, sg.bx - sg.ax)); }
-  for (let q = 0; q < occ.length; q++) { roadOcc[q] = occ[q] && !occSave[q] ? 1 : 0; occ[q] = occSave[q]; }
-  const onRoad = (x, z) => { const gx = Math.floor((x - OX) / OC), gz = Math.floor((z - OZ) / OC); return gx < 0 || gz < 0 || gx >= ON || gz >= ON || roadOcc[gz * ON + gx] || occ[gz * ON + gx]; };
+  const roadT = new Uint16Array(ON * ON).fill(65535);   // the earliest road over each cell, in tenths of a second
+  for (const sg of segs) {
+    const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L < 0.5) continue;
+    const cx = (sg.ax + sg.bx) / 2, cz = (sg.az + sg.bz) / 2, hx = L / 2 + 1, hz = sg.w / 2 + 1.5, a = -Math.atan2(sg.bz - sg.az, sg.bx - sg.ax);
+    const ca = Math.cos(a), sa = Math.sin(a), R = Math.hypot(hx, hz), tv = Math.min(65000, Math.max(0, Math.round(sg.ba * 10)));
+    for (let gz = Math.max(0, Math.floor((cz - R - OZ) / OC)); gz <= Math.min(ON - 1, Math.floor((cz + R - OZ) / OC)); gz++)
+      for (let gx = Math.max(0, Math.floor((cx - R - OX) / OC)); gx <= Math.min(ON - 1, Math.floor((cx + R - OX) / OC)); gx++) {
+        const px = OX + (gx + 0.5) * OC - cx, pz = OZ + (gz + 0.5) * OC - cz;
+        if (Math.abs(px * ca - pz * sa) <= hx && Math.abs(px * sa + pz * ca) <= hz && tv < roadT[gz * ON + gx]) roadT[gz * ON + gx] = tv;
+      }
+  }
+  const roadAt = (x, z) => { const gx = Math.floor((x - OX) / OC), gz = Math.floor((z - OZ) / OC); return gx < 0 || gz < 0 || gx >= ON || gz >= ON || roadT[gz * ON + gx] === 65535 ? NEVER : roadT[gz * ON + gx] / 10; };
+  const onRoad = (x, z) => { const gx = Math.floor((x - OX) / OC), gz = Math.floor((z - OZ) / OC); return gx < 0 || gz < 0 || gx >= ON || gz >= ON || roadT[gz * ON + gx] < 65535 || occ[gz * ON + gx]; };
+  // distance to the sea in metres (the shore grid is clamped at 120 m): a chamfer pass over the 20 m grid
+  const cdist = new Float32Array(SG.nx * SG.nz);
+  {                                                    // seeds: water 60 m+ from the shore that connects to the open sea in the west
+    const sea = new Uint8Array(SG.nx * SG.nz), st0 = [];
+    for (let i = 0; i < SG.nz; i++) if (sdRaw(i, 0) <= -60) { sea[i * SG.nx] = 1; st0.push(i * SG.nx); }
+    while (st0.length) {
+      const q = st0.pop(), i = Math.floor(q / SG.nx), j = q % SG.nx;
+      for (const [di, dj] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+        const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx || sea[a * SG.nx + b] || sdRaw(a, b) > -60) continue;
+        sea[a * SG.nx + b] = 1; st0.push(a * SG.nx + b);
+      }
+    }
+    for (let q = 0; q < cdist.length; q++) cdist[q] = sea[q] ? 0 : 1e6;
+  }
+  const relax = (i, j, di, dj, c) => { const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx) return; const v = cdist[a * SG.nx + b] + c; if (v < cdist[i * SG.nx + j]) cdist[i * SG.nx + j] = v; };
+  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) { relax(i, j, -1, 0, SG.g); relax(i, j, 0, -1, SG.g); relax(i, j, -1, -1, SG.g * 1.414); relax(i, j, -1, 1, SG.g * 1.414); }
+  for (let i = SG.nz - 1; i >= 0; i--) for (let j = SG.nx - 1; j >= 0; j--) { relax(i, j, 1, 0, SG.g); relax(i, j, 0, 1, SG.g); relax(i, j, 1, 1, SG.g * 1.414); relax(i, j, 1, -1, SG.g * 1.414); }
+  // the coastal dunes: a band of sand parallel to the shore, about 1.5 km deep round Ahuzat Bayit and Neve Tzedek
+  // (both were built on the dunes) and about 550 m elsewhere, varying only slowly along the coast. The texture stores
+  // distance-from-sea / band width (0..2), so the shader can shrink the whole band evenly as the city greens it
+  const [, ahDZ] = LL(32.0633, 34.7714), dratio = new Float32Array(SG.nx * SG.nz);
+  for (let i = 0; i < SG.nz; i++) {
+    const z = SG.z0 + (i + 0.5) * SG.g, dw = 550 + 950 * Math.exp(-(((z - ahDZ) / 1300) ** 2)) + 300 * (vnoise(z * 0.0006 + 3.1, 0.7) - 0.5);
+    for (let j = 0; j < SG.nx; j++) dratio[i * SG.nx + j] = Math.min(2, cdist[i * SG.nx + j] / dw);
+  }
+  const duneAt = (x, z) => { const j = Math.floor((x - coastShift(z) - SG.x0) / SG.g), i = Math.floor((z - SG.z0) / SG.g); return i < 0 || j < 0 || i >= SG.nz || j >= SG.nx ? 0 : clamp((1.05 - dratio[i * SG.nx + j]) / 0.1); };
+  const coastTex = new THREE.DataTexture(Uint8Array.from(dratio, (v) => Math.round(v / 2 * 255)), SG.nx, SG.nz, THREE.RedFormat);
+  coastTex.magFilter = coastTex.minFilter = THREE.LinearFilter; coastTex.flipY = false; coastTex.needsUpdate = true;
   // street trees on every street (Tel Aviv's ficus and plane trees), planted a few years after the street
   for (const sg of segs) {
     if (sg.w < 4.5 || sg.w > 13) continue;                       // no rows of trees along the motorways
@@ -317,47 +354,21 @@ export function buildVideo(canvas, hud) {
     }
     nGarden++;
   }
-  // lone trees across the open land (carob, sycamore, eucalyptus windbreaks) as it greens up; they stay in the gaps later
-  for (let gx = -160; gx <= 180; gx++) for (let gz = -175; gz <= 150; gz++) {
-    const x = gx * 24 + (hash2(gx + 5, gz) - 0.5) * 18, z = gz * 24 + (hash2(gz, gx - 5) - 0.5) * 18, r1 = hash2(gx * 13, gz * 17);
-    if (r1 > 0.18 + 0.3 * fbm(x * 0.002 + 3, z * 0.002 - 8) || shoreDist(x, z) < 60 || !free(x, z)) continue;
-    const b = tOf(1914 + hash2(gx, gz * 3) * 30), gy = heightAt(x, z) - 0.3, q = hash2(gx * 5, gz * 7), sc = 0.8 + q * 0.7, hgt = (3.4 + q * 2.4) * sc;
-    trunkR.push({ m: M4(x, gy, z, q * 6, 0.45, hgt, 0.45), c: new THREE.Color("#6e5a40"), t: [b, NEVER, NEVER, r1] });
-    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.8 * sc, 3.2 * sc, 3.8 * sc), c: new THREE.Color(DEEP[Math.floor(q * 3.99)]), t: [b, NEVER, NEVER, r1] });
-  }
-  // orchards round Jaffa and Sarona before the city (the land of the citrus groves), cleared as houses arrive
   const clearAt = (x, z) => { let t = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) t = Math.min(t, v - 0.4); } return t; };
-  // each grove (pardes) is a walled rectangular plot with its trees in rows and a cactus hedge round it
-  const [jx, jz] = LL(32.0535, 34.7525), [sx, sz] = LL(32.0718, 34.7865);
-  const groves = [], hedgeR = [], [ax0, az0] = LL(32.0635, 34.7715);
-  for (let gx = -40; gx <= 40; gx++) for (let gz = -40; gz <= 40; gz++) {
-    // plots tile a slightly rotated grid, separated by narrow sandy tracks, in clusters along the old roads
-    const G0 = -0.12, gc = Math.cos(G0), gs = Math.sin(G0), cu = gx * 98 + (gz % 2) * 31, cv = gz * 92;
-    const x = cu * gc + cv * gs, z = -cu * gs + cv * gc, r1 = rnd(), r2 = rnd();
-    const near = Math.min(Math.hypot(x - jx - 1000, z - jz + 250) / 1700, Math.hypot(x - sx - 400, z - sz + 300) / 1500);
-    if (near > 1 || fbm(x * 0.003 + 7, z * 0.003 - 3) < 0.4 + near * 0.1 || shoreDist(x, z) < 115) continue;   // shoreDist is clamped at ±120 m
-    if (Math.hypot(x - ax0, z - az0) < 650) continue;      // Ahuzat Bayit was bought on bare dunes (the 1909 lottery photo)
-    const w = r1 < 0.25 ? 50 + r2 * 25 : 84 + r1 * 10, d = 78 + r2 * 10, ang = G0 + (r2 - 0.5) * 0.06, ca = Math.cos(ang), sa = Math.sin(ang);
-    let death = clearAt(x, z);
-    for (const [u, v] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) death = Math.min(death, clearAt(x + (u * w / 2) * ca + (v * d / 2) * sa, z - (u * w / 2) * sa + (v * d / 2) * ca));
-    if (death < 2) continue;
-    death = Math.min(death, tOf(1952 + r1 * 16));          // the last groves inside the city were gone by the late 1960s
-    groves.push({ x, z, rx: w / 2 - 2, rz: d / 2 - 2, ry: -ang, b: death });
-    const gy = heightAt(x, z) - 0.3, dark = r1 < 0.5;
-    for (let u = -w / 2 + 5; u < w / 2 - 3; u += 7.5) for (let v = -d / 2 + 5; v < d / 2 - 3; v += 7.5) {
-      const tx = x + u * ca + v * sa, tz = z - u * sa + v * ca, q = hash2(Math.round(tx * 7), Math.round(tz * 7));
-      if (q < 0.04) continue;
-      const td = death - q * 0.5, hgt = 1.8 + q * 0.7, s = 2.7 + q * 0.6;
-      trunkR.push({ m: M4(tx, gy, tz, q * 6, 0.35, hgt, 0.35), c: new THREE.Color("#6e5a40"), t: [-1, td, NEVER, q] });
-      crownR.push({ m: M4(tx, gy + hgt, tz, q * 6.28, s, s * 0.85, s), c: new THREE.Color(dark ? ["#2f5e27", "#3a6b2e", "#2c5524"][Math.floor(q * 2.99)] : ["#467a31", "#3f7130", "#4f8236"][Math.floor(q * 2.99)]), t: [-1, td, NEVER, q] });
-    }
-    for (const [u, v, a, l] of [[0, -d / 2, 0, w], [0, d / 2, 0, w], [-w / 2, 0, 1, d], [w / 2, 0, 1, d]]) {
-      const hx = x + u * ca + v * sa, hz = z - u * sa + v * ca;
-      hedgeR.push({ m: M4(hx, gy, hz, ang + a * Math.PI / 2, l, 1, 1.4), c: new THREE.Color(r2 < 0.5 ? "#5f7a3c" : "#c9b48c"), t: [-1, death - 0.3, NEVER, r1], h: [0, r2 < 0.5 ? 1.8 : 1.3] });
-    }
+  // the open land: natural woods and copses (sycamore, carob, oak, the orchards' windbreaks) in soft irregular clumps,
+  // plus trees scattered over the meadows; they give way to the houses and roads as the city arrives
+  const groves = [], WOOD = ["#2f6326", "#3a6e2c", "#356b28", "#447a32", "#2c5a24", "#4a8535"];
+  const wood = (x, z) => fbm(x * 0.0021 + 21, z * 0.0021 - 13) + 0.25 * (fbm(x * 0.009 - 5, z * 0.009 + 3) - 0.5);
+  for (let gx = -340; gx <= 440; gx++) for (let gz = -420; gz <= 360; gz++) {
+    const x = gx * 10 + (hash2(gx + 11, gz) - 0.5) * 8, z = gz * 10 + (hash2(gz, gx + 13) - 0.5) * 8, r1 = hash2(gx * 17 + 3, gz * 19 + 5);
+    const wd = wood(x, z), keep = wd > 0.6 ? clamp((wd - 0.6) / 0.08) * 0.85 : 0.012;   // dense inside the clumps, a few loose trees elsewhere
+    if (r1 > keep || shoreDist(x, z) < 115 || duneAt(x, z) > 0.3) continue;
+    const death = Math.min(clearAt(x, z), roadAt(x, z) - 0.6); if (death < 2) continue;
+    const q = hash2(gx * 5 + 1, gz * 7 + 2), sc = 0.85 + q * 0.8, hgt = (2.8 + q * 2.6) * sc, gy = heightAt(x, z) - 0.3;
+    trunkR.push({ m: M4(x, gy, z, q * 6, 0.45, hgt, 0.45), c: new THREE.Color("#6e5a40"), t: [-1, death - q * 0.4, NEVER, r1] });
+    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.9 * sc, 3.3 * sc, 3.9 * sc), c: new THREE.Color(WOOD[Math.floor(q * 5.99)]), t: [-1, death - q * 0.4, NEVER, r1] });
   }
-  scene.add(growMesh(unitBox(), STD({ roughness: 1 }), "house", hedgeR, { shadow: false }));
-  const groveTex = rasterGround({ X0: -3400, Z0: -4200, EXT: 7800, TEX: 2048 }, [], groves, []);
+  const groveTex = rasterGround({ X0: -3400, Z0: -4200, EXT: 16, TEX: 4 }, [], groves, []);   // no rectangular groves any more
   const trunkGeo = new THREE.CylinderGeometry(0.5, 0.7, 1, 5); trunkGeo.translate(0, 0.5, 0);
   scene.add(growMesh(trunkGeo, STD({ roughness: 1 }), "uniform", trunkR, { shadow: false }));
   scene.add(growMesh(facet(new THREE.IcosahedronGeometry(1, 0)), STD({ flatShading: true, roughness: 0.95 }), "uniform", crownR));
@@ -395,25 +406,6 @@ export function buildVideo(canvas, hud) {
     for (let q = 0; q < cTime.length; q++) cTime[q] = Math.round(clamp(f[q] / (MDUR + 20)) * 255);
   }
   const cityTex = new THREE.DataTexture(cTime, CN, CN, THREE.RedFormat); cityTex.magFilter = cityTex.minFilter = THREE.LinearFilter; cityTex.flipY = false; cityTex.needsUpdate = true;
-  // distance to the sea in metres (the shore grid is clamped at 120 m): a chamfer pass over the 20 m grid
-  const cdist = new Float32Array(SG.nx * SG.nz);
-  {                                                    // seeds: water 60 m+ from the shore that connects to the open sea in the west
-    const sea = new Uint8Array(SG.nx * SG.nz), st0 = [];
-    for (let i = 0; i < SG.nz; i++) if (sdRaw(i, 0) <= -60) { sea[i * SG.nx] = 1; st0.push(i * SG.nx); }
-    while (st0.length) {
-      const q = st0.pop(), i = Math.floor(q / SG.nx), j = q % SG.nx;
-      for (const [di, dj] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
-        const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx || sea[a * SG.nx + b] || sdRaw(a, b) > -60) continue;
-        sea[a * SG.nx + b] = 1; st0.push(a * SG.nx + b);
-      }
-    }
-    for (let q = 0; q < cdist.length; q++) cdist[q] = sea[q] ? 0 : 1e6;
-  }
-  const relax = (i, j, di, dj, c) => { const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx) return; const v = cdist[a * SG.nx + b] + c; if (v < cdist[i * SG.nx + j]) cdist[i * SG.nx + j] = v; };
-  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) { relax(i, j, -1, 0, SG.g); relax(i, j, 0, -1, SG.g); relax(i, j, -1, -1, SG.g * 1.414); relax(i, j, -1, 1, SG.g * 1.414); }
-  for (let i = SG.nz - 1; i >= 0; i--) for (let j = SG.nx - 1; j >= 0; j--) { relax(i, j, 1, 0, SG.g); relax(i, j, 0, 1, SG.g); relax(i, j, 1, 1, SG.g * 1.414); relax(i, j, 1, -1, SG.g * 1.414); }
-  const coastTex = new THREE.DataTexture(Uint8Array.from(cdist, (v) => Math.min(255, Math.round(v / 10))), SG.nx, SG.nz, THREE.RedFormat);
-  coastTex.magFilter = coastTex.minFilter = THREE.LinearFilter; coastTex.flipY = false; coastTex.needsUpdate = true;
   // low scrub on the dunes (retama, sea squill), cleared as the houses arrive
   const scrubR = [];
   for (let gx = -300; gx <= 120; gx++) for (let gz = -420; gz <= 420; gz++) {
@@ -421,8 +413,8 @@ export function buildVideo(canvas, hud) {
     const fx = Math.floor((x - SG.x0) / SG.g), fz = Math.floor((z - SG.z0) / SG.g);
     if (fx < 0 || fz < 0 || fx >= SG.nx || fz >= SG.nz) continue;
     const c = cdist[fz * SG.nx + fx];
-    if (c < 200 || c > 1180 || r1 > (fbm(x * 0.006, z * 0.006) > 0.56 ? 0.3 : 0.015) || !free(x, z)) continue;
-    const death = Math.min(clearAt(x, z), tOf(1922 + r1 * 30)); if (death < 1) continue;
+    if (c < 140 || duneAt(x, z) < 0.7 || r1 > (fbm(x * 0.006, z * 0.006) > 0.56 ? 0.22 : 0.02) || !free(x, z)) continue;
+    const death = Math.min(clearAt(x, z), roadAt(x, z) - 0.6); if (death < 1) continue;
     const q = hash2(gx * 11, gz * 5), sc = 1.8 + q * 1.8;
     scrubR.push({ m: M4(x, heightAt(x, z) - 0.2, z, q * 6.28, 1.6 * sc, 0.9 * sc, 1.6 * sc), c: new THREE.Color(q < 0.5 ? "#6f7f45" : "#5b6c3a"), t: [-1, death, NEVER, q] });
   }
@@ -448,38 +440,22 @@ export function buildVideo(canvas, hud) {
       .replace("#include <color_fragment>", /* glsl */ `#include <color_fragment>
       {
         float nz = n21(vW.xz * 0.004), nf = n21(vW.xz * 0.03);
-        // clean, even ground like a painted model: one meadow green everywhere, farmland outside the city's final
-        // footprint, and a narrow strip of sand dunes along the coast. No speckle, no blotches.
+        // natural, even ground like a painted model: meadow green in broad soft patches (no fields, no straight edges),
+        // and a wandering band of sand dunes along the coast that the built quarters turn into gardens from the 1910s
         vec3 sand = mix(Ls(vec3(0.90, 0.83, 0.66)), Ls(vec3(0.87, 0.80, 0.63)), nz);
-        // open country inland: a patchwork of fields (wheat, stubble, ploughed earth, vegetables, fallow) on a tilted grid
-        vec2 fr = mat2(0.993, -0.12, 0.12, 0.993) * vW.xz, fc = floor(fr / vec2(150.0, 100.0)), fl = fract(fr / vec2(150.0, 100.0));
-        float sp = 0.3 + 0.4 * h21(fc - 9.0), sx = h21(fc + 2.0), hf = sx < 0.5 ? step(sp, fl.x) : 2.0 + step(sp, fl.y);   // split each plot in two
-        fl = sx < 0.5 ? vec2(fl.x < sp ? fl.x / sp : (fl.x - sp) / (1.0 - sp), fl.y) : vec2(fl.x, fl.y < sp ? fl.y / sp : (fl.y - sp) / (1.0 - sp));
-        fc = fc * 4.0 + hf;
-        float fh = h21(fc + 31.0), fh2 = h21(fc * 1.7 - 5.0);
-        vec3 field = fh < 0.3 ? Ls(vec3(0.33, 0.47, 0.19)) : fh < 0.45 ? Ls(vec3(0.43, 0.50, 0.24)) : fh < 0.56 ? Ls(vec3(0.58, 0.55, 0.33))
-                   : fh < 0.64 ? Ls(vec3(0.48, 0.41, 0.29)) : fh < 0.85 ? Ls(vec3(0.29, 0.43, 0.17)) : Ls(vec3(0.38, 0.49, 0.22));
-        field *= mix(0.94, 1.04, step(0.5, fract((fh2 < 0.5 ? fr.x : fr.y) / 5.0)));          // furrows
-        float edge = min(min(fl.x, 1.0 - fl.x) * 70.0, min(fl.y, 1.0 - fl.y) * 50.0);
-        field = mix(Ls(vec3(0.27, 0.38, 0.16)), field, smoothstep(0.8, 2.2, edge));          // hedgerows and tracks
-        vec3 grass = mix(Ls(vec3(0.36, 0.51, 0.21)), Ls(vec3(0.39, 0.53, 0.23)), n21(vW.xz * 0.0011 + 9.0));
+        float m1 = n21(vW.xz * 0.0013 + 9.0), m2 = n21(vW.xz * 0.0042 - 4.0);
+        vec3 grass = mix(Ls(vec3(0.34, 0.50, 0.20)), Ls(vec3(0.41, 0.56, 0.24)), smoothstep(0.25, 0.75, m1));
+        grass = mix(grass, Ls(vec3(0.49, 0.55, 0.29)), smoothstep(0.62, 0.9, m2) * 0.35);
         vec2 cu = (vW.xz - uOrig.xy) / uOrig.z;
-        // farmland inland; uCity (blurred) holds when the city reaches each patch: it turns to lawn and gardens then
         float cb = (cu.x > 0.0 && cu.y > 0.0 && cu.x < 1.0 && cu.y < 1.0) ? texture2D(uCity, cu).r * ${(MDUR + 20).toFixed(1)} : 1e5;
-        vec3 col = mix(mix(field, grass, smoothstep(0.62, 0.78, n21(vW.xz * 0.0009 - 2.0)) * 0.5), grass, smoothstep(cb + 0.5, cb + 5.0, uTime));
-        // the dune strip: distance from the open sea (the grid measures it from 60 m offshore), a gentle wavy edge
         float shx = vW.z < ${ZN.toFixed(1)} ? ${SLN} * (vW.z - ${ZN.toFixed(1)}) : vW.z > ${ZS.toFixed(1)} ? ${SLS} * (vW.z - ${ZS.toFixed(1)}) : 0.0;
         vec2 cs = (vec2(vW.x - shx, vW.z) - vec2(${SG.x0.toFixed(1)}, ${SG.z0.toFixed(1)})) / vec2(${(SG.nx * SG.g).toFixed(1)}, ${(SG.nz * SG.g).toFixed(1)});
-        float cd = texture2D(uCoast, cs).r * 2550.0 + (n21(vW.xz * 0.0012 + 3.0) - 0.5) * 420.0;
+        // the dune band narrows evenly towards the beach as gardens, avenues and parks spread (1912-1932)
+        float rr = texture2D(uCoast, cs).r * 2.0 + (n21(vW.xz * 0.004 + 3.0) - 0.5) * 0.12, lim = mix(1.0, 0.15, uGreen);
+        float dn = 1.0 - smoothstep(lim - 0.03, lim + 0.03, rr);
         float inland = smoothstep(1.5, 1.85, vW.y);            // the land is 2 m up at 120 m from the shore (the clamp of the shore grid)
-        // the sand dunes north of Jaffa (the 1909 lots were drawn on them): about 1.3 km deep, a clean edge, broad soft
-        // shading only; the whole belt greens evenly as gardens, avenues and parks spread (1906-1928)
-        // as the city grows the green front moves from inland towards the sea (a clean edge, never a half fade)
-        float front = mix(1300.0, 240.0, uGreen);
         vec3 dune = sand * mix(0.95, 1.03, n21(vW.xz * 0.0035 + 4.0));
-        col = mix(dune, col, smoothstep(front, front + 50.0, cd) * inland);
-        // from 1912 the built-up quarters get gardens and avenues wherever they stand, dunes included
-        col = mix(col, grass, smoothstep(cb + 0.5, cb + 5.0, uTime) * smoothstep(0.0, 0.3, uGreen) * smoothstep(150.0, 220.0, cd) * inland);
+        vec3 col = mix(grass, dune, max(dn, 1.0 - inland));
         col = mix(col, Ls(vec3(0.95, 0.90, 0.78)), smoothstep(1.6, 0.5, vW.y) * 0.8);             // the beach
         vec2 uv = (vW.xz - uOrig.xy) / uOrig.z;
         if (uv.x > 0.0 && uv.y > 0.0 && uv.x < 1.0 && uv.y < 1.0) {
@@ -666,7 +642,7 @@ export function buildVideo(canvas, hud) {
     const mainT = intro ? (time < 2.5 ? 505 : time < 8 ? 505 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
     const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
-    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1912, 1932));
+    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1911, 1922));
     updateLM(t); updDust(t); updateLife(t);
     let { pos, tgt } = cam(t);
     if (intro) { const k = sm(ramp(time, 5.5, 9)); pos = introPose.pos.clone().lerp(pos, k); tgt = introPose.tgt.clone().lerp(tgt, k); }
