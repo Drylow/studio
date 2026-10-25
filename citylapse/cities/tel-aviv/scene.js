@@ -543,7 +543,10 @@ export function buildVideo(canvas, hud) {
         float e = 0.6, h0 = wn(q + uTime * 0.15) + 0.5 * wn(q * 2.3 - uTime * 0.2);
         float hx = wn(q + vec2(e, 0.0) + uTime * 0.15) + 0.5 * wn((q + vec2(e, 0.0)) * 2.3 - uTime * 0.2);
         float hz = wn(q + vec2(0.0, e) + uTime * 0.15) + 0.5 * wn((q + vec2(0.0, e)) * 2.3 - uTime * 0.2);
-        normal = normalize(normal + (mat3(viewMatrix) * vec3(-(hx - h0), 0.0, -(hz - h0))) * 0.12);`);
+        normal = normalize(normal + (mat3(viewMatrix) * vec3(-(hx - h0), 0.0, -(hz - h0))) * 0.12);`)
+      // the sun's reflection: with a float framebuffer (any real GPU) the glint goes far above 1 and washes the
+      // near sea out to white; keep only a soft sheen
+      .replace("#include <lights_fragment_end>", "#include <lights_fragment_end>\n reflectedLight.directSpecular *= 0.12; reflectedLight.indirectSpecular *= 0.3;");
   };
   const water = new THREE.Mesh(wGeo, wMat); water.receiveShadow = true; scene.add(water);
   const fwGeo = new THREE.PlaneGeometry(120000, 120000, 1, 1).rotateX(-Math.PI / 2); fwGeo.translate(-1000, -0.35, 0);
