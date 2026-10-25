@@ -238,7 +238,7 @@ export function rasterGround({ X0, Z0, EXT, TEX }, segs, plazas = [], fields = [
     if (b < old) { data[i + 1] = b >> 8; data[i + 2] = b & 255; }
   };
   for (const s of segs) {
-    const pad = s.w / 2 + 2;
+    const pad = s.w / 2 + 2.5;
     const minx = Math.floor((Math.min(s.ax, s.bx) - pad - X0) / PX), maxx = Math.ceil((Math.max(s.ax, s.bx) + pad - X0) / PX);
     const minz = Math.floor((Math.min(s.az, s.bz) - pad - Z0) / PX), maxz = Math.ceil((Math.max(s.az, s.bz) + pad - Z0) / PX);
     const dx = s.bx - s.ax, dz = s.bz - s.az, ll = dx * dx + dz * dz || 1;
@@ -246,7 +246,7 @@ export function rasterGround({ X0, Z0, EXT, TEX }, segs, plazas = [], fields = [
       const x = X0 + (px + 0.5) * PX, z = Z0 + (pz + 0.5) * PX, u = clamp(((x - s.ax) * dx + (z - s.az) * dz) / ll);
       const d = Math.hypot(x - s.ax - dx * u, z - s.az - dz * u);
       if (d > pad) continue;
-      put(px, pz, Math.round(255 * clamp((s.w / 2 + 0.6 - d) / 1.2)), lerp(s.ba, s.bb, u) + (d / s.w) * 0.25);
+      put(px, pz, Math.round(255 * clamp((s.w / 2 + 1.2 - d) / 2.4)), lerp(s.ba, s.bb, u) + (d / s.w) * 0.25);   // edge ramp wider than a texel: no stair steps
     }
   }
   for (const p of plazas) {
@@ -256,7 +256,7 @@ export function rasterGround({ X0, Z0, EXT, TEX }, segs, plazas = [], fields = [
       const x = X0 + (px + 0.5) * PX - p.x, z = Z0 + (pz + 0.5) * PX - p.z;
       const u = Math.abs(x * ca + z * sa) - (p.rx || p.r), v = Math.abs(-x * sa + z * ca) - (p.rz || p.r);
       const d = Math.max(u, v);
-      if (d < 1) put(px, pz, Math.round(255 * clamp(-d / 1.2 + 0.5)), p.b + (d + (p.r || 0)) * 0.005);
+      if (d < 1.5) put(px, pz, Math.round(255 * clamp(-d / 2.4 + 0.5)), p.b + (d + (p.r || 0)) * 0.005);
     }
   }
   for (const f of fields) {

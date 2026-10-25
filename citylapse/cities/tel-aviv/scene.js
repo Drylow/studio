@@ -15,6 +15,7 @@ export const W = 1920, H = 1080, SS = 1.5, MDUR = 560, INTRO = 9, DUR = MDUR + I
 // ---------------- land: the coast, the Yarkon, low sand dunes ----------------
 const SG = DATA.S, SD = Uint8Array.from(atob(SG.b64), (c) => c.charCodeAt(0));
 const sdRaw = (i, j) => { i = clamp(i, 9, SG.nz - 10);   // the water data stops short of the grid's north and south edges
+  if (j >= SG.nx - 4) return 120;                           // east of the data: dry land (the Yarkon leaves the grid there)
   j = clamp(j, 0, SG.nx - 1); const v = SD[i * SG.nx + j]; return v > 127 ? v - 256 : v; };
 // beyond the north and south edges of the grid the coast carries on along its own direction (from the real shore
 // 1.5 km inside each edge), so the land never ends in a straight wall of sand
@@ -384,7 +385,7 @@ export function buildVideo(canvas, hud) {
   const cityTex = new THREE.DataTexture(cTime, CN, CN, THREE.RedFormat); cityTex.magFilter = cityTex.minFilter = THREE.LinearFilter; cityTex.flipY = false; cityTex.needsUpdate = true;
   // distance to the sea in metres (the shore grid is clamped at 120 m): a chamfer pass over the 20 m grid
   const cdist = new Float32Array(SG.nx * SG.nz);
-  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) cdist[i * SG.nx + j] = sdRaw(i, j) < 0 ? 0 : 1e6;
+  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) cdist[i * SG.nx + j] = sdRaw(i, j) <= -60 ? 0 : 1e6;   // the sea only: the river is never 60 m deep in this grid
   const relax = (i, j, di, dj, c) => { const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx) return; const v = cdist[a * SG.nx + b] + c; if (v < cdist[i * SG.nx + j]) cdist[i * SG.nx + j] = v; };
   for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) { relax(i, j, -1, 0, SG.g); relax(i, j, 0, -1, SG.g); relax(i, j, -1, -1, SG.g * 1.414); relax(i, j, -1, 1, SG.g * 1.414); }
   for (let i = SG.nz - 1; i >= 0; i--) for (let j = SG.nx - 1; j >= 0; j--) { relax(i, j, 1, 0, SG.g); relax(i, j, 0, 1, SG.g); relax(i, j, 1, 1, SG.g * 1.414); relax(i, j, 1, -1, SG.g * 1.414); }
@@ -432,7 +433,7 @@ export function buildVideo(canvas, hud) {
         float shx = vW.z < ${ZN.toFixed(1)} ? ${SLN} * (vW.z - ${ZN.toFixed(1)}) : vW.z > ${ZS.toFixed(1)} ? ${SLS} * (vW.z - ${ZS.toFixed(1)}) : 0.0;
         vec2 cs = (vec2(vW.x - shx, vW.z) - vec2(${SG.x0.toFixed(1)}, ${SG.z0.toFixed(1)})) / vec2(${(SG.nx * SG.g).toFixed(1)}, ${(SG.nz * SG.g).toFixed(1)});
         float cd = texture2D(uCoast, cs).r * 2550.0;
-        float belt = smoothstep(700.0, 1250.0, cd + (n21(vW.xz * 0.0018 + 3.0) - 0.5) * 600.0);
+        float belt = smoothstep(760.0, 1310.0, cd + (n21(vW.xz * 0.0018 + 3.0) - 0.5) * 600.0);
         float inland = smoothstep(1.5, 1.85, vW.y);            // the land is 2 m up at 120 m from the shore (the clamp of the shore grid)
         vec3 col = mix(dune, country, belt * inland);
         // as the city spreads, the dune belt greens too (irrigated gardens, scrub, parks)
@@ -441,7 +442,7 @@ export function buildVideo(canvas, hud) {
         vec2 cu = (vW.xz - uOrig.xy) / uOrig.z;
         vec2 cj = cu + (vec2(n21(vW.xz * 0.025), n21(vW.xz * 0.025 + 7.0)) - 0.5) * (40.0 / uOrig.z);
         float cb = (cu.x > 0.0 && cu.y > 0.0 && cu.x < 1.0 && cu.y < 1.0) ? texture2D(uCity, cj).r * ${(MDUR + 20).toFixed(1)} * 255.0 / 254.0 : 1e5;
-        vec3 lawn = mix(Ls(vec3(0.36, 0.50, 0.21)), Ls(vec3(0.41, 0.54, 0.24)), n21(vW.xz * 0.02)) * mix(0.95, 1.04, n21(vW.xz * 0.006 + 5.0));
+        vec3 lawn = mix(Ls(vec3(0.34, 0.48, 0.20)), Ls(vec3(0.38, 0.51, 0.22)), n21(vW.xz * 0.02)) * mix(0.95, 1.04, n21(vW.xz * 0.006 + 5.0));
         lawn = mix(mix(Ls(vec3(0.66, 0.63, 0.43)), Ls(vec3(0.55, 0.57, 0.35)), n21(vW.xz * 0.02)), lawn, uGreen);   // sandy yards before the 1920s
         col = mix(col, lawn, smoothstep(cb + 0.5, cb + 4.0, uTime) * step(cb, ${MDUR.toFixed(1)}) * inland);
         col = mix(col, Ls(vec3(0.95, 0.90, 0.78)), smoothstep(1.6, 0.5, vW.y) * 0.8);             // the beach
@@ -599,7 +600,8 @@ export function buildVideo(canvas, hud) {
     [118, [bx - 1300, 850, bz + 700], [bx + 250, 0, bz - 350]],
     [140, [wx - 1100, 700, wz + 1300], [wx + 60, 0, wz + 600]],
     [160, [wx - 640, 400, wz + 800], [wx + 40, 0, wz + 280]],
-    [177, [px - 760, 470, pz + 820], [px + 60, 0, pz + 180]],
+    [170, [wx - 600, 380, wz + 640], [wx + 60, 0, wz + 130]],
+    [177, [px - 820, 720, pz + 1350], [px + 120, 0, pz + 420]],
     [190, [wx - 1900, 1300, wz + 1600], [wx + 200, 0, wz - 200]],
     [204, [ix - 330, 180, iz + 260], [ix, 8, iz]],
     [224, [ax - 700, 420, az + 520], [ax + 100, 0, az - 100]],
@@ -626,7 +628,7 @@ export function buildVideo(canvas, hud) {
     time = clamp(time, 0, DUR);
     // intro: the city today, then a fast rewind to 1880 (the main timeline runs backwards), then the flight starts
     const intro = time < INTRO;
-    const mainT = intro ? (time < 2.5 ? 500 : time < 8 ? 500 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
+    const mainT = intro ? (time < 2.5 ? 505 : time < 8 ? 505 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
     const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
     UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1906, 1928));
