@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { EffectComposer, RenderPass, EffectPass, ShaderPass, BloomEffect, ToneMappingEffect, ToneMappingMode, VignetteEffect, SMAAEffect, SMAAPreset, HueSaturationEffect, BrightnessContrastEffect } from "postprocessing";
+import { EffectComposer, RenderPass, EffectPass, ShaderPass, Effect, BloomEffect, ToneMappingEffect, ToneMappingMode, VignetteEffect, SMAAEffect, SMAAPreset, HueSaturationEffect, BrightnessContrastEffect } from "postprocessing";
 import { N8AOPostPass } from "n8ao";
 
 // Shared city-timelapse engine (from the approved Valmora pilot): renderer + post (AO, tilt-shift, bloom, ACES, SMAA),
@@ -205,8 +205,12 @@ export function createStage(canvas, { W, H, SS, fog = "#c9d2d4", sunColor = "#ff
   });
   composer.addPass(new ShaderPass(tiltMat(new THREE.Vector2(1, 0)), "inputBuffer"));
   composer.addPass(new ShaderPass(tiltMat(new THREE.Vector2(0, 1)), "inputBuffer"));
+  // contrast works in sRGB and can push a dark channel below 0 (the sea's red); the pass then converts back to linear
+  // with pow() for the saturation, which gives NaN on a real GPU and a white sea. Clamp in sRGB right after it.
+  const noNeg = new Effect("NoNegativeEffect", "void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) { outputColor = vec4(max(inputColor.rgb, 0.0), inputColor.a); }");
+  noNeg.inputColorSpace = THREE.SRGBColorSpace;
   composer.addPass(new EffectPass(camera, new BloomEffect({ intensity: bloom, luminanceThreshold: 0.92, luminanceSmoothing: 0.1, mipmapBlur: true }), new ToneMappingEffect({ mode: ToneMappingMode.ACES_FILMIC }),
-    new BrightnessContrastEffect({ brightness: 0.0, contrast }), new HueSaturationEffect({ saturation }), new VignetteEffect({ darkness: 0.38, offset: 0.32 })));
+    new BrightnessContrastEffect({ brightness: 0.0, contrast }), noNeg, new HueSaturationEffect({ saturation }), new VignetteEffect({ darkness: 0.38, offset: 0.32 })));
   composer.addPass(new EffectPass(camera, new SMAAEffect({ preset: SMAAPreset.HIGH })));
 
   // place the camera; fit fog, clip planes, AO radius and the sun's shadow frustum to what we see
