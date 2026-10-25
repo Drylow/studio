@@ -6,6 +6,14 @@ Voix : **Mellow Matt**, ID `IsEXLHzSvLH9UMB6SLHj`, vitesse **0,90**. Offre stand
 
 Volume du texte : **1 726 549 caracteres**, espaces et retours inclus. Solde releve avant/apres soumission : **5 093 599 → 3 367 081** (difference de **1 726 518**). Le compteur du fournisseur differe de 31 caracteres du texte local. Il ne s'agit pas d'un devis pour une nouvelle generation.
 
+## Point de reprise — 25 octobre 2026
+
+Neuf MP3 finaux sont recuperes : quatre Deep Void et les cinq Quiet Paradox. Leur presence, taille et SHA256 ont ete verifies. Le deuxieme bloc de DV-12-great-houses a echoue definitivement chez le fournisseur, sans audio recuperable. Son essai est conserve dans failed_attempts du registre prive. Une seule reprise manuelle a ete soumise en quatre blocs contigus plus courts (88 712 caracteres au total), avec le meme texte, la meme voix et les memes reglages. Les quatre nouveaux identifiants sont enregistres ; ne pas les repayer. Le premier bloc deja reussi est conserve.
+
+Le moniteur a repris avec monitor-recovery.log et monitor-recovery-errors.log. Une alerte dans ce chat verifie toutes les quinze minutes et previendra lorsque les dix fichiers seront recuperes et controles ; elle doit ensuite etre desactivee. Aucun sous-titre payant ni nouvel upload n'est lance.
+
+Les durees de certaines moities divergent ; un controle complementaire des fins audio de DV10, DV11 et QP10 est en cours. Ne pas confondre decodage valide et verification integrale du contenu parle.
+
 ## Episodes
 
 | Episode | Chaine | Caracteres |
