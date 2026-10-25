@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import {
   clamp, lerp, ramp, sm, V, mulberry32, hash2, fbm, pw, pl, inv, M4, NEVER, U, STD, growMesh, unitBox, hipRoof, facet,
-  createStage, rasterGround, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs,
+  createStage, rasterGround, growPrisms, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs,
 } from "./engine.js";
 import { DATA } from "./data.js";
 
@@ -10,12 +10,19 @@ import { DATA } from "./data.js";
 // tools/osm_data.py): its rectangle, its height, and an approximate year (satellite GHSL epochs after 1975,
 // documented founding dates of each quarter before, real years for the towers). World metres, x east, z south.
 
-export const W = 1920, H = 1080, SS = 1.5, DUR = 560;
+export const W = 1920, H = 1080, SS = 1.5, MDUR = 560, INTRO = 9, DUR = MDUR + INTRO;   // 9 s intro: today, rewound to 1880
 
 // ---------------- land: the coast, the Yarkon, low sand dunes ----------------
 const SG = DATA.S, SD = Uint8Array.from(atob(SG.b64), (c) => c.charCodeAt(0));
-const sdRaw = (i, j) => { i = clamp(i, 0, SG.nz - 1); j = clamp(j, 0, SG.nx - 1); const v = SD[i * SG.nx + j]; return v > 127 ? v - 256 : v; };
+const sdRaw = (i, j) => { i = clamp(i, 9, SG.nz - 10);   // the water data stops short of the grid's north and south edges
+  if (j >= SG.nx - 4) return 120;                           // east of the data: dry land (the Yarkon leaves the grid there)
+  j = clamp(j, 0, SG.nx - 1); const v = SD[i * SG.nx + j]; return v > 127 ? v - 256 : v; };
+// beyond the north and south edges of the grid the coast carries on along its own direction (from the real shore
+// 1.5 km inside each edge), so the land never ends in a straight wall of sand
+const ZN = SG.z0 + 9.5 * SG.g, ZS = SG.z0 + (SG.nz - 9.5) * SG.g, SLN = -0.267, SLS = -0.253;
+const coastShift = (z) => (z < ZN ? SLN * (z - ZN) : z > ZS ? SLS * (z - ZS) : 0);
 function shoreDist(x, z) {                       // signed metres to the water's edge (< 0 in the water), bilinear
+  x -= coastShift(z);
   const fx = (x - SG.x0) / SG.g - 0.5, fz = (z - SG.z0) / SG.g - 0.5, j = Math.floor(fx), i = Math.floor(fz), u = fx - j, v = fz - i;
   return lerp(lerp(sdRaw(i, j), sdRaw(i, j + 1), u), lerp(sdRaw(i + 1, j), sdRaw(i + 1, j + 1), u), v);
 }
@@ -33,11 +40,11 @@ const YK = [
   [0, 1880], [14, 1887], [30, 1902], [41, 1909.27], [49, 1909.3], [62, 1913], [72, 1917.25], [79, 1917.3], [88, 1921.3],
   [104, 1925.5], [109, 1925.6], [150, 1934.4], [172, 1938.5], [190, 1946], [202, 1948.37], [214, 1948.38], [226, 1950.31], [233, 1950.32],
   [262, 1959], [282, 1965.5], [312, 1975], [340, 1990], [352, 1995.84], [360, 1995.85], [384, 1999.6], [412, 2007], [444, 2017],
-  [470, 2023.63], [478, 2023.64], [505, 2026], [DUR, 2026],
+  [470, 2023.63], [478, 2023.64], [505, 2026], [MDUR, 2026],
 ];
 const yearF = (t) => pl(YK, t);
 const yearAt = (t) => Math.floor(yearF(t));
-const tOf = (y) => (y <= YK[0][1] ? -1 : inv(yearF, y, 0, DUR));   // first video time that reaches a year
+const tOf = (y) => (y <= YK[0][1] ? -1 : inv(yearF, y, 0, MDUR));   // first video time that reaches a year
 const T = { lottery: 41, gym: [47, 58], expel: 72, geddes: 104, indep: 202, merger: 226, gymDown: tOf(1959.5), azrieli: tOf(1998.6), end: 505 };
 
 const ERAS = [
@@ -82,6 +89,33 @@ const CAPTIONS = [
   { a: 453, b: 459.5, lines: ["Finished in 2017 at 238.5 m, it was", "Israel's tallest building until 2024."] },
   { a: 478.5, b: 485, lines: ["On 18 August 2023 the Red Line opened,", "Tel Aviv's first light-rail line."] },
 ];
+const MORE = [
+  [1891.5, ["1891: Jaffa's railway station opens;", "the line to Jerusalem is finished the next year."]],
+  [1906.5, ["July 1906: Jaffa families form a society", "to build a new garden suburb on the dunes."]],
+  [1909.57, ["28 July 1909: the cornerstone of the Herzliya Hebrew Gymnasium,", "the first Hebrew high school, is laid on Herzl Street."]],
+  [1917.88, ["17 November 1917:", "British forces take Tel Aviv."]],
+  [1921.35, ["May 1921: riots in Jaffa leave 47 Jews and 48 Arabs dead;", "many Jewish residents move to Tel Aviv."]],
+  [1922.8, ["October 1922: the British census", "counts 15,185 residents in Tel Aviv."]],
+  [1932.3, ["1932: the Tel Aviv Museum of Art opens", "in Meir Dizengoff's house on Rothschild Boulevard."]],
+  [1934.33, ["April 1934: the Levant Fair opens in north Tel Aviv;", "about 600,000 visitors come from 30 countries."]],
+  [1938.3, ["1938: Dizengoff Square is inaugurated", "and the Reading Power Station starts up."]],
+  [1940.69, ["9 September 1940: Italian aircraft", "bomb Tel Aviv; 137 people are killed."]],
+  [1945.5, ["1945: the Habima national theatre", "moves into its new building."]],
+  [1956.5, ["1956: Tel Aviv University is founded", "from three institutes in the city."]],
+  [1965.82, ["25 October 1965: Tel Aviv Port closes to cargo;", "shipping moves south to Ashdod."]],
+  [1966.5, ["1966: the new City Hall is completed", "on Kings of Israel Square."]],
+  [1971.5, ["1971: the Tel Aviv Museum of Art moves", "to its new building on Shaul HaMelech Boulevard."]],
+  [1977.5, ["1977: the first stores open in Dizengoff Center,", "Israel's first shopping mall."]],
+  [1982.5, ["1982: the first section of the Ayalon Highway opens;", "the central section with the railway follows in 1991."]],
+  [1991.05, ["January-February 1991: Iraq fires about 42 Scud missiles at Israel,", "aimed mainly at Tel Aviv and Haifa."]],
+  [2007.45, ["June 2007: the Azrieli Square Tower is completed,", "154 m and 42 floors."]],
+  [2014.5, ["2014: the old Templer colony of Sarona", "reopens after an eight-year restoration."]],
+  [2019.37, ["May 2019: Tel Aviv hosts", "the Eurovision Song Contest."]],
+  [2025.8, ["2026: ToHA 2 tops out at about 300 m,", "set to become the tallest tower in the city."]],
+];
+const busy = (a, b) => [...CAPTIONS, ...LANDMARKS].some((c) => a < c.b + 0.6 && b > c.a - 0.6) || (a < TITLE[1] + 0.5);
+for (const [y, lines] of MORE) { const a = tOf(y) + 0.3, b = a + 6; if (a > 0 && b < MDUR - 40 && !busy(a, b)) CAPTIONS.push({ a, b, lines }); }
+CAPTIONS.sort((p, q) => p.a - q.a);
 const CARDS = [
   { a: T.lottery - 0.2, b: T.lottery + 1, kicker: "", text: "" },
   { a: T.indep - 5, b: T.indep + 0.8, kicker: "14 MAY 1948", text: "INDEPENDENCE" },
@@ -97,7 +131,7 @@ const popAt = (t) => { const y = yearF(t); return y < 1915 ? 0 : pl(POP, y); };
 
 // ---------------- build ----------------
 export function buildVideo(canvas, hud) {
-  const st = createStage(canvas, { W, H, SS, fog: "#d6dde0", sunColor: "#fff2db", sunDir: [-0.55, 0.62, 0.55], hemiSky: "#d4e6f7", hemiGround: "#a08d6a", hemiI: 1.15, sunI: 3.1, saturation: -0.03 });
+  const st = createStage(canvas, { W, H, SS, fog: "#d3e1ea", sunColor: "#fff1d6", sunDir: [-0.5, 0.7, 0.5], hemiSky: "#d6e9fb", hemiGround: "#9c8f6e", hemiI: 1.2, sunI: 3.3, saturation: 0.12, contrast: 0.15, tilt: 0.15, bloom: 0.3 });
   const { scene } = st;
   const { box, grow, update: updateLM } = landmarks();
   const rnd = mulberry32(1909);
@@ -115,60 +149,215 @@ export function buildVideo(canvas, hud) {
   // ---------- buildings ----------
   const OLD = ["#d9c29a", "#cfb48a", "#e2cda6", "#c8ad83", "#d6c29e", "#c2a67c"];           // Jaffa sandstone
   const ROOF = ["#c0603d", "#b25a3a", "#cc6d48", "#a9553a"];                                  // tile roofs
-  const WHITE = ["#f2ede3", "#ebe4d6", "#f6f2ea", "#e6dccb", "#efe8dc", "#e2d9c8"];          // plaster, the White City
-  const MID = ["#e4ddd1", "#d6cfc3", "#cdc4b5", "#ddd3c3", "#c7c0b6", "#ece5da"];
-  const GLASS = ["#7f9fb8", "#8daabd", "#6f8fab", "#9cb3c2", "#64849f", "#a8bcc8"];
-  const wallR = [], roofR = [], hipR = [], glassR = [], capR = [];
+  // plaster in many tones (white, cream, sand, ochre, pale stone, salmon): the "White City" is far from uniform
+  const WHITE = ["#f1ebdf", "#e9dcc2", "#e3cfa8", "#f3e6cc", "#dcc6a0", "#efe1c9", "#e8d2b4", "#f2d9c4", "#e6e0d2", "#d9c09a", "#f0e4b8", "#e2c7ae"];
+  const MID = ["#d8cfc0", "#cbbfae", "#e0d2bb", "#c9b79c", "#d5cbbd", "#bfb5a6", "#e2d6c2", "#cdbb9f", "#b9ad9b", "#d7c2a2", "#c4b8a8", "#e5d8c0"];
+  const GLASS = ["#b9d0de", "#a9c4d6", "#c6d8e2", "#9fbdd0", "#cfdde6", "#8fb3c8", "#5f86a3", "#3f5d74", "#7fa7a4", "#9ab0bd", "#4d6b80", "#6b8f9e"];
+  // the later city mixes concrete greys, sand, ochre, salmon and a little brick with the white plaster
+  const ACCENT = ["#cfd3d6", "#b8bcbf", "#a9a59c", "#d9b99b", "#e8c9a0", "#c98f6b", "#b5704f", "#d7a98c", "#c4cfd6", "#e6dba0", "#9aa3a8", "#8e7f6e", "#d2c4b2", "#bfa58a"];
+  const ROOFS = ["#a8a49c", "#9b978f", "#b7b2a8", "#8f8b84", "#c2bdb2", "#7d7a74"];
+  const BR = DATA.BR, rings = [];
+  for (let i = 0; i < BR.length;) { const n = BR[i++], r = []; for (let q = 0; q < n; q++, i += 2) r.push([BR[i] / 10, BR[i + 1] / 10]); rings.push(r); }
+  const inRing = (r, px, pz) => { let c = false; for (let a = 0, b = r.length - 1; a < r.length; b = a++) if ((r[a][1] > pz) !== (r[b][1] > pz) && px < ((r[b][0] - r[a][0]) * (pz - r[a][1])) / (r[b][1] - r[a][1]) + r[a][0]) c = !c; return c; };
+  const prismR = [], prismB = [], prismG = [];
+  const SOLAR = [], solarDark = new THREE.Color("#3a4a5a"), solarTank = new THREE.Color("#e8e8e4");
+  const wallR = [], wallB = [], roofR = [], hipR = [], glassR = [], capR = [];
   const cW = new THREE.Color();
   const B = DATA.B;
-  const houseAt = new Map(), HCS = 16;
+  const houseAt = new Map(), HCS = 16, [portX, portZ] = LL(32.0975, 34.774), [ahX, ahZ] = LL(32.0633, 34.7714);
+  const paving = [], cityPts = [];          // the apron round each house (from its birth), and where / when the city is built
   for (let i = 0; i < B.length; i += 9) {
-    const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10, ang = B[i + 4] / 1000, h = Math.max(3.5, B[i + 5] / 10), y = B[i + 6] / 100, kind = B[i + 7], ci = B[i + 8];
+    const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10, ang = B[i + 4] / 1000, h = Math.max(3.5, B[i + 5] / 10), kind = B[i + 7], ci = B[i + 8];
     if (isWet(x, z)) continue;
+    let y = B[i + 6] / 100;
+    // the port's hangars and sheds went up in 1936-38 (most still stand, restored): date the low port buildings so
+    if (y > 1938 && h < 20 && Math.hypot(x - portX, z - portZ) < 330) y = 1936.3 + hash2(i, 12) * 2.4;
     const r1 = hash2(i, 1), r2 = hash2(i, 2);
     const b = Math.max(0.2, tOf(y) + r1 * 0.6);
     const y0 = heightAt(x, z) - 0.8, t = [b, NEVER, NEVER, r2];
     const k = Math.floor(x / HCS) * 100003 + Math.floor(z / HCS); const v = houseAt.get(k); if (v === undefined || v > b) houseAt.set(k, b);
-    if (kind === 2 || h >= 45) {                    // towers: glass shafts, a lighter crown
-      cW.set(GLASS[ci % 6]);
-      glassR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h] });
+    const ring = rings[i / 9].map(([dx, dz]) => [x + dx, z + dz]);
+    // Ahuzat Bayit: the 60-odd one- and two-storey houses of 1909-10 were almost all replaced later; put one back on
+    // about every other lot, standing until today's building takes its place
+    if (y > 1911 && kind !== 2 && Math.hypot(x - ahX, z - ahZ) < 260 && hash2(i, 13) < 0.6) {
+      const eb = tOf(1909.35 + hash2(i, 14) * 1.1), hs = 4.5 + r1 * 3, sw = Math.min(w, 13), sd = Math.min(d, 11);
+      wallR.push({ m: M4(x, y0, z, ang, sw, 1, sd), c: new THREE.Color(WHITE[Math.floor(hash2(i, 15) * 12)]), t: [eb, b - 0.3, NEVER, r2], h: [0, hs] });
+      hipR.push({ m: M4(x, y0 + hs, z, ang, sw + 0.6, Math.min(4, Math.min(sw, sd) * 0.34), sd + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [eb + 0.15, b - 0.3, NEVER, r2] });
+      if (eb < houseAt.get(k)) houseAt.set(k, eb);
+      paving.push({ x, z, rx: sw / 2 + 1.2, rz: sd / 2 + 1.2, ry: -ang, b: eb - 0.5 }); cityPts.push(x, z, eb);
+    }
+    if (kind === 2 || h >= 45) {                    // towers: glass shafts on their real footprint, a set-back crown
+      cW.set(GLASS[(ci * 2 + Math.floor(r1 * 12)) % 12]);
+      const top = r2 < 0.55 ? h * (0.84 + r1 * 0.08) : h;
+      prismG.push({ ring, y0, c: cW.clone(), rc: cW.clone().multiplyScalar(0.75), t, h: [0, top] });
+      if (top < h) glassR.push({ m: M4(x, y0, z, ang, w * 0.78, 1, d * 0.78), c: cW.clone().multiplyScalar(1.05), t: [b + 0.3, NEVER, NEVER, r2], h: [top, h - top] });
       capR.push({ m: M4(x, y0, z, ang, w * 0.86, 1, d * 0.86), c: new THREE.Color("#dfe6ea"), t: [b + 0.4, NEVER, NEVER, r2], h: [h, 2.5] });
+      paving.push({ x, z, rx: w * 0.56 + 1.2, rz: d * 0.56 + 1.2, ry: -ang, b: b - 0.5 }); cityPts.push(x, z, b);
       continue;
     }
+    // a building dated before 1930 but taller than 3 floors is a later rebuild: first a small house, then today's block
+    if (y < 1930 && (h > 12 || w * d > 450)) {
+      const rb = tOf(1950 + hash2(i, 11) * 45), hs = 5 + r1 * 4, sw = Math.min(w, 12), sd = Math.min(d, 11);
+      cW.set(y < 1906 ? OLD[ci % 6] : WHITE[Math.floor(hash2(i, 5) * 12)]);
+      wallR.push({ m: M4(x, y0, z, ang, sw, 1, sd), c: cW.clone(), t: [b, rb, NEVER, r2], h: [0, hs] });
+      if (y < 1925) hipR.push({ m: M4(x, y0 + hs, z, ang, sw + 0.6, Math.min(4, Math.min(sw, sd) * 0.32), sd + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [b + 0.15, rb, NEVER, r2] });
+      else roofR.push({ m: M4(x, y0, z, ang, sw - 1, 1, sd - 1), c: cW.clone().multiplyScalar(0.86), t: [b, rb, NEVER, r2], h: [hs - 0.05, 0.25] });
+      t[0] = rb + 0.6;
+      paving.push({ x, z, rx: sw / 2 + 1.2, rz: sd / 2 + 1.2, ry: -ang, b: b - 0.5 });
+    }
+    paving.push({ x, z, rx: w * 0.56 + 1.2, rz: d * 0.56 + 1.2, ry: -ang, b: t[0] - 0.5 }); cityPts.push(x, z, b);
     const old = h < 14 && (y < 1912 || (y < 1925 && r1 < 0.3));
-    cW.set(old && y < 1906 ? OLD[ci % 6] : kind === 1 ? MID[ci % 6] : WHITE[ci % 6]);
-    wallR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
-    if (old && w < 30 && d < 30) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(w, d) * 0.32, d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [b + 0.15, NEVER, NEVER, r2] });
-    else roofR.push({ m: M4(x, y0, z, ang, Math.max(1, w - 1), 1, Math.max(1, d - 1)), c: cW.clone().multiplyScalar(0.92), t, h: [h + 0.75, 0.25] });
+    const pick = Math.floor(hash2(i, 5) * 12), mx = hash2(i, 6);
+    cW.set(old && y < 1906 ? OLD[ci % 6] : mx < (y > 1960 ? 0.55 : y > 1935 ? 0.3 : 0.12) ? ACCENT[Math.floor(hash2(i, 4) * ACCENT.length)] : kind === 1 ? MID[pick] : WHITE[pick]);
+    // 1930s-60s plaster blocks: often the Bauhaus look (ribbon windows, long balconies); the rest: punched windows
+    const bau = !old && y > 1929 && y < 1970 && h < 30 && hash2(i, 9) < 0.55;
+    const hip = old && w < 14 && d < 14;             // bigger old buildings (khans, warehouses) have flat roofs
+    if (hip) wallR.push({ m: M4(x, y0, z, ang, w, 1, d), c: cW.clone(), t, h: [0, h + 0.8] });
+    else {
+      const rc = new THREE.Color(ROOFS[Math.floor(hash2(i, 3) * 5.99)]).lerp(cW, 0.3);
+      (bau ? prismB : prismR).push({ ring, y0, c: cW.clone(), rc, t, h: [0, h + 0.8] });
+    }
+    if (hip) hipR.push({ m: M4(x, y0 + h + 0.8, z, ang, w + 0.6, Math.min(4, Math.min(w, d) * 0.32), d + 0.6), c: new THREE.Color(ROOF[Math.floor(r1 * 3.99)]), t: [t[0] + 0.15, NEVER, NEVER, r2] });
+    else {
+      // rooftop solar water heaters, a Tel Aviv signature (panel + white tank), from the 1950s on
+      if (y > 1950 && h < 40 && w > 7 && d > 7 && r2 < 0.75) {
+        const n = 1 + Math.floor(r1 * 3), ca = Math.cos(ang), sa = Math.sin(ang);
+        for (let q = 0; q < n; q++) {
+          const ox = (hash2(i, 20 + q) - 0.5) * (w - 4), oz = (hash2(i, 30 + q) - 0.5) * (d - 4);
+          const px = x + ox * ca + oz * sa, pz = z - ox * sa + oz * ca;
+          if (!inRing(ring, px, pz) || !inRing(ring, px, pz + 1.6)) continue;
+          SOLAR.push({ m: M4(px, y0, pz, ang, 2.2, 1, 1.4), c: solarDark, t: [t[0] + 0.5, NEVER, NEVER, r2], h: [h + 1.0, 0.5] });
+          SOLAR.push({ m: M4(px, y0, pz + 1.2, ang, 2.0, 1, 0.8), c: solarTank, t: [t[0] + 0.5, NEVER, NEVER, r2], h: [h + 1.0, 1.0] });
+        }
+      }
+    }
   }
-  scene.add(growMesh(unitBox(), STD({ roughness: 0.92 }), "house", wallR));
+  // a street is laid out when the houses along it go up, not years before across empty land
+  for (const sg of segs) {
+    let hb = NEVER;
+    for (const [qx, qz] of [[sg.ax, sg.az], [(sg.ax + sg.bx) / 2, (sg.az + sg.bz) / 2], [sg.bx, sg.bz]])
+      for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(qx / HCS) + dx) * 100003 + Math.floor(qz / HCS) + dz); if (v !== undefined) hb = Math.min(hb, v); }
+    if (hb < NEVER) sg.ba = sg.bb = Math.max(sg.ba, hb - 1.0);
+  }
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.92 }), "house", wallR, { facade: 1 }));
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.9 }), "house", wallB, { facade: 3 }));
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.6 }), "house", SOLAR, { shadow: false }));
   scene.add(growMesh(unitBox(), STD({ roughness: 1 }), "house", roofR, { shadow: false }));
   scene.add(growMesh(facet(hipRoof()), STD({ roughness: 0.9, flatShading: true }), "uniform", hipR));
-  scene.add(growMesh(unitBox(), STD({ roughness: 0.35, metalness: 0.25 }), "house", glassR));
+  scene.add(growMesh(unitBox(), STD({ roughness: 0.28, metalness: 0.08 }), "house", glassR, { facade: 2 }));
   scene.add(growMesh(unitBox(), STD({ roughness: 0.6 }), "house", capR, { shadow: false }));
+  scene.add(growPrisms(prismR, STD({ roughness: 0.92 }), { facade: 1 }));
+  scene.add(growPrisms(prismB, STD({ roughness: 0.9 }), { facade: 3 }));
+  scene.add(growPrisms(prismG, STD({ roughness: 0.28, metalness: 0.08 }), { facade: 2 }));
 
   // ---------- trees: parks, boulevards (cleared nowhere: they come with the streets) ----------
   const trunkR = [], crownR = [];
+  const GREENS = ["#3f7a2e", "#4a8535", "#356b28", "#558f3a", "#2f6326", "#467f31"];
   for (let i = 0; i < DATA.T.length; i += 4) {
-    const [y, x, z, s] = DATA.T.slice(i, i + 4);
+    const [y0t, x, z, s] = DATA.T.slice(i, i + 4), y = Math.max(y0t, 1935 + hash2(i, 9) * 8);
     if (isWet(x, z)) continue;
     const r1 = hash2(i, 7), r2 = hash2(i, 8), b = tOf(y) + 0.5 + r1;
     const gy = heightAt(x, z) - 0.3, hgt = (4.5 + r1 * 3) * s;
     trunkR.push({ m: M4(x, gy, z, r2 * 6, 0.45, hgt, 0.45), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
-    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.6 * s, 3.2 * s, 3.6 * s), c: new THREE.Color(["#4f7a37", "#5c8540", "#466f31", "#62893f"][Math.floor(r2 * 3.99)]), t: [b, NEVER, NEVER, r1] });
+    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.8 * s, 3.4 * s, 3.8 * s), c: new THREE.Color(GREENS[Math.floor(r2 * 5.99)]), t: [b, NEVER, NEVER, r1] });
+  }
+  // garden trees: Tel Aviv's yards and courtyards are full of ficus, jacaranda and palms. An occupancy grid (2 m) keeps
+  // them off every building and street; they fill the gaps a few years after the houses around them
+  const OX = -3400, OZ = -4200, OC = 2, ON = 3900, occ = new Uint8Array(ON * ON);
+  const mark = (cx, cz, hx, hz, a) => {                  // a rotated rectangle (half sizes) into the grid
+    const ca = Math.cos(a), sa = Math.sin(a), R = Math.hypot(hx, hz);
+    for (let gz = Math.max(0, Math.floor((cz - R - OZ) / OC)); gz <= Math.min(ON - 1, Math.floor((cz + R - OZ) / OC)); gz++)
+      for (let gx = Math.max(0, Math.floor((cx - R - OX) / OC)); gx <= Math.min(ON - 1, Math.floor((cx + R - OX) / OC)); gx++) {
+        const px = OX + (gx + 0.5) * OC - cx, pz = OZ + (gz + 0.5) * OC - cz;
+        if (Math.abs(px * ca - pz * sa) <= hx && Math.abs(px * sa + pz * ca) <= hz) occ[gz * ON + gx] = 1;
+      }
+  };
+  for (let i = 0; i < B.length; i += 9) mark(B[i] / 10, B[i + 1] / 10, B[i + 2] / 20 * 1.15 + 1.5, B[i + 3] / 20 * 1.15 + 1.5, B[i + 4] / 1000);
+  // exact road surfaces, so a street tree never lands on another carriageway or in a junction
+  const roadOcc = new Uint8Array(ON * ON), occSave = occ.slice();
+  for (const sg of segs) { const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L > 0.5) mark((sg.ax + sg.bx) / 2, (sg.az + sg.bz) / 2, L / 2 + 0.5, sg.w / 2 + 0.3, -Math.atan2(sg.bz - sg.az, sg.bx - sg.ax)); }
+  for (let q = 0; q < occ.length; q++) { roadOcc[q] = occ[q] && !occSave[q] ? 1 : 0; occ[q] = occSave[q]; }
+  const onRoad = (x, z) => { const gx = Math.floor((x - OX) / OC), gz = Math.floor((z - OZ) / OC); return gx < 0 || gz < 0 || gx >= ON || gz >= ON || roadOcc[gz * ON + gx] || occ[gz * ON + gx]; };
+  // street trees on every street (Tel Aviv's ficus and plane trees), planted a few years after the street
+  for (const sg of segs) {
+    if (sg.w < 4.5 || sg.w > 13) continue;                       // no rows of trees along the motorways
+    const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L < 6) continue;
+    const ux = (sg.bx - sg.ax) / L, uz = (sg.bz - sg.az) / L, off = sg.w / 2 + 2.2;
+    for (let d0 = 4; d0 < L; d0 += 11) for (const sgn of [-1, 1]) {
+      const x = sg.ax + ux * d0 - uz * off * sgn, z = sg.az + uz * d0 + ux * off * sgn, r1 = hash2(Math.round(x * 3), Math.round(z * 3));
+      if (r1 < 0.18 || isWet(x, z) || onRoad(x, z)) continue;
+      let hb = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) hb = Math.min(hb, v); }
+      if (hb >= NEVER) continue;                      // no houses on this street yet: no street trees either
+      const b = Math.max(sg.ba + 4, hb + 1.5) + r1 * 3, gy = heightAt(x, z) - 0.3, s = 0.75 + r1 * 0.4, hgt = 4.2 * s;
+      if (yearF(Math.min(MDUR, b)) < 1915) continue;
+      trunkR.push({ m: M4(x, gy, z, r1 * 6, 0.4, hgt, 0.4), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
+      crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.4 * s, 3.0 * s, 3.4 * s), c: new THREE.Color(GREENS[Math.floor(r1 * 5.99)]), t: [b, NEVER, NEVER, r1] });
+    }
+  }
+  for (const sg of segs) { const L = Math.hypot(sg.bx - sg.ax, sg.bz - sg.az); if (L > 0.5) mark((sg.ax + sg.bx) / 2, (sg.az + sg.bz) / 2, L / 2 + 1, sg.w / 2 + 1.5, -Math.atan2(sg.bz - sg.az, sg.bx - sg.ax)); }
+  const free = (x, z) => { const gx = Math.floor((x - OX) / OC), gz = Math.floor((z - OZ) / OC); if (gx < 1 || gz < 1 || gx >= ON - 1 || gz >= ON - 1) return false;
+    for (let dz = -1; dz <= 1; dz++) for (let dx = -1; dx <= 1; dx++) if (occ[(gz + dz) * ON + gx + dx]) return false; return true; };
+  const DEEP = ["#3f7a2e", "#356b28", "#4a8834", "#2f6326"];
+  let nGarden = 0;
+  for (let gx = -380; gx <= 420; gx++) for (let gz = -420; gz <= 360; gz++) {
+    const x = gx * 9.5 + (hash2(gx, gz) - 0.5) * 7, z = gz * 9.5 + (hash2(gz, gx + 7) - 0.5) * 7, r1 = hash2(gx * 3 + 1, gz * 5 + 2);
+    if (r1 < 0.32 + 0.3 * fbm(x * 0.004 - 11, z * 0.004 + 5) - 0.15) continue;
+    let hb = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) hb = Math.min(hb, v); }
+    if (hb >= NEVER || !free(x, z) || shoreDist(x, z) < 25) continue;
+    const b = Math.max(hb + 1.5 + r1 * 4, tOf(1911)), gy = heightAt(x, z) - 0.3, q = hash2(gx * 7, gz * 11);
+    if (b > MDUR) continue;
+    if (q < 0.12 && yearF(Math.min(MDUR, b)) > 1925) {           // a Washingtonia palm: tall bare trunk, a flat star of fronds
+      const ph = 8 + q * 40;
+      trunkR.push({ m: M4(x, gy, z, 0, 0.3, ph, 0.3), c: new THREE.Color("#8a7458"), t: [b, NEVER, NEVER, r1] });
+      crownR.push({ m: M4(x, gy + ph, z, q * 60, 3.0, 1.0, 3.0), c: new THREE.Color("#4e7f33"), t: [b, NEVER, NEVER, r1] });
+    } else {
+      const sc = 0.7 + q * 0.75, hgt = (3.2 + q * 2.5) * sc;
+      trunkR.push({ m: M4(x, gy, z, q * 6, 0.42, hgt, 0.42), c: new THREE.Color("#7a6347"), t: [b, NEVER, NEVER, r1] });
+      crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.6 * sc, 3.1 * sc, 3.6 * sc), c: new THREE.Color(q < 0.55 ? GREENS[Math.floor(r1 * 5.99)] : DEEP[Math.floor(r1 * 3.99)]), t: [b, NEVER, NEVER, r1] });
+    }
+    nGarden++;
+  }
+  // lone trees across the open land (carob, sycamore, eucalyptus windbreaks) as it greens up; they stay in the gaps later
+  for (let gx = -160; gx <= 180; gx++) for (let gz = -175; gz <= 150; gz++) {
+    const x = gx * 24 + (hash2(gx + 5, gz) - 0.5) * 18, z = gz * 24 + (hash2(gz, gx - 5) - 0.5) * 18, r1 = hash2(gx * 13, gz * 17);
+    if (r1 > 0.12 + 0.22 * fbm(x * 0.002 + 3, z * 0.002 - 8) || shoreDist(x, z) < 60 || !free(x, z)) continue;
+    const b = tOf(1914 + hash2(gx, gz * 3) * 30), gy = heightAt(x, z) - 0.3, q = hash2(gx * 5, gz * 7), sc = 0.8 + q * 0.7, hgt = (3.4 + q * 2.4) * sc;
+    trunkR.push({ m: M4(x, gy, z, q * 6, 0.45, hgt, 0.45), c: new THREE.Color("#6e5a40"), t: [b, NEVER, NEVER, r1] });
+    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.8 * sc, 3.2 * sc, 3.8 * sc), c: new THREE.Color(DEEP[Math.floor(q * 3.99)]), t: [b, NEVER, NEVER, r1] });
   }
   // orchards round Jaffa and Sarona before the city (the land of the citrus groves), cleared as houses arrive
   const clearAt = (x, z) => { let t = NEVER; for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) { const v = houseAt.get((Math.floor(x / HCS) + dx) * 100003 + Math.floor(z / HCS) + dz); if (v !== undefined) t = Math.min(t, v - 0.4); } return t; };
+  // each grove (pardes) is a walled rectangular plot with its trees in rows and a cactus hedge round it
   const [jx, jz] = LL(32.0535, 34.7525), [sx, sz] = LL(32.0718, 34.7865);
-  for (let gx = -260; gx <= 260; gx++) for (let gz = -260; gz <= 260; gz++) {
-    const x = gx * 12 + (rnd() - 0.5) * 6, z = gz * 12 + (rnd() - 0.5) * 6, r1 = rnd(), r2 = rnd();
-    const near = Math.min(Math.hypot(x - jx - 900, z - jz + 200) / 1400, Math.hypot(x - sx - 500, z - sz) / 1300);
-    if (near > 1 || fbm(x * 0.004 + 7, z * 0.004 - 3) < 0.5 + near * 0.12 || shoreDist(x, z) < 160) continue;
-    const death = clearAt(x, z); if (death < 2) continue;
-    const gy = heightAt(x, z) - 0.3, hgt = 2.4 + r1 * 1.2;
-    trunkR.push({ m: M4(x, gy, z, r2 * 6, 0.35, hgt, 0.35), c: new THREE.Color("#6e5a40"), t: [-1, death, NEVER, r1] });
-    crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 2.6, 2.4, 2.6), c: new THREE.Color(["#3f6a2f", "#4a7535", "#38612b"][Math.floor(r2 * 2.99)]), t: [-1, death, NEVER, r1] });
+  const groves = [], hedgeR = [], [ax0, az0] = LL(32.0635, 34.7715);
+  for (let gx = -40; gx <= 40; gx++) for (let gz = -40; gz <= 40; gz++) {
+    // plots tile a slightly rotated grid, separated by narrow sandy tracks, in clusters along the old roads
+    const G0 = -0.12, gc = Math.cos(G0), gs = Math.sin(G0), cu = gx * 98 + (gz % 2) * 31, cv = gz * 92;
+    const x = cu * gc + cv * gs, z = -cu * gs + cv * gc, r1 = rnd(), r2 = rnd();
+    const near = Math.min(Math.hypot(x - jx - 1000, z - jz + 250) / 1700, Math.hypot(x - sx - 400, z - sz + 300) / 1500);
+    if (near > 1 || fbm(x * 0.003 + 7, z * 0.003 - 3) < 0.4 + near * 0.1 || shoreDist(x, z) < 115) continue;   // shoreDist is clamped at ±120 m
+    if (Math.hypot(x - ax0, z - az0) < 650) continue;      // Ahuzat Bayit was bought on bare dunes (the 1909 lottery photo)
+    const w = r1 < 0.25 ? 50 + r2 * 25 : 84 + r1 * 10, d = 78 + r2 * 10, ang = G0 + (r2 - 0.5) * 0.06, ca = Math.cos(ang), sa = Math.sin(ang);
+    let death = clearAt(x, z);
+    for (const [u, v] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) death = Math.min(death, clearAt(x + (u * w / 2) * ca + (v * d / 2) * sa, z - (u * w / 2) * sa + (v * d / 2) * ca));
+    if (death < 2) continue;
+    death = Math.min(death, tOf(1952 + r1 * 16));          // the last groves inside the city were gone by the late 1960s
+    groves.push({ x, z, rx: w / 2 - 2, rz: d / 2 - 2, ry: -ang, b: death });
+    const gy = heightAt(x, z) - 0.3, dark = r1 < 0.5;
+    for (let u = -w / 2 + 5; u < w / 2 - 3; u += 7.5) for (let v = -d / 2 + 5; v < d / 2 - 3; v += 7.5) {
+      const tx = x + u * ca + v * sa, tz = z - u * sa + v * ca, q = hash2(Math.round(tx * 7), Math.round(tz * 7));
+      if (q < 0.04) continue;
+      const td = death - q * 0.5, hgt = 1.8 + q * 0.7, s = 2.7 + q * 0.6;
+      trunkR.push({ m: M4(tx, gy, tz, q * 6, 0.35, hgt, 0.35), c: new THREE.Color("#6e5a40"), t: [-1, td, NEVER, q] });
+      crownR.push({ m: M4(tx, gy + hgt, tz, q * 6.28, s, s * 0.85, s), c: new THREE.Color(dark ? ["#2f5e27", "#3a6b2e", "#2c5524"][Math.floor(q * 2.99)] : ["#467a31", "#3f7130", "#4f8236"][Math.floor(q * 2.99)]), t: [-1, td, NEVER, q] });
+    }
+    for (const [u, v, a, l] of [[0, -d / 2, 0, w], [0, d / 2, 0, w], [-w / 2, 0, 1, d], [w / 2, 0, 1, d]]) {
+      const hx = x + u * ca + v * sa, hz = z - u * sa + v * ca;
+      hedgeR.push({ m: M4(hx, gy, hz, ang + a * Math.PI / 2, l, 1, 1.4), c: new THREE.Color(r2 < 0.5 ? "#5f7a3c" : "#c9b48c"), t: [-1, death - 0.3, NEVER, r1], h: [0, r2 < 0.5 ? 1.8 : 1.3] });
+    }
   }
+  scene.add(growMesh(unitBox(), STD({ roughness: 1 }), "house", hedgeR, { shadow: false }));
+  const groveTex = rasterGround({ X0: -3400, Z0: -4200, EXT: 7800, TEX: 2048 }, [], groves, []);
   const trunkGeo = new THREE.CylinderGeometry(0.5, 0.7, 1, 5); trunkGeo.translate(0, 0.5, 0);
   scene.add(growMesh(trunkGeo, STD({ roughness: 1 }), "uniform", trunkR, { shadow: false }));
   scene.add(growMesh(facet(new THREE.IcosahedronGeometry(1, 0)), STD({ flatShading: true, roughness: 0.95 }), "uniform", crownR));
@@ -176,9 +365,34 @@ export function buildVideo(canvas, hud) {
   // ---------- ground texture: streets (with birth times) and the built-up paving round houses ----------
   const GX = { X0: -3400, Z0: -4200, EXT: 7800, TEX: 4096 };
   const groundTex = rasterGround(GX, segs, [], []);
-  const paving = [];
-  for (let i = 0; i < B.length; i += 9) { const x = B[i] / 10, z = B[i + 1] / 10, w = B[i + 2] / 10, d = B[i + 3] / 10; paving.push({ x, z, rx: w / 2 + 8, rz: d / 2 + 8, ry: -B[i + 4] / 1000, b: Math.max(0, tOf(B[i + 6] / 100) - 0.5) }); }
-  const urbanTex = rasterGround(GX, [], paving, []);
+  // pavements along every street, plus the apron round each house (collected with the buildings)
+  const walks = segs.map((sg) => ({ ...sg, w: sg.w + 3.5 }));
+  const urbanTex = rasterGround(GX, walks, paving, []);
+  // when each patch of land is built over (30 m cells, earliest house within about 90 m): gardens replace the fields
+  const CN = 256, CCELL = GX.EXT / CN, cMin = new Float32Array(CN * CN).fill(NEVER), cTime = new Uint8Array(CN * CN).fill(255);
+  for (let i = 0; i < cityPts.length; i += 3) {
+    const gx = Math.floor((cityPts[i] - GX.X0) / CCELL), gz = Math.floor((cityPts[i + 1] - GX.Z0) / CCELL);
+    if (gx >= 0 && gz >= 0 && gx < CN && gz < CN) cMin[gz * CN + gx] = Math.min(cMin[gz * CN + gx], cityPts[i + 2]);
+  }
+  for (let gz = 0; gz < CN; gz++) for (let gx = 0; gx < CN; gx++) {
+    let m = NEVER;
+    for (let dz = -3; dz <= 3; dz++) for (let dx = -3; dx <= 3; dx++) {
+      if (dx * dx + dz * dz > 10 || gx + dx < 0 || gz + dz < 0 || gx + dx >= CN || gz + dz >= CN) continue;
+      m = Math.min(m, cMin[(gz + dz) * CN + gx + dx]);
+    }
+    if (m < NEVER) cTime[gz * CN + gx] = Math.round(clamp(m / (MDUR + 20)) * 254);
+  }
+  const cityTex = new THREE.DataTexture(cTime, CN, CN, THREE.RedFormat); cityTex.magFilter = cityTex.minFilter = THREE.LinearFilter; cityTex.flipY = false; cityTex.needsUpdate = true;
+  // distance to the sea in metres (the shore grid is clamped at 120 m): a chamfer pass over the 20 m grid
+  const cdist = new Float32Array(SG.nx * SG.nz);
+  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) cdist[i * SG.nx + j] = sdRaw(i, j) <= -60 ? 0 : 1e6;   // the sea only: the river is never 60 m deep in this grid
+  const relax = (i, j, di, dj, c) => { const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx) return; const v = cdist[a * SG.nx + b] + c; if (v < cdist[i * SG.nx + j]) cdist[i * SG.nx + j] = v; };
+  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) { relax(i, j, -1, 0, SG.g); relax(i, j, 0, -1, SG.g); relax(i, j, -1, -1, SG.g * 1.414); relax(i, j, -1, 1, SG.g * 1.414); }
+  for (let i = SG.nz - 1; i >= 0; i--) for (let j = SG.nx - 1; j >= 0; j--) { relax(i, j, 1, 0, SG.g); relax(i, j, 0, 1, SG.g); relax(i, j, 1, 1, SG.g * 1.414); relax(i, j, 1, -1, SG.g * 1.414); }
+  const coastTex = new THREE.DataTexture(Uint8Array.from(cdist, (v) => Math.min(255, Math.round(v / 10))), SG.nx, SG.nz, THREE.RedFormat);
+  coastTex.magFilter = coastTex.minFilter = THREE.LinearFilter; coastTex.flipY = false; coastTex.needsUpdate = true;
+  const PK = DATA.P, pkRaw = Uint8Array.from(atob(PK.b64), (c) => c.charCodeAt(0));
+  const parkTex = new THREE.DataTexture(pkRaw, PK.n, PK.n, THREE.RGFormat); parkTex.flipY = false; parkTex.needsUpdate = true;
 
   // ---------- terrain ----------
   const TWD = 13000, TN = 1000;
@@ -186,41 +400,98 @@ export function buildVideo(canvas, hud) {
   const tp = tGeo.attributes.position;
   for (let i = 0; i < tp.count; i++) tp.setY(i, heightAt(tp.getX(i), tp.getZ(i)));
   tGeo.computeVertexNormals();
-  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 } };
+  const UT = { uGround: { value: groundTex }, uUrban: { value: urbanTex }, uOrig: { value: new THREE.Vector4(GX.X0, GX.Z0, GX.EXT, GX.TEX) }, uPave: { value: 0 }, uPark: { value: parkTex }, uPorig: { value: new THREE.Vector4(PK.x0, PK.z0, PK.ext, PK.n) }, uYear: { value: 1880 }, uGreen: { value: 0 }, uGrove: { value: groveTex }, uCity: { value: cityTex }, uCoast: { value: coastTex } };
   const tMat = STD({ color: "#ffffff", roughness: 1 });
   tMat.onBeforeCompile = (s) => {
     Object.assign(s.uniforms, UT, { uTime: U.uTime });
     s.vertexShader = s.vertexShader.replace("#include <common>", "#include <common>\nvarying vec3 vW;")
       .replace("#include <worldpos_vertex>", "#include <worldpos_vertex>\nvW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
     s.fragmentShader = s.fragmentShader.replace("#include <common>", `#include <common>
-      varying vec3 vW; uniform sampler2D uGround, uUrban; uniform vec4 uOrig; uniform float uTime, uPave;
+      varying vec3 vW; uniform sampler2D uGround, uUrban, uPark, uGrove, uCity, uCoast; uniform vec4 uOrig, uPorig; uniform float uTime, uPave, uYear, uGreen;
       ${GROUND_GLSL}`)
       .replace("#include <color_fragment>", /* glsl */ `#include <color_fragment>
       {
         float nz = n21(vW.xz * 0.004), nf = n21(vW.xz * 0.03);
-        vec3 sand = mix(Ls(vec3(0.89, 0.80, 0.62)), Ls(vec3(0.84, 0.74, 0.56)), nz);
-        sand = mix(sand, Ls(vec3(0.93, 0.86, 0.70)), nf * 0.35);
-        vec3 scrub = mix(Ls(vec3(0.66, 0.66, 0.44)), Ls(vec3(0.58, 0.60, 0.38)), nf);
-        vec3 col = mix(sand, scrub, smoothstep(0.55, 0.8, n21(vW.xz * 0.0016 + 4.0)) * 0.55);
+        // smooth, even ground (no speckle): broad tone changes only, like a painted model
+        vec3 sand = mix(Ls(vec3(0.88, 0.80, 0.62)), Ls(vec3(0.84, 0.76, 0.58)), nz);
+        // the coastal dunes north of Jaffa: sand with broad patches of low scrub
+        vec3 dune = mix(sand, Ls(vec3(0.60, 0.61, 0.40)), smoothstep(0.45, 0.8, n21(vW.xz * 0.0035 + 4.0)) * 0.6);
+        // open country inland: a patchwork of fields (wheat, stubble, ploughed earth, vegetables, fallow) on a tilted grid
+        vec2 fr = mat2(0.993, -0.12, 0.12, 0.993) * vW.xz, fc = floor(fr / vec2(150.0, 100.0)), fl = fract(fr / vec2(150.0, 100.0));
+        float sp = 0.3 + 0.4 * h21(fc - 9.0), sx = h21(fc + 2.0), hf = sx < 0.5 ? step(sp, fl.x) : 2.0 + step(sp, fl.y);   // split each plot in two
+        fl = sx < 0.5 ? vec2(fl.x < sp ? fl.x / sp : (fl.x - sp) / (1.0 - sp), fl.y) : vec2(fl.x, fl.y < sp ? fl.y / sp : (fl.y - sp) / (1.0 - sp));
+        fc = fc * 4.0 + hf;
+        float fh = h21(fc + 31.0), fh2 = h21(fc * 1.7 - 5.0);
+        vec3 field = fh < 0.3 ? Ls(vec3(0.33, 0.47, 0.19)) : fh < 0.45 ? Ls(vec3(0.43, 0.50, 0.24)) : fh < 0.56 ? Ls(vec3(0.58, 0.55, 0.33))
+                   : fh < 0.64 ? Ls(vec3(0.48, 0.41, 0.29)) : fh < 0.85 ? Ls(vec3(0.29, 0.43, 0.17)) : Ls(vec3(0.38, 0.49, 0.22));
+        field *= mix(0.94, 1.04, step(0.5, fract((fh2 < 0.5 ? fr.x : fr.y) / 5.0)));          // furrows
+        float edge = min(min(fl.x, 1.0 - fl.x) * 70.0, min(fl.y, 1.0 - fl.y) * 50.0);
+        field = mix(Ls(vec3(0.27, 0.38, 0.16)), field, smoothstep(0.8, 2.2, edge));          // hedgerows and tracks
+        vec3 grass = mix(Ls(vec3(0.33, 0.47, 0.20)), Ls(vec3(0.37, 0.50, 0.22)), n21(vW.xz * 0.0011 + 9.0)) * mix(0.96, 1.03, n21(vW.xz * 0.006 - 4.0));
+        vec3 country = mix(field, grass, smoothstep(0.62, 0.78, n21(vW.xz * 0.0009 - 2.0)) * 0.5);
+        // dunes along the coast (about 1 km deep), farmland behind them, from the very start
+        float shx = vW.z < ${ZN.toFixed(1)} ? ${SLN} * (vW.z - ${ZN.toFixed(1)}) : vW.z > ${ZS.toFixed(1)} ? ${SLS} * (vW.z - ${ZS.toFixed(1)}) : 0.0;
+        vec2 cs = (vec2(vW.x - shx, vW.z) - vec2(${SG.x0.toFixed(1)}, ${SG.z0.toFixed(1)})) / vec2(${(SG.nx * SG.g).toFixed(1)}, ${(SG.nz * SG.g).toFixed(1)});
+        float cd = texture2D(uCoast, cs).r * 2550.0;
+        float belt = smoothstep(760.0, 1310.0, cd + (n21(vW.xz * 0.0018 + 3.0) - 0.5) * 600.0);
+        float inland = smoothstep(1.5, 1.85, vW.y);            // the land is 2 m up at 120 m from the shore (the clamp of the shore grid)
+        vec3 col = mix(dune, country, belt * inland);
+        // as the city spreads, the dune belt greens too (irrigated gardens, scrub, parks)
+        col = mix(col, mix(grass, country, 0.4), uGreen * (1.0 - belt) * inland * 0.85);
+        // built-up land: lawns and gardens between the houses, from the time the houses arrive
+        vec2 cu = (vW.xz - uOrig.xy) / uOrig.z;
+        vec2 cj = cu + (vec2(n21(vW.xz * 0.025), n21(vW.xz * 0.025 + 7.0)) - 0.5) * (40.0 / uOrig.z);
+        float cb = (cu.x > 0.0 && cu.y > 0.0 && cu.x < 1.0 && cu.y < 1.0) ? texture2D(uCity, cj).r * ${(MDUR + 20).toFixed(1)} * 255.0 / 254.0 : 1e5;
+        vec3 lawn = mix(Ls(vec3(0.34, 0.48, 0.20)), Ls(vec3(0.38, 0.51, 0.22)), n21(vW.xz * 0.02)) * mix(0.95, 1.04, n21(vW.xz * 0.006 + 5.0));
+        lawn = mix(mix(Ls(vec3(0.66, 0.63, 0.43)), Ls(vec3(0.55, 0.57, 0.35)), n21(vW.xz * 0.02)), lawn, uGreen);   // sandy yards before the 1920s
+        col = mix(col, lawn, smoothstep(cb + 0.5, cb + 4.0, uTime) * step(cb, ${MDUR.toFixed(1)}) * inland);
         col = mix(col, Ls(vec3(0.95, 0.90, 0.78)), smoothstep(1.6, 0.5, vW.y) * 0.8);             // the beach
         vec2 uv = (vW.xz - uOrig.xy) / uOrig.z;
         if (uv.x > 0.0 && uv.y > 0.0 && uv.x < 1.0 && uv.y < 1.0) {
+          // the citrus groves: dark irrigated earth under the rows, gone when the plot is cleared
+          vec4 gv = texture2D(uGrove, uv); vec4 gvn = texelFetch(uGrove, ivec2(uv * 2048.0), 0);
+          float gd = (gvn.g * 255.0 * 256.0 + gvn.b * 255.0) / 100.0;
+          vec3 earth = Ls(vec3(0.43, 0.45, 0.27));
+          col = mix(col, earth, gv.r * (1.0 - smoothstep(gd - 0.4, gd + 0.4, uTime)) * 0.9);
           vec4 ur = texture2D(uUrban, uv); vec4 un = texelFetch(uUrban, ivec2(uv * uOrig.w), 0);
           float ub = (un.g * 255.0 * 256.0 + un.b * 255.0) / 100.0;
-          vec3 lot = mix(Ls(vec3(0.80, 0.76, 0.66)), Ls(vec3(0.72, 0.71, 0.68)), uPave);
-          col = mix(col, lot * mix(0.95, 1.05, nf), ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.85);
+          vec3 lot = mix(Ls(vec3(0.80, 0.75, 0.64)), Ls(vec3(0.76, 0.75, 0.72)), uPave);
+          col = mix(col, lot, ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.92);
           vec4 g = texture2D(uGround, uv); vec4 gn = texelFetch(uGround, ivec2(uv * uOrig.w), 0);
           float birth = (gn.g * 255.0 * 256.0 + gn.b * 255.0) / 100.0;
           float road = g.r * smoothstep(birth, birth + 0.6, uTime);
-          vec3 dirt = Ls(vec3(0.78, 0.68, 0.52)), asph = mix(Ls(vec3(0.44, 0.45, 0.47)), Ls(vec3(0.50, 0.51, 0.52)), nf);
-          col = mix(col, mix(dirt, asph, uPave), road * 0.92);
+          vec3 dirt = Ls(vec3(0.76, 0.66, 0.50)), asph = mix(Ls(vec3(0.30, 0.31, 0.33)), Ls(vec3(0.36, 0.37, 0.39)), nf);
+          col = mix(col, mix(dirt, asph, uPave), road * 0.95);
+        }
+        vec2 pv = (vW.xz - uPorig.xy) / uPorig.z;
+        if (pv.x > 0.0 && pv.y > 0.0 && pv.x < 1.0 && pv.y < 1.0) {
+          // bilinear over the 4 nearest park cells, so lawns have smooth edges instead of stair steps
+          vec2 pc = pv * uPorig.w - 0.5, pf = fract(pc); ivec2 p0 = ivec2(floor(pc));
+          float on[4];
+          for (int k = 0; k < 4; k++) {
+            vec2 pk = texelFetch(uPark, p0 + ivec2(k & 1, k >> 1), 0).rg;
+            float py = max((pk.r * 255.0 + pk.g * 255.0 * 256.0) / 100.0 + 1800.0, 1935.0);   // no public lawns before the 1930s
+            on[k] = pk.r + pk.g > 0.0 ? smoothstep(py, py + 1.5, uYear) : 0.0;
+          }
+          float pm = smoothstep(0.35, 0.65, mix(mix(on[0], on[1], pf.x), mix(on[2], on[3], pf.x), pf.y));
+          vec3 grass = Ls(vec3(0.34, 0.50, 0.20)) * mix(0.97, 1.03, nz);
+          col = mix(col, grass, pm * 0.95);
         }
         diffuseColor.rgb = col;
       }`);
   };
   const terrain = new THREE.Mesh(tGeo, tMat); terrain.receiveShadow = true; scene.add(terrain);
-  const farGround = new THREE.Mesh(new THREE.RingGeometry(9000, 60000, 96, 1).rotateX(-Math.PI / 2), STD({ color: "#cdb98f", roughness: 1 }));
-  farGround.position.set(-1000, 1, 0); scene.add(farGround);
+  // the far land outside the terrain square, in the same ground shader (fields, dunes): its coast follows shoreDist, and
+  // everything inside the square sinks out of sight
+  const farG = new THREE.PlaneGeometry(120000, 120000, 600, 600).rotateX(-Math.PI / 2), fp = farG.attributes.position;
+  for (let i = 0; i < fp.count; i++) {
+    const x = fp.getX(i) - 1000, z = fp.getZ(i), s = shoreDist(x, z);
+    const inside = Math.abs(x + 1000) < TWD / 2 - 250 && Math.abs(z) < TWD / 2 - 250;
+    fp.setY(i, inside ? -9 : s >= 120 ? 2.0 : s <= -60 ? -2.5 : lerp(-2.5, 2.0, (s + 60) / 180));
+  }
+  farG.computeVertexNormals();
+  const farGround = new THREE.Mesh(farG, tMat); farGround.receiveShadow = true;
+  farGround.position.set(-1000, 0, 0); scene.add(farGround);
 
   // ---------- the sea and the Yarkon: two tones, foam at the shore ----------
   const wGeo = new THREE.PlaneGeometry(TWD, TWD, 500, 500); wGeo.rotateX(-Math.PI / 2); wGeo.translate(-1000, 0, 0);
@@ -251,6 +522,9 @@ export function buildVideo(canvas, hud) {
         normal = normalize(normal + (mat3(viewMatrix) * vec3(-(hx - h0), 0.0, -(hz - h0))) * 0.12);`);
   };
   const water = new THREE.Mesh(wGeo, wMat); water.receiveShadow = true; scene.add(water);
+  const fwGeo = new THREE.PlaneGeometry(120000, 120000, 1, 1).rotateX(-Math.PI / 2); fwGeo.translate(-1000, -0.35, 0);
+  fwGeo.setAttribute("aDepth", new THREE.BufferAttribute(new Float32Array(fwGeo.attributes.position.count).fill(20), 1));
+  scene.add(new THREE.Mesh(fwGeo, wMat));
 
   // ---------- landmarks ----------
   const groupAt = (x, z, ry = 0) => { const g = new THREE.Group(); g.position.set(x, heightAt(x, z) - 0.6, z); g.rotation.y = ry; scene.add(g); return g; };
@@ -271,6 +545,43 @@ export function buildVideo(canvas, hud) {
   for (const [t0, x, z] of [[T.gym[0], SM.x, SM.z], [T.gymDown, SM.x, SM.z]]) for (let k = 0; k < 6; k++) dust.push({ x: x + (hash2(k, 1) - 0.5) * 40, y: 6, z: z + (hash2(k, 2) - 0.5) * 30, t0: t0 + k * 0.3, t1: t0 + 3 + k * 0.2, ph: hash2(k, 3), rise: 40, spread: 18, size0: 3, speed: 0.3, wind: [30, -10] });
   const updDust = puffs(scene, dust, { color: "#d8ccb4", opacity: 0.3, perCol: 10 });
 
+  // ---------- life: sailboats offshore, cars on the main roads from the 1950s ----------
+  const boats = [];
+  const hullM = STD({ color: "#f4f1ea" }), sailM = STD({ color: "#ffffff", side: THREE.DoubleSide }), deckM = STD({ color: "#8a6a48" });
+  const rb = mulberry32(77);
+  for (let k = 0; k < 46; k++) {
+    let x = 0, z = 0; for (let tries = 0; tries < 40; tries++) { x = -4200 + rb() * 3600; z = -4200 + rb() * 8400; if (shoreDist(x, z) < -110) break; }
+    const g = new THREE.Group(), big = k < 6, L = big ? 60 : 9 + rb() * 6;
+    const hull = new THREE.Mesh(new THREE.BoxGeometry(L, big ? 6 : 1.6, big ? 11 : 3).translate(0, big ? 2 : 0.6, 0), big ? STD({ color: "#c94a3a" }) : hullM); hull.castShadow = true; g.add(hull);
+    if (big) { const b2 = new THREE.Mesh(new THREE.BoxGeometry(L * 0.3, 8, 9).translate(-L * 0.28, 9, 0), hullM); b2.castShadow = true; g.add(b2); }
+    else { const s = new THREE.Mesh(new THREE.ConeGeometry(L * 0.32, L * 1.05, 3).translate(0, L * 0.6 + 1, 0), sailM); s.scale.z = 0.12; s.castShadow = true; g.add(s); }
+    scene.add(g);
+    boats.push({ g, x0: x, z0: z, v: (rb() < 0.5 ? -1 : 1) * (big ? 4 : 2 + rb() * 3), born: big ? tOf(1950 + rb() * 50) : rb() * 120, ph: rb() * 6 });
+  }
+  const mains = segs.filter((sg) => sg.w >= 9 && Math.hypot(sg.bx - sg.ax, sg.bz - sg.az) > 25);
+  const NC = Math.min(2200, mains.length * 2), cars = new THREE.InstancedMesh(new THREE.BoxGeometry(4.2, 1.6, 2).translate(0, 0.8, 0), STD({ roughness: 0.4 }), NC);
+  cars.frustumCulled = false; cars.castShadow = false; scene.add(cars);
+  const carP = [], CC = ["#f2f2f0", "#c8ccd2", "#222428", "#b8302a", "#f2c230", "#3a5f9a", "#f2f2f0"];
+  for (let k = 0; k < NC; k++) { const sg = mains[Math.floor(hash2(k, 41) * mains.length)]; carP.push({ sg, u: hash2(k, 42), dir: hash2(k, 43) < 0.5 ? 1 : -1, sp: 9 + hash2(k, 44) * 6, on: hash2(k, 45) }); cars.setColorAt(k, new THREE.Color(CC[k % CC.length])); }
+  const _cm = new THREE.Matrix4(), _cq = new THREE.Quaternion(), _cs = V(1, 1, 1), _cp = V(), _up = V(0, 1, 0);
+  function updateLife(t) {
+    for (const b of boats) {
+      const on = sm(ramp(t, b.born, b.born + 1)); b.g.visible = on > 0.01; if (!b.g.visible) continue;
+      let z = b.z0 + b.v * t; z = ((z + 4200) % 8400 + 8400) % 8400 - 4200;
+      b.g.position.set(b.x0, 0.2 + Math.sin(t * 1.1 + b.ph) * 0.15, z); b.g.rotation.set(0, b.v > 0 ? -Math.PI / 2 : Math.PI / 2, Math.sin(t * 0.9 + b.ph) * 0.03); b.g.scale.setScalar(on);
+    }
+    const share = sm(ramp(yearF(t), 1948, 2005)); let n = 0;
+    for (const c of carP) {
+      if (c.on > share || t < c.sg.ba + 3) continue;
+      const L = Math.hypot(c.sg.bx - c.sg.ax, c.sg.bz - c.sg.az), f = ((c.u + c.dir * t * c.sp / L) % 1 + 1) % 1;
+      const ux = (c.sg.bx - c.sg.ax) / L, uz = (c.sg.bz - c.sg.az) / L, lane = c.sg.w * 0.22 * c.dir;
+      _cp.set(c.sg.ax + (c.sg.bx - c.sg.ax) * f - uz * lane, heightAt(c.sg.ax, c.sg.az) - 0.3, c.sg.az + (c.sg.bz - c.sg.az) * f + ux * lane);
+      _cq.setFromAxisAngle(_up, -Math.atan2(uz, ux) + (c.dir < 0 ? Math.PI : 0));
+      cars.setMatrixAt(n++, _cm.compose(_cp, _cq, _cs));
+    }
+    cars.count = n; cars.instanceMatrix.needsUpdate = true; if (cars.instanceColor) cars.instanceColor.needsUpdate = true;
+  }
+
   // ---------- camera: one flight, mostly from over the sea looking east ----------
   const P = (lat, lon) => LL(lat, lon);
   const [ax, az] = P(32.0545, 34.754), [nx, nz] = P(32.0607, 34.7655), [bx, bz] = P(32.0636, 34.7718), [wx, wz] = P(32.0800, 34.7770);
@@ -289,7 +600,8 @@ export function buildVideo(canvas, hud) {
     [118, [bx - 1300, 850, bz + 700], [bx + 250, 0, bz - 350]],
     [140, [wx - 1100, 700, wz + 1300], [wx + 60, 0, wz + 600]],
     [160, [wx - 640, 400, wz + 800], [wx + 40, 0, wz + 280]],
-    [177, [px - 620, 380, pz + 520], [px + 40, 0, pz + 80]],
+    [170, [wx - 600, 380, wz + 640], [wx + 60, 0, wz + 130]],
+    [177, [px - 820, 720, pz + 1350], [px + 120, 0, pz + 420]],
     [190, [wx - 1900, 1300, wz + 1600], [wx + 200, 0, wz - 200]],
     [204, [ix - 330, 180, iz + 260], [ix, 8, iz]],
     [224, [ax - 700, 420, az + 520], [ax + 100, 0, az - 100]],
@@ -306,20 +618,34 @@ export function buildVideo(canvas, hud) {
     [470, [wx - 2000, 1200, wz + 1700], [wx + 500, 40, wz - 300]],
     [492, [ix - 1600, 900, iz + 1500], [ix + 600, 30, iz - 400]],
     [515, [wx - 2400, 2500, wz + 2200], [wx + 600, 0, wz - 200]],
-    [DUR, [wx - 2900, 3300, wz + 2700], [wx + 700, 0, wz - 200]],
+    [MDUR, [wx - 2900, 3300, wz + 2700], [wx + 700, 0, wz - 200]],
   ]);
-  const drawHud = hudDriver(hud, { ERAS, FLAGS, TITLE, LANDMARKS, CAPTIONS, CARDS, yearAt, popAt, DUR });
+  const drawHud = hudDriver(hud, { ERAS, FLAGS, TITLE, LANDMARKS, CAPTIONS, CARDS, yearAt, popAt, DUR: MDUR });
 
   const ready = Promise.resolve();
+  const introPose = { pos: V(wx - 3200, 2300, wz + 2600), tgt: V(wx + 500, 0, wz - 300) };
   function renderAt(time) {
-    const t = clamp(time, 0, DUR);
+    time = clamp(time, 0, DUR);
+    // intro: the city today, then a fast rewind to 1880 (the main timeline runs backwards), then the flight starts
+    const intro = time < INTRO;
+    const mainT = intro ? (time < 2.5 ? 505 : time < 8 ? 505 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
+    const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
-    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960));
-    updateLM(t); updDust(t);
-    const { pos, tgt } = cam(t);
-    st.frame(pos, tgt);
-    const wide = sm(ramp(t, 500, 530)); st.scene.fog.near *= lerp(0.7, 0.45, wide); st.scene.fog.far *= lerp(0.65, 0.4, wide);
+    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1906, 1928));
+    updateLM(t); updDust(t); updateLife(t);
+    let { pos, tgt } = cam(t);
+    if (intro) { const k = sm(ramp(time, 5.5, 9)); pos = introPose.pos.clone().lerp(pos, k); tgt = introPose.tgt.clone().lerp(tgt, k); }
+    const dist = st.frame(pos, tgt), haze = sm(clamp((dist - 1400) / 2600)); st.scene.fog.near *= lerp(1.3, 0.5, haze); st.scene.fog.far *= lerp(1.4, 0.3, haze);
+    // golden hour over the last minute
+    const dusk = intro ? 0 : sm(ramp(t, 505, 535));
+    st.sun.color.set("#fff1d6").lerp(new THREE.Color("#ffc890"), dusk * 0.7); st.sun.intensity = 3.3 - 0.4 * dusk; st.hemi.intensity = 1.2 - 0.1 * dusk;
     drawHud(t);
+    if (intro) {
+      hud.black.style.opacity = 1 - clamp(time / 1.2); hud.ui.style.opacity = clamp((time - 0.4) / 0.8);
+      for (const el of [hud.title, hud.lm, hud.cap, hud.card]) el.style.opacity = 0;
+    } else {
+      hud.black.style.opacity = clamp((t - (MDUR - 1.8)) / 1.6); hud.ui.style.opacity = 1 - clamp((t - (MDUR - 2.4)) / 1.2);
+    }
     st.render();
   }
   return { ready, renderAt, DUR, stats: { houses: wallR.length, towers: glassR.length, roofs: hipR.length, trees: crownR.length, roads: segs.length } };

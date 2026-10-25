@@ -23,7 +23,7 @@
       .corner { position: absolute; pointer-events: none; }
       #cBL { left: -260px; bottom: -220px; width: 1150px; height: 560px; background: radial-gradient(ellipse at center, rgba(16, 13, 8, 0.5), rgba(16, 13, 8, 0.22) 45%, rgba(16, 13, 8, 0) 70%); }
       #cBR { right: -260px; bottom: -220px; width: 900px; height: 520px; background: radial-gradient(ellipse at center, rgba(16, 13, 8, 0.5), rgba(16, 13, 8, 0.22) 45%, rgba(16, 13, 8, 0) 70%); }
-      #cTR { right: -220px; top: -200px; width: 800px; height: 420px; background: radial-gradient(ellipse at center, rgba(16, 13, 8, 0.45), rgba(16, 13, 8, 0.2) 45%, rgba(16, 13, 8, 0) 70%); }
+      #cTR { right: -160px; top: -170px; width: 640px; height: 340px; background: radial-gradient(ellipse at center, rgba(16, 13, 8, 0.3), rgba(16, 13, 8, 0.12) 45%, rgba(16, 13, 8, 0) 70%); }
       /* year: bottom-right, condensed bold */
       #year { position: absolute; right: 74px; bottom: 66px; font: 700 104px/1 "Barlow Condensed", sans-serif; letter-spacing: 5px; text-align: right; }
       /* era: flag tile above a tracked caps label, bottom-left */
@@ -45,20 +45,20 @@
       /* explanatory caption with gold rules */
       #cap { position: absolute; left: 0; right: 0; top: 748px; text-align: center; }
       #cap .rule { width: 230px; height: 2px; background: #c9a45c; margin: 0 auto; }
-      #cap .line { font: 500 36px/1.5 "Cormorant Garamond", serif; color: #fbf7ef; letter-spacing: 0.3px; }
+      #cap .line { font: 600 38px/1.5 "Cormorant Garamond", serif; color: #fffaf0; letter-spacing: 0.3px; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75), 0 0 2px rgba(0, 0, 0, 0.6); }
       #cap .rule.top { margin-bottom: 14px; } #cap .rule.bot { margin-top: 14px; }
       /* chapter card */
       #card { position: absolute; left: 0; right: 0; top: 802px; text-align: center; }
-      #cardK { font: 400 20px/1 "Cinzel", serif; letter-spacing: 0.6em; padding-left: 0.6em; color: #efe5d0; }
-      #cardT { margin-top: 16px; font: 400 64px/1 "Cinzel", serif; letter-spacing: 0.26em; padding-left: 0.26em; color: #fbf6ec; }
+      #cardK { font: 600 22px/1 "Cinzel", serif; letter-spacing: 0.6em; padding-left: 0.6em; color: #f3e9d3; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
+      #cardT { margin-top: 16px; font: 600 68px/1 "Cinzel", serif; letter-spacing: 0.24em; padding-left: 0.24em; color: #fffaf0; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.6); }
       /* soft dark backing behind centred serif text (no boxes, just a falloff) */
-      #title::before, #lm::before, #cap::before, #card::before { content: ""; position: absolute; left: 50%; top: 50%; width: 1500px; height: 300px; transform: translate(-50%, -50%); background: radial-gradient(ellipse at center, rgba(14, 12, 8, 0.6), rgba(14, 12, 8, 0.28) 45%, rgba(14, 12, 8, 0) 70%); z-index: -1; }
+      #title::before, #lm::before, #cap::before, #card::before { content: ""; position: absolute; left: 50%; top: 50%; width: 1500px; height: 300px; transform: translate(-50%, -50%); background: radial-gradient(ellipse at center, rgba(14, 12, 8, 0.72), rgba(14, 12, 8, 0.38) 45%, rgba(14, 12, 8, 0) 70%); z-index: -1; }
       #black { position: absolute; inset: 0; background: #000; pointer-events: none; }
       #preload { position: absolute; left: 0; top: 0; opacity: 0; font-size: 10px; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-no-timeline data-start="0" data-duration="560" data-width="1920" data-height="1080">
+    <div id="root" data-composition-id="main" data-no-timeline data-start="0" data-duration="569" data-width="1920" data-height="1080">
       <canvas id="world" width="2880" height="1620"></canvas>
       <div id="ui"><div class="corner" id="cBL"></div><div class="corner" id="cBR"></div><div class="corner" id="cTR"></div>
         <div id="pop" class="sh"><svg viewBox="0 0 30 36"><circle cx="15" cy="9" r="8" fill="#fff"/><path d="M1 36 Q1 20 15 20 Q29 20 29 36Z" fill="#fff"/></svg><span id="popN">c. 0</span></div>
@@ -73,7 +73,7 @@
       </div>
       <div id="black"></div>
       <div id="preload"><span style="font-family:'Barlow Condensed';font-weight:500">A</span><span style="font-family:'Barlow Condensed';font-weight:700">A</span><span style="font-family:Cinzel;font-weight:400">A</span><span style="font-family:Cinzel;font-weight:600">A</span><span style="font-family:'Cormorant Garamond';font-weight:500">A</span></div>
-      <audio id="music" src="assets/music.m4a" data-start="0" data-duration="560" data-volume="1"></audio>
+      <audio id="music" src="assets/music.m4a" data-start="0" data-duration="569" data-volume="1"></audio>
     </div>
     <script type="module">
       import { buildVideo } from "./scene.js";

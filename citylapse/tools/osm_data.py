@@ -1,0 +1,115 @@
+"""Turns a real city (timelapse_engine/prep.py output + Overture water) into cities/<slug>/data.js for the kit.
+
+    python citylapse/tools/osm_data.py work/timelapse/tel_aviv citylapse/cities/tel-aviv
+
+Writes `export const DATA = {...}`:
+  B  buildings, 9 ints each: x, z (dm), w, d (dm), angle (mrad), height (dm), year (x100), kind, colour
+     (each real footprint becomes its minimum rotated rectangle)
+  BR the real footprints, in B's order: vertex count, then dx, dz (dm from B's centre) per vertex
+  R  road segments, 6 numbers each: ax, az, bx, bz (m), width (m), year
+  T  trees: year, x, z, scale
+  L  labels / towers from scene.json
+  S  land/sea grid: signed distance to the shore in metres (clamped to ±120, int8 after /1), GRID metres per cell
+World metres, x east, z south, origin = the city centre used by prep.py.
+"""
+import json
+import math
+import os
+import sys
+
+import base64
+
+import duckdb
+import numpy as np
+import shapely
+from shapely.geometry import Polygon
+from shapely.ops import unary_union
+
+GRID = 20.0
+EXT = (-7000.0, -5600.0, 5000.0, 5600.0)   # x0, z0, x1, z1 of the land/sea grid
+
+
+def main(src, dst):
+    sc = json.load(open(os.path.join(src, "scene.json")))
+    B, BR = [], []
+    for year, h, kind, ci, ring in sc["buildings"]:
+        p = Polygon(ring)
+        if not p.is_valid:
+            p = p.buffer(0)
+        r = p.minimum_rotated_rectangle
+        c = list(r.exterior.coords)[:4]
+        e1 = (c[1][0] - c[0][0], c[1][1] - c[0][1]); e2 = (c[2][0] - c[1][0], c[2][1] - c[1][1])
+        w, d = math.hypot(*e1), math.hypot(*e2)
+        if w < 2 or d < 2:
+            continue
+        # a rectangle much bigger than the footprint (L shapes, courtyards): shrink to the footprint's area
+        k = math.sqrt(min(1.0, p.area / (w * d)))
+        ang = -math.atan2(e1[1], e1[0])
+        cx, cz = r.centroid.x, r.centroid.y
+        B += [round(cx * 10), round(cz * 10), round(w * k * 10), round(d * k * 10), round(ang * 1000), round(h * 10), round(year * 100), kind, ci]
+        # the real footprint too (counter-clockwise seen from above, dm offsets from the rectangle centre)
+        q = shapely.geometry.polygon.orient(p if p.geom_type == "Polygon" else max(p.geoms, key=lambda g: g.area), 1.0)
+        ring = list(q.exterior.coords)[:-1]
+        BR.append(len(ring))
+        for px, pz in ring:
+            BR += [round((px - cx) * 10), round((pz - cz) * 10)]
+    R = []
+    for year, w, pts in sc["roads"]:
+        for (ax, az), (bx, bz) in zip(pts, pts[1:]):
+            R += [round(ax, 1), round(az, 1), round(bx, 1), round(bz, 1), w, round(year, 1)]
+    T = []
+    for year, x, z, s in sc["trees"]:
+        T += [round(year, 1), x, z, s]
+
+    # water: the sea + rivers + large ponds from Overture, in world metres
+    lon0, lat0 = 34.775, 32.070
+    kx = math.cos(math.radians(lat0)) * math.pi / 180 * 6371000.0
+    ky = math.pi / 180 * 6371000.0
+    con = duckdb.connect()
+    polys = []
+    for cls, g in con.execute(f"select class, wkt from '{os.path.join(src, 'water.parquet')}'").fetchall():
+        if not g or cls in ("swimming_pool", "drain", "ditch", "ocean"):
+            continue
+        geom = shapely.from_wkt(g)
+        geom = shapely.transform(geom, lambda a: np.column_stack([(a[:, 0] - lon0) * kx, -(a[:, 1] - lat0) * ky]))
+        if geom.area < 5000 and cls not in ("river", "stream", "canal", "sea"):
+            continue
+        polys.append(geom.buffer(0))
+    water = unary_union(polys)
+    # the sea goes on to the west of the data
+    west = shapely.box(EXT[0] - 100, EXT[1] - 100, -4800, EXT[3] + 100)
+    water = unary_union([water, west]).simplify(2.0)
+    nx, nz = int((EXT[2] - EXT[0]) / GRID), int((EXT[3] - EXT[1]) / GRID)
+    xs = EXT[0] + (np.arange(nx) + 0.5) * GRID
+    zs = EXT[1] + (np.arange(nz) + 0.5) * GRID
+    X, Z = np.meshgrid(xs, zs)
+    pts = shapely.points(X.ravel(), Z.ravel())
+    shapely.prepare(water)
+    inside = shapely.contains(water, pts)
+    dist = shapely.distance(water.boundary, pts)
+    sd = np.where(inside, -dist, dist).reshape(nz, nx)          # < 0 in the water
+    sd = np.clip(np.round(sd / 1.0), -120, 120).astype(np.int8)
+    S = base64.b64encode(sd.tobytes()).decode()
+
+    # parks: a raster over the ground texture extent, value = (year - 1800) * 100 (0 = no park), earliest wins
+    from PIL import Image, ImageDraw
+    PX0, PZ0, PEXT, PN = -3400.0, -4200.0, 7800.0, 1024
+    img = Image.new("I", (PN, PN), 0); dr = ImageDraw.Draw(img)
+    for year, ring in sorted(sc["parks"], key=lambda r: -r[0]):
+        pts = [((x - PX0) / PEXT * PN, (z - PZ0) / PEXT * PN) for x, z in ring]
+        if len(pts) >= 3:
+            dr.polygon(pts, fill=int(max(1, min(65535, round((year - 1800) * 100)))))
+    pk = np.array(img, dtype=np.uint32).astype(np.uint16)
+    P = base64.b64encode(pk.tobytes()).decode()
+    out = {"B": B, "BR": BR, "R": R, "T": T, "towers": sc.get("towers", []), "labels": sc.get("labels", []),
+           "P": {"x0": PX0, "z0": PZ0, "ext": PEXT, "n": PN, "b64": P}, "S": {"x0": EXT[0], "z0": EXT[1], "nx": nx, "nz": nz, "g": GRID, "b64": S}}
+    os.makedirs(dst, exist_ok=True)
+    with open(os.path.join(dst, "data.js"), "w") as f:
+        f.write("// generated by tools/osm_data.py from OpenStreetMap / Overture Maps data (ODbL); do not edit\n")
+        f.write("export const DATA = " + json.dumps(out, separators=(",", ":")) + ";\n")
+    print(f"buildings {len(B) // 9}  road segments {len(R) // 6}  trees {len(T) // 4}  grid {nx}x{nz}  "
+          f"{os.path.getsize(os.path.join(dst, 'data.js')) / 1e6:.1f} MB")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2])
