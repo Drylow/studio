@@ -320,7 +320,7 @@ export function buildVideo(canvas, hud) {
   // lone trees across the open land (carob, sycamore, eucalyptus windbreaks) as it greens up; they stay in the gaps later
   for (let gx = -160; gx <= 180; gx++) for (let gz = -175; gz <= 150; gz++) {
     const x = gx * 24 + (hash2(gx + 5, gz) - 0.5) * 18, z = gz * 24 + (hash2(gz, gx - 5) - 0.5) * 18, r1 = hash2(gx * 13, gz * 17);
-    if (r1 > 0.12 + 0.22 * fbm(x * 0.002 + 3, z * 0.002 - 8) || shoreDist(x, z) < 60 || !free(x, z)) continue;
+    if (r1 > 0.18 + 0.3 * fbm(x * 0.002 + 3, z * 0.002 - 8) || shoreDist(x, z) < 60 || !free(x, z)) continue;
     const b = tOf(1914 + hash2(gx, gz * 3) * 30), gy = heightAt(x, z) - 0.3, q = hash2(gx * 5, gz * 7), sc = 0.8 + q * 0.7, hgt = (3.4 + q * 2.4) * sc;
     trunkR.push({ m: M4(x, gy, z, q * 6, 0.45, hgt, 0.45), c: new THREE.Color("#6e5a40"), t: [b, NEVER, NEVER, r1] });
     crownR.push({ m: M4(x, gy + hgt, z, r1 * 6.28, 3.8 * sc, 3.2 * sc, 3.8 * sc), c: new THREE.Color(DEEP[Math.floor(q * 3.99)]), t: [b, NEVER, NEVER, r1] });
@@ -382,15 +382,51 @@ export function buildVideo(canvas, hud) {
     }
     if (m < NEVER) cTime[gz * CN + gx] = Math.round(clamp(m / (MDUR + 20)) * 254);
   }
+  {                                                    // two box-blur passes over the times (never = the end + 20 s)
+    let f = Float32Array.from(cTime, (v) => (v / 254) * (MDUR + 20)), g = new Float32Array(f.length);
+    for (let pass = 0; pass < 4; pass++) {
+      const [src, dst] = pass % 2 ? [g, f] : [f, g], hor = pass % 2 === 0, R = 2;
+      for (let z = 0; z < CN; z++) for (let x = 0; x < CN; x++) {
+        let acc = 0, n = 0;
+        for (let k = -R; k <= R; k++) { const xx = hor ? x + k : x, zz = hor ? z : z + k; if (xx < 0 || zz < 0 || xx >= CN || zz >= CN) continue; acc += src[zz * CN + xx]; n++; }
+        dst[z * CN + x] = acc / n;
+      }
+    }
+    for (let q = 0; q < cTime.length; q++) cTime[q] = Math.round(clamp(f[q] / (MDUR + 20)) * 255);
+  }
   const cityTex = new THREE.DataTexture(cTime, CN, CN, THREE.RedFormat); cityTex.magFilter = cityTex.minFilter = THREE.LinearFilter; cityTex.flipY = false; cityTex.needsUpdate = true;
   // distance to the sea in metres (the shore grid is clamped at 120 m): a chamfer pass over the 20 m grid
   const cdist = new Float32Array(SG.nx * SG.nz);
-  for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) cdist[i * SG.nx + j] = sdRaw(i, j) <= -60 ? 0 : 1e6;   // the sea only: the river is never 60 m deep in this grid
+  {                                                    // seeds: water 60 m+ from the shore that connects to the open sea in the west
+    const sea = new Uint8Array(SG.nx * SG.nz), st0 = [];
+    for (let i = 0; i < SG.nz; i++) if (sdRaw(i, 0) <= -60) { sea[i * SG.nx] = 1; st0.push(i * SG.nx); }
+    while (st0.length) {
+      const q = st0.pop(), i = Math.floor(q / SG.nx), j = q % SG.nx;
+      for (const [di, dj] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+        const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx || sea[a * SG.nx + b] || sdRaw(a, b) > -60) continue;
+        sea[a * SG.nx + b] = 1; st0.push(a * SG.nx + b);
+      }
+    }
+    for (let q = 0; q < cdist.length; q++) cdist[q] = sea[q] ? 0 : 1e6;
+  }
   const relax = (i, j, di, dj, c) => { const a = i + di, b = j + dj; if (a < 0 || b < 0 || a >= SG.nz || b >= SG.nx) return; const v = cdist[a * SG.nx + b] + c; if (v < cdist[i * SG.nx + j]) cdist[i * SG.nx + j] = v; };
   for (let i = 0; i < SG.nz; i++) for (let j = 0; j < SG.nx; j++) { relax(i, j, -1, 0, SG.g); relax(i, j, 0, -1, SG.g); relax(i, j, -1, -1, SG.g * 1.414); relax(i, j, -1, 1, SG.g * 1.414); }
   for (let i = SG.nz - 1; i >= 0; i--) for (let j = SG.nx - 1; j >= 0; j--) { relax(i, j, 1, 0, SG.g); relax(i, j, 0, 1, SG.g); relax(i, j, 1, 1, SG.g * 1.414); relax(i, j, 1, -1, SG.g * 1.414); }
   const coastTex = new THREE.DataTexture(Uint8Array.from(cdist, (v) => Math.min(255, Math.round(v / 10))), SG.nx, SG.nz, THREE.RedFormat);
   coastTex.magFilter = coastTex.minFilter = THREE.LinearFilter; coastTex.flipY = false; coastTex.needsUpdate = true;
+  // low scrub on the dunes (retama, sea squill), cleared as the houses arrive
+  const scrubR = [];
+  for (let gx = -300; gx <= 120; gx++) for (let gz = -420; gz <= 420; gz++) {
+    const x = gx * 13 + (hash2(gx + 3, gz) - 0.5) * 10, z = gz * 13 + (hash2(gz, gx - 3) - 0.5) * 10, r1 = hash2(gx * 7 + 2, gz * 3 + 9);
+    const fx = Math.floor((x - SG.x0) / SG.g), fz = Math.floor((z - SG.z0) / SG.g);
+    if (fx < 0 || fz < 0 || fx >= SG.nx || fz >= SG.nz) continue;
+    const c = cdist[fz * SG.nx + fx];
+    if (c < 200 || c > 1180 || r1 > (fbm(x * 0.006, z * 0.006) > 0.56 ? 0.3 : 0.015) || !free(x, z)) continue;
+    const death = Math.min(clearAt(x, z), tOf(1922 + r1 * 30)); if (death < 1) continue;
+    const q = hash2(gx * 11, gz * 5), sc = 1.8 + q * 1.8;
+    scrubR.push({ m: M4(x, heightAt(x, z) - 0.2, z, q * 6.28, 1.6 * sc, 0.9 * sc, 1.6 * sc), c: new THREE.Color(q < 0.5 ? "#6f7f45" : "#5b6c3a"), t: [-1, death, NEVER, q] });
+  }
+  scene.add(growMesh(facet(new THREE.IcosahedronGeometry(1, 0)), STD({ flatShading: true, roughness: 1 }), "uniform", scrubR, { shadow: false }));
   const PK = DATA.P, pkRaw = Uint8Array.from(atob(PK.b64), (c) => c.charCodeAt(0));
   const parkTex = new THREE.DataTexture(pkRaw, PK.n, PK.n, THREE.RGFormat); parkTex.flipY = false; parkTex.needsUpdate = true;
 
@@ -412,10 +448,9 @@ export function buildVideo(canvas, hud) {
       .replace("#include <color_fragment>", /* glsl */ `#include <color_fragment>
       {
         float nz = n21(vW.xz * 0.004), nf = n21(vW.xz * 0.03);
-        // smooth, even ground (no speckle): broad tone changes only, like a painted model
-        vec3 sand = mix(Ls(vec3(0.88, 0.80, 0.62)), Ls(vec3(0.84, 0.76, 0.58)), nz);
-        // the coastal dunes north of Jaffa: sand with broad patches of low scrub
-        vec3 dune = mix(sand, Ls(vec3(0.60, 0.61, 0.40)), smoothstep(0.45, 0.8, n21(vW.xz * 0.0035 + 4.0)) * 0.6);
+        // clean, even ground like a painted model: one meadow green everywhere, farmland outside the city's final
+        // footprint, and a narrow strip of sand dunes along the coast. No speckle, no blotches.
+        vec3 sand = mix(Ls(vec3(0.90, 0.83, 0.66)), Ls(vec3(0.87, 0.80, 0.63)), nz);
         // open country inland: a patchwork of fields (wheat, stubble, ploughed earth, vegetables, fallow) on a tilted grid
         vec2 fr = mat2(0.993, -0.12, 0.12, 0.993) * vW.xz, fc = floor(fr / vec2(150.0, 100.0)), fl = fract(fr / vec2(150.0, 100.0));
         float sp = 0.3 + 0.4 * h21(fc - 9.0), sx = h21(fc + 2.0), hf = sx < 0.5 ? step(sp, fl.x) : 2.0 + step(sp, fl.y);   // split each plot in two
@@ -427,40 +462,40 @@ export function buildVideo(canvas, hud) {
         field *= mix(0.94, 1.04, step(0.5, fract((fh2 < 0.5 ? fr.x : fr.y) / 5.0)));          // furrows
         float edge = min(min(fl.x, 1.0 - fl.x) * 70.0, min(fl.y, 1.0 - fl.y) * 50.0);
         field = mix(Ls(vec3(0.27, 0.38, 0.16)), field, smoothstep(0.8, 2.2, edge));          // hedgerows and tracks
-        vec3 grass = mix(Ls(vec3(0.33, 0.47, 0.20)), Ls(vec3(0.37, 0.50, 0.22)), n21(vW.xz * 0.0011 + 9.0)) * mix(0.96, 1.03, n21(vW.xz * 0.006 - 4.0));
-        vec3 country = mix(field, grass, smoothstep(0.62, 0.78, n21(vW.xz * 0.0009 - 2.0)) * 0.5);
-        // dunes along the coast (about 1 km deep), farmland behind them, from the very start
+        vec3 grass = mix(Ls(vec3(0.36, 0.51, 0.21)), Ls(vec3(0.39, 0.53, 0.23)), n21(vW.xz * 0.0011 + 9.0));
+        vec2 cu = (vW.xz - uOrig.xy) / uOrig.z;
+        // farmland inland; uCity (blurred) holds when the city reaches each patch: it turns to lawn and gardens then
+        float cb = (cu.x > 0.0 && cu.y > 0.0 && cu.x < 1.0 && cu.y < 1.0) ? texture2D(uCity, cu).r * ${(MDUR + 20).toFixed(1)} : 1e5;
+        vec3 col = mix(mix(field, grass, smoothstep(0.62, 0.78, n21(vW.xz * 0.0009 - 2.0)) * 0.5), grass, smoothstep(cb + 0.5, cb + 5.0, uTime));
+        // the dune strip: distance from the open sea (the grid measures it from 60 m offshore), a gentle wavy edge
         float shx = vW.z < ${ZN.toFixed(1)} ? ${SLN} * (vW.z - ${ZN.toFixed(1)}) : vW.z > ${ZS.toFixed(1)} ? ${SLS} * (vW.z - ${ZS.toFixed(1)}) : 0.0;
         vec2 cs = (vec2(vW.x - shx, vW.z) - vec2(${SG.x0.toFixed(1)}, ${SG.z0.toFixed(1)})) / vec2(${(SG.nx * SG.g).toFixed(1)}, ${(SG.nz * SG.g).toFixed(1)});
-        float cd = texture2D(uCoast, cs).r * 2550.0;
-        float belt = smoothstep(760.0, 1310.0, cd + (n21(vW.xz * 0.0018 + 3.0) - 0.5) * 600.0);
+        float cd = texture2D(uCoast, cs).r * 2550.0 + (n21(vW.xz * 0.0012 + 3.0) - 0.5) * 420.0;
         float inland = smoothstep(1.5, 1.85, vW.y);            // the land is 2 m up at 120 m from the shore (the clamp of the shore grid)
-        vec3 col = mix(dune, country, belt * inland);
-        // as the city spreads, the dune belt greens too (irrigated gardens, scrub, parks)
-        col = mix(col, mix(grass, country, 0.4), uGreen * (1.0 - belt) * inland * 0.85);
-        // built-up land: lawns and gardens between the houses, from the time the houses arrive
-        vec2 cu = (vW.xz - uOrig.xy) / uOrig.z;
-        vec2 cj = cu + (vec2(n21(vW.xz * 0.025), n21(vW.xz * 0.025 + 7.0)) - 0.5) * (40.0 / uOrig.z);
-        float cb = (cu.x > 0.0 && cu.y > 0.0 && cu.x < 1.0 && cu.y < 1.0) ? texture2D(uCity, cj).r * ${(MDUR + 20).toFixed(1)} * 255.0 / 254.0 : 1e5;
-        vec3 lawn = mix(Ls(vec3(0.34, 0.48, 0.20)), Ls(vec3(0.38, 0.51, 0.22)), n21(vW.xz * 0.02)) * mix(0.95, 1.04, n21(vW.xz * 0.006 + 5.0));
-        lawn = mix(mix(Ls(vec3(0.66, 0.63, 0.43)), Ls(vec3(0.55, 0.57, 0.35)), n21(vW.xz * 0.02)), lawn, uGreen);   // sandy yards before the 1920s
-        col = mix(col, lawn, smoothstep(cb + 0.5, cb + 4.0, uTime) * step(cb, ${MDUR.toFixed(1)}) * inland);
+        // the sand dunes north of Jaffa (the 1909 lots were drawn on them): about 1.3 km deep, a clean edge, broad soft
+        // shading only; the whole belt greens evenly as gardens, avenues and parks spread (1906-1928)
+        // as the city grows the green front moves from inland towards the sea (a clean edge, never a half fade)
+        float front = mix(1300.0, 240.0, uGreen);
+        vec3 dune = sand * mix(0.95, 1.03, n21(vW.xz * 0.0035 + 4.0));
+        col = mix(dune, col, smoothstep(front, front + 50.0, cd) * inland);
+        // from 1912 the built-up quarters get gardens and avenues wherever they stand, dunes included
+        col = mix(col, grass, smoothstep(cb + 0.5, cb + 5.0, uTime) * smoothstep(0.0, 0.3, uGreen) * smoothstep(150.0, 220.0, cd) * inland);
         col = mix(col, Ls(vec3(0.95, 0.90, 0.78)), smoothstep(1.6, 0.5, vW.y) * 0.8);             // the beach
         vec2 uv = (vW.xz - uOrig.xy) / uOrig.z;
         if (uv.x > 0.0 && uv.y > 0.0 && uv.x < 1.0 && uv.y < 1.0) {
           // the citrus groves: dark irrigated earth under the rows, gone when the plot is cleared
           vec4 gv = texture2D(uGrove, uv); vec4 gvn = texelFetch(uGrove, ivec2(uv * 2048.0), 0);
           float gd = (gvn.g * 255.0 * 256.0 + gvn.b * 255.0) / 100.0;
-          vec3 earth = Ls(vec3(0.43, 0.45, 0.27));
+          vec3 earth = Ls(vec3(0.28, 0.40, 0.17));               // shaded orchard floor
           col = mix(col, earth, gv.r * (1.0 - smoothstep(gd - 0.4, gd + 0.4, uTime)) * 0.9);
           vec4 ur = texture2D(uUrban, uv); vec4 un = texelFetch(uUrban, ivec2(uv * uOrig.w), 0);
           float ub = (un.g * 255.0 * 256.0 + un.b * 255.0) / 100.0;
           vec3 lot = mix(Ls(vec3(0.80, 0.75, 0.64)), Ls(vec3(0.76, 0.75, 0.72)), uPave);
-          col = mix(col, lot, ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.92);
+          col = mix(col, lot, ur.r * smoothstep(ub, ub + 0.8, uTime) * 0.92 * uPave);   // pavements come with the asphalt
           vec4 g = texture2D(uGround, uv); vec4 gn = texelFetch(uGround, ivec2(uv * uOrig.w), 0);
           float birth = (gn.g * 255.0 * 256.0 + gn.b * 255.0) / 100.0;
           float road = g.r * smoothstep(birth, birth + 0.6, uTime);
-          vec3 dirt = Ls(vec3(0.76, 0.66, 0.50)), asph = mix(Ls(vec3(0.30, 0.31, 0.33)), Ls(vec3(0.36, 0.37, 0.39)), nf);
+          vec3 dirt = Ls(vec3(0.71, 0.61, 0.46)), asph = mix(Ls(vec3(0.30, 0.31, 0.33)), Ls(vec3(0.36, 0.37, 0.39)), nf);
           col = mix(col, mix(dirt, asph, uPave), road * 0.95);
         }
         vec2 pv = (vW.xz - uPorig.xy) / uPorig.z;
@@ -631,7 +666,7 @@ export function buildVideo(canvas, hud) {
     const mainT = intro ? (time < 2.5 ? 505 : time < 8 ? 505 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
     const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
-    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1906, 1928));
+    UT.uPave.value = sm(ramp(yearF(t), 1925, 1960)); UT.uYear.value = yearF(t); UT.uGreen.value = sm(ramp(yearF(t), 1912, 1932));
     updateLM(t); updDust(t); updateLife(t);
     let { pos, tgt } = cam(t);
     if (intro) { const k = sm(ramp(time, 5.5, 9)); pos = introPose.pos.clone().lerp(pos, k); tgt = introPose.tgt.clone().lerp(tgt, k); }
