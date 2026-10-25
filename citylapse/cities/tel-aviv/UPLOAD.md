@@ -3,7 +3,7 @@
 **Titre :**
 EVOLUTION OF TEL AVIV | 3D CITY TIMELAPSE (1880–NOW)
 
-**Miniature :** `thumbnail_a_final.jpg` (recommandée) ou `thumbnail_b_final.jpg`.
+**Miniature :** `thumbnail_split.jpg` (avant/après 1927 → aujourd'hui, recommandée), sinon `thumbnail_towers.jpg` ou `thumbnail_wide.jpg`.
 
 **Catégorie :** Éducation
 
