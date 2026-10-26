@@ -992,10 +992,21 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
 _MODERATION = ("safety", "moderation", "policy", "content_policy", "rejected", "not allowed", "violat")
 
 
+def _with_extra(full, refs, extra):
+    """Ajoute des images de référence (lieu, plan précédent) après celles du style et des persos."""
+    lines = []
+    for path, label in extra or []:
+        if path and os.path.isfile(path):
+            refs = refs + [path]
+            lines.append(f"Reference image {len(refs)} = {label}")
+    return ("\n".join(lines) + "\n" + full if lines else full), refs
+
+
 def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=1080, board_layout=False,
-                         cast=None):
+                         cast=None, extra=None):
     full, refs = build_image_prompt(ch, prompt, scene_chars, vertical=height > width, board_layout=board_layout,
                                     cast=cast)
+    full, refs = _with_extra(full, refs, extra)
     try:
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     except ai.AIError as e:
@@ -1007,6 +1018,7 @@ def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=
                        model=ai.fast_model())
         full, refs = build_image_prompt(ch, safe, scene_chars, vertical=height > width, board_layout=board_layout,
                                         cast=cast)
+        full, refs = _with_extra(full, refs, extra)
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     ai.fit_cover(blob, width, height, dest)
     return dest
@@ -1643,6 +1655,14 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
                      "other writing.")
     if uses_board(pr):
         text_rule += " Keep the bottom-left corner calm (a presenter is overlaid there)."
+    places, place_rule, place_out = pr.get("locations") or [], "", ""
+    if places:  # images qui se suivent : chaque scène se passe dans un lieu fixe du script
+        place_rule = ("\n- PLACES of this story (fixed layouts, reused every time):\n"
+                      + "\n".join(f"  - {p['name']}: {p.get('layout', '')}" for p in places)
+                      + "\n- \"place\" = the exact name of the PLACE where the scene happens (\"\" if none fits). Keep "
+                        "its layout: when the camera looks toward the door, the window or a wall, describe what that "
+                        "layout puts there. Consecutive scenes in the same place read as a continuous comic strip.")
+        place_out = ', "place": "exact place name or empty"'
     prompt = f"""You are the art director of a faceless 2D YouTube channel. For each scene below, write the image prompt of the illustration shown while this narration is spoken.
 
 VIDEO: {pr['title']}
@@ -1658,17 +1678,18 @@ RULES:
 - Vary the camera across consecutive scenes (wide establishing, medium, close-up on hands/face/object, over-the-shoulder, top-down, low angle). Never the same framing twice in a row.
 - Stay historically / technically accurate (uniforms, tools, places, era).
 - For violence, death or danger: imply it (shadows, aftermath, expressions), never gore. No real celebrities.
-- {text_rule} 25-60 words per prompt, English.
+- {text_rule} 25-60 words per prompt, English.{place_rule}
 
 SCENES:
 {chr(10).join(lines)}
 
-Return JSON: {{"prompts": [{{"i": <scene number>, "prompt": "...", "chars": ["exact cast names visible, or empty"]}}]}}"""
+Return JSON: {{"prompts": [{{"i": <scene number>, "prompt": "...", "chars": ["exact cast names visible, or empty"]{place_out}}}]}}"""
     data = ai.chat_json(prompt, model=ai.fast_model(), timeout=240)
     out = {}
     for p in data.get("prompts") or []:
         try:
-            out[int(p.get("i"))] = (str(p.get("prompt") or "").strip(), [str(c) for c in (p.get("chars") or [])])
+            out[int(p.get("i"))] = (str(p.get("prompt") or "").strip(), [str(c) for c in (p.get("chars") or [])],
+                                    str(p.get("place") or "").strip())
         except (TypeError, ValueError):
             continue
     return out
@@ -1696,9 +1717,11 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
     def save(x):
         for s in x["scenes"]:
             if not (s.get("prompt") or "").strip():
-                prm, chars = results.get(s["i"], ("", []))
+                prm, chars, place = results.get(s["i"], ("", [], ""))
                 s["prompt"] = prm or f"Illustration of: {s['text'][:200]}"
                 s["chars"] = chars
+                if place:
+                    s["place"] = place
             if x.get("era_lock") and "ERA LOCK" not in s["prompt"]:
                 # vidéo historique : décor d'époque imposé à chaque image (sinon cuisines modernes, canapés, frigos…)
                 s["prompt"] += " ERA LOCK: " + x["era_lock"]
@@ -1911,17 +1934,149 @@ def check_image(path, sc, no_text=True, faceless=False):
     return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
 
 
-def _gen_scene(ch, pr, sc):
-    """Image d'une scène, contrôlée en vision (chaîne qui l'active) : refaite une fois si elle a une erreur."""
+# ── Images qui se suivent (format survie) ───────────────────────────────────
+
+def continuity_enabled(pr):
+    """Lieux fixes avec une image de référence, état du moment et plan précédent en référence de chaque image."""
+    return (pr or {}).get("format") == "pov_survive" or bool(((pr or {}).get("montage") or {}).get("continuity"))
+
+
+def _place_of(pr, name):
+    n = _norm_name(name)
+    return next((p for p in pr.get("locations") or [] if _norm_name(p["name"]) == n), None) if n else None
+
+
+def _continuity_refs(pr, sc, prev):
+    """(images de référence en plus, texte ajouté au prompt) : lieu fixe, état du moment, plan précédent."""
+    if not continuity_enabled(pr):
+        return [], ""
+    d = store.project_dir(pr["id"])
+    extra, tail = [], ""
+    place = _place_of(pr, sc.get("place"))
+    if place:
+        if place.get("image"):
+            extra.append((os.path.join(d, place["image"]),
+                          f"the LOCATION reference of {place['name']}: keep exactly the same layout, walls, windows, "
+                          "doors, furniture positions, colours and light; only the camera angle may change as the SCENE "
+                          "says; where it differs from the CURRENT STATE, the CURRENT STATE wins."))
+        tail += f" LOCATION ({place['name']}): {place.get('layout', '')}"
+    if prev:
+        extra.append((prev, "the PREVIOUS SHOT of this continuous story, a few seconds earlier in the same place: "
+                            "continue directly from it; same outfits, same carried items, same injuries, and every "
+                            "change already made to the place stays (moved, broken or taken objects)."))
+    state = (pr.get("section_states") or {}).get(sc.get("heading") or "")
+    if state:
+        tail += f" CURRENT STATE (mandatory, overrides the references): {state}"
+    return extra, tail
+
+
+def _continuity_chains(pr, targets):
+    """Chaînes de plans à faire dans l'ordre : suites de scènes de la même partie dans le même lieu. Chaque élément
+    = (scène, image du plan précédent déjà faite ou None) ; les chaînes tournent en parallèle."""
+    want = {s["i"] for s in targets}
+    covered = {s["i"] for s in pr["scenes"] if (s.get("fx") or {}).get("type") in _full_panel()}
+    d = store.project_dir(pr["id"])
+    chains, cur, last = [], [], None
+    for s in pr["scenes"]:
+        if s["i"] in covered:
+            continue
+        key = (s.get("section"), _norm_name(s.get("place")))
+        if not key[1] or key != (last or {}).get("key"):
+            if cur:
+                chains.append(cur)
+            cur, last = [], None
+        if s["i"] in want:
+            prev = None if cur or not last or not last.get("image") else os.path.join(d, last["image"])
+            cur.append((s, prev))
+        elif cur:  # une image gardée coupe la chaîne : la suite repart d'elle
+            chains.append(cur)
+            cur = []
+        last = {"key": key if key[1] else None, "image": s.get("image")}
+    if cur:
+        chains.append(cur)
+    return chains
+
+
+def _gen_chain(ch, pr, chain):
+    """Images d'une chaîne, dans l'ordre (chacune part du plan précédent) : [(scène, image, erreur)]."""
+    d = store.project_dir(pr["id"])
+    out, prev = [], None
+    for s, before in chain:
+        try:
+            rel = _gen_scene(ch, pr, s, prev=prev or before)
+            out.append((s, rel, None))
+            prev = os.path.join(d, rel)
+        except store.JobCancelled:
+            raise
+        except Exception as e:  # noqa: BLE001
+            out.append((s, None, e))
+            prev = None
+            if isinstance(e, store.JobCancelled) or getattr(e, "status", None) == 4290:
+                break
+    return out
+
+
+def ensure_continuity(job, pid):
+    """Lieux fixes du script (image de référence vide pour chacun) et état visible au début de chaque partie."""
+    pr = store.get_project(pid)
+    if not continuity_enabled(pr):
+        return
+    ch = project_channel(pr)
+    if not pr.get("locations"):
+        job.update(None, "Lieux de l'histoire et état jour par jour…")
+        heads = [h for h, _ in S.parse(pr.get("script") or "")]
+        prompt = f"""Read this second-person survival story. Return the visual continuity bible an illustrator needs.
+
+1. "locations": the 8-16 distinct places where scenes happen (use the exact short names of the story, e.g. "Room 112",
+   "the cafeteria"), each with a fixed "layout" of 40-70 words: what is on the left, the right, the back wall, the
+   door, the windows and what they show outside, furniture, light. Indoor and outdoor places.
+2. "states": one entry per section heading listed below, in the same order: the visible state during that section in
+   30-60 words: what the hero wears and carries, injuries or bandages, companions present, the light (power on/off),
+   and what has changed in each place by then (barricades, moved, broken or taken objects, the view outside).
+
+SECTION HEADINGS (in order): {json.dumps(heads)}
+
+STORY:
+{S.narration(pr.get('script') or '')}
+
+Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["state for heading 1", "..."]}}"""
+        data = ai.chat_json(prompt, model=ai.fast_model(), timeout=400)
+        locs = [{"name": str(p.get("name") or "").strip(), "layout": str(p.get("layout") or "").strip()}
+                for p in data.get("locations") or [] if str(p.get("name") or "").strip()][:16]
+        states = {h: str(t).strip() for h, t in zip(heads, data.get("states") or []) if str(t).strip()}
+        store.update_project(pid, lambda x: x.update(locations=locs, section_states=states))
+    pr = store.get_project(pid)
+    d = store.project_dir(pid)
+    w, h = dims(pr)
+    todo = [k for k, p in enumerate(pr["locations"]) if not p.get("image")]
+
+    def master(k):
+        p = pr["locations"][k]
+        rel = f"images/location_{k:02d}.jpg"
+        full, refs = build_image_prompt(ch, f"ESTABLISHING SHOT of {p['name']}, wide angle, NO people at all, the "
+                                            f"empty place. {p['layout']}", scene_chars=[], cast=[])
+        ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, os.path.join(d, rel))
+        return k, rel
+    if todo:
+        job.update(None, f"Images de référence des lieux ({len(todo)})…")
+        with ThreadPoolExecutor(max_workers=min(_image_workers(), len(todo))) as ex:
+            for k, rel in ex.map(master, todo):
+                store.update_project(pid, lambda x, k=k, rel=rel: x["locations"][k].__setitem__("image", rel))
+
+
+def _gen_scene(ch, pr, sc, prev=None):
+    """Image d'une scène, contrôlée en vision (chaîne qui l'active) : refaite une fois si elle a une erreur.
+    prev = image (chemin absolu) du plan précédent quand les images se suivent."""
     w, h = dims(pr)
     d = store.project_dir(pr["id"])
     rel = f"images/scene_{sc['i']:04d}_{int(time.time() * 1000) % 10**9}.jpg"
     prompt = sc["prompt"]
+    extra, tail = _continuity_refs(pr, sc, prev)
     qa = bool((pr.get("montage") or {}).get("image_qa"))
     no_text = (ch.get("style") or {}).get("no_text", True) is not False
     for attempt in range(2 if qa else 1):
-        generate_scene_image(ch, prompt, os.path.join(d, rel), scene_chars=sc.get("chars"), width=w, height=h,
-                             board_layout=uses_board(pr), cast=cast_list(ch, pr))
+        generate_scene_image(ch, prompt + tail, os.path.join(d, rel), scene_chars=sc.get("chars"), width=w,
+                             height=h, board_layout=uses_board(pr), cast=cast_list(ch, pr), extra=extra)
         if not qa or attempt == 1:
             break
         try:
@@ -1943,6 +2098,7 @@ def job_images(job, pid, only=None, first_only=False):
     pr = store.get_project(pid)
     if pr.get("cast") is None and any(not (s.get("prompt") or "").strip() for s in pr["scenes"]):
         job_cast(job, pid, p0=0.01, p1=0.06)  # persos consistants AVANT d'écrire les prompts
+    ensure_continuity(job, pid)  # lieux fixes avant les prompts (chaque scène reçoit son lieu)
     ensure_prompts(job, pid, 0.06, 0.12)
     pr = store.get_project(pid)
     ch = project_channel(pr)
@@ -1974,24 +2130,24 @@ def job_images(job, pid, only=None, first_only=False):
     job.update(0.12, f"Génération de {total} image(s)…")
     ex = ThreadPoolExecutor(max_workers=_image_workers())
     try:
-        futs = {ex.submit(_gen_scene, ch, pr, s): s for s in targets}
+        if continuity_enabled(pr):  # images qui se suivent : une chaîne par suite de plans dans le même lieu
+            futs = {ex.submit(_gen_chain, ch, pr, c): c for c in _continuity_chains(pr, targets)}
+        else:
+            futs = {ex.submit(_gen_chain, ch, pr, [(s, None)]): s for s in targets}
         for fut in as_completed(futs):
-            s = futs[fut]
-            try:
-                rel = fut.result()
-                mark(s["i"], image=rel, status="done", error=None)
-                done += 1
-            except ai.AIError as e:
-                if getattr(e, "status", None) == 4290:  # quota épuisé : on s'arrête net, message clair
-                    for f in futs:
-                        f.cancel()
-                    quota = e
-                    break
-                failed += 1
-                mark(s["i"], status="error", error=str(e)[:300])
-            except Exception as e:  # noqa: BLE001
-                failed += 1
-                mark(s["i"], status="error", error=str(e)[:300])
+            for s, rel, e in fut.result():
+                if rel:
+                    mark(s["i"], image=rel, status="done", error=None)
+                    done += 1
+                elif isinstance(e, ai.AIError) and getattr(e, "status", None) == 4290:
+                    quota = e  # quota épuisé : on s'arrête net, message clair
+                else:
+                    failed += 1
+                    mark(s["i"], status="error", error=str(e)[:300])
+            if quota:
+                for f in futs:
+                    f.cancel()
+                break
             job.update(0.12 + 0.88 * (done + failed) / total,
                        f"Images {done}/{total}" + (f" · {failed} en échec" if failed else ""))
     except store.JobCancelled:

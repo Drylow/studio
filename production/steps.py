@@ -71,7 +71,7 @@ elif step == "qa":
             return s["i"], True, [f"check failed: {e}"]
         return s["i"], ok, pb
     bad = []
-    with ThreadPoolExecutor(8) as ex:
+    with ThreadPoolExecutor(24) as ex:  # 8 → 24 : contrôle 3x plus rapide (l'utilisateur, 26 oct. : « plus vite »)
         for i, ok, pb in ex.map(check, todo):
             if not ok:
                 bad.append(i)
