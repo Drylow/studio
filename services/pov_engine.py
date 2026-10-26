@@ -219,7 +219,10 @@ TEMPLATES = {
                          "shots for details (a key, a note, a radio). Infected people are adults drawn in the same "
                          "character design with sickly grey-green heads, dark eye rings and torn clothes, every one "
                          "with exactly two arms and two hands; danger shown through doors, shadows and windows. No "
-                         "blood, no gore, no wounds, no red marks.",
+                         "blood, no gore, no wounds, no red marks. The places are DESERTED: no staff, nurses, doctors, "
+                         "patients or passers-by; only the cast members of the scene and the infected the narration "
+                         "mentions (a nurses' station, a desk or a counter stays empty). An infected person is only "
+                         "inside a room when the narration says so.",
             "characters": [("You", "the protagonist ('you'): an ordinary ADULT man in his late twenties, a simple "
                                    "cartoon figure with a large perfectly round plain white head, small black dot eyes, "
                                    "short messy brown hair, adult proportions; outfit follows the story (a hospital gown "
@@ -1722,6 +1725,9 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
                 s["chars"] = chars
                 if place:
                     s["place"] = place
+                if continuity_enabled(x) and re.search(r"\bYou\b", s["prompt"]) and not any(
+                        _norm_name(c) == "you" for c in chars):
+                    s["chars"] = chars + ["You"]  # sans sa référence, le héros devenait une femme aux cheveux noirs
             if x.get("era_lock") and "ERA LOCK" not in s["prompt"]:
                 # vidéo historique : décor d'époque imposé à chaque image (sinon cuisines modernes, canapés, frigos…)
                 s["prompt"] += " ERA LOCK: " + x["era_lock"]
@@ -1967,6 +1973,8 @@ def _continuity_refs(pr, sc, prev):
     state = (pr.get("section_states") or {}).get(sc.get("heading") or "")
     if state:
         tail += f" CURRENT STATE (mandatory, overrides the references): {state}"
+    tail += (" NOBODY ELSE: no staff, nurses, doctors or passers-by; only the people of CHARACTERS IN THIS IMAGE and "
+             "the infected the SCENE mentions; counters and desks stay empty.")
     return extra, tail
 
 
