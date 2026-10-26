@@ -12,7 +12,7 @@ A stranger bows to your wife while she buys leeks. At her father's funeral, men 
 She kept her name off the lease. Now she tells you why. You go to work the next morning with the bento she packed.
 This is Osaka. This is the family she leads. And this is the question waiting at your kitchen table.
 🖤 Like if you stayed.
-🔔 Follow for more POV stories.
+🔔 Follow for more POV stories: https://www.youtube.com/@OddlySpecificLives?sub_confirmation=1
 
 #yakuza #yakuzaboss #pov #povstory #osaka #japan #kuromonichiba #namba #sumiyoshitaisha #marriage #romanticstory #darkromance #storytelling #povnarrative #yakuzawife
 
