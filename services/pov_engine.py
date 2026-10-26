@@ -231,6 +231,31 @@ TEMPLATES = {
                                    "cartoon figure with a large perfectly round plain white head, small black dot eyes, "
                                    "short messy brown hair, adult proportions; outfit follows the story (a hospital gown "
                                    "at the start); same look in every image")],
+            # look validé par l'utilisateur (essai du 25 oct.) ; refusé : les décors ensoleillés et douillets des
+            # vidéos mariage (« ça a l'air trop joyeux »)
+            "style_ref": "presets/oddly_specific_en/survival/style.jpg",
+            "style_prompt": "2D digital cartoon illustration with clean bold black outlines and soft cel shading. "
+                            "Simple characters: a large perfectly round plain WHITE head (no nose, no ears), small "
+                            "solid black dot eyes, tiny simple eyebrows and a small simple mouth, slim simple bodies, "
+                            "white mitten hands; the infected have the same design with sickly grey-green skin, dark "
+                            "sunken eye rings and torn dirty clothes. Detailed realistic backgrounds with a DARK, "
+                            "TENSE survival-horror mood: night or dim light, deep blue and teal shadows, flickering "
+                            "fluorescent tubes, red emergency lights, flashlight beams, rain on windows, a burning "
+                            "city skyline with smoke and helicopters at night, debris, overturned furniture, papers on "
+                            "the floor. Strong contrast, cinematic composition, characters medium-large in the frame, "
+                            "expressions of fear, panic, exhaustion or grim focus. Never cozy, never sunny or golden, "
+                            "never cheerful (only the first normal morning before the outbreak is in daylight, and "
+                            "even then cold hospital light).",
+            "cast_refs": [(r"^you$", "presets/oddly_specific_en/survival/you.png",
+                           "An ordinary slim adult man with a large perfectly round plain white head, small black dot "
+                           "eyes, tiny eyebrows, a simple mouth, short messy brown hair. He wears a pale blue hospital "
+                           "gown over grey sweatpants and white hospital socks, a plastic patient wristband on his left "
+                           "wrist, white mitten hands."),
+                          (r"infect|zombie|undead", "presets/oddly_specific_en/survival/infected.png",
+                           "An infected person in the channel's simple design: a large round head with a sickly pale "
+                           "grey-green tint instead of white, dark rings around the small black dot eyes, a slack open "
+                           "mouth, messy dark hair, torn dirty clothes, slumped shoulders, arms hanging forward. Creepy "
+                           "but cartoonish: no blood, no gore, no wounds.")],
             "thumb_style": "Split DAY 1 / DAY 30 before-and-after thumbnail in the channel's simple cartoon style: same "
                            "place and same camera angle in both halves, calm and bright on DAY 1, wrecked and at night "
                            "on DAY 30 with clean grey-green zombies (adults, two arms each, no blood); one single "
@@ -757,6 +782,12 @@ def project_channel(pr):
     st = ch.setdefault("style", {})
     if v.get("direction"):
         st["direction"] = v["direction"]
+    if v.get("style_prompt"):
+        st["prompt"] = v["style_prompt"]
+    if v.get("style_ref"):  # chemin du dépôt (absolu : channel_ref_path le garde tel quel)
+        st["ref"] = os.path.join(_REPO, v["style_ref"])
+    if v.get("cast_refs"):
+        ch["cast_refs"] = v["cast_refs"]
     if v.get("characters") is not None:
         old = {_norm_name(c["name"]): c for c in st.get("characters") or []}
         st["characters"] = [{"id": (old.get(_norm_name(n)) or {}).get("id") or store.new_id("chr"), "name": n,
@@ -809,6 +840,9 @@ def apply_channel_update(ch, data):
     except (TypeError, ValueError):
         ch["wpm"] = 150
     return ch
+
+
+_REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # racine du dépôt (presets/)
 
 
 def channel_ref_path(ch, rel):
@@ -1865,6 +1899,17 @@ def job_cast(job, pid, redetect=False, only=None, p0=0.0, p1=1.0):
         store.update_project(pid, lambda x: x.__setitem__("cast", found))
         pr = store.get_project(pid)
     todo = [c for c in pr.get("cast") or [] if (only and c["id"] in only) or (not only and not c.get("image"))]
+    fixed = []
+    for c in todo:  # persos au look validé une fois pour toutes (format survie : héros et infecté de l'essai)
+        for pat, rel, desc in ch.get("cast_refs") or []:
+            path = os.path.join(_REPO, rel)
+            if re.search(pat, _norm_name(c["name"])) and os.path.isfile(path):
+                set_cast_image(pid, c["id"], _save_cast_image(pid, c["id"], open(path, "rb").read()))
+                store.update_project(pid, lambda x, cid=c["id"], desc=desc: next(
+                    k for k in x["cast"] if k["id"] == cid).__setitem__("description", desc))
+                fixed.append(c["id"])
+                break
+    todo = [c for c in todo if c["id"] not in fixed]
     if not todo:
         job.update(p1, f"{len(pr.get('cast') or [])} personnage(s) prêts.")
         return
