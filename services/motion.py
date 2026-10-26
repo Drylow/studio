@@ -1121,7 +1121,9 @@ class Chapter(Fx):
         p.ellipse((cx - rr + 6 * k, cy - rr + 6 * k, cx + rr + 6 * k, cy + rr + 6 * k), fill=INK)
         p.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=YELLOW, outline=INK, width=6 * k)
         if self.num and a > 0.5:
-            p.text((cx, cy + 2 * k), "#" + self.num if len(self.num) < 2 else self.num, 900,
+            # « #3 » pour HAND #3 ; un jour reste « 1 », « 19 » (avant : #1, #2 puis 19, 30 sans dièse)
+            hashed = len(self.num) < 2 and self.word not in ("DAY", "WEEK", "HOUR", "MONTH")
+            p.text((cx, cy + 2 * k), "#" + self.num if hashed else self.num, 900,
                    fit_size("#" + self.num, 900, 70 * k * a, rr * 1.45), anchor="mm")
         im = p.image()
         return transform(im, dx=-(1 - ease_out(seg(t, 0, 0.3))) * 60 * k, alpha=seg(t, 0, 0.08))
