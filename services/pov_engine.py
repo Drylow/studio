@@ -2472,6 +2472,25 @@ def _item_times(scene, fx, words):
     return out
 
 
+def apply_chapter_cards(pid):
+    """Cartes de partie (« Day 6: The pharmacy » → DAY 6 / THE PHARMACY) quand le réalisateur du montage ne tourne
+    pas : sans ça, la 1re vidéo zombie est sortie sans ses cartes DAY N."""
+    pr = store.get_project(pid)
+    if not (pr.get("montage") or {}).get("chapter_cards"):
+        return 0
+    words = load_words(pid)
+    n = []
+
+    def f(x):
+        for s in x.get("scenes") or []:
+            card = chapter_card(s)
+            if card and not s.get("fx"):
+                s["fx"] = fx_timing(s, card, words)
+                n.append(s["i"])
+    store.update_project(pid, f)
+    return len(n)
+
+
 def fx_timing(scene, fx, words):
     """fx + « t » (instant d'apparition) et « item_t » (lignes) — une fiche démarre avec sa scène."""
     if not fx:
@@ -3232,6 +3251,8 @@ def job_autopilot(job, pid, render_video=True):
     elif need_voice:
         job_voice(_Sub(job, 0.25, 0.35, "2/4 Voix"), pid)
     pr = store.get_project(pid)
+    if not montage_enabled(pr):
+        apply_chapter_cards(pid)  # cartes DAY N / HAND #N même sans réalisateur du montage
     if montage_enabled(pr) and not pr.get("montage_plan"):
         try:  # poses du prof + animations, AVANT les images (une fiche remplace l'image de sa scène)
             job_montage(_Sub(job, 0.35, 0.4, "3/4 Réalisation"), pid)
