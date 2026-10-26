@@ -2812,6 +2812,11 @@ def render_inputs(pid, workdir, until=None):
             layout, sounds = acted
         sounds += [(float(s["start"]) + lead + 0.05, "whoosh", 0.3) for s in scenes_src[1:]
                    if s.get("first") and s.get("heading")]
+    elif any((s.get("fx") or {}).get("type") == "chapter" for s in scenes_src):
+        # sans réalisateur : seules les cartes de partie (DAY N) sont incrustées
+        fx = [{"scene": k, "t": s["fx"].get("t", s["start"]), "items_t": [],
+               "spec": {a: b for a, b in s["fx"].items() if a not in ("t", "item_t")}}
+              for k, s in enumerate(scenes_src) if (s.get("fx") or {}).get("type") == "chapter"]
     return {"scenes": scenes, "voice": voice, "words": words, "overlays": overlays, "layout": layout, "fx": fx,
             "sounds": sounds, "w": w, "h": h, "m": m, "music": pick_music(pr, m.get("music"))}
 
