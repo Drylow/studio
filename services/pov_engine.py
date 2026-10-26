@@ -207,22 +207,26 @@ TEMPLATES = {
             "pov_survive": {
             "niche": "Second-person POV survival stories: an ordinary guy has to survive a zombie apocalypse day by day "
                      "in one oddly specific place, moves from room to room and escapes at the end",
+            "tone": "Tense, immersive second-person survival thriller, present tense: fear, adrenaline and close calls, "
+                    "short punchy sentences in danger, the hero reacts to everything he sees (questions, panic, "
+                    "disbelief). Sayable, cinematic, never flat or understated about danger; no gore.",
             "rules": "Follow the days chronologically, from the first morning to the escape and the quiet scene in "
                      "safety. Concrete, realistic survival logic (water, food, light, noise, doors, keys). Strictly "
                      "non-graphic: no blood, no gore, no bites shown.",
-            "bible_note": "derived from the channel's reference video, a POV love story: follow its narration "
-                          "register, hook mechanics, rhythm, dialogue density and ending shape; its romance beats "
-                          "do not apply",
+            "bible_note": "derived from the channel's reference video, a calm POV love story: use it ONLY for sentence "
+                          "rhythm and dialogue density; its calm, dry tone and romance beats do NOT apply to this "
+                          "survival thriller (follow the format's TONE, HOOK and REACTIONS rules instead)",
             "direction": "Show the story like a continuous comic strip: You (and at most one companion) moving through "
                          "the real places of the setting, the same rooms reused with the same layout, objects moved or "
                          "broken staying that way. Wide shots to show each new place, medium shots for actions, close "
                          "shots for details (a key, a note, a radio). Infected people are adults drawn in the same "
                          "character design with sickly grey-green heads, dark eye rings and torn clothes, every one "
                          "with exactly two arms and two hands; danger shown through doors, shadows and windows. No "
-                         "blood, no gore, no wounds, no red marks. The places are DESERTED: no staff, nurses, doctors, "
-                         "patients or passers-by; only the cast members of the scene and the infected the narration "
-                         "mentions (a nurses' station, a desk or a counter stays empty). An infected person is only "
-                         "inside a room when the narration says so.",
+                         "blood, no gore, no wounds, no red marks. Show exactly what the narration has revealed so far: "
+                         "no infected before the narration shows one. After the outbreak the places are deserted (no staff "
+                         "or passers-by unless the narration mentions them). Never show cut-off body parts (feet under a "
+                         "door, a hand with no body): an infected is a whole figure or a clear silhouette. Expressions "
+                         "follow the moment: fear, panic and tension in danger, never a calm smile after a scare.",
             "characters": [("You", "the protagonist ('you'): an ordinary ADULT man in his late twenties, a simple "
                                    "cartoon figure with a large perfectly round plain white head, small black dot eyes, "
                                    "short messy brown hair, adult proportions; outfit follows the story (a hospital gown "
@@ -1973,8 +1977,9 @@ def _continuity_refs(pr, sc, prev):
     state = (pr.get("section_states") or {}).get(sc.get("heading") or "")
     if state:
         tail += f" CURRENT STATE (mandatory, overrides the references): {state}"
-    tail += (" NOBODY ELSE: no staff, nurses, doctors or passers-by; only the people of CHARACTERS IN THIS IMAGE and "
-             "the infected the SCENE mentions; counters and desks stay empty.")
+    tail += (" PEOPLE: only the people of CHARACTERS IN THIS IMAGE and those the SCENE or CURRENT STATE mentions (staff "
+             "and patients only before the outbreak); no infected unless the SCENE mentions one; never a cut-off body "
+             "part (feet under a door, a lone hand); faces show the fear or tension of the moment.")
     return extra, tail
 
 
@@ -2040,6 +2045,7 @@ def ensure_continuity(job, pid):
    door, the windows and what they show outside, furniture, light. Indoor and outdoor places.
 2. "states": one entry per section heading listed below, in the same order: the visible state during that section in
    30-60 words: what the hero wears and carries, injuries or bandages, companions present, the light (power on/off),
+   whether staff and patients are still around or the place is deserted, his mood (scared, exhausted, determined),
    and what has changed in each place by then (barricades, moved, broken or taken objects, the view outside).
 
 SECTION HEADINGS (in order): {json.dumps(heads)}
