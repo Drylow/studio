@@ -13,7 +13,7 @@
   même lieu et même angle des deux côtés. Jour 1 : calme et lumineux. Jour 30 : lieu ravagé, zombies, et le héros
   changé (barbe naissante, bandage, sac à dos, magazines scotchés aux avant-bras). Pas de sang ni de gore.
   Maquettes : [miniatures_day1_day30.jpg](miniatures_day1_day30.jpg) (lit, couloir, fenêtre, cafétéria).
-- **Miniature choisie pour l'épisode 1 :** [miniature_episode1.jpg](miniature_episode1.jpg), la B d'origine, gardée telle quelle à la demande de l'utilisateur (26 oct.), après plusieurs retouches qu'il n'a pas aimées.
+- **Miniature choisie pour l'épisode 1 :** [miniature_episode1.jpg](miniature_episode1.jpg), la B d'origine, gardée telle quelle à la demande de l'utilisateur (26 oct.), sauf les voitures du parking du jour 30, enlevées à sa demande.
   Il est vu de 3/4 dos à la fenêtre : jus au soleil au jour 1, il regarde entre les planches au jour 30, la ville
   brûle et des zombies remplissent le parking. Pour les prochaines : retoucher seulement ce qu'il demande, rien d'autre.
 - **Détails à vérifier au zoom avant de montrer quoi que ce soit** (l'utilisateur, 25-26 oct.) : une seule paille ; zombies adultes, deux bras attachés au corps, aucune main qui flotte, aucune tache rouge, aucune croix ni symbole ; une seule ville et un seul horizon par la fenêtre ; au jour 30, le même lieu (même parking, même taille) mais le héros changé (expression, cheveux, barbe), pas un copier-coller du jour 1.
