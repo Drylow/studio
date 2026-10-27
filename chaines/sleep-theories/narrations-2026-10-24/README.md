@@ -6,16 +6,16 @@ Dossier de livraison : `C:/Users/ytbyt/Desktop/Voix sleep - 24 octobre 2026`. Le
 
 | Episode | Duree | Fichier |
 |---|---:|---|
-| DV-08-bene-gesserit | 4:10:25 | 01-DV-08-bene-gesserit.mp3 |
-| DV-09-jedi-order | 4:23:30 | 02-DV-09-jedi-order.mp3 |
-| DV-10-fremen | 3:40:47 | 03-DV-10-fremen.mp3 |
-| DV-11-old-republic | 4:08:11 | 04-DV-11-old-republic.mp3 |
-| DV-12-great-houses | 4:10:51 | 05-DV-12-great-houses.mp3 |
-| QP-07-silo-builders | 3:56:26 | 06-QP-07-silo-builders.mp3 |
-| QP-08-from-rules | 3:48:15 | 07-QP-08-from-rules.mp3 |
-| QP-09-lumon-building | 4:25:39 | 08-QP-09-lumon-building.mp3 |
-| QP-10-silo-outside | 4:04:36 | 09-QP-10-silo-outside.mp3 |
-| QP-11-from-cycles | 4:03:20 | 10-QP-11-from-cycles.mp3 |
+| DV-08-bene-gesserit | 4:10:25 | DV-08-bene-gesserit/01-DV-08-bene-gesserit.mp3 |
+| DV-09-jedi-order | 4:23:30 | DV-09-jedi-order/02-DV-09-jedi-order.mp3 |
+| DV-10-fremen | 3:40:47 | DV-10-fremen/03-DV-10-fremen.mp3 |
+| DV-11-old-republic | 4:08:11 | DV-11-old-republic/04-DV-11-old-republic.mp3 |
+| DV-12-great-houses | 4:10:51 | DV-12-great-houses/05-DV-12-great-houses.mp3 |
+| QP-07-silo-builders | 3:56:26 | QP-07-silo-builders/06-QP-07-silo-builders.mp3 |
+| QP-08-from-rules | 3:48:15 | QP-08-from-rules/07-QP-08-from-rules.mp3 |
+| QP-09-lumon-building | 4:25:39 | QP-09-lumon-building/08-QP-09-lumon-building.mp3 |
+| QP-10-silo-outside | 4:04:36 | QP-10-silo-outside/09-QP-10-silo-outside.mp3 |
+| QP-11-from-cycles | 4:03:20 | QP-11-from-cycles/10-QP-11-from-cycles.mp3 |
 
 ## Controles et limites
 
@@ -33,3 +33,7 @@ Ces controles portent sur les fichiers et des passages cibles. Ils ne constituen
 Aucune nouvelle generation necessaire. Ne pas relancer `submit`. L executeur `production/sleep_silo_repair.py` conserve les etapes plan, submit, monitor, assemble et finalize ; la finalisation exige le rapport independant de raccord et une empreinte conforme. Les identifiants des jobs et les URL restent dans les registres prives, jamais dans Git. La cle reste dans le `.env` prive.
 
 Les dix voix seules sont livrees : aucune nouvelle video, publication ou programmation YouTube n a ete lancee. La surveillance de fin est arretee apres cette livraison.
+
+## Classement par video — 27 octobre 2026
+
+Chaque episode possede maintenant son propre sous-dossier, nomme par son identifiant, dans le dossier de livraison du Bureau. Il contient son MP3 final et `TITLE-DESCRIPTION.txt` avec le titre approuve et la description anglaise a copier. Les fichiers audio ont ete deplaces sans reencodage ni duplication ; leurs tailles et empreintes SHA-256 restent conformes au controle du 25 octobre. Les descriptions reprennent le perimetre et les avertissements de spoilers des scripts.

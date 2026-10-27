@@ -1,0 +1,46 @@
+LA BOÎTE À RÉCAP — PROCHAINS SUJETS
+Sélection du 27 octobre 2026
+Chaîne : https://www.youtube.com/@LaBoiteARecap
+
+DEMANDE ET DÉCISION
+L'utilisateur demande de retenir les idées notées 7/10 dans sa capture.
+Trois sujets retenus : Galactus, Freezer, Sukuna.
+Bouffon Vert et Garou, notés 6/10 sur la capture, restent en réserve.
+
+ORDRE RECOMMANDÉ ET TITRES DE TRAVAIL
+1. TOUTE l’Histoire de Galactus — Le Dévoreur de Mondes
+2. TOUTE l’Histoire de Freezer — De Namek à Black Freezer
+3. TOUTE l’Histoire de Sukuna — Le Roi des Fléaux
+
+POURQUOI CET ORDRE
+Galactus prolonge le terrain Marvel de Thanos, vidéo la plus vue parmi les neuf vidéos publiques relevées : 24 266 vues.
+Freezer propose ensuite un parcours de grand antagoniste dans Dragon Ball.
+Sukuna poursuit avec une autre franchise manga, autour de la possession et du contrôle.
+One Punch Man (12 673 vues) et L'Attaque des Titans (7 700) montrent une audience pour certains récaps d'anime sur la chaîne ; cela ne garantit pas les résultats des deux nouveaux sujets.
+Doom compte 4 928 vues. Aucun des trois sujets choisis ne figure parmi les neuf vidéos renvoyées par le relevé de chaîne.
+Les scores 7/10 viennent de la capture fournie. Les projections mensuelles de cette capture ne sont pas vérifiées et ne constituent pas des objectifs garantis.
+
+FORMAT
+Français. Narration originale : progression du personnage, décisions, conséquences et contexte nécessaire.
+Livrables attendus pour la production suivante : titre et script. Pas de production de voix ni de vidéo dans cette sélection.
+Le cadrage utilisateur enregistré le 18 octobre fixe généralement 2 heures minimum par script, sans maximum.
+La capture propose 60 minutes pour Galactus, 80 pour Freezer, 65 pour Sukuna. Une question de clarification a été envoyée le 27 octobre ; aucune réponse reçue à la sauvegarde.
+En attendant une correction utilisateur, conserver le cadrage précédent de 2 heures minimum. Les titres restent sans nombre de minutes ; la durée effective devra être mesurée après narration.
+Conserver la cadence précédemment demandée d'une vidéo par semaine comme contexte, sans programmer de date ici.
+
+ÉTAT
+Sélection et cadrages préparés ; aucun des trois scripts complets n'est encore rédigé.
+Les fiches suivent les champs de recherche FacelessOS. Elles ne remplacent pas la vérification détaillée de tous les arcs avant rédaction.
+Galactus : lecture des pages officielles bloquée par 403 ; jalons explicitement à vérifier.
+Freezer et Sukuna : premiers jalons vérifiés dans des sources officielles ouvertes, recherche complète du script encore à faire.
+Les anciennes propositions Gravity Falls, Gumball, Adventure Time et Regular Show restent conservées dans ../../relance-boite-boring-2026-10-18/. Elles ne sont pas relancées par cette sélection.
+Les skills FacelessOS locaux sont présents dans skills/facelessos/ ; l'ancienne mention « skills attendus » ne décrit plus leur disponibilité technique.
+
+SOURCES DE LA SÉLECTION
+Relevé Algrow get_channel_videos, tri popular, limite 80, neuf résultats, pas de page suivante ; consulté le 27 octobre 2026. Détail dans chaine-observee.json.
+https://www.youtube.com/watch?v=7d06Z6W6J70
+https://www.youtube.com/watch?v=B7099KgzENE
+https://www.youtube.com/watch?v=5jsmtyQ-MbY
+https://www.youtube.com/watch?v=e8jVVEXPwOs
+
+Les vues sont des compteurs publics observés, pas des statistiques privées de rétention ou de taux de clic.
