@@ -1,0 +1,14 @@
+{
+  "channel": "La Boîte à Récap",
+  "language": "fr",
+  "service": "Algrow",
+  "provider": "elevenlabs",
+  "voice_id": "IHngRooVccHyPqB4uQkG",
+  "voice_name": null,
+  "voice_source": "Identifiant fourni directement par l'utilisateur le 27 octobre 2026",
+  "speed": 1.0,
+  "speed_source": "Vitesse normale retenue pour le récap français ; durée réelle à contrôler",
+  "minimum_episode_duration_seconds": 7200,
+  "generate_srt": true,
+  "key_location": ".env : ALGROW_API_KEY ; ne pas publier cette clé"
+}
