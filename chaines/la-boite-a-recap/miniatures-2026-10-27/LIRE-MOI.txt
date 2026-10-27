@@ -10,8 +10,9 @@ Les PNG conservent les originaux de génération.
 
 GALACTUS — NON LIVRÉ
 Les essais du générateur intégré ont été refusés sans motif précis.
-Le prompt et les références sont prêts. Un essai via l'API configurée a été
-proposé à l'utilisateur ; sa confirmation est en attente.
+L'utilisateur a ensuite autorisé l'API configurée : cet essai a également
+renvoyé un refus de sécurité (HTTP 400), sans motif détaillé.
+Le prompt et les références sont conservés. Aucun appel n'est encore actif.
 Aucune miniature Galactus terminée ne figure dans ce dossier.
 
 DIRECTION ARTISTIQUE
@@ -28,7 +29,10 @@ texte non rogné. Sukuna : anomalie du nombre d'yeux corrigée ; quatre yeux
 visibles. Le cadrage poitrine laisse la bouche abdominale hors champ.
 
 MODE DE PRODUCTION
-Générateur intégré ; prompts et corrections conservés dans PROMPTS.txt.
+Freezer et Sukuna : générateur intégré.
+Galactus : générateur intégré puis CLI via l'API configurée, sans image produite.
+Prompts et corrections conservés dans PROMPTS.txt. L'essai API a repris le
+premier prompt GALACTUS avec les références Thanos puis Docteur Doom.
 Conversion technique JPG et redimensionnement 1280 × 720 sans retouche graphique.
 Aucune publication YouTube effectuée.
 
