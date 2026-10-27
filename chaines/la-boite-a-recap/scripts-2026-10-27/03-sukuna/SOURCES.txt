@@ -1,0 +1,193 @@
+SUKUNA — DOSSIER DE SOURCES
+Recherche et vérifications : 27 octobre 2026.
+
+PÉRIMÈTRE
+Le manga original Jujutsu Kaisen de Gege Akutami, tomes 1 à 30, fin comprise, avec les compléments utiles des tomes 29 et 30. Le texte contient les révélations finales. Il ne prétend pas raconter une enfance inconnue de Sukuna, une biographie complète de l'époque Heian, ni les développements d'une autre série. L'anime sert de recoupement officiel pour les événements déjà adaptés, sans lui attribuer les scènes finales du manga.
+
+MÉTHODE ET LIMITES D'ACCÈS
+Les pages officielles ci-dessous ont réellement été ouvertes. Elles fournissent des résumés éditoriaux ou des synopsis d'épisodes, pas la lecture intégrale de trente volumes. Les détails des chapitres ont été vérifiés avec des comptes rendus secondaires identifiés et recoupés. Plusieurs pages du wiki Fandom étaient bloquées à l'ouverture ; leurs résultats de recherche détaillés ont été consultés et sont explicitement distingués des pages ouvertes. Aucune prétention de contrôle de chaque planche de l'édition licenciée. Les commentaires et rapprochements du script sont une analyse originale ; ce ne sont pas des paroles attribuées à l'auteur.
+
+SOURCES OFFICIELLES OUVERTES
+P1. VIZ — présentation officielle de Jujutsu Kaisen, Gege Akutami.
+https://www.viz.com/jujutsu-kaisen
+P2. VIZ — Jujutsu Kaisen, tome 25, résumé éditorial : Yorozu, corps de Tsumiki, volonté de Megumi et retour de Gojo.
+https://www.viz.com/manga-books/manga/jujutsu-kaisen-volume-25-0/product/8233/digital
+P3. VIZ — Jujutsu Kaisen, tome 30, résumé éditorial : Itadori frappe la jonction des âmes de Sukuna et Fushiguro pour les séparer ; volume final. Page rouverte au dernier contrôle.
+https://www.viz.com/manga-books/manga/jujutsu-kaisen-volume-30/product/8827
+P4. Shueisha / Weekly Shonen Jump — page officielle de la série et présentations des volumes.
+https://www.shonenjump.com/j/rensai/_list/jujutsu/
+P5. Ki-oon — Jujutsu Kaisen, tome 14, présentation officielle française de la phase Shibuya.
+https://ki-oon.com/9791032711194-jujutsu-kaisen-edition-simple-volume-14
+P6. Site officiel de l'anime — synopsis d'épisodes réellement ouverts : 1, 2, 4, 5, 6, 12, 13, 24, 40, 41, 42, 43.
+https://jujutsukaisen.jp/episodes/01.php
+https://jujutsukaisen.jp/episodes/02.php
+https://jujutsukaisen.jp/episodes/04.php
+https://jujutsukaisen.jp/episodes/05.php
+https://jujutsukaisen.jp/episodes/06.php
+https://jujutsukaisen.jp/episodes/12.php
+https://jujutsukaisen.jp/episodes/13.php
+https://jujutsukaisen.jp/episodes/24.php
+https://jujutsukaisen.jp/episodes/40.php
+https://jujutsukaisen.jp/episodes/41.php
+https://jujutsukaisen.jp/episodes/42.php
+https://jujutsukaisen.jp/episodes/43.php
+Ce sont des appuis officiels pour le retour de Sukuna, le centre de détention, Junpei et Mahito, les progrès de Megumi et Shibuya. Ils ne valident pas à eux seuls les mécaniques exposées après Shibuya.
+
+CARTE DES SOURCES PAR ARC
+
+Sections 01–02 : arrivée dans Yuji, centre de détention, cœur arraché, résurrection et pacte.
+Appuis officiels : P1, P6 épisodes 1–6.
+Comptes rendus ouverts : DaddyJim, chapitre 8, pour l'affrontement avec Megumi ; Twinfinite pour les conditions de l'accord. La durée d'une minute, l'oubli et l'interdiction de blesser concernent le contrôle obtenu par l'activation convenue, pas toutes les prises de contrôle possibles.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-8
+https://twinfinite.net/guides/what-was-itadori-sukunas-binding-vow-in-jujutsu-kaisen-explained/
+Le compte rendu Twinfinite comporte une formulation fautive sur l'arrachement du cœur : le script l'attribue bien à Sukuna, pas à une décision autonome de Yuji.
+
+Section 03 : Junpei, Mahito, frontière de l'âme, progression de Megumi.
+Appuis officiels : P6 épisodes 12, 13 et 24.
+Comptes rendus ouverts : DaddyJim chapitres 27 et 29.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-27
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-29
+Le refus de Sukuna d'aider Yuji ne démontre pas une capacité générale à annuler la Transfiguration de Mahito. Le script décrit son refus et sa cruauté, sans inventer une guérison disponible.
+
+Sections 04–05 : Shibuya, Jogo, Mahoraga, destruction et retour de Yuji.
+Appuis officiels : P5 ; P6 épisodes 40–43.
+Comptes rendus ouverts : DaddyJim chapitres 112, 115, 116, 118 et 120.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-112
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-115
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-116
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-118
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-120
+Recoupements indexés, ouverture directe bloquée : Fandom chapitres 117 et 119.
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_117
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_119
+Points retenus : Sukuna intervient comme tiers au rituel ; sa victoire n'accorde pas la maîtrise de Mahoraga à Megumi. Son domaine n'a pas de coque fermée ordinaire. L'adaptation progresse à partir des attaques reçues. La flamme existait dans son arsenal ; elle n'a pas été copiée à Jogo. Le script n'ajoute pas un rayon chiffré inutile ni un total inventé de victimes.
+
+Section 06 : Yuta, culpabilité de Yuji, procès de Higuruma, Ange et Tsumiki.
+Comptes rendus ouverts : DaddyJim chapitres 143, 165, 166, 211 et 212.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-143
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-165
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-166
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-211
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-212
+L'acte de Yuta et le premier procès donnent deux réponses concrètes à la confusion entre corps et responsabilité. La scène de Tsumiki est racontée comme la révélation de Yorozu, sans prétendre que Tsumiki aurait consenti à sa possession.
+
+Sections 07–08 : transfert vers Megumi, Hana, Bain, Yorozu et origines connues.
+Appui officiel : P2.
+Comptes rendus ouverts : DaddyJim chapitres 212, 213, 216, 217 et 218.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-213
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-216
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-217
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-218
+Recoupements indexés, ouverture directe bloquée : Fandom chapitres 219 et 221.
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_219
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_221
+Points retenus : le risque pris par Sukuna sur l'exclusion de Yuji du pacte, la résistance de Megumi après le transfert, le Bain et la mort de Tsumiki, l'usage des Dix Ombres permis par l'incarnation dans Megumi. Conserver l'apparence de Megumi aide à tromper Hana ; l'apparence physique seule n'est pas présentée comme la source de la technique.
+
+CORRECTION IMPORTANTE — ASCENDANCE, COMPLÉMENT DU TOME 29
+Sources secondaires ouvertes et recoupées :
+Gamepressure, Edyta Jastrzebska, 24 décembre 2024, article sur la clarification du lien entre Sukuna et la famille Itadori.
+https://www.gamepressure.com/newsroom/sukunas-twin-raised-yuji-gege-akutami-cleared-up-misunderstanding/z57725
+ComicBook, article sur Sukuna et le grand-père de Yuji.
+https://comicbook.com/anime/news/jujutsu-kaisen-sukuna-yuji-grandfather/
+Ces articles reproduisent la précision du supplément : Wasuke, le grand-père, partage l'âme du jumeau, et non directement Jin, le père. Le script cite le complément du tome 29. Le supplément japonais n'a pas été consulté intégralement en direct. Les anciennes synthèses du chapitre 257 attribuant sans réserve ce lien à Jin ne font pas autorité contre cette précision. Les erreurs annexes de l'article ComicBook ne sont pas reprises. Aucun parcours de réincarnation intermédiaire, enfance ni motivation supplémentaire n'est inventé.
+
+Sections 09–10 : préparation et affrontements de domaines contre Gojo.
+Appui officiel : P4 pour le jalon éditorial.
+Comptes rendus ouverts : DaddyJim chapitres 222 et 224–231.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-222
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-224
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-225
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-226
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-227
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-228
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-229
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-230
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-231
+Points retenus : attaque de la coque depuis l'extérieur, changement des propriétés de la barrière, petite barrière liée à l'expérience du Royaume carcéral, dommages accumulés et restauration risquée de la technique. L'adaptation de Mahoraga ne rend pas automatiquement Sukuna lui-même immunisé contre toute attaque. La momie compense le doigt manquant selon l'estimation formulée par Sukuna ; ce n'est pas un calcul de puissance inventé par le narrateur.
+
+Section 11 : Mahoraga, Agito, Violet, mort de Gojo et entaille étendue au monde.
+Comptes rendus ouverts : DaddyJim chapitres 235, 236 et 255.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-235
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-236
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-255
+Correction de chronologie vérifiée sur le résumé indexé du chapitre 234 et l'article Animehunch ouvert : Mahoraga coupe le bras de Gojo AVANT la destruction d'Agito par Bleu.
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_234
+https://animehunch.com/jjk-chapter-234-spoilers-one-arm-gojo-trumps-in-3-vs-1-fight/
+Animehunch décrit des informations prépublication ; seules la séquence recoupée et l'action correspondante ont été retenues, pas ses prédictions sur le vainqueur.
+Le signe Enmaten à deux mains était la condition initiale du coup étendu au monde. Le vœu dispense de ce signe pour l'utilisation contre Gojo, puis ajoute les incantations et l'indication de la direction pour les utilisations suivantes. Le script ne confond pas ce coup et toutes les entailles habituelles de Sukuna. La scène du chapitre 236 n'est pas une victoire durable de Gojo suivie d'une résurrection inventée.
+
+Section 12 : Kashimo, corps ancien, Kamutoke et Higuruma.
+Comptes rendus ouverts : DaddyJim chapitres 237, 238 et 244–248.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-237
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-238
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-244
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-245
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-246
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-247
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-248
+La confiscation touche Kamutoke, pas le Sanctuaire. Le corps à quatre bras et deux bouches fournit des avantages simultanés mais n'efface pas arbitrairement les dégâts cérébraux. Le compte rendu du chapitre 248 parle trop tôt de la mort de Higuruma ; la survie révélée ensuite est conservée dans le script.
+
+Sections 13–14 : Yuta, Maki, équipe, éveil de Yuji, domaine et Choso.
+Comptes rendus ouverts : DaddyJim chapitres 249–256, 258 et 259.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-249
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-250
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-251
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-252
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-253
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-254
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-256
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-258
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-259
+Recoupements indexés, ouverture directe bloquée : chapitre 257 et fiches Shrine / Binding Vow.
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_257
+https://jujutsu-kaisen.fandom.com/wiki/Shrine
+https://jujutsu-kaisen.fandom.com/wiki/Binding_Vow
+Points retenus : coups à la jonction des âmes, intervention de Maki à l'effondrement du domaine, restriction céleste involontaire, soins imparfaits de Yuji, Sang et Sanctuaire, apprentissage par échanges d'âmes, limite de 99 secondes de cette ouverture du Sanctuaire, préparation du feu par les découpes et restriction hors domaine contre plusieurs adversaires. Choso protège Yuji et meurt ; Todo ne l'a pas extrait de cette attaque.
+La croyance de Sukuna selon laquelle Rika aurait consommé son doigt reste présentée comme une hypothèse du personnage, réfutée à la section 16.
+
+Sections 15–16 : Todo, Yuta dans Gojo, séparation, Nobara, défaite et lendemain.
+Comptes rendus ouverts : DaddyJim chapitres 261, 263–267 et 269–271.
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-261
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-263
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-264
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-265
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-266
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-267
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-269
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-270
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Chapter-271
+Autres comptes rendus ouverts : The Review Geek chapitres 260, 268 et 271.
+https://www.thereviewgeek.com/jujutsukaisen-chapter260review/
+https://www.thereviewgeek.com/jujutsukaisen-chapter268review/
+https://www.thereviewgeek.com/jujutsukaisen-chapter271review/
+Recoupements indexés, ouverture directe bloquée : Fandom 260, 262, 263, 264, 268 et 270.
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_260
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_262
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_263
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_264
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_268
+https://jujutsu-kaisen.fandom.com/wiki/Chapter_270
+Points retenus : vibraslap, transfert du cerveau de Yuta et absence de résurrection de Gojo, difficulté à manier le nouveau corps, enregistrement du véritable Inumaki, interruption de la technique copiée après le domaine, fragments de barrière utilisés par Todo. La fin comprend l'action de Megumi, Résonance de Nobara sur le doigt préservé, la copie obtenue à partir d'un doigt de Yuji, la séparation et le refus final de Sukuna.
+Le récit ne donne pas un nom inventé au domaine de Yuji. Les survivants comprennent Higuruma et Yuta ; Gojo et Choso ne sont pas ramenés. La rencontre finale avec Mahito autorise un autre choix possible, pas l'affirmation d'une réincarnation effectivement montrée. Certaines critiques interprètent différemment cette scène : leurs conclusions ne sont pas reprises comme faits.
+
+COMPLÉMENT DU TOME 30 — URAUME
+ComicBook, Tulisha Srivastava, 25 décembre 2024, article réellement ouvert et rouvert au contrôle final.
+https://comicbook.com/anime/news/jujutsu-kaisen-epilogue-sukuna-uraume/
+Compte rendu secondaire ouvert :
+https://daddyjim.com/jujutsu-kaisen/manga-chapter/Epilogue
+Recoupement indexé seulement :
+https://jujutsu-kaisen.fandom.com/wiki/Epilogue
+Le froid d'Uraume, la mort de ses parents, la conservation de viande et la cuisine expliquent le début du lien. L'analyse du départ commun reste limitée à leur relation. Elle n'en déduit pas que Sukuna protégerait généralement les faibles. Le script nomme le supplément du tome 30 ; il n'invente pas un chapitre officiel 272 à partir du classement d'un site secondaire. Les pages officielles de catalogue confirment le volume final ; elles ne remplacent pas l'accès direct à toutes les pages de l'épilogue.
+
+ANCRAGES DE VOIX ET COMPARAISON, PAS SOURCES DE CANON
+La Boîte à Récap, transcriptions réelles conservées dans le dossier de travail :
+https://www.youtube.com/watch?v=7d06Z6W6J70 — Thanos.
+https://www.youtube.com/watch?v=B7099KgzENE — One Punch Man.
+https://www.youtube.com/watch?v=5jsmtyQ-MbY — L'Attaque des Titans.
+Les ouvertures ont été lues pour le tutoiement, la narration orale et l'explication progressive. Leurs fautes de transcription, tics et affirmations excessives n'ont pas été adoptés comme règles.
+Comparateur réel : Dakba, Gojo vs Sukuna, 39 min 29, 438 201 vues au relevé de la session.
+https://www.youtube.com/watch?v=oSBOwbihLRY
+Son ouverture prend le parcours après la possession de Megumi et organise la rivalité finale. Le présent script repart de Yuji, suit les pactes et leurs conséquences, puis livre la fin entière. Aucun passage de cette transcription n'a été recopié. Le relevé de vues est une observation, pas une preuve d'un taux de surperformance. Les cinq résultats de recherche conservés comprennent des théories non confirmées ; ils ne deviennent pas des faits de canon.
+
+REPRISE
+CHAPITRES.json donne les limites exactes des 16 sections dans SCRIPT.txt. AUDIT.txt consigne les corrections, la vérification de longueur et les limites des tests. Les URL sont uniquement dans ce dossier documentaire, jamais dans la narration à envoyer en voix.

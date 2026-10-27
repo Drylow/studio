@@ -1,0 +1,22 @@
+{
+  "words": 24810,
+  "word_regex": "[^\\W_]+(?:[’'-][^\\W_]+)*",
+  "words_whitespace": 24839,
+  "characters_with_spaces": 156255,
+  "characters_without_whitespace": 131108,
+  "utf8_bytes": 160513,
+  "sha256": "79c166d46484b054da7a5ceee732d19d360ac75d49e4ee0afc97d3cef68426eb",
+  "chapters": 16,
+  "max_chapter_words": 1698,
+  "hook_words": 70,
+  "estimated_duration_minutes": {
+    "181_wpm": 137.07,
+    "182_wpm": 136.32,
+    "190_wpm": 130.58,
+    "200_wpm": 124.05
+  },
+  "duration_effective_audio": null,
+  "calibration": "Transcriptions FR de la chaîne : Thanos, One Punch Man, L’Attaque des Titans ; débit observé environ 181–182 mots/minute.",
+  "audio_generated_or_listened": false,
+  "notes": "Estimation de durée de narration, pauses non incluses. Audio final non produit. Minimum rédactionnel de 24 500 mots."
+}

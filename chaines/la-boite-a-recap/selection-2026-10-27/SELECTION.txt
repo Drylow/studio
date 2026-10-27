@@ -22,17 +22,16 @@ Les scores 7/10 viennent de la capture fournie. Les projections mensuelles de ce
 
 FORMAT
 Français. Narration originale : progression du personnage, décisions, conséquences et contexte nécessaire.
-Livrables attendus pour la production suivante : titre et script. Pas de production de voix ni de vidéo dans cette sélection.
+Livrables de rédaction dans ../scripts-2026-10-27/ : titre, script de narration, chapitrage, sources et audits. Pas de production de voix ni de vidéo dans cette livraison.
 Confirmation explicite de l'utilisateur le 27 octobre : « 2 heures minimum par script » pour Galactus, Freezer et Sukuna. Cette réponse remplace les durées de 60, 80 et 65 minutes proposées sur la capture. Aucun maximum fixé.
-Dimensionner chaque texte selon le débit de narration retenu, avec une marge au-delà des 120 minutes. Exemple de calcul, pas mesure de la voix : 18 000 mots donnent 120 minutes à 150 mots/minute ; avec 10 % de marge, viser 19 800 mots. Recalculer si le débit choisi est différent.
+Calibration effectuée sur les transcriptions de Thanos, One Punch Man et L'Attaque des Titans : environ 181 à 182 mots/minute. Cible retenue : au moins 24 500 mots de narration par script, soit environ 2 h 15 à 182 mots/minute ou 2 h 09 à 190. Détail dans ../scripts-2026-10-27/CALIBRATION.json; ce sont des estimations, pas des mesures audio.
 Compter les mots de narration uniquement et contrôler la durée réelle une fois la voix produite. Ne pas ajouter de répétitions pour atteindre le seuil. Les titres restent sans nombre de minutes tant que la durée finale n'est pas mesurée.
 Conserver la cadence précédemment demandée d'une vidéo par semaine comme contexte, sans programmer de date ici.
 
 ÉTAT
-Sélection et cadrages préparés ; aucun des trois scripts complets n'est encore rédigé.
-Les fiches suivent les champs de recherche FacelessOS. Elles ne remplacent pas la vérification détaillée de tous les arcs avant rédaction.
-Galactus : lecture des pages officielles bloquée par 403 ; jalons explicitement à vérifier.
-Freezer et Sukuna : premiers jalons vérifiés dans des sources officielles ouvertes, recherche complète du script encore à faire.
+Les trois scripts complets ont été rédigés. Le dossier ../scripts-2026-10-27/ contient les textes, les mesures et les vérifications de livraison.
+Les trois fiches de ce dossier restent les cadrages initiaux du 27 octobre, conservés comme historique. Pour les sources approfondies, les corrections et les limites de consultation, utiliser SOURCES.txt et AUDIT.txt dans chaque dossier final.
+Les pages Marvel directes bloquées par 403 ne sont pas présentées comme lues intégralement. Les recoupements accessibles et les références bibliographiques sont distingués dans le dossier Galactus.
 Les anciennes propositions Gravity Falls, Gumball, Adventure Time et Regular Show restent conservées dans ../../relance-boite-boring-2026-10-18/. Elles ne sont pas relancées par cette sélection.
 Les skills FacelessOS locaux sont présents dans skills/facelessos/ ; l'ancienne mention « skills attendus » ne décrit plus leur disponibilité technique.
 

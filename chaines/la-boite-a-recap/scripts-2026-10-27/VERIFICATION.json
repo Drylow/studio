@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27",
+  "scripts": [
+    {
+      "id": "01-galactus",
+      "words": 24957,
+      "characters_with_spaces": 156788,
+      "utf8_bytes": 161114,
+      "sha256": "4bb4ebf68cdb960e1e6f22f0bdea85ea1703ddcfb513f6b623edce38d0550c19",
+      "chapters": 19,
+      "estimated_minutes_182_wpm": 137.13,
+      "estimated_minutes_190_wpm": 131.35,
+      "estimated_minutes_200_wpm": 124.78,
+      "maximum_wpm_for_two_hours": 207.97,
+      "metadata_and_chapter_boundaries_verified": true
+    },
+    {
+      "id": "02-freezer",
+      "words": 24639,
+      "characters_with_spaces": 154230,
+      "utf8_bytes": 158401,
+      "sha256": "388d885cb8e2afcc4f9116f159e82196e779fac9a2aad960d4f9c5ca683980d9",
+      "chapters": 25,
+      "estimated_minutes_182_wpm": 135.38,
+      "estimated_minutes_190_wpm": 129.68,
+      "estimated_minutes_200_wpm": 123.19,
+      "maximum_wpm_for_two_hours": 205.32,
+      "metadata_and_chapter_boundaries_verified": true
+    },
+    {
+      "id": "03-sukuna",
+      "words": 24810,
+      "characters_with_spaces": 156255,
+      "utf8_bytes": 160513,
+      "sha256": "79c166d46484b054da7a5ceee732d19d360ac75d49e4ee0afc97d3cef68426eb",
+      "chapters": 16,
+      "estimated_minutes_182_wpm": 136.32,
+      "estimated_minutes_190_wpm": 130.58,
+      "estimated_minutes_200_wpm": 124.05,
+      "maximum_wpm_for_two_hours": 206.75,
+      "metadata_and_chapter_boundaries_verified": true
+    }
+  ],
+  "total_words": 74406,
+  "total_characters_with_spaces": 467273,
+  "audio_generated": false,
+  "duration_status": "Estimation sur le texte. Durée réelle à mesurer après voix off.",
+  "verification_scope": "Intégrité, comptage et limites des chapitres. Voir VERIFICATION.txt pour la relecture éditoriale et les limites documentaires."
+}

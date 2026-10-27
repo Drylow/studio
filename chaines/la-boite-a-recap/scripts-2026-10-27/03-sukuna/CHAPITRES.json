@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Le retour dans un corps qui résiste",
+    "words": 1636,
+    "start_char": 0,
+    "end_char_exclusive": 10157,
+    "first_sentence": "Yuji Itadori avale un doigt pour sauver ses amis.",
+    "paragraphs": 19
+  },
+  {
+    "id": 2,
+    "title": "Le cœur arraché et le pacte oublié",
+    "words": 1696,
+    "start_char": 10159,
+    "end_char_exclusive": 20726,
+    "first_sentence": "Dans le centre de détention, Yuji découvre à quelle vitesse son corps peut cesser de lui être utile.",
+    "paragraphs": 20
+  },
+  {
+    "id": 3,
+    "title": "Junpei, Mahito et les limites de la cohabitation",
+    "words": 1610,
+    "start_char": 20728,
+    "end_char_exclusive": 30754,
+    "first_sentence": "Junpei Yoshino arrive dans l'histoire avec une vulnérabilité que Mahito sait exploiter.",
+    "paragraphs": 19
+  },
+  {
+    "id": 4,
+    "title": "Shibuya et le duel contre Jogo",
+    "words": 1394,
+    "start_char": 30756,
+    "end_char_exclusive": 39265,
+    "first_sentence": "Shibuya change d'échelle quand Gojo est scellé.",
+    "paragraphs": 18
+  },
+  {
+    "id": 5,
+    "title": "Mahoraga, le Sanctuaire et les conséquences",
+    "words": 1585,
+    "start_char": 39267,
+    "end_char_exclusive": 49223,
+    "first_sentence": "Megumi a invoqué Mahoraga.",
+    "paragraphs": 19
+  },
+  {
+    "id": 6,
+    "title": "Le procès de Yuji et le piège de Tsumiki",
+    "words": 1519,
+    "start_char": 49225,
+    "end_char_exclusive": 58927,
+    "first_sentence": "Après Shibuya, la condamnation de Yuji redevient immédiate.",
+    "paragraphs": 18
+  },
+  {
+    "id": 7,
+    "title": "Le transfert vers Megumi",
+    "words": 1457,
+    "start_char": 58929,
+    "end_char_exclusive": 67975,
+    "first_sentence": "Yuji perd la main au milieu de ses amis.",
+    "paragraphs": 18
+  },
+  {
+    "id": 8,
+    "title": "Yorozu, les Dix Ombres et les origines révélées",
+    "words": 1698,
+    "start_char": 67977,
+    "end_char_exclusive": 78682,
+    "first_sentence": "Yorozu engage le combat avec une technique de Construction.",
+    "paragraphs": 21
+  },
+  {
+    "id": 9,
+    "title": "Gojo et la première rupture de territoire",
+    "words": 1569,
+    "start_char": 78684,
+    "end_char_exclusive": 88870,
+    "first_sentence": "Uraume apporte à Sukuna les derniers doigts retrouvés, mais un fragment manque encore.",
+    "paragraphs": 20
+  },
+  {
+    "id": 10,
+    "title": "Les barrières, les âmes et le cerveau",
+    "words": 1484,
+    "start_char": 88872,
+    "end_char_exclusive": 98403,
+    "first_sentence": "Gojo renverse les conditions de sa barrière pour la rendre plus résistante aux attaques extérieures.",
+    "paragraphs": 19
+  },
+  {
+    "id": 11,
+    "title": "Le modèle de Mahoraga et la mort de Gojo",
+    "words": 1585,
+    "start_char": 98405,
+    "end_char_exclusive": 108413,
+    "first_sentence": "Gojo renforce ses coups avec le Bleu et oblige Sukuna à encaisser une pression physique croissante.",
+    "paragraphs": 20
+  },
+  {
+    "id": 12,
+    "title": "Kashimo, la forme ancienne et Higuruma",
+    "words": 1589,
+    "start_char": 108415,
+    "end_char_exclusive": 118670,
+    "first_sentence": "Kashimo n'attend pas que la poussière retombe.",
+    "paragraphs": 21
+  },
+  {
+    "id": 13,
+    "title": "Les assauts de Yuta, Maki et leurs alliés",
+    "words": 1572,
+    "start_char": 118672,
+    "end_char_exclusive": 128688,
+    "first_sentence": "Yuta déploie son territoire.",
+    "paragraphs": 20
+  },
+  {
+    "id": 14,
+    "title": "L’éveil de Yuji et le sacrifice de Choso",
+    "words": 1439,
+    "start_char": 128690,
+    "end_char_exclusive": 137672,
+    "first_sentence": "Les découpes de Yuji n'ont pas exactement l'apparence de celles de Sukuna.",
+    "paragraphs": 18
+  },
+  {
+    "id": 15,
+    "title": "Todo, le corps de Gojo et le territoire de Yuji",
+    "words": 1427,
+    "start_char": 137674,
+    "end_char_exclusive": 146607,
+    "first_sentence": "À la place de sa main, Todo a installé un vibraslap, un instrument de percussion dont les vibrations produisent une succession de claquements.",
+    "paragraphs": 19
+  },
+  {
+    "id": 16,
+    "title": "La séparation, la défaite et le dernier choix",
+    "words": 1550,
+    "start_char": 146609,
+    "end_char_exclusive": 156254,
+    "first_sentence": "Yuji rejoint aussi Megumi dans cet affrontement intérieur.",
+    "paragraphs": 20
+  }
+]

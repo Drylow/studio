@@ -1,0 +1,36 @@
+LA BOÎTE À RÉCAP — RÉFÉRENCES ÉDITORIALES
+Travail du 27 octobre 2026
+
+ANCRAGE DANS LA CHAÎNE
+Trois transcriptions françaises de la chaîne ont été récupérées et lues pour calibrer la voix narrative et la longueur :
+- Thanos : https://www.youtube.com/watch?v=7d06Z6W6J70
+- One Punch Man : https://www.youtube.com/watch?v=B7099KgzENE
+- L'Attaque des Titans : https://www.youtube.com/watch?v=5jsmtyQ-MbY
+
+Les transcriptions automatiques contiennent des erreurs et ne sont pas utilisées comme sources de faits sur les œuvres. Elles servent à observer le français oral, l'adresse au spectateur, le déroulement causal et le débit. Le registre conservé est accessible, narratif, avec « tu » et « on » lorsque cela convient. Les formules excessivement théâtrales et les approximations des anciens récaps ne constituent pas des consignes à reproduire.
+
+CALIBRATION
+Le nombre de mots de ces transcriptions, rapporté à la durée publique des vidéos, donne environ 181 à 182 mots par minute. Détail reproductible dans CALIBRATION.json.
+Objectif de rédaction : au moins 24 500 mots de narration par script. Cela correspond à environ 2 h 15 à 182 mots/minute et 2 h 09 à 190 mots/minute. La durée sonore exacte dépendra de la voix et devra être mesurée après génération.
+
+COMPARAISONS PAR SUJET
+Les recherches ont renvoyé cinq résultats par sujet, mais le tri et le filtre de durée étaient imparfaits. Ce relevé n'est donc pas présenté comme un classement exhaustif des cinq meilleurs outliers. Aucune statistique privée de rétention n'a été consultée.
+
+Galactus : Argorok, « POURQUOI GALACTUS est si UNIQUE ? (Histoire Marvel comics) »
+https://www.youtube.com/watch?v=F-FJv5I5IJc
+155 806 vues observées ; 53 min 39 s. Transcription consultée.
+Comparaison utile : contexte de publication et origine cosmique, avec les hérauts peu développés. Notre récit part du choix de Reed et de son procès, puis suit les hérauts, les crises et les changements de fonction de Galactus. Il ne reprend pas l'ouverture ni le texte de cette référence.
+
+Freezer : SolarBoy, « L'HISTOIRE DE FREEZER | DRAGON BALL »
+https://www.youtube.com/watch?v=2OwijKKfX4I
+281 562 vues observées ; 27 min 26 s. Transcription consultée.
+Comparaison utile : récit biographique centré sur l'histoire antérieure à Super. Les dates d'enfance énoncées dans cette référence ne sont pas reprises sans preuve. Notre texte développe la logique de l'empire, Namek, Golden, le Tournoi du Pouvoir, Broly et Black Freezer, en distinguant les adaptations.
+
+Sukuna : Dakba, « Gojo vs Sukuna (Arc final de Jujutsu Kaisen) »
+https://www.youtube.com/watch?v=oSBOwbihLRY
+438 201 vues observées ; 39 min 29 s. Transcription consultée.
+Comparaison utile : début après la possession de Megumi, importance du duel final. Notre récit commence avec Yuji et suit le pacte, Shibuya, le transfert, la préparation du combat et son dénouement. La perspective finale de Sukuna reste une possibilité évoquée par le récit, pas une réincarnation future inventée.
+
+MÉTHODE
+FacelessOS : recherche et cadrage, ancrage de voix, structure documentaire, rétention, humanisation, contrôle greenlight et scanner de formulations.
+Les narrations sont originales. Les références aident à étudier la clarté et le rythme ; elles ne fournissent ni phrases à copier ni chapitrage obligatoire. Les sources de faits et les limites de vérification figurent dans SOURCES.txt pour chaque vidéo. Les transcriptions brutes restent dans le dossier de travail privé et ne sont pas publiées avec les scripts.

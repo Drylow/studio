@@ -1,0 +1,68 @@
+LA BOÎTE À RÉCAP — CONTRÔLE DE LIVRAISON
+27 octobre 2026
+
+PÉRIMÈTRE
+Trois scripts de narration complets en français. La méthode FacelessOS a servi
+au cadrage, à l'ancrage dans la voix de la chaîne, à la progression du récit,
+à l'humanisation et à l'audit. Les sources factuelles et leurs limites sont
+détaillées par épisode. Les chiffres définitifs et empreintes des textes sont
+dans VERIFICATION.json, calculés directement sur les fichiers livrés.
+
+RELECTURE
+Galactus : dix-neuf sections lues intégralement par l'auteur et par le
+coordinateur. Correction de la promesse initiale, de la disparition au
+Nullificateur et du retour dans la Reckoning War; adaptations séparées.
+Freezer : vingt-cinq sections lues intégralement par l'auteur et par le
+coordinateur, puis contre-lecture ciblée des sections 15–19 et 24 par un
+autre relecteur. Corrections de l'accroche, de l'ordre Sorbet/Vegeta Blue,
+des différences anime/manga, du soin de Monaito et de la conclusion.
+Sukuna : seize sections relues par l'auteur; contre-lecture du coordinateur
+sur 01–10 et 16, et d'un autre relecteur sur 11–16. Corrections du lien
+Wasuke/Jin, des Dix Ombres, de l'ordre bras de Gojo/Agito, du signe Enmaten
+et de la restriction céleste de Maki. Les passages corrigés ont été relus.
+Ces relectures sont des contrôles de rédaction par les agents; elles ne sont
+pas présentées comme une validation humaine du propriétaire de la chaîne.
+
+CONTRÔLES MÉCANIQUES
+- Au moins 24 500 mots de narration par fichier, avec la même règle Unicode
+  pour les trois : apostrophes et traits d'union intérieurs restent dans le mot.
+- Comptage indépendant des mots et caractères, contrôle SHA-256 et octets.
+- Concordance des mesures, frontières des chapitres et totalité du texte :
+  aucun segment de narration hors chapitrage et aucune section dupliquée.
+- Aucun paragraphe exactement dupliqué d'au moins 25 mots.
+- Aucune séquence exacte de quinze mots répétée au moins trois fois dans
+  un script; aucune reprise exacte de quinze mots entre les scripts ou avec
+  les six transcriptions de référence. Ce test ne mesure pas toute ressemblance
+  possible de sens et ne constitue pas une recherche sur l'ensemble du web.
+- Aucun titre de production, URL, timecode ou note entre crochets dans SCRIPT.
+- Scanner FacelessOS exécuté sur les paragraphes nus; contrôle français
+  complémentaire, car ses motifs automatiques sont surtout anglophones.
+
+SIGNAUX AUTOMATIQUES EXAMINÉS
+« À compléter l'effort » dans Galactus et « à vérifier ce qu'il a remarqué »
+dans Freezer sont des actions racontées, pas des notes de travail oubliées.
+Todo est un personnage de Jujutsu Kaisen, pas un marqueur TODO.
+Les alertes d'échos courts concernent notamment des noms de personnages,
+des techniques et des fragments grammaticaux. Elles ont été examinées en
+contexte; le rapport ne prétend pas que le scanner n'a émis aucune alerte.
+Les phrases courtes conservées dans Sukuna servent des gestes, une énumération
+ou un dénouement. Leur présence et leur examen figurent dans AUDIT.txt.
+
+LIMITES DOCUMENTAIRES
+La recherche a utilisé des pages officielles accessibles, des synopsis et
+des comptes rendus spécialisés. Elle ne correspond pas à une lecture de
+chaque planche originale de toutes les œuvres couvertes. Les ouvertures
+bloquées et les simples extraits indexés sont distingués des pages lues.
+Les trois références de la chaîne et un comparateur direct par personnage
+ont servi au travail éditorial. Aucun classement exhaustif des cinq meilleurs
+outliers ni accès à des données privées de rétention n'est revendiqué.
+Les analyses de décisions et de conséquences sont une lecture éditoriale
+des événements racontés. Aucun dialogue reconstruit n'est présenté comme
+une citation canonique.
+
+DURÉE ET SUITE
+Le seuil demandé est dimensionné par la longueur de narration et le débit
+observé sur la chaîne, avec une marge jusque vers 200 mots/minute.
+Les estimations ne sont pas une durée audio mesurée : aucune voix n'a été
+produite ou écoutée pour cette livraison. Après génération, vérifier la durée
+réelle, les raccords, la prononciation et la présence de tous les segments.
