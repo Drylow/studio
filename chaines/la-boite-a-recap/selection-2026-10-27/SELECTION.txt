@@ -23,9 +23,9 @@ Les scores 7/10 viennent de la capture fournie. Les projections mensuelles de ce
 FORMAT
 Français. Narration originale : progression du personnage, décisions, conséquences et contexte nécessaire.
 Livrables attendus pour la production suivante : titre et script. Pas de production de voix ni de vidéo dans cette sélection.
-Le cadrage utilisateur enregistré le 18 octobre fixe généralement 2 heures minimum par script, sans maximum.
-La capture propose 60 minutes pour Galactus, 80 pour Freezer, 65 pour Sukuna. Une question de clarification a été envoyée le 27 octobre ; aucune réponse reçue à la sauvegarde.
-En attendant une correction utilisateur, conserver le cadrage précédent de 2 heures minimum. Les titres restent sans nombre de minutes ; la durée effective devra être mesurée après narration.
+Confirmation explicite de l'utilisateur le 27 octobre : « 2 heures minimum par script » pour Galactus, Freezer et Sukuna. Cette réponse remplace les durées de 60, 80 et 65 minutes proposées sur la capture. Aucun maximum fixé.
+Dimensionner chaque texte selon le débit de narration retenu, avec une marge au-delà des 120 minutes. Exemple de calcul, pas mesure de la voix : 18 000 mots donnent 120 minutes à 150 mots/minute ; avec 10 % de marge, viser 19 800 mots. Recalculer si le débit choisi est différent.
+Compter les mots de narration uniquement et contrôler la durée réelle une fois la voix produite. Ne pas ajouter de répétitions pour atteindre le seuil. Les titres restent sans nombre de minutes tant que la durée finale n'est pas mesurée.
 Conserver la cadence précédemment demandée d'une vidéo par semaine comme contexte, sans programmer de date ici.
 
 ÉTAT
