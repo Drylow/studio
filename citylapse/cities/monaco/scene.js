@@ -633,5 +633,5 @@ export function buildVideo(canvas, hud) {
   // sound cues for tools/sfx.mjs, in video seconds (the intro shifts everything by INTRO)
   const sfx = fx.cues.map((c) => ({ ...c, t: c.t + INTRO })).sort((a, b) => a.t - b.t);
   window.__dbg = { heightAt, shoreDist, nearestWater, SPOT, rcAt, fx, scene, EVENTS };
-  return { ready, renderAt, DUR, sfx, events: EVENTS.map((e) => ({ t: e.t + INTRO, y: e.y, title: e.title })), stats: { houses: wallR.length + prismR.length, towers: prismG.length, roofs: hipR.length, trees: crownR.length, roads: segs.length } };
+  return { ready, renderAt, DUR, sfx, events: EVENTS.map((e) => ({ t: e.t + INTRO, y: e.y, title: e.title, fx: e.fx || "" })), stats: { houses: wallR.length + prismR.length, towers: prismG.length, roofs: hipR.length, trees: crownR.length, roads: segs.length } };
 }

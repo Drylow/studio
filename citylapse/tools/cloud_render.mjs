@@ -1,6 +1,6 @@
 // Rendu sans carte graphique (machine cloud) : morceaux de 20 s rendus par plusieurs navigateurs en parallèle,
 // chaque morceau encodé en MP4 puis ses images effacées (disque), reprise automatique après un redémarrage.
-//   node tools/cloud_render.mjs <slug> [--fps 24] [--ss 0.75] [--workers 2] [--chunk 20]
+//   node tools/cloud_render.mjs <slug> [--fps 24] [--ss 0.75] [--workers 2] [--chunk 20] [--only 3,4]
 // Sortie : cities/<slug>/renders/cloud/part_XXX.mp4, puis node tools/cloud_render.mjs <slug> --join
 import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -11,8 +11,9 @@ const args = process.argv.slice(2);
 const opt = (n, d) => { const i = args.indexOf(`--${n}`); return i >= 0 && args[i + 1] ? args[i + 1] : d; };
 const slug = args[0], DIR = path.join(root, 'cities', slug), OUT = path.join(DIR, 'renders', 'cloud');
 const FPS = +opt('fps', 24), SS = opt('ss', '0.75'), WORKERS = +opt('workers', 2), CHUNK = +opt('chunk', 20);
-const DUR = +(/DUR = (\d+(\.\d+)?)/.exec(fs.readFileSync(path.join(DIR, 'scene.js'), 'utf8'))[1]);
-const NCH = Math.ceil(DUR / CHUNK);
+const TLF = path.join(DIR, 'timeline.json');   // computed durations (event-driven scenes) come from tools/stills.mjs
+const DUR = fs.existsSync(TLF) ? Math.ceil(JSON.parse(fs.readFileSync(TLF, 'utf8')).DUR) : +(/DUR = (\d+(\.\d+)?)/.exec(fs.readFileSync(path.join(DIR, 'scene.js'), 'utf8'))[1]);
+const NCH = Math.ceil(DUR / CHUNK), ONLY = opt('only', '') ? opt('only', '').split(',').map(Number) : null;   // --only 3,4: a preview
 fs.mkdirSync(OUT, { recursive: true });
 const ff = process.env.FFMPEG || 'ffmpeg';
 
@@ -39,7 +40,7 @@ const done = (k) => fs.existsSync(path.join(OUT, `part_${String(k).padStart(3, '
 const mine = new Set();
 function claim() {          // un morceau libre (verrou = fichier .lock avec le pid ; un verrou d'un process mort est repris)
   for (let k = 0; k < NCH; k++) {
-    if (done(k) || mine.has(k)) continue;
+    if (done(k) || mine.has(k) || (ONLY && !ONLY.includes(k))) continue;
     const lock = path.join(OUT, `part_${String(k).padStart(3, '0')}.lock`);
     if (fs.existsSync(lock)) { const pid = +fs.readFileSync(lock, 'utf8'); try { process.kill(pid, 0); if (pid !== process.pid) continue; } catch { /* mort */ } }
     fs.writeFileSync(lock, String(process.pid)); mine.add(k); return k;
