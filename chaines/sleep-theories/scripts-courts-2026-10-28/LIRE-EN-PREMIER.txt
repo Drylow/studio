@@ -22,17 +22,19 @@ Nouvelles générations autorisées : 1 203 846 caractères, sans sous-titres pa
 La réserve des voix françaises est contrôlée avant chaque paire de soumissions.
 Mellow Matt, vitesse 0,90. Ne pas reprendre les anciens scripts longs.
 
-ÉTAT À LA CRÉATION DE CE DOCUMENT
-La file de production est lancée ; les treize MP3 courts ne sont pas livrés.
-Deux blocs Daedric Princes sont réutilisés après contrôle complet.
-Lire le registre privé actualisé et les STATUT-VOICEOVER.txt pour la progression.
+ÉTAT VÉRIFIÉ LE 28 OCTOBRE 2026
+Les treize MP3 courts sont livrés et contrôlés dans leurs dossiers vidéo.
+Durées constatées : de 2:15:44 à 2:26:36, toutes entre deux heures et deux heures trente.
+Tailles, empreintes, durées réelles et scripts correspondants ont été revérifiés.
+Les titres et miniatures sont présents dans chacun des treize dossiers.
+Deux blocs Daedric Princes ont été réutilisés après contrôle complet.
+Lire LIVRAISON-VERIFIEE.json pour les treize durées. Aucun nouveau job à lancer.
 
 LIVRAISON
 Bureau/VIDEOS - TOUT REGROUPE/<chaîne>/<vidéo>/.
-SCRIPT-COURT-EN-PRODUCTION.txt contient le texte en fabrication.
-Avant remplacement, VOICEOVER.mp3 et SCRIPT.txt restent les versions longues.
-Après validation, le MP3 court et son script remplacent ensemble les fichiers
-de travail ; les originaux sont préservés sous _Archives des anciens dossiers/
+VOICEOVER.mp3 et SCRIPT.txt sont désormais les versions courtes finales.
+SCRIPT-COURT-EN-PRODUCTION.txt est une copie de préparation ; utiliser SCRIPT.txt.
+Les originaux sont préservés sous _Archives des anciens dossiers/
 Versions longues avant correction - 28 octobre 2026.
 Un marqueur LIVRAISON-EN-COURS.txt interdit d'utiliser une livraison interrompue.
 CONTROLES-VERSION-COURTE.json identifie les fichiers courts réellement livrés.

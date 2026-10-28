@@ -2,10 +2,11 @@
 
 **Décision suivante du 28 octobre : refaire les voix avec des scripts raccourcis,
 durée finale entre 2 heures et 2 h 30 maximum.** Les trois textes Daedric Princes,
-Brotherhood et Elden Ring sont raccourcis et relus ; leurs voix sont incluses dans
-la [nouvelle file de treize épisodes](../sleep-theories/scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt).
+Brotherhood et Elden Ring sont raccourcis et relus ; leurs voix sont **livrées et
+revérifiées** : respectivement 2:20:29, 2:26:36 et 2:18:12. Voir
+la [livraison de treize épisodes](../sleep-theories/scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt).
 Le début Daedric déjà payé est réutilisé. Le pilote ancien reste bloqué pour
-éviter les doublons ; seul le nouveau pilote doit poursuivre cette production.
+éviter les doublons. Cette production est terminée ; aucun pilote à relancer.
 
 **28 octobre : voix en attente après vérification des durées.** Deux blocs de
 Daedric Princes sont déjà soumis et récupérés par un moniteur seul. La file des

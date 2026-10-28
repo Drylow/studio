@@ -5,9 +5,10 @@
 **Priorité actuelle : versions courtes, entre 2 h et 2 h 30 maximum.**
 L'utilisateur a choisi de refaire les dix narrations Deep Void / Quiet Paradox.
 Les [treize scripts raccourcis et leur reprise](scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt)
-sont prêts, avec les trois premières Forgotten Realms. La file de voix est lancée,
-les durées finales restent à vérifier. Les anciennes versions longues sont
-préservées et remplacées par vidéo seulement après les contrôles.
+sont livrés avec les treize MP3, dont les trois premières Forgotten Realms.
+Durées réelles revérifiées le 28 octobre : **2:15:44 à 2:26:36**. Les empreintes,
+tailles, scripts correspondants et emplacements sont conformes. Les anciennes
+versions longues sont conservées dans les archives du dossier unique.
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
 
