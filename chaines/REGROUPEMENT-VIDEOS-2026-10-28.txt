@@ -13,6 +13,16 @@ Les versions longues restent dans les dossiers tant que le nouveau MP3 et son
 script ne sont pas tous deux prêts ; elles seront archivées lors du remplacement.
 STATUT-VOICEOVER.txt et CONTROLES-VERSION-COURTE.json font foi par vidéo.
 
+REPRISE FRANÇAISE ACTUALISÉE
+Les 4 Fantastiques sont livrés et contrôlés : 2 h 04 min 15 s.
+Frieren : un bloc échoué sans média est remplacé par deux sous-blocs exacts
+de 10 474 et 10 264 caractères ; un autre bloc est conservé après revue des
+variantes de noms dans la transcription et contrôle local de cinq extraits.
+Les métriques initiales restent préservées ; aucun seuil général n'est abaissé.
+Le lot de reprise compte désormais 25 blocs. Le pilote est reparti, puis
+poursuivra Sakamoto Days. Ne pas relancer les blocs réussis ni le pilote arrêté.
+Plan et preuve privés : work/recap-voiceovers-2026-10-28-recovery/review-frieren/.
+
 OUVRIR
 C:/Users/ytbyt/Desktop/VIDEOS - TOUT REGROUPE
 

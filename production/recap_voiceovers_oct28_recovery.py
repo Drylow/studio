@@ -31,6 +31,7 @@ SPEED = 0.85
 CHARACTERS = 473930
 PARTS = 24
 MAX_ACTIVE = 2
+TARGET_REPAIR = "06-frieren-part2-recovery1"
 STOP_STATES = {
     "failed", "submitting", "submission_unknown", "transcript_missing",
     "transcript_review_required", "audio_check_failed", "duration_below_minimum",
@@ -114,14 +115,47 @@ def load():
     return data
 
 
+def expected_layout(data):
+    """Allow only the explicitly audited subdivision of one confirmed failure."""
+    counts = {eid: 8 for eid in FOLDERS}
+    repairs = data.get("targeted_repairs", [])
+    if not repairs:
+        return PARTS, counts
+    if len(repairs) != 1 or repairs[0].get("source_part_id") != TARGET_REPAIR:
+        raise RuntimeError("Unrecognized targeted repair")
+    repair = repairs[0]
+    episode = next(e for e in data["episodes"] if e["id"] == "06-frieren")
+    archived = [p for p in episode.get("failed_attempts", []) if p["id"] == TARGET_REPAIR]
+    if len(archived) != 1 or archived[0]["state"] != "failed":
+        raise RuntimeError("Targeted repair must preserve its confirmed failed attempt")
+    old = archived[0]
+    if old.get("last_response", {}).get("status") != "failed" or old["last_response"].get("audio_url"):
+        raise RuntimeError("Targeted repair original is not a failure without audio")
+    names = [TARGET_REPAIR + "-retry1", TARGET_REPAIR + "-retry2"]
+    if repair.get("replacement_ids") != names or repair.get("source_sha256") != old["sha256"]:
+        raise RuntimeError("Targeted repair identity changed")
+    children = [p for p in episode["parts"] if p["id"] in names]
+    if (len(children) != 2 or [p["id"] for p in children] != names
+            or [p["characters"] for p in children] != [10474, 10264]
+            or [children[0]["start"], children[0]["end"], children[1]["start"], children[1]["end"]]
+               != [82028, 92502, 92502, 102766]
+            or any(p.get("replaces_failed_job_id") != old["job_id"] for p in children)):
+        raise RuntimeError("Targeted repair source ranges changed")
+    counts[episode["id"]] = 9
+    return PARTS + 1, counts
+
+
 def prepare(data):
+    if data.get("pending_targeted_approval"):
+        raise RuntimeError("Targeted candidate is awaiting review; do not run it yet")
     planned = list(engine.parts(data))
-    if len(planned) != PARTS or sum(len(text) for _, _, text in planned) != CHARACTERS:
-        raise RuntimeError("Recovery must contain the exact 24 authorized source slices")
+    expected_parts, expected_counts = expected_layout(data)
+    if len(planned) != expected_parts or sum(len(text) for _, _, text in planned) != CHARACTERS:
+        raise RuntimeError("Recovery must contain all authorized source slices exactly once")
     for episode in data["episodes"]:
         text = source_text(episode)
         parts = episode["parts"]
-        if len(parts) != 8 or parts[0]["start"] != 0 or parts[-1]["end"] != len(text):
+        if len(parts) != expected_counts[episode["id"]] or parts[0]["start"] != 0 or parts[-1]["end"] != len(text):
             raise RuntimeError("Incomplete recovery source coverage")
         if any(a["end"] != b["start"] for a, b in zip(parts, parts[1:])):
             raise RuntimeError("Recovery source has a gap or overlap")
@@ -182,7 +216,7 @@ def status_files(data):
 def assemble(episode):
     base_assemble(episode)
     if episode.get("duration_seconds") is not None:
-        episode["assembly"] = "Eight exact contiguous source slices; MP3 packet concatenation, no padding or repeated content"
+        episode["assembly"] = f"{len(episode['parts'])} exact contiguous source slices; MP3 packet concatenation, no padding or repeated content"
 
 
 def blocked(data):
