@@ -1,4 +1,4 @@
-// Still frames of a city without a GPU (SwiftShader): node tools/stills.mjs <slug> 12,60,140 [--ss 0.75] [--out dir]
+// Still frames of a city without a GPU (SwiftShader): node tools/stills.mjs <slug> 12,60,140 [--ss 0.75] [--out dir] [--nohud]
 import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -23,5 +23,6 @@ console.log(`ready in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
 const info = await p.evaluate(() => ({ DUR: window.__video.DUR, sfx: window.__video.sfx || [], events: window.__video.events || [] }));
 fs.writeFileSync(path.join(DIR, 'timeline.json'), JSON.stringify(info));
 console.log('DUR', info.DUR, 'events', info.events.length, 'cues', info.sfx.length);
-for (const t of times) { await p.evaluate(t => window.__video.renderAt(t), t); await p.screenshot({ path: path.join(OUT, `s_${String(t).padStart(5, '0')}.jpg`), type: 'jpeg', quality: 85 }); console.log('still', t); }
+const NOHUD = args.includes('--nohud');   // clean frames for thumbnails
+for (const t of times) { await p.evaluate(([t, h]) => { window.__video.renderAt(t); if (h) for (const id of ['ui', 'black', 'title', 'card']) { const e = document.getElementById(id); if (e) e.style.visibility = 'hidden'; } }, [t, NOHUD]); await p.screenshot({ path: path.join(OUT, `s_${String(t).padStart(5, '0')}.jpg`), type: 'jpeg', quality: 85 }); console.log('still', t); }
 await b.close(); srv.close();
