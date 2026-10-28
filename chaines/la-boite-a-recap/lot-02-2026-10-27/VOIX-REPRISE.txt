@@ -1,0 +1,68 @@
+LA BOÎTE À RÉCAP — CINQ NARRATIONS DU LOT 2
+Lancement autorisé et effectué le 28 octobre 2026.
+
+VOIX ET TEXTES
+Service : Algrow. Voix française : IHngRooVccHyPqB4uQkG.
+Vitesse : 1,00. Même réglage standard que le précédent lot français.
+Le nom commercial de cette voix n'est pas confirmé.
+Transcription demandée pour le contrôle d'alignement avec le texte.
+Les scripts source totalisent 779 416 caractères et 125 783 mots.
+Les 4 Fantastiques : 154 232 caractères.
+One Piece : 155 958 caractères.
+Frieren : 164 546 caractères.
+Sakamoto Days : 155 152 caractères.
+Stranger Things : 149 528 caractères.
+
+SOUMISSION
+Dix jobs distincts acceptés, deux blocs contigus par script, sans perte de texte.
+Le script entier a été figé avant soumission et vérifié par son empreinte.
+Les identifiants, réponses privées, médias et mesures sont exclusivement dans :
+work/recap-voiceovers-2026-10-28/ledger.json
+Copies figées des textes : work/recap-voiceovers-2026-10-28/sources/.
+Ne pas relancer submit pour résoudre un échec ou un délai. Une soumission
+submitting ou submission_unknown doit être réconciliée avec Algrow avant action.
+Ne pas lancer une nouvelle génération payante sans nouvelle autorisation.
+
+LIVRAISON
+Bureau / La Boîte à Récap - Lot 2 - 27 octobre 2026 /
+04 - Les 4 Fantastiques
+05 - One Piece
+06 - Frieren
+07 - Sakamoto Days
+08 - Stranger Things
+Chaque dossier contient SCRIPT.txt, TITRE-ET-DESCRIPTION.txt et MINIATURE.jpg.
+STATUT-VOICEOVER.txt est actualisé par le moniteur.
+Le fichier final s'appelle voiceover.mp3 ; il est placé après les contrôles.
+Les blocs et fichiers intermédiaires restent dans le dossier de travail privé.
+Aucune suppression ni publication YouTube n'est prévue par ce processus.
+
+REPRISE
+Depuis la racine du dépôt :
+python production/recap_voiceovers_oct28.py status
+python production/recap_voiceovers_oct28.py monitor
+Le moniteur ne fait que lire, télécharger, contrôler et assembler les jobs existants.
+Il ne soumet aucune génération et ne régénère aucun bloc en échec.
+Vérifier les processus Windows avant de le reprendre ; un seul moniteur pour ce lot.
+Utiliser un processus caché, avec les sorties dans le dossier de travail privé.
+Le verrou executor.lock empêche deux exécuteurs simultanés.
+Un processus arrêté peut être repris avec monitor : ne pas recréer le registre.
+La clé est lue dans .env ; ne jamais afficher cette clé ni les URL privées.
+Le lot précédent utilise recap_voiceovers_oct27.py et un autre registre ;
+ne pas remplacer son état ni lancer ses jobs à partir de ce dossier.
+Le dossier privé work et les médias doivent être conservés pour une reprise
+sur ce PC. Git seul ne contient ni le registre ni les sources figées privées.
+
+CONTRÔLES ET LIMITES
+Chaque bloc : SHA-256, taille, décodage intégral et durée mesurée ; comparaison
+du texte SRT au script, couverture de la fin et cohérence de la durée SRT/audio.
+Le SRT est un alignement fourni par le service, pas une reconnaissance vocale
+indépendante prouvant chaque mot prononcé. Aucune écoute humaine intégrale
+n'est revendiquée.
+Les deux blocs sont assemblés dans leur ordre, sans ajout de silence ni répétition.
+Le MP3 final doit durer au moins 7 200 secondes, avec moins d'une seconde d'écart
+par rapport à la somme des blocs. Taille et empreinte contrôlées avant livraison.
+Un MP3 existant avec une empreinte différente est préservé et signalé.
+Une anomalie bloque la livraison du fichier concerné ; aucune réparation payante
+n'est automatique. La durée réelle n'est annoncée qu'après décodage du MP3 final.
+Les tests hors ligne couvrent l'absence de double soumission, la réponse perdue,
+le surcoût de transcription, le SRT retardé et la reprise de livraison.

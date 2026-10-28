@@ -5,7 +5,7 @@ LOT PRÉCÉDENT
 Galactus, Freezer et Sukuna : scripts livrés ; narrations soumises à Algrow.
 Reprise des voix : VOIX-REPRISE.txt et registre privé indiqué dans ce document.
 
-LOT 2 — SCRIPTS ET MINIATURES PRODUITS
+LOT 2 — SCRIPTS ET MINIATURES PRODUITS, NARRATIONS LANCÉES
 Les cinq sujets ci-dessous ont été écrits à la demande de l'utilisateur.
 Les fichiers, mesures, audits et périmètres sont dans lot-02-2026-10-27/.
 La copie de livraison est rangée au Bureau : La Boîte à Récap - Lot 2 - 27 octobre 2026.
@@ -54,10 +54,12 @@ La voix de la chaîne est enregistrée dans VOIX.json.
 ÉTAT ET SOURCES
 Statut des cinq entrées : scripts écrits et miniatures créées. Sources et corrections
 dans chaque dossier ; contrôles du lot dans lot-02-2026-10-27/CONTROLE-LOT.json.
-Aucune narration, vidéo, programmation YouTube ou publication n'a été lancée
-pour ces cinq sujets. La demande « do the other scripts & thumbz » a autorisé
-leur rédaction et leur production visuelle ; elle ne doit pas relancer les voix
-du lot précédent.
+Les cinq narrations ont été demandées et lancées le 28 octobre 2026 avec la voix
+française habituelle, à vitesse 1,00. Dix blocs acceptés, récupération et assemblage
+en cours : lot-02-2026-10-27/VOIX-REPRISE.txt. Aucun MP3 n'est annoncé comme livré
+avant les contrôles et sa présence dans le dossier de la vidéo.
+Aucune vidéo, programmation YouTube ou publication n'a été lancée pour ce lot.
+Cette demande ne relance pas les voix du lot précédent.
 Source : capture utilisateur « FOLLOW-UP 1 #6–10 », reçue le 27 octobre 2026.
 Les affirmations de concurrence, d'actualité et les projections de vues de la
 capture n'ont pas été vérifiées dans cet ajout. Les vérifier avant production.

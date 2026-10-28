@@ -3,7 +3,7 @@ Lot ouvert le 27 octobre 2026 ; livraison vérifiée le 28 octobre 2026.
 
 CONTENU
 Cinq scripts originaux en français, chacun au-dessus de 24 500 mots de narration.
-Un dossier par vidéo avec SCRIPT.txt, TITRE-ET-DESCRIPTION.txt et MINIATURE.jpg quand elle est prête. Le sous-dossier Verification conserve les sources, le brief, l'audit, les mesures, les repères de chapitres, le prompt et le PNG d'origine.
+Un dossier par vidéo avec SCRIPT.txt, TITRE-ET-DESCRIPTION.txt et MINIATURE.jpg. STATUT-VOICEOVER.txt indique l'avancement de la narration ; voiceover.mp3 apparaît après génération, récupération et contrôles. Le sous-dossier Verification conserve les sources, le brief, l'audit, les mesures, les repères de chapitres, le prompt et le PNG d'origine.
 
 LONGUEURS ET MINIATURES
 - 04 - Les 4 Fantastiques : 24 821 mots ; 2 h 16 à 182 mots/min ; 2 h 04 à 200 mots/min ; miniature prête.
@@ -33,5 +33,6 @@ Comptage Unicode de la narration, longueur minimale, encodage, absence de paragr
 Recherche avec FacelessOS, ancrage dans les transcriptions de la chaîne et relecture éditoriale. Les corrections factuelles et les limites de recherche sont documentées dans chaque AUDIT.txt et SOURCES.txt. Les épisodes et comics n'ont pas tous été revus intégralement pendant cette session. Une écoute humaine complète du futur audio n'est pas réalisée ; aucun label de certification totale n'est revendiqué.
 
 ÉTAT DE PRODUCTION
-Ce lot contient les textes et les miniatures. Aucune nouvelle narration, vidéo, programmation YouTube ou publication n'a été lancée pour ces cinq épisodes.
+Les cinq narrations ont été lancées le 28 octobre 2026 sur Algrow, avec la voix française habituelle et la vitesse 1,00. Les dix blocs ont été acceptés. Un moniteur récupère, contrôle et assemble les jobs existants ; les MP3 complets seront ajoutés dans chaque dossier. Consulter STATUT-VOICEOVER.txt pour l'état local, et VOIX-REPRISE.txt pour la reprise technique.
+Aucune vidéo, programmation YouTube ou publication n'a été lancée pour ces cinq épisodes. CONTROLE-LOT.json et les audits décrivent les textes et miniatures contrôlés avant cette soumission, pas une livraison audio achevée.
 Les voix de Galactus, Freezer et Sukuna appartiennent au lot précédent ; ne pas les relancer à partir de ce dossier.
