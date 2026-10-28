@@ -11,9 +11,11 @@
       "sha256": "5662a0a5b8ce79ea61a258ee33c9d7421f05ba985c1d28e7a05d2610598d233d",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 96773
+      "new_paid_characters": 96773,
+      "audio_duration_seconds": 8523.683651,
+      "audio_sha256": "fa2b9be2fdaeff93f65376ff2fdd084cf6b18e21a52faf179a0b95ea41b66528"
     },
     {
       "id": "DV-09-jedi-order",
@@ -24,9 +26,11 @@
       "sha256": "9b7ef6eacb2607cd61e30f93afc44dff48372ba452c418d9aebaea8ff3db77d8",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 93945
+      "new_paid_characters": 93945,
+      "audio_duration_seconds": 8277.843333,
+      "audio_sha256": "1a1d9a650c60f3d25a2b87f153b5c7bbc79130374f4db8f0794326f39249ae08"
     },
     {
       "id": "DV-10-fremen",
@@ -37,9 +41,11 @@
       "sha256": "795436e2d8e33bd676e3cce4a56447bc102621a83daac0577a0fc0089a6eb36f",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 97195
+      "new_paid_characters": 97195,
+      "audio_duration_seconds": 8563.544694,
+      "audio_sha256": "c7331326d94d240913dab3cca2e1d8b4b052b85208962d75cab7db84c350e431"
     },
     {
       "id": "DV-11-old-republic",
@@ -50,9 +56,11 @@
       "sha256": "da4e6fb9e0b2b5d069ca2b6d2531bd558f6a14af2b1de41d54be2e82cc79072a",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 97179
+      "new_paid_characters": 97179,
+      "audio_duration_seconds": 8568.184694,
+      "audio_sha256": "c7e226e421ff410c8c3cb180358751af05156d830e48fe65cc23a94974699d46"
     },
     {
       "id": "DV-12-great-houses",
@@ -63,9 +71,11 @@
       "sha256": "171093add2a17131ae1baf36c94faa8edba963fe6a1136ec29a3236eaee6d080",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 97963
+      "new_paid_characters": 97963,
+      "audio_duration_seconds": 8629.628095,
+      "audio_sha256": "fbff744e0a6621fd108b9dfbc6505201e38d6254afaabb650a61a9293afa60f5"
     },
     {
       "id": "QP-07-silo-builders",
@@ -76,9 +86,11 @@
       "sha256": "f8009cd1b84dbbf135f9cf5e9cbd94c7ddff07cda184ff1539563b439bbaf9ea",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 95736
+      "new_paid_characters": 95736,
+      "audio_duration_seconds": 8420.116122,
+      "audio_sha256": "b643983e78709448ea8a1713fd4c21b7e7396477a938edcdddfdebcab509d64b"
     },
     {
       "id": "QP-08-from-rules",
@@ -89,9 +101,11 @@
       "sha256": "21f063d1e0f684f2e66f4728c388ddc9a1efa0ab1bca178ad6843747d01d6a76",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 93267
+      "new_paid_characters": 93267,
+      "audio_duration_seconds": 8171.275147,
+      "audio_sha256": "e3af890f6ae569108a9a33cc6674cfab1402205cd31f1e24e94d350214c2a8be"
     },
     {
       "id": "QP-09-lumon-building",
@@ -102,9 +116,11 @@
       "sha256": "5f7db3b918d957b77aa113483f3aef092a4051262af83a5d708cc0889cda8ec7",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 95502
+      "new_paid_characters": 95502,
+      "audio_duration_seconds": 8394.516825,
+      "audio_sha256": "f162fe4c5ad55703c5347f2788e55055249808d310ec7767ac34b4de899b86cc"
     },
     {
       "id": "QP-10-silo-outside",
@@ -115,9 +131,11 @@
       "sha256": "82e5eecaa40644525b138c01b48ce7af6141f42e225899d2082f792a894ae127",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 94264
+      "new_paid_characters": 94264,
+      "audio_duration_seconds": 8281.30746,
+      "audio_sha256": "6cc5f501f24f5c17d9575a7b73814a0bea7bba79acc7423a874147c72b537b1c"
     },
     {
       "id": "QP-11-from-cycles",
@@ -128,9 +146,11 @@
       "sha256": "5ff63d6e9509c8e982c34604ead9e1aeaaed2609b8831f06527354199158707e",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 93105
+      "new_paid_characters": 93105,
+      "audio_duration_seconds": 8144.287052,
+      "audio_sha256": "f9ec97e634f3368547c18d5f7225788164933a01beba535d1cae167f9d216439"
     },
     {
       "id": "FR-04-daedric-princes",
@@ -141,9 +161,11 @@
       "sha256": "29331af7cd333a78a5ada79768d14a2fca73c42d9c68dc5cf13fd7b98fa0dbde",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 54305
+      "new_paid_characters": 54305,
+      "audio_duration_seconds": 8429.819841,
+      "audio_sha256": "a7e016205b5d329ba215131ed072aba8d9ff4237d125e733b0659a0664b9c61d"
     },
     {
       "id": "FR-05-brotherhood",
@@ -154,9 +176,11 @@
       "sha256": "99e135063ae0f8f538ecaf65203d45c866d99486c28f1aab73392648d5c99f22",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 100148
+      "new_paid_characters": 100148,
+      "audio_duration_seconds": 8796.980227,
+      "audio_sha256": "68e02c3d9a52f19946875acd9e9634e546a696adbb886c96580d64b37b099c6a"
     },
     {
       "id": "FR-06-elden-ring",
@@ -167,9 +191,11 @@
       "sha256": "d690f7fb380fabf31820f04d56877217a054d43f2e1bf3142b037aa17769b2a5",
       "minimum_audio_seconds": 7200,
       "maximum_audio_seconds": 9000,
-      "audio_duration_status": "pending_measurement",
+      "audio_duration_status": "measured_and_verified",
       "review_status": "reviewed",
-      "new_paid_characters": 94464
+      "new_paid_characters": 94464,
+      "audio_duration_seconds": 8292.547188,
+      "audio_sha256": "87b779184c81c41c645f6a63502d07b6af69dfae2d9da002919f55253edcae55"
     }
   ],
   "total_characters": 1245380,
@@ -177,5 +203,6 @@
   "already_paid_characters_reused": 41534,
   "minimum_seconds": 7200,
   "maximum_seconds": 9000,
-  "audio_status": "generation_queue_started_not_delivered"
+  "audio_status": "13_delivered_and_rechecked",
+  "verified_count": 13
 }

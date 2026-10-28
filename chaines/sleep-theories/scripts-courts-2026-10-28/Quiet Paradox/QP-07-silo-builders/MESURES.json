@@ -7,7 +7,9 @@
   "sha256": "f8009cd1b84dbbf135f9cf5e9cbd94c7ddff07cda184ff1539563b439bbaf9ea",
   "minimum_audio_seconds": 7200,
   "maximum_audio_seconds": 9000,
-  "audio_duration_status": "pending_measurement",
+  "audio_duration_status": "measured_and_verified",
   "review_status": "reviewed",
-  "new_paid_characters": 95736
+  "new_paid_characters": 95736,
+  "audio_duration_seconds": 8420.116122,
+  "audio_sha256": "b643983e78709448ea8a1713fd4c21b7e7396477a938edcdddfdebcab509d64b"
 }

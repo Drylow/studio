@@ -1,0 +1,152 @@
+{
+  "checked_date": "2026-10-28",
+  "verified_count": 13,
+  "minimum_seconds": 8144.287052,
+  "maximum_seconds": 8796.980227,
+  "method": "Canonical delivered MP3 durations and SHA-256 rechecked against full decode and automatic transcript records, with matching shortened scripts. No new generation.",
+  "episodes": [
+    {
+      "id": "DV-08-bene-gesserit",
+      "channel": "Deep Void Theories",
+      "duration_hms": "2:22:03",
+      "seconds": 8523.683651,
+      "bytes": 136380123,
+      "sha256": "fa2b9be2fdaeff93f65376ff2fdd084cf6b18e21a52faf179a0b95ea41b66528",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "DV-09-jedi-order",
+      "channel": "Deep Void Theories",
+      "duration_hms": "2:17:57",
+      "seconds": 8277.843333,
+      "bytes": 132446710,
+      "sha256": "1a1d9a650c60f3d25a2b87f153b5c7bbc79130374f4db8f0794326f39249ae08",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "DV-10-fremen",
+      "channel": "Deep Void Theories",
+      "duration_hms": "2:22:43",
+      "seconds": 8563.544694,
+      "bytes": 137017926,
+      "sha256": "c7331326d94d240913dab3cca2e1d8b4b052b85208962d75cab7db84c350e431",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "DV-11-old-republic",
+      "channel": "Deep Void Theories",
+      "duration_hms": "2:22:48",
+      "seconds": 8568.184694,
+      "bytes": 137091907,
+      "sha256": "c7e226e421ff410c8c3cb180358751af05156d830e48fe65cc23a94974699d46",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "DV-12-great-houses",
+      "channel": "Deep Void Theories",
+      "duration_hms": "2:23:49",
+      "seconds": 8629.628095,
+      "bytes": 138074941,
+      "sha256": "fbff744e0a6621fd108b9dfbc6505201e38d6254afaabb650a61a9293afa60f5",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "QP-07-silo-builders",
+      "channel": "Quiet Paradox",
+      "duration_hms": "2:20:20",
+      "seconds": 8420.116122,
+      "bytes": 134722916,
+      "sha256": "b643983e78709448ea8a1713fd4c21b7e7396477a938edcdddfdebcab509d64b",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "QP-08-from-rules",
+      "channel": "Quiet Paradox",
+      "duration_hms": "2:16:11",
+      "seconds": 8171.275147,
+      "bytes": 130741436,
+      "sha256": "e3af890f6ae569108a9a33cc6674cfab1402205cd31f1e24e94d350214c2a8be",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "QP-09-lumon-building",
+      "channel": "Quiet Paradox",
+      "duration_hms": "2:19:54",
+      "seconds": 8394.516825,
+      "bytes": 134313310,
+      "sha256": "f162fe4c5ad55703c5347f2788e55055249808d310ec7767ac34b4de899b86cc",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "QP-10-silo-outside",
+      "channel": "Quiet Paradox",
+      "duration_hms": "2:18:01",
+      "seconds": 8281.30746,
+      "bytes": 132501878,
+      "sha256": "6cc5f501f24f5c17d9575a7b73814a0bea7bba79acc7423a874147c72b537b1c",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "QP-11-from-cycles",
+      "channel": "Quiet Paradox",
+      "duration_hms": "2:15:44",
+      "seconds": 8144.287052,
+      "bytes": 130309682,
+      "sha256": "f9ec97e634f3368547c18d5f7225788164933a01beba535d1cae167f9d216439",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "FR-04-daedric-princes",
+      "channel": "Forgotten Realms of Sleep",
+      "duration_hms": "2:20:29",
+      "seconds": 8429.819841,
+      "bytes": 134878396,
+      "sha256": "a7e016205b5d329ba215131ed072aba8d9ff4237d125e733b0659a0664b9c61d",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "FR-05-brotherhood",
+      "channel": "Forgotten Realms of Sleep",
+      "duration_hms": "2:26:36",
+      "seconds": 8796.980227,
+      "bytes": 140752810,
+      "sha256": "68e02c3d9a52f19946875acd9e9634e546a696adbb886c96580d64b37b099c6a",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    },
+    {
+      "id": "FR-06-elden-ring",
+      "channel": "Forgotten Realms of Sleep",
+      "duration_hms": "2:18:12",
+      "seconds": 8292.547188,
+      "bytes": 132682020,
+      "sha256": "87b779184c81c41c645f6a63502d07b6af69dfae2d9da002919f55253edcae55",
+      "verified_now": true,
+      "thumbnail_exists": true,
+      "title_exists": true
+    }
+  ]
+}

@@ -1,6 +1,15 @@
 DOSSIER UNIQUE — QUATRE CHAÎNES
 Mise à jour du 28 octobre 2026.
 
+ÉTAT FINAL DES 13 VOIX COURTES
+Les cinq Deep Void, cinq Quiet Paradox et trois premières Forgotten Realms sont
+livrées et revérifiées dans les dossiers vidéo du Bureau. Les treize durées sont
+comprises entre 2:15:44 et 2:26:36. Empreintes, tailles, scripts correspondants,
+titres et miniatures vérifiés. Aucun nouveau job de ce lot n'est nécessaire.
+Relevé : sleep-theories/scripts-courts-2026-10-28/LIVRAISON-VERIFIEE.json.
+Les anciennes versions longues sont conservées dans les archives.
+Les sections suivantes conservent l'historique du lancement et du regroupement.
+
 NOUVELLE DÉCISION PRIORITAIRE — 2 H 30 MAXIMUM
 Les dix MP3 Deep Void / Quiet Paradox existants durent environ 3 h 40 à 4 h 25.
 L'utilisateur a demandé leur réduction puis choisi une nouvelle génération des
