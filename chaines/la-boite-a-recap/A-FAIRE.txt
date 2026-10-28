@@ -8,7 +8,8 @@ Reprise des voix : VOIX-REPRISE.txt et registre privé indiqué dans ce document
 LOT 2 — SCRIPTS ET MINIATURES PRODUITS, NARRATIONS LANCÉES
 Les cinq sujets ci-dessous ont été écrits à la demande de l'utilisateur.
 Les fichiers, mesures, audits et périmètres sont dans lot-02-2026-10-27/.
-La copie de livraison est rangée au Bureau : La Boîte à Récap - Lot 2 - 27 octobre 2026.
+La copie de travail est rangée au Bureau : VIDEOS - TOUT REGROUPE / La Boîte à Récap.
+L'ancien dossier Lot 2 est conservé dans les archives de ce dossier commun.
 Les notes sont celles de la capture de l'utilisateur, pas un nouvel audit.
 
 1. LES 4 FANTASTIQUES — 7/10 — priorité haute
@@ -55,9 +56,11 @@ La voix de la chaîne est enregistrée dans VOIX.json.
 Statut des cinq entrées : scripts écrits et miniatures créées. Sources et corrections
 dans chaque dossier ; contrôles du lot dans lot-02-2026-10-27/CONTROLE-LOT.json.
 Les cinq narrations ont été demandées et lancées le 28 octobre 2026 avec la voix
-française habituelle, à vitesse 1,00. Dix blocs acceptés, récupération et assemblage
-en cours : lot-02-2026-10-27/VOIX-REPRISE.txt. Aucun MP3 n'est annoncé comme livré
-avant les contrôles et sa présence dans le dossier de la vidéo.
+française habituelle, à vitesse 1,00. One Piece et Stranger Things ont été récupérés,
+mais leur durée est inférieure à deux heures : correction locale du débit en cours.
+Les six blocs des Fantastiques, Frieren et Sakamoto ont échoué chez Algrow.
+Reprise des trois épisodes lancée en petits blocs, deux jobs à la fois, vitesse 0,85.
+Voir ../REGROUPEMENT-VIDEOS-2026-10-28.txt pour les registres et dossiers actuels.
 Aucune vidéo, programmation YouTube ou publication n'a été lancée pour ce lot.
 Cette demande ne relance pas les voix du lot précédent.
 Source : capture utilisateur « FOLLOW-UP 1 #6–10 », reçue le 27 octobre 2026.

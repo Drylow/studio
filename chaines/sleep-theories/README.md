@@ -6,15 +6,16 @@ Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Par
 
 ## Dossier unique — 28 octobre
 
-À la demande de l'utilisateur, les trois ensembles scripts, miniatures et voix
-sont réunis dans **Miniatures sleep - 15 videos - 22 octobre 2026** sur le Bureau.
+À la demande de l'utilisateur, les ensembles scripts, miniatures et voix des
+quatre chaînes sont réunis dans **VIDEOS - TOUT REGROUPE** sur le Bureau.
+Les sept anciens dossiers ont été déplacés dans son sous-dossier d'archives.
 Un sous-dossier par chaîne puis par vidéo contient le script, le titre et la
 miniature. Les dix vidéos Deep Void et Quiet Paradox contiennent aussi leur MP3
 complet `VOICEOVER.mp3` et `TITRE-ET-DESCRIPTION.txt`. Les cinq voix Forgotten
 Realms n'ont pas été générées. L'utilisateur a précisé qu'il parlait de MP3.
 Les fichiers existants ont été regroupés, sans nouvelle génération ni assemblage
 entre épisodes différents. Voir [le relevé](regroupement-2026-10-28/REGROUPEMENT.json)
-et [la reprise](regroupement-2026-10-28/REPRISE.txt).
+et [la reprise globale actualisée](../REGROUPEMENT-VIDEOS-2026-10-28.txt).
 
 ## Dix narrations livrees — 25 octobre
 

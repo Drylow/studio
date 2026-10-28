@@ -1,0 +1,54 @@
+DOSSIER UNIQUE — QUATRE CHAÎNES
+Mise à jour du 28 octobre 2026.
+
+OUVRIR
+C:/Users/ytbyt/Desktop/VIDEOS - TOUT REGROUPE
+
+L'utilisateur a explicitement demandé de réunir les sept dossiers du Bureau,
+puis confirmé d'y inclure les miniatures. Les dossiers de travail sont directement
+classés par chaîne et par vidéo. Les sept anciens dossiers ont été déplacés dans
+_Archives des anciens dossiers à l'intérieur de cette racine ; ils ne restent pas
+éparpillés sur le Bureau. Aucun fichier original n'a été supprimé.
+
+CONTENU AU REGROUPEMENT
+23 dossiers vidéo, 23 scripts, 22 miniatures, 15 MP3 récupérés.
+Deep Void Theories : cinq scripts, miniatures et MP3 complets contrôlés.
+Quiet Paradox : cinq scripts, miniatures et MP3 complets contrôlés.
+Forgotten Realms : cinq scripts et miniatures ; voix non générées.
+La Boîte à Récap : huit scripts, sept miniatures et cinq MP3 récupérés.
+La miniature Galactus n'existe pas : les essais intégrés et API ont été refusés.
+Ne pas déclarer une miniature générée ou remplacer par un autre personnage.
+
+AUDIOS FRANÇAIS
+Galactus, Freezer, Sukuna, One Piece, Stranger Things : audio complet récupéré
+et décodable, mais durée initiale entre 1 h 43 et 1 h 49 au débit demandé 1,00.
+Correction locale du débit annoncée : facteur 0,85, hauteur conservée, originaux
+préservés ; ne déclarer >=2h qu'après mesure des sorties corrigées.
+Journal de cette opération : work/recap-audio-retime-2026-10-28/.
+
+Fantastiques, Frieren et Sakamoto : les six gros blocs ont échoué. Échecs confirmés
+par lecture du serveur, sans média récupérable. Le solde net correspond aux seuls
+blocs réussis, les échecs ayant été remboursés ou non facturés nets.
+Reprise lancée à vitesse 0,85 avec la même voix française :
+production/recap_voiceovers_oct28_recovery.py
+473 930 caractères exacts, 24 petits blocs, au plus deux jobs simultanés.
+Le registre privé work/recap-voiceovers-2026-10-28-recovery/ledger.json conserve
+les anciennes tentatives et les nouvelles ; ne jamais resoumettre un bloc actif.
+run poursuit la file de reprise explicitement autorisée, sans retry payant
+automatique en cas d'échec ou réponse ambiguë. monitor ne crée aucune génération.
+Vérifier les processus avant toute reprise et lancer un seul processus caché.
+La livraison se fait dans les dossiers 04, 06 et 07 de La Boîte à Récap, après
+décodage, alignement du texte, contrôle d'assemblage, empreinte et durée >=7200s.
+STATUT-VOICEOVER.txt de chaque épisode donne l'avancement du moniteur.
+
+REPRISE DU CLASSEMENT
+Plan, preuve et script : work/sleep-package-2026-10-28/all-channels/ et
+work/sleep-package-2026-10-28/unify_all.py.
+Les MP3 existants ont été liés physiquement pour éviter une copie de plusieurs Go.
+Ne pas réécrire en place un MP3 partagé : écrire une nouvelle sortie puis remplacer
+seulement l'entrée finale. Les corrections conservent les originaux dans les archives.
+Les registres privés d'origine ont leurs chemins anciens relocalisés vers les
+archives ; les sauvegardes précédant ce déplacement restent dans le dossier privé.
+Les anciens README décrivent des états historiques : ce document et les registres
+actualisés priment pour les chemins et les états.
+Les médias, clés et identifiants des jobs restent privés, hors Git.
