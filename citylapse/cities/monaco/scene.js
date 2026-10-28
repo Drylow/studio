@@ -41,8 +41,10 @@ for (const r of RC) {                                       // each reclaimed ar
   r.top = n ? Math.max(1.6, s / n) : 2;
 }
 const heightAt = (x, z) => { const k = rcAt(x, z); return k >= 0 ? RC[k].top : landH(x, z); };
-const seabed = (x, z) => (rcAt(x, z) >= 0 ? -9 : landH(x, z));   // the ground mesh: the sea where land was won later
+const nearRC = (x, z) => { for (const r of [25, 55, 90]) for (let k = 0; k < 8; k++) if (rcAt(x + Math.cos(k * 0.785) * r, z + Math.sin(k * 0.785) * r) >= 0) return r; return 0; };
+const seabed = (x, z) => { if (rcAt(x, z) >= 0) return -26; const h = landH(x, z); if (h > 0.5) return h; const r = nearRC(x, z); return r ? Math.min(h, -26 + r * 0.12) : h; };   // the ground mesh: the sea where land was won later
 const isWet = (x, z) => shoreDist(x, z) < 2;
+const nearestWater = (x, z, d = 8) => { for (let r = 0; r < 260; r += 6) for (let k = 0; k < 16; k++) { const px = x + Math.cos(k * 0.3927) * r, pz = z + Math.sin(k * 0.3927) * r; if (shoreDist(px, pz) < -d && rcAt(px, pz) < 0) return [px, pz]; } return [x, z]; };
 const KX = DATA.k[0], KY = DATA.k[1];
 const LL = (lat, lon) => [(lon - 7.4235) * KX, -(lat - 43.7375) * KY];
 
@@ -54,16 +56,26 @@ const SPOT = {
   casino: LL(43.7394, 7.4276), mc: LL(43.7405, 7.4262), museum: LL(43.7307, 7.4253), cathedral: LL(43.7303, 7.4232),
   fv: LL(43.7268, 7.4165), stadium: LL(43.7276, 7.4156), lv: LL(43.7470, 7.4345), mt: LL(43.7420, 7.4322),
   odeon: LL(43.7465, 7.4330), forum: LL(43.7432, 7.4312), fort: LL(43.7322, 7.4270), center: LL(43.7372, 7.4245),
+  garden: LL(43.7313, 7.4138), tabac: LL(43.7368, 7.4236), chicane: LL(43.7378, 7.4262), heli: LL(43.7263, 7.4205),
+  tram: LL(43.7380, 7.4255), occ: LL(43.7350, 7.4205), dike: LL(43.7352, 7.4300), hdp: LL(43.7388, 7.4271), siege: LL(43.7326, 7.4190),
 };
 // view: [distance, height, azimuth°] of the camera from the focus (azimuth 0 = from the south, 90 = from the east)
 const EVENTS = [
   { y: 1215.44, title: "THE ROCK", line: "10 June 1215: Genoese led by Fulco del Cassello begin a fortress on the Rock.", at: "palace", view: [520, 260, 35] },
-  { y: 1297.02, title: "THE MONK AT THE GATE", line: "8 January 1297: François Grimaldi, reportedly disguised as a monk, takes the fortress.", at: "palace", view: [380, 170, 20] },
+  { y: 1297.02, title: "THE MONK AT THE GATE", line: "8 January 1297: François Grimaldi, reportedly disguised as a monk, takes the fortress.", at: "palace", view: [380, 170, 20], fx: "monk" },
+  { y: 1301.27, title: "THE ROCK FALLS", line: "1301: Genoa takes the fortress back; the Grimaldis flee into exile.", at: "palace", view: [480, 230, 340], fx: "retake" },
+  { y: 1331.7, title: "THE GRIMALDIS RETURN", line: "1331: thirty years later, Charles Grimaldi seizes the Rock again.", at: "palace", view: [460, 220, 30], fx: "return" },
   { y: 1346.5, title: "MENTON AND ROQUEBRUNE", line: "The Grimaldis acquire Menton in 1346 and Roquebrune in 1355.", at: "rock", view: [900, 520, 40] },
-  { y: 1506.5, title: "THE PALACE GROWS", line: "1506-07: a wing of state apartments is added to the palace.", at: "palace", view: [420, 200, 340] },
+  { y: 1357.62, title: "SIEGE OF 1357", line: "1357: a Genoese siege under Simone Boccanegra; the Rock is lost once more.", at: "siege", view: [640, 340, 190], fx: "siege" },
+  { y: 1505.76, title: "MURDER IN THE PALACE", line: "1505: Lord Jean II is killed; his brother Lucien, reportedly the killer, takes power.", at: "palace", view: [340, 150, 50], fx: "night" },
+  { y: 1506.93, title: "THE GREAT SIEGE", line: "Winter 1506-07: reportedly some 14,000 Genoese besiege the Rock, and fail.", at: "siege", view: [820, 430, 195], fx: "greatsiege" },
+  { y: 1507.5, title: "THE PALACE GROWS", line: "1506-07: a wing of state apartments is added to the palace.", at: "palace", view: [420, 200, 340], fx: "build" },
+  { y: 1523.64, title: "A LORD ASSASSINATED", line: "1523: Lucien Grimaldi is murdered by his nephew, Bartolomeo Doria.", at: "palace", view: [360, 160, 10], fx: "night" },
   { y: 1524.5, title: "UNDER SPAIN'S WING", line: "1524: Monaco places itself under the protection of Spain.", at: "rock", view: [700, 380, 15] },
+  { y: 1631.6, title: "THE PLAGUE", line: "1631: plague and quarantine on the Rock; about one in ten inhabitants dies.", at: "palace", view: [460, 210, 40], fx: "plague" },
   { y: 1633.5, title: "THE FIRST PRINCE", line: "1633: Spain recognises Honoré II as Prince of Monaco.", at: "palace", view: [460, 220, 50] },
   { y: 1641.7, title: "FRANCE TAKES OVER", line: "14 September 1641: the Treaty of Péronne makes Monaco a French protectorate.", at: "rock", view: [760, 420, 330] },
+  { y: 1641.88, title: "THE SPANISH THROWN OUT", line: "One night in November 1641, the Spanish garrison is driven from the palace.", at: "palace", view: [420, 190, 20], fx: "expel" },
   { y: 1793.1, title: "THE REVOLUTION", line: "1793: revolutionary France annexes Monaco; the palace is looted.", at: "palace", view: [420, 210, 30], fx: "revolution" },
   { y: 1814.4, title: "THE PRINCE RETURNS", line: "1814: the Treaty of Paris restores the principality.", at: "rock", view: [640, 330, 10] },
   { y: 1815.9, title: "UNDER SARDINIA", line: "20 November 1815: Monaco becomes a protectorate of the Kingdom of Sardinia.", at: "condamine", view: [800, 420, 25] },
@@ -76,34 +88,54 @@ const EVENTS = [
   { y: 1866.42, title: "MONTE-CARLO", line: "1 June 1866: the new quarter on the Spélugues is named Monte-Carlo.", at: "mc", view: [720, 380, 50] },
   { y: 1868.5, title: "THE RAILWAY ARRIVES", line: "1868: the Nice-Ventimiglia line reaches Monaco.", at: "condamine", view: [700, 360, 70], fx: "train" },
   { y: 1879.07, title: "THE OPERA", line: "25 January 1879: Charles Garnier's opera hall opens, built in about eight months.", at: "casino", view: [420, 210, 60] },
+  { y: 1885.5, title: "MONACO'S OWN STAMPS", line: "1885: the first Monegasque stamps, bearing Prince Charles III.", at: "condamine", view: [640, 330, 40] },
+  { y: 1887.15, title: "THE EARTH SHAKES", line: "Dawn, 23 February 1887: an earthquake; Monaco camps outdoors in tents.", at: "casino", view: [420, 210, 30], fx: "quake" },
+  { y: 1898.37, title: "THE ELECTRIC TRAM", line: "1898: electric trams climb the steep streets of Monaco.", at: "tram", view: [420, 220, 40], fx: "tram" },
   { y: 1899.3, title: "A MUSEUM ON THE CLIFF", line: "1899: Prince Albert I lays the first stone of the Oceanographic Museum.", at: "museum", view: [460, 200, 15], fx: "build" },
-  { y: 1902.2, title: "THE PORT", line: "1902: work starts on the jetties of Port Hercule.", at: "port", view: [700, 380, 40] },
+  { y: 1902.2, title: "THE PORT", line: "1902: work starts on the jetties of Port Hercule.", at: "port", view: [700, 380, 40], fx: "jetty" },
   { y: 1903.8, title: "THE CATHEDRAL", line: "1903: Saint Nicholas Cathedral is finished in white La Turbie stone.", at: "cathedral", view: [380, 190, 330] },
   { y: 1910.24, title: "THE MUSEUM OPENS", line: "29 March 1910: the Oceanographic Museum opens on the cliff.", at: "museum", view: [400, 160, 20] },
-  { y: 1911.01, title: "A CONSTITUTION", line: "5 January 1911: Monaco's first constitution, after the revolution of 1910.", at: "palace", view: [500, 240, 40], fx: "crowd" },
+  { y: 1910.76, title: "CROWDS AT THE PALACE", line: "October 1910: Monegasques march on the palace to demand a constitution.", at: "palace", view: [460, 220, 40], fx: "crowd" },
+  { y: 1911.01, title: "A CONSTITUTION", line: "5 January 1911: Monaco's first constitution is promulgated.", at: "palace", view: [560, 270, 20] },
+  { y: 1911.06, title: "THE FIRST RALLY", line: "January 1911: 23 cars from 11 European cities race to Monte-Carlo.", at: "casino", view: [460, 230, 70], fx: "rally" },
   { y: 1918.6, title: "THE WAR YEARS", line: "1918: Monaco counts 15,960 residents, down from 19,121 in 1908.", at: "center", view: [1300, 800, 30] },
   { y: 1926.5, title: "A HARBOUR OF STONE", line: "1926: the jetties of Port Hercule are finished.", at: "port", view: [800, 460, 55] },
-  { y: 1929.28, title: "THE FIRST GRAND PRIX", line: "14 April 1929: William Grover-Williams wins in a Bugatti, 100 laps of the streets.", at: "port", view: [520, 260, 60], fx: "gp1929" },
-  { y: 1942.86, title: "OCCUPIED", line: "11 November 1942: the Italian army occupies Monaco; German troops follow in 1943.", at: "condamine", view: [600, 320, 20], fx: "occupation" },
+  { y: 1929.28, title: "THE FIRST GRAND PRIX", line: "14 April 1929: William Grover-Williams wins in a Bugatti, 100 laps of the streets.", at: "tabac", view: [300, 150, 70], fx: "gp" },
+  { y: 1933.1, title: "GARDEN ON THE CLIFF", line: "1933: the Exotic Garden opens, its cacti clinging to the cliff.", at: "garden", view: [420, 200, 20] },
+  { y: 1942.86, title: "OCCUPIED", line: "11 November 1942: the Italian army occupies Monaco; German troops follow in 1943.", at: "occ", view: [420, 240, 30], fx: "occupation" },
   { y: 1944.55, title: "FORT ANTOINE", line: "July 1944: Allied bombing destroys Fort Antoine.", at: "fort", view: [520, 280, 40], fx: "bombing" },
   { y: 1944.67, title: "LIBERATED", line: "3 September 1944: Monaco is liberated.", at: "condamine", view: [520, 260, 30], fx: "liberation" },
   { y: 1949.35, title: "RAINIER III", line: "9 May 1949: Rainier III becomes Prince of Monaco.", at: "palace", view: [440, 210, 20] },
-  { y: 1954.6, title: "LAND FROM THE SEA", line: "From 1954 to 1961, new land is won from the sea at Larvotto and Le Portier.", at: "lv", view: [800, 460, 50] },
+  { y: 1950.39, title: "THE WAVE AT TABAC", line: "21 May 1950: a wave floods the track on lap one, nine cars crash; Fangio wins.", at: "tabac", view: [330, 170, 50], fx: "tabac" },
+  { y: 1954.6, title: "LAND FROM THE SEA", line: "From 1954 to 1961, new land is won from the sea at Larvotto and Le Portier.", at: "lv", view: [800, 460, 50], fx: "reclaim" },
+  { y: 1955.39, title: "INTO THE HARBOUR", line: "22 May 1955: Ascari's Lancia plunges into the port; he swims to safety.", at: "chicane", view: [320, 160, 20], fx: "ascari" },
   { y: 1956.3, title: "THE WEDDING", line: "April 1956: Prince Rainier III marries the American actress Grace Kelly.", at: "port", view: [900, 380, 35], fx: "wedding" },
+  { y: 1957.5, title: "COUSTEAU'S MUSEUM", line: "1957: Jacques-Yves Cousteau becomes director of the Oceanographic Museum.", at: "museum", view: [520, 220, 10], fx: "calypso" },
+  { y: 1958.2, title: "AN HEIR IS BORN", line: "14 March 1958: Prince Albert, the future Albert II, is born.", at: "fort", view: [480, 230, 30], fx: "salute" },
   { y: 1962.96, title: "WOMEN VOTE", line: "1962: the new constitution gives women the vote and ends the death penalty.", at: "center", view: [1100, 680, 40] },
   { y: 1966.3, title: "FONTVIEILLE", line: "About 1966-1973: some 22 hectares are won from the sea at Fontvieille.", at: "fv", view: [900, 520, 20], fx: "reclaim" },
+  { y: 1966.42, title: "FIREWORKS OVER THE PORT", line: "1966: fireworks for Monte-Carlo's hundredth birthday.", at: "port", view: [900, 420, 30], fx: "fireworks" },
   { y: 1969.5, title: "THE FIRST TOWER", line: "1969: Le Millefiori, 111 m, rises over Monte-Carlo.", at: "mc", view: [720, 330, 60] },
+  { y: 1976.5, title: "THE HELIPORT", line: "1976: helicopters land on reclaimed Fontvieille.", at: "heli", view: [420, 220, 340], fx: "heli" },
   { y: 1980.5, title: "THE CITY GOES UP", line: "1980-1982: L'Annonciade and Parc Saint Roman pass 100 m.", at: "odeon", view: [820, 420, 70] },
+  { y: 1982.7, title: "FAREWELL, PRINCESS GRACE", line: "14 September 1982: Princess Grace dies; Monaco mourns.", at: "cathedral", view: [520, 240, 20], fx: "mourning" },
   { y: 1985.07, title: "STADE LOUIS II", line: "25 January 1985: the new stadium opens on reclaimed land in Fontvieille.", at: "stadium", view: [520, 260, 10], fx: "stadium" },
+  { y: 1991.7, title: "THE YACHT SHOW", line: "1991: the first Monaco Yacht Show fills Port Hercule.", at: "port", view: [560, 280, 40], fx: "yachts" },
   { y: 1993.4, title: "A SEAT AT THE UN", line: "28 May 1993: Monaco joins the United Nations.", at: "palace", view: [600, 300, 30] },
   { y: 2000.55, title: "GRIMALDI FORUM", line: "20 July 2000: the Grimaldi Forum opens on the Larvotto seafront.", at: "forum", view: [480, 230, 60] },
-  { y: 2002.4, title: "THE FLOATING DIKE", line: "About 2002: a new outer dike closes the bay of Port Hercule.", at: "port", view: [900, 480, 50] },
+  { y: 2002.58, title: "A DIKE AFLOAT", line: "August 2002: a 352 m concrete dike is towed from Spain to close the port.", at: "dike", view: [900, 460, 60], fx: "dike" },
   { y: 2005.26, title: "ALBERT II", line: "6 April 2005: Albert II succeeds his father.", at: "palace", view: [460, 220, 25] },
+  { y: 2011.5, title: "A ROYAL WEDDING", line: "July 2011: Albert II marries Charlene Wittstock; fireworks over the harbour.", at: "port", view: [900, 400, 40], fx: "wedding2011" },
+  { y: 2014.94, title: "TWIN HEIRS", line: "December 2014: twins are born; Fort Antoine fires 21 shots for each.", at: "fort", view: [480, 230, 30], fx: "salute" },
   { y: 2015.3, title: "THE ODEON TOWER", line: "2015: the Odeon Tower, 170 m, becomes Monaco's tallest building.", at: "odeon", view: [560, 300, 50] },
-  { y: 2017.5, title: "BUILDING IN THE SEA", line: "About 2017: work begins on a 6-hectare extension at Le Portier.", at: "mt", view: [620, 320, 40], fx: "build" },
+  { y: 2017.5, title: "BUILDING IN THE SEA", line: "About 2017: work begins on a 6-hectare extension at Le Portier.", at: "mt", view: [620, 320, 40], fx: "reclaim" },
+  { y: 2018.83, title: "THE STORM", line: "October 2018: storm Adrian; huge waves smash Larvotto beach.", at: "lv", view: [620, 300, 40], fx: "storm" },
+  { y: 2019.08, title: "FIRE ON THE ROOF", line: "31 January 2019: fire breaks out on the Hôtel de Paris roof; no one is hurt.", at: "hdp", view: [360, 190, 30], fx: "roof" },
   { y: 2019.55, title: "18 CAISSONS", line: "18 July 2019: the last of the 18 caissons is set in place.", at: "mt", view: [460, 230, 70] },
+  { y: 2020.22, title: "EMPTY STREETS", line: "2020: the pandemic; for the first time since 1954, no Grand Prix.", at: "port", view: [620, 320, 40], fx: "empty" },
   { y: 2024.93, title: "MARETERRA", line: "4 December 2024: the new district of Mareterra opens.", at: "mt", view: [520, 260, 40], fx: "fireworks" },
-  { y: 2025.99, title: "38,857 PEOPLE", line: "End of 2025: 38,857 residents, from 144 nationalities, on about 2 km².", at: "center", view: [2600, 1900, 40] },
+  { y: 2026.24, title: "THE POPE'S VISIT", line: "28 March 2026: Pope Leo XIV blesses the crowds from the palace.", at: "palace", view: [400, 300, 25], fx: "pope" },
+  { y: 2026.26, title: "38,857 PEOPLE", line: "End of 2025: 38,857 residents, from 144 nationalities, on about 2 km².", at: "center", view: [2600, 1900, 40] },
 ];
 const SLOT = 10.5, TAIL = 34;
 const YK = []; {
@@ -116,10 +148,10 @@ const YK = []; {
     t += SLOT - 3; YK.push([t, e.y + Math.min(0.2, gap * 0.02)]);   // the year almost stops while the title shows
     prev = e.y;
   }
-  YK.push([t + 6, 2026]);
+  YK.push([t + 6, 2026.3]);
 }
 export const MDUR = Math.ceil(YK[YK.length - 1][0] + TAIL), DUR = MDUR + INTRO;
-YK.push([MDUR, 2026]);
+YK.push([MDUR, 2026.3]);
 const yearF = (t) => pl(YK, t);
 const yearAt = (t) => Math.floor(yearF(t));
 const tOf = (y) => (y <= YK[0][1] ? -1 : inv(yearF, y, 0, MDUR));
@@ -326,8 +358,8 @@ export function buildVideo(canvas, hud) {
         float nz = n21(vW.xz * 0.004), nf = n21(vW.xz * 0.03);
         vec3 nW = normalize(cross(dFdx(vW), dFdy(vW))); float stp = 1.0 - abs(nW.y);
         float m1 = n21(vW.xz * 0.0016 + 9.0), m2 = n21(vW.xz * 0.006 - 4.0);
-        vec3 maquis = mix(Ls(vec3(0.40, 0.45, 0.30)), Ls(vec3(0.49, 0.51, 0.35)), smoothstep(0.25, 0.75, m1));
-        maquis = mix(maquis, Ls(vec3(0.62, 0.60, 0.48)), smoothstep(0.55, 0.9, m2) * 0.5);
+        vec3 maquis = mix(Ls(vec3(0.33, 0.38, 0.26)), Ls(vec3(0.42, 0.44, 0.31)), smoothstep(0.25, 0.75, m1));
+        maquis = mix(maquis, Ls(vec3(0.55, 0.53, 0.43)), smoothstep(0.55, 0.9, m2) * 0.4);
         vec3 rock = mix(Ls(vec3(0.70, 0.67, 0.60)), Ls(vec3(0.80, 0.77, 0.70)), nz);
         vec3 col = mix(maquis, rock, smoothstep(0.30, 0.52, stp + (nf - 0.5) * 0.14));
         col = mix(col, rock * 0.95, smoothstep(1.5, 0.7, vW.y) * 0.8);                 // rocky shore
@@ -371,10 +403,11 @@ export function buildVideo(canvas, hud) {
   // ---------- the land won from the sea: each platform rises out of the water between its dates ----------
   for (const r of RC) {
     const sh = new THREE.Shape(r.ring.map(([x, z]) => new THREE.Vector2(x, -z)));
-    const D = r.top + 9, geo = new THREE.ExtrudeGeometry(sh, { depth: D, bevelEnabled: false }); geo.rotateX(-Math.PI / 2);
+    const D = r.top + 26, geo = new THREE.ExtrudeGeometry(sh, { depth: D, bevelEnabled: false }); geo.rotateX(-Math.PI / 2);
     const m = new THREE.Mesh(geo, tMat); m.receiveShadow = true; m.castShadow = true;
-    const g = new THREE.Group(); g.position.y = -9; g.add(m); scene.add(g);
-    grow(g, tOf(r.from), tOf(r.to), "y");
+    const g = new THREE.Group(); g.position.y = -26; g.add(m); scene.add(g);
+    const [f0, f1] = r.name === "Port Hercule dike" ? [2002.62, 2002.66] : [r.from, r.to];   // the dike arrives in one piece, towed
+    grow(g, tOf(f0), tOf(f1), "y");
   }
 
   // ---------- the sea ----------
@@ -440,6 +473,7 @@ export function buildVideo(canvas, hud) {
   const carP = [], CC = ["#f2f2f0", "#c8ccd2", "#222428", "#b8302a", "#f2c230", "#3a5f9a", "#f2f2f0"];
   for (let k = 0; k < NC; k++) { const sg = mains[Math.floor(hash2(k, 41) * mains.length)]; carP.push({ sg, u: hash2(k, 42), dir: hash2(k, 43) < 0.5 ? 1 : -1, sp: 8 + hash2(k, 44) * 6, on: hash2(k, 45) }); cars.setColorAt(k, new THREE.Color(CC[k % CC.length])); }
   const _cm = new THREE.Matrix4(), _cq = new THREE.Quaternion(), _cs = V(1, 1, 1), _cp = V(), _up = V(0, 1, 0);
+  const QE = EVENTS.filter((e) => e.fx === "empty"), QUIET = (t) => QE.reduce((m, e) => Math.max(m, clamp(Math.min((t - e.t) / 1.5, (e.t + SLOT - t) / 1.5))), 0);
   function updateLife(t) {
     for (const b of boats) {
       const on = sm(ramp(t, b.born, b.born + 1)); b.g.visible = on > 0.01; if (!b.g.visible) continue;
@@ -447,7 +481,7 @@ export function buildVideo(canvas, hud) {
       if (shoreDist(x, b.z0) > -40) { b.g.visible = false; continue; }
       b.g.position.set(x, 0.2 + Math.sin(t * 1.1 + b.ph) * 0.15, b.z0); b.g.rotation.set(0, b.v > 0 ? 0 : Math.PI, Math.sin(t * 0.9 + b.ph) * 0.03); b.g.scale.setScalar(on);
     }
-    const share = sm(ramp(yearF(t), 1910, 1990)); let n = 0;
+    const share = sm(ramp(yearF(t), 1910, 1990)) * (1 - QUIET(t)); let n = 0;
     for (const c of carP) {
       if (c.on > share || t < c.sg.ba + 3) continue;
       const L = Math.hypot(c.sg.bx - c.sg.ax, c.sg.bz - c.sg.az), f = ((c.u + c.dir * t * c.sp / L) % 1 + 1) % 1;
@@ -467,25 +501,70 @@ export function buildVideo(canvas, hud) {
   const CIRCUIT = [[43.7348, 7.4205], [43.7364, 7.4230], [43.7380, 7.4255], [43.7392, 7.4266], [43.7395, 7.4278], [43.7405, 7.4290],
     [43.7412, 7.4296], [43.7400, 7.4306], [43.7385, 7.4300], [43.7372, 7.4285], [43.7362, 7.4260], [43.7355, 7.4245], [43.7344, 7.4222],
     [43.7343, 7.4210], [43.7348, 7.4205]].map(([a, b]) => LL(a, b));
+  const L2 = (pts) => pts.map(([a, b]) => LL(a, b)), plen = (p) => p.slice(1).reduce((s, q, i) => s + Math.hypot(q[0] - p[i][0], q[1] - p[i][1]), 0);
+  const TRAM = L2([[43.7335, 7.4158], [43.7350, 7.4190], [43.7362, 7.4228], [43.7380, 7.4255], [43.7400, 7.4290], [43.7430, 7.4318], [43.7465, 7.4345]]);
+  const RALLY = L2([[43.7450, 7.4372], [43.7428, 7.4330], [43.7410, 7.4300], [43.7398, 7.4282], [43.7394, 7.4276]]);
+  const GENOA_ROAD = L2([[43.7335, 7.4100], [43.7330, 7.4160], [43.7320, 7.4192], [43.7314, 7.4200]]);
+  const SEA_SE = L2([[43.7205, 7.4360], [43.7240, 7.4300], [43.7262, 7.4268]]);
+  const GP_CARS = ["#2b55a8", "#2b55a8", "#c8102e", "#1f6b3a", "#2b55a8", "#e6e2d6", "#c8102e"];
+  const CAMP = LL(43.7343, 7.4172);
+  const cannon = (cx, cz, t0, n, every = 0.7) => { for (let k = 0; k < n; k++) { fx.splash({ x: cx + (hash2(k, 7) - 0.5) * 30, z: cz + (hash2(k, 8) - 0.5) * 30, y0: heightAt(cx, cz) + 4, t0: t0 + k * every, t1: t0 + k * every + 0.3, r: 4, h: 8, size: 6, per: 6, sound: false }); fx.cue(t0 + k * every, "cannon", 2, 0.8); } };
+  const siege = (t, big) => {
+    fx.camp({ x: CAMP[0], z: CAMP[1], r: big ? 110 : 70, sx: 1.6, n: big ? 220 : 110, s: 6, t0: t - 0.5, t1: t + SLOT + 0.5, color: "#efe7d2" });
+    fx.army({ path: GENOA_ROAD, t0: t - 0.5, t1: t + SLOT, u0: 0.2, u1: 0.9, cols: 10, n: big ? 420 : 220, s: 2.4, color: "#d8d2c4", flag: "#c8102e" });
+    fx.fleet({ path: SEA_SE, t0: t - 1, t1: t + SLOT - 1, n: big ? 12 : 6, len: 30 });
+    const [px, pz] = P("palace"); cannon(CAMP[0] + 60, CAMP[1] - 20, t + 2, big ? 9 : 5, 0.8); fx.smoke({ x: px - 30, z: pz + 10, t0: t + 4, t1: t + SLOT, sound: false });
+    fx.cue(t, "battle", SLOT - 1, big ? 1 : 0.8);
+  };
   for (const e of EVENTS) {
     const t = e.t, [x, z] = P(e.at);
     fx.cue(t + 0.3, "title", 1.5, 0.5);
     switch (e.fx) {
-      case "revolution": fx.crowd({ x: square[0], z: square[1], r: 45, n: 500, t0: t, t1: t + 8 }); fx.smoke({ x: palX, z: palZ, t0: t + 2, t1: t + 7, sound: false }); fx.cue(t + 1, "drums", 6, 0.7); break;
+      case "monk": fx.army({ path: GENOA_ROAD.slice(1), t0: t, t1: t + SLOT, n: 14, s: 2.4, color: "#5b4636", flag: "#5b4636" }); fx.cue(t + 4, "clash", 3, 0.7); break;
+      case "retake": fx.army({ path: GENOA_ROAD, t0: t - 0.5, t1: t + SLOT, n: 200, s: 2.4, color: "#d8d2c4", flag: "#c8102e" }); fx.fleet({ path: SEA_SE, t0: t - 1, t1: t + SLOT - 1, n: 6, len: 30 }); fx.cue(t + 3, "battle", 6, 0.8); break;
+      case "return": fx.army({ path: GENOA_ROAD, t0: t - 0.5, t1: t + SLOT, n: 150, s: 2.4, color: "#7a2e2a", flag: "#ffffff" }); fx.cue(t + 3, "battle", 6, 0.8); break;
+      case "siege": siege(t, false); break;
+      case "greatsiege": siege(t, true); break;
+      case "night": fx.sky({ t0: t, t1: t + SLOT + 0.5, kind: "night", fade: 1.4 }); fx.cue(t + 1, "night", SLOT - 1, 0.6); fx.cue(t + 4, "clash", 2, 0.6); break;
+      case "plague": fx.sky({ t0: t, t1: t + SLOT + 0.5, kind: "gloom", fade: 1.6 }); fx.cue(t + 1, "toll", SLOT - 2, 0.8); break;
+      case "expel": fx.sky({ t0: t, t1: t + SLOT + 0.5, kind: "night", fade: 1.4 }); fx.army({ path: [[palX + 10, palZ], [palX + 140, palZ - 60], L2([[43.7340, 7.4228]])[0]], t0: t + 1, t1: t + SLOT, n: 60, s: 2.4, color: "#b9a23a", flag: "#c8102e" }); fx.cue(t + 1, "march", 7, 0.7); break;
+      case "revolution": fx.crowd({ x: square[0], z: square[1], r: 45, n: 500, s: 1.5, t0: t, t1: t + 8 }); fx.smoke({ x: palX, z: palZ, t0: t + 2, t1: t + 7, sound: false }); fx.cue(t + 1, "drums", 6, 0.7); break;
       case "build": fx.dust({ x, z, t0: t, t1: t + 6 }); fx.cue(t, "construction", 6, 0.8); break;
       case "train": fx.cue(t + 1, "train", 5, 0.8); break;
-      case "crowd": fx.crowd({ x: square[0], z: square[1], r: 50, n: 650, t0: t, t1: t + 8 }); break;
-      case "gp1929": fx.race({ path: CIRCUIT, t0: t - 1, t1: t + SLOT, n: 14, speed: 48, colors: ["#2b55a8", "#2b55a8", "#c8102e", "#1f6b3a", "#2b55a8", "#e6e2d6"] });
-        fx.crowd({ x: x - 40, z: z + 40, r: 70, sx: 2.2, n: 900, t0: t - 1, t1: t + SLOT, gain: 0.7 }); fx.cue(t + SLOT - 3, "cheer", 3, 0.9); break;
-      case "occupation": { const [ax, az] = LL(43.7330, 7.4110); fx.army({ path: [[ax, az], [x - 200, z + 60], [x, z]], t0: t - 1, t1: t + SLOT, n: 300, color: "#5a5b44", flag: "#2f7d32" }); break; }
+      case "quake": fx.quake({ t0: t + 1.2, t1: t + 4.2 }); for (let k = 0; k < 5; k++) fx.dust({ x: x + (hash2(k, 3) - 0.5) * 300, z: z + (hash2(k, 4) - 0.5) * 300, t0: t + 1.6 + k * 0.3, t1: t + 6 });
+        fx.camp({ x, z: z + 20, r: 45, sx: 1.4, n: 90, t0: t + 3, t1: t + SLOT + 0.5, s: 5 }); fx.crowd({ x, z: z + 20, r: 50, n: 300, t0: t + 3, t1: t + SLOT + 0.5, gain: 0.5 }); break;
+      case "tram": fx.race({ path: TRAM, t0: t - 0.5, t1: t + SLOT, n: 4, speed: 12, s: 3, spread: 0.25, colors: ["#e3c35a", "#e3c35a", "#c94a32"] }); fx.cue(t + 1, "tram", SLOT - 2, 0.7); break;
+      case "jetty": fx.splash({ x: x + 120, z: z + 60, t0: t + 1, t1: t + SLOT - 2, r: 40, h: 10, every: 0.6, per: 5 }); fx.cue(t, "construction", 8, 0.8); break;
+      case "crowd": fx.crowd({ x: square[0], z: square[1], r: 50, n: 650, s: 1.5, t0: t, t1: t + 8 }); fx.cue(t + 1, "chant", 6, 0.8); break;
+      case "rally": fx.race({ path: RALLY, t0: t - 0.5, t1: t + SLOT, n: 9, speed: plen(RALLY) / 7, once: true, spread: 0.03, s: 2.8, colors: ["#c8102e", "#f2c230", "#2b55a8", "#e6e2d6", "#2f8a3a"] }); fx.crowd({ x, z, r: 40, n: 350, s: 1.4, t0: t + 2, t1: t + SLOT, gain: 0.6 }); fx.cue(t + 1, "oldcars", SLOT - 2, 0.8); break;
+      case "gp": case "tabac": case "ascari":
+        fx.race({ path: CIRCUIT, t0: t - 1, t1: t + SLOT, n: 14, speed: 34, s: 2.8, colors: e.fx === "gp" ? GP_CARS : ["#c8102e", "#c8102e", "#1f5fa8", "#e6e2d6", "#2f6b3a", "#c8102e"] });
+        fx.crowd({ path: CIRCUIT, gap: 10, w: 10, n: 2200, s: 2.2, t0: t - 1, t1: t + SLOT, gain: 0.7 }); fx.cue(t + SLOT - 3, "cheer", 3, 0.9);
+        if (e.fx === "tabac") { { const [wx, wz] = nearestWater(x, z, 4); fx.splash({ x: wx, z: wz, t0: t + 2.5, t1: t + 4.5, r: 25, h: 26, per: 20, every: 0.12 }); } fx.cue(t + 3.2, "crash", 2.5, 1); }
+        if (e.fx === "ascari") { const [wx, wz] = nearestWater(x, z, 3); fx.splash({ x: wx, z: wz, t0: t + 3.5, t1: t + 4.3, r: 6, h: 22, per: 24, every: 0.08 }); fx.cue(t + 3.4, "crash", 2, 0.9); }
+        break;
+      case "occupation": fx.army({ path: L2([[43.7335, 7.4140], [43.7348, 7.4205], [43.7364, 7.4230], [43.7380, 7.4255]]), t0: t - 1, t1: t + SLOT, u0: 0.3, u1: 0.95, cols: 6, n: 300, s: 1.9, color: "#7d8060", flag: "#2f7d32" }); break;
       case "bombing": { const [fx0, fz0] = P("fort"); fx.planes({ from: [fx0 + 400, fz0 + 2600], to: [fx0 - 600, fz0 - 2600], t0: t - 1, t1: t + 7, n: 9, alt: 320 });
         for (let k = 0; k < 4; k++) fx.smoke({ x: fx0 + (k - 1.5) * 30, z: fz0 + (k % 2) * 25, t0: t + 2 + k * 0.5, t1: t + 9, big: k === 0, gain: 0.8 });
         fx.fire({ x: fx0, z: fz0, r: 35, t0: t + 2.4, t1: t + 9 }); break; }
-      case "liberation": fx.crowd({ x, z, r: 60, n: 800, t0: t, t1: t + 8 }); fx.cue(t + 0.5, "bells", 7, 0.8); fx.cue(t + 2, "cheer", 5, 0.9); break;
-      case "wedding": fx.sky({ t0: t + 3, t1: t + SLOT + 1.5, kind: "night", fade: 1.6 }); fx.crowd({ x: x - 60, z: z + 30, r: 80, sx: 2, n: 900, t0: t, t1: t + SLOT });
+      case "liberation": fx.crowd({ x, z, r: 60, n: 800, s: 1.5, t0: t, t1: t + 8 }); fx.cue(t + 0.5, "bells", 7, 0.8); fx.cue(t + 2, "cheer", 5, 0.9); break;
+      case "wedding": case "wedding2011": fx.sky({ t0: t + 3, t1: t + SLOT + 1.5, kind: "night", fade: 1.6 }); fx.crowd({ x: x - 60, z: z + 30, r: 80, sx: 2, n: 900, s: 1.5, t0: t, t1: t + SLOT });
         fx.fireworks({ x: x + 150, z: z + 350, t0: t + 4.2, t1: t + SLOT + 0.5, w: 600, d: 250 }); fx.cue(t, "bells", 4, 0.7); break;
-      case "reclaim": fx.dust({ x, z: z + 150, t0: t, t1: t + 9 }); fx.dust({ x: x + 200, z: z + 250, t0: t + 1, t1: t + 9 }); fx.cue(t, "construction", 9, 0.9); fx.cue(t, "waves", 9, 0.5); break;
-      case "stadium": fx.cue(t + 2, "cheer", 4, 0.8); break;
+      case "reclaim": fx.fleet({ path: [[x + 500, z + 700], [x + 60, z + 120]], t0: t, t1: t + SLOT, n: 6, len: 26, sail: false, hull: "#7d7a72", tall: 1.4 });
+        fx.splash({ x: x + 40, z: z + 90, sx: 2, t0: t + 1, t1: t + SLOT - 1, r: 70, h: 12, every: 0.45, per: 5 }); fx.cue(t, "construction", 9, 0.9); fx.cue(t, "waves", 9, 0.5); break;
+      case "calypso": fx.fleet({ path: L2([[43.7262, 7.4310], [43.7287, 7.4262]]), t0: t - 1, t1: t + SLOT, n: 1, len: 42, sail: false, hull: "#f2f2ee", tall: 2 }); fx.cue(t + 1, "horn", 2, 0.6); break;
+      case "salute": cannon(x, z, t + 1.5, 7, 0.9); fx.cue(t + 1, "bells", SLOT - 2, 0.7); break;
+      case "heli": fx.planes({ from: [x + 900, z - 350], to: [x, z], t0: t, t1: t + SLOT - 1.5, n: 1, alt: 40, s: 3.5 }); fx.cue(t + 0.5, "heli", SLOT - 2, 0.8); break;
+      case "mourning": fx.sky({ t0: t, t1: t + SLOT + 0.5, kind: "gloom", fade: 1.6 }); fx.cue(t + 1, "toll", SLOT - 2, 0.8); break;
+      case "stadium": fx.crowd({ x, z, r: 45, n: 700, s: 1.3, t0: t + 1, t1: t + SLOT, gain: 0.4 }); fx.cue(t + 2, "cheer", 4, 0.8); break;
+      case "yachts": fx.fleet({ path: [nearestWater(x + 260, z + 90), [x, z], nearestWater(x - 220, z - 80)], t0: t - 1, t1: t + SLOT, n: 16, len: 30, sail: false, hull: "#f6f6f4", tall: 1.6 }); fx.cue(t, "horn", 2, 0.5); break;
+      case "dike": fx.fleet({ path: [[x + 1500, z + 1300], [x + 60, z + 30]], t0: t - 1, t1: t + SLOT - 2.5, n: 2, len: 18, sail: false, hull: "#c0392b", tall: 1.6 });
+        fx.fleet({ path: [[x + 1440, z + 1240], [x, z]], t0: t - 1, t1: t + SLOT - 2.5, n: 1, len: 150, sail: false, hull: "#a29f98", tall: 3 }); fx.cue(t, "horn", 3, 0.7); break;
+      case "storm": fx.sky({ t0: t, t1: t + SLOT + 0.5, kind: "storm", fade: 1.4 });
+        for (let k = 0; k < 6; k++) { const [sx, sz] = nearestWater(...LL(43.7448 + k * 0.0009, 7.4365 + k * 0.0006), 3); fx.splash({ x: sx, z: sz, t0: t + 1 + k * 0.4, t1: t + SLOT - 1, r: 30, h: 30, per: 16, every: 0.9, sound: k === 0 }); } break;
+      case "roof": fx.fire({ x, z, r: 14, n: 24, y: 24, t0: t + 1, t1: t + SLOT - 1 }); fx.cue(t + 2, "siren", 5, 0.6); break;
+      case "empty": fx.sky({ t0: t, t1: t + SLOT + 0.5, kind: "gloom", fade: 1.6 }); fx.cue(t + 1, "wind", SLOT - 2, 0.6); break;
+      case "pope": fx.crowd({ x: square[0], z: square[1], r: 55, n: 1100, s: 1.4, t0: t, t1: t + SLOT }); fx.cue(t + 0.5, "bells", 8, 0.8); fx.cue(t + 4, "cheer", 4, 0.8); break;
       case "fireworks": fx.sky({ t0: t + 2, t1: t + SLOT + 1.5, kind: "night", fade: 1.6 }); fx.fireworks({ x: x + 200, z: z + 400, t0: t + 3.5, t1: t + SLOT + 0.5, w: 700, d: 300 }); break;
     }
   }
@@ -553,5 +632,6 @@ export function buildVideo(canvas, hud) {
   }
   // sound cues for tools/sfx.mjs, in video seconds (the intro shifts everything by INTRO)
   const sfx = fx.cues.map((c) => ({ ...c, t: c.t + INTRO })).sort((a, b) => a.t - b.t);
+  window.__dbg = { heightAt, shoreDist, nearestWater, SPOT, rcAt, fx, scene, EVENTS };
   return { ready, renderAt, DUR, sfx, events: EVENTS.map((e) => ({ t: e.t + INTRO, y: e.y, title: e.title })), stats: { houses: wallR.length + prismR.length, towers: prismG.length, roofs: hipR.length, trees: crownR.length, roads: segs.length } };
 }
