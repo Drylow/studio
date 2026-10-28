@@ -89,7 +89,7 @@ const EVENTS = [
   { y: 1868.5, title: "THE RAILWAY ARRIVES", line: "1868: the Nice-Ventimiglia line reaches Monaco.", at: "condamine", view: [700, 360, 70], fx: "train" },
   { y: 1879.07, title: "THE OPERA", line: "25 January 1879: Charles Garnier's opera hall opens, built in about eight months.", at: "casino", view: [420, 210, 60] },
   { y: 1885.5, title: "MONACO'S OWN STAMPS", line: "1885: the first Monegasque stamps, bearing Prince Charles III.", at: "condamine", view: [640, 330, 40] },
-  { y: 1887.15, title: "THE EARTH SHAKES", line: "Dawn, 23 February 1887: an earthquake; Monaco camps outdoors in tents.", at: "casino", view: [420, 210, 30], fx: "quake" },
+  { y: 1887.15, title: "THE EARTH SHAKES", line: "Dawn, 23 February 1887: an earthquake. Afraid to go home, people sleep in tents on the Casino square.", at: "casino", view: [330, 190, 30], fx: "quake" },
   { y: 1898.37, title: "THE ELECTRIC TRAM", line: "1898: electric trams climb the steep streets of Monaco.", at: "tram", view: [420, 220, 40], fx: "tram" },
   { y: 1899.3, title: "A MUSEUM ON THE CLIFF", line: "1899: Prince Albert I lays the first stone of the Oceanographic Museum.", at: "museum", view: [460, 200, 15], fx: "build" },
   { y: 1902.2, title: "THE PORT", line: "1902: work starts on the jetties of Port Hercule.", at: "port", view: [700, 380, 40], fx: "jetty" },
@@ -143,9 +143,9 @@ const YK = []; {
   YK.push([0, 1215.4]);
   for (const e of EVENTS) {
     const gap = e.y - prev;
-    t += Math.max(3, Math.min(9, gap * (prev < 1800 ? 0.03 : 0.25)));   // the quiet centuries go fast
+    t += Math.max(1.8, Math.min(8, gap * (prev < 1800 ? 0.03 : 0.25)));   // the quiet centuries go fast
     e.t = t; YK.push([t, e.y]);
-    t += SLOT - 3; YK.push([t, e.y + Math.min(0.2, gap * 0.02)]);   // the year almost stops while the title shows
+    t += SLOT - 1; YK.push([t, e.y + Math.min(0.2, gap * 0.02)]);   // the year almost stops while the title shows
     prev = e.y;
   }
   YK.push([t + 6, 2026.3]);
@@ -532,7 +532,7 @@ export function buildVideo(canvas, hud) {
       case "build": fx.dust({ x, z, t0: t, t1: t + 6 }); fx.cue(t, "construction", 6, 0.8); break;
       case "train": fx.cue(t + 1, "train", 5, 0.8); break;
       case "quake": fx.quake({ t0: t + 1.2, t1: t + 4.2 }); for (let k = 0; k < 5; k++) fx.dust({ x: x + (hash2(k, 3) - 0.5) * 300, z: z + (hash2(k, 4) - 0.5) * 300, t0: t + 1.6 + k * 0.3, t1: t + 6 });
-        fx.camp({ x, z: z + 20, r: 45, sx: 1.4, n: 90, t0: t + 3, t1: t + SLOT + 0.5, s: 5 }); fx.crowd({ x, z: z + 20, r: 50, n: 300, t0: t + 3, t1: t + SLOT + 0.5, gain: 0.5 }); break;
+        fx.camp({ x: x + 40, z: z + 30, grid: 12, n: 30, t0: t + 3, t1: t + SLOT + 0.5, s: 8, color: "#f4f0e6" }); fx.crowd({ x: x + 40, z: z + 30, r: 45, n: 60, s: 1.6, t0: t + 3.5, t1: t + SLOT + 0.5, gain: 0.5 }); break;
       case "tram": fx.race({ path: TRAM, t0: t - 0.5, t1: t + SLOT, n: 4, speed: 12, s: 3, spread: 0.25, colors: ["#e3c35a", "#e3c35a", "#c94a32"] }); fx.cue(t + 1, "tram", SLOT - 2, 0.7); break;
       case "jetty": fx.splash({ x: x + 120, z: z + 60, t0: t + 1, t1: t + SLOT - 2, r: 40, h: 10, every: 0.6, per: 5 }); fx.cue(t, "construction", 8, 0.8); break;
       case "crowd": fx.crowd({ x: square[0], z: square[1], r: 50, n: 650, s: 1.5, t0: t, t1: t + 8 }); fx.cue(t + 1, "chant", 6, 0.8); break;

@@ -6,7 +6,7 @@
 //   Monte-Carlo (1861-1944)   a Belle Époque waltz in F: pizzicato bass, strings on 2 and 3, a celesta tune
 //   modern Monaco (1944-2026) A major: strings, choir, a bright pluck ostinato and a soft pulse
 // Dark moments (night, plague, gloom, sieges) thin the music; timpani and gong mark the big events.
-//   node music.mjs  ->  assets/music.m4a (-14 LUFS)
+//   node music.mjs  ->  assets/music.m4a (-18 LUFS, peaks tamed: the user found -14 too loud)
 import { writeFileSync, readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
@@ -195,7 +195,7 @@ let mpk = 0; for (let i = 0; i < N; i++) mpk = Math.max(mpk, Math.abs(L[i]), Mat
 const fx = renderSfx(TL.sfx, { SR, N, seed: 1215 });
 let fpk = 0; for (let i = 0; i < N; i++) fpk = Math.max(fpk, Math.abs(fx.L[i]), Math.abs(fx.R[i]));
 let epk = 0; for (let i = 0; i < N; i++) epk = Math.max(epk, fx.env[i]);
-const FXG = 0.55 * mpk / (fpk || 1);                 // effects peak a little under the music's peak
+const FXG = 0.4 * mpk / (fpk || 1);                 // effects peak a little under the music's peak
 for (let i = 0; i < N; i++) { const d = 1 - 0.35 * clamp(fx.env[i] / (epk * 0.5)); L[i] = L[i] * d + fx.L[i] * FXG; R[i] = R[i] * d + fx.R[i] * FXG; }
 
 // ---------- write ----------
@@ -208,5 +208,5 @@ for (let i = 0; i < N; i++) { buf.writeInt16LE(Math.round(clamp(L[i] * g, -1, 1)
 const wav = join(here, "assets/music.wav"), m4a = join(here, "assets/music.m4a");
 writeFileSync(wav, buf);
 const ff = process.env.FFMPEG || "ffmpeg";
-const r = spawnSync(ff, ["-y", "-loglevel", "error", "-i", wav, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-c:a", "aac", "-b:a", "256k", m4a], { stdio: "inherit" });
+const r = spawnSync(ff, ["-y", "-loglevel", "error", "-i", wav, "-af", "acompressor=threshold=0.25:ratio=4:attack=5:release=200,loudnorm=I=-18:TP=-3:LRA=9,aresample=48000", "-c:a", "aac", "-b:a", "256k", m4a], { stdio: "inherit" });
 console.log(`peak ${peak.toFixed(3)}, ${TL.sfx.length} effects -> ${r.status === 0 ? "assets/music.m4a" : "ffmpeg failed"}`);

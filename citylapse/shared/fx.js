@@ -10,7 +10,7 @@ import { clamp, lerp, ramp, sm, V, hash2, mulberry32 } from "./engine.js";
 //   fx.fire({ x, z, r, t0, t1 })                 flames + a smoke column (sound: fire)
 //   fx.smoke({ x, z, t0, t1, big })              a dark column (bombing, battle)
 //   fx.crowd({ x, z, r, n, t0, t1, s })          a dense gathering (sound: crowd); or { path, w } for spectators along a route
-//   fx.camp({ x, z, r, n, t0, t1, color })       tents (sieges, refugees after a quake)
+//   fx.camp({ x, z, r, n, t0, t1, color, grid })  tents (sieges, refugees after a quake); grid: metres between tents in rows
 //   fx.splash({ x, z, t0, t1, r, y0 })            white spray on the water (waves, a car in the harbour, dumped rock)
 //   fx.army({ path:[[x,z],...], t0, t1, n, color, s, u0, u1, cols })   a column of soldiers marching along a path (sound: march)
 //   fx.fleet({ path, t0, t1, n, sail, hull })       ships sailing along a sea path (sound: waves)
@@ -75,7 +75,8 @@ export function storyFx(scene, heightAt) {
   const TENT = inst(new THREE.ConeGeometry(0.75, 1, 4).rotateY(Math.PI / 4).translate(0, 0.5, 0), new THREE.MeshLambertMaterial({ color: "#ffffff", flatShading: true }), 1500, true);
   const camps = [];
   function camp(o) { const rnd = mulberry32(camps.length * 53 + 5), pts = [];
-    for (let k = 0; k < (o.n || 120); k++) { const a = rnd() * 6.283, d = Math.sqrt(rnd()) * (o.r || 60), x = o.x + Math.cos(a) * d * (o.sx || 1), z = o.z + Math.sin(a) * d; pts.push([x, heightAt(x, z), z, rnd()]); }
+    if (o.grid) { const g = o.grid, m = Math.ceil(Math.sqrt(o.n || 60)); for (let i = 0; i < m; i++) for (let j = 0; j < m; j++) { if (pts.length >= (o.n || 60)) break; const x = o.x + (i - (m - 1) / 2) * g, z = o.z + (j - (m - 1) / 2) * g * 1.2; pts.push([x, heightAt(x, z), z, rnd()]); } }   // neat rows
+    else for (let k = 0; k < (o.n || 120); k++) { const a = rnd() * 6.283, d = Math.sqrt(rnd()) * (o.r || 60), x = o.x + Math.cos(a) * d * (o.sx || 1), z = o.z + Math.sin(a) * d; pts.push([x, heightAt(x, z), z, rnd()]); }
     camps.push({ color: "#e8e0cc", s: 4, ...o, pts }); }
   const SPRAY = inst(new THREE.IcosahedronGeometry(1, 0), new THREE.MeshLambertMaterial({ color: "#eef6fa", transparent: true, opacity: 0.85, depthWrite: false, flatShading: true }), 4000);
   const splashes = [];
@@ -177,7 +178,7 @@ export function storyFx(scene, heightAt) {
     let nt = 0;
     for (const c of camps) { const on = life(t, c.t0, c.t1, 1.5); if (on <= 0) continue;
       for (const [x, y, z, ph] of c.pts) { if (ph > on) continue; const k = c.s * (0.8 + ph * 0.5); _p.set(x, y - 0.2, z); _s.set(k, k * 0.8, k);
-        TENT.setMatrixAt(nt, _m.compose(_p, _q, _s)); TENT.setColorAt(nt++, _c.set(ph < 0.15 ? "#c9b48e" : c.color)); } }
+        TENT.setMatrixAt(nt, _m.compose(_p, _q, _s)); TENT.setColorAt(nt++, _c.set(c.grid ? c.color : ph < 0.15 ? "#c9b48e" : c.color)); } }
     TENT.count = nt; TENT.instanceMatrix.needsUpdate = true; if (TENT.instanceColor) TENT.instanceColor.needsUpdate = true;
     // spray: each drop shoots up and falls back into the sea
     let nw = 0;
