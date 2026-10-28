@@ -14,7 +14,11 @@ CONTENU AU REGROUPEMENT
 23 dossiers vidéo, 23 scripts, 22 miniatures, 15 MP3 récupérés.
 Deep Void Theories : cinq scripts, miniatures et MP3 complets contrôlés.
 Quiet Paradox : cinq scripts, miniatures et MP3 complets contrôlés.
-Forgotten Realms : cinq scripts et miniatures ; voix non générées.
+Forgotten Realms : cinq scripts et miniatures ; aucun MP3 complet livré.
+Deux blocs de Daedric Princes sont soumis. La file des trois premières voix
+est arrêtée après la question utilisateur sur les durées de plus de quatre heures.
+La récupération seule continue ; aucune nouvelle soumission sans décision.
+Oblivion et New Vegas restent différés. Lire forgotten-realms-of-sleep/VOIX-2026-10-28.txt.
 La Boîte à Récap : huit scripts, sept miniatures et cinq MP3 récupérés.
 La miniature Galactus n'existe pas : les essais intégrés et API ont été refusés.
 Ne pas déclarer une miniature générée ou remplacer par un autre personnage.

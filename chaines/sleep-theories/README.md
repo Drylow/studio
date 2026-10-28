@@ -11,8 +11,13 @@ quatre chaînes sont réunis dans **VIDEOS - TOUT REGROUPE** sur le Bureau.
 Les sept anciens dossiers ont été déplacés dans son sous-dossier d'archives.
 Un sous-dossier par chaîne puis par vidéo contient le script, le titre et la
 miniature. Les dix vidéos Deep Void et Quiet Paradox contiennent aussi leur MP3
-complet `VOICEOVER.mp3` et `TITRE-ET-DESCRIPTION.txt`. Les cinq voix Forgotten
-Realms n'ont pas été générées. L'utilisateur a précisé qu'il parlait de MP3.
+complet `VOICEOVER.mp3` et `TITRE-ET-DESCRIPTION.txt`. Les dix audios durent de
+3 h 40 à 4 h 25 : les scripts ont été surdimensionnés pour le débit réel.
+Forgotten Realms : deux blocs de Daedric Princes sont soumis, puis la file des
+trois voix autorisées a été suspendue après la question utilisateur sur ces durées.
+Aucun MP3 complet Forgotten Realms n'est livré. Voir
+[la reprise des voix](../forgotten-realms-of-sleep/VOIX-2026-10-28.txt).
+L'utilisateur a précisé qu'il parlait de MP3.
 Les fichiers existants ont été regroupés, sans nouvelle génération ni assemblage
 entre épisodes différents. Voir [le relevé](regroupement-2026-10-28/REGROUPEMENT.json)
 et [la reprise globale actualisée](../REGROUPEMENT-VIDEOS-2026-10-28.txt).

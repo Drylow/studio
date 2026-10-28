@@ -1,5 +1,10 @@
 # Forgotten Realms of Sleep
 
+**28 octobre : voix en attente après vérification des durées.** Deux blocs de
+Daedric Princes sont déjà soumis et récupérés par un moniteur seul. La file des
+trois épisodes autorisés est suspendue ; Oblivion et New Vegas restent différés.
+Lire [la reprise actuelle](VOIX-2026-10-28.txt) avant toute nouvelle soumission.
+
 Troisieme chaine : lore de jeux video en anglais pour le sommeil. Identite visuelle : ruines, foret sombre, pierre creme, vert mousse et feu ambre. Signature : Gaming Lore to Fall Asleep To.
 
 Le lot du 18 octobre est dans [scripts-2026-10-18](scripts-2026-10-18/LIRE-EN-PREMIER.txt) : trois narrations completes, titres, chapitres, sources, mesures et audits. Lire ce dossier avant de reprendre.

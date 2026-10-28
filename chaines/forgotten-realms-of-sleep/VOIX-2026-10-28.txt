@@ -1,0 +1,42 @@
+REPRISE VOIX — 28 OCTOBRE 2026
+
+ÉTAT PRIORITAIRE : NOUVELLES SOUMISSIONS EN ATTENTE.
+Après autorisation des trois premières voix seulement, l'utilisateur a signalé
+la durée excessive des audios Deep Void et Quiet Paradox. La file Forgotten
+Realms a été arrêtée. Deux blocs de Daedric Princes avaient déjà été acceptés ;
+un moniteur de récupération seul les conserve, sans créer de génération.
+Ne pas relancer run ni supprimer pause-submissions.json sans nouvelle décision.
+
+SÉLECTION AVANT CETTE INTERRUPTION
+FR-04 Daedric Princes, FR-05 Brotherhood of Steel, FR-06 Elden Ring.
+524 530 caractères, 24 blocs contigus, voix Mellow Matt à vitesse 0,90,
+sans sous-titres payants. FR-07 Oblivion et FR-08 New Vegas sont différés.
+La réserve des trois reprises françaises est protégée par le pilote.
+
+DURÉE : CORRECTION DE CALIBRAGE NÉCESSAIRE
+Les dix MP3 Deep Void et Quiet Paradox existants durent de 3:40:47 à 4:25:39.
+Les textes ont 25 516 à 29 903 mots ; le débit effectif est d'environ
+106 à 123 mots par minute. Les estimations initiales à 150 mots/minute ne
+représentaient pas cette voix. Aucun indice de double assemblage n'a été trouvé :
+les fichiers correspondent aux registres et les blocs sources sont contigus.
+Il faut convenir de la durée cible avant de raccourcir des textes ou des audios.
+Ne pas accélérer, couper ou régénérer les MP3 existants de sa propre initiative.
+
+OUTIL ET REPRISE TECHNIQUE
+production/forgotten_voiceovers_oct28.py : plan, status, run, monitor.
+run soumet la sélection autorisée ; monitor effectue uniquement récupération,
+contrôles et assemblage. Aucun retry payant automatique. Réponse ambiguë ou
+échec bloquent la file et demandent une réconciliation préalable.
+État privé : work/forgotten-voiceovers-2026-10-28/ledger.json.
+Blocage de soumission : pause-submissions.json dans ce même dossier.
+Contrôler les processus avant toute reprise ; un seul exécuteur Windows caché.
+Ne jamais resoumettre les deux blocs actifs ni écraser les sources gelées.
+Le callback local de contrôle des débuts/fins et ses réglages restent privés.
+Les contrôles échantillonnés ne constituent pas une écoute humaine intégrale.
+
+LIVRAISON PRÉVUE
+Bureau/VIDEOS - TOUT REGROUPE/Forgotten Realms of Sleep/<identifiant>/VOICEOVER.mp3.
+La livraison exige les empreintes, le décodage complet, le contrôle des débuts
+et fins des blocs, leur assemblage contigu et une durée réelle >= 2 heures.
+Aucun MP3 complet Forgotten Realms n'est livré au moment de l'interruption.
+Les autres médias et la reprise française ne sont pas modifiés par cette pause.
