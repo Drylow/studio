@@ -91,6 +91,7 @@ def main(cfg_path, folder):
             for t in towers:
                 if (name and t.get("match") and t["match"] in name) or (t.get("match_h") and h and abs(h - t["match_h"]) < 0.5):
                     label, year = t["label"], t["year"]
+                    height = t.get("h") or height  # hauteur réelle quand la donnée OSM est absente ou fausse
                     break
             if height is None:
                 area = Polygon(ring).area

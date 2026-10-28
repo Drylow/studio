@@ -1,8 +1,303 @@
 {
-  "city": "Monaco",
-  "title": "MONACO - 3D TIMELAPSE - 1215 to 2026",
-  "bbox": [7.398, 43.718, 7.447, 43.757],
-  "center": [7.4235, 43.7375],
-  "start_year": 1215,
-  "now_year": 2026
+ "city": "Monaco",
+ "title": "MONACO - 3D TIMELAPSE - 1215 to 2026",
+ "bbox": [
+  7.398,
+  43.718,
+  7.447,
+  43.757
+ ],
+ "center": [
+  7.4235,
+  43.7375
+ ],
+ "start_year": 1215,
+ "now_year": 2026,
+ "zones_note": "Approximate dates per quarter (documented development of each quarter); the towers carry their real completion year (Wikipedia list of the tallest buildings in Monaco); land won from the sea carries its reclamation dates.",
+ "zones": [
+  {
+   "name": "Mareterra",
+   "lat": 43.7418,
+   "lon": 7.4318,
+   "r": 230,
+   "from": 2022,
+   "to": 2025
+  },
+  {
+   "name": "Fontvieille",
+   "lat": 43.7268,
+   "lon": 7.416,
+   "r": 420,
+   "from": 1975,
+   "to": 1998
+  },
+  {
+   "name": "Monaco-Ville (the Rock)",
+   "lat": 43.7308,
+   "lon": 7.4235,
+   "r": 300,
+   "from": 1240,
+   "to": 1780
+  },
+  {
+   "name": "La Condamine",
+   "lat": 43.7352,
+   "lon": 7.419,
+   "r": 360,
+   "from": 1720,
+   "to": 1885
+  },
+  {
+   "name": "Monte-Carlo",
+   "lat": 43.7398,
+   "lon": 7.4262,
+   "r": 380,
+   "from": 1864,
+   "to": 1910
+  },
+  {
+   "name": "Moneghetti",
+   "lat": 43.7366,
+   "lon": 7.4128,
+   "r": 300,
+   "from": 1890,
+   "to": 1935
+  },
+  {
+   "name": "Larvotto and Saint-Roman",
+   "lat": 43.747,
+   "lon": 7.433,
+   "r": 400,
+   "from": 1900,
+   "to": 1966
+  },
+  {
+   "name": "Beausoleil",
+   "lat": 43.744,
+   "lon": 7.4215,
+   "r": 480,
+   "from": 1900,
+   "to": 1940
+  },
+  {
+   "name": "Cap d'Ail",
+   "lat": 43.724,
+   "lon": 7.405,
+   "r": 600,
+   "from": 1890,
+   "to": 1965
+  }
+ ],
+ "fallback": {
+  "core_lat": 43.731,
+  "core_lon": 7.4235,
+  "base": 1880,
+  "per_km": 18,
+  "max": 1995
+ },
+ "towers": [
+  {
+   "match": "Tour Odéon",
+   "label": "Odeon Tower",
+   "year": 2015,
+   "h": 170
+  },
+  {
+   "match": "Millefiori",
+   "label": "Le Millefiori",
+   "year": 1969,
+   "h": 111
+  },
+  {
+   "match": "Annonciade",
+   "label": "L'Annonciade",
+   "year": 1980,
+   "h": 111
+  },
+  {
+   "match": "Parc Saint Roman",
+   "label": "Parc Saint Roman",
+   "year": 1982,
+   "h": 108
+  },
+  {
+   "match": "Château Périgord 2",
+   "label": "Château Périgord II",
+   "year": 1973,
+   "h": 93
+  },
+  {
+   "match": "Château Périgord",
+   "label": "Château Périgord I",
+   "year": 1968,
+   "h": 93
+  },
+  {
+   "match": "Roccabella",
+   "label": "Le Roccabella",
+   "year": 1982,
+   "h": 90
+  },
+  {
+   "match": "Mirabeau",
+   "label": "Le Mirabeau",
+   "year": 1975,
+   "h": 81
+  },
+  {
+   "match": "Sun Tower",
+   "label": "Monte Carlo Sun",
+   "year": 1982,
+   "h": 81
+  },
+  {
+   "match": "Musée Océanographique",
+   "label": "Oceanographic Museum",
+   "year": 1910
+  },
+  {
+   "match": "Grimaldi Forum",
+   "label": "Grimaldi Forum",
+   "year": 2000
+  },
+  {
+   "match": "Palais princier",
+   "label": "Prince's Palace",
+   "year": 1300
+  },
+  {
+   "match": "Cathédrale Notre-Dame-Immaculée",
+   "label": "Saint Nicholas Cathedral",
+   "year": 1903
+  }
+ ],
+ "reclaim": [
+  {
+   "name": "Fontvieille",
+   "from": 1966,
+   "to": 1973,
+   "poly": [
+    [
+     43.7294,
+     7.41
+    ],
+    [
+     43.7292,
+     7.4185
+    ],
+    [
+     43.7299,
+     7.4206
+    ],
+    [
+     43.7262,
+     7.4245
+    ],
+    [
+     43.7215,
+     7.415
+    ],
+    [
+     43.7232,
+     7.4098
+    ]
+   ]
+  },
+  {
+   "name": "Larvotto",
+   "from": 1954,
+   "to": 1961,
+   "poly": [
+    [
+     43.7445,
+     7.4325
+    ],
+    [
+     43.747,
+     7.4345
+    ],
+    [
+     43.7505,
+     7.4372
+    ],
+    [
+     43.7505,
+     7.4425
+    ],
+    [
+     43.7445,
+     7.44
+    ]
+   ]
+  },
+  {
+   "name": "Mareterra",
+   "from": 2017,
+   "to": 2019.96,
+   "poly": [
+    [
+     43.7398,
+     7.4296
+    ],
+    [
+     43.7445,
+     7.4318
+    ],
+    [
+     43.7445,
+     7.437
+    ],
+    [
+     43.7398,
+     7.4345
+    ]
+   ]
+  },
+  {
+   "name": "Port Hercule jetties",
+   "from": 1902.2,
+   "to": 1926,
+   "poly": [
+    [
+     43.7356,
+     7.4262
+    ],
+    [
+     43.7392,
+     7.429
+    ],
+    [
+     43.7392,
+     7.4318
+    ],
+    [
+     43.7356,
+     7.43
+    ]
+   ]
+  },
+  {
+   "name": "Port Hercule dike",
+   "from": 2001.5,
+   "to": 2002.6,
+   "poly": [
+    [
+     43.7331,
+     7.4265
+    ],
+    [
+     43.7372,
+     7.4302
+    ],
+    [
+     43.7378,
+     7.4322
+    ],
+    [
+     43.7326,
+     7.429
+    ]
+   ]
+  }
+ ]
 }
