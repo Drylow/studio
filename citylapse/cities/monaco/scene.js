@@ -1,8 +1,9 @@
 import * as THREE from "three";
 import {
   clamp, lerp, ramp, sm, V, mulberry32, hash2, vnoise, fbm, pl, inv, M4, NEVER, U, STD, growMesh, unitBox, hipRoof, facet,
-  createStage, rasterGround, growPrisms, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs,
+  createStage, rasterGround, growPrisms, GROUND_GLSL, landmarks, cameraPath, hudDriver, puffs, fmtYear, fmtPop,
 } from "./engine.js";
+import { storyFx } from "./fx.js";
 import { DATA } from "./data.js";
 
 // "MONACO – 3D TIMELAPSE – 1215 to 2026". SPEC.md has the beats, FACTS.md the sources of every caption.
@@ -11,7 +12,7 @@ import { DATA } from "./data.js";
 // the rest (an approximate reconstruction). Fontvieille, Larvotto and Mareterra rise out of the sea on their dates.
 // World metres, x east, z south, origin 43.7375 N 7.4235 E.
 
-export const W = 1920, H = 1080, SS = 1.5, MDUR = 500, INTRO = 9, DUR = MDUR + INTRO;
+export const W = 1920, H = 1080, SS = 1.5, INTRO = 9;
 
 // ---------------- land: the real coast and relief ----------------
 const SG = DATA.S, SD = Uint8Array.from(atob(SG.b64), (c) => c.charCodeAt(0));
@@ -45,97 +46,101 @@ const isWet = (x, z) => shoreDist(x, z) < 2;
 const KX = DATA.k[0], KY = DATA.k[1];
 const LL = (lat, lon) => [(lon - 7.4235) * KX, -(lat - 43.7375) * KY];
 
-// ---------------- time: video seconds → year ----------------
-const YK = [
-  [0, 1215.44], [14, 1216], [18, 1297.0], [27, 1297.03], [40, 1346], [52, 1430], [60, 1524], [70, 1633], [78, 1641.7], [92, 1740],
-  [100, 1793], [106, 1814.4], [112, 1848.2], [118, 1856.95], [124, 1861.09], [131, 1861.1], [142, 1863.6], [152, 1866.6], [160, 1868.5],
-  [174, 1879.1], [194, 1899.3], [204, 1903.8], [214, 1910.3], [220, 1911.1], [238, 1926], [244, 1929.27], [251, 1929.3], [262, 1942.86],
-  [268, 1944.7], [276, 1949.4], [284, 1954.5], [292, 1956.3], [300, 1961], [308, 1966], [326, 1973], [342, 1982], [352, 1985.07],
-  [370, 1993.4], [384, 2000.55], [396, 2005.3], [410, 2009.8], [424, 2015.3], [432, 2017], [446, 2019.96], [462, 2024.93], [470, 2026], [MDUR, 2026],
+// ---------------- the story: dated events (title + one line, FACTS.md has the sources) ----------------
+// Each event gets a slot of about 11 s: the camera flies to its focus, the year slows down while the title shows,
+// and its effect plays. The year → time mapping is built from the events, so the titles never crowd each other.
+const SPOT = {
+  rock: LL(43.7308, 7.4235), palace: LL(43.7314, 7.4200), condamine: LL(43.7352, 7.4195), port: LL(43.7355, 7.4245),
+  casino: LL(43.7394, 7.4276), mc: LL(43.7405, 7.4262), museum: LL(43.7307, 7.4253), cathedral: LL(43.7303, 7.4232),
+  fv: LL(43.7268, 7.4165), stadium: LL(43.7276, 7.4156), lv: LL(43.7470, 7.4345), mt: LL(43.7420, 7.4322),
+  odeon: LL(43.7465, 7.4330), forum: LL(43.7432, 7.4312), fort: LL(43.7322, 7.4270), center: LL(43.7372, 7.4245),
+};
+// view: [distance, height, azimuth°] of the camera from the focus (azimuth 0 = from the south, 90 = from the east)
+const EVENTS = [
+  { y: 1215.44, title: "THE ROCK", line: "10 June 1215: Genoese led by Fulco del Cassello begin a fortress on the Rock.", at: "palace", view: [520, 260, 35] },
+  { y: 1297.02, title: "THE MONK AT THE GATE", line: "8 January 1297: François Grimaldi, reportedly disguised as a monk, takes the fortress.", at: "palace", view: [380, 170, 20] },
+  { y: 1346.5, title: "MENTON AND ROQUEBRUNE", line: "The Grimaldis acquire Menton in 1346 and Roquebrune in 1355.", at: "rock", view: [900, 520, 40] },
+  { y: 1506.5, title: "THE PALACE GROWS", line: "1506-07: a wing of state apartments is added to the palace.", at: "palace", view: [420, 200, 340] },
+  { y: 1524.5, title: "UNDER SPAIN'S WING", line: "1524: Monaco places itself under the protection of Spain.", at: "rock", view: [700, 380, 15] },
+  { y: 1633.5, title: "THE FIRST PRINCE", line: "1633: Spain recognises Honoré II as Prince of Monaco.", at: "palace", view: [460, 220, 50] },
+  { y: 1641.7, title: "FRANCE TAKES OVER", line: "14 September 1641: the Treaty of Péronne makes Monaco a French protectorate.", at: "rock", view: [760, 420, 330] },
+  { y: 1793.1, title: "THE REVOLUTION", line: "1793: revolutionary France annexes Monaco; the palace is looted.", at: "palace", view: [420, 210, 30], fx: "revolution" },
+  { y: 1814.4, title: "THE PRINCE RETURNS", line: "1814: the Treaty of Paris restores the principality.", at: "rock", view: [640, 330, 10] },
+  { y: 1815.9, title: "UNDER SARDINIA", line: "20 November 1815: Monaco becomes a protectorate of the Kingdom of Sardinia.", at: "condamine", view: [800, 420, 25] },
+  { y: 1848.2, title: "MENTON BREAKS AWAY", line: "21 March 1848: Menton and Roquebrune declare themselves free cities.", at: "center", view: [1500, 900, 60] },
+  { y: 1856.95, title: "THE FIRST CASINO", line: "14 December 1856: a first casino opens at Villa Bellevue, in La Condamine.", at: "condamine", view: [520, 260, 30] },
+  { y: 1861.09, title: "SOLD TO FRANCE", line: "2 February 1861: Menton and Roquebrune are ceded to France for 4 million francs.", at: "center", view: [2200, 1500, 45] },
+  { y: 1861.3, title: "WHAT IS LEFT", line: "Monaco keeps less than a tenth of its land, and about 1,200 people.", at: "rock", view: [1100, 620, 20] },
+  { y: 1863.5, title: "THE SPÉLUGUES", line: "1863: the casino opens on the bare plateau of the Spélugues.", at: "casino", view: [520, 260, 40], fx: "build" },
+  { y: 1864.5, title: "HÔTEL DE PARIS", line: "1864: the Hôtel de Paris opens beside the casino.", at: "casino", view: [380, 190, 20] },
+  { y: 1866.42, title: "MONTE-CARLO", line: "1 June 1866: the new quarter on the Spélugues is named Monte-Carlo.", at: "mc", view: [720, 380, 50] },
+  { y: 1868.5, title: "THE RAILWAY ARRIVES", line: "1868: the Nice-Ventimiglia line reaches Monaco.", at: "condamine", view: [700, 360, 70], fx: "train" },
+  { y: 1879.07, title: "THE OPERA", line: "25 January 1879: Charles Garnier's opera hall opens, built in about eight months.", at: "casino", view: [420, 210, 60] },
+  { y: 1899.3, title: "A MUSEUM ON THE CLIFF", line: "1899: Prince Albert I lays the first stone of the Oceanographic Museum.", at: "museum", view: [460, 200, 15], fx: "build" },
+  { y: 1902.2, title: "THE PORT", line: "1902: work starts on the jetties of Port Hercule.", at: "port", view: [700, 380, 40] },
+  { y: 1903.8, title: "THE CATHEDRAL", line: "1903: Saint Nicholas Cathedral is finished in white La Turbie stone.", at: "cathedral", view: [380, 190, 330] },
+  { y: 1910.24, title: "THE MUSEUM OPENS", line: "29 March 1910: the Oceanographic Museum opens on the cliff.", at: "museum", view: [400, 160, 20] },
+  { y: 1911.01, title: "A CONSTITUTION", line: "5 January 1911: Monaco's first constitution, after the revolution of 1910.", at: "palace", view: [500, 240, 40], fx: "crowd" },
+  { y: 1918.6, title: "THE WAR YEARS", line: "1918: Monaco counts 15,960 residents, down from 19,121 in 1908.", at: "center", view: [1300, 800, 30] },
+  { y: 1926.5, title: "A HARBOUR OF STONE", line: "1926: the jetties of Port Hercule are finished.", at: "port", view: [800, 460, 55] },
+  { y: 1929.28, title: "THE FIRST GRAND PRIX", line: "14 April 1929: William Grover-Williams wins in a Bugatti, 100 laps of the streets.", at: "port", view: [520, 260, 60], fx: "gp1929" },
+  { y: 1942.86, title: "OCCUPIED", line: "11 November 1942: the Italian army occupies Monaco; German troops follow in 1943.", at: "condamine", view: [600, 320, 20], fx: "occupation" },
+  { y: 1944.55, title: "FORT ANTOINE", line: "July 1944: Allied bombing destroys Fort Antoine.", at: "fort", view: [520, 280, 40], fx: "bombing" },
+  { y: 1944.67, title: "LIBERATED", line: "3 September 1944: Monaco is liberated.", at: "condamine", view: [520, 260, 30], fx: "liberation" },
+  { y: 1949.35, title: "RAINIER III", line: "9 May 1949: Rainier III becomes Prince of Monaco.", at: "palace", view: [440, 210, 20] },
+  { y: 1954.6, title: "LAND FROM THE SEA", line: "From 1954 to 1961, new land is won from the sea at Larvotto and Le Portier.", at: "lv", view: [800, 460, 50] },
+  { y: 1956.3, title: "THE WEDDING", line: "April 1956: Prince Rainier III marries the American actress Grace Kelly.", at: "port", view: [900, 380, 35], fx: "wedding" },
+  { y: 1962.96, title: "WOMEN VOTE", line: "1962: the new constitution gives women the vote and ends the death penalty.", at: "center", view: [1100, 680, 40] },
+  { y: 1966.3, title: "FONTVIEILLE", line: "About 1966-1973: some 22 hectares are won from the sea at Fontvieille.", at: "fv", view: [900, 520, 20], fx: "reclaim" },
+  { y: 1969.5, title: "THE FIRST TOWER", line: "1969: Le Millefiori, 111 m, rises over Monte-Carlo.", at: "mc", view: [720, 330, 60] },
+  { y: 1980.5, title: "THE CITY GOES UP", line: "1980-1982: L'Annonciade and Parc Saint Roman pass 100 m.", at: "odeon", view: [820, 420, 70] },
+  { y: 1985.07, title: "STADE LOUIS II", line: "25 January 1985: the new stadium opens on reclaimed land in Fontvieille.", at: "stadium", view: [520, 260, 10], fx: "stadium" },
+  { y: 1993.4, title: "A SEAT AT THE UN", line: "28 May 1993: Monaco joins the United Nations.", at: "palace", view: [600, 300, 30] },
+  { y: 2000.55, title: "GRIMALDI FORUM", line: "20 July 2000: the Grimaldi Forum opens on the Larvotto seafront.", at: "forum", view: [480, 230, 60] },
+  { y: 2002.4, title: "THE FLOATING DIKE", line: "About 2002: a new outer dike closes the bay of Port Hercule.", at: "port", view: [900, 480, 50] },
+  { y: 2005.26, title: "ALBERT II", line: "6 April 2005: Albert II succeeds his father.", at: "palace", view: [460, 220, 25] },
+  { y: 2015.3, title: "THE ODEON TOWER", line: "2015: the Odeon Tower, 170 m, becomes Monaco's tallest building.", at: "odeon", view: [560, 300, 50] },
+  { y: 2017.5, title: "BUILDING IN THE SEA", line: "About 2017: work begins on a 6-hectare extension at Le Portier.", at: "mt", view: [620, 320, 40], fx: "build" },
+  { y: 2019.55, title: "18 CAISSONS", line: "18 July 2019: the last of the 18 caissons is set in place.", at: "mt", view: [460, 230, 70] },
+  { y: 2024.93, title: "MARETERRA", line: "4 December 2024: the new district of Mareterra opens.", at: "mt", view: [520, 260, 40], fx: "fireworks" },
+  { y: 2025.99, title: "38,857 PEOPLE", line: "End of 2025: 38,857 residents, from 144 nationalities, on about 2 km².", at: "center", view: [2600, 1900, 40] },
 ];
+const SLOT = 10.5, TAIL = 34;
+const YK = []; {
+  let t = 0, prev = 1215.4;
+  YK.push([0, 1215.4]);
+  for (const e of EVENTS) {
+    const gap = e.y - prev;
+    t += Math.max(3, Math.min(9, gap * (prev < 1800 ? 0.03 : 0.25)));   // the quiet centuries go fast
+    e.t = t; YK.push([t, e.y]);
+    t += SLOT - 3; YK.push([t, e.y + Math.min(0.2, gap * 0.02)]);   // the year almost stops while the title shows
+    prev = e.y;
+  }
+  YK.push([t + 6, 2026]);
+}
+export const MDUR = Math.ceil(YK[YK.length - 1][0] + TAIL), DUR = MDUR + INTRO;
+YK.push([MDUR, 2026]);
 const yearF = (t) => pl(YK, t);
 const yearAt = (t) => Math.floor(yearF(t));
 const tOf = (y) => (y <= YK[0][1] ? -1 : inv(yearF, y, 0, MDUR));
 
 const ERAS = [
-  { t: 0, name: "REPUBLIC OF GENOA", flag: "genoa" },
-  { t: 18, name: "THE GRIMALDIS", flag: "monaco" },
-  { t: tOf(1524.5), name: "UNDER SPANISH PROTECTION", flag: "monaco" },
-  { t: tOf(1641.75), name: "UNDER FRENCH PROTECTION", flag: "monaco" },
-  { t: tOf(1793.1), name: "ANNEXED BY FRANCE", flag: "france" },
-  { t: tOf(1814.45), name: "PRINCIPALITY OF MONACO", flag: "monaco" },
-  { t: tOf(1815.9), name: "UNDER SARDINIAN PROTECTION", flag: "monaco" },
-  { t: 131, name: "PRINCIPALITY OF MONACO", flag: "monaco" },
-];
+  { y: 1215, name: "Republic of Genoa", flag: "genoa" },
+  { y: 1297, name: "Lordship of Monaco", flag: "monaco" },
+  { y: 1524.5, name: "Monaco, under Spanish protection", flag: "monaco" },
+  { y: 1633.5, name: "Principality of Monaco", flag: "monaco" },
+  { y: 1641.75, name: "Monaco, under French protection", flag: "monaco" },
+  { y: 1793.1, name: "French Republic", flag: "france" },
+  { y: 1814.45, name: "Principality of Monaco", flag: "monaco" },
+  { y: 1815.9, name: "Monaco, under Sardinian protection", flag: "monaco" },
+  { y: 1861.1, name: "Principality of Monaco", flag: "monaco" },
+].map((e) => ({ ...e, t: e.y <= 1215.4 ? 0 : tOf(e.y) }));
 const FLAGS = {
   genoa: `<svg viewBox="0 0 140 84"><rect width="140" height="84" fill="#fff"/><rect x="58" width="24" height="84" fill="#c8102e"/><rect y="30" width="140" height="24" fill="#c8102e"/></svg>`,
   monaco: `<svg viewBox="0 0 140 84"><rect width="140" height="84" fill="#fff"/><rect width="140" height="42" fill="#ce1126"/></svg>`,
   france: `<svg viewBox="0 0 140 84"><rect width="47" height="84" fill="#002395"/><rect x="47" width="46" height="84" fill="#fff"/><rect x="93" width="47" height="84" fill="#ed2939"/></svg>`,
 };
 const TITLE = [1.2, 8];
-const LANDMARKS = [
-  { a: 9, b: 15.5, text: "THE ROCK OF MONACO" },
-  { a: 44, b: 50, text: "PRINCE'S PALACE" },
-  { a: 143, b: 149, text: "CASINO DE MONTE-CARLO" },
-  { a: 198, b: 203.5, text: "SAINT NICHOLAS CATHEDRAL" },
-  { a: 214.5, b: 220, text: "OCEANOGRAPHIC MUSEUM" },
-  { a: 228, b: 233.5, text: "PORT HERCULE" },
-  { a: 296, b: 301.5, text: "LARVOTTO" },
-  { a: 318, b: 323.5, text: "FONTVIEILLE" },
-  { a: 353, b: 358.5, text: "STADE LOUIS II" },
-  { a: 385, b: 390.5, text: "GRIMALDI FORUM" },
-  { a: 425, b: 430.5, text: "ODEON TOWER" },
-  { a: 449, b: 454.5, text: "MARETERRA" },
-];
-const CAPTIONS = [
-  { a: 2.5, b: 8.5, lines: ["On 10 June 1215, Genoese led by Fulco del Cassello", "began a fortress on the Rock of Monaco."] },
-  { a: 28, b: 34.5, lines: ["On the night of 8 January 1297 François Grimaldi took the fortress,", "reportedly disguised as a monk."] },
-  { a: 36, b: 42.5, lines: ["The Grimaldis acquired Menton in 1346", "and Roquebrune in 1355."] },
-  { a: 60.5, b: 66.5, lines: ["In 1524 Monaco placed itself", "under the protection of Spain."] },
-  { a: 70, b: 76, lines: ["In 1633 Spain recognised Honoré II", "as the Prince of Monaco."] },
-  { a: 78.5, b: 84.5, lines: ["The Treaty of Péronne, on 14 September 1641,", "made Monaco a French protectorate."] },
-  { a: 100.5, b: 106, lines: ["From 1793 to 1814 Monaco was annexed by France;", "the palace was looted."] },
-  { a: 112.2, b: 117.8, lines: ["On 21 March 1848 Menton and Roquebrune", "broke away from Monaco."] },
-  { a: 118.2, b: 123.6, lines: ["On 14 December 1856 the first casino", "opened in La Condamine."] },
-  { a: 131.2, b: 138, lines: ["Monaco ceded Menton and Roquebrune to France for 4 million francs,", "losing more than 90% of its territory."] },
-  { a: 149.5, b: 155.5, lines: ["In 1864 the Hôtel de Paris opened", "beside the casino."] },
-  { a: 156, b: 162, lines: ["On 1 June 1866 the new quarter on the Spélugues", "was named Monte-Carlo."] },
-  { a: 162.5, b: 168.5, lines: ["In 1868 the railway", "reached Monaco."] },
-  { a: 172, b: 178, lines: ["On 25 January 1879 Charles Garnier's opera hall", "opened at the casino."] },
-  { a: 204, b: 210, lines: ["Built from 1875 to 1903 in white La Turbie stone,", "it replaced the parish church of 1252."] },
-  { a: 220.5, b: 226.5, lines: ["Founded by Prince Albert I, the museum", "opened on the cliff in 1910."] },
-  { a: 234, b: 240, lines: ["The jetties of Port Hercule were built", "between 1902 and 1926."] },
-  { a: 251.2, b: 258, lines: ["William Grover-Williams won the first Monaco Grand Prix,", "in a Bugatti, over 100 laps of the streets."] },
-  { a: 262.5, b: 268, lines: ["Italian troops occupied Monaco in November 1942;", "German forces followed in 1943."] },
-  { a: 268.5, b: 274, lines: ["Monaco was liberated", "on 3 September 1944."] },
-  { a: 276.2, b: 282, lines: ["Rainier III became Prince of Monaco", "on 9 May 1949."] },
-  { a: 286, b: 292, lines: ["In April 1956 Prince Rainier III married", "the American actress Grace Kelly."] },
-  { a: 302, b: 308, lines: ["From 1954 to 1961 new land was won from the sea", "at Larvotto and Le Portier."] },
-  { a: 324, b: 330, lines: ["From about 1966 to 1973 Fontvieille,", "some 22 hectares, was won from the sea."] },
-  { a: 359, b: 365, lines: ["The new Stade Louis II opened on reclaimed land", "in Fontvieille on 25 January 1985."] },
-  { a: 370.5, b: 376.5, lines: ["On 28 May 1993 Monaco joined", "the United Nations."] },
-  { a: 391, b: 397, lines: ["The Grimaldi Forum, on the Larvotto seafront,", "opened on 20 July 2000."] },
-  { a: 397.5, b: 403.5, lines: ["Albert II succeeded his father", "on 6 April 2005."] },
-  { a: 431, b: 437, lines: ["Finished in 2015 at 170 m, the Odeon Tower", "is the tallest building in Monaco."] },
-  { a: 455, b: 461, lines: ["Its 18 caissons were in place by July 2019;", "the 6-hectare Mareterra opened in December 2024."] },
-  { a: 471, b: 477.5, lines: ["About a fifth of Monaco", "was won from the sea."] },
-];
-const MORE = [
-  [1331.5, ["From 1331 the Grimaldis built two new halls", "inside the fortress."]],
-  [1506.5, ["In 1506-07 the state-apartments wing", "was added to the palace."]],
-  [1918.6, ["In 1918 Monaco counted 15,960 residents,", "down from 19,121 in 1908."]],
-  [1962.96, ["The 1962 constitution gave women the vote", "and abolished the death penalty."]],
-  [1999.93, ["In December 1999 the railway station", "moved underground."]],
-];
-const busy = (a, b) => [...CAPTIONS, ...LANDMARKS].some((c) => a < c.b + 0.6 && b > c.a - 0.6) || (a < TITLE[1] + 0.5);
-for (const [y, lines] of MORE) { const a = tOf(y) + 0.3, b = a + 6; if (a > 0 && b < MDUR - 40 && !busy(a, b)) CAPTIONS.push({ a, b, lines }); }
-CAPTIONS.sort((p, q) => p.a - q.a);
-const CARDS = [
-  { a: 19, b: 27, kicker: "8 JANUARY 1297", text: "FRANÇOIS GRIMALDI" },
-  { a: 124.5, b: 130.8, kicker: "2 FEBRUARY 1861", text: "THE TREATY WITH FRANCE" },
-  { a: 244.5, b: 250.8, kicker: "14 APRIL 1929", text: "THE FIRST GRAND PRIX" },
-  { a: 480, b: 497, kicker: "1215 – 2026", text: "MONACO" },
-];
 
 // population of today's territory (IMSEE censuses; 1757 = Monaco without Menton and Roquebrune). FACTS.md §3.
 const POP = [[1756.99, 0], [1757, 1350], [1792, 1192], [1861, 1200], [1868, 3443], [1873, 5741], [1878, 6049], [1883, 9108], [1888, 10864],
@@ -455,71 +460,98 @@ export function buildVideo(canvas, hud) {
     cars.count = n; cars.instanceMatrix.needsUpdate = true; if (cars.instanceColor) cars.instanceColor.needsUpdate = true;
   }
 
-  // ---------- dust: the fortress, the casino, Fontvieille's seawall ----------
+  // ---------- the events' effects ----------
+  const fx = storyFx(scene, heightAt);
+  const P = (k) => SPOT[k];
+  const square = [palX + 90, palZ + 10];                       // Place du Palais, east of the palace
+  const CIRCUIT = [[43.7348, 7.4205], [43.7364, 7.4230], [43.7380, 7.4255], [43.7392, 7.4266], [43.7395, 7.4278], [43.7405, 7.4290],
+    [43.7412, 7.4296], [43.7400, 7.4306], [43.7385, 7.4300], [43.7372, 7.4285], [43.7362, 7.4260], [43.7355, 7.4245], [43.7344, 7.4222],
+    [43.7343, 7.4210], [43.7348, 7.4205]].map(([a, b]) => LL(a, b));
+  for (const e of EVENTS) {
+    const t = e.t, [x, z] = P(e.at);
+    fx.cue(t + 0.3, "title", 1.5, 0.5);
+    switch (e.fx) {
+      case "revolution": fx.crowd({ x: square[0], z: square[1], r: 45, n: 500, t0: t, t1: t + 8 }); fx.smoke({ x: palX, z: palZ, t0: t + 2, t1: t + 7, sound: false }); fx.cue(t + 1, "drums", 6, 0.7); break;
+      case "build": fx.dust({ x, z, t0: t, t1: t + 6 }); fx.cue(t, "construction", 6, 0.8); break;
+      case "train": fx.cue(t + 1, "train", 5, 0.8); break;
+      case "crowd": fx.crowd({ x: square[0], z: square[1], r: 50, n: 650, t0: t, t1: t + 8 }); break;
+      case "gp1929": fx.race({ path: CIRCUIT, t0: t - 1, t1: t + SLOT, n: 14, speed: 48, colors: ["#2b55a8", "#2b55a8", "#c8102e", "#1f6b3a", "#2b55a8", "#e6e2d6"] });
+        fx.crowd({ x: x - 40, z: z + 40, r: 70, sx: 2.2, n: 900, t0: t - 1, t1: t + SLOT, gain: 0.7 }); fx.cue(t + SLOT - 3, "cheer", 3, 0.9); break;
+      case "occupation": { const [ax, az] = LL(43.7330, 7.4110); fx.army({ path: [[ax, az], [x - 200, z + 60], [x, z]], t0: t - 1, t1: t + SLOT, n: 300, color: "#5a5b44", flag: "#2f7d32" }); break; }
+      case "bombing": { const [fx0, fz0] = P("fort"); fx.planes({ from: [fx0 + 400, fz0 + 2600], to: [fx0 - 600, fz0 - 2600], t0: t - 1, t1: t + 7, n: 9, alt: 320 });
+        for (let k = 0; k < 4; k++) fx.smoke({ x: fx0 + (k - 1.5) * 30, z: fz0 + (k % 2) * 25, t0: t + 2 + k * 0.5, t1: t + 9, big: k === 0, gain: 0.8 });
+        fx.fire({ x: fx0, z: fz0, r: 35, t0: t + 2.4, t1: t + 9 }); break; }
+      case "liberation": fx.crowd({ x, z, r: 60, n: 800, t0: t, t1: t + 8 }); fx.cue(t + 0.5, "bells", 7, 0.8); fx.cue(t + 2, "cheer", 5, 0.9); break;
+      case "wedding": fx.sky({ t0: t + 3, t1: t + SLOT + 1.5, kind: "night", fade: 1.6 }); fx.crowd({ x: x - 60, z: z + 30, r: 80, sx: 2, n: 900, t0: t, t1: t + SLOT });
+        fx.fireworks({ x: x + 150, z: z + 350, t0: t + 4.2, t1: t + SLOT + 0.5, w: 600, d: 250 }); fx.cue(t, "bells", 4, 0.7); break;
+      case "reclaim": fx.dust({ x, z: z + 150, t0: t, t1: t + 9 }); fx.dust({ x: x + 200, z: z + 250, t0: t + 1, t1: t + 9 }); fx.cue(t, "construction", 9, 0.9); fx.cue(t, "waves", 9, 0.5); break;
+      case "stadium": fx.cue(t + 2, "cheer", 4, 0.8); break;
+      case "fireworks": fx.sky({ t0: t + 2, t1: t + SLOT + 1.5, kind: "night", fade: 1.6 }); fx.fireworks({ x: x + 200, z: z + 400, t0: t + 3.5, t1: t + SLOT + 0.5, w: 700, d: 300 }); break;
+    }
+  }
+  // construction dust where the big works start
   const dust = [];
-  for (const [t0, x, z] of [[2, palX, palZ], [tOf(1863.25), casX, casZ], [tOf(1966.3), stX, stZ + 200], [tOf(2017.2), ...LL(43.7420, 7.4325)]])
+  for (const [t0, x, z] of [[2, palX, palZ], [tOf(1863.25), casX, casZ]])
     for (let k = 0; k < 6; k++) dust.push({ x: x + (hash2(k, 1) - 0.5) * 60, y: 6, z: z + (hash2(k, 2) - 0.5) * 50, t0: t0 + k * 0.3, t1: t0 + 3.5 + k * 0.2, ph: hash2(k, 3), rise: 40, spread: 20, size0: 3, speed: 0.3, wind: [20, -10] });
   const updDust = puffs(scene, dust, { color: "#d8ccb4", opacity: 0.3, perCol: 10 });
 
-  // ---------- camera: one flight, mostly from over the sea (south-east) looking at the mountains ----------
-  const OD = TW["Odeon Tower"] || { x: 542, z: -1158 }, [mtX, mtZ] = LL(43.7420, 7.4325), [lvX, lvZ] = LL(43.7470, 7.4350);
-  const [mcX, mcZ] = LL(43.7405, 7.4255), [fvX, fvZ] = LL(43.7265, 7.4165), [muX, muZ] = TW["Oceanographic Museum"] ? [TW["Oceanographic Museum"].x, TW["Oceanographic Museum"].z] : LL(43.7307, 7.4253);
-  const cam = cameraPath([
-    [0, [rockX + 700, 380, rockZ + 760], [rockX - 160, 20, rockZ - 40]],
-    [12, [palX + 330, 170, palZ + 330], [palX, 30, palZ]],
-    [26, [palX + 420, 230, palZ + 420], [palX + 40, 30, palZ - 20]],
-    [42, [rockX - 520, 320, rockZ + 640], [rockX + 40, 30, rockZ - 40]],
-    [62, [rockX - 300, 420, rockZ + 900], [rockX, 30, rockZ - 160]],
-    [84, [rockX + 640, 400, rockZ + 720], [rockX - 80, 30, rockZ - 140]],
-    [104, [porX + 900, 700, porZ + 1500], [porX - 100, 40, porZ - 200]],
-    [124, [mcX + 1700, 1300, mcZ + 2200], [mcX - 200, 80, mcZ - 200]],
-    [140, [casX + 560, 300, casZ + 520], [casX, 30, casZ]],
-    [152, [casX + 380, 210, casZ + 380], [casX - 30, 30, casZ - 20]],
-    [170, [mcX + 900, 560, mcZ + 900], [mcX - 80, 50, mcZ - 120]],
-    [196, [muX + 460, 260, muZ + 420], [muX - 120, 40, muZ - 40]],
-    [214, [muX + 320, 170, muZ + 340], [muX, 50, muZ]],
-    [232, [porX + 560, 460, porZ + 900], [porX, 10, porZ - 60]],
-    [250, [porX + 1500, 1100, porZ + 1800], [porX + 100, 40, porZ - 300]],
-    [274, [lvX + 900, 600, lvZ + 1000], [lvX - 100, 30, lvZ - 100]],
-    [294, [lvX + 620, 420, lvZ + 700], [lvX - 60, 20, lvZ]],
-    [312, [fvX + 700, 480, fvZ + 860], [fvX - 60, 20, fvZ - 60]],
-    [330, [fvX + 500, 360, fvZ + 640], [fvX - 40, 20, fvZ - 40]],
-    [348, [stX + 420, 300, stZ + 500], [stX, 15, stZ]],
-    [366, [mcX + 1500, 1000, mcZ + 1400], [mcX - 100, 60, mcZ - 400]],
-    [386, [OD.x + 700, 420, OD.z + 900], [OD.x - 100, 40, OD.z + 300]],
-    [412, [OD.x + 620, 360, OD.z + 640], [OD.x, 80, OD.z]],
-    [428, [OD.x + 420, 260, OD.z + 460], [OD.x, 100, OD.z]],
-    [444, [mtX + 560, 330, mtZ + 600], [mtX - 30, 15, mtZ - 20]],
-    [462, [mtX + 1200, 800, mtZ + 1300], [mtX - 200, 30, mtZ - 200]],
-    [480, [CX + 2400, 1900, CZ + 2800], [CX - 200, 40, CZ - 300]],
-    [MDUR, [CX + 3100, 2600, CZ + 3500], [CX - 300, 40, CZ - 300]],
-  ]);
-  const drawHud = hudDriver(hud, { ERAS, FLAGS, TITLE, LANDMARKS, CAPTIONS, CARDS, yearAt, popAt, DUR: MDUR });
+  // ---------- camera: it flies to each event's focus and holds there while the title shows ----------
+  const view = (e) => { const [x, z] = P(e.at), [d, h, az] = e.view, a = (az * Math.PI) / 180, gy = heightAt(x, z);
+    return [[x + Math.sin(a) * d, gy + h, z + Math.cos(a) * d], [x, gy + 10, z]]; };
+  const KEYS = [];
+  for (const e of EVENTS) { const [p, q] = view(e); KEYS.push([Math.max(0, e.t - 0.5), p, q]); KEYS.push([e.t + SLOT - 3.5, [p[0] * 0.98 + q[0] * 0.02, p[1] * 0.97, p[2] * 0.98 + q[2] * 0.02], q]); }
+  KEYS.sort((a, b) => a[0] - b[0]);
+  const last = EVENTS[EVENTS.length - 1].t + SLOT;
+  KEYS.push([last + 10, [CX + 2400, 1900, CZ + 2800], [CX - 200, 40, CZ - 300]], [MDUR, [CX + 3100, 2600, CZ + 3500], [CX - 300, 40, CZ - 300]]);
+  for (let i = 1; i < KEYS.length; i++) if (KEYS[i][0] <= KEYS[i - 1][0] + 0.3) KEYS[i][0] = KEYS[i - 1][0] + 0.3;
+  const cam = cameraPath(KEYS);
+
+  // ---------- HUD: state top-left, population top-right, year bottom-left, the event bottom-right ----------
+  const env = (t, a, b, f = 0.9) => clamp(Math.min((t - a) / f, (b - t) / f));
+  let lastEra = -1;
+  for (const el of [hud.lm, hud.cap]) el.style.opacity = 0;
+  function drawHud(t) {
+    hud.year.textContent = fmtYear(yearAt(t));
+    const p = popAt(t); hud.pop.style.opacity = p > 0 ? 1 : 0; hud.popN.textContent = `${fmtPop(p)}`;
+    let e = 0; for (let i = 0; i < ERAS.length; i++) if (t >= ERAS[i].t) e = i;
+    if (e !== lastEra) { hud.eraName.textContent = ERAS[e].name; hud.flag.innerHTML = FLAGS[ERAS[e].flag]; lastEra = e; }
+    hud.era.style.opacity = e === 0 ? 1 : clamp((t - ERAS[e].t) / 0.7);
+    hud.title.style.opacity = env(t, TITLE[0], TITLE[1], 1.2);
+    const ev = EVENTS.find((x) => t >= x.t + 0.2 && t <= x.t + SLOT - 1);
+    hud.ev.style.opacity = ev ? env(t, ev.t + 0.2, ev.t + SLOT - 1, 0.7) : 0;
+    if (ev) { hud.evT.textContent = ev.title; hud.evS.textContent = ev.line; }
+    hud.card.style.opacity = env(t, MDUR - 26, MDUR - 3, 1.4); hud.cardK.textContent = "1215 – 2026"; hud.cardT.textContent = "MONACO";
+  }
 
   const ready = Promise.resolve();
   const introPose = { pos: V(CX + 2900, 2200, CZ + 3300), tgt: V(CX - 200, 40, CZ - 300) };
+  const now = tOf(2025.5);
   function renderAt(time) {
     time = clamp(time, 0, DUR);
     // intro: Monaco today, then a fast rewind to 1215, then the flight starts
     const intro = time < INTRO;
-    const mainT = intro ? (time < 2.5 ? 470 : time < 8 ? 470 * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
+    const mainT = intro ? (time < 2.5 ? now : time < 8 ? now * (1 - sm(sm(ramp(time, 2.5, 8)))) : 0) : time - INTRO;
     const t = clamp(mainT, 0, MDUR);
     U.uTime.value = t;
     UT.uPave.value = sm(ramp(yearF(t), 1900, 1955)); UT.uYear.value = yearF(t);
     updateLM(t); updDust(t); updateLife(t);
     let { pos, tgt } = cam(t);
     if (intro) { const k = sm(ramp(time, 5.5, 9)); pos = introPose.pos.clone().lerp(pos, k); tgt = introPose.tgt.clone().lerp(tgt, k); }
-    const dist = st.frame(pos, tgt), haze = sm(clamp((dist - 1400) / 2600)); st.scene.fog.near *= lerp(1.3, 0.5, haze); st.scene.fog.far *= lerp(1.4, 0.4, haze);
-    const dusk = intro ? 0 : sm(ramp(t, 470, 495));
+    const dusk = intro ? 0 : sm(ramp(t, MDUR - 30, MDUR - 6));
     st.sun.color.set("#fff1d8").lerp(new THREE.Color("#ffc890"), dusk * 0.7); st.sun.intensity = 3.3 - 0.4 * dusk; st.hemi.intensity = 1.2 - 0.1 * dusk;
+    const dist = st.frame(pos, tgt), haze = sm(clamp((dist - 1400) / 2600)); st.scene.fog.near *= lerp(1.3, 0.5, haze); st.scene.fog.far *= lerp(1.4, 0.4, haze);
+    const fs = fx.update(intro ? -100 : t, st, { tgt, dist });
+    if (fs.shake.lengthSq() > 0) { st.camera.position.add(fs.shake); }
     drawHud(t);
     if (intro) {
       hud.black.style.opacity = 1 - clamp(time / 1.2); hud.ui.style.opacity = clamp((time - 0.4) / 0.8);
-      for (const el of [hud.title, hud.lm, hud.cap, hud.card]) el.style.opacity = 0;
+      for (const el of [hud.title, hud.ev, hud.card]) el.style.opacity = 0;
     } else {
       hud.black.style.opacity = clamp((t - (MDUR - 1.8)) / 1.6); hud.ui.style.opacity = 1 - clamp((t - (MDUR - 2.4)) / 1.2);
     }
     st.render();
   }
-  return { ready, renderAt, DUR, stats: { houses: wallR.length + prismR.length, towers: prismG.length, roofs: hipR.length, trees: crownR.length, roads: segs.length } };
+  // sound cues for tools/sfx.mjs, in video seconds (the intro shifts everything by INTRO)
+  const sfx = fx.cues.map((c) => ({ ...c, t: c.t + INTRO })).sort((a, b) => a.t - b.t);
+  return { ready, renderAt, DUR, sfx, events: EVENTS.map((e) => ({ t: e.t + INTRO, y: e.y, title: e.title })), stats: { houses: wallR.length + prismR.length, towers: prismG.length, roofs: hipR.length, trees: crownR.length, roads: segs.length } };
 }

@@ -20,5 +20,8 @@ const t0 = Date.now();
 await p.goto(`http://127.0.0.1:${srv.address().port}/`);
 await p.waitForFunction(() => window.__video, null, { timeout: 900000 });
 console.log(`ready in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
+const info = await p.evaluate(() => ({ DUR: window.__video.DUR, sfx: window.__video.sfx || [], events: window.__video.events || [] }));
+fs.writeFileSync(path.join(DIR, 'timeline.json'), JSON.stringify(info));
+console.log('DUR', info.DUR, 'events', info.events.length, 'cues', info.sfx.length);
 for (const t of times) { await p.evaluate(t => window.__video.renderAt(t), t); await p.screenshot({ path: path.join(OUT, `s_${String(t).padStart(5, '0')}.jpg`), type: 'jpeg', quality: 85 }); console.log('still', t); }
 await b.close(); srv.close();
