@@ -1,0 +1,1128 @@
+{
+  "date_verification": "2026-10-28",
+  "methode_mots": "[^\\W_]+(?:[’'-][^\\W_]+)*",
+  "mots_minimum_par_script": 24500,
+  "audio_lance": false,
+  "videos": [
+    {
+      "dossier": "04-quatre-fantastiques",
+      "statut": "controle_technique_ok",
+      "mots": 24821,
+      "caracteres": 154232,
+      "octets": 158129,
+      "sha256": "bcb8c8c3f2f1f8199b1fa1552d9de6d860bd82ac38ddd3d4e457b0be3b938613",
+      "minutes_estimees_a_182_mots_min": 136.38,
+      "minutes_estimees_a_200_mots_min": 124.11,
+      "duree_audio_mesuree": null,
+      "paragraphes": 303,
+      "paragraphes_dupliques": 0,
+      "phrases_dupliquees_8_mots_min": [],
+      "hook_mots": 87,
+      "chapitres": [
+        {
+          "id": 1,
+          "mots": 1106,
+          "sha256_segment": "8ef75c8dc6e90944ee1b6768506f174fd39e9309a6c1cd68d76b34bf2690b800",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 2,
+          "mots": 1003,
+          "sha256_segment": "1c6f2e6971741b8ea59e348fcc224712ba56770658d1115086d4892fb49a3f2c",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 3,
+          "mots": 981,
+          "sha256_segment": "923078460f790714668a1c45d69f014806e8405ce4704ff2f6cd3b674a022209",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 4,
+          "mots": 1057,
+          "sha256_segment": "9b05bf97222fcbdf19f230261174f0c021224c02bed49676cc4614ab2b0b4819",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 5,
+          "mots": 997,
+          "sha256_segment": "686cdf2871dbe23bcd808e42b16eb0990c797df95c7ad8d787db4b6c939c3bad",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 6,
+          "mots": 889,
+          "sha256_segment": "22f5e04ada02ffd865a6e08ac32716e3b1c11b1288c9ba363465e04acc0da51b",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 7,
+          "mots": 996,
+          "sha256_segment": "43980dde2b9795f3d1970e0d435238e6143c1c17fbe9ba54169d46adebd76962",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 8,
+          "mots": 972,
+          "sha256_segment": "5743009aaa032be3c5a06f832ff1b4ab11aa447a1e994a4c22538c668293662b",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 9,
+          "mots": 1055,
+          "sha256_segment": "11b884201706fc4edb042cf158c6cbc684fd64c3c338697cbedc76ba3f66bc60",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 10,
+          "mots": 949,
+          "sha256_segment": "75f2b0505974ab49ca054ffd7e7800102873891f0d78909edca6a2e7cfdd1b0f",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 11,
+          "mots": 960,
+          "sha256_segment": "e12ff38bc9122d8101241640e90229c55d87dffddde77a7319346fb7e1545f93",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 12,
+          "mots": 937,
+          "sha256_segment": "847f98774191e90c74e54c0e6a5b0860685e25b0f4abe500bf73827a8225c57a",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 13,
+          "mots": 937,
+          "sha256_segment": "9131d7d47e8fd7f1ba40980735b36fb6096311cf66ffcdabff98b3ff32c07e6b",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 14,
+          "mots": 921,
+          "sha256_segment": "53f980f9ab6fe9e9ad655913c6a166387a8a8302e2fc315fb428b83df15f80ff",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 15,
+          "mots": 981,
+          "sha256_segment": "229f2d31b7e26f840c259f82ae0b0b877561198124197a14d02bb07a81f60cd5",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 16,
+          "mots": 985,
+          "sha256_segment": "5d0fcfcc37ed63e5a6373d75785447b351b7b559bc7d3df0d3a10fd837c9c569",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 17,
+          "mots": 983,
+          "sha256_segment": "7bca7ad85607d3c41682ce4dd1ea4d1d77b07cf7d9595015c6c7fb54dda02771",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 18,
+          "mots": 957,
+          "sha256_segment": "b6b856c089a1d4b0bb2e8bf9d71b48804eeb992adf76199cb5d3e79cb8181568",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 19,
+          "mots": 940,
+          "sha256_segment": "f172b0959b06189f2f74bd08aec253408334c870d95724a534df4e227eece8f2",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 20,
+          "mots": 965,
+          "sha256_segment": "e78d1e828cb0719b849ab874b3106537c9f27c1e66ad0df05143c7fa73e3a1ba",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 21,
+          "mots": 962,
+          "sha256_segment": "7a62286f6b4d2954dd9946ecd633c994db3ee7220095a642a444793eb4501054",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 22,
+          "mots": 926,
+          "sha256_segment": "bfb826345d6aec6204962ffb5efefda4ec7be8b89772379296954253f9327456",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 23,
+          "mots": 963,
+          "sha256_segment": "e47316e3cf7068f98457346764ba2dd2b7322c736ec05d3368f985e4262e1ffa",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 24,
+          "mots": 749,
+          "sha256_segment": "c194e21c8e5a46ae2eb47a8a77845e643f642203e9b6e340e37bfe9aeff0a5ca",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 25,
+          "mots": 791,
+          "sha256_segment": "4535273b8a055a4a968a559b5d65810d515dd86a868b6cf27e8e176c20dfaabd",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 26,
+          "mots": 859,
+          "sha256_segment": "0193d90dc5e50915f73d669e5ad5a5efe9286d63fb0524ce1ccee2d702cc513c",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        }
+      ],
+      "erreurs": [],
+      "miniature_png_presente": true,
+      "miniature_jpg_presente": true,
+      "fichiers": {
+        "AUDIT.txt": {
+          "octets": 12260,
+          "sha256": "d04b5762f812650a7908dbdfcc4861b65f742ec5f6bc76628b1cde959cff3190"
+        },
+        "BRIEF.txt": {
+          "octets": 5235,
+          "sha256": "b8b4bf366b23c3ff08a0ddbc6bded4a174f5c5183e4b28a31f833459d928a7a8"
+        },
+        "CHAPITRES.json": {
+          "octets": 21709,
+          "sha256": "79dcef9f8f30c0c4503c4da53b4f999689d2c9cffd097633f3422e649ee43b65"
+        },
+        "DESCRIPTION.txt": {
+          "octets": 1025,
+          "sha256": "b045a164e0d6afa1fec29872ce8b7a95b815fec9c7938f7c26e45920438ad66b"
+        },
+        "MESURES.json": {
+          "octets": 684,
+          "sha256": "9658fb23376b9979a6582230b9c078eae0b994b5c565685eb08da1157afa4989"
+        },
+        "MINIATURE.jpg": {
+          "octets": 168067,
+          "sha256": "8dbb9850256ed4aa4fc509002c7b14abdea4e2d40bccad9990756895246d4667"
+        },
+        "MINIATURE.png": {
+          "octets": 1318929,
+          "sha256": "2ead10ccc5d534eca1ce54892c794d614c735b69b1d6f17dd57b39e920b59c2f"
+        },
+        "PROMPT-MINIATURE.txt": {
+          "octets": 3491,
+          "sha256": "8eeb15f0c412e72d72ce9f5f78e155b95f18a6b24eb4f1dd17fa06f04a3ae23e"
+        },
+        "SCRIPT.txt": {
+          "octets": 158129,
+          "sha256": "bcb8c8c3f2f1f8199b1fa1552d9de6d860bd82ac38ddd3d4e457b0be3b938613"
+        },
+        "SOURCES.txt": {
+          "octets": 9777,
+          "sha256": "1ed15a4fa5f8cec0a4e449919a7d64b6d89d849e6b1a1355c24bf1e9e9285e19"
+        },
+        "TITRE.txt": {
+          "octets": 71,
+          "sha256": "5dc66c7ac27a7fd9ce97608ba25f3bee2aa9c8a04cb75417ad5c2520c0b7650a"
+        },
+        "VERIFICATION.json": {
+          "octets": 978,
+          "sha256": "7c5edabdc80bdd017315e3307e6a8ba35ac8c559b71849471c64bef866630161"
+        }
+      }
+    },
+    {
+      "dossier": "05-one-piece",
+      "statut": "controle_technique_ok",
+      "mots": 25064,
+      "caracteres": 155958,
+      "octets": 159978,
+      "sha256": "c31f14abdb2be0178739d8b89d302ebef7bcbc176f626aa56d7416f7039f042b",
+      "minutes_estimees_a_182_mots_min": 137.71,
+      "minutes_estimees_a_200_mots_min": 125.32,
+      "duree_audio_mesuree": null,
+      "paragraphes": 278,
+      "paragraphes_dupliques": 0,
+      "phrases_dupliquees_8_mots_min": [],
+      "hook_mots": 89,
+      "chapitres": [
+        {
+          "id": "OP-01",
+          "mots": 1055,
+          "sha256_segment": "32b4a43bf5b2e8a40e9797ad90859facff2ac14f845e8e5d3e9ee6ef43570b9c",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-02",
+          "mots": 1062,
+          "sha256_segment": "b72dfb03ab0cdb02f737381da372f1d0b5b1ba5940aea04939eb159db7393a79",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-03",
+          "mots": 998,
+          "sha256_segment": "e9c71c11ebe2967341a360115187642212431f1f33ad244b5b9fed1db5c8c636",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-04",
+          "mots": 989,
+          "sha256_segment": "35993cfedc108053cfb46ec398eea3559c9ab1f056f5934608f411b65d1a8d0f",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-05",
+          "mots": 1024,
+          "sha256_segment": "b4bf8c999814d255f0482ef05232cc480475f38b578bae9bd8d3307bcd044dbb",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-06",
+          "mots": 999,
+          "sha256_segment": "e80d559d5fed75e5e8915a128a7a417239cea7a5b8ca03c0c96f2937f8e7a4d7",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-07",
+          "mots": 1000,
+          "sha256_segment": "f739d25d1f8029cd7a4bfc4283eba85c12c5c7519c227145bac385af8794deaa",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-08",
+          "mots": 1005,
+          "sha256_segment": "4e7ea6f9226a7db33ee69275520b279da65d485224449a2748a0c9156376e257",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-09",
+          "mots": 1020,
+          "sha256_segment": "09f98787d48fb8f2c0926b704a8aa3eba2fe3dfbec5cad66ef24f4b3cb8a5ecb",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-10",
+          "mots": 958,
+          "sha256_segment": "64f145f0b2ffcd68bc26c7f527fd15f38b4e76f310f2da7b3b709c9d97900eba",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-11",
+          "mots": 975,
+          "sha256_segment": "8dfd181e174bcc76ff93dbc24b66394d415bb4d394a6affd71a5d51881153bac",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-12",
+          "mots": 990,
+          "sha256_segment": "c478f1d67cc1d23b9dc64406f2c1136c34b1943ce957b5c8be957ca3036902c4",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-13",
+          "mots": 961,
+          "sha256_segment": "deeb5f746689a82fdb4b41915a977800f158f76b94cbd9be2a932132ea7bc304",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-14",
+          "mots": 1003,
+          "sha256_segment": "631ded473c6b23682fe6a8cf7a12c7d8491cb5c053c45df31979446d652598ed",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-15",
+          "mots": 952,
+          "sha256_segment": "03055123659ac2f8d8d6c5e1c500b9651835c24bb82449b40b929c78e2640714",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-16",
+          "mots": 944,
+          "sha256_segment": "ba21bef5f9176b11a5c74891fe2f8330d8bd26d0f3f53f145113461189e59ef8",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-17",
+          "mots": 971,
+          "sha256_segment": "dd6201010b6ef8e9326b21f29ea669826bc1d89218dc8811276dac7110b19422",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-18",
+          "mots": 986,
+          "sha256_segment": "5fbbfcf62eb881c685a893091bd77d6e3ccf589b7ce0534a9b1ee915322c2e2c",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-19",
+          "mots": 991,
+          "sha256_segment": "d834ad57d41975ebb0b6be8de8ec868d33f9a0fe1b03016baf16c471d0556d07",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-20",
+          "mots": 965,
+          "sha256_segment": "f459a7cf3e47901a4256379f645daab78fdf48f3dc1933043b69923245a667e5",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-21",
+          "mots": 996,
+          "sha256_segment": "ca0bdda517461fe35f67d62a300c23f783210b82bc893d939ebf403ff0aefe7c",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-22",
+          "mots": 1025,
+          "sha256_segment": "333a3ae89ab6df010b3175cc7cb8e450694c240af31c2ad61387e77497c03d40",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-23",
+          "mots": 1007,
+          "sha256_segment": "29942e5bb04be9ed11f9d4b755e1a9441a4b37f58224cc5b084043cbe9e4cb8d",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-24",
+          "mots": 1192,
+          "sha256_segment": "fe8206e3aa58353a0ee03c2fa5732407fe3f32f1bd64a263c6fec7cf118d9131",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "OP-25",
+          "mots": 996,
+          "sha256_segment": "6b9212b7009c5d3b96a81acc545fa519b6800cd1e0960df87944143ede0d8860",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        }
+      ],
+      "erreurs": [],
+      "miniature_png_presente": true,
+      "miniature_jpg_presente": true,
+      "fichiers": {
+        "AUDIT.txt": {
+          "octets": 11937,
+          "sha256": "cfed64441f5196fc98c5da9c5b2300a389f0b0eef2446776e466feb5f9cacc5a"
+        },
+        "BRIEF.txt": {
+          "octets": 3991,
+          "sha256": "b45fd032b7d49230c77531d653941176212c71c3806860991bb4fbed0bd9e625"
+        },
+        "CHAPITRES.json": {
+          "octets": 18155,
+          "sha256": "0ab7606f43a8afba4cd8170f5a5ec58f2146c67a6508c2b8bc65c93da47c05ee"
+        },
+        "DESCRIPTION.txt": {
+          "octets": 1064,
+          "sha256": "ae01d78293a3adb4c1f41b6d5fd01cb567808791371969351c1171e5d82576bf"
+        },
+        "MESURES.json": {
+          "octets": 1412,
+          "sha256": "f4ff3f0ae0ddf9d8e267d81b9cc08cf69118f6a68daebf9fca0b825d9882479f"
+        },
+        "MINIATURE.jpg": {
+          "octets": 318427,
+          "sha256": "eeb60965a631aa4cac2f57b9b9bccd144868d0ff6f5f4142bed91e3102e8d79b"
+        },
+        "MINIATURE.png": {
+          "octets": 2450271,
+          "sha256": "22c5e655503e27131697244f62b32a121763f5a2cd1e4f03f50def400a227e1f"
+        },
+        "PROMPT-MINIATURE.txt": {
+          "octets": 1957,
+          "sha256": "454a27b1fbe78d73d58ebe3ea467876cf8d921d295eeb5a9cf0b5b6e4ec69c89"
+        },
+        "SCRIPT.txt": {
+          "octets": 159978,
+          "sha256": "c31f14abdb2be0178739d8b89d302ebef7bcbc176f626aa56d7416f7039f042b"
+        },
+        "SOURCES.txt": {
+          "octets": 7586,
+          "sha256": "82ecfd82ab1a7ffb274c1f72c7c8f33e7b7ad5768c9a6631f91be7500b764e38"
+        },
+        "TITRE.txt": {
+          "octets": 73,
+          "sha256": "bd9c5ac63019c7861a99b0acd09dd55100431c37efa9bf83ff1e2c321448f966"
+        }
+      }
+    },
+    {
+      "dossier": "06-frieren",
+      "statut": "controle_technique_ok",
+      "mots": 26453,
+      "caracteres": 164546,
+      "octets": 168744,
+      "sha256": "bf8b1ddb814d98b31df45a36f151ff31330469581bfecd4e74e326c30b556d5a",
+      "minutes_estimees_a_182_mots_min": 145.35,
+      "minutes_estimees_a_200_mots_min": 132.26,
+      "duree_audio_mesuree": null,
+      "paragraphes": 289,
+      "paragraphes_dupliques": 0,
+      "phrases_dupliquees_8_mots_min": [],
+      "hook_mots": 70,
+      "chapitres": [
+        {
+          "id": "FR-01",
+          "mots": 1247,
+          "sha256_segment": "d09b8d467145fd8b9e507fcb79746ebd3dc34ce2d8367508595321baa38d51d4",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-02",
+          "mots": 1211,
+          "sha256_segment": "09c0f8dcb4ccbc8415394bb361add5cd8f4612604d72d54fd3da0fd2d6d91c66",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-03",
+          "mots": 1199,
+          "sha256_segment": "d141e4a8d3c1400ee6678dee388a5163d429870ce5513907d29230d277887be8",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-04",
+          "mots": 1161,
+          "sha256_segment": "5c0badd0edcfd0f5591d65d7177d16a37168016284233e07514947d8d5681b42",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-05",
+          "mots": 1179,
+          "sha256_segment": "7d0d16351f16aa8ef7bcc12d2369cba02c320c9696235a9c9dfc4cacaca17796",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-06",
+          "mots": 1132,
+          "sha256_segment": "945056059a03e598e34c7ebfb1f37671a6084a2a5a206fdbc7795810e10cfd5f",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-07",
+          "mots": 1124,
+          "sha256_segment": "c8786f0659eafc118162dd2e1c968dcd4b9a82e7b135b700cef0a3f49c40f1ab",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-08",
+          "mots": 1078,
+          "sha256_segment": "128d8915194ebde234ae26b55be7d96fad43d332456bcaeedcb1383334078480",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-09",
+          "mots": 974,
+          "sha256_segment": "287f7a1a1f9921d538fc81e1b66344e5ae11dbddae23641738671ec60eb0c80f",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-10",
+          "mots": 1083,
+          "sha256_segment": "5d04e2c6d2726e52b4b042cd39915536776cdbdbf5c6750d7880527c3f77869b",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-11",
+          "mots": 1101,
+          "sha256_segment": "13d9b96298519253a0d08d2f949042167c60fc330b7d987ce748d6ad3ffda09a",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-12",
+          "mots": 1064,
+          "sha256_segment": "32189006fe081033a9336e7928bc1694423b5658d89e100f5074b710da60108b",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-13",
+          "mots": 1115,
+          "sha256_segment": "59d59e3529d5acac3a01edb3e08a62caffb3dbc1e5ec74f58f37941c7219ce73",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-14",
+          "mots": 1076,
+          "sha256_segment": "6d49205426fd8a985e5c0ca75d6b7c580ef4a105ec9d8bc9954768a8e6e5f07c",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-15",
+          "mots": 1084,
+          "sha256_segment": "2043c766104aeeef65fd04ec51bc7b432f342bc33195f9f87143a7cdd2723274",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-16",
+          "mots": 1069,
+          "sha256_segment": "0405751a30198f8b7be5f6c717dd5d5034052f73163bbeffa629ef02fee8f8bd",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-17",
+          "mots": 1112,
+          "sha256_segment": "b3f2d4c409c9c49e8c4c54ec2e919b733593d8f1466c4771ea4cb96630ea91a2",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-18",
+          "mots": 1009,
+          "sha256_segment": "dca4a16d7ea6e45bec89341b0189d06e988f0723142e1d7aa6b3c66def8f0da1",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-19",
+          "mots": 1028,
+          "sha256_segment": "7069ec441a89617995a9d111d29b101dfdd8cb0e85bb7b22eea9ddc725b7619f",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-20",
+          "mots": 1123,
+          "sha256_segment": "02cc6a43471f6033cee76d8150ae5a14fb6736bc71be68865e8f41cb5178f917",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-21",
+          "mots": 1008,
+          "sha256_segment": "4452f4fe9b87c0f61182bdc2fb95bcb3dd79dde21dc7788271a587c9368f677c",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-22",
+          "mots": 931,
+          "sha256_segment": "bddd7bfb6ff6cb8763f4dc41ec1e4877f63deab5f05ca96c7db57ac235df2f97",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-23",
+          "mots": 1171,
+          "sha256_segment": "e6b4e5b582237a693f3b9c1c47a667bfc34a4f5255d34905d634c3e4eacf5cfb",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "FR-24",
+          "mots": 1174,
+          "sha256_segment": "fdf6c831bc7d435736e71651acd7ad53acbca4110fc93b4b97dc36120d5f6ec9",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        }
+      ],
+      "erreurs": [],
+      "miniature_png_presente": true,
+      "miniature_jpg_presente": true,
+      "fichiers": {
+        "AUDIT.txt": {
+          "octets": 16074,
+          "sha256": "2e39e98d2d9bbf60a2fe6fd80443e6914cb884eb24efc47ecd7af36b726c7207"
+        },
+        "BRIEF.txt": {
+          "octets": 3700,
+          "sha256": "186422d60960d47f947df96069306b37a71bcf855fc227f8b38c878c747ea82e"
+        },
+        "CHAPITRES.json": {
+          "octets": 14332,
+          "sha256": "ed1a5db463a05dd8255a385d2a0b49c8f4dc0f516302afb79bc6196ca93ba615"
+        },
+        "DESCRIPTION.txt": {
+          "octets": 973,
+          "sha256": "5a961313f3380790941e8d1863e499d7bbc1aac9e1e311ebdbcf9985fe6775aa"
+        },
+        "MESURES.json": {
+          "octets": 947,
+          "sha256": "050378aacd18e8b21648f550e1645c383853fde043c2ae062d09552dfbe09438"
+        },
+        "MINIATURE.jpg": {
+          "octets": 307967,
+          "sha256": "120af8ec0480882e2b8fb21b6772ede43699abc6e197d9a63b5d691a913b405e"
+        },
+        "MINIATURE.png": {
+          "octets": 2405341,
+          "sha256": "7fd3d0e60bb65a892518f1a0299e3f85d3ae41c5a505e2a7c59d3e2254b96863"
+        },
+        "PROMPT-MINIATURE.txt": {
+          "octets": 2144,
+          "sha256": "2388d1abb68c55ccd56263e17d28bb085cf69ae8958f3a83791013b66f804a6f"
+        },
+        "SCRIPT.txt": {
+          "octets": 168744,
+          "sha256": "bf8b1ddb814d98b31df45a36f151ff31330469581bfecd4e74e326c30b556d5a"
+        },
+        "SOURCES.txt": {
+          "octets": 9867,
+          "sha256": "90c7cd26fe24643207605134ca777af5d5196d4dcc04a387a5f3cdf8922b64c4"
+        },
+        "TITRE.txt": {
+          "octets": 45,
+          "sha256": "b9957211b0eb233d59417bb802c7782f4985b4b0f488c3a07ae4e54310cb08c8"
+        }
+      }
+    },
+    {
+      "dossier": "07-sakamoto-days",
+      "statut": "controle_technique_ok",
+      "mots": 24808,
+      "caracteres": 155152,
+      "octets": 162321,
+      "sha256": "6dc8568928f7f6a5477681bbf100a129b6f0a27c3974b733740c5d259333e559",
+      "minutes_estimees_a_182_mots_min": 136.31,
+      "minutes_estimees_a_200_mots_min": 124.04,
+      "duree_audio_mesuree": null,
+      "paragraphes": 263,
+      "paragraphes_dupliques": 0,
+      "phrases_dupliquees_8_mots_min": [],
+      "hook_mots": 88,
+      "chapitres": [
+        {
+          "id": "01",
+          "mots": 1230,
+          "sha256_segment": "ec3d80455e188db0ecaae798492bcf92bba2290d0def44f72619d807d916b1c8",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "02",
+          "mots": 1096,
+          "sha256_segment": "d139ba3b4921509b5a5701006b71e4c4d0a65f750d7dec19ca79005ee0e83cc0",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "03",
+          "mots": 1057,
+          "sha256_segment": "8b8a6a63701d6e1afaa00cb52e3b80e088a8fce2b276d0b75e6870c0e2db8976",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "04",
+          "mots": 1117,
+          "sha256_segment": "88cf8a66905fda6d754e71da489290fa422394ac2568aae23e42351d9a092429",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "05",
+          "mots": 1116,
+          "sha256_segment": "b2bf7f0b98f58e3b510ca4c90f61a8d932923cc0b1a5d327dcdb41ad43b7d710",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "06",
+          "mots": 1140,
+          "sha256_segment": "c1a5e8b92befef63298fab478fb71a544eecb05e9c8b7a1edfaa76bb278d8311",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "07",
+          "mots": 1142,
+          "sha256_segment": "dad680ab912f56afe63ef879001f9baf84f433b482c88459d07723a434792403",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "08",
+          "mots": 1124,
+          "sha256_segment": "81e545a96acc7ce5988d402ca883481e3a24e9399a951fd3bdddd26b5599d94e",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "09",
+          "mots": 1141,
+          "sha256_segment": "b7e3968529012845c8e943e0ce756ed9da1fddc9e6a560c0cedcf92355137cd8",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "10",
+          "mots": 1152,
+          "sha256_segment": "7a83092f701d75570b25d513a68d24df74b4012842b57d2757c78bf163658c72",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "11",
+          "mots": 1160,
+          "sha256_segment": "5d4a463bfca8cb8b8b347db825e80f1e41a7ac4084d2e3891e439e05b46cc5bf",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "12",
+          "mots": 1088,
+          "sha256_segment": "672ee17c6f7df60ed74d91f449de85b4f9fd900b9206123e8d55110ff93e01cf",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "13",
+          "mots": 1095,
+          "sha256_segment": "a6bf42cdbf1156b5cb89b299ff6b9796e6795cd1d3e86e4104b4c68f5cf9050c",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "14",
+          "mots": 1114,
+          "sha256_segment": "0ea4bfa474aaf904b9814cda6fe14385fdda5ce676777340aa44db250a2d19c8",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "15",
+          "mots": 1145,
+          "sha256_segment": "516c09992dc15c6c14203dfe68c0bb1c64998de02dae3fb1f844d8c130f68326",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "16",
+          "mots": 1105,
+          "sha256_segment": "271b626ffd314957f977ae0e298f5c252e46e7215cc19e4348beff79989331c4",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "17",
+          "mots": 1113,
+          "sha256_segment": "485899b00a9fc29d2e91fcb2eb3e0cdc12833d331d316cca7a77fc78434d2d49",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "18",
+          "mots": 1143,
+          "sha256_segment": "155843d6b1901b18e90c8c0b65baeee226016bd42ea426803ba46620c13ee408",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "19",
+          "mots": 1125,
+          "sha256_segment": "d83402da6a264e2758fb034f7b8ae8e0f6f1fa298aad8860275433e4dab1b692",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "20",
+          "mots": 1112,
+          "sha256_segment": "c2ff6c7f144df415d37d2754c1c80d08bb98a4411a025342cbe40bab06199670",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "21",
+          "mots": 1149,
+          "sha256_segment": "93d368e03b4cf0c1a6319cae267fffe0c47ff17eaa529efd9fe694ab944d6449",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": "22",
+          "mots": 1144,
+          "sha256_segment": "42512ca632ce8f4205da347a37929b722e213ea3d3d6a7c63799388b7c8f9d94",
+          "empreinte_comparee": true,
+          "controle_segment_conforme": true
+        }
+      ],
+      "erreurs": [],
+      "miniature_png_presente": true,
+      "miniature_jpg_presente": true,
+      "fichiers": {
+        "AUDIT.txt": {
+          "octets": 9371,
+          "sha256": "0fef47e8f415f0a086c73aba2dc5eba71b343ba873ab375bfae22dd029d00842"
+        },
+        "BRIEF.txt": {
+          "octets": 2415,
+          "sha256": "0889b0039b278f07fc6f06fd710862fa790cc73bcaa980588c27e0e4d79adb6b"
+        },
+        "CHAPITRES.json": {
+          "octets": 16069,
+          "sha256": "911018c17b663779a994e6398b0bec7a95e05e86ff1e2fe8b89af94fef6942e4"
+        },
+        "DESCRIPTION.txt": {
+          "octets": 854,
+          "sha256": "c43c3f94d8d73d9160f8361251314ab21bc495a5c537272aa73d1d72d51c85f3"
+        },
+        "MESURES.json": {
+          "octets": 843,
+          "sha256": "a97575d551f934f48651bdc3d17475987c9b313c0432e2260f9af81931a85499"
+        },
+        "MINIATURE.jpg": {
+          "octets": 237013,
+          "sha256": "15532e692f0d7c46fb4b0f558f5d8db0523362021c5d564ed337640f218d49d5"
+        },
+        "MINIATURE.png": {
+          "octets": 2112214,
+          "sha256": "5b4c558ad1e2f717317937148de9d32749b225805bad62c7958baeadb59c1704"
+        },
+        "PROMPT-MINIATURE.txt": {
+          "octets": 2025,
+          "sha256": "490fbfede836e631b95c3f8c57cf2a7d00648b034604793b9ef92da1770d3297"
+        },
+        "SCRIPT.txt": {
+          "octets": 162321,
+          "sha256": "6dc8568928f7f6a5477681bbf100a129b6f0a27c3974b733740c5d259333e559"
+        },
+        "SOURCES.txt": {
+          "octets": 5384,
+          "sha256": "a6a11559c63328495b3e91c7604a19e06bd67eaf50c999d1f4a3fd7d6d2093ef"
+        },
+        "TITRE.txt": {
+          "octets": 55,
+          "sha256": "5c3692660715c465434aa17f42548d2b7b458db945c46a58313edbab2660424f"
+        }
+      }
+    },
+    {
+      "dossier": "08-stranger-things",
+      "statut": "controle_technique_ok",
+      "mots": 24637,
+      "caracteres": 149528,
+      "octets": 153289,
+      "sha256": "047c8eba4b08e8009d2ae6d65c4600d03c4edd83ee5754b37073fb29c1853f3d",
+      "minutes_estimees_a_182_mots_min": 135.37,
+      "minutes_estimees_a_200_mots_min": 123.19,
+      "duree_audio_mesuree": null,
+      "paragraphes": 329,
+      "paragraphes_dupliques": 0,
+      "phrases_dupliquees_8_mots_min": [],
+      "hook_mots": 83,
+      "chapitres": [
+        {
+          "id": 1,
+          "mots": 1619,
+          "sha256_segment": "7490735f8fb930beef10aa34bc439a918e22f74abdbc7f0934ab8e953ddab72a",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 2,
+          "mots": 2374,
+          "sha256_segment": "1762d29b3a9f15c78a0e73f7869c3826b69cb126ef547d12ef2c64cee360f13f",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 3,
+          "mots": 1639,
+          "sha256_segment": "3d6d7468a9d25d00f735e797efde1cb143440f8cdfb90dcfca26113cbb0d4234",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 4,
+          "mots": 1804,
+          "sha256_segment": "bdaeae3c81b9f235670006143a3256102aad12c0a6ece60545058001dec3980a",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 5,
+          "mots": 1528,
+          "sha256_segment": "d342e58f46b6f837c55b2fe67b5ad7c1f14074b87d2cf57d3e781ac624c0b336",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 6,
+          "mots": 1776,
+          "sha256_segment": "3167a4f940052941bc6a87ca5a4f23361ea527ac7853b0d34aa73304776b7e09",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 7,
+          "mots": 1602,
+          "sha256_segment": "5aeb394b0808a06760c4a1d322d187d465f7459b12926b2b38f8aaa6373fcdaa",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 8,
+          "mots": 1659,
+          "sha256_segment": "a3cd7d1b8dc74b0f65d14637a9eb1b2cdde1e64cce44222f8a506e74946a45ed",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 9,
+          "mots": 1790,
+          "sha256_segment": "6aea8c83b97547d374855a8f370f944e9cb649df252515570d0d47c696827bd0",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 10,
+          "mots": 1625,
+          "sha256_segment": "8d0b8e57107ffa1fa67bf47c5579f325425150662bb5efae8fb1dde85b8769bd",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 11,
+          "mots": 1579,
+          "sha256_segment": "ccef27143473202f5d9f2bd917315659e834e0fc88c065f6448a5d72eef99c5c",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 12,
+          "mots": 1734,
+          "sha256_segment": "8b981fe219863e3276570b3c5253bfa4325ab2f092ce1a6d3b35d1fa46f0d465",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 13,
+          "mots": 1565,
+          "sha256_segment": "87d0affcce44bd8de97861a6225ca4d7afdd35847e8d9fcbcc7f75a23c118e38",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 14,
+          "mots": 1328,
+          "sha256_segment": "6bfc3cf0156e058665f67987a155400f2d882a3f08a37d54e3ac61f03631ad37",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        },
+        {
+          "id": 15,
+          "mots": 1015,
+          "sha256_segment": "d502743c7ab58e3c6f4fe673a395d45c828fe0df0d3743c54126f03353ecca42",
+          "empreinte_comparee": false,
+          "controle_segment_conforme": true
+        }
+      ],
+      "erreurs": [],
+      "miniature_png_presente": true,
+      "miniature_jpg_presente": true,
+      "fichiers": {
+        "AUDIT.txt": {
+          "octets": 9342,
+          "sha256": "2082cb676623726093bda488551c3945c4cb6cae19e839e46530bb2b1316e682"
+        },
+        "BRIEF.txt": {
+          "octets": 2294,
+          "sha256": "d90df00999322561353d31976ba586c864bb47b5944527f7e48e417fcd43b531"
+        },
+        "CHAPITRES.json": {
+          "octets": 8148,
+          "sha256": "2407b3ae938a337a59ee9b52a486a38b9a425ad854d76e799c54de25bd62e9f1"
+        },
+        "DESCRIPTION.txt": {
+          "octets": 756,
+          "sha256": "85c4e922ff2c3c700463d8e983c460276b6c26e5c379f5307cbfcee185251af0"
+        },
+        "MESURES.json": {
+          "octets": 898,
+          "sha256": "0793ddd33def8600e5b0636bc4ff7d6ceecd33ed7dda9d9d820e8b29df2b30f9"
+        },
+        "MINIATURE.jpg": {
+          "octets": 233237,
+          "sha256": "30296215762f10ff1286dc6575fd2d0f3a3a9b27a0a10eef7db3a86c2f30538b"
+        },
+        "MINIATURE.png": {
+          "octets": 2194477,
+          "sha256": "5c607b7e7db56cde0cfd8068fcf09ce3bd1fbb985b959d1f5467b6ffee77fc51"
+        },
+        "PROMPT-MINIATURE.txt": {
+          "octets": 1936,
+          "sha256": "37987949e36489fe94a6ba09e73c1f02f4c358965043deeb1a32681bf578ce42"
+        },
+        "SCRIPT.txt": {
+          "octets": 153289,
+          "sha256": "047c8eba4b08e8009d2ae6d65c4600d03c4edd83ee5754b37073fb29c1853f3d"
+        },
+        "SOURCES.txt": {
+          "octets": 5382,
+          "sha256": "89a9a94b67e9bd20969d2d050e710a248f01714ea793c7080f8e45b37f574b48"
+        },
+        "TITRE.txt": {
+          "octets": 53,
+          "sha256": "658332370ad2e118697765cfa35291be4b4c2b16c0bd2934ed44e9b6560965f0"
+        }
+      }
+    }
+  ],
+  "total_mots": 125783,
+  "total_caracteres": 779416
+}

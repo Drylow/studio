@@ -1,12 +1,14 @@
-LA BOÎTE À RÉCAP — IDÉES À FAIRE
-Ajout demandé par l'utilisateur le 27 octobre 2026.
+LA BOÎTE À RÉCAP — SUIVI DES IDÉES
+Ajout demandé le 27 octobre 2026 ; production du lot 2 le 28 octobre 2026.
 
-LOT ACTUEL
+LOT PRÉCÉDENT
 Galactus, Freezer et Sukuna : scripts livrés ; narrations soumises à Algrow.
 Reprise des voix : VOIX-REPRISE.txt et registre privé indiqué dans ce document.
 
-PROCHAINES IDÉES — ORDRE PROPOSÉ APRÈS LE LOT ACTUEL
-Les cinq sujets ci-dessous sont ajoutés à la liste de travail.
+LOT 2 — SCRIPTS ET MINIATURES PRODUITS
+Les cinq sujets ci-dessous ont été écrits à la demande de l'utilisateur.
+Les fichiers, mesures, audits et périmètres sont dans lot-02-2026-10-27/.
+La copie de livraison est rangée au Bureau : La Boîte à Récap - Lot 2 - 27 octobre 2026.
 Les notes sont celles de la capture de l'utilisateur, pas un nouvel audit.
 
 1. LES 4 FANTASTIQUES — 7/10 — priorité haute
@@ -18,28 +20,27 @@ L'accroche « avant Avengers Doomsday » dépendra du calendrier vérifié au mo
 de la production et de la publication ; ne pas présumer du contenu de ce film.
 
 2. ONE PIECE JUSQU'À ELBAF — 7/10 — priorité haute
-Titre de travail : TOUTE l'Histoire de One Piece — De Romance Dawn à Elbaf
+Titre retenu : TOUTE l'Histoire de One Piece — De Romance Dawn à l'arrivée à Elbaf
 Récap chronologique de l'aventure et des révélations nécessaires à sa compréhension.
-Définir avant rédaction le support retenu et le dernier chapitre ou épisode couvert.
-Le titre reste provisoire : il ne signifie pas que l'arc Elbaf est achevé.
+Périmètre produit : manga, chapitres 1 à 1133, retrouvailles Robin/Saul.
+Le titre ne signifie pas que l'arc Elbaf est achevé.
 
 3. FRIEREN — 6/10 — priorité secondaire
-Titre de travail : TOUTE l'Histoire de Frieren — Après la défaite du Roi Démon
+Titre retenu : TOUTE l'Histoire de Frieren (Saisons 1 et 2)
 Angle : le voyage de Frieren après la victoire, la mémoire et ses compagnons.
-Fixer le périmètre anime ou manga et les spoilers avant la recherche détaillée.
-La mention « saisons 1 et 2 » de la capture n'est pas une limite validée ici.
+Périmètre produit : anime, épisodes 1 à 38 inclus, sans raconter la suite du manga.
 
 4. SAKAMOTO DAYS — 6/10 — priorité secondaire
-Titre de travail : TOUTE l'Histoire de Sakamoto Days — Le Tueur devenu Épicier
+Titre retenu : TOUTE l'Histoire de Sakamoto Days (Saison 1 complète)
 Angle : la reconversion de Sakamoto et le retour de son passé dans sa nouvelle vie.
-Fixer le périmètre anime ou manga et les spoilers avant la recherche détaillée.
+Périmètre produit : anime, saison 1, épisodes 1 à 22 inclus.
 
 5. STRANGER THINGS — 5/10 — réserve de la nouvelle sélection
-Titre de travail : TOUTE l'Histoire de Stranger Things — Les Secrets de Hawkins
+Titre retenu : TOUTE l'Histoire de Stranger Things (Saisons 1 à 5)
 Sujet conservé à la demande de l'utilisateur, après les quatre autres priorités.
 Le précédent choix d'éviter Stranger Things concernait le projet Quiet Paradox.
 Cette entrée appartient à La Boîte à Récap ; ne pas la transférer à une autre chaîne.
-Vérifier le périmètre diffusé avant toute promesse « toute la série » ou « vraie fin ».
+Les cinq saisons sont racontées ; le sort final d'Onze reste explicitement ambigu.
 
 FORMAT À CONSERVER
 Français ; format long de la chaîne, objectif de 2 heures minimum par vidéo.
@@ -51,9 +52,12 @@ Utiliser FacelessOS et les références de la chaîne lors de la rédaction.
 La voix de la chaîne est enregistrée dans VOIX.json.
 
 ÉTAT ET SOURCES
-Statut des cinq nouvelles entrées : À FAIRE, aucun nouveau script rédigé.
-La demande actuelle ajoute des idées ; elle ne lance pas de nouvelle narration,
-de génération payante ni de programmation YouTube.
+Statut des cinq entrées : scripts écrits et miniatures créées. Sources et corrections
+dans chaque dossier ; contrôles du lot dans lot-02-2026-10-27/CONTROLE-LOT.json.
+Aucune narration, vidéo, programmation YouTube ou publication n'a été lancée
+pour ces cinq sujets. La demande « do the other scripts & thumbz » a autorisé
+leur rédaction et leur production visuelle ; elle ne doit pas relancer les voix
+du lot précédent.
 Source : capture utilisateur « FOLLOW-UP 1 #6–10 », reçue le 27 octobre 2026.
 Les affirmations de concurrence, d'actualité et les projections de vues de la
 capture n'ont pas été vérifiées dans cet ajout. Les vérifier avant production.

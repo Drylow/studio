@@ -1,0 +1,291 @@
+{
+  "offset_convention": "Indices de caractères Unicode dans SCRIPT.txt UTF-8 avec retours LF ; début inclus, fin exclue. Horaires seulement estimés, à recalculer après audio.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Le vol cosmique et la promesse de Reed",
+      "char_start": 0,
+      "char_end_exclusive": 6673,
+      "word_start": 0,
+      "word_end_exclusive": 1106,
+      "words": 1106,
+      "opening": "Reed Richards regarde son meilleur ami et comprend que son voyage dans l'espace lui a détruit la vie. Ben Grimm est debout devant lui, couvert d'une peau orange qui ressemble à de la roche. Ses mains sont énormes. Son visage a changé. Il vient de ramener leur vaisseau sur Terre et, en remerciement, il découvre un corps dans lequel personne ne pourra le reconnaître. Reed voudrait lui expliquer ce qui s'est passé. Ben voudrait surtout savoir pourquoi son ami n'a pas écouté ses avertissements avant le départ.",
+      "start_seconds_estimate_182_wpm": 0.0
+    },
+    {
+      "number": 2,
+      "title": "Un foyer public, des ennemis souterrains",
+      "char_start": 6675,
+      "char_end_exclusive": 12996,
+      "word_start": 1106,
+      "word_end_exclusive": 2109,
+      "words": 1003,
+      "opening": "L'Homme Taupe vit à l'écart d'une société dont il considère avoir été rejeté. Il a trouvé sous terre un territoire, des créatures et des serviteurs qui lui donnent une autorité qu'il n'avait jamais obtenue à la surface. Quand ses attaques attirent les Fantastiques, ils rencontrent déjà une forme d'adversaire qui reviendra souvent dans leur histoire. Quelqu'un a été humilié, s'est isolé et utilise un pouvoir acquis loin des autres pour leur faire payer ce rejet. Ben est particulièrement bien placé pour comprendre la blessure de départ. Cela ne l'oblige pas à accepter ce que l'Homme Taupe en a fait.",
+      "start_seconds_estimate_182_wpm": 364.62
+    },
+    {
+      "number": 3,
+      "title": "Namor et le retour de Doom",
+      "char_start": 12998,
+      "char_end_exclusive": 18824,
+      "word_start": 2109,
+      "word_end_exclusive": 3090,
+      "words": 981,
+      "opening": "L'homme que Johnny retrouve s'appelle Namor. Il appartient à la fois au monde des humains et à celui d'Atlantis, et il a déjà vécu une histoire avant que les Fantastiques n'existent. Sa mémoire perdue l'a éloigné de son peuple et de son statut. Johnny utilise sa flamme pour dégager son visage puis le contact avec l'eau contribue à lui rendre ses souvenirs. Il vient de retrouver le Prince des Mers. Sur le moment, ça ressemble à un service rendu à quelqu'un qui avait besoin d'aide.",
+      "start_seconds_estimate_182_wpm": 695.27
+    },
+    {
+      "number": 4,
+      "title": "Le tyran, la Chose et Alicia",
+      "char_start": 18826,
+      "char_end_exclusive": 25318,
+      "word_start": 3090,
+      "word_end_exclusive": 4147,
+      "words": 1057,
+      "opening": "Victor voyage, étudie et se construit une nouvelle apparence. L'armure et le masque deviennent ses signes les plus reconnaissables. Il prend le nom de Docteur Fatalis en français, même si on l'appelle très souvent Doom, et impose son pouvoir en Latvérie. Pour ses sujets, il peut être celui qui a renversé une ancienne oppression. Il devient aussi un souverain qui exige l'obéissance et contrôle ce qu'on peut dire de lui. Cette combinaison explique pourquoi ses interventions ne se résument jamais au cambriolage d'un laboratoire. Doom dispose d'un pays, d'une administration, de machines et d'une idée très claire de la place qu'il s'attribue dans le monde.",
+      "start_seconds_estimate_182_wpm": 1018.68
+    },
+    {
+      "number": 5,
+      "title": "Les Terrifics, Attilan et le mariage",
+      "char_start": 25320,
+      "char_end_exclusive": 31649,
+      "word_start": 4147,
+      "word_end_exclusive": 5144,
+      "words": 997,
+      "opening": "Le Sorcier, le Piégeur, l'Homme Sable et Médusa composent la première version des Terrifics, souvent appelés les Quatre Terribles. Leur réunion copie assez clairement la forme de leurs ennemis. Un spécialiste de la technologie dirige, plusieurs pouvoirs se complètent et le nombre permet d'annoncer le duel. Mais la confiance qui rend les Fantastiques résistants manque à leurs adversaires. Les ambitions personnelles compliquent la coopération, et leur intérêt commun dépend surtout du plaisir qu'ils attendent d'une victoire sur Reed et ses proches.",
+      "start_seconds_estimate_182_wpm": 1367.14
+    },
+    {
+      "number": 6,
+      "title": "La Terre face à Galactus",
+      "char_start": 31651,
+      "char_end_exclusive": 37095,
+      "word_start": 5144,
+      "word_end_exclusive": 6033,
+      "words": 889,
+      "opening": "Le Surfer d'Argent traverse l'espace à la recherche de mondes capables de nourrir Galactus. Quand il se dirige vers la Terre, le Gardien essaie d'en dissimuler la présence. Les phénomènes que les humains aperçoivent dans le ciel sont les effets de cette tentative. Le plan échoue. Le héraut a trouvé sa destination et son maître arrive. Les Fantastiques découvrent un être qui n'a aucune raison personnelle de les haïr. Il doit manger, et leur monde répond à ce besoin.",
+      "start_seconds_estimate_182_wpm": 1695.82
+    },
+    {
+      "number": 7,
+      "title": "Le Wakanda, la Zone négative et Franklin",
+      "char_start": 37097,
+      "char_end_exclusive": 43295,
+      "word_start": 6033,
+      "word_end_exclusive": 7029,
+      "words": 996,
+      "opening": "T'Challa invite les Fantastiques au Wakanda et les met à l'épreuve dans un environnement préparé. Il a étudié leurs capacités. Il sait que la chaleur de Johnny peut être contrainte, que l'élasticité de Reed ne résout pas tous les problèmes et que Ben peut être piégé sans être battu au poing. Le roi veut éprouver sa propre capacité à défendre son pays. Pour les visiteurs, l'accueil a quelque chose d'assez désagréable. Ils ont accepté une invitation et se retrouvent traités comme des adversaires dans une expérience grandeur nature.",
+      "start_seconds_estimate_182_wpm": 1988.9
+    },
+    {
+      "number": 8,
+      "title": "La décision qui éloigne Sue",
+      "char_start": 43297,
+      "char_end_exclusive": 49408,
+      "word_start": 7029,
+      "word_end_exclusive": 8001,
+      "words": 972,
+      "opening": "Annihilus s'intéresse aux capacités de Franklin et cherche à les exploiter. Ses manipulations provoquent un développement dangereux des pouvoirs de l'enfant. Reed se retrouve devant une situation qu'il considère comme incontrôlable. Si l'énergie continue de se manifester, les conséquences pourraient dépasser tout ce que la famille est capable de contenir. Il agit en bloquant l'activité mentale de son fils. Il veut empêcher une catastrophe et le sauver, mais le résultat immédiat est un enfant réduit au silence par son propre père.",
+      "start_seconds_estimate_182_wpm": 2317.25
+    },
+    {
+      "number": 9,
+      "title": "Galactus jugé, Ben séparé",
+      "char_start": 49410,
+      "char_end_exclusive": 55907,
+      "word_start": 8001,
+      "word_end_exclusive": 9056,
+      "words": 1055,
+      "opening": "Galactus revient affaibli. Les héros réunis sur Terre parviennent à le faire tomber, et Reed constate que l'être qu'ils combattent est en train de mourir. Il intervient pour le sauver. La décision choque parce qu'elle dépasse leur combat immédiat. Galactus a déjà détruit des mondes et pourra recommencer s'il survit. Reed aide pourtant un être agonisant, convaincu que le laisser mourir dans ces conditions pose un problème qu'il ne peut pas simplement ignorer.",
+      "start_seconds_estimate_182_wpm": 2637.69
+    },
+    {
+      "number": 10,
+      "title": "Malice, Lyja et la famille transformée",
+      "char_start": 55909,
+      "char_end_exclusive": 61937,
+      "word_start": 9056,
+      "word_end_exclusive": 10005,
+      "words": 949,
+      "opening": "Ben voit Johnny et celle qu'il croit être Alicia construire une relation. Il réagit avec colère, quitte à s'éloigner de l'équipe. Johnny ne se vit pas simplement comme quelqu'un qui aurait attendu l'absence de Ben pour lui prendre sa compagne. Il a développé des sentiments dans une situation qu'il comprend mal lui aussi. La tension ne peut pas se résoudre par un duel, parce qu'aucun coup ne permettra de décider ce que chacun avait le droit de ressentir.",
+      "start_seconds_estimate_182_wpm": 2985.49
+    },
+    {
+      "number": 11,
+      "title": "Hyperstorm, Onslaught et les mondes de Franklin",
+      "char_start": 61939,
+      "char_end_exclusive": 67971,
+      "word_start": 10005,
+      "word_end_exclusive": 10965,
+      "words": 960,
+      "opening": "Reed et Doom semblent mourir ensemble à la suite d'un affrontement en Latvérie. La disparition laisse Sue avec les témoignages du combat, une équipe fragilisée et un enfant à protéger. Elle refuse de conclure trop vite que Reed est définitivement perdu. Certains de ses proches pensent qu'elle s'accroche à un espoir impossible. Elle connaît pourtant assez leur vie pour savoir qu'une disparition ne constitue pas toujours une preuve. Les voyages temporels, les transferts d'esprit et les copies mécaniques ont déjà compliqué leurs certitudes.",
+      "start_seconds_estimate_182_wpm": 3298.35
+    },
+    {
+      "number": 12,
+      "title": "Valeria et les limites de Reed",
+      "char_start": 67973,
+      "char_end_exclusive": 73797,
+      "word_start": 10965,
+      "word_end_exclusive": 11902,
+      "words": 937,
+      "opening": "Une jeune fille appelée Valeria apparaît dans la vie des Fantastiques avec une origine qui semble impossible. Elle se présente dans un contexte où Sue et Doom occupent des places familiales qui ne correspondent pas à leur présent. Les voyages entre réalités et les manipulations de Franklin compliquent son identité. Pour comprendre sa place sans se perdre dans chaque détour, il faut revenir à l'enfant que Reed et Sue avaient perdu. L'histoire de Valeria réutilise cette blessure et la relie aux pouvoirs de leur fils.",
+      "start_seconds_estimate_182_wpm": 3614.84
+    },
+    {
+      "number": 13,
+      "title": "Unthinkable, la Latvérie et l'au-delà",
+      "char_start": 73799,
+      "char_end_exclusive": 79598,
+      "word_start": 11902,
+      "word_end_exclusive": 12839,
+      "words": 937,
+      "opening": "Dans l'arc Unthinkable de Mark Waid et Mike Wieringo, Doom frappe la famille avec la magie. Franklin est envoyé dans un lieu infernal, Valeria devient un point d'accès à ses manœuvres et les Fantastiques subissent des attaques que les explications habituelles de Reed ne permettent pas d'arrêter. Victor veut forcer son rival à reconnaître qu'il ne maîtrise pas tout. Il prépare des situations où la souffrance des proches de Reed semble dépendre de l'aveu de son impuissance.",
+      "start_seconds_estimate_182_wpm": 3923.74
+    },
+    {
+      "number": 14,
+      "title": "Civil War et les autres Reed",
+      "char_start": 79600,
+      "char_end_exclusive": 85400,
+      "word_start": 12839,
+      "word_end_exclusive": 13760,
+      "words": 921,
+      "opening": "La catastrophe de Stamford déclenche une crise autour de la responsabilité des personnes dotées de pouvoirs. Le gouvernement réclame un encadrement, et les héros se divisent sur la manière d'y répondre. Tony Stark soutient l'enregistrement et l'organisation des activités surhumaines. Captain America refuse un système qu'il estime dangereux pour les libertés et pour ceux qu'il obligerait à obéir. Reed rejoint le camp de Stark, convaincu qu'il faut prévenir un chaos dont il cherche à calculer les conséquences.",
+      "start_seconds_estimate_182_wpm": 4232.64
+    },
+    {
+      "number": 15,
+      "title": "La Fondation du Futur et le sacrifice de Johnny",
+      "char_start": 85402,
+      "char_end_exclusive": 91441,
+      "word_start": 13760,
+      "word_end_exclusive": 14741,
+      "words": 981,
+      "opening": "La Fondation du Futur accueille des enfants qui viennent de milieux très différents. Franklin et Valeria en font partie, mais ils ne sont pas les seuls. Des enfants moloïdes, des jeunes issus d'autres civilisations, Alex Power, Artie, Leech et Bentley, un clone du Sorcier, se retrouvent dans un cadre où l'intelligence peut prendre plusieurs formes. Dragon Man, dont les capacités ont été transformées, participe à cette communauté. Le Baxter Building devient une école autant qu'un centre de recherche.",
+      "start_seconds_estimate_182_wpm": 4536.26
+    },
+    {
+      "number": 16,
+      "title": "La guerre des cités et le retour de la Torche",
+      "char_start": 91443,
+      "char_end_exclusive": 97542,
+      "word_start": 14741,
+      "word_end_exclusive": 15726,
+      "words": 985,
+      "opening": "Johnny est soumis aux arènes et aux méthodes d'Annihilus. Le maître de la Zone négative dispose de moyens pour le ramener après ses défaites et recommencer l'exploitation. La répétition détruit toute idée d'un sacrifice rapide suivi d'un repos. Johnny doit trouver comment agir dans un système où l'adversaire contrôle jusqu'à la possibilité de mourir. Sa réputation de jeune homme incapable de se concentrer ne décrit plus ce qu'il vit. Il observe, supporte et cherche une ouverture.",
+      "start_seconds_estimate_182_wpm": 4859.67
+    },
+    {
+      "number": 17,
+      "title": "Le voyage familial et le Quiet Man",
+      "char_start": 97544,
+      "char_end_exclusive": 103634,
+      "word_start": 15726,
+      "word_end_exclusive": 16709,
+      "words": 983,
+      "opening": "Reed veut chercher une réponse dans le temps et dans l'espace. Les moyens de transport dont il dispose doivent permettre à la famille de vivre un long voyage tout en revenant sur Terre peu après son départ. Pour les personnes restées à la maison, l'absence est censée être courte. Il prévoit tout de même une équipe de remplacement. Scott Lang, Médusa, Jennifer Walters et Darla Deering prennent en charge les responsabilités du groupe et de la Fondation du Futur.",
+      "start_seconds_estimate_182_wpm": 5184.4
+    },
+    {
+      "number": 18,
+      "title": "Les incursions et le dernier radeau",
+      "char_start": 103636,
+      "char_end_exclusive": 109726,
+      "word_start": 16709,
+      "word_end_exclusive": 17666,
+      "words": 957,
+      "opening": "Les Illuminati cherchent d'abord à éviter le choix. Ils essaient des instruments, consultent des puissances et étudient les incursions précédentes. Chaque succès provisoire laisse la même question ouverte. Le phénomène revient, touche d'autres univers et rapproche la destruction générale. Captain America refuse que le groupe prépare des armes capables d'anéantir des Terres peuplées. Les autres lui retirent ses souvenirs de ces discussions pour continuer sans son opposition. Le secret ne protège plus seulement leur travail. Il protège les décisions qu'ils ne veulent pas défendre devant quelqu'un qui les connaît.",
+      "start_seconds_estimate_182_wpm": 5508.46
+    },
+    {
+      "number": 19,
+      "title": "Battleworld et la fin du règne de Doom",
+      "char_start": 109728,
+      "char_end_exclusive": 115641,
+      "word_start": 17666,
+      "word_end_exclusive": 18606,
+      "words": 940,
+      "opening": "Dans Secret Wars de Jonathan Hickman et Esad Ribić, Battleworld possède des régions qui viennent de réalités différentes. Des frontières séparent des royaumes, des zones dangereuses et des territoires soumis à des règles particulières. Doom maintient l'ensemble grâce à la puissance qu'il contrôle, et son autorité s'appuie sur des représentants capables de la faire respecter. Des versions de Thor forment une police. Doctor Strange occupe une place majeure dans cet ordre, avec une connaissance du passé que la plupart des habitants ne possèdent plus.",
+      "start_seconds_estimate_182_wpm": 5823.96
+    },
+    {
+      "number": 20,
+      "title": "Reconstruire les mondes, retrouver la famille",
+      "char_start": 115643,
+      "char_end_exclusive": 121639,
+      "word_start": 18606,
+      "word_end_exclusive": 19571,
+      "words": 965,
+      "opening": "La reconstruction du multivers offre aux Richards une mission différente de leurs anciennes explorations. Ils ne visitent plus seulement des mondes déjà là. Franklin et l'Homme-Molécule contribuent à en créer, tandis que Reed, Sue, Valeria et les enfants de la Fondation accompagnent le processus. Leurs connaissances servent à établir des possibilités de vie et à comprendre ce qui apparaît. La famille découvre des réalités dont les habitants ne partagent pas nécessairement les mêmes règles physiques ou les mêmes formes d'existence.",
+      "start_seconds_estimate_182_wpm": 6133.85
+    },
+    {
+      "number": 21,
+      "title": "Ben père, Johnny prisonnier de son feu",
+      "char_start": 121641,
+      "char_end_exclusive": 127735,
+      "word_start": 19571,
+      "word_end_exclusive": 20533,
+      "words": 962,
+      "opening": "Le mariage ne met pas Ben à l'abri des conflits. Pendant sa lune de miel avec Alicia, le Maître des Maléfices utilise Hulk contre lui. La période devait lui permettre de profiter de son retour temporaire à une forme humaine. Il doit au contraire affronter une violence qui menace les personnes présentes sur l'île où ils séjournent. Alicia se retrouve en danger et aide aussi ceux qui sont avec elle. Ben combat jusqu'à épuiser les moyens dont il dispose, puis retrouve sa forme humaine dans un état qui l'empêche de vivre les jours qu'il attendait.",
+      "start_seconds_estimate_182_wpm": 6451.98
+    },
+    {
+      "number": 22,
+      "title": "La Guerre du Jugement et le quartier disparu",
+      "char_start": 127737,
+      "char_end_exclusive": 133489,
+      "word_start": 20533,
+      "word_end_exclusive": 21459,
+      "words": 926,
+      "opening": "La Guerre du Jugement revient sur une décision ancienne des Gardiens. Avant de s'imposer une règle de non-intervention, ils avaient partagé des connaissances avec une civilisation en pensant améliorer son existence. Ces moyens avaient été employés pour étendre une violence qui avait ravagé d'autres peuples. Les conséquences avaient contribué à leur retrait. L'histoire qu'ils se racontent depuis repose sur cette faute et sur la conviction qu'observer sans agir évite de la reproduire.",
+      "start_seconds_estimate_182_wpm": 6769.12
+    },
+    {
+      "number": 23,
+      "title": "La route, la ferme et le retour des enfants",
+      "char_start": 133491,
+      "char_end_exclusive": 139618,
+      "word_start": 21459,
+      "word_end_exclusive": 22422,
+      "words": 963,
+      "opening": "Les aventures écrites par Ryan North partent de cette famille séparée et de la méfiance qu'elle rencontre. Ben et Alicia voyagent ensemble. Johnny cherche à continuer sa vie loin des habitudes du groupe. Reed et Sue portent le poids de la décision qui a fait disparaître le quartier. Le récit révèle progressivement ce qui s'est passé, en laissant d'abord les conséquences exister dans le comportement des personnages.",
+      "start_seconds_estimate_182_wpm": 7074.4
+    },
+    {
+      "number": 24,
+      "title": "Doom et les limites du pouvoir",
+      "char_start": 139620,
+      "char_end_exclusive": 144118,
+      "word_start": 22422,
+      "word_end_exclusive": 23171,
+      "words": 749,
+      "opening": "Doom revient régulièrement mettre cette vie à l'épreuve. Dans One World Under Doom, il revendique une autorité mondiale et utilise sa puissance magique pour imposer son projet. Les Fantastiques le connaissent assez bien pour comprendre que ses promesses de stabilité seront accompagnées d'une exigence d'obéissance. Ils se rendent à sa rencontre en sachant que le combat portera autant sur l'image qu'il donne de lui que sur les moyens qu'il possède.",
+      "start_seconds_estimate_182_wpm": 7391.87
+    },
+    {
+      "number": 25,
+      "title": "Les adaptations, des continuités distinctes",
+      "char_start": 144120,
+      "char_end_exclusive": 149112,
+      "word_start": 23171,
+      "word_end_exclusive": 23962,
+      "words": 791,
+      "opening": "Dans le film sorti en deux mille cinq, Reed rassemble une équipe pour étudier un phénomène cosmique depuis une station spatiale liée à Victor. Sue, Johnny et Ben participent à l'expédition, et l'exposition transforme leurs corps. Doom est lui aussi directement associé à l'accident et développe des capacités qui ne correspondent pas à son origine classique dans les comics. Sa rivalité avec Reed passe notamment par les affaires, la réputation et sa relation avec Sue.",
+      "start_seconds_estimate_182_wpm": 7638.79
+    },
+    {
+      "number": 26,
+      "title": "Cet homme, ce monstre : rentrer à la maison",
+      "char_start": 149114,
+      "char_end_exclusive": 154231,
+      "word_start": 23962,
+      "word_end_exclusive": 24821,
+      "words": 859,
+      "opening": "Il reste une ancienne aventure qui permet de revenir à Ben et de mesurer le chemin parcouru. Cet homme, ce monstre, de Stan Lee et Jack Kirby, se déroule peu après la première rencontre avec Galactus, à une époque où la famille ne connaît pas encore Franklin, Valeria ou la Fondation du Futur. Ben marche sous la pluie et souffre de son apparence. Un inconnu lui offre un abri. L'homme semble lui rendre un service, mais il prépare une attaque contre Reed.",
+      "start_seconds_estimate_182_wpm": 7899.56
+    }
+  ]
+}

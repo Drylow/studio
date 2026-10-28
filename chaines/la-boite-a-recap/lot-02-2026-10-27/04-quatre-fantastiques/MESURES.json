@@ -1,0 +1,17 @@
+{
+  "title": "TOUTE l'Histoire des 4 Fantastiques — La Première Famille de Marvel",
+  "checked_on": "2026-10-28",
+  "words": 24821,
+  "characters_including_spaces": 154232,
+  "characters_excluding_whitespace": 129104,
+  "utf8_bytes": 158129,
+  "sha256": "bcb8c8c3f2f1f8199b1fa1552d9de6d860bd82ac38ddd3d4e457b0be3b938613",
+  "chapters": 26,
+  "count_method": "Suites de lettres/chiffres Unicode ; apostrophes et traits d’union intérieurs conservés. Narration seule.",
+  "estimated_minutes_at_182_wpm": 136.38,
+  "estimated_minutes_at_190_wpm": 130.64,
+  "estimated_minutes_at_200_wpm": 124.11,
+  "minimum_words": 24500,
+  "minimum_met": true,
+  "actual_audio_measured": false
+}

@@ -1,0 +1,48 @@
+SAKAMOTO DAYS — DOSSIER DE SOURCES
+Accès et vérifications : 28 octobre 2026.
+Périmètre : anime, saison 1, épisodes 1 à 22. Aucune intrigue de saison 2 ou de manga ultérieure ajoutée au récit.
+
+SOURCES PRIMAIRES
+1. Site officiel de l’anime, archives saison 1 : https://sakamotodays.jp/1st/
+   Présentation, personnages, séparation de la première saison et de la seconde.
+2. Synopsis officiels des 22 épisodes : https://sakamotodays.jp/1st/story/
+   Les textes sont chargés côté client. L’URL publique utilisée par le JavaScript officiel a été lue puis consultée : https://api.sakamotodays.jp/data/?post_type=story_article&per_page=99
+   Copie brute privée : work/boite-recap-lot02-2026-10-27/sakamoto-days/official-episodes.json.
+   Liens de consultation par épisode : https://sakamotodays.jp/1st/story/?episode=1 jusqu’à ?episode=22.
+   Titres et synopsis contrôlent la chronologie de chacun des 22 chapitres du manuscrit.
+   Épisodes 1–5 : retraite, accueil de Shin et Lu, prime d’un milliard, Sugar Park et Boiled.
+   Épisodes 6–9 : Heisuke, tournoi à un million, enlèvement de Lu par erreur, laboratoire et combat contre Kashima/Seba.
+   Épisodes 10–11 : bains publics, Wutang et casino.
+   Épisodes 12–16 : quatre condamnés, Miya, tour de Tokyo, diversion de Slur, attaque du Kanto, identité Uzuki.
+   Épisodes 17–22 : avion, cartouches, Kanaguri, Akira, équipes, Toramaru, Kaji, Shinaya télécommandé par Gaku, missions finales.
+3. Netflix, Sakamoto Days | Part 1 Recap : https://www.youtube.com/watch?v=sxiWtB-0Vsg
+   Transcription récupérée. Vérification des jalons de la première partie et étude du montage de rappel. Aucun dialogue repris dans le SCRIPT.
+4. Netflix, annonce de saison 2, 24 juin 2026 : https://about.netflix.com/en/news/sakamoto-days-season-2-returns-january-2027
+   Délimitation : retour annoncé en janvier 2027. Les développements de l’infiltration JCC et les événements de Kyoto annoncés pour cette suite ne sont pas racontés dans ce manuscrit. Seuls leurs lancements visibles à la fin de la saison 1 sont mentionnés.
+
+RECOUPEMENTS SECONDAIRES
+5. Liste détaillée des épisodes : https://en.wikipedia.org/wiki/List_of_Sakamoto_Days_episodes
+   Consultée pour déroulé et dénouements absents des accroches officielles, notamment mort des condamnés, bilan de l’assaut, contrôle de Shinaya et résultats administratifs. Source secondaire, pas substitut prétendu au visionnage intégral.
+6. ORICON, synopsis épisode 22 : https://www.oricon-group.com/news/6220/
+   Recoupe le contrôle à distance de Shinaya, les cibles Mafuyu/Toramaru et les départs de mission.
+7. Épisode 2, trésor de Lu : https://otakuorbit.com/sakamoto-days-episode-02-review-vs-son-hee-and-bacho/
+   Recoupement par un second agent. Le coffre contient des richesses et des objets de plusieurs générations ; l’alcool est le legs personnel de son père, pas l’essentiel du contenu. Correction intégrée.
+8. Épisode 9 : https://lesleysanimeandmangacorner.com/2025/03/09/sakamoto-days-episode-9-all-aboard/
+   Recoupement par un second agent des images de surveillance sans visage utile de Slur et des excuses mutuelles de Shin/Lu. Corrections intégrées.
+9. Épisode 9 : https://butwhytho.net/2025/03/sakamoto-days-episode-9-review/
+   Second recoupement des retrouvailles et de la réconciliation de Shin/Lu.
+10. Épisode 15, séquence de la tour : https://www.asahi-net.or.jp/~zj2y-skrb/anime/sakamotodays.html
+   Recoupement par un second agent des appuis endommagés, de Sakamoto retenant la structure et de l’intervention de Takamura. La chaîne d’actions concrète remplace un paragraphe initial trop vague.
+
+RÉFÉRENCES ÉDITORIALES
+11. bruhviews, COMPLETE Sakamoto Days Season 1 Part 1 Recap in 7 MINUTES : https://www.youtube.com/watch?v=tgY1b_4sBtw
+   Transcription consultée, conservée en privé. Étude limitée à la structure : entrée immédiate, chronologie causale, présentation des personnages par rôle. Aucun passage copié ni traduit. Noms mal transcrits corrigés au regard des sources officielles.
+12. La Boîte à Récap, Thanos : https://www.youtube.com/watch?v=7d06Z6W6J70
+   Ancrage français depuis la transcription locale déjà récupérée dans work/boite-recap-scripts-2026-10-27/references/.
+13. La Boîte à Récap, One Punch Man : https://www.youtube.com/watch?v=B7099KgzENE
+   Ancrage français : variations de longueur, adresse au public, explication d’un paradoxe concret.
+
+LIMITES ET CHOIX
+Les synopsis officiels sont des résumés et ne prouvent pas chaque réplique ou chaque geste. Le texte ne contient aucun dialogue présenté comme une citation exacte. Les motivations sont racontées comme des lectures des actes montrés ; aucun entretien inventé avec les auteurs.
+Le pouvoir de Shin reste limité et fatigant ; il ne voit pas un avenir universel. Le combat final oppose Sakamoto au corps de Shinaya piloté par Gaku, pas au corps de Gaku lui-même. Takamura est porté disparu après l’explosion, sa mort n’est pas affirmée. Akira est la nièce de Rion. La réussite annoncée sur l’île ne supprime pas le refus administratif final de Sakamoto.
+Pas de visionnage intégral ni d’écoute humaine du futur audio prétendus. Aucun audio généré dans cette tâche. Les durées du dossier sont des estimations à partir du texte.

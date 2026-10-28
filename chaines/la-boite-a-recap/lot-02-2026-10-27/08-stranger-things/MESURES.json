@@ -1,0 +1,25 @@
+{
+  "words": 24637,
+  "word_count_method": "Suites de lettres/chiffres Unicode ; apostrophes et traits d’union intérieurs conservés. Narration seule.",
+  "characters_with_spaces": 149528,
+  "characters_without_whitespace": 124557,
+  "utf8_bytes": 153289,
+  "sha256": "047c8eba4b08e8009d2ae6d65c4600d03c4edd83ee5754b37073fb29c1853f3d",
+  "minimum_requested_minutes": 120,
+  "minimum_editorial_words": 24500,
+  "passes_minimum_words": true,
+  "estimated_duration_minutes": {
+    "182_wpm": 135.37,
+    "200_wpm": 123.19
+  },
+  "actual_audio_duration": null,
+  "audio_generated": false,
+  "chapter_count": 15,
+  "spoilers": "Saisons 1 à 5, final inclus ; fin d’Onze explicitement ambiguë.",
+  "source_cutoff": "2026-10-27",
+  "measured_on": "2026-10-28",
+  "duplicate_paragraphs": 0,
+  "em_dash_count": 0,
+  "urls_in_narration": 0,
+  "voice_id_requested_for_channel": "IHngRooVccHyPqB4uQkG"
+}

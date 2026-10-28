@@ -1,0 +1,26 @@
+LA BOÎTE À RÉCAP — LES 4 FANTASTIQUES — PROMPT RETENU
+
+Méthode : API image autorisée, avec une référence d'identité de la Chose. Composition originale DÉBUT / FIN, Ben Grimm humain à gauche et transformé à droite. Les versions avec personnages mélangés et la variante assombrie sont écartées et conservées dans le travail privé.
+
+RÉFÉRENCE D'IDENTITÉ
+D23, Meet the Characters of Marvel Studios’ The Fantastic Four: First Steps, 21 juillet 2025.
+https://d23.com/meet-the-characters-of-marvel-studios-the-fantastic-four-first-steps/
+Image de la Chose consultée :
+https://d23.com/app/uploads/2025/07/BBL7065_TRL_comp_DDO_v0067.1048_R2.jpg.jpg
+Cette référence sert à la forme du visage rocheux ; elle n'est pas un fichier à republier séparément.
+
+PROMPT EXACT DE LA VERSION RETENUE
+Use the provided photograph as the EXACT CHARACTER IDENTITY REFERENCE for The Thing on the RIGHT half of a new finished 16:9 French YouTube thumbnail. Preserve his recognizable broad continuous rocky brow, tiny blue humanlike eyes, large irregular orange stone plates, flat broad nose, squat massive neck and blue-and-white suit. His eyes do not glow. Remove the restaurant background entirely.
+
+Make a highly polished before-and-after thumbnail with TWO equal vertical halves, separated by a thick jagged white torn-paper seam down the center. Each side has exactly one large chest-up portrait filling the frame, both faces at the same large scale.
+
+LEFT HALF: Ben Grimm as a normal human before becoming the Thing, a broad-shouldered American test pilot, fair skin, dark short hair, strong rounded square jaw, dark blue flight suit. Human skin only, no rocks. He is fortyish, solid and grounded, looking at the viewer with a determined face. Bright blue sky, softly blurred space launch structure behind him. Huge portrait, face occupies the upper two thirds of his half.
+
+RIGHT HALF: The Thing from the reference photograph, unmistakably the SAME rock face and massive continuous eyebrow ridge, looking at the viewer, head and shoulders visible. Re-light his orange rocks with stronger dramatic orange edge light against deep black-blue space. Preserve the real reference design rather than making a generic muscular monster. Huge face occupying upper two thirds of right half, shoulders wearing the reference blue-and-white suit. Sharp rock detail, emotionally serious but heroic.
+
+TYPOGRAPHY: exact word DÉBUT at the bottom of the LEFT half in very large WHITE uppercase rounded bold italic letters with thick BLACK outline and drop shadow. Exact word FIN at the bottom of the RIGHT half in the same very large rounded bold italic lettering, but YELLOW with thick BLACK outline and shadow. Both words fully inside frame. The type should feel like a dramatic popular French movie recap channel. No other text. Strong blue-left / warm-dark-right contrast, photoreal cinematic comic illustration, instantly readable on a phone, no watermark or mockup.
+
+
+CONTRÔLE VISUEL
+Deux personnages uniques, humain à gauche et Chose rocheuse à droite, sans confusion avec Thanos. Visages lisibles, séparation déchirée, mots DÉBUT blanc et FIN jaune. Typographie obtenue : gros caractères droits, plus carrés que les quatre miniatures animées du lot ; la structure et les couleurs de la chaîne sont conservées. Le PNG est la version sélectionnée, le JPG son export 1280 × 720.
+FIN illustre la transformation, pas la disparition de la famille ni une fin de l'univers Marvel.

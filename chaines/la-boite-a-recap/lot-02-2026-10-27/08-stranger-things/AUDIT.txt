@@ -1,0 +1,66 @@
+AUDIT ÉDITORIAL — STRANGER THINGS
+Contrôle du 28 octobre 2026, Europe/Paris.
+Fichier contrôlé : SCRIPT.txt, SHA-256 047c8eba4b08e8009d2ae6d65c4600d03c4edd83ee5754b37073fb29c1853f3d.
+
+ÉTAT : manuscrit complet et contrôlé pour préparation de la voix. Aucune voix soumise. Durée réelle à contrôler sur la narration finale.
+Ne pas confondre cet audit documentaire et technique avec une écoute humaine, un visionnage intégral de la série ou une certification de monétisation.
+
+A — ACCROCHE / PROMESSE
+Phrase d'ouverture : « Le jour où Will Byers disparaît, ses amis croient encore que le monstre le plus dangereux de Hawkins tient sur une table de jeu. »
+Accroche = premier paragraphe, moins de 100 mots, renversement explicite par « Mais ». Promesse = récit complet jusqu'au final, et distinction entre le montré et ce qui reste en suspens.
+A4 comparaisons réellement consultées : ouverture Thanos de La Boîte à Récap (« Le méchant perd à la fin »), ouverture One Punch Man (« la force absolue »), concurrent Recap & Chill (départ direct sur la disparition en 1983). Notre ouverture part d'une scène et d'un retournement, sans intro de chaîne ni copie du concurrent. Aucune affirmation chiffrée de performance future.
+Carte promesse : saisons 1-2 = chapitres 1-4 ; saison 3 = chapitres 5-6 ; saison 4 = chapitres 7-9 ; saison 5 et résolution = chapitres 10-15.
+CTA abonnement et lieu d'écoute présents une seule fois, après l'installation du danger et de la rencontre avec Onze.
+
+B — PROGRESSION / RÉTENTION
+Boucles suivies :
+- Will disparu (1) -> faux corps démasqué (2) -> sauvetage et séquelles (3).
+- Origine d'Onze (1-2) -> Terry et Kali (4) -> Henry/Nina (8-9) -> exploitation relancée par Kay (11).
+- Dart et tunnels (3-4) -> possession, mort de Bob, fermeture de la porte (4).
+- Transmission russe, aimants, rats, Billy (5) -> convergence Starcourt et fermeture de la machine (6).
+- Meurtres et culpabilité (7) -> musique et salut provisoire de Max (7) -> Henry et brèches (8-9) -> coma puis réveil (12).
+- Hopper disparu (6) -> message et prison (8) -> retrouvailles (9).
+- Holly et faux refuge (10) -> Max/Camazotz (11-12) -> sauvetage physique (13).
+- Nature du passage (11) -> plan de tour et évacuation (12) -> destruction (14).
+- Choix d'Onze (11-12) -> disparition (14) -> hypothèse de Mike, explicitement non confirmée (15).
+Transitions causales présentes dans les chapitres : les objets servent à une action (vélo, photo, guirlandes, boussoles, dessins, radio, musique, bague, tour). Pas de boucle reproduite en annexe pour remplir la durée. Le final s'arrête sur la fermeture de la porte du sous-sol.
+Limite : aucune mesure réelle de rétention spectateur ; les seuils de cadence des skills ne constituent pas une prédiction de watch time.
+
+C — CLARTÉ / CANON / CONTINUITÉ
+Relus et distingués : Onze/Jane/Eleven = même personnage ; Henry/Un/Vecna = même personnage ; le récit d'Henry en S4 est présenté comme son point de vue avant le complément S5.
+S5 : Monde à l'envers = liaison vers l'Abysse, pas totalité du lieu d'origine des créatures. Camazotz = prison mentale, pas endroit où se trouvent physiquement les corps.
+Max : cœur relancé S4, coma maintenu, conscience retenue, réveil S5. Aucune guérison magique complète annoncée à la fin S4.
+Nancy/Jonathan : rupture en S5, pas demande en mariage acceptée.
+Henry : souvenir de possession enfant, liberté initiale laissée nuancée, choix final en faveur du Flagelleur explicite. Vecna mort par le coup de Joyce ; pas de survie inventée.
+Onze : disparition montrée, survie par illusion = récit hypothétique de Mike ; ambiguïté confirmée par les créateurs. Kali : mort apparente, sans évasion secrète affirmée.
+Brenner : auteur des expériences, pas père biologique affirmé.
+Les causes psychologiques sont des lectures éditoriales raccordées aux scènes, pas des diagnostics médicaux des personnages.
+Corrections appliquées avant assemblage : « une autre adolescente » pour Barb ; accord « Elle les conduit » ; maintien systématique du conditionnel pour le récit d'illusion.
+
+D — VOIX / HUMANIZER / CONTRÔLES TECHNIQUES
+Ancrages français réellement lus :
+- Thanos, 7d06Z6W6J70 : « Le méchant perd à la fin. » / « C'est le contrat. » (constat concret suivi d'explication).
+- One Punch Man, B7099KgzENE : « Et quand je dis ordinaire, je pèse mes mots. » (précision adressée à l'auditeur).
+Lignes du manuscrit comparées : « Un enfant qui décide de partir emporte son moyen de transport. » ; « Les garçons comprennent qu'il ne mène pas à un téléphone classique, mais à un système informatique. » Le registre reste explicatif, oral, français, avec gestes et conséquences, sans vocabulaire de pipeline dans la voix.
+Scanner FacelessOS exécuté sur SCRIPT.txt final. Résultat privé scanner-final.txt : 15 candidats signalés, aucun hard-ban anglais, plancher d'antithèse automatique 0. Ces résultats ne valent pas certification de la prose française. Les fragments signalés décrivent principalement des actions visibles (« Billy hésite », « Joyce tourne les clés »), pas une accumulation de slogans. Les échos concernent surtout les lieux ou raccords nécessaires (« de l'autre côté », « Monde à l'envers »), conservés pour éviter les synonymes artificiels.
+D5 — registre des nombres et noms numériques : 1983 et date de disparition = récap officiel S1 ; 1979 = souvenirs du laboratoire, récap officiel S4 ; automne 1987 = cadrage S5 ; douze enfants = explication officielle S5E4/E7 ; Onze, Un et Huit = désignations des sujets, récaps officiels S1/S2/S4. Aucun chiffre de vues ou durée de vidéo intégré au récit.
+D6/D7 — réserves formelles : plusieurs contrastes factuels ordinaires restent volontairement présents dans ce récit long (« prénom / numéro », « téléphone / système informatique », « récit de Mike / confirmation »). Le scanner anglais ne suffit pas à certifier le seuil littéral très strict de deux antithèses du skill. Aucun score parfait de style n'est revendiqué.
+Format : 0 tiret cadratin, 0 URL, 0 note de montage, 0 placeholder dans SCRIPT.txt. 0 paragraphe identique et 0 phrase de 10 mots ou plus répétée à l'identique. 15 offsets vérifiés contre le texte exact, caractères Unicode à partir de zéro et fin exclusive.
+Longueur : 24 637 mots de narration, 149 528 caractères espaces inclus ; 123,19 min à 200 mots/minute, 135,37 min à 182 mots/minute. Ce sont des estimations ; MP3 non généré et non écouté.
+
+E — ORIGINALITÉ / RÉFÉRENCES
+La narration a été écrite spécialement en français, scène par scène, avec des conséquences relationnelles et des distinctions de niveau de preuve. Aucun sponsor, gag ou texte du concurrent anglais n'a été transposé. Le concurrent s'arrête à S4 et compresse les intrigues ; notre récit inclut la S5 et le contrôle de ses ambiguïtés.
+E1 strict du skill : pas de score 5/7 revendiqué. Les éléments établis sont voix éditoriale, rapprochements narratifs spécifiques, dossier de sources détaillé. Une supériorité d'angle face aux cinq meilleurs concurrents n'a pas été mesurée ; recherche « absente de la première page » non démontrée ; aucune relecture humaine confirmée. La structure chronologique est propre au format récap et n'est pas présentée comme une innovation exclusive.
+E2 : aucun texte copié identifié ; publication multiple non prévue ; aucune cadence de publication engagée. Ces contrôles rédactionnels ne garantissent pas le jugement de monétisation de YouTube.
+E4 : non applicable à ce stade, vidéo et audio non produits.
+
+SKILLS CONSULTÉS ET APPLIQUÉS
+research-and-ideation-skill.md ; faceless-scripts-os-master.md ; voice-anchoring-skill.md ; humanizer-skill.md ; greenlight-audit-skill.md ; script-structures-skill.md ; retention-mechanics-skill.md ; authenticity-audit-skill.md ; scanner trailer-voice-scan.py.
+
+CONCLUSION DE PORTÉE
+Le contrat mesurable de narration complète de plus de deux heures à 200 mots/minute est rempli. Le final a été contrôlé avec les sources officielles actuelles. Le dossier distingue les contrôles réellement faits des étapes non exécutées. Aucun label « greenlight parfait », « écoute validée » ou « durée audio garantie » n'est utilisé.
+
+RELECTURE CROISÉE FINALE DU 28 OCTOBRE 2026
+Deux paragraphes méta ont été ramenés à ce que vivent les personnages : après la disparition d'Onze, les amis n'ont pas de preuve de survie ; Mike formule ensuite une possibilité à laquelle il choisit de croire. Aucune évasion de Kali ou d'Onze n'est ajoutée ni confirmée. Les sources privées sont synchronisées et le script est désormais écrit avec retours LF conformément à sa convention d'offsets.
+Comptage harmonisé : suites Unicode de lettres/chiffres, apostrophes et traits d'union intérieurs conservés ; 24 637 mots. Chapitres, offsets de caractères et de mots, durées estimées et empreinte recalculés.
+Nouveau scanner : quinze candidats de phrases courtes et dix-huit échos, sans changement du verdict prudent ci-dessus. Contrôle des trois derniers chapitres et des révélations S5 recoupé avec Netflix Tudum ; aucune écoute ou vision intégrale revendiquée.

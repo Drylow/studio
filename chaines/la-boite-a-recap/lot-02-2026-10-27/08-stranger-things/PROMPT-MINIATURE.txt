@@ -1,0 +1,11 @@
+LA BOÎTE À RÉCAP — PROMPT MINIATURE
+
+Références de composition et de typographie, dossier REFERENCES-MINIATURES à la racine du lot (copie Bureau : Verification du lot/References miniatures) :
+thanos.jpg
+doom.jpg
+
+PROMPT
+Create one finished 16:9 French YouTube thumbnail in the exact before-and-after channel layout and typography of the attached references, about the fictional character Eleven from Stranger Things. Two equal halves with a rugged white torn-paper vertical seam exactly in the middle. Cinematic realistic television-poster look, large expressive shoulder-up faces, bright cool left / dramatic dark warm right. LEFT: recognizable season-one Eleven, short buzz-cut brown hair, wearing her modest pale pink dress and blue jacket, cautious serious expression, sunlit woods and a hint of Hawkins behind. RIGHT: recognizable older season-five Eleven, short dark brown hair, practical fully clothed dark action outfit, focused determined expression, one raised hand suggesting her telekinetic powers near her shoulder but not covering the face; deep burgundy stormy Hawkins background with distant red lightning and floating dust. No blood, wounds or horror injuries. Do not depict death, an afterlife, or a claimed resolution of Eleven's ambiguous ending. Faces should be natural, distinct stages of the same fictional character, not generic adults. Exact lettering like the references: "DÉBUT" in huge white thick rounded italic capitals at lower left, "FIN" in vivid yellow at lower right, thick black outlines and shadows, fully within margins. No franchise logo, no extra words or duration badge. Output only one completed thumbnail, no mockup.
+
+ÉTAT : image créée avec le générateur intégré, regardée, puis exportée en JPG 1280 × 720 pour la publication. Le PNG conserve le fichier original.
+Les mots DÉBUT / FIN désignent les bornes du récap, sans promettre la fin d’une œuvre encore en cours.

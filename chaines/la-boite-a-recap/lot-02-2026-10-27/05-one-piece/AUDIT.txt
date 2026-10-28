@@ -1,0 +1,180 @@
+ONE PIECE — AUDIT ÉDITORIAL ET TECHNIQUE
+Lot du 27 octobre 2026 ; contrôle final du 28 octobre 2026, Paris.
+
+RÉSULTAT
+Manuscrit complet livré : 25 064 mots, 25 chapitres, narration française.
+125,32 minutes à 200 mots/minute ; 137,71 minutes à 182 mots/minute.
+Durées calculées, aucune piste audio générée ou écoutée pour ce lot.
+Le seuil de 24 500 mots est atteint. Vérifier la durée et l'intégralité du
+MP3 lorsqu'une génération sera demandée ; ne pas déduire une durée audio
+réelle de ces seules estimations.
+
+MÉTHODE FACELESSOS
+Fichiers réellement consultés : research-and-ideation-skill.md,
+faceless-scripts-os-master.md, voice-anchoring-skill.md,
+script-structures-skill.md, retention-mechanics-skill.md,
+humanizer-skill.md, greenlight-audit-skill.md et trailer-voice-scan.py.
+L'interdiction générique des caractères non ASCII est adaptée au français :
+les accents nécessaires sont conservés ; guillemets typographiques,
+points de suspension typographiques et tirets longs absents du SCRIPT.
+
+A — ACCROCHE ET PROMESSE
+Première phrase : « Tu veux comprendre comment Luffy devient empereur des
+mers alors qu'il commence son voyage coincé dans un tonneau ? »
+Hook : 89 mots. Preuve concrète : tonneau et absence de navigation.
+Retournement : « Mais chaque personne qu'il embarque va lui permettre
+d'affronter quelque chose qu'il aurait été incapable de surmonter seul. »
+Promesse cartographiée :
+- Départ et constitution du groupe : OP-01 à OP-04.
+- Ce que les compétences des compagnons rendent possible : OP-05 à OP-09,
+  OP-14 à OP-18 et OP-21 à OP-24.
+- Limites de Luffy, séparation et perte : OP-10 à OP-13.
+- Évolution jusqu'au statut d'empereur : OP-20 à OP-22.
+- Arrivée à Elbaf et Robin/Saul : OP-25.
+La borne 1133 est dite au début, répétée à la clôture et dans la description.
+La miniature peut montrer l'évolution début/Gear Five, déjà couverte au
+chapitre OP-22. Elle ne doit pas présenter « LA FIN » comme fin de la série.
+
+A4 — COMPARAISON D'OUVERTURES
+Ancrages réels lus : les trois références de la chaîne, plus Dakba.
+Thanos : « Le méchant perd à la fin. » puis inversion factuelle.
+One Punch Man : « Aucun adversaire ne peut te résister. » puis coût du pouvoir.
+Attaque des Titans : changement de lecture du récit, promesse d'un parcours.
+Notre ouverture reprend le principe d'une contradiction concrète, pas leurs
+phrases ni leur scénario. Elle annonce une borne plus limitée que le titre
+générique « résumé complet » du concurrent. Aucun score de rétention prédit.
+
+B — PROGRESSION ET BOUCLES
+Registre de boucles éditoriales, ouvertures et paiements :
+OP-01 navigation impossible -> Nami en OP-02 ; véritable appartenance OP-03.
+OP-02 fidélité de Nami incertaine -> Arlong et libération OP-03.
+OP-03 accès à Grand Line -> montagne, Log Pose et Laboon OP-04.
+OP-04 royaume menacé -> chute de Crocodile et choix de Vivi OP-05.
+OP-05 écriture interdite -> Skypiea OP-06 ; passé de Robin OP-08.
+OP-06 réparation du Merry -> diagnostic OP-07 ; dernier sauvetage OP-08.
+OP-07 départ de Robin -> motif révélé puis choix de vivre OP-08.
+OP-08 musicien et ombre -> Brook libéré et lien Laboon OP-09.
+OP-09 avertissement sur Ace -> capture connue OP-10 ; échec du sauvetage OP-12.
+OP-10 séparation -> lieux d'entraînement et réunion OP-13.
+OP-11 retard à la cellule -> arrivée Marineford OP-12.
+OP-12 raison de continuer -> noms des compagnons et entraînement OP-13.
+OP-14 engagement de Jinbe -> rupture avec Big Mom OP-19 ; retour OP-21.
+OP-15 filière Caesar -> usine et Doflamingo OP-16 à OP-17.
+OP-16 effacement des jouets -> retour des souvenirs dans OP-16.
+OP-17 disparition de Sanji -> contrainte familiale OP-18 ; fuite OP-19.
+OP-18 mariage piégé -> échec de l'assassinat et récupération OP-19.
+OP-20 nourriture de Tama -> libération de Wano OP-22.
+OP-21 chute de l'île -> intervention de Momonosuke OP-22.
+OP-23 transformation de Kuma -> souvenirs et accord OP-24.
+OP-23 survie de Saul -> réunion OP-25.
+Promesses de l'oeuvre encore ouvertes, signalées comme telles : One Piece,
+chapeau de Shanks, Laboon, All Blue, carte du monde, Mihawk et suite d'Elbaf.
+Le texte ne promet pas de résoudre ces questions dans cette vidéo.
+
+Les chapitres sont constitués de paragraphes courts apportant événement,
+conséquence, obstacle ou explication reliée à une scène. La longueur des
+paragraphes et les frontières sont vérifiables dans le fichier de narration.
+Les transitions relient les décisions aux obstacles suivants ; pas de bloc
+de remplissage ajouté pour atteindre deux heures. Le contrôle de cadence
+reste éditorial, pas une mesure de rétention réelle d'une vidéo publiée.
+
+C — COHÉRENCE, PÉRIMÈTRE, PROMESSES
+Manga principal seulement. La différence Zeff manga/anime est annoncée.
+Foxy est condensé à son rôle dans le manga, sans le remplissage de l'anime.
+Les retours sur Robin, Ace/Sabo, Corazon, Oden et Kuma sont placés au moment
+où ils éclairent le conflit présent. Pas de récitation des seules primes.
+Une seule demande d'abonnement et une question de commentaire après le hook.
+Pas de références de montage, URLs, titres de chapitres lus, balises ou
+instructions adressées au générateur dans SCRIPT.txt.
+Le titre désigne expressément l'arrivée à Elbaf. La description dit que les
+derniers chapitres ne sont pas couverts. Aucune fin de série inventée.
+
+D — VOIX, CHIFFRES, RÉPÉTITIONS
+Ancrages français réels : Thanos, One Punch Man et Attaque des Titans,
+fichiers privés existants et URLs dans SOURCES.txt.
+Formes retenues : adresse directe, situation concrète, cause puis conséquence,
+alternance de phrases simples et de liaisons explicatives.
+Extraits courts de forme : « Le méchant perd à la fin. » / « Aucun
+adversaire ne peut te résister. » / « Tout commence avec un homme parfaitement
+ordinaire. » Les citations restent brèves, séparées du texte vocal.
+Exemple du manuscrit : « Les enfants ne peuvent pas simplement courir assez
+vite pour sortir du danger. » Une limite concrète explique le sauvetage.
+
+Scanner avant révision : deux signalements de forme, zéro HARD-BAN.
+Révision : liaison de la phrase sur les blessures de Zoro en OP-09.
+Scanner final : un signalement de forme, zéro HARD-BAN, plancher mécanique
+d'antithèses à zéro. Le signalement restant coupe « Mr. Two » en deux phrases
+et relève ensuite l'énumération des trois motivations Baggy/Mr. Three/Bon Clay.
+Jugement : faux positif de segmentation et véritable comparaison de personnes,
+pas une cascade de fragments abstraits. Les noms sont conservés.
+Vingt candidats d'écho : lieux, noms et liaisons comme « l'île des
+Hommes-Poissons », « un Dragon céleste » et « une partie de son ».
+Pas de refrain narratif répété ; aucun paragraphe identique.
+Les doubles négations factuelles servent notamment à distinguer Gear Five
+d'une omnipotence et la survie d'Orochi de sa décapitation. Elles ne constituent
+pas une série de slogans « ce n'est pas X, c'est Y ».
+Reframes de cette forme : zéro trouvé au contrôle intégral.
+Antithèses construites pour une symétrie rhétorique : zéro retenu ; les
+contrastes de faits et rectifications de chronologie ne sont pas comptés
+comme aphorismes. Aucune clôture de chapitre en maxime abstraite.
+
+D5 — QUANTITÉS À ENJEU NARRATIF
+Dix ans entre l'enfance avec Shanks et le départ : récit officiel East Blue.
+Trois sabres de Zoro : premier recrutement et promesse à Kuina, manga East Blue.
+Trente millions de berrys : première prime, notice officielle East Blue.
+Sept grands corsaires : statut institutionnel du manga avant sa suppression.
+Deux années d'entraînement : notice officielle Hommes-Poissons et ch.598.
+Quatre Road Ponéglyphes : notice officielle Zou.
+Vingt ans pour le saut de Toki et le règne à Wano : notice officielle Wano.
+Trois milliards de berrys et quatre empereurs : notice officielle Wano.
+Deux pouvoirs simultanés de Teach : constat à Marineford, mécanisme inconnu.
+Trois frères Luffy/Ace/Sabo : récit d'enfance après Marineford.
+Six satellites nommés : notice officielle Egghead.
+Cinq Doyens : institution et assaut décrits dans la notice officielle Egghead.
+Chapitre1133 et tome111 : catalogue VIZ et fiche officielle du tome111.
+Les nombres de techniques, noms CP Nine/CP Zero/Gear Five et ordinaux de
+chapitres ne sont pas des statistiques de performance ou de publication.
+Aucun chiffre de vues, taux de succès ou durée réelle n'est inventé dans la voix.
+
+E — ORIGINALITÉ ET LIMITES DE VALIDATION
+Texte rédigé pour ce sujet ; aucun remplissage par substitution de personnages.
+Comparaison de séquences normalisées de douze mots avec les trois ancrages et
+la transcription de Dakba : zéro séquence commune trouvée dans chaque cas.
+Ce contrôle ne prouve pas à lui seul l'originalité de chaque formulation,
+mais complète l'absence de reprise volontaire de dialogues et de paragraphes.
+Apport éditorial : causalité des sauvetages, compétences complémentaires,
+différence entre réputation et actes, coût des promesses, lecture tardive de
+Kuma, boucle Ohara/Enies Lobby/Elbaf. Ces développements sont reliés aux scènes.
+
+La grille E1 complète de FacelessOS n'est pas surévaluée : la comparaison
+documentée porte sur un concurrent pertinent et les trois ancrages de la
+chaîne, pas sur une étude exhaustive des cinq premiers concurrents. Il n'y a
+pas encore de relecture humaine confirmée, de vidéo ni de montage à inspecter.
+Les signaux de voix, sources identifiées, liens narratifs et travail de
+restructuration sont documentés. Une garantie de monétisation ou un score
+automatique de conformité YouTube ne peuvent pas en être déduits.
+E4 vidéo : non applicable à cette livraison de texte.
+
+CORRECTIONS FACTUELLES CONTRÔLÉES AVANT LIVRAISON
+- Orochi survit à la décapitation par Kaido ; rôle final de Denjiro ajouté.
+- Défaite de Big Mom replacée avant le réveil Gear Five.
+- Trois affrontements avec Crocodile ; survie de Pell reconnue.
+- Udon/armement avancé distingué du Haki des rois sur le toit.
+- Bonney n'a pas un second fruit Nika ; filiation biologique non inventée.
+- Corps principal de Vegapunk distingué de ses satellites.
+- Elbaf encore en cours ; contenu limité au chapitre1133.
+Limite factuelle conservée : consultation de notices et textes web accessibles,
+pas de nouvelle lecture page par page des1133chapitres dans cette session.
+
+INTÉGRITÉ DES FICHIERS
+MESURES.json : compte réel, caractères, SHA-256, durée calculée, absence audio.
+CHAPITRES.json : offsets Unicode exacts, bornes de texte et empreinte par chapitre.
+Vérification exécutée : empreinte finale conforme, tous les offsets conformes,
+minimum de mots atteint, zéro paragraphe doublon, zéro URL ou tiret cadratin.
+Le code privé assemble les chapitres déjà écrits ; il ne génère pas leur prose.
+Aucun appel payant, aucune narration soumise, aucune publication effectuée.
+
+RELECTURE CROISÉE FINALE DU 28 OCTOBRE 2026
+Deux précautions de méthode ont été rendues plus naturelles à l'oral : réactions des compagnons au rêve de Luffy en OP-22, absence de nom du père biologique de Bonney en OP-24. Le rêve reste non révélé et la borne 1133 est inchangée. Sources privées synchronisées, script réassemblé, chapitres et empreintes recalculés.
+Comptage harmonisé : suites Unicode de lettres/chiffres, apostrophes et traits d'union intérieurs conservés ; 25 064 mots, 155 958 caractères avec espaces et retours. SHA-256 : c31f14abdb2be0178739d8b89d302ebef7bcbc176f626aa56d7416f7039f042b.
+Scanner de contrôle : un candidat déjà connu dû notamment aux abréviations Mr., vingt échos à interpréter ; aucun nouveau constat de copie ni de paragraphe dupliqué. Les limites de recherche et d'absence de contrôle audio ci-dessus restent applicables.
