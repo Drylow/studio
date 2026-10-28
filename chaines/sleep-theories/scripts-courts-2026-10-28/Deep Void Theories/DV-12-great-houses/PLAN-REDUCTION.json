@@ -1,0 +1,198 @@
+{
+  "id": "DV-12-great-houses",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Deep Void Theories/DV-12-great-houses/SCRIPT.txt",
+  "source_sha256": "042f669672026ce360b27cf16b24469353eafdac66f617fd0697e7f1a05021cc",
+  "source_text_sha256": "98b108ca5c29d979fa0555212d3b867363764cae8c4fb9eb3743a738b253cc9c",
+  "offset_convention": "Python character offsets into UTF-8 decoded text, universal newlines (CRLF to LF); end exclusive",
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 1706,
+      "chapters": [
+        1
+      ],
+      "reason": "A duke who still needs transport"
+    },
+    {
+      "start_character": 5352,
+      "end_character": 29986,
+      "chapters": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "reason": "What makes a House Great; The throne and its counterweights; CHOAM and the flow of profit; Fiefs that can be reassigned"
+    },
+    {
+      "start_character": 35425,
+      "end_character": 47153,
+      "chapters": [
+        7,
+        8
+      ],
+      "reason": "Giedi Prime and Harkonnen extraction; Salusa Secundus behind imperial prestige"
+    },
+    {
+      "start_character": 70102,
+      "end_character": 76369,
+      "chapters": [
+        13
+      ],
+      "reason": "The physician whose conditioning breaks"
+    },
+    {
+      "start_character": 82066,
+      "end_character": 88490,
+      "chapters": [
+        15
+      ],
+      "reason": "Kanly and controlled forms of war"
+    },
+    {
+      "start_character": 100598,
+      "end_character": 110299,
+      "chapters": [
+        18,
+        19
+      ],
+      "reason": "The Guild's narrow but decisive veto; The trap closes on the Atreides"
+    },
+    {
+      "start_character": 120868,
+      "end_character": 132772,
+      "chapters": [
+        22,
+        23
+      ],
+      "reason": "A new army outside the Houses; A marriage that settles a conquest"
+    },
+    {
+      "start_character": 139060,
+      "end_character": 145282,
+      "chapters": [
+        25
+      ],
+      "reason": "House Corrino in exile"
+    },
+    {
+      "start_character": 151736,
+      "end_character": 158001,
+      "chapters": [
+        27
+      ],
+      "reason": "Leto reduces the old aristocratic freedom"
+    },
+    {
+      "start_character": 164681,
+      "end_character": 177775,
+      "chapters": [
+        29,
+        30
+      ],
+      "reason": "After the Scattering, other forms of power; What a name can carry"
+    }
+  ],
+  "words": 15290,
+  "characters": 97963,
+  "estimated_seconds": 8275.073,
+  "estimated_seconds_basis": "Measured original episode duration divided by original words, applied to retained words; estimate only, final regenerated audio must be measured",
+  "estimated_minutes_at_106_wpm": 144.25,
+  "target_audio_min_seconds": 7200,
+  "target_audio_max_seconds": 9000,
+  "editorial_notes": "Garder le cadre des Grandes Maisons, le Landsraad, CHOAM, les fiefs, les économies Harkonnen/Corrino, Yueh, le kanly et la Guilde, le piège Atreides, la conquête et le mariage, l'exil Corrino, Leto II puis les pouvoirs après la Dispersion. Le CTA et le sens final de l'héritage Atreides restent. Retirer les portraits de personnel et les négociations annexes déjà illustrés par l'arc principal.",
+  "removed_topics": [
+    "Caladan and Atreides obligations",
+    "A throne without a son",
+    "The marriage a duke avoids",
+    "Children planned across enemy Houses",
+    "A Mentat's place in a household",
+    "Swordmasters and personal allegiance",
+    "A dinner maps competing interests",
+    "Smugglers at the edge of legal power",
+    "Two Harkonnen heirs and an audience",
+    "Fenring's proximity to the throne",
+    "The imperial household under pressure",
+    "Jessica teaches an heir from another House",
+    "The Ixian approach to a distant ruler",
+    "Chapitre 1 : ne garder que les quatre premiers paragraphes, dont les dépendances de transport et le CTA ; le reste répète les effets du déplacement, repris par le chapitre des fiefs et celui de la Guilde."
+  ],
+  "join_reviews": [
+    {
+      "join_number": 1,
+      "before_range": 0,
+      "after_range": 1,
+      "before_last_two_sentences": "Deep Void Theories has more quiet lore journeys if you'd like to subscribe. And before you settle further into this one, you're welcome to tell us which country you're listening in and whether it's a day or a night listen.",
+      "after_first_two_sentences": "The Atreides belong to the Great Houses because their family holds a planetary fief and has a place among the powers represented in the Landsraad. Leto's title identifies his rank, but the family name reaches beyond the duke himself.",
+      "judgment": "OK : après l'exemple du transport et le CTA, définition autonome d'une Grande Maison et du fief Atreides."
+    },
+    {
+      "join_number": 2,
+      "before_range": 1,
+      "after_range": 2,
+      "before_last_two_sentences": "Making that appointment workable requires repairs, local agreements, and information gathered person by person. House Atreides arrives entitled to govern Arrakis, and immediately begins the unfinished work of taking possession.",
+      "after_first_two_sentences": "The Baron wants Rabban to make Arrakis pay. Restoring Harkonnen rule has cost an immense amount, including the Guild's charges for transporting the forces used against the Atreides.",
+      "judgment": "OK thématique : de la prise de possession Atreides à l'exploitation Harkonnen ; la restauration est explicitement mentionnée, pas présentée comme simultanée."
+    },
+    {
+      "join_number": 3,
+      "before_range": 2,
+      "after_range": 3,
+      "before_last_two_sentences": "House Corrino could retain a name, a household and the remembrance of imperial rank. Recreating the army that once enforced that rank would require conditions Paul intends to take away.",
+      "after_first_two_sentences": "The diamond tattoo on Wellington Yueh's forehead tells the Atreides household that its physician has received Suk conditioning. That training carries an extraordinary assurance: a Suk doctor is conditioned against taking human life.",
+      "judgment": "OK thématique : après les moyens militaires Corrino, présentation d'un autre instrument du pouvoir domestique, le médecin Suk ; Yueh est nommé et défini."
+    },
+    {
+      "join_number": 4,
+      "before_range": 3,
+      "after_range": 4,
+      "before_last_two_sentences": "Yueh leaves the Atreides with both the consequences of his betrayal and assistance he prepared in secret. The family physician has helped destroy the security around the Duke, while leaving the surviving heir equipment he can use beyond it.",
+      "after_first_two_sentences": "Duke Leto receives a formal approach from Baron Harkonnen and answers it in the language of an acknowledged feud. He won't accept the reconciliation the Baron proposes.",
+      "judgment": "OK thématique : après l'infiltration du médecin, nouvelle présentation du cadre de la vendetta ; Leto, le Baron et le refus de réconciliation sont explicites."
+    },
+    {
+      "join_number": 5,
+      "before_range": 4,
+      "after_range": 5,
+      "before_last_two_sentences": "He needs the opening in the rock, and he also needs to avoid giving the assembled Houses grounds for atomic retaliation. The prohibition remains part of his calculations as his troops advance.",
+      "after_first_two_sentences": "The Spacing Guild carries armies as well as travelers. The Baron pays heavily to move his assault force to Arrakis, so even his military plan depends on an institution outside his House.",
+      "judgment": "OK : le cadre juridique de la guerre débouche sur sa contrainte logistique ; le monopole de la Guilde est réintroduit."
+    },
+    {
+      "join_number": 6,
+      "before_range": 5,
+      "after_range": 6,
+      "before_last_two_sentences": "Harkonnen troops hold the ground, the duke is dead, and his family has been driven out of the seat they were ordered to occupy. Yueh's preparations give Jessica and Paul a chance to escape, but they enter the desert without the residence, army or working household that had made Leto's authority on Arrakis practical.",
+      "after_first_two_sentences": "The Shield Wall protects Arrakeen from the desert, and Paul opens a passage through it with the Atreides family atomics. The breach gives his Fremen a way into the imperial position while a great storm bears down on the city.",
+      "judgment": "OK : la chute Atreides s'achève par la fuite ; le retour armé de Paul est présenté avec ses Fremen et expliqué dans le chapitre conservé."
+    },
+    {
+      "join_number": 7,
+      "before_range": 6,
+      "after_range": 7,
+      "before_last_two_sentences": "Irulan's interference shows that the marriage settlement has not settled the succession. Paul has gained a Corrino connection while leaving his wife with access to the household and a powerful grievance over the future of his line.",
+      "after_first_two_sentences": "On Salusa Secundus, Princess Wensicia prepares an attack on the Atreides children through animals trained to recognize their intended prey. The Laza tigers are part of her effort to recover the imperial position her family has lost.",
+      "judgment": "OK : la succession reste conflictuelle, puis la tentative Corrino contre les enfants est présentée ; Wensicia, Farad'n et les tigres sont identifiés dans le passage."
+    },
+    {
+      "join_number": 8,
+      "before_range": 7,
+      "after_range": 8,
+      "before_last_two_sentences": "By then, his mother's restoration scheme has failed to command his allegiance. The surviving Corrino prince remains on Salusa Secundus with his title and his dynastic importance, but Wensicia no longer directs the future she intended him to fulfill.",
+      "after_first_two_sentences": "Moneo Atreides serves an emperor who can remember the ancestors whose name he carries. At Leto II's court, being an Atreides descendant doesn't place Moneo near an approaching inheritance.",
+      "judgment": "OK : fin de la restauration Corrino, puis règne millénaire explicitement nommé de Leto II ; Moneo est introduit comme serviteur, pas comme le Corrino précédent."
+    },
+    {
+      "join_number": 9,
+      "before_range": 8,
+      "after_range": 9,
+      "before_last_two_sentences": "His position never gave him a separate dynastic future to retreat into. Through his working life, the Atreides family name had brought him close to Leto, with all the duties and exposure that closeness required.",
+      "after_first_two_sentences": "On Rakis, the priests discover that Sheeana can walk among the sandworms without being attacked. For the Bene Gesserit, her ability makes her someone to protect, study and train.",
+      "judgment": "OK : après la fin de l'ancien règne, Rakis et la nouvelle forme de pouvoir religieux sont présentés ; Sheeana et les Bene Gesserit conduisent à la conclusion sur l'héritage."
+    }
+  ],
+  "review_status": "reviewed",
+  "review_scope": "Manual selection by story function. Actual chapter openings and closings, condensed retained passages and every new two-sided join read. All original chapter hashes and exact retained substrings verified. No new factual claims or external fact-check; final audio remains ungenerated and must be checked separately.",
+  "script_sha256": "171093add2a17131ae1baf36c94faa8edba963fe6a1136ec29a3236eaee6d080",
+  "new_facts_added": false
+}

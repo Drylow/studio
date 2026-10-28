@@ -1,6 +1,13 @@
 # Reprise — Deep Void Theories et Quiet Paradox
 
 État mis à jour le **28 octobre 2026**, fuseau **Europe/Paris**.
+
+**Priorité actuelle : versions courtes, entre 2 h et 2 h 30 maximum.**
+L'utilisateur a choisi de refaire les dix narrations Deep Void / Quiet Paradox.
+Les [treize scripts raccourcis et leur reprise](scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt)
+sont prêts, avec les trois premières Forgotten Realms. La file de voix est lancée,
+les durées finales restent à vérifier. Les anciennes versions longues sont
+préservées et remplacées par vidéo seulement après les contrôles.
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
 

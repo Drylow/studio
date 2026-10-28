@@ -1,0 +1,213 @@
+{
+  "id": "DV-08-bene-gesserit",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Deep Void Theories/DV-08-bene-gesserit/SCRIPT.txt",
+  "source_sha256": "eb66f1c44f6e51db18f3f118d17df8d5657d1a7e1e1e1f47acc2022aade23f00",
+  "source_text_sha256": "9c6282d64739b4382fb6a6bcdfa5599dec9024a95dee87b16ad6604d2f304044",
+  "offset_convention": "Python character offsets into UTF-8 decoded text, universal newlines (CRLF to LF); end exclusive",
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 5957,
+      "chapters": [
+        1
+      ],
+      "reason": "The test on Caladan"
+    },
+    {
+      "start_character": 11944,
+      "end_character": 16034,
+      "chapters": [
+        3
+      ],
+      "reason": "A voice fitted to a listener"
+    },
+    {
+      "start_character": 27457,
+      "end_character": 36299,
+      "chapters": [
+        6,
+        7
+      ],
+      "reason": "The breeding project; Jessica's choice"
+    },
+    {
+      "start_character": 41125,
+      "end_character": 47090,
+      "chapters": [
+        9
+      ],
+      "reason": "Preparing religions before arrival"
+    },
+    {
+      "start_character": 53744,
+      "end_character": 65983,
+      "chapters": [
+        11,
+        12,
+        13
+      ],
+      "reason": "Changing the Water of Life; Alia before birth; The boundary in Other Memory"
+    },
+    {
+      "start_character": 69673,
+      "end_character": 75537,
+      "chapters": [
+        14
+      ],
+      "reason": "An awakening outside their timetable"
+    },
+    {
+      "start_character": 86557,
+      "end_character": 98953,
+      "chapters": [
+        17,
+        18
+      ],
+      "reason": "Irulan inside an imperial marriage; The conspiracy around an heir"
+    },
+    {
+      "start_character": 110127,
+      "end_character": 122972,
+      "chapters": [
+        21,
+        22
+      ],
+      "reason": "Alia and the inherited Baron; A ruler who already knows their methods"
+    },
+    {
+      "start_character": 129404,
+      "end_character": 135738,
+      "chapters": [
+        24
+      ],
+      "reason": "Taraza's dangerous strategy"
+    },
+    {
+      "start_character": 141359,
+      "end_character": 146645,
+      "chapters": [
+        26
+      ],
+      "reason": "Sheeana and the worms"
+    },
+    {
+      "start_character": 153274,
+      "end_character": 170209,
+      "chapters": [
+        28,
+        29,
+        30
+      ],
+      "reason": "Honored Matres and Murbella; Preserving memories when a world falls; Chapterhouse after the old certainty"
+    }
+  ],
+  "words": 15164,
+  "characters": 96773,
+  "estimated_seconds": 8555.088,
+  "estimated_seconds_basis": "Measured original episode duration divided by original words, applied to retained words; estimate only, final regenerated audio must be measured",
+  "estimated_minutes_at_106_wpm": 143.06,
+  "target_audio_min_seconds": 7200,
+  "target_audio_max_seconds": 9000,
+  "editorial_notes": "Conserver le test et le CTA, la Voix, le programme génétique et Jessica, la Missionaria Protectiva, la transformation et l'Autre Mémoire, Paul et les conséquences pour Irulan/Alia, puis Leto II, Taraza, Sheeana et la survie de l'ordre à Chapterhouse. La définition de l'Autre Mémoire reste avant l'éveil de Paul. Les développements parallèles sur les mêmes méthodes sont retirés.",
+  "removed_topics": [
+    "Training a body's responses",
+    "What a Truthsayer actually hears",
+    "Advisers in noble households",
+    "The Harkonnen inheritance",
+    "The cost of a successful prophecy",
+    "Margot Fenring's assignment",
+    "When a Sister cannot command",
+    "The children Irulan chooses to protect",
+    "Jessica returns to a changed Arrakis",
+    "The long shadow of the Golden Path",
+    "Odrade reads the warning at Sietch Tabr",
+    "Lucilla and the Duncan ghola",
+    "Chapitre 13 : retirer les illustrations répétées après les deux paragraphes définissant la limite de l'Autre Mémoire ; l'éveil de Paul est raconté dans le chapitre suivant."
+  ],
+  "join_reviews": [
+    {
+      "join_number": 1,
+      "before_range": 0,
+      "after_range": 1,
+      "before_last_two_sentences": "Exercises learned within his household have now been examined by someone prepared to kill him if he fails. For Jessica, it brings her obligations as a Bene Gesserit into direct contact with the life of her son.",
+      "after_first_two_sentences": "A command in the Voice has to be fitted to the person who hears it. Jessica can't rely on speaking loudly, sounding angry, or using the same tone with everyone.",
+      "judgment": "OK : la formation de Jessica et Paul conduit à une technique précise ; la Voix est définie dès la reprise."
+    },
+    {
+      "join_number": 2,
+      "before_range": 1,
+      "after_range": 2,
+      "before_last_two_sentences": "The ornithopter guards face a different problem. Their precautions acknowledge Jessica's abilities, but their understanding of the two prisoners is uneven, and Paul acts in the space that leaves.",
+      "after_first_two_sentences": "The daughter Jessica was supposed to bear had a place in the Bene Gesserit breeding project before she had a name. The Sisterhood intended to join her to the Harkonnen line.",
+      "judgment": "OK : après l'exemple pratique, le projet génétique est réintroduit avec Jessica nommée ; aucun pronom sans antécédent."
+    },
+    {
+      "join_number": 3,
+      "before_range": 2,
+      "after_range": 3,
+      "before_last_two_sentences": "The child she prepared is developing beyond the position of a pupil. She remains his mother, but her knowledge no longer makes her the person who can explain everything he experiences.",
+      "after_first_two_sentences": "When Shadout Mapes brings Jessica a crysknife in the palace at Arrakeen, a household meeting becomes a religious test. Mapes is a Fremen woman serving the newly arrived Atreides family, and she wants to know whether Jessica fits expectations that existed before the Atreides came.",
+      "judgment": "OK : Mapes, le lieu et l'objet du test sont réintroduits ; passage de la formation familiale au terrain religieux."
+    },
+    {
+      "join_number": 4,
+      "before_range": 3,
+      "after_range": 4,
+      "before_last_two_sentences": "By the time she seeks shelter among the Fremen, earlier Bene Gesserit work has given her an opening. The people receiving her still determine what that opening requires, and she and Paul must live within the community that makes their survival possible.",
+      "after_first_two_sentences": "The Water of Life is poisonous when Jessica drinks it. The Fremen use it in a ceremony that depends on someone surviving long enough to change what the others will receive.",
+      "judgment": "OK : l'accueil Fremen conduit à la cérémonie communautaire ; le poison et le rôle de Jessica sont explicités."
+    },
+    {
+      "join_number": 5,
+      "before_range": 4,
+      "after_range": 5,
+      "before_last_two_sentences": "Mohiam doesn't present the inaccessible region as a forgotten record waiting to be retrieved by a better technique. She describes an encounter that defeats the women who approach it.",
+      "after_first_two_sentences": "The Water of Life leaves Paul so close to death that the people attending him can't bring him back into ordinary awareness. His body continues to live, but Jessica's training doesn't supply a way to reach him.",
+      "judgment": "OK : la limite féminine vient d'être définie, puis l'épreuve de Paul commence avec son nom et la même substance."
+    },
+    {
+      "join_number": 6,
+      "before_range": 5,
+      "after_range": 6,
+      "before_last_two_sentences": "Paul can explain portions of his experience, yet the burden of acting on those perceptions belongs to him. The man who emerges from the ordeal is still surrounded by people he needs, even as his sight separates his experience from theirs.",
+      "after_first_two_sentences": "Irulan can enter the Emperor's household as his wife and still find the future of that household closed to her. In Dune Messiah, she has the imperial title, her father's ancestry, and Bene Gesserit training.",
+      "judgment": "OK : changement de période explicite vers Dune Messiah et Irulan ; son mariage et son exclusion sont expliqués dans le passage conservé."
+    },
+    {
+      "join_number": 7,
+      "before_range": 6,
+      "after_range": 7,
+      "before_last_two_sentences": "Paul has just seen that a dead person's identity can return. He still rejects the terms attached to doing it for Chani, and the twins survive the man who threatened them.",
+      "after_first_two_sentences": "The Baron Vladimir Harkonnen offers Alia relief from the other voices inside her. In Children of Dune, that's how he finds his opening.",
+      "judgment": "OK : la confrontation de Messiah se termine ; Children of Dune et le danger intérieur d'Alia sont nommés à la reprise."
+    },
+    {
+      "join_number": 8,
+      "before_range": 7,
+      "after_range": 8,
+      "before_last_two_sentences": "The Bene Gesserit continue sending trained women, weighing reports, and seeking the spice that keeps their order alive. During his reign, their plans must pass through audiences with an emperor who remembers their methods and expects to be there when their successors return.",
+      "after_first_two_sentences": "Taraza sends Miles Teg to take charge of a Duncan Idaho ghola whose survival has become a serious problem for the Bene Gesserit. Earlier attempts to raise such a ghola have ended in death.",
+      "judgment": "OK : changement d'époque vers Heretics identifié dans le deuxième paragraphe conservé ; Taraza et la mission de Teg sont présentées."
+    },
+    {
+      "join_number": 9,
+      "before_range": 8,
+      "after_range": 9,
+      "before_last_two_sentences": "Duncan survives as well. The surviving Sisterhood has people and a worm with which to continue, but Taraza leaves Odrade to work out what can actually be built from them.",
+      "after_first_two_sentences": "A sandworm destroys the settlement where Sheeana lives, yet the child survives its approach and finds that it won't harm her. On Rakis, where the worms are worshipped as manifestations of the Divided God, this is an event with an immediate religious meaning.",
+      "judgment": "OK thématique : retour à l'origine de Sheeana après le bilan de Taraza, comme dans la structure source ; la destruction de son village est distincte de celle de Rakis."
+    },
+    {
+      "join_number": 10,
+      "before_range": 9,
+      "after_range": 10,
+      "before_last_two_sentences": "Odrade can teach her to read another person's behavior, but using that skill requires Sheeana to decide what she makes of the person before her. On Rakis, even the priests must approach the worms through a child who has her own reasons for answering them.",
+      "after_first_two_sentences": "The Honored Matres returning from the Scattering expect submission to follow an encounter with them. Their sexual conditioning can bind men so strongly that ordinary loyalties lose their force.",
+      "judgment": "OK : après Sheeana, présentation autonome de la menace des Honored Matres ; Murbella, la transmission mémorielle et la conclusion suivent intégralement."
+    }
+  ],
+  "review_status": "reviewed",
+  "review_scope": "Manual selection by story function. Actual chapter openings and closings, condensed retained passages and every new two-sided join read. All original chapter hashes and exact retained substrings verified. No new factual claims or external fact-check; final audio remains ungenerated and must be checked separately.",
+  "script_sha256": "5662a0a5b8ce79ea61a258ee33c9d7421f05ba985c1d28e7a05d2610598d233d",
+  "new_facts_added": false
+}

@@ -1,0 +1,169 @@
+{
+  "id": "DV-10-fremen",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Deep Void Theories/DV-10-fremen/SCRIPT.txt",
+  "source_sha256": "1854ff05919606134a3c0089f34562ff525b3db8d1d13c33d1fd5089e709f51f",
+  "source_text_sha256": "b4bb21476743892adfc74e8b972d5e552448febe590a4574e735d39ddea73b3e",
+  "offset_convention": "Python character offsets into UTF-8 decoded text, universal newlines (CRLF to LF); end exclusive",
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 1552,
+      "chapters": [
+        1
+      ],
+      "reason": "The water offered at a first meeting"
+    },
+    {
+      "start_character": 3871,
+      "end_character": 28737,
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reason": "The water offered at a first meeting; Before Arrakis; The planet that reshapes a people; The stillsuit as everyday infrastructure; Living in a sietch"
+    },
+    {
+      "start_character": 33883,
+      "end_character": 44564,
+      "chapters": [
+        7,
+        8
+      ],
+      "reason": "Walking where worms listen; The worm and the maker hooks"
+    },
+    {
+      "start_character": 68127,
+      "end_character": 74991,
+      "chapters": [
+        13
+      ],
+      "reason": "Pardot Kynes imagines change"
+    },
+    {
+      "start_character": 94691,
+      "end_character": 104934,
+      "chapters": [
+        18,
+        19
+      ],
+      "reason": "Two refugees in the desert; A prophecy takes local form"
+    },
+    {
+      "start_character": 111211,
+      "end_character": 123519,
+      "chapters": [
+        21,
+        22
+      ],
+      "reason": "Winning the battle of Arrakeen; The jihad leaves Arrakis"
+    },
+    {
+      "start_character": 135920,
+      "end_character": 142364,
+      "chapters": [
+        25
+      ],
+      "reason": "Greening Arrakis changes the bargain"
+    },
+    {
+      "start_character": 148598,
+      "end_character": 172821,
+      "chapters": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "reason": "Leto's desert becomes a reserve; The Museum Fremen; Rakis, priests and Sheeana; What travels after Rakis is lost"
+    }
+  ],
+  "words": 15225,
+  "characters": 97195,
+  "estimated_seconds": 7456.304,
+  "estimated_seconds_basis": "Measured original episode duration divided by original words, applied to retained words; estimate only, final regenerated audio must be measured",
+  "estimated_minutes_at_106_wpm": 143.63,
+  "target_audio_min_seconds": 7200,
+  "target_audio_max_seconds": 9000,
+  "editorial_notes": "Conserver les migrations, l'écologie, le stillsuit et le sietch, la marche et la monte des vers, Pardot, l'intégration des réfugiés, la prophétie et la conquête, le jihad, le verdissement, le Sareer, les Fremen de musée, Sheeana et le ver sauvé. Couper les variations sociologiques secondaires sans retirer la transformation de la société sur les six romans.",
+  "removed_topics": [
+    "Water rings and communal wealth",
+    "The crysknife's social boundary",
+    "How a naib leads",
+    "Women, kinship and obligations",
+    "The shared remembrance of a community",
+    "Liet Kynes between offices",
+    "The hidden southern population",
+    "Imperial extraction and local resistance",
+    "The Atreides become possible allies",
+    "Training moves in both directions",
+    "A veteran remembers a sea",
+    "Chani within imperial life",
+    "The regency and the older customs",
+    "Chapitre 1 : retirer les paragraphes 4 à 7, qui multiplient les exemples d'hospitalité et de gaspillage d'eau ; conserver l'accueil de Stilgar et le CTA, puis la portée politique de la rencontre."
+  ],
+  "join_reviews": [
+    {
+      "join_number": 1,
+      "before_range": 0,
+      "after_range": 1,
+      "before_last_two_sentences": "He's willing to spend something his people work to preserve. Leto's response matters because accepting the gift requires him to set aside his household's first reaction and listen to someone who knows the custom.",
+      "after_first_two_sentences": "Leto has reason to take that opportunity seriously. He wants a relationship with the Fremen, whose capabilities the Harkonnens have failed to appreciate.",
+      "judgment": "OK : 'that opportunity' renvoie à l'accueil de la coutume de Stilgar dans le paragraphe conservé ; la relation politique prolonge le don d'eau."
+    },
+    {
+      "join_number": 2,
+      "before_range": 1,
+      "after_range": 2,
+      "before_last_two_sentences": "For Jessica, it means bringing her skills into a community with customs already in force. Around them, the settlement continues its ordinary tasks, keeping people fed, equipped and sheltered beneath the rock.",
+      "after_first_two_sentences": "Regular footsteps send rhythmic vibrations through the sand. For Paul and Jessica, crossing the desert after the destruction of House Atreides means learning to interrupt something their bodies would normally do without thought.",
+      "judgment": "OK thématique : après l'habitat, une pratique extérieure ; l'épisode de la fuite est réintroduit avec Paul, Jessica et son contexte."
+    },
+    {
+      "join_number": 3,
+      "before_range": 2,
+      "after_range": 3,
+      "before_last_two_sentences": "They can honor the creature while knowing how to lift an armored segment with a hook. Beneath their feet, the worm continues across the sand, held to the surface by the exposed tissue its passengers know how to keep raised.",
+      "after_first_two_sentences": "Pardot Kynes looked at the dry basins of Arrakis and saw places where water had once collected. As the imperial planetologist, he was supposed to study the planet, and the desert gave him a problem that reached well beyond the needs of spice production.",
+      "judgment": "OK : de la maîtrise des vers au projet écologique ; Pardot est présenté avec son nom et sa fonction."
+    },
+    {
+      "join_number": 4,
+      "before_range": 3,
+      "after_range": 4,
+      "before_last_two_sentences": "Small changes can be protected until they support further growth. Pardot leaves the Fremen with a future they can work toward through recognizable daily actions, on the same planet where their ancestors had learned to survive.",
+      "after_first_two_sentences": "Jessica brings Stilgar to a standstill with her hands, and the encounter with the Fremen becomes a negotiation. She and Paul have reached the desert as fugitives after the destruction of the Atreides household.",
+      "judgment": "OK : fin du projet de Pardot, puis retour aux réfugiés dans une scène avec lieu, acteurs et danger rappelés."
+    },
+    {
+      "join_number": 5,
+      "before_range": 4,
+      "after_range": 5,
+      "before_last_two_sentences": "His emergence grows through recognizable acts, inherited stories, and shared danger. By the time those things gather around Muad'Dib, the refuge offered to two fugitives has begun to involve the future of the whole community.",
+      "after_first_two_sentences": "The Shield Wall protects the imperial position near Arrakeen from the open desert, and Paul uses the Atreides family atomics to break through it. The blast strikes rock, a distinction he later relies on when the Emperor accuses him of violating the prohibition against using atomic weapons on human beings.",
+      "judgment": "OK : de la montée de Muad'Dib à sa victoire ; le mécanisme tactique et le rôle de l'armée Fremen sont expliqués."
+    },
+    {
+      "join_number": 6,
+      "before_range": 5,
+      "after_range": 6,
+      "before_last_two_sentences": "By the time Paul confronts the jihad's aftermath, his name already authorizes actions far beyond the room where he's speaking. On Arrakis, veterans return to their households while the priesthood continues its work.",
+      "after_first_two_sentences": "On the Arrakis of Children of Dune, patches of green have spread into places where open desert once lay. Water runs in channels, and cultivated ground gives people reasons to settle where their grandparents would've found little shelter.",
+      "judgment": "OK : le jihad débouche sur la société transformée ; Children of Dune situe explicitement la nouvelle période."
+    },
+    {
+      "join_number": 7,
+      "before_range": 6,
+      "after_range": 7,
+      "before_last_two_sentences": "By the time these concerns meet, the green areas already support people's lives. Preserving enough desert would require limits on a project whose success has given families good reasons to welcome its continuation.",
+      "after_first_two_sentences": "The Sareer is the surviving desert on a planet that has become green. In God Emperor of Dune, Leto II keeps this expanse of sand around his imperial domain while water and vegetation occupy territory the Fremen once crossed under very different conditions.",
+      "judgment": "OK : la nécessité de préserver le désert conduit au Sareer ; God Emperor et Leto II sont nommés. Musée, Rakis et conclusion restent."
+    }
+  ],
+  "review_status": "reviewed",
+  "review_scope": "Manual selection by story function. Actual chapter openings and closings, condensed retained passages and every new two-sided join read. All original chapter hashes and exact retained substrings verified. No new factual claims or external fact-check; final audio remains ungenerated and must be checked separately.",
+  "script_sha256": "795436e2d8e33bd676e3cce4a56447bc102621a83daac0577a0fc0089a6eb36f",
+  "new_facts_added": false
+}

@@ -1,0 +1,237 @@
+{
+  "id": "QP-08-from-rules",
+  "channel": "Quiet Paradox",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Quiet Paradox/QP-08-from-rules/SCRIPT.txt",
+  "source_sha256": "ea63963e5c9a17864002c536ab86e7e5536052cf5ce7423f1c0512d87d200950",
+  "source_file_sha256": "fce25458f4da583f1b2ad148a6a7919c459d32749b0a4f66fc82accb98b71e77",
+  "source_characters": 156452,
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 4234,
+      "reason": "Ouverture, périmètre, CTA et conditions de protection du foyer",
+      "source_chapters": [
+        1
+      ],
+      "words": 682
+    },
+    {
+      "start_character": 4763,
+      "end_character": 5327,
+      "reason": "Conclusion pratique de la première scène après retrait du détour sur la punition de Frank",
+      "source_chapters": [
+        1
+      ],
+      "words": 96
+    },
+    {
+      "start_character": 15757,
+      "end_character": 30133,
+      "reason": "Découverte des talismans, enclos protégés et invitation collective",
+      "source_chapters": [
+        4,
+        5,
+        6
+      ],
+      "words": 2404
+    },
+    {
+      "start_character": 56417,
+      "end_character": 68515,
+      "reason": "Martin, transfert sanguin et mort de Smiley : une chaîne causale complète",
+      "source_chapters": [
+        12,
+        13
+      ],
+      "words": 2045
+    },
+    {
+      "start_character": 73914,
+      "end_character": 86195,
+      "reason": "Menace de la boîte à musique puis résolution par Boyd, sans laisser la crise ouverte",
+      "source_chapters": [
+        15,
+        16
+      ],
+      "words": 2004
+    },
+    {
+      "start_character": 98046,
+      "end_character": 116245,
+      "reason": "Grossesse, retour de Smiley et témoignage sur le sacrifice",
+      "source_chapters": [
+        19,
+        20,
+        21
+      ],
+      "words": 2926
+    },
+    {
+      "start_character": 116248,
+      "end_character": 122618,
+      "reason": "Distinguer l’homme en jaune des créatures nocturnes et identifier Sophia ; retirer l’amorce de la scène de Henry supprimée",
+      "source_chapters": [
+        22
+      ],
+      "words": 1054
+    },
+    {
+      "start_character": 131319,
+      "end_character": 146024,
+      "reason": "Arbre arraché, limite physique du talisman, transformation et secours de Fatima",
+      "source_chapters": [
+        26,
+        27,
+        28
+      ],
+      "words": 2374
+    },
+    {
+      "start_character": 146027,
+      "end_character": 156451,
+      "reason": "Sabotage des pierres et conclusion sur les règles encore utilisables",
+      "source_chapters": [
+        29,
+        30
+      ],
+      "words": 1673
+    }
+  ],
+  "words": 15258,
+  "characters": 93267,
+  "short_script_sha256": "21f063d1e0f684f2e66f4728c388ddc9a1efa0ab1bca178ad6843747d01d6a76",
+  "original_duration_seconds": 13695,
+  "original_words": 25516,
+  "measured_original_words_per_minute": 111.79,
+  "estimated_seconds": 8189.305,
+  "estimated_seconds_at_106_wpm": 8636.604,
+  "estimated_seconds_at_123_wpm": 7442.927,
+  "duration_note": "Estimation au débit réel de la première génération, puis fourchette 106–123 mots/minute. Le MP3 régénéré devra être mesuré pour confirmer 2h minimum et 2h30 maximum.",
+  "edit_mode": "extractive_complete_paragraphs_original_order",
+  "paid_generation_performed": false,
+  "editorial_notes": "La progression reste défense nocturne, menace intérieure, retour des créatures, danger diurne puis sabotage des protections. Le chapitre 16 est gardé expressément pour résoudre la boîte à musique introduite au 15. Les lances et Roger sont retirés ensemble pour éviter une référence sans présentation. Aucun mot nouveau dans le script.",
+  "removed_topics": [
+    "Boucle routière et arrivée des Matthews développées séparément",
+    "Long retour sur les nuits avant les talismans",
+    "Répétition du pouvoir de persuasion des voix",
+    "Sara et attaque de la clinique",
+    "Vitesse de marche, repos souterrain et inefficacité des armes détaillés",
+    "Dissection de Smiley et essais de bile",
+    "Piège de la grange et marché de l’ambulance",
+    "Manipulation de Henry et essais de lance contre Roger",
+    "Connexion Fatima/Smiley développée séparément",
+    "Punition de Frank dans la boîte"
+  ],
+  "join_reviews": [
+    {
+      "join": 1,
+      "before_last_two_sentences": [
+        "The town has therefore gone beyond telling people that the creatures are dangerous.",
+        "Its precautions account for people being tired, distracted, frightened, or too young to carry the whole burden of keeping a household safe."
+      ],
+      "after_first_two_sentences": [
+        "Meagan's window answers the first practical question FROM puts before us.",
+        "A house with a talisman can be entered when someone inside opens it to a creature."
+      ],
+      "judgment": "Raccord interne direct : les précautions physiques mènent à la leçon de la fenêtre. Retirer la punition de Frank ne laisse aucune conséquence annoncée sans résolution.",
+      "editorial_pass": true
+    },
+    {
+      "join": 2,
+      "before_last_two_sentences": [
+        "By the end of the opening, Boyd's bell and the secured windows have become understandable parts of ordinary life here.",
+        "Another household hearing that evening warning has a specific task to complete: get everyone inside, close the house, and make sure a child can't reopen a window on her own."
+      ],
+      "after_first_two_sentences": [
+        "Boyd finds the talismans while taking shelter in a small stone hollow in the woods.",
+        "By then, darkness has caught him away from the town, and the creatures are approaching."
+      ],
+      "judgment": "Raccord de retour en arrière autonome : le texte nomme Boyd et sa découverte des talismans, sans s’appuyer sur le chapitre supprimé des nuits avant les pierres.",
+      "editorial_pass": true
+    },
+    {
+      "join": 3,
+      "before_last_two_sentences": [
+        "For the surviving residents, maintaining shelter now includes a problem the talisman can't settle for them.",
+        "Everyone inside has to leave the boundary intact, including when someone outside has made breaking it feel personal."
+      ],
+      "after_first_two_sentences": [
+        "Boyd can hear a man above him while he's trapped at the bottom of the shaft.",
+        "The man says his name is Martin, and a rope gives Boyd a way to climb out."
+      ],
+      "judgment": "Changement de type de danger explicite : la frontière d’un foyer se conclut ; la scène suivante situe Boyd dans le puits, présente Martin et décrit la transmission. Le passé de la scène est expliqué dans le chapitre gardé.",
+      "editorial_pass": true
+    },
+    {
+      "join": 4,
+      "before_last_two_sentences": [
+        "The result is substantial enough without turning it into a weapon the residents can already reproduce.",
+        "For now, Ellis receives treatment, Boyd has survived the contact, and Smiley's body lies available for investigation."
+      ],
+      "after_first_two_sentences": [
+        "Kenny wakes from a dream with a burn on his arm.",
+        "While he's asleep, a telephone rings, a voice recites a disturbing nursery rhyme, and something that should belong to the dream reaches his body."
+      ],
+      "judgment": "Raccord cohérent : Smiley est mort, puis une blessure de sommeil ouvre la menace suivante. Le chapitre relie lui-même les cicadas aux restes de Smiley et le 16 résout la crise.",
+      "editorial_pass": true
+    },
+    {
+      "join": 5,
+      "before_last_two_sentences": [
+        "Marielle, meanwhile, resumes caring for people at the clinic alongside Kristi.",
+        "The series doesn't give her an identical version of Julie's encounters or Randall's recurring cicadas."
+      ],
+      "after_first_two_sentences": [
+        "Fatima can't eat the food that's supposed to nourish her.",
+        "As her apparent pregnancy continues, ordinary meals become difficult to keep down, while spoiled vegetables begin to appeal to her."
+      ],
+      "judgment": "Raccord cohérent : réveil et séquelles des trois captifs ferment la boîte à musique ; la grossesse ouvre un autre cas autonome, avec Fatima et son contexte présentés.",
+      "editorial_pass": true
+    },
+    {
+      "join": 6,
+      "before_last_two_sentences": [
+        "Among the children was their daughter.",
+        "They have found their way back to the place where they lost her, and this time they can remember who they've been trying to reach."
+      ],
+      "after_first_two_sentences": [
+        "Jim meets the Man in Yellow in daylight, near the wrecked RV that brought the Matthews family into the town's first night.",
+        "The man doesn't need darkness to approach him, and Jim has no house or closed door between them."
+      ],
+      "judgment": "Changement de scène compréhensible : la révélation des enfants se clôt ; Jim, le RV, la lumière du jour et l’adversaire sont explicitement introduits. L’enjeu devient la limite du jour protecteur.",
+      "editorial_pass": true
+    },
+    {
+      "join": 7,
+      "before_last_two_sentences": [
+        "With Sophia's identity revealed, the audience also knows he doesn't always arrive wearing the clothes Jim saw.",
+        "The town's daylight hours now include a danger that can meet people with another face."
+      ],
+      "after_first_two_sentences": [
+        "The bottle tree is uprooted, and the sky darkens while the residents are still in what had been daytime.",
+        "In the season four finale, that change brings the creatures into hours the town has depended on for work outside."
+      ],
+      "judgment": "Raccord nettoyé : l’amorce de Sophia/prêtre/Henry a été retirée avec la scène de Henry. La conclusion restante concerne la menace diurne, puis la finale introduit la perte collective du jour.",
+      "editorial_pass": true
+    },
+    {
+      "join": 8,
+      "before_last_two_sentences": [
+        "That leaves Ellis with a wife whose actions he can recognize even as her condition has become frighteningly unfamiliar.",
+        "Jade and Tabitha get away with help from Fatima, and Fatima remains behind."
+      ],
+      "after_first_two_sentences": [
+        "Sophia takes the talismans away while the town's attention is elsewhere.",
+        "Clara helps her remove the protections, and Sophia disposes of the stones through a faraway tree."
+      ],
+      "judgment": "Raccord parallèle cohérent : le sauvetage et le sort non résolu de Fatima sont posés, puis Sophia est nommée comme actrice d’un sabotage distinct. Pas de confusion entre secours et vol des talismans.",
+      "editorial_pass": true
+    }
+  ],
+  "source_text_sha256": "ea63963e5c9a17864002c536ab86e7e5536052cf5ce7423f1c0512d87d200950",
+  "script_sha256": "21f063d1e0f684f2e66f4728c388ddc9a1efa0ab1bca178ad6843747d01d6a76",
+  "review_status": "reviewed",
+  "join_separator": "\n\n",
+  "reconstruction_verified": true,
+  "short_script_path": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\work\\sleep-shortened-2026-10-28\\scripts\\QP-08-from-rules\\SCRIPT-COURT.txt"
+}

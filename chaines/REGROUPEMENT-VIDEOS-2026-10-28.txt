@@ -1,6 +1,18 @@
 DOSSIER UNIQUE — QUATRE CHAÎNES
 Mise à jour du 28 octobre 2026.
 
+NOUVELLE DÉCISION PRIORITAIRE — 2 H 30 MAXIMUM
+Les dix MP3 Deep Void / Quiet Paradox existants durent environ 3 h 40 à 4 h 25.
+L'utilisateur a demandé leur réduction puis choisi une nouvelle génération des
+scripts raccourcis. Treize textes sont relus : ces dix épisodes et les trois
+premiers Forgotten Realms. La nouvelle file est lancée, pas encore livrée.
+Coût neuf exact : 1 203 846 caractères ; deux blocs Daedric Princes réutilisés.
+Reprise : sleep-theories/scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt.
+Pilote : production/sleep_voiceovers_short_oct28.py. Ne pas relancer l'ancien FR.
+Les versions longues restent dans les dossiers tant que le nouveau MP3 et son
+script ne sont pas tous deux prêts ; elles seront archivées lors du remplacement.
+STATUT-VOICEOVER.txt et CONTROLES-VERSION-COURTE.json font foi par vidéo.
+
 OUVRIR
 C:/Users/ytbyt/Desktop/VIDEOS - TOUT REGROUPE
 

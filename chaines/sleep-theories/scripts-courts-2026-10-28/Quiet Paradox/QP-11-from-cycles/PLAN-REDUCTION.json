@@ -1,0 +1,234 @@
+{
+  "id": "QP-11-from-cycles",
+  "channel": "Quiet Paradox",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Quiet Paradox/QP-11-from-cycles/SCRIPT.txt",
+  "source_sha256": "ad6518d429496a66796441a03b9706035c87f9037046103684d9c9383e7cd12d",
+  "source_file_sha256": "356bec9ebdf3f3a27c56a0c633a324c956ec64db6b625807af39e849a6afe727",
+  "source_characters": 168131,
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 5749,
+      "reason": "Musique, vies antérieures, périmètre et CTA",
+      "source_chapters": [
+        1
+      ],
+      "words": 951
+    },
+    {
+      "start_character": 39353,
+      "end_character": 45582,
+      "reason": "Christopher et le symbole comme précédent de Jade",
+      "source_chapters": [
+        8
+      ],
+      "words": 1009
+    },
+    {
+      "start_character": 51852,
+      "end_character": 57221,
+      "reason": "Enfants sur les dalles et emplacement du symbole",
+      "source_chapters": [
+        10
+      ],
+      "words": 875
+    },
+    {
+      "start_character": 63605,
+      "end_character": 68855,
+      "reason": "Bouteilles et résolution musicale",
+      "source_chapters": [
+        12
+      ],
+      "words": 862
+    },
+    {
+      "start_character": 72845,
+      "end_character": 88648,
+      "reason": "Anghkooey, fille de Jade/Tabitha et coût de l’immortalité",
+      "source_chapters": [
+        14,
+        15,
+        16
+      ],
+      "words": 2544
+    },
+    {
+      "start_character": 106975,
+      "end_character": 124821,
+      "reason": "Trajet non reproductible de Dale, boucle de Julie et tentative de sauver Jim",
+      "source_chapters": [
+        20,
+        21,
+        22
+      ],
+      "words": 2954
+    },
+    {
+      "start_character": 124824,
+      "end_character": 131085,
+      "reason": "Sophia et présence répétée de l’homme en jaune",
+      "source_chapters": [
+        23
+      ],
+      "words": 1017
+    },
+    {
+      "start_character": 137545,
+      "end_character": 154411,
+      "reason": "Projet collectif des ossements, avertissement et conséquences de l’arrachage",
+      "source_chapters": [
+        25,
+        26,
+        27
+      ],
+      "words": 2698
+    },
+    {
+      "start_character": 154414,
+      "end_character": 168130,
+      "reason": "Récupération effective, opposition des deux figures puis bilan du cycle",
+      "source_chapters": [
+        28,
+        29,
+        30
+      ],
+      "words": 2205
+    }
+  ],
+  "words": 15115,
+  "characters": 93105,
+  "short_script_sha256": "5ff63d6e9509c8e982c34604ead9e1aeaaed2609b8831f06527354199158707e",
+  "original_duration_seconds": 14600,
+  "original_words": 27463,
+  "measured_original_words_per_minute": 112.862,
+  "estimated_seconds": 8035.502,
+  "estimated_seconds_at_106_wpm": 8555.66,
+  "estimated_seconds_at_123_wpm": 7373.171,
+  "duration_note": "Estimation au débit réel de la première génération, puis fourchette 106–123 mots/minute. Le MP3 régénéré devra être mesuré pour confirmer 2h minimum et 2h30 maximum.",
+  "edit_mode": "extractive_complete_paragraphs_original_order",
+  "paid_generation_performed": false,
+  "editorial_notes": "Le fil va de traces récurrentes vers la musique et les souvenirs, distingue renaissance de Smiley et réincarnation, puis teste la possibilité de modifier une issue. Le chapitre de Dale réintroduit lui-même le trajet arbre/phare/hôpital de Tabitha ; il demeure compréhensible sans les chapitres 17–19. La fin conserve récupération réelle, pertes et incertitudes. Aucun mot nouveau.",
+  "removed_topics": [
+    "Arrivées routières et cadre narratif du Cromenockle",
+    "Objets et dessins de Victor développés séparément",
+    "Peintures de Miranda, histoire d’Eloise et conversation mal remémorée",
+    "Première rencontre souterraine de Tabitha et second exposé des racines",
+    "Méthode musicale réexposée dans un chapitre supplémentaire",
+    "Catalogue des trajets par arbres",
+    "Parcours complet de Tabitha au phare et chez Henry",
+    "Conversation familiale séparée sur Miranda"
+  ],
+  "join_reviews": [
+    {
+      "join": 1,
+      "before_last_two_sentences": [
+        "What has changed is the company they have in that search.",
+        "Each now has someone beside them who remembers being involved before."
+      ],
+      "after_first_two_sentences": [
+        "The notebook Jade finds is filled with a shape he's already seen.",
+        "Someone has drawn it again and again, enough times for the pages to turn a private vision into something another person has worked on."
+      ],
+      "judgment": "Retour d’enquête cohérent : l’ouverture annonce des souvenirs communs, puis le cahier de Christopher fournit une première trace. Christopher et Victor sont présentés dans le chapitre gardé.",
+      "editorial_pass": true
+    },
+    {
+      "join": 2,
+      "before_last_two_sentences": [
+        "Jade keeps investigating with those things available to him.",
+        "Christopher's pages are still unfinished when Jade opens them, and Jade has to decide how to continue the work while living among the people who may bear its consequences."
+      ],
+      "after_first_two_sentences": [
+        "The children in Jade's underground vision are lying on raised stone slabs.",
+        "That's a different sight from the figures Tabitha has encountered around the town."
+      ],
+      "judgment": "Raccord de preuve cohérent : du symbole dessiné au lieu où il apparaît au-dessus des enfants. Le paragraphe rappelle lui-même que Tabitha avait déjà rencontré des enfants.",
+      "editorial_pass": true
+    },
+    {
+      "join": 3,
+      "before_last_two_sentences": [
+        "His first view of those stone slabs comes before he can remember that involvement.",
+        "He encounters the children as a bewildered newcomer, looking at a part of a history that will eventually include him."
+      ],
+      "after_first_two_sentences": [
+        "The bottles hanging from the tree contain slips of paper with numbers on them.",
+        "That's a peculiar thing to find in a forest, even before anyone knows what the tree can do."
+      ],
+      "judgment": "Raccord entre deux pistes explicite : la vision souterraine se conclut ; les bouteilles, leur contenu et la découverte de Boyd sont présentés comme un nouveau dossier.",
+      "editorial_pass": true
+    },
+    {
+      "join": 4,
+      "before_last_two_sentences": [
+        "The paper has held the same figures throughout.",
+        "What changes is that Jade can finally do something with them: take up his violin and give the sequence a sound."
+      ],
+      "after_first_two_sentences": [
+        "Anghkooey is a word Tabitha has heard before she understands what the children are asking of her.",
+        "They repeat it during encounters that leave her frightened and drawn toward them, and she carries the sound away without an explanation she can use."
+      ],
+      "judgment": "Raccord causal musical cohérent : Jade peut jouer la séquence ; le mot des enfants devient ensuite intelligible avec la mémoire. Le chapitre intermédiaire répétitif sur la méthode est dispensable.",
+      "editorial_pass": true
+    },
+    {
+      "join": 5,
+      "before_last_two_sentences": [
+        "That's the clearest answer the finale gives about the promise: the adults' continued existence has outlasted a death Boyd thought he had achieved.",
+        "The children remain without rescue, and Fatima has endured another part of the bargain without ever having agreed to it."
+      ],
+      "after_first_two_sentences": [
+        "Dale emerges inside the solid structure of the town's empty swimming pool.",
+        "Part of him is visible, but he can't free himself, and the people who reach him can't pull him out."
+      ],
+      "judgment": "Raccord thématique autonome : la renaissance et le sacrifice se concluent ; l’échec de Dale introduit la question de reproduire un trajet. Ce chapitre rappelle le phare et l’hôpital de Tabitha sans dépendre des scènes retirées.",
+      "editorial_pass": true
+    },
+    {
+      "join": 6,
+      "before_last_two_sentences": [
+        "Her ability brought her within speaking distance, with enough freedom to call to him and ask him to leave.",
+        "Jim's final response was to protect the daughter he recognized, and Julie couldn't get him away from the Man in Yellow."
+      ],
+      "after_first_two_sentences": [
+        "Sophia's appearance gives the Man in Yellow a way to approach people who'd respond very differently to the figure who confronted Jim.",
+        "The fourth-season premiere reveals that Sophia and the Man in Yellow are the same being."
+      ],
+      "judgment": "Raccord direct : Jim ne peut être sauvé de l’homme en jaune ; le chapitre suivant explique l’autre apparence de ce même adversaire.",
+      "editorial_pass": true
+    },
+    {
+      "join": 7,
+      "before_last_two_sentences": [
+        "Victor survives both the older catastrophe and this attack, carrying a recognition Henry was poorly placed to make.",
+        "After Ethan's intervention, the father and son are still alive together, with the imagined replacement having nearly cost them the family reunion they'd already been given."
+      ],
+      "after_first_two_sentences": [
+        "The door gives Boyd and Jade's investigation a place to concentrate on.",
+        "A hidden chamber can be approached, searched for, and included in a plan."
+      ],
+      "judgment": "Changement d’objectif compréhensible : après la survie de Henry/Victor, le texte nomme Boyd et Jade puis explique la chambre cachée et le projet collectif. « The door » est immédiatement spécifiée par « A hidden chamber ».",
+      "editorial_pass": true
+    },
+    {
+      "join": 8,
+      "before_last_two_sentences": [
+        "Protecting a building, helping someone move and understanding the disturbance are separate demands.",
+        "The removal has widened the area of danger beyond the people standing beside the tree, and it reaches people whose part in the plan may have been no more than relying on it to succeed."
+      ],
+      "after_first_two_sentences": [
+        "Jade and Tabitha recover the children's bones from the cavern.",
+        "After so much time spent following appearances, drawings and remembered fragments, they can finally carry something out of the place where the children were left."
+      ],
+      "judgment": "Raccord causal direct : la perturbation liée à l’arbre met en danger l’expédition ; le passage suivant décrit le résultat concret, la récupération des ossements et le sauvetage.",
+      "editorial_pass": true
+    }
+  ],
+  "source_text_sha256": "ad6518d429496a66796441a03b9706035c87f9037046103684d9c9383e7cd12d",
+  "script_sha256": "5ff63d6e9509c8e982c34604ead9e1aeaaed2609b8831f06527354199158707e",
+  "review_status": "reviewed",
+  "join_separator": "\n\n",
+  "reconstruction_verified": true,
+  "short_script_path": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\work\\sleep-shortened-2026-10-28\\scripts\\QP-11-from-cycles\\SCRIPT-COURT.txt"
+}
