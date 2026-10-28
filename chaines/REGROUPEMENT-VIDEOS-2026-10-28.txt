@@ -22,8 +22,12 @@ Ne pas déclarer une miniature générée ou remplacer par un autre personnage.
 AUDIOS FRANÇAIS
 Galactus, Freezer, Sukuna, One Piece, Stranger Things : audio complet récupéré
 et décodable, mais durée initiale entre 1 h 43 et 1 h 49 au débit demandé 1,00.
-Correction locale du débit annoncée : facteur 0,85, hauteur conservée, originaux
-préservés ; ne déclarer >=2h qu'après mesure des sorties corrigées.
+Correction locale du débit terminée et contrôlée : facteur 0,85, hauteur conservée,
+originaux préservés. Durées finales : Galactus 2:07:32, Freezer 2:05:50, Sukuna
+2:08:03, One Piece 2:08:03, Stranger Things 2:00:45. Décodage intégral avant/après
+et empreintes contrôlés. Les cinq MP3 corrigés sont présents dans leurs dossiers.
+Ne pas recopier les anciens MP3 Algrow sur ces versions finales corrigées.
+Relevé public : la-boite-a-recap/narrations-regroupees-2026-10-28.json.
 Journal de cette opération : work/recap-audio-retime-2026-10-28/.
 
 Fantastiques, Frieren et Sakamoto : les six gros blocs ont échoué. Échecs confirmés

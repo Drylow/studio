@@ -57,7 +57,7 @@ Statut des cinq entrées : scripts écrits et miniatures créées. Sources et co
 dans chaque dossier ; contrôles du lot dans lot-02-2026-10-27/CONTROLE-LOT.json.
 Les cinq narrations ont été demandées et lancées le 28 octobre 2026 avec la voix
 française habituelle, à vitesse 1,00. One Piece et Stranger Things ont été récupérés,
-mais leur durée est inférieure à deux heures : correction locale du débit en cours.
+puis leur débit corrigé localement à 0,85 : les MP3 finaux dépassent deux heures.
 Les six blocs des Fantastiques, Frieren et Sakamoto ont échoué chez Algrow.
 Reprise des trois épisodes lancée en petits blocs, deux jobs à la fois, vitesse 0,85.
 Voir ../REGROUPEMENT-VIDEOS-2026-10-28.txt pour les registres et dossiers actuels.

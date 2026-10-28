@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-28",
+  "delivered": [
+    {
+      "id": "01-galactus",
+      "audio_file": "La Boîte à Récap/01 - Galactus/voiceover.mp3",
+      "audio_sha256": "6b91217874f6b293dabeafa96094506dc074ac78008a18ce77de822e5675b232",
+      "audio_bytes": 122444112,
+      "duration_seconds": 7652.696,
+      "meets_two_hours": true,
+      "local_tempo_factor": 0.85,
+      "original_sha256": "69b3d72bdc66fa8b924d9ccd57fab4a49a54b3ab31354e4a2b0cf9e1a35f6339",
+      "full_decode_passed": true
+    },
+    {
+      "id": "02-freezer",
+      "audio_file": "La Boîte à Récap/02 - Freezer/voiceover.mp3",
+      "audio_sha256": "2f3b6f9c2c263d9ced4e9e05718cb6ed9d689b5c3e5634eb95ba1b256e61f78b",
+      "audio_bytes": 120814907,
+      "duration_seconds": 7550.872,
+      "meets_two_hours": true,
+      "local_tempo_factor": 0.85,
+      "original_sha256": "c228d3ca523f2224a71031baf9c7cc2f0c513ecd41d541bd0fc24b288da8d13b",
+      "full_decode_passed": true
+    },
+    {
+      "id": "03-sukuna",
+      "audio_file": "La Boîte à Récap/03 - Sukuna/voiceover.mp3",
+      "audio_sha256": "bdf53b8cf68120952c17c4d99acf11cde86191e40172186c1e01234a36eb7fc0",
+      "audio_bytes": 122942319,
+      "duration_seconds": 7683.816,
+      "meets_two_hours": true,
+      "local_tempo_factor": 0.85,
+      "original_sha256": "eb818f17a62b4334c2f3f20dda808534d597c03d3386bff9f735f7fea87a267c",
+      "full_decode_passed": true
+    },
+    {
+      "id": "05-one-piece",
+      "audio_file": "La Boîte à Récap/05 - One Piece/voiceover.mp3",
+      "audio_sha256": "6b8563c46ac35f77a64a7d4d1423e813aa38d9846c89da2382c879cea3097bcf",
+      "audio_bytes": 122934796,
+      "duration_seconds": 7683.357,
+      "meets_two_hours": true,
+      "local_tempo_factor": 0.85,
+      "original_sha256": "4f45151d8565162c3f6ff651249829c3103b60c2878821f5bf837eee4bd73680",
+      "full_decode_passed": true
+    },
+    {
+      "id": "08-stranger-things",
+      "audio_file": "La Boîte à Récap/08 - Stranger Things/voiceover.mp3",
+      "audio_sha256": "c7d81aaa2f2a2f7c4a756afe4b8a9e1ae17aae02230f84034bbc7a554c6702ba",
+      "audio_bytes": 115931054,
+      "duration_seconds": 7245.611,
+      "meets_two_hours": true,
+      "local_tempo_factor": 0.85,
+      "original_sha256": "4ba1487ad9544ebdbf6cd46890538fcf63f2efd7bab79a65596e4ba37cd65a6f",
+      "full_decode_passed": true
+    }
+  ],
+  "pending_recovery": [
+    "04-quatre-fantastiques",
+    "06-frieren",
+    "07-sakamoto-days"
+  ],
+  "note": "Pitch-preserving local tempo correction; full decoding and hashes checked, no full human listen."
+}
