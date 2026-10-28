@@ -1683,7 +1683,7 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
     for sc in scenes:
         prev = all_scenes[sc["i"] - 1]["text"] if sc["i"] > 0 else ""
         lines.append(f"#{sc['i']} [section: {sc.get('heading') or 'hook'}] (prev: \"{prev[-120:]}\") "
-                     f"NARRATION: \"{sc['text']}\"")
+                     f"NARRATION: \"{sc['text']}\"" + (f" STATE NOW: {sc['state']}" if sc.get("state") else ""))
     st = ch.get("style") or {}
     direction = (st.get("direction") or "").strip()
     direction = f"- CHANNEL ART DIRECTION: {direction}\n" if direction else ""
@@ -1704,6 +1704,11 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
                         "its layout: when the camera looks toward the door, the window or a wall, describe what that "
                         "layout puts there. Consecutive scenes in the same place read as a continuous comic strip.")
         place_out = ', "place": "exact place name or empty"'
+        if any(sc.get("state") for sc in scenes):
+            place_rule += ("\n- STATE NOW is the exact situation at that moment: follow it. Never show an object, a "
+                           "barricade, damage, an injury, a person or a change before the narration has brought it "
+                           "(the first image of a room shows it untouched); an action of this scene is shown in "
+                           "progress, not already finished.")
     prompt = f"""You are the art director of a faceless 2D YouTube channel. For each scene below, write the image prompt of the illustration shown while this narration is spoken.
 
 VIDEO: {pr['title']}
@@ -1991,9 +1996,19 @@ def check_image(path, sc, no_text=True, faceless=False):
 
 # ── Images qui se suivent (format survie) ───────────────────────────────────
 
+CONTINUITY_ALL_SINCE = "2026-10-28T19"  # Oddly Specific Lives : tous les formats en images qui se suivent (28 oct.)
+
+
 def continuity_enabled(pr):
-    """Lieux fixes avec une image de référence, état du moment et plan précédent en référence de chaque image."""
-    return (pr or {}).get("format") == "pov_survive" or bool(((pr or {}).get("montage") or {}).get("continuity"))
+    """Lieux fixes avec une image de référence, état du moment et plan précédent en référence de chaque image.
+    Format survie, montage.continuity, ou toute vidéo Oddly Specific Lives créée depuis CONTINUITY_ALL_SINCE
+    (l'utilisateur, 28 oct. : « que les images se suivent… que ça ait du sens », sur tous les formats)."""
+    pr = pr or {}
+    if pr.get("format") == "pov_survive" or (pr.get("montage") or {}).get("continuity"):
+        return True
+    if (pr.get("created") or "") < CONTINUITY_ALL_SINCE or uses_board(pr):
+        return False
+    return ((store.get_channel(pr.get("channel_id")) or {}).get("template") or "") == "oddly_specific_en"
 
 
 def _place_of(pr, name):
@@ -2019,12 +2034,17 @@ def _continuity_refs(pr, sc, prev):
         extra.append((prev, "the PREVIOUS SHOT of this continuous story, a few seconds earlier in the same place: "
                             "continue directly from it; same outfits, same carried items, same injuries, and every "
                             "change already made to the place stays (moved, broken or taken objects)."))
-    state = (pr.get("section_states") or {}).get(sc.get("heading") or "")
+    state = sc.get("state") or (pr.get("section_states") or {}).get(sc.get("heading") or "")
     if state:
-        tail += f" CURRENT STATE (mandatory, overrides the references): {state}"
-    tail += (" PEOPLE: only the people of CHARACTERS IN THIS IMAGE and those the SCENE or CURRENT STATE mentions (staff "
-             "and patients only before the outbreak); no infected unless the SCENE mentions one; never a cut-off body "
-             "part (feet under a door, a lone hand); faces show the fear or tension of the moment.")
+        tail += (f" CURRENT STATE at this exact moment (mandatory, overrides the references; nothing the story has not "
+                 f"done yet may appear): {state}")
+    if pr.get("format") == "pov_survive":
+        tail += (" PEOPLE: only the people of CHARACTERS IN THIS IMAGE and those the SCENE or CURRENT STATE mentions "
+                 "(staff and patients only before the outbreak); no infected unless the SCENE mentions one; never a "
+                 "cut-off body part (feet under a door, a lone hand); faces show the fear or tension of the moment.")
+    else:
+        tail += (" PEOPLE: only the people of CHARACTERS IN THIS IMAGE and those the SCENE or CURRENT STATE mentions; "
+                 "never a cut-off body part; faces show the emotion of the moment.")
     return extra, tail
 
 
@@ -2083,14 +2103,19 @@ def ensure_continuity(job, pid):
     if not pr.get("locations"):
         job.update(None, "Lieux de l'histoire et état jour par jour…")
         heads = [h for h, _ in S.parse(pr.get("script") or "")]
-        prompt = f"""Read this second-person survival story. Return the visual continuity bible an illustrator needs.
+        prompt = f"""Read this second-person story. Return the visual continuity bible an illustrator needs.
 
 1. "locations": the 8-16 distinct places where scenes happen (use the exact short names of the story, e.g. "Room 112",
    "the cafeteria"), each with a fixed "layout" of 40-70 words: what is on the left, the right, the back wall, the
    door, the windows and what they show outside, furniture, light. Indoor and outdoor places.
+   The layout is the place AS IT IS THE FIRST TIME IT APPEARS, before the story changes anything: never mention what
+   will happen later (no "can be dragged against the door", no "later the packed bag", no barricade, damage or
+   object that only arrives later). Give every big piece of furniture a precise, sensible position relative to the
+   door and walls (e.g. "the bed stands against the right wall, its head to the wall, two metres from the door;
+   the door is in the left wall, nothing in front of it").
 2. "states": one entry per section heading listed below, in the same order: the visible state during that section in
    30-60 words: what the hero wears and carries, injuries or bandages, companions present, the light (power on/off),
-   whether staff and patients are still around or the place is deserted, his mood (scared, exhausted, determined),
+   who else is around or whether the place is deserted, the hero's mood (scared, happy, exhausted, determined),
    and what has changed in each place by then (barricades, moved, broken or taken objects, the view outside).
 
 SECTION HEADINGS (in order): {json.dumps(heads)}
@@ -2113,7 +2138,10 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
         p = pr["locations"][k]
         rel = f"images/location_{k:02d}.jpg"
         full, refs = build_image_prompt(ch, f"ESTABLISHING SHOT of {p['name']}, wide angle, NO people at all, the "
-                                            f"empty place. {p['layout']}", scene_chars=[], cast=[])
+                                            f"empty place. {p['layout']} The place as it first appears in the story: "
+                                            "clean, tidy and intact, plain neutral daylight, the view outside calm (no "
+                                            "fire, no smoke, no helicopters, no damage); the story adds its light and "
+                                            "changes later, scene by scene.", scene_chars=[], cast=[])
         ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, os.path.join(d, rel))
         return k, rel
     if todo:
@@ -2121,6 +2149,83 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
         with ThreadPoolExecutor(max_workers=min(_image_workers(), len(todo))) as ex:
             for k, rel in ex.map(master, todo):
                 store.update_project(pid, lambda x, k=k, rel=rel: x["locations"][k].__setitem__("image", rel))
+
+
+def ensure_scene_states(job, pid, size=40):
+    """État visible au moment de CHAQUE scène, calculé dans l'ordre du récit (registre des changements reporté
+    d'un paquet au suivant) : ce que la scène a déjà fait est là, ce qui arrive plus tard n'y est pas encore
+    (le fauteuil contre la porte de la vidéo zombie dès la 1re image : l'état par partie le mettait trop tôt)."""
+    pr = store.get_project(pid)
+    if not continuity_enabled(pr) or all(s.get("state") for s in pr["scenes"]):
+        return
+    places = "\n".join(f"- {p['name']}: {p.get('layout', '')}" for p in pr.get("locations") or []) or "- (none)"
+    cast = ", ".join(c["name"] for c in pr.get("cast") or []) or "-"
+    ledger, out = "Nothing has changed yet: every place looks like its layout, nobody is hurt.", {}
+    scenes = pr["scenes"]
+    for k in range(0, len(scenes), size):
+        job.update(None, f"Continuité scène par scène {min(k + size, len(scenes))}/{len(scenes)}…")
+        part = scenes[k:k + size]
+        lines = "\n".join(f"#{s['i']} [{s.get('heading') or 'hook'}] {s['text']}" for s in part)
+        prompt = f"""You keep the visual continuity of an illustrated story told scene by scene (one image per scene).
+PLACES (as they look before the story changes them):
+{places}
+CAST: {cast}
+WHAT IS TRUE BEFORE THESE SCENES (running ledger): {ledger}
+
+For EACH scene below, write "state": 25-50 words describing what must be visible in its image at that exact moment:
+who is present, what they wear and carry, injuries or bandages, the time of day and light, and the state of the place
+(objects moved, barricades, damage, items taken). Rules:
+- Only what the story has done UP TO AND INCLUDING this scene's narration. Something that happens in a later scene
+  is NOT there yet (if a scene says "you drag the armchair to the door", earlier scenes show the armchair in its
+  layout position, this scene shows it being dragged, later scenes show it against the door).
+- Changes stay until the story undoes them (a barricade stays, a broken window stays broken, a taken item is carried).
+- Flashbacks or scenes in another time say so ("flashback, six hours earlier:") and describe that moment.
+- Concrete and visual, no feelings beyond a facial expression.
+Then "ledger": 60-120 words, the running list of every lasting change after the last scene (for the next scenes).
+
+SCENES:
+{lines}
+
+Return JSON: {{"states": [{{"i": <scene number>, "state": "..."}}], "ledger": "..."}}"""
+        data = ai.chat_json(prompt, model=ai.fast_model(), timeout=400)
+        for r in data.get("states") or []:
+            try:
+                out[int(r.get("i"))] = str(r.get("state") or "").strip()
+            except (TypeError, ValueError):
+                continue
+        ledger = str(data.get("ledger") or ledger).strip()[:1500]
+
+    def save(x):
+        for s in x["scenes"]:
+            if out.get(s["i"]) and not s.get("state"):
+                s["state"] = out[s["i"]]
+    store.update_project(pid, save)
+
+
+CONTINUITY_QA = """Image 1 is the NEW image of a scene; image 2 is the PREVIOUS image of the same continuous story, a few
+seconds earlier. Reject the new image only for a continuity mistake a viewer would notice:
+- something present that the CURRENT STATE says is not there yet (a barricade, a moved object, damage, a person, an
+  injury), or something the CURRENT STATE says is there that is missing;
+- furniture or the room layout changed between the two images without the story moving it (a bed jumping next to
+  the door, a window on another wall);
+- a character's outfit, hair, carried items or bandages changed without a reason.
+CURRENT STATE: {state}
+NARRATION: {text}
+Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."""
+
+
+def check_continuity(path, prev, sc):
+    """Contrôle en vision : la nouvelle image suit-elle la précédente et l'état du moment ? → (ok, [problèmes])."""
+    import base64
+    imgs = []
+    for p in (path, prev):
+        with open(p, "rb") as f:
+            imgs.append({"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(
+                _jpeg(f.read(), side=768)).decode()}})
+    q = CONTINUITY_QA.format(state=(sc.get("state") or "-")[:600], text=(sc.get("text") or "")[:400])
+    res = ai.chat_json([{"role": "user", "content": [{"type": "text", "text": q}] + imgs}], model=ai.text_model(),
+                       timeout=240)
+    return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
 
 
 def _gen_scene(ch, pr, sc, prev=None):
@@ -2140,6 +2245,8 @@ def _gen_scene(ch, pr, sc, prev=None):
             break
         try:
             ok, problems = check_image(os.path.join(d, rel), dict(sc, prompt=prompt), no_text, faceless_object(ch, pr))
+            if ok and prev and continuity_enabled(pr):  # suit-elle le plan précédent et l'état du moment ?
+                ok, problems = check_continuity(os.path.join(d, rel), prev, sc)
         except Exception:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
             break
         if ok:
@@ -2158,6 +2265,7 @@ def job_images(job, pid, only=None, first_only=False):
     if pr.get("cast") is None and any(not (s.get("prompt") or "").strip() for s in pr["scenes"]):
         job_cast(job, pid, p0=0.01, p1=0.06)  # persos consistants AVANT d'écrire les prompts
     ensure_continuity(job, pid)  # lieux fixes avant les prompts (chaque scène reçoit son lieu)
+    ensure_scene_states(job, pid)  # état exact au moment de chaque scène, dans l'ordre du récit
     ensure_prompts(job, pid, 0.06, 0.12)
     pr = store.get_project(pid)
     ch = project_channel(pr)
