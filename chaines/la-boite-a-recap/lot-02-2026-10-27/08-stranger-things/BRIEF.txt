@@ -1,0 +1,13 @@
+TOPIC: Toute l'histoire de Stranger Things, saisons 1 à 5, en français.
+ANGLE: Mechanism-reveal à trame chronologique : suivre ce que chaque groupe sait au moment d'agir, puis montrer comment leurs informations et leurs liens permettent le sauvetage ; distinguer vérité montrée, récit de Henry et hypothèse finale de Mike.
+PROOF BANK:
+- Disparition de Will et fuite d'Onze le 6 novembre 1983, puis faux corps et sauvetage : Netflix Tudum, Stranger Things Season 1 Recap, https://www.netflix.com/tudum/articles/stranger-things-season-1-recap
+- Possession de Will, Kali et fermeture de la porte : Netflix Tudum, Season 2 Recap, https://www.netflix.com/tudum/articles/stranger-things-season-2-recap
+- Starcourt, possession de Billy, perte des pouvoirs et départ : Netflix Tudum, Season 3 Recap, https://www.netflix.com/tudum/articles/stranger-things-season-3-recap
+- Henry = Un = Vecna ; Max réanimée mais dans le coma ; Eddie mort : Netflix Tudum, Season 4 Recap, https://www.netflix.com/tudum/articles/stranger-things-season-4-recap
+- Holly dans Camazotz et douze enfants recherchés ; Will utilise sa connexion : Netflix Tudum, Season 5 Episode 4 Explained, https://www.netflix.com/tudum/articles/stranger-things-season-5-episode-4-explained
+- Abysse distinct du Monde à l'envers ; retour de Max ; rupture Nancy/Jonathan : Netflix Tudum, Season 5 Episode 7 Ending Explained, https://www.netflix.com/tudum/articles/stranger-things-season-5-episode-7-ending-explained
+- Mort de Vecna et du Flagelleur ; disparition d'Onze suivie d'une hypothèse : Netflix Tudum, Season 5 Episode 8 Ending Explained, https://www.netflix.com/tudum/articles/stranger-things-5-episode-8-ending-explained
+- Ambiguïté de la fin d'Onze et de l'emprise initiale sur Henry : entretien des frères Duffer, https://www.netflix.com/tudum/features/stranger-things-series-finale-duffer-brothers-interview
+HOOK DIRECTION: Une partie de jeu s'arrête, puis son monstre devient réel ; promesse de retrouver le fil entre les antagonistes jusqu'au final, sans annoncer une survie confirmée d'Onze.
+STRUCTURE HINT: Récap narratif avec colonne documentaire chronologique ; 15 chapitres, transferts d'information et conséquences familiales intégrés à chaque saison. Narration TTS seule, métadonnées séparées.

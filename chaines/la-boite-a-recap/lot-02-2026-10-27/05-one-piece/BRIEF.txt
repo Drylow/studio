@@ -1,0 +1,23 @@
+TOPIC
+One Piece, parcours principal du manga de Romance Dawn au chapitre 1133 inclus, fin du tome 111. Récit français long pour La Boîte à Récap. Arrivée à Elbaf et retrouvailles Robin/Saul, sans prétendre couvrir les derniers chapitres ou conclure l'arc. La recherche a commencé le 27 octobre 2026 et la livraison est contrôlée le 28 octobre 2026, heure de Paris.
+
+ANGLE
+Mechanism-reveal : suivre comment les compétences, promesses et relations de l'équipage rendent possible la progression de Luffy. Phrase de départ à dépasser : « Luffy traverse les îles et devient toujours plus fort ». Les défaites de Sabaody et Marineford, les rôles de Nami, Usopp, Sanji, Robin, Jinbe et Kuma montrent précisément ce que la force du capitaine ne résout pas. Contrarian écarté : pas de fausse révélation disant que toute la lecture habituelle est erronée. Hidden-cost retenu ponctuellement avec Kuma et les pertes de la guerre. Untold-story retenu pour les conséquences des décisions des compagnons, sans inventer un secret inédit.
+
+PROOF BANK
+1. Départ, tonneau, Koby, Zoro et rôle de Nami : récapitulatif officiel East Blue, ONE PIECE.com, https://one-piece.com/story/east_blue/index.html ; récit développé dans les chapitres éditoriaux 01 à 03.
+2. Dorry/Brogy, Chopper, Vivi, Crocodile et Robin : récapitulatif officiel Alabasta, https://one-piece.com/story/alabasta/index.html ; chapitres 04 à 05.
+3. Merry irréparable, conflit avec Usopp, sacrifice de Robin et plans de Pluton : récapitulatif officiel Water Seven, https://one-piece.com/story/water_seven/index.html ; chapitres 07 à 08.
+4. Mort d'Ace, intervention des alliés, disparition de Barbe Blanche : récapitulatif officiel Marineford, https://one-piece.com/story/marineford/index.html ; chapitres 11 à 13.
+5. Transfusion de Jinbe, Shirahoshi/Poséidon et conflit avec Big Mom : récapitulatif officiel Fishman Island, https://one-piece.com/story/fishman_island/index.html ; chapitre 14.
+6. Alliance et quatre Road Ponéglyphes : récapitulatif officiel Zou, https://one-piece.com/story/zou/index.html ; chapitre 17.
+7. Sanji, mariage, Brook et Katakuri : récapitulatif officiel Whole Cake Island, https://one-piece.com/story/wholecakeisland/index.html ; chapitres 18 à 19.
+8. Wano puis Egghead, Kuma, message de Vegapunk, Emeth : récapitulatifs officiels https://one-piece.com/story/land_of_wano/index.html et https://one-piece.com/story/egghead/index.html ; chapitres 20 à 24.
+9. Borne contrôlée : tome 111, chapitres 1122 à 1133, fiche officielle https://one-piece.com/comics/73357/index.html ; arrivée/retrouvailles recoupées avec la fiche officielle de l'adaptation https://one-piece.com/anime/80333/index.html et catalogue VIZ. Aucune extrapolation vers la fin d'Elbaf.
+Accès : textes indexés renvoyés par le moteur de recherche, plusieurs ouvertures directes du domaine officiel renvoyant HTTP 403. Pas de prétention de lecture intégrale de toutes les pages du manga ; limites détaillées dans SOURCES.txt.
+
+HOOK DIRECTION
+Ouvrir sur une contradiction concrète : le futur empereur ne sait pas naviguer et commence dans un tonneau. Promesse : retracer la progression en montrant ce que les autres rendent possible. Hook de 89 mots, borne et spoilers immédiatement explicites. CTA après le hook, une seule demande d'abonnement et une question de commentaire liée à la série.
+
+STRUCTURE HINT
+Récit chronologique avec analyse causale intégrée. Vingt-cinq chapitres éditoriaux, environ mille mots chacun, sans titres lus dans le texte vocal. Les retours sur le passé arrivent aux révélations pertinentes : Robin à Enies Lobby, enfance d'Ace/Luffy après Marineford, Corazon à Dressrosa, Oden à Wano, Kuma à Egghead. La dernière scène Robin/Saul donne un aboutissement émotionnel autonome à cette borne, sans fausse conclusion de la série. Minimum contractuel de 24 500 mots ; débit de référence 182 mots/min, contrôle conservateur à 200 mots/min.

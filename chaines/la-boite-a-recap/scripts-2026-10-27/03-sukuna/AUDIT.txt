@@ -1,0 +1,98 @@
+SUKUNA — CONTRÔLE FINAL DE RÉDACTION
+27 octobre 2026.
+
+STATUT
+Texte complet, relu, corrigé et assemblé. Les contrôles factuels, éditoriaux et mécaniques décrits ci-dessous sont terminés. Aucun audio n'a été produit ni écouté. Le test C2 de lecture intégrale à voix haute et le point E1 de validation humaine ne sont donc pas attestés ; ce dossier ne revendique pas un PASS global sans réserve de toutes les étapes FacelessOS.
+
+MESURES VÉRIFIÉES
+24 810 mots selon la regex Unicode conservant apostrophes et traits d'union, indiquée dans MESURES.json ; 24 839 tokens séparés par des espaces. 156 255 caractères espaces compris, 131 108 hors blancs, 160 513 octets UTF-8. 16 sections, aucune au-delà de 1 698 mots. 309 paragraphes, maximum de 101 mots par paragraphe. CHAPITRES.json contient des positions Unicode à base zéro, début inclus et fin exclue, vérifiées par comparaison avec les sections sources. SHA256 de SCRIPT.txt :
+79c166d46484b054da7a5ceee732d19d360ac75d49e4ee0afc97d3cef68426eb
+
+Durée estimée : 136,32 minutes à 182 mots/minute, 137,07 à 181, 130,58 à 190 et 124,05 à 200. Le débit de référence vient des transcriptions réelles de la chaîne : Thanos, 16 304 mots pour environ 89,8 minutes ; One Punch Man, 9 158 pour 50,63 ; L'Attaque des Titans, 13 209 pour 72,43. Ce sont des estimations de narration, pas une durée mesurée d'un fichier vocal. La rédaction dépasse le minimum demandé de 24 500 mots.
+
+A — HOOK ET PROMESSE
+Phrase initiale exacte : « Yuji Itadori avale un doigt pour sauver ses amis. »
+Hook : 70 mots. Renversement : « Mais ce corps lui résiste. » Le tutoiement arrive dès la deuxième phrase. Le geste du doigt apporte la preuve concrète avant l'explication générale. La dernière phrase annonce les révélations du manga entier.
+Comparaisons réelles lues dans les transcriptions : Thanos, « Il y a une règle non écrite dans le cinéma de super-héros. Le méchant perd à la fin. » ; One Punch Man, « Imagine que tu obtiennes le pouvoir dont rêve chaque être humain sur cette planète, la force absolue. » ; L'Attaque des Titans, « L'Attaque des Titans a été vendue comme une histoire de monstres ». Les retours à la ligne de transcription sont simplement réunis. Le hook proposé utilise une action connue et sa complication, sans copier l'ouverture de ces vidéos. Ce jugement éditorial ne prédit pas un taux de clic ou de rétention.
+Carte A5/C5 : parcours = sections 01–08 ; choix et pactes = 02, 06–08, 11–15 ; combats = 04–05 et 09–15 ; fin complète = 16. Le titre correspond à ce périmètre. Pas de promesse de biographie Heian inexistante ni de fin exclusive à l'anime.
+
+B — BOUCLES, PROGRESSION ET RYTHME
+Repères S = section, P = paragraphe dans la section.
+1. Corps qui résiste : ouverture S01 P1 ; premier résultat S02 P10–13 ; sortie de Yuji S07 P1–3 ; résultat final S16 P6–10.
+2. Reprendre son corps après une aide : S01 P18–19 ; réponse par le cœur et le retour de Yuji S02 P4–13.
+3. Intérêt pour Megumi : S02 P7–8 ; Mahoraga S05 P1–11 ; transfert et utilisation des Dix Ombres S07–08 ; modèle contre Gojo S11 P5–14.
+4. Minute oubliée : S02 P13–19 ; déclenchement S06 P18 ; utilisation et faille S07 P1–3.
+5. Junpei et Mahito : ouverture S03 ; refus, contact des âmes et conséquences livrés dans la même section. La perception de Yuji revient comme action utile S13 P3.
+6. Jogo et son pari : ouverture S04 ; flamme et mort livrées avant le raccord vers Megumi à S04 P18.
+7. Sauvetage de Megumi à Shibuya : ouverture S04 P17–18 ; rituel résolu et coût pour la ville S05 ; culpabilité ensuite examinée au procès S06.
+8. Tsumiki à sauver : ouverture S06 ; Yorozu révélée à la fin de la section ; mort et effondrement de Megumi S08.
+9. Fragilité du nouvel hôte : S07 ; Bain puis mort de Tsumiki S07–08 ; résistance retrouvée S16 P1–7.
+10. Doigt absent : S09 P1–2 ; fausse explication attribuée à Sukuna S13 P5 ; vraie copie et Résonance S16 P4–5.
+11. Domaines de Gojo : première rupture S09 P14 ; modifications, coût cérébral et arrêt des extensions S10. La roue ouvre ensuite la question du modèle offensif.
+12. Modèle de Mahoraga : S10 fin et S11 P5 ; réponse S11 P11–15, mort de Gojo et vœu.
+13. Confiscation et épée de Higuruma : S12 ; Kamutoke confisqué, épée disparue sans exécution, puis arrivée de Yuta à la fin de cette section.
+14. Libérer Megumi : S13 P3–7, échec émotionnel ; Yuji revient vers lui S16 P1–7 et obtient sa participation.
+15. Feu entrevu à Shibuya : S04–05 ; conditions et coût pleinement expliqués S14 P12–16.
+16. Corps de Gojo et retour de Yuta : S15 P4–11 ; interruption expliquée, retour dans son propre corps confirmé S16 P11.
+17. Rapport aux liens et autre choix : Yorozu S07–08, Kashimo S12 P9 ; refus de l'offre de Yuji S16 P8–10 ; possibilité conditionnelle finale S16 P14–17.
+
+Relecture causale effectuée : les raccords passent par un objectif, un échec ou une conséquence. Les explications techniques accompagnent le problème qu'un personnage doit résoudre. Les paragraphes d'avertissement méthodologique ont été raccourcis ; les URL, limites de recherche et notes sont hors narration. B3 a été contrôlé sur le texte et sa progression, pas à l'écoute d'un montage ; aucun chronométrage de rétention réelle n'est revendiqué. L'ordre B7 d'un classement est sans objet pour ce récit. La conclusion se termine sur la liberté retrouvée des survivants, sans abonnement ajouté après le dernier résultat.
+CTA unique S02 P19 : abonnement à La Boîte à Récap et demande du prochain personnage souhaité. Il arrive après le centre de détention et l'explication du pacte. Le script garde un rythme de récap, sans consignes d'endormissement importées des autres chaînes.
+
+C — CLARTÉ ET FIL CONDUCTEUR
+Fil : le contrôle des corps se négocie, se vole, se protège puis se défait par des actes précis. S01 P2 nomme la situation du spectateur qui connaît surtout les extraits du duel. L'idée de puissance comme explication suffisante est confrontée aux pactes, aux informations incomplètes, à Megumi et à la coopération finale. Aucun chapitre annexe n'a été ajouté pour gonfler la longueur.
+C2 : relecture textuelle intégrale effectuée au fil des sections ; test oral intégral non réalisé. Les noms, techniques et révélations sont introduits avec leur rôle avant leur réemploi. La lisibilité à une seule écoute reste à éprouver lors de la voix, sans prétendre qu'un auditeur humain l'a déjà validée.
+
+D — VOIX, HUMANIZER ET SCANNER
+Ancrages français réels : 90 secondes environ des trois ouvertures indiquées dans SOURCES. Exemple Thanos : « Ce méchant, c'est Thanos et ce soir, on te raconte toute son histoire. » Forme correspondante dans notre hook : « On va reprendre son parcours, ses choix, ses combats et sa fin ». Exemple One Punch Man : « Aucun adversaire ne peut te résister. » Forme courte et explicative correspondante : « Mais ce corps lui résiste. » Exemple Titans : « Commençons par le monde tel qu'on nous le présente. » Le principe retenu est d'accompagner une explication en français oral ; les phrases des références ne sont pas copiées dans SCRIPT.
+H1–H19 revus : suppression des précautions répétées et des constructions de contraste les plus écrites ; pas d'autorité inventée, de dialogue direct fabriqué, d'éloge générique final ni de série de synonymes pour le même pouvoir. Le vocabulaire technique nécessaire reste stable. Les accents français, apostrophes et ligatures sont conservés volontairement ; les effacer dégraderait la narration française. Pas d'emoji, de ligne de chatbot, de note de méthode, d'URL, de balise ou de caractère de remplacement dans SCRIPT. Zéro tiret cadratin dans la narration.
+Scanner FacelessOS relancé sur le fichier assemblé final : zéro HARD-BAN, sept candidats de phrases courtes, plancher mécanique d'antithèse = zéro. Le scanner est surtout anglophone et sa fragmentation des accents rend plusieurs échos trompeurs. Le contrôle humain demandé par le skill n'est pas attribué à cette analyse textuelle.
+Arbitrage des sept candidats :
+- « Le garçon refuse d'abord. » / « Sukuna le bat immédiatement. » : deux actes séparés par les termes du pacte, pas une cascade de fragments.
+- « Quatre bras. Deux bouches. » : énumération de caractéristiques physiques, suivie de leur usage concret ; conservée selon la règle qui protège les énumérations.
+- « L'épée l'intéresse. » / « Puis les entailles reviennent. » : actions du duel de Higuruma, avec phrase développée entre elles.
+- « C'est Kamutoke qui disparaît. Le Sanctuaire reste disponible. » : résultat technique nécessaire pour comprendre l'échec du plan.
+- « Ses réserves ont baissé. » / « Sa régénération a souffert. » : inventaire des dommages, pas trois slogans abstraits.
+- « Le feu envahit l'espace. » / « Choso, lui, brûle. » : déroulement concret du sacrifice, avec l'action de protection entre les deux.
+- « Sukuna refuse. » / « Sa défaite est acquise. » : choix et résultat exposés, la deuxième phrase arrive après l'explication de sa disparition.
+Échos : 31 signalements bruts, dont des découpages de « régénération », « énergie occulte » et « centre de détention ». Les mêmes noms de lieux, corps et pouvoirs ne doivent pas être remplacés par des synonymes pour satisfaire un compteur. Vérification complémentaire : zéro paragraphe identique et zéro suite de 15 mots répétée au moins trois fois. La comparaison indépendante avec les références n'a trouvé aucune reprise de 15 mots.
+
+D5 — REGISTRE DES NOMBRES FACTUELS
+Un doigt avalé au départ : chapitre 1 et synopsis officiel épisode 1.
+Une minute et oubli du pacte : accord du début, recoupé Twinfinite et synopsis officiel épisode 6 ; exploitation au chapitre 212.
+Dix Ombres : nom de la technique, chapitre 8 et déploiements 117, 217–219.
+Deux jeunes filles, Nanako et Mimiko ; dix doigts apportés par Jogo ; évaluation à quinze : chapitre 112, compte rendu ouvert, puis épisode officiel 40 pour la séquence.
+Quatre bras, deux bouches : forme ancienne, chapitres 237–238.
+Tome vingt-neuf : supplément sur Wasuke, deux articles ouverts et recoupés, détail de l'accès dans SOURCES.
+Vingt-quatre décembre : rendez-vous fixé au chapitre 221, recoupement indexé documenté.
+Chapitre deux cent trente-six : mort de Gojo, compte rendu du chapitre ouvert.
+Signe à deux mains et contraintes futures : chapitre 255, compte rendu ouvert et recoupement Shrine indexé.
+Fœtus des neuf phases et les deux frères de Choso déjà rencontrés : nomenclature et ingestion par Yuji, chapitres 257–258 ; les individus Choso, Eso et Kechizu sont distingués des autres.
+Quatre-vingt-dix-neuf secondes : cette ouverture du domaine, chapitre 258 ; pas une limite universelle imposée à tous les domaines ultérieurs.
+Deux formes de découpe avant la flamme : chapitre 259, compte rendu et fiche Shrine recoupés.
+Tome trente : épilogue Uraume, ComicBook et compte rendu Epilogue ouverts ; volume final confirmé par VIZ.
+Les autres « deux » désignent des éléments explicitement énumérés, comme deux délais ou deux fronts. « Premier », « dernier », « quelques instants » et « quelques minutes » relient les événements ; ils ne sont pas présentés comme des statistiques mesurées. Aucun pourcentage de puissance, total de morts ou chrono précis non sourcé n'a été ajouté.
+
+D6/D7 — FORMES ÉCRITES
+Reframes littéraux « ce n'est pas X, c'est Y » : zéro conservé après balayage complet et retrait du contraste artificiel du trésor en S01. Les négations qui corrigent un fait, par exemple l'absence de résurrection de Gojo, restent utiles et ne sont pas des maximes.
+Registre des antithèses de construction conservées, deux : S06 P3, « Sukuna avait lié une résurrection » face à « Yuta accomplit une exécution » ; S07 P18, « Elle veut qu'il lui accorde toute son attention » face à « Il prévoit de la tuer avec celle de Megumi ». Elles comparent des décisions vérifiables, dans des paragraphes non adjacents. Les simples oppositions causales « mais » ne sont pas comptées comme une figure équilibrée par défaut.
+Une chute aphoristique conservée, au dernier paragraphe : « Leur avenir ne lui appartient plus. » Elle ferme la séparation effectivement racontée. Plancher du scanner : zéro ; la décision repose sur la lecture française, pas sur ce zéro.
+
+E — ORIGINALITÉ ET LIMITES
+Évaluation documentée : 5/7 signaux retenus. Recherche ciblée au-delà d'un résumé général, avec complément Wasuke et correction de la séquence du chapitre 234 ; jugement éditorial sur les décisions ; trois artefacts nommés dans la narration (complément du tome 29, chapitre 236, complément du tome 30) ; rapprochements entre usages des pactes, conservation du doigt et fausse certitude de puissance ; structure distincte du comparateur Dakba, centrée dès Yuji sur les prises de contrôle et poursuivie jusqu'au dénouement.
+Deux points non attribués : différence prouvée face aux cinq vidéos dominantes, car les cinq résultats de recherche ne forment pas un classement exhaustif ; validation humaine de l'acheteur, non effectuée. Le point de recherche décrit un travail de recoupement réel, sans prétendre avoir découvert un fait inédit dans le fandom. Les trois artefacts nommés sont des parties distinctes de la même œuvre, pas trois auteurs indépendants.
+Pas de reprise verbatim décelée, pas de permutation de noms dans un modèle de script ; le comparateur traite surtout Gojo contre Sukuna tandis que notre texte relie l'ensemble du parcours. Aucune publication, duplication entre chaînes ou cadence de cinq vidéos par jour n'a été exécutée dans cette tâche. E4 de contrôle d'une vidéo générée : sans objet, aucun montage produit. Ce dossier n'est pas une garantie de décision de monétisation de YouTube.
+
+CORRECTIONS EFFECTIVEMENT APPLIQUÉES
+1. Junpei : retrait de l'implication selon laquelle le refus établirait une capacité certaine à le guérir.
+2. Megumi : accès aux Dix Ombres attribué à l'incarnation, pas à la seule apparence conservée.
+3. Ascendance : Wasuke conformément au complément du tome 29, pas l'ancienne lecture automatique attribuant l'âme à Jin.
+4. Section 11 : Mahoraga coupe le bras de Gojo avant que Gojo détruise Agito avec Bleu. Ordre corrigé à la suite de la revue croisée.
+5. Section 11 : signe Enmaten initial, dispense pour cette seule utilisation puis conditions supplémentaires. La formule vague « conditions ordinaires » a été remplacée.
+6. Section 13 : restriction céleste subie par Maki ; retrait de « Maki a renoncé », qui suggérait un choix volontaire.
+7. Higuruma vivant, véritable Inumaki dans l'enregistrement, retour de Yuta et absence de résurrection effective de Sukuna maintenus contre des résumés secondaires trompeurs.
+8. Coupes des commentaires méthodologiques répétitifs, des contrastes artificiels et des explications de prudence qui encombraient les scènes. Hook final ramené à 70 mots avec tutoiement immédiat.
+Les sections 01–10 et 16 ont été relues indépendamment par le coordinateur ; les sections 11–16 ont reçu une deuxième lecture intégrale et les trois corrections de cette revue ont été confirmées après modification. Cette revue d'agents ne remplace pas une écoute humaine.
+
+FICHIERS DE MÉTHODE UTILISÉS
+faceless-scripts-os-master.md ; research-and-ideation-skill.md ; voice-anchoring-skill.md ; humanizer-skill.md ; script-structures-skill.md, structure documentaire ; retention-mechanics-skill.md ; greenlight-audit-skill.md ; trailer-voice-scan.py. Les rapports techniques et les sections sources restent dans work/boite-recap-scripts-2026-10-27/sukuna/. Aucun service de voix, d'image, de publication ou de génération de texte payante n'a été lancé.

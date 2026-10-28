@@ -1,0 +1,278 @@
+{
+  "id": "QP-09-lumon-building",
+  "channel": "Quiet Paradox",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Quiet Paradox/QP-09-lumon-building/SCRIPT.txt",
+  "source_sha256": "4d93363921468881a48ca19d35b528e9eae2940725efcc2dbb6c5a249aa7229d",
+  "source_file_sha256": "0367671f604ce46140aed8c5d0b3035be7d9da74d7d323b0e93c5e51e379208a",
+  "source_characters": 181542,
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 2116,
+      "reason": "Crib test, périmètre et CTA",
+      "source_chapters": [
+        1
+      ],
+      "words": 349
+    },
+    {
+      "start_character": 3866,
+      "end_character": 5015,
+      "reason": "Présenter les trois hypothèses et le coût pour Gemma sans répéter la mécanique du test",
+      "source_chapters": [
+        1
+      ],
+      "words": 182
+    },
+    {
+      "start_character": 10343,
+      "end_character": 16345,
+      "reason": "Conscience de Helly, consentement et refus de départ",
+      "source_chapters": [
+        3
+      ],
+      "words": 972
+    },
+    {
+      "start_character": 21999,
+      "end_character": 27055,
+      "reason": "Implant et seuils physiques",
+      "source_chapters": [
+        5
+      ],
+      "words": 802
+    },
+    {
+      "start_character": 33842,
+      "end_character": 40013,
+      "reason": "Travail MDR et quatre tempéraments",
+      "source_chapters": [
+        7
+      ],
+      "words": 995
+    },
+    {
+      "start_character": 72587,
+      "end_character": 85399,
+      "reason": "Commande à distance, révolte et promotion publique du produit",
+      "source_chapters": [
+        13,
+        14
+      ],
+      "words": 2036
+    },
+    {
+      "start_character": 98416,
+      "end_character": 104742,
+      "reason": "Réintégration de Mark et objectif de retrouver Gemma",
+      "source_chapters": [
+        17
+      ],
+      "words": 1017
+    },
+    {
+      "start_character": 124120,
+      "end_character": 136902,
+      "reason": "Chemin vers l’étage expérimental et vie de Gemma dans les pièces",
+      "source_chapters": [
+        21,
+        22
+      ],
+      "words": 2053
+    },
+    {
+      "start_character": 138467,
+      "end_character": 156679,
+      "reason": "Lien MDR/Gemma, test du berceau et contribution technique de Cobel",
+      "source_chapters": [
+        24,
+        25,
+        26
+      ],
+      "words": 2920
+    },
+    {
+      "start_character": 156682,
+      "end_character": 168959,
+      "reason": "Hypothèses de compartiments extensibles et d’évitement de la souffrance",
+      "source_chapters": [
+        27,
+        28
+      ],
+      "words": 1919
+    },
+    {
+      "start_character": 168962,
+      "end_character": 181541,
+      "reason": "Hypothèse de pérennité Eagan puis choix final de Mark",
+      "source_chapters": [
+        29,
+        30
+      ],
+      "words": 2040
+    }
+  ],
+  "words": 15285,
+  "characters": 95502,
+  "short_script_sha256": "5f7db3b918d957b77aa113483f3aef092a4051262af83a5d708cc0889cda8ec7",
+  "original_duration_seconds": 15939,
+  "original_words": 28935,
+  "measured_original_words_per_minute": 108.922,
+  "estimated_seconds": 8419.824,
+  "estimated_seconds_at_106_wpm": 8651.887,
+  "estimated_seconds_at_123_wpm": 7456.098,
+  "duration_note": "Estimation au débit réel de la première génération, puis fourchette 106–123 mots/minute. Le MP3 régénéré devra être mesuré pour confirmer 2h minimum et 2h30 maximum.",
+  "edit_mode": "extractive_complete_paragraphs_original_order",
+  "paid_generation_performed": false,
+  "editorial_notes": "Le fil reste la technologie réellement montrée, la relation MDR/Gemma, puis trois hypothèses explicitement qualifiées. Les descriptions de Gabby nécessaires à l’hypothèse sont encore autonomes au chapitre 27. La réintégration rappelle elle-même le rôle de Reghabi ; Petey est mentionné comme un antécédent de la série, sans prétendre que son histoire a été racontée ici. Aucun mot nouveau.",
+  "removed_topics": [
+    "Présentation répétée du contrat de travail de Mark",
+    "Capacités préservées sans mémoire autobiographique développées séparément",
+    "Enseignement de la doctrine de Kier, expertise et départements",
+    "Break Room et wellness détaillées",
+    "Cobel observant Mark comme voisine",
+    "Usage de la technologie hors bureau développé avant les théories",
+    "Parcours complet de Petey",
+    "Retour mis en scène, Helena à Woe’s Hollow et visites de Dylan",
+    "Court chapitre répétitif sur la détresse expérimentale",
+    "Quatre paragraphes d’introduction répétant le fonctionnement du berceau"
+  ],
+  "join_reviews": [
+    {
+      "join": 1,
+      "before_last_two_sentences": [
+        "The research hypothesis appears to be that a separated consciousness can encounter something tied to another consciousness's distress without that distress crossing over.",
+        "Gemma's behavior gives the researchers a result they can observe, even though she hasn't been allowed to understand the experiment she's participating in."
+      ],
+      "after_first_two_sentences": [
+        "That leaves room for distinct ideas about what the company could do with its research.",
+        "A system that keeps expanding the number of separated experiences would have different uses from a treatment intended to spare someone emotional suffering."
+      ],
+      "judgment": "Raccord interne cohérent : le résultat expérimental décrit avant la coupe donne bien l’antécédent de « That leaves room ». Les trois hypothèses et l’incertitude commerciale suivent sans promesse retirée.",
+      "editorial_pass": true
+    },
+    {
+      "join": 2,
+      "before_last_two_sentences": [
+        "Even an apparently calm completion therefore tells us little about what Gemma would agree to if she could consider her whole situation.",
+        "Lumon gets a usable experimental result from conditions that prevent its participant from understanding what her response means to the researchers."
+      ],
+      "after_first_two_sentences": [
+        "Helly wakes on a conference table with a voice coming through a speaker.",
+        "The man speaking knows there's a procedure to follow."
+      ],
+      "judgment": "Retour chronologique compréhensible : après le cas d’ouverture et le coût du test, Helly est nommée et replacée sur la table. Sa scène explique elle-même sa situation.",
+      "editorial_pass": true
+    },
+    {
+      "join": 3,
+      "before_last_two_sentences": [
+        "Helly can ask, protest, and send a message.",
+        "Her outside self can reject that message and send their body back to the elevator for another shift."
+      ],
+      "after_first_two_sentences": [
+        "During Helly's severance procedure, a surgical drill reaches through her skull so that an implant can be placed in her brain.",
+        "Lumon's arrangement begins with a physical intervention in the person who'll take the elevator to work."
+      ],
+      "judgment": "Raccord cohérent entre expérience et mécanisme : le refus de sortie est suivi de l’implant qui rend la séparation possible. L’ellipse temporelle est explicite avec « During ... procedure ».",
+      "editorial_pass": true
+    },
+    {
+      "join": 4,
+      "before_last_two_sentences": [
+        "Lumon has built its working day around that dependence, with elevators, controlled thresholds, and security equipment determining who wakes where.",
+        "The machinery reaches into a person's life through something small enough to place inside the brain, while the person carrying it must live through each separation it produces."
+      ],
+      "after_first_two_sentences": [
+        "Helly looks at the numbers on her terminal and sees nothing that explains why Mark wants her to be afraid of them.",
+        "They're arranged across the screen, available for her to move through and examine."
+      ],
+      "judgment": "Raccord cohérent : après l’implant et les seuils, le terminal donne l’application quotidienne. Helly et Mark sont déjà présents dans les passages gardés.",
+      "editorial_pass": true
+    },
+    {
+      "join": 5,
+      "before_last_two_sentences": [
+        "Lumon has put an intimate human reaction inside a procedure with bins and measurable completion.",
+        "For Mark and his coworkers, that reaction is the part of the work they can actually know how to do."
+      ],
+      "after_first_two_sentences": [
+        "Dylan wakes inside a closet with Milchick in front of him.",
+        "He's away from the severed floor, in a home he doesn't recognize, and Milchick wants to know what happened to a card he took from Optics and Design."
+      ],
+      "judgment": "Nouvelle scène autonome : Dylan est nommé dans un placard et l’objet recherché est décrit ; la carte d’Optics and Design n’exige pas le chapitre des rivalités départementales supprimé.",
+      "editorial_pass": true
+    },
+    {
+      "join": 6,
+      "before_last_two_sentences": [
+        "The guests have been shown smiling workers.",
+        "Before Lumon can remove her, one of those workers speaks."
+      ],
+      "after_first_two_sentences": [
+        "Mark tries to carry a message into Lumon by staring at words under a bright light.",
+        "He wants his innie to receive a question about Gemma, using an afterimage that might remain when the elevator changes which memories he can access."
+      ],
+      "judgment": "Raccord cohérent : le gala conclut la révélation publique ; Mark et son message ouvrent une enquête distincte sur Gemma. Le chapitre récapitule les informations dont il dispose.",
+      "editorial_pass": true
+    },
+    {
+      "join": 7,
+      "before_last_two_sentences": [
+        "The procedure has begun to change what reaches him.",
+        "It hasn't made either version of Mark disappear, or given him a settled understanding of the life they now have to face together."
+      ],
+      "after_first_two_sentences": [
+        "Irving paints the same dark corridor again and again.",
+        "At its far end there's an elevator, with a red downward indicator above the doors."
+      ],
+      "judgment": "Raccord parallèle cohérent : la réintégration reste une voie vers Gemma ; les peintures d’Irving ouvrent l’autre voie, spatiale. Le nouvel objet et son lieu sont nommés.",
+      "editorial_pass": true
+    },
+    {
+      "join": 8,
+      "before_last_two_sentences": [
+        "She lives between appointments she can't fully remember, asks a doctor for news she can't independently check, and discovers that an elevator can interrupt her attempt to get home.",
+        "Staff can bring her back to her room, where she'll again know whom she's missing."
+      ],
+      "after_first_two_sentences": [
+        "Mark's Cold Harbor file has a progress indicator, and Lumon is waiting for it to reach completion before Gemma enters the room with the same name.",
+        "For Mark at his desk, finishing means sorting the remaining numbers."
+      ],
+      "judgment": "Raccord causal direct : la captivité de Gemma est établie, puis le fichier Cold Harbor relie le travail de Mark à son prochain test. Le petit chapitre sur la peur peut être retiré sans perte de mécanisme.",
+      "editorial_pass": true
+    },
+    {
+      "join": 9,
+      "before_last_two_sentences": [
+        "Now that earlier work can assist people trying to reach someone Lumon has confined.",
+        "The same pages that record Cobel's contribution give her a way to use her knowledge beyond the service Jame accepted from her."
+      ],
+      "after_first_two_sentences": [
+        "Gemma enters different rooms on the testing floor, and each room gives Lumon access to a separate version of her.",
+        "The woman who spends time with Dr. Mauer doesn't carry every test back into her ordinary awareness there."
+      ],
+      "judgment": "Raccord de théorie explicite : l’origine technique de Cobel ferme le dossier des faits ; les pièces de Gemma réintroduisent ensuite la première interprétation possible, avec ses limites.",
+      "editorial_pass": true
+    },
+    {
+      "join": 10,
+      "before_last_two_sentences": [
+        "In each case, a person is present during the interval another self doesn't have to bear.",
+        "Lumon's possible promise of relief would still leave that person inside the room, living through the experience until someone switches them away."
+      ],
+      "after_first_two_sentences": [
+        "At the severance gala, Jame Eagan speaks to the woman he believes is his daughter about his coming revolving.",
+        "Helly is awake in Helena's place, so she's hearing a family conversation she wasn't meant to enter."
+      ],
+      "judgment": "Raccord de théorie explicite : le coût de l’évitement de la souffrance se conclut ; Jame et le gala sont réintroduits pour la pérennité Eagan. La formulation maintient cette dernière comme hypothèse.",
+      "editorial_pass": true
+    }
+  ],
+  "source_text_sha256": "4d93363921468881a48ca19d35b528e9eae2940725efcc2dbb6c5a249aa7229d",
+  "script_sha256": "5f7db3b918d957b77aa113483f3aef092a4051262af83a5d708cc0889cda8ec7",
+  "review_status": "reviewed",
+  "join_separator": "\n\n",
+  "reconstruction_verified": true,
+  "short_script_path": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\work\\sleep-shortened-2026-10-28\\scripts\\QP-09-lumon-building\\SCRIPT-COURT.txt"
+}

@@ -1,0 +1,32 @@
+{
+  "checked_on": "2026-10-27",
+  "method": "Mots des transcriptions françaises récupérées, divisés par la durée publiée. Les apostrophes et les mots composés restent un token. Estimation de débit, non analyse acoustique.",
+  "references": [
+    {
+      "url": "https://www.youtube.com/watch?v=7d06Z6W6J70",
+      "words": 16304,
+      "duration_seconds": 5388,
+      "estimated_wpm": 181.55902004454344,
+      "language": "French (auto-generated)"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=B7099KgzENE",
+      "words": 9158,
+      "duration_seconds": 3038,
+      "estimated_wpm": 180.8689927583937,
+      "language": "French (auto-generated)"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5jsmtyQ-MbY",
+      "words": 13209,
+      "duration_seconds": 4346,
+      "estimated_wpm": 182.3607915324436,
+      "language": "French (auto-generated)"
+    }
+  ],
+  "target_words_per_script": 24500,
+  "estimated_minutes_at_182_wpm": 134.6153846153846,
+  "estimated_minutes_at_190_wpm": 128.94736842105263,
+  "minimum_minutes": 120,
+  "actual_audio_measured": false
+}

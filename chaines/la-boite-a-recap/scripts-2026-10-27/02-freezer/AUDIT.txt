@@ -1,0 +1,113 @@
+AUDIT ÉDITORIAL FACELESSOS — FREEZER
+Version du 27 octobre 2026. Périmètre : SCRIPT.txt, 24 639 mots, 154 230 caractères espaces compris, 25 sections externes.
+Empreinte SHA-256 : 388d885cb8e2afcc4f9116f159e82196e779fac9a2aad960d4f9c5ca683980d9
+
+VERDICT ET LIMITES
+Texte complet prêt pour préparation de la narration, après corrections factuelles, relecture éditoriale et contrôle indépendant du texte. Pas de prétention à une écoute humaine de la future voix, à une lecture de toutes les planches de l'édition licenciée, ni à une validation personnelle du propriétaire de la chaîne. Les sources consultées et leur nature figurent dans SOURCES.txt.
+Le minimum de deux heures est couvert par la longueur au débit observé de la chaîne : 135,38 minutes à 182 mots/minute ; 123,20 minutes même à 200 mots/minute. Ce sont des estimations, pas une durée audio mesurée. Un débit moyen supérieur à 205,325 mots/minute ferait passer sous deux heures ; contrôler la durée du rendu avant livraison vidéo.
+Ce document appartient à la production et ne doit pas être lu dans la voix off.
+
+A — ACCROCHE ET PROMESSE
+A1/A2 : première phrase exacte : « Freezer a détruit les Saiyans pour empêcher qu'un jour, l'un d'eux le dépasse. »
+L'accroche entière compte 75 mots. La destruction des Saiyans donne le risque ; Goku le réalise sur Namek ; le retour de Black crée le renversement explicite avec « Mais des années plus tard ». Question concrète : comment l'avance a-t-elle été reprise ? Aucun chiffre de puissance inventé dans cette ouverture.
+Correction effectuée : « refusait de s'entraîner » était excessif ; la version finale dit « n'avait jamais eu besoin de s'entraîner ». Le corps développe le talent initial, les quatre mois de Golden, le contrôle mental et les dix années de Black.
+
+A4 : comparaisons réelles tirées des transcriptions de La Boîte à Récap, pas de souvenirs de vidéos :
+Thanos, 7d06Z6W6J70 : « Il y a une règle non écrite dans le cinéma de super-héros. Le méchant perd à la fin. »
+One Punch Man, B7099KgzENE : « Imagine que tu obtiennes le pouvoir dont rêve chaque être humain sur cette planète, la force absolue. »
+L'Attaque des Titans, 5jsmtyQ-MbY : « Sauf que cette histoire va changer de nature sous tes yeux trois fois. »
+Ces références utilisent une attente précise puis un renversement. Freezer propose immédiatement l'acte de destruction et la contradiction de son résultat, au lieu d'une fiche de personnage. La meilleure tension, son retour au-dessus des Saiyans, apparaît avant l'histoire de son enfance. Cette comparaison est éditoriale ; elle ne prédit pas le taux de clic ni la rétention.
+
+A5/C5 — Carte de promesse, vérifiée dans le texte final :
+Titre : TOUTE l'Histoire de Freezer — De Namek à Black Freezer.
+Empire et Saiyans : sections 01–02, lignes 3–49.
+Namek, domination et défaite : 03–10, lignes 51–259.
+Retours, erreurs et nouvelles méthodes : 11–21, lignes 261–545.
+Conséquences pour les victimes, piège des Heeters et résultat Black : 22–24, lignes 547–623.
+Réponse finale et portée sur ses relations : 25, lignes 625–633.
+Le périmètre s'arrête au résultat établi de Black dans l'arc Granolah. Le script ne promet pas une bataille finale future et ne la fabrique pas. La phrase après l'accroche fait entrer directement sur Namek, sans annoncer un plan de fabrication.
+
+B — CAUSALITÉ, BOUCLES ET PROGRESSION
+Registre des principales attentes ouvertes et résolues ; les lignes renvoient à SCRIPT.txt :
+01 / ligne 1 : reprise de l'avance → 24 / lignes 599–607 et 25 / ligne 633, dix années et maîtrise de la préparation.
+01 / lignes 15–19 : rôle réel de l'organisation dans les retours → 11 / corps reconstruit ; 13 / lignes 311–317, Sorbet, souhait puis technologie médicale.
+02 / lignes 35–49 : destruction des Saiyans et immortalité → 03 / ligne 51, concurrence des trois groupes ; 06 / lignes 139–145, souhait perdu.
+03 / lignes 57–63 : intérêt concret du sauvetage de Dende et de la perte des détecteurs → 06 / invocation et soins ; 07 / ligne 181, Freezer élimine le soigneur.
+04 / officiers débordés et appel aux meilleurs hommes → 05 / arrivée de Ginyu ; changement de corps et conséquences médicales pour Goku.
+05 / lignes 131–133 : Nail retient Freezer et ouvre une fenêtre → 06 / lignes 139–145, Porunga utilisé, Grand Chef mort, Freezer revient trop tard.
+06 / ligne 155 : force supérieure à un million et réserves → 07 / transformations successives ; 08 / défaite de Vegeta et entrée de Goku.
+08 / besoin d'une réponse à la force disponible → 09 / Kaioken, Genkidama et mort de Krilin ; 10 / Super Saiyan.
+10 / lignes 247–249 : sauver les autres avant la catastrophe → transfert par Porunga ; combat final, survie expliquée en 11.
+11 / retour avec Cold → 12 / Trunks tue Freezer, puis récit de son identité.
+13 / quatre mois et nouvelle revanche → 14 / puissance Golden ; 15 / endurance insuffisante et piège de Sorbet.
+15 / ligne 389 : planète exposée malgré la victoire de Vegeta → 16 / destruction, protection de Whis, retour de trois minutes et intervention immédiate de Goku.
+17 / contrat de résurrection et contrôle de Golden → 18 / adaptation aux règles ; 19 / lignes 469–479, élimination de Jiren, victoire de C-17 et résurrection effective.
+20 / Broly choisi comme instrument → 21 / perte de contrôle, Gogeta, sauvetage de Broly.
+22 / vengeance de Granolah orientée contre les Saiyans → récit de Monaito et responsabilité d'Elec ; 23 / coût du souhait et sacrifice de Gas.
+23 / Elec convoque celui qu'il veut éliminer → arrivée de Freezer et mort de Gas/Elec ; 24 / explication de l'entraînement hors du cadre des souhaits.
+24 / avenir après cette démonstration → 25 / conséquences présentes seulement. Aucun futur annoncé comme une révélation certaine n'est laissé impayé.
+
+Les raccords suivent les contraintes : perte des détecteurs → recherche moins fiable ; résistance des cibles → renforts ; corps de Goku blessé → récupération ; soigneur identifié → élimination ; Golden épuisé → recours au piège ; absence de Boo → recrutement ; prix du souhait → Gas consommé. Le récit ne repose pas sur une simple liste de transformations.
+317 paragraphes, maximum 109 mots par paragraphe. Le contrôle de progression a porté sur l'information, le choix, l'obstacle ou sa conséquence dans chaque bloc, pas seulement sur la présence de questions. Les rehooks sont surtout les changements de cible et de règle. Les durées de rétention restent des repères éditoriaux et ne sont pas une mesure de performance future.
+Les CTA sont brefs : ligne 79, après plusieurs conséquences concrètes sur Namek ; ligne 631, avant le dernier apport de fond. Ils demandent abonnement et personnage souhaité, avec une question de commentaire sur Freezer. Pas de publicité extérieure ni de demande de localisation imposée à un format qui n'est pas une vidéo sleep.
+Corrections de rythme : réduction du métadiscours au début, suppression de rappels répétitifs en conclusion, quatre suites trop hachées remises en phrases parlées. Le dernier paragraphe finit sur les progrès devenus nécessaires à Goku et Vegeta, sans longue sortie après cette idée.
+
+C — LISIBILITÉ, PÉRIMÈTRE ET EXACTITUDE
+Le fil directeur reste les choix d'un dirigeant confronté à des défaites et obligé d'acquérir une préparation qu'il n'avait pas pratiquée. Les subordonnés, victimes et technologies servent à expliquer les résultats, pas à accumuler des anecdotes de catalogue.
+Les noms et transformations sont présentés au moment de leur utilité. Le lecteur dispose des règles nécessaires avant les conclusions : langue de Porunga, soins de Dende, endurance Golden, élimination hors arène, prix des souhaits, dimension de l'entraînement. Les mises en garde détaillées sur les adaptations sont dans SOURCES ; la narration nomme localement anime, manga ou film quand ils divergent.
+Contrôles sensibles et corrections :
+- Les Saiyans ne deviennent pas innocents parce que Freezer les a massacrés.
+- L'information de Dodoria est une révélation au personnage, pas une scène d'enfance inventée.
+- Shenron restaure les victimes ; Porunga permet l'évacuation de Namek. Ne pas recopier une confusion présente dans un résumé officiel.
+- Sorbet vise Goku ; son rayon dévié le tue avant le passage de Vegeta en Blue. L'ordre initialement incorrect a été corrigé.
+- Feinte avec Gohan identifiée comme version anime ; conclusion du tournoi manga et anime distinguées.
+- Mort de Paragus et montée en Super Saiyan distinguées de la forme pleine puissance ultérieure de Broly.
+- Monaito a rétabli Goku et Vegeta avant la dernière reprise contre Gas. Black n'est pas expliqué seulement par des héros privés de toute énergie.
+- Pas de victoire hypothétique contre Beerus ou Whis déduite du chapitre 87.
+- Aucune motivation secrète certaine ajoutée au fait de laisser les Saiyans vivants.
+La narration ne fusionne pas Dragon Ball GT, Heroes ou des jeux avec cette trajectoire. Une affirmation flottante sur une demande de Beerus a été retirée plutôt que de conserver une attribution insuffisamment vérifiée.
+Relecture textuelle complète et relecture indépendante effectuées. La condition littérale d'une lecture humaine à voix haute sur deux heures n'a pas été exécutée ; elle reste un contrôle de production lors du rendu vocal, sans être présentée ici comme acquis.
+
+D — VOIX, CHIFFRES ET ORIGINALITÉ TEXTUELLE
+D1/D4 : mêmes ancrages réels que A4. Forme attendue : français parlé, tutoiement et « on », idée concrète puis conséquence. Exemple final rapproché de la mise en situation de One Punch Man : « L'effet est particulièrement fort si tu te souviens de Vegeta lors de sa première venue sur Terre. » La suite rappelle ce que le spectateur vient de voir et agrandit la menace, sans imiter la formulation de l'ancrage.
+Exemple rapproché du renversement de Thanos : « Vegeta a gagné l'échange de coups, mais il lui laisse encore le temps de décider d'une autre cible. » Le sens change à cause d'un geste disponible, pas d'une sentence mystérieuse du narrateur.
+Exemple de progression comparable à l'accroche d'Attaque des Titans : « Les trois groupes poursuivent les mêmes objets avec des intentions incompatibles. » Le récit donne ensuite les contraintes propres à chacun.
+Les accents français sont conservés. Pas d'élimination mécanique des caractères non ASCII : cela dégraderait la langue demandée.
+
+D2/D3 : dernier passage du scanner trailer-voice-scan.py sur la narration assemblée : 0 candidate flag, 0 occurrence mécanique de la famille antithèse/reformulation, 0 tiret cadratin dans la voix. Le compteur d'échos H18 produit 35 groupes candidats ; ses exemples sont notamment des noms/techniques (« la planète Vegeta », « le déplacement instantané ») et des fragments grammaticaux. Ils ne prouvent pas des phrases copiées. Le scanner est surtout anglophone et dégrade les accents dans ses recherches ; une relecture française complète a donc été nécessaire.
+Contrôles complémentaires : aucune phrase entière répétée d'au moins huit mots ; aucune correspondance exacte de douze mots consécutifs avec chacune des trois transcriptions de la chaîne ou avec la transcription Solar Boy utilisée en comparateur. Ce test ne prétend pas détecter toute proximité sémantique.
+0 URL, 0 note de production entre crochets dans SCRIPT. Aucun marqueur d'assistant, aucune clé, aucun titre de section à faire lire.
+
+D5 — Registre des quantités factuelles :
+Trois camps principaux sur Namek : Terriens, Vegeta, Freezer ; décomposition narrative de l'arc, documentée dans S01, S05–S09.
+Puissance supérieure à un million annoncée en deuxième forme : S02, fiche officielle « Frieza: Second Form », renvoi au chapitre 296.
+Deuxième, troisième et dernière forme : S02, S06, S07 ; ordinaux de transformations, pas des multiplicateurs calculés.
+Quatre mois de préparation de Golden : S12, résumé du film La Résurrection de F ; retour et entraînement confirmés par S10. L'attribution n'est pas un chiffre applicable à toute son espèce.
+Trois minutes du retour de Whis : S12, même film.
+Dix années d'entraînement de Black : S20, récapitulatif officiel Granolah.
+Univers six, sept et onze : identifiants diégétiques du Tournoi du Pouvoir, S13–S15 ; pas des statistiques.
+C-17 : nom du personnage vainqueur, S13 et S15 ; pas une quantité.
+Les autres pluriels ou ordres d'action sont des descriptions du récit, pas des dates ou données ajoutées. Pas d'année de naissance fabriquée, pas de multiplication chiffrée entre formes et pas de « cinq minutes » converties en durée de scène réelle.
+
+D7 — Registre des rapprochements rhétoriques retenus :
+1. Ligne 63 : « Freezer peut prendre les objets, mais les héros peuvent obtenir la confiance de ceux qui savent les utiliser. » Opposition concrète d'accès aux Dragon Balls.
+2. Ligne 221 : comparaison des subordonnés qui absorbent le danger dans l'armée et des alliés qui contribuent au Genkidama. Une comparaison de structure d'action, espacée de la précédente.
+Les négations portant sur une condition réelle, une attribution ou une limite de connaissance ne sont pas comptées comme slogans antithétiques. Les reformulations explicites « pas seulement une couleur », « pas seulement une série de nouvelles formes » et la reprise symétrique sur Trunks ont été réécrites. Aucun enchaînement de proverbes détachables ni de fermeture aphoristique de section retenu.
+
+E — SIGNATURE ÉDITORIALE ET AUTHENTICITÉ
+Grille FacelessOS, cinq indices étayés sur sept ; appréciation interne, sans garantie de classement ni de monétisation :
+1/1 Recherche propre : vérification de sources ciblées Muri, Nail, Sorbet, Cold, Paragus et Maki, au-delà d'une simple biographie générale.
+0/1 Angle confronté aux cinq meilleurs concurrents : non revendiqué. Cinq résultats de recherche ne forment pas cinq outliers validés. Un véritable comparateur a été récupéré et lu : Solar Boy, « L'histoire de Freezer », 27 min 26, se terminant explicitement avant Dragon Ball Super.
+1/1 Voix éditoriale : décisions et conséquences examinées avec les victimes et subordonnés, sans confondre coopération ponctuelle et rédemption.
+1/1 Sources identifiables : auteur du manga, fiche officielle de Muri, récapitulatif officiel Granolah cités naturellement ; détails et limites conservés hors narration.
+1/1 Connexions spécifiques : infrastructure médicale et retours ; Dende comme guide, interprète puis soigneur ; maîtrise du corps de Ginyu ; prix de la puissance chez Gas comparé au temps de préparation de Freezer.
+1/1 Construction propre : entrée par le retour de Black, parcours causal jusqu'à Super et reprise de l'angle par la préparation. Le comparateur s'ouvre sur une biographie datée et ne raconte pas Super ; aucun de ses chiffres initiaux douteux n'a été importé.
+0/1 Relecture humaine du propriétaire : non réalisée. La contre-relecture technique indépendante n'est pas présentée comme un avis humain.
+Analyse et synthèse originales ; pas de longs dialogues cités ni de scènes entièrement transcrites depuis les œuvres.
+
+FICHIERS ET MÉTHODE
+FacelessOS : master, research-and-ideation, voice-anchoring, humanizer, structure documentaire, retention-mechanics et greenlight-audit. Sections rédigées dans l'ordre, chacune sous 3 500 mots ; assemblage sans réécriture automatique.
+Livrables : SCRIPT.txt, TITRE.txt, CHAPITRES.json, SOURCES.txt, AUDIT.txt, MESURES.json. Les limites de caractères des chapitres ont été comparées aux fichiers de rédaction ; leur somme égale le comptage du script.
+Preuves de production conservées dans work/boite-recap-scripts-2026-10-27/freezer/ : chapitres, assemble.py, check_final.py, scan-final.txt et reference-overlap.json.
+
+Dernière contre-relecture : remplacement en section 19 de la formulation maladroite sur la confiance par « lui accorde sa confiance ». Aucun autre changement de narration lors de cette passe. Métadonnées, index, scanner et empreinte recalculés ensuite.

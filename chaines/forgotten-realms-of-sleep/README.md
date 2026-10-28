@@ -1,5 +1,17 @@
 # Forgotten Realms of Sleep
 
+**Décision suivante du 28 octobre : refaire les voix avec des scripts raccourcis,
+durée finale entre 2 heures et 2 h 30 maximum.** Les trois textes Daedric Princes,
+Brotherhood et Elden Ring sont raccourcis et relus ; leurs voix sont incluses dans
+la [nouvelle file de treize épisodes](../sleep-theories/scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt).
+Le début Daedric déjà payé est réutilisé. Le pilote ancien reste bloqué pour
+éviter les doublons ; seul le nouveau pilote doit poursuivre cette production.
+
+**28 octobre : voix en attente après vérification des durées.** Deux blocs de
+Daedric Princes sont déjà soumis et récupérés par un moniteur seul. La file des
+trois épisodes autorisés est suspendue ; Oblivion et New Vegas restent différés.
+Lire [la reprise actuelle](VOIX-2026-10-28.txt) avant toute nouvelle soumission.
+
 Troisieme chaine : lore de jeux video en anglais pour le sommeil. Identite visuelle : ruines, foret sombre, pierre creme, vert mousse et feu ambre. Signature : Gaming Lore to Fall Asleep To.
 
 Le lot du 18 octobre est dans [scripts-2026-10-18](scripts-2026-10-18/LIRE-EN-PREMIER.txt) : trois narrations completes, titres, chapitres, sources, mesures et audits. Lire ce dossier avant de reprendre.

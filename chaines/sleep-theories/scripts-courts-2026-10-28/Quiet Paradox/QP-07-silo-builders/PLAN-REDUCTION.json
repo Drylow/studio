@@ -1,0 +1,259 @@
+{
+  "id": "QP-07-silo-builders",
+  "channel": "Quiet Paradox",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Quiet Paradox/QP-07-silo-builders/SCRIPT.txt",
+  "source_sha256": "69d6ec4e5d0f735048746f113e8bcc10ab00f051db99f4a17fe405f8f61fef97",
+  "source_file_sha256": "af780062059726837ef65168f5c706564685e89cf3c493c60caf75b96c31f6cc",
+  "source_characters": 162712,
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 5324,
+      "reason": "Question des fondateurs, périmètre et CTA",
+      "source_chapters": [
+        1
+      ],
+      "words": 868
+    },
+    {
+      "start_character": 16335,
+      "end_character": 22393,
+      "reason": "Trace matérielle de la construction et passage inférieur",
+      "source_chapters": [
+        4
+      ],
+      "words": 979
+    },
+    {
+      "start_character": 35400,
+      "end_character": 42091,
+      "reason": "Différence Pacte/Order et gouvernement hérité",
+      "source_chapters": [
+        7
+      ],
+      "words": 1060
+    },
+    {
+      "start_character": 54828,
+      "end_character": 73113,
+      "reason": "Helen et Daniel : rencontre, enquête, chantier et proposition des fondateurs",
+      "source_chapters": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "words": 2881
+    },
+    {
+      "start_character": 79113,
+      "end_character": 89793,
+      "reason": "Coût pour Charlotte, rédaction du Pacte, séparation puis réveil de Troy",
+      "source_chapters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "words": 1677
+    },
+    {
+      "start_character": 89796,
+      "end_character": 90356,
+      "reason": "Identifier Susan comme Charlotte et maintenir le lien familial",
+      "source_chapters": [
+        19
+      ],
+      "words": 94
+    },
+    {
+      "start_character": 91552,
+      "end_character": 93218,
+      "reason": "Conserver le désaccord pratique et l’arrestation sans six développements répétitifs sur les noms",
+      "source_chapters": [
+        19
+      ],
+      "words": 259
+    },
+    {
+      "start_character": 95563,
+      "end_character": 116253,
+      "reason": "Personnel de Silo 1, séparation imposée et Safeguard",
+      "source_chapters": [
+        20,
+        21,
+        22
+      ],
+      "words": 3179
+    },
+    {
+      "start_character": 116256,
+      "end_character": 129285,
+      "reason": "Alternative de Susan, décision de Troy, opération et notes sur Helen",
+      "source_chapters": [
+        23,
+        24,
+        25
+      ],
+      "words": 2072
+    },
+    {
+      "start_character": 149976,
+      "end_character": 162711,
+      "reason": "Comparer les deux explications puis conclure sur les responsabilités individuelles",
+      "source_chapters": [
+        30,
+        31
+      ],
+      "words": 1958
+    }
+  ],
+  "words": 15027,
+  "characters": 95736,
+  "short_script_sha256": "f8009cd1b84dbbf135f9cf5e9cbd94c7ddff07cda184ff1539563b439bbaf9ea",
+  "original_duration_seconds": 14186,
+  "original_words": 25626,
+  "measured_original_words_per_minute": 108.386,
+  "estimated_seconds": 8318.623,
+  "estimated_seconds_at_106_wpm": 8505.849,
+  "estimated_seconds_at_123_wpm": 7330.244,
+  "duration_note": "Estimation au débit réel de la première génération, puis fourchette 106–123 mots/minute. Le MP3 régénéré devra être mesuré pour confirmer 2h minimum et 2h30 maximum.",
+  "edit_mode": "extractive_complete_paragraphs_original_order",
+  "paid_generation_performed": false,
+  "editorial_notes": "Conserver une enquête sur les auteurs et les intentions du projet, puis distinguer refuge, coercition initiale et décisions ultérieures. Le chapitre 19 est condensé par extraction de paragraphes entiers ; les identités, proposition et conséquence sont conservées. Aucun mot nouveau dans le script. Les faits et le périmètre des sources sont ceux du script original ; cet audit porte sur la coupe éditoriale.",
+  "removed_topics": [
+    "Procédures du Pacte et Syndrome de Billings détaillés",
+    "Réparation du générateur racontée intégralement",
+    "Catalogue des reliques et histoire familiale de Hanna",
+    "Inventaire de la Legacy et décryptage de Quinn",
+    "Exposé séparé des nanoweapons, déjà introduites au dîner",
+    "Six développements redondants sur Charlotte/Susan",
+    "Récapitulations intermédiaires sur le but initial et le métier d’ingénieur",
+    "Gestion médiatique de Juliette et classement séparé des dirigeants"
+  ],
+  "join_reviews": [
+    {
+      "join": 1,
+      "before_last_two_sentences": [
+        "Their lives depend on a building they didn't choose, maintained by people who weren't given its full history.",
+        "That's where the distance between the proposed refuge and the inherited government first becomes tangible."
+      ],
+      "after_first_two_sentences": [
+        "George's map gives Juliette a way to think about the space beneath Mechanical before she can move through it.",
+        "The silo she knows has stairs, landings and workplaces, with people assigned to keep each part running."
+      ],
+      "judgment": "Raccord cohérent : la question de l’origine reçoit une première trace physique. George, Juliette et Mechanical sont présentés dans les passages gardés.",
+      "editorial_pass": true
+    },
+    {
+      "join": 2,
+      "before_last_two_sentences": [
+        "George finds a question there that Juliette carries after him.",
+        "By the time Lukas enters the hidden passage, the accepted bottom of the silo has become a place someone can pass beyond."
+      ],
+      "after_first_two_sentences": [
+        "Bernard opens the Order when Juliette's survival leaves him facing a situation the residents of Silo 18 weren't supposed to encounter.",
+        "A cleaner has gone outside, passed beyond the familiar view, and failed to die where everyone can see her."
+      ],
+      "judgment": "Raccord de chapitre cohérent : le passage inférieur ferme son enquête matérielle ; Bernard et l’Order ouvrent une autre catégorie de preuves. Son paragraphe réintroduit la survie de Juliette.",
+      "editorial_pass": true
+    },
+    {
+      "join": 3,
+      "before_last_two_sentences": [
+        "Each man has a text he can use, a task attached to it, and limits on what it tells him.",
+        "Below them, Knox and Shirley have to survive the accusation that Bernard's reading has helped set in motion."
+      ],
+      "after_first_two_sentences": [
+        "Helen Drew meets Daniel Keene in a Washington bar, in a city where people can still go out for a drink above ground.",
+        "The closing Before Times sequence of season two gives the past an ordinary setting."
+      ],
+      "judgment": "Changement temporel explicite et compréhensible : la nouvelle scène nomme Helen, Daniel, Washington et la saison deux avant de dérouler leur enquête.",
+      "editorial_pass": true
+    },
+    {
+      "join": 4,
+      "before_last_two_sentences": [
+        "They present the project as a human seed bank, built to carry a surviving population through catastrophe.",
+        "Inside that population will be people who must maintain the refuge, raise families there, and live with the arrangements its builders leave behind."
+      ],
+      "after_first_two_sentences": [
+        "Charlotte has already encountered the danger being discussed.",
+        "At the meeting with Stenson and Thurman, the attack on her squad is identified with the nanoweapons behind the preservation proposal."
+      ],
+      "judgment": "Raccord causal conservé : le danger discuté est celui des nanoweapons déjà nommé au dîner. Charlotte a été présentée au chantier ; sa réaction suit la proposition.",
+      "editorial_pass": true
+    },
+    {
+      "join": 5,
+      "before_last_two_sentences": [
+        "When Victor encounters Troy, the audience can still recognize Daniel.",
+        "And when Helen persists in Daniel's recollection, his life before the silo continues to affect the man who has just awakened inside it."
+      ],
+      "after_first_two_sentences": [
+        "Susan is Charlotte, Daniel's sister, and that gives her encounter with Troy a history he can't fully bring into the room.",
+        "The audience can connect the people in Silo 1 to the siblings in the Before Times."
+      ],
+      "judgment": "Raccord direct : le réveil de Daniel/Troy précède l’identification autonome de Susan/Charlotte.",
+      "editorial_pass": true
+    },
+    {
+      "join": 6,
+      "before_last_two_sentences": [
+        "He meets Susan within the operating community of the silo project, where both have names and responsibilities that belong to their present lives.",
+        "For Charlotte, the family connection now exists inside an arrangement that makes it difficult to approach her brother as someone who knows her."
+      ],
+      "after_first_two_sentences": [
+        "The distinction becomes practical when the residents of Silo 17 leave their silo.",
+        "Their departure reaches Silo 1 as a situation requiring a response."
+      ],
+      "judgment": "Raccord interne relu : « The distinction » renvoie encore à la différence entre le lien familial connu du public et la connaissance fragmentée de Troy. La sortie de Silo 17 donne immédiatement son application.",
+      "editorial_pass": true
+    },
+    {
+      "join": 7,
+      "before_last_two_sentences": [
+        "Their family relationship doesn't prevent the institution from treating her refusal as an offense.",
+        "Troy remains able to proceed, while Susan loses her freedom to participate on the terms she was attempting to defend."
+      ],
+      "after_first_two_sentences": [
+        "Silo 1 has people operating the system Bernard knows as the Algorithm.",
+        "By the end of the third season, that name belongs to an arrangement with human participants, including Victor and Troy."
+      ],
+      "judgment": "Raccord cohérent : l’arrestation ferme l’exemple familial, puis le texte élargit la discussion aux opérateurs du système. Aucun pronom ne dépend des paragraphes retirés.",
+      "editorial_pass": true
+    },
+    {
+      "join": 8,
+      "before_last_two_sentences": [
+        "When those survivors eventually face danger beyond the building, they face a different mechanism.",
+        "The pipe inside Silo 17 has already been stopped."
+      ],
+      "after_first_two_sentences": [
+        "Susan proposes targeting the sheriff so the people leaving Silo 17 will retreat.",
+        "Her suggestion gives Troy a different response to the crowd outside."
+      ],
+      "judgment": "Continuité conservée : le Safeguard interne est arrêté ; l’alternative extérieure de Susan introduit le choix menant aux drones. Les deux mécanismes restent distincts.",
+      "editorial_pass": true
+    },
+    {
+      "join": 9,
+      "before_last_two_sentences": [
+        "The latest note joins the others.",
+        "Victor has a continuing record; Troy still has a question."
+      ],
+      "after_first_two_sentences": [
+        "Stenson and Thurman describe the underground project as a way to preserve human beings against the danger of nanoweapons.",
+        "Their human seed-bank proposal gives the silos a purpose that fits their physical scale: people could survive below ground while conditions above threatened their existence."
+      ],
+      "judgment": "Raccord de synthèse cohérent : les notes sur Helen ferment le cas humain, puis les deux explications reprennent la proposition des fondateurs en nommant leurs auteurs.",
+      "editorial_pass": true
+    }
+  ],
+  "source_text_sha256": "69d6ec4e5d0f735048746f113e8bcc10ab00f051db99f4a17fe405f8f61fef97",
+  "script_sha256": "f8009cd1b84dbbf135f9cf5e9cbd94c7ddff07cda184ff1539563b439bbaf9ea",
+  "review_status": "reviewed",
+  "join_separator": "\n\n",
+  "reconstruction_verified": true,
+  "short_script_path": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\work\\sleep-shortened-2026-10-28\\scripts\\QP-07-silo-builders\\SCRIPT-COURT.txt"
+}

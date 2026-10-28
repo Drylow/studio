@@ -1,0 +1,11 @@
+LA BOÎTE À RÉCAP — PROMPT MINIATURE
+
+Références de composition et de typographie, dossier REFERENCES-MINIATURES à la racine du lot (copie Bureau : Verification du lot/References miniatures) :
+one-punch-man.jpg
+attaque-titans.jpg
+
+PROMPT
+Create a completed 16:9 YouTube thumbnail for a French One Piece retrospective using the two attached La Boîte à Récap anime thumbnails only as layout, lettering and rendering references. Two equal panels, rough white vertical torn-paper seam in the middle, huge expressive chest-up faces. LEFT: instantly recognizable early-adventure Monkey D. Luffy, black hair, iconic straw hat with red band, scar underneath his left eye, red sleeveless vest, cheerful determined grin, blue sunny sea and the Going Merry faintly behind. RIGHT: instantly recognizable Luffy Gear Five, white cloudlike fluffy hair and white eyebrows, red-pink eyes, very wide joyful grin, open white jacket and visible X scar on his chest, white looping smoke cloud around shoulders. No straw hat on his head on the right. Dark violet background with warm gold radiance, celebratory powerful expression, not evil or angry. Preserve genuine One Piece anime proportions and clean outlined richly shaded illustration. Both heads very large, the right version should feel like a clear evolution. Text exactly like reference 1: only "DÉBUT" in white lower left, "FIN" vivid yellow lower right, huge rounded thick italic uppercase with a strong black outline and shadow, fully inside margins. No extra lettering, badge, logo or arrows. The image represents the late form reached by arrival at Elbaf, not the end of the series. Output one finished thumbnail, not a contact sheet.
+
+ÉTAT : image créée avec le générateur intégré, regardée, puis exportée en JPG 1280 × 720 pour la publication. Le PNG conserve le fichier original.
+Les mots DÉBUT / FIN désignent les bornes du récap, sans promettre la fin d’une œuvre encore en cours.

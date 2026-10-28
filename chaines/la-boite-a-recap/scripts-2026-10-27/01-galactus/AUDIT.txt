@@ -1,0 +1,106 @@
+GALACTUS — AUDIT DE LIVRAISON
+27 octobre 2026
+
+ÉTAT
+VERDICT FACELESSOS : PASS DE L'AUDIT TEXTUEL A–E, après corrections et nouvelle passe sur la version figée. E1 atteint 5/7 avec les preuves détaillées ci-dessous; top 5 intégral et revue humaine restent non acquis.
+Script intégral rédigé, relu par sections, corrigé et contrôlé techniquement. Les dix-neuf sections ont aussi reçu une contre-lecture éditoriale indépendante dans le travail d'équipe. Aucune lecture humaine ou écoute d'une voix produite n'est revendiquée.
+Le contrôle rédactionnel et les limites de continuité sont documentés ci-dessous. Le premier décompte conservateur E1 retenait 4/7. Une réévaluation du critère de recherche à partir des investigations #109 et #41–45, déjà réalisées et appliquées, établit le cinquième point. Ce score ne suppose ni une comparaison intégrale au top 5 ni une revue humaine.
+
+MESURES
+24 957 mots de narration, 156 788 caractères avec espaces et sauts, 131 446 sans blancs.
+19 sections, 378 paragraphes; plus longue section : 1 493 mots, sous le plafond de 3 500 mots par séquence d'écriture.
+Débit de référence de la chaîne : environ 181–182 mots/minute, d'après les trois transcriptions et durées du dossier de recherche commun. Estimation : 137,13 à 137,88 minutes, soit environ 2 h 17 à 2 h 18. Même à 200 mots/minute : 124,78 minutes.
+La durée finale n'est pas mesurée : aucun MP3 n'a été généré. Pour conserver au moins 120 minutes, le débit moyen ne doit pas dépasser environ 207,97 mots/minute. Les pauses éventuelles ne sont pas comptées comme remplissage.
+SHA-256 du SCRIPT.txt UTF-8 : 4bb4ebf68cdb960e1e6f22f0bdea85ea1703ddcfb513f6b623edce38d0550c19
+CHAPITRES.json porte des offsets exacts en caractères et les empreintes de chaque section; aucun faux timestamp de narration n'est fourni.
+
+A — ACCROCHE ET PROMESSE
+Première phrase : « Reed Richards a sauvé Galactus, et des survivants l'ont fait juger pour ça. »
+Hook : 82 mots, premier paragraphe, ligne 1. Le pivot « Mais avant de dévorer des mondes » ouvre le retour à Galan.
+Promesse : suivre le survivant, ses hérauts, ses morts et ses tentatives de changer. La formulation initiale qui faisait du Lifebringer un point final a été corrigée, puisque le corps du récit continue après sa rechute.
+Carte de promesse : procès ouvert GAL-01 → résolution GAL-06; Galan/Taa → GAL-01/02; hérauts → GAL-03/05/06/08/10/11; morts et retours → GAL-09/17/18; tentatives de changer → GAL-10/14/15/16; autres versions identifiées → GAL-13/18/19.
+Pas de titre promettant une date ultime, chaque apparition de Galactus ou une fin définitivement établie.
+
+B — PROGRESSION ET RÉTENTION
+Colonne vertébrale : l'existence de Galactus provoque des décisions; leurs conséquences obligent les personnages à chercher d'autres solutions. Les transitions suivent un changement d'objectif, de dépendance ou de capacité.
+Registre de boucles principales, avec positions exactes dans la version livrée :
+1. Pourquoi Reed est-il jugé après un sauvetage ? Ouverture lignes 1–3, GAL-01; paiement GAL-06, lignes 187–225.
+2. Que produit la survie de Galan ? GAL-01, lignes 7–33; premier repas et fonction dans GAL-02, lignes 35–69.
+3. Le service de Norrin protège-t-il les autres mondes ? GAL-03, lignes 71–107; rébellion et prix personnel GAL-04, lignes 109–147.
+4. Un héraut brutal résout-il les objections ? Terrax GAL-05, puis rébellion GAL-06; nouvelle tentative Morg GAL-08 et conséquences dans cette même section.
+5. Tuer Galactus supprime-t-il le danger ? GAL-08, ligne 303, vers GAL-09, lignes 305–345; Abraxas et retour traités dans GAL-09.
+6. Peut-on modifier sa fonction ? Galan humain GAL-10, lignes 347–385; Lifebringer GAL-14/15, lignes 513–593; rechute Saiph GAL-16.
+7. Pourquoi Thor accepte-t-il ce marché ? GAL-16, ligne 631; réponse, mensonge et rupture GAL-17, lignes 633–675.
+8. La mort face à Thor est-elle définitive ? GAL-17, lignes 673–675; retour concret GAL-18, lignes 677–689.
+Les films et Parabole sont un prolongement comparatif annoncé, pas un nouvel arc prétendument situé entre deux épisodes de la même continuité.
+CTA unique après le paiement de la première bataille terrestre, ligne 145 : invitation légère à s'abonner et à proposer le prochain personnage. Aucun CTA commercial, aucune demande d'action extérieure ou de commentaires artificiels. La conclusion se limite au parcours du personnage.
+
+C — CLARTÉ ET CONTRÔLES FACTUELS
+Le script contient uniquement de la prose française prête à narrer, sans titre de chapitre lu, URL, timecode ou indication de montage. Aucun dialogue fictif attribué à un personnage, aucun témoignage inventé.
+Les explications de méthode ont été réduites à une phrase de périmètre au début et aux distinctions de version nécessaires. Les documents de production portent les réserves de recherche.
+Points corrigés après contre-lecture :
+- Hook : changement de promesse pour inclure les revers après le Lifebringer.
+- GAL-08 : disparition au Nullificateur décrite comme apparemment fatale; Galactus et Morg reviennent, aucune fin irréversible ni technique d'évasion inventée.
+- GAL-11 : Drax/Moondragon libèrent le Surfer; celui-ci permet la libération de Galactus. Richard Rider est distinct de Frankie/Nova.
+- GAL-13 : Franklin adulte venu du futur; Reed Ultimate distinct du Reed principal; Galactus principal entre dans l'univers Ultimate.
+- GAL-17 : l'explication Black Winter est une révélation tardive, identifiée comme telle. La vision de Thor n'est pas présentée comme une action immédiatement vécue par Galactus.
+- GAL-18 : la fusion avec le Destructeur précède le dernier numéro; action du Surfer et de Johnny sur l'armure de Wrath, puis séparation par Uatu, remplace un passage trop vague sur la restauration.
+- GAL-19 : versions 2007 et 2025 séparées; Shalla-Bal héraut seulement dans la version concernée; aucun sort ultérieur imaginé.
+Fact → source : table exhaustive par section dans SOURCES.txt. Les anciens arcs parfois accessibles seulement par synthèse sont signalés; les numéros bibliographiques ne sont pas présentés comme tous lus intégralement.
+La qualification « vérifié » porte donc sur le recoupement décrit, pas sur une expertise primaire complète de plusieurs décennies de publications.
+
+D — VOIX, HUMANISATION ET TECHNIQUE
+Ancrage utilisé : ouvertures de trois vidéos réelles de La Boîte à Récap, Thanos (7d06Z6W6J70), One Punch Man (B7099KgzENE), L'Attaque des Titans (5jsmtyQ-MbY). Ces transcriptions règlent le registre; elles ne servent pas de banque de faits ni de formules à recopier.
+Formes effectivement lues, espacements de transcription réunis :
+Thanos : « Mais à la fin, le héros se relève ».
+One Punch Man : « Imagine que tu obtiennes le pouvoir dont rêve chaque être humain ».
+L'Attaque des Titans : « Et pendant des années, c'est exactement ce que tu as regardé. »
+Correspondance dans le script : « Tu sauves une vie, puis cette vie détruit d'autres planètes. Comment tu défends ton choix ? » (GAL-01). Même accès oral par un problème concret et le tutoiement; formulation et exemple propres au présent récit.
+Autre exemple : « Galactus arrive affamé. Le manque d'énergie l'a rendu vulnérable, ce qui donne à Terrax l'impression que son plan peut fonctionner. » (GAL-06). Une action courte suivie de sa cause, plutôt qu'une succession de slogans.
+Les répétitions, annonces de récit et petites séries hachées ont reçu une passe française complémentaire. L'outil anglais seul ne peut certifier la voix française.
+
+D3 — SCANNER
+Commande exécutée sur les paragraphes nus du fichier complet : python skills/facelessos/trailer-voice-scan.py .../01-galactus/SCRIPT.txt
+Premier scan : 5 candidats staccato. Réécritures appliquées aux passages GAL-04, GAL-08, GAL-12, GAL-15, GAL-17.
+Scan final : 0 candidat de forme, 0 HARD-BAN, plancher mécanique antithèse 0. Zéro tiret cadratin, URL, caractère de remplacement Unicode et paragraphe exactement dupliqué.
+Le scanner conserve 34 alertes lexicales H18, dont « les conséquences de », « son ancien maître », « la Zone négative » et le nom des Quatre Fantastiques. Il tronque mal certains accents dans ses motifs anglais. Ces alertes ne sont PAS effacées du rapport : elles portent sur de courtes expressions ou des noms nécessaires, pas sur 34 passages identiques. Leur contexte a été examiné; la réapparition d'un objet/fait introduit un nouvel effet dans l'arc concerné. Le rapport brut est conservé dans le dossier de travail privé.
+La mécanique « enlever tout non-ASCII » n'a pas été appliquée aux lettres françaises : accents et œ sont préservés, conformément à la langue et aux instructions de la production. Aucun emoji ou ponctuation décorative dans la narration.
+
+D5 — CHIFFRES
+1966 → S01/S02; moitié de la vie → S10; cinq planètes → S20; films 2007/2025 → S28/S29. Voir SOURCES.txt pour noms propres numérotés et les quantités contextuelles. Aucun score de puissance, nombre total de victimes, durée cosmologique ou statistique de succès ajouté sans preuve.
+
+D6/D7 — CONTRASTES ET CADENCE
+Recherche des formes françaises après révision, en complément d'un plancher anglais de zéro. Les négations factuelles et les désaccords entre personnages ne sont pas comptés automatiquement comme une formule rhétorique; ils sont distingués des clauses volontairement symétriques.
+Registre conservateur des formulations mises en balance conservées :
+1. « Ils ont reçu une explication [...] Ils n'ont pas récupéré leur maison. » GAL-06, ligne 217. Le coût humain subsiste après le verdict.
+2. « Son ancien maître avait besoin qu'on lui livre des mondes. » puis la confiance livrée au dieu autoproclamé, GAL-18, ligne 707. Comparaison entre servitude cosmique et Parabole.
+Une formule de type aphoristique conservée : « Celui qui a détruit tant de traces conserve aussi la mémoire d'un univers. » GAL-19, ligne 751. Elle accompagne le cadre publié de History of the Marvel Universe et n'annonce pas une nouvelle morale générale.
+Deux constructions de contraste et une formule aphoristique au sens conservateur ci-dessus, non adjacentes. Aucune répétition littérale « ce n'est pas X, c'est Y » conservée comme gimmick. Les multiples différences entre versions sont des explications factuelles; leur présence ne vaut pas à elle seule une antithèse de bande-annonce.
+
+E — AUTHENTICITÉ : 5/7 ÉTABLIS, PAS 7/7
+Recherche propre approfondissant la biographie générale : 1. Deux investigations ciblées ont produit des corrections matérielles. Pour Silver Surfer #109, la synthèse générale S01 ne précisait pas la perspective du Surfer après le désastre. Le compte rendu S12 montre qu'il ne détecte plus les énergies et croit les combattants morts : GAL-08 a été corrigé pour distinguer cette disparition perçue de la fin définitive, puisque Galactus et Morg reparaissent. Pour Reckoning War, S01 ne détaillait pas la résolution et pouvait faire confondre le numéro final avec toute la résurrection. Le preview S24, le résumé numéro par numéro S25 et le recoupement S26 établissent une fusion déjà active avant le dénouement, l'absorption de l'armure de Wrath par l'action de Johnny et du Surfer, puis la séparation opérée par Uatu. Ces actions ont remplacé les phrases générales de GAL-18. Ce point repose sur ces recherches et leurs modifications visibles, pas sur une prétendue découverte inédite de canon.
+Angle distinct du top 5 : 0. Un comparateur direct consulté et une recherche de cinq résultats; pas cinq analyses intégrales validées.
+Voix éditoriale : 1. Responsabilité de Reed et coût pour les survivants; dépendance du héraut; conditions des accords; conséquences des transformations.
+Sources spécifiques : 1. Œuvres nommées dans la narration et table par saga dans SOURCES.txt : Secret Wars, Silver Surfer Black, Parabole, History of the Marvel Universe, entre autres.
+Connexions non évidentes : 1. Ecce/Uatu; retour humain/Lifebringer; enjeu du procès et résurrections; héraut dépendant/obéissance religieuse dans Parabole.
+Structure propre : 1. Ouverture au procès, remontée à Galan, chaîne de décisions et section finale comparant les adaptations; le comparateur Argorok commence par la présentation et l'histoire éditoriale. Cela établit une différence avec le comparateur consulté, pas avec tout YouTube.
+Revue humaine : 0. Aucune validation humaine inventée. La relecture et la contre-lecture de rédaction ne sont pas substituées à ce critère.
+E2 : aucun projet de duplication multi-chaînes, aucune publication massive décidée ici, aucun remplacement de noms dans une transcription. Le contrôle indépendant du dossier commun a confirmé, sur les 24 957 mots de cette version, zéro reprise exacte de quinze mots avec les six références, zéro paragraphe dupliqué et aucun flag bloquant. Cela détecte les reprises littérales, sans prétendre certifier toute forme possible de ressemblance sémantique.
+E4 : sans objet pour cette livraison de texte. Aucun montage, voix ou visuel final n'a été produit ou évalué.
+La conformité d'une future vidéo ou sa monétisation n'est pas garantie par ce contrôle de texte.
+
+NOUVELLE PASSE A–E SUR LA VERSION FIGÉE
+Empreinte du script inchangée par rapport aux mesures ci-dessus. A : accroche relue, 82 mots, première phrase et promesse identiques; chaque promesse retrouve son développement dans la carte de chapitres. B : ouvertures et sorties des dix-neuf sections réexaminées avec le registre des huit boucles; CTA unique après valeur, conclusion bornée. C : corrections #109 et Reckoning comparées aux documents consultés; séparation comics/Parabole/films et limites d'accès maintenues; offsets exacts contrôlés. D : résultats finaux du scanner reconfirmés et les 34 alertes lexicales examinées sans la troncature d'affichage; noms et expressions françaises nécessaires, aucune nouvelle alerte de forme, registre des contrastes inchangé. E : cinq points documentés, top 5 et revue humaine à zéro. Aucune nouvelle correction du texte demandée par cette passe. Le relevé de contrôle figure dans le dossier de travail sous fresh-audit-A-E.json.
+
+FICHIERS FACELESSOS EFFECTIVEMENT CONSULTÉS
+faceless-scripts-os-master.md, dont long-form et checklist anti-slop
+research-and-ideation-skill.md
+voice-anchoring-skill.md
+script-structures-skill.md, branche documentaire
+retention-mechanics-skill.md
+humanizer-skill.md, H1–H19 et procédure
+greenlight-audit-skill.md, A–E et règles de preuve
+trailer-voice-scan.py, exécuté sur le fichier complet après corrections
+
+LIMITES DE LIVRAISON
+La voix définitive doit être mesurée avant d'afficher une durée exacte. Les accents sont préservés en UTF-8. Aucun média, compte, crédit ou service payant n'a été utilisé pour générer une voix. Le titre, le script, les sources, les chapitres et les mesures sont séparés pour éviter d'envoyer les notes d'audit au narrateur.

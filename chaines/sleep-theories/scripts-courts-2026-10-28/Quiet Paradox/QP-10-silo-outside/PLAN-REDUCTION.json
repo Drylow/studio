@@ -1,0 +1,280 @@
+{
+  "id": "QP-10-silo-outside",
+  "channel": "Quiet Paradox",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Quiet Paradox/QP-10-silo-outside/SCRIPT.txt",
+  "source_sha256": "2b59eeb8cc0d1dbe43a5207d28a5cf6c387c3573344df795edaca753d9085d8e",
+  "source_file_sha256": "a806f48ced7b67e0c28c10c82781c343d6730c0ccfa10c7dcb8c9f35748e10bb",
+  "source_characters": 167251,
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 15590,
+      "reason": "Écran public, découverte d’Allison et expérience de Holston avec CTA",
+      "source_chapters": [
+        1,
+        2,
+        3
+      ],
+      "words": 2578
+    },
+    {
+      "start_character": 15593,
+      "end_character": 33183,
+      "reason": "Distinguer les deux images, rôle du ruban et passage de la crête",
+      "source_chapters": [
+        4,
+        5,
+        6
+      ],
+      "words": 2861
+    },
+    {
+      "start_character": 33186,
+      "end_character": 33677,
+      "reason": "Présenter l’entrée de Silo 17 comme destination de secours",
+      "source_chapters": [
+        7
+      ],
+      "words": 85
+    },
+    {
+      "start_character": 36324,
+      "end_character": 37434,
+      "reason": "Entrée effective et respiration de l’air intérieur",
+      "source_chapters": [
+        7
+      ],
+      "words": 177
+    },
+    {
+      "start_character": 39160,
+      "end_character": 39690,
+      "reason": "Bilan de l’arrivée : abri réel, sans accueil organisé",
+      "source_chapters": [
+        7
+      ],
+      "words": 89
+    },
+    {
+      "start_character": 90209,
+      "end_character": 102467,
+      "reason": "Safeguard : menace interne distincte de l’attaque extérieure",
+      "source_chapters": [
+        16,
+        17
+      ],
+      "words": 1942
+    },
+    {
+      "start_character": 102470,
+      "end_character": 114287,
+      "reason": "Observateurs de Silo 1 et drones",
+      "source_chapters": [
+        18,
+        19
+      ],
+      "words": 1915
+    },
+    {
+      "start_character": 126032,
+      "end_character": 144677,
+      "reason": "Menace décrite par les fondateurs, séparation initiale et marche de Bernard sans protection",
+      "source_chapters": [
+        22,
+        23,
+        24
+      ],
+      "words": 2923
+    },
+    {
+      "start_character": 144680,
+      "end_character": 147581,
+      "reason": "Radio et distinction entre traversée possible et habitat durable",
+      "source_chapters": [
+        25,
+        26
+      ],
+      "words": 462
+    },
+    {
+      "start_character": 147584,
+      "end_character": 159480,
+      "reason": "Comparer zone interdite administrée et refuge dans une catastrophe plus vaste",
+      "source_chapters": [
+        27,
+        28
+      ],
+      "words": 1841
+    },
+    {
+      "start_character": 165834,
+      "end_character": 167250,
+      "reason": "Refermer le parcours sur les limites du cadre de la caméra",
+      "source_chapters": [
+        30
+      ],
+      "words": 233
+    }
+  ],
+  "words": 15106,
+  "characters": 94264,
+  "short_script_sha256": "82e5eecaa40644525b138c01b48ce7af6141f42e225899d2082f792a894ae127",
+  "original_duration_seconds": 14676,
+  "original_words": 26998,
+  "measured_original_words_per_minute": 110.376,
+  "estimated_seconds": 8211.558,
+  "estimated_seconds_at_106_wpm": 8550.566,
+  "estimated_seconds_at_123_wpm": 7368.78,
+  "duration_note": "Estimation au débit réel de la première génération, puis fourchette 106–123 mots/minute. Le MP3 régénéré devra être mesuré pour confirmer 2h minimum et 2h30 maximum.",
+  "edit_mode": "extractive_complete_paragraphs_original_order",
+  "paid_generation_performed": false,
+  "editorial_notes": "Préserver la distinction centrale entre image trompeuse, atmosphère dangereuse et violence organisée. L’airlock est condensé autour de l’approche, de l’entrée et de la respiration ; aucun segment ne promet ensuite une description retirée. La théorie de la zone interdite conserve ses limites et ne transforme pas une hypothèse en certitude. Aucun mot nouveau.",
+  "removed_topics": [
+    "Long passage mécanique dans l’airlock et répétitions sur le besoin d’abri",
+    "Reconstitution séparée de la sortie collective de Silo 17",
+    "Vie du silo abandonné, inondation et survie de Jimmy détaillées",
+    "Préparation complète du costume du retour",
+    "Archives, observation des étoiles et recherche de la porte inférieure développées séparément",
+    "Alternative proposée par Susan détaillée séparément",
+    "Rencontre de Helen et Daniel en ville",
+    "Long inventaire des besoins d’une expédition finale"
+  ],
+  "join_reviews": [
+    {
+      "join": 1,
+      "before_last_two_sentences": [
+        "His last moments carry him out of that view and back to her.",
+        "He dies on the exposed ground beside his wife, after removing the helmet that had kept her from his sight."
+      ],
+      "after_first_two_sentences": [
+        "The birds give Juliette something she can recognize.",
+        "In the green view inside her helmet, their movement matches the recording she's already seen."
+      ],
+      "judgment": "Raccord comparatif cohérent : la fin de Holston est suivie de l’indice permettant à Juliette de comprendre le même décor apparent. Le nom de Juliette réancre la scène.",
+      "editorial_pass": true
+    },
+    {
+      "join": 2,
+      "before_last_two_sentences": [
+        "Juliette continues across that area with an expanded map and very little shelter of her own.",
+        "Behind her, the camera still faces the hollow she has left."
+      ],
+      "after_first_two_sentences": [
+        "The bodies around the entrance to Silo 17 leave Juliette with very little room to approach it without passing the people who came out.",
+        "They lie along the route between the underground structure and the open ground."
+      ],
+      "judgment": "Raccord géographique direct : la sortie du cadre et les autres sites mènent à la porte de Silo 17, nommée dès la première phrase.",
+      "editorial_pass": true
+    },
+    {
+      "join": 3,
+      "before_last_two_sentences": [
+        "Whatever happened here, the entrance is still a possible shelter, and she needs to get inside while her suit can still protect her.",
+        "A structure that resembles her own silo offers the most practical destination she's found."
+      ],
+      "after_first_two_sentences": [
+        "She gains entry, and the journey outside becomes an arrival inside another human structure.",
+        "There's no welcoming group waiting to explain the place."
+      ],
+      "judgment": "Raccord interne direct : l’approche urgente mène à « She gains entry ». Le détail de manipulation des portes a été supprimé, pas l’entrée ni son résultat.",
+      "editorial_pass": true
+    },
+    {
+      "join": 4,
+      "before_last_two_sentences": [
+        "For Juliette, that's a direct answer to the most immediate question the entrance presents.",
+        "Reaching the building has brought her to an environment in which she can breathe without keeping her head enclosed."
+      ],
+      "after_first_two_sentences": [
+        "Juliette has crossed between two separate openings and reached the interior of Silo 17 alive.",
+        "The journey has required a functioning suit, movement over exposed ground, and passage through an entrance bordered by bodies."
+      ],
+      "judgment": "Bilan cohérent de la même action : Juliette respire à l’intérieur, puis le dernier paragraphe résume sa traversée et situe son nouveau refuge. Répétition courte acceptable pour clore la scène.",
+      "editorial_pass": true
+    },
+    {
+      "join": 5,
+      "before_last_two_sentences": [
+        "That leaves her in a new and very concrete situation: she's sheltered beneath the surface, in another silo, without the people or routines that made her own home familiar.",
+        "For now, she can breathe there, and she has enough shelter to begin finding her way farther in."
+      ],
+      "after_first_two_sentences": [
+        "The warning Lukas encounters below the silo concerns a pipe that could kill the people living above him.",
+        "Down near the water, far from Bernard's archive and the ordinary work of IT, his search reaches something that can answer him."
+      ],
+      "judgment": "Changement d’enquête compréhensible : après l’arrivée de Juliette, Lukas est nommé et sa recherche inférieure est resituée. Son rôle de shadow et la lettre de Quinn sont expliqués dans le passage gardé.",
+      "editorial_pass": true
+    },
+    {
+      "join": 6,
+      "before_last_two_sentences": [
+        "The internal safeguard could fail, and the residents could still be attacked through a separate external mechanism.",
+        "There's no need to assign every danger on the surface to that single installation beneath the silo."
+      ],
+      "after_first_two_sentences": [
+        "In Silo 1's control room, the residents leaving Silo 17 are visible to people who aren't standing at its doorway.",
+        "Their departure becomes an event that can be followed elsewhere, inside another inhabited part of the underground system."
+      ],
+      "judgment": "Raccord causal conservé : l’attaque externe est distinguée du Safeguard ; le contrôle de Silo 1 montre ensuite qui peut observer et commander cette attaque.",
+      "editorial_pass": true
+    },
+    {
+      "join": 7,
+      "before_last_two_sentences": [
+        "The wasteland contains exposed routes between underground shelters, and Silo 1 can send machines into those routes.",
+        "For the crowd outside Silo 17, the drones turn that capability into an attack before departure can become escape."
+      ],
+      "after_first_two_sentences": [
+        "Stenson describes a nanoweapon danger when the underground project is explained in the Before Times.",
+        "That gives the proposed refuge a particular purpose."
+      ],
+      "judgment": "Retour temporel explicite : après les moyens opérationnels actuels, « Before Times » situe la proposition de refuge et sa menace initiale.",
+      "editorial_pass": true
+    },
+    {
+      "join": 8,
+      "before_last_two_sentences": [
+        "What physically sustains Juliette's earlier journey is absent from his: protection that holds long enough for her to keep moving.",
+        "Bernard's walk ends on the exposed ground outside the refuge."
+      ],
+      "after_first_two_sentences": [
+        "The radio connection across the silos becomes useful through Lukas and Kennedy's journey.",
+        "After surviving the attack outside, they reach Silo 17 with Lukas wounded."
+      ],
+      "judgment": "Raccord cohérent : après le contraste entre protection et exposition de Bernard, la radio ouvre une possibilité de communication. Lukas et Kennedy sont nommés, leur état et leur destination immédiatement précisés.",
+      "editorial_pass": true
+    },
+    {
+      "join": 9,
+      "before_last_two_sentences": [
+        "The next practical question concerns the place a traveler hopes to reach: who maintains it, what it can provide, and whether the people inside will help.",
+        "A surface made passable for a journey can still lead to a refuge whose own survival is unfinished."
+      ],
+      "after_first_two_sentences": [
+        "Victor watches the operation against the people leaving Silo 17.",
+        "That detail gives the ground around the entrances a different character from the one available through a cafeteria screen."
+      ],
+      "judgment": "Passage de faits à théorie cohérent : la distinction traversée/habitat se conclut ; l’observation de Victor fournit la preuve de départ pour la zone interdite administrée.",
+      "editorial_pass": true
+    },
+    {
+      "join": 10,
+      "before_last_two_sentences": [
+        "The residents leaving Silo 17 face an additional intervention.",
+        "Both experiences can belong to the same damaged world, with people below ground still deciding what happens to those who come out."
+      ],
+      "after_first_two_sentences": [
+        "The cafeteria camera still faces the ground outside Silo 18.",
+        "It gives residents a shared view, with the ridge marking the edge of what they can watch."
+      ],
+      "judgment": "Conclusion naturelle : les deux hypothèses peuvent coexister ; le cadre de la caméra revient comme mesure de ce que les habitants savent et ignorent.",
+      "editorial_pass": true
+    }
+  ],
+  "source_text_sha256": "2b59eeb8cc0d1dbe43a5207d28a5cf6c387c3573344df795edaca753d9085d8e",
+  "script_sha256": "82e5eecaa40644525b138c01b48ce7af6141f42e225899d2082f792a894ae127",
+  "review_status": "reviewed",
+  "join_separator": "\n\n",
+  "reconstruction_verified": true,
+  "short_script_path": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\work\\sleep-shortened-2026-10-28\\scripts\\QP-10-silo-outside\\SCRIPT-COURT.txt"
+}

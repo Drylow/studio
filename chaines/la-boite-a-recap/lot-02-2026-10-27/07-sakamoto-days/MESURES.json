@@ -1,0 +1,23 @@
+{
+  "mots_narration": 24808,
+  "methode_mots": "[^\\W_]+(?:[’'-][^\\W_]+)*",
+  "caracteres_espaces_inclus": 155152,
+  "caracteres_hors_espaces": 129990,
+  "octets_utf8": 162321,
+  "sha256_script_utf8": "6dc8568928f7f6a5477681bbf100a129b6f0a27c3974b733740c5d259333e559",
+  "minimum_mots": 24500,
+  "minimum_mots_atteint": true,
+  "duree_estimee_minutes_182_mots_min": 136.31,
+  "duree_estimee_minutes_200_mots_min": 124.04,
+  "duree_audio_mesuree": null,
+  "audio_genere": false,
+  "nombre_chapitres": 22,
+  "hook_mots": 88,
+  "paragraphes_dupliques": 0,
+  "phrases_dupliquees_8_mots_min": [],
+  "tirets_cadratins": 0,
+  "url_narration": 0,
+  "perimetre": "Anime Sakamoto Days, saison 1, épisodes 1 à 22 ; arrêt au lancement des missions JCC et Kyoto.",
+  "recherche_et_mesure": "2026-10-28",
+  "voice_id_chaine": "IHngRooVccHyPqB4uQkG"
+}

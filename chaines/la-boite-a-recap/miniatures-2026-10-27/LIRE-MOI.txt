@@ -1,0 +1,43 @@
+LA BOÎTE À RÉCAP — MINIATURES DU 27 OCTOBRE 2026
+
+PRÊTES : FREEZER ET SUKUNA
+
+Utiliser les fichiers JPG pour YouTube : 1280 × 720, moins de 2 Mo chacun.
+Les PNG conservent les originaux de génération.
+
+02-freezer.jpg : première forme sur Namek / Black Freezer.
+03-sukuna.jpg : incarnation dans Yuji / forme originelle restaurée.
+
+GALACTUS — NON LIVRÉ
+Les essais du générateur intégré ont été refusés sans motif précis.
+L'utilisateur a ensuite autorisé l'API configurée : cet essai a également
+renvoyé un refus de sécurité (HTTP 400), sans motif détaillé.
+Le prompt et les références sont conservés. Aucun appel n'est encore actif.
+Aucune miniature Galactus terminée ne figure dans ce dossier.
+
+DIRECTION ARTISTIQUE
+Même composition que les miniatures publiées de la chaîne : deux portraits,
+déchirure blanche verticale, DÉBUT blanc à gauche et FIN jaune à droite,
+typographie grasse inclinée avec contour noir. Rendu anime pour les deux images.
+FIN désigne ici une apparence tardive représentative dans le langage graphique
+de la chaîne, sans promettre un portrait de l'ultime scène des personnages.
+
+CONTRÔLES EFFECTUÉS
+Relecture visuelle des PNG et des exports JPG, puis second regard indépendant :
+personnages reconnaissables, séparation centrale, lisibilité et accent de DÉBUT,
+texte non rogné. Sukuna : anomalie du nombre d'yeux corrigée ; quatre yeux
+visibles. Le cadrage poitrine laisse la bouche abdominale hors champ.
+
+MODE DE PRODUCTION
+Freezer et Sukuna : générateur intégré.
+Galactus : générateur intégré puis CLI via l'API configurée, sans image produite.
+Prompts et corrections conservés dans PROMPTS.txt. L'essai API a repris le
+premier prompt GALACTUS avec les références Thanos puis Docteur Doom.
+Conversion technique JPG et redimensionnement 1280 × 720 sans retouche graphique.
+Aucune publication YouTube effectuée.
+
+RÉFÉRENCES PUBLIÉES DE LA CHAÎNE
+Thanos : https://www.youtube.com/watch?v=7d06Z6W6J70
+Docteur Doom : https://www.youtube.com/watch?v=e8jVVEXPwOs
+One Punch Man : https://www.youtube.com/watch?v=B7099KgzENE
+L'Attaque des Titans : https://www.youtube.com/watch?v=5jsmtyQ-MbY

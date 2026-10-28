@@ -1,8 +1,33 @@
 # Reprise — Deep Void Theories et Quiet Paradox
 
-État mis à jour le **25 octobre 2026**, fuseau **Europe/Paris**.
+État mis à jour le **28 octobre 2026**, fuseau **Europe/Paris**.
+
+**Priorité actuelle : versions courtes, entre 2 h et 2 h 30 maximum.**
+L'utilisateur a choisi de refaire les dix narrations Deep Void / Quiet Paradox.
+Les [treize scripts raccourcis et leur reprise](scripts-courts-2026-10-28/LIRE-EN-PREMIER.txt)
+sont prêts, avec les trois premières Forgotten Realms. La file de voix est lancée,
+les durées finales restent à vérifier. Les anciennes versions longues sont
+préservées et remplacées par vidéo seulement après les contrôles.
 Ce dossier est le point d'entrée pour une nouvelle IA, même sans l'historique du chat.
 Le paquet autonome sur le Bureau porte le nom **REPRISE - Deep Void et Quiet Paradox**.
+
+## Dossier unique — 28 octobre
+
+À la demande de l'utilisateur, les ensembles scripts, miniatures et voix des
+quatre chaînes sont réunis dans **VIDEOS - TOUT REGROUPE** sur le Bureau.
+Les sept anciens dossiers ont été déplacés dans son sous-dossier d'archives.
+Un sous-dossier par chaîne puis par vidéo contient le script, le titre et la
+miniature. Les dix vidéos Deep Void et Quiet Paradox contiennent aussi leur MP3
+complet `VOICEOVER.mp3` et `TITRE-ET-DESCRIPTION.txt`. Les dix audios durent de
+3 h 40 à 4 h 25 : les scripts ont été surdimensionnés pour le débit réel.
+Forgotten Realms : deux blocs de Daedric Princes sont soumis, puis la file des
+trois voix autorisées a été suspendue après la question utilisateur sur ces durées.
+Aucun MP3 complet Forgotten Realms n'est livré. Voir
+[la reprise des voix](../forgotten-realms-of-sleep/VOIX-2026-10-28.txt).
+L'utilisateur a précisé qu'il parlait de MP3.
+Les fichiers existants ont été regroupés, sans nouvelle génération ni assemblage
+entre épisodes différents. Voir [le relevé](regroupement-2026-10-28/REGROUPEMENT.json)
+et [la reprise globale actualisée](../REGROUPEMENT-VIDEOS-2026-10-28.txt).
 
 ## Dix narrations livrees — 25 octobre
 
@@ -69,8 +94,8 @@ Copie sur le Bureau : **Voix sleep - 15 octobre 2026**. Ne pas régénérer les 
 Le [dossier du 15 octobre](miniatures-2026-10-15/README.md) contient les six nouvelles
 propositions exportées : Force, Guilde, Paul, Silo, FROM, Severance. Force a été créée
 via le proxy API autorisé, avec deux Jedi humains originaux et des vaisseaux Star Wars.
-Les cinq autres viennent du générateur intégré. Les images ont été revues visuellement.
-Le 17 octobre, l'utilisateur demande de les appliquer aux six uploads. Copie simple : Miniatures sleep - 15 octobre 2026
+Les cinq autres viennent du générateur intégré. Les images sont revues visuellement,
+sans choix utilisateur ni publication. Copie simple : Miniatures sleep - 15 octobre 2026
 sur le Bureau.
 
 ## Lire dans cet ordre

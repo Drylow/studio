@@ -1,0 +1,75 @@
+{
+  "observed_on": "2026-10-27",
+  "source": "Algrow get_channel_videos",
+  "channel_url": "https://www.youtube.com/@LaBoiteARecap",
+  "channel_id": "UCsUUdc6_60KZ9Q0BRg6TI_A",
+  "count": 9,
+  "has_more": false,
+  "sort": "popular",
+  "scope": "Public video counters, not private channel analytics",
+  "videos": [
+    {
+      "title": "TOUTE l'Histoire de Thanos en 90 Minutes!",
+      "url": "https://www.youtube.com/watch?v=7d06Z6W6J70",
+      "views": 24266,
+      "duration": 5388,
+      "upload_date": "2026-07-17T23:05:19Z"
+    },
+    {
+      "title": "TOUTE l'Histoire de One Punch Man en 50 Minutes",
+      "url": "https://www.youtube.com/watch?v=B7099KgzENE",
+      "views": 12673,
+      "duration": 3038,
+      "upload_date": "2026-07-09T16:54:20Z"
+    },
+    {
+      "title": "TOUTE l'Histoire de L'Attaque des Titans en 70 Minutes",
+      "url": "https://www.youtube.com/watch?v=5jsmtyQ-MbY",
+      "views": 7700,
+      "duration": 4346,
+      "upload_date": "2026-07-25T11:46:57Z"
+    },
+    {
+      "title": "Docteur DOOM : l'Histoire du Nouveau Méchant de Marvel expliquée en 70 Minutes!",
+      "url": "https://www.youtube.com/watch?v=e8jVVEXPwOs",
+      "views": 4928,
+      "duration": 4212,
+      "upload_date": "2026-08-18T23:54:13Z"
+    },
+    {
+      "title": "TOUTE l'Histoire de Rick et Morty en 1h24! (la VRAIE histoire cachée)",
+      "url": "https://www.youtube.com/watch?v=cZ53V5z2A2g",
+      "views": 809,
+      "duration": 5090,
+      "upload_date": "2026-09-17T22:00:21Z"
+    },
+    {
+      "title": "TOUTE l'Histoire de Demon Slayer en 55 Minutes!",
+      "url": "https://www.youtube.com/watch?v=uLiWhQFL0_M",
+      "views": 309,
+      "duration": 3257,
+      "upload_date": "2026-08-23T22:00:37Z"
+    },
+    {
+      "title": "TOUTE l'Histoire d'Avatar en 73 Minutes (le Dernier Maître de l'Air)",
+      "url": "https://www.youtube.com/watch?v=JDFCCHKOqcI",
+      "views": 167,
+      "duration": 4409,
+      "upload_date": "2026-09-05T22:00:00Z"
+    },
+    {
+      "title": "TOUTE l'Histoire de Solo Leveling en 85 Minutes! (du Rang E à la VRAIE Fin)",
+      "url": "https://www.youtube.com/watch?v=Cnpg4dKNuNQ",
+      "views": 159,
+      "duration": 5154,
+      "upload_date": "2026-09-12T22:00:39Z"
+    },
+    {
+      "title": "TOUTE l'Histoire de Re:Zero en 71 Minutes (avant la Saison 4)",
+      "url": "https://www.youtube.com/watch?v=JlQPGiJ_Qyo",
+      "views": 130,
+      "duration": 4277,
+      "upload_date": "2026-09-03T21:00:36Z"
+    }
+  ]
+}

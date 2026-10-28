@@ -1,0 +1,89 @@
+LA BOÎTE À RÉCAP — AUDIT DU SCRIPT LES QUATRE FANTASTIQUES
+Contrôle du 28 octobre 2026. Texte de narration seulement, sans génération audio.
+
+VERDICT : rédaction complète, contrôles techniques réussis et revue éditoriale effectuée ; validation FacelessOS stricte NON attestée sans réserves.
+Ce document distingue le travail réalisé d'une certification absolue. Le contrôle comparatif n'a pas porté sur cinq outliers exhaustivement classés et aucune relecture par l'utilisateur ni écoute du futur audio n'a eu lieu. Ces limites ne sont pas masquées par un PASS global.
+
+ÉTAT LIVRÉ
+24 821 mots, 154 232 caractères espaces et retours compris, 26 chapitres.
+Estimation : 136,38 minutes à 182 mots/minute ; 130,64 à 190 ; 124,11 à 200.
+Le minimum de deux heures est respecté dans ces hypothèses de débit. La durée réelle dépendra de la voix et doit être mesurée après génération. Aucune durée audio n'est prétendue ici.
+Empreinte SHA-256 : bcb8c8c3f2f1f8199b1fa1552d9de6d860bd82ac38ddd3d4e457b0be3b938613
+
+A — ACCROCHE
+Première phrase : « Reed Richards regarde son meilleur ami et comprend que son voyage dans l'espace lui a détruit la vie. »
+Les deux premiers paragraphes font 176 mots, environ 58 secondes au débit de référence. Le coût physique pour Ben est concret dès le premier paragraphe. La promesse se précise au second : comprendre comment la famille vit avec l'accident et avec la promesse de Reed. Pivot vers les origines dans le troisième paragraphe, qui fixe aussi la séparation comics/films.
+CTA discret d'abonnement et question « depuis où tu écoutes » présents dans le troisième paragraphe. Aucun CTA de génération audio ou ordre à un outil dans la narration.
+Réserve : ouverture longue à l'échelle d'une vidéo courte, cohérente avec le format long validé ; la rétention effective ne peut être garantie sans données de publication.
+
+B — RÉTENTION ET FERMETURE DES QUESTIONS
+Registre des principales boucles, lignes du SCRIPT.txt en LF :
+- Corps de Ben et promesse de Reed : ouverture L1–3 ; réponses partielles L329–351, L473–495 et L545–563 ; retour conclusif L585–605.
+- Identité du souverain réveillé par Johnny : ouverture L43 ; résolution L45–65.
+- Obsession de Doom : ouverture L61–65 ; développement L67–89 ; résultat à l'échelle cosmique L425–447.
+- Menace de Galactus : ouverture L113 ; réponse L115–135.
+- Danger des pouvoirs de Franklin : ouverture L159 ; choix de Reed et rupture L161–183 ; autre rôle des pouvoirs L233–255.
+- Johnny enfermé derrière le portail : ouverture L329–351 ; survie et retour L353–375.
+- Disparition du radeau familial : ouverture L421–423 ; réunion et reconstruction L443–471.
+- Enfants envoyés dans l'avenir : ouverture L515–519 ; retour L535–539.
+Une question non soldée sur les Skrulls transformés en vaches a été remplacée par une conséquence concrète dans le même paragraphe.
+Les retours sur Reed ne recopient pas une scène : ils comparent des conséquences nouvelles, de Franklin à la Latvérie, de la prison à la séparation des enfants.
+Réserve : plusieurs sections comportent de l'analyse relationnelle après l'action ; le montage devra soutenir ce rythme avec des scènes et des repères clairs, sans prétendre qu'un texte seul prouve la rétention.
+
+C — CLARTÉ, PROMESSE, CONTINUITÉ
+Carte des promesses : accident et coût = chapitres 1–2 ; Doom = 3–4, 12–14, 18–19, 24 ; place de Sue = 8–10, 14, 23 ; enfants = 7–8, 11–12, 15–16, 20–23 ; reconstruction = 18–20 ; versions cinéma = 24–25.
+Les comics principaux constituent le fil. Les versions Ultimate, Battleworld et les adaptations sont nommées séparément. Le retour final vers Fantastic Four #51 est annoncé comme un retour ancien, pas comme un événement postérieur à One World Under Doom.
+Le titre evergreen n'annonce aucune durée exacte et la description précise « grandes étapes » plutôt qu'une exhaustivité de chaque numéro. Aucun événement de Doomsday n'est inventé. Aucun calendrier de sortie futur n'est affirmé.
+La narration ne reproduit pas de dialogues des œuvres. Les états d'esprit sont des lectures éditoriales étayées par les actes, non des citations cachées.
+Réserves documentaires : accès partiel aux sources primaires (guides, notices, récap officiel), pas de lecture intégrale de toutes les planches. Voir SOURCES.txt. Le début de One World Under Doom est traité ; le lot ne prétend pas raconter chaque parution de 2026.
+
+D — VOIX ET HUMANISATION
+Ancrage réellement relu : La Boîte à Récap, One Punch Man, B7099KgzENE.
+Formes citées : « Tout commence avec un homme parfaitement ordinaire. » ; « Alors, il pose sa mallette ».
+Lignes du nouveau texte correspondantes : « L'exposition commence une fois le vaisseau dans l'espace. » ; « Ben fait son travail de pilote. Il ramène l'appareil et permet aux autres de sortir vivants. »
+Principe conservé : un acteur identifiable, un geste, puis sa conséquence. Le texte ne reproduit pas les comparaisons ou plaisanteries de l'ancrage. L'ouverture Thanos sert aussi à calibrer l'adresse directe, sans copier sa règle initiale ni ses images.
+Scanner FacelessOS final : zéro HARD-BAN, zéro candidat staccato/voix de bande-annonce, zéro tiret cadratin. Les trois petits groupes de phrases courtes repérés au premier passage ont été réunis sans changer les faits.
+Échos : 26 signaux de n-grammes, majoritairement noms propres et expressions grammaticales. « Zone négative », « Fondation du Futur » et « Maître des Maléfices » restent identiques pour la clarté. « Ce qui s'est passé » ou « qu'il ne peut pas » n'est pas une répétition de fait. Zéro paragraphe dupliqué exactement dans les 303 paragraphes.
+Le retour final à la promesse de Ben est volontaire et modifie la réponse par son mariage et sa parentalité. Les rappels de Reed sont rattachés à de nouveaux événements, mais leur densité mérite une écoute lors du contrôle sonore.
+
+D5 — NOMBRES ET DURÉES DU RÉCIT
+Le script ne contient aucun chiffre arabe, aucune statistique de vues, de revenus ou de force inventée. Les nombres narratifs significatifs écrits en lettres sont :
+- Quatre membres fondateurs : Fantastic Four #1 et guide officiel de l'équipe.
+- Deux enfants de Reed/Sue, deuxième grossesse et deux enfants adoptés par Ben/Alicia : guide officiel The Children of the Fantastic Four ; Empyre: Fantastic Four ; fiche Alicia Masters.
+- Une semaine humaine chaque année pour Ben : fiche officielle Future Foundation ; arc Three et récap officiel.
+- Un an de déplacement du quartier : Fantastic Four (2022) #4 et #14, notice officielle et guide Things Reed Richards Feels Guilty About.
+- Films deux mille cinq, deux mille sept, deux mille quinze : historique AP des adaptations et œuvres identifiées dans SOURCES.txt.
+- Film deux mille vingt-cinq et imaginaire des années soixante : fiche officielle Marvel et article The Walt Disney Company du 24 juillet 2025.
+Les ordinaux narratifs comme « première rencontre » ne prétendent pas compter toutes les apparitions éditoriales. Les dates des publications figurent dans les sources, pas comme une chronologie diégétique artificielle.
+
+D6 — LISTE MAÎTRE
+Pas d'ouverture « la plupart des gens », pas de promesse de vérité cachée, pas d'adjectifs promotionnels pour remplacer un fait, pas d'accumulation de slogans. Zéro reframe littéral « ce n'est pas X, c'est Y » trouvé dans la recherche ciblée. Les contrastes qui subsistent décrivent des choix distincts et des continuités différentes.
+
+D7 — ANTITHÈSES ET APHORISMES
+Plancher mécanique du scanner : 0.
+Registre de la comparaison rhétorique conservée : chapitre 4, « Reed aime résoudre un problème » / « Victor veut souvent que la réponse confirme sa supériorité ». Une opposition de méthode, développée ensuite par leurs actions.
+Les constructions conditionnelles « il peut X et rester Y » servent à expliquer une contradiction du personnage, sans produire une série de formules symétriques. Aucun aphorisme final en forme de slogan n'a été retenu ; le dernier geste revient à Ben, au vaisseau et aux enfants.
+Réserve : la détection automatisée est anglophone et ne certifie pas à elle seule la prose française. La lecture éditoriale a été effectuée par l'agent, pas par un humain ni par une écoute.
+
+E — ORIGINALITÉ ET AUTHENTICITÉ
+Éléments documentés : analyse des choix familiaux, rapprochements entre la décision sur Franklin et le quartier déplacé, rôle actif d'Alicia, sources nommées dans le récit (Unthinkable, Secret Wars, Cet homme, ce monstre), retour final thématique. Texte rédigé pour ce sujet, pas traduction de la vidéo de référence.
+Évaluation prudente : 4/7 signaux clairement documentés (voix éditoriale, sources spécifiques, liens analytiques, organisation avec retour thématique). Recherche indépendante complémentaire réelle, mais le critère strict « faits absents de la première page » n'est pas certifié. Angle comparé à deux références repérées, pas à cinq outliers exhaustifs. Relecture humaine : 0, non revendiquée.
+Signaux rouges connus : aucune duplication de paragraphe ni reprise verbatim identifiée ; aucune publication multiple ou cadence quotidienne décidée dans cette tâche. La vidéo de référence sert à comparer la structure, pas à fournir des phrases. La publication et le montage devront conserver ce travail original.
+E4 vidéo générée : non applicable à cette livraison de texte. Aucune garantie de monétisation ni de performance YouTube n'est donnée.
+
+CONTRÔLES TECHNIQUES REPRODUCTIBLES
+VERIFICATION.json : compte de mots, caractères et SHA conformes ; 26 offsets valides ; zéro paragraphe dupliqué ; zéro caractère de remplacement ; zéro URL ou balise de montage ; CTA présents.
+CHAPITRES.json : offsets réels en caractères Unicode et en mots ; débuts inclus, fins exclues. Les heures sont seulement des estimations à 182 mots/minute.
+Les commandes de comptage/assemblage se trouvent dans le travail privé ; elles ne génèrent pas la prose.
+
+SKILLS EFFECTIVEMENT CONSULTÉS
+research-and-ideation-skill.md ; faceless-scripts-os-master.md ; script-structures-skill.md ; retention-mechanics-skill.md ; voice-anchoring-skill.md ; humanizer-skill.md ; greenlight-audit-skill.md ; trailer-voice-scan.py.
+
+À VÉRIFIER APRÈS VOIX
+Mesurer la durée, contrôler début/fin et chaque jonction de bloc, vérifier les noms propres prononcés (Reed, Sue, Doom, Jo-Venn, N'Kalla, T'Challa, Annihilus, Valeria, Ribić) et recalculer les chapitres YouTube. Ne pas annoncer ces contrôles comme déjà réalisés.
+
+RELECTURE DE RECUL DU 28 OCTOBRE
+Chronologie du chapitre 9 corrigée : retour de Reed et Johnny de Battleworld, remplacement de Ben par Jennifer, puis complications de grossesse et tentative de secours avec Octavius. La version antérieure plaçait le deuil avant le récit du départ et pouvait faire croire que Reed était encore sur Battleworld. Le guide officiel Fantastic Four In Comics et la notice Fantastic Four #267 confirment l'ordre corrigé. Les détails du trajet d'Octavius sont recoupés avec le synopsis Marvel Database de ce numéro, source secondaire explicitement signalée.
+Révision stylistique appliquée : la seconde moitié du chapitre 24 a été resserrée. Les considérations générales sur la mise en scène sont remplacées par les choix déjà établis de Ben, Sue et Johnny : mariage et enfants, rupture sur Franklin, sacrifice dans la Zone négative. Ces rappels sont explicitement rétrospectifs ; ils n'inventent ni nouvel épisode ni intrigue de Doomsday. La transition ne garde que la séparation nécessaire entre continuités des comics et films.
+
+Comptage final harmonisé avec le lot : suites Unicode de lettres/chiffres, apostrophes et traits d'union intérieurs conservés. Le total de 24 821 mots remplace les comptages antérieurs fondés sur les seules espaces. Les 26 segments, leurs offsets et leurs estimations ont été recalculés. Les contrôles finaux ne montrent ni paragraphe dupliqué, ni balise, ni URL dans la narration.

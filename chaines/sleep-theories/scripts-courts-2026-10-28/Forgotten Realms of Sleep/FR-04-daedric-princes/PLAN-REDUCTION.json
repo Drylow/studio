@@ -1,0 +1,4247 @@
+{
+  "id": "FR-04-daedric-princes",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Forgotten Realms of Sleep/FR-04-daedric-princes/SCRIPT.txt",
+  "source_sha256": "61eb73c8fcc79a0e24670b78d942d687970267558444d9036b7846877dcb0f96",
+  "source_text_sha256": "61eb73c8fcc79a0e24670b78d942d687970267558444d9036b7846877dcb0f96",
+  "source_characters": 165471,
+  "source_words": 26017,
+  "output_sha256": "29331af7cd333a78a5ada79768d14a2fca73c42d9c68dc5cf13fd7b98fa0dbde",
+  "words": 15165,
+  "characters": 95839,
+  "script_sha256": "29331af7cd333a78a5ada79768d14a2fca73c42d9c68dc5cf13fd7b98fa0dbde",
+  "ranges": [
+    {
+      "start_character": 0,
+      "end_character": 483,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 0,
+      "words": 82,
+      "sha256": "1053a88be02ca60907e02aebce85cdc9aa42cef58357983adea070d250451fc6"
+    },
+    {
+      "start_character": 483,
+      "end_character": 984,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 1,
+      "words": 80,
+      "sha256": "be07974fb5ff1af5292fab1445bfb2443c26a3884573476c4f2797ba501e09f2"
+    },
+    {
+      "start_character": 984,
+      "end_character": 1546,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 2,
+      "words": 91,
+      "sha256": "9d9a5c4c32523514596957d6509432e346b99e9d5e94a2c2b2b37ed890cd421e"
+    },
+    {
+      "start_character": 1546,
+      "end_character": 1754,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 3,
+      "words": 37,
+      "sha256": "bc4061ea51f772e93d1498d6fde886972eef9b9b4464c9b0cae8095fbada3de9"
+    },
+    {
+      "start_character": 1754,
+      "end_character": 2269,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 4,
+      "words": 80,
+      "sha256": "4861666b978a69f764b9ea7981b336158c9d5ef779dd63bfbfd3e2a7b3f75b90"
+    },
+    {
+      "start_character": 2269,
+      "end_character": 2810,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "bd4cf5a787ccc0228c7e55661fea6c7b6caf03898f1f3e7412d192f878a4190f"
+    },
+    {
+      "start_character": 2810,
+      "end_character": 3356,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 6,
+      "words": 92,
+      "sha256": "25f33e06d89558fde886aa6554c9529bd542bb4be5b7e8ef48122c8287be1476"
+    },
+    {
+      "start_character": 3356,
+      "end_character": 3867,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 7,
+      "words": 86,
+      "sha256": "6208d63b1dfa6807e24ffbdcca8ccec224b7aee10e9ce9c29b48e73612c493d1"
+    },
+    {
+      "start_character": 3867,
+      "end_character": 4396,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 8,
+      "words": 84,
+      "sha256": "bb958d3185e363e8a6162b90bdfbfab13f5465836061c897415de4e874bbb594"
+    },
+    {
+      "start_character": 4396,
+      "end_character": 4958,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 9,
+      "words": 87,
+      "sha256": "e15c70275f4cbdb8262e243f8f2d92929fcb69b704a79f3ac39511c46d1f9bcc"
+    },
+    {
+      "start_character": 4958,
+      "end_character": 5489,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 10,
+      "words": 89,
+      "sha256": "30b8575ee01c8db45b7d39541885b780ee42d8957f4b7ae3e944bb8ba613f307"
+    },
+    {
+      "start_character": 5489,
+      "end_character": 6025,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 0,
+      "words": 86,
+      "sha256": "c5d433345394379e16d09f63d5c6886422118ddd0228240a6c066ba47e7e442e"
+    },
+    {
+      "start_character": 6025,
+      "end_character": 6552,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 1,
+      "words": 85,
+      "sha256": "657d4723f0d94b2cd0da91b4d8436e494b1531ae9e86375f17283e9612dae5fa"
+    },
+    {
+      "start_character": 6552,
+      "end_character": 7107,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 2,
+      "words": 85,
+      "sha256": "d3a17351086920a966ce004e522ce31db90291ac0618544a298d0bb542ed5bf2"
+    },
+    {
+      "start_character": 7107,
+      "end_character": 7687,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 3,
+      "words": 88,
+      "sha256": "de8a2f1ed960f36d2ecd302709f7aae66f847d90b99482bdc8d747ec07593787"
+    },
+    {
+      "start_character": 7687,
+      "end_character": 8207,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 4,
+      "words": 84,
+      "sha256": "1cbcb54cf13033c884a1ca79c9578ab2fea281f7d2bf5f529469b28031185bff"
+    },
+    {
+      "start_character": 8207,
+      "end_character": 8801,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 5,
+      "words": 92,
+      "sha256": "738fb7b676484b32d5ff74469e213964f3d34e05be982feddef19e0d45542eab"
+    },
+    {
+      "start_character": 8801,
+      "end_character": 9344,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 6,
+      "words": 87,
+      "sha256": "7113ddbedfb97a1708b1006c35ac0094890de6b977ec9fdb33e8a207f9e8ee9f"
+    },
+    {
+      "start_character": 9344,
+      "end_character": 9866,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "c76d0dfba619b7b81dfe6c6df28960c5732928e512422b4f4eaf50a98c14b9f0"
+    },
+    {
+      "start_character": 9866,
+      "end_character": 10411,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 8,
+      "words": 89,
+      "sha256": "e31be145acc77b2f91f28a5f2b3387ccaf7fc2bff2388b34a9b06de66badafc7"
+    },
+    {
+      "start_character": 10411,
+      "end_character": 11000,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 9,
+      "words": 94,
+      "sha256": "77d91970281a1c0cd01b0717c38d48f5c42816fb68fa271b720b6d171c35329a"
+    },
+    {
+      "start_character": 11000,
+      "end_character": 11556,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 10,
+      "words": 88,
+      "sha256": "c7174391f877e5dd4ec07472bf50c1e26015a7223e637b0bacbf3f8d202f83da"
+    },
+    {
+      "start_character": 11556,
+      "end_character": 12104,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 11,
+      "words": 87,
+      "sha256": "8fe0fc7e5eb4a569e0ff63e62114435e55d68b280c49fba8a10153805b0c5c71"
+    },
+    {
+      "start_character": 12104,
+      "end_character": 12659,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 0,
+      "words": 90,
+      "sha256": "71c540bf1f3dfcc17a216e162f3e67b2193fee3f46e6eb7fac880a5385a8cd70"
+    },
+    {
+      "start_character": 12659,
+      "end_character": 13209,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 1,
+      "words": 86,
+      "sha256": "fd751efbf5f297f07138009b7793317c96ae3e1bbc87ea231cdfb54b37cddf97"
+    },
+    {
+      "start_character": 13209,
+      "end_character": 13752,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 2,
+      "words": 89,
+      "sha256": "e2b06f62dbdd3f482cb2c012b31fb820e9835177971ba571771b3aff298956d7"
+    },
+    {
+      "start_character": 13752,
+      "end_character": 14350,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 3,
+      "words": 89,
+      "sha256": "6996686ab7a9294dd244df4c9f6eb7726f1e99ef99570ba0baddeae3a434e3dc"
+    },
+    {
+      "start_character": 14350,
+      "end_character": 14943,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 4,
+      "words": 87,
+      "sha256": "7bfb0cef26d7ca81b235814b3d7a04f290ecb49e26f70e807cfcbea203275c2c"
+    },
+    {
+      "start_character": 14943,
+      "end_character": 15583,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 5,
+      "words": 98,
+      "sha256": "ecd559278cfd06f874277f4982ec42a78d083597770857ace03fafefe2b9883c"
+    },
+    {
+      "start_character": 15583,
+      "end_character": 16107,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 6,
+      "words": 85,
+      "sha256": "37962bd907e5271ee2b2207f37cbed5bf69eba1fad1d70234086538982a1118a"
+    },
+    {
+      "start_character": 16107,
+      "end_character": 16637,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "408e2d2636cde2a3cbf6b10c21e6da8654ce4d8a525f8fa04f626f37a79c304a"
+    },
+    {
+      "start_character": 16637,
+      "end_character": 17288,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 8,
+      "words": 100,
+      "sha256": "afe133e2c339e090c56b4868c43fa324c91f0921fa48689331570c9605b891f6"
+    },
+    {
+      "start_character": 17288,
+      "end_character": 17799,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 9,
+      "words": 83,
+      "sha256": "4e4b0fee2241bd10163849b4cacb4fdd4ca5bd00b30934cb4fdcf56a69acfd42"
+    },
+    {
+      "start_character": 17799,
+      "end_character": 18298,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 0,
+      "words": 81,
+      "sha256": "b587db9a5b2ea4f7500361266bf320aa4394d401199dd81d707ecb4eb238f7fe"
+    },
+    {
+      "start_character": 18298,
+      "end_character": 18863,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 1,
+      "words": 86,
+      "sha256": "38c1714fa8b3062bffca1fc6a2b4a1b3ef8222bfe8054c6707d653f09da88164"
+    },
+    {
+      "start_character": 18863,
+      "end_character": 19433,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 2,
+      "words": 88,
+      "sha256": "551304a2dd33db650d4471feaae2d157fbee7bc2f340c62d8f63232f71934abe"
+    },
+    {
+      "start_character": 19433,
+      "end_character": 20019,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 3,
+      "words": 90,
+      "sha256": "295d58705f21ae62ef7d8748952bd0705faa3f8e257fa9619ae230e0fa639acc"
+    },
+    {
+      "start_character": 20019,
+      "end_character": 20584,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 4,
+      "words": 90,
+      "sha256": "822798bd8b377e5eaad2af0fc65bf013849a57f66ace01327f36705be58d2a88"
+    },
+    {
+      "start_character": 20584,
+      "end_character": 21151,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 5,
+      "words": 88,
+      "sha256": "c82aec9958af0df7a6b487185d768e75393334a0a85effabd61a72bfc5d47359"
+    },
+    {
+      "start_character": 21151,
+      "end_character": 21713,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 6,
+      "words": 89,
+      "sha256": "38191922661c674781e4098073a2e732f35c5e9ea41ec8f80240ccc53aed3e2a"
+    },
+    {
+      "start_character": 21713,
+      "end_character": 22260,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "a392274ae160ba202393284fb2b6a0821f4ca5edad422ab25e801609d4d2a61d"
+    },
+    {
+      "start_character": 22260,
+      "end_character": 22681,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 8,
+      "words": 67,
+      "sha256": "5154a5cdd650a17d97b770e0a2c47566282ecdcc3085b29408e8d0b6294914a2"
+    },
+    {
+      "start_character": 22681,
+      "end_character": 23265,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 0,
+      "words": 91,
+      "sha256": "ed5b649dfc2604bd7647adbf42e6143a2450095f836fe04f340a5b9edcc8abe1"
+    },
+    {
+      "start_character": 23265,
+      "end_character": 23745,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 1,
+      "words": 76,
+      "sha256": "5f9476e3614aec5aa5dc56a2b8ae5f91b184517901a9454ae89a3a87f1bf81a6"
+    },
+    {
+      "start_character": 23745,
+      "end_character": 24299,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 2,
+      "words": 81,
+      "sha256": "3b45918ca55c1104aa2b67282dfdf61b9c25ef0441b6224d0e25b9fa83d53f0c"
+    },
+    {
+      "start_character": 24299,
+      "end_character": 24852,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 3,
+      "words": 83,
+      "sha256": "413924b7dedc093acdab9ea68a7c2d0db7f153d18fc332ecc0f57ed3162e9aee"
+    },
+    {
+      "start_character": 24852,
+      "end_character": 25348,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 4,
+      "words": 77,
+      "sha256": "143dea80168be1a9b21ec246e1f1fb50a677c2a93321b3531e55f6ed4ccf1310"
+    },
+    {
+      "start_character": 25348,
+      "end_character": 25885,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 5,
+      "words": 82,
+      "sha256": "3b2837b699e6f4671f0f4b066f22b306255bb53e2e32dfa58db74b11243717a8"
+    },
+    {
+      "start_character": 25885,
+      "end_character": 26466,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 6,
+      "words": 88,
+      "sha256": "30a3dd3ab1d5f519d14359f6c0a43e2ec2674580817f7e5f07e2bb1fa5d005f9"
+    },
+    {
+      "start_character": 26466,
+      "end_character": 27010,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 7,
+      "words": 87,
+      "sha256": "2465541a45ac31aa441c787ea41ce1630f5e62aa6e5cf6fe4ad8cf00939e5b93"
+    },
+    {
+      "start_character": 27010,
+      "end_character": 27515,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 8,
+      "words": 75,
+      "sha256": "f51650a700805efddb3ef4323ed2bce20603d103d12a6b9de7476a766688ca09"
+    },
+    {
+      "start_character": 27515,
+      "end_character": 28044,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 9,
+      "words": 81,
+      "sha256": "fe5769f710f0a2d669873966804cf3508f62e0b2bd1ba9477ac848735fedcb16"
+    },
+    {
+      "start_character": 28044,
+      "end_character": 28625,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 10,
+      "words": 82,
+      "sha256": "c3b39e9a63a5c12027f596d6077ce38323460b1d0a1092ffb781e4f7bc9c3fb0"
+    },
+    {
+      "start_character": 28625,
+      "end_character": 29203,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 11,
+      "words": 84,
+      "sha256": "19e78704cdb334947a5e21ffe1ed23d1103572c788bafc1084a340589bcc04b8"
+    },
+    {
+      "start_character": 29203,
+      "end_character": 29716,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 0,
+      "words": 82,
+      "sha256": "70e02a831a229449b958084ad45c4251cc6ea489406aa5e3615a422dbbf6c7ad"
+    },
+    {
+      "start_character": 29716,
+      "end_character": 30243,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 1,
+      "words": 84,
+      "sha256": "a853b18dbb3152f7c0d1f349ee451a672ab494f4c4d341dcbaaa736c057396a7"
+    },
+    {
+      "start_character": 30243,
+      "end_character": 30780,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 2,
+      "words": 83,
+      "sha256": "09fb86d65ce782ac79018dc8d28e8f2c6104ce6dc1eb6a5d0b373f474169dec4"
+    },
+    {
+      "start_character": 30780,
+      "end_character": 31353,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 3,
+      "words": 89,
+      "sha256": "24440fb6d926348f20625e68144f41829cb029a273c4d27e1bd4c29e5957259f"
+    },
+    {
+      "start_character": 31353,
+      "end_character": 31942,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 4,
+      "words": 90,
+      "sha256": "35463b88265ef143750e72997e6772f52c080733211cf3e770db94c14af07d7e"
+    },
+    {
+      "start_character": 31942,
+      "end_character": 32511,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 5,
+      "words": 94,
+      "sha256": "589b940bd27bb46a53e2bbf578d3bb4b1cc1890d514734a8d54b1778b0019613"
+    },
+    {
+      "start_character": 32511,
+      "end_character": 33026,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 6,
+      "words": 82,
+      "sha256": "34999825f8f762b501aa1570e0dff93958cfd271cc23c2383ea59741df18442e"
+    },
+    {
+      "start_character": 33026,
+      "end_character": 33545,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 7,
+      "words": 86,
+      "sha256": "74d463485308b3128c014d09ebb3fa7e6e11182c634c0997cacec5db5d0d7302"
+    },
+    {
+      "start_character": 33545,
+      "end_character": 34080,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 8,
+      "words": 92,
+      "sha256": "88dd8f9bdf5855a865de30b145f9b7a0948f2db23c9383fcede3c838047c1a01"
+    },
+    {
+      "start_character": 34080,
+      "end_character": 34631,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 9,
+      "words": 91,
+      "sha256": "c9265337d42fdfa8baf82c6bd7b0a592b95d9a57b8d142a72b80c8a1ab3e3d04"
+    },
+    {
+      "start_character": 34631,
+      "end_character": 35167,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 10,
+      "words": 86,
+      "sha256": "0e4263989beb72699496f71fd17088a0128fbcb329be0cf75fbb8874f230672b"
+    },
+    {
+      "start_character": 35167,
+      "end_character": 35706,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 11,
+      "words": 89,
+      "sha256": "9974e3089cd2312f6a694300f62cbe38e233b4171dd5c14a3fce9ea853e864de"
+    },
+    {
+      "start_character": 35706,
+      "end_character": 36254,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 0,
+      "words": 84,
+      "sha256": "ff67e7056b651e167446426b02000ef297955dd397324bd63d895cb1f56c2086"
+    },
+    {
+      "start_character": 36254,
+      "end_character": 36777,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 1,
+      "words": 86,
+      "sha256": "d0753150b09884eef94496012935f8aed19331729dfeaccc32efbe12ed733758"
+    },
+    {
+      "start_character": 36777,
+      "end_character": 37355,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 2,
+      "words": 86,
+      "sha256": "1d76003d17efec7e8d29eb3b7e96bf045f5d7973c8d640b4cbacdbc91b9eca4f"
+    },
+    {
+      "start_character": 37355,
+      "end_character": 37958,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 3,
+      "words": 91,
+      "sha256": "e1a82f4ba536a3de6176cc7dd114c084157a2341ae7898db4b59af88eeca415f"
+    },
+    {
+      "start_character": 37958,
+      "end_character": 38553,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 4,
+      "words": 87,
+      "sha256": "493efc7ae9cb32c338cd8745e26f9cd2639866e567184517ee07205be1b9f21c"
+    },
+    {
+      "start_character": 38553,
+      "end_character": 39181,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 5,
+      "words": 88,
+      "sha256": "8094b105436d1504a7e451cc9e1e1280d7f599fb698c26f37045bd8dcb75bb4c"
+    },
+    {
+      "start_character": 39181,
+      "end_character": 39803,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 6,
+      "words": 88,
+      "sha256": "931bf957fadf666dba84d71a436c4e23adbe46fdb90f536a577ae887fa0129af"
+    },
+    {
+      "start_character": 39803,
+      "end_character": 40359,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 7,
+      "words": 87,
+      "sha256": "3aae889c43087e5b917e2ecc75089ad7a948a466b443ba46a2c07382f42fcd6f"
+    },
+    {
+      "start_character": 40359,
+      "end_character": 40950,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 8,
+      "words": 92,
+      "sha256": "79b97cd811d2520c1a76b10bd0c803b74fcb28ad9e84f9ae819367cd9e69d1d9"
+    },
+    {
+      "start_character": 40950,
+      "end_character": 41534,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 9,
+      "words": 91,
+      "sha256": "7cc70f8d062d265dfb70d1b331c70a9256b6a47df84b730efe5127d9d112952b"
+    },
+    {
+      "start_character": 41534,
+      "end_character": 42145,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 10,
+      "words": 93,
+      "sha256": "26888c8cf5cdb22a156bcb251922513bab31b6702ff8b788e6c68b0482e5172b"
+    },
+    {
+      "start_character": 42145,
+      "end_character": 42709,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 0,
+      "words": 90,
+      "sha256": "6e692293ceb5494927316d9be634a7b5b7082ae820991035bf0d846ca5fbcc21"
+    },
+    {
+      "start_character": 42709,
+      "end_character": 43232,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 1,
+      "words": 80,
+      "sha256": "8ce9a3f3405c559ff185bdedea746495f84f41e8999d23c62a24fd10ec5fdc37"
+    },
+    {
+      "start_character": 43232,
+      "end_character": 43751,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 2,
+      "words": 84,
+      "sha256": "78255654f2dfb776ae8ecd27189c9a23510aaa2a9e985861b43c8cca82ab14b2"
+    },
+    {
+      "start_character": 43751,
+      "end_character": 44297,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 3,
+      "words": 90,
+      "sha256": "dde2f9247daa6dc51509d4e7323b1b71a3d2ebe452cf170ce0d6c105a37952f1"
+    },
+    {
+      "start_character": 47192,
+      "end_character": 47454,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 9,
+      "words": 45,
+      "sha256": "e1255e9d553420d500e9b08d3c1b9114b3a5db7dc7207207d7bad308cc0fbab9"
+    },
+    {
+      "start_character": 48037,
+      "end_character": 48599,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 0,
+      "words": 88,
+      "sha256": "b4bd5abe290b5a4c68f6e8abe34cf3b98027fdb856ad504563bdee8beb9d264f"
+    },
+    {
+      "start_character": 48599,
+      "end_character": 49212,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 1,
+      "words": 97,
+      "sha256": "3be162325341721262fa9c7e38627ecbd18107f858bb000cd2fec0f471b73a8d"
+    },
+    {
+      "start_character": 49212,
+      "end_character": 49733,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 2,
+      "words": 89,
+      "sha256": "7fe06edb2b589187339ad7a1b9340939f4d2dd46b768658733246f9c4d1bef15"
+    },
+    {
+      "start_character": 49733,
+      "end_character": 50263,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 3,
+      "words": 91,
+      "sha256": "59e9e43c61166b1aa5ced80161225d008421d475579af7d848f0bace3c88136b"
+    },
+    {
+      "start_character": 50263,
+      "end_character": 50792,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 4,
+      "words": 91,
+      "sha256": "6664145e5099946b396cbad7b692dc99935b4d189e13ae1ccd207498f051a59c"
+    },
+    {
+      "start_character": 50792,
+      "end_character": 51358,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 5,
+      "words": 91,
+      "sha256": "6cd50b1a18e2cfd97c845e6213f50992bbe470c82d3a3046465ad55c320d1672"
+    },
+    {
+      "start_character": 54159,
+      "end_character": 54687,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 0,
+      "words": 90,
+      "sha256": "359339c77d8298760fae8efac0b6fc09705213b760d23a6d4eec34278c88b03f"
+    },
+    {
+      "start_character": 54687,
+      "end_character": 55244,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 1,
+      "words": 90,
+      "sha256": "776cd61bbf49556405be0dc457fbdfbce582e72bb2238cdd9c6a92889d19b084"
+    },
+    {
+      "start_character": 55244,
+      "end_character": 55805,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 2,
+      "words": 88,
+      "sha256": "be69729a27cc41f930dc457e035fa809a2e6799dd58ffefbd8d10b56fba5b077"
+    },
+    {
+      "start_character": 56967,
+      "end_character": 57529,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "966467100fe4bd2fa8554072feadb6f18cc5209ca5addf80b73e2eb8f44637e7"
+    },
+    {
+      "start_character": 57529,
+      "end_character": 58059,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 6,
+      "words": 85,
+      "sha256": "f6e8068da84e4efd99a6d89080296de37593df0206016447e1b231a31676d65a"
+    },
+    {
+      "start_character": 58059,
+      "end_character": 58670,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 7,
+      "words": 92,
+      "sha256": "76ab5f312238a4da8cac87092508249ff4df27a5665f80a0f50c1ddfc86ce2dd"
+    },
+    {
+      "start_character": 60451,
+      "end_character": 61004,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 0,
+      "words": 91,
+      "sha256": "26124c648c4078107d74a9a9a6a384a854418704164f6d6a22a9f450ec3e8b40"
+    },
+    {
+      "start_character": 61004,
+      "end_character": 61513,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 1,
+      "words": 80,
+      "sha256": "430bff116413d2a252d76bf399d28b731cb546cb26325847b6a2710dad4974aa"
+    },
+    {
+      "start_character": 61513,
+      "end_character": 62032,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 2,
+      "words": 86,
+      "sha256": "8af1a3eeffec33fcace51553fef159f3886cef58c9bbe16b4f912f1273ddcfd9"
+    },
+    {
+      "start_character": 62531,
+      "end_character": 63055,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 4,
+      "words": 84,
+      "sha256": "4f992cd0971f12a0840d6107010b830a3970e4ef1d87576f10a8231b1393dcce"
+    },
+    {
+      "start_character": 63055,
+      "end_character": 63577,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 5,
+      "words": 85,
+      "sha256": "0746a10467f6e2b6e095f49f603e4f0b717eaed0839d034ed406f0f9720d4dba"
+    },
+    {
+      "start_character": 66852,
+      "end_character": 67311,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 0,
+      "words": 78,
+      "sha256": "9bff99523db8269d28b0780ce07cf7b37a64056d2665fa22ed5b95ba27814029"
+    },
+    {
+      "start_character": 67311,
+      "end_character": 67800,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 1,
+      "words": 79,
+      "sha256": "a271697612411a2d8bca766e87fcf411ec74290de3a760e89aa3e6b1dea14caa"
+    },
+    {
+      "start_character": 68920,
+      "end_character": 69458,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 4,
+      "words": 92,
+      "sha256": "95d5225264dbc89cca5b8775e5ce09b1156775096cc3684c8a1a9cd7f70f744d"
+    },
+    {
+      "start_character": 69458,
+      "end_character": 69949,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 5,
+      "words": 85,
+      "sha256": "81c86db22e6f2da8e2f340bfc84ef060a32812a4df659ceca023ae21c14c745c"
+    },
+    {
+      "start_character": 69949,
+      "end_character": 70488,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 6,
+      "words": 91,
+      "sha256": "e769a505fd1360bd783bd12b373292cca45fbcd8c601236d7930e0f8e0cb8d57"
+    },
+    {
+      "start_character": 70488,
+      "end_character": 71072,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 7,
+      "words": 90,
+      "sha256": "d7e02271297bed536ff08d6a60ffe011bdcdea61da69ded5177ee0fa5ab78ef9"
+    },
+    {
+      "start_character": 73156,
+      "end_character": 73721,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 0,
+      "words": 94,
+      "sha256": "a9305fdff13d0526447127313d000f14ec290f2963f8306d6e04285b7b27294c"
+    },
+    {
+      "start_character": 73721,
+      "end_character": 74284,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 1,
+      "words": 87,
+      "sha256": "cd8d1d2ce3b81fe57d5f7b694e65c17aed46047b4c43c347883ce447c7f7023b"
+    },
+    {
+      "start_character": 74284,
+      "end_character": 74801,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 2,
+      "words": 90,
+      "sha256": "33f90eca2617c009b151aebdceec90deca862c78d67ffca837750852e2776cb4"
+    },
+    {
+      "start_character": 74801,
+      "end_character": 75344,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 3,
+      "words": 87,
+      "sha256": "dfb95cdd7700d12a10cb5d9b496a2d0efd5a4a97dcd6e034425cf2e32d3c476b"
+    },
+    {
+      "start_character": 75344,
+      "end_character": 75907,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 4,
+      "words": 87,
+      "sha256": "cbaac1e12f980820a8a52e5351026a572167200c5ea4721cdcec6d31dc9a28a1"
+    },
+    {
+      "start_character": 75907,
+      "end_character": 76446,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "aeabf4ffd931bf9f0b5c7781fabb0ea38fda37c3f55ebf8c9a015a775ccd9077"
+    },
+    {
+      "start_character": 76446,
+      "end_character": 77003,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 6,
+      "words": 91,
+      "sha256": "92c9846dc6cae7795e986b8bd45ec3e41019753d8949dad264feb87ab899a2b3"
+    },
+    {
+      "start_character": 77003,
+      "end_character": 77571,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 7,
+      "words": 89,
+      "sha256": "f1057cc028482a17dc031dbdea9a4cecd898c33c9cf51fbc74eab1c7c935f7cb"
+    },
+    {
+      "start_character": 77571,
+      "end_character": 78108,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 8,
+      "words": 88,
+      "sha256": "c33d3ffe26677eff0335051f01ffd498ecd7d40148c559715a2226027e125f97"
+    },
+    {
+      "start_character": 78748,
+      "end_character": 79318,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 0,
+      "words": 92,
+      "sha256": "e6d4a7136b1557d3818bf67f20243bbaa3ddbc17ad1b3d041b102aefd6a90321"
+    },
+    {
+      "start_character": 79318,
+      "end_character": 79900,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 1,
+      "words": 94,
+      "sha256": "f600e668a4c785a5e16484fa706ba6915173e2ef7c5ba15b6f0127ec64bf1621"
+    },
+    {
+      "start_character": 79900,
+      "end_character": 80507,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 2,
+      "words": 96,
+      "sha256": "c76f5582e89a8fcd633f397bf3530fd286883198d3b68f748482d17625e83b29"
+    },
+    {
+      "start_character": 80507,
+      "end_character": 81094,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 3,
+      "words": 100,
+      "sha256": "2ed4715dcb86792732718b063436a0e1a9d496ead221db0d750027a162b51681"
+    },
+    {
+      "start_character": 82361,
+      "end_character": 82931,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 6,
+      "words": 92,
+      "sha256": "06b0e32eff7761baf446fcb8ea23bec32380f339b2bc31e53349006112c2c910"
+    },
+    {
+      "start_character": 82931,
+      "end_character": 83536,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 7,
+      "words": 97,
+      "sha256": "d5ddf2f0d801da0e89a0564846c85244a3e4ee8c1e0e63a49aeadbd95d444793"
+    },
+    {
+      "start_character": 83536,
+      "end_character": 84106,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 8,
+      "words": 88,
+      "sha256": "be25b6584298040ab235cfd5f149f68563210d5f315c65728f4b64073dfc722e"
+    },
+    {
+      "start_character": 85279,
+      "end_character": 85779,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 0,
+      "words": 81,
+      "sha256": "0cd0961d914ead51e34c9182736db9442cbfb9f7474fedcaaacd0f0b8c7139f3"
+    },
+    {
+      "start_character": 85779,
+      "end_character": 86305,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 1,
+      "words": 81,
+      "sha256": "28ad590e133c4c4ecf0f025635e4c19d3b619990a35f0e031a62a08295989863"
+    },
+    {
+      "start_character": 88958,
+      "end_character": 89502,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 7,
+      "words": 90,
+      "sha256": "2bec1adaaa6d5afb94b50921d25aac387cc7976d5a85fde1a4538f1a0d1bea0c"
+    },
+    {
+      "start_character": 89502,
+      "end_character": 90015,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 8,
+      "words": 84,
+      "sha256": "4059a463c326e3b771a623f098d974cdbdddc6a625e0adfdfbebe2b18d780f5d"
+    },
+    {
+      "start_character": 90569,
+      "end_character": 91125,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 10,
+      "words": 90,
+      "sha256": "5a237caadfeb560912ba1d187c9230f142a59a81a8753e46627e54c762e8539c"
+    },
+    {
+      "start_character": 91690,
+      "end_character": 92233,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 0,
+      "words": 93,
+      "sha256": "ed4b10cc75153edb95f61f8dfb92f1b539d27124fa5a80ef6fd64c077c0fe957"
+    },
+    {
+      "start_character": 92233,
+      "end_character": 92774,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 1,
+      "words": 83,
+      "sha256": "d842286a951bc1f4ca91fc41fa2bd48451535ef9d43d21025e8720a7624de139"
+    },
+    {
+      "start_character": 92774,
+      "end_character": 93315,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 2,
+      "words": 89,
+      "sha256": "18f1a5df242e5be119b1bdcf2ac6c16235e7152f981bd72e6bac7c7e380157bc"
+    },
+    {
+      "start_character": 93315,
+      "end_character": 93842,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 3,
+      "words": 83,
+      "sha256": "b2b1260bc85fbc9535dbb0badac8890ceb986ffb114f24b4e54b34bd262f0956"
+    },
+    {
+      "start_character": 95485,
+      "end_character": 96027,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 7,
+      "words": 83,
+      "sha256": "047e736c3a46ddb5867158562b2515285248b9280f56cb6a64bc9e6518a1fad3"
+    },
+    {
+      "start_character": 96027,
+      "end_character": 96583,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 8,
+      "words": 80,
+      "sha256": "fdfa9e46a481bfd4aca5d2963ddf73d6c145cc174cf295ef70b2becea37691b1"
+    },
+    {
+      "start_character": 98197,
+      "end_character": 98742,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 0,
+      "words": 85,
+      "sha256": "0043a5ac8a4948c64c669fb3763bf32b574f247744e22e68ace553567214ecf4"
+    },
+    {
+      "start_character": 98742,
+      "end_character": 99280,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 1,
+      "words": 85,
+      "sha256": "ee7bf180cab9af6f59f9b993ab554126c1bc24c7e890f2be7f6dbb8e7a77e4d7"
+    },
+    {
+      "start_character": 101029,
+      "end_character": 101572,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 5,
+      "words": 91,
+      "sha256": "89cf1c465f7ddad312717a7ff180a601acc965b3078a7f6c8bb347c6f0cb49cb"
+    },
+    {
+      "start_character": 101572,
+      "end_character": 102158,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 6,
+      "words": 97,
+      "sha256": "fe8fe59a59ebd1078285b41bd8ef948af95cfd47d8fb76b6f639658636a1975b"
+    },
+    {
+      "start_character": 102158,
+      "end_character": 102714,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 7,
+      "words": 90,
+      "sha256": "fd0ea4c74d3de94f29f779662d4c36332f6f6962d112d80fad733433b457974a"
+    },
+    {
+      "start_character": 102714,
+      "end_character": 103283,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 8,
+      "words": 93,
+      "sha256": "40d02c6206c8478894f041f79a01fe7b192d8cc883efaa278715f736f77a2909"
+    },
+    {
+      "start_character": 103283,
+      "end_character": 103847,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 9,
+      "words": 91,
+      "sha256": "79592573f6e0db0d75ddb9ba4bff0743dff78d09b388fd8622f9a704c0f2c271"
+    },
+    {
+      "start_character": 103847,
+      "end_character": 104393,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 10,
+      "words": 87,
+      "sha256": "6af5447ae684a44d756cec88d5794f89543acded4b9365f2628f821b187575c1"
+    },
+    {
+      "start_character": 104393,
+      "end_character": 104952,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 0,
+      "words": 88,
+      "sha256": "fda422763cd27f6eb599fa32cc439024c7040b6c33c5aabc864a44a4a49ba9ca"
+    },
+    {
+      "start_character": 106535,
+      "end_character": 107039,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 4,
+      "words": 78,
+      "sha256": "653a895671ee67ef51cc7eaef485948ccbb7b376cb984a95ef31668b77e36672"
+    },
+    {
+      "start_character": 107039,
+      "end_character": 107606,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 5,
+      "words": 84,
+      "sha256": "8a06f56b751776c5526581cc395024aa96ecd99dfa23a9c2d6aecb7072fd60dd"
+    },
+    {
+      "start_character": 108174,
+      "end_character": 108746,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 7,
+      "words": 89,
+      "sha256": "c5cee06199a6fc5163421829d198ac13f518b600d6fef09097d7e22e822cb190"
+    },
+    {
+      "start_character": 110844,
+      "end_character": 111363,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 0,
+      "words": 85,
+      "sha256": "bb70e6ed11356a2a492c5b2d263e1e76fbf0ddbdbb1d74f01a6b8be23dde9821"
+    },
+    {
+      "start_character": 111363,
+      "end_character": 111874,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 1,
+      "words": 83,
+      "sha256": "81af768f4d60c6cca47d39298be7e489c20b09befae5677e57609013f9c072d6"
+    },
+    {
+      "start_character": 112376,
+      "end_character": 112956,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 3,
+      "words": 88,
+      "sha256": "f619da359ba091c7e79db347708d3c6b528876ed121ecbfe2eb584bc1c42d197"
+    },
+    {
+      "start_character": 112956,
+      "end_character": 113535,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 4,
+      "words": 88,
+      "sha256": "e888b13bbd04fda33cc5e9a60ac9bc201c4244a2889584eb7a20e0a5af57b8cb"
+    },
+    {
+      "start_character": 113535,
+      "end_character": 114088,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "7019c00ca3eab0474098e63e1bea5f97712ac1f6b512cc7530f4a2f0d86838d0"
+    },
+    {
+      "start_character": 114660,
+      "end_character": 115165,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "8c66d0ae0e354645a022c41f2c7a55f99cb8f55e3be64d3db66fd2b550db405c"
+    },
+    {
+      "start_character": 116344,
+      "end_character": 116880,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 10,
+      "words": 88,
+      "sha256": "dcd55d948fa9f31de08ca2bae2cdd018059bfaee60b302944637a3fb16902dc2"
+    },
+    {
+      "start_character": 116880,
+      "end_character": 117431,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 11,
+      "words": 79,
+      "sha256": "e4dd85425ffa4c8b1f6ff38dca8aecf518b98d23dd09de519ee4d0faaec03fee"
+    },
+    {
+      "start_character": 123396,
+      "end_character": 123986,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 0,
+      "words": 95,
+      "sha256": "0cf12ae921bc74074a29e5d9a55a3b6b13d42136f8165e7ead7976869ede18e6"
+    },
+    {
+      "start_character": 124555,
+      "end_character": 125104,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 2,
+      "words": 85,
+      "sha256": "2c3f02963447b77390e692917ed26abfab4b9182ce2136f34f65fc827e7e702f"
+    },
+    {
+      "start_character": 125104,
+      "end_character": 125691,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 3,
+      "words": 85,
+      "sha256": "007865d3fa974c650df6928d161139431f4a0d7604dccbfd243b15dcc7efe139"
+    },
+    {
+      "start_character": 125691,
+      "end_character": 126130,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 4,
+      "words": 67,
+      "sha256": "0fda8abe36c9cf4bca2d97a468d5d2cc94b1b57c16d4265bf213261703129305"
+    },
+    {
+      "start_character": 126130,
+      "end_character": 126681,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 5,
+      "words": 87,
+      "sha256": "5f8dff7c8668c43bdc29a56f0510ae6299ea34361910d03ff0b4ae81f4870d39"
+    },
+    {
+      "start_character": 130049,
+      "end_character": 130615,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 0,
+      "words": 89,
+      "sha256": "da140cd177179aa33b6c7d040d63c5815239bdb5dd379d203cfd085227e9d2fd"
+    },
+    {
+      "start_character": 130615,
+      "end_character": 131184,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 1,
+      "words": 90,
+      "sha256": "3b23257b0bc0f56ead4e98d8e0fd892333fc7ad4c828b560bd8e4180d93002c8"
+    },
+    {
+      "start_character": 131184,
+      "end_character": 131800,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 2,
+      "words": 87,
+      "sha256": "51101a245af3682734b1ecaf1d5f9bc05a01219cc2c2e1a5b6ed01df55ce0a88"
+    },
+    {
+      "start_character": 131800,
+      "end_character": 132398,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 3,
+      "words": 88,
+      "sha256": "69ebb2399d5c9fd6cfeff54c9dc565a3a0674c89ee9ea296965f27707b352e99"
+    },
+    {
+      "start_character": 132398,
+      "end_character": 132987,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 4,
+      "words": 88,
+      "sha256": "14ba8cdcd224784cd54b135e41962a7ce37d7337733fee6911d129e5e7e2a0f1"
+    },
+    {
+      "start_character": 135333,
+      "end_character": 135907,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 9,
+      "words": 86,
+      "sha256": "48c667f43c5a42701e36ebb3bf51bcd3f27ce9941df98dd8a654fe7c63a71923"
+    },
+    {
+      "start_character": 137022,
+      "end_character": 137606,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 0,
+      "words": 91,
+      "sha256": "ec35ce6191ccb6c5f5ad657e5dc95e9e693fa3db58e4e51059c6f64d5f32ad54"
+    },
+    {
+      "start_character": 138788,
+      "end_character": 139338,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 3,
+      "words": 86,
+      "sha256": "01aa63a4fa5007aa4f757afa884dd2fcf68acb6a476c6eb740cb8b09970f72ae"
+    },
+    {
+      "start_character": 139338,
+      "end_character": 139901,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 4,
+      "words": 88,
+      "sha256": "e0e8b8bad749d13590ccf24f741ff7b6b2615459f3f7eb75697a1de53ab3f3fb"
+    },
+    {
+      "start_character": 139901,
+      "end_character": 140439,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 5,
+      "words": 87,
+      "sha256": "4708841a279cc2d7577fbdaa8c45f8a81ab6d68e92d3f89204a41c613e116e5b"
+    },
+    {
+      "start_character": 141000,
+      "end_character": 141572,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 7,
+      "words": 94,
+      "sha256": "9a77994e41cb0cffbab0d62a8ea19dfcb30c0a3eb1b3b158358f45753ed32290"
+    },
+    {
+      "start_character": 141572,
+      "end_character": 142124,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 8,
+      "words": 86,
+      "sha256": "481b2a2cd5e1b46acae50f11fb7f8f318da9f44343d72a83ac0cc1e4daee9b14"
+    },
+    {
+      "start_character": 142124,
+      "end_character": 142671,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 9,
+      "words": 88,
+      "sha256": "6f0b152349b19d9569d99a1574741fb4f9db5b7a1b3b545173f19bef8241a11e"
+    },
+    {
+      "start_character": 157674,
+      "end_character": 158015,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 28,
+      "source_chapter_title": "The Prince absent from an older list",
+      "paragraph": 0,
+      "words": 49,
+      "sha256": "4d5d6aad416575aad911031bf323f180e3c4115ee4001057f23b99a55cae2c02"
+    },
+    {
+      "start_character": 158015,
+      "end_character": 158384,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 28,
+      "source_chapter_title": "The Prince absent from an older list",
+      "paragraph": 1,
+      "words": 59,
+      "sha256": "1811cdee49efeebe7eb145a7ed84088984899b89b9d0058d6156a44cf5a99605"
+    },
+    {
+      "start_character": 158384,
+      "end_character": 158828,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 28,
+      "source_chapter_title": "The Prince absent from an older list",
+      "paragraph": 2,
+      "words": 68,
+      "sha256": "5068f6a4f03a5dd79a3fdba38b52d5aac34d25df9ee0e6c47397028dd65e1ea1"
+    },
+    {
+      "start_character": 163791,
+      "end_character": 164111,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 0,
+      "words": 50,
+      "sha256": "8b0f2ce0bb301787089c4cca47a6871e3f5d2aa8d34842fc472a2cc6644cd976"
+    },
+    {
+      "start_character": 164111,
+      "end_character": 164474,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 1,
+      "words": 55,
+      "sha256": "de612e7c8757099f28f2d9fecb65003bf862dee3d621bdf9d68a59a77c6e7519"
+    },
+    {
+      "start_character": 164474,
+      "end_character": 164805,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 2,
+      "words": 51,
+      "sha256": "1cdd0933986d74414599d9c7232921a208766c7abc0113a80ec2db39a4681068"
+    },
+    {
+      "start_character": 164805,
+      "end_character": 165082,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 3,
+      "words": 45,
+      "sha256": "ab7c1fabb2f5c2f08ba79de1c20663aa58c0d2c5c66effe039afd0bc0930a96c"
+    },
+    {
+      "start_character": 165082,
+      "end_character": 165471,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 4,
+      "words": 62,
+      "sha256": "a6163cedd35c7d04a6406f8758b96d4b6670226719f2d6b51d52799316291da5"
+    }
+  ],
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 483,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 0,
+      "words": 82,
+      "sha256": "1053a88be02ca60907e02aebce85cdc9aa42cef58357983adea070d250451fc6"
+    },
+    {
+      "start_character": 483,
+      "end_character": 984,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 1,
+      "words": 80,
+      "sha256": "be07974fb5ff1af5292fab1445bfb2443c26a3884573476c4f2797ba501e09f2"
+    },
+    {
+      "start_character": 984,
+      "end_character": 1546,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 2,
+      "words": 91,
+      "sha256": "9d9a5c4c32523514596957d6509432e346b99e9d5e94a2c2b2b37ed890cd421e"
+    },
+    {
+      "start_character": 1546,
+      "end_character": 1754,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 3,
+      "words": 37,
+      "sha256": "bc4061ea51f772e93d1498d6fde886972eef9b9b4464c9b0cae8095fbada3de9"
+    },
+    {
+      "start_character": 1754,
+      "end_character": 2269,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 4,
+      "words": 80,
+      "sha256": "4861666b978a69f764b9ea7981b336158c9d5ef779dd63bfbfd3e2a7b3f75b90"
+    },
+    {
+      "start_character": 2269,
+      "end_character": 2810,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "bd4cf5a787ccc0228c7e55661fea6c7b6caf03898f1f3e7412d192f878a4190f"
+    },
+    {
+      "start_character": 2810,
+      "end_character": 3356,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 6,
+      "words": 92,
+      "sha256": "25f33e06d89558fde886aa6554c9529bd542bb4be5b7e8ef48122c8287be1476"
+    },
+    {
+      "start_character": 3356,
+      "end_character": 3867,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 7,
+      "words": 86,
+      "sha256": "6208d63b1dfa6807e24ffbdcca8ccec224b7aee10e9ce9c29b48e73612c493d1"
+    },
+    {
+      "start_character": 3867,
+      "end_character": 4396,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 8,
+      "words": 84,
+      "sha256": "bb958d3185e363e8a6162b90bdfbfab13f5465836061c897415de4e874bbb594"
+    },
+    {
+      "start_character": 4396,
+      "end_character": 4958,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 9,
+      "words": 87,
+      "sha256": "e15c70275f4cbdb8262e243f8f2d92929fcb69b704a79f3ac39511c46d1f9bcc"
+    },
+    {
+      "start_character": 4958,
+      "end_character": 5489,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 1,
+      "source_chapter_title": "A traveler stops at a shrine",
+      "paragraph": 10,
+      "words": 89,
+      "sha256": "30b8575ee01c8db45b7d39541885b780ee42d8957f4b7ae3e944bb8ba613f307"
+    },
+    {
+      "start_character": 5489,
+      "end_character": 6025,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 0,
+      "words": 86,
+      "sha256": "c5d433345394379e16d09f63d5c6886422118ddd0228240a6c066ba47e7e442e"
+    },
+    {
+      "start_character": 6025,
+      "end_character": 6552,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 1,
+      "words": 85,
+      "sha256": "657d4723f0d94b2cd0da91b4d8436e494b1531ae9e86375f17283e9612dae5fa"
+    },
+    {
+      "start_character": 6552,
+      "end_character": 7107,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 2,
+      "words": 85,
+      "sha256": "d3a17351086920a966ce004e522ce31db90291ac0618544a298d0bb542ed5bf2"
+    },
+    {
+      "start_character": 7107,
+      "end_character": 7687,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 3,
+      "words": 88,
+      "sha256": "de8a2f1ed960f36d2ecd302709f7aae66f847d90b99482bdc8d747ec07593787"
+    },
+    {
+      "start_character": 7687,
+      "end_character": 8207,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 4,
+      "words": 84,
+      "sha256": "1cbcb54cf13033c884a1ca79c9578ab2fea281f7d2bf5f529469b28031185bff"
+    },
+    {
+      "start_character": 8207,
+      "end_character": 8801,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 5,
+      "words": 92,
+      "sha256": "738fb7b676484b32d5ff74469e213964f3d34e05be982feddef19e0d45542eab"
+    },
+    {
+      "start_character": 8801,
+      "end_character": 9344,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 6,
+      "words": 87,
+      "sha256": "7113ddbedfb97a1708b1006c35ac0094890de6b977ec9fdb33e8a207f9e8ee9f"
+    },
+    {
+      "start_character": 9344,
+      "end_character": 9866,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "c76d0dfba619b7b81dfe6c6df28960c5732928e512422b4f4eaf50a98c14b9f0"
+    },
+    {
+      "start_character": 9866,
+      "end_character": 10411,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 8,
+      "words": 89,
+      "sha256": "e31be145acc77b2f91f28a5f2b3387ccaf7fc2bff2388b34a9b06de66badafc7"
+    },
+    {
+      "start_character": 10411,
+      "end_character": 11000,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 9,
+      "words": 94,
+      "sha256": "77d91970281a1c0cd01b0717c38d48f5c42816fb68fa271b720b6d171c35329a"
+    },
+    {
+      "start_character": 11000,
+      "end_character": 11556,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 10,
+      "words": 88,
+      "sha256": "c7174391f877e5dd4ec07472bf50c1e26015a7223e637b0bacbf3f8d202f83da"
+    },
+    {
+      "start_character": 11556,
+      "end_character": 12104,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 2,
+      "source_chapter_title": "Creation as Tamriel remembers it",
+      "paragraph": 11,
+      "words": 87,
+      "sha256": "8fe0fc7e5eb4a569e0ff63e62114435e55d68b280c49fba8a10153805b0c5c71"
+    },
+    {
+      "start_character": 12104,
+      "end_character": 12659,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 0,
+      "words": 90,
+      "sha256": "71c540bf1f3dfcc17a216e162f3e67b2193fee3f46e6eb7fac880a5385a8cd70"
+    },
+    {
+      "start_character": 12659,
+      "end_character": 13209,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 1,
+      "words": 86,
+      "sha256": "fd751efbf5f297f07138009b7793317c96ae3e1bbc87ea231cdfb54b37cddf97"
+    },
+    {
+      "start_character": 13209,
+      "end_character": 13752,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 2,
+      "words": 89,
+      "sha256": "e2b06f62dbdd3f482cb2c012b31fb820e9835177971ba571771b3aff298956d7"
+    },
+    {
+      "start_character": 13752,
+      "end_character": 14350,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 3,
+      "words": 89,
+      "sha256": "6996686ab7a9294dd244df4c9f6eb7726f1e99ef99570ba0baddeae3a434e3dc"
+    },
+    {
+      "start_character": 14350,
+      "end_character": 14943,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 4,
+      "words": 87,
+      "sha256": "7bfb0cef26d7ca81b235814b3d7a04f290ecb49e26f70e807cfcbea203275c2c"
+    },
+    {
+      "start_character": 14943,
+      "end_character": 15583,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 5,
+      "words": 98,
+      "sha256": "ecd559278cfd06f874277f4982ec42a78d083597770857ace03fafefe2b9883c"
+    },
+    {
+      "start_character": 15583,
+      "end_character": 16107,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 6,
+      "words": 85,
+      "sha256": "37962bd907e5271ee2b2207f37cbed5bf69eba1fad1d70234086538982a1118a"
+    },
+    {
+      "start_character": 16107,
+      "end_character": 16637,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "408e2d2636cde2a3cbf6b10c21e6da8654ce4d8a525f8fa04f626f37a79c304a"
+    },
+    {
+      "start_character": 16637,
+      "end_character": 17288,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 8,
+      "words": 100,
+      "sha256": "afe133e2c339e090c56b4868c43fa324c91f0921fa48689331570c9605b891f6"
+    },
+    {
+      "start_character": 17288,
+      "end_character": 17799,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 3,
+      "source_chapter_title": "Spheres are not moral teams",
+      "paragraph": 9,
+      "words": 83,
+      "sha256": "4e4b0fee2241bd10163849b4cacb4fdd4ca5bd00b30934cb4fdcf56a69acfd42"
+    },
+    {
+      "start_character": 17799,
+      "end_character": 18298,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 0,
+      "words": 81,
+      "sha256": "b587db9a5b2ea4f7500361266bf320aa4394d401199dd81d707ecb4eb238f7fe"
+    },
+    {
+      "start_character": 18298,
+      "end_character": 18863,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 1,
+      "words": 86,
+      "sha256": "38c1714fa8b3062bffca1fc6a2b4a1b3ef8222bfe8054c6707d653f09da88164"
+    },
+    {
+      "start_character": 18863,
+      "end_character": 19433,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 2,
+      "words": 88,
+      "sha256": "551304a2dd33db650d4471feaae2d157fbee7bc2f340c62d8f63232f71934abe"
+    },
+    {
+      "start_character": 19433,
+      "end_character": 20019,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 3,
+      "words": 90,
+      "sha256": "295d58705f21ae62ef7d8748952bd0705faa3f8e257fa9619ae230e0fa639acc"
+    },
+    {
+      "start_character": 20019,
+      "end_character": 20584,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 4,
+      "words": 90,
+      "sha256": "822798bd8b377e5eaad2af0fc65bf013849a57f66ace01327f36705be58d2a88"
+    },
+    {
+      "start_character": 20584,
+      "end_character": 21151,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 5,
+      "words": 88,
+      "sha256": "c82aec9958af0df7a6b487185d768e75393334a0a85effabd61a72bfc5d47359"
+    },
+    {
+      "start_character": 21151,
+      "end_character": 21713,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 6,
+      "words": 89,
+      "sha256": "38191922661c674781e4098073a2e732f35c5e9ea41ec8f80240ccc53aed3e2a"
+    },
+    {
+      "start_character": 21713,
+      "end_character": 22260,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "a392274ae160ba202393284fb2b6a0821f4ca5edad422ab25e801609d4d2a61d"
+    },
+    {
+      "start_character": 22260,
+      "end_character": 22681,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 4,
+      "source_chapter_title": "Azura and a promise remembered",
+      "paragraph": 8,
+      "words": 67,
+      "sha256": "5154a5cdd650a17d97b770e0a2c47566282ecdcc3085b29408e8d0b6294914a2"
+    },
+    {
+      "start_character": 22681,
+      "end_character": 23265,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 0,
+      "words": 91,
+      "sha256": "ed5b649dfc2604bd7647adbf42e6143a2450095f836fe04f340a5b9edcc8abe1"
+    },
+    {
+      "start_character": 23265,
+      "end_character": 23745,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 1,
+      "words": 76,
+      "sha256": "5f9476e3614aec5aa5dc56a2b8ae5f91b184517901a9454ae89a3a87f1bf81a6"
+    },
+    {
+      "start_character": 23745,
+      "end_character": 24299,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 2,
+      "words": 81,
+      "sha256": "3b45918ca55c1104aa2b67282dfdf61b9c25ef0441b6224d0e25b9fa83d53f0c"
+    },
+    {
+      "start_character": 24299,
+      "end_character": 24852,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 3,
+      "words": 83,
+      "sha256": "413924b7dedc093acdab9ea68a7c2d0db7f153d18fc332ecc0f57ed3162e9aee"
+    },
+    {
+      "start_character": 24852,
+      "end_character": 25348,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 4,
+      "words": 77,
+      "sha256": "143dea80168be1a9b21ec246e1f1fb50a677c2a93321b3531e55f6ed4ccf1310"
+    },
+    {
+      "start_character": 25348,
+      "end_character": 25885,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 5,
+      "words": 82,
+      "sha256": "3b2837b699e6f4671f0f4b066f22b306255bb53e2e32dfa58db74b11243717a8"
+    },
+    {
+      "start_character": 25885,
+      "end_character": 26466,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 6,
+      "words": 88,
+      "sha256": "30a3dd3ab1d5f519d14359f6c0a43e2ec2674580817f7e5f07e2bb1fa5d005f9"
+    },
+    {
+      "start_character": 26466,
+      "end_character": 27010,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 7,
+      "words": 87,
+      "sha256": "2465541a45ac31aa441c787ea41ce1630f5e62aa6e5cf6fe4ad8cf00939e5b93"
+    },
+    {
+      "start_character": 27010,
+      "end_character": 27515,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 8,
+      "words": 75,
+      "sha256": "f51650a700805efddb3ef4323ed2bce20603d103d12a6b9de7476a766688ca09"
+    },
+    {
+      "start_character": 27515,
+      "end_character": 28044,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 9,
+      "words": 81,
+      "sha256": "fe5769f710f0a2d669873966804cf3508f62e0b2bd1ba9477ac848735fedcb16"
+    },
+    {
+      "start_character": 28044,
+      "end_character": 28625,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 10,
+      "words": 82,
+      "sha256": "c3b39e9a63a5c12027f596d6077ce38323460b1d0a1092ffb781e4f7bc9c3fb0"
+    },
+    {
+      "start_character": 28625,
+      "end_character": 29203,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 5,
+      "source_chapter_title": "Boethiah and the challenge of allegiance",
+      "paragraph": 11,
+      "words": 84,
+      "sha256": "19e78704cdb334947a5e21ffe1ed23d1103572c788bafc1084a340589bcc04b8"
+    },
+    {
+      "start_character": 29203,
+      "end_character": 29716,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 0,
+      "words": 82,
+      "sha256": "70e02a831a229449b958084ad45c4251cc6ea489406aa5e3615a422dbbf6c7ad"
+    },
+    {
+      "start_character": 29716,
+      "end_character": 30243,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 1,
+      "words": 84,
+      "sha256": "a853b18dbb3152f7c0d1f349ee451a672ab494f4c4d341dcbaaa736c057396a7"
+    },
+    {
+      "start_character": 30243,
+      "end_character": 30780,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 2,
+      "words": 83,
+      "sha256": "09fb86d65ce782ac79018dc8d28e8f2c6104ce6dc1eb6a5d0b373f474169dec4"
+    },
+    {
+      "start_character": 30780,
+      "end_character": 31353,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 3,
+      "words": 89,
+      "sha256": "24440fb6d926348f20625e68144f41829cb029a273c4d27e1bd4c29e5957259f"
+    },
+    {
+      "start_character": 31353,
+      "end_character": 31942,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 4,
+      "words": 90,
+      "sha256": "35463b88265ef143750e72997e6772f52c080733211cf3e770db94c14af07d7e"
+    },
+    {
+      "start_character": 31942,
+      "end_character": 32511,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 5,
+      "words": 94,
+      "sha256": "589b940bd27bb46a53e2bbf578d3bb4b1cc1890d514734a8d54b1778b0019613"
+    },
+    {
+      "start_character": 32511,
+      "end_character": 33026,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 6,
+      "words": 82,
+      "sha256": "34999825f8f762b501aa1570e0dff93958cfd271cc23c2383ea59741df18442e"
+    },
+    {
+      "start_character": 33026,
+      "end_character": 33545,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 7,
+      "words": 86,
+      "sha256": "74d463485308b3128c014d09ebb3fa7e6e11182c634c0997cacec5db5d0d7302"
+    },
+    {
+      "start_character": 33545,
+      "end_character": 34080,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 8,
+      "words": 92,
+      "sha256": "88dd8f9bdf5855a865de30b145f9b7a0948f2db23c9383fcede3c838047c1a01"
+    },
+    {
+      "start_character": 34080,
+      "end_character": 34631,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 9,
+      "words": 91,
+      "sha256": "c9265337d42fdfa8baf82c6bd7b0a592b95d9a57b8d142a72b80c8a1ab3e3d04"
+    },
+    {
+      "start_character": 34631,
+      "end_character": 35167,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 10,
+      "words": 86,
+      "sha256": "0e4263989beb72699496f71fd17088a0128fbcb329be0cf75fbb8874f230672b"
+    },
+    {
+      "start_character": 35167,
+      "end_character": 35706,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 6,
+      "source_chapter_title": "Mephala's hidden connections",
+      "paragraph": 11,
+      "words": 89,
+      "sha256": "9974e3089cd2312f6a694300f62cbe38e233b4171dd5c14a3fce9ea853e864de"
+    },
+    {
+      "start_character": 35706,
+      "end_character": 36254,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 0,
+      "words": 84,
+      "sha256": "ff67e7056b651e167446426b02000ef297955dd397324bd63d895cb1f56c2086"
+    },
+    {
+      "start_character": 36254,
+      "end_character": 36777,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 1,
+      "words": 86,
+      "sha256": "d0753150b09884eef94496012935f8aed19331729dfeaccc32efbe12ed733758"
+    },
+    {
+      "start_character": 36777,
+      "end_character": 37355,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 2,
+      "words": 86,
+      "sha256": "1d76003d17efec7e8d29eb3b7e96bf045f5d7973c8d640b4cbacdbc91b9eca4f"
+    },
+    {
+      "start_character": 37355,
+      "end_character": 37958,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 3,
+      "words": 91,
+      "sha256": "e1a82f4ba536a3de6176cc7dd114c084157a2341ae7898db4b59af88eeca415f"
+    },
+    {
+      "start_character": 37958,
+      "end_character": 38553,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 4,
+      "words": 87,
+      "sha256": "493efc7ae9cb32c338cd8745e26f9cd2639866e567184517ee07205be1b9f21c"
+    },
+    {
+      "start_character": 38553,
+      "end_character": 39181,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 5,
+      "words": 88,
+      "sha256": "8094b105436d1504a7e451cc9e1e1280d7f599fb698c26f37045bd8dcb75bb4c"
+    },
+    {
+      "start_character": 39181,
+      "end_character": 39803,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 6,
+      "words": 88,
+      "sha256": "931bf957fadf666dba84d71a436c4e23adbe46fdb90f536a577ae887fa0129af"
+    },
+    {
+      "start_character": 39803,
+      "end_character": 40359,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 7,
+      "words": 87,
+      "sha256": "3aae889c43087e5b917e2ecc75089ad7a948a466b443ba46a2c07382f42fcd6f"
+    },
+    {
+      "start_character": 40359,
+      "end_character": 40950,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 8,
+      "words": 92,
+      "sha256": "79b97cd811d2520c1a76b10bd0c803b74fcb28ad9e84f9ae819367cd9e69d1d9"
+    },
+    {
+      "start_character": 40950,
+      "end_character": 41534,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 9,
+      "words": 91,
+      "sha256": "7cc70f8d062d265dfb70d1b331c70a9256b6a47df84b730efe5127d9d112952b"
+    },
+    {
+      "start_character": 41534,
+      "end_character": 42145,
+      "reason": "Preserve exact accepted audio prefix and complete the adjoining source paragraph.",
+      "chapter": 7,
+      "source_chapter_title": "The Reclamations after the Tribunal",
+      "paragraph": 10,
+      "words": 93,
+      "sha256": "26888c8cf5cdb22a156bcb251922513bab31b6702ff8b788e6c68b0482e5172b"
+    },
+    {
+      "start_character": 42145,
+      "end_character": 42709,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 0,
+      "words": 90,
+      "sha256": "6e692293ceb5494927316d9be634a7b5b7082ae820991035bf0d846ca5fbcc21"
+    },
+    {
+      "start_character": 42709,
+      "end_character": 43232,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 1,
+      "words": 80,
+      "sha256": "8ce9a3f3405c559ff185bdedea746495f84f41e8999d23c62a24fd10ec5fdc37"
+    },
+    {
+      "start_character": 43232,
+      "end_character": 43751,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 2,
+      "words": 84,
+      "sha256": "78255654f2dfb776ae8ecd27189c9a23510aaa2a9e985861b43c8cca82ab14b2"
+    },
+    {
+      "start_character": 43751,
+      "end_character": 44297,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 3,
+      "words": 90,
+      "sha256": "dde2f9247daa6dc51509d4e7323b1b71a3d2ebe452cf170ce0d6c105a37952f1"
+    },
+    {
+      "start_character": 47192,
+      "end_character": 47454,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 8,
+      "source_chapter_title": "Mehrunes Dagon at the border of a world",
+      "paragraph": 9,
+      "words": 45,
+      "sha256": "e1255e9d553420d500e9b08d3c1b9114b3a5db7dc7207207d7bad308cc0fbab9"
+    },
+    {
+      "start_character": 48037,
+      "end_character": 48599,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 0,
+      "words": 88,
+      "sha256": "b4bd5abe290b5a4c68f6e8abe34cf3b98027fdb856ad504563bdee8beb9d264f"
+    },
+    {
+      "start_character": 48599,
+      "end_character": 49212,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 1,
+      "words": 97,
+      "sha256": "3be162325341721262fa9c7e38627ecbd18107f858bb000cd2fec0f471b73a8d"
+    },
+    {
+      "start_character": 49212,
+      "end_character": 49733,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 2,
+      "words": 89,
+      "sha256": "7fe06edb2b589187339ad7a1b9340939f4d2dd46b768658733246f9c4d1bef15"
+    },
+    {
+      "start_character": 49733,
+      "end_character": 50263,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 3,
+      "words": 91,
+      "sha256": "59e9e43c61166b1aa5ced80161225d008421d475579af7d848f0bace3c88136b"
+    },
+    {
+      "start_character": 50263,
+      "end_character": 50792,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 4,
+      "words": 91,
+      "sha256": "6664145e5099946b396cbad7b692dc99935b4d189e13ae1ccd207498f051a59c"
+    },
+    {
+      "start_character": 50792,
+      "end_character": 51358,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 9,
+      "source_chapter_title": "Molag Bal and imposed ownership",
+      "paragraph": 5,
+      "words": 91,
+      "sha256": "6cd50b1a18e2cfd97c845e6213f50992bbe470c82d3a3046465ad55c320d1672"
+    },
+    {
+      "start_character": 54159,
+      "end_character": 54687,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 0,
+      "words": 90,
+      "sha256": "359339c77d8298760fae8efac0b6fc09705213b760d23a6d4eec34278c88b03f"
+    },
+    {
+      "start_character": 54687,
+      "end_character": 55244,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 1,
+      "words": 90,
+      "sha256": "776cd61bbf49556405be0dc457fbdfbce582e72bb2238cdd9c6a92889d19b084"
+    },
+    {
+      "start_character": 55244,
+      "end_character": 55805,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 2,
+      "words": 88,
+      "sha256": "be69729a27cc41f930dc457e035fa809a2e6799dd58ffefbd8d10b56fba5b077"
+    },
+    {
+      "start_character": 56967,
+      "end_character": 57529,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "966467100fe4bd2fa8554072feadb6f18cc5209ca5addf80b73e2eb8f44637e7"
+    },
+    {
+      "start_character": 57529,
+      "end_character": 58059,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 6,
+      "words": 85,
+      "sha256": "f6e8068da84e4efd99a6d89080296de37593df0206016447e1b231a31676d65a"
+    },
+    {
+      "start_character": 58059,
+      "end_character": 58670,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 10,
+      "source_chapter_title": "Meridia's light has conditions",
+      "paragraph": 7,
+      "words": 92,
+      "sha256": "76ab5f312238a4da8cac87092508249ff4df27a5665f80a0f50c1ddfc86ce2dd"
+    },
+    {
+      "start_character": 60451,
+      "end_character": 61004,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 0,
+      "words": 91,
+      "sha256": "26124c648c4078107d74a9a9a6a384a854418704164f6d6a22a9f450ec3e8b40"
+    },
+    {
+      "start_character": 61004,
+      "end_character": 61513,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 1,
+      "words": 80,
+      "sha256": "430bff116413d2a252d76bf399d28b731cb546cb26325847b6a2710dad4974aa"
+    },
+    {
+      "start_character": 61513,
+      "end_character": 62032,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 2,
+      "words": 86,
+      "sha256": "8af1a3eeffec33fcace51553fef159f3886cef58c9bbe16b4f912f1273ddcfd9"
+    },
+    {
+      "start_character": 62531,
+      "end_character": 63055,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 4,
+      "words": 84,
+      "sha256": "4f992cd0971f12a0840d6107010b830a3970e4ef1d87576f10a8231b1393dcce"
+    },
+    {
+      "start_character": 63055,
+      "end_character": 63577,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 11,
+      "source_chapter_title": "Hircine and the changing position of hunter",
+      "paragraph": 5,
+      "words": 85,
+      "sha256": "0746a10467f6e2b6e095f49f603e4f0b717eaed0839d034ed406f0f9720d4dba"
+    },
+    {
+      "start_character": 66852,
+      "end_character": 67311,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 0,
+      "words": 78,
+      "sha256": "9bff99523db8269d28b0780ce07cf7b37a64056d2665fa22ed5b95ba27814029"
+    },
+    {
+      "start_character": 67311,
+      "end_character": 67800,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 1,
+      "words": 79,
+      "sha256": "a271697612411a2d8bca766e87fcf411ec74290de3a760e89aa3e6b1dea14caa"
+    },
+    {
+      "start_character": 68920,
+      "end_character": 69458,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 4,
+      "words": 92,
+      "sha256": "95d5225264dbc89cca5b8775e5ce09b1156775096cc3684c8a1a9cd7f70f744d"
+    },
+    {
+      "start_character": 69458,
+      "end_character": 69949,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 5,
+      "words": 85,
+      "sha256": "81c86db22e6f2da8e2f340bfc84ef060a32812a4df659ceca023ae21c14c745c"
+    },
+    {
+      "start_character": 69949,
+      "end_character": 70488,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 6,
+      "words": 91,
+      "sha256": "e769a505fd1360bd783bd12b373292cca45fbcd8c601236d7930e0f8e0cb8d57"
+    },
+    {
+      "start_character": 70488,
+      "end_character": 71072,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 12,
+      "source_chapter_title": "Clavicus Vile and the wish that divides",
+      "paragraph": 7,
+      "words": 90,
+      "sha256": "d7e02271297bed536ff08d6a60ffe011bdcdea61da69ded5177ee0fa5ab78ef9"
+    },
+    {
+      "start_character": 73156,
+      "end_character": 73721,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 0,
+      "words": 94,
+      "sha256": "a9305fdff13d0526447127313d000f14ec290f2963f8306d6e04285b7b27294c"
+    },
+    {
+      "start_character": 73721,
+      "end_character": 74284,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 1,
+      "words": 87,
+      "sha256": "cd8d1d2ce3b81fe57d5f7b694e65c17aed46047b4c43c347883ce447c7f7023b"
+    },
+    {
+      "start_character": 74284,
+      "end_character": 74801,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 2,
+      "words": 90,
+      "sha256": "33f90eca2617c009b151aebdceec90deca862c78d67ffca837750852e2776cb4"
+    },
+    {
+      "start_character": 74801,
+      "end_character": 75344,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 3,
+      "words": 87,
+      "sha256": "dfb95cdd7700d12a10cb5d9b496a2d0efd5a4a97dcd6e034425cf2e32d3c476b"
+    },
+    {
+      "start_character": 75344,
+      "end_character": 75907,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 4,
+      "words": 87,
+      "sha256": "cbaac1e12f980820a8a52e5351026a572167200c5ea4721cdcec6d31dc9a28a1"
+    },
+    {
+      "start_character": 75907,
+      "end_character": 76446,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "aeabf4ffd931bf9f0b5c7781fabb0ea38fda37c3f55ebf8c9a015a775ccd9077"
+    },
+    {
+      "start_character": 76446,
+      "end_character": 77003,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 6,
+      "words": 91,
+      "sha256": "92c9846dc6cae7795e986b8bd45ec3e41019753d8949dad264feb87ab899a2b3"
+    },
+    {
+      "start_character": 77003,
+      "end_character": 77571,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 7,
+      "words": 89,
+      "sha256": "f1057cc028482a17dc031dbdea9a4cecd898c33c9cf51fbc74eab1c7c935f7cb"
+    },
+    {
+      "start_character": 77571,
+      "end_character": 78108,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 13,
+      "source_chapter_title": "Sanguine makes an evening into an obligation",
+      "paragraph": 8,
+      "words": 88,
+      "sha256": "c33d3ffe26677eff0335051f01ffd498ecd7d40148c559715a2226027e125f97"
+    },
+    {
+      "start_character": 78748,
+      "end_character": 79318,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 0,
+      "words": 92,
+      "sha256": "e6d4a7136b1557d3818bf67f20243bbaa3ddbc17ad1b3d041b102aefd6a90321"
+    },
+    {
+      "start_character": 79318,
+      "end_character": 79900,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 1,
+      "words": 94,
+      "sha256": "f600e668a4c785a5e16484fa706ba6915173e2ef7c5ba15b6f0127ec64bf1621"
+    },
+    {
+      "start_character": 79900,
+      "end_character": 80507,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 2,
+      "words": 96,
+      "sha256": "c76f5582e89a8fcd633f397bf3530fd286883198d3b68f748482d17625e83b29"
+    },
+    {
+      "start_character": 80507,
+      "end_character": 81094,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 3,
+      "words": 100,
+      "sha256": "2ed4715dcb86792732718b063436a0e1a9d496ead221db0d750027a162b51681"
+    },
+    {
+      "start_character": 82361,
+      "end_character": 82931,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 6,
+      "words": 92,
+      "sha256": "06b0e32eff7761baf446fcb8ea23bec32380f339b2bc31e53349006112c2c910"
+    },
+    {
+      "start_character": 82931,
+      "end_character": 83536,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 7,
+      "words": 97,
+      "sha256": "d5ddf2f0d801da0e89a0564846c85244a3e4ee8c1e0e63a49aeadbd95d444793"
+    },
+    {
+      "start_character": 83536,
+      "end_character": 84106,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 14,
+      "source_chapter_title": "Vaermina in sleeping lives",
+      "paragraph": 8,
+      "words": 88,
+      "sha256": "be25b6584298040ab235cfd5f149f68563210d5f315c65728f4b64073dfc722e"
+    },
+    {
+      "start_character": 85279,
+      "end_character": 85779,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 0,
+      "words": 81,
+      "sha256": "0cd0961d914ead51e34c9182736db9442cbfb9f7474fedcaaacd0f0b8c7139f3"
+    },
+    {
+      "start_character": 85779,
+      "end_character": 86305,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 1,
+      "words": 81,
+      "sha256": "28ad590e133c4c4ecf0f025635e4c19d3b619990a35f0e031a62a08295989863"
+    },
+    {
+      "start_character": 88958,
+      "end_character": 89502,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 7,
+      "words": 90,
+      "sha256": "2bec1adaaa6d5afb94b50921d25aac387cc7976d5a85fde1a4538f1a0d1bea0c"
+    },
+    {
+      "start_character": 89502,
+      "end_character": 90015,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 8,
+      "words": 84,
+      "sha256": "4059a463c326e3b771a623f098d974cdbdddc6a625e0adfdfbebe2b18d780f5d"
+    },
+    {
+      "start_character": 90569,
+      "end_character": 91125,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 15,
+      "source_chapter_title": "Namira and people pushed from sight",
+      "paragraph": 10,
+      "words": 90,
+      "sha256": "5a237caadfeb560912ba1d187c9230f142a59a81a8753e46627e54c762e8539c"
+    },
+    {
+      "start_character": 91690,
+      "end_character": 92233,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 0,
+      "words": 93,
+      "sha256": "ed4b10cc75153edb95f61f8dfb92f1b539d27124fa5a80ef6fd64c077c0fe957"
+    },
+    {
+      "start_character": 92233,
+      "end_character": 92774,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 1,
+      "words": 83,
+      "sha256": "d842286a951bc1f4ca91fc41fa2bd48451535ef9d43d21025e8720a7624de139"
+    },
+    {
+      "start_character": 92774,
+      "end_character": 93315,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 2,
+      "words": 89,
+      "sha256": "18f1a5df242e5be119b1bdcf2ac6c16235e7152f981bd72e6bac7c7e380157bc"
+    },
+    {
+      "start_character": 93315,
+      "end_character": 93842,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 3,
+      "words": 83,
+      "sha256": "b2b1260bc85fbc9535dbb0badac8890ceb986ffb114f24b4e54b34bd262f0956"
+    },
+    {
+      "start_character": 95485,
+      "end_character": 96027,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 7,
+      "words": 83,
+      "sha256": "047e736c3a46ddb5867158562b2515285248b9280f56cb6a64bc9e6518a1fad3"
+    },
+    {
+      "start_character": 96027,
+      "end_character": 96583,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 16,
+      "source_chapter_title": "Peryite's order of a different kind",
+      "paragraph": 8,
+      "words": 80,
+      "sha256": "fdfa9e46a481bfd4aca5d2963ddf73d6c145cc174cf295ef70b2becea37691b1"
+    },
+    {
+      "start_character": 98197,
+      "end_character": 98742,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 0,
+      "words": 85,
+      "sha256": "0043a5ac8a4948c64c669fb3763bf32b574f247744e22e68ace553567214ecf4"
+    },
+    {
+      "start_character": 98742,
+      "end_character": 99280,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 1,
+      "words": 85,
+      "sha256": "ee7bf180cab9af6f59f9b993ab554126c1bc24c7e890f2be7f6dbb8e7a77e4d7"
+    },
+    {
+      "start_character": 101029,
+      "end_character": 101572,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 5,
+      "words": 91,
+      "sha256": "89cf1c465f7ddad312717a7ff180a601acc965b3078a7f6c8bb347c6f0cb49cb"
+    },
+    {
+      "start_character": 101572,
+      "end_character": 102158,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 6,
+      "words": 97,
+      "sha256": "fe8fe59a59ebd1078285b41bd8ef948af95cfd47d8fb76b6f639658636a1975b"
+    },
+    {
+      "start_character": 102158,
+      "end_character": 102714,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 7,
+      "words": 90,
+      "sha256": "fd0ea4c74d3de94f29f779662d4c36332f6f6962d112d80fad733433b457974a"
+    },
+    {
+      "start_character": 102714,
+      "end_character": 103283,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 8,
+      "words": 93,
+      "sha256": "40d02c6206c8478894f041f79a01fe7b192d8cc883efaa278715f736f77a2909"
+    },
+    {
+      "start_character": 103283,
+      "end_character": 103847,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 9,
+      "words": 91,
+      "sha256": "79592573f6e0db0d75ddb9ba4bff0743dff78d09b388fd8622f9a704c0f2c271"
+    },
+    {
+      "start_character": 103847,
+      "end_character": 104393,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 17,
+      "source_chapter_title": "Malacath and a chief who fails",
+      "paragraph": 10,
+      "words": 87,
+      "sha256": "6af5447ae684a44d756cec88d5794f89543acded4b9365f2628f821b187575c1"
+    },
+    {
+      "start_character": 104393,
+      "end_character": 104952,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 0,
+      "words": 88,
+      "sha256": "fda422763cd27f6eb599fa32cc439024c7040b6c33c5aabc864a44a4a49ba9ca"
+    },
+    {
+      "start_character": 106535,
+      "end_character": 107039,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 4,
+      "words": 78,
+      "sha256": "653a895671ee67ef51cc7eaef485948ccbb7b376cb984a95ef31668b77e36672"
+    },
+    {
+      "start_character": 107039,
+      "end_character": 107606,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 5,
+      "words": 84,
+      "sha256": "8a06f56b751776c5526581cc395024aa96ecd99dfa23a9c2d6aecb7072fd60dd"
+    },
+    {
+      "start_character": 108174,
+      "end_character": 108746,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 18,
+      "source_chapter_title": "Nocturnal and a contract beyond a theft",
+      "paragraph": 7,
+      "words": 89,
+      "sha256": "c5cee06199a6fc5163421829d198ac13f518b600d6fef09097d7e22e822cb190"
+    },
+    {
+      "start_character": 110844,
+      "end_character": 111363,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 0,
+      "words": 85,
+      "sha256": "bb70e6ed11356a2a492c5b2d263e1e76fbf0ddbdbb1d74f01a6b8be23dde9821"
+    },
+    {
+      "start_character": 111363,
+      "end_character": 111874,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 1,
+      "words": 83,
+      "sha256": "81af768f4d60c6cca47d39298be7e489c20b09befae5677e57609013f9c072d6"
+    },
+    {
+      "start_character": 112376,
+      "end_character": 112956,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 3,
+      "words": 88,
+      "sha256": "f619da359ba091c7e79db347708d3c6b528876ed121ecbfe2eb584bc1c42d197"
+    },
+    {
+      "start_character": 112956,
+      "end_character": 113535,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 4,
+      "words": 88,
+      "sha256": "e888b13bbd04fda33cc5e9a60ac9bc201c4244a2889584eb7a20e0a5af57b8cb"
+    },
+    {
+      "start_character": 113535,
+      "end_character": 114088,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 5,
+      "words": 89,
+      "sha256": "7019c00ca3eab0474098e63e1bea5f97712ac1f6b512cc7530f4a2f0d86838d0"
+    },
+    {
+      "start_character": 114660,
+      "end_character": 115165,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 7,
+      "words": 84,
+      "sha256": "8c66d0ae0e354645a022c41f2c7a55f99cb8f55e3be64d3db66fd2b550db405c"
+    },
+    {
+      "start_character": 116344,
+      "end_character": 116880,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 10,
+      "words": 88,
+      "sha256": "dcd55d948fa9f31de08ca2bae2cdd018059bfaee60b302944637a3fb16902dc2"
+    },
+    {
+      "start_character": 116880,
+      "end_character": 117431,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 19,
+      "source_chapter_title": "Hermaeus Mora collects more than books",
+      "paragraph": 11,
+      "words": 79,
+      "sha256": "e4dd85425ffa4c8b1f6ff38dca8aecf518b98d23dd09de519ee4d0faaec03fee"
+    },
+    {
+      "start_character": 123396,
+      "end_character": 123986,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 0,
+      "words": 95,
+      "sha256": "0cf12ae921bc74074a29e5d9a55a3b6b13d42136f8165e7ead7976869ede18e6"
+    },
+    {
+      "start_character": 124555,
+      "end_character": 125104,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 2,
+      "words": 85,
+      "sha256": "2c3f02963447b77390e692917ed26abfab4b9182ce2136f34f65fc827e7e702f"
+    },
+    {
+      "start_character": 125104,
+      "end_character": 125691,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 3,
+      "words": 85,
+      "sha256": "007865d3fa974c650df6928d161139431f4a0d7604dccbfd243b15dcc7efe139"
+    },
+    {
+      "start_character": 125691,
+      "end_character": 126130,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 4,
+      "words": 67,
+      "sha256": "0fda8abe36c9cf4bca2d97a468d5d2cc94b1b57c16d4265bf213261703129305"
+    },
+    {
+      "start_character": 126130,
+      "end_character": 126681,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 21,
+      "source_chapter_title": "Sheogorath enters the ordinary city",
+      "paragraph": 5,
+      "words": 87,
+      "sha256": "5f8dff7c8668c43bdc29a56f0510ae6299ea34361910d03ff0b4ae81f4870d39"
+    },
+    {
+      "start_character": 130049,
+      "end_character": 130615,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 0,
+      "words": 89,
+      "sha256": "da140cd177179aa33b6c7d040d63c5815239bdb5dd379d203cfd085227e9d2fd"
+    },
+    {
+      "start_character": 130615,
+      "end_character": 131184,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 1,
+      "words": 90,
+      "sha256": "3b23257b0bc0f56ead4e98d8e0fd892333fc7ad4c828b560bd8e4180d93002c8"
+    },
+    {
+      "start_character": 131184,
+      "end_character": 131800,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 2,
+      "words": 87,
+      "sha256": "51101a245af3682734b1ecaf1d5f9bc05a01219cc2c2e1a5b6ed01df55ce0a88"
+    },
+    {
+      "start_character": 131800,
+      "end_character": 132398,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 3,
+      "words": 88,
+      "sha256": "69ebb2399d5c9fd6cfeff54c9dc565a3a0674c89ee9ea296965f27707b352e99"
+    },
+    {
+      "start_character": 132398,
+      "end_character": 132987,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 4,
+      "words": 88,
+      "sha256": "14ba8cdcd224784cd54b135e41962a7ce37d7337733fee6911d129e5e7e2a0f1"
+    },
+    {
+      "start_character": 135333,
+      "end_character": 135907,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 22,
+      "source_chapter_title": "The Shivering Isles have institutions",
+      "paragraph": 9,
+      "words": 86,
+      "sha256": "48c667f43c5a42701e36ebb3bf51bcd3f27ce9941df98dd8a654fe7c63a71923"
+    },
+    {
+      "start_character": 137022,
+      "end_character": 137606,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 0,
+      "words": 91,
+      "sha256": "ec35ce6191ccb6c5f5ad657e5dc95e9e693fa3db58e4e51059c6f64d5f32ad54"
+    },
+    {
+      "start_character": 138788,
+      "end_character": 139338,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 3,
+      "words": 86,
+      "sha256": "01aa63a4fa5007aa4f757afa884dd2fcf68acb6a476c6eb740cb8b09970f72ae"
+    },
+    {
+      "start_character": 139338,
+      "end_character": 139901,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 4,
+      "words": 88,
+      "sha256": "e0e8b8bad749d13590ccf24f741ff7b6b2615459f3f7eb75697a1de53ab3f3fb"
+    },
+    {
+      "start_character": 139901,
+      "end_character": 140439,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 5,
+      "words": 87,
+      "sha256": "4708841a279cc2d7577fbdaa8c45f8a81ab6d68e92d3f89204a41c613e116e5b"
+    },
+    {
+      "start_character": 141000,
+      "end_character": 141572,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 7,
+      "words": 94,
+      "sha256": "9a77994e41cb0cffbab0d62a8ea19dfcb30c0a3eb1b3b158358f45753ed32290"
+    },
+    {
+      "start_character": 141572,
+      "end_character": 142124,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 8,
+      "words": 86,
+      "sha256": "481b2a2cd5e1b46acae50f11fb7f8f318da9f44343d72a83ac0cc1e4daee9b14"
+    },
+    {
+      "start_character": 142124,
+      "end_character": 142671,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 23,
+      "source_chapter_title": "Jyggalag and the Greymarch",
+      "paragraph": 9,
+      "words": 88,
+      "sha256": "6f0b152349b19d9569d99a1574741fb4f9db5b7a1b3b545173f19bef8241a11e"
+    },
+    {
+      "start_character": 157674,
+      "end_character": 158015,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 28,
+      "source_chapter_title": "The Prince absent from an older list",
+      "paragraph": 0,
+      "words": 49,
+      "sha256": "4d5d6aad416575aad911031bf323f180e3c4115ee4001057f23b99a55cae2c02"
+    },
+    {
+      "start_character": 158015,
+      "end_character": 158384,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 28,
+      "source_chapter_title": "The Prince absent from an older list",
+      "paragraph": 1,
+      "words": 59,
+      "sha256": "1811cdee49efeebe7eb145a7ed84088984899b89b9d0058d6156a44cf5a99605"
+    },
+    {
+      "start_character": 158384,
+      "end_character": 158828,
+      "reason": "Keep core event, its causal setup or conditional outcome; remove surrounding repetition and secondary examples.",
+      "chapter": 28,
+      "source_chapter_title": "The Prince absent from an older list",
+      "paragraph": 2,
+      "words": 68,
+      "sha256": "5068f6a4f03a5dd79a3fdba38b52d5aac34d25df9ee0e6c47397028dd65e1ea1"
+    },
+    {
+      "start_character": 163791,
+      "end_character": 164111,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 0,
+      "words": 50,
+      "sha256": "8b0f2ce0bb301787089c4cca47a6871e3f5d2aa8d34842fc472a2cc6644cd976"
+    },
+    {
+      "start_character": 164111,
+      "end_character": 164474,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 1,
+      "words": 55,
+      "sha256": "de612e7c8757099f28f2d9fecb65003bf862dee3d621bdf9d68a59a77c6e7519"
+    },
+    {
+      "start_character": 164474,
+      "end_character": 164805,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 2,
+      "words": 51,
+      "sha256": "1cdd0933986d74414599d9c7232921a208766c7abc0113a80ec2db39a4681068"
+    },
+    {
+      "start_character": 164805,
+      "end_character": 165082,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 3,
+      "words": 45,
+      "sha256": "ab7c1fabb2f5c2f08ba79de1c20663aa58c0d2c5c66effe039afd0bc0930a96c"
+    },
+    {
+      "start_character": 165082,
+      "end_character": 165471,
+      "reason": "Preserve the source conclusion and its final image without adding new claims.",
+      "chapter": 30,
+      "source_chapter_title": "Leaving the shrine with a decision",
+      "paragraph": 4,
+      "words": 62,
+      "sha256": "a6163cedd35c7d04a6406f8758b96d4b6670226719f2d6b51d52799316291da5"
+    }
+  ],
+  "join_separator": "",
+  "offset_semantics": "Zero-based Python Unicode character offsets, end exclusive, source read as UTF-8-sig with LF normalization. Ranges include their original following whitespace. Concatenate literal slices with an EMPTY separator; do not strip each range.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "kept_words": 897,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "chapter": 2,
+      "kept_words": 1049,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "chapter": 3,
+      "kept_words": 891,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "chapter": 4,
+      "kept_words": 763,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "chapter": 5,
+      "kept_words": 987,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "chapter": 6,
+      "kept_words": 1048,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "chapter": 7,
+      "kept_words": 973,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "chapter": 8,
+      "kept_words": 389,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "chapter": 9,
+      "kept_words": 547,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "chapter": 10,
+      "kept_words": 534,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "chapter": 11,
+      "kept_words": 426,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "chapter": 12,
+      "kept_words": 515,
+      "selected_paragraphs": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "chapter": 13,
+      "kept_words": 802,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "chapter": 14,
+      "kept_words": 659,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "chapter": 15,
+      "kept_words": 426,
+      "selected_paragraphs": [
+        0,
+        1,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "chapter": 16,
+      "kept_words": 511,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "chapter": 17,
+      "kept_words": 719,
+      "selected_paragraphs": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "chapter": 18,
+      "kept_words": 339,
+      "selected_paragraphs": [
+        0,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "chapter": 19,
+      "kept_words": 684,
+      "selected_paragraphs": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "chapter": 20,
+      "kept_words": 0,
+      "selected_paragraphs": []
+    },
+    {
+      "chapter": 21,
+      "kept_words": 419,
+      "selected_paragraphs": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "chapter": 22,
+      "kept_words": 528,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        9
+      ]
+    },
+    {
+      "chapter": 23,
+      "kept_words": 620,
+      "selected_paragraphs": [
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "chapter": 24,
+      "kept_words": 0,
+      "selected_paragraphs": []
+    },
+    {
+      "chapter": 25,
+      "kept_words": 0,
+      "selected_paragraphs": []
+    },
+    {
+      "chapter": 26,
+      "kept_words": 0,
+      "selected_paragraphs": []
+    },
+    {
+      "chapter": 27,
+      "kept_words": 0,
+      "selected_paragraphs": []
+    },
+    {
+      "chapter": 28,
+      "kept_words": 176,
+      "selected_paragraphs": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "chapter": 29,
+      "kept_words": 0,
+      "selected_paragraphs": []
+    },
+    {
+      "chapter": 30,
+      "kept_words": 263,
+      "selected_paragraphs": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "new_text_added": false,
+  "operation": "Exact ordered paragraph extraction; no rewrite, no audio generation.",
+  "cta_preserved": true,
+  "source_conclusion_last_500_characters_preserved": true,
+  "paid_prefix_0_41534_preserved": true,
+  "estimated_minutes_at_106_wpm": 143.07,
+  "estimated_minutes_at_123_wpm": 123.29,
+  "duration_is_estimate_until_audio_measured": true,
+  "review": "Selection authored by chapter and paragraph. All removed-gap junctions read in context; dependent references rechecked against full source paragraphs and restored where needed.",
+  "review_status": "reviewed",
+  "editorial_notes": [
+    "Preserved the exact first 41534 source characters, including every newline, to reuse the two accepted audio blocks.",
+    "Kept the opening spoiler scope and subscription/location CTA, all principal Prince encounters, the separately framed Ithelia coda and the complete final Twilight Sepulcher scene.",
+    "Removed the separate Miraak expansion and repeated cross-Prince comparison chapters; retained Mora, Storn, the Black Books, and the conditional outcomes of the shrine quests.",
+    "Junction review restored the Ennis-to-Ysolda lead, the Skull introduction, the Fallowstone Cave approach and the Shivering Isles succession setup. Removed the early duplicate return of the Skeleton Key so the final scene completes that obligation."
+  ],
+  "join_reviews": [
+    {
+      "after_chapter": 8,
+      "before_chapter": 8,
+      "before_paragraph": 9,
+      "left": "ch his remaining people into a secure city while the gate continues to admit enemies. Once the opening is shut, the effort to reclaim Kvatch can proceed. The Prince's invasion has a structure that mortals can disrupt, one opening at a time.",
+      "right": "Martin Septim ultimately stops Dagon's entry into the Imperial City by breaking the Amulet of Kings and becoming Akatosh's avatar. Dagon is driven back, but Martin is lost, leaving a stone dragon at the Temple of the One and an Empire without a Septim emperor.",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 8,
+      "before_chapter": 9,
+      "before_paragraph": 0,
+      "left": "tely stops Dagon's entry into the Imperial City by breaking the Amulet of Kings and becoming Akatosh's avatar. Dagon is driven back, but Martin is lost, leaving a stone dragon at the Temple of the One and an Empire without a Septim emperor.",
+      "right": "In Markarth, Vigilant Tyranus stands outside an abandoned house, asking whether anyone has seen people entering or leaving. He suspects Daedra worship inside. If the Dragonborn agrees to help him search, an ordinary doorway in the city leads into Molag Bal's reach. There's no journey across Oblivion",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 9,
+      "before_chapter": 10,
+      "before_paragraph": 0,
+      "left": "tifact a history the player has participated in. Its restoration involves making a named priest renounce the allegiance that brought him into conflict with Molag Bal. The weapon leaves the house after its patron has obtained that surrender.",
+      "right": "Meridia's Beacon can turn an ordinary search through a chest into a summons. In Skyrim, taking the object brings the Prince's voice directly to the Dragonborn. She wants her Beacon returned to her shrine at Mount Kilkreath, where a necromancer has occupied her temple. The object has a particular use",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 10,
+      "before_chapter": 10,
+      "before_paragraph": 5,
+      "left": " inside. That arrangement makes the quest feel different from a priest asking for help on a god's behalf. Here the patron gives the instructions herself, while the difficult journey through the sanctuary remains the mortal's responsibility.",
+      "right": "Malkoran waits in the inner sanctuary among corrupted shades. His defeat requires more than overcoming his living body, because a shade of Malkoran emerges after he falls. The necromancy that has filled the temple extends to its occupant's own final resistance. Once that shade is defeated, the Drago",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 10,
+      "before_chapter": 11,
+      "before_paragraph": 0,
+      "left": "sted chiefly in Dawnbreaker has accomplished the same restoration. Meridia doesn't require those motives to be identical. Her immediate concern is that Malkoran has been removed and that an armed mortal can now take her influence elsewhere.",
+      "right": "Sinding is locked inside the jail at Falkreath when the Dragonborn meets him. Outside, a family is mourning the child he killed. He admits responsibility, and his account leads to a ring he stole from Hircine, the Daedric Prince of the hunt. Sinding had hoped the ring would help him manage his trans",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 11,
+      "before_chapter": 11,
+      "before_paragraph": 4,
+      "left": "unt of his own. Sinding has fled to Bloated Man's Grotto, and Hircine wants him killed and skinned. The request for relief has brought the Dragonborn into a position where removing a curse means pursuing the person who first asked for help.",
+      "right": "The Dragonborn can follow Hircine's demand and kill Sinding. In that branch, taking his skin brings another appearance by the Prince, and the reward is the Savior's Hide. The armor has a direct connection to the creature pursued through the grotto. Sinding's attempt to escape the curse ends with his",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 11,
+      "before_chapter": 12,
+      "before_paragraph": 0,
+      "left": " result as well. He removes the curse from the ring and allows the Dragonborn to keep it. His satisfaction suggests that reversing the hunt still meets his interests when the supposed quarry and an ally overcome the hunters sent against it.",
+      "right": "Lod, the blacksmith in Falkreath, is looking for a dog. He asks the Dragonborn to find the animal outside town, and the errand seems ordinary enough until the dog begins speaking. Barbas has a problem with his master, Clavicus Vile, and wants help settling their disagreement. He can speak for himsel",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 12,
+      "before_chapter": 12,
+      "before_paragraph": 4,
+      "left": " else to help bring them together. The Dragonborn becomes involved as an intermediary in a dispute that began before their arrival. The talking dog knows his master well enough to expect difficulties, even while pursuing a reunion with him.",
+      "right": "Vile proposes a task involving the Rueful Axe, which is held by the mage Sebastian Lort at Rimerock Burrow. Bringing it back will settle the matter of Barbas's return. Barbas also supplies an account of the weapon's origin. According to him, Lort's daughter became a werewolf, and her father appealed",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 12,
+      "before_chapter": 13,
+      "before_paragraph": 0,
+      "left": " especially mean-spirited: Vile describes an outcome that won't permanently solve his complaint, while asking a mortal to perform it. The two branches leave the Dragonborn with different artifacts and different participation in the quarrel.",
+      "right": "Sam Guevenne offers the Dragonborn a drinking contest in a tavern, with a staff as the prize. He looks like a man prepared to share an evening's entertainment, and the invitation doesn't require a pilgrimage or an offering at a shrine. If the Dragonborn accepts and continues drinking, the contest en",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 13,
+      "before_chapter": 14,
+      "before_paragraph": 0,
+      "left": "d temple to attend to, Ennis wanted Gleda back, and Ysolda expected a debt to be settled. Sanguine can enjoy the whole affair from the feast at its end. The Dragonborn has met the people who were left to deal with its separate consequences.",
+      "right": "In Dawnstar, people are afraid to fall asleep. The nightmares have become a shared trouble in the town, and the conversations at the Windpeak Inn bring that trouble into an ordinary public room. Erandur, a priest of Mara, believes he knows where the dreams originate. Above Dawnstar stands Nightcalle",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 14,
+      "before_chapter": 14,
+      "before_paragraph": 6,
+      "left": "for the Dragonborn. Their guide knows the temple because he belonged to it, and his wish to destroy the Skull is bound up with something he did there. He offers that history himself, even though it gives his companion a reason to doubt him.",
+      "right": "Near the Skull, Erandur encounters Veren Duleri and Thorek, former fellow priests who survived in the temple's unnatural sleep. They recognize him as Casimir and accuse him of leaving them. Erandur acknowledges what he did, but the meeting doesn't produce forgiveness or a peaceful departure. The con",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 14,
+      "before_chapter": 15,
+      "before_paragraph": 0,
+      "left": "ctive effect. That property carries the temple's intrusion into sleep beyond Dawnstar. Keeping the artifact offers a practical benefit to its bearer, while destroying it completes the task Erandur brought the Dragonborn there to accomplish.",
+      "right": "Brother Verulus won't let visitors into Markarth's Hall of the Dead while the remains entrusted to him are being disturbed. The trouble comes to the Dragonborn through a priest trying to protect a burial place. Before Namira's name enters the conversation, there's a problem within the city's ordinar",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 15,
+      "before_chapter": 15,
+      "before_paragraph": 7,
+      "left": "ast she describes, and her account shouldn't be mistaken for an established history of the character. Eola offers recognition on her own terms, inviting the Dragonborn to accept both her description and the companionship that comes with it.",
+      "right": "If the Dragonborn accepts Eola's invitation, she directs them to Reachcliff Cave. Draugr have made the site unsafe for the feast she wants to hold, and she asks for help clearing them out. This gives the invitation a practical stage before its full cost arrives. Eola can accompany the Dragonborn thr",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 15,
+      "before_chapter": 15,
+      "before_paragraph": 10,
+      "left": " Dragonborn know what awaits. Once he arrives, Eola takes charge of him and directs him toward the place prepared for the meal. Keeping that deception in view matters, because the cult presents the gathering as a welcome for the Dragonborn.",
+      "right": "The Dragonborn can decline Eola's invitation when they first meet, rather than help arrange the feast. If the Dragonborn instead follows the invitation as far as Reachcliff Cave, it's also possible to turn against the assembled cult and save Verulus. Those branches keep the priest's fate from being ",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 15,
+      "before_chapter": 16,
+      "before_paragraph": 0,
+      "left": "cepting Eola's earlier help doesn't require completing her demand. If the Dragonborn does carry out the final act and take part in the meal, Namira addresses them and grants her ring, whose benefits include a reward for feeding on the dead.",
+      "right": "At Peryite's shrine in the Reach, Kesh the Clean asks for ingredients before the Dragonborn can speak with his Prince. A silver ingot, a flawless ruby, deathbell, and vampire dust must be brought together for an incense that makes the audience possible. The shrine is an outdoor place, with a dragon-",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 16,
+      "before_chapter": 16,
+      "before_paragraph": 7,
+      "left": "here their patron directed them. Orchendor's position comes with responsibility for those people, as well as duties toward the Prince. By the time the Dragonborn arrives, the refuge has become a place Peryite wants an outsider to penetrate.",
+      "right": "Orchendor waits farther within the complex. He's a mage who can teleport during the confrontation, and his immunity to magic distinguishes him from the followers encountered on the way. Peryite's complaint concerns his failure as an overseer, but Orchendor is also capable of resisting the person sen",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 16,
+      "before_chapter": 17,
+      "before_paragraph": 0,
+      "left": "ask and receives an object that can protect its bearer against further danger. Peryite remains at a distance throughout the enforcement. Kesh facilitates the meetings, the Dragonborn travels to Bthardamz, and Orchendor bears the punishment.",
+      "right": "A giant is attacking Largashbur when the Dragonborn first encounters the stronghold's crisis. The Orcs living behind its walls have been struggling with these attacks, and their chief, Yamarz, hasn't secured their safety. Atub, the stronghold's wise woman, is willing to ask an outsider for help. Tha",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 17,
+      "before_chapter": 17,
+      "before_paragraph": 5,
+      "left": "e the stronghold's patron, but the Orcs can't resolve their trouble merely by acknowledging him. Atub undertakes the work of approaching him, while Yamarz's position as chief leaves him answerable for what has happened under his leadership.",
+      "right": "Malacath directs Yamarz to deal with the giants at his shrine and recover the warhammer they have taken. The order gives the chief a specific task through which to answer the accusation against him. He's expected to enter the place the giants occupy and confront the danger himself. Atub has obtained",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 18,
+      "before_chapter": 18,
+      "before_paragraph": 4,
+      "left": "ht Sepulcher. When Mercer removes it, he breaks the arrangement he was sworn to protect. Karliah connects that theft to the Thieves Guild's failing fortunes, giving its troubles an explanation that reaches beyond bad jobs and empty coffers.",
+      "right": "She takes Brynjolf and the Dragonborn to Nightingale Hall, where the Nightingales' connection to Nocturnal becomes explicit. They are a small, secretive circle associated with the Guild, pledged to defend her shrine and the Ebonmere. Gallus, Karliah and Mercer had belonged to that circle. Membership",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 18,
+      "before_chapter": 18,
+      "before_paragraph": 7,
+      "left": "ts the new arrangement, though her response gives little comfort to Karliah. The Prince expects the stolen Key returned. Becoming a Nightingale places the Dragonborn inside an existing obligation, with the earlier betrayal still unresolved.",
+      "right": "At Irkngthand, Mercer demonstrates why the Key is more dangerous in his possession than an unusually good lockpick would suggest. Karliah explains that it can unlock potential as well as physical barriers, and she connects Mercer's extraordinary abilities to his misuse of it. The pursuit leads to th",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 18,
+      "before_chapter": 19,
+      "before_paragraph": 0,
+      "left": "s of the Falmer. If the Dragonborn completes the confrontation, Mercer dies, the chamber floods, and the survivors escape with the recovered Key. The Guild's betrayer is gone, while Nocturnal's property still needs to reach its destination.",
+      "right": "Septimus Signus lives beside a sealed Dwemer lockbox in an outpost north of the College of Winterhold. The object occupies his attention so completely that conversation keeps returning to what might be inside it. He believes it contains the Heart of Lorkhan. That belief gives his work an extraordina",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 19,
+      "before_chapter": 19,
+      "before_paragraph": 3,
+      "left": "n the Tower of Mzark. There, the Scroll can be released while the lexicon receives an inscription. For someone following the main quest, the Scroll is the immediate concern. Septimus wants the information brought back in the smaller device.",
+      "right": "When Septimus examines the inscribed lexicon, his problem becomes more specific. The lock requires Dwemer blood, which he cannot obtain. He proposes creating a substitute by combining blood from the surviving elven peoples. If the Dragonborn continues his work, the next collection includes Altmer, B",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 19,
+      "before_chapter": 19,
+      "before_paragraph": 7,
+      "left": "ent himself pursuing the sealed chamber doesn't leave with its treasure. The traveler who completed his work receives an artifact that can increase their abilities through reading, with its benefits directed toward different kinds of skill.",
+      "right": "On Solstheim, the Black Books give the same patron a wider reach. These volumes can carry a reader into Apocrypha, Mora's realm, where books fill immense structures and Seekers and Lurkers threaten visitors. Reading becomes a physical crossing into a place with passages to navigate and dangers to su",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 19,
+      "before_chapter": 19,
+      "before_paragraph": 10,
+      "left": "assages to navigate and dangers to survive. A volume found in a ruin can therefore alter what happens far outside its resting place. Someone opens a book on Solstheim, and Mora gains an opportunity to meet that reader within his own domain.",
+      "right": "Mora's demand for the Skaal's secrets shows what he still wants from outside his library. He offers the knowledge the Dragonborn needs in exchange for traditions kept by Storn Crag-Strider's people. Storn agrees because of the danger facing Solstheim, despite his distrust of the Prince. When he read",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 19,
+      "before_chapter": 21,
+      "before_paragraph": 0,
+      "left": "son for Mora's continued bargaining: even a realm crowded with books has things its ruler wants mortals to bring him. At Skaal Village, that acquisition leaves Frea without her father, while the knowledge he protected passes into Apocrypha.",
+      "right": "Dervenin waits in Solitude with a problem that sounds, at first, like a servant's complaint. His master has gone away, and he wants someone to bring him back. Following that request takes the Dragonborn toward the Blue Palace, where the abandoned Pelagius Wing sits within a working royal household. ",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 21,
+      "before_chapter": 21,
+      "before_paragraph": 2,
+      "left": "ing. The disused rooms belong to another history, associated with Emperor Pelagius Septim III. Sheogorath enters this ordinary city through a servant, a locked part of a palace, and an errand whose meaning changes once someone agrees to it.",
+      "right": "Inside the wing, the journey breaks away from the building. The Dragonborn arrives at a strange outdoor table where Sheogorath is speaking with Pelagius. The quest places this encounter within Pelagius's mind. Ordinary equipment is unavailable, and Sheogorath supplies the Wabbajack for the work he d",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 21,
+      "before_chapter": 22,
+      "before_paragraph": 0,
+      "left": "d Sheogorath agrees to depart. Dervenin gets the return he wanted. The traveler returns to the palace with the Wabbajack, having passed through an experience that the ordinary rooms of the Pelagius Wing couldn't have suggested on their own.",
+      "right": "Haskill receives the traveler in a small room beyond the strange door in Niben Bay. He has a desk, a manner suited to official business, and questions about whether the visitor intends to proceed. The entrance to the Shivering Isles therefore includes something like an interview. When the room gives",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 22,
+      "before_chapter": 22,
+      "before_paragraph": 9,
+      "left": "assing remarks. Their servants know their habits, their households have internal dangers, and their titles can be transferred through recognized rituals. A newcomer is stepping into an arrangement that existed before the invitation arrived.",
+      "right": "The offices of Mania and Dementia become especially concrete when Sheogorath allows the traveler to replace one of their rulers. The routes differ. Taking Thadon's place involves his ritual and the lethal use of greenmote. Taking Syl's place involves pursuing her and obtaining her heart. These are c",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 22,
+      "before_chapter": 23,
+      "before_paragraph": 0,
+      "left": "th its own participants and consequences. Whichever route is taken, the title comes through a process the court recognizes. Sheogorath's approval matters, and so does the prescribed act that makes the succession acceptable within his realm.",
+      "right": "Order begins appearing in the Shivering Isles as something its residents fear. Crystals emerge, Knights of Order advance, and familiar places become sites of attack. At Passwall, the settlement where the traveler first waited beyond the strange door, the danger reaches people who had seemed part of ",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 23,
+      "before_chapter": 23,
+      "before_paragraph": 3,
+      "left": "s recurring destruction the Greymarch. He knows its approach and has sought a champion to interfere with it. The preparations that brought the visitor into his service belong to an attempt to prevent a catastrophe he has experienced before.",
+      "right": "Yet Sheogorath's own presence becomes increasingly uncertain as the crisis develops. His explanation places him inside the recurring event. When the decisive change comes, he disappears as Sheogorath and becomes Jyggalag, the Prince of Order. The threat isn't merely another ruler arriving at his bor",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 23,
+      "before_chapter": 23,
+      "before_paragraph": 7,
+      "left": "owledge associated with the earlier order. His survival provides a connection to a history that the current court can't supply by itself. Haskill can direct the player toward him, but Dyus must explain what materials the new staff requires.",
+      "right": "Dyus makes the staff once the materials are brought to him, but it still needs the power associated with Sheogorath's office. The Font of Madness in the palace should provide that. Order has reached the source, however, and the roots beneath the palace must be cleared before the process can be compl",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 23,
+      "before_chapter": 28,
+      "before_paragraph": 0,
+      "left": "w holder of its ruling role. Haskill continues to serve. The duties attached to the court continue too. Becoming the ruler doesn't empty the streets of residents or remove the practical needs that made the threatened domain worth defending.",
+      "right": "The Elder Scrolls Online gives the Princes an earlier-era setting, long before the journeys through Morrowind, Oblivion, and Skyrim. Its Gold Road story introduces Ithelia, the Forgotten Prince, associated with paths and possibilities. Her return belongs to that separate story, rather than an unseen",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    },
+    {
+      "after_chapter": 28,
+      "before_chapter": 30,
+      "before_paragraph": 0,
+      "left": "ape as well as the emergence of unfamiliar Daedra. The Forgotten Prince's return reaches beyond a revised entry in a scholar's book. It has brought uncertainty into roads and settlements whose inhabitants must now find their way through it.",
+      "right": "At the Twilight Sepulcher, the Dragonborn can finally complete the journey begun with the recovery of the Skeleton Key. Gallus waits as a Nightingale Sentinel, able to explain the Pilgrim's Path to the living bearer. Beyond him, the sanctuary's trials lead inward, through passages where light itself",
+      "status": "reviewed",
+      "review_note": "Read the left/right join in context; the location, speaker or causal subject is retained or introduced by the next paragraph. Dependent references identified during review were restored from the original."
+    }
+  ]
+}

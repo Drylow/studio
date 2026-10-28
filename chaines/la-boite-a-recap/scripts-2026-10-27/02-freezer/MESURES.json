@@ -1,0 +1,35 @@
+{
+  "episode": "Freezer",
+  "language": "fr",
+  "status": "script_complete_audited",
+  "words": 24639,
+  "characters_with_spaces": 154230,
+  "characters_without_whitespace": 129272,
+  "utf8_bytes": 158401,
+  "sha256": "388d885cb8e2afcc4f9116f159e82196e779fac9a2aad960d4f9c5ca683980d9",
+  "chapter_count": 25,
+  "word_count_rule": "Unicode words; apostrophes and internal hyphens kept inside one word.",
+  "minimum_requested_minutes": 120,
+  "estimated_duration_minutes": {
+    "170": 144.935,
+    "180": 136.883,
+    "182": 135.379,
+    "190": 129.679,
+    "200": 123.195
+  },
+  "maximum_rate_for_120_minutes": 205.325,
+  "duration_status": "estimate_only_no_voiceover_generated",
+  "calibration": {
+    "channel_samples": [
+      "7d06Z6W6J70",
+      "B7099KgzENE",
+      "5jsmtyQ-MbY"
+    ],
+    "observed_wpm_approx": "181–182",
+    "narration_rate_used": 182
+  },
+  "em_dashes_in_spoken_copy": 0,
+  "urls_in_spoken_copy": 0,
+  "bracketed_production_notes": 0,
+  "hook_words": 75
+}

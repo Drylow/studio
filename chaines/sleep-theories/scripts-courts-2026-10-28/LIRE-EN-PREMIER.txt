@@ -1,0 +1,57 @@
+SCRIPTS RACCOURCIS ET NOUVELLES VOIX — 28 OCTOBRE 2026
+
+L'utilisateur impose désormais 2 HEURES MINIMUM et 2 H 30 MAXIMUM mesurées
+sur le MP3 final. Il a choisi de refaire les dix voix Deep Void / Quiet Paradox
+à partir des textes raccourcis. Les trois premières Forgotten Realms restent
+autorisées ; Oblivion et New Vegas sont différés.
+
+13 scripts relus, 197 579 mots, 1 245 380 caractères au total.
+Les textes ont environ 15 000 à 15 300 mots chacun. Les estimations utilisent
+le débit constaté de la voix ; seule la mesure du MP3 valide la durée.
+Leur contenu provient de passages entiers des scripts approuvés, conservés
+dans l'ordre, sans faits nouveaux. Intro, CTA et conclusion sont conservés.
+Les raccords et suppressions sont décrits dans PLAN-REDUCTION.json.
+Il s'agit d'une revue de réduction et de cohérence, pas d'une nouvelle recherche
+exhaustive des faits déjà présents dans les scripts d'origine.
+
+COÛT ET RÉUTILISATION
+Dix remplacements Deep Void / Quiet : 954 929 caractères.
+Trois Forgotten Realms : 290 451 caractères, dont 41 534 déjà générés et
+réutilisables à l'identique au début de Daedric Princes.
+Nouvelles générations autorisées : 1 203 846 caractères, sans sous-titres payants.
+La réserve des voix françaises est contrôlée avant chaque paire de soumissions.
+Mellow Matt, vitesse 0,90. Ne pas reprendre les anciens scripts longs.
+
+ÉTAT À LA CRÉATION DE CE DOCUMENT
+La file de production est lancée ; les treize MP3 courts ne sont pas livrés.
+Deux blocs Daedric Princes sont réutilisés après contrôle complet.
+Lire le registre privé actualisé et les STATUT-VOICEOVER.txt pour la progression.
+
+LIVRAISON
+Bureau/VIDEOS - TOUT REGROUPE/<chaîne>/<vidéo>/.
+SCRIPT-COURT-EN-PRODUCTION.txt contient le texte en fabrication.
+Avant remplacement, VOICEOVER.mp3 et SCRIPT.txt restent les versions longues.
+Après validation, le MP3 court et son script remplacent ensemble les fichiers
+de travail ; les originaux sont préservés sous _Archives des anciens dossiers/
+Versions longues avant correction - 28 octobre 2026.
+Un marqueur LIVRAISON-EN-COURS.txt interdit d'utiliser une livraison interrompue.
+CONTROLES-VERSION-COURTE.json identifie les fichiers courts réellement livrés.
+
+REPRISE
+Pilote : production/sleep_voiceovers_short_oct28.py.
+Registre privé : work/sleep-short-voiceovers-2026-10-28/ledger.json.
+Actions : plan et status sans soumission ; monitor récupère seulement les jobs
+existants ; run poursuit exclusivement cette file finie autorisée.
+Un seul processus Windows caché ; vérifier les processus avant de relancer.
+Chaque bloc n'est soumis qu'une fois. Réponse ambiguë ou échec exige une revue,
+aucun retry payant automatique. pause-submissions.json bloque les nouveaux POST.
+L'ancien pilote Forgotten Realms reste en pause : ne pas le relancer en parallèle.
+
+CONTRÔLES
+Sources figées avec empreintes, découpage exact, décodage complet de chaque bloc,
+comparaison avec une transcription automatique intégrale et contrôle strict des
+extrémités. Assemblage sans répétition ajoutée ni silence artificiel, empreintes
+finales et durée obligatoire entre 7 200 et 9 000 secondes avant livraison.
+La transcription automatique peut confondre des noms et ne remplace pas une
+écoute humaine intégrale. Un doute bloque la livraison plutôt que de la valider.
+Les identifiants de jobs, médias, accès et cache de contrôle restent privés.

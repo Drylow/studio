@@ -1,0 +1,11 @@
+LA BOÎTE À RÉCAP — PROMPT MINIATURE
+
+Références de composition et de typographie, dossier REFERENCES-MINIATURES à la racine du lot (copie Bureau : Verification du lot/References miniatures) :
+one-punch-man.jpg
+attaque-titans.jpg
+
+PROMPT
+Make one final 16:9 French YouTube thumbnail matching the layout, rendering and typography of the supplied La Boîte à Récap anime references, about Taro Sakamoto from Sakamoto Days. Two equal halves, rough white vertical torn-paper seam at center, huge chest-up portraits, polished high-detail anime cel shading and crisp black contours. LEFT: Taro Sakamoto in his former legendary hitman appearance, lean adult man with long silver hair tied back in a low ponytail, rectangular glasses, sharp serious handsome face, wearing a tailored black suit, white shirt and dark tie. Bright cool blue urban background, no firearm pointed at viewer. RIGHT: present-day retired Taro Sakamoto, round heavyset adult man, the same white/silver ponytail and rectangular glasses, small recognizable mustache, calm determined protective expression, green store apron over a casual white T-shirt, holding no weapons. Warm grocery store glow behind him with simple blurred shelves, dramatic navy shadows and warm rim light. He is the same character changed by family life, not an elderly wizard and not a generic villain. Show the transformation slender-to-round immediately, faces dominant and not obscured. Text exactly like supplied references: only huge white "DÉBUT" on bottom left and huge yellow "FIN" bottom right, thick rounded italic uppercase with heavy black outlines and shadows, fully visible. No food brand labels, other text, arrows, logos or time badge. Output one finished thumbnail, not a collage of variants.
+
+ÉTAT : image créée avec le générateur intégré, regardée, puis exportée en JPG 1280 × 720 pour la publication. Le PNG conserve le fichier original.
+Les mots DÉBUT / FIN désignent les bornes du récap, sans promettre la fin d’une œuvre encore en cours.

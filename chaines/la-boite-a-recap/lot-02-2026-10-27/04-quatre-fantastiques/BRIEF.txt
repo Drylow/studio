@@ -1,0 +1,44 @@
+LA BOÎTE À RÉCAP — LES QUATRE FANTASTIQUES
+Lot autorisé le 27 octobre 2026 ; vérifications terminées le 28 octobre 2026.
+
+TOPIC: L'histoire des Quatre Fantastiques dans les comics Marvel, avec une comparaison séparée des films.
+
+ANGLE: Coût caché et conséquences : suivre ce que les décisions de Reed font aux autres, et comment Sue, Ben, Johnny puis les enfants gardent leur capacité de choisir au sein d'une famille d'explorateurs.
+
+PROOF BANK:
+1. Vol cosmique et transformation de Ben : Fantastic Four (1961) #1 ; synthèse officielle Marvel « Fantastic Four In Comics » et récapitulatif officiel vidéo.
+2. Sue quitte Reed après l'intervention sur Franklin : Fantastic Four (1961) #141 ; guide officiel « The Children of the Fantastic Four ».
+3. Unthinkable, occupation de la Latvérie et retour de Ben : Fantastic Four de Waid/Wieringo, recueils officiels Unthinkable et Hereafter.
+4. Conseil des Reed, Fondation, semaine humaine de Ben et sacrifice de Johnny : Fantastic Four (1998) #570–588, FF (2011) et reprise #600 ; guides officiels Fondation et recueils Hickman.
+5. Incursions, Battleworld et reconstruction : New Avengers (2013), Secret Wars (2015), guides officiels Secret Wars et Molecule Man.
+6. Adoption de Jo-Venn et N'Kalla : Empyre: Fantastic Four (2020), guide officiel des enfants et fiche Alicia Masters.
+7. Quartier envoyé un an dans le futur : Fantastic Four (2022) #4 et #14 ; fiches officielles Marvel et guide sur la culpabilité de Reed.
+8. First Steps : univers cinématographique distinct, équipe déjà formée ; article officiel The Walt Disney Company du 24 juillet 2025, ouvert et lu.
+
+HOOK DIRECTION: Le corps de Ben après le retour du vaisseau ; la promesse de Reed de le guérir reste ouverte à travers leurs exploits. Première scène concrète, compréhension rapide du coût de l'accident.
+
+STRUCTURE HINT: Documentaire chronologique avec fil familial ; retour final explicite à l'ancien récit Cet homme, ce monstre. La chronologie est regroupée par crises pour éviter un catalogue de numéros. Les films forment un épilogue distinct, avant le retour final à Ben.
+
+PÉRIMÈTRE
+- Continuité principale des comics, origines et grands arcs jusqu'au début de One World Under Doom et au cadre récent de Ryan North.
+- Aucune prétention d'exhaustivité numéro par numéro ou de couverture de tous les épisodes sortis en 2026.
+- Versions Ultimate, Battleworld et cinéma signalées comme distinctes.
+- Ni anticipation de scènes de Doomsday, ni mélange des films avec la chronologie des comics.
+- Spoilers majeurs autorisés par le format demandé ; aucun contenu de romans concernant Silo n'est pertinent ici.
+- Narration française, ton de récap accessible ; minimum 24 500 mots ; durée exacte à mesurer après voix.
+- Aucun audio généré dans cette tâche. SCRIPT.txt uniquement, sans titres à prononcer ni balises de montage.
+
+ANCRAGE DE CHAÎNE
+Transcriptions françaises existantes : Thanos (7d06Z6W6J70), One Punch Man (B7099KgzENE), L'Attaque des Titans (5jsmtyQ-MbY). Les deux premières ouvertures ont été relues ; le débit repose sur CALIBRATION.json du lot précédent, environ 182 mots/minute.
+Conserver : narration causale, français direct, scènes et décisions, adresse ponctuelle au spectateur.
+Écarter : erreurs de reconnaissance automatique, affirmations absolues et dramatisation mécanique présentes dans certaines références.
+
+COMPARAISON ÉDITORIALE
+Référence effectivement consultée : Marvel Entertainment, « 60 Years of Fantastic Four History in 90 Minutes », dZBgbT_jtmQ, publiée le 15 juillet 2025. Transcription récupérée via Algrow, ouverture et segments jusqu'à la période North étudiés.
+Structure observée : présentation des quatre membres, origines biographiques séparées, progression par événements et numéros, humour, élargissement cosmique, conclusion promotionnelle.
+Notre différence : ouverture sur Ben, conséquences du consentement et du contrôle suivies dans chaque crise, développements d'Alicia et de Sue, retour final à une ancienne aventure ; aucune reprise de phrases ou traduction suivie de la référence.
+Autre résultat repéré : Chaos Ensues, « The Complete Fantastic Four Comics History », compilation d'essais par périodes créatives. Page et description consultées ; aucune transcription intégrale disponible dans cette passe.
+Limite : pas de classement exhaustif des cinq meilleurs outliers, pas de données privées de rétention, aucune promesse de performance.
+
+PLAN
+01 Vol cosmique et promesse ; 02 maison publique et Skrulls ; 03 Namor ; 04 Doom et Alicia ; 05 Terrifics, Inhumains, mariage ; 06 Galactus ; 07 Wakanda, Zone négative, Franklin ; 08 rupture familiale ; 09 procès de Galactus et Guerres secrètes ; 10 Malice, Lyja et générations ; 11 Hyperstorm et Onslaught ; 12 Valeria ; 13 Unthinkable et Hereafter ; 14 Civil War et Conseil ; 15 Fondation et Johnny ; 16 guerre des cités ; 17 voyage et Quiet Man ; 18 incursions ; 19 Battleworld ; 20 reconstruction et retour ; 21 adoption et flamme permanente ; 22 Guerre du Jugement et quartier ; 23 ferme et enfants ; 24 Doom et limites des versions ; 25 films ; 26 retour à Cet homme, ce monstre.

@@ -1,0 +1,38 @@
+LA BOÎTE À RÉCAP — LOT 2
+Lot ouvert le 27 octobre 2026 ; livraison vérifiée le 28 octobre 2026.
+
+CONTENU
+Cinq scripts originaux en français, chacun au-dessus de 24 500 mots de narration.
+Un dossier par vidéo avec SCRIPT.txt, TITRE-ET-DESCRIPTION.txt et MINIATURE.jpg. STATUT-VOICEOVER.txt indique l'avancement de la narration ; voiceover.mp3 apparaît après génération, récupération et contrôles. Le sous-dossier Verification conserve les sources, le brief, l'audit, les mesures, les repères de chapitres, le prompt et le PNG d'origine.
+
+LONGUEURS ET MINIATURES
+- 04 - Les 4 Fantastiques : 24 821 mots ; 2 h 16 à 182 mots/min ; 2 h 04 à 200 mots/min ; miniature prête.
+- 05 - One Piece : 25 064 mots ; 2 h 18 à 182 mots/min ; 2 h 05 à 200 mots/min ; miniature prête.
+- 06 - Frieren : 26 453 mots ; 2 h 25 à 182 mots/min ; 2 h 12 à 200 mots/min ; miniature prête.
+- 07 - Sakamoto Days : 24 808 mots ; 2 h 16 à 182 mots/min ; 2 h 04 à 200 mots/min ; miniature prête.
+- 08 - Stranger Things : 24 637 mots ; 2 h 15 à 182 mots/min ; 2 h 03 à 200 mots/min ; miniature prête.
+
+Total : 125 783 mots et 779 416 caractères, espaces et sauts de ligne compris.
+Les durées ci-dessus sont des estimations, pas des durées MP3 mesurées. Même à 200 mots/minute, chaque script dépasse deux heures. Mesurer le fichier audio final avant de promettre un nombre de minutes dans le titre.
+
+PÉRIMÈTRES
+Les 4 Fantastiques : grands arcs de la continuité principale des comics, puis adaptations traitées séparément. Aucun scénario supposé d'Avengers: Doomsday.
+One Piece : du début au chapitre 1133, retrouvailles Robin/Saul à Elbaf. La suite de l'arc est hors périmètre.
+Frieren : saisons 1 et 2 de l'anime, épisodes 1 à 38. Le voyage vers Aureole n'est pas terminé.
+Sakamoto Days : saison 1 de l'anime, épisodes 1 à 22, jusqu'au lancement des pistes JCC/Kyoto.
+Stranger Things : saisons 1 à 5. Le sort final d'Onze conserve l'ambiguïté de la série.
+
+UTILISATION
+Coller seulement SCRIPT.txt dans l'outil de narration. Les notes de recherche et les repères de chapitres ne sont pas à lire à voix haute.
+TITRE-ET-DESCRIPTION.txt rassemble les deux textes de publication.
+Les JPG sont en 1280 × 720, avec le style DÉBUT / FIN de la chaîne. FIN désigne la borne du récap, pas la fin d'un manga encore en cours.
+Les chapitres ne portent pas de faux timestamps : les recaler après production audio.
+
+VÉRIFICATIONS
+Comptage Unicode de la narration, longueur minimale, encodage, absence de paragraphes dupliqués, absence d'URL et d'indications techniques dans la narration, empreintes du script et des sections, contrôle des copies livrées.
+Recherche avec FacelessOS, ancrage dans les transcriptions de la chaîne et relecture éditoriale. Les corrections factuelles et les limites de recherche sont documentées dans chaque AUDIT.txt et SOURCES.txt. Les épisodes et comics n'ont pas tous été revus intégralement pendant cette session. Une écoute humaine complète du futur audio n'est pas réalisée ; aucun label de certification totale n'est revendiqué.
+
+ÉTAT DE PRODUCTION
+Les cinq narrations ont été lancées le 28 octobre 2026 sur Algrow, avec la voix française habituelle et la vitesse 1,00. Les dix blocs ont été acceptés. Un moniteur récupère, contrôle et assemble les jobs existants ; les MP3 complets seront ajoutés dans chaque dossier. Consulter STATUT-VOICEOVER.txt pour l'état local, et VOIX-REPRISE.txt pour la reprise technique.
+Aucune vidéo, programmation YouTube ou publication n'a été lancée pour ces cinq épisodes. CONTROLE-LOT.json et les audits décrivent les textes et miniatures contrôlés avant cette soumission, pas une livraison audio achevée.
+Les voix de Galactus, Freezer et Sukuna appartiennent au lot précédent ; ne pas les relancer à partir de ce dossier.

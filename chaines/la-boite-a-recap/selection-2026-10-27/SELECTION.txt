@@ -1,0 +1,51 @@
+LA BOÎTE À RÉCAP — PROCHAINS SUJETS
+Sélection du 27 octobre 2026
+Chaîne : https://www.youtube.com/@LaBoiteARecap
+
+DEMANDE ET DÉCISION
+L'utilisateur demande de retenir les idées notées 7/10 dans sa capture.
+Trois sujets retenus : Galactus, Freezer, Sukuna.
+Bouffon Vert et Garou, notés 6/10 sur la capture, restent en réserve.
+
+ORDRE RECOMMANDÉ ET TITRES DE TRAVAIL
+1. TOUTE l’Histoire de Galactus — Le Dévoreur de Mondes
+2. TOUTE l’Histoire de Freezer — De Namek à Black Freezer
+3. TOUTE l’Histoire de Sukuna — Le Roi des Fléaux
+
+POURQUOI CET ORDRE
+Galactus prolonge le terrain Marvel de Thanos, vidéo la plus vue parmi les neuf vidéos publiques relevées : 24 266 vues.
+Freezer propose ensuite un parcours de grand antagoniste dans Dragon Ball.
+Sukuna poursuit avec une autre franchise manga, autour de la possession et du contrôle.
+One Punch Man (12 673 vues) et L'Attaque des Titans (7 700) montrent une audience pour certains récaps d'anime sur la chaîne ; cela ne garantit pas les résultats des deux nouveaux sujets.
+Doom compte 4 928 vues. Aucun des trois sujets choisis ne figure parmi les neuf vidéos renvoyées par le relevé de chaîne.
+Les scores 7/10 viennent de la capture fournie. Les projections mensuelles de cette capture ne sont pas vérifiées et ne constituent pas des objectifs garantis.
+
+FORMAT
+Français. Narration originale : progression du personnage, décisions, conséquences et contexte nécessaire.
+Livrables de rédaction dans ../scripts-2026-10-27/ : titre, script de narration, chapitrage, sources et audits. Pas de production de voix ni de vidéo dans cette livraison.
+Confirmation explicite de l'utilisateur le 27 octobre : « 2 heures minimum par script » pour Galactus, Freezer et Sukuna. Cette réponse remplace les durées de 60, 80 et 65 minutes proposées sur la capture. Aucun maximum fixé.
+Calibration effectuée sur les transcriptions de Thanos, One Punch Man et L'Attaque des Titans : environ 181 à 182 mots/minute. Cible retenue : au moins 24 500 mots de narration par script, soit environ 2 h 15 à 182 mots/minute ou 2 h 09 à 190. Détail dans ../scripts-2026-10-27/CALIBRATION.json; ce sont des estimations, pas des mesures audio.
+Compter les mots de narration uniquement et contrôler la durée réelle une fois la voix produite. Ne pas ajouter de répétitions pour atteindre le seuil. Les titres restent sans nombre de minutes tant que la durée finale n'est pas mesurée.
+Conserver la cadence précédemment demandée d'une vidéo par semaine comme contexte, sans programmer de date ici.
+
+ÉTAT
+Les trois scripts complets ont été rédigés. Le dossier ../scripts-2026-10-27/ contient les textes, les mesures et les vérifications de livraison.
+Les trois fiches de ce dossier restent les cadrages initiaux du 27 octobre, conservés comme historique. Pour les sources approfondies, les corrections et les limites de consultation, utiliser SOURCES.txt et AUDIT.txt dans chaque dossier final.
+Les pages Marvel directes bloquées par 403 ne sont pas présentées comme lues intégralement. Les recoupements accessibles et les références bibliographiques sont distingués dans le dossier Galactus.
+Les anciennes propositions Gravity Falls, Gumball, Adventure Time et Regular Show restent conservées dans ../../relance-boite-boring-2026-10-18/. Elles ne sont pas relancées par cette sélection.
+Les skills FacelessOS locaux sont présents dans skills/facelessos/ ; l'ancienne mention « skills attendus » ne décrit plus leur disponibilité technique.
+
+SOURCES DE LA SÉLECTION
+Relevé Algrow get_channel_videos, tri popular, limite 80, neuf résultats, pas de page suivante ; consulté le 27 octobre 2026. Détail dans chaine-observee.json.
+https://www.youtube.com/watch?v=7d06Z6W6J70
+https://www.youtube.com/watch?v=B7099KgzENE
+https://www.youtube.com/watch?v=5jsmtyQ-MbY
+https://www.youtube.com/watch?v=e8jVVEXPwOs
+
+Les vues sont des compteurs publics observés, pas des statistiques privées de rétention ou de taux de clic.
+
+AJOUT ULTÉRIEUR DU 27 OCTOBRE 2026
+L'utilisateur a ajouté les cinq sujets de la capture FOLLOW-UP 1 #6–10.
+La liste à jour et l'ordre proposé figurent dans ../A-FAIRE.txt :
+les 4 Fantastiques, One Piece jusqu'à Elbaf, Frieren, Sakamoto Days et Stranger Things.
+Cette extension conserve la sélection initiale Galactus / Freezer / Sukuna.

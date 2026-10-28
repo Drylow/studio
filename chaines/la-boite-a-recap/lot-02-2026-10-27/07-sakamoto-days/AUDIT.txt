@@ -1,0 +1,49 @@
+AUDIT DU MANUSCRIT — SAKAMOTO DAYS, SAISON 1
+Date : 28 octobre 2026. Audit éditorial sur texte et recoupements ; aucune écoute audio humaine prétendue.
+Méthode : FacelessOS research-and-ideation, master, voice-anchoring, humanizer, structures, retention et greenlight. Contrôle indépendant en lecture seule par un second agent sur les passages sensibles. Les réserves des critères exigeant une mesure audio ou une preuve humaine restent explicites.
+
+A — ACCROCHE ET PROMESSE
+Phrase d’ouverture : « Le meilleur tueur du pays a un problème assez particulier. »
+Hook : 88 mots Unicode, premier paragraphe. Pivot : « Mais aujourd’hui, il n’a plus le droit de tuer. » Tension concrète : sa famille et sa règle de non-meurtre, pas une promesse inventée de bataille finale du manga.
+Promesse : raconter comment Sakamoto protège sa nouvelle vie avec ses capacités d’ancien assassin. Paiements : chapitres 1–2 (Shin/Lu épargnés et accueillis), 3–5 (famille au parc), 7–9 (laboratoire), 12–16 (condamnés puis Uzuki et serment), 17–22 (coopération et examen).
+Titre et périmètre annoncent explicitement la saison 1 complète. Épisodes 1 à 22 couverts ; arrêt après résultats et lancement des missions.
+Ancrages réellement lus : Thanos, « Il y a une règle non écrite dans le cinéma de super-héros. Le méchant perd à la fin. » ; One Punch Man, « Maintenant, imagine que ce pouvoir soit la pire chose qui te soit jamais arrivée. » Ces extraits proviennent des transcriptions françaises locales de la chaîne. Le hook utilise également une capacité exceptionnelle qui complique la vie de son détenteur, avec une formulation et des faits propres à Sakamoto. Aucune supériorité de performance du nouveau hook n’est mesurée.
+
+B — STRUCTURE, BOUCLES ET PROGRESSION
+Registre des boucles :
+01 : Shin peut-il repartir sans tuer Sakamoto ? Résolution : refus de la mission, sauvetage, embauche.
+02 : que protège Lu avec sa clé ? Résolution : héritage familial et legs personnel de son père ; entrée au magasin.
+03–05 : préserver la sortie de Hana malgré la prime ? Résolution : Tatsu puis Boiled/Obiguro vaincus, Aoi informée ; piste Dondenkai ouverte.
+06 : Heisuke peut-il être autre chose qu’un assassin sans argent ? Résolution : talent reconnu et place dans le groupe ; prix absorbé par les dégâts.
+07–09 : retrouver Lu et comprendre le rejet vécu par Shin ? Résolution : libération, excuses d’Asakura et de Lu/Shin, évacuation ; Slur rencontré sans identité complète.
+10–11 : Lu doit-elle retourner à la mafia ? Résolution : casino gagné, mutinerie arrêtée, choix de Lu respecté ; quatre condamnés annoncés.
+12–15 : arrêter les condamnés vivants pour obtenir une piste ? Résolution partielle : trois tués par l’Order, Apart capturé et diversion révélée.
+16 : qui est Slur, et Sakamoto peut-il tenir sa promesse sous menace ? Résolution : Uzuki reconnu, Shin rappelle le serment ; les motifs complets restent ouverts dans l’œuvre.
+17–19 : entrer au JCC, et pourquoi Akira est-elle là ? Résolution : épreuves franchies, nom Akao révélé, recherche de Rion explicitée en 20.
+20–21 : pourquoi Shinaya combat-il ainsi ? Résolution : contrôle de Gaku compris par Kaji, tentative collective, Sakamoto neutralise le relais.
+22 : admission des deux enquêteurs ? Résolution : Shin admis, Sakamoto refusé puis déguisé en Aoi pour entrer comme enseignante. Mafuyu/Toramaru et Rion restent des questions de fin de saison, clairement laissées ouvertes.
+Révision concrète : paragraphes abstraits remplacés par les excuses mutuelles de Shin/Lu, les bols de ramen de Shishiba, les appuis de la tour et le coup de Takamura. Sept autres paragraphes ont été retouchés vers des gestes et des conséquences plutôt que des oppositions générales.
+Contrôle technique : aucun paragraphe dupliqué, aucune phrase identique de huit mots ou plus. Cela ne prouve pas à lui seul une absence complète de redondance conceptuelle ; plusieurs rappels du serment sont intentionnels et rattachés à des scènes différentes.
+Limite B3/B6 : cadence perçue et résistance à une lecture à voix haute non certifiées sans audio. Pas de taux de rétention promis.
+
+C — COMPRÉHENSION ET CONTINUITÉ
+Personnages présentés à leur entrée par rôle : Shin télépathe, Lu fille d’une famille mafieuse, Heisuke tireur, Nagumo ancien compagnon et membre de l’Order, Akira nièce de Rion.
+Correction contrôlée : trésor de Lu avec richesses et objets familiaux, pas uniquement de l’alcool ; images de Slur sans visage exploitable ; Shinaya télécommandé, pas Gaku déguisé ; échec administratif de Sakamoto conservé.
+Les actions de l’Order et celles de Sakamoto ont des objectifs différents expliqués au moment de la chasse aux condamnés. Les données du JCC sont une piste recherchée, pas déjà obtenue dans cette saison.
+CTA après le hook et le premier contexte, chapitre 1 : abonnement et lieu d’écoute. Aucun CTA ajouté après la conclusion.
+Le SCRIPT ne contient ni titre de chapitre, ni URL, ni instruction de montage, ni tiret cadratin. Les titres et offsets sont dans CHAPITRES.json.
+Limite C2 : vérification écrite de lisibilité ; aucune lecture orale intégrale par un humain n’a eu lieu.
+
+D — VOIX, CHIFFRES ET SCANNER
+Ancrage de forme : Thanos juxtapose une règle attendue et l’événement qui la renverse ; One Punch Man explique une capacité par ses conséquences concrètes, puis alterne phrases courtes et développements. Exemple propre au présent script : « Heisuke choisit donc une cible différente : le système d’arrosage. » puis résultat visible de l’eau sur Seba. Aucun hook ou paragraphe concurrent recopié.
+Chiffres vérifiés : un milliard de yens, prime, synopsis officiel épisode 3 et récap Netflix ; un million de yens, prix du tournoi, synopsis officiel épisode 6 ; quatre condamnés, synopsis officiels 11–15 ; cent soixante-seize morts, bilan de l’assaut recoupé dans la liste détaillée des épisodes, épisode 16 ; première/deuxième/troisième étapes de l’examen, synopsis officiels 17–21 ; saison 1 et 22 épisodes, archive officielle. Les repères « deux hommes », « trois candidats », etc. décrivent les groupes nommés dans la scène, pas des statistiques nouvelles. Le pourcentage de puissance de Miya n’est pas transformé en mesure objective dans le texte.
+Scanner FacelessOS : sortie privée conservée dans scanner.txt. Cinq alertes de phrases courtes à juger, pas cinq erreurs factuelles. Exemples : « La confusion leur suffit. Lu est enlevée. » décrit la conséquence immédiate d’une erreur ; « Takamura apparaît. » signale une arrivée réelle ; « Sakamoto arrive. » introduit l’intervention qui arrête Gaku. Les phrases suivantes reprennent un rythme développé. Les noms récurrents Order/télépathie sont nécessaires au sujet.
+D7 : plancher mécanique antithèse/reframe = 0, ce qui ne vaut pas zéro occurrence réelle. Le texte contient des oppositions explicatives ; exemples conservés : « Il peut retrouver une puissance ancienne sans reprendre les objectifs de son ancienne vie. » ; « Il n’a pas rencontré un homme incapable de tuer. Il a rencontré un homme qui pouvait le vaincre et qui a décidé de ne pas lui prendre la vie. » ; « Ce n’est pas un duel intégral entre leurs deux corps… » précise la portée du combat Gaku/Shinaya. Aucune attestation de conformité au seuil strict d’une seule opposition sur tout le manuscrit. Certification D7 intégrale non revendiquée.
+
+E — ORIGINALITÉ ET LIMITES DE CERTIFICATION
+E1 : 3/7 signaux étayés. Voix éditoriale : oui, conséquences des décisions commentées. Sources spécifiques : oui, archive des 22 épisodes, récap officiel et recoupements du final. Connexions : oui, recours de Shin aux perceptions de Sakamoto, Heisuke puis Kaji ; évolution de l’aide reçue vers l’aide apportée au serment. Recherche inédite hors première page : non démontrée. Angle distinct des cinq premières vidéos : comparaison exhaustive non menée. Structure entièrement différente : non, chronologie adaptée à la promesse de récap complet. Relecture humaine du client : non effectuée. Le seuil formel 5/7 n’est donc pas déclaré atteint.
+E2/E3 : rédaction originale en français, aucune traduction du récap bruhviews, aucun dialogue repris du montage Netflix, pas de duplication interchaîne prévue. Aucun calendrier de publication exécuté ici. L’examen, les relations et les limites du pouvoir sont développés par rapport au récap concurrent de sept minutes.
+E4 : montage et voix futurs non inspectables à ce stade. Miniature existante conservée ; aucun appel de génération image ou audio effectué par cet agent. Aucune garantie de monétisation ou d’acceptation par une plateforme.
+
+VERDICT
+Manuscrit complet livré, périmètre et points sensibles recoupés, minimum de longueur atteint, offsets et empreintes calculés sur le fichier final. Réserves formelles : écoute humaine, cadence audio, D7 strict et score E1 non certifiés. Ce dossier ne prétend pas à un « PASS intégral » fictif. Les nombres et l’empreinte de la dernière version font foi dans MESURES.json ; ils sont recalculés après toute correction.

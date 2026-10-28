@@ -1,0 +1,50 @@
+LA BOÎTE À RÉCAP — NARRATIONS DU 27 OCTOBRE 2026
+
+Voix utilisateur : IHngRooVccHyPqB4uQkG
+Service : Algrow, voix française, vitesse normale 1,00.
+Nom commercial de la voix non confirmé ; ne pas lui inventer un nom.
+
+Les trois scripts définitifs sont ceux de scripts-2026-10-27.
+Galactus : 156 788 caractères, 24 957 mots.
+Freezer : 154 230 caractères, 24 639 mots.
+Sukuna : 156 255 caractères, 24 810 mots.
+Total : 467 273 caractères.
+
+ÉTAT AU LANCEMENT
+Six blocs ont été acceptés par Algrow : deux moitiés contiguës par script,
+coupées entre les paragraphes, sans perte ni répétition de texte.
+Les identifiants de jobs et les URL de médias restent dans le registre privé :
+work/recap-voiceovers-2026-10-27/ledger.json
+Ne jamais soumettre de nouveau ces blocs sans réconciliation des jobs existants.
+
+Solde avant soumission : 2 223 799 caractères.
+Solde relevé immédiatement après : 1 663 080 caractères.
+Différence observée : 560 719 unités. Le texte source compte 467 273 caractères ;
+la demande comprend la génération de transcriptions. La différence de solde
+est la mesure enregistrée, pas une promesse de tarif pour les prochains lots.
+
+LIVRAISON
+Bureau / Voix La Boîte à Récap - 27 octobre 2026 /
+Un dossier par vidéo, avec SCRIPT.txt, TITRE.txt puis voiceover.mp3 quand prêt.
+Pas de MP3 livré tant que la génération n'est pas terminée et contrôlée.
+
+REPRISE TECHNIQUE
+Depuis la racine du dépôt :
+python production/recap_voiceovers_oct27.py status
+python production/recap_voiceovers_oct27.py monitor
+
+Le moniteur récupère et assemble uniquement les jobs existants. Il ne crée
+aucune génération payante. Un verrou Windows empêche deux exécuteurs simultanés.
+Le lancer dans un processus Windows caché uniquement après avoir vérifié
+qu'aucun autre moniteur recap_voiceovers_oct27.py n'est déjà actif.
+Les journaux et le registre sont privés dans work/recap-voiceovers-2026-10-27.
+La clé Algrow est chargée depuis .env sans être incluse dans les fichiers publics.
+
+CONTRÔLES
+Empreintes du texte et limites des blocs avant soumission ; téléchargement et
+SHA-256 ; décodage intégral des MP3 ; comparaison de la transcription au texte
+et à sa fin ; assemblage dans l'ordre ; durée finale d'au moins 7 200 secondes.
+Une anomalie de transcription demande une vérification, jamais une régénération
+payante automatique. Ces contrôles ne remplacent pas une écoute humaine intégrale.
+Durées de texte estimées : environ 2 h 15 à 2 h 17 à 182 mots/minute.
+La durée réelle n'est connue qu'après génération et décodage de l'audio.

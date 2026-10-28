@@ -1,0 +1,108 @@
+LA BOÎTE À RÉCAP — FRIEREN — AUDIT ÉDITORIAL FACELESSOS
+Date : 28 octobre 2026. Texte audité : SCRIPT.txt.
+SHA256 : bf8b1ddb814d98b31df45a36f151ff31330469581bfecd4e74e326c30b556d5a
+
+ÉTAT DE LIVRAISON
+Manuscrit complet livré et contrôlé sur texte. 26,453 mots selon la regex [^\W_]+(?:[’'-][^\W_]+)*, 164,546 caractères espaces/sauts inclus ; 24 chapitres ; 289 paragraphes.
+Minimum demandé : 24 500 mots, marge de 1953 mots. Estimations : 132.26 minutes à 200 mots/minute et 145.35 minutes à 182 mots/minute. Il faut rester au plus à 220.44 mots/minute pour dépasser deux heures sans pauses.
+Aucun MP3 généré, aucune durée audio mesurée, aucune écoute humaine effectuée. Ces estimations ne sont pas une fausse mesure de narration finale.
+Le périmètre est l’anime, épisodes1–38. La fin du récap ne devient ni la fin du manga ni une arrivée à Aureole.
+
+MÉTHODE ET CORRECTIONS RÉELLES
+Les 24 chapitres ont été lus en texte et relus après révision. Les points fragiles ont été confrontés à l’index officiel, aux synopsis de production, aux récapitulatifs du diffuseur et à des corroborations secondaires identifiées dans SOURCES.txt et son complément ci-dessous.
+Les paragraphes qui expliquaient vaguement « ce que montre la scène » ont été remplacés par des actions : corne gardée par Himmel, rongeurs et graines de fleurs, défenses partielles contre Qual, faux morts, trente secondes demandées à Stark, enfant démone et victime de remplacement, fil de Draht et mains sectionnées, dégagement de Granat, repas de Stoltz et Eisen, marais de Sein, charrette attaquée et bague perdue, réveil de cinq secondes, capture du Stille, bouteilles/golems, faux doubles, bâton réparé, Land absent en personne à l’examen, attaque de Lernen, bain de pieds, argent extrait pour Norm, Fern tirant sur les deux subordonnés de Revolte, et raison protectrice du contrat final.
+Correction de chronologie : le récit de Wirbel sur Himmel est à la sortie de l’examen ; le premier recrutement de Stark pendant la pause est distinct. Le plan contre la copie est décrit avant que Richter quitte le donjon : il est encore présent pour observer la démonstration de Fern. Le lien entre Revolte et le partenaire perdu de Genau n’est pas attribué prématurément au mage.
+Correction de portée : aucun dialogue inventé présenté comme citation, aucune scène située après l’épisode38, aucun détail inventé du dernier combat du héros du Sud.
+Mesure avant/après homogène par espaces : 26 243 → 26 588, soit +345 mots nets. Ce compteur de révision diffère du compteur Unicode de livraison ; ils ne sont pas mélangés. Les sauvegardes originales et les réécritures manuelles restent dans le registre privé.
+
+A — ACCROCHE
+Phrase1 : « Frieren donne rendez-vous à ses amis dans cinquante ans, et revient avec le même visage alors que Himmel est devenu un vieillard. »
+Accroche : 70 mots. Renversement : « Mais elle découvre seulement à son enterrement combien elle ignorait celui qui avait voyagé avec elle. » Le nombre cinquante est canonique à l’épisode1. Promesse : refaire la route, accueillir les nouveaux compagnons, comprendre les gestes ignorés.
+A1/A2/A3/A5/A6 : éléments présents dans le texte et cohérents avec le titre. A4 : comparaison de formes avec trois véritables transcriptions de la chaîne ; leur classement actuel parmi les meilleurs hooks de la niche n’a pas été vérifié. Aucun avantage de performance n’est certifié.
+Carte de promesse : retour/deuil FR-01 ; transmission Heiter/Fern FR-02–04 ; Stark FR-05 ; anciens enseignements employés FR-06–12 ; nouvelles relations FR-13–19 ; choix du groupe au Nord FR-20–24. La limite des deux saisons est annoncée après l’accroche, avant le retour au départ de l’histoire.
+CTA abonnement : une occurrence, après l’accroche, autour du mot 163. Pas de demande finale qui prolonge artificiellement la conclusion.
+
+B — RÉTENTION ET CAUSALITÉ
+Les enjeux sont rattachés aux décisions et aux contraintes : l’épée ne bouge pas mais Himmel continue ; le Stille détecte le mana, donc le groupe modifie l’accès à l’eau ; le donjon produit les mêmes compétences, donc les mages partagent leurs faiblesses ; le bâton est un cadeau, donc Frieren le fait réparer ; la brume empêche les tirs cachés, donc Methode la dissipe avant les attaques de Fern.
+Le registre suivant donne les réponses effectivement présentes, avec lignes du SCRIPT final. Les liens d’un épisode à l’autre suivent parfois le voyage et le temps qui passe : la règle absolue « zéro liaison chronologique » d’un format court n’est pas artificiellement déclarée satisfaite sur un récap de38épisodes. Il n’existe pas de mesure de rétention de spectateurs ni de cadence audio testée. Le contrôle de progression et de répétition est éditorial, pas une prédiction de watch time.
+- Le rendez-vous de cinquante ans : ouverture L1, réponse L19 (« Puis Himmel meurt. »).
+- L’avenir de Fern après Heiter : ouverture L27, réponse L47 (« Après la mort de Heiter, Fern rejoint Frieren sur la route. »).
+- Les fleurs préférées de Himmel : ouverture L53, réponse L57 (« elle pose aussi une couronne de fleurs »).
+- Le retour de Qual : ouverture L65, réponse L73 (« Frieren abat Qual avec Zoltraak »).
+- La menace des faux morts : ouverture L95, réponse L99 (« Elle la frappe et met fin au piège. »).
+- Le dragon et la peur de Stark : ouverture L103, réponse L115 (« a déjà tué le dragon »).
+- La frontière fermée : ouverture L123, réponse L125 (« les autorise à franchir la frontière »).
+- La sincérité des envoyés : ouverture L131, réponse L145 (« Lügner révèle davantage de ses intentions »).
+- Draht attaque la prisonnière : ouverture L139, réponse L141 (« elle lui coupe l'autre main et l'abat »).
+- Linie reproduit Eisen : ouverture L161, réponse L165 (« Son coup abat la démone. »).
+- Fern contre Lügner : ouverture L155, réponse L169 (« Fern porte le coup qui tue Lügner. »).
+- La balance et le mana caché : ouverture L177, réponse L193 (« Aura tourne alors son arme »).
+- La légitimité de Himmel devant l’épée : ouverture L213, réponse L215 (« Himmel avait décidé de vaincre malgré ce résultat. »).
+- Le repas d’anniversaire de Stark : ouverture L225, réponse L231 (« Stark se rappelle alors que Stoltz lui avait préparé le même plat »).
+- Sein pourra-t-il partir : ouverture L239, réponse L245 (« Sein finit par accepter. »).
+- Le cadeau de Fern : ouverture L249, réponse L257 (« Elle préfère le bracelet choisi avec elle »).
+- La bague perdue : ouverture L255, réponse L265 (« En récupérant la bague »).
+- La malédiction du sommeil : ouverture L273, réponse L279 (« La malédiction prend fin. »).
+- Le remplacement du fils à la réception : ouverture L283, réponse L293 (« Leur prestation permet au noble »).
+- La mémoire de Voll : ouverture L297, réponse L305 (« il a rêvé de sa femme »).
+- La recherche de Gorille : ouverture L307, réponse L313 (« Sein part vers son ami »).
+- La fièvre de Fern : ouverture L315, réponse L319 (« Une fois Fern rétablie »).
+- La capture du Stille : ouverture L325, réponse L337 (« Le trio réussit à capturer un Stille. »).
+- Les affrontements du premier examen : ouverture L345, réponse L363 (« six équipes ont conservé un Stille »).
+- La copie qui bloque le donjon : ouverture L385, réponse L423 (« Frieren frappe et détruit son double. »).
+- La faiblesse de détection : ouverture L391, réponse L395 (« Denken et Methode repèrent l'interruption »).
+- Le bâton de Heiter : ouverture L429, réponse L435 (« Le bâton l'attend sur son lit »).
+- Le certificat pour aller au Nord : ouverture L321, réponse L459 (« Fern possède désormais le titre »).
+- La sortie de la grotte sans magie : ouverture L461, réponse L467 (« Ils échappent au poison »).
+- La proposition de Wirbel à Stark : ouverture L469, réponse L469 (« Stark refuse. »).
+- L’épée volée de Dach : ouverture L479, réponse L481 (« Ils prient pour les victimes avant de rapporter l'épée »).
+- Le détour des sources chaudes : ouverture L485, réponse L487 (« ils peuvent seulement y tremper les pieds »).
+- Le rendez-vous de Fern et Stark : ouverture L489, réponse L499 (« Fern revient à l'auberge »).
+- La boisson de Fass : ouverture L507, réponse L511 (« le goût est mauvais »).
+- La dette de Norm : ouverture L517, réponse L523 (« Le lendemain, l'elfe récupère ses affaires »).
+- Les subordonnés dans la brume : ouverture L535, réponse L539 (« Les deux subordonnés tombent »).
+- Revolte au village : ouverture L541, réponse L549 (« Stark porte une frappe qui permet à Genau d'achever Revolte »).
+- Le manuscrit de Himmel : ouverture L555, réponse L561 (« Il la laisse le conserver. »).
+- Le pont devenu utilisable : ouverture L563, réponse L565 (« Le trio intervient et libère le passage. »).
+- Le contrat sur les cristaux : ouverture L567, réponse L573 (« elle doit empêcher leur destruction. »).
+- Aureole : objectif annoncé en FR-04, explicitement encore ouvert en FR-24. Le titre et la description bornent le récap aux saisons1–2 ; aucune résolution hors périmètre n’est promise.
+- Denken et le territoire du Nord : amorce de fin de saison conservée, sans raconter sa résolution manga.
+
+C — CLARTÉ ET PROMESSE
+Personnages introduits avec leurs rôles : Heiter prêtre, Eisen guerrier nain, Fern orpheline/apprentie, Stark élève d’Eisen, Sein soigneur, Serie maîtresse de Flamme. Mana, protections, capture du Stille, copies, bouteille de secours et barrière sont expliqués lors de leur emploi. Les spécialités restent distinctes ; la réserve de mana ne devient pas une victoire garantie.
+La première scène paie la tension de l’accroche avec le cercueil, puis reprend la chronologie. Le fil principal est la route de Frieren et ce qu’elle apprend des autres. Les souvenirs sont reliés à une action présente. Un lecteur froid pourra suivre les noms, mais aucune écoute à l’aveugle avec un adolescent ou un public réel n’a eu lieu : C2 n’est pas un test humain réussi.
+
+D — VOIX, RYTHME ET ANTI-SLOP
+Ancres réelles : Thanos (7d06Z6W6J70), One Punch Man (B7099KgzENE), L’Attaque des Titans (5jsmtyQ-MbY), transcriptions locales de La Boîte à Récap. Exemples exacts : « Le méchant perd à la fin. » ; « Un seul coup de poing et c’est terminé. » ; « Et pendant des années, c’est exactement ce que tu as regardé. » Les apostrophes sont ici normalisées pour la lisibilité ; les fichiers de référence conservent le texte brut.
+Correspondance de forme : « Frieren lève le sceau et retrouve Qual après quatre-vingts années. Le démon apprend la défaite de son roi, puis attaque. » Acteurs nommés, verbes concrets, phrases de longueurs différentes. L’accroche emploie « Tu pourrais croire » ; les scènes emploient les noms utiles plutôt que de multiplier les surnoms décoratifs.
+Scanner final : zéro HARD-BAN ; zéro tiret cadratin ; deux candidats de rythme à adjudication. FR-12 « Il la réveille. » / « La malédiction prend fin. » et FR-18 « Frieren détruit le Spiegel. » / « Sense félicite les survivants. » sont deux actions distinctes séparées par des phrases plus longues, pas des suites de fragments dramatiques. Conservés.
+Le scanner remonte26 échos, surtout syntagmes grammaticaux et noms de fonction (« de première classe », « de sa maîtresse »). Il casse les lettres accentuées et détecte principalement l’anglais : il ne valide pas à lui seul le français. Contrôle complémentaire : zéro paragraphe exactement répété ; zéro séquence identique de12mots avec chacune des trois ancres.
+D6/D7 : retrait des oppositions trop écrites sur la date et l’avenir, l’hiver, le sens du bracelet, les souvenirs inchangés, le vin et la victoire enseignée. Registre final de la construction rhétorique retenue : « Pour Frieren, cet objet… ; pour Himmel… » (FR-01), une antithèse liée à la corne conservée. Conclusion aphoristique retenue : « Le mot qui avait obtenu leur pitié ne lui avait jamais appris à aimer quelqu’un » (FR-06), une occurrence ancrée à l’enfant démone. Les oppositions factuelles non symétriques (personnage qui hésite puis agit, ennemis possédant des capacités différentes) ne sont pas comptées comme des refrains rhétoriques. Plancher mécanique : zéro, utilisé comme minimum et non comme preuve de style. Aucune validation de diction par écoute n’est revendiquée.
+
+D5 — REGISTRE DES NOMBRES FACTUELS
+Dix ans de quête et rendez-vous à cinquante ans : épisode1 officiel.
+Programme d’un siècle de voyage : épisode1, corroboration détaillée Episode_1.
+Six mois de recherche des fleurs : épisode2, transcription de l’épisode et Episode_2.
+Quatre-vingts ans de scellement de Qual : épisode3, transcription de l’épisode.
+Trente secondes demandées à Stark : épisode6, scène du dragon.
+Deux mains de Draht neutralisées : épisode8, scène de prison.
+Stark fête dix-huit ans : épisode12, anniversaire ; steak de viande hachée, pas pain à hamburger.
+Trois heures de choix du bracelet : épisode14, discussion Stark/Sein.
+Cinq secondes de réveil : épisode15, sort de Sein.
+Quatre-vingts ans depuis la précédente formule d’adieu de Voll : épisode16.
+Équipes de trois, six équipes puis dix-huit candidats : épisodes18 et22.
+Douze candidats à l’issue du donjon : épisodes26–27.
+Sept Sages affrontés, trois tués avec Schlacht : épisode30, récit du héros du Sud ; pas de chorégraphie inventée.
+Plus de deux siècles de recherche de Fass : épisode33 officiel.
+Quatre bras et quatre épées de Revolte : épisodes34–36.
+Deux subordonnés abattus par Fern : épisode36, corroboration du diffuseur et fiche de Methode.
+Deux saisons, trente-huit épisodes : index officiel seconde saison, dernier épisode daté du27mars2026. Les autres petits nombres de prose désignent les membres explicitement présents, des étapes ou des relations, pas des statistiques de performance.
+
+E — AUTHENTICITÉ : LIMITES EXPLICITES
+E1 : 2/7 signaux démontrés, pas5/7 inventé. Voix éditoriale présente ; liens causaux originaux entre souvenirs, techniques et comportements présents. Recherche exclusive hors première page non démontrée ; différence d’angle face aux cinq meilleures vidéos non mesurée ; trois sources éditoriales externes ne sont pas citées dans la voix pour éviter de les faire lire comme du canon ; structure reste chronologique ; aucun acheteur n’a confirmé une révision humaine. Une passe faite par une IA ne vaut pas le point « human review ».
+E2 : zéro copie textuelle détectée face aux trois références contrôlées. Pas d’autre diffusion ni de planning de publication créé par cette tâche. Le volume ou les pratiques futures de la chaîne ne sont pas certifiés à partir du script seul.
+E3 : narration et développements rédigés pour Frieren ; aucune transcription concurrente de Frieren n’a été copiée. Le test global contre toutes les vidéos existantes n’a pas été fait et n’est pas sous-entendu par le test12mots.
+E4 : non applicable à ce stade ; aucune vidéo ni piste audio finale créée. La présence d’une miniature personnalisée ne garantit pas une validation de monétisation.
+
+VERDICT
+Livrable éditorial complet, contrôlé et utilisable pour la préparation de narration. Minimum de mots, périmètre, fichiers et cohérence corrigés. Le PASS global strict FacelessOS reste non certifié : E1 n’atteint pas5/7, A4 ne constitue pas une étude comparative de performance et les tests humains/audio n’ont pas été effectués. Ce constat ne suspend pas la livraison demandée et ne déclenche aucune action payante. Aucun « sans erreur garanti », aucune écoute fictive, aucune promesse de rétention ou de monétisation.

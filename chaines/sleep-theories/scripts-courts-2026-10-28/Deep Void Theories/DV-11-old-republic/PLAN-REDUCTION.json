@@ -1,0 +1,249 @@
+{
+  "id": "DV-11-old-republic",
+  "source_path": "chaines/sleep-theories/scripts-2026-10-22/Deep Void Theories/DV-11-old-republic/SCRIPT.txt",
+  "source_sha256": "432420e44f39bf5464f429b087adc868a7de04b78069fd8de308172707791260",
+  "source_text_sha256": "eb7e12dc930114e589a9ecd4ec985106e3198b1031e2718019c8acdf5761c353",
+  "offset_convention": "Python character offsets into UTF-8 decoded text, universal newlines (CRLF to LF); end exclusive",
+  "kept_ranges": [
+    {
+      "start_character": 0,
+      "end_character": 1263,
+      "chapters": [
+        1
+      ],
+      "reason": "A capital that has survived other wars"
+    },
+    {
+      "start_character": 17146,
+      "end_character": 18330,
+      "chapters": [
+        4
+      ],
+      "reason": "Worlds connect through hyperspace"
+    },
+    {
+      "start_character": 19707,
+      "end_character": 20909,
+      "chapters": [
+        4
+      ],
+      "reason": "Worlds connect through hyperspace"
+    },
+    {
+      "start_character": 21510,
+      "end_character": 22951,
+      "chapters": [
+        4
+      ],
+      "reason": "Worlds connect through hyperspace"
+    },
+    {
+      "start_character": 28648,
+      "end_character": 40816,
+      "chapters": [
+        6,
+        7
+      ],
+      "reason": "A schism leaves the Republic behind; Naga Sadow and the first great invasion"
+    },
+    {
+      "start_character": 58754,
+      "end_character": 59782,
+      "chapters": [
+        11
+      ],
+      "reason": "Ulic Qel-Droma enters a dangerous plan"
+    },
+    {
+      "start_character": 60335,
+      "end_character": 60857,
+      "chapters": [
+        11
+      ],
+      "reason": "Ulic Qel-Droma enters a dangerous plan"
+    },
+    {
+      "start_character": 62978,
+      "end_character": 70365,
+      "chapters": [
+        11,
+        12
+      ],
+      "reason": "Ulic Qel-Droma enters a dangerous plan; The Great Sith War and its cost"
+    },
+    {
+      "start_character": 81653,
+      "end_character": 107374,
+      "chapters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "reason": "Revan's intervention divides the Jedi; Malachor ends one war; The victors become the next invaders; Bastila and the captured commander"
+    },
+    {
+      "start_character": 113703,
+      "end_character": 120101,
+      "chapters": [
+        20
+      ],
+      "reason": "The Star Forge and chosen outcomes"
+    },
+    {
+      "start_character": 133009,
+      "end_character": 151516,
+      "chapters": [
+        23,
+        24,
+        25
+      ],
+      "reason": "Three Sith pursue different hungers; The hidden Empire returns; Coruscant falls into a treaty"
+    },
+    {
+      "start_character": 164635,
+      "end_character": 165117,
+      "chapters": [
+        28
+      ],
+      "reason": "An Emperor challenged from within"
+    },
+    {
+      "start_character": 170645,
+      "end_character": 190497,
+      "chapters": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "reason": "An Emperor challenged from within; The Eternal Empire interrupts the older war; Later wars wear down both orders; Ruusan and a quieter enemy"
+    }
+  ],
+  "words": 15275,
+  "characters": 97179,
+  "estimated_seconds": 7606.595,
+  "estimated_seconds_basis": "Measured original episode duration divided by original words, applied to retained words; estimate only, final regenerated audio must be measured",
+  "estimated_minutes_at_106_wpm": 144.1,
+  "target_audio_min_seconds": 7200,
+  "target_audio_max_seconds": 9000,
+  "editorial_notes": "Partir du sac de Coruscant et du CTA puis revenir à la formation de la République, au schisme et aux invasions Sith. Conserver les grandes guerres, Revan/Malak, la révélation de l'identité de Revan, la Forge stellaire, les trois adversaires de l'Exilée, le retour impérial et le traité, Zakuul et Ruusan. Une introduction condensée d'Ulic/Exar Kun et la défaite de l'Empereur sont conservées pour éviter deux références orphelines. Retirer la préhistoire de Tython et les parcours secondaires ; la fin du premier chapitre est coupée car elle annonçait Tython, désormais retiré.",
+  "removed_topics": [
+    "Tython before the familiar Jedi",
+    "The Rakatan reach",
+    "The Jedi become Republic protectors",
+    "Survivors beyond the known frontier",
+    "Freedon Nadd's shadow on Onderon",
+    "Exar Kun searches for forbidden teachers",
+    "Recovery is uneven",
+    "The Mandalorians test the frontier",
+    "Following the Star Maps",
+    "The Republic left after victory",
+    "The Exile's unusual bond",
+    "Two societies during a cold war",
+    "The war seen through other professions",
+    "Chapitre 1 : garder les trois premiers paragraphes avec la continuité Legends et le CTA ; retirer notamment l'annonce de Tython. Chapitre 4 : retirer les paragraphes 3 à 5 sur les tracés détaillés des routes et le paragraphe 8 sur les marchandises. Chapitre 11 : garder la mission initiale d'Ulic, les chefs du Krath, l'emprisonnement et le poison, puis sa rencontre avec Kun et leur alliance (paragraphes 1, 2, 4, 9, 10). Chapitre 28 : garder l'avertissement de Scourge et la défaite du souverain (paragraphes 1 et 12), nécessaires au début du chapitre 29."
+  ],
+  "join_reviews": [
+    {
+      "join_number": 1,
+      "before_range": 0,
+      "after_range": 1,
+      "before_last_two_sentences": "For another long visit to this galaxy, you can subscribe to Deep Void Theories whenever you like. If you leave us a comment, let it be a little postcard: where are you, and is it light or dark outside?",
+      "after_first_two_sentences": "A ship leaving Coruscant needs a usable course to its destination. Having a hyperdrive doesn't make every direction safe.",
+      "judgment": "OK : après le cadre Legends et le CTA, les voyages expliquent la formation de la République ; l'annonce de Tython a été retirée."
+    },
+    {
+      "join_number": 2,
+      "before_range": 1,
+      "after_range": 2,
+      "before_last_two_sentences": "The early chronology is sparse compared with the wars recorded in the games and comics. Its broad development is clear enough, though: travel makes sustained diplomacy possible, and diplomacy gives connected worlds a way to settle common business without treating every arriving ship as the representative of a foreign power.",
+      "after_first_two_sentences": "Coruscant's position gives those journeys a political destination. The planet becomes the place where member worlds send representatives and where the Senate conducts the Republic's business.",
+      "judgment": "OK : 'those journeys' renvoie bien aux échanges diplomatiques conservés ; les détails techniques supprimés ne sont pas requis."
+    },
+    {
+      "join_number": 3,
+      "before_range": 2,
+      "after_range": 3,
+      "before_last_two_sentences": "A senator's seat belongs to a world with internal politics, influential families and arguments of its own. Decisions made on Coruscant have to operate through those existing societies, whose disagreements don't disappear when they join a larger government.",
+      "after_first_two_sentences": "Knights of the Old Republic also shows why a connected galaxy can't be treated as a single political territory. Manaan's government regulates access to its kolto and maintains neutrality between the Republic and the Sith.",
+      "judgment": "OK : les particularités locales débouchent sur l'exemple d'une planète neutre ; Manaan et le kolto sont présentés."
+    },
+    {
+      "join_number": 4,
+      "before_range": 3,
+      "after_range": 4,
+      "before_last_two_sentences": "Across the distances between them, regular journeys make a common government workable. A decision reached in the capital can travel outward aboard a ship and become business for another world.",
+      "after_first_two_sentences": "The defeated Dark Jedi were sent away from the territory they'd fought to change. After the Hundred-Year Darkness, the survivors of their struggle with the Jedi departed into exile and eventually reached Korriban.",
+      "judgment": "OK : du fonctionnement de la République à un conflit ancien ; Hundred-Year Darkness et l'exil sont explicitement nommés."
+    },
+    {
+      "join_number": 5,
+      "before_range": 4,
+      "after_range": 5,
+      "before_last_two_sentences": "Jori survives to carry the Daragons' story forward, while Gav dies after turning against the master who recruited him. The invasion fails, but the Republic's pursuit carries the fighting into Sith territory along the connection the Daragons opened.",
+      "after_first_two_sentences": "Ulic Qel-Droma went to the Krath intending to destroy their movement from inside. He believed he could enter their service, learn how their leaders worked, and bring them down before they carried their war farther into the Republic.",
+      "judgment": "OK : la guerre de Sadow s'achève, puis une nouvelle crise commence avec Ulic, la Krath et ses motivations réintroduits."
+    },
+    {
+      "join_number": 6,
+      "before_range": 5,
+      "after_range": 6,
+      "before_last_two_sentences": "Ulic is approaching people who have seized the means to govern and wage war. To get close enough to hurt them, he has to place himself within the institutions they've taken over.",
+      "after_first_two_sentences": "Satal answers Ulic's arrival with imprisonment and torture. The Krath also subject him to a Sith poison that helps turn his emotions toward the dark side.",
+      "judgment": "OK : Satal vient d'être nommé parmi les chefs de la Krath ; la captivité et le poison expliquent la chute d'Ulic."
+    },
+    {
+      "join_number": 7,
+      "before_range": 6,
+      "after_range": 7,
+      "before_last_two_sentences": "Ulic had entered the system believing that his Jedi training would let him withstand the danger. The people holding him have their own methods for changing the man who came to deceive them.",
+      "after_first_two_sentences": "His path then meets Exar Kun's. Kun comes to the Empress Teta system prepared to eliminate a rival, and the two fallen Jedi fight.",
+      "judgment": "OK : 'His path' renvoie à Ulic ; la rencontre explique la voie différente de Kun et conduit à l'alliance des deux Sith."
+    },
+    {
+      "join_number": 8,
+      "before_range": 7,
+      "after_range": 8,
+      "before_last_two_sentences": "The alliances that had carried the offensive across Republic space came apart. For the survivors on Ossus, victory arrived amid evacuation, bereavement, and the work of carrying their Order's remaining knowledge somewhere it could be taught again.",
+      "after_first_two_sentences": "Revan called for Jedi to join the Republic's defense while the Council still counseled restraint. Malak joined him, and other Jedi followed them into the Mandalorian Wars without the Order's approval.",
+      "judgment": "OK : conclusion de la Grande Guerre des Sith, puis conflit nommé des Mandaloriens ; Revan et Malak sont réintroduits."
+    },
+    {
+      "join_number": 9,
+      "before_range": 8,
+      "after_range": 9,
+      "before_last_two_sentences": "Bastila carries both parts of that history: she preserved Revan aboard the damaged flagship, then helped maintain the concealment. By the time she falls into Malak's hands, Revan knows the truth and has to continue living among people who now know it too.",
+      "after_first_two_sentences": "The Star Forge hangs above a star, drawing energy into a station that can manufacture the ships sustaining Malak's war. Reaching its system doesn't give the Ebon Hawk a clear approach.",
+      "judgment": "OK : la véritable identité de Revan et la capture de Bastila sont conservées avant l'arrivée à la Forge ; les voyages intermédiaires peuvent être omis."
+    },
+    {
+      "join_number": 10,
+      "before_range": 9,
+      "after_range": 10,
+      "before_last_two_sentences": "For Revan, the journey ends with public recognition of deeds performed after his capture and retraining, among companions who now know who he was. Above the Rakatan homeworld, the Star Forge is gone, and Malak's war has ended.",
+      "after_first_two_sentences": "Darth Sion's body is already broken when he reaches Peragus aboard the Harbinger. The Republic warship has carried its attacker into the mining facility's vicinity, and the people fleeing the station face someone who keeps moving despite wounds that should have killed him.",
+      "judgment": "OK : la guerre de Malak se termine ; le nouveau passage nomme Sion et son arrivée à Peragus, puis identifie Meetra et Kreia dans le paragraphe suivant."
+    },
+    {
+      "join_number": 11,
+      "before_range": 10,
+      "after_range": 11,
+      "before_last_two_sentences": "Jedi and Republic officers had to live with an agreement reached after the Temple's fall, while Imperial leaders could point to concessions won through the assault. The guns had fallen silent under a signed treaty, and the Republic began its recovery with the terms of that treaty still binding it.",
+      "after_first_two_sentences": "Lord Scourge turns against the Emperor after serving as his Wrath, the Sith charged with carrying out his master's will. He comes to the Jedi Knight with a warning that reaches beyond the Republic's military position.",
+      "judgment": "OK : du traité à une menace dans l'Empire ; Scourge, sa charge et son interlocuteur Jedi sont présentés avant leurs actions."
+    },
+    {
+      "join_number": 12,
+      "before_range": 11,
+      "after_range": 12,
+      "before_last_two_sentences": "Imperial soldiers and Sith would perish along with their enemies. The threat gives Scourge and the Jedi a common enemy, despite their opposing allegiances.",
+      "after_first_two_sentences": "The Knight reaches the Dark Temple with T7-O1 and defeats the Emperor in their core-story confrontation. The immediate ritual threat is stopped.",
+      "judgment": "OK : le Jedi averti par Scourge est bien 'The Knight' ; le rituel annoncé est arrêté, ce qui fournit l'antécédent nécessaire à la reprise sur Valkorion."
+    }
+  ],
+  "review_status": "reviewed",
+  "review_scope": "Manual selection by story function. Actual chapter openings and closings, condensed retained passages and every new two-sided join read. All original chapter hashes and exact retained substrings verified. No new factual claims or external fact-check; final audio remains ungenerated and must be checked separately.",
+  "script_sha256": "da4e6fb9e0b2b5d069ca2b6d2531bd558f6a14af2b1de41d54be2e82cc79072a",
+  "new_facts_added": false
+}

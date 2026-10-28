@@ -1,0 +1,73 @@
+LA BOÎTE À RÉCAP — SUIVI DES IDÉES
+Ajout demandé le 27 octobre 2026 ; production du lot 2 le 28 octobre 2026.
+
+LOT PRÉCÉDENT
+Galactus, Freezer et Sukuna : scripts livrés ; narrations soumises à Algrow.
+Reprise des voix : VOIX-REPRISE.txt et registre privé indiqué dans ce document.
+
+LOT 2 — SCRIPTS ET MINIATURES PRODUITS, NARRATIONS LANCÉES
+Les cinq sujets ci-dessous ont été écrits à la demande de l'utilisateur.
+Les fichiers, mesures, audits et périmètres sont dans lot-02-2026-10-27/.
+La copie de travail est rangée au Bureau : VIDEOS - TOUT REGROUPE / La Boîte à Récap.
+L'ancien dossier Lot 2 est conservé dans les archives de ce dossier commun.
+Les notes sont celles de la capture de l'utilisateur, pas un nouvel audit.
+
+1. LES 4 FANTASTIQUES — 7/10 — priorité haute
+Titre de travail : TOUTE l'Histoire des 4 Fantastiques — La Première Famille de Marvel
+Angle proposé dans la capture : les 4 Fantastiques avant Doomsday.
+Raconter l'origine de l'équipe, ses membres, les grands adversaires et ses liens
+avec Doom et Galactus. Séparer clairement comics et adaptations.
+L'accroche « avant Avengers Doomsday » dépendra du calendrier vérifié au moment
+de la production et de la publication ; ne pas présumer du contenu de ce film.
+
+2. ONE PIECE JUSQU'À ELBAF — 7/10 — priorité haute
+Titre retenu : TOUTE l'Histoire de One Piece — De Romance Dawn à l'arrivée à Elbaf
+Récap chronologique de l'aventure et des révélations nécessaires à sa compréhension.
+Périmètre produit : manga, chapitres 1 à 1133, retrouvailles Robin/Saul.
+Le titre ne signifie pas que l'arc Elbaf est achevé.
+
+3. FRIEREN — 6/10 — priorité secondaire
+Titre retenu : TOUTE l'Histoire de Frieren (Saisons 1 et 2)
+Angle : le voyage de Frieren après la victoire, la mémoire et ses compagnons.
+Périmètre produit : anime, épisodes 1 à 38 inclus, sans raconter la suite du manga.
+
+4. SAKAMOTO DAYS — 6/10 — priorité secondaire
+Titre retenu : TOUTE l'Histoire de Sakamoto Days (Saison 1 complète)
+Angle : la reconversion de Sakamoto et le retour de son passé dans sa nouvelle vie.
+Périmètre produit : anime, saison 1, épisodes 1 à 22 inclus.
+
+5. STRANGER THINGS — 5/10 — réserve de la nouvelle sélection
+Titre retenu : TOUTE l'Histoire de Stranger Things (Saisons 1 à 5)
+Sujet conservé à la demande de l'utilisateur, après les quatre autres priorités.
+Le précédent choix d'éviter Stranger Things concernait le projet Quiet Paradox.
+Cette entrée appartient à La Boîte à Récap ; ne pas la transférer à une autre chaîne.
+Les cinq saisons sont racontées ; le sort final d'Onze reste explicitement ambigu.
+
+FORMAT À CONSERVER
+Français ; format long de la chaîne, objectif de 2 heures minimum par vidéo.
+Base de dimensionnement actuelle : au moins 24 500 mots, sans remplissage.
+Les durées 50/60/70/90 minutes affichées dans la capture ne deviennent pas des
+consignes de production. Contrôler la durée réelle après génération de la voix.
+Ne pas figer de nombre de minutes dans les titres avant cette mesure.
+Utiliser FacelessOS et les références de la chaîne lors de la rédaction.
+La voix de la chaîne est enregistrée dans VOIX.json.
+
+ÉTAT ET SOURCES
+Statut des cinq entrées : scripts écrits et miniatures créées. Sources et corrections
+dans chaque dossier ; contrôles du lot dans lot-02-2026-10-27/CONTROLE-LOT.json.
+Les cinq narrations ont été demandées et lancées le 28 octobre 2026 avec la voix
+française habituelle, à vitesse 1,00. One Piece et Stranger Things ont été récupérés,
+puis leur débit corrigé localement à 0,85 : les MP3 finaux dépassent deux heures.
+Les six blocs des Fantastiques, Frieren et Sakamoto ont échoué chez Algrow.
+Reprise des trois épisodes lancée en petits blocs, deux jobs à la fois, vitesse 0,85.
+Voir ../REGROUPEMENT-VIDEOS-2026-10-28.txt pour les registres et dossiers actuels.
+Aucune vidéo, programmation YouTube ou publication n'a été lancée pour ce lot.
+Cette demande ne relance pas les voix du lot précédent.
+Source : capture utilisateur « FOLLOW-UP 1 #6–10 », reçue le 27 octobre 2026.
+Les affirmations de concurrence, d'actualité et les projections de vues de la
+capture n'ont pas été vérifiées dans cet ajout. Les vérifier avant production.
+
+AUTRES RÉSERVES DÉJÀ CONSERVÉES
+Bouffon Vert et Garou : voir selection-2026-10-27/SELECTION.txt.
+Gravity Falls, Gumball, Adventure Time et Regular Show : dossiers historiques
+dans ../relance-boite-boring-2026-10-18/, sans changement de leur statut ici.
