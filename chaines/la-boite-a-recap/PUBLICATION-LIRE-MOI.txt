@@ -1,0 +1,16 @@
+MÉTADONNÉES DE PUBLICATION — 28 OCTOBRE 2026
+
+Titres et descriptions en texte brut, sans astérisques Markdown.
+Chaque dossier contient TITRE.txt, DESCRIPTION.txt et TITRE-ET-DESCRIPTION.txt.
+Le récapitulatif TITRES-ET-DESCRIPTIONS.txt regroupe les huit vidéos.
+Les minutes du titre sont les minutes entières, sans arrondir vers le haut.
+Une durée de vidéo finale confirmée prime sur celle du MP3 de travail.
+
+01 - Galactus : MP3 complet du dossier : 2 h 07 min 32 s ; titre à ajuster si le montage final change de durée.
+02 - Freezer : MP4 final mesuré dans Downloads : 1 h 46 min 58 s. Ce titre correspond au MP4, pas au MP3 ralenti du dossier.
+03 - Sukuna : Vidéo finale de 1 h 48 confirmée par l’utilisateur le 28 octobre 2026. Ce titre correspond à cette vidéo, pas au MP3 ralenti du dossier.
+04 - Les 4 Fantastiques : MP3 complet du dossier : 2 h 04 min 15 s ; titre à ajuster si le montage final change de durée.
+05 - One Piece : MP3 complet du dossier : 2 h 08 min 03 s ; titre à ajuster si le montage final change de durée.
+06 - Frieren : Audio complet absent du dossier : aucune durée chiffrée dans le titre avant mesure du fichier final.
+07 - Sakamoto Days : Audio complet absent du dossier : aucune durée chiffrée dans le titre avant mesure du fichier final.
+08 - Stranger Things : MP3 complet du dossier : 2 h 00 min 45 s ; titre à ajuster si le montage final change de durée.
