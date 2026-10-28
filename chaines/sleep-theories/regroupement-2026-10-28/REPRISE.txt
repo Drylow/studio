@@ -1,0 +1,38 @@
+REGROUPEMENT DES ÉLÉMENTS SLEEP — 28 OCTOBRE 2026
+
+Demande de l'utilisateur : réunir les trois dossiers scripts, miniatures et voix
+dans un dossier unique, avec un sous-dossier par vidéo. Il a confirmé que « MP4 »
+dans son premier message voulait dire MP3. Aucun montage vidéo n'est demandé.
+
+DOSSIER À OUVRIR
+C:/Users/ytbyt/Desktop/Miniatures sleep - 15 videos - 22 octobre 2026
+
+ÉTAT LIVRÉ
+15 dossiers vidéo, répartis entre trois chaînes.
+15 SCRIPT.txt, 15 TITRE.txt, 15 MINIATURE.jpg et les documents de recherche.
+10 VOICEOVER.mp3 complets : cinq Deep Void Theories, cinq Quiet Paradox.
+10 TITRE-ET-DESCRIPTION.txt repris à l'identique des kits existants.
+Les cinq dossiers Forgotten Realms n'ont pas de MP3 : ces voix n'ont pas été
+générées. Leur statut est indiqué dans ETAT-DES-FICHIERS.txt.
+Les dix MP3 ont une taille et une empreinte conformes au registre privé des
+narrations. Le Silo utilisé est le fichier corrigé, pas l'archive tronquée.
+REGROUPEMENT.json conserve les chemins relatifs, tailles et empreintes.
+Ce contrôle de regroupement ne prétend pas à une nouvelle écoute intégrale.
+
+CONSERVATION
+Les anciens dossiers scripts et voix sont préservés. DOSSIER-REGROUPE.txt y
+indique le dossier commun. Les documents de lot sont également copiés dans
+Documents du lot, à l'intérieur du dossier commun.
+Les MP3 sont des liens physiques NTFS vers les fichiers finaux existants :
+ils apparaissent comme des fichiers ordinaires dans les dossiers vidéo et
+n'occupent pas une seconde fois les 2 353 939 513 octets d'audio.
+Pour une future modification audio, écrire une nouvelle sortie puis remplacer
+l'entrée choisie plutôt que modifier en place ce fichier partagé.
+Les anciens chemins du registre restent valides ; aucun média n'est supprimé.
+
+EXÉCUTION
+Exécuteur privé : work/sleep-package-2026-10-28/consolidate.py.
+Plan et preuve : plan.json et verified.json dans le même dossier privé.
+Registre voix d'origine : work/sleep-voiceovers-2026-10-24/ledger.json.
+Aucune nouvelle requête payante, nouvelle concaténation audio, vidéo, publication
+ou programmation YouTube n'a été lancée par ce classement.
