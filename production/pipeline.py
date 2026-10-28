@@ -83,7 +83,8 @@ log("script ok")
 step("prod", "prod.log", "PROD DONE")
 if short_by():
     raise SystemExit("VOIX TROP COURTE : allonger le script et refaire la voix avant le rendu")
-step("qa", "qa.log", "QA DONE", 3)
+if "--no-qa" not in FLAGS:  # contrôle en vision sauté : relecture des planches à la main (gain ~10 min)
+    step("qa", "qa.log", "QA DONE", 3)
 if "--replan" in FLAGS:
     step("replan", "replan.log", "REPLAN DONE", 3)
 lock = os.path.join(os.path.dirname(D), "render.lock")  # un rendu à la fois par dossier de chaîne
