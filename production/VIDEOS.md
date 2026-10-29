@@ -1,5 +1,16 @@
 # Journal des vidéos
 
+## Oddly Specific Lives — KGB, Aztec, Ottoman — 29 octobre 2026
+
+Livrées sur le Discord OSL (à poster par l'utilisateur, miniature au choix) :
+- « POV: You Date a KGB Spy » 32:05 (miniature C choisie).
+- « POV: You Love an Ottoman Princess » 30:54, 3 miniatures. Images refaites : mètre ruban
+  moderne (scène 80), grille d'égout (scène 28).
+- « POV: You Marry an Aztec Warrior » 31:28, mariage dans le script, 3 miniatures. Image refaite :
+  cavalier avant 1519 (scène 36 ; l'ERA LOCK citait les chevaux espagnols, à retirer des scènes d'avant 1519).
+Disque plein vers 4 h 15 (rendus échoués) : vider les vieux rendus `work/prod/projects/*/render` et les
+mp4 déjà livrés avant de lancer plusieurs vidéos.
+
 ## Historical Daily - OVNI integration, 9 October 2026
 
 OVNI is now the default picture renderer for the five manually authored
