@@ -167,8 +167,9 @@ TEMPLATES = {
                      "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
                      "understated expressions that sell the joke. Put the cultural details on screen (food, clothes, "
                      "architecture, objects, customs). Night city skylines and warm interiors for emotional beats.",
-        "default_minutes": 27, "min_minutes": 25, "minutes_rev": 3,  # 25 min MINIMUM (l'utilisateur, 17-18 oct. 2026) :
-        # on vise 27 pour ne jamais finir en dessous (Gladiator 24:22 et Pirate 23:27 visaient 25 pile)
+        "default_minutes": 32, "min_minutes": 30, "minutes_rev": 4,  # 30 min MINIMUM (l'utilisateur, 29 oct. 2026 : « va
+        # chercher 30, 31 minutes » ; le RPM a doublé depuis les vidéos de 25 min). On vise 32 pour ne jamais finir
+        # en dessous (Gladiator 24:22 et Pirate 23:27 visaient 25 pile)
         "montage": {"pacing": 6.0, "hook_pacing": 6.0, "hook_seconds": 0, "min_scene": 3.0, "max_scene": 11.0,
                     "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "full",

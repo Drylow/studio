@@ -150,7 +150,7 @@ son marqueur (`AUDIT DONE`, `PROD DONE`, `QA DONE`, `RENDER DONE`, `ALL DONE`) :
 - **Miniature** : `production/thumb.py` avec la référence de la chaîne, 2-4 variantes en planche, le choix
   de l'utilisateur va dans `<dossier>/thumb_choice.txt` (chemin absolu).
 - **Rendus sur le VPS, jamais sur la machine cloud** (l'utilisateur, 26 oct. : « c'est complètement con de faire ça sur le cloud ») : la machine cloud n'a que 4 cœurs (≈ 20 min pour 30 min de vidéo), le VPS en a 18. Pour toutes les vidéos ; les vidéos POV (`services/render.py`) ne passent pas encore par le VPS (seules les History y vont) : à brancher.
-- Durée par défaut 14 min ; **Oddly Specific Lives : 25 min MINIMUM depuis le 17 oct.** (l'utilisateur, 18 oct. : « minimum 25, c'est minimum 25 » ; Gladiator 24:22 et Pirate 23:27 refusés). On vise 27 min (≈ 4 650 mots à 172 mots/min) ; `pipeline.py` bloque la prod si le script fait moins que `min_minutes` (retire `script_ok`, « SCRIPT TROP COURT ») et s'arrête avant le rendu si la voix est trop courte. Une vidéo prend ~1 h 30 à 2 h (images ≈ 4-5/min, rendu ≈ 25 min).
+- Durée par défaut 14 min ; **Oddly Specific Lives : 30 min MINIMUM depuis le 29 oct.** (l'utilisateur : « va chercher 30, 31 minutes » ; avant : 25 min minimum depuis le 17 oct., Gladiator 24:22 et Pirate 23:27 refusés). On vise 32 min (≈ 5 500 mots à 172 mots/min) ; `pipeline.py` bloque la prod si le script fait moins que `min_minutes` (retire `script_ok`, « SCRIPT TROP COURT ») et s'arrête avant le rendu si la voix est trop courte. Une vidéo prend ~1 h 30 à 2 h (images ≈ 4-5/min, rendu ≈ 25 min).
 
 ## 5. Vérifier avant d'envoyer (obligatoire)
 
