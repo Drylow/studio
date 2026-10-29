@@ -1996,19 +1996,14 @@ def check_image(path, sc, no_text=True, faceless=False):
 
 # ── Images qui se suivent (format survie) ───────────────────────────────────
 
-CONTINUITY_ALL_SINCE = "2026-10-28T19"  # Oddly Specific Lives : tous les formats en images qui se suivent (28 oct.)
-
-
 def continuity_enabled(pr):
     """Lieux fixes avec une image de référence, état du moment et plan précédent en référence de chaque image.
-    Format survie, montage.continuity, ou toute vidéo Oddly Specific Lives créée depuis CONTINUITY_ALL_SINCE
-    (l'utilisateur, 28 oct. : « que les images se suivent… que ça ait du sens », sur tous les formats)."""
+    Format survie ou montage.continuity explicite. L'activation sur tous les formats d'Oddly Specific Lives a été
+    retirée le 29 oct. : l'essai zombie (porte qui change de côté, blouse incohérente) a été refusé."""
     pr = pr or {}
     if pr.get("format") == "pov_survive" or (pr.get("montage") or {}).get("continuity"):
         return True
-    if (pr.get("created") or "") < CONTINUITY_ALL_SINCE or uses_board(pr):
-        return False
-    return ((store.get_channel(pr.get("channel_id")) or {}).get("template") or "") == "oddly_specific_en"
+    return False  # pas d'activation automatique : l'essai du 28 oct. n'a pas été validé par l'utilisateur
 
 
 def _place_of(pr, name):
