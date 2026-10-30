@@ -60,7 +60,7 @@ def short_by():
     from services import pov_script as S
     pr = st.get_project(pid_of(D))
     ch = st.get_channel(pr["channel_id"]) or {}
-    need = float(ch.get("min_minutes") or 0)
+    need = 0.0 if "--pilot" in FLAGS else float(ch.get("min_minutes") or 0)  # essai court (test d'outil)
     v = pr.get("voice") or {}
     # sur le script seul, marge d'1 min : la voix sort parfois plus vite que prévu (Spartan : 26,7 estimées → 24,9)
     have = (v["duration"] / 60.0 if v.get("duration")

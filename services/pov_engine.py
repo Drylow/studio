@@ -261,6 +261,23 @@ TEMPLATES = {
                            "place and same camera angle in both halves, calm and bright on DAY 1, wrecked and at night "
                            "on DAY 30 with clean grey-green zombies (adults, two arms each, no blood); one single "
                            "coherent view through any window; no text (DAY 1 / DAY 30 is added afterwards).",
+        },
+            "pov_film": {
+            "niche": "Second-person POV love stories told as a full feature film (1-2 hours): you meet her, history "
+                     "or danger tests your love for years, chapter by chapter, until the quiet last scene",
+            "tone": "Cinematic, emotional second-person love story, present tense: tender and funny in quiet moments, "
+                    "tense in danger, never melodramatic; dry understatement; short loaded dialogue.",
+            "rules": "Follow the relationship chronologically, chapter by chapter, from the first meeting to the quiet "
+                     "final scene. Real, named places and correct historical details. Respectful of real history and "
+                     "its victims: never graphic, never trivializing; imply, cut away, show the consequences.",
+            "bible_note": "derived from the channel's reference video, a POV love story: follow its narration "
+                          "register, rhythm, dialogue density and ending shape; this is the same kind of story, longer, "
+                          "in chapters, with real stakes",
+            "direction": "Show the story like a continuous animated film: You and Her (and the few recurring people) "
+                         "in the real places of the story, the same rooms reused with the same layout and the same "
+                         "fixed camera set-ups, objects moved or broken staying that way. Wide shots to show each new "
+                         "place, medium shots for actions, close shots for hands, faces and key objects. Expressions "
+                         "follow the moment. Danger is shown through doors, shadows, windows and faces, never gore.",
         }},
         "variant_default": "pov_life",
         "variant_match": r"(?i)\b(marr(y|ies|ied|iage)|wife|husband|fall(s|ing)?\s+in\s+love|date|dating|"
@@ -1705,6 +1722,16 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
                         "its layout: when the camera looks toward the door, the window or a wall, describe what that "
                         "layout puts there. Consecutive scenes in the same place read as a continuous comic strip.")
         place_out = ', "place": "exact place name or empty"'
+        if fixed_angles(pr):
+            place_rule += ("\n- FIXED CAMERA SET-UPS (like a film set, reused all film long):\n"
+                           + "\n".join(f"  - {p['name']} / {a['key']}: {a.get('view', '')}"
+                                        for p in places for a in p.get("angles") or [])
+                           + "\n- \"angle\": every WIDE or MEDIUM shot in a place uses one of its set-ups (\"A\", "
+                             "\"B\" or \"C\") and the prompt describes the frame exactly as that set-up does (same left, "
+                             "centre, right); \"close\" only for a close-up on faces, hands or an object where the "
+                             "room barely shows. Alternate set-ups and close-ups across consecutive scenes instead of "
+                             "inventing new camera positions. Outdoors or a place with no set-up: \"\".")
+            place_out += ', "angle": "A|B|C|close|"'
         if any(sc.get("state") for sc in scenes):
             place_rule += ("\n- STATE NOW is the exact situation at that moment: follow it. Never show an object, a "
                            "barricade, damage, an injury, a person or a change before the narration has brought it "
@@ -1736,7 +1763,7 @@ Return JSON: {{"prompts": [{{"i": <scene number>, "prompt": "...", "chars": ["ex
     for p in data.get("prompts") or []:
         try:
             out[int(p.get("i"))] = (str(p.get("prompt") or "").strip(), [str(c) for c in (p.get("chars") or [])],
-                                    str(p.get("place") or "").strip())
+                                    str(p.get("place") or "").strip(), str(p.get("angle") or "").strip())
         except (TypeError, ValueError):
             continue
     return out
@@ -1764,11 +1791,13 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
     def save(x):
         for s in x["scenes"]:
             if not (s.get("prompt") or "").strip():
-                prm, chars, place = results.get(s["i"], ("", [], ""))
+                prm, chars, place, angle = results.get(s["i"], ("", [], "", ""))
                 s["prompt"] = prm or f"Illustration of: {s['text'][:200]}"
                 s["chars"] = chars
                 if place:
                     s["place"] = place
+                if angle:
+                    s["angle"] = angle
                 if continuity_enabled(x) and re.search(r"\bYou\b", s["prompt"]) and not any(
                         _norm_name(c) == "you" for c in chars):
                     s["chars"] = chars + ["You"]  # sans sa référence, le héros devenait une femme aux cheveux noirs
@@ -2018,15 +2047,26 @@ def _continuity_refs(pr, sc, prev):
         return [], ""
     d = store.project_dir(pr["id"])
     extra, tail = [], ""
-    place = _place_of(pr, sc.get("place"))
-    if place:
+    place, angle = _angle_of(pr, sc)
+    if angle:
+        extra.append((os.path.join(d, angle["image"]),
+                      f"the FIXED CAMERA SET-UP {angle['key']} of {place['name']}: draw this shot from EXACTLY this "
+                      "viewpoint and framing; every wall, door, window and piece of furniture stays exactly where it is "
+                      "in this image (what is on the left stays on the left); add the characters and the changes of "
+                      "the CURRENT STATE into this set."))
+        tail += f" LOCATION ({place['name']}, set-up {angle['key']}): {angle.get('view', '')}"
+    elif place:
         if place.get("image"):
             extra.append((os.path.join(d, place["image"]),
                           f"the LOCATION reference of {place['name']}: keep exactly the same layout, walls, windows, "
                           "doors, furniture positions, colours and light; only the camera angle may change as the SCENE "
                           "says; where it differs from the CURRENT STATE, the CURRENT STATE wins."))
         tail += f" LOCATION ({place['name']}): {place.get('layout', '')}"
-    if prev:
+    if prev and angle:
+        extra.append((prev, "the PREVIOUS SHOT, a few seconds earlier: use it ONLY for the people (same outfits, "
+                            "hair, carried items, injuries) and for changes already made to the place; the camera "
+                            "viewpoint comes from the FIXED CAMERA SET-UP image, not from this one."))
+    elif prev:
         extra.append((prev, "the PREVIOUS SHOT of this continuous story, a few seconds earlier in the same place: "
                             "continue directly from it; same outfits, same carried items, same injuries, and every "
                             "change already made to the place stays (moved, broken or taken objects)."))
@@ -2123,11 +2163,16 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
         data = ai.chat_json(prompt, model=ai.fast_model(), timeout=400)
         locs = [{"name": str(p.get("name") or "").strip(), "layout": str(p.get("layout") or "").strip()}
                 for p in data.get("locations") or [] if str(p.get("name") or "").strip()][:16]
+        if fixed_angles(pr):
+            locs = _location_angles(locs)
         states = {h: str(t).strip() for h, t in zip(heads, data.get("states") or []) if str(t).strip()}
         store.update_project(pid, lambda x: x.update(locations=locs, section_states=states))
     pr = store.get_project(pid)
     d = store.project_dir(pid)
     w, h = dims(pr)
+    if fixed_angles(pr):
+        _ensure_angle_plates(job, pr, ch, d, w, h)
+        pr = store.get_project(pid)
     todo = [k for k, p in enumerate(pr["locations"]) if not p.get("image")]
 
     def master(k):
@@ -2145,6 +2190,94 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
         with ThreadPoolExecutor(max_workers=min(_image_workers(), len(todo))) as ex:
             for k, rel in ex.map(master, todo):
                 store.update_project(pid, lambda x, k=k, rel=rel: x["locations"][k].__setitem__("image", rel))
+
+
+def fixed_angles(pr):
+    """Film aux images qui se suivent : chaque lieu a 2-3 cadrages de caméra fixes (plans vides dessinés une fois,
+    validés), et chaque plan large ou moyen pose les persos DANS un de ces cadrages au lieu de redessiner la pièce
+    (zombie hôpital, 28 oct. : porte qui changeait de côté d'une image à l'autre)."""
+    return bool(((pr or {}).get("montage") or {}).get("fixed_angles"))
+
+
+def _location_angles(locs):
+    """2-3 cadrages fixes par lieu, décrits de façon cohérente avec son plan (gauche/droite/fond, portes, fenêtres)."""
+    if not locs:
+        return locs
+    listing = "\n".join(f"- {p['name']}: {p['layout']}" for p in locs)
+    prompt = f"""You are the set designer of an animated film. For each PLACE below, define 2 or 3 FIXED CAMERA SET-UPS
+that will be reused for every wide or medium shot in that place (like the fixed cameras of a sitcom set).
+
+PLACES:
+{listing}
+
+For each set-up give "key" ("A", "B" or "C") and "view": 35-60 words saying where the camera stands, where it looks,
+and exactly what is on the LEFT, in the CENTRE, on the RIGHT and in the BACKGROUND of the frame, consistent with the
+layout (if the door is in the left wall seen from the window, then seen from the door the window is straight ahead).
+Set-up A = the main wide view showing the door and the most important furniture. B = the reverse or side view. C (optional)
+= a third view for big places. Only furniture and fixtures of the layout; no people, nothing the story adds later.
+
+Return JSON: {{"places": [{{"name": "exact place name", "angles": [{{"key": "A", "view": "..."}}]}}]}}"""
+    data = ai.chat_json(prompt, model=ai.text_model(), timeout=400)
+    if isinstance(data, list):
+        data = {"places": data}
+    found = {_norm_name(p.get("name")): p.get("angles") or [] for p in data.get("places") or [] if isinstance(p, dict)}
+    out = []
+    for p in locs:
+        angles = [{"key": str(a.get("key") or "ABC"[k]).strip()[:1].upper(), "view": str(a.get("view") or "").strip()}
+                  for k, a in enumerate(found.get(_norm_name(p["name"])) or [])[:3]
+                  if isinstance(a, dict) and str(a.get("view") or "").strip()]
+        out.append(dict(p, angles=angles))
+    return out
+
+
+def _ensure_angle_plates(job, pr, ch, d, w, h):
+    """Plan vide de chaque cadrage fixe (décor seul), dessiné une fois ; le cadrage A sert aussi d'image du lieu."""
+    pid = pr["id"]
+    todo = [(k, j) for k, p in enumerate(pr.get("locations") or []) for j, a in enumerate(p.get("angles") or [])
+            if not a.get("image")]
+    if not todo:
+        return
+
+    def plate(kj):
+        k, j = kj
+        p = pr["locations"][k]
+        a = p["angles"][j]
+        rel = f"images/set_{k:02d}_{a['key']}.jpg"
+        refs_extra = []
+        if j and p["angles"][0].get("image"):
+            refs_extra.append((os.path.join(d, p["angles"][0]["image"]),
+                               f"the SAME PLACE seen from set-up A: same walls, colours, furniture, doors and windows; "
+                               f"now show it from set-up {a['key']}"))
+        full, refs = build_image_prompt(ch, f"EMPTY FILM SET, no people at all: {p['name']}. CAMERA SET-UP {a['key']}: "
+                                            f"{a['view']} PLACE LAYOUT: {p['layout']} The place as it first appears: "
+                                            "clean, intact, neutral daylight; every piece of furniture, door and "
+                                            "window exactly where the set-up says.", scene_chars=[], cast=[])
+        full, refs = _with_extra(full, refs, refs_extra)
+        ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, os.path.join(d, rel))
+        return k, j, rel
+
+    job.update(None, f"Décors fixes : {len(todo)} cadrage(s)…")
+    firsts = [t for t in todo if t[1] == 0]
+    rest = [t for t in todo if t[1] != 0]
+    for batch in (firsts, rest):  # B et C partent du cadrage A (même lieu)
+        if not batch:
+            continue
+        with ThreadPoolExecutor(max_workers=min(_image_workers(), len(batch))) as ex:
+            for k, j, rel in ex.map(plate, batch):
+                def save(x, k=k, j=j, rel=rel):
+                    x["locations"][k]["angles"][j]["image"] = rel
+                    if j == 0:
+                        x["locations"][k]["image"] = rel
+                store.update_project(pid, save)
+        pr = store.get_project(pid)
+
+
+def _angle_of(pr, sc):
+    place = _place_of(pr, sc.get("place"))
+    key = str(sc.get("angle") or "").strip().upper()[:1]
+    if not place or not key:
+        return place, None
+    return place, next((a for a in place.get("angles") or [] if a.get("key") == key and a.get("image")), None)
 
 
 def ensure_scene_states(job, pid, size=40):
@@ -2208,19 +2341,31 @@ seconds earlier. Reject the new image only for a continuity mistake a viewer wou
   the door, a window on another wall);
 - a character's outfit, hair, carried items or bandages changed without a reason.
 CURRENT STATE: {state}
-NARRATION: {text}
+NARRATION: {text}{set_rule}
 Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."""
 
+SET_RULE = """
+Image 3 is the FIXED SET of this place seen from the same camera set-up (empty). Also reject the new image if a door,
+window, wall or big piece of furniture is not where image 3 puts it (moved to the other side, missing, duplicated), or
+if the room is clearly a different room. People and objects the story added are fine."""
 
-def check_continuity(path, prev, sc):
-    """Contrôle en vision : la nouvelle image suit-elle la précédente et l'état du moment ? → (ok, [problèmes])."""
+
+def check_continuity(path, prev, sc, plate=None):
+    """Contrôle en vision : la nouvelle image suit-elle la précédente, l'état du moment et (film) le décor fixe
+    de son cadrage ? → (ok, [problèmes])."""
     import base64
     imgs = []
-    for p in (path, prev):
+    for p in (path, prev or plate, plate if prev else None):
+        if not p:
+            continue
         with open(p, "rb") as f:
             imgs.append({"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(
                 _jpeg(f.read(), side=768)).decode()}})
-    q = CONTINUITY_QA.format(state=(sc.get("state") or "-")[:600], text=(sc.get("text") or "")[:400])
+    q = CONTINUITY_QA.format(state=(sc.get("state") or "-")[:600], text=(sc.get("text") or "")[:400],
+                             set_rule=SET_RULE if plate and prev else "")
+    if plate and not prev:
+        q = q.replace("image 2 is the PREVIOUS image of the same continuous story, a few\nseconds earlier",
+                      "image 2 is the FIXED SET of this place (empty) from the same camera set-up")
     res = ai.chat_json([{"role": "user", "content": [{"type": "text", "text": q}] + imgs}], model=ai.text_model(),
                        timeout=240)
     return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
@@ -2236,15 +2381,18 @@ def _gen_scene(ch, pr, sc, prev=None):
     extra, tail = _continuity_refs(pr, sc, prev)
     qa = bool((pr.get("montage") or {}).get("image_qa"))
     no_text = (ch.get("style") or {}).get("no_text", True) is not False
-    for attempt in range(2 if qa else 1):
+    _, angle = _angle_of(pr, sc) if continuity_enabled(pr) else (None, None)
+    plate = os.path.join(d, angle["image"]) if angle else None
+    tries = (3 if fixed_angles(pr) else 2) if qa else 1  # film : une image ratée est refaite jusqu'à 2 fois
+    for attempt in range(tries):
         generate_scene_image(ch, prompt + tail, os.path.join(d, rel), scene_chars=sc.get("chars"), width=w,
                              height=h, board_layout=uses_board(pr), cast=cast_list(ch, pr), extra=extra)
-        if not qa or attempt == 1:
+        if not qa or attempt == tries - 1:
             break
         try:
             ok, problems = check_image(os.path.join(d, rel), dict(sc, prompt=prompt), no_text, faceless_object(ch, pr))
-            if ok and prev and continuity_enabled(pr):  # suit-elle le plan précédent et l'état du moment ?
-                ok, problems = check_continuity(os.path.join(d, rel), prev, sc)
+            if ok and (prev or plate) and continuity_enabled(pr):  # suit-elle le plan précédent, l'état, le décor ?
+                ok, problems = check_continuity(os.path.join(d, rel), prev, sc, plate)
         except Exception:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
             break
         if ok:
@@ -2678,7 +2826,7 @@ def chapter_card(scene):
     if len(title) > 32:  # coupé sur un mot entier (avant : « THE PRESSER AND THE WASTE PILE B »)
         title = title[:33].rsplit(" ", 1)[0].rstrip(" ,;:-")
     word = m.group(1).upper()
-    kicker = f"{word} {m.group(2)}" if word in ("DAY", "WEEK", "HOUR", "MONTH") else f"{word} #{m.group(2)}"  # DAY 1
+    kicker = f"{word} {m.group(2)}" if word in ("DAY", "WEEK", "HOUR", "MONTH", "CHAPTER", "PART") else f"{word} #{m.group(2)}"  # DAY 1
     return {"type": "chapter", "kicker": kicker, "title": title}
 
 
@@ -2765,6 +2913,7 @@ def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None, extra=None):
 
 
 INTRO_SECONDS = 5.5
+PRESENTS_SECONDS = 6.0
 OUTRO_SECONDS = 7.0
 
 
@@ -2878,6 +3027,24 @@ def _intro_bg(ch, workdir, w, h):
     return path
 
 
+def presents_spec(pr, ch):
+    """Ouverture de film : marque de la chaîne, puis titre (« POV: … (Full Movie) » → sous-titre + titre)."""
+    title = re.sub(r"\s*\((?:full movie|full film)\)\s*$", "", (pr.get("title") or "").strip(), flags=re.I)
+    m = re.match(r"(?i)^(pov:)\s*(.+)$", title)
+    brand = ((TEMPLATES.get(ch.get("template") or "", {}).get("studio") or {}).get("brand")
+             or (ch.get("name") or "").split(" — ")[0])
+    return {"type": "presents", "kicker": brand, "sub": "A FILM" if not m else "POV", "main": m.group(2) if m else title}
+
+
+def _black_bg(workdir, w, h):
+    from PIL import Image
+    path = os.path.join(workdir, "black_bg.png")
+    if not os.path.isfile(path):
+        os.makedirs(workdir, exist_ok=True)
+        Image.new("RGB", (w, h), (0, 0, 0)).save(path)
+    return path
+
+
 def title_spec(pr, ch):
     """Écran titre de l'intro : « THE ECONOMICS OF » en petit, la suite en énorme."""
     title = (pr.get("title") or "").strip()
@@ -2918,7 +3085,8 @@ def render_inputs(pid, workdir, until=None):
     ch = project_channel(pr)
     scenes_src = [s for s in pr["scenes"] if until is None or s["start"] < until]
     t_end = scenes_src[-1]["end"] if until is not None and scenes_src else None
-    lead = INTRO_SECONDS if (m.get("intro") and montage_enabled(pr)) else 0.0
+    presents = bool(m.get("presents"))  # film : « ODDLY SPECIFIC LIVES PRESENTS » puis le titre, sur fond noir
+    lead = PRESENTS_SECONDS if presents else INTRO_SECONDS if (m.get("intro") and montage_enabled(pr)) else 0.0
     tail = OUTRO_SECONDS if (m.get("outro") and montage_enabled(pr) and t_end is None) else 0.0
     voice = os.path.join(d, pr["voice"]["file"])
     voice_end = lead + (t_end if t_end is not None else media.duration(voice))
@@ -2971,9 +3139,13 @@ def render_inputs(pid, workdir, until=None):
                    if s.get("first") and s.get("heading")]
     elif any((s.get("fx") or {}).get("type") == "chapter" for s in scenes_src):
         # sans réalisateur : seules les cartes de partie (DAY N) sont incrustées
-        fx = [{"scene": k, "t": s["fx"].get("t", s["start"]), "items_t": [],
+        fx = [{"scene": k, "t": s["fx"].get("t", s["start"]) + lead, "items_t": [],
                "spec": {a: b for a, b in s["fx"].items() if a not in ("t", "item_t")}}
               for k, s in enumerate(scenes_src) if (s.get("fx") or {}).get("type") == "chapter"]
+    if presents and not montage_enabled(pr):
+        fx = [dict(f, scene=f["scene"] + 1) for f in fx or []]
+        scenes.insert(0, {"image": _black_bg(workdir, w, h), "start": 0.0, "motion": "none", "index": -1})
+        fx.insert(0, {"scene": 0, "t": 0.0, "items_t": [], "spec": presents_spec(pr, ch)})
     return {"scenes": scenes, "voice": voice, "words": words, "overlays": overlays, "layout": layout, "fx": fx,
             "sounds": sounds, "w": w, "h": h, "m": m, "music": pick_music(pr, m.get("music"))}
 
@@ -3356,7 +3528,8 @@ def studio_summary(pr):
 
 def chapters(pr):
     m = pr.get("montage") or DEFAULT_MONTAGE
-    lead = INTRO_SECONDS if (m.get("intro") and montage_enabled(pr)) else 0.0  # la voix démarre après l'intro
+    lead = (PRESENTS_SECONDS if m.get("presents") else INTRO_SECONDS if (m.get("intro") and montage_enabled(pr))
+            else 0.0)  # la voix démarre après l'intro
     out = []
     for s in pr.get("scenes") or []:
         if s.get("first"):

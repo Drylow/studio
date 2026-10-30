@@ -1122,11 +1122,47 @@ class Chapter(Fx):
         p.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=YELLOW, outline=INK, width=6 * k)
         if self.num and a > 0.5:
             # « #3 » pour HAND #3 ; un jour reste « 1 », « 19 » (avant : #1, #2 puis 19, 30 sans dièse)
-            hashed = len(self.num) < 2 and self.word not in ("DAY", "WEEK", "HOUR", "MONTH")
+            hashed = len(self.num) < 2 and self.word not in ("DAY", "WEEK", "HOUR", "MONTH", "CHAPTER", "PART")
             p.text((cx, cy + 2 * k), "#" + self.num if hashed else self.num, 900,
                    fit_size("#" + self.num, 900, 70 * k * a, rr * 1.45), anchor="mm")
         im = p.image()
         return transform(im, dx=-(1 - ease_out(seg(t, 0, 0.3))) * 60 * k, alpha=seg(t, 0, 0.08))
+
+
+class Presents(Fx):
+    """Ouverture de film (≈6 s) : fond noir, « ODDLY SPECIFIC LIVES » puis « PRESENTS » en fondu, puis le titre
+    du film (kicker en petit, titre en grand), et fondu au noir vers la première image."""
+    anim_end = 6.0
+    exit = False
+
+    def setup(self):
+        k = self.k
+        self.x, self.y = 0, 0
+        self.w, self.h = int(self.geo["W"]), int(self.geo["H"])
+        self.brand = (self.spec.get("kicker") or "").upper()[:40]
+        self.main = (self.spec.get("main") or "").upper()[:60]
+        self.sub = (self.spec.get("sub") or "").upper()[:50]
+        self.bsize = fit_size(self.brand, 900, 64 * k, self.w * 0.7)
+        self.msize = fit_size(self.main, 900, 110 * k, self.w * 0.86)
+        self.sfx = [(0.2, "whoosh", 0.35), (2.9, "whoosh", 0.45)]
+
+    def frame(self, t):
+        k = self.k
+        p = Pad(self.w, self.h)
+        p.rect((0, 0, self.w, self.h), (0, 0, 0, 255))
+        cx, cy = self.w / 2, self.h / 2
+        a1 = seg(t, 0.2, 0.9) * (1 - seg(t, 2.3, 2.8))
+        if a1 > 0:
+            g = int(255 * a1)
+            p.text((cx, cy - 10 * k), self.brand, 900, self.bsize, fill=(g, g, g, 255), anchor="ms")
+            p.text((cx, cy + 40 * k), "PRESENTS", 700, 30 * k, fill=(int(g * .8),) * 3 + (255,), anchor="mt")
+        a2 = seg(t, 3.0, 3.7) * (1 - seg(t, 5.4, 6.0))
+        if a2 > 0:
+            g = int(255 * a2)
+            if self.sub:
+                p.text((cx, cy - 70 * k), self.sub, 700, 30 * k, fill=(int(g * .75),) * 3 + (255,), anchor="ms")
+            p.text((cx, cy), self.main, 900, self.msize, fill=(g, g, g, 255), anchor="mm")
+        return p.image()
 
 
 def _place(name, n=24):
@@ -1217,7 +1253,7 @@ class Route(Fx):
 
 
 CLASSES = {"outro": Outro, "sheet": Sheet, "intro": Intro, "title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
-           "split": Split, "timeline": Timeline, "stamp": Stamp, "route": Route, "chapter": Chapter}
+           "split": Split, "timeline": Timeline, "stamp": Stamp, "route": Route, "chapter": Chapter, "presents": Presents}
 
 
 def make(spec, geo, state=None):

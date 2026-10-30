@@ -117,6 +117,24 @@ FORMATS = {
 - Honest, human, dry understatement: never glamorize, never moralize. Sensitive lives stay non-graphic: imply, cut away, show the consequences.
 - ENDING: a small, quiet scene with 2-4 lines of dialogue, then a last physical image. Never summarize the video.""",
     },
+    "pov_film": {
+        "name": "POV: Your Love Story… (Full Movie, film en chapitres)",
+        "desc": "« POV: Your Love Story With a Jewish Girl During World War II (Full Movie) » — une histoire d'amour en "
+                "« you » racontée comme un long métrage (1-2 h), chapitre par chapitre, avec des lieux fixes.",
+        "heading": "Chapter N: <short label with the time or place> (shown on screen as a CHAPTER N card, never "
+                   "spoken; e.g. \"Chapter 1: Summer 1939\", \"Chapter 4: The wall\", \"Chapter 9: August 1944\")",
+        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological, told as a feature film. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it.
+- CHAPTER HEADINGS: every section heading is "Chapter N: <label>", N from 1 upward, 10-16 chapters for a long film; each chapter is one stretch of time in one or two places. Say the time jump out loud at the start of each chapter ("Two weeks later...", "By the spring of 1941...").
+- HOOK (first 30-45 s, no heading): a vivid moment from the heart of the story (a close call, a whispered line, a door at night), then cut back ("But three years earlier, you are just..."), ending on one clear question.
+- "YOU": an ordinary young man with a specific everyday life (a job, a family, a street, a habit), honest, a little clumsy, brave when it counts. He speaks little; his lines are short. "SHE" is a full person: her own voice, family, humour, opinions and choices; never a prop to be saved.
+- ARC: the ordinary world and the meeting (warm, funny, specific; about 12% of the film) → falling in love, small rituals, her family → history breaks in (the stakes become real and personal) → the long middle: separation, danger, risky choices, help from a few people, one betrayal, each chapter solving one concrete problem and creating the next → the darkest moment → the turn → the quiet aftermath and the last scene.
+- RECURRING PEOPLE: 4-6 fixed people (her parents or a sibling, your mother, a friend, a neighbour, one dangerous person), each shown through what they do and one telling line, each with a fixed look.
+- PLACES: 8-14 distinct, concrete places, each described once with a fixed layout (what is on the left, the right, the door, the window) and reused consistently when you come back. Things moved, broken, hidden or taken stay that way; outfits change only when the story says so (season, years passing, a disguise).
+- HISTORY: real dates, places and events exactly as the notes give them, woven into the scenes (a poster on a wall, a radio announcement, a new rule); never a lecture. Respectful and non-graphic: no bodies, no gore, no violence shown on screen; imply, cut away, show the consequences and the grief.
+- Scenes, not summaries: a time of day, the light, one telling physical detail, then short loaded dialogue.
+- Plant 3 physical motifs early (an object, a song, a ritual) and pay them off across the film; the last line returns to the opening image.
+- ENDING: a small, quiet two-person scene with 2-4 lines of dialogue, then a last physical image. Never summarize the film.""",
+    },
     "pov_survive": {
         "name": "POV: You Have to Survive… (survie zombie, jour par jour)",
         "desc": "« POV: You Have to Survive a Zombie Apocalypse (Locked in a Hospital) » — un mec lambda survit jour après "
