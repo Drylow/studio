@@ -1,5 +1,11 @@
 # Journal des vidéos
 
+## Chaîne Cyberpunk (essais) — arrêtée par l'utilisateur, 30 octobre 2026
+
+Essais de vidéos 100 % codées (canvas + Playwright) : Rook, puis Weak Kingsley en style cel, marionnette articulée
+(`work/cyber/rig/`), décor marché de Kabuki, bruitages CC0 d'OpenGameArt (`work/cyber/sfx/LICENSES.txt`).
+Refusés : rendu jugé caricatural et bugué (marche, tête, manteau, prise du revolver). Ne pas relancer sans demande.
+
 ## Oddly Specific Lives — KGB, Aztec, Ottoman — 29 octobre 2026
 
 Livrées sur le Discord OSL (à poster par l'utilisateur, miniature au choix) :
