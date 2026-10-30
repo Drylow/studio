@@ -2108,6 +2108,10 @@ def _continuity_chains(pr, targets):
         last = {"key": key if key[1] else None, "image": s.get("image")}
     if cur:
         chains.append(cur)
+    if fixed_angles(pr):
+        # le décor fixe tient la pièce : une chaîne est coupée tous les 6 plans pour tourner en parallèle (la plus
+        # longue chaîne fixait la durée : 56 plans d'affilée ≈ 1 h 30 sur la vidéo zombie IKEA)
+        chains = [c[k:k + 6] for c in chains for k in range(0, len(c), 6)]
     return chains
 
 
