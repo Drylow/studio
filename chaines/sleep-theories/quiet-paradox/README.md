@@ -1,16 +1,22 @@
 # Quiet Paradox
 
+**Cap éditorial du 30 octobre 2026 : priorité Silo, arrêt de FROM.**
+Annuler les futurs QP-08-from-rules et QP-11-from-cycles. Ne plus lancer de script,
+voix, rendu ou publication FROM. La rotation obligatoire ci-dessous est abandonnée.
+Prochain sujet Silo préparé : QP-10-silo-outside, « The World Outside the Silos |
+Mysteries & Theories to Fall Asleep To ». Les fichiers anciens restent archivés.
+
 Nom du kit : **Quiet Paradox**. L'utilisateur dit aussi Quiet Sleep Paradox.
-Handle proposé : @QuietParadox ; handle effectivement enregistré non confirmé.
+Handle vérifié : @QuietParadoxSleep.
 Le kit de chaîne original est dans chaines/quiet-paradox/setup-kit-2026-10-11/
 du dépôt ; sa copie autonome est dans quiet-paradox/silo-dossier-original/setup-kit/.
 
-## Ordre des publications
+## Historique du premier ordre de publication — remplacé le 30 octobre
 
 1. **Silo**, publié le 11 octobre 2026.
 2. **FROM**, production en cours dans Ultravid selon l'utilisateur, 2 h 30 choisies.
 3. **Severance**, prochaine vidéo, 2 h 30 proposées.
-4. Puis Silo, FROM, Severance, dans le même ordre.
+4. L'ancienne répétition Silo, FROM, Severance ne s'applique plus.
 
 Titres à copier dans publication/. Le script final Silo est celui nommé
 script-voix.txt, 21 321 mots / 22 chapitres. Dans la sauvegarde autonome, il se
@@ -31,7 +37,7 @@ miniatures/silo-reference.jpg.
 - Fond brun sombre, lumière ambre, texte crème / bronze.
 - Serif cinématographique, gros mots lisibles sur téléphone.
 - Décor reconnaissable de la série derrière le texte.
-- Adapter les personnages à FROM et Severance, en conservant la famille visuelle.
+- Conserver cette famille visuelle pour les prochaines vidéos Silo.
 - Ne pas utiliser seulement une description : envoyer l'image de référence.
 
 Les logos existants sont conservés dans les archives, mais leur choix reste en pause.
