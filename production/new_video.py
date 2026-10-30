@@ -35,7 +35,8 @@ if fmt == "pov_survive":  # cartes DAY N à l'écran (titres « Day N: … »)
     store.update_project(pr["id"], lambda x: x.setdefault("montage", {}).__setitem__("chapter_cards", True))
 if fmt == "pov_film":  # film : cartes CHAPTER N, images qui se suivent sur décors fixes, contrôle en vision, intro
     store.update_project(pr["id"], lambda x: x.setdefault("montage", {}).update(
-        chapter_cards=True, continuity=True, fixed_angles=True, image_qa=True, presents=True))
+        chapter_cards=True, continuity=True, fixed_angles=True, image_qa=True, presents=True,
+        motion="none", transition="fade", transition_dur=0.7))  # images fixes, fondus doux (l'utilisateur, 31 oct.)
 if a.object:
     store.update_project(pr["id"], lambda x: x.__setitem__("object_noun", a.object))
 era = next((ln.split(":", 1)[1].strip() for ln in notes.splitlines() if ln.startswith("ERA LOCK:")), "")

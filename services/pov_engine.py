@@ -3107,8 +3107,9 @@ def render_inputs(pid, workdir, until=None):
         img = os.path.join(d, s["image"]) if s.get("image") else None
         if (s.get("fx") or {}).get("type") in _full_panel() or not img:
             img = prev_img or img or _intro_bg(ch, workdir, w, h)
-        scenes.append({"image": img, "start": s["start"] + lead, "motion": "none"
-                       if (s.get("fx") or {}).get("type") in _full_panel() else s.get("motion"), "index": s["i"]})
+        still = (s.get("fx") or {}).get("type") in _full_panel() or m.get("motion") == "none"  # film : jamais de zoom
+        scenes.append({"image": img, "start": s["start"] + lead, "motion": "none" if still else s.get("motion"),
+                       "index": s["i"]})
         prev_img = img
     words = [dict(x, s=x["s"] + lead, e=x["e"] + lead) for x in load_words(pid) if t_end is None or x["s"] < t_end]
     overlays = []
