@@ -2184,6 +2184,8 @@ SCENES:
 
 Return JSON: {{"states": [{{"i": <scene number>, "state": "..."}}], "ledger": "..."}}"""
         data = ai.chat_json(prompt, model=ai.fast_model(), timeout=400)
+        if isinstance(data, list):  # le modèle renvoie parfois la liste seule
+            data = {"states": data}
         for r in data.get("states") or []:
             try:
                 out[int(r.get("i"))] = str(r.get("state") or "").strip()
