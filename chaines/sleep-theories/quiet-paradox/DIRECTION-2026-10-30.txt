@@ -9,7 +9,9 @@ et la meme direction visuelle brun/ambre. Narrations entre 2 h et 2 h 30.
 Episodes televises diffuses seulement, sans spoilers des romans.
 
 Les futurs QP-08-from-rules et QP-11-from-cycles sont annules avant lancement.
-Leurs scripts, miniatures et voix existants sont archives, pas autorises a publier.
+Leurs fichiers locaux (scripts, miniatures, voix et copies de livraison) sont a
+supprimer a la demande explicite de l'utilisateur. Aucun retelechargement ni
+restauration automatique. Les registres partages gardent seulement l'historique.
 Le prochain Silo deja prepare est QP-10-silo-outside :
 The World Outside the Silos | Mysteries & Theories to Fall Asleep To
 
@@ -20,6 +22,9 @@ Les six uploads du 30 octobre (cinq Deep Void et Silo QP-07) restent autorises
 et doivent terminer. L'ancienne surveillance Ultravid reste en pause et ne doit
 plus contenir les deux sujets FROM parmi ses cibles executables.
 
-Le retrait des videos FROM deja presentes sur YouTube est suivi separement
-dans le registre prive de la session. Ne pas deduire une suppression effectuee
-de cette seule decision editoriale.
+Clarification utilisateur : les videos FROM ont deja ete passees en prive par
+l'utilisateur. Il demande la suppression des fichiers locaux, PAS des videos
+YouTube. Ne pas supprimer ni modifier ces videos sur YouTube.
+
+
+Nettoyage FROM effectue le 30 octobre : 527 fichiers locaux supprimes (environ 3,07 Go), copies et archives incluses. Les medias des autres series et des six uploads en cours sont preserves. Ne pas restaurer FROM. Les videos YouTube restent privees selon l utilisateur ; aucune suppression YouTube.

@@ -4,7 +4,9 @@
 Annuler les futurs QP-08-from-rules et QP-11-from-cycles. Ne plus lancer de script,
 voix, rendu ou publication FROM. La rotation obligatoire ci-dessous est abandonnée.
 Prochain sujet Silo préparé : QP-10-silo-outside, « The World Outside the Silos |
-Mysteries & Theories to Fall Asleep To ». Les fichiers anciens restent archivés.
+Mysteries & Theories to Fall Asleep To ». L'utilisateur demande aussi la suppression
+des fichiers locaux FROM, copies et archives comprises. Ne pas les restaurer.
+Les vidéos YouTube ont déjà été mises en privé par l'utilisateur : ne pas les supprimer.
 
 Nom du kit : **Quiet Paradox**. L'utilisateur dit aussi Quiet Sleep Paradox.
 Handle vérifié : @QuietParadoxSleep.
