@@ -320,7 +320,7 @@ def algrow_key(fields):
 ALGROW_CACHE = ".algrow_jobs.json"
 
 
-def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=None, srt=True, max_wait=1800,
+def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=None, srt=True, max_wait=4800,
             cache_dir=None):
     """Job Algrow : envoi → attente (polling) → MP3 + timings (SRT si ElevenLabs)."""
     import time
