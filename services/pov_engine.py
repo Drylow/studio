@@ -1757,6 +1757,8 @@ RULES:
 - ONE single frame per scene: never "two panels", a split screen, a collage, an inset or a before/after; if the
   narration covers two moments, show the most important one.
 - No emblems, eagles, seals, coats of arms or flags on posters, uniforms or buildings (plain paper, plain uniforms).
+- Every armband, badge or uniform detail is written in full each time it appears (exact colours and symbol, which
+  arm), as the ERA LOCK defines it; never just "her armband".
 - {text_rule} 25-60 words per prompt, English.{place_rule}
 
 SCENES:
