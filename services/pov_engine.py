@@ -2058,7 +2058,14 @@ def _continuity_refs(pr, sc, prev):
     d = store.project_dir(pr["id"])
     extra, tail = [], ""
     place, angle = _angle_of(pr, sc)
-    if angle:
+    if angle and angle.get("close"):
+        extra.append((os.path.join(d, angle["image"]),
+                      f"the FIXED CAMERA SET-UP {angle['key']} of {place['name']}: this shot is a CLOSE-UP taken from "
+                      "this same camera, zoomed in on the subject. Behind the subject show only the part of THIS image "
+                      "that really lies behind them, softly out of focus, at the same place and scale; never move, "
+                      "add, enlarge or bring forward any furniture, door or window (nothing jumps into the foreground)."))
+        tail += f" LOCATION ({place['name']}, close-up from set-up {angle['key']}): {angle.get('view', '')}"
+    elif angle:
         extra.append((os.path.join(d, angle["image"]),
                       f"the FIXED CAMERA SET-UP {angle['key']} of {place['name']}: draw this shot from EXACTLY this "
                       "viewpoint and framing; every wall, door, window and piece of furniture stays exactly where it is "
@@ -2320,11 +2327,27 @@ def _ensure_angle_plates(job, pr, ch, d, w, h):
 
 
 def _angle_of(pr, sc):
+    """(lieu, cadrage fixe) d'un plan. Un gros plan (« close ») part du cadrage du dernier plan large du même lieu
+    (sinon A) : il reçoit ce décor en référence, marqué close=True. Avant (pilote WW2, 31 oct.), « close » donnait
+    « C » ou rien : l'IA redessinait la pièce et l'armoire sautait au premier plan d'une image à l'autre."""
     place = _place_of(pr, sc.get("place"))
-    key = str(sc.get("angle") or "").strip().upper()[:1]
-    if not place or not key:
+    raw = str(sc.get("angle") or "").strip().upper()
+    if not place:
         return place, None
-    return place, next((a for a in place.get("angles") or [] if a.get("key") == key and a.get("image")), None)
+    angles = [a for a in place.get("angles") or [] if a.get("image")]
+    if raw in ("A", "B", "C"):
+        return place, next((a for a in angles if a.get("key") == raw), None)
+    if raw != "CLOSE" or not angles:
+        return place, None
+    base = None
+    for s in reversed([x for x in pr.get("scenes") or [] if x["i"] < sc["i"]]):
+        if s.get("section") != sc.get("section") or _norm_name(s.get("place")) != _norm_name(sc.get("place")):
+            break
+        k = str(s.get("angle") or "").strip().upper()
+        if k in ("A", "B", "C"):
+            base = next((a for a in angles if a.get("key") == k), None)
+            break
+    return place, dict(base or angles[0], close=True)
 
 
 def ensure_scene_states(job, pid, size=40):
@@ -2397,7 +2420,13 @@ window, wall or big piece of furniture is not where image 3 puts it (moved to th
 if the room is clearly a different room. People and objects the story added are fine."""
 
 
-def check_continuity(path, prev, sc, plate=None):
+CLOSE_RULE = """
+Image 3 is the FIXED SET (empty) seen from the camera this CLOSE-UP zooms in from. The background behind the subject
+must be the matching part of image 3: reject the new image if a big piece of furniture, a door or a window jumped to
+the foreground, changed side, changed size, or if the room behind is laid out differently from image 3."""
+
+
+def check_continuity(path, prev, sc, plate=None, close=False):
     """Contrôle en vision : la nouvelle image suit-elle la précédente, l'état du moment et (film) le décor fixe
     de son cadrage ? → (ok, [problèmes])."""
     import base64
@@ -2409,7 +2438,7 @@ def check_continuity(path, prev, sc, plate=None):
             imgs.append({"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(
                 _jpeg(f.read(), side=768)).decode()}})
     q = CONTINUITY_QA.format(state=(sc.get("state") or "-")[:600], text=(sc.get("text") or "")[:400],
-                             set_rule=SET_RULE if plate and prev else "")
+                             set_rule=(CLOSE_RULE if close else SET_RULE) if plate and prev else "")
     if plate and not prev:
         q = q.replace("image 2 is the PREVIOUS image of the same continuous story, a few\nseconds earlier",
                       "image 2 is the FIXED SET of this place (empty) from the same camera set-up")
@@ -2439,7 +2468,8 @@ def _gen_scene(ch, pr, sc, prev=None):
         try:
             ok, problems = check_image(os.path.join(d, rel), dict(sc, prompt=prompt), no_text, faceless_object(ch, pr))
             if ok and (prev or plate) and continuity_enabled(pr):  # suit-elle le plan précédent, l'état, le décor ?
-                ok, problems = check_continuity(os.path.join(d, rel), prev, sc, plate)
+                ok, problems = check_continuity(os.path.join(d, rel), prev, sc, plate,
+                                                close=bool(angle and angle.get("close")))
         except Exception:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
             break
         if ok:
