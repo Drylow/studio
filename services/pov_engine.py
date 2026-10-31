@@ -1757,6 +1757,8 @@ RULES:
 - ONE single frame per scene: never "two panels", a split screen, a collage, an inset or a before/after; if the
   narration covers two moments, show the most important one.
 - No emblems, eagles, seals, coats of arms or flags on posters, uniforms or buildings (plain paper, plain uniforms).
+- A character who is hiding is drawn INSIDE the hiding place (e.g. the dark narrow gap behind the wardrobe, seen
+  from inside or through the gap) or not at all; never standing in the open room in front of the people searching.
 - Every armband, badge or uniform detail is written in full each time it appears (exact colours and symbol, which
   arm), as the ERA LOCK defines it; never just "her armband".
 - {text_rule} 25-60 words per prompt, English.{place_rule}
@@ -1816,7 +1818,7 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
 
 # ── Casting de la vidéo (persos consistants, façon TubeGen) ─────────────────
 
-MAX_CAST = 7
+MAX_CAST = 10  # film : tous les proches nommés (Ruth manquait au pilote WW2 et était dessinée comme Hanna)
 
 
 def detect_cast(ch, pr):
@@ -2375,7 +2377,9 @@ WHAT IS TRUE BEFORE THESE SCENES (running ledger): {ledger}
 
 For EACH scene below, write "state": 25-50 words describing what must be visible in its image at that exact moment:
 who is present, what they wear and carry, injuries or bandages, the time of day and light, and the state of the place
-(objects moved, barricades, damage, items taken). Rules:
+(objects moved, barricades, damage, items taken). Say who is HIDDEN and where (e.g. "Hanna is hidden in the dark
+space behind the wardrobe, not visible in the room"), and any identifying item each person wears or has removed at
+that moment (armband, uniform, papers). Rules:
 - Only what the story has done UP TO AND INCLUDING this scene's narration. Something that happens in a later scene
   is NOT there yet (if a scene says "you drag the armchair to the door", earlier scenes show the armchair in its
   layout position, this scene shows it being dragged, later scenes show it against the door).
@@ -2411,7 +2415,11 @@ seconds earlier. Reject the new image only for a continuity mistake a viewer wou
   injury), or something the CURRENT STATE says is there that is missing;
 - furniture or the room layout changed between the two images without the story moving it (a bed jumping next to
   the door, a window on another wall);
-- a character's outfit, hair, carried items or bandages changed without a reason.
+- a character's outfit, hair, carried items or bandages changed without a reason;
+- a character the NARRATION or CURRENT STATE says is hidden (behind a wardrobe, in a hiding place, out of sight)
+  shown in the open room; a hidden person is either not visible or drawn INSIDE the hiding place only;
+- an armband, badge or identifying garment the CURRENT STATE does not give that person at this moment (a person in
+  hiding wearing an armband), or a person present whom the narration says is away.
 CURRENT STATE: {state}
 NARRATION: {text}{set_rule}
 Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."""
