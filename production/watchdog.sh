@@ -7,9 +7,13 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 WORK="${STUDIO_WORK:-$(dirname "$HERE")/work}"
 STATE="$WORK/watchdog.state"
 touch "$STATE"
+# Sort de lui-même avant la limite de 2 h d'une tâche de fond (CYCLE) : la session est réveillée et le relance.
+END=$(( $(date +%s) + ${WATCHDOG_MAX:-6000} ))
 while true; do
+  [ $(date +%s) -gt $END ] && { echo "CYCLE : relancer le surveillant"; exit 0; }
+  "$HERE/resume_all.sh"
   if ! pgrep -f "production/supervisor.sh" >/dev/null; then
-    nohup "$HERE/supervisor.sh" >> "$WORK/supervisor.out" 2>&1 &
+    (setsid nohup "$HERE/supervisor.sh" >> "$WORK/supervisor.out" 2>&1 < /dev/null &)
     echo "$(date +%H:%M) superviseur relancé"
   fi
   now=$(date +%s)
@@ -29,5 +33,5 @@ while true; do
     if [ $age -gt 1200 ]; then echo "BLOQUÉ : $d ($(basename "$newest") figé depuis $((age/60)) min)"; exit 0; fi
   done < "$WORK/active.txt"
   echo "$(date +%H:%M) ok"
-  sleep 600
+  sleep 300
 done
