@@ -1716,7 +1716,7 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
                      "other writing.")
     if uses_board(pr):
         text_rule += " Keep the bottom-left corner calm (a presenter is overlaid there)."
-    places, place_rule, place_out = pr.get("locations") or [], "", ""
+    places, place_rule, place_out = places_reached(pr, scenes), "", ""
     if places:  # images qui se suivent : chaque scène se passe dans un lieu fixe du script
         place_rule = ("\n- PLACES of this story (fixed layouts, reused every time):\n"
                       + "\n".join(f"  - {p['name']}: {p.get('layout', '')}" for p in places)
@@ -2245,6 +2245,37 @@ def era_rule(pr, what):
     return (f"   PERIOD: {e}. Every place is described as it really looked then: period furniture, materials and "
             "fixtures only (wooden benches in trams, tiled stoves, oil or early electric lamps, wooden crates, enamel "
             "jugs), never anything modern (no sofas of today, office chairs, plastic, modern lighting or doors).\n")
+
+
+_PLACE_STOP = {"street", "streets", "rooms", "house", "kitchen", "building", "behind", "wardrobe", "garden", "cellar",
+               "courtyard", "crossing", "guarded", "shelter", "shelters", "corner", "square", "station", "market"}
+
+
+def _place_keys(name):
+    return [w for w in re.findall(r"[a-zà-ž]{5,}", (name or "").lower().replace("'s", "")) if w not in _PLACE_STOP]
+
+
+def places_reached(pr, scenes):
+    """Lieux que l'histoire a déjà atteints au moment de ces scènes. L'accroche (partie 0, souvent un flash-forward)
+    peut tout montrer ; ensuite un lieu n'est proposé qu'une fois nommé dans la narration (pilote WW2, 31 oct. :
+    51 scènes de 1940-1942 dessinées dans l'appartement où la famille n'emménage qu'en septembre 1942)."""
+    locs = pr.get("locations") or []
+    if not scenes or all((sc.get("section") or 0) == 0 for sc in scenes):
+        return locs
+    sec = max(sc.get("section") or 0 for sc in scenes)  # tout le chapitre en cours compte (un lieu nommé plus loin
+    told = " ".join(x.get("text") or "" for x in pr.get("scenes") or []  # dans le même chapitre est déjà là)
+                    if 1 <= (x.get("section") or 0) <= sec).lower()
+    return [l for l in locs if not _place_keys(l["name"]) or any(k in told for k in _place_keys(l["name"]))]
+
+
+def fix_early_places(pr):
+    """Indices des scènes (hors accroche) posées dans un lieu que l'histoire n'a pas encore atteint."""
+    bad = []
+    for sc in pr.get("scenes") or []:
+        if (sc.get("section") or 0) >= 1 and sc.get("place"):
+            if not any(_norm_name(l["name"]) == _norm_name(sc["place"]) for l in places_reached(pr, [sc])):
+                bad.append(sc["i"])
+    return bad
 
 
 def fixed_angles(pr):
