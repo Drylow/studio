@@ -1,5 +1,16 @@
 # Journal des vidéos
 
+## Oddly Specific Lives — film de 2 h WW2 (Varsovie) — 31 octobre 2026
+
+« POV: Your Love Story With a Jewish Girl During World War II (Full Movie) » : 1 h 50 min 53, 14 chapitres,
+1 144 images, fabriqué de bout en bout sur le VPS (agent `production/studio_agent.py`). Outil film `pov_film` :
+décors fixes par lieu (cadrages A/B/C, gros plans zoomés depuis le dernier cadrage), époque imposée aux décors,
+tenues et contrôle, cachette invisible depuis la pièce, lieux proposés seulement une fois atteints par le récit,
+intro « Oddly Specific Lives Presents », images fixes et fondus (pas de zoom). Relu image par image avec le texte ;
+corrigés : 51 scènes dans un appartement pas encore habité, brassards sur les références de persos, montre-bracelet
+finale, atelier en ruine. Gofile https://gofile.io/d/KT3QAUOA, paquet Discord OSL avec 3 miniatures au choix.
+Avant : Zombie IKEA (Gofile g3b74614) jugée bâclée par l'utilisateur, postée sur Last Safe Door, jamais sur OSL.
+
 ## Chaîne Cyberpunk (essais) — arrêtée par l'utilisateur, 30 octobre 2026
 
 Essais de vidéos 100 % codées (canvas + Playwright) : Rook, puis Weak Kingsley en style cel, marionnette articulée

@@ -100,6 +100,12 @@ mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/to
 | `oddly_expensive_en` | **Oddly Expensive Lives** | « The Economics of … » : le prof explique la facture ligne par ligne, ticket de caisse (« running tab ») | façon Marcus : fond plan bleu, gros titre noir contour blanc souligné rouge, le prof à droite, 1-2 humains BD à gauche (**différents à chaque vidéo**), étiquettes chiffrées + flèches |
 | `oddly_things_en` | **Oddly Specific Things** — « Some things live oddly specific lives. » | « Your Life as a Stolen … » (`object_journey`) : TU es l'objet, suivi de main en main (cartes « HAND #n », trajets animés) | très simple (`presets/oddly_things_en/thumb.jpg`) : fond gris clair, une main moufle blanche (manche verte) tient l'objet, une main gantée noire l'arrache, traits jaunes, énorme mot noir arrondi en haut (STOLEN). **Varier l'action à chaque vidéo** (demande de l'utilisateur : « ça commence à faire répétitif ») : même style, mais une scène différente (arraché sous la voiture, pesé contre du cash, pêché dans un portefeuille, cadenas coupé vide, mis en carton, tir à la corde, grue + conteneur…) **et le mot du haut** (pas toujours STOLEN : un mot-clé de l'histoire, ex. SNATCHED, SOLD, PRECIOUS, GONE, SHIPPED, FOR SALE, CLONED, DRAINED ; retouche du mot seul : `thumb.py --edit`) ; proposer 3-4 variantes en planche |
 
+**Films OSL (`--format pov_film`, 31 oct.)** : chaîne principale = perfection exigée. Tourner sur le VPS
+(`STUDIO_AGENT_URL`/`TOKEN` du `.env`, agent `production/studio_agent.py`, la machine cloud n'a pas de SSH et redémarre).
+Faire d'abord un test court (`--minutes 8`, `--pilot`). Relire TOUTES les images avec la phrase du narrateur
+(logique : qui est caché, brassards selon la date, lieu déjà atteint, objets exacts), pas seulement la continuité.
+Regarder les persos de référence (aucun accessoire daté dessus) et les décors avant les images. Pas de zoom, fondus.
+
 **Dossier `chaines/`** : une fiche par chaîne (concept, style, ce qui marche, idées de vidéos — écrite à la
 main) et, pour chaque vidéo, script, recherche, publication et miniature (générés par
 `python production/export_channels.py` : le relancer après chaque vidéo, puis commit).
