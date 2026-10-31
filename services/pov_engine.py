@@ -2228,7 +2228,7 @@ Return JSON: {{"places": [{{"name": "exact place name", "angles": [{{"key": "A",
     out = []
     for p in locs:
         angles = [{"key": str(a.get("key") or "ABC"[k]).strip()[:1].upper(), "view": str(a.get("view") or "").strip()}
-                  for k, a in enumerate(found.get(_norm_name(p["name"])) or [])[:3]
+                  for k, a in list(enumerate(found.get(_norm_name(p["name"])) or []))[:3]
                   if isinstance(a, dict) and str(a.get("view") or "").strip()]
         out.append(dict(p, angles=angles))
     return out
@@ -2257,7 +2257,18 @@ def _ensure_angle_plates(job, pr, ch, d, w, h):
                                             "clean, intact, neutral daylight; every piece of furniture, door and "
                                             "window exactly where the set-up says.", scene_chars=[], cast=[])
         full, refs = _with_extra(full, refs, refs_extra)
-        ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, os.path.join(d, rel))
+        out = os.path.join(d, rel)
+        # décor de base de tout le film : contrôlé en vision (personne dedans, texte, objet absurde) et refait si raté
+        sc = {"text": f"Empty set of {p['name']}, no people.", "prompt": f"EMPTY SET, NO PEOPLE. {a['view']}"}
+        for t in range(3):
+            ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, out)
+            try:
+                ok, probs = check_image(out, sc)
+            except Exception:
+                ok, probs = True, []
+            if ok:
+                break
+            job.update(None, f"Décor {p['name']} {a['key']} refait ({'; '.join(probs)[:120]})")
         return k, j, rel
 
     job.update(None, f"Décors fixes : {len(todo)} cadrage(s)…")
