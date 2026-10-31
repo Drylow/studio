@@ -120,7 +120,7 @@ class H(BaseHTTPRequestHandler):
 def boot():
     """Clone le dépôt public au premier démarrage, installe les dépendances, relance les productions en cours."""
     if not os.path.isdir(os.path.join(ROOT, ".git")):
-        subprocess.run(["git", "clone", "-q", "https://github.com/drylow/studio.git", ROOT], check=True)
+        subprocess.run(["git", "clone", "-q", "https://github.com/Drylow/studio.git", ROOT], check=True)
     subprocess.run("pip install -q -r requirements.txt", shell=True, cwd=ROOT)
     os.makedirs(os.path.join(ROOT, "work"), exist_ok=True)
     if os.path.isfile(os.path.join(ROOT, "work", "active.txt")):  # redémarrage du conteneur : on reprend tout

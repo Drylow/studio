@@ -1,13 +1,13 @@
 #!/bin/bash
 # Agent du studio (vidéos Oddly Specific Lives : voix, images, montage) sur ce VPS. À lancer en root, une fois :
-#   curl -fsSL https://raw.githubusercontent.com/drylow/studio/main/production/vps_studio_setup.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Drylow/studio/main/production/vps_studio_setup.sh | bash
 # Docker (python:3.12), HTTPS automatique : Traefik de Coolify s'il est là, sinon un Caddy si 80/443 sont libres,
 # sinon un tunnel Cloudflare (aucun port à ouvrir). Affiche STUDIO_AGENT_URL / STUDIO_AGENT_TOKEN à envoyer à Claude.
 # Relancer le script met l'agent à jour (même jeton). Aucun secret dans ce fichier : le jeton est créé ici.
 set -e
 DIR=/opt/drylow-studio
 mkdir -p "$DIR"
-curl -fsSL https://raw.githubusercontent.com/drylow/studio/main/production/studio_agent.py -o "$DIR/agent.py"
+curl -fsSL https://raw.githubusercontent.com/Drylow/studio/main/production/studio_agent.py -o "$DIR/agent.py"
 [ -s "$DIR/token" ] || (openssl rand -hex 24 2>/dev/null || head -c 24 /dev/urandom | od -An -tx1 | tr -d ' \n') > "$DIR/token"
 chmod 600 "$DIR/token"
 TOKEN=$(cat "$DIR/token")
