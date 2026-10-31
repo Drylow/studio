@@ -1839,7 +1839,7 @@ For each cast member give:
 - "role": one line.
 - "description": a precise, FIXED visual description for the whole video, following the channel's character design (for white round-head stick figures: head is always the same, so identity = hairstyle and hair color, age cues, body type, and a signature default outfit with exact colors, plus 1 accessory). 30-60 words, English, no personality traits.
 
-{obj_rule}Return JSON: {{"cast": [{{"name": "...", "aliases": ["..."], "role": "...", "description": "..."}}]}}
+{obj_rule}{era_rule(pr, "outfits")}Return JSON: {{"cast": [{{"name": "...", "aliases": ["..."], "role": "...", "description": "..."}}]}}
 
 SCRIPT:
 \"\"\"
@@ -1985,6 +1985,9 @@ scene below and reject it only for REAL, visible mistakes a viewer would notice:
 - any readable text, letters or numbers (blank papers and screens are fine){no_text}
 - a real brand mark, even small: overlapping circles or any logo on a payment card, a designer monogram,
   checkerboard or quilted-chain pattern on a bag, a car badge, a logo on a device;
+- if the PROMPT has an ERA LOCK: anything from another period (modern sofa, office chair, plastic crates or bins,
+  water jugs, modern tram, modern door handle or lock, light switch plates, modern clothes, phones, cars of another
+  era) or any forbidden symbol it lists;
 - the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
 NARRATION: {text}
 PROMPT: {prompt}
@@ -2153,7 +2156,7 @@ def ensure_continuity(job, pid):
    object that only arrives later). Give every big piece of furniture a precise, sensible position relative to the
    door and walls (e.g. "the bed stands against the right wall, its head to the wall, two metres from the door;
    the door is in the left wall, nothing in front of it").
-2. "states": one entry per section heading listed below, in the same order: the visible state during that section in
+{era_rule(pr, "places")}2. "states": one entry per section heading listed below, in the same order: the visible state during that section in
    30-60 words: what the hero wears and carries, injuries or bandages, companions present, the light (power on/off),
    who else is around or whether the place is deserted, the hero's mood (scared, happy, exhausted, determined),
    and what has changed in each place by then (barricades, moved, broken or taken objects, the view outside).
@@ -2168,7 +2171,7 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
         locs = [{"name": str(p.get("name") or "").strip(), "layout": str(p.get("layout") or "").strip()}
                 for p in data.get("locations") or [] if str(p.get("name") or "").strip()][:16]
         if fixed_angles(pr):
-            locs = _location_angles(locs)
+            locs = _location_angles(locs, era_rule(pr, "places"))
         states = {h: str(t).strip() for h, t in zip(heads, data.get("states") or []) if str(t).strip()}
         store.update_project(pid, lambda x: x.update(locations=locs, section_states=states))
     pr = store.get_project(pid)
@@ -2186,7 +2189,8 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
                                             f"empty place. {p['layout']} The place as it first appears in the story: "
                                             "clean, tidy and intact, plain neutral daylight, the view outside calm (no "
                                             "fire, no smoke, no helicopters, no damage); the story adds its light and "
-                                            "changes later, scene by scene.", scene_chars=[], cast=[])
+                                            "changes later, scene by scene." + era_lock_text(pr),
+                                            scene_chars=[], cast=[])
         ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, os.path.join(d, rel))
         return k, rel
     if todo:
@@ -2196,6 +2200,26 @@ Return JSON: {{"locations": [{{"name": "...", "layout": "..."}}], "states": ["st
                 store.update_project(pid, lambda x, k=k, rel=rel: x["locations"][k].__setitem__("image", rel))
 
 
+def era_lock_text(pr):
+    """« ERA LOCK: … » du projet (vidéo historique), ajouté aux prompts des décors comme à ceux des scènes."""
+    e = ((pr or {}).get("era_lock") or "").strip()
+    return f" ERA LOCK (every object, material, fixture and outfit of this period only): {e}" if e else ""
+
+
+def era_rule(pr, what):
+    """Consigne d'époque pour l'IA qui écrit le casting ou les décors (WW2 pilote, 31 oct. : canapé moderne, chaise de
+    bureau, bacs en plastique et tram moderne dans le Varsovie de 1939)."""
+    e = ((pr or {}).get("era_lock") or "").strip()
+    if not e:
+        return ""
+    if what == "outfits":
+        return (f"PERIOD: {e}. Every outfit is a real outfit of that time and place (cut, fabric, hats, uniforms of "
+                "their job), never modern clothes (no hoodies, T-shirts, sneakers, jeans).\n\n")
+    return (f"   PERIOD: {e}. Every place is described as it really looked then: period furniture, materials and "
+            "fixtures only (wooden benches in trams, tiled stoves, oil or early electric lamps, wooden crates, enamel "
+            "jugs), never anything modern (no sofas of today, office chairs, plastic, modern lighting or doors).\n")
+
+
 def fixed_angles(pr):
     """Film aux images qui se suivent : chaque lieu a 2-3 cadrages de caméra fixes (plans vides dessinés une fois,
     validés), et chaque plan large ou moyen pose les persos DANS un de ces cadrages au lieu de redessiner la pièce
@@ -2203,7 +2227,7 @@ def fixed_angles(pr):
     return bool(((pr or {}).get("montage") or {}).get("fixed_angles"))
 
 
-def _location_angles(locs):
+def _location_angles(locs, era=""):
     """2-3 cadrages fixes par lieu, décrits de façon cohérente avec son plan (gauche/droite/fond, portes, fenêtres)."""
     if not locs:
         return locs
@@ -2217,7 +2241,7 @@ PLACES:
 For each set-up give "key" ("A", "B" or "C") and "view": 35-60 words saying where the camera stands, where it looks,
 and exactly what is on the LEFT, in the CENTRE, on the RIGHT and in the BACKGROUND of the frame, consistent with the
 layout (if the door is in the left wall seen from the window, then seen from the door the window is straight ahead).
-Set-up A = the main wide view showing the door and the most important furniture. B = the reverse or side view. C (optional)
+{era}Set-up A = the main wide view showing the door and the most important furniture. B = the reverse or side view. C (optional)
 = a third view for big places. Only furniture and fixtures of the layout; no people, nothing the story adds later.
 
 Return JSON: {{"places": [{{"name": "exact place name", "angles": [{{"key": "A", "view": "..."}}]}}]}}"""
@@ -2255,11 +2279,12 @@ def _ensure_angle_plates(job, pr, ch, d, w, h):
         full, refs = build_image_prompt(ch, f"EMPTY FILM SET, no people at all: {p['name']}. CAMERA SET-UP {a['key']}: "
                                             f"{a['view']} PLACE LAYOUT: {p['layout']} The place as it first appears: "
                                             "clean, intact, neutral daylight; every piece of furniture, door and "
-                                            "window exactly where the set-up says.", scene_chars=[], cast=[])
+                                            "window exactly where the set-up says." + era_lock_text(pr),
+                                            scene_chars=[], cast=[])
         full, refs = _with_extra(full, refs, refs_extra)
         out = os.path.join(d, rel)
         # décor de base de tout le film : contrôlé en vision (personne dedans, texte, objet absurde) et refait si raté
-        sc = {"text": f"Empty set of {p['name']}, no people.", "prompt": f"EMPTY SET, NO PEOPLE. {a['view']}"}
+        sc = {"text": f"Empty set of {p['name']}, no people.", "prompt": f"EMPTY SET, NO PEOPLE. {a['view']}" + era_lock_text(pr)}
         for t in range(3):
             ai.fit_cover(ai.generate_image(full, width=w, height=h, refs=refs), w, h, out)
             try:
