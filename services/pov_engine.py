@@ -277,7 +277,9 @@ TEMPLATES = {
                          "in the real places of the story, the same rooms reused with the same layout and the same "
                          "fixed camera set-ups, objects moved or broken staying that way. Wide shots to show each new "
                          "place, medium shots for actions, close shots for hands, faces and key objects. Expressions "
-                         "follow the moment. Danger is shown through doors, shadows, windows and faces, never gore.",
+                         "follow the moment. Danger is shown through doors, shadows, windows and faces, never gore. "
+                         "Battles, uprisings and raids are seen from afar (smoke over the rooftops, a glow, people "
+                         "hurrying past) or through their aftermath; no weapon pointed or fired in the frame.",
         }},
         "variant_default": "pov_life",
         "variant_match": r"(?i)\b(marr(y|ies|ied|iage)|wife|husband|fall(s|ing)?\s+in\s+love|date|dating|"
@@ -1752,6 +1754,9 @@ RULES:
 - Vary the camera across consecutive scenes (wide establishing, medium, close-up on hands/face/object, over-the-shoulder, top-down, low angle). Never the same framing twice in a row.
 - Stay historically / technically accurate (uniforms, tools, places, era).
 - For violence, death or danger: imply it (shadows, aftermath, expressions), never gore. No real celebrities.
+- ONE single frame per scene: never "two panels", a split screen, a collage, an inset or a before/after; if the
+  narration covers two moments, show the most important one.
+- No emblems, eagles, seals, coats of arms or flags on posters, uniforms or buildings (plain paper, plain uniforms).
 - {text_rule} 25-60 words per prompt, English.{place_rule}
 
 SCENES:
@@ -1988,6 +1993,8 @@ scene below and reject it only for REAL, visible mistakes a viewer would notice:
 - if the PROMPT has an ERA LOCK: anything from another period (modern sofa, office chair, plastic crates or bins,
   water jugs, modern tram, modern door handle or lock, light switch plates, modern clothes, phones, cars of another
   era) or any forbidden symbol it lists;
+- a collage: two or more panels, a split screen, an inset picture or a frame inside the frame;
+- an emblem, eagle, seal, coat of arms or flag (on a poster, a uniform, a building);
 - the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
 NARRATION: {text}
 PROMPT: {prompt}
