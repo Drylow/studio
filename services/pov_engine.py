@@ -1761,6 +1761,8 @@ RULES:
   only close-ups taken INSIDE the hiding place show it.
 - A character who is hiding is drawn INSIDE the hiding place (e.g. the dark narrow gap behind the wardrobe, seen
   from inside or through the gap) or not at all; never standing in the open room in front of the people searching.
+- Unnamed extras never share a cast member's signature look (an unnamed woman with the heroine's long straight black
+  hair reads as the heroine): give them a different hair colour, a headscarf or a hat, and describe them.
 - Every armband, badge or uniform detail is written in full each time it appears (exact colours and symbol, which
   arm), as the ERA LOCK defines it; never just "her armband".
 - {text_rule} 25-60 words per prompt, English.{place_rule}
