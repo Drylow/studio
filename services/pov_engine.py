@@ -1757,8 +1757,8 @@ RULES:
 - ONE single frame per scene: never "two panels", a split screen, a collage, an inset or a before/after; if the
   narration covers two moments, show the most important one.
 - No emblems, eagles, seals, coats of arms or flags on posters, uniforms or buildings (plain paper, plain uniforms).
-- A hiding place is drawn exactly as its layout says in EVERY shot once it exists (same side, same width of the gap):
-  repeat that sentence in each prompt of that room from then on; before it exists the furniture stands flush.
+- A hiding place is never visible from the room: the furniture looks exactly as in the fixed set (no gap, no opening);
+  only close-ups taken INSIDE the hiding place show it.
 - A character who is hiding is drawn INSIDE the hiding place (e.g. the dark narrow gap behind the wardrobe, seen
   from inside or through the gap) or not at all; never standing in the open room in front of the people searching.
 - Every armband, badge or uniform detail is written in full each time it appears (exact colours and symbol, which
@@ -2178,9 +2178,9 @@ def ensure_continuity(job, pid):
    the door is in the left wall, nothing in front of it").
    A HIDING PLACE (the space behind a wardrobe, a cellar recess, a false wall) is its own location with a layout seen
    from INSIDE it (e.g. "behind the wardrobe: a gap a hand's width deep between the wardrobe's plain back panel on the
-   left and the blue wall on the right, a thin vertical slit of room light at the right end"), and the room's layout
-   says exactly how it looks from the room once it exists (e.g. "the wardrobe stands 30 cm from the wall; a narrow
-   dark gap shows on its RIGHT side") so that it is drawn identically in every shot.
+   left and the blue wall on the right, a thin vertical slit of room light at the right end"). Seen from the room it
+   is INVISIBLE (the wardrobe looks exactly as in the fixed set, no gap shown): the fixed set images never change, so
+   a gap drawn in some shots and not in others would jump (pilot WW2, 31 oct.).
 {era_rule(pr, "places")}2. "states": one entry per section heading listed below, in the same order: the visible state during that section in
    30-60 words: what the hero wears and carries, injuries or bandages, companions present, the light (power on/off),
    who else is around or whether the place is deserted, the hero's mood (scared, happy, exhausted, determined),
