@@ -3662,7 +3662,8 @@ def chapters(pr):
     for s in pr.get("scenes") or []:
         if s.get("first"):
             t = int(s["start"] + (lead if out else 0))
-            out.append(f"{t // 60:02d}:{t % 60:02d} {s.get('heading') or ('Intro' if not out else '')}".strip())
+            ts = f"{t // 3600}:{t // 60 % 60:02d}:{t % 60:02d}" if t >= 3600 else f"{t // 60:02d}:{t % 60:02d}"  # YouTube : H:MM:SS
+            out.append(f"{ts} {s.get('heading') or ('Intro' if not out else '')}".strip())
     if out and not out[0].startswith("00:00"):
         out.insert(0, "00:00 Intro")
     return out
