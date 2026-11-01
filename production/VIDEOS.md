@@ -8,7 +8,7 @@ décors fixes par lieu (cadrages A/B/C, gros plans zoomés depuis le dernier cad
 tenues et contrôle, cachette invisible depuis la pièce, lieux proposés seulement une fois atteints par le récit,
 intro « Oddly Specific Lives Presents », images fixes et fondus (pas de zoom). Relu image par image avec le texte ;
 corrigés : 51 scènes dans un appartement pas encore habité, brassards sur les références de persos, montre-bracelet
-finale, atelier en ruine. Gofile https://gofile.io/d/KT3QAUOA, paquet Discord OSL avec 3 miniatures au choix.
+finale, atelier en ruine. Version finale (1 nov., 0 brassard après contrôle en vision des 1 144 images, ouverture refaite) : Gofile https://gofile.io/d/IGS890Qn, paquet Discord OSL avec 3 miniatures. 1 h 50 au lieu des 2 h demandées : accepté cette fois seulement.
 Avant : Zombie IKEA (Gofile g3b74614) jugée bâclée par l'utilisateur, postée sur Last Safe Door, jamais sur OSL.
 
 ## Chaîne Cyberpunk (essais) — arrêtée par l'utilisateur, 30 octobre 2026
