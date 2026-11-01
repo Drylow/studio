@@ -105,6 +105,10 @@ mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/to
 Faire d'abord un test court (`--minutes 8`, `--pilot`). Relire TOUTES les images avec la phrase du narrateur
 (logique : qui est caché, brassards selon la date, lieu déjà atteint, objets exacts), pas seulement la continuité.
 Regarder les persos de référence (aucun accessoire daté dessus) et les décors avant les images. Pas de zoom, fondus.
+**Durée demandée = minimum** (l'utilisateur, 1 nov. : « si je te demande 2 heures, c'est 2 heures ») : la voix doit
+atteindre la durée (≈ 178 mots/min en film : 120 min ≈ 21 500 mots), `pipeline.py` bloque sinon. **Jamais de brassard,
+d'étoile de David ni de symbole religieux sur les vêtements** (1 nov., même si le récit en parle). La casquette du héros
+sur toutes les images est voulue (on reconnaît le perso). Décors réalistes : une cachette ne se voit pas depuis la pièce.
 
 **Dossier `chaines/`** : une fiche par chaîne (concept, style, ce qui marche, idées de vidéos — écrite à la
 main) et, pour chaque vidéo, script, recherche, publication et miniature (générés par

@@ -61,10 +61,14 @@ def short_by():
     pr = st.get_project(pid_of(D))
     ch = st.get_channel(pr["channel_id"]) or {}
     need = 0.0 if "--pilot" in FLAGS else float(ch.get("min_minutes") or 0)  # essai court (test d'outil)
+    film = pr.get("format") == "pov_film"
+    if film and "--pilot" not in FLAGS:  # film : la durée demandée est un minimum (« 2 heures, c'est pas 1 minute de moins »)
+        need = max(need, float(pr.get("minutes") or 0))
     v = pr.get("voice") or {}
     # sur le script seul, marge d'1 min : la voix sort parfois plus vite que prévu (Spartan : 26,7 estimées → 24,9)
     have = (v["duration"] / 60.0 if v.get("duration")
-            else S.word_count(S.narration(pr.get("script") or "")) / float(ch.get("wpm") or 150) - 1.0)
+            else S.word_count(S.narration(pr.get("script") or "")) / (180.0 if film else float(ch.get("wpm") or 150)) - 1.0)
+    # film WW2 (1 nov.) : 19 699 mots estimés à 123,7 min, voix réelle 110,8 min (≈ 178 mots/min)
     log(f"durée : {have:.1f} min (minimum {need:g})")
     return max(0.0, need - have)
 
