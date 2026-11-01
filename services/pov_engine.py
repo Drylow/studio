@@ -1763,8 +1763,8 @@ RULES:
   from inside or through the gap) or not at all; never standing in the open room in front of the people searching.
 - Unnamed extras never share a cast member's signature look (an unnamed woman with the heroine's long straight black
   hair reads as the heroine): give them a different hair colour, a headscarf or a hat, and describe them.
-- Every armband, badge or uniform detail is written in full each time it appears (exact colours and symbol, which
-  arm), as the ERA LOCK defines it; never just "her armband".
+- NEVER draw an armband, a Star of David, a cross or any religious or identifying symbol on clothing, even when the
+  narration mentions one (the user refuses them, WW2 film 1 nov.): show the moment through faces, hands and objects.
 - {text_rule} 25-60 words per prompt, English.{place_rule}
 
 SCENES:
@@ -2003,6 +2003,7 @@ scene below and reject it only for REAL, visible mistakes a viewer would notice:
   era) or any forbidden symbol it lists;
 - a collage: two or more panels, a split screen, an inset picture or a frame inside the frame;
 - an emblem, eagle, seal, coat of arms or flag (on a poster, a uniform, a building);
+- an armband, a Star of David, a cross or any religious or identifying symbol worn on clothing;
 - the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
 NARRATION: {text}
 PROMPT: {prompt}
