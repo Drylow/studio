@@ -1,5 +1,12 @@
 # Journal des vidéos
 
+## Oddly Specific Lives — Viking, Samurai's Daughter, Yakuza Boss's Daughter — 1 novembre 2026
+
+Trois vidéos de ~34 min faites sur le VPS avec décors fixes, contrôle en vision et relecture image par image :
+Viking Shieldmaiden (34:10, https://gofile.io/d/THJ8lWy2), Yakuza Boss's Daughter (33:27, https://gofile.io/d/nESQiNKl,
+mariage refait : mêmes tenues partout), Samurai's Daughter (34:50, https://gofile.io/d/uFQcUQxA, Aizu 1868).
+Paquets Discord OSL avec 2 miniatures chacune (style BD de la chaîne). Idée « Russian Ballerina » refusée.
+
 ## Oddly Specific Lives — film de 2 h WW2 (Varsovie) — 31 octobre 2026
 
 « POV: Your Love Story With a Jewish Girl During World War II (Full Movie) » : 1 h 50 min 53, 14 chapitres,
