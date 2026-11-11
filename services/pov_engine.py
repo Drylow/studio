@@ -262,6 +262,20 @@ TEMPLATES = {
                            "on DAY 30 with clean grey-green zombies (adults, two arms each, no blood); one single "
                            "coherent view through any window; no text (DAY 1 / DAY 30 is added afterwards).",
         },
+            "pov_rank": {
+            "niche": "The famous \"every rank\" format told as a POV love story: you climb every rank of an "
+                     "organisation and every promotion changes your marriage",
+            "tone": "Grounded, tense, emotional second-person story, present tense: proud and funny at the bottom, "
+                    "colder and more dangerous at the top; dry understatement; short loaded dialogue.",
+            "rules": "One rank per section, in the real order; real rank names and customs from the notes; the "
+                     "marriage carries every section. Never glamorise crime, never a how-to, violence only implied.",
+            "bible_note": "derived from the channel's reference video, a POV love story: follow its narration "
+                          "register and rhythm; the structure is the \"every rank\" ladder",
+            "direction": "Show the story like a continuous animated film: You and Her in the same rooms reused with "
+                         "the same layout; your home visibly grows with each rank (small flat, bigger flat, house). "
+                         "Wide shots for each new place, medium shots for actions, close shots for faces and key "
+                         "objects. Danger through doors, shadows and faces, never gore; no weapon pointed or fired.",
+        },
             "pov_film": {
             "niche": "Second-person POV love stories told as a full feature film (1-2 hours): you meet her, history "
                      "or danger tests your love for years, chapter by chapter, until the quiet last scene",
@@ -2954,7 +2968,7 @@ def chapter_card(scene):
     if len(title) > 32:  # coupé sur un mot entier (avant : « THE PRESSER AND THE WASTE PILE B »)
         title = title[:33].rsplit(" ", 1)[0].rstrip(" ,;:-")
     word = m.group(1).upper()
-    kicker = f"{word} {m.group(2)}" if word in ("DAY", "WEEK", "HOUR", "MONTH", "CHAPTER", "PART") else f"{word} #{m.group(2)}"  # DAY 1
+    kicker = f"{word} {m.group(2)}" if word in ("DAY", "WEEK", "HOUR", "MONTH", "CHAPTER", "PART", "RANK", "LEVEL") else f"{word} #{m.group(2)}"  # DAY 1
     return {"type": "chapter", "kicker": kicker, "title": title}
 
 

@@ -135,6 +135,22 @@ FORMATS = {
 - Plant 3 physical motifs early (an object, a song, a ritual) and pay them off across the film; the last line returns to the opening image.
 - ENDING: a small, quiet two-person scene with 2-4 lines of dialogue, then a last physical image. Never summarize the film.""",
     },
+    "pov_rank": {
+        "name": "POV: Married Life at Every Rank of… (le format « every rank », vu depuis le couple)",
+        "desc": "« POV: Married Life at Every Rank of the Yakuza » — tu montes grade par grade dans une organisation "
+                "(Yakuza, mafia, légion…), et chaque grade change ta vie de couple.",
+        "heading": "Rank N: <real rank name> — <plain English meaning> (shown on screen as a RANK N card, never "
+                   "spoken; e.g. \"Rank 1: Jun-kōsei — The Errand Boy\", \"Rank 4: Wakagashira — The Underboss\")",
+        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological, climbing the ladder one rank at a time from the very bottom to the top (or to the moment you walk away). No host, no intro, no "in this video", no spoken section titles, no CTA, no outro. The title carries the premise: never restate it.
+- RANK HEADINGS: every section heading is "Rank N: <real rank name> — <plain English meaning>", N from 1 upward, 7-10 ranks, in the real order of the organisation's hierarchy as the notes give it. Each rank opens with what the rank is (your duties, your pay, who you answer to, one real rule or custom of that rank, named and explained in one or two plain sentences) and the time it took to get there ("Two years later..."), then turns to life at home.
+- THE COUPLE IS THE STORY: every rank shows what it does to your marriage: money (the flat, the bills, what you can buy her), time (nights away, missed dinners), danger (what she notices, what you hide, what she finds out), her own life and choices (her job, her friends, her family's opinion), and one concrete scene at home with short loaded dialogue. She is a full person with her own voice; she pushes back, makes choices, sets limits.
+- HOOK (first 30-45 s, no heading): a vivid moment from a high rank (a quiet threat at your door, her question you cannot answer), then cut back ("But eight years earlier, you are just..."), ending on one clear question.
+- ARC: the bottom rank and the wedding early (warm, funny, poor; about 15%) → each promotion brings more money and more distance → the middle ranks: the cost becomes personal (a close call, a lie discovered, a child, a choice between the family and the organisation) → the top rank or the turning point → her ultimatum → the ending (you leave, or you stay and lose something; never glamorise crime) → a quiet last scene.
+- RECURRING PEOPLE: 4-6 fixed people (your boss/mentor, a friend from the bottom rank, her parent or sibling, one rival), each with a fixed look.
+- PLACES: 8-12 concrete places, each with a fixed layout reused across ranks; your home changes visibly as you rise (small flat → bigger apartment → house), and each change is shown.
+- FACTS: real rank names, real customs and real laws exactly as the notes give them; no real group names, no real people. Crime and violence are implied (shadows, aftermath, faces), never shown and never explained as a method.
+- Scenes, not summaries; plant 3 motifs early (an object, a ritual between you two, a phrase) and pay them off; the last line returns to the opening image.""",
+    },
     "pov_survive": {
         "name": "POV: You Have to Survive… (survie zombie, jour par jour)",
         "desc": "« POV: You Have to Survive a Zombie Apocalypse (Locked in a Hospital) » — un mec lambda survit jour après "
