@@ -2965,11 +2965,16 @@ def chapter_card(scene):
     if not m:
         return None
     title = m.group(3).upper()
+    sub = ""
+    if m.group(1).upper() in ("RANK", "LEVEL"):  # « Shatei-gashira — Head of the Younger Brothers » : le vrai nom
+        parts = re.split(r"\s+[—–-]\s+", title, maxsplit=1)  # en petit, le sens en grand (sinon coupé)
+        if len(parts) == 2:
+            sub, title = parts
     if len(title) > 32:  # coupé sur un mot entier (avant : « THE PRESSER AND THE WASTE PILE B »)
         title = title[:33].rsplit(" ", 1)[0].rstrip(" ,;:-")
     word = m.group(1).upper()
     kicker = f"{word} {m.group(2)}" if word in ("DAY", "WEEK", "HOUR", "MONTH", "CHAPTER", "PART", "RANK", "LEVEL") else f"{word} #{m.group(2)}"  # DAY 1
-    return {"type": "chapter", "kicker": kicker, "title": title}
+    return {"type": "chapter", "kicker": kicker, "title": title, **({"sub": sub} if sub else {})}
 
 
 def montage_enabled(pr):

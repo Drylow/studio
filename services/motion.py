@@ -1088,6 +1088,9 @@ class Chapter(Fx):
         kick = (self.spec.get("kicker") or "").upper().strip()
         m = re.match(r"^(.*?)\s*#?\s*(\d+)$", kick)
         self.word, self.num = (m.group(1).strip(), m.group(2)) if m else (kick, "")
+        sub = (self.spec.get("sub") or "").upper().strip()[:34]
+        if sub:  # RANK · SHATEI-GASHIRA en petit au-dessus du sens
+            self.word = f"{self.word} · {sub}" if self.word else sub
         self.title = (self.spec.get("title") or "").upper()[:32]
         self.d = 150 * k  # pastille
         self.size = fit_size(self.title, 900, 60 * k, pw * 0.42)
