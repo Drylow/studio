@@ -1,5 +1,14 @@
 # Journal des vidéos
 
+## Oddly Specific Lives — Your Marriage at Every Rank of the Yakuza — 11 novembre 2026
+
+« POV: Your Marriage at Every Rank of the Yakuza » (34:22, https://gofile.io/d/3Oaq3CaB), nouveau format
+`pov_rank` : 8 rangs réels (Jun-kōseiin → Kumichō), carte RANK en début de partie (nom japonais en petit, sens
+anglais en grand, jamais coupé), le couple Aya / le héros comme fil rouge, Osaka → Kobe → Kyoto. 339 images
+relues avec la narration (tenues des rangs 1-2 refaites : sweat, tablier, chemise blanche). Miniature choisie :
+mariée yakuza en shiromuku, coupe de saké, torii et cerisiers au coucher du soleil (style de la Female Samurai,
+44k vues). **Pas de sabre sur une yakuza** (l'utilisateur : « c'est pas un samouraï »). Paquet Discord envoyé.
+
 ## Oddly Specific Lives — Viking, Samurai's Daughter, Yakuza Boss's Daughter — 1 novembre 2026
 
 Trois vidéos de ~34 min faites sur le VPS avec décors fixes, contrôle en vision et relecture image par image :
