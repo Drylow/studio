@@ -5,9 +5,12 @@
 « POV: Your Marriage at Every Rank of the Yakuza » (34:22, https://gofile.io/d/3Oaq3CaB), nouveau format
 `pov_rank` : 8 rangs réels (Jun-kōseiin → Kumichō), carte RANK en début de partie (nom japonais en petit, sens
 anglais en grand, jamais coupé), le couple Aya / le héros comme fil rouge, Osaka → Kobe → Kyoto. 339 images
-relues avec la narration (tenues des rangs 1-2 refaites : sweat, tablier, chemise blanche). Miniature choisie :
-mariée yakuza en shiromuku, coupe de saké, torii et cerisiers au coucher du soleil (style de la Female Samurai,
-44k vues). **Pas de sabre sur une yakuza** (l'utilisateur : « c'est pas un samouraï »). Paquet Discord envoyé.
+relues avec la narration (tenues des rangs 1-2 refaites : sweat, tablier, chemise blanche). Miniature finale
+(renvoyée seule sur Discord après le paquet) : femme de dos, kimono blanc descendu à la taille tout autour, poitrine
+bandée de sarashi blanche, grand dragon irezumi sur tout le dos, torii et cerisiers au coucher du soleil.
+Leçons : **pas de sabre sur une yakuza** ; une simple femme en kimono « fait juste japonaise » (il faut le grand
+tatouage traditionnel bien visible) ; **vêtement cohérent tout autour du corps** (refusé : kimono tombé dans le dos
+mais tenu devant) ; vérifier les bras (un bras tordu refait en retouche).
 
 ## Oddly Specific Lives — Viking, Samurai's Daughter, Yakuza Boss's Daughter — 1 novembre 2026
 
