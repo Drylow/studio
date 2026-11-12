@@ -1,5 +1,14 @@
 # Journal des vidéos
 
+## 12 novembre 2026 — Female Samurai (Osaka) + films zombie Last Safe Door
+
+- OSL « POV: You Fall in Love With a Female Samurai » (nouvelle histoire, Osaka 1614-1615, Ren, éventail au prunier) :
+  31:36, https://gofile.io/d/a78EbHVs, miniature 1 (arc, coucher de soleil), paquet Discord OSL. 1 h 05 du script
+  validé au lien (voix en 4 morceaux parallèles, QA sans double contrôle).
+- Last Safe Door (films 1 h, `--brand "Last Safe Door"`, fiches dans `chaines/last-safe-door/full-movie-*`) :
+  Airport https://gofile.io/d/0g6hY7ns ; Hospital https://gofile.io/d/oMF0fWu6 (refait : sang retiré par
+  `production/blood_fix.py`) ; Costco en cours (QA bloqué la nuit par le quota d'images épuisé).
+
 ## Oddly Specific Lives — Your Marriage at Every Rank of the Yakuza — 11 novembre 2026
 
 « POV: Your Marriage at Every Rank of the Yakuza » (34:22, https://gofile.io/d/3Oaq3CaB), nouveau format
