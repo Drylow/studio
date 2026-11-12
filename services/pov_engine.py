@@ -2023,6 +2023,8 @@ scene below and reject it only for REAL, visible mistakes a viewer would notice:
   era) or any forbidden symbol it lists;
 - a collage: two or more panels, a split screen, an inset picture or a frame inside the frame;
 - an emblem, eagle, seal, coat of arms or flag (on a poster, a uniform, a building);
+- blood of any kind: red handprints, smears, drips, splatter, stains or puddles, wounds, gore (red lights,
+  signs and red objects are fine);
 - an armband, a Star of David, a cross or any religious or identifying symbol worn on clothing;
 - the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
 NARRATION: {text}
