@@ -1962,7 +1962,13 @@ def job_cast(job, pid, redetect=False, only=None, p0=0.0, p1=1.0):
         pr = store.get_project(pid)
     todo = [c for c in pr.get("cast") or [] if (only and c["id"] in only) or (not only and not c.get("image"))]
     fixed = []
+    hero = (pr.get("hero_look") or "").strip()  # tenue du héros propre au film (cariste, brancardier…)
     for c in todo:  # persos au look validé une fois pour toutes (format survie : héros et infecté de l'essai)
+        if hero and _norm_name(c["name"]) == "you":  # sinon : la blouse de patient du preset (12 nov., films zombie)
+            c["description"] = hero
+            store.update_project(pid, lambda x, cid=c["id"]: next(
+                k for k in x["cast"] if k["id"] == cid).__setitem__("description", hero))
+            continue
         for pat, rel, desc in ch.get("cast_refs") or []:
             path = os.path.join(_REPO, rel)
             if re.search(pat, _norm_name(c["name"])) and os.path.isfile(path):
