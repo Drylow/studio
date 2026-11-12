@@ -3178,8 +3178,8 @@ def presents_spec(pr, ch):
     """Ouverture de film : marque de la chaîne, puis titre (« POV: … (Full Movie) » → sous-titre + titre)."""
     title = re.sub(r"\s*\((?:full movie|full film)\)\s*$", "", (pr.get("title") or "").strip(), flags=re.I)
     m = re.match(r"(?i)^(pov:)\s*(.+)$", title)
-    brand = ((TEMPLATES.get(ch.get("template") or "", {}).get("studio") or {}).get("brand")
-             or (ch.get("name") or "").split(" — ")[0])
+    brand = (pr.get("brand") or (TEMPLATES.get(ch.get("template") or "", {}).get("studio") or {}).get("brand")
+             or (ch.get("name") or "").split(" — ")[0])  # pr["brand"] : film fait pour une autre chaîne
     return {"type": "presents", "kicker": brand, "sub": "A FILM" if not m else "POV", "main": m.group(2) if m else title}
 
 
@@ -3197,8 +3197,8 @@ def title_spec(pr, ch):
     title = (pr.get("title") or "").strip()
     m = re.match(r"(?i)^(the economics of|how|why|inside the life of|the real cost of)\s+(.+)$", title)
     pre, main = (m.group(1), m.group(2)) if m else ("", title)
-    brand = ((TEMPLATES.get(ch.get("template") or "", {}).get("studio") or {}).get("brand")
-             or (ch.get("name") or "").split(" — ")[0])
+    brand = (pr.get("brand") or (TEMPLATES.get(ch.get("template") or "", {}).get("studio") or {}).get("brand")
+             or (ch.get("name") or "").split(" — ")[0])  # pr["brand"] : film fait pour une autre chaîne
     return {"type": "title", "kicker": brand, "pre": pre, "main": main}
 
 

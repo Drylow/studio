@@ -19,6 +19,7 @@ ap.add_argument("--minutes", type=float, default=None)
 ap.add_argument("--notes", default=None, help="fichier de notes (sinon <folder>/notes.txt)")
 ap.add_argument("--object", default=None, help="objet dessiné quand le titre ne le nomme pas (« the air fryer »)")
 ap.add_argument("--format", default=None, help="format imposé (variante du modèle : pov_survive…)")
+ap.add_argument("--brand", default=None, help="chaîne affichée dans l'intro si ce n'est pas celle du modèle (« Last Safe Door »)")
 a = ap.parse_args()
 d = os.path.abspath(a.folder)
 os.makedirs(d, exist_ok=True)
@@ -40,6 +41,8 @@ if fmt == "pov_film":  # film : cartes CHAPTER N, images qui se suivent sur déc
     store.update_project(pr["id"], lambda x: x.setdefault("montage", {}).update(
         chapter_cards=True, continuity=True, fixed_angles=True, image_qa=True, presents=True,
         motion="none", transition="fade", transition_dur=0.7))  # images fixes, fondus doux (l'utilisateur, 31 oct.)
+if a.brand:
+    store.update_project(pr["id"], lambda x: x.__setitem__("brand", a.brand))
 if a.object:
     store.update_project(pr["id"], lambda x: x.__setitem__("object_noun", a.object))
 era = next((ln.split(":", 1)[1].strip() for ln in notes.splitlines() if ln.startswith("ERA LOCK:")), "")
