@@ -735,7 +735,7 @@ def estimate_words(text, total):
 
 # ── Point d'entrée ──────────────────────────────────────────────────────────
 
-_MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800, "algrow": 90000, "algrow_stealth": 40000, "ai33": 12000}
+_MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800, "algrow": 12000, "algrow_stealth": 40000, "ai33": 12000}
 
 
 def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, model="",
@@ -749,12 +749,12 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
     chunks = chunk_text(text, _MAX_CHARS[provider])
     tmpdir = tempfile.mkdtemp(prefix="tts_", dir=os.path.dirname(dest) or None)
     parts, all_words, offset, tok_offset = [], [], 0.0, 0
-    try:
-        for i, chunk in enumerate(chunks):
-            if progress:
-                progress(i, len(chunks))
-            part = os.path.join(tmpdir, f"part_{i:03d}.mp3")
-            said = speak_numbers(chunk) if (lang or "").lower().startswith("en") else chunk
+
+    def make(i):  # un morceau → (fichier, mots) ; les morceaux partent en parallèle (gain ≈ 2/3 du temps)
+        chunk = chunks[i]
+        part = os.path.join(tmpdir, f"part_{i:03d}.mp3")
+        said = speak_numbers(chunk) if (lang or "").lower().startswith("en") else chunk
+        if True:
             if provider == "edge":
                 words = _edge(said, voice, part, speed=speed, pitch=pitch)
             elif provider == "elevenlabs":
@@ -773,6 +773,17 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
                 words = estimate_words(chunk, dur)
                 if provider.startswith("algrow") or provider == "ai33":  # pas de timings natifs : recalage sur les pauses
                     words = snap_to_silences(words, part)
+        return part, dur, words
+
+    try:
+        from concurrent.futures import ThreadPoolExecutor
+        workers = 4 if provider in ("algrow", "algrow_stealth", "ai33") else 1
+        if progress:
+            progress(0, len(chunks))
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            made = list(ex.map(make, range(len(chunks))))
+        for i, (part, dur, words) in enumerate(made):
+            chunk = chunks[i]
             for w in words:
                 all_words.append({"w": w["w"], "s": round(w["s"] + offset, 3), "e": round(w["e"] + offset, 3),
                                   "t": int(w.get("t", 0)) + tok_offset})

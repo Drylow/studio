@@ -61,7 +61,8 @@ elif step == "qa":
     store.update_project(pid, lambda x: x.__setitem__("montage", dict(x.get("montage") or {}, image_qa=True)))
     pr = store.get_project(pid)
     pd = store.project_dir(pid)
-    todo = [s for s in pr["scenes"] if s.get("image") and (s.get("fx") or {}).get("type") != "sheet"]
+    todo = [s for s in pr["scenes"] if s.get("image") and (s.get("fx") or {}).get("type") != "sheet"
+            and not s.get("qa_ok")]  # images déjà validées en vision à leur création : pas de 2e contrôle (12 nov.)
     faceless = E.faceless_object(E.project_channel(pr), pr)
 
     def check(s):

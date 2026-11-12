@@ -2546,9 +2546,13 @@ def _gen_scene(ch, pr, sc, prev=None):
         except Exception:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
             break
         if ok:
+            _QA_PASSED.add(rel)  # déjà contrôlée en vision : l'étape QA n'a pas à la revoir
             break
         prompt = sc["prompt"] + " AVOID these mistakes of a previous attempt: " + "; ".join(problems) + "."
     return rel
+
+
+_QA_PASSED = set()  # images (chemins relatifs) validées en vision à la génération
 
 
 def job_images(job, pid, only=None, first_only=False):
@@ -2600,7 +2604,7 @@ def job_images(job, pid, only=None, first_only=False):
         for fut in as_completed(futs):
             for s, rel, e in fut.result():
                 if rel:
-                    mark(s["i"], image=rel, status="done", error=None)
+                    mark(s["i"], image=rel, status="done", error=None, qa_ok=rel in _QA_PASSED)
                     done += 1
                 elif isinstance(e, ai.AIError) and getattr(e, "status", None) == 4290:
                     quota = e  # quota épuisé : on s'arrête net, message clair
