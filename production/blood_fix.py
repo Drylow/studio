@@ -56,6 +56,20 @@ def fix(s):
 
 
 scenes = [s for s in store.get_project(pid)["scenes"] if s.get("image")]
+prev = os.path.join(D, "blood.json")
+if "--reuse" in sys.argv and os.path.isfile(prev):  # reprise après un quota épuisé : pas de nouveau contrôle complet
+    left = json.load(open(prev)).get("left")
+    bad = left if left is not None else json.load(open(prev))["bad"]
+    todo = [s for s in scenes if s["i"] in bad and "nob_" not in s["image"]]
+    with ThreadPoolExecutor(8) as ex:
+        done = dict(ex.map(fix, todo))
+    ok = {i: r for i, r in done.items() if r}
+    store.update_project(pid, lambda x: [s.__setitem__("image", ok[s["i"]]) for s in x["scenes"] if s["i"] in ok])
+    data = json.load(open(prev))
+    data["left"] = sorted(set(s["i"] for s in todo) - set(ok))
+    json.dump(data, open(prev, "w"))
+    print("corrigées", len(ok), "/", len(todo), "restantes", data["left"], flush=True)
+    sys.exit()
 with ThreadPoolExecutor(24) as ex:
     res = list(ex.map(check, scenes))
 bad = [i for i, b, _ in res if b]
