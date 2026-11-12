@@ -78,7 +78,13 @@ elif step == "qa":
                 print("BAD", i, "; ".join(pb)[:220], flush=True)
     print("QA", len(todo), "checked,", len(bad), "to redo", flush=True)
     if bad:
-        E.job_images(Job(), pid, only=bad)
+        try:
+            E.job_images(Job(), pid, only=bad)
+        except RuntimeError as e:  # quelques images refusées par le générateur : on garde leur version d'avant
+            n = int(str(e).split()[0]) if str(e).split()[0].isdigit() else len(bad)
+            if "en échec" not in str(e) or n > max(3, len(bad) // 20):
+                raise
+            print("QA : images gardées telles quelles (à relire) :", str(e), flush=True)
     print("QA DONE", round(time.time() - t), "s", flush=True)
 
 elif step == "replan":
